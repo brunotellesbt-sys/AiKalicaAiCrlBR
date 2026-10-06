@@ -152,6 +152,8 @@ def prepare(source):
     # The hidden padding objects never spawn, including in a fresh save.
     replace('src/new_game.c','    InitEventData();','    InitEventData();\n    FlagSet(FLAG_0x8E2);')
     write('.journey-prepared',json.dumps({'homes':report,'excluded':config['excluded'],'commit':COMMIT},indent=2)+'\n')
+    from open_world import apply
+    apply(source)
     return report
 
 
