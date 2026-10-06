@@ -37,8 +37,11 @@ No Windows, confira os runtimes e abra os lançadores:
 .local\windows-portable\XSE.cmd
 ```
 
-Os ZIPs e a extração desse kit foram testados no Linux; os lançadores `.cmd` precisam de
-validação no Windows. O mGBA e o Floating IPS continuam em suas pastas: extraia o `.7z`
+Os ZIPs e a extração desse kit foram testados no Linux. Os três lançadores `.cmd` também
+foram executados e validados num runner Windows 2022;
+`tools/windows/validate.ps1` repete a instalação, confere os runtimes, exige janelas reais
+visíveis e responsivas, captura as interfaces e verifica o encerramento e o hash da ROM.
+O workflow **Validate Windows ROM tools** repete essa verificação nos PRs. O mGBA e o Floating IPS continuam em suas pastas: extraia o `.7z`
 do mGBA ou o ZIP do Flips e abra seus executáveis.
 
 ## HexManiacAdvance na nuvem Linux
@@ -59,21 +62,21 @@ consumo de disco com o driver VFS da nuvem.
 
 `run.py` copia a ROM para `.local/rom-tools/hma/working.gba`, preservando qualquer cópia já
 existente. O editor só recebe essa pasta de trabalho. Seu prefixo Wine e suas configurações
-ficam no volume Docker `leafgreen-hma-state`; o processo roda sem rede, sem privilégios
+ficam no volume Docker `leafgreen-desktop-state`; a sessão `leafgreen-desktop` roda sem rede, sem privilégios
 adicionais e com limites de memória/CPU. Os processos precisam ser iniciados novamente
 em tarefas futuras; não presuma que imagens ou volumes Docker sobrevivam à publicação.
 
 A interface roda em Xvfb, sem uma prévia web. Para inspecionar uma sessão:
 
 ```sh
-docker logs leafgreen-hma
-docker exec -e DISPLAY=:99 leafgreen-hma xdotool search --onlyvisible --name 'Hex Maniac Advance' getwindowname
-docker exec -e DISPLAY=:99 leafgreen-hma import -window root /home/editor/editor.png
-docker cp leafgreen-hma:/home/editor/editor.png /tmp/editor.png
+docker exec leafgreen-desktop cat /home/editor/logs/hma.log
+docker exec -e DISPLAY=:99 leafgreen-desktop xdotool search --onlyvisible --name 'Hex Maniac Advance' getwindowname
+docker exec -e DISPLAY=:99 leafgreen-desktop import -window root /home/editor/editor.png
+docker cp leafgreen-desktop:/home/editor/editor.png /tmp/editor.png
 ```
 
 Salve as edições no editor antes de encerrar o contêiner. Para iniciar outra sessão após
-encerrá-lo, remova apenas o contêiner `leafgreen-hma` e rode o comando novamente; a pasta
+encerrá-lo, remova apenas o contêiner `leafgreen-desktop` e rode o comando novamente; a pasta
 `working.gba` e o volume de configurações são preservados.
 
 ### Fontes do WPF
@@ -86,11 +89,35 @@ O registro de fontes acontece apenas no prefixo Wine do contêiner, sem alterar 
 
 ### AdvanceMap e XSE no Linux
 
-Os pacotes estão incluídos e preparados no kit. `run.py advancemap` e `run.py xse` também
-estão disponíveis, mas **suas interfaces não iniciaram nesta nuvem durante a validação**.
-São executáveis Windows de 32 bits; a combinação deste host com Wine/WoW64 falhou na
-inicialização. Os pacotes e a dependência VB6 foram conferidos; não declare sua execução
-Linux pronta sem uma nova validação. Use os lançadores Windows para testar esses programas.
+Os dois editores agora iniciam nesta nuvem com **Wine Debian de 32 bits sob QEMU i386**.
+O Wine/WoW64 de 64 bits sozinho falhava até com seu próprio `cmd.exe` de 32 bits.
+A emulação precisa incluir o **pré-carregador original** (`wine-preloader.static`):
+executar somente o carregador não reserva os endereços fixos usados por esses programas
+e causa `STATUS_CONFLICTING_ADDRESSES`. Os executáveis dos editores não foram modificados.
+
+```sh
+python3 tools/cloud/run.py advancemap --rom 'Pokemon - Leaf Green Version (U) (V1.1).gba'
+python3 tools/cloud/run.py xse --rom 'Pokemon - Leaf Green Version (U) (V1.1).gba'
+```
+
+Todos os comandos usam a mesma sessão `leafgreen-desktop` e Xvfb `:99`. Isso evita duplicar
+a imagem grande para cada editor no driver VFS. Os arquivos de trabalho ficam em
+`.local/rom-tools/<editor>/working.gba`, montados como `Z:/work/<editor>/working.gba`.
+Cada editor tem sua própria cópia; transfira a cópia editada entre ferramentas quando necessário.
+O prefixo legado `.wine32` é separado do prefixo WPF `.wine`. A inicialização e o registro
+de fontes são protegidos por trava para permitir comandos consecutivos.
+
+Na primeira abertura do AdvanceMap, escolha o idioma e leia o contrato original; os diálogos
+iniciais e a pergunta sobre atalho fazem parte do programa. Depois abra a cópia em **File → Load ROM**.
+O XSE também exige as fontes esperadas pelo VB6: os aliases OFL instalados no prefixo eliminam
+o erro **380 / Invalid property value** observado sem `Courier New`.
+Logs separados: `/home/editor/logs/advancemap.log` e `/home/editor/logs/xse.log`.
+A emulação tem custo de CPU; aguarde a primeira inicialização. Avisos de serviços auxiliares
+Wine/QEMU podem aparecer nos logs; a validação exige a interface e operações reais no editor.
+
+Após atualizar a imagem, salve as edições, encerre a sessão e recrie apenas seu contêiner;
+não apague volumes nem arquivos `working.gba`. Volumes das antigas sessões individuais
+continuam preservados, mas os novos lançadores usam o volume compartilhado.
 
 ## Origem, hashes e licenças
 
@@ -124,4 +151,9 @@ Consulte os manifestos por pasta para as URLs exatas e os arquivos `LICENSE`, `C
   Bulbasaur com HP 45, ataque 49 e sprite correto. Original e cópia mantiveram o SHA-256 inicial.
   Captura: [hexmaniac-leafgreen.png](cloud/hexmaniac-leafgreen.png).
 - Extração do kit Windows repetida sem sobrescrever a instalação existente.
-- Execução das interfaces AdvanceMap/XSE nesta nuvem: falhou; execução em Windows: não testada.
+- AdvanceMap e XSE iniciados sob Wine/QEMU i386 nesta nuvem; validação funcional detalhada em
+  [validation.md](cloud/validation.md).
+- Os três lançadores Windows exibiram interfaces responsivas e encerraram com código zero:
+  [execução Windows validada](https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/actions/runs/37445549073).
+  As capturas estão no artefato `windows-tools-validation`. Esse teste verifica instalação e
+  inicialização/encerramento; não substitui testes de todas as funções de edição.

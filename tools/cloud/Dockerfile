@@ -5,11 +5,17 @@ ENV DEBIAN_FRONTEND=noninteractive \
 # Keep filesystem changes in one large layer: the cloud daemon uses the VFS driver.
 WORKDIR /home/editor
 COPY . /tmp/setup/
-RUN sed -i s,http://deb.debian.org,https://deb.debian.org,g /etc/apt/sources.list.d/debian.sources \
+RUN dpkg --add-architecture i386 \
+ && sed -i s,http://deb.debian.org,https://deb.debian.org,g /etc/apt/sources.list.d/debian.sources \
  && apt-get -o Acquire::https::CaInfo=/tmp/setup/build-ca.pem update --error-on=any \
  && apt-get -o Acquire::https::CaInfo=/tmp/setup/build-ca.pem install -y --no-install-recommends \
-    wine64 xvfb xauth x11-utils xdotool imagemagick unzip xz-utils ca-certificates \
+    wine wine64 wine32:i386 wine32-preloader:i386 qemu-user xvfb xauth x11-utils xdotool imagemagick unzip xz-utils ca-certificates \
     fonts-liberation fonts-crosextra-carlito fonts-dejavu-core procps \
+ && mv /usr/lib/wine/wine /usr/lib/wine/wine.real \
+ && printf '#!/bin/sh\nexec /usr/bin/qemu-i386 /usr/lib/wine/wine.real "$@"\n' > /usr/lib/wine/wine \
+ && rm /usr/lib/wine/wine-preloader \
+ && printf '#!/bin/sh\nexec /usr/bin/qemu-i386 /usr/lib/wine/wine-preloader.static "$@"\n' > /usr/lib/wine/wine-preloader \
+ && chmod 755 /usr/lib/wine/wine /usr/lib/wine/wine-preloader \
  && mkdir -p /opt/wine /opt/dotnet /opt/hma /opt/am /opt/xse \
  && tar -xJf /tmp/setup/packages/wine-11.0-amd64-wow64.tar.xz -C /opt/wine --strip-components=1 \
  && unzip -oq /tmp/setup/packages/dotnet-runtime-6.0.36-win-x64.zip -d /opt/dotnet \
