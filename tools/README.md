@@ -11,7 +11,7 @@
 | XSE | 1.1.1 | Scripts de eventos | Arquivo comunitário com fontes |
 | Visual Basic 6 SP6 | KB290887 | Dependência do XSE | Redistribuível Microsoft arquivado |
 
-Nenhuma história ou evento foi alterado. A ROM de referência é **LeafGreen USA v1.1**, código
+A ROM original foi preservada. A versão opcional [sem obstáculos terrestres de HM](../mods/no-hm-walls/README.md) mantém Surf e Waterfall. A ROM de referência é **LeafGreen USA v1.1**, código
 `BPGE`, revisão `1`. Trabalhe em uma cópia. A abertura da ROM no HexManiacAdvance foi
 validada; não significa que todos os recursos de edição ou a compatibilidade de saves foram testados.
 

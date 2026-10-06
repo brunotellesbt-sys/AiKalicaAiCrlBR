@@ -1,0 +1,75 @@
+[
+  {
+    "check": "water-still-requires-surf",
+    "map": "PalletTown",
+    "from": [
+      10,
+      15
+    ],
+    "to": [
+      10,
+      16
+    ],
+    "passed": true
+  },
+  {
+    "check": "cut-tree-removed",
+    "map": "Route2",
+    "from": [
+      16,
+      61
+    ],
+    "to": [
+      16,
+      63
+    ],
+    "passed": true
+  },
+  {
+    "check": "rock-smash-removed",
+    "map": "OneIsland_KindleRoad",
+    "from": [
+      8,
+      103
+    ],
+    "to": [
+      8,
+      105
+    ],
+    "passed": true
+  },
+  {
+    "check": "strength-boulder-removed",
+    "map": "VictoryRoad_1F",
+    "from": [
+      7,
+      17
+    ],
+    "to": [
+      7,
+      19
+    ],
+    "passed": true
+  },
+  {
+    "check": "victory-road-gate-open",
+    "map": "VictoryRoad_1F",
+    "from": [
+      12,
+      16
+    ],
+    "to": [
+      12,
+      14
+    ],
+    "passed": true
+  },
+  {
+    "check": "seafoam-b3f-calm-layout",
+    "passed": true
+  },
+  {
+    "check": "seafoam-b4f-calm-layout",
+    "passed": true
+  }
+]
