@@ -1,0 +1,6 @@
+Microsoft Visual Basic 6 SP6 runtime redistributable (KB290887).
+Copyright Microsoft Corporation. Original terms apply; no new license is asserted.
+
+The archived VB6.0-KB290887-X86.exe matches the SHA-256 published in Winetricks 20200412. The original Microsoft URL and archived source are recorded in manifest.json.
+
+msvbvm60.dll was extracted locally from the wrapper and its embedded vbrun60sp6.exe using cabextract. Only this DLL is copied beside XSE.exe. The setup helpers do not execute the legacy system installer or replace Windows/Wine OLE libraries.

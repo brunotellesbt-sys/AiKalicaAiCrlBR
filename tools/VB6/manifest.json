@@ -1,0 +1,14 @@
+{
+  "url": "https://raw.githubusercontent.com/jbreslin33/breslinserver_archive/24ca0fa22a333a898e652d6f062a0286cbf1318f/nhl94/nose/VB6.0-KB290887-X86.exe",
+  "official_download_url": "https://download.microsoft.com/download/5/a/d/5ad868a0-8ecd-4bb0-a882-fe53eb7ef348/VB6.0-KB290887-X86.exe",
+  "sha256": "467b5a10c369865f2021d379fc0933cb382146b702bbca4bcb703fc86f4322bb",
+  "checksum_source": "https://github.com/Winetricks/winetricks/blob/20200412/src/winetricks",
+  "size": 1064736,
+  "upstream_checksum_verified": true,
+  "extracted_runtime_dll": {
+    "name": "msvbvm60.dll",
+    "sha256": "3ef32e0152cc3fa07c417e6aadf9ead83a17b5fdee73799044e1bd7564725d6e",
+    "size": 1386496,
+    "extraction": "cabextract wrapper, then embedded vbrun60sp6.exe; no system installation"
+  }
+}
