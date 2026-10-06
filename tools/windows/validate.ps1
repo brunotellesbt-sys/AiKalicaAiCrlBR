@@ -40,13 +40,14 @@ try {
         if ($tool -eq 'HexManiacAdvance') { $arguments += ' "' + $copy + '"' }
         $arguments += '"'
         $launcher = Start-Process $env:ComSpec -ArgumentList $arguments -PassThru
+        $pattern = @{ HexManiacAdvance = 'Hex Maniac Advance'; AdvanceMap = 'Advance.?Map'; XSE = 'eXtreme Script Editor|XSE' }[$tool]
         $process = $null
         $deadline = (Get-Date).AddSeconds(60)
         while ((Get-Date) -lt $deadline) {
             $candidates = if ($tool -eq 'HexManiacAdvance') { @(Get-Process dotnet -ErrorAction SilentlyContinue) } else { @(Get-Process $tool -ErrorAction SilentlyContinue) }
             foreach ($candidate in $candidates) {
                 $candidate.Refresh()
-                if ($candidate.MainWindowHandle -ne [IntPtr]::Zero -and [DesktopProbe]::IsWindowVisible($candidate.MainWindowHandle)) {
+                if ($candidate.MainWindowHandle -ne [IntPtr]::Zero -and [DesktopProbe]::IsWindowVisible($candidate.MainWindowHandle) -and $candidate.MainWindowTitle -match $pattern) {
                     $process = $candidate
                     break
                 }
@@ -61,7 +62,6 @@ try {
         $process.Refresh()
         if ($process.HasExited -or !$process.Responding) { throw "$tool exited or stopped responding" }
         $title = $process.MainWindowTitle
-        $pattern = @{ HexManiacAdvance = 'Hex Maniac Advance'; AdvanceMap = 'Advance.?Map'; XSE = 'eXtreme Script Editor|XSE' }[$tool]
         if ($title -notmatch $pattern) { throw "$tool opened an unexpected window: $title" }
         $rect = New-Object DesktopProbe+Rect
         if (![DesktopProbe]::GetWindowRect($process.MainWindowHandle, [ref]$rect)) { throw 'Cannot capture application window' }
