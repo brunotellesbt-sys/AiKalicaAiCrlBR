@@ -33,3 +33,6 @@ Inclui a remoção dos obstáculos terrestres e libera Surf/Waterfall sem insíg
 Esta versão também abre as estradas, entrega Poké Flute após a primeira insígnia
 e adapta os níveis dos ginásios à ordem escolhida. Blue assume Viridian; Giovanni
 permanece na Team Rocket. A Liga exige as oito insígnias.
+
+Os encontros selvagens agora acompanham a média da equipe (−5 a +2 níveis),
+as insígnias e a cidade inicial, combinando os habitats de LeafGreen e FireRed.

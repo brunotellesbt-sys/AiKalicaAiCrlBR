@@ -30,6 +30,8 @@ def validate(e):
         return lib.read32(0x0203fffc)
     def badges(mask):
         for i in range(8):setflag(0x820+i,bool(mask&(1<<i)))
+    e['native'] = native
+    e['badges'] = badges
     for mask in range(256):
         badges(mask);assert native('OpenWorld_BadgeCount')==mask.bit_count()
     record('badge-count-all-256-combinations')

@@ -49,11 +49,31 @@ Os Pokémon mais fracos de uma equipe mantêm diferenças de até seis níveis e
 
 **A Liga exige as oito insígnias.** Os controles da Route 22/23 foram preservados, e a entrada da Elite Four verifica novamente todas as insígnias. Ganhar Earthbadge primeiro não libera a Liga nem aciona o último encontro com o rival; esse encontro fica disponível depois da oitava insígnia.
 
+## Encontros selvagens dinâmicos
+
+Os níveis selvagens usam a **média inteira dos níveis da equipe atual**, incluindo Pokémon desmaiados e ignorando Eggs e espaços vazios. Cada encontro sorteia um nível entre **média −5 e média +2**, com limites absolutos de 1 e 100. Isso vale em Kanto e nas sete ilhas, para grama, cavernas, Surf, pesca, Safari, Rock Smash, encontros por evento e lendários errantes. Presentes e equipes de treinadores não usam essa regra. Repel continua comparando o nível sorteado com o primeiro Pokémon apto da equipe.
+
+As espécies acompanham a quantidade de insígnias, independentemente da cidade inicial:
+
+| Insígnias | Estágios encontrados |
+| --- | --- |
+| 0–2 | Básicos |
+| 3–5 | Básicos e primeira evolução |
+| 6–8 | Primeira e última evolução |
+
+Famílias de dois estágios terminam na primeira evolução; espécies sem evolução continuam presentes. Os Unown preservam as letras próprias de cada câmara. Encontros de história, como Snorlax e lendários, preservam a espécie. Evoluções por troca ou pedra podem aparecer selvagens nas fases posteriores; não exigem a troca ou pedra para esse encontro. Os movimentos e atributos são criados pelo jogo para a espécie e o nível efetivamente sorteados.
+
+Cada área combina as famílias dos encontros originais de **LeafGreen e FireRed** naquela mesma área. A tabela ponderada de LeafGreen fornece 75% das escolhas; 12,5% sorteiam uma família da combinação, e 12,5% favorecem uma família local definida pela cidade inicial e pelo mapa. Isso mantém encontros comuns e raros, preserva os habitats e muda a distribuição conforme o lugar onde a jornada começou. As rotas mantêm sua geografia.
+
+Os exclusivos de FireRed aparecem nos habitats da própria versão: Scyther no Safari; a família de Electabuzz na usina; Growlithe na mansão e em suas rotas; Psyduck nas águas interiores; Shellder na pesca costeira, como Vermilion; Oddish e Ekans em suas rotas. Nas ilhas também entram Wooper, Murkrow, Qwilfish, Delibird e Skarmory nos respectivos habitats. As espécies nativas de LeafGreen permanecem disponíveis. As regras originais de obtenção da National Dex não foram alteradas.
+
+Os lendários errantes preservam personalidade, IVs, status e a proporção de HP restante quando seu nível muda. Nenhuma nova variável de save ou área de RAM foi necessária.
+
 ## Arquivos e reprodução
 
 - `LeafGreen-Choose-Starting-City.gba`: ROM pronta.
 - `LeafGreen-Choose-Starting-City.bps`: patch para a **ROM original USA v1.1**, não para a ROM do PR anterior. Aplique com Floating IPS.
-- `manifest.json`: hashes, casas, exclusões, arquivos de implementação e alterações terrestres de HM.
+- `manifest.json`: hashes, casas, exclusões, arquivos de implementação, habitats/evoluções e alterações terrestres de HM.
 - `debug-reference.json`: endereços e IDs para reproduzir os testes da ROM construída.
 - `validation/`: capturas e resultados dos testes no mGBA.
 
@@ -75,4 +95,4 @@ Para testar no núcleo mGBA, use a ponte e as instruções de compilação em [n
 python3 tools/journey/validate_emulator.py --library .local/mgba-bridge.so
 ```
 
-Os testes usam comandos temporários na memória do emulador para chegar a outras casas e cenários; esses comandos não fazem parte da ROM entregue. Passaram **498 verificações no mGBA**, cobrindo escolha pelo menu real, escada, visita de Oak, três iniciais, Pokédex, cura, presentes, todas as casas, casa fixa por cidade, saídas das casas e viagens antecipadas entre Kanto e as sete ilhas e uso real de Surf/Waterfall sem insígnias. Incluem as 256 combinações de insígnias, as 49 equipes em cada etapa, a Poké Flute, os dois sprites do rival, as entradas abertas e a exigência de todas as insígnias na Liga. As equipes são criadas pela rotina nativa da ROM através do trampolim de teste em `native_call.s`, injetado apenas na memória. Os nove testes de integridade/BPS desta versão e os seis da modificação terrestre também passaram. A campanha inteira ainda não foi jogada até o final; saves de outras versões não são suportados.
+Os testes usam comandos temporários na memória do emulador para chegar a outras casas e cenários; esses comandos não fazem parte da ROM entregue. Passaram **544 verificações no mGBA**, cobrindo escolha pelo menu real, escada, visita de Oak, três iniciais, Pokédex, cura, presentes, todas as casas, casa fixa por cidade, saídas das casas e viagens antecipadas entre Kanto e as sete ilhas e uso real de Surf/Waterfall sem insígnias. Incluem as 256 combinações de insígnias, as 49 equipes em cada etapa, a Poké Flute, os dois sprites do rival, as entradas abertas e a exigência de todas as insígnias na Liga. As equipes são criadas pela rotina nativa da ROM através do trampolim de teste em `native_call.s`, injetado apenas na memória. Também verificam os limites de nível 1/100, média com Eggs e desmaiados, encontros reais de grama/caverna/Surf/pesca em cada fase, variação por cidade inicial, Repel, Snorlax/lendários e identidade/HP/status do lendário errante. Os onze testes de integridade/ecologia/BPS desta versão e os seis da modificação terrestre também passaram. A campanha inteira ainda não foi jogada até o final; saves de outras versões não são suportados.
