@@ -10,13 +10,13 @@ Prepare o kit para Windows x64 com Python 3.10+:
 python tools/install_portable.py
 ```
 
-Ou construa o ambiente Wine/.NET para Linux com Docker:
+Ou construa o ambiente Wine/QEMU/.NET para Linux com Docker:
 
 ```sh
 python3 tools/cloud/build.py
 python3 tools/cloud/run.py hma --rom 'Pokemon - Leaf Green Version (U) (V1.1).gba'
 ```
 
-O HexManiacAdvance foi validado na nuvem. AdvanceMap e XSE estão disponíveis como
-pacotes Windows; suas interfaces não iniciaram na validação Linux. As cópias de
-trabalho e os arquivos gerados ficam em `.local/`, fora do Git.
+HexManiacAdvance, AdvanceMap e XSE iniciam na nuvem numa sessão gráfica compartilhada.
+Os três lançadores também foram testados em Windows. As cópias de trabalho e os arquivos
+gerados ficam em `.local/`, fora do Git. Consulte os comandos e as evidências em `tools/README.md`.

@@ -2,6 +2,15 @@
 set -eu
 app=${1:-runtimes}
 shift || true
+# Native 64-bit Wine remains available for WPF. Legacy applications use a
+# separate win32 prefix and the Debian Wine loader/preloader under QEMU.
+marker=/home/editor/.leafgreen-initialized-v1
+case "$app" in
+    advancemap|xse)
+        export PATH=/usr/bin:/usr/local/bin:/bin
+        export WINEARCH=win32 WINEPREFIX=/home/editor/.wine32
+        marker=/home/editor/.leafgreen-initialized-legacy-v2 ;;
+esac
 mkdir -p /home/editor/logs
 if [ -z "${DISPLAY:-}" ]; then
     export DISPLAY=:99
@@ -13,7 +22,11 @@ if [ -z "${DISPLAY:-}" ]; then
         sleep 0.2
     done
 fi
-if [ ! -f /home/editor/.leafgreen-initialized-v1 ]; then
+# Two editors may be requested consecutively while the first prefix is still
+# initializing. Serialize initialization, not the lifetime of the editors.
+exec 9>"$marker.lock"
+flock 9
+if [ ! -f "$marker" ]; then
     mkdir -p "$WINEPREFIX/drive_c/windows/Fonts"
     cp /opt/font-aliases/*.ttf "$WINEPREFIX/drive_c/windows/Fonts/"
     wineboot -i > /home/editor/logs/wineboot.log 2>&1
@@ -23,8 +36,10 @@ if [ ! -f /home/editor/.leafgreen-initialized-v1 ]; then
     done
     # Restart this prefix after font registration; WPF otherwise retains stale collections.
     wineserver -k
-    touch /home/editor/.leafgreen-initialized-v1
+    touch "$marker"
 fi
+flock -u 9
+exec 9>&-
 case "$app" in
     runtimes) exec wine /opt/dotnet/dotnet.exe --list-runtimes ;;
     hma)
