@@ -1,0 +1,19 @@
+name: Validate custom journey
+on:
+  pull_request:
+    paths: ['mods/choose-starting-city/**', 'tools/journey/**', '.github/workflows/journey.yml']
+  push:
+    branches: [main]
+    paths: ['mods/choose-starting-city/**', 'tools/journey/**', '.github/workflows/journey.yml']
+permissions:
+  contents: read
+jobs:
+  journey:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Verify journey ROM, house whitelist, source hashes and BPS
+        run: python3 -m unittest discover -s tools/journey -v
+      - name: Verify inherited terrestrial HM modification
+        run: python3 -m unittest discover -s tools/rom_hacks -v

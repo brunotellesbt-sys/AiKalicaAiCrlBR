@@ -1,0 +1,841 @@
+{
+  "source_commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
+  "original_sha256": "2f978f635b9593f6ca26ec42481c53a6b39f6cddd894ad5c062c1419fac58825",
+  "intermediate_sha256": "82e9f514acaf4d363c10d93659f358edc0d10c080d2b9b0876e10ae1a25b0d8a",
+  "target_sha256": "f72e7f804f8a0948d1d631f15677ebf642089a75c7fce7de83ad2d5edff6a129",
+  "patch_sha256": "be1e8a910dd401fae3fa80021886b68f06649d1f87e0181af05c37a51035af3e",
+  "size": 16777216,
+  "terrestrial_hm_changes": {
+    "source_sha256": "82e9f514acaf4d363c10d93659f358edc0d10c080d2b9b0876e10ae1a25b0d8a",
+    "target_sha256": "f72e7f804f8a0948d1d631f15677ebf642089a75c7fce7de83ad2d5edff6a129",
+    "size": 16777216,
+    "changed_bytes": 3231,
+    "maps_scanned": 455,
+    "layouts_scanned": 364,
+    "counts": {
+      "strength_boulder": 58,
+      "rock_smash_rock": 97,
+      "flash_maps": 2,
+      "cut_tree": 55,
+      "victory_road_gate_cells_opened": 8
+    },
+    "affected_maps": [
+      {
+        "map": "VictoryRoad_1F",
+        "group": 1,
+        "number": 39,
+        "removed": {
+          "strength_boulder": 3
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "VictoryRoad_2F",
+        "group": 1,
+        "number": 40,
+        "removed": {
+          "strength_boulder": 3
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "VictoryRoad_3F",
+        "group": 1,
+        "number": 41,
+        "removed": {
+          "strength_boulder": 4
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "CeruleanCave_1F",
+        "group": 1,
+        "number": 72,
+        "removed": {
+          "rock_smash_rock": 6
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "CeruleanCave_2F",
+        "group": 1,
+        "number": 73,
+        "removed": {
+          "rock_smash_rock": 10
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "CeruleanCave_B1F",
+        "group": 1,
+        "number": 74,
+        "removed": {
+          "rock_smash_rock": 9
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "RockTunnel_1F",
+        "group": 1,
+        "number": 81,
+        "removed": {},
+        "flash_removed": true
+      },
+      {
+        "map": "RockTunnel_B1F",
+        "group": 1,
+        "number": 82,
+        "removed": {
+          "rock_smash_rock": 15
+        },
+        "flash_removed": true
+      },
+      {
+        "map": "SeafoamIslands_1F",
+        "group": 1,
+        "number": 83,
+        "removed": {
+          "strength_boulder": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "SeafoamIslands_B1F",
+        "group": 1,
+        "number": 84,
+        "removed": {
+          "strength_boulder": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "SeafoamIslands_B2F",
+        "group": 1,
+        "number": 85,
+        "removed": {
+          "strength_boulder": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "SeafoamIslands_B3F",
+        "group": 1,
+        "number": 86,
+        "removed": {
+          "strength_boulder": 6
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "SeafoamIslands_B4F",
+        "group": 1,
+        "number": 87,
+        "removed": {
+          "strength_boulder": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_Exterior",
+        "group": 1,
+        "number": 97,
+        "removed": {
+          "rock_smash_rock": 6,
+          "strength_boulder": 5
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_SummitPath_2F",
+        "group": 1,
+        "number": 99,
+        "removed": {
+          "rock_smash_rock": 9
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_Summit",
+        "group": 1,
+        "number": 101,
+        "removed": {
+          "strength_boulder": 4
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_RubyPath_1F",
+        "group": 1,
+        "number": 103,
+        "removed": {
+          "rock_smash_rock": 5
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_RubyPath_B1F",
+        "group": 1,
+        "number": 104,
+        "removed": {
+          "rock_smash_rock": 4
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_RubyPath_B2F",
+        "group": 1,
+        "number": 105,
+        "removed": {
+          "strength_boulder": 3,
+          "rock_smash_rock": 4
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_RubyPath_B3F",
+        "group": 1,
+        "number": 106,
+        "removed": {
+          "strength_boulder": 4,
+          "rock_smash_rock": 6
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_RubyPath_B1F_Stairs",
+        "group": 1,
+        "number": 107,
+        "removed": {
+          "rock_smash_rock": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_RubyPath_B2F_Stairs",
+        "group": 1,
+        "number": 108,
+        "removed": {
+          "rock_smash_rock": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "ThreeIsland_BerryForest",
+        "group": 1,
+        "number": 109,
+        "removed": {
+          "cut_tree": 10
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "SevenIsland_SevaultCanyon_TanobyKey",
+        "group": 2,
+        "number": 35,
+        "removed": {
+          "strength_boulder": 7
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "ViridianCity",
+        "group": 3,
+        "number": 1,
+        "removed": {
+          "cut_tree": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "PewterCity",
+        "group": 3,
+        "number": 2,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "CeruleanCity",
+        "group": 3,
+        "number": 3,
+        "removed": {
+          "cut_tree": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "VermilionCity",
+        "group": 3,
+        "number": 5,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "CeladonCity",
+        "group": 3,
+        "number": 6,
+        "removed": {
+          "cut_tree": 3
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "FuchsiaCity",
+        "group": 3,
+        "number": 7,
+        "removed": {
+          "cut_tree": 4
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "TwoIsland",
+        "group": 3,
+        "number": 13,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "ThreeIsland",
+        "group": 3,
+        "number": 14,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "FourIsland",
+        "group": 3,
+        "number": 15,
+        "removed": {
+          "rock_smash_rock": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "FiveIsland",
+        "group": 3,
+        "number": 16,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route2",
+        "group": 3,
+        "number": 20,
+        "removed": {
+          "cut_tree": 5
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route7",
+        "group": 3,
+        "number": 25,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route8",
+        "group": 3,
+        "number": 26,
+        "removed": {
+          "cut_tree": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route9",
+        "group": 3,
+        "number": 27,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route10",
+        "group": 3,
+        "number": 28,
+        "removed": {
+          "cut_tree": 4
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route12",
+        "group": 3,
+        "number": 30,
+        "removed": {
+          "cut_tree": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route13",
+        "group": 3,
+        "number": 31,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route14",
+        "group": 3,
+        "number": 32,
+        "removed": {
+          "cut_tree": 3
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route15",
+        "group": 3,
+        "number": 33,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route16",
+        "group": 3,
+        "number": 34,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route25",
+        "group": 3,
+        "number": 44,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "OneIsland_KindleRoad",
+        "group": 3,
+        "number": 45,
+        "removed": {
+          "rock_smash_rock": 13
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "ThreeIsland_BondBridge",
+        "group": 3,
+        "number": 48,
+        "removed": {
+          "cut_tree": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "FiveIsland_Meadow",
+        "group": 3,
+        "number": 56,
+        "removed": {
+          "cut_tree": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "SixIsland_RuinValley",
+        "group": 3,
+        "number": 61,
+        "removed": {
+          "strength_boulder": 8
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "SevenIsland_SevaultCanyon",
+        "group": 3,
+        "number": 64,
+        "removed": {
+          "rock_smash_rock": 6,
+          "strength_boulder": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "CeladonCity_Gym",
+        "group": 10,
+        "number": 16,
+        "removed": {
+          "cut_tree": 3
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "FuchsiaCity_WardensHouse",
+        "group": 11,
+        "number": 7,
+        "removed": {
+          "strength_boulder": 1
+        },
+        "flash_removed": false
+      }
+    ],
+    "scripts": [
+      {
+        "symbol": "VictoryRoad_1F_OnLoad",
+        "offset": 1445864,
+        "before": "216440640007",
+        "after": "166440640002"
+      },
+      {
+        "symbol": "VictoryRoad_2F_OnLoad",
+        "offset": 1446000,
+        "before": "2165406400070587101608",
+        "after": "1665406400166640640002"
+      },
+      {
+        "symbol": "VictoryRoad_3F_OnLoad",
+        "offset": 1446280,
+        "before": "216740640007",
+        "after": "166740640002"
+      },
+      {
+        "symbol": "SeafoamIslands_B3F_OnTransition",
+        "offset": 1454130,
+        "before": "2bd20207004530",
+        "after": "29d202a7160102"
+      },
+      {
+        "symbol": "SeafoamIslands_B3F_EventScript_EnterByFalling",
+        "offset": 1454202,
+        "before": "6916024000002b",
+        "after": "16014000006b02"
+      },
+      {
+        "symbol": "SeafoamIslands_B4F_OnTransition",
+        "offset": 1454398,
+        "before": "2bbe020700853116082bd30207005a31",
+        "after": "2bbe0207008531160829d302a7170102"
+      },
+      {
+        "symbol": "SeafoamIslands_B4F_EventScript_EnterByFalling",
+        "offset": 1454585,
+        "before": "6916024000002b",
+        "after": "16014000006b02"
+      },
+      {
+        "symbol": "SeafoamIslands_B4F_OnLoad",
+        "offset": 1454473,
+        "before": "16024000002b4c000700413216082b4d000700",
+        "after": "a20c000e002b010000a20d000e002b01000002"
+      },
+      {
+        "symbol": "SeafoamIslands_B4F_EventScript_EnterOnCurrent",
+        "offset": 1454563,
+        "before": "694fff00f53116",
+        "after": "16634000006b02"
+      },
+      {
+        "symbol": "SeafoamIslands_B4F_EventScript_UpwardCurrent",
+        "offset": 1454709,
+        "before": "694f",
+        "after": "6b02"
+      }
+    ]
+  },
+  "homes": [
+    {
+      "index": 1,
+      "city": "Pallet",
+      "house": "PalletTown_PlayersHouse_1F",
+      "original_map": "MAP_PALLET_TOWN_PLAYERS_HOUSE_1F",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_00",
+      "living_map": "MAP_JOURNEY_LIVING_00",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_MOM"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "city": "Viridian",
+      "house": "ViridianCity_House",
+      "original_map": "MAP_VIRIDIAN_CITY_HOUSE",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_01",
+      "living_map": "MAP_JOURNEY_LIVING_01",
+      "people": 2,
+      "original_people": [
+        "OBJ_EVENT_GFX_BALDING_MAN",
+        "OBJ_EVENT_GFX_LITTLE_GIRL"
+      ],
+      "roles": [
+        1,
+        4
+      ]
+    },
+    {
+      "index": 3,
+      "city": "Pewter",
+      "house": "PewterCity_House1",
+      "original_map": "MAP_PEWTER_CITY_HOUSE1",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_02",
+      "living_map": "MAP_JOURNEY_LIVING_02",
+      "people": 2,
+      "original_people": [
+        "OBJ_EVENT_GFX_BALDING_MAN",
+        "OBJ_EVENT_GFX_LITTLE_BOY"
+      ],
+      "roles": [
+        1,
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "city": "Cerulean",
+      "house": "CeruleanCity_House1",
+      "original_map": "MAP_CERULEAN_CITY_HOUSE1",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_03",
+      "living_map": "MAP_JOURNEY_LIVING_03",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_GENTLEMAN"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "city": "Vermilion",
+      "house": "VermilionCity_House3",
+      "original_map": "MAP_VERMILION_CITY_HOUSE3",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_04",
+      "living_map": "MAP_JOURNEY_LIVING_04",
+      "people": 2,
+      "original_people": [
+        "OBJ_EVENT_GFX_LASS",
+        "OBJ_EVENT_GFX_BOY"
+      ],
+      "roles": [
+        1,
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "city": "Lavender",
+      "house": "LavenderTown_House2",
+      "original_map": "MAP_LAVENDER_TOWN_HOUSE2",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_05",
+      "living_map": "MAP_JOURNEY_LIVING_05",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_GENTLEMAN"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "city": "Celadon",
+      "house": "CeladonCity_House1",
+      "original_map": "MAP_CELADON_CITY_HOUSE1",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_06",
+      "living_map": "MAP_JOURNEY_LIVING_06",
+      "people": 3,
+      "original_people": [
+        "OBJ_EVENT_GFX_OLD_MAN_2",
+        "OBJ_EVENT_GFX_ROCKET_M",
+        "OBJ_EVENT_GFX_ROCKET_M"
+      ],
+      "roles": [
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "city": "Fuchsia",
+      "house": "FuchsiaCity_House1",
+      "original_map": "MAP_FUCHSIA_CITY_HOUSE1",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_07",
+      "living_map": "MAP_JOURNEY_LIVING_07",
+      "people": 3,
+      "original_people": [
+        "OBJ_EVENT_GFX_WOMAN_2",
+        "OBJ_EVENT_GFX_OLD_MAN_1",
+        "OBJ_EVENT_GFX_LITTLE_BOY"
+      ],
+      "roles": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "city": "Saffron",
+      "house": "SaffronCity_House",
+      "original_map": "MAP_SAFFRON_CITY_HOUSE",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_08",
+      "living_map": "MAP_JOURNEY_LIVING_08",
+      "people": 2,
+      "original_people": [
+        "OBJ_EVENT_GFX_LASS",
+        "OBJ_EVENT_GFX_YOUNGSTER"
+      ],
+      "roles": [
+        1,
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "city": "One Island",
+      "house": "OneIsland_House1",
+      "original_map": "MAP_ONE_ISLAND_HOUSE1",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_09",
+      "living_map": "MAP_JOURNEY_LIVING_09",
+      "people": 2,
+      "original_people": [
+        "OBJ_EVENT_GFX_OLD_WOMAN",
+        "OBJ_EVENT_GFX_OLD_MAN_1"
+      ],
+      "roles": [
+        1,
+        2
+      ]
+    },
+    {
+      "index": 11,
+      "city": "Two Island",
+      "house": "TwoIsland_House",
+      "original_map": "MAP_TWO_ISLAND_HOUSE",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_10",
+      "living_map": "MAP_JOURNEY_LIVING_10",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_FAT_MAN"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 12,
+      "city": "Three Island",
+      "house": "ThreeIsland_House3",
+      "original_map": "MAP_THREE_ISLAND_HOUSE3",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_11",
+      "living_map": "MAP_JOURNEY_LIVING_11",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_BEAUTY"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 13,
+      "city": "Four Island",
+      "house": "FourIsland_House2",
+      "original_map": "MAP_FOUR_ISLAND_HOUSE2",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_12",
+      "living_map": "MAP_JOURNEY_LIVING_12",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_MAN"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 14,
+      "city": "Five Island",
+      "house": "FiveIsland_House1",
+      "original_map": "MAP_FIVE_ISLAND_HOUSE1",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_13",
+      "living_map": "MAP_JOURNEY_LIVING_13",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_WOMAN_3"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 15,
+      "city": "Six Island",
+      "house": "SixIsland_House",
+      "original_map": "MAP_SIX_ISLAND_HOUSE",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_14",
+      "living_map": "MAP_JOURNEY_LIVING_14",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_OLD_MAN_1"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 16,
+      "city": "Seven Island",
+      "house": "SevenIsland_House_Room1",
+      "original_map": "MAP_SEVEN_ISLAND_HOUSE_ROOM1",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_15",
+      "living_map": "MAP_JOURNEY_LIVING_15",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_OLD_WOMAN"
+      ],
+      "roles": [
+        1
+      ]
+    }
+  ],
+  "excluded": {
+    "LavenderTown_VolunteerPokemonHouse": "Mr. Fuji e progressão de Pokémon Tower/Poké Flute.",
+    "FuchsiaCity_WardensHouse": "Warden, Gold Teeth e recompensa vinculada à progressão original.",
+    "PalletTown_RivalsHouse": "Daisy, mapa e eventos do rival.",
+    "SaffronCity_CopycatsHouse_1F": "Mantida a família da Copycat e seus eventos nos dois andares.",
+    "SaffronCity_CopycatsHouse_2F": "Mantida a família da Copycat e seus eventos nos dois andares.",
+    "CinnabarIsland": "Sem casa residencial elegível; laboratório e mansion são locais de história.",
+    "IndigoPlateau": "Sem residência elegível.",
+    "CeladonCity_Condominiums_1F": "Tea necessário para abrir os portões de Saffron.",
+    "CeruleanCity_House2": "Evento de Team Rocket e progressão para a Route 5.",
+    "FourIsland_LoreleisHouse": "Lorelei e eventos de Icefall Cave.",
+    "TwoIsland_GameCorner": "Pai de Lostelle e missão de Bill/Celio.",
+    "ThreeIsland_House1": "Família de Lostelle e missão de resgate."
+  },
+  "overlay_hashes": {
+    "build.py": "0c8c9b595794399914876824ec00fe446412b6f11386844f0a942d7fc7582296",
+    "events.inc": "4eda426a33b780ae38721fd483e59db92968addb3595253527d691c717a0f399",
+    "homes.json": "2e1efb76723374892aa93e38baeb85283d9af31c41283560bcaeeafe3f549c00",
+    "journey.c": "8b24dcb54f70989eb138ef7054391fce31aa4a8fe3d6d77d312c229ab3e34f9e",
+    "journey.h": "740b6790ac994e0967f648a8062016b821b294847f25fa4d1aff2aa9910caeb0",
+    "prepare.py": "466009cf50423207e35323695be5b49f5a1b5089352eb87cab4aef36fbac41fe",
+    "test_journey.py": "b3513d773ae71c02853bcde30a061e4586558c4ff258a3efcc103ef761110b4c",
+    "validate_emulator.py": "5d88433203ea2a8cd2cd43410a6120063feec5116016dd762baf0606c7b95940"
+  }
+}
