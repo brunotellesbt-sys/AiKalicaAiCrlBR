@@ -6,6 +6,7 @@
 #define VAR_JOURNEY_STAGE 0x40CE
 #define FLAG_JOURNEY_HIDE_VISITOR 0x8E0
 #define FLAG_JOURNEY_STARTER_RECEIVED 0x8E1
+#define FLAG_JOURNEY_EARLY_FERRY 0x8E3
 struct MapHeader;
 const struct MapHeader *JourneyHomeHeader(u16 group, u16 number);
 void JourneyChooseHome(void);

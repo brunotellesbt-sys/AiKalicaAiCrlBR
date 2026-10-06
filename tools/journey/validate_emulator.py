@@ -75,14 +75,14 @@ for _ in range(12):step(10,8);step(120)
 lib.write8(save()+0x3a4c,255);lib.write8(lib.read32(s['gSaveBlock2Ptr']),255)
 lib.write32(s['gMain'],0);lib.write8(s['gMain']+0x438,0);lib.write32(s['gMain']+4,s['CB2_NewGame']|1)
 step(300);tap(1);screenshot('city-selection')
-tap(16);tap(128);tap(1)
+tap(128);tap(128);tap(1)
 for _ in range(5):tap(1)
 step(900)
 assert var(0x40cb)==5
 home=ref['homes'][var(0x40cc)-1]
 assert location()==map_id('JourneyBedroom'+str(home['index']-1).zfill(2))
 screenshot('born-in-bedroom')
-record('real-city-menu-and-random-birth',city=home['city'],house=home['house'])
+record('real-city-menu-and-fixed-birth',city=home['city'],house=home['house'])
 # Walk to the original bedroom staircase and use its directional warp.
 step(64,16);step(20);step(80,64);step(900);step(8,32);step(900)
 assert location()==map_id(home['house'])
@@ -140,6 +140,12 @@ for home in ref['homes'][1:]:
         script(special('JourneyGiveGift')+b'\x6b\x02',30)
     assert var(0x40cd)&3==3
     record('house-bedroom-family-and-gifts',house=home['house'],people=home['people'])
+    setvar(0x40ce,2)
+    warp(home['house'],4,7);step(28,128);step(900)
+    outside_name=home['house'].split('_')[0]
+    assert location()==map_id(outside_name),(home['house'],location(),outside_name)
+    record('fixed-home-front-door-to-settlement',house=home['house'],outside=outside_name)
+
 # Give all starter choices and verify species, level and rival's canonical starter variable.
 for choice,expected,starter_var in [(0,1,0),(1,4,2),(2,7,1)]:
     setflag(0x8e1,False);lib.write8(s['gPlayerPartyCount'],0);lib.write8(save()+0x34,0)
@@ -172,16 +178,70 @@ tap(64);tap(1);drain();step(300)
 assert position()[1]<y+1,(position(),x,y)
 screenshot('waterfall-without-badges')
 record('waterfall-usable-without-badges',from_y=y+1,to_y=position()[1])
-# Random home selections stay inside the curated city whitelist and persist across warps.
-for city in range(9):
-    eligible={h['index'] for h in ref['homes'] if h['city']==json.loads((ROOT/'tools/journey/homes.json').read_text())['cities'][city]['name']}
-    seen=set()
-    for _ in range(50):
+# Real ferry menus/animations must connect every island to Kanto before the
+# League or Celio quests. No pass, ticket, badge or quest-completion flag is granted.
+assert flag(0x8e3) and not flag(0x82c) and not flag(0x234)
+assert var(0x4076)==0 and var(0x407e)==0
+islands=['One','Two','Three','Four','Five','Six','Seven']
+for number,name in enumerate(islands,1):
+    warp(name+'Island_Harbor',5,4)
+    lib.write16(s['gSpecialVar_0x8004'],number)
+    entry='EventScript_ChooseDestFrom'+('OneIsland' if number==1 else 'TwoIsland' if number==2 else 'Island')
+    script(b'\x05'+struct.pack('<I',s[entry]),90)
+    tap(1);drain();step(900)
+    assert location()==map_id('VermilionCity'),(name,location())
+    assert var(0x4076)==0 and var(0x407e)==0 and not flag(0x82c)
+    record('early-ferry-island-to-kanto',island=name)
+# The physical pier offers a ferry without a ticket, but still admits ticket
+# holders through the original SS Anne check rather than intercepting them.
+warp('VermilionCity',23,32);lib.write16(s['gSpecialVar_Result'],0)
+step(20,128);step(120)
+for _ in range(10):
+    if lib.read16(s['gSpecialVar_Result'])==255:break
+    tap(1)
+assert lib.read16(s['gSpecialVar_Result'])==255
+tap(2);step(300)
+assert position()[1]==32 and var(0x4053)==0
+record('physical-pier-ferry-without-ss-ticket')
+setflag(0x234,True);warp('VermilionCity',23,32)
+step(20,128);step(120);drain()
+assert var(0x4053)==1
+setflag(0x234,False);setvar(0x4053,0)
+record('ss-ticket-preserves-original-boarding-check')
+# Talk to the actual Vermilion sailor, including navigating to the second page.
+warp('VermilionCity',24,32)
+lib.write16(s['gSpecialVar_Result'],0)
+tap(128);tap(1)
+for _ in range(10):
+    if lib.read16(s['gSpecialVar_Result'])==255:break
+    tap(1)
+assert lib.read16(s['gSpecialVar_Result'])==255
+screenshot('early-ferry-menu-from-kanto')
+for _ in range(4):tap(128)
+tap(1);tap(128);tap(128);tap(1);drain();step(900)
+assert location()==map_id('SevenIsland_Harbor'),location()
+screenshot('early-ferry-to-seven-island')
+record('early-ferry-kanto-to-postgame-island')
+assert var(0x4076)==0 and var(0x407e)==0 and not flag(0x82c) and not flag(0x234)
+record('ferry-preserves-celio-league-and-ssanne-story')
+# The last option must be reachable through the actual 16-entry city grid.
+lib.write16(s['gSpecialVar_Result'],0)
+script(b'\x05'+struct.pack('<I',s['Journey_ChooseCity']),90)
+for _ in range(10):
+    if lib.read16(s['gSpecialVar_Result'])==255:break
+    tap(1)
+assert lib.read16(s['gSpecialVar_Result'])==255
+for _ in range(7):tap(128)
+tap(16);screenshot('city-selection-seven-island');tap(1);drain();step(900)
+assert var(0x40cb)==16 and var(0x40cc)==16 and location()==map_id('JourneyBedroom15')
+record('real-city-menu-last-island-birth')
+# Every menu entry maps to one fixed home on every selection.
+for city in range(16):
+    for _ in range(5):
         lib.write16(s['gSpecialVar_Result'],city)
         script(special('JourneyChooseHome')+b'\x6b\x02',5)
-        selected=var(0x40cc);assert selected in eligible;seen.add(selected)
-    assert seen==eligible,(city,seen,eligible)
-    record('city-randomization-covers-eligible-houses',city=city,houses=sorted(seen))
+        assert var(0x40cc)==city+1 and var(0x40cb)==city+1
+    record('city-always-selects-one-fixed-house',city=city,home=city+1)
 lib.stop()
 (args.output/'results.json').write_text(json.dumps(results,indent=2)+'\n')
 print(f'{len(results)} mGBA checks passed')

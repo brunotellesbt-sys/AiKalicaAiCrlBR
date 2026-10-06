@@ -33,9 +33,11 @@ class JourneyTests(unittest.TestCase):
     def test_curated_house_whitelist_and_progression_exclusions(self):
         homes=[h['house'] for h in self.manifest['homes']]
         self.assertEqual(homes,[house for city in self.config['cities'] for house in city['houses']])
-        self.assertEqual(len(homes),19)
+        self.assertEqual(len(homes),16)
+        self.assertTrue(all(len(c['houses'])==1 for c in self.config['cities']))
+        self.assertEqual([h['index'] for h in self.manifest['homes']],list(range(1,17)))
         self.assertTrue(set(homes).isdisjoint(self.config['excluded']))
-        self.assertEqual(len({h['city'] for h in self.manifest['homes']}),9)
+        self.assertEqual(len({h['city'] for h in self.manifest['homes']}),16)
         self.assertTrue(all(1<=h['people']<=3 and h['roles'][0]==1 for h in self.manifest['homes']))
 
     def test_original_map_ids_and_non_home_headers_stay_available(self):

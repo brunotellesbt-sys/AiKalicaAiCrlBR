@@ -2,7 +2,7 @@ Journey_ChooseCity::
 	lockall
 	msgbox Journey_Text_ChooseCity
 	closemessage
-	multichoicegrid 0, 0, MULTICHOICE_JOURNEY_CITIES, 3, TRUE
+	multichoicegrid 0, 0, MULTICHOICE_JOURNEY_CITIES, 2, TRUE
 	special JourneyChooseHome
 	goto_if_eq VAR_RESULT, 0, Journey_KeepPallet
 	msgbox Journey_Text_NewHome
@@ -117,7 +117,7 @@ Journey_MoveAwayFromDoor::
 Journey_Text_ChooseCity:
 	.string "Escolha a cidade onde sua\njornada vai começar.$"
 Journey_Text_NewHome:
-	.string "Sua casa foi sorteada.\nVamos ao seu quarto!$"
+	.string "Sua casa está pronta.\nVamos ao seu quarto!$"
 Journey_Text_Mother:
 	.string "Sou sua mae! Para sua viagem,\ntenho um presente para você.$"
 Journey_Text_Father:
@@ -146,3 +146,11 @@ Journey_Text_Case:
 	.string "Uma maleta com três POKéMON.\nFale com o professor OAK.$"
 Journey_Text_NeedStarter:
 	.string "Antes de sair, fale com OAK.\nVocê precisa de um parceiro!$"
+
+Journey_FerryFromVermilion::
+	setvar VAR_0x8004, SEAGALLOP_VERMILION_CITY
+	msgbox Journey_Text_EarlyFerry, MSGBOX_DEFAULT
+	goto EventScript_SeviiDestinationsPage1
+
+Journey_Text_EarlyFerry:
+	.string "Os barcos ligam Kanto às ilhas.\nPara onde você quer viajar?$"

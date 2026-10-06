@@ -1,16 +1,16 @@
 {
   "source_commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
   "original_sha256": "2f978f635b9593f6ca26ec42481c53a6b39f6cddd894ad5c062c1419fac58825",
-  "intermediate_sha256": "e3e521489d716ce60fe8263fab2b358ec29b988f1558bf5ba5d07065fc855edb",
-  "target_sha256": "b6cad5304694489fc91a33d0b46a2c8464e7a719b62a03248cedbca6e5f3a3d6",
-  "patch_sha256": "87b218baba27da74d9c407da84625b6e1f1f7bac11e5191b0480fe8a7fda869f",
+  "intermediate_sha256": "82e9f514acaf4d363c10d93659f358edc0d10c080d2b9b0876e10ae1a25b0d8a",
+  "target_sha256": "f72e7f804f8a0948d1d631f15677ebf642089a75c7fce7de83ad2d5edff6a129",
+  "patch_sha256": "be1e8a910dd401fae3fa80021886b68f06649d1f87e0181af05c37a51035af3e",
   "size": 16777216,
   "terrestrial_hm_changes": {
-    "source_sha256": "e3e521489d716ce60fe8263fab2b358ec29b988f1558bf5ba5d07065fc855edb",
-    "target_sha256": "b6cad5304694489fc91a33d0b46a2c8464e7a719b62a03248cedbca6e5f3a3d6",
+    "source_sha256": "82e9f514acaf4d363c10d93659f358edc0d10c080d2b9b0876e10ae1a25b0d8a",
+    "target_sha256": "f72e7f804f8a0948d1d631f15677ebf642089a75c7fce7de83ad2d5edff6a129",
     "size": 16777216,
     "changed_bytes": 3231,
-    "maps_scanned": 461,
+    "maps_scanned": 455,
     "layouts_scanned": 364,
     "counts": {
       "strength_boulder": 58,
@@ -606,28 +606,11 @@
     },
     {
       "index": 4,
-      "city": "Pewter",
-      "house": "PewterCity_House2",
-      "original_map": "MAP_PEWTER_CITY_HOUSE2",
-      "bedroom_map": "MAP_JOURNEY_BEDROOM_03",
-      "living_map": "MAP_JOURNEY_LIVING_03",
-      "people": 2,
-      "original_people": [
-        "OBJ_EVENT_GFX_OLD_MAN_1",
-        "OBJ_EVENT_GFX_LITTLE_BOY"
-      ],
-      "roles": [
-        1,
-        3
-      ]
-    },
-    {
-      "index": 5,
       "city": "Cerulean",
       "house": "CeruleanCity_House1",
       "original_map": "MAP_CERULEAN_CITY_HOUSE1",
-      "bedroom_map": "MAP_JOURNEY_BEDROOM_04",
-      "living_map": "MAP_JOURNEY_LIVING_04",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_03",
+      "living_map": "MAP_JOURNEY_LIVING_03",
       "people": 1,
       "original_people": [
         "OBJ_EVENT_GFX_GENTLEMAN"
@@ -637,89 +620,12 @@
       ]
     },
     {
-      "index": 6,
-      "city": "Cerulean",
-      "house": "CeruleanCity_House3",
-      "original_map": "MAP_CERULEAN_CITY_HOUSE3",
-      "bedroom_map": "MAP_JOURNEY_BEDROOM_05",
-      "living_map": "MAP_JOURNEY_LIVING_05",
-      "people": 2,
-      "original_people": [
-        "OBJ_EVENT_GFX_OLD_WOMAN",
-        "OBJ_EVENT_GFX_OLD_MAN_1"
-      ],
-      "roles": [
-        1,
-        2
-      ]
-    },
-    {
-      "index": 7,
-      "city": "Cerulean",
-      "house": "CeruleanCity_House4",
-      "original_map": "MAP_CERULEAN_CITY_HOUSE4",
-      "bedroom_map": "MAP_JOURNEY_BEDROOM_06",
-      "living_map": "MAP_JOURNEY_LIVING_06",
-      "people": 1,
-      "original_people": [
-        "OBJ_EVENT_GFX_OLD_MAN_1"
-      ],
-      "roles": [
-        1
-      ]
-    },
-    {
-      "index": 8,
-      "city": "Cerulean",
-      "house": "CeruleanCity_House5",
-      "original_map": "MAP_CERULEAN_CITY_HOUSE5",
-      "bedroom_map": "MAP_JOURNEY_BEDROOM_07",
-      "living_map": "MAP_JOURNEY_LIVING_07",
-      "people": 1,
-      "original_people": [
-        "OBJ_EVENT_GFX_OLD_MAN_2"
-      ],
-      "roles": [
-        1
-      ]
-    },
-    {
-      "index": 9,
-      "city": "Vermilion",
-      "house": "VermilionCity_House1",
-      "original_map": "MAP_VERMILION_CITY_HOUSE1",
-      "bedroom_map": "MAP_JOURNEY_BEDROOM_08",
-      "living_map": "MAP_JOURNEY_LIVING_08",
-      "people": 1,
-      "original_people": [
-        "OBJ_EVENT_GFX_FISHER"
-      ],
-      "roles": [
-        1
-      ]
-    },
-    {
-      "index": 10,
-      "city": "Vermilion",
-      "house": "VermilionCity_House2",
-      "original_map": "MAP_VERMILION_CITY_HOUSE2",
-      "bedroom_map": "MAP_JOURNEY_BEDROOM_09",
-      "living_map": "MAP_JOURNEY_LIVING_09",
-      "people": 1,
-      "original_people": [
-        "OBJ_EVENT_GFX_LITTLE_GIRL"
-      ],
-      "roles": [
-        1
-      ]
-    },
-    {
-      "index": 11,
+      "index": 5,
       "city": "Vermilion",
       "house": "VermilionCity_House3",
       "original_map": "MAP_VERMILION_CITY_HOUSE3",
-      "bedroom_map": "MAP_JOURNEY_BEDROOM_10",
-      "living_map": "MAP_JOURNEY_LIVING_10",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_04",
+      "living_map": "MAP_JOURNEY_LIVING_04",
       "people": 2,
       "original_people": [
         "OBJ_EVENT_GFX_LASS",
@@ -731,27 +637,12 @@
       ]
     },
     {
-      "index": 12,
-      "city": "Lavender",
-      "house": "LavenderTown_House1",
-      "original_map": "MAP_LAVENDER_TOWN_HOUSE1",
-      "bedroom_map": "MAP_JOURNEY_BEDROOM_11",
-      "living_map": "MAP_JOURNEY_LIVING_11",
-      "people": 1,
-      "original_people": [
-        "OBJ_EVENT_GFX_COOLTRAINER_F"
-      ],
-      "roles": [
-        1
-      ]
-    },
-    {
-      "index": 13,
+      "index": 6,
       "city": "Lavender",
       "house": "LavenderTown_House2",
       "original_map": "MAP_LAVENDER_TOWN_HOUSE2",
-      "bedroom_map": "MAP_JOURNEY_BEDROOM_12",
-      "living_map": "MAP_JOURNEY_LIVING_12",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_05",
+      "living_map": "MAP_JOURNEY_LIVING_05",
       "people": 1,
       "original_people": [
         "OBJ_EVENT_GFX_GENTLEMAN"
@@ -761,12 +652,12 @@
       ]
     },
     {
-      "index": 14,
+      "index": 7,
       "city": "Celadon",
       "house": "CeladonCity_House1",
       "original_map": "MAP_CELADON_CITY_HOUSE1",
-      "bedroom_map": "MAP_JOURNEY_BEDROOM_13",
-      "living_map": "MAP_JOURNEY_LIVING_13",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_06",
+      "living_map": "MAP_JOURNEY_LIVING_06",
       "people": 3,
       "original_people": [
         "OBJ_EVENT_GFX_OLD_MAN_2",
@@ -780,12 +671,12 @@
       ]
     },
     {
-      "index": 15,
+      "index": 8,
       "city": "Fuchsia",
       "house": "FuchsiaCity_House1",
       "original_map": "MAP_FUCHSIA_CITY_HOUSE1",
-      "bedroom_map": "MAP_JOURNEY_BEDROOM_14",
-      "living_map": "MAP_JOURNEY_LIVING_14",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_07",
+      "living_map": "MAP_JOURNEY_LIVING_07",
       "people": 3,
       "original_people": [
         "OBJ_EVENT_GFX_WOMAN_2",
@@ -799,42 +690,12 @@
       ]
     },
     {
-      "index": 16,
-      "city": "Fuchsia",
-      "house": "FuchsiaCity_House2",
-      "original_map": "MAP_FUCHSIA_CITY_HOUSE2",
-      "bedroom_map": "MAP_JOURNEY_BEDROOM_15",
-      "living_map": "MAP_JOURNEY_LIVING_15",
-      "people": 1,
-      "original_people": [
-        "OBJ_EVENT_GFX_FISHER"
-      ],
-      "roles": [
-        1
-      ]
-    },
-    {
-      "index": 17,
-      "city": "Fuchsia",
-      "house": "FuchsiaCity_House3",
-      "original_map": "MAP_FUCHSIA_CITY_HOUSE3",
-      "bedroom_map": "MAP_JOURNEY_BEDROOM_16",
-      "living_map": "MAP_JOURNEY_LIVING_16",
-      "people": 1,
-      "original_people": [
-        "OBJ_EVENT_GFX_BALDING_MAN"
-      ],
-      "roles": [
-        1
-      ]
-    },
-    {
-      "index": 18,
+      "index": 9,
       "city": "Saffron",
       "house": "SaffronCity_House",
       "original_map": "MAP_SAFFRON_CITY_HOUSE",
-      "bedroom_map": "MAP_JOURNEY_BEDROOM_17",
-      "living_map": "MAP_JOURNEY_LIVING_17",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_08",
+      "living_map": "MAP_JOURNEY_LIVING_08",
       "people": 2,
       "original_people": [
         "OBJ_EVENT_GFX_LASS",
@@ -846,15 +707,107 @@
       ]
     },
     {
-      "index": 19,
-      "city": "Saffron",
-      "house": "SaffronCity_MrPsychicsHouse",
-      "original_map": "MAP_SAFFRON_CITY_MR_PSYCHICS_HOUSE",
-      "bedroom_map": "MAP_JOURNEY_BEDROOM_18",
-      "living_map": "MAP_JOURNEY_LIVING_18",
+      "index": 10,
+      "city": "One Island",
+      "house": "OneIsland_House1",
+      "original_map": "MAP_ONE_ISLAND_HOUSE1",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_09",
+      "living_map": "MAP_JOURNEY_LIVING_09",
+      "people": 2,
+      "original_people": [
+        "OBJ_EVENT_GFX_OLD_WOMAN",
+        "OBJ_EVENT_GFX_OLD_MAN_1"
+      ],
+      "roles": [
+        1,
+        2
+      ]
+    },
+    {
+      "index": 11,
+      "city": "Two Island",
+      "house": "TwoIsland_House",
+      "original_map": "MAP_TWO_ISLAND_HOUSE",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_10",
+      "living_map": "MAP_JOURNEY_LIVING_10",
       "people": 1,
       "original_people": [
-        "OBJ_EVENT_GFX_BALDING_MAN"
+        "OBJ_EVENT_GFX_FAT_MAN"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 12,
+      "city": "Three Island",
+      "house": "ThreeIsland_House3",
+      "original_map": "MAP_THREE_ISLAND_HOUSE3",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_11",
+      "living_map": "MAP_JOURNEY_LIVING_11",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_BEAUTY"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 13,
+      "city": "Four Island",
+      "house": "FourIsland_House2",
+      "original_map": "MAP_FOUR_ISLAND_HOUSE2",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_12",
+      "living_map": "MAP_JOURNEY_LIVING_12",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_MAN"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 14,
+      "city": "Five Island",
+      "house": "FiveIsland_House1",
+      "original_map": "MAP_FIVE_ISLAND_HOUSE1",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_13",
+      "living_map": "MAP_JOURNEY_LIVING_13",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_WOMAN_3"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 15,
+      "city": "Six Island",
+      "house": "SixIsland_House",
+      "original_map": "MAP_SIX_ISLAND_HOUSE",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_14",
+      "living_map": "MAP_JOURNEY_LIVING_14",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_OLD_MAN_1"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 16,
+      "city": "Seven Island",
+      "house": "SevenIsland_House_Room1",
+      "original_map": "MAP_SEVEN_ISLAND_HOUSE_ROOM1",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_15",
+      "living_map": "MAP_JOURNEY_LIVING_15",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_OLD_WOMAN"
       ],
       "roles": [
         1
@@ -870,16 +823,19 @@
     "CinnabarIsland": "Sem casa residencial elegível; laboratório e mansion são locais de história.",
     "IndigoPlateau": "Sem residência elegível.",
     "CeladonCity_Condominiums_1F": "Tea necessário para abrir os portões de Saffron.",
-    "CeruleanCity_House2": "Evento de Team Rocket e progressão para a Route 5."
+    "CeruleanCity_House2": "Evento de Team Rocket e progressão para a Route 5.",
+    "FourIsland_LoreleisHouse": "Lorelei e eventos de Icefall Cave.",
+    "TwoIsland_GameCorner": "Pai de Lostelle e missão de Bill/Celio.",
+    "ThreeIsland_House1": "Família de Lostelle e missão de resgate."
   },
   "overlay_hashes": {
-    "build.py": "38177e85c449861cab4cd22e6f0eb71e5c0024dbf1da4a093c4282617a9e0cb4",
-    "events.inc": "e08046dadce7f40d482bdbf81ca298ee7ef060cd2cf53f751544fb5f68f40c7b",
-    "homes.json": "937b9342ffa143a68e698aef731d3bb39846b8f0e39b121be4674eff30138bf5",
-    "journey.c": "a7e0b452367bd31348b5b1c4ec4a7b510aa8f277cfda3f5c441dc377f2710a0b",
-    "journey.h": "653a6609afcf26f1b453d61e3750ed9c0b63fc971833fb50d94e990430658fe5",
-    "prepare.py": "c5e09a71a182e0ad8a2fd9db7527975e8ce1c5c6f2247331e3e67f7d781b356a",
-    "test_journey.py": "de21e367294e6b8b731dbde6dff81dd00d79c821eeabdf3e61044acdef823cc6",
-    "validate_emulator.py": "3e32722a4d9b820b3d492d8d2cef347e6241ad7bdcfaa70740aeeeeed25f8d67"
+    "build.py": "0c8c9b595794399914876824ec00fe446412b6f11386844f0a942d7fc7582296",
+    "events.inc": "4eda426a33b780ae38721fd483e59db92968addb3595253527d691c717a0f399",
+    "homes.json": "2e1efb76723374892aa93e38baeb85283d9af31c41283560bcaeeafe3f549c00",
+    "journey.c": "8b24dcb54f70989eb138ef7054391fce31aa4a8fe3d6d77d312c229ab3e34f9e",
+    "journey.h": "740b6790ac994e0967f648a8062016b821b294847f25fa4d1aff2aa9910caeb0",
+    "prepare.py": "466009cf50423207e35323695be5b49f5a1b5089352eb87cab4aef36fbac41fe",
+    "test_journey.py": "b3513d773ae71c02853bcde30a061e4586558c4ff258a3efcc103ef761110b4c",
+    "validate_emulator.py": "5d88433203ea2a8cd2cd43410a6120063feec5116016dd762baf0606c7b95940"
   }
 }

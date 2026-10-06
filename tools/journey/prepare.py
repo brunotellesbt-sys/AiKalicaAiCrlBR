@@ -52,10 +52,23 @@ def prepare(source):
     replace('data/maps/PalletTown_PlayersHouse_1F/scripts.inc','PalletTown_PlayersHouse_1F_EventScript_Mom::','PalletTown_PlayersHouse_1F_EventScript_Mom::\n\tgoto_if_eq VAR_JOURNEY_CITY, 1, Journey_Family\nPalletTown_PlayersHouse_1F_EventScript_MomOriginal::')
     replace('data/maps/PalletTown_PlayersHouse_1F/scripts.inc','applymovement LOCALID_MOM, Common_Movement_FaceOriginalDirection','applymovement VAR_LAST_TALKED, Common_Movement_FaceOriginalDirection')
     replace('include/constants/menu.h','#define MULTICHOICE_NONE', '#define MULTICHOICE_JOURNEY_CITIES 65\n#define MULTICHOICE_JOURNEY_STARTERS 66\n\n#define MULTICHOICE_NONE')
-    city_texts=''.join('static const u8 sJourneyCityText%d[] = _("%s");\n' % (i,c['name']) for i,c in enumerate(config['cities']))
+    city_texts=''.join('static const u8 sJourneyCityText%d[] = _("%s");\n' % (i,c.get('label',c['name'])) for i,c in enumerate(config['cities']))
     starter_texts=''.join('static const u8 sJourneyStarterText%d[] = _("%s");\n' % (i,n) for i,n in enumerate(['Bulbasaur','Charmander','Squirtle']))
-    lists=city_texts+starter_texts+'static const struct MenuAction sJourneyCities[] = {\n'+''.join('    {sJourneyCityText%d, NULL},\n' % i for i in range(9))+'};\nstatic const struct MenuAction sJourneyStarters[] = {\n'+''.join('    {sJourneyStarterText%d, NULL},\n' % i for i in range(3))+'};\n\n'
+    lists=city_texts+starter_texts+'static const struct MenuAction sJourneyCities[] = {\n'+''.join('    {sJourneyCityText%d, NULL},\n' % i for i in range(len(config['cities'])))+'};\nstatic const struct MenuAction sJourneyStarters[] = {\n'+''.join('    {sJourneyStarterText%d, NULL},\n' % i for i in range(3))+'};\n\n'
     replace('src/script_menu.c','static const struct MultichoiceListStruct sMultichoiceLists[] = {',lists+'static const struct MultichoiceListStruct sMultichoiceLists[] = {\n    [MULTICHOICE_JOURNEY_CITIES] = MULTICHOICE(sJourneyCities),\n    [MULTICHOICE_JOURNEY_STARTERS] = MULTICHOICE(sJourneyStarters),')
+    # Journey ferry access is independent of Celio/Lostelle/Liga completion.
+    for entry in ['ChooseDestFromOneIsland','ChooseDestFromTwoIsland','ChooseDestFromIsland']:
+        label='EventScript_'+entry+'::'
+        replace('data/scripts/seagallop.inc',label,label+'\n\tgoto_if_set FLAG_JOURNEY_EARLY_FERRY, EventScript_SeviiDestinationsPage1')
+    replace('data/maps/VermilionCity/scripts.inc',
+            'VermilionCity_EventScript_FerrySailor::\n\tlock\n\tfaceplayer',
+            'VermilionCity_EventScript_FerrySailor::\n\tlock\n\tfaceplayer\n\tgoto_if_set FLAG_JOURNEY_EARLY_FERRY, Journey_FerryFromVermilion')
+    replace('data/maps/VermilionCity/scripts.inc',
+            '\tgoto_if_eq VAR_MAP_SCENE_VERMILION_CITY, 3, VermilionCity_EventScript_CheckSeagallopPresentTrigger',
+            '\tgoto_if_set FLAG_GOT_SS_TICKET, Journey_CheckTicketNormal\n\tgoto_if_set FLAG_JOURNEY_EARLY_FERRY, Journey_FerryFromVermilion\nJourney_CheckTicketNormal::\n\tgoto_if_eq VAR_MAP_SCENE_VERMILION_CITY, 3, VermilionCity_EventScript_CheckSeagallopPresentTrigger')
+    for entry in ['CheckSeagallopPresent','CheckSeagallopPresentTrigger']:
+        label='VermilionCity_EventScript_'+entry+'::\n\tsetvar VAR_0x8004, SEAGALLOP_VERMILION_CITY'
+        replace('data/maps/VermilionCity/scripts.inc',label,label+'\n\tgoto_if_set FLAG_JOURNEY_EARLY_FERRY, EventScript_SeviiDestinationsPage1')
     # A small original suitcase sprite, using the game's white NPC palette.
     pixels=[[0]*16 for _ in range(16)]
     for y in range(5,14):
@@ -85,6 +98,7 @@ def prepare(source):
     rows=[];report=[]
     non_people={'OBJ_EVENT_GFX_NIDORAN_M','OBJ_EVENT_GFX_CUBONE','OBJ_EVENT_GFX_PIDGEY','OBJ_EVENT_GFX_SPEAROW','OBJ_EVENT_GFX_CLIPBOARD'}
     for city,c in enumerate(config['cities']):
+        if len(c['houses']) != 1: raise ValueError('Each city must have exactly one fixed home')
         for name in c['houses']:
             original=load_map(name)
             people=[o for o in original['object_events'] if o['graphics_id'] not in non_people]
@@ -115,7 +129,7 @@ def prepare(source):
                 obj=copy.deepcopy(base_object);obj.update(graphics_id=gfx,x=x,y=y,script=script,flag='FLAG_JOURNEY_HIDE_VISITOR',movement_type='MOVEMENT_TYPE_FACE_DOWN')
                 obj.pop('local_id',None)
                 out['object_events'].append(obj)
-            exit_warp=next(w for w in original['warp_events'] if 'CITY' in w['dest_map'] or 'TOWN' in w['dest_map'])
+            exit_warp=next(w for w in original['warp_events'] if w['dest_map'] == c['outside'])
             for w in out['warp_events']:
                 if w['dest_map']=='MAP_PALLET_TOWN':w.update(dest_map=exit_warp['dest_map'],dest_warp_id=exit_warp['dest_warp_id'])
                 else:w.update(dest_map=bid,dest_warp_id='0')

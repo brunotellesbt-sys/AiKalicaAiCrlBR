@@ -4,7 +4,6 @@
 #include "overworld.h"
 #include "field_fadetransition.h"
 #include "save_location.h"
-#include "random.h"
 #include "item.h"
 #include "string_util.h"
 #include "script_pokemon_util.h"
@@ -56,15 +55,12 @@ const struct MapHeader *JourneyHomeHeader(u16 group, u16 number)
 void JourneyChooseHome(void)
 {
     u16 city = gSpecialVar_Result;
-    u16 first = 0, count = 0, i;
-    if (city >= 9)
+    // Exactly one curated home per city, in the same order as the city menu.
+    u16 i;
+    if (city >= ARRAY_COUNT(sJourneyHomes))
         city = 0;
-    for (i = 0; i < ARRAY_COUNT(sJourneyHomes); i++)
-        if (sJourneyHomes[i].city == city) {
-            if (count == 0) first = i;
-            count++;
-        }
-    i = first + Random() % count;
+    i = city;
+    FlagSet(FLAG_JOURNEY_EARLY_FERRY);
     VarSet(VAR_JOURNEY_CITY, city + 1);
     VarSet(VAR_JOURNEY_HOME, i + 1);
     VarSet(VAR_JOURNEY_STAGE, city == 0 ? 2 : 1);

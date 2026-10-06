@@ -1,6 +1,6 @@
 [
   {
-    "check": "real-city-menu-and-random-birth",
+    "check": "real-city-menu-and-fixed-birth",
     "passed": true,
     "city": "Vermilion",
     "house": "VermilionCity_House3"
@@ -45,16 +45,22 @@
     "people": 2
   },
   {
+    "check": "fixed-home-front-door-to-settlement",
+    "passed": true,
+    "house": "ViridianCity_House",
+    "outside": "ViridianCity"
+  },
+  {
     "check": "house-bedroom-family-and-gifts",
     "passed": true,
     "house": "PewterCity_House1",
     "people": 2
   },
   {
-    "check": "house-bedroom-family-and-gifts",
+    "check": "fixed-home-front-door-to-settlement",
     "passed": true,
-    "house": "PewterCity_House2",
-    "people": 2
+    "house": "PewterCity_House1",
+    "outside": "PewterCity"
   },
   {
     "check": "house-bedroom-family-and-gifts",
@@ -63,34 +69,10 @@
     "people": 1
   },
   {
-    "check": "house-bedroom-family-and-gifts",
+    "check": "fixed-home-front-door-to-settlement",
     "passed": true,
-    "house": "CeruleanCity_House3",
-    "people": 2
-  },
-  {
-    "check": "house-bedroom-family-and-gifts",
-    "passed": true,
-    "house": "CeruleanCity_House4",
-    "people": 1
-  },
-  {
-    "check": "house-bedroom-family-and-gifts",
-    "passed": true,
-    "house": "CeruleanCity_House5",
-    "people": 1
-  },
-  {
-    "check": "house-bedroom-family-and-gifts",
-    "passed": true,
-    "house": "VermilionCity_House1",
-    "people": 1
-  },
-  {
-    "check": "house-bedroom-family-and-gifts",
-    "passed": true,
-    "house": "VermilionCity_House2",
-    "people": 1
+    "house": "CeruleanCity_House1",
+    "outside": "CeruleanCity"
   },
   {
     "check": "house-bedroom-family-and-gifts",
@@ -99,10 +81,10 @@
     "people": 2
   },
   {
-    "check": "house-bedroom-family-and-gifts",
+    "check": "fixed-home-front-door-to-settlement",
     "passed": true,
-    "house": "LavenderTown_House1",
-    "people": 1
+    "house": "VermilionCity_House3",
+    "outside": "VermilionCity"
   },
   {
     "check": "house-bedroom-family-and-gifts",
@@ -111,10 +93,22 @@
     "people": 1
   },
   {
+    "check": "fixed-home-front-door-to-settlement",
+    "passed": true,
+    "house": "LavenderTown_House2",
+    "outside": "LavenderTown"
+  },
+  {
     "check": "house-bedroom-family-and-gifts",
     "passed": true,
     "house": "CeladonCity_House1",
     "people": 3
+  },
+  {
+    "check": "fixed-home-front-door-to-settlement",
+    "passed": true,
+    "house": "CeladonCity_House1",
+    "outside": "CeladonCity"
   },
   {
     "check": "house-bedroom-family-and-gifts",
@@ -123,16 +117,10 @@
     "people": 3
   },
   {
-    "check": "house-bedroom-family-and-gifts",
+    "check": "fixed-home-front-door-to-settlement",
     "passed": true,
-    "house": "FuchsiaCity_House2",
-    "people": 1
-  },
-  {
-    "check": "house-bedroom-family-and-gifts",
-    "passed": true,
-    "house": "FuchsiaCity_House3",
-    "people": 1
+    "house": "FuchsiaCity_House1",
+    "outside": "FuchsiaCity"
   },
   {
     "check": "house-bedroom-family-and-gifts",
@@ -141,10 +129,94 @@
     "people": 2
   },
   {
+    "check": "fixed-home-front-door-to-settlement",
+    "passed": true,
+    "house": "SaffronCity_House",
+    "outside": "SaffronCity"
+  },
+  {
     "check": "house-bedroom-family-and-gifts",
     "passed": true,
-    "house": "SaffronCity_MrPsychicsHouse",
+    "house": "OneIsland_House1",
+    "people": 2
+  },
+  {
+    "check": "fixed-home-front-door-to-settlement",
+    "passed": true,
+    "house": "OneIsland_House1",
+    "outside": "OneIsland"
+  },
+  {
+    "check": "house-bedroom-family-and-gifts",
+    "passed": true,
+    "house": "TwoIsland_House",
     "people": 1
+  },
+  {
+    "check": "fixed-home-front-door-to-settlement",
+    "passed": true,
+    "house": "TwoIsland_House",
+    "outside": "TwoIsland"
+  },
+  {
+    "check": "house-bedroom-family-and-gifts",
+    "passed": true,
+    "house": "ThreeIsland_House3",
+    "people": 1
+  },
+  {
+    "check": "fixed-home-front-door-to-settlement",
+    "passed": true,
+    "house": "ThreeIsland_House3",
+    "outside": "ThreeIsland"
+  },
+  {
+    "check": "house-bedroom-family-and-gifts",
+    "passed": true,
+    "house": "FourIsland_House2",
+    "people": 1
+  },
+  {
+    "check": "fixed-home-front-door-to-settlement",
+    "passed": true,
+    "house": "FourIsland_House2",
+    "outside": "FourIsland"
+  },
+  {
+    "check": "house-bedroom-family-and-gifts",
+    "passed": true,
+    "house": "FiveIsland_House1",
+    "people": 1
+  },
+  {
+    "check": "fixed-home-front-door-to-settlement",
+    "passed": true,
+    "house": "FiveIsland_House1",
+    "outside": "FiveIsland"
+  },
+  {
+    "check": "house-bedroom-family-and-gifts",
+    "passed": true,
+    "house": "SixIsland_House",
+    "people": 1
+  },
+  {
+    "check": "fixed-home-front-door-to-settlement",
+    "passed": true,
+    "house": "SixIsland_House",
+    "outside": "SixIsland"
+  },
+  {
+    "check": "house-bedroom-family-and-gifts",
+    "passed": true,
+    "house": "SevenIsland_House_Room1",
+    "people": 1
+  },
+  {
+    "check": "fixed-home-front-door-to-settlement",
+    "passed": true,
+    "house": "SevenIsland_House_Room1",
+    "outside": "SevenIsland"
   },
   {
     "check": "starter-choice",
@@ -175,85 +247,154 @@
     "to_y": 13
   },
   {
-    "check": "city-randomization-covers-eligible-houses",
+    "check": "early-ferry-island-to-kanto",
+    "passed": true,
+    "island": "One"
+  },
+  {
+    "check": "early-ferry-island-to-kanto",
+    "passed": true,
+    "island": "Two"
+  },
+  {
+    "check": "early-ferry-island-to-kanto",
+    "passed": true,
+    "island": "Three"
+  },
+  {
+    "check": "early-ferry-island-to-kanto",
+    "passed": true,
+    "island": "Four"
+  },
+  {
+    "check": "early-ferry-island-to-kanto",
+    "passed": true,
+    "island": "Five"
+  },
+  {
+    "check": "early-ferry-island-to-kanto",
+    "passed": true,
+    "island": "Six"
+  },
+  {
+    "check": "early-ferry-island-to-kanto",
+    "passed": true,
+    "island": "Seven"
+  },
+  {
+    "check": "physical-pier-ferry-without-ss-ticket",
+    "passed": true
+  },
+  {
+    "check": "ss-ticket-preserves-original-boarding-check",
+    "passed": true
+  },
+  {
+    "check": "early-ferry-kanto-to-postgame-island",
+    "passed": true
+  },
+  {
+    "check": "ferry-preserves-celio-league-and-ssanne-story",
+    "passed": true
+  },
+  {
+    "check": "real-city-menu-last-island-birth",
+    "passed": true
+  },
+  {
+    "check": "city-always-selects-one-fixed-house",
     "passed": true,
     "city": 0,
-    "houses": [
-      1
-    ]
+    "home": 1
   },
   {
-    "check": "city-randomization-covers-eligible-houses",
+    "check": "city-always-selects-one-fixed-house",
     "passed": true,
     "city": 1,
-    "houses": [
-      2
-    ]
+    "home": 2
   },
   {
-    "check": "city-randomization-covers-eligible-houses",
+    "check": "city-always-selects-one-fixed-house",
     "passed": true,
     "city": 2,
-    "houses": [
-      3,
-      4
-    ]
+    "home": 3
   },
   {
-    "check": "city-randomization-covers-eligible-houses",
+    "check": "city-always-selects-one-fixed-house",
     "passed": true,
     "city": 3,
-    "houses": [
-      5,
-      6,
-      7,
-      8
-    ]
+    "home": 4
   },
   {
-    "check": "city-randomization-covers-eligible-houses",
+    "check": "city-always-selects-one-fixed-house",
     "passed": true,
     "city": 4,
-    "houses": [
-      9,
-      10,
-      11
-    ]
+    "home": 5
   },
   {
-    "check": "city-randomization-covers-eligible-houses",
+    "check": "city-always-selects-one-fixed-house",
     "passed": true,
     "city": 5,
-    "houses": [
-      12,
-      13
-    ]
+    "home": 6
   },
   {
-    "check": "city-randomization-covers-eligible-houses",
+    "check": "city-always-selects-one-fixed-house",
     "passed": true,
     "city": 6,
-    "houses": [
-      14
-    ]
+    "home": 7
   },
   {
-    "check": "city-randomization-covers-eligible-houses",
+    "check": "city-always-selects-one-fixed-house",
     "passed": true,
     "city": 7,
-    "houses": [
-      15,
-      16,
-      17
-    ]
+    "home": 8
   },
   {
-    "check": "city-randomization-covers-eligible-houses",
+    "check": "city-always-selects-one-fixed-house",
     "passed": true,
     "city": 8,
-    "houses": [
-      18,
-      19
-    ]
+    "home": 9
+  },
+  {
+    "check": "city-always-selects-one-fixed-house",
+    "passed": true,
+    "city": 9,
+    "home": 10
+  },
+  {
+    "check": "city-always-selects-one-fixed-house",
+    "passed": true,
+    "city": 10,
+    "home": 11
+  },
+  {
+    "check": "city-always-selects-one-fixed-house",
+    "passed": true,
+    "city": 11,
+    "home": 12
+  },
+  {
+    "check": "city-always-selects-one-fixed-house",
+    "passed": true,
+    "city": 12,
+    "home": 13
+  },
+  {
+    "check": "city-always-selects-one-fixed-house",
+    "passed": true,
+    "city": 13,
+    "home": 14
+  },
+  {
+    "check": "city-always-selects-one-fixed-house",
+    "passed": true,
+    "city": 14,
+    "home": 15
+  },
+  {
+    "check": "city-always-selects-one-fixed-house",
+    "passed": true,
+    "city": 15,
+    "home": 16
   }
 ]
