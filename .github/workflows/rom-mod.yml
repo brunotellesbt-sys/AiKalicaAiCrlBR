@@ -1,0 +1,17 @@
+name: Validate LeafGreen map modification
+on:
+  pull_request:
+    paths: ['mods/**', 'tools/rom_hacks/**', '.github/workflows/rom-mod.yml']
+  push:
+    branches: [main]
+    paths: ['mods/**', 'tools/rom_hacks/**', '.github/workflows/rom-mod.yml']
+permissions:
+  contents: read
+jobs:
+  rom-mod:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Verify ROM, all maps, water preservation and BPS roundtrip
+        run: python3 -m unittest discover -s tools/rom_hacks -v

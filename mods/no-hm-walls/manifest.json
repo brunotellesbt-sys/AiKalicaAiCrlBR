@@ -1,0 +1,549 @@
+{
+  "source_sha256": "2f978f635b9593f6ca26ec42481c53a6b39f6cddd894ad5c062c1419fac58825",
+  "target_sha256": "f988648f55828c5b58a5c00523aa0df0e64b63a1a95992922a97bbfff2188c24",
+  "size": 16777216,
+  "changed_bytes": 3229,
+  "maps_scanned": 425,
+  "layouts_scanned": 364,
+  "counts": {
+    "strength_boulder": 58,
+    "rock_smash_rock": 97,
+    "flash_maps": 2,
+    "cut_tree": 55,
+    "victory_road_gate_cells_opened": 8
+  },
+  "affected_maps": [
+    {
+      "map": "VictoryRoad_1F",
+      "group": 1,
+      "number": 39,
+      "removed": {
+        "strength_boulder": 3
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "VictoryRoad_2F",
+      "group": 1,
+      "number": 40,
+      "removed": {
+        "strength_boulder": 3
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "VictoryRoad_3F",
+      "group": 1,
+      "number": 41,
+      "removed": {
+        "strength_boulder": 4
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "CeruleanCave_1F",
+      "group": 1,
+      "number": 72,
+      "removed": {
+        "rock_smash_rock": 6
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "CeruleanCave_2F",
+      "group": 1,
+      "number": 73,
+      "removed": {
+        "rock_smash_rock": 10
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "CeruleanCave_B1F",
+      "group": 1,
+      "number": 74,
+      "removed": {
+        "rock_smash_rock": 9
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "RockTunnel_1F",
+      "group": 1,
+      "number": 81,
+      "removed": {},
+      "flash_removed": true
+    },
+    {
+      "map": "RockTunnel_B1F",
+      "group": 1,
+      "number": 82,
+      "removed": {
+        "rock_smash_rock": 15
+      },
+      "flash_removed": true
+    },
+    {
+      "map": "SeafoamIslands_1F",
+      "group": 1,
+      "number": 83,
+      "removed": {
+        "strength_boulder": 2
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "SeafoamIslands_B1F",
+      "group": 1,
+      "number": 84,
+      "removed": {
+        "strength_boulder": 2
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "SeafoamIslands_B2F",
+      "group": 1,
+      "number": 85,
+      "removed": {
+        "strength_boulder": 2
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "SeafoamIslands_B3F",
+      "group": 1,
+      "number": 86,
+      "removed": {
+        "strength_boulder": 6
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "SeafoamIslands_B4F",
+      "group": 1,
+      "number": 87,
+      "removed": {
+        "strength_boulder": 2
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "MtEmber_Exterior",
+      "group": 1,
+      "number": 97,
+      "removed": {
+        "rock_smash_rock": 6,
+        "strength_boulder": 5
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "MtEmber_SummitPath_2F",
+      "group": 1,
+      "number": 99,
+      "removed": {
+        "rock_smash_rock": 9
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "MtEmber_Summit",
+      "group": 1,
+      "number": 101,
+      "removed": {
+        "strength_boulder": 4
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "MtEmber_RubyPath_1F",
+      "group": 1,
+      "number": 103,
+      "removed": {
+        "rock_smash_rock": 5
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "MtEmber_RubyPath_B1F",
+      "group": 1,
+      "number": 104,
+      "removed": {
+        "rock_smash_rock": 4
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "MtEmber_RubyPath_B2F",
+      "group": 1,
+      "number": 105,
+      "removed": {
+        "strength_boulder": 3,
+        "rock_smash_rock": 4
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "MtEmber_RubyPath_B3F",
+      "group": 1,
+      "number": 106,
+      "removed": {
+        "strength_boulder": 4,
+        "rock_smash_rock": 6
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "MtEmber_RubyPath_B1F_Stairs",
+      "group": 1,
+      "number": 107,
+      "removed": {
+        "rock_smash_rock": 1
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "MtEmber_RubyPath_B2F_Stairs",
+      "group": 1,
+      "number": 108,
+      "removed": {
+        "rock_smash_rock": 2
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "ThreeIsland_BerryForest",
+      "group": 1,
+      "number": 109,
+      "removed": {
+        "cut_tree": 10
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "SevenIsland_SevaultCanyon_TanobyKey",
+      "group": 2,
+      "number": 35,
+      "removed": {
+        "strength_boulder": 7
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "ViridianCity",
+      "group": 3,
+      "number": 1,
+      "removed": {
+        "cut_tree": 2
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "PewterCity",
+      "group": 3,
+      "number": 2,
+      "removed": {
+        "cut_tree": 1
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "CeruleanCity",
+      "group": 3,
+      "number": 3,
+      "removed": {
+        "cut_tree": 2
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "VermilionCity",
+      "group": 3,
+      "number": 5,
+      "removed": {
+        "cut_tree": 1
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "CeladonCity",
+      "group": 3,
+      "number": 6,
+      "removed": {
+        "cut_tree": 3
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "FuchsiaCity",
+      "group": 3,
+      "number": 7,
+      "removed": {
+        "cut_tree": 4
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "TwoIsland",
+      "group": 3,
+      "number": 13,
+      "removed": {
+        "cut_tree": 1
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "ThreeIsland",
+      "group": 3,
+      "number": 14,
+      "removed": {
+        "cut_tree": 1
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "FourIsland",
+      "group": 3,
+      "number": 15,
+      "removed": {
+        "rock_smash_rock": 1
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "FiveIsland",
+      "group": 3,
+      "number": 16,
+      "removed": {
+        "cut_tree": 1
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "Route2",
+      "group": 3,
+      "number": 20,
+      "removed": {
+        "cut_tree": 5
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "Route7",
+      "group": 3,
+      "number": 25,
+      "removed": {
+        "cut_tree": 1
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "Route8",
+      "group": 3,
+      "number": 26,
+      "removed": {
+        "cut_tree": 2
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "Route9",
+      "group": 3,
+      "number": 27,
+      "removed": {
+        "cut_tree": 1
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "Route10",
+      "group": 3,
+      "number": 28,
+      "removed": {
+        "cut_tree": 4
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "Route12",
+      "group": 3,
+      "number": 30,
+      "removed": {
+        "cut_tree": 2
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "Route13",
+      "group": 3,
+      "number": 31,
+      "removed": {
+        "cut_tree": 1
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "Route14",
+      "group": 3,
+      "number": 32,
+      "removed": {
+        "cut_tree": 3
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "Route15",
+      "group": 3,
+      "number": 33,
+      "removed": {
+        "cut_tree": 1
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "Route16",
+      "group": 3,
+      "number": 34,
+      "removed": {
+        "cut_tree": 1
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "Route25",
+      "group": 3,
+      "number": 44,
+      "removed": {
+        "cut_tree": 1
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "OneIsland_KindleRoad",
+      "group": 3,
+      "number": 45,
+      "removed": {
+        "rock_smash_rock": 13
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "ThreeIsland_BondBridge",
+      "group": 3,
+      "number": 48,
+      "removed": {
+        "cut_tree": 2
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "FiveIsland_Meadow",
+      "group": 3,
+      "number": 56,
+      "removed": {
+        "cut_tree": 2
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "SixIsland_RuinValley",
+      "group": 3,
+      "number": 61,
+      "removed": {
+        "strength_boulder": 8
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "SevenIsland_SevaultCanyon",
+      "group": 3,
+      "number": 64,
+      "removed": {
+        "rock_smash_rock": 6,
+        "strength_boulder": 2
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "CeladonCity_Gym",
+      "group": 10,
+      "number": 16,
+      "removed": {
+        "cut_tree": 3
+      },
+      "flash_removed": false
+    },
+    {
+      "map": "FuchsiaCity_WardensHouse",
+      "group": 11,
+      "number": 7,
+      "removed": {
+        "strength_boulder": 1
+      },
+      "flash_removed": false
+    }
+  ],
+  "scripts": [
+    {
+      "symbol": "VictoryRoad_1F_OnLoad",
+      "offset": 1445732,
+      "before": "216440640007",
+      "after": "166440640002"
+    },
+    {
+      "symbol": "VictoryRoad_2F_OnLoad",
+      "offset": 1445868,
+      "before": "2165406400070503101608",
+      "after": "1665406400166640640002"
+    },
+    {
+      "symbol": "VictoryRoad_3F_OnLoad",
+      "offset": 1446148,
+      "before": "216740640007",
+      "after": "166740640002"
+    },
+    {
+      "symbol": "SeafoamIslands_B3F_OnTransition",
+      "offset": 1453998,
+      "before": "2bd2020700c12f",
+      "after": "29d202a7160102"
+    },
+    {
+      "symbol": "SeafoamIslands_B3F_EventScript_EnterByFalling",
+      "offset": 1454070,
+      "before": "6916024000002b",
+      "after": "16014000006b02"
+    },
+    {
+      "symbol": "SeafoamIslands_B4F_OnTransition",
+      "offset": 1454266,
+      "before": "2bbe020700013116082bd3020700d630",
+      "after": "2bbe0207000131160829d302a7170102"
+    },
+    {
+      "symbol": "SeafoamIslands_B4F_EventScript_EnterByFalling",
+      "offset": 1454453,
+      "before": "6916024000002b",
+      "after": "16014000006b02"
+    },
+    {
+      "symbol": "SeafoamIslands_B4F_OnLoad",
+      "offset": 1454341,
+      "before": "16024000002b4c000700bd3116082b4d000700",
+      "after": "a20c000e002b010000a20d000e002b01000002"
+    },
+    {
+      "symbol": "SeafoamIslands_B4F_EventScript_EnterOnCurrent",
+      "offset": 1454431,
+      "before": "694fff00713116",
+      "after": "16634000006b02"
+    },
+    {
+      "symbol": "SeafoamIslands_B4F_EventScript_UpwardCurrent",
+      "offset": 1454577,
+      "before": "694f",
+      "after": "6b02"
+    }
+  ]
+}

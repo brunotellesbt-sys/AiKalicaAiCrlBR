@@ -20,3 +20,6 @@ python3 tools/cloud/run.py hma --rom 'Pokemon - Leaf Green Version (U) (V1.1).gb
 HexManiacAdvance, AdvanceMap e XSE iniciam na nuvem numa sessão gráfica compartilhada.
 Os três lançadores também foram testados em Windows. As cópias de trabalho e os arquivos
 gerados ficam em `.local/`, fora do Git. Consulte os comandos e as evidências em `tools/README.md`.
+
+A versão [sem obstáculos terrestres de HM](mods/no-hm-walls/README.md) inclui ROM pronta,
+patch BPS e gerador reproduzível. **Surf e Waterfall permanecem necessários.**
