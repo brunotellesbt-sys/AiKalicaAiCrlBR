@@ -24,6 +24,31 @@ Em cidades diferentes de Pallet, você nasce no quarto. Ao descer a escada, Oak 
 
 Em **Pallet**, a casa elegível é a casa original, e o encontro com Oak e a entrega do inicial/Pokédex continuam no laboratório, como no jogo original. A mãe também dá os dois HMs. Cinnabar e Indigo não aparecem no menu porque não têm residência elegível.
 
+## Estradas e ginásios em qualquer ordem
+
+Os oito ginásios podem ser feitos em qualquer ordem. Os bloqueios do velho de Viridian, do guia de Pewter, das saídas de Cerulean, dos guardas que exigiam Tea e da bicicleta foram removidos. Os Rockets nas portas de Saffron deixam a passagem livre; o ginásio de Cinnabar dispensa Secret Key. As entradas exteriores de Mt. Ember, Dotted Hole e Cerulean Cave também ficam acessíveis. As batalhas normais, os quebra-cabeças dentro dos ginásios e os eventos dentro dos locais da Team Rocket continuam disponíveis.
+
+**Snorlax continua nas Routes 12 e 16.** O primeiro líder que você vencer entrega a **Poké Flute**, independentemente da cidade, junto da insígnia. Mr. Fuji não entrega outra cópia nem antecipa o item antes da primeira insígnia. Se a bolsa de itens-chave estiver cheia, fale novamente com um líder após liberar espaço.
+
+A dificuldade usa a quantidade de insígnias no início de cada batalha, sem depender da identidade das insígnias:
+
+| Ginásio na sua jornada | Nível máximo do líder | Máximo dos treinadores internos |
+| --- | --- | --- |
+| 1º | 14 | 12 |
+| 2º | 21 | 19 |
+| 3º | 28 | 26 |
+| 4º | 35 | 33 |
+| 5º | 42 | 40 |
+| 6º | 48 | 46 |
+| 7º | 54 | 52 |
+| 8º | 60 | 58 |
+
+Os Pokémon mais fracos de uma equipe mantêm diferenças de até seis níveis em relação ao mais forte. O ajuste vale para os **49 treinadores dos oito ginásios** e não altera os níveis dos treinadores das estradas, da Team Rocket ou da Liga. Os líderes mantêm seus Pokémon, itens, inteligência e movimentos personalizados; não há troca automática de evoluções ou redução do tamanho das equipes nas etapas iniciais. Movimentos aprendidos por nível usam o nível ajustado.
+
+**Blue substitui Giovanni apenas no ginásio de Viridian**, com Exeggutor, Rhydon, Machamp, Gyarados, Arcanine e Pidgeot. Ele fica no ginásio depois da vitória e não conclui eventos da Team Rocket. Giovanni permanece nos confrontos de Rocket Hideout e Silph Co. O rival usa a aparência do personagem do sexo oposto: Leaf para jogador masculino e Red para jogadora feminina, nos mapas, nas batalhas e na apresentação inicial. O nome do rival continua sendo escolhido pelo jogador.
+
+**A Liga exige as oito insígnias.** Os controles da Route 22/23 foram preservados, e a entrada da Elite Four verifica novamente todas as insígnias. Ganhar Earthbadge primeiro não libera a Liga nem aciona o último encontro com o rival; esse encontro fica disponível depois da oitava insígnia.
+
 ## Arquivos e reprodução
 
 - `LeafGreen-Choose-Starting-City.gba`: ROM pronta.
@@ -50,4 +75,4 @@ Para testar no núcleo mGBA, use a ponte e as instruções de compilação em [n
 python3 tools/journey/validate_emulator.py --library .local/mgba-bridge.so
 ```
 
-Os testes usam comandos temporários na memória do emulador para chegar a outras casas e cenários; esses comandos não fazem parte da ROM entregue. Passaram **72 verificações no mGBA**, cobrindo escolha pelo menu real, escada, visita de Oak, três iniciais, Pokédex, cura, presentes, todas as casas, casa fixa por cidade, saídas das casas e viagens antecipadas entre Kanto e as sete ilhas e uso real de Surf/Waterfall sem insígnias. Os seis testes de integridade/BPS desta versão e os seis da modificação terrestre também passaram. A campanha inteira ainda não foi jogada até o final; saves de outras versões não são suportados.
+Os testes usam comandos temporários na memória do emulador para chegar a outras casas e cenários; esses comandos não fazem parte da ROM entregue. Passaram **498 verificações no mGBA**, cobrindo escolha pelo menu real, escada, visita de Oak, três iniciais, Pokédex, cura, presentes, todas as casas, casa fixa por cidade, saídas das casas e viagens antecipadas entre Kanto e as sete ilhas e uso real de Surf/Waterfall sem insígnias. Incluem as 256 combinações de insígnias, as 49 equipes em cada etapa, a Poké Flute, os dois sprites do rival, as entradas abertas e a exigência de todas as insígnias na Liga. As equipes são criadas pela rotina nativa da ROM através do trampolim de teste em `native_call.s`, injetado apenas na memória. Os nove testes de integridade/BPS desta versão e os seis da modificação terrestre também passaram. A campanha inteira ainda não foi jogada até o final; saves de outras versões não são suportados.

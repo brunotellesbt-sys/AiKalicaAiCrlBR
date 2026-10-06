@@ -29,3 +29,7 @@ escolher entre 16 cidades e ilhas, cada uma com uma casa fixa, receber presentes
 da família e começar com Oak visitando sua sala. Os barcos ligam Kanto às sete ilhas
 Sevii desde o início.
 Inclui a remoção dos obstáculos terrestres e libera Surf/Waterfall sem insígnias.
+
+Esta versão também abre as estradas, entrega Poké Flute após a primeira insígnia
+e adapta os níveis dos ginásios à ordem escolhida. Blue assume Viridian; Giovanni
+permanece na Team Rocket. A Liga exige as oito insígnias.

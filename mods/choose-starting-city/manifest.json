@@ -1,15 +1,873 @@
 {
+  "open_world": {
+    "ace_levels": [
+      14,
+      21,
+      28,
+      35,
+      42,
+      48,
+      54,
+      60
+    ],
+    "trainers": [
+      {
+        "name": "TRAINER_LEADER_BROCK",
+        "id": 414,
+        "gym": "PewterCity_Gym",
+        "highest": 14,
+        "levels": [
+          12,
+          14
+        ],
+        "species": [
+          "GEODUDE",
+          "ONIX"
+        ],
+        "leader": true,
+        "victory_script": "PewterCity_Gym_EventScript_DefeatedBrock"
+      },
+      {
+        "name": "TRAINER_CAMPER_LIAM",
+        "id": 142,
+        "gym": "PewterCity_Gym",
+        "highest": 11,
+        "levels": [
+          10,
+          11
+        ],
+        "species": [
+          "GEODUDE",
+          "SANDSHREW"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_LEADER_MISTY",
+        "id": 415,
+        "gym": "CeruleanCity_Gym",
+        "highest": 21,
+        "levels": [
+          18,
+          21
+        ],
+        "species": [
+          "STARYU",
+          "STARMIE"
+        ],
+        "leader": true,
+        "victory_script": "CeruleanCity_Gym_EventScript_MistyDefeated"
+      },
+      {
+        "name": "TRAINER_PICNICKER_DIANA",
+        "id": 150,
+        "gym": "CeruleanCity_Gym",
+        "highest": 19,
+        "levels": [
+          19
+        ],
+        "species": [
+          "GOLDEEN"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_SWIMMER_MALE_LUIS",
+        "id": 234,
+        "gym": "CeruleanCity_Gym",
+        "highest": 16,
+        "levels": [
+          16,
+          16
+        ],
+        "species": [
+          "HORSEA",
+          "SHELLDER"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_LEADER_LT_SURGE",
+        "id": 416,
+        "gym": "VermilionCity_Gym",
+        "highest": 24,
+        "levels": [
+          21,
+          18,
+          24
+        ],
+        "species": [
+          "VOLTORB",
+          "PIKACHU",
+          "RAICHU"
+        ],
+        "leader": true,
+        "victory_script": "VermilionCity_Gym_EventScript_DefeatedLtSurge"
+      },
+      {
+        "name": "TRAINER_SAILOR_DWAYNE",
+        "id": 141,
+        "gym": "VermilionCity_Gym",
+        "highest": 21,
+        "levels": [
+          21,
+          21
+        ],
+        "species": [
+          "PIKACHU",
+          "PIKACHU"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_ENGINEER_BAILY",
+        "id": 220,
+        "gym": "VermilionCity_Gym",
+        "highest": 21,
+        "levels": [
+          21,
+          21
+        ],
+        "species": [
+          "VOLTORB",
+          "MAGNEMITE"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_GENTLEMAN_TUCKER",
+        "id": 423,
+        "gym": "VermilionCity_Gym",
+        "highest": 23,
+        "levels": [
+          23
+        ],
+        "species": [
+          "PIKACHU"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_LEADER_ERIKA",
+        "id": 417,
+        "gym": "CeladonCity_Gym",
+        "highest": 29,
+        "levels": [
+          29,
+          24,
+          29
+        ],
+        "species": [
+          "VICTREEBEL",
+          "TANGELA",
+          "VILEPLUME"
+        ],
+        "leader": true,
+        "victory_script": "CeladonCity_Gym_EventScript_DefeatedErika"
+      },
+      {
+        "name": "TRAINER_LASS_KAY",
+        "id": 132,
+        "gym": "CeladonCity_Gym",
+        "highest": 23,
+        "levels": [
+          23,
+          23
+        ],
+        "species": [
+          "BELLSPROUT",
+          "WEEPINBELL"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_LASS_LISA",
+        "id": 133,
+        "gym": "CeladonCity_Gym",
+        "highest": 23,
+        "levels": [
+          23,
+          23
+        ],
+        "species": [
+          "ODDISH",
+          "GLOOM"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_PICNICKER_TINA",
+        "id": 160,
+        "gym": "CeladonCity_Gym",
+        "highest": 24,
+        "levels": [
+          24,
+          24
+        ],
+        "species": [
+          "BULBASAUR",
+          "IVYSAUR"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BEAUTY_BRIDGET",
+        "id": 265,
+        "gym": "CeladonCity_Gym",
+        "highest": 21,
+        "levels": [
+          21,
+          21,
+          21,
+          21
+        ],
+        "species": [
+          "ODDISH",
+          "BELLSPROUT",
+          "ODDISH",
+          "BELLSPROUT"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BEAUTY_TAMIA",
+        "id": 266,
+        "gym": "CeladonCity_Gym",
+        "highest": 24,
+        "levels": [
+          24,
+          24
+        ],
+        "species": [
+          "BELLSPROUT",
+          "BELLSPROUT"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BEAUTY_LORI",
+        "id": 267,
+        "gym": "CeladonCity_Gym",
+        "highest": 24,
+        "levels": [
+          24
+        ],
+        "species": [
+          "EXEGGCUTE"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_COOLTRAINER_MARY",
+        "id": 402,
+        "gym": "CeladonCity_Gym",
+        "highest": 22,
+        "levels": [
+          22,
+          22,
+          22,
+          22,
+          22
+        ],
+        "species": [
+          "BELLSPROUT",
+          "ODDISH",
+          "WEEPINBELL",
+          "GLOOM",
+          "IVYSAUR"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_LEADER_KOGA",
+        "id": 418,
+        "gym": "FuchsiaCity_Gym",
+        "highest": 43,
+        "levels": [
+          37,
+          39,
+          37,
+          43
+        ],
+        "species": [
+          "KOFFING",
+          "MUK",
+          "KOFFING",
+          "WEEZING"
+        ],
+        "leader": true,
+        "victory_script": "FuchsiaCity_Gym_EventScript_DefeatedKoga"
+      },
+      {
+        "name": "TRAINER_TAMER_PHIL",
+        "id": 294,
+        "gym": "FuchsiaCity_Gym",
+        "highest": 34,
+        "levels": [
+          34,
+          34
+        ],
+        "species": [
+          "SANDSLASH",
+          "ARBOK"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_TAMER_EDGAR",
+        "id": 295,
+        "gym": "FuchsiaCity_Gym",
+        "highest": 33,
+        "levels": [
+          33,
+          33,
+          33
+        ],
+        "species": [
+          "ARBOK",
+          "SANDSLASH",
+          "ARBOK"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_JUGGLER_KIRK",
+        "id": 288,
+        "gym": "FuchsiaCity_Gym",
+        "highest": 31,
+        "levels": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "species": [
+          "DROWZEE",
+          "DROWZEE",
+          "KADABRA",
+          "DROWZEE"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_JUGGLER_SHAWN",
+        "id": 289,
+        "gym": "FuchsiaCity_Gym",
+        "highest": 34,
+        "levels": [
+          34,
+          34
+        ],
+        "species": [
+          "DROWZEE",
+          "HYPNO"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_JUGGLER_KAYDEN",
+        "id": 292,
+        "gym": "FuchsiaCity_Gym",
+        "highest": 38,
+        "levels": [
+          38
+        ],
+        "species": [
+          "HYPNO"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_JUGGLER_NATE",
+        "id": 293,
+        "gym": "FuchsiaCity_Gym",
+        "highest": 34,
+        "levels": [
+          34,
+          34
+        ],
+        "species": [
+          "DROWZEE",
+          "KADABRA"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_LEADER_SABRINA",
+        "id": 420,
+        "gym": "SaffronCity_Gym",
+        "highest": 43,
+        "levels": [
+          38,
+          37,
+          38,
+          43
+        ],
+        "species": [
+          "KADABRA",
+          "MR_MIME",
+          "VENOMOTH",
+          "ALAKAZAM"
+        ],
+        "leader": true,
+        "victory_script": "SaffronCity_Gym_EventScript_DefeatedSabrina"
+      },
+      {
+        "name": "TRAINER_PSYCHIC_JOHAN",
+        "id": 280,
+        "gym": "SaffronCity_Gym",
+        "highest": 31,
+        "levels": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "species": [
+          "KADABRA",
+          "SLOWPOKE",
+          "MR_MIME",
+          "KADABRA"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_PSYCHIC_TYRON",
+        "id": 281,
+        "gym": "SaffronCity_Gym",
+        "highest": 34,
+        "levels": [
+          34,
+          34
+        ],
+        "species": [
+          "MR_MIME",
+          "KADABRA"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_PSYCHIC_CAMERON",
+        "id": 282,
+        "gym": "SaffronCity_Gym",
+        "highest": 33,
+        "levels": [
+          33,
+          33,
+          33
+        ],
+        "species": [
+          "SLOWPOKE",
+          "SLOWPOKE",
+          "SLOWBRO"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_PSYCHIC_PRESTON",
+        "id": 283,
+        "gym": "SaffronCity_Gym",
+        "highest": 38,
+        "levels": [
+          38
+        ],
+        "species": [
+          "SLOWBRO"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_CHANNELER_AMANDA",
+        "id": 462,
+        "gym": "SaffronCity_Gym",
+        "highest": 34,
+        "levels": [
+          34,
+          34
+        ],
+        "species": [
+          "GASTLY",
+          "HAUNTER"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_CHANNELER_STACY",
+        "id": 463,
+        "gym": "SaffronCity_Gym",
+        "highest": 38,
+        "levels": [
+          38
+        ],
+        "species": [
+          "HAUNTER"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_CHANNELER_TASHA",
+        "id": 464,
+        "gym": "SaffronCity_Gym",
+        "highest": 33,
+        "levels": [
+          33,
+          33,
+          33
+        ],
+        "species": [
+          "GASTLY",
+          "GASTLY",
+          "HAUNTER"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_LEADER_BLAINE",
+        "id": 419,
+        "gym": "CinnabarIsland_Gym",
+        "highest": 47,
+        "levels": [
+          42,
+          40,
+          42,
+          47
+        ],
+        "species": [
+          "GROWLITHE",
+          "PONYTA",
+          "RAPIDASH",
+          "ARCANINE"
+        ],
+        "leader": true,
+        "victory_script": "CinnabarIsland_Gym_EventScript_DefeatedBlaine"
+      },
+      {
+        "name": "TRAINER_SUPER_NERD_ERIK",
+        "id": 177,
+        "gym": "CinnabarIsland_Gym",
+        "highest": 36,
+        "levels": [
+          36,
+          36,
+          36
+        ],
+        "species": [
+          "VULPIX",
+          "VULPIX",
+          "NINETALES"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_SUPER_NERD_AVERY",
+        "id": 178,
+        "gym": "CinnabarIsland_Gym",
+        "highest": 34,
+        "levels": [
+          34,
+          34,
+          34,
+          34
+        ],
+        "species": [
+          "PONYTA",
+          "CHARMANDER",
+          "VULPIX",
+          "GROWLITHE"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_SUPER_NERD_DEREK",
+        "id": 179,
+        "gym": "CinnabarIsland_Gym",
+        "highest": 41,
+        "levels": [
+          41
+        ],
+        "species": [
+          "RAPIDASH"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_SUPER_NERD_ZAC",
+        "id": 180,
+        "gym": "CinnabarIsland_Gym",
+        "highest": 37,
+        "levels": [
+          37,
+          37
+        ],
+        "species": [
+          "GROWLITHE",
+          "VULPIX"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BURGLAR_QUINN",
+        "id": 213,
+        "gym": "CinnabarIsland_Gym",
+        "highest": 36,
+        "levels": [
+          36,
+          36,
+          36
+        ],
+        "species": [
+          "GROWLITHE",
+          "VULPIX",
+          "NINETALES"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BURGLAR_RAMON",
+        "id": 214,
+        "gym": "CinnabarIsland_Gym",
+        "highest": 41,
+        "levels": [
+          41
+        ],
+        "species": [
+          "PONYTA"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BURGLAR_DUSTY",
+        "id": 215,
+        "gym": "CinnabarIsland_Gym",
+        "highest": 37,
+        "levels": [
+          37,
+          37
+        ],
+        "species": [
+          "VULPIX",
+          "GROWLITHE"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_LEADER_GIOVANNI",
+        "id": 350,
+        "gym": "ViridianCity_Gym",
+        "highest": 60,
+        "levels": [
+          56,
+          58,
+          56,
+          58,
+          58,
+          60
+        ],
+        "species": [
+          "EXEGGUTOR",
+          "RHYDON",
+          "MACHAMP",
+          "GYARADOS",
+          "ARCANINE",
+          "PIDGEOT"
+        ],
+        "leader": true,
+        "victory_script": "ViridianCity_Gym_EventScript_DefeatedGiovanni"
+      },
+      {
+        "name": "TRAINER_TAMER_JASON",
+        "id": 296,
+        "gym": "ViridianCity_Gym",
+        "highest": 43,
+        "levels": [
+          43
+        ],
+        "species": [
+          "RHYHORN"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_TAMER_COLE",
+        "id": 297,
+        "gym": "ViridianCity_Gym",
+        "highest": 39,
+        "levels": [
+          39,
+          39
+        ],
+        "species": [
+          "ARBOK",
+          "TAUROS"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BLACK_BELT_ATSUSHI",
+        "id": 322,
+        "gym": "ViridianCity_Gym",
+        "highest": 40,
+        "levels": [
+          40,
+          40
+        ],
+        "species": [
+          "MACHOP",
+          "MACHOKE"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BLACK_BELT_KIYO",
+        "id": 323,
+        "gym": "ViridianCity_Gym",
+        "highest": 43,
+        "levels": [
+          43
+        ],
+        "species": [
+          "MACHOKE"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BLACK_BELT_TAKASHI",
+        "id": 324,
+        "gym": "ViridianCity_Gym",
+        "highest": 38,
+        "levels": [
+          38,
+          38,
+          38
+        ],
+        "species": [
+          "MACHOKE",
+          "MACHOP",
+          "MACHOKE"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_COOLTRAINER_SAMUEL",
+        "id": 392,
+        "gym": "ViridianCity_Gym",
+        "highest": 39,
+        "levels": [
+          37,
+          37,
+          38,
+          39,
+          39
+        ],
+        "species": [
+          "SANDSLASH",
+          "SANDSLASH",
+          "RHYHORN",
+          "NIDORINO",
+          "NIDOKING"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_COOLTRAINER_YUJI",
+        "id": 400,
+        "gym": "ViridianCity_Gym",
+        "highest": 38,
+        "levels": [
+          38,
+          38,
+          38,
+          38,
+          38
+        ],
+        "species": [
+          "SANDSLASH",
+          "GRAVELER",
+          "ONIX",
+          "GRAVELER",
+          "MAROWAK"
+        ],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_COOLTRAINER_WARREN",
+        "id": 401,
+        "gym": "ViridianCity_Gym",
+        "highest": 39,
+        "levels": [
+          37,
+          37,
+          38,
+          39,
+          39
+        ],
+        "species": [
+          "MAROWAK",
+          "MAROWAK",
+          "RHYHORN",
+          "NIDORINA",
+          "NIDOQUEEN"
+        ],
+        "leader": false,
+        "victory_script": null
+      }
+    ],
+    "first_badge_item": "ITEM_POKE_FLUTE",
+    "league_requires_badges": 8,
+    "rival": "opposite-sex player sprite",
+    "viridian_leader": "BLUE"
+  },
   "source_commit": "037335f4c725d7c9aecdac87066f2002b4bd7e14",
   "original_sha256": "2f978f635b9593f6ca26ec42481c53a6b39f6cddd894ad5c062c1419fac58825",
-  "intermediate_sha256": "82e9f514acaf4d363c10d93659f358edc0d10c080d2b9b0876e10ae1a25b0d8a",
-  "target_sha256": "f72e7f804f8a0948d1d631f15677ebf642089a75c7fce7de83ad2d5edff6a129",
-  "patch_sha256": "be1e8a910dd401fae3fa80021886b68f06649d1f87e0181af05c37a51035af3e",
+  "intermediate_sha256": "3155c715e9e2d9ee82828bfbf9d947ab861fa3dc041009a7585d210b5b4ee259",
+  "target_sha256": "8ec4aa890c7f7daf9a92f1e77f2790aa82934dff01c21a4a6bfe4e8203d48a7c",
+  "patch_sha256": "63ae2dcd450660d8d354de54e64eec02c1a5b8f01e7632b80ba730c1e9822bac",
   "size": 16777216,
   "terrestrial_hm_changes": {
-    "source_sha256": "82e9f514acaf4d363c10d93659f358edc0d10c080d2b9b0876e10ae1a25b0d8a",
-    "target_sha256": "f72e7f804f8a0948d1d631f15677ebf642089a75c7fce7de83ad2d5edff6a129",
+    "source_sha256": "3155c715e9e2d9ee82828bfbf9d947ab861fa3dc041009a7585d210b5b4ee259",
+    "target_sha256": "8ec4aa890c7f7daf9a92f1e77f2790aa82934dff01c21a4a6bfe4e8203d48a7c",
     "size": 16777216,
-    "changed_bytes": 3231,
+    "changed_bytes": 3232,
     "maps_scanned": 455,
     "layouts_scanned": 364,
     "counts": {
@@ -494,61 +1352,61 @@
     "scripts": [
       {
         "symbol": "VictoryRoad_1F_OnLoad",
-        "offset": 1445864,
+        "offset": 1445980,
         "before": "216440640007",
         "after": "166440640002"
       },
       {
         "symbol": "VictoryRoad_2F_OnLoad",
-        "offset": 1446000,
-        "before": "2165406400070587101608",
+        "offset": 1446116,
+        "before": "21654064000705fb101608",
         "after": "1665406400166640640002"
       },
       {
         "symbol": "VictoryRoad_3F_OnLoad",
-        "offset": 1446280,
+        "offset": 1446396,
         "before": "216740640007",
         "after": "166740640002"
       },
       {
         "symbol": "SeafoamIslands_B3F_OnTransition",
-        "offset": 1454130,
-        "before": "2bd20207004530",
+        "offset": 1454246,
+        "before": "2bd2020700b930",
         "after": "29d202a7160102"
       },
       {
         "symbol": "SeafoamIslands_B3F_EventScript_EnterByFalling",
-        "offset": 1454202,
+        "offset": 1454318,
         "before": "6916024000002b",
         "after": "16014000006b02"
       },
       {
         "symbol": "SeafoamIslands_B4F_OnTransition",
-        "offset": 1454398,
-        "before": "2bbe020700853116082bd30207005a31",
-        "after": "2bbe0207008531160829d302a7170102"
+        "offset": 1454514,
+        "before": "2bbe020700f93116082bd3020700ce31",
+        "after": "2bbe020700f931160829d302a7170102"
       },
       {
         "symbol": "SeafoamIslands_B4F_EventScript_EnterByFalling",
-        "offset": 1454585,
+        "offset": 1454701,
         "before": "6916024000002b",
         "after": "16014000006b02"
       },
       {
         "symbol": "SeafoamIslands_B4F_OnLoad",
-        "offset": 1454473,
-        "before": "16024000002b4c000700413216082b4d000700",
+        "offset": 1454589,
+        "before": "16024000002b4c000700b53216082b4d000700",
         "after": "a20c000e002b010000a20d000e002b01000002"
       },
       {
         "symbol": "SeafoamIslands_B4F_EventScript_EnterOnCurrent",
-        "offset": 1454563,
-        "before": "694fff00f53116",
+        "offset": 1454679,
+        "before": "694fff00693216",
         "after": "16634000006b02"
       },
       {
         "symbol": "SeafoamIslands_B4F_EventScript_UpwardCurrent",
-        "offset": 1454709,
+        "offset": 1454825,
         "before": "694f",
         "after": "6b02"
       }
@@ -829,13 +1687,19 @@
     "ThreeIsland_House1": "Família de Lostelle e missão de resgate."
   },
   "overlay_hashes": {
-    "build.py": "0c8c9b595794399914876824ec00fe446412b6f11386844f0a942d7fc7582296",
+    "build.py": "eb8cdd2f78e81bdfbc102259429ad707ef20758882fa3c4da076c71fd6ad534d",
     "events.inc": "4eda426a33b780ae38721fd483e59db92968addb3595253527d691c717a0f399",
     "homes.json": "2e1efb76723374892aa93e38baeb85283d9af31c41283560bcaeeafe3f549c00",
     "journey.c": "8b24dcb54f70989eb138ef7054391fce31aa4a8fe3d6d77d312c229ab3e34f9e",
     "journey.h": "740b6790ac994e0967f648a8062016b821b294847f25fa4d1aff2aa9910caeb0",
-    "prepare.py": "466009cf50423207e35323695be5b49f5a1b5089352eb87cab4aef36fbac41fe",
-    "test_journey.py": "b3513d773ae71c02853bcde30a061e4586558c4ff258a3efcc103ef761110b4c",
-    "validate_emulator.py": "5d88433203ea2a8cd2cd43410a6120063feec5116016dd762baf0606c7b95940"
+    "native_call.s": "7156a4f818dc6b81aa879ba9366e71a789914ecf71af029273b7422d36fc5fd2",
+    "open_world.c": "50597dccab80d461548ebff3f24f04a6450397095828c184412753b76e5b6a4c",
+    "open_world.h": "0a264b0298b4a0bdc84d2fe093a4a2f7ce54c906dbd69557309bfd429c0488b6",
+    "open_world.inc": "f007b1904257c7e7df96ff466a658b05678025e0481877b5748ac2c25292f1f8",
+    "open_world.py": "9e202d4645fae6a601bcbcaa145684e5b744eba87ebb90cc794012eaca55d7b6",
+    "prepare.py": "155632cbae39b0f325dd9c418ee9c51e8b6008da751cbf3b02b61c7796ca05f6",
+    "test_journey.py": "be539407756154da3d46d0a1665129b28dea933ec8293260793a471d3029add4",
+    "validate_emulator.py": "6865a4db5ed00256640371d3bf7df27b23ca74e41e0d90501701f338d183350e",
+    "validate_open_world.py": "b93d2d73f65479fdebd500de7850c45662774120b745aa44ff52b748e9c80ea9"
   }
 }

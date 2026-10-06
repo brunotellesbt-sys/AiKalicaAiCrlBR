@@ -242,6 +242,8 @@ for city in range(16):
         script(special('JourneyChooseHome')+b'\x6b\x02',5)
         assert var(0x40cc)==city+1 and var(0x40cb)==city+1
     record('city-always-selects-one-fixed-house',city=city,home=city+1)
+from validate_open_world import validate
+validate(globals())
 lib.stop()
 (args.output/'results.json').write_text(json.dumps(results,indent=2)+'\n')
 print(f'{len(results)} mGBA checks passed')

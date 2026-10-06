@@ -66,6 +66,44 @@ class JourneyTests(unittest.TestCase):
             start,other,size=old['address']-BASE,new['address']-BASE,old['count']*4
             self.assertEqual(self.source[start:start+size],self.rom[other:other+size],old['symbol'])
 
+    def test_snorlax_objects_and_flute_requirement_preserved(self):
+        old=json.loads((ROOT/'mods/no-hm-walls/reference.json').read_text())
+        original=Maps(self.source,old)
+        target=Maps(self.rom,{'symbols':{'gMapGroups':self.ref['symbols']['gMapGroups']},'groups':self.ref['groups']})
+        def snorlax(m):
+            rows={}
+            for name,_,_,header in m.headers():
+                events=m.ptr(header+4)
+                if not m.rom[events]:continue
+                start=m.ptr(events+4)
+                for i in range(m.rom[events]):
+                    row=m.rom[start+i*24:start+(i+1)*24]
+                    if row[1]==109:rows[name]=row
+            return rows
+        before,after=snorlax(original),snorlax(target)
+        self.assertEqual(set(after),{'Route12','Route16'})
+        for name,row in before.items():
+            self.assertEqual(row[:16]+row[20:],after[name][:16]+after[name][20:])
+            ptr=struct.unpack_from('<I',after[name],16)[0]-BASE
+            self.assertIn(b'\x2b'+struct.pack('<H',0x23d),self.rom[ptr:ptr+16])
+
+    def test_road_gate_triggers_removed_from_compiled_rom(self):
+        target=Maps(self.rom,{'symbols':{'gMapGroups':self.ref['symbols']['gMapGroups']},'groups':self.ref['groups']})
+        gates={'Route5_SouthEntrance','Route6_NorthEntrance','Route7_EastEntrance','Route8_WestEntrance'}
+        for name,_,_,header in target.headers():
+            if name in gates:self.assertEqual(self.rom[target.ptr(header+4)+2],0,name)
+
+    def test_gym_roster_and_league_policy(self):
+        mode=self.manifest['open_world'];trainers=mode['trainers']
+        self.assertEqual(mode['league_requires_badges'],8)
+        self.assertEqual(len(trainers),49)
+        self.assertEqual(len({t['id'] for t in trainers}),49)
+        self.assertEqual(sum(t['leader'] for t in trainers),8)
+        self.assertEqual(mode['ace_levels'],[14,21,28,35,42,48,54,60])
+        blue=next(t for t in trainers if t['id']==350)
+        self.assertEqual(blue['species'],['EXEGGUTOR','RHYDON','MACHAMP','GYARADOS','ARCANINE','PIDGEOT'])
+        self.assertFalse(any(t['id'] in (348,349) for t in trainers))
+
     def test_exported_overlay_matches_reviewed_files(self):
         for name,digest in self.manifest['overlay_hashes'].items():
             self.assertEqual(sha((ROOT/'tools/journey'/name).read_bytes()),digest,name)
