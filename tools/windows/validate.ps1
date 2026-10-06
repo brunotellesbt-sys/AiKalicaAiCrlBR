@@ -1,5 +1,10 @@
 param([string]$Destination = "$PSScriptRoot\..\..\.local\windows-validation")
 $ErrorActionPreference = 'Stop'
+trap {
+    $message = $_.Exception.Message.Replace("`r", ' ').Replace("`n", ' ')
+    Write-Output "::error::$message"
+    throw
+}
 $repo = (Resolve-Path "$PSScriptRoot\..\..").Path
 $report = Join-Path $repo '.local\windows-report'
 New-Item -ItemType Directory -Force $report | Out-Null
