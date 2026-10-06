@@ -1,0 +1,21 @@
+{
+  "version": "11.0",
+  "build": "amd64-wow64",
+  "url": "https://github.com/Kron4ek/Wine-Builds/releases/download/11.0/wine-11.0-amd64-wow64.tar.xz",
+  "sha256": "39574efa1132c3ca0d5c77dd2eddbe4a49cca0d6cc2c290ff4924493a1c40314",
+  "build_project": "https://github.com/Kron4ek/Wine-Builds",
+  "upstream_source": "https://github.com/wine-mirror/wine/tree/wine-11.0",
+  "community_build": true,
+  "upstream_release_digest_verified": true,
+  "source_archive": {
+    "name": "wine-11.0-source.tar.gz",
+    "url": "https://codeload.github.com/wine-mirror/wine/tar.gz/refs/tags/wine-11.0",
+    "size": 53784681,
+    "sha256": "f09e8153aa46a581d2b56a5b1363b04832070b9409d9244a68cf482b243ff14a"
+  },
+  "build_recipes": {
+    "name": "Wine-Builds-11.0-recipes.zip",
+    "url": "https://codeload.github.com/Kron4ek/Wine-Builds/zip/refs/tags/11.0",
+    "sha256": "ba9064ce385787b41a07fdcd85d77fb06f0f41ac56b858e057af41d49b817d17"
+  }
+}
