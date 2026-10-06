@@ -157,3 +157,11 @@ Consulte os manifestos por pasta para as URLs exatas e os arquivos `LICENSE`, `C
   [execução Windows validada](https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/actions/runs/37445549073).
   As capturas estão no artefato `windows-tools-validation`. Esse teste verifica instalação e
   inicialização/encerramento; não substitui testes de todas as funções de edição.
+
+## Jornada com cidade inicial escolhida
+
+A [versão com escolha da cidade](../mods/choose-starting-city/README.md) tem ROM pronta,
+BPS e implementação em `tools/journey/`. O overlay compila uma cópia separada do projeto
+pret/pokefirered, verifica a revisão e reaplica a modificação de obstáculos terrestres
+pelos endereços do ELF gerado. Os testes de ROM/BPS usam apenas Python; os testes de
+movimentação e eventos usam o núcleo mGBA 0.10.5.

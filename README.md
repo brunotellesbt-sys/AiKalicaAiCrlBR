@@ -23,3 +23,7 @@ gerados ficam em `.local/`, fora do Git. Consulte os comandos e as evidências e
 
 A versão [sem obstáculos terrestres de HM](mods/no-hm-walls/README.md) inclui ROM pronta,
 patch BPS e gerador reproduzível. **Surf e Waterfall permanecem necessários.**
+
+A versão [com escolha da cidade inicial](mods/choose-starting-city/README.md) permite
+sortear uma casa, receber presentes da família e começar com Oak visitando sua sala.
+Inclui a remoção dos obstáculos terrestres e libera Surf/Waterfall sem insígnias.
