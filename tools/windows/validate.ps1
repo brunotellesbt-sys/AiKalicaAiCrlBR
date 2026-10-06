@@ -65,7 +65,11 @@ try {
         if ($title -notmatch $pattern) { throw "$tool opened an unexpected window: $title" }
         $rect = New-Object DesktopProbe+Rect
         if (![DesktopProbe]::GetWindowRect($process.MainWindowHandle, [ref]$rect)) { throw 'Cannot capture application window' }
-        $bitmap = New-Object Drawing.Bitmap ($rect.Right - $rect.Left), ($rect.Bottom - $rect.Top)
+        $width = $rect.Right - $rect.Left
+        $height = $rect.Bottom - $rect.Top
+        Write-Host "$tool screenshot: $width x $height ($title)"
+        if ($width -lt 50 -or $height -lt 50) { throw "$tool has no usable window rectangle: $width x $height" }
+        $bitmap = [Drawing.Bitmap]::new([int]$width, [int]$height)
         $graphics = [Drawing.Graphics]::FromImage($bitmap)
         try {
             $graphics.CopyFromScreen($rect.Left, $rect.Top, 0, 0, $bitmap.Size)
