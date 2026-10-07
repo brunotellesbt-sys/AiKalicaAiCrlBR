@@ -15,19 +15,21 @@ OUT = ROOT/'mods/unova-catalog'
 FAIRY = {35:('FAIRY','FAIRY'),36:('FAIRY','FAIRY'),39:('NORMAL','FAIRY'),40:('NORMAL','FAIRY'),122:('PSYCHIC','FAIRY'),173:('FAIRY','FAIRY'),174:('NORMAL','FAIRY'),175:('FAIRY','FAIRY'),176:('FAIRY','FLYING'),183:('WATER','FAIRY'),184:('WATER','FAIRY'),209:('FAIRY','FAIRY'),210:('FAIRY','FAIRY'),280:('PSYCHIC','FAIRY'),281:('PSYCHIC','FAIRY'),282:('PSYCHIC','FAIRY'),298:('NORMAL','FAIRY'),303:('STEEL','FAIRY'),439:('PSYCHIC','FAIRY'),468:('FAIRY','FLYING'),546:('GRASS','FAIRY'),547:('GRASS','FAIRY')}
 
 class CatalogTests(unittest.TestCase):
+    output = OUT
+    rom_name = "LeafGreen-Journey-Unova"
     @classmethod
     def setUpClass(cls):
-        cls.rom = (OUT/'LeafGreen-Journey-Unova.gba').read_bytes()
-        cls.manifest = json.loads((OUT/'manifest.json').read_text())
-        cls.catalog = json.loads((OUT/'catalog.json').read_text())
-        cls.ref = json.loads((OUT/'debug-reference.json').read_text())
+        cls.rom = (cls.output/(cls.rom_name+'.gba')).read_bytes()
+        cls.manifest = json.loads((cls.output/'manifest.json').read_text())
+        cls.catalog = json.loads((cls.output/'catalog.json').read_text())
+        cls.ref = json.loads((cls.output/'debug-reference.json').read_text())
         cls.abi = cls.ref['layout']; cls.base = cls.ref['symbols']['gSpeciesInfo']-0x08000000
 
     def offset(self,row): return self.base+row['species_id']*self.abi['species_size']
 
     def test_patch_integrity_and_roundtrip(self):
         original = (ROOT/'Pokemon - Leaf Green Version (U) (V1.1).gba').read_bytes()
-        patch = (OUT/'LeafGreen-Journey-Unova.bps').read_bytes()
+        patch = (self.output/(self.rom_name+'.bps')).read_bytes()
         for data,key in [(original,'original_sha256'),(patch,'patch_sha256'),(self.rom,'target_sha256')]:
             self.assertEqual(hashlib.sha256(data).hexdigest(),self.manifest[key])
         self.assertEqual(apply(patch,original),self.rom)
@@ -48,8 +50,8 @@ class CatalogTests(unittest.TestCase):
         self.assertGreater(struct.unpack_from('<I',self.rom,egg+self.abi['species_front'])[0],0x08000000)
 
     def test_original_uploaded_patch_verified(self):
-        patch = (OUT/'donor/unova_emerald_2_0_3.bps').read_bytes()
-        report = json.loads((OUT/'donor-patch.json').read_text())
+        patch = (self.output/'donor/unova_emerald_2_0_3.bps').read_bytes()
+        report = json.loads((self.output/'donor-patch.json').read_text())
         self.assertEqual(hashlib.sha256(patch).hexdigest(),report['patch_sha256'])
         self.assertEqual(patch[:4],b'BPS1')
         source,target,checksum = struct.unpack('<III',patch[-12:])
@@ -67,8 +69,8 @@ class CatalogTests(unittest.TestCase):
             else: self.assertEqual(types,[TYPES.index(t)+1 for t in r['types']],r['species'])
 
     def test_all_donor_graphics_referenced_in_rom(self):
-        with zipfile.ZipFile(OUT/'donor-assets.zip') as archive:
-            self.assertEqual(hashlib.sha256((OUT/'donor-assets.zip').read_bytes()).hexdigest(),self.manifest['donor_asset_sha256'])
+        with zipfile.ZipFile(self.output/'donor-assets.zip') as archive:
+            self.assertEqual(hashlib.sha256((self.output/'donor-assets.zip').read_bytes()).hexdigest(),self.manifest['donor_asset_sha256'])
             for r in self.catalog['catalog']:
                 p = self.offset(r)
                 for kind in ['front','back']:
@@ -90,7 +92,7 @@ class CatalogTests(unittest.TestCase):
             self.assertEqual(self.manifest['wild_world'][key],prior[key])
 
     def test_recorded_emulator_validation_matches_release(self):
-        report = json.loads((OUT/'validation/results.json').read_text())
+        report = json.loads((self.output/'validation/results.json').read_text())
         self.assertEqual(report['rom_sha256'],self.manifest['target_sha256'])
         rows = report['checks']
         self.assertTrue(all(r['passed'] for r in rows))

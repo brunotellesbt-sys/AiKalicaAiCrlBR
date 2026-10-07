@@ -1,0 +1,31 @@
+name: Validate all-region Pokemon catalog
+on:
+  pull_request:
+    paths: ['mods/all-regions/**', 'tools/regions/**', 'tools/unova/**', 'tools/rom_hacks/**', '.github/workflows/all-regions-catalog.yml']
+  push:
+    branches: [main]
+    paths: ['mods/all-regions/**', 'tools/regions/**', 'tools/unova/**', 'tools/rom_hacks/**', '.github/workflows/all-regions-catalog.yml']
+permissions:
+  contents: read
+jobs:
+  all-regions:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Verify every species, sprite, form and evolution reference
+        run: python3 -m unittest discover -s tools/regions -v
+      - name: Verify previous releases and journey rules
+        run: |
+          python3 -m unittest discover -s tools/unova -v
+          python3 -m unittest discover -s tools/journey -v
+          python3 -m unittest discover -s tools/rom_hacks -v
+      - name: Install mGBA development package
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libmgba-dev
+      - name: Exercise the complete catalog, Megas and excluded mechanics
+        run: |
+          gcc -shared -fPIC -O2 tools/rom_hacks/mgba_bridge.c -o /tmp/mgba-bridge.so -lmgba
+          python3 tools/unova/validate_emulator.py --directory mods/all-regions --rom-name LeafGreen-Journey-AllRegions --output mods/all-regions/validation --library /tmp/mgba-bridge.so
+          python3 -m unittest discover -s tools/regions -v

@@ -19,7 +19,7 @@ from remove_hm_walls import BASE, REFERENCE, bps, sha, transform
 def symbols(source,nm):
     return {name:int(addr,16) for addr,kind,name in re.findall(r'^(\w+) (\w) (\S+)$',subprocess.check_output([str(nm),'-n',str(source/'pokeleafgreen.elf')],text=True),re.M)}
 
-def export(source,nm,output):
+def export(source,nm,output,name='LeafGreen-Journey-Unova',overlay_folders=None):
     syms = symbols(source,nm)
     built = (source/'pokeleafgreen.gba').read_bytes()
     original = (ROOT/'Pokemon - Leaf Green Version (U) (V1.1).gba').read_bytes()
@@ -34,12 +34,12 @@ def export(source,nm,output):
     for t in dynamic['attribute_tables']: t['address'] = syms[t['symbol']]
     result,hm = transform(built,dynamic)
     output.mkdir(parents=True,exist_ok=True)
-    (output/'LeafGreen-Journey-Unova.gba').write_bytes(result)
+    (output/(name+'.gba')).write_bytes(result)
     patch = bps(original,result)
-    (output/'LeafGreen-Journey-Unova.bps').write_bytes(patch)
+    (output/(name+'.bps')).write_bytes(patch)
     homes = json.loads((source/'.journey-prepared').read_text())
     donor = json.loads((source/'.unova-prepared').read_text())
-    manifest = dict(source_repository='kerrymilan/roguemon-expansion',source_commit=COMMIT,original_sha256=sha(original),target_sha256=sha(result),patch_sha256=sha(patch),size=len(result),donor_asset_sha256=sha((output/'donor-assets.zip').read_bytes()),terrestrial_hm_changes=hm,homes=homes['homes'],open_world=json.loads((source/'.open-world-prepared').read_text()),wild_world=json.loads((source/'.wild-world-prepared').read_text()),imported={k:v for k,v in donor.items() if k != 'catalog'},overlay_hashes={str(p.relative_to(ROOT)):sha(p.read_bytes()) for folder in ['tools/unova','tools/journey'] for p in sorted((ROOT/folder).iterdir()) if p.is_file() and p.suffix in ['.py','.json','.c','.h','.inc']})
+    manifest = dict(source_repository='kerrymilan/roguemon-expansion',source_commit=COMMIT,original_sha256=sha(original),target_sha256=sha(result),patch_sha256=sha(patch),size=len(result),donor_asset_sha256=sha((output/'donor-assets.zip').read_bytes()),terrestrial_hm_changes=hm,homes=homes['homes'],open_world=json.loads((source/'.open-world-prepared').read_text()),wild_world=json.loads((source/'.wild-world-prepared').read_text()),imported={k:v for k,v in donor.items() if k != 'catalog'},overlay_hashes={str(p.relative_to(ROOT)):sha(p.read_bytes()) for folder in (overlay_folders or ['tools/unova','tools/journey']) for p in sorted((ROOT/folder).iterdir()) if p.is_file() and p.suffix in ['.py','.json','.c','.h','.inc']})
     (output/'manifest.json').write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+'\n')
     (output/'catalog.json').write_text(json.dumps(donor,indent=2)+'\n')
     fields = json.loads((source/'.unova-layout').read_text()); addr = syms['gUnovaLayout']-BASE
@@ -49,7 +49,7 @@ def export(source,nm,output):
     # rather than tens of thousands of compiler-local graphics labels.
     needed = {'gSpeciesInfo','gUnovaLayout','gBattleMons','gBattleStruct','gBattlerPositions','gBattlerPartyIndexes','gBattlersCount','HandleInputChooseMove','gBattlerControllerFuncs','gBattleOutcome'}
     needed.update(json.loads((ROOT/'mods/choose-starting-city/debug-reference.json').read_text())['symbols'])
-    for folder in ['tools/unova','tools/journey']:
+    for folder in (overlay_folders or ['tools/unova','tools/journey']):
         for p in (ROOT/folder).glob('*.py'):
             needed.update(re.findall(r"(?:s\[|native\()\s*['\"](\w+)['\"]",p.read_text()))
     needed.update(n for names in dynamic['groups'] for n in names)
