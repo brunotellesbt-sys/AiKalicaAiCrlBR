@@ -1,0 +1,827 @@
+{
+  "status": "experimental_ocean_grid_not_complete_campaign",
+  "revision": 1,
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "routes": [
+    {
+      "name": "JourneyWorldSea00",
+      "width": 64,
+      "height": 48,
+      "cell": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "JourneyWorldSea01",
+      "width": 64,
+      "height": 48,
+      "cell": [
+        1,
+        0
+      ]
+    },
+    {
+      "name": "JourneyWorldSea02",
+      "width": 64,
+      "height": 48,
+      "cell": [
+        2,
+        0
+      ]
+    },
+    {
+      "name": "JourneyWorldSea03",
+      "width": 64,
+      "height": 48,
+      "cell": [
+        3,
+        0
+      ]
+    },
+    {
+      "name": "JourneyWorldSea04",
+      "width": 64,
+      "height": 48,
+      "cell": [
+        1,
+        1
+      ]
+    },
+    {
+      "name": "JourneyWorldSea05",
+      "width": 64,
+      "height": 48,
+      "cell": [
+        2,
+        1
+      ]
+    },
+    {
+      "name": "JourneyWorldSea06",
+      "width": 64,
+      "height": 48,
+      "cell": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "JourneyWorldSea07",
+      "width": 64,
+      "height": 48,
+      "cell": [
+        2,
+        2
+      ]
+    },
+    {
+      "name": "JourneyWorldSea08",
+      "width": 64,
+      "height": 48,
+      "cell": [
+        3,
+        1
+      ]
+    },
+    {
+      "name": "JourneyWorldSea09",
+      "width": 64,
+      "height": 48,
+      "cell": [
+        3,
+        2
+      ]
+    },
+    {
+      "name": "JourneyWorldLane10",
+      "width": 16,
+      "height": 48,
+      "cell": null
+    },
+    {
+      "name": "JourneyWorldLane20",
+      "width": 16,
+      "height": 48,
+      "cell": null
+    },
+    {
+      "name": "JourneyWorldLane30",
+      "width": 16,
+      "height": 48,
+      "cell": null
+    },
+    {
+      "name": "JourneyWorldLane11",
+      "width": 16,
+      "height": 48,
+      "cell": null
+    },
+    {
+      "name": "JourneyWorldLane21",
+      "width": 16,
+      "height": 48,
+      "cell": null
+    },
+    {
+      "name": "JourneyWorldLane31",
+      "width": 16,
+      "height": 48,
+      "cell": null
+    },
+    {
+      "name": "JourneyPacifidlogSea",
+      "width": 12,
+      "height": 48,
+      "cell": null
+    }
+  ],
+  "ports": [
+    "VermilionCity_Frlg",
+    "OneIsland_Harbor_Frlg",
+    "TwoIsland_Harbor_Frlg",
+    "ThreeIsland_Harbor_Frlg",
+    "FourIsland_Harbor_Frlg",
+    "FiveIsland_Harbor_Frlg",
+    "SixIsland_Harbor_Frlg",
+    "SevenIsland_Harbor_Frlg",
+    "BirthIsland_Harbor_Frlg",
+    "NavelRock_Harbor_Frlg"
+  ],
+  "cells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      2
+    ]
+  ],
+  "connections": {
+    "JourneyWorldSea00": [
+      {
+        "map": "MAP_VERMILION_CITY",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA01",
+        "direction": "right",
+        "offset": 0
+      }
+    ],
+    "JourneyWorldSea01": [
+      {
+        "map": "MAP_ONE_ISLAND_HARBOR",
+        "direction": "up",
+        "offset": 24
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA00",
+        "direction": "left",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA02",
+        "direction": "right",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDLANE10",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "JourneyWorldSea02": [
+      {
+        "map": "MAP_TWO_ISLAND_HARBOR",
+        "direction": "up",
+        "offset": 24
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA01",
+        "direction": "left",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA03",
+        "direction": "right",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDLANE20",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "JourneyWorldSea03": [
+      {
+        "map": "MAP_THREE_ISLAND_HARBOR",
+        "direction": "up",
+        "offset": 24
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA02",
+        "direction": "left",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDLANE30",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "JourneyWorldSea04": [
+      {
+        "map": "MAP_FOUR_ISLAND_HARBOR",
+        "direction": "up",
+        "offset": 24
+      },
+      {
+        "map": "MAP_JOURNEYWORLDLANE10",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA05",
+        "direction": "right",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDLANE11",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "JourneyWorldSea05": [
+      {
+        "map": "MAP_FIVE_ISLAND_HARBOR",
+        "direction": "up",
+        "offset": 24
+      },
+      {
+        "map": "MAP_JOURNEYWORLDLANE20",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA04",
+        "direction": "left",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA08",
+        "direction": "right",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDLANE21",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "JourneyWorldSea06": [
+      {
+        "map": "MAP_SIX_ISLAND_HARBOR",
+        "direction": "up",
+        "offset": 24
+      },
+      {
+        "map": "MAP_JOURNEYWORLDLANE11",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA07",
+        "direction": "right",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYPACIFIDLOGSEA",
+        "direction": "left",
+        "offset": 0
+      }
+    ],
+    "JourneyWorldSea07": [
+      {
+        "map": "MAP_SEVEN_ISLAND_HARBOR",
+        "direction": "up",
+        "offset": 24
+      },
+      {
+        "map": "MAP_JOURNEYWORLDLANE21",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA06",
+        "direction": "left",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA09",
+        "direction": "right",
+        "offset": 0
+      }
+    ],
+    "JourneyWorldSea08": [
+      {
+        "map": "MAP_BIRTH_ISLAND_HARBOR_FRLG",
+        "direction": "up",
+        "offset": 24
+      },
+      {
+        "map": "MAP_JOURNEYWORLDLANE30",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA05",
+        "direction": "left",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDLANE31",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "JourneyWorldSea09": [
+      {
+        "map": "MAP_NAVEL_ROCK_HARBOR_FRLG",
+        "direction": "up",
+        "offset": 24
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA07",
+        "direction": "left",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDLANE31",
+        "direction": "up",
+        "offset": 0
+      }
+    ],
+    "JourneyWorldLane10": [
+      {
+        "map": "MAP_JOURNEYWORLDSEA01",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA04",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "JourneyWorldLane20": [
+      {
+        "map": "MAP_JOURNEYWORLDSEA02",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA05",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "JourneyWorldLane30": [
+      {
+        "map": "MAP_JOURNEYWORLDSEA03",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA08",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "JourneyWorldLane11": [
+      {
+        "map": "MAP_JOURNEYWORLDSEA04",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA06",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "JourneyWorldLane21": [
+      {
+        "map": "MAP_JOURNEYWORLDSEA05",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA07",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "JourneyWorldLane31": [
+      {
+        "map": "MAP_JOURNEYWORLDSEA08",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA09",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "JourneyPacifidlogSea": [
+      {
+        "map": "MAP_ROUTE131",
+        "direction": "up",
+        "offset": -48
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA06",
+        "direction": "right",
+        "offset": 0
+      }
+    ],
+    "VermilionCity_Frlg": [
+      {
+        "map": "MAP_ROUTE6",
+        "offset": 12,
+        "direction": "up"
+      },
+      {
+        "map": "MAP_ROUTE11",
+        "offset": 10,
+        "direction": "right"
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA00",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "OneIsland_Harbor_Frlg": [
+      {
+        "map": "MAP_JOURNEYWORLDSEA01",
+        "direction": "down",
+        "offset": -24
+      }
+    ],
+    "TwoIsland_Harbor_Frlg": [
+      {
+        "map": "MAP_JOURNEYWORLDSEA02",
+        "direction": "down",
+        "offset": -24
+      }
+    ],
+    "ThreeIsland_Harbor_Frlg": [
+      {
+        "map": "MAP_JOURNEYWORLDSEA03",
+        "direction": "down",
+        "offset": -24
+      }
+    ],
+    "FourIsland_Harbor_Frlg": [
+      {
+        "map": "MAP_JOURNEYWORLDSEA04",
+        "direction": "down",
+        "offset": -24
+      }
+    ],
+    "FiveIsland_Harbor_Frlg": [
+      {
+        "map": "MAP_JOURNEYWORLDSEA05",
+        "direction": "down",
+        "offset": -24
+      }
+    ],
+    "SixIsland_Harbor_Frlg": [
+      {
+        "map": "MAP_JOURNEYWORLDSEA06",
+        "direction": "down",
+        "offset": -24
+      }
+    ],
+    "SevenIsland_Harbor_Frlg": [
+      {
+        "map": "MAP_JOURNEYWORLDSEA07",
+        "direction": "down",
+        "offset": -24
+      }
+    ],
+    "BirthIsland_Harbor_Frlg": [
+      {
+        "map": "MAP_JOURNEYWORLDSEA08",
+        "direction": "down",
+        "offset": -24
+      }
+    ],
+    "NavelRock_Harbor_Frlg": [
+      {
+        "map": "MAP_JOURNEYWORLDSEA09",
+        "direction": "down",
+        "offset": -24
+      }
+    ],
+    "Route131": [
+      {
+        "map": "MAP_PACIFIDLOG_TOWN",
+        "offset": 0,
+        "direction": "left"
+      },
+      {
+        "map": "MAP_ROUTE130",
+        "offset": 0,
+        "direction": "right"
+      },
+      {
+        "map": "MAP_JOURNEYPACIFIDLOGSEA",
+        "direction": "down",
+        "offset": 48
+      }
+    ]
+  },
+  "preserved_event_sha256": {
+    "VermilionCity_Frlg": {
+      "object_events": "fe3600099df72eda68623b48cd17d3c60159691875fc9d4d217341cbbb708a16",
+      "warp_events": "8925bcfa127ec0ca24a399931e60658ff9dbfbb32ec889d2dc5f3e99cca50707",
+      "coord_events": "22273f010f1b03a45a4066adc1132c89f1f45771a5c3546c2c6000abc219041e",
+      "bg_events": "3b2fca5d81da5a58502d2b1745de67e623a110ff9ca614736129bd385ffd1fcb"
+    },
+    "OneIsland_Harbor_Frlg": {
+      "object_events": "68c5f0159d7c64c97aefb6ebfdd285978e937f46c0af9295fd10853077cc506a",
+      "warp_events": "796890190689989c167d34ddd5a3f88524b63d71af106e36e82b04731102ca9b",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "TwoIsland_Harbor_Frlg": {
+      "object_events": "9ca526c6fecae122bb2d483b55a00c113432adb0b6827e32b446f6e485802eb1",
+      "warp_events": "7172dbbeac69efe096960343d8c14ffa67fb78da5311fb24a869f5d5834bae2b",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "ThreeIsland_Harbor_Frlg": {
+      "object_events": "4887b1d4b7ad1e5cc53fc78e038f16450bc095f2adea3b4a44a20a3ddd476aae",
+      "warp_events": "5c328f3bb2d03efaa34033d2866a10f284450da43fb5878ba3be4e7c626e4233",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "FourIsland_Harbor_Frlg": {
+      "object_events": "d7430c1aecd77dcd5a62986f5d719f1883877f9ec295e30dfa7d06e44e26a182",
+      "warp_events": "ae3d41e43b5b853014755f65c56004277e70275cc948c228593314ebc91db9d4",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "FiveIsland_Harbor_Frlg": {
+      "object_events": "428f39a9f63084b40ac70cecb57a3261b47ccd4653eb66b0638f32817dd07ef5",
+      "warp_events": "e5a783ce4f236bb8c0072f736471a46658495eeb0599d31c1f4447e4af6ec585",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "SixIsland_Harbor_Frlg": {
+      "object_events": "b4a483abefc8ee9f7324999cd868f4a7e7f6232cf24f8567d0bca06e7d6b5672",
+      "warp_events": "8032ce024ab2a1d38e98545976ebffb1163e324442460b5172b0153910ec96f2",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "SevenIsland_Harbor_Frlg": {
+      "object_events": "f475a6b66dd8bc3e55976547f3c52fd481808019010cad1c5ebb0bbac515c64c",
+      "warp_events": "9231fa3ba3b131bdc78485a391a642ea2252aa0915f005bb54c7f09ac15ae602",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "BirthIsland_Harbor_Frlg": {
+      "object_events": "3984e6ada3f449d66d24405dc901e1417ad709e03e80c8c20ce5f8a9e2c1d315",
+      "warp_events": "c6ec5d69bbc83807fafda7313e526666c51de58cb9c85fe6b466048675c93721",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "NavelRock_Harbor_Frlg": {
+      "object_events": "5d3d06f1e16af7055f6e0a9383661fffbe0956c949813304c7cb32f4e4c50ac9",
+      "warp_events": "986782c070acad647754fa744a5deca8118f9750c60ed89498b08e7b380e2b7e",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "Route131": {
+      "object_events": "c4b053c7fd3ec5f947d02abac710b056e588e855c0a6e9bb3a2909ba4bd0579a",
+      "warp_events": "100172f64336647bf0fb43e78e04ad0da5be5f34d854959305af724838acad97",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  },
+  "original_sha256": {
+    "data/layouts/JourneyWorldSea00/map.bin": null,
+    "data/layouts/JourneyWorldSea00/border.bin": null,
+    "data/layouts/VermilionCity_Frlg/map.bin": "2cfff972a1112b7b411063aae6d0032d308fd563d7c6aa82a0609f1aaef0a2ad",
+    "data/layouts/JourneyWorldSea01/map.bin": null,
+    "data/layouts/JourneyWorldSea01/border.bin": null,
+    "data/layouts/Island_Harbor_Frlg/map.bin": "5eea78c3f4e1718aa04e1fb4bc6c3b6f41162e678ee1d9d4c4715b10d1c1f8ba",
+    "data/layouts/JourneyWorldSea02/map.bin": null,
+    "data/layouts/JourneyWorldSea02/border.bin": null,
+    "data/layouts/JourneyWorldSea03/map.bin": null,
+    "data/layouts/JourneyWorldSea03/border.bin": null,
+    "data/layouts/JourneyWorldSea04/map.bin": null,
+    "data/layouts/JourneyWorldSea04/border.bin": null,
+    "data/layouts/JourneyWorldSea05/map.bin": null,
+    "data/layouts/JourneyWorldSea05/border.bin": null,
+    "data/layouts/JourneyWorldSea06/map.bin": null,
+    "data/layouts/JourneyWorldSea06/border.bin": null,
+    "data/layouts/JourneyWorldSea07/map.bin": null,
+    "data/layouts/JourneyWorldSea07/border.bin": null,
+    "data/layouts/JourneyWorldSea08/map.bin": null,
+    "data/layouts/JourneyWorldSea08/border.bin": null,
+    "data/layouts/JourneyWorldSea09/map.bin": null,
+    "data/layouts/JourneyWorldSea09/border.bin": null,
+    "data/layouts/JourneyWorldLane10/map.bin": null,
+    "data/layouts/JourneyWorldLane10/border.bin": null,
+    "data/layouts/JourneyWorldLane20/map.bin": null,
+    "data/layouts/JourneyWorldLane20/border.bin": null,
+    "data/layouts/JourneyWorldLane30/map.bin": null,
+    "data/layouts/JourneyWorldLane30/border.bin": null,
+    "data/layouts/JourneyWorldLane11/map.bin": null,
+    "data/layouts/JourneyWorldLane11/border.bin": null,
+    "data/layouts/JourneyWorldLane21/map.bin": null,
+    "data/layouts/JourneyWorldLane21/border.bin": null,
+    "data/layouts/JourneyWorldLane31/map.bin": null,
+    "data/layouts/JourneyWorldLane31/border.bin": null,
+    "data/layouts/Route131/map.bin": "f37c7300b40969630c780319814cd875f8aad346423be9818a76c6c32e7779d9",
+    "data/layouts/JourneyPacifidlogSea/map.bin": null,
+    "data/layouts/JourneyPacifidlogSea/border.bin": null,
+    "data/maps/map_groups.json": "c60bff81b489a2c3f61d0951be6255576bcb2c9956d7f3103fb7f9d20db3193a",
+    "data/layouts/layouts.json": "6ae2a5d091593c763c2eb36d293aa001f5ff73c3ef41ab7062811c9c7ecf4303",
+    "data/maps/JourneyWorldSea00/map.json": null,
+    "data/maps/VermilionCity_Frlg/map.json": "94fee207255c939e3e670352d0641926e303386664599b5db70d758da12e1835",
+    "data/maps/JourneyWorldSea01/map.json": null,
+    "data/maps/OneIsland_Harbor_Frlg/map.json": "4793f1797a49afd1e6ea5df8ac842a82c747bc95ab24c11b948e06f9c521f0b6",
+    "data/maps/JourneyWorldSea02/map.json": null,
+    "data/maps/TwoIsland_Harbor_Frlg/map.json": "eec8f9aaca3070b2032afd04f01520c2c799399751ce282adfb3e782cb15d8d7",
+    "data/maps/JourneyWorldSea03/map.json": null,
+    "data/maps/ThreeIsland_Harbor_Frlg/map.json": "6a9358ddbdef3c47f013a64d9e7466ac2742cdd25ed1e29d2994f1d41b8d5ec1",
+    "data/maps/JourneyWorldSea04/map.json": null,
+    "data/maps/FourIsland_Harbor_Frlg/map.json": "90ad2d64d4ed5c3082416683d37af321538520a316d394498d197691247513b2",
+    "data/maps/JourneyWorldSea05/map.json": null,
+    "data/maps/FiveIsland_Harbor_Frlg/map.json": "7f1cd87bc6c40c1babc8d7c73e8c82498624c6a6c105901865f228166f72d197",
+    "data/maps/JourneyWorldSea06/map.json": null,
+    "data/maps/SixIsland_Harbor_Frlg/map.json": "a751dd3b6979f18f0acb146f7f55716fe9516a8b26609e515723cd59528708d4",
+    "data/maps/JourneyWorldSea07/map.json": null,
+    "data/maps/SevenIsland_Harbor_Frlg/map.json": "486949417b8107b5494baebcb272ccc92948b128994498f5ccd8963a72cc0390",
+    "data/maps/JourneyWorldSea08/map.json": null,
+    "data/maps/BirthIsland_Harbor_Frlg/map.json": "002edb36705ae33e9463fa639992b8179d87949725acbedc1e871defbb0a2c7b",
+    "data/maps/JourneyWorldSea09/map.json": null,
+    "data/maps/NavelRock_Harbor_Frlg/map.json": "26a975cbad87bd28828c0c5d1f7bd62bcf4c16bb9b9cb4781943d8a3b41cb36e",
+    "data/maps/JourneyWorldLane10/map.json": null,
+    "data/maps/JourneyWorldLane20/map.json": null,
+    "data/maps/JourneyWorldLane30/map.json": null,
+    "data/maps/JourneyWorldLane11/map.json": null,
+    "data/maps/JourneyWorldLane21/map.json": null,
+    "data/maps/JourneyWorldLane31/map.json": null,
+    "data/maps/Route131/map.json": "913932c86c127e1fe069b3a7e32002bb2a0224ab5d57535423ea92d472d6aac6",
+    "data/maps/JourneyPacifidlogSea/map.json": null,
+    "data/maps/JourneyWorldSea00/scripts.inc": null,
+    "data/maps/JourneyWorldSea01/scripts.inc": null,
+    "data/maps/JourneyWorldSea02/scripts.inc": null,
+    "data/maps/JourneyWorldSea03/scripts.inc": null,
+    "data/maps/JourneyWorldSea04/scripts.inc": null,
+    "data/maps/JourneyWorldSea05/scripts.inc": null,
+    "data/maps/JourneyWorldSea06/scripts.inc": null,
+    "data/maps/JourneyWorldSea07/scripts.inc": null,
+    "data/maps/JourneyWorldSea08/scripts.inc": null,
+    "data/maps/JourneyWorldSea09/scripts.inc": null,
+    "data/maps/JourneyWorldLane10/scripts.inc": null,
+    "data/maps/JourneyWorldLane20/scripts.inc": null,
+    "data/maps/JourneyWorldLane30/scripts.inc": null,
+    "data/maps/JourneyWorldLane11/scripts.inc": null,
+    "data/maps/JourneyWorldLane21/scripts.inc": null,
+    "data/maps/JourneyWorldLane31/scripts.inc": null,
+    "data/maps/JourneyPacifidlogSea/scripts.inc": null,
+    "data/event_scripts.s": "65bdf9816513ed44321534241a74ee413ab609d56881440a6460ba03f10ffcce"
+  },
+  "prepared_sha256": {
+    "data/layouts/JourneyWorldSea00/map.bin": "25f6ba7240b9325d090967f7b1a89f8c01ac8cd3570d6e37f5b8840647296000",
+    "data/layouts/JourneyWorldSea00/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/VermilionCity_Frlg/map.bin": "dd77bfcc774fb458fbc093ed013c4808755c0e82034ff86b6291f1681a344a69",
+    "data/layouts/JourneyWorldSea01/map.bin": "25f6ba7240b9325d090967f7b1a89f8c01ac8cd3570d6e37f5b8840647296000",
+    "data/layouts/JourneyWorldSea01/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/Island_Harbor_Frlg/map.bin": "baa2debd4a842d3bd0df616f689331379252f0b98b77dfaa1021b6e04ba63db5",
+    "data/layouts/JourneyWorldSea02/map.bin": "25f6ba7240b9325d090967f7b1a89f8c01ac8cd3570d6e37f5b8840647296000",
+    "data/layouts/JourneyWorldSea02/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/JourneyWorldSea03/map.bin": "25f6ba7240b9325d090967f7b1a89f8c01ac8cd3570d6e37f5b8840647296000",
+    "data/layouts/JourneyWorldSea03/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/JourneyWorldSea04/map.bin": "25f6ba7240b9325d090967f7b1a89f8c01ac8cd3570d6e37f5b8840647296000",
+    "data/layouts/JourneyWorldSea04/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/JourneyWorldSea05/map.bin": "25f6ba7240b9325d090967f7b1a89f8c01ac8cd3570d6e37f5b8840647296000",
+    "data/layouts/JourneyWorldSea05/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/JourneyWorldSea06/map.bin": "25f6ba7240b9325d090967f7b1a89f8c01ac8cd3570d6e37f5b8840647296000",
+    "data/layouts/JourneyWorldSea06/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/JourneyWorldSea07/map.bin": "25f6ba7240b9325d090967f7b1a89f8c01ac8cd3570d6e37f5b8840647296000",
+    "data/layouts/JourneyWorldSea07/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/JourneyWorldSea08/map.bin": "25f6ba7240b9325d090967f7b1a89f8c01ac8cd3570d6e37f5b8840647296000",
+    "data/layouts/JourneyWorldSea08/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/JourneyWorldSea09/map.bin": "25f6ba7240b9325d090967f7b1a89f8c01ac8cd3570d6e37f5b8840647296000",
+    "data/layouts/JourneyWorldSea09/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/JourneyWorldLane10/map.bin": "de3afbc7f210d6b982835f21572d497f0bffd119f00c1e8137ec920c9e917389",
+    "data/layouts/JourneyWorldLane10/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/JourneyWorldLane20/map.bin": "de3afbc7f210d6b982835f21572d497f0bffd119f00c1e8137ec920c9e917389",
+    "data/layouts/JourneyWorldLane20/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/JourneyWorldLane30/map.bin": "de3afbc7f210d6b982835f21572d497f0bffd119f00c1e8137ec920c9e917389",
+    "data/layouts/JourneyWorldLane30/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/JourneyWorldLane11/map.bin": "de3afbc7f210d6b982835f21572d497f0bffd119f00c1e8137ec920c9e917389",
+    "data/layouts/JourneyWorldLane11/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/JourneyWorldLane21/map.bin": "de3afbc7f210d6b982835f21572d497f0bffd119f00c1e8137ec920c9e917389",
+    "data/layouts/JourneyWorldLane21/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/JourneyWorldLane31/map.bin": "de3afbc7f210d6b982835f21572d497f0bffd119f00c1e8137ec920c9e917389",
+    "data/layouts/JourneyWorldLane31/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/Route131/map.bin": "2fe08bdb2847ad62dc80ca98f2ce8c5d570410f62aec99ae2cf0e1d5273b735d",
+    "data/layouts/JourneyPacifidlogSea/map.bin": "9a23cd919a2e46fcb529d326e575d5503b1f9fd116a6ce463fd75ed5ad71c206",
+    "data/layouts/JourneyPacifidlogSea/border.bin": "074adf1a5df149c325dc9367c1a2b807694f3b1e6c83bd26cf4a6f3840bb720b",
+    "data/maps/map_groups.json": "809c2f9da5e26f40e92296d7aee4c1f572dd794b1f9c41a1e7f4435ee317afbb",
+    "data/layouts/layouts.json": "28a8e58b606f83ac47062fed9f88d68d0fc0313e974b96575ddae588583006ce",
+    "data/maps/JourneyWorldSea00/map.json": "8c1bde226b1ec8a0fa25a6e9ebf281019461400502736359e4ee16d708130051",
+    "data/maps/VermilionCity_Frlg/map.json": "c5789b4f872a8d79e87cb8febb46b7c35ff55bca33e458d5d2c0d9c28cae9a86",
+    "data/maps/JourneyWorldSea01/map.json": "4a2fd63aa7210276f0d1dbc1a098eb3b086bbdecc013adbc53fe50a87948f637",
+    "data/maps/OneIsland_Harbor_Frlg/map.json": "f042633ddabe5ea8676d9546e55423cf8a14e8dbb4af9acc9d74d9ee4994e926",
+    "data/maps/JourneyWorldSea02/map.json": "a45eae8bd23b171a5d9192914fbda5229a935ddaa2380c70a99f5bfdc9a6117e",
+    "data/maps/TwoIsland_Harbor_Frlg/map.json": "b0f3e082e5e2d0e970da2b2ca9e665e36f8b36e07c65d2fb239832903efafcc9",
+    "data/maps/JourneyWorldSea03/map.json": "8cbfbff3805d29424c8a6d1f0df506deb6aba1853e8eccbe6c5c5d00dfed2204",
+    "data/maps/ThreeIsland_Harbor_Frlg/map.json": "77eb282cff174ed0e01918ec719545fc5b6acdef9b445e39e3304b5ee7e7c2ff",
+    "data/maps/JourneyWorldSea04/map.json": "3df3d93e0db095131d9f3a480b94932ede697a88559fd6409b279b69b7e4aa2a",
+    "data/maps/FourIsland_Harbor_Frlg/map.json": "23bd797236f02eeb4b21fa5df9037dc02eb0c0d4f54e8c8b50c5e0bddca98944",
+    "data/maps/JourneyWorldSea05/map.json": "8eb40e998567d2752405cd5bfd1317d194bc0d8054febe8dc7e1eef9feace112",
+    "data/maps/FiveIsland_Harbor_Frlg/map.json": "726c83a59c75e9092aea4b80dc4ce0b126b623f601269489d7597785c0b1a007",
+    "data/maps/JourneyWorldSea06/map.json": "6e8d5af483625696aee3f761c1c220898af19019a44c8237e318f015eb6e03e3",
+    "data/maps/SixIsland_Harbor_Frlg/map.json": "bb00663d20b52af19429d8f0f599658e4362e0d419de9ca0cefeb7ad2a6655a7",
+    "data/maps/JourneyWorldSea07/map.json": "260832d7418b4cdf4da2e2c2bab226b561b1ddeb700b0b03763ff97b7153729f",
+    "data/maps/SevenIsland_Harbor_Frlg/map.json": "7245f30b88679b4b83d0879511fafbe013ece77022478739fbfe4f775bebcec2",
+    "data/maps/JourneyWorldSea08/map.json": "71e2ec19e53ee019fa598a1dc57afa1ce257edad4f75cc9fb08b0e6b93884ec5",
+    "data/maps/BirthIsland_Harbor_Frlg/map.json": "8065d9a9548a8832759acd2323b57028ee7f5a89005cc5929b058bd8715c4850",
+    "data/maps/JourneyWorldSea09/map.json": "e7d08a5052d255300fb97dcd53f448169eec57bfc6e056ba2b4ad1bf436a84b7",
+    "data/maps/NavelRock_Harbor_Frlg/map.json": "587ab92971e634ed61e1119a79c7992efb69f3e47da51e6f3e9c1eaa3ce4e98a",
+    "data/maps/JourneyWorldLane10/map.json": "e982d1bf7f60c228e00e431aa23a9e0066108b2ac57ac97662feb357fb1aefc1",
+    "data/maps/JourneyWorldLane20/map.json": "9207512665a371f6805dcc6d7c99e22efce21e0a7665a95e29926153de671611",
+    "data/maps/JourneyWorldLane30/map.json": "a3fadfabd3a9ea574752bcba39ca157829d66dff5f4110f61fd78988fe41d388",
+    "data/maps/JourneyWorldLane11/map.json": "27c9f45dae0d83de73be1e01d6f684e2a9f6f1952ed4e74a6c7da435a91b12aa",
+    "data/maps/JourneyWorldLane21/map.json": "e1dee6082e515064d64758edc0db11cd3976eacbec695fdcd778e37420a4da98",
+    "data/maps/JourneyWorldLane31/map.json": "8abc030f614060caee971133c80b639510f9dec3131bf9f03f57bf31970f68cc",
+    "data/maps/Route131/map.json": "8c62d38ea41bb9f8ab7e985e065b9a618ce16f2b7801115a8ff9faaf7546ff56",
+    "data/maps/JourneyPacifidlogSea/map.json": "01a6561f29efe771c69eb8e29910c0ea2dbc9663e9955ee80925048dc97f5614",
+    "data/maps/JourneyWorldSea00/scripts.inc": "c75682fd4e9893a38ecbb0c2a3ca2aa70e6b3f6e4b0a91558a694c380b2c8fec",
+    "data/maps/JourneyWorldSea01/scripts.inc": "ce13c89ae60405471309e735aeae8af783c094ac6edb82e6769a6f9a0f030d1b",
+    "data/maps/JourneyWorldSea02/scripts.inc": "70d5b65a7ddb19372471ba9dc8a69f0078042f4688bc1e4b4658ffe202505590",
+    "data/maps/JourneyWorldSea03/scripts.inc": "a144cf6e5e80b6cd6dc5a9ede62ac217f9be96f6661ee50ed818836ff920e7e5",
+    "data/maps/JourneyWorldSea04/scripts.inc": "b57346f1f404bb5f6de93c5f24bf6c81352d9c2021981b71516ccec914385f2d",
+    "data/maps/JourneyWorldSea05/scripts.inc": "d332ce3dd18fa7456a6238129efc2a0645c3eff18ffa749c1cde42234452a5c2",
+    "data/maps/JourneyWorldSea06/scripts.inc": "772274cd40ea80c20e217fb28b0842b0df2520a9f471eee0ea9c1590090e636c",
+    "data/maps/JourneyWorldSea07/scripts.inc": "370f53ed55db7c935213db8082696201c92710116b4eebd2407bd0a350cdb768",
+    "data/maps/JourneyWorldSea08/scripts.inc": "ebca011632bf82b04d41588d5c3709996700699520e3cb362974d774688a74b1",
+    "data/maps/JourneyWorldSea09/scripts.inc": "485c9742b28e2813f3f213030ccb15a3d5872b8b2f1fba105532cd7470eff5bd",
+    "data/maps/JourneyWorldLane10/scripts.inc": "913a0426e8c34dd18f1ea8c7102568b46227b4dc17a73fc784887b3390bb26c3",
+    "data/maps/JourneyWorldLane20/scripts.inc": "bbef191ef3c2c7c5146720b4d90c891dac5ff158c23a6229c8d0ed4ec9871b3a",
+    "data/maps/JourneyWorldLane30/scripts.inc": "739ca2faa56e39251474b22241a681393f27c212f7ac0b535935f102c932f702",
+    "data/maps/JourneyWorldLane11/scripts.inc": "a25e02d6c2fca86c9af675748e3478e82f224cbb59ba80fd79f149b4a5fc8703",
+    "data/maps/JourneyWorldLane21/scripts.inc": "6dfc69527464325c39b8a7c5794b6db0d9102c4aeb1258dbc4ae1b3f481baf49",
+    "data/maps/JourneyWorldLane31/scripts.inc": "0f718b24eb7bf04fcd29b5eea5b4f36b0af239e0b43590606931b9bd7ed4a681",
+    "data/maps/JourneyPacifidlogSea/scripts.inc": "2a9115e794dca6c96cd9f175b46812bd6666ff3955463950d0f4d3cbb8eb0050",
+    "data/event_scripts.s": "683fc8a68a6448fe35b3e6e3473176a8aff8d1446f276eb38a24f4c2b64ac9e4"
+  },
+  "route131_endpoint": "proposed_pending_user_confirmation",
+  "cinnabar_south_endpoint": "pending_geographic_confirmation",
+  "released_rom_changed": false,
+  "full_story_validated": false
+}

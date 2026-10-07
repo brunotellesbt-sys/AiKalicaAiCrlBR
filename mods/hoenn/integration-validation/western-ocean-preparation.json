@@ -1,0 +1,317 @@
+{
+  "status": "experimental_western_ocean_not_complete_campaign",
+  "revision": 1,
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "channels": {
+    "CinnabarIsland_Frlg": [
+      8,
+      16,
+      14,
+      20
+    ],
+    "Route114": [
+      0,
+      12,
+      10,
+      24
+    ],
+    "Route115": [
+      0,
+      7,
+      24,
+      48
+    ],
+    "Route105": [
+      0,
+      7,
+      30,
+      54
+    ]
+  },
+  "maps": [
+    "JourneyCinnabarSouthSea",
+    "JourneyWestRiver",
+    "JourneyRustboroCoast",
+    "JourneyRustboroGate",
+    "JourneyDewfordCoast",
+    "JourneyDewfordGate"
+  ],
+  "connections": {
+    "CinnabarIsland_Frlg": [
+      {
+        "map": "MAP_ROUTE21_SOUTH",
+        "offset": 0,
+        "direction": "up"
+      },
+      {
+        "map": "MAP_ROUTE20",
+        "offset": 0,
+        "direction": "right"
+      },
+      {
+        "map": "MAP_JOURNEYCINNABARSOUTHSEA",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "Route114": [
+      {
+        "map": "MAP_ROUTE115",
+        "offset": 40,
+        "direction": "left"
+      },
+      {
+        "map": "MAP_FALLARBOR_TOWN",
+        "offset": 0,
+        "direction": "right"
+      },
+      {
+        "map": "MAP_JOURNEYWESTRIVER",
+        "direction": "left",
+        "offset": 10
+      }
+    ],
+    "Route115": [
+      {
+        "map": "MAP_RUSTBORO_CITY",
+        "offset": 0,
+        "direction": "down"
+      },
+      {
+        "map": "MAP_ROUTE114",
+        "offset": -40,
+        "direction": "right"
+      },
+      {
+        "map": "MAP_JOURNEYRUSTBOROGATE",
+        "direction": "left",
+        "offset": 24
+      }
+    ],
+    "Route105": [
+      {
+        "map": "MAP_ROUTE104",
+        "offset": 0,
+        "direction": "up"
+      },
+      {
+        "map": "MAP_ROUTE106",
+        "offset": 0,
+        "direction": "down"
+      },
+      {
+        "map": "MAP_UNDERWATER_ROUTE105",
+        "offset": 0,
+        "direction": "dive"
+      },
+      {
+        "map": "MAP_JOURNEYDEWFORDGATE",
+        "direction": "left",
+        "offset": 30
+      }
+    ],
+    "JourneyCinnabarSouthSea": [
+      {
+        "map": "MAP_CINNABAR_ISLAND",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWESTRIVER",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "JourneyWestRiver": [
+      {
+        "map": "MAP_JOURNEYCINNABARSOUTHSEA",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_ROUTE114",
+        "direction": "right",
+        "offset": -10
+      },
+      {
+        "map": "MAP_JOURNEYRUSTBOROCOAST",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "JourneyRustboroCoast": [
+      {
+        "map": "MAP_JOURNEYWESTRIVER",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYRUSTBOROGATE",
+        "direction": "right",
+        "offset": 24
+      },
+      {
+        "map": "MAP_JOURNEYDEWFORDCOAST",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "JourneyRustboroGate": [
+      {
+        "map": "MAP_JOURNEYRUSTBOROCOAST",
+        "direction": "left",
+        "offset": -24
+      },
+      {
+        "map": "MAP_ROUTE115",
+        "direction": "right",
+        "offset": -24
+      }
+    ],
+    "JourneyDewfordCoast": [
+      {
+        "map": "MAP_JOURNEYRUSTBOROCOAST",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYDEWFORDGATE",
+        "direction": "right",
+        "offset": 30
+      }
+    ],
+    "JourneyDewfordGate": [
+      {
+        "map": "MAP_JOURNEYDEWFORDCOAST",
+        "direction": "left",
+        "offset": -30
+      },
+      {
+        "map": "MAP_ROUTE105",
+        "direction": "right",
+        "offset": -30
+      }
+    ]
+  },
+  "preserved_event_sha256": {
+    "CinnabarIsland_Frlg": {
+      "object_events": "3b387ebdb32b96c21520570b1df0a4198810f76bc0eb3e65885801bebefe71ea",
+      "warp_events": "b7e4f34bd1f089debcb95c8444c9f1c4084e55223ab0d042f53bebaaf1a6477a",
+      "coord_events": "1042fb2825c0a6b5fd1f24572c1672faace88d41dd91c57ad83a9c217d1c145e",
+      "bg_events": "68526cac70f63e99e4d03ec5363b25bd21fd76118030fac0c06a0a324c0688da"
+    },
+    "Route114": {
+      "object_events": "04bcf75ef57396bda2e43066a315fdbdd596f9b4206ca89a0c8a35495468520d",
+      "warp_events": "e7186b8c16ab3263b4851abf2d73ee412741ca042efcdb3f6161c73e85874717",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "bf24b5c3d5549db60c0ef3fea4e012199479cdda4f20d6fd2b4546e4aac21a14"
+    },
+    "Route115": {
+      "object_events": "87b2e44ec8a5eb17d9ef04bffa4249cff0fc85517325c3ce02590589a3a27107",
+      "warp_events": "70581655ef964ddb9bef8d1520dbf583333e7d2de63a4ab26ed6bfffe0cf0b76",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "cc5c051b3aafa85811a566fe71990f06e99e9e6aa1daddc79970ec8f57f92173"
+    },
+    "Route105": {
+      "object_events": "77a984c987b595c9e0e73e066332a3c59c1443dc4a38022dd8467bd66542accc",
+      "warp_events": "bf267575741393d5a3bcd6b6b857b78e591fd86e32a763691a858886e6516b1b",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "947b51b324b1636ad2193bdd4eea09350cde86355054a1cadf02f3814fe8c955"
+    },
+    "Route127": {
+      "object_events": "103a701ce74d4aa413f9705b42e4fee97572ab2d04157dc53c38ef8e1fb85e2e",
+      "warp_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "693c7db097f538314723db9baec9f0d220c2a88538dd971498f46fc911a60d97"
+    },
+    "Route21_South_Frlg": {
+      "object_events": "cb306586d59fe3b80b9553ccee0d5402d38c4d8aba46599b4bef386253ecd99f",
+      "warp_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  },
+  "original_sha256": {
+    "data/maps/JourneyHoennCrossing/map.json": "19f2655f47177392a96bc822c21c15cc9ae5e61c39895607bc29e3d3c501633e",
+    "data/layouts/JourneyCinnabarSouthSea/map.bin": null,
+    "data/layouts/JourneyCinnabarSouthSea/border.bin": null,
+    "data/layouts/JourneyWestRiver/map.bin": null,
+    "data/layouts/JourneyWestRiver/border.bin": null,
+    "data/layouts/JourneyRustboroCoast/map.bin": null,
+    "data/layouts/JourneyRustboroCoast/border.bin": null,
+    "data/layouts/JourneyRustboroGate/map.bin": null,
+    "data/layouts/JourneyRustboroGate/border.bin": null,
+    "data/layouts/JourneyDewfordCoast/map.bin": null,
+    "data/layouts/JourneyDewfordCoast/border.bin": null,
+    "data/layouts/JourneyDewfordGate/map.bin": null,
+    "data/layouts/JourneyDewfordGate/border.bin": null,
+    "data/layouts/CinnabarIsland_Frlg/map.bin": "1d1277951916f4db9c7e4f4f42390ead7537b538bebf787024b81f303a7db78a",
+    "data/layouts/Route114/map.bin": "2b2c0d6a1bc47c172448db6a9231522d5716d5272ac827dd0fbd23f9798d88d7",
+    "data/layouts/Route115/map.bin": "5c7cc1c25391885af12d40f67c08e2cb04a9984bf2b7d9a604855d1e85ba10fc",
+    "data/layouts/Route105/map.bin": "3426db0bbeca5baeb3971d5d60345400d01fff229a60c28ebe3745fd81558b14",
+    "data/maps/map_groups.json": "809c2f9da5e26f40e92296d7aee4c1f572dd794b1f9c41a1e7f4435ee317afbb",
+    "data/layouts/layouts.json": "28a8e58b606f83ac47062fed9f88d68d0fc0313e974b96575ddae588583006ce",
+    "data/maps/JourneyCinnabarSouthSea/scripts.inc": null,
+    "data/maps/JourneyWestRiver/scripts.inc": null,
+    "data/maps/JourneyRustboroCoast/scripts.inc": null,
+    "data/maps/JourneyRustboroGate/scripts.inc": null,
+    "data/maps/JourneyDewfordCoast/scripts.inc": null,
+    "data/maps/JourneyDewfordGate/scripts.inc": null,
+    "data/event_scripts.s": "683fc8a68a6448fe35b3e6e3473176a8aff8d1446f276eb38a24f4c2b64ac9e4",
+    "data/maps/CinnabarIsland_Frlg/map.json": "bc6ac21cbf0361b7904540f300dedaeb1c6e96d8f0655044bb06268606ca87e2",
+    "data/maps/Route114/map.json": "ca690d9c58204766efba6ac99856e6a9f6d9449ca8d1b20cd39b09c66cfbdf3c",
+    "data/maps/Route115/map.json": "82f243b5ab9b092e94655f458212734657d3469d07786dc8585c74dd86dd62fc",
+    "data/maps/Route105/map.json": "2682035e257263a905e6444ed4f9c7e78742bafa51ec1b59d940aa6bca5b34b8",
+    "data/maps/Route127/map.json": "1cd6433ee866c24058a61e6280cba8518535a284a204836d9a50d91a115e47e6",
+    "data/maps/Route21_South_Frlg/map.json": "0236503937fa08111802099588a35c64e446cfca4bec06aaf0d311b9eff8c1df",
+    "data/maps/JourneyCinnabarSouthSea/map.json": null,
+    "data/maps/JourneyWestRiver/map.json": null,
+    "data/maps/JourneyRustboroCoast/map.json": null,
+    "data/maps/JourneyRustboroGate/map.json": null,
+    "data/maps/JourneyDewfordCoast/map.json": null,
+    "data/maps/JourneyDewfordGate/map.json": null
+  },
+  "prepared_sha256": {
+    "data/maps/JourneyHoennCrossing/map.json": "46595b20ee8b5ca890a1c49324cbf1bcbad7c7ae9a042be19a23b76c13012e57",
+    "data/layouts/JourneyCinnabarSouthSea/map.bin": "ffac4030e586f1ae6b5b6646bd3e12d18817671a03ed5b9a7cacd9c5f27718fe",
+    "data/layouts/JourneyCinnabarSouthSea/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/JourneyWestRiver/map.bin": "6013b542cfb4d1306d38253377155672c842ec955b4d0cb671be2faccd281c7f",
+    "data/layouts/JourneyWestRiver/border.bin": "074adf1a5df149c325dc9367c1a2b807694f3b1e6c83bd26cf4a6f3840bb720b",
+    "data/layouts/JourneyRustboroCoast/map.bin": "af730b88329a32df2567a70aaeb79a3eaf97423505b5488ee8294acdbf65b0ce",
+    "data/layouts/JourneyRustboroCoast/border.bin": "074adf1a5df149c325dc9367c1a2b807694f3b1e6c83bd26cf4a6f3840bb720b",
+    "data/layouts/JourneyRustboroGate/map.bin": "979b0ec492bed800d7875ec17bdce73d5d90520b04edd07c249c7d59b00667fe",
+    "data/layouts/JourneyRustboroGate/border.bin": "074adf1a5df149c325dc9367c1a2b807694f3b1e6c83bd26cf4a6f3840bb720b",
+    "data/layouts/JourneyDewfordCoast/map.bin": "af730b88329a32df2567a70aaeb79a3eaf97423505b5488ee8294acdbf65b0ce",
+    "data/layouts/JourneyDewfordCoast/border.bin": "074adf1a5df149c325dc9367c1a2b807694f3b1e6c83bd26cf4a6f3840bb720b",
+    "data/layouts/JourneyDewfordGate/map.bin": "979b0ec492bed800d7875ec17bdce73d5d90520b04edd07c249c7d59b00667fe",
+    "data/layouts/JourneyDewfordGate/border.bin": "074adf1a5df149c325dc9367c1a2b807694f3b1e6c83bd26cf4a6f3840bb720b",
+    "data/layouts/CinnabarIsland_Frlg/map.bin": "f97449eda1a1b4765e2351cfa9019d208a0fc6013c60e8eeb234041d2392e1f1",
+    "data/layouts/Route114/map.bin": "0697231c91d7976b5660d9b1a62bc9c0f0d3a8d50c1e07a2a8c6b3120b5046aa",
+    "data/layouts/Route115/map.bin": "502b45a36f456618c8c44afd7d4a0ca89cf1e01cf99b6366b1bd2788f0080b57",
+    "data/layouts/Route105/map.bin": "31ca4569ce2966352f73440eba7756ffb84e9cd463f4ae2949a22708c95864a7",
+    "data/maps/map_groups.json": "b28db58f544b9bdd509ec8fd1729706a6047a5be0ad89d12d5a6100180371a13",
+    "data/layouts/layouts.json": "72d423489975ced1d3422a550883a4259af82eebef1f66b2e87613b7f2d25b06",
+    "data/maps/JourneyCinnabarSouthSea/scripts.inc": "9e933c7d7325182785cd9c00b1027269d379d5c356cc2f29e0ba1d7910f577fa",
+    "data/maps/JourneyWestRiver/scripts.inc": "81b4dcfa44a3e4764f0e92c3275173c213d928328945948c47171149c5092ac5",
+    "data/maps/JourneyRustboroCoast/scripts.inc": "ae3bd26fa2a9deb43b4f6be3ad01c988cadd175f6c7a615d5e7bf54ddf8ad12e",
+    "data/maps/JourneyRustboroGate/scripts.inc": "d6f19a17d1a6929aa3d71672ead8a296b5f804972f08dc93d2c872a73971a744",
+    "data/maps/JourneyDewfordCoast/scripts.inc": "6f45b399ff2934f38c2d994a23ebb18307809b6a6223bd0736e6bd8341680b98",
+    "data/maps/JourneyDewfordGate/scripts.inc": "a673bb898b9068253c692bfd6c7a19e6f2c950e04345208b03c274c87a540b82",
+    "data/event_scripts.s": "eb88431a54a16096e53f7e8fae5fe9e30b22bf5901678ba2eddde96d33a12478",
+    "data/maps/CinnabarIsland_Frlg/map.json": "5986e5e891f894eaa34916aabd8b46a6b8123851ef81df89d2441fddb962fbda",
+    "data/maps/Route114/map.json": "fb14e0e73132c418c610a16cc8a5b7a9ce7626bb335bc4032403499ef168b425",
+    "data/maps/Route115/map.json": "fc4fcaa7e4317750228da3b6ff0f339fcb178974904554d8b2aa129f8199b055",
+    "data/maps/Route105/map.json": "2d2e900636871ea02f519155182d5640ed39ca1a09b778f71965367f6cfa3303",
+    "data/maps/Route127/map.json": "7f1f624d39624f6d8e89c23b29dbba15fdb0da463fc4753d3895a74fa0d6fc62",
+    "data/maps/Route21_South_Frlg/map.json": "6f2adee7e3226fa05786662950e6209862268c486147e7a5d58a6e5df13b73b9",
+    "data/maps/JourneyCinnabarSouthSea/map.json": "727386c04376087c67e8c04a9031f7065d9fa3cd08da79b8704a1e79280a5f71",
+    "data/maps/JourneyWestRiver/map.json": "905ef1b36e5fc5d164414e0760989926a0debeba9b20f64dd04447055a043348",
+    "data/maps/JourneyRustboroCoast/map.json": "5d7df49e488f9baf075b229782f155016b621aff29f33a7e6c610095ce6c892d",
+    "data/maps/JourneyRustboroGate/map.json": "ee0703f74085bb48f40bb10b4cb96d6180aa4b7ac54b84bf7dc25aab4f223d1e",
+    "data/maps/JourneyDewfordCoast/map.json": "ce20e8f6ddf1145aa4ab3cb26439c15440962367ed6166b07f3d0f8b39528a65",
+    "data/maps/JourneyDewfordGate/map.json": "4682bfaa14db5b05e83a6c1b96077916c868bc165d9bcce394416298596691c6"
+  },
+  "superseded_crossing_disconnected": true,
+  "released_rom_changed": false,
+  "full_story_validated": false
+}

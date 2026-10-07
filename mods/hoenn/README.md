@@ -1,7 +1,8 @@
 # Hoenn — inventário e porte pendente
 
-[Protótipo da travessia Rota 127 ↔ Rota 21](INTEGRATION.md): conexão física
-testada numa base experimental; **não substitui a ROM publicada nem conclui
+[Mundo conectado e estados regionais](INTEGRATION.md): conexões físicas Surf
+de Cinnabar/Rota 114 e Rota 131/Sevii testadas numa base experimental;
+**não substitui a ROM publicada nem conclui
 a integração da história**.
 
 A decisão é usar **uma única ROM**, com a mesma equipe e navegação por Surf.
