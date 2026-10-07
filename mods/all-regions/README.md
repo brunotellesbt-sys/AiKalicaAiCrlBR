@@ -29,6 +29,20 @@ Mega Ring e Mega Stones continuam sem distribuição. Encontros, níveis dinâmi
 casas iniciais, família, professor, Surf/Waterfall, ferries, ginásios e Liga
 mantêm as regras da jornada anterior.
 
+## Ash-Greninja
+
+O catálogo mantém Greninja normal, Greninja com Battle Bond e Ash-Greninja,
+com seus sprites e atributos. **A configuração atual de Battle Bond é a regra
+da geração 9:** após um nocaute válido, aumenta Ataque, Ataque Especial e Velocidade
+em um estágio, uma vez por batalha, sem transformar o Greninja normal.
+A regra clássica de Sun/Moon existe no motor, mas não está selecionada nesta versão.
+
+Ash-Greninja não é uma Mega Evolução e não usa Mega Stone. A forma Ash tem
+Ataque 145, Ataque Especial 153 e Velocidade 132. Water Shuriken nessa forma tem
+poder 20 por golpe e acerta três vezes. A variante com Battle Bond é um registro
+próprio; Greninja com Torrent/Protean não recebe automaticamente essa habilidade.
+Assim como os demais Pokémon novos, nenhuma dessas variantes é distribuída ainda.
+
 ## Origem dos dados
 
 Os quatro arquivos enviados foram identificados por SHA-256 e auditados por
