@@ -28,6 +28,7 @@ public static class DesktopProbe {
     [DllImport("user32.dll")] static extern bool EnumChildWindows(IntPtr parent, Callback callback, IntPtr param);
     [DllImport("user32.dll")] static extern uint GetWindowThreadProcessId(IntPtr hwnd, out uint pid);
     [DllImport("user32.dll", CharSet=CharSet.Unicode)] static extern int GetWindowText(IntPtr hwnd, StringBuilder text, int count);
+    [DllImport("user32.dll")] static extern IntPtr SendMessageTimeout(IntPtr hwnd, uint msg, IntPtr wp, IntPtr lp, uint flags, uint timeout, out UIntPtr result);
     public class Window { public IntPtr Handle; public string Title; public int Width, Height; }
     static string Title(IntPtr hwnd) { var text = new StringBuilder(1024); GetWindowText(hwnd, text, text.Capacity); return text.ToString(); }
     public static Window[] Windows(uint pid) {
@@ -44,7 +45,15 @@ public static class DesktopProbe {
     static void Click(IntPtr parent, string caption) {
         EnumChildWindows(parent, (hwnd, param) => {
             if (Title(hwnd).Replace("&", "").Equals(caption, StringComparison.OrdinalIgnoreCase)) {
-                PostMessage(hwnd, 0x00F5, IntPtr.Zero, IntPtr.Zero); return false;
+                UIntPtr checkedState;
+                if (caption == "I hereby accept this agreement.") {
+                    SendMessageTimeout(hwnd, 0x00F0, IntPtr.Zero, IntPtr.Zero, 2, 1000, out checkedState);
+                    if (checkedState.ToUInt64() == 1) return false;
+                }
+                UIntPtr result;
+                // A click can start another modal loop; do not wait indefinitely.
+                SendMessageTimeout(hwnd, 0x00F5, IntPtr.Zero, IntPtr.Zero, 2, 1000, out result);
+                return false;
             }
             return true;
         }, IntPtr.Zero);
@@ -66,6 +75,11 @@ public static class DesktopProbe {
             }
             if (window.Title == "Frage") Click(window.Handle, "No");
         }
+    }
+    public static bool HasInitialDialogs(uint pid) {
+        foreach (var window in Windows(pid))
+            if (window.Title == "Language select" || window.Title == "End user license agreement" || window.Title == "Frage") return true;
+        return false;
     }
     [DllImport("user32.dll")] public static extern bool IsWindowVisible(IntPtr window);
     [DllImport("user32.dll")] public static extern bool GetWindowRect(IntPtr window, out Rect rect);
@@ -93,7 +107,10 @@ try {
             $candidates = if ($tool -eq 'HexManiacAdvance') { @(Get-Process dotnet -ErrorAction SilentlyContinue) } else { @(Get-Process $tool -ErrorAction SilentlyContinue) }
             foreach ($candidate in $candidates) {
                 $candidate.Refresh()
-                if ($tool -eq 'AdvanceMap') { [DesktopProbe]::InitialDialogs($candidate.Id) }
+                if ($tool -eq 'AdvanceMap') {
+                    [DesktopProbe]::InitialDialogs($candidate.Id)
+                    if ([DesktopProbe]::HasInitialDialogs($candidate.Id)) { continue }
+                }
                 $window = [DesktopProbe]::Windows($candidate.Id) | Where-Object { $_.Title -match $pattern -and $_.Width -ge 100 -and $_.Height -ge 100 } | Sort-Object Width -Descending | Select-Object -First 1
                 if ($window) {
                     $process = $candidate
