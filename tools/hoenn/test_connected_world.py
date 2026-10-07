@@ -9,6 +9,39 @@ VALIDATION = ROOT / 'mods/hoenn/integration-validation'
 
 
 class ConnectedWorldTests(unittest.TestCase):
+    def test_three_water_hms_and_terrestrial_tm_conversion(self):
+        prep = json.loads((VALIDATION / 'water-hms-preparation.json').read_text())
+        runtime = json.loads((VALIDATION / 'connected-world.json').read_text())
+        check = next(c for c in runtime['checks'] if c['check'] == 'three_water_hms_and_family_package')
+        self.assertEqual(prep['hms'], ['SURF', 'DIVE', 'WATERFALL'])
+        self.assertEqual(check['water_hms'], prep['hms'])
+        self.assertEqual(check['terrestrial_tms'], {'CUT': 51, 'FLY': 52, 'STRENGTH': 53, 'FLASH': 54, 'ROCK_SMASH': 55})
+        self.assertEqual(check['native_move_types'], {'CUT': 'GRASS', 'STRENGTH': 'ROCK'})
+        for invariant in ['native_machine_table_checked', 'native_hm_classification',
+                          'squirtle_can_learn_all_three', 'mothers_in_both_regions', 'zero_badges',
+                          'dive_without_badges', 'native_zero_badge_dive_roundtrip', 'shared_gift_no_duplicates',
+                          'full_pocket_and_partial_delivery_retry', 'whirlpool_is_not_hm']:
+            self.assertTrue(check[invariant])
+        self.assertTrue(prep['requires_new_save'])
+        self.assertFalse(prep['full_story_validated'])
+
+    def test_space_center_completion_survives_native_rival_call(self):
+        prep = json.loads((VALIDATION / 'story-completion-preparation.json').read_text())
+        runtime = json.loads((VALIDATION / 'connected-world.json').read_text())
+        check = next(c for c in runtime['checks'] if c['check'] == 'space_center_completion_survives_rival_call')
+        self.assertEqual(check['state_combinations'], 72)
+        for invariant in ['native_rival_call_executed', 'call_does_not_repeat', 'native_steven_dive_gift',
+                          'dive_without_tate_liza_badge', 'archie_permission_preserved',
+                          'physical_eighth_gym_entry', 'native_flash_save_roundtrip']:
+            self.assertTrue(check[invariant])
+        self.assertTrue(check['battle_victory_simulated'])
+        self.assertTrue(prep['native_rayquaza_call_unchanged'])
+        self.assertFalse(prep['new_flags_allocated'])
+        reproduction = json.loads((VALIDATION / 'world-reproduction.json').read_text())
+        self.assertEqual(reproduction['prepared_sha256']['src/journey_campaign_gates.c'],
+                         prep['prepared_sha256']['src/journey_campaign_gates.c'])
+        self.assertFalse(prep['full_story_validated'])
+
     def test_first_badge_reward_survives_region_change_and_full_bag(self):
         prep = json.loads((VALIDATION / 'story-access-preparation.json').read_text())
         runtime = json.loads((VALIDATION / 'connected-world.json').read_text())
@@ -157,7 +190,8 @@ class ConnectedWorldTests(unittest.TestCase):
         self.assertEqual(access['all_obstacles_catalogued'],336)
         self.assertEqual(len(access['obstacle_samples']),6)
         self.assertTrue(access['real_surf_prompt_without_badges'])
-        self.assertTrue(access['dive_rule_preserved'])
+        self.assertTrue(access['dive_without_badges'])
+        self.assertFalse(access['dive_rule_preserved'])
         self.assertFalse(access['full_campaign_validated'])
         # Mission-door tests must still pass on the same ROM as free entries.
         gates=next(c for c in runtime['checks']if c['check']=='regional_campaign_checkpoints_and_guides')

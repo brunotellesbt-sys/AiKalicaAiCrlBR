@@ -25,6 +25,8 @@ parser.add_argument('--road-access', action='store_true', help='Exercise bike qu
 parser.add_argument('--team-stories', action='store_true', help='Validate regional incursions, casino stairs and actual Giovanni tag-battle startup')
 parser.add_argument('--campaign-gates', action='store_true', help='Exercise regional story checkpoints and gym-door guide objects')
 parser.add_argument('--story-access', action='store_true', help='Exercise native first-badge rewards in all sixteen gyms, including a full bag')
+parser.add_argument('--story-completion', action='store_true', help='Exercise the native rival call, Dive gift and permanent Space Center victory')
+parser.add_argument('--water-hms', action='store_true', help='Exercise early family gifts, three-HM classification and new terrestrial TMs')
 parser.add_argument('--output', type=Path, default=ROOT / 'mods/hoenn/integration-validation')
 args = parser.parse_args(); source = args.source.resolve(); args.output.mkdir(parents=True, exist_ok=True)
 raw = subprocess.check_output([str(ROOT / '.local/arm-binutils/usr/bin/arm-none-eabi-nm'), '-n', str(source / 'pokeemerald.elf')], text=True)
@@ -37,7 +39,7 @@ assert lib.start(str(source / 'pokeemerald.gba').encode())
 results = []
 call4 = None
 abi = None
-if args.gym_scaling or args.team_stories or args.story_access:
+if args.gym_scaling or args.team_stories or args.story_access or args.story_completion or args.water_hms:
     toolchain = ROOT / '.local/arm-gcc/usr/bin/arm-none-eabi-gcc'
     with tempfile.TemporaryDirectory(prefix='gym-fixture-', dir='/tmp') as directory:
         temp = Path(directory)
@@ -173,6 +175,104 @@ if args.region_state:
     results.append(dict(check='regional_flags_and_native_save_roundtrip', passed=True,
         kanto_badges_independent=True, champion_independent=True, trainer_flag_unchanged=True))
     print('Regional badges/champion/story bank and native flash roundtrip passed', flush=True)
+if args.story_completion:
+    completion = json.loads((source / '.journey-story-completion').read_text())
+    constants = (source / 'include/constants/flags.h').read_text()
+    def completion_flag(name):
+        return int(re.search(r'^#define\s+' + name + r'\s+(0x[0-9A-Fa-f]+)', constants, re.M)[1], 16)
+    def completion_rawflag(f, enabled):
+        address = save() + 4720 + f // 8
+        value, mask = lib.read8(address), 1 << (f & 7)
+        lib.write8(address, value | mask if enabled else value & ~mask)
+    hb = [lib.read16(s['gBadgeFlags'] + i * 2) for i in range(8)]
+    kb = list(range(0x1AB0, 0x1AB8))
+    stories = json.loads((source / '.journey-team-stories').read_text())
+    for trainer in stories['trainers']: completion_rawflag(0x500 + trainer['id'], True)
+    for name in ['FLAG_HIDE_CELADON_ROCKETS', 'FLAG_HIDE_SAFFRON_ROCKETS',
+                 'FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY', 'FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT',
+                 'FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN']:
+        completion_rawflag(completion_flag(name), True)
+    legacy = completion_flag('FLAG_DEFEATED_MAGMA_SPACE_CENTER')
+    for f in hb + kb: completion_rawflag(f, False)
+    warp('MossdeepCity', 15, 25)
+    cases = 0
+    # Every count with both transient-flag values, including a seventh badge
+    # earned without Tate/Liza. Only native terminal state 3 completes the quest.
+    order = [0, 1, 2, 3, 4, 5, 7, 6]
+    for state in range(4):
+        for transient in [False, True]:
+            completion_rawflag(legacy, transient)
+            for count in range(9):
+                for i, f in enumerate(hb): completion_rawflag(f, i in order[:count])
+                for i, f in enumerate(kb): completion_rawflag(f, i < 8 - count)
+                native('VarSet', 0x409F, state)
+                assert native('JourneyPendingCampaignEvent', 0) == (5 if count >= 7 and state != 3 else 0)
+                assert native('JourneyCanStartArchieAlliance') == int(count >= 7 and state == 3)
+                assert native('IsFieldMoveUnlocked_Dive') == int((source / '.journey-water-hms').exists() or count == 8 or state == 3)
+                cases += 1
+    for i, f in enumerate(hb): completion_rawflag(f, i != 6)
+    for f in kb: completion_rawflag(f, False)
+    native('VarSet', 0x409F, 3)  # Isolate the aftermath; battle victory is simulated.
+    completion_rawflag(legacy, True)
+    native('VarSet', 0x40F6, 248)
+    assert native('ShouldDoRivalRayquazaCall') == 0
+    assert native('ShouldDoRivalRayquazaCall') == 1
+    # Run the original call, including its deliberate clearflag command.
+    script(b'\x05' + struct.pack('<I', s['MossdeepCity_SpaceCenter_2F_EventScript_RivalRayquazaCall']), 60)
+    picture('Rayquaza-call-after-Space-Center')
+    for _ in range(100):
+        if not lib.read8(s['sLockFieldControls']): break
+        step(1, 1); step(40)
+    assert not lib.read8(s['sLockFieldControls']), 'Native rival call did not finish'
+    assert not native('FlagGet', legacy), 'The native call did not consume its temporary flag'
+    assert native('VarGet', 0x409F) == 3
+    assert native('ShouldDoRivalRayquazaCall') == 0, 'Rival call repeated'
+    assert native('JourneyCanStartArchieAlliance') == 1
+    assert native('JourneyPendingCampaignEvent', 0) == 0
+    assert native('IsFieldMoveUnlocked_Dive') == 1
+    native('JourneyStartSpaceCenterInvasion')
+    assert native('VarGet', 0x409F) == 3, 'Completed invasion respawned'
+    completion_rawflag(completion_flag('FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN'), False)
+    assert native('JourneyPendingCampaignEvent', 0) == 6, 'Archie quest disappeared after call'
+    completion_rawflag(completion_flag('FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN'), True)
+    city = next(c for c in json.loads((source / '.journey-campaign-gates').read_text())['cities'] if c['map'] == 'MossdeepCity')
+    door = city['door']
+    warp('MossdeepCity', door['x'], door['y'] + 1)
+    native('SetPlayerAvatarTransitionFlags', 1); step(30)
+    assert native('JourneyCurrentGymGate') == 0
+    step(100, 64); step(60)
+    assert location() == map_id('MossdeepCity_Gym'), 'Eighth gym remained locked after the call'
+    # Complete Steven's unmodified house scene after the original call.
+    completion_rawflag(completion_flag('FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_STEVEN'), False)
+    completion_rawflag(completion_flag('FLAG_RECEIVED_HM_DIVE'), False)
+    native('VarSet', 0x40C6, 1)
+    dive = abi[16]
+    quantity = native('CountTotalItemQuantityInBag', dive)
+    if quantity: assert native('RemoveBagItem', dive, quantity)
+    warp('MossdeepCity_StevensHouse', 3, 7)
+    for _ in range(120):
+        if not lib.read8(s['sLockFieldControls']): break
+        step(1, 1); step(40)
+    assert not lib.read8(s['sLockFieldControls']), 'Steven Dive gift did not finish'
+    assert native('VarGet', 0x40C6) == 2
+    assert native('FlagGet', completion_flag('FLAG_RECEIVED_HM_DIVE'))
+    assert native('CountTotalItemQuantityInBag', dive) == 1
+    assert native('IsFieldMoveUnlocked_Dive') == 1
+    # Save/reload the emulator's own fixture and prove the quest state persists.
+    assert native('TrySavingData', 0, max_frames=6000) == 1
+    native('VarSet', 0x409F, 0)
+    assert native('LoadGameSave', 0) == 1
+    assert native('VarGet', 0x409F) == 3
+    assert not native('FlagGet', legacy)
+    assert native('JourneyCanStartArchieAlliance') == 1
+    assert native('IsFieldMoveUnlocked_Dive') == 1
+    assert not native('FlagGet', hb[6]), 'Test accidentally awarded Tate/Liza badge'
+    results.append(dict(check='space_center_completion_survives_rival_call', passed=True,
+                        state_combinations=cases, native_rival_call_executed=True, call_does_not_repeat=True,
+                        native_steven_dive_gift=True, dive_without_tate_liza_badge=True,
+                        archie_permission_preserved=True, physical_eighth_gym_entry=True,
+                        native_flash_save_roundtrip=True, battle_victory_simulated=True))
+    print('Space Center completion survives native rival call, Steven Dive gift and save/reload', flush=True)
 if args.campaign_gates:
     gating = json.loads((source / '.journey-campaign-gates').read_text())
     constants = (source / 'include/constants/flags.h').read_text()
@@ -186,6 +286,9 @@ if args.campaign_gates:
     def write_flag(flag, enabled):
         address = save()+4720+flag//8
         value = lib.read8(address); mask = 1 << (flag & 7)
+        if (source / '.journey-story-completion').exists() and flag == event_flags[4]:
+            native('VarSet', 0x409F, 3 if enabled else 0)
+            enabled = False  # Simulate the completed quest after its one-time call.
         lib.write8(address, value | mask if enabled else value & ~mask)
     def write_badges(flags, indices):
         for index, flag in enumerate(flags): write_flag(flag, index in indices)
@@ -216,7 +319,7 @@ if args.campaign_gates:
     native('VarSet',0x409F,2); native('JourneyStartSpaceCenterInvasion')
     assert native('VarGet',0x409F) == 2
     write_flag(hoenn_badges[6],False)
-    assert native('IsFieldMoveUnlocked_Dive') == 0
+    assert native('IsFieldMoveUnlocked_Dive') == int((source / '.journey-water-hms').exists())
     write_flag(event_flags[4],True); native('VarSet',0x409F,3)
     native('JourneyStartSpaceCenterInvasion'); assert native('VarGet',0x409F) == 3
     assert native('IsFieldMoveUnlocked_Dive') == 1
@@ -294,7 +397,7 @@ if args.free_access:
         lib.write8(s['isFrlg'],region)
         assert native('IsFieldMoveUnlocked_Surf')==1
         assert native('IsFieldMoveUnlocked_Waterfall')==1
-        assert native('IsFieldMoveUnlocked_Dive')==0
+        assert native('IsFieldMoveUnlocked_Dive')==int((source / '.journey-water-hms').exists())
     gating=json.loads((source/'.journey-campaign-gates').read_text())
     # Retain the tutorial, and exercise Norman's formerly fixed-badge states.
     for state in [2,3,4,5]:
@@ -383,8 +486,144 @@ if args.free_access:
         battle_victory_simulated=True))
     results.append(dict(check='free_gym_doors_and_land_hms',passed=True,physical_gym_entries=doors,
         norman_old_badge_states=4,opened_boulder_barrier_tiles=barriers,obstacle_samples=samples,all_obstacles_catalogued=len(access['obstacles']),
-        surf_waterfall_without_badges=True,real_surf_prompt_without_badges=True,dive_rule_preserved=True,full_campaign_validated=False))
+        surf_waterfall_without_badges=True,real_surf_prompt_without_badges=True,
+        dive_rule_preserved=not (source / '.journey-water-hms').exists(),
+        dive_without_badges=(source / '.journey-water-hms').exists(),full_campaign_validated=False))
     print('Free gym entries and terrestrial HM samples passed',flush=True)
+if args.water_hms:
+    water = json.loads((source / '.journey-water-hms').read_text())
+    water_items, terrestrial_items = abi[17:20], abi[20:25]
+    stride, item_offset, move_offset, move_stride, type_offset = abi[25:30]
+    water_moves, terrestrial_moves = [57, 291, 127], [15, 19, 70, 148, 249]
+    # Native compiled machine table, HM classification, learnability and move
+    # type data all agree, rather than merely checking source text.
+    linked_machines = {}
+    for i in range(59):
+        base = s['gTMHMItemMoveIds'] + stride * i
+        linked_machines[lib.read16(base + item_offset)] = lib.read16(base + move_offset)
+    for item, move in zip(water_items + terrestrial_items, water_moves + terrestrial_moves):
+        assert linked_machines[item] == move, (item, move)
+        assert native('GetItemPocket', item) == 2
+        assert native('IsMoveHM', move) == int(move in water_moves), move
+    assert all(native('CanLearnTeachableMove', 7, move) for move in water_moves), 'Squirtle water HM compatibility'
+    assert not native('IsMoveHM', 250), 'Whirlpool is incorrectly marked as an HM'
+    assert native('CanLearnTeachableMove', 1, 15), 'Bulbasaur Cut compatibility'
+    assert lib.read16(s['gMovesInfo'] + move_stride * 15 + type_offset) & 31 == abi[30], 'Cut is not Grass'
+    assert lib.read16(s['gMovesInfo'] + move_stride * 70 + type_offset) & 31 == abi[31], 'Strength is not Rock'
+    # A mother can give the whole shared package before any gym; quantities
+    # stay one when speaking to the mother in the other region.
+    pocket = s['gBagPockets'] + 2 * 8
+    capacity = lib.read16(pocket + 4) & 1023
+    original_slots = bytes(lib.read8(lib.read32(pocket) + i) for i in range(capacity * 4))
+    def water_gift_flag(enabled):
+        address, mask = save() + 4720 + 0x1ABD // 8, 1 << (0x1ABD & 7)
+        value = lib.read8(address)
+        lib.write8(address, value | mask if enabled else value & ~mask)
+    original_gift_flag = bool(lib.read8(save() + 4720 + 0x1ABD // 8) & (1 << (0x1ABD & 7)))
+    def empty_tm_pocket():
+        for i in range(capacity * 4): lib.write8(lib.read32(pocket) + i, 0)
+        water_gift_flag(False)
+    def finish_water_dialogue(code=None):
+        if code: script(code, 45)
+        for _ in range(180):
+            if not lib.read8(s['sLockFieldControls']): break
+            step(1, 1); step(40)
+        assert not lib.read8(s['sLockFieldControls']), 'Family water gift did not finish'
+    # Use a temporary zero-badge fixture; restore these banks afterwards.
+    badges = [lib.read16(s['gBadgeFlags'] + i * 2) for i in range(8)] + list(range(0x1AB0, 0x1AB8))
+    saved_badges = {f: bool(lib.read8(save() + 4720 + f // 8) & (1 << (f & 7))) for f in badges}
+    for f in badges:
+        address = save() + 4720 + f // 8
+        lib.write8(address, lib.read8(address) & ~(1 << (f & 7)))
+    empty_tm_pocket()
+    for name, label, x, y in [('LittlerootTown_BrendansHouse_1F', 'PlayersHouse_1F_EventScript_Mom', 4, 7),
+                              ('PalletTown_PlayersHouse_1F_Frlg', 'PalletTown_PlayersHouse_1F_EventScript_Mom', 5, 5)]:
+        warp(name, x, y)
+        native('SetPlayerAvatarTransitionFlags', 1); step(30)
+        finish_water_dialogue(b'\x05' + struct.pack('<I', s[label]))
+        assert all(native('CountTotalItemQuantityInBag', item) == 1 for item in water_items), name
+        assert native('FlagGet', 0x1ABD)
+        assert native('JourneyGymBadgeCount', 0) == native('JourneyGymBadgeCount', 1) == 0
+        assert native('IsFieldMoveUnlocked_Dive') == 1
+        finish_water_dialogue(b'\x05' + struct.pack('<I', s[label]))
+        assert all(native('CountTotalItemQuantityInBag', item) == 1 for item in water_items), 'Duplicate family gifts'
+    # Exercise the real Dive prompt and underwater transition with zero badges.
+    native('ScriptSetMonMoveSlot', 0, 291, 1)
+    ocean = json.loads((source / 'data/maps/Route127/map.json').read_text())
+    layout = layouts[ocean['layout']]
+    blocks = (source / layout['blockdata_filepath']).read_bytes()
+    tiles = struct.unpack('<' + 'H' * (len(blocks) // 2), blocks)
+    warp('Route127', 79, 42)
+    behaviors, dive_point = {}, None
+    for y in range(2, layout['height'] - 2):
+        for x in range(2, layout['width'] - 2):
+            tile = tiles[y * layout['width'] + x]
+            if tile & 0xC00 or tile >> 12 != 1: continue
+            tid = tile & 1023
+            if tid not in behaviors:
+                behavior = native('MapGridGetMetatileBehaviorAt', x + 7, y + 7)
+                behaviors[tid] = bool(native('MetatileBehavior_IsDiveable', behavior))
+            if behaviors[tid]: dive_point = (x, y); break
+        if dive_point: break
+    assert dive_point, 'No native Dive point'
+    warp('Route127', *dive_point)
+    native('SetPlayerAvatarTransitionFlags', 8); step(30)
+    assert native('TrySetDiveWarp') == 2
+    before = location()
+    for _ in range(100):
+        step(1, 1); step(40)
+        if location() != before: break
+    assert location() == map_id('Underwater_Route127'), ('Zero-badge Dive failed', location(), dive_point)
+    step(60)
+    assert native('TrySetDiveWarp') == 1, 'Cannot resurface at the tested Dive point'
+    step(1, 2); step(80)  # Native underwater interaction uses B to surface.
+    for _ in range(100):
+        step(1, 1); step(40)
+        if location() == before: break
+    assert location() == before, 'Zero-badge resurface failed'
+    step(60)
+    assert native('JourneyGymBadgeCount', 0) == native('JourneyGymBadgeCount', 1) == 0
+    # Force a full pocket using an actual encrypted native TM slot, then free
+    # one slot and prove partial delivery can resume without duplicating Surf.
+    empty_tm_pocket()
+    assert native('AddBagItem', 582, 1)
+    slots = lib.read32(pocket)
+    filler = bytes(lib.read8(slots + i) for i in range(4))
+    for index in range(capacity):
+        for i, value in enumerate(filler): lib.write8(slots + index * 4 + i, value)
+    assert not native('CheckBagHasSpace', water_items[0], 1)
+    gift_code = b'\x04' + struct.pack('<I', s['Journey_WaterHMFamilyGift']) + b'\x6b\x02'
+    finish_water_dialogue(gift_code)
+    assert not native('FlagGet', 0x1ABD)
+    for i in range(4): lib.write8(slots + (capacity - 1) * 4 + i, 0)
+    finish_water_dialogue(gift_code)
+    assert native('CountTotalItemQuantityInBag', water_items[0]) == 1
+    assert all(native('CountTotalItemQuantityInBag', item) == 0 for item in water_items[1:])
+    assert not native('FlagGet', 0x1ABD)
+    for index in range(capacity - 3, capacity - 1):
+        for i in range(4): lib.write8(slots + index * 4 + i, 0)
+    finish_water_dialogue(gift_code)
+    assert all(native('CountTotalItemQuantityInBag', item) == 1 for item in water_items)
+    assert native('FlagGet', 0x1ABD)
+    finish_water_dialogue(gift_code)
+    assert all(native('CountTotalItemQuantityInBag', item) == 1 for item in water_items)
+    slots = lib.read32(pocket)
+    for i, value in enumerate(original_slots): lib.write8(slots + i, value)
+    water_gift_flag(original_gift_flag)
+    for f, enabled in saved_badges.items():
+        address, mask = save() + 4720 + f // 8, 1 << (f & 7)
+        value = lib.read8(address)
+        lib.write8(address, value | mask if enabled else value & ~mask)
+    results.append(dict(check='three_water_hms_and_family_package', passed=True,
+                        water_hms=water['hms'], terrestrial_tms=water['new_tms'],
+                        native_machine_table_checked=True, native_hm_classification=True,
+                        native_move_types=dict(CUT='GRASS', STRENGTH='ROCK'),
+                        squirtle_can_learn_all_three=True, mothers_in_both_regions=True,
+                        zero_badges=True, dive_without_badges=True, native_zero_badge_dive_roundtrip=True,
+                        shared_gift_no_duplicates=True,
+                        full_pocket_and_partial_delivery_retry=True, whirlpool_is_not_hm=True,
+                        whirlpool_terrain_not_added=True))
+    print('Three water HMs, native types/TMs, zero-badge family gifts and partial-bag retry passed', flush=True)
 if args.story_access:
     reward = json.loads((source / '.journey-story-access').read_text())
     constants = (source / 'include/constants/flags.h').read_text()
@@ -641,6 +880,9 @@ if args.team_stories:
     for name in ['FLAG_HIDE_CELADON_ROCKETS','FLAG_HIDE_SAFFRON_ROCKETS','FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY',
                  'FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT','FLAG_DEFEATED_MAGMA_SPACE_CENTER','FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN']:
         team_flag(flag_id(name),True)
+    if (source / '.journey-story-completion').exists():
+        native('VarSet', 0x409F, 3)
+        team_flag(flag_id('FLAG_DEFEATED_MAGMA_SPACE_CENTER'),False)
     bank(hb,4);bank(kb,4)
     for t in stories['trainers']:team_flag(0x500+t['id'],True)
     cases=0
@@ -769,6 +1011,9 @@ if args.team_stories:
     bank(kb,6);bank(hb,7)
     team_flag(flag_id('FLAG_HIDE_SAFFRON_ROCKETS'),True)
     team_flag(flag_id('FLAG_DEFEATED_MAGMA_SPACE_CENTER'),True)
+    if (source / '.journey-story-completion').exists():
+        native('VarSet', 0x409F, 3)
+        team_flag(flag_id('FLAG_DEFEATED_MAGMA_SPACE_CENTER'),False)
     team_flag(flag_id('FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN'),False)
     for trainer in stories['trainers']:team_flag(0x500+trainer['id'],True)
     warp('SeafloorCavern_Room9',17,43)

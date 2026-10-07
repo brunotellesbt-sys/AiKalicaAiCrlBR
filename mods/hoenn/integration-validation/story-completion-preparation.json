@@ -1,0 +1,35 @@
+{
+  "status": "permanent_space_center_completion_candidate",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "completion_state": "VAR_MOSSDEEP_SPACE_CENTER_STATE == 3",
+  "legacy_flag": "FLAG_DEFEATED_MAGMA_SPACE_CENTER",
+  "legacy_flag_is_transient": true,
+  "native_rayquaza_call_unchanged": true,
+  "dive_permission_survives_call": true,
+  "archie_permission_survives_call": true,
+  "new_flags_allocated": false,
+  "native_steven_dive_gift_unchanged": true,
+  "meteor_falls_quest_preserved": true,
+  "full_story_validated": false,
+  "preserved_native_sha256": {
+    "data/maps/MossdeepCity_SpaceCenter_2F/scripts.inc": "04184e0e8a6ca56a6e1abd3f08e741d69a2b970dd816bb65cc742af7ab96db8d",
+    "src/field_specials.c": "4c920b051175a935091050072d9b89472d0d443e99c7cc53049866d40662783c",
+    "data/maps/MossdeepCity_StevensHouse/scripts.inc": "eacd09bb81f6d1763d160caaaa27dbe36dfc1701562f5f035f54ffd8b9c939d5"
+  },
+  "input_sha256": {
+    "src/field_move.c": "79cabadd300c6ad4775974077d16698eae0f12885adb21670b57981d0b93420f",
+    "data/maps/MossdeepCity_SpaceCenter_2F/scripts.inc": "04184e0e8a6ca56a6e1abd3f08e741d69a2b970dd816bb65cc742af7ab96db8d",
+    "src/field_specials.c": "4c920b051175a935091050072d9b89472d0d443e99c7cc53049866d40662783c",
+    "data/maps/MossdeepCity_StevensHouse/scripts.inc": "eacd09bb81f6d1763d160caaaa27dbe36dfc1701562f5f035f54ffd8b9c939d5"
+  },
+  "original_sha256": {
+    "src/journey_campaign_gates.c": "fd6cf9eee0925dac154c2cf14220660073ee6f1bcb61c903ef1cdef739b8a714",
+    "src/field_move.c": "5928cdb04e482b006192138127104d86f73a7fbaffcad18263d3210765d4a249",
+    "data/scripts/journey_campaign_gates.inc": "ed9bc157532f98da3ec4117d04bc2e3fccc252423fd2ee5451af703cf17aa30a"
+  },
+  "prepared_sha256": {
+    "src/journey_campaign_gates.c": "5b1b3289d52a252b4f3935b93517f1eaea1bc932d2dcfa40108d061429168407",
+    "src/field_move.c": "69fd271b02a9868bfa5214d7660ff6d0dd5ef6f2c8abdd26166d24c1ebfca2ce",
+    "data/scripts/journey_campaign_gates.inc": "fde9aa23ce7304e9aa0b0a3d8fe41f7d4072555e84979a21f6381de56c809953"
+  }
+}
