@@ -1,6 +1,10 @@
 # AiKalicaAiCrlBR
 
 Ambiente para trabalhar com uma cópia local de **Pokémon LeafGreen USA v1.1**.
+
+A versão com **649 espécies, 210 formas, tipo Fada e Mega Evolução**, preservando
+a jornada personalizada, está em [mods/unova-catalog](mods/unova-catalog/README.md).
+Ela requer jogo novo; os novos encontros e as Mega Stones ainda não foram liberados.
 Os pacotes, versões, fontes de download, licenças e resultados dos testes estão em
 [tools/README.md](tools/README.md).
 

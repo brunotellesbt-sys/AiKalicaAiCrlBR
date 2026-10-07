@@ -78,8 +78,9 @@ def transform(source, ref):
             retained = []
             for i in range(count):
                 row = source[start + i * 24:start + (i + 1) * 24]
-                if row[1] in OBSTACLES:
-                    removed[OBSTACLES[row[1]]] += 1
+                graphics_id = int.from_bytes(row[1:1 + ref.get('object_graphics_bytes', 1)], 'little')
+                if graphics_id in OBSTACLES:
+                    removed[OBSTACLES[graphics_id]] += 1
                     x, y = struct.unpack_from('<hh', row, 4)
                     layout = before.ptr(header)
                     width, height = before.u32(layout), before.u32(layout + 4)
@@ -168,9 +169,9 @@ def bps(source, target):
     patch = bytearray(b'BPS1') + number(len(source)) + number(len(target)) + number(0)
     start = 0
     while start < len(target):
-        same = source[start] == target[start]
+        same = start < len(source) and source[start] == target[start]
         end = start + 1
-        while end < len(target) and (source[end] == target[end]) == same:
+        while end < len(target) and (end < len(source) and source[end] == target[end]) == same:
             end += 1
         patch += number(((end - start - 1) << 2) | (0 if same else 1))
         if not same:
