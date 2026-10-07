@@ -1,0 +1,44 @@
+{
+  "status": "experimental_not_full_integration",
+  "rom_sha256": "96fcb26328f678678707f241874d91b88717e3b4411525e5ce223a767f4e2326",
+  "checks": [
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        0,
+        42
+      ],
+      "target": "JourneyHoennCrossing",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        75,
+        0
+      ],
+      "target": "Route21_South_Frlg",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        37,
+        40
+      ],
+      "target": "JourneyHoennCrossing",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        75,
+        0
+      ],
+      "target": "Route127",
+      "passed": true
+    }
+  ],
+  "full_story_validated": false,
+  "custom_journey_migrated": false
+}

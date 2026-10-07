@@ -112,17 +112,18 @@ def build(source, output):
 
     for section in kanto_sections:
         name = section['id']
-        if name in ['MAPSEC_' + n for n in KANTO_CITIES]: point(section, 'kanto', PORT_IDS.index(name) if name in PORT_IDS else None)
+        if name in ['MAPSEC_' + n for n in KANTO_CITIES] + ['MAPSEC_ROUTE_21']: point(section, 'kanto', PORT_IDS.index(name) if name in PORT_IDS else None)
         elif name in PORT_IDS:
             index = PORT_IDS.index(name)
             panel_id = 'sevii_123' if index <= 3 else 'sevii_45' if index in [4, 5, 9] else 'sevii_67'
             point(section, panel_id, index)
     for section in hoenn_sections[:16]: point(section, 'hoenn')
+    point(next(s for s in hoenn_sections if s['id'] == 'MAPSEC_ROUTE_127'), 'hoenn')
     # Consecutive ports correspond to the east/west seams in the shipped ROM.
     links = [dict(id=f'sea-{i:02d}-{i+1:02d}', source=PORT_IDS[i], target=PORT_IDS[i + 1],
                   status='playable', mode='Surf', maps=[ports[i]['name'], ports[i + 1]['name']])
              for i in range(len(PORT_IDS) - 1)]
-    links += [dict(id='hoenn-surf', source=PORT_IDS[0], target='MAPSEC_SLATEPORT_CITY', status='planned', mode='Surf'),
+    links += [dict(id='hoenn-surf', source='MAPSEC_ROUTE_21', target='MAPSEC_ROUTE_127', status='planned', mode='Surf'),
               dict(id='hoenn-ferry', source=PORT_IDS[0], target='MAPSEC_SLATEPORT_CITY', status='planned', mode='Barco com ticket')]
     report = dict(title='Atlas da jornada', width=1288, height=810, panels=panels, points=points, links=links,
         projection='Native regional maps arranged as an atlas; inter-panel links are schematic, not ocean distances.',

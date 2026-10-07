@@ -1,0 +1,70 @@
+{
+  "status": "experimental_crossing_not_complete_migration",
+  "prototype_revision": 4,
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "maps": [
+    "Route127",
+    "Route21_South_Frlg"
+  ],
+  "bridge": "JourneyHoennCrossing",
+  "bridge_connections": [
+    {
+      "map": "MAP_ROUTE127",
+      "direction": "left",
+      "offset": -30
+    },
+    {
+      "map": "MAP_ROUTE21_SOUTH",
+      "direction": "right",
+      "offset": -10
+    }
+  ],
+  "original_sha256": {
+    "data/maps/Route127/map.json": "7f1f624d39624f6d8e89c23b29dbba15fdb0da463fc4753d3895a74fa0d6fc62",
+    "data/layouts/Route127/map.bin": "b56a8c342a119a825518e6c14d47d63b4fb72374096567cf9a64cf7d6ef7ca19",
+    "data/maps/Route21_South_Frlg/map.json": "6f2adee7e3226fa05786662950e6209862268c486147e7a5d58a6e5df13b73b9",
+    "data/layouts/Route21_South_Frlg/map.bin": "7ddb6eca59f0d04980233211b990caf41708b95015f05c007b5dcb521f699ff5",
+    "data/maps/JourneyHoennCrossing/map.json": null,
+    "data/maps/JourneyHoennCrossing/scripts.inc": null,
+    "data/maps/map_groups.json": "21d2a2743ca1d7598bfc01c010caf82cfa0da3f8525a706705ea7c33dd0217d2",
+    "data/layouts/JourneyHoennCrossing/map.bin": null,
+    "data/layouts/JourneyHoennCrossing/border.bin": null,
+    "data/layouts/layouts.json": "16d2a6ef7e27ee5f2cc1279400151d9f54528cbd8c549a8a0fe910312b8114e7",
+    "data/event_scripts.s": "30095a1a0c1a09e50a2a7592665f0f42abeca8b56477f5f3a77d70246f597431",
+    "src/overworld.c": "fd8dd6a07d69527cff6007cc2a4d4f4d770e93c4ac8563a85ce4fbe6be8e42d9",
+    "src/fieldmap.c": "990d1864ce669fb82def844f8e954ff63bd4a6fce570a535b8e6b2600e09d839",
+    "src/field_camera.c": "123e7336c9012a57f91abde03ded91c5be64b8d577933bb550b2a1d2743012d5"
+  },
+  "preserved_event_sha256": {
+    "Route127": {
+      "object_events": "103a701ce74d4aa413f9705b42e4fee97572ab2d04157dc53c38ef8e1fb85e2e",
+      "warp_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "693c7db097f538314723db9baec9f0d220c2a88538dd971498f46fc911a60d97"
+    },
+    "Route21_South_Frlg": {
+      "object_events": "cb306586d59fe3b80b9553ccee0d5402d38c4d8aba46599b4bef386253ecd99f",
+      "warp_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  },
+  "prepared_sha256": {
+    "data/maps/Route127/map.json": "1cd6433ee866c24058a61e6280cba8518535a284a204836d9a50d91a115e47e6",
+    "data/layouts/Route127/map.bin": "4defb0e8cd5024a4adb8a9d661740dc70f23987341a10c8e25f24ead535749a4",
+    "data/maps/Route21_South_Frlg/map.json": "0236503937fa08111802099588a35c64e446cfca4bec06aaf0d311b9eff8c1df",
+    "data/layouts/Route21_South_Frlg/map.bin": "bd62659182f98d96bb5b5f9cfaa005e0c223141c619a99900b3e3cc20e558893",
+    "data/maps/JourneyHoennCrossing/map.json": "19f2655f47177392a96bc822c21c15cc9ae5e61c39895607bc29e3d3c501633e",
+    "data/maps/JourneyHoennCrossing/scripts.inc": "ce148261ee79b67f9aaedd72d8871a40e5326ccbee9020facef18af0994b0f86",
+    "data/maps/map_groups.json": "c60bff81b489a2c3f61d0951be6255576bcb2c9956d7f3103fb7f9d20db3193a",
+    "data/layouts/JourneyHoennCrossing/map.bin": "8dbcee6768fa83c3a68c6bfd3d195afbaed438c348f49d01e1a8d8b467d9bb4d",
+    "data/layouts/JourneyHoennCrossing/border.bin": "074adf1a5df149c325dc9367c1a2b807694f3b1e6c83bd26cf4a6f3840bb720b",
+    "data/layouts/layouts.json": "6ae2a5d091593c763c2eb36d293aa001f5ff73c3ef41ab7062811c9c7ecf4303",
+    "data/event_scripts.s": "65bdf9816513ed44321534241a74ee413ab609d56881440a6460ba03f10ffcce",
+    "src/overworld.c": "04c98a8aac76568d364b75ddfc70354e3157a69e02190fb9de5ac7212169fb06",
+    "src/fieldmap.c": "9ba0949f98807989e3042c4ef74e221b0713be37b1e244635c9811e3cda797dc",
+    "src/field_camera.c": "305d5315517666f85fa68fd92320c07fe237af067b16c163e0e4c981bfc6fb85"
+  },
+  "custom_journey_migrated": false,
+  "full_story_validated": false
+}
