@@ -28,7 +28,6 @@ public static class DesktopProbe {
     [DllImport("user32.dll")] static extern bool EnumChildWindows(IntPtr parent, Callback callback, IntPtr param);
     [DllImport("user32.dll")] static extern uint GetWindowThreadProcessId(IntPtr hwnd, out uint pid);
     [DllImport("user32.dll", CharSet=CharSet.Unicode)] static extern int GetWindowText(IntPtr hwnd, StringBuilder text, int count);
-    [DllImport("user32.dll")] static extern IntPtr SendMessage(IntPtr hwnd, uint msg, IntPtr wp, IntPtr lp);
     public class Window { public IntPtr Handle; public string Title; public int Width, Height; }
     static string Title(IntPtr hwnd) { var text = new StringBuilder(1024); GetWindowText(hwnd, text, text.Capacity); return text.ToString(); }
     public static Window[] Windows(uint pid) {
@@ -45,10 +44,19 @@ public static class DesktopProbe {
     static void Click(IntPtr parent, string caption) {
         EnumChildWindows(parent, (hwnd, param) => {
             if (Title(hwnd).Replace("&", "").Equals(caption, StringComparison.OrdinalIgnoreCase)) {
-                SendMessage(hwnd, 0x00F5, IntPtr.Zero, IntPtr.Zero); return false;
+                PostMessage(hwnd, 0x00F5, IntPtr.Zero, IntPtr.Zero); return false;
             }
             return true;
         }, IntPtr.Zero);
+    }
+    public static string Contents(IntPtr parent) {
+        var captions = new List<string>();
+        EnumChildWindows(parent, (hwnd, param) => {
+            string text = Title(hwnd);
+            if (!string.IsNullOrWhiteSpace(text)) captions.Add(text);
+            return true;
+        }, IntPtr.Zero);
+        return string.Join(" | ", captions);
     }
     public static void InitialDialogs(uint pid) {
         foreach (var window in Windows(pid)) {
@@ -128,7 +136,7 @@ try {
         }
         $launcher.Refresh()
         if (!$launcher.HasExited) {
-            $remaining = [DesktopProbe]::Windows($process.Id) | ForEach-Object { "$($_.Title) [$($_.Width)x$($_.Height)]" }
+            $remaining = [DesktopProbe]::Windows($process.Id) | ForEach-Object { "$($_.Title) [$($_.Width)x$($_.Height)]: $([DesktopProbe]::Contents($_.Handle))" }
             $remaining | Set-Content (Join-Path $report "$tool-close-windows.txt")
             throw "$tool launcher did not finish after closing the window: $($remaining -join '; ')"
         }
