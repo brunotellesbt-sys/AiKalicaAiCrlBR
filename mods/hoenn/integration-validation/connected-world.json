@@ -1,6 +1,6 @@
 {
   "status": "experimental_not_full_integration",
-  "rom_sha256": "1d3b55f1bf477f99345773af29f929837165b66cd22c8a69323a8d1d621fbb1d",
+  "rom_sha256": "2fe9b405becb3a34722bf8ddc2db6fe2806e438121821ec4673864e9d1a71697",
   "checks": [
     {
       "check": "regional_flags_and_native_save_roundtrip",
@@ -8,6 +8,21 @@
       "kanto_badges_independent": true,
       "champion_independent": true,
       "trainer_flag_unchanged": true
+    },
+    {
+      "check": "regional_campaign_checkpoints_and_guides",
+      "passed": true,
+      "state_combinations": 180,
+      "city_guides": 16,
+      "blocked_door_movement": true,
+      "completion_hides_guides": true,
+      "won_gyms_exempt": true,
+      "all_guide_dialogues_triggered": true,
+      "invasion_before_seventh_gym": true,
+      "invasion_does_not_restart": true,
+      "dive_after_space_center_without_seventh_badge": true,
+      "representative_completed_door_warps": 2,
+      "full_story_or_free_order_access_validated": false
     },
     {
       "check": "native_gym_party_levels",

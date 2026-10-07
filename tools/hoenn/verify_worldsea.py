@@ -17,6 +17,7 @@ from prepare_westsea import prepare as western_prepare
 from prepare_region_state import prepare as regional_prepare
 from prepare_east_coast import prepare as coast_prepare
 from prepare_gym_scaling import prepare as gym_prepare
+from prepare_campaign_gates import prepare as campaign_prepare
 
 
 def verify(source, output):
@@ -25,6 +26,7 @@ def verify(source, output):
     markers = ['.journey-hoenn-crossing', '.journey-worldsea', '.journey-westsea', '.journey-region-state']
     if (source / '.journey-east-coast').exists(): markers.append('.journey-east-coast')
     if (source / '.journey-gym-scaling').exists(): markers.append('.journey-gym-scaling')
+    if (source / '.journey-campaign-gates').exists(): markers.append('.journey-campaign-gates')
     reports = [json.loads((source / p).read_text()) for p in markers]
     original_paths = sorted({p for r in reports for p in (r['original_sha256'] | r.get('input_sha256', {})) if p in acquired['sha256']})
     expected = {}
@@ -50,6 +52,8 @@ def verify(source, output):
             coast = coast_prepare(fresh); assert coast_prepare(fresh) == json.loads(json.dumps(coast))
         if '.journey-gym-scaling' in markers:
             gym = gym_prepare(fresh); assert gym_prepare(fresh) == gym
+        if '.journey-campaign-gates' in markers:
+            campaign = campaign_prepare(fresh); assert campaign_prepare(fresh) == campaign
         for path, digest in expected.items():
             if hashlib.sha256((fresh / path).read_bytes()).hexdigest() != digest:
                 raise ValueError('Fresh overlay mismatch: ' + path)
@@ -60,7 +64,12 @@ def verify(source, output):
             for name, events in r.get('preserved_event_sha256', {}).items():
                 actual = json.loads((fresh / f'data/maps/{name}/map.json').read_text())
                 for key, digest in events.items():
-                    assert hashlib.sha256(json.dumps(actual.get(key, []), sort_keys=True).encode()).hexdigest() == digest, (name, key)
+                    values = actual.get(key, [])
+                    if key == 'object_events' and '.journey-campaign-gates' in markers:
+                        # A later layer appends a guide; native event objects
+                        # and their implicit local IDs must remain unchanged.
+                        values = [o for o in values if o.get('script') != 'Journey_GymGuide']
+                    assert hashlib.sha256(json.dumps(values, sort_keys=True).encode()).hexdigest() == digest, (name, key)
                     event_checks += 1
         # Check every reciprocal edge and that parallel seams don't overlap.
         groups = json.loads((fresh / 'data/maps/map_groups.json').read_text())
@@ -101,7 +110,7 @@ def verify(source, output):
             full_story_validated=False, prepared_sha256=expected)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, indent=2) + '\n')
-    for name, r in zip(['crossing-preparation', 'eastern-ocean-preparation', 'western-ocean-preparation', 'regional-state-preparation', 'east-coast-preparation', 'gym-scaling-preparation'], reports):
+    for name, r in zip(['crossing-preparation', 'eastern-ocean-preparation', 'western-ocean-preparation', 'regional-state-preparation', 'east-coast-preparation', 'gym-scaling-preparation', 'campaign-gates-preparation'], reports):
         (output.parent / (name + '.json')).write_text(json.dumps(r, indent=2) + '\n')
     print(f'Reproduction passed: {len(expected)} files; {edge_count} reciprocal edges; no overlapping seams')
 

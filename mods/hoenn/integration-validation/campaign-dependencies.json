@@ -684,39 +684,39 @@
           "script": "goto_if_unset FLAG_RECEIVED_TM_CALM_MIND, MossdeepCity_Gym_EventScript_GiveCalmMind2"
         },
         {
-          "line": 99,
+          "line": 92,
           "script": "goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull"
         },
         {
-          "line": 107,
+          "line": 100,
           "script": "goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull"
         },
         {
-          "line": 120,
+          "line": 113,
           "script": "goto_if_set FLAG_MOSSDEEP_GYM_SWITCH_1, MossdeepCity_Gym_EventScript_ClearSwitch1"
         },
         {
-          "line": 146,
+          "line": 139,
           "script": "goto_if_set FLAG_MOSSDEEP_GYM_SWITCH_2, MossdeepCity_Gym_EventScript_ClearSwitch2"
         },
         {
-          "line": 166,
+          "line": 159,
           "script": "goto_if_set FLAG_MOSSDEEP_GYM_SWITCH_3, MossdeepCity_Gym_EventScript_ClearSwitch3"
         },
         {
-          "line": 186,
+          "line": 179,
           "script": "goto_if_set FLAG_MOSSDEEP_GYM_SWITCH_4, MossdeepCity_Gym_EventScript_ClearSwitch4"
         },
         {
-          "line": 274,
+          "line": 267,
           "script": "goto_if_set FLAG_DEFEATED_MOSSDEEP_GYM, MossdeepCity_Gym_EventScript_GymGuidePostVictory"
         },
         {
-          "line": 292,
+          "line": 285,
           "script": "goto_if_set FLAG_BADGE07_GET, MossdeepCity_Gym_EventScript_GymStatueCertified"
         },
         {
-          "line": 298,
+          "line": 291,
           "script": "goto_if_set FLAG_BADGE07_GET, MossdeepCity_Gym_EventScript_GymStatueCertified"
         }
       ]
@@ -1365,7 +1365,19 @@
     "independent_campaigns": true,
     "independent_leagues": true,
     "free_choice_of_gym_order": true,
-    "boss_badge_thresholds": "awaiting user preference",
+    "boss_badge_thresholds": {
+      "kanto_before_gym": [
+        3,
+        4
+      ],
+      "hoenn_before_gym": [
+        3,
+        6,
+        7,
+        7
+      ]
+    },
+    "gym_door_guide_explains_team_and_location": true,
     "preserve_team_story_sequence": true,
     "viridian_leader_target": "Blue"
   },
@@ -1390,7 +1402,7 @@
     "data/maps/LavaridgeTown_Gym_1F/scripts.inc": "8e013f614b0fcdb9b688cc6e18b66f916b1cfd1da78778f30504a435a2bf1d67",
     "data/maps/LavaridgeTown_Gym_B1F/scripts.inc": "034236909b629ee3f3a180a0b2f98f17aad41e3487931c60edfbdff858651159",
     "data/maps/MauvilleCity_Gym/scripts.inc": "9fa32a400f7ac2e33a04f0e1beb3874b179a85b560aaf55dfe8e9ccf58cd4ffd",
-    "data/maps/MossdeepCity_Gym/scripts.inc": "73276d9d44db1f68f62206e07d2d6c37884e92eb2078e134cdf3668c8d83fdd6",
+    "data/maps/MossdeepCity_Gym/scripts.inc": "39e50e53f311b5e55687b898338e32ca3d85cf71d258d4cba6b9db4685d60e68",
     "data/maps/PetalburgCity_Gym/scripts.inc": "b3c50a720c857068d70a9ad54700de498906e401e82f69032ff5798094ae1738",
     "data/maps/PewterCity_Gym_Frlg/scripts.inc": "7e2f81ea8493e81eee3c3591587caefd1cf515039b70c6ad605b48574fde0be6",
     "data/maps/RustboroCity_Gym/scripts.inc": "0880fe95e8aa6981e9e54883364b8f37b30330c50ecb0d3c3758d40a3e773208",

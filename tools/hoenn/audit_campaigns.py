@@ -77,7 +77,8 @@ def audit(source):
                 league_guards=leagues, gym_conditions=dependencies,
                 policy=dict(independent_campaigns=True, independent_leagues=True,
                             free_choice_of_gym_order=True,
-                            boss_badge_thresholds='awaiting user preference',
+                            boss_badge_thresholds=dict(kanto_before_gym=[3,4], hoenn_before_gym=[3,6,7,7]),
+                            gym_door_guide_explains_team_and_location=True,
                             preserve_team_story_sequence=True,
                             viridian_leader_target='Blue'),
                 full_campaign_runtime_validated=False, input_sha256=evidence)

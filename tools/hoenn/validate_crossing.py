@@ -20,6 +20,7 @@ parser.add_argument('--westsea', action='store_true', help='Use the revised Cinn
 parser.add_argument('--region-state', action='store_true', help='Exercise separate badge/champion/story banks and native flash save/reload')
 parser.add_argument('--east-coast', action='store_true', help='Exercise the three eastern Hoenn exits and Fuchsia sea connection')
 parser.add_argument('--gym-scaling', action='store_true', help='Generate actual gym parties at every regional badge count')
+parser.add_argument('--campaign-gates', action='store_true', help='Exercise regional story checkpoints and gym-door guide objects')
 parser.add_argument('--output', type=Path, default=ROOT / 'mods/hoenn/integration-validation')
 args = parser.parse_args(); source = args.source.resolve(); args.output.mkdir(parents=True, exist_ok=True)
 raw = subprocess.check_output([str(ROOT / '.local/arm-binutils/usr/bin/arm-none-eabi-nm'), '-n', str(source / 'pokeemerald.elf')], text=True)
@@ -122,7 +123,7 @@ native('ScriptSetMonMoveSlot', 0, 57, 0)
 # isolates the camera/map seam, NOT early-HM unlocking or the custom story.
 native('SetPlayerAvatarTransitionFlags', 8); step(30)
 assert lib.read8(s['gPlayerAvatar']) & 8
-if not args.westsea:
+if not args.westsea and not args.campaign_gates:
     cross('JourneyHoennCrossing', 16)
     warp('JourneyHoennCrossing', 47, 12)
     cross('Route21_South_Frlg', 16)
@@ -168,6 +169,108 @@ if args.region_state:
     results.append(dict(check='regional_flags_and_native_save_roundtrip', passed=True,
         kanto_badges_independent=True, champion_independent=True, trainer_flag_unchanged=True))
     print('Regional badges/champion/story bank and native flash roundtrip passed', flush=True)
+if args.campaign_gates:
+    gating = json.loads((source / '.journey-campaign-gates').read_text())
+    constants = (source / 'include/constants/flags.h').read_text()
+    event_names = ['FLAG_HIDE_CELADON_ROCKETS', 'FLAG_HIDE_SAFFRON_ROCKETS',
+        'FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY', 'FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT',
+        'FLAG_DEFEATED_MAGMA_SPACE_CENTER', 'FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN']
+    event_flags = [int(re.search(r'^#define\s+' + name + r'\s+(0x[0-9A-Fa-f]+)', constants, re.M)[1], 16)
+                   for name in event_names]
+    hoenn_badges = [lib.read16(s['gBadgeFlags'] + i*2) for i in range(8)]
+    kanto_badges = list(range(0x1AB0, 0x1AB8))
+    def write_flag(flag, enabled):
+        address = save()+4720+flag//8
+        value = lib.read8(address); mask = 1 << (flag & 7)
+        lib.write8(address, value | mask if enabled else value & ~mask)
+    def write_badges(flags, indices):
+        for index, flag in enumerate(flags): write_flag(flag, index in indices)
+    cases = 0
+    for kanto, thresholds, events in [(True, [2,3], [0,1]), (False, [2,5,6,6], [2,3,4,5])]:
+        for count in range(9):
+            write_badges(kanto_badges if kanto else hoenn_badges, range(count))
+            write_badges(hoenn_badges if kanto else kanto_badges, range(8-count))
+            for completed in range(1 << len(events)):
+                for flag in event_flags: write_flag(flag, False)
+                for i,event in enumerate(events): write_flag(event_flags[event], bool(completed & (1 << i)))
+                expected = next((event+1 for i,(event,threshold) in enumerate(zip(events,thresholds))
+                                 if count >= threshold and not completed & (1 << i)), 0)
+                assert native('JourneyPendingCampaignEvent',int(kanto)) == expected, (kanto,count,completed,expected)
+                cases += 1
+    # Prepare invasion before the seventh gym, preserve in-progress/completed
+    # scenes and never grant the seventh badge to satisfy the story dependency.
+    write_badges(hoenn_badges, range(6)); lib.write8(s['isFrlg'],0)
+    write_flag(event_flags[3],True); write_flag(event_flags[4],False)
+    native('VarSet',0x409F,0); native('JourneyStartSpaceCenterInvasion')
+    assert native('VarGet',0x409F) == 1
+    assert not native('FlagGet',hoenn_badges[6])
+    native('VarSet',0x409F,2); native('JourneyStartSpaceCenterInvasion')
+    assert native('VarGet',0x409F) == 2
+    assert native('IsFieldMoveUnlocked_Dive') == 0
+    write_flag(event_flags[4],True); native('VarSet',0x409F,3)
+    native('JourneyStartSpaceCenterInvasion'); assert native('VarGet',0x409F) == 3
+    assert native('IsFieldMoveUnlocked_Dive') == 1
+    guides = 0
+    for city in gating['cities']:
+        own = kanto_badges if city['kanto'] else hoenn_badges
+        other = hoenn_badges if city['kanto'] else kanto_badges
+        write_badges(own, [i for i in range(8) if i != city['badge']][:2])
+        write_badges(other, range(8))
+        for flag in event_flags: write_flag(flag,False)
+        door = city['door']
+        warp(city['map'],door['x'],door['y']+1)
+        native('SetPlayerAvatarTransitionFlags',1); step(30)
+        before_position = position()
+        assert native('JourneyCurrentGymGate') == (1 if city['kanto'] else 3)
+        objects = [s['gObjectEvents']+36*i for i in range(16)]
+        def guide_objects():
+            return [p for p in objects if lib.read8(p) & 1
+                    and lib.read8(p+8) == city['guide_local_id']
+                    and (lib.read8(p+10),lib.read8(p+9)) == map_id(city['map'])]
+        found = guide_objects()
+        assert len(found) == 1, ('Guide not spawned',city['map'],city['guide_local_id'])
+        assert (lib.read16(found[0]+16)-7,lib.read16(found[0]+18)-7) == (door['x'],door['y'])
+        lib.write16(s['gSpecialVar_Result'],0)
+        step(80,64)
+        print('Guide movement fixture:',city['map'],before_position,position(),
+              'avatar',lib.read8(s['gPlayerAvatar']),flush=True)
+        assert location() == map_id(city['map']), ('Guide did not block entrance',city['map'])
+        assert position() == before_position, ('Player walked through the guide',city['map'],position())
+        # Some native doors are still closed by their original story. The
+        # trainer must also explain the checkpoint when spoken to with A.
+        step(1,1); step(80)
+        assert lib.read16(s['gSpecialVar_Result']) == (1 if city['kanto'] else 3), ('Guide dialogue did not start',city['map'])
+        if city['map'] in ['PewterCity_Frlg','RustboroCity']:
+            step(1,1); step(180); picture(city['map']+'-checkpoint-dialogue')
+            step(1,1); step(180); picture(city['map']+'-checkpoint-location')
+        for flag in event_flags: write_flag(flag,True)
+        # Finish the actual message task before injecting another fixture
+        # script. Replacing a context does not cancel asynchronous message UI.
+        for _ in range(12):
+            step(16,1); step(16)
+        # Completing the scene naturally hides the guide on returning to town.
+        warp(city['map'],door['x'],door['y']+1)
+        assert native('JourneyCurrentGymGate') == 0
+        assert not guide_objects(), ('Guide stayed after completion',city['map'])
+        if city['map'] in ['PewterCity_Frlg','RustboroCity']:
+            gym = city['map'].replace('_Frlg','')+'_Gym'+('_Frlg' if city['kanto'] else '')
+            step(160,64); step(90)
+            assert location() == map_id(gym), ('Completed checkpoint still blocks entry',city['map'],location())
+            warp(city['map'],door['x'],door['y']+1)
+        # Already defeated gyms never acquire a story blockade on revisits.
+        for flag in event_flags: write_flag(flag,False)
+        write_flag(own[city['badge']],True)
+        assert native('JourneyCurrentGymGate') == 0
+        guides += 1
+        print('Native gym-door guide passed:',city['map'],flush=True)
+    results.append(dict(check='regional_campaign_checkpoints_and_guides',passed=True,
+        state_combinations=cases,city_guides=guides,blocked_door_movement=True,
+        completion_hides_guides=True,won_gyms_exempt=True,
+        all_guide_dialogues_triggered=True,
+        invasion_before_seventh_gym=True,invasion_does_not_restart=True,
+        dive_after_space_center_without_seventh_badge=True,
+        representative_completed_door_warps=2,
+        full_story_or_free_order_access_validated=False))
 if args.gym_scaling:
     scaling = json.loads((source / '.journey-gym-scaling').read_text())
     trainer_size, mon_size, pokemon_size, party_offset, class_offset, lvl_offset, level_data, species_data, leader, frlg_leader, battle_trainer, trainers_count, difficulty_normal = abi
@@ -255,7 +358,7 @@ if args.worldsea or args.westsea or args.east_coast:
             native('SetPlayerAvatarTransitionFlags', 8); step(30)
             cross(target, keys[direction])
 lib.stop()
-(args.output / ('connected-world.json' if args.westsea else 'worldsea.json' if args.worldsea else 'crossing.json')).write_text(json.dumps(dict(status='experimental_not_full_integration',
+(args.output / ('connected-world.json' if args.westsea else 'worldsea.json' if args.worldsea else 'campaign-gates.json' if args.campaign_gates else 'crossing.json')).write_text(json.dumps(dict(status='experimental_not_full_integration',
     rom_sha256=hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest(),
     checks=results, full_story_validated=False, custom_journey_migrated=False), indent=2) + '\n')
 print(f'{sum(r["check"] == "physical_surf_seam" for r in results)} physical Surf seams passed', flush=True)
