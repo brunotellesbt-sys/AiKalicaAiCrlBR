@@ -24,9 +24,10 @@ if __name__=='__main__':
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('--source',type=Path,required=True);p.add_argument('--toolchain',type=Path,default=ROOT/'.local/arm-gcc/usr/bin');p.add_argument('--nm',type=Path,default=ROOT/'.local/arm-binutils/usr/bin/arm-none-eabi-nm');p.add_argument('--export-only',action='store_true');p.add_argument('--reimport',action='store_true');p.add_argument('--jobs',type=int,default=4);a=p.parse_args();source=a.source.resolve()
  toolchain=a.toolchain.resolve();nm=a.nm.resolve()
  if not (source/'.unova-prepared').exists():
-  prepare(source);restrict_mechanics(source)
+  prepare(source)
   raw=subprocess.check_output([str(toolchain/'arm-none-eabi-cpp'),'-P','-iquote','include','-Wno-trigraphs','-DMODERN=1','-DTESTING=0','-DLEAFGREEN','-std=gnu17','src/pokemon.c'],cwd=source,text=True)
   (source/'.region-native.c').write_text(raw)
+  restrict_mechanics(source)
   import_catalog(source,toolchain/'arm-none-eabi-cpp',OUT/'donor-assets.zip',raw);configure(source)
  elif a.reimport:
   import_catalog(source,toolchain/'arm-none-eabi-cpp',OUT/'donor-assets.zip',(source/'.region-native.c').read_text())
