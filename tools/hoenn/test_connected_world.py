@@ -102,5 +102,35 @@ class ConnectedWorldTests(unittest.TestCase):
             self.assertEqual(gates['prepared_sha256'][path],
                 hashlib.sha256((ROOT/'tools/hoenn'/template).read_bytes()).hexdigest())
 
+    def test_team_stories_are_required_in_their_own_region(self):
+        stories=json.loads((VALIDATION/'team-stories-preparation.json').read_text())
+        self.assertEqual(stories['before_gym_ordinals'],{'kanto':[3,5,7],'hoenn':[3,5,6,8,8]})
+        self.assertEqual(len(stories['new_maps']),2)
+        self.assertEqual(len(stories['ocean_design']),27)
+        ids=[t['id']for t in stories['trainers']]
+        self.assertEqual(len(ids),72);self.assertEqual(len(set(ids)),72)
+        self.assertLessEqual(max(ids),1622)
+        self.assertTrue(all(m['badge_count']==4 for m in stories['missions']))
+        rocket=next(m for m in stories['missions']if m['key']=='hoenn_rocket')
+        self.assertFalse(rocket['kanto']);self.assertEqual(len(rocket['trainers']),9)
+        self.assertTrue(all(m['kanto']for m in stories['missions']if m['key']!='hoenn_rocket'))
+        runtime=json.loads((VALIDATION/'connected-world.json').read_text())
+        check=next(c for c in runtime['checks']if c['check']=='regional_incursions_and_casino')
+        self.assertEqual(check['individually_required_trainers'],28)
+        self.assertTrue(check['regions_independent']);self.assertEqual(check['physical_stair_warps'],4)
+        self.assertTrue(check['silph_after_six']);self.assertTrue(check['alliance_after_seven'])
+
+    def test_giovanni_alliance_uses_native_multi_battle(self):
+        runtime=json.loads((VALIDATION/'connected-world.json').read_text())
+        battle=next(c for c in runtime['checks']if c['check']=='real_giovanni_tag_battle_start')
+        self.assertTrue(battle['passed']);self.assertEqual(battle['opponents'],['ARCHIE','SHELLY'])
+        self.assertEqual(battle['partner_id'],2)
+        self.assertTrue(battle['battle_type_flags']&0x8000)
+        self.assertTrue(battle['battle_type_flags']&0x40)
+        self.assertEqual(battle['rendered_battlers'],4)
+        self.assertTrue(battle['native_battle_screen_rendered'])
+        self.assertFalse(battle['victory_aftermath_validated'])
+        self.assertTrue((VALIDATION/'Giovanni-Archie-Shelly-tag-battle.png').exists())
+
 
 if __name__ == '__main__': unittest.main()

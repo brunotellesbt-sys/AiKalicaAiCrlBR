@@ -32,6 +32,8 @@ def audit(source):
     for region, name, trainer, boss, interval in BOSSES:
         path = f'data/maps/{name}/scripts.inc'
         script = read(path)
+        if trainer == 'TRAINER_ARCHIE' and (source / '.journey-team-stories').exists():
+            trainer='TRAINER_JOURNEY_ARCHIE_ALLIANCE'; boss='Archie + Shelly, alongside Giovanni'
         matches = [dict(line=i, script=line.strip())
                    for i, line in enumerate(script.splitlines(), 1)
                    if re.search(r'\b' + trainer + r'\b', line)]
@@ -77,7 +79,7 @@ def audit(source):
                 league_guards=leagues, gym_conditions=dependencies,
                 policy=dict(independent_campaigns=True, independent_leagues=True,
                             free_choice_of_gym_order=True,
-                            boss_badge_thresholds=dict(kanto_before_gym=[3,4], hoenn_before_gym=[3,6,7,7]),
+                            boss_badge_thresholds=dict(kanto_before_gym=[3,5,7] if (source / '.journey-team-stories').exists() else [3,4], hoenn_before_gym=[3,5,6,8,8] if (source / '.journey-team-stories').exists() else [3,6,7,7]),
                             gym_door_guide_explains_team_and_location=True,
                             preserve_team_story_sequence=True,
                             viridian_leader_target='Blue'),

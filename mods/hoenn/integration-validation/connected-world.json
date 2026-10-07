@@ -1,6 +1,6 @@
 {
   "status": "experimental_not_full_integration",
-  "rom_sha256": "2fe9b405becb3a34722bf8ddc2db6fe2806e438121821ec4673864e9d1a71697",
+  "rom_sha256": "253ec1c1a6198a8670750f38e4d7386c2c067aa77012e73b4d7ac50839278acf",
   "checks": [
     {
       "check": "regional_flags_and_native_save_roundtrip",
@@ -18,11 +18,21 @@
       "completion_hides_guides": true,
       "won_gyms_exempt": true,
       "all_guide_dialogues_triggered": true,
-      "invasion_before_seventh_gym": true,
+      "invasion_before_gym": 8,
       "invasion_does_not_restart": true,
       "dive_after_space_center_without_seventh_badge": true,
       "representative_completed_door_warps": 2,
       "full_story_or_free_order_access_validated": false
+    },
+    {
+      "check": "regional_incursions_and_casino",
+      "passed": true,
+      "individually_required_trainers": 28,
+      "regions_independent": true,
+      "physical_stair_warps": 4,
+      "silph_after_six": true,
+      "alliance_after_seven": true,
+      "giovanni_requires_silph": true
     },
     {
       "check": "native_gym_party_levels",
@@ -905,6 +915,19 @@
       ],
       "target": "JourneyWorldSea00",
       "passed": true
+    },
+    {
+      "check": "real_giovanni_tag_battle_start",
+      "passed": true,
+      "partner_id": 2,
+      "opponents": [
+        "ARCHIE",
+        "SHELLY"
+      ],
+      "battle_type_flags": 4227145,
+      "rendered_battlers": 4,
+      "native_battle_screen_rendered": true,
+      "victory_aftermath_validated": false
     }
   ],
   "full_story_validated": false,

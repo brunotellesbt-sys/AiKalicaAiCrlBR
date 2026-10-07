@@ -23,7 +23,7 @@
       "boss": "Giovanni",
       "original_usual_interval": "Erika \u2192 Sabrina; Koga order varies",
       "evidence": {
-        "line": 68,
+        "line": 70,
         "script": "trainerbattle_no_intro TRAINER_BOSS_GIOVANNI_2, SilphCo_11F_Text_GiovanniDefeat"
       }
     },
@@ -74,12 +74,12 @@
     {
       "region": "hoenn",
       "map": "SeafloorCavern_Room9",
-      "trainer": "TRAINER_ARCHIE",
-      "boss": "Archie",
+      "trainer": "TRAINER_JOURNEY_ARCHIE_ALLIANCE",
+      "boss": "Archie + Shelly, alongside Giovanni",
       "original_usual_interval": "Tate & Liza \u2192 Juan",
       "evidence": {
-        "line": 29,
-        "script": "trainerbattle_no_intro TRAINER_ARCHIE, SeafloorCavern_Room9_Text_ArchieDefeat"
+        "line": 36,
+        "script": "multi_2_vs_2 TRAINER_JOURNEY_ARCHIE_ALLIANCE, SeafloorCavern_Room9_Text_ArchieDefeat, TRAINER_JOURNEY_SHELLY_ALLIANCE, Journey_ShellyDefeat, PARTNER_GIOVANNI"
       }
     }
   ],
@@ -1368,13 +1368,15 @@
     "boss_badge_thresholds": {
       "kanto_before_gym": [
         3,
-        4
+        5,
+        7
       ],
       "hoenn_before_gym": [
         3,
+        5,
         6,
-        7,
-        7
+        8,
+        8
       ]
     },
     "gym_door_guide_explains_team_and_location": true,
@@ -1384,12 +1386,12 @@
   "full_campaign_runtime_validated": false,
   "input_sha256": {
     "data/maps/RocketHideout_B4F_Frlg/scripts.inc": "61cb23330802694879178497d72aa322fb703b990a23e56606f22aebe4e28832",
-    "data/maps/SilphCo_11F_Frlg/scripts.inc": "c4cd6552c2aebe2945e4faaf8e42a826b248c618c4f32fecf4e86e5c1051918f",
+    "data/maps/SilphCo_11F_Frlg/scripts.inc": "b083bd19b463ec63b7f8e4623b37e5bb6141f0f19ce9a977605d65d2ac412ca3",
     "data/maps/ViridianCity_Gym_Frlg/scripts.inc": "6676479fdca2e65896415b8497c2ed7b87e1eb625c29590c869ef4d6299638da",
     "data/maps/MtChimney/scripts.inc": "9eaed775a7bde2edeaf487229bc2ef1b6b571b4f3f63b43f1bba6160c1517cbc",
     "data/maps/MagmaHideout_4F/scripts.inc": "e5e2c8c362fc88cb70f76ebd70ba47bc4c1d3673af6a3f0651ebd10e215e4d41",
     "data/maps/MossdeepCity_SpaceCenter_2F/scripts.inc": "04184e0e8a6ca56a6e1abd3f08e741d69a2b970dd816bb65cc742af7ab96db8d",
-    "data/maps/SeafloorCavern_Room9/scripts.inc": "15fc46d9b8000819dc81a5ea8706ae5a3b64549af4e0e6beca7a71929ca02b09",
+    "data/maps/SeafloorCavern_Room9/scripts.inc": "9c189069c37a78a96bd686143de8e8fa1daa0ec2ed9b3f451059ac789fbefaad",
     "data/scripts/route23.inc": "1766e126903d471cdb46d91e013056405c1db8f25b17928dd41c6c4f6336a641",
     "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc": "dcd902ed5895ef76e769bbfb7852c6e6a979cd47334ba4c3884b65a930262a6a",
     "src/event_data.c": "bba81b22580819fafed74e22ba1833414c0b970b9f9bfa467260af37dfbe8726",
