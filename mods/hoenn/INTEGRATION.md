@@ -1,5 +1,82 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+## Histórias independentes e ordem livre
+
+Cada região deve preservar sua própria campanha, próxima do jogo original.
+Os oito ginásios de Kanto valem apenas para a Liga de Kanto; os oito de
+Hoenn valem apenas para a Liga de Hoenn. Ordem livre significa que o jogador
+escolhe a ordem, sem sorteio obrigatório. As insígnias e títulos de campeão
+já têm bancos separados. Isso não significa que todos os acessos e eventos
+das duas campanhas já estejam adaptados.
+
+A auditoria de dependências registra os sete encontros originais com os
+chefes, as condições dos 18 mapas/andares de ginásios e os oito requisitos
+de cada Liga. A sequência habitual em LeafGreen é Giovanni no esconderijo
+Rocket após Surge e normalmente antes de Erika; Giovanni na Silph Co. antes
+de Sabrina, com a ordem de Koga variável; Giovanni como oitavo líder em
+Viridian. Em Emerald, Maxie no Monte Chimney fica entre Wattson e Flannery;
+no esconderijo Magma entre Winona e Tate & Liza; no Centro Espacial entre
+Tate & Liza e Juan. Archie na Caverna Submarina também fica entre o sétimo
+e o oitavo ginásio. A adaptação de Viridian continua prevendo Blue como
+líder, preservando Giovanni nos eventos Rocket.
+
+Esses intervalos descrevem a jornada original habitual, não requisitos
+universais de quantidade de insígnias. A regra autorizada para a candidata
+é bloquear o próximo ginásio ainda não vencido, independentemente de sua
+identidade, antes do ginásio que originalmente precedia o evento:
+
+| Região | Antes do ginásio da jornada | Evento exigido |
+| --- | --- | --- |
+| Kanto | 3º, com duas insígnias de Kanto | Rocket Hideout, Celadon |
+| Kanto | 4º, com três insígnias de Kanto | Silph Co., Saffron |
+| Hoenn | 3º, com duas insígnias de Hoenn | Maxie no Monte Chimney |
+| Hoenn | 6º, com cinco insígnias de Hoenn | Maxie no esconderijo Magma |
+| Hoenn | 7º, com seis insígnias de Hoenn | Maxie/Tabitha no Centro Espacial; depois Archie na Caverna Submarina |
+
+Um treinador na porta explica que o líder está ajudando a combater Rocket,
+Magma ou Aqua e informa a rota/local da missão. A candidata usa os diálogos
+em inglês, como o restante da base. O evento concluído libera a passagem
+ao retornar à cidade. Ginásios já vencidos não ficam bloqueados em revisitas.
+Tentar outro ginásio não contorna a missão pendente. Não é sorteado um
+ginásio específico: a trava vale para qualquer próximo desafio da região.
+
+O motor inicia warps de portas antes da colisão normal com NPCs; por isso
+há também uma verificação da entrada real, além do treinador visível.
+Objetos originais e seus IDs são preservados. Os dois novos flags de
+visibilidade usam posições já reservadas no banco regional, sem aumentar
+novamente a estrutura do save.
+
+O Centro Espacial antes era ativado pela vitória em Mossdeep. Agora sua
+invasão é preparada com seis insígnias de Hoenn e o evento do esconderijo
+Magma concluído, preservando cenas em andamento/concluídas. Vencer Mossdeep
+depois não reinicia a invasão. Concluir o Centro Espacial permite usar Dive
+antes da sétima insígnia; continua necessário um Pokémon com o golpe.
+
+Esta etapa não libera todos os acessos em ordem livre nem coloca fisicamente
+o líder escolhido nas cenas de combate às equipes. Portas, obstáculos,
+variáveis compartilhadas e demais dependências das campanhas ainda exigem
+adaptação e teste completo. Os limites acima seguem os checkpoints escolhidos,
+não comprovam uma campanha jogável do início ao fim.
+
+Passaram no mGBA **180 combinações de contagem de insígnias/eventos**, as
+portas e os diálogos dos **16 treinadores**, a remoção dos treinadores após
+concluir a missão e duas entradas completas em ginásios após a liberação.
+Foram verificados o início antecipado da invasão, a preservação de cenas
+em andamento/concluídas e a permissão de Dive sem a sétima insígnia após
+o Centro Espacial. Os estados de missão são configurados diretamente na
+memória da fixture: não representam vitórias completas contra os chefes.
+
+[Aviso de Kanto](integration-validation/PewterCity_Frlg-checkpoint-dialogue.png)
+e [destino em Hoenn](integration-validation/RustboroCity-checkpoint-location.png).
+
+Reproduzir a auditoria:
+
+```sh
+python tools/hoenn/audit_campaigns.py --source .local/hoenn-multiregion-src --output mods/hoenn/integration-validation/campaign-dependencies.json
+```
+
+[Dependências registradas](integration-validation/campaign-dependencies.json).
+
 ## Integração marítima atual
 
 A rede agora tem saídas nas rotas **125, 127 e 129**, além da 131.
@@ -23,8 +100,8 @@ adaptados e testados. Blue, rival e as demais regras da jornada anterior
 continuam pendentes de migração. Não foram alterados os times, espécies,
 golpes ou puzzles dos ginásios nesta etapa.
 
-Os overlays atuais foram reproduzidos em **157 arquivos**. Foram verificadas
-114 conexões recíprocas sem sobreposição e a conectividade de todo o mar
+Os overlays atuais foram reproduzidos em **195 arquivos**. Foram verificadas
+124 conexões recíprocas sem sobreposição e a conectividade de todo o mar
 leste de Hoenn com a rede de Kanto/Sevii. Os números de etapas anteriores
 abaixo são históricos. A ROM publicada continua separada.
 
@@ -132,6 +209,7 @@ python3 tools/hoenn/prepare_westsea.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_region_state.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_east_coast.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_gym_scaling.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_campaign_gates.py --source .local/hoenn-multiregion-src
 ```
 
 Na pasta de fonte, compile com os caminhos do compilador ARM, binutils,
@@ -141,7 +219,7 @@ Após editar mapas binários, force sua recompilação com `make modern -W data/
 ```sh
 python3 tools/hoenn/validate_crossing.py \
   --source .local/hoenn-multiregion-src --library .local/mgba-bridge.so \
-  --worldsea --westsea --region-state --east-coast --gym-scaling
+  --worldsea --westsea --region-state --east-coast --gym-scaling --campaign-gates
 python3 tools/hoenn/verify_worldsea.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/world_layout.py
 node tools/hoenn/validate_world_layout.cjs

@@ -53,7 +53,7 @@ class ConnectedWorldTests(unittest.TestCase):
         reproduction = json.loads((VALIDATION / 'world-reproduction.json').read_text())
         runtime = json.loads((VALIDATION / 'connected-world.json').read_text())
         self.assertTrue(reproduction['passed']); self.assertTrue(reproduction['idempotence'])
-        self.assertEqual(reproduction['prepared_files'], 157)
+        self.assertEqual(reproduction['prepared_files'], len(reproduction['prepared_sha256']))
         self.assertTrue(reproduction['entire_eastern_sea_connected'])
         seams = [r for r in runtime['checks'] if r['check'] == 'physical_surf_seam']
         self.assertEqual(len(seams), 96)
@@ -80,6 +80,27 @@ class ConnectedWorldTests(unittest.TestCase):
         self.assertTrue(check['passed'])
         self.assertEqual(check['parties'],840)
         self.assertFalse(check['access_or_free_order_validated'])
+
+    def test_regional_story_checkpoints_and_native_door_guides(self):
+        gates=json.loads((VALIDATION/'campaign-gates-preparation.json').read_text())
+        self.assertEqual(gates['before_gym_ordinals'], {'kanto':[3,4],'hoenn':[3,6,7,7]})
+        self.assertEqual(len(gates['cities']),16)
+        state=json.loads((VALIDATION/'regional-state-preparation.json').read_text())
+        used={f['allocated'] for f in state['frlg_flags'].values()} | set(state['kanto_badges']) | {state['kanto_champion']}
+        self.assertTrue(used.isdisjoint(gates['guide_flags']))
+        runtime=json.loads((VALIDATION/'connected-world.json').read_text())
+        check=next(r for r in runtime['checks'] if r['check']=='regional_campaign_checkpoints_and_guides')
+        self.assertTrue(check['passed']); self.assertEqual(check['city_guides'],16)
+        self.assertEqual(check['state_combinations'],180)
+        self.assertTrue(check['completion_hides_guides'])
+        self.assertTrue(check['all_guide_dialogues_triggered'])
+        self.assertTrue(check['dive_after_space_center_without_seventh_badge'])
+        self.assertEqual(check['representative_completed_door_warps'],2)
+        self.assertFalse(check['full_story_or_free_order_access_validated'])
+        for path,template in [('src/journey_campaign_gates.c','campaign_gates.c'),
+                              ('include/journey_campaign_gates.h','campaign_gates.h')]:
+            self.assertEqual(gates['prepared_sha256'][path],
+                hashlib.sha256((ROOT/'tools/hoenn'/template).read_bytes()).hexdigest())
 
 
 if __name__ == '__main__': unittest.main()
