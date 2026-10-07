@@ -154,6 +154,8 @@ def prepare(source):
     write('.journey-prepared',json.dumps({'homes':report,'excluded':config['excluded'],'commit':COMMIT},indent=2)+'\n')
     from open_world import apply
     apply(source)
+    from wild_world import apply as apply_wild
+    apply_wild(source)
     return report
 
 

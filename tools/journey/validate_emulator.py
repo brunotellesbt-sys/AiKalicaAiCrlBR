@@ -244,6 +244,8 @@ for city in range(16):
     record('city-always-selects-one-fixed-house',city=city,home=city+1)
 from validate_open_world import validate
 validate(globals())
+from validate_wild_world import validate as validate_wild
+validate_wild(globals())
 lib.stop()
 (args.output/'results.json').write_text(json.dumps(results,indent=2)+'\n')
 print(f'{len(results)} mGBA checks passed')
