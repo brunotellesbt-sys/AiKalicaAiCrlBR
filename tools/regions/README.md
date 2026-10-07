@@ -12,6 +12,11 @@ git -C .local/all-regions-src checkout 7606f57650627704c9aad965a031fd3a454590e2
 python3 tools/regions/build.py --source .local/all-regions-src --nm /usr/bin/arm-none-eabi-nm
 ```
 
+O preparador compila as ferramentas nativas e gera os cabeçalhos de mapas antes
+da importação. `--prepare-only` permite verificar essa etapa sem compilar a ROM.
+A preparação a partir de um checkout limpo foi conferida nesta tarefa e produziu
+os mesmos cabeçalhos de catálogo/assets usados na ROM validada.
+
 Use uma cópia limpa da base antes da primeira preparação; edições anteriores
 são preservadas e recusadas. O preparador guarda o catálogo canônico pré-processado
 em `.region-native.c`. Para revisar o pacote extraído, `--reimport` reaplica o
