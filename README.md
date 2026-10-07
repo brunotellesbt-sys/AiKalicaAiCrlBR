@@ -48,3 +48,8 @@ permanece na Team Rocket. A Liga exige as oito insígnias.
 
 Os encontros selvagens agora acompanham a média da equipe (−5 a +2 níveis),
 as insígnias e a cidade inicial, combinando os habitats de LeafGreen e FireRed.
+
+Veja também a [prévia visual do mapa-múndi](mods/hoenn/validation/world-atlas.png)
+e o [atlas navegável no estilo PokéNav](mods/hoenn/README.md#atlas-visual-da-jornada).
+Ele mostra as conexões atuais de Surf e separa a cartografia de Hoenn das
+travessias e da história ainda não implementadas.

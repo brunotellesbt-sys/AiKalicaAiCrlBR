@@ -37,3 +37,40 @@ python3 tools/hoenn/audit.py --archive '/caminho/Pokemon - Emerald Version (USA,
 
 O auditor verifica o hash da ROM e lê apenas os dados de mapas da fonte fixada.
 Documentos incluídos no ZIP não são tratados como instruções.
+
+## Atlas visual da jornada
+
+[Veja a prévia do mapa-múndi](validation/world-atlas.png), com cartografia real de
+Kanto, das ilhas Sevii e do PokéNav de Emerald. `web/world-map.html` oferece
+seleção de 36 lugares, consulta dos acessos, controles de teclado e opções para
+mostrar/ocultar rotas e Hoenn. O player tem um link para esse atlas.
+
+As nove conexões entre os dez portos seguem exatamente a cadeia de mapas da
+ROM de Surf. As linhas são esquemáticas: a disposição dos painéis não determina
+distâncias ou a geografia dos mapas marítimos jogáveis. As duas travessias para
+Slateport (Surf e barco com ticket) aparecem explicitamente como **planejadas**.
+Os 16 lugares de Hoenn também são marcados como não jogáveis.
+
+Esta é uma consulta externa no navegador, **não a implementação do PokéNav
+dentro da ROM**. Não acompanha o save nem teleporta o jogador. O menu regional
+original da ROM permanece inalterado. A cartografia não substitui o porte de
+mapas, NPCs e eventos descrito acima.
+
+Para recriar os cinco painéis, use o checkout preparado da versão atual. O
+gerador usa Pillow (validado com 12.3.0) para decodificar os tiles e seus mapas:
+
+```sh
+python3 tools/hoenn/world_atlas.py --source .local/all-regions-src
+python3 -m unittest discover -s tools/hoenn -v
+python3 tools/sea_routes/serve.py
+# Abra http://127.0.0.1:8765/world-map.html
+```
+
+O gerador lê os assets nativos de LeafGreen e os arquivos de cartografia de
+Emerald do commit fixado, sem carregar textos anexados. `web/world-map.json`
+registra hashes dos arquivos de entrada e das imagens produzidas, o hash da
+ROM atual e o estado de cada lugar/travessia. Nenhum byte da ROM é alterado.
+
+Passaram cinco testes offline de integridade e sete verificações no Chromium,
+incluindo seleção, teclado, visibilidade, rotas pendentes e layout móvel.
+[Relatório do navegador](validation/atlas-browser.json).
