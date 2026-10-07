@@ -1,0 +1,259 @@
+{
+  "status": "road_access_candidate_not_full_campaign_validation",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "relocations": [
+    {
+      "map": "Route110",
+      "local_id": 22,
+      "script": "Route110_EventScript_AquaGrunt1",
+      "before": [
+        7,
+        83
+      ],
+      "after": [
+        7,
+        80
+      ]
+    },
+    {
+      "map": "Route110",
+      "local_id": 23,
+      "script": "Route110_EventScript_AquaGrunt2",
+      "before": [
+        8,
+        83
+      ],
+      "after": [
+        7,
+        81
+      ]
+    },
+    {
+      "map": "Route110",
+      "local_id": 24,
+      "script": "Route110_EventScript_AquaGrunt3",
+      "before": [
+        9,
+        83
+      ],
+      "after": [
+        7,
+        82
+      ]
+    },
+    {
+      "map": "Route110",
+      "local_id": 25,
+      "script": "Route110_EventScript_AquaGrunt4",
+      "before": [
+        10,
+        83
+      ],
+      "after": [
+        7,
+        83
+      ]
+    },
+    {
+      "map": "Route110",
+      "local_id": 26,
+      "script": "0x0",
+      "before": [
+        8,
+        82
+      ],
+      "after": [
+        7,
+        84
+      ]
+    },
+    {
+      "map": "Route119",
+      "local_id": 23,
+      "script": "Route119_EventScript_BridgeAquaGrunt1",
+      "before": [
+        13,
+        33
+      ],
+      "after": [
+        10,
+        32
+      ]
+    },
+    {
+      "map": "Route119",
+      "local_id": 24,
+      "script": "Route119_EventScript_BridgeAquaGrunt2",
+      "before": [
+        13,
+        34
+      ],
+      "after": [
+        10,
+        35
+      ]
+    }
+  ],
+  "event_changes": [
+    {
+      "map": "Route110",
+      "path": [
+        "object_events",
+        21,
+        "x"
+      ],
+      "before": 7,
+      "after": 7
+    },
+    {
+      "map": "Route110",
+      "path": [
+        "object_events",
+        21,
+        "y"
+      ],
+      "before": 83,
+      "after": 80
+    },
+    {
+      "map": "Route110",
+      "path": [
+        "object_events",
+        22,
+        "x"
+      ],
+      "before": 8,
+      "after": 7
+    },
+    {
+      "map": "Route110",
+      "path": [
+        "object_events",
+        22,
+        "y"
+      ],
+      "before": 83,
+      "after": 81
+    },
+    {
+      "map": "Route110",
+      "path": [
+        "object_events",
+        23,
+        "x"
+      ],
+      "before": 9,
+      "after": 7
+    },
+    {
+      "map": "Route110",
+      "path": [
+        "object_events",
+        23,
+        "y"
+      ],
+      "before": 83,
+      "after": 82
+    },
+    {
+      "map": "Route110",
+      "path": [
+        "object_events",
+        24,
+        "x"
+      ],
+      "before": 10,
+      "after": 7
+    },
+    {
+      "map": "Route110",
+      "path": [
+        "object_events",
+        24,
+        "y"
+      ],
+      "before": 83,
+      "after": 83
+    },
+    {
+      "map": "Route110",
+      "path": [
+        "object_events",
+        25,
+        "x"
+      ],
+      "before": 8,
+      "after": 7
+    },
+    {
+      "map": "Route110",
+      "path": [
+        "object_events",
+        25,
+        "y"
+      ],
+      "before": 82,
+      "after": 84
+    },
+    {
+      "map": "Route119",
+      "path": [
+        "object_events",
+        22,
+        "x"
+      ],
+      "before": 13,
+      "after": 10
+    },
+    {
+      "map": "Route119",
+      "path": [
+        "object_events",
+        22,
+        "y"
+      ],
+      "before": 33,
+      "after": 32
+    },
+    {
+      "map": "Route119",
+      "path": [
+        "object_events",
+        23,
+        "x"
+      ],
+      "before": 13,
+      "after": 10
+    },
+    {
+      "map": "Route119",
+      "path": [
+        "object_events",
+        23,
+        "y"
+      ],
+      "before": 34,
+      "after": 35
+    }
+  ],
+  "mission_flags_unchanged": true,
+  "snorlax_unchanged": true,
+  "requires_new_save": true,
+  "full_story_validated": false,
+  "input_sha256": {
+    "data/layouts/layouts.json": "16d2a6ef7e27ee5f2cc1279400151d9f54528cbd8c549a8a0fe910312b8114e7",
+    "data/maps/Route110/map.json": "5c0441b7239ee1ab89d3c7b8d56ce03a8f83f2d535147d2b3ce170020249482f",
+    "data/layouts/Route110/map.bin": "53c4da783116c4b726989d9ebb872ee4cbfaea1e148b39a4e345471e60a3d6da",
+    "data/maps/Route119/map.json": "7303913b8cb5ea4f6875f47bba9b4219d0faf1210aacda0ed89d9fb2a801befc",
+    "data/layouts/Route119/map.bin": "f6c948a0fb90925afce408b4bf1742ba56e9e6c95ffb899a348d563d1ba5f47d"
+  },
+  "original_sha256": {
+    "data/maps/Route110/map.json": "5c0441b7239ee1ab89d3c7b8d56ce03a8f83f2d535147d2b3ce170020249482f",
+    "data/maps/Route119/map.json": "7303913b8cb5ea4f6875f47bba9b4219d0faf1210aacda0ed89d9fb2a801befc"
+  },
+  "prepared_sha256": {
+    "data/maps/Route110/map.json": "9cc3795c0a2c5f8c8686eef5389e271c06c3c67760d3efe7941baf4adb4f59f6",
+    "data/maps/Route119/map.json": "8ebc9b771e8554a3d379a6b70d13aeb7d693e69b3a110f8be0f188103eb16239"
+  },
+  "cycling_gates": "preserved_pending_bike_missions"
+}

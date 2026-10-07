@@ -1,6 +1,6 @@
 {
   "status": "experimental_not_full_integration",
-  "rom_sha256": "be82afa2d11a723f2a2d0995bd5b0b455549cf58c4985905bd2ac640a5785ef4",
+  "rom_sha256": "42ec402cbc7feeac0efe111455078dbf83a4e474e6c4e4b195faa9666a26da3c",
   "checks": [
     {
       "check": "regional_flags_and_native_save_roundtrip",
@@ -87,6 +87,28 @@
       "surf_waterfall_without_badges": true,
       "real_surf_prompt_without_badges": true,
       "dive_rule_preserved": true,
+      "full_campaign_validated": false
+    },
+    {
+      "check": "bike_quests_and_acro_replacements",
+      "passed": true,
+      "converted_tiles": 81,
+      "physical_replacement_walks": 5,
+      "bike_gate_cases": 8,
+      "cycling_locked_without_bike": true,
+      "cycling_open_after_bike": true,
+      "reward_scripts": [
+        "MauvilleCity_BikeShop",
+        "CeruleanCity_BikeShop_Frlg"
+      ],
+      "full_bicycle_quests_validated": false,
+      "only_mach_awarded": true,
+      "registered_bike_preserved": true,
+      "stairs_draw_below_player": true,
+      "aqua_missions_unchanged": true,
+      "yellow_stair_matches_native_lateral": true,
+      "upper_landings_have_no_stair": true,
+      "physical_aqua_passages": 2,
       "full_campaign_validated": false
     },
     {
