@@ -1,6 +1,6 @@
 {
   "status": "experimental_not_full_integration",
-  "rom_sha256": "253ec1c1a6198a8670750f38e4d7386c2c067aa77012e73b4d7ac50839278acf",
+  "rom_sha256": "be82afa2d11a723f2a2d0995bd5b0b455549cf58c4985905bd2ac640a5785ef4",
   "checks": [
     {
       "check": "regional_flags_and_native_save_roundtrip",
@@ -23,6 +23,71 @@
       "dive_after_space_center_without_seventh_badge": true,
       "representative_completed_door_warps": 2,
       "full_story_or_free_order_access_validated": false
+    },
+    {
+      "check": "blue_regular_gym_reward",
+      "passed": true,
+      "rocket_flags_unchanged": true,
+      "regional_badge_only": true,
+      "route22_after_all_eight": true,
+      "completed_final_rival_not_restarted": true,
+      "battle_victory_simulated": true
+    },
+    {
+      "check": "free_gym_doors_and_land_hms",
+      "passed": true,
+      "physical_gym_entries": 16,
+      "norman_old_badge_states": 4,
+      "opened_boulder_barrier_tiles": 8,
+      "obstacle_samples": [
+        {
+          "map": "PetalburgWoods",
+          "local_id": 1,
+          "x": 19,
+          "y": 10,
+          "script": "EventScript_CutTree"
+        },
+        {
+          "map": "CeladonCity_Frlg",
+          "local_id": 10,
+          "x": 52,
+          "y": 22,
+          "script": "EventScript_CutTree"
+        },
+        {
+          "map": "GraniteCave_B2F",
+          "local_id": 3,
+          "x": 5,
+          "y": 14,
+          "script": "EventScript_RockSmash"
+        },
+        {
+          "map": "CeruleanCave_1F_Frlg",
+          "local_id": 4,
+          "x": 7,
+          "y": 21,
+          "script": "EventScript_RockSmash"
+        },
+        {
+          "map": "FieryPath",
+          "local_id": 2,
+          "x": 10,
+          "y": 15,
+          "script": "EventScript_StrengthBoulder"
+        },
+        {
+          "map": "FuchsiaCity_WardensHouse_Frlg",
+          "local_id": 2,
+          "x": 11,
+          "y": 6,
+          "script": "EventScript_StrengthBoulder"
+        }
+      ],
+      "all_obstacles_catalogued": 336,
+      "surf_waterfall_without_badges": true,
+      "real_surf_prompt_without_badges": true,
+      "dive_rule_preserved": true,
+      "full_campaign_validated": false
     },
     {
       "check": "regional_incursions_and_casino",

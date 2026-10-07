@@ -20,6 +20,7 @@ parser.add_argument('--westsea', action='store_true', help='Use the revised Cinn
 parser.add_argument('--region-state', action='store_true', help='Exercise separate badge/champion/story banks and native flash save/reload')
 parser.add_argument('--east-coast', action='store_true', help='Exercise the three eastern Hoenn exits and Fuchsia sea connection')
 parser.add_argument('--gym-scaling', action='store_true', help='Generate actual gym parties at every regional badge count')
+parser.add_argument('--free-access', action='store_true', help='Exercise terrestrial obstacle removal and free-order gym doors')
 parser.add_argument('--team-stories', action='store_true', help='Validate regional incursions, casino stairs and actual Giovanni tag-battle startup')
 parser.add_argument('--campaign-gates', action='store_true', help='Exercise regional story checkpoints and gym-door guide objects')
 parser.add_argument('--output', type=Path, default=ROOT / 'mods/hoenn/integration-validation')
@@ -278,6 +279,110 @@ if args.campaign_gates:
         dive_after_space_center_without_seventh_badge=True,
         representative_completed_door_warps=2,
         full_story_or_free_order_access_validated=False))
+if args.free_access:
+    access=json.loads((source/'.journey-free-access').read_text())
+    def rawflag(flag,enabled):
+        p=save()+4720+flag//8;mask=1<<(flag&7);v=lib.read8(p)
+        lib.write8(p,v|mask if enabled else v&~mask)
+    hb=[lib.read16(s['gBadgeFlags']+i*2)for i in range(8)];kb=list(range(0x1AB0,0x1AB8))
+    for b in hb+kb:rawflag(b,False)
+    rawflag(0xB5A,False);rawflag(0x1AB8,False)
+    assert native('FlagGet',0x1ABB)==1
+    for region in [0,1]:
+        lib.write8(s['isFrlg'],region)
+        assert native('IsFieldMoveUnlocked_Surf')==1
+        assert native('IsFieldMoveUnlocked_Waterfall')==1
+        assert native('IsFieldMoveUnlocked_Dive')==0
+    gating=json.loads((source/'.journey-campaign-gates').read_text())
+    # Retain the tutorial, and exercise Norman's formerly fixed-badge states.
+    for state in [2,3,4,5]:
+        native('VarSet',0x4085,state)
+        warp('PetalburgCity_Gym',4,106)
+        assert native('VarGet',0x4085)==6, ('Norman rank gate',state)
+    doors=0
+    for city in gating['cities']:
+        native('VarSet',0x4085,6)
+        door=city['door'];warp(city['map'],door['x'],door['y']+1)
+        native('SetPlayerAvatarTransitionFlags',1);step(30)
+        assert native('JourneyCurrentGymGate')==0
+        gym=next(json.loads(p.read_text())['name'] for p in (source/'data/maps').glob('*/map.json')
+                 if json.loads(p.read_text())['id']==door['dest_map'])
+        step(100,64);step(60)
+        assert location()==map_id(gym), ('Free gym door',city['map'],location(),position())
+        print('Free gym door passed:',city['map'],flush=True)
+        picture(city['map']+'-free-gym-entry');doors+=1
+    samples=[]
+    for script_name in ['EventScript_CutTree','EventScript_RockSmash','EventScript_StrengthBoulder']:
+        # Verify representative objects absent in each engine format.
+        for frlg in [False,True]:
+            obstacle=next(o for o in access['obstacles']if o['script']==script_name and o['map'].endswith('_Frlg')==frlg)
+            warp(obstacle['map'],obstacle['x'],obstacle['y'])
+            native('SetPlayerAvatarTransitionFlags',1);step(30)
+            assert native('MapGridGetCollisionAt',obstacle['x']+7,obstacle['y']+7)==0,obstacle
+            active=[s['gObjectEvents']+36*i for i in range(16)]
+            assert not any(lib.read8(p)&1 and lib.read8(p+8)==obstacle['local_id']
+                           and (lib.read8(p+10),lib.read8(p+9))==map_id(obstacle['map'])for p in active),obstacle
+            samples.append(obstacle);picture(obstacle['map']+'-cleared-'+script_name)
+    # Use Surf through the real A-button prompt with no badges, not just the
+    # forced-avatar helper used to isolate the ocean seam tests.
+    beach=json.loads((source/'data/maps/Route109/map.json').read_text())
+    bl=layouts[beach['layout']];raw=(source/bl['blockdata_filepath']).read_bytes()
+    tiles=struct.unpack('<'+'H'*(len(raw)//2),raw);w,h=bl['width'],bl['height']
+    occupied={(o['x'],o['y'])for o in beach['object_events']}
+    choices=[]
+    for y in range(2,h-2):
+        for x in range(2,w-2):
+            v=tiles[y*w+x]
+            if v&0xC00 or v>>12!=3 or any(abs(x-a)+abs(y-b)<4 for a,b in occupied):continue
+            for dx,dy,key in [(0,1,128),(1,0,16),(-1,0,32),(0,-1,64)]:
+                water=tiles[(y+dy)*w+x+dx]
+                if not water&0xC00 and water>>12==1:choices.append((x,y,key))
+    assert choices,'No native beach fixture'
+    x,y,key=choices[0];warp('Route109',x,y)
+    native('SetPlayerAvatarTransitionFlags',1);step(30);step(16,key);step(16)
+    assert not lib.read8(s['gPlayerAvatar'])&8
+    step(1,1);step(100);picture('Surf-without-badges-prompt')
+    for _ in range(6):step(1,1);step(100)
+    assert lib.read8(s['gPlayerAvatar'])&8,('Surf prompt did not mount',x,y,position())
+    picture('Surf-without-badges-active')
+    barriers=0
+    for name,points in [('VictoryRoad_1F_Frlg',[(12,14),(12,15)]),
+        ('VictoryRoad_2F_Frlg',[(13,10),(13,11),(33,16),(33,17)]),
+        ('VictoryRoad_3F_Frlg',[(12,12),(12,13)])]:
+        warp(name,points[0][0],points[0][1])
+        for x,y in points:
+            assert native('MapGridGetCollisionAt',x+7,y+7)==0,(name,x,y)
+            barriers+=1
+        picture(name+'-open-boulder-barriers')
+    # Exercise Blue's actual reward script without faking a Rocket victory.
+    constants=(source/'include/constants/flags.h').read_text()
+    def flagid(name):return int(re.search(r'^#define\s+'+name+r'\s+(0x[0-9A-Fa-f]+)',constants,re.M)[1],16)
+    rocket=[flagid(n)for n in ['FLAG_HIDE_MISC_KANTO_ROCKETS','FLAG_HIDE_SAFFRON_ROCKETS','FLAG_HIDE_CELADON_ROCKETS']]
+    for f in rocket:rawflag(f,False)
+    for f in kb:rawflag(f,False)
+    # VAR_MAP_SCENE_ROUTE22 is generated from the pinned native header.
+    vc=(source/'include/constants/vars.h').read_text()
+    route22=int(re.search(r'^#define\s+VAR_MAP_SCENE_ROUTE22\s+(0x[0-9A-Fa-f]+)',vc,re.M)[1],16)
+    native('VarSet',route22,0);warp('ViridianCity_Gym_Frlg',2,3)
+    script(b'\x05'+struct.pack('<I',s['ViridianCity_Gym_EventScript_DefeatedGiovanni']),30)
+    for _ in range(30):step(16,1);step(16)
+    assert all(not native('FlagGet',f)for f in rocket),'Blue cleared Rocket story'
+    assert native('FlagGet',kb[7])==1
+    assert sum(native('FlagGet',f)for f in kb)==1
+    assert native('VarGet',route22)==0,'Blue triggered final rival before all gyms'
+    for f in kb:rawflag(f,True)
+    warp('ViridianCity_Frlg',34,14)
+    assert native('VarGet',route22)==3
+    native('VarSet',route22,4);native('JourneyUpdateGymGate')
+    assert native('VarGet',route22)==4
+    for f in kb:rawflag(f,False)
+    results.append(dict(check='blue_regular_gym_reward',passed=True,rocket_flags_unchanged=True,
+        regional_badge_only=True,route22_after_all_eight=True,completed_final_rival_not_restarted=True,
+        battle_victory_simulated=True))
+    results.append(dict(check='free_gym_doors_and_land_hms',passed=True,physical_gym_entries=doors,
+        norman_old_badge_states=4,opened_boulder_barrier_tiles=barriers,obstacle_samples=samples,all_obstacles_catalogued=len(access['obstacles']),
+        surf_waterfall_without_badges=True,real_surf_prompt_without_badges=True,dive_rule_preserved=True,full_campaign_validated=False))
+    print('Free gym entries and terrestrial HM samples passed',flush=True)
 if args.team_stories:
     stories = json.loads((source / '.journey-team-stories').read_text())
     ids = {t['key']:t['id'] for t in stories['trainers']}
@@ -328,6 +433,10 @@ if args.team_stories:
     print('Regional incursions and four casino stair warps passed',flush=True)
 if args.gym_scaling:
     scaling = json.loads((source / '.journey-gym-scaling').read_text())
+    if (source / '.journey-blue-gym').exists():
+        for gym in scaling['gyms']:
+            if gym['map']=='ViridianCity_Gym_Frlg':
+                gym['trainers']=['TRAINER_JOURNEY_BLUE' if n=='TRAINER_LEADER_GIOVANNI' else n for n in gym['trainers']]
     trainer_size, mon_size, pokemon_size, party_offset, class_offset, lvl_offset, level_data, species_data, leader, frlg_leader, battle_trainer, trainers_count, difficulty_normal = abi[:13]
     trainers_base = s['gTrainers'] + difficulty_normal * trainers_count * trainer_size
     ids = {}
