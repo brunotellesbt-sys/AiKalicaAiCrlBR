@@ -24,6 +24,7 @@ parser.add_argument('--free-access', action='store_true', help='Exercise terrest
 parser.add_argument('--road-access', action='store_true', help='Exercise bike quest gates, former Acro terrain and relocated Aqua roadblocks')
 parser.add_argument('--team-stories', action='store_true', help='Validate regional incursions, casino stairs and actual Giovanni tag-battle startup')
 parser.add_argument('--campaign-gates', action='store_true', help='Exercise regional story checkpoints and gym-door guide objects')
+parser.add_argument('--story-access', action='store_true', help='Exercise native first-badge rewards in all sixteen gyms, including a full bag')
 parser.add_argument('--output', type=Path, default=ROOT / 'mods/hoenn/integration-validation')
 args = parser.parse_args(); source = args.source.resolve(); args.output.mkdir(parents=True, exist_ok=True)
 raw = subprocess.check_output([str(ROOT / '.local/arm-binutils/usr/bin/arm-none-eabi-nm'), '-n', str(source / 'pokeemerald.elf')], text=True)
@@ -36,7 +37,7 @@ assert lib.start(str(source / 'pokeemerald.gba').encode())
 results = []
 call4 = None
 abi = None
-if args.gym_scaling or args.team_stories:
+if args.gym_scaling or args.team_stories or args.story_access:
     toolchain = ROOT / '.local/arm-gcc/usr/bin/arm-none-eabi-gcc'
     with tempfile.TemporaryDirectory(prefix='gym-fixture-', dir='/tmp') as directory:
         temp = Path(directory)
@@ -384,6 +385,117 @@ if args.free_access:
         norman_old_badge_states=4,opened_boulder_barrier_tiles=barriers,obstacle_samples=samples,all_obstacles_catalogued=len(access['obstacles']),
         surf_waterfall_without_badges=True,real_surf_prompt_without_badges=True,dive_rule_preserved=True,full_campaign_validated=False))
     print('Free gym entries and terrestrial HM samples passed',flush=True)
+if args.story_access:
+    reward = json.loads((source / '.journey-story-access').read_text())
+    constants = (source / 'include/constants/flags.h').read_text()
+    def reward_flag(name):
+        return int(re.search(r'^#define\s+' + name + r'\s+(0x[0-9A-Fa-f]+)', constants, re.M)[1], 16)
+    hoenn_badges = [lib.read16(s['gBadgeFlags'] + i * 2) for i in range(8)]
+    kanto_badges = [reward_flag('FLAG_KANTO_BADGE01_GET') + i for i in range(8)]
+    receipt = reward_flag('FLAG_GOT_POKE_FLUTE')
+    flute = 724
+    flags = hoenn_badges + kanto_badges + [receipt]
+    saved_flags = {f: bool(lib.read8(save() + 4720 + f // 8) & (1 << (f & 7))) for f in flags}
+    def reward_rawflag(f, enabled):
+        address = save() + 4720 + f // 8
+        value, mask = lib.read8(address), 1 << (f & 7)
+        lib.write8(address, value | mask if enabled else value & ~mask)
+    # Isolate key-item scripts from automatic trainer sight battles. These
+    # transient flags are restored and never alter the built ROM or a save.
+    trainer_count = int(re.search(r'^#define\s+TRAINERS_COUNT\s+(\d+)',
+                                 (source / 'include/constants/opponents.h').read_text(), re.M)[1])
+    saved_trainers = {f: bool(lib.read8(save() + 4720 + f // 8) & (1 << (f & 7)))
+                      for f in range(0x500, 0x500 + trainer_count)}
+    for f in saved_trainers: reward_rawflag(f, True)
+    # Native BagPocket pointer/capacity, rather than a hardcoded save offset.
+    pocket = s['gBagPockets'] + 4 * 8
+    capacity = lib.read16(pocket + 4) & 1023
+    assert capacity == 30
+    slots = lib.read32(pocket)
+    original_bag = bytes(lib.read8(slots + i) for i in range(capacity * 4))
+    def clear_reward_fixture():
+        for f in flags: reward_rawflag(f, False)
+        current = lib.read32(pocket)
+        for i in range(capacity * 4): lib.write8(current + i, 0)
+    def run_reward(code=None):
+        script(code or b'\x04' + struct.pack('<I', s['Journey_FirstBadgeReward']) + b'\x6b\x02', 30)
+        for _ in range(100):
+            if not lib.read8(s['sLockFieldControls']): break
+            step(1, 1); step(30)
+        if lib.read8(s['sLockFieldControls']):
+            picture('unfinished-first-badge-reward')
+            raise AssertionError(('Reward script did not finish', location(), position()))
+    clear_reward_fixture()
+    warp('RustboroCity_Gym', 4, 10)
+    run_reward()
+    assert native('CountTotalItemQuantityInBag', flute) == 0
+    assert not native('FlagGet', receipt)
+    warp('LavenderTown_VolunteerPokemonHouse_Frlg', 4, 5)
+    run_reward(b'\x05' + struct.pack('<I', s['LavenderTown_VolunteerPokemonHouse_EventScript_MrFuji']))
+    assert native('CountTotalItemQuantityInBag', flute) == 0
+    assert not native('FlagGet', receipt)
+    tested = []
+    for gym in reward['gyms']:
+        clear_reward_fixture()
+        data = json.loads((source / f"data/maps/{gym['map']}/map.json").read_text())
+        # Warp to a native gym position to select its actual flag-remapping bank.
+        leader = next(o for o in data['object_events'] if o.get('script') == gym['retry_label'])
+        assert leader['trainer_type'] == 'TRAINER_TYPE_NONE', gym
+        warp(gym['map'], leader['x'], leader['y'] + 1)
+        native('SetPlayerAvatarTransitionFlags', 1); step(30)
+        flag = hoenn_badges[gym['badge'] - 1]
+        compiled = b'\x29' + struct.pack('<H', flag) + b'\x04' + struct.pack('<I', s['Journey_FirstBadgeReward'])
+        linked = bytes(lib.read8(s[gym['victory_label']] + i) for i in range(512))
+        assert linked.count(compiled) == 1, ('Missing linked gym reward hook', gym)
+        # Execute the linked badge-setting/reward commands, isolating them from
+        # unrelated victory cutscenes. The actual battle win is simulated.
+        run_reward(compiled + b'\x6b\x02')
+        picture('first-badge-' + gym['map'])
+        print('Checking first-badge reward:', gym['map'], flush=True)
+        own = kanto_badges if gym['kanto'] else hoenn_badges
+        other = hoenn_badges if gym['kanto'] else kanto_badges
+        assert native('CountTotalItemQuantityInBag', flute) == 1, gym
+        assert native('FlagGet', receipt), gym
+        assert native('JourneyGymBadgeCount', int(gym['kanto'])) == 1
+        assert native('JourneyGymBadgeCount', int(not gym['kanto'])) == 0
+        assert bool(lib.read8(save() + 4720 + own[gym['badge'] - 1] // 8)
+                    & (1 << (own[gym['badge'] - 1] & 7)))
+        run_reward()
+        assert native('CountTotalItemQuantityInBag', flute) == 1, ('Duplicate flute', gym)
+        tested.append(gym['map'])
+    # Fail on an actually full key pocket and retry after making room.
+    clear_reward_fixture()
+    warp('RustboroCity_Gym', 4, 10)
+    reward_rawflag(hoenn_badges[3], True)
+    fillers = []
+    for item in range(707, 765):
+        if item == flute or native('GetItemPocket', item) != 4: continue
+        if native('AddBagItem', item, 1): fillers.append(item)
+        if len(fillers) == capacity: break
+    assert len(fillers) == capacity
+    assert not native('CheckBagHasSpace', flute, 1)
+    run_reward()
+    assert not native('FlagGet', receipt)
+    assert native('CountTotalItemQuantityInBag', flute) == 0
+    assert native('RemoveBagItem', fillers[-1], 1)
+    run_reward()
+    assert native('FlagGet', receipt)
+    assert native('CountTotalItemQuantityInBag', flute) == 1
+    # Hoenn reward persists in Kanto; Fuji must take his existing-item branch.
+    warp('LavenderTown_VolunteerPokemonHouse_Frlg', 4, 5)
+    assert native('FlagGet', receipt)
+    run_reward(b'\x05' + struct.pack('<I', s['LavenderTown_VolunteerPokemonHouse_EventScript_MrFuji']))
+    assert native('CountTotalItemQuantityInBag', flute) == 1
+    slots = lib.read32(pocket)
+    for i, value in enumerate(original_bag): lib.write8(slots + i, value)
+    for f, enabled in saved_flags.items(): reward_rawflag(f, enabled)
+    for f, enabled in saved_trainers.items(): reward_rawflag(f, enabled)
+    results.append(dict(check='first_badge_flute_native_rewards', passed=True, gyms=tested,
+                        no_reward_before_badges=True, repeated_reward_no_duplicate=True,
+                        full_bag_retry=True, hoenn_reward_recognized_by_fuji=True,
+                        other_region_badges_unchanged=True, battle_victory_simulated=True,
+                        trainer_sight_disabled_only_in_fixture=True))
+    print('First badge flute: all 16 native hooks, duplicate prevention and full-bag retry passed', flush=True)
 if args.road_access:
     road=json.loads((source/'.journey-road-access').read_text())
     bike=json.loads((source/'.journey-mach-bike').read_text())

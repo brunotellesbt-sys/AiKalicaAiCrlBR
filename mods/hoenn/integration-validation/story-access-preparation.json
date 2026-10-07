@@ -1,0 +1,192 @@
+{
+  "status": "first_badge_and_magma_quest_access_candidate",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "gyms": [
+    {
+      "map": "RustboroCity_Gym",
+      "badge": 1,
+      "kanto": false,
+      "victory_label": "RustboroCity_Gym_EventScript_RoxanneDefeated",
+      "retry_label": "RustboroCity_Gym_EventScript_Roxanne"
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "badge": 2,
+      "kanto": false,
+      "victory_label": "DewfordTown_Gym_EventScript_BrawlyDefeated",
+      "retry_label": "DewfordTown_Gym_EventScript_Brawly"
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "badge": 3,
+      "kanto": false,
+      "victory_label": "MauvilleCity_Gym_EventScript_WattsonDefeated",
+      "retry_label": "MauvilleCity_Gym_EventScript_Wattson"
+    },
+    {
+      "map": "LavaridgeTown_Gym_1F",
+      "badge": 4,
+      "kanto": false,
+      "victory_label": "LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated",
+      "retry_label": "LavaridgeTown_Gym_1F_EventScript_Flannery"
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "badge": 5,
+      "kanto": false,
+      "victory_label": "PetalburgCity_Gym_EventScript_NormanBattle",
+      "retry_label": "PetalburgCity_Gym_EventScript_Norman"
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "badge": 6,
+      "kanto": false,
+      "victory_label": "FortreeCity_Gym_EventScript_WinonaDefeated",
+      "retry_label": "FortreeCity_Gym_EventScript_Winona"
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "badge": 7,
+      "kanto": false,
+      "victory_label": "MossdeepCity_Gym_EventScript_TateAndLizaDefeated",
+      "retry_label": "MossdeepCity_Gym_EventScript_TateAndLiza"
+    },
+    {
+      "map": "SootopolisCity_Gym_1F",
+      "badge": 8,
+      "kanto": false,
+      "victory_label": "SootopolisCity_Gym_1F_EventScript_JuanDefeated",
+      "retry_label": "SootopolisCity_Gym_1F_EventScript_Juan"
+    },
+    {
+      "map": "PewterCity_Gym_Frlg",
+      "badge": 1,
+      "kanto": true,
+      "victory_label": "PewterCity_Gym_EventScript_DefeatedBrock",
+      "retry_label": "PewterCity_Gym_EventScript_Brock"
+    },
+    {
+      "map": "CeruleanCity_Gym_Frlg",
+      "badge": 2,
+      "kanto": true,
+      "victory_label": "CeruleanCity_Gym_EventScript_MistyDefeated",
+      "retry_label": "CeruleanCity_Gym_EventScript_Misty"
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "badge": 3,
+      "kanto": true,
+      "victory_label": "VermilionCity_Gym_EventScript_DefeatedLtSurge",
+      "retry_label": "VermilionCity_Gym_EventScript_LtSurge"
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "badge": 4,
+      "kanto": true,
+      "victory_label": "CeladonCity_Gym_EventScript_DefeatedErika",
+      "retry_label": "CeladonCity_Gym_EventScript_Erika"
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "badge": 5,
+      "kanto": true,
+      "victory_label": "FuchsiaCity_Gym_EventScript_DefeatedKoga",
+      "retry_label": "FuchsiaCity_Gym_EventScript_Koga"
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "badge": 6,
+      "kanto": true,
+      "victory_label": "SaffronCity_Gym_EventScript_DefeatedSabrina",
+      "retry_label": "SaffronCity_Gym_EventScript_Sabrina"
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "badge": 7,
+      "kanto": true,
+      "victory_label": "CinnabarIsland_Gym_EventScript_DefeatedBlaine",
+      "retry_label": "CinnabarIsland_Gym_EventScript_Blaine"
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "badge": 8,
+      "kanto": true,
+      "victory_label": "ViridianCity_Gym_EventScript_DefeatedGiovanni",
+      "retry_label": "ViridianCity_Gym_EventScript_Giovanni"
+    }
+  ],
+  "first_badge_region": "either",
+  "reward": "ITEM_POKE_FLUTE",
+  "shared_receipt_flag": "FLAG_GOT_POKE_FLUTE",
+  "bag_full_retry": true,
+  "mr_fuji_rescue_preserved": true,
+  "snorlax_encounters_unchanged": true,
+  "magma_emblem_quest_preserved": true,
+  "full_story_validated": false,
+  "input_sha256": {
+    "data/maps/RustboroCity_Gym/scripts.inc": "0880fe95e8aa6981e9e54883364b8f37b30330c50ecb0d3c3758d40a3e773208",
+    "data/maps/DewfordTown_Gym/scripts.inc": "1063ebe7b76a7802dab7ba71a91c18f29d0e4dea20710971e9fb84158a7c9085",
+    "data/maps/MauvilleCity_Gym/scripts.inc": "9fa32a400f7ac2e33a04f0e1beb3874b179a85b560aaf55dfe8e9ccf58cd4ffd",
+    "data/maps/LavaridgeTown_Gym_1F/scripts.inc": "8e013f614b0fcdb9b688cc6e18b66f916b1cfd1da78778f30504a435a2bf1d67",
+    "data/maps/LavaridgeTown_Gym_B1F/scripts.inc": "034236909b629ee3f3a180a0b2f98f17aad41e3487931c60edfbdff858651159",
+    "data/maps/PetalburgCity_Gym/scripts.inc": "b3c50a720c857068d70a9ad54700de498906e401e82f69032ff5798094ae1738",
+    "data/maps/FortreeCity_Gym/scripts.inc": "7487bd2039db4a3e724fff383ee564855b8eea4391a08e1a5ad9567d393e5308",
+    "data/maps/MossdeepCity_Gym/scripts.inc": "73276d9d44db1f68f62206e07d2d6c37884e92eb2078e134cdf3668c8d83fdd6",
+    "data/maps/SootopolisCity_Gym_1F/scripts.inc": "731683b579d64076400d00064b36e15b1d547e368396bbdfb99759f900c9c1be",
+    "data/maps/SootopolisCity_Gym_B1F/scripts.inc": "7caf16e86149d1cb2da7f2675311928fe54b1e0e83e2406b981d66fa372bd0a5",
+    "data/maps/PewterCity_Gym_Frlg/scripts.inc": "7e2f81ea8493e81eee3c3591587caefd1cf515039b70c6ad605b48574fde0be6",
+    "data/maps/CeruleanCity_Gym_Frlg/scripts.inc": "0809185f3d88e79049e4f8d132302ffb4fc95af30f62f6a60f091871b41dac9a",
+    "data/maps/VermilionCity_Gym_Frlg/scripts.inc": "b6d693906fe2154ec314fdfc36ae36dd2e380022b2050a67a71f12b18115bd55",
+    "data/maps/CeladonCity_Gym_Frlg/scripts.inc": "25a91c00b419adde82f4669ed1d9dbecf8358cb03beb72824c18d95f27775546",
+    "data/maps/FuchsiaCity_Gym_Frlg/scripts.inc": "a75e2013f58469abc4a73095cd7e00e6341520afb9e2bbab9d9796fe6cdbf691",
+    "data/maps/SaffronCity_Gym_Frlg/scripts.inc": "57fdc1576162c779d5c88e8b9016f856940df06ae56d88c4101a95d1bb7394c7",
+    "data/maps/CinnabarIsland_Gym_Frlg/scripts.inc": "9062fedd2a975acfa0f6d87a6282b37782bf950a8fce465898541a2b684656e7",
+    "data/maps/ViridianCity_Gym_Frlg/scripts.inc": "6676479fdca2e65896415b8497c2ed7b87e1eb625c29590c869ef4d6299638da",
+    "data/specials.inc": "a177c14bffd62dd0de17582e9789178e24e44d5ed8399a3a7b153ad018d53ffa",
+    "data/maps/LavenderTown_VolunteerPokemonHouse_Frlg/scripts.inc": "87cad34a319ba12f3cd17070fb34e5204576febc438b14f11b13add094d470c5"
+  },
+  "original_sha256": {
+    "data/maps/RustboroCity_Gym/scripts.inc": "0880fe95e8aa6981e9e54883364b8f37b30330c50ecb0d3c3758d40a3e773208",
+    "data/maps/DewfordTown_Gym/scripts.inc": "1063ebe7b76a7802dab7ba71a91c18f29d0e4dea20710971e9fb84158a7c9085",
+    "data/maps/MauvilleCity_Gym/scripts.inc": "9fa32a400f7ac2e33a04f0e1beb3874b179a85b560aaf55dfe8e9ccf58cd4ffd",
+    "data/maps/LavaridgeTown_Gym_1F/scripts.inc": "8e013f614b0fcdb9b688cc6e18b66f916b1cfd1da78778f30504a435a2bf1d67",
+    "data/maps/PetalburgCity_Gym/scripts.inc": "0927f1ee7e91495faddf503dc1f3aba682f822d60fa92fb68b243dcbf6d400a9",
+    "data/maps/FortreeCity_Gym/scripts.inc": "7487bd2039db4a3e724fff383ee564855b8eea4391a08e1a5ad9567d393e5308",
+    "data/maps/MossdeepCity_Gym/scripts.inc": "39e50e53f311b5e55687b898338e32ca3d85cf71d258d4cba6b9db4685d60e68",
+    "data/maps/SootopolisCity_Gym_1F/scripts.inc": "7c5ea0c792bda12d8103da3fcab6dc044697b3d1abb548af2c8722b3168aafec",
+    "data/maps/PewterCity_Gym_Frlg/scripts.inc": "7e2f81ea8493e81eee3c3591587caefd1cf515039b70c6ad605b48574fde0be6",
+    "data/maps/CeruleanCity_Gym_Frlg/scripts.inc": "0809185f3d88e79049e4f8d132302ffb4fc95af30f62f6a60f091871b41dac9a",
+    "data/maps/VermilionCity_Gym_Frlg/scripts.inc": "b6d693906fe2154ec314fdfc36ae36dd2e380022b2050a67a71f12b18115bd55",
+    "data/maps/CeladonCity_Gym_Frlg/scripts.inc": "25a91c00b419adde82f4669ed1d9dbecf8358cb03beb72824c18d95f27775546",
+    "data/maps/FuchsiaCity_Gym_Frlg/scripts.inc": "a75e2013f58469abc4a73095cd7e00e6341520afb9e2bbab9d9796fe6cdbf691",
+    "data/maps/SaffronCity_Gym_Frlg/scripts.inc": "57fdc1576162c779d5c88e8b9016f856940df06ae56d88c4101a95d1bb7394c7",
+    "data/maps/CinnabarIsland_Gym_Frlg/scripts.inc": "9062fedd2a975acfa0f6d87a6282b37782bf950a8fce465898541a2b684656e7",
+    "data/maps/ViridianCity_Gym_Frlg/scripts.inc": "5341b5347d17bdeff832aeec7650a2c55e0b39f6ac0807d20f85818db354c45d",
+    "src/journey_campaign_gates.c": "a7127c6c1cb82c6ede92a400f5f8643ec458671d36c9d4e3f71319caa9eb1bb1",
+    "data/specials.inc": "8282a6aecd92eafc2c129dd8de6b9665e3ec13c5eb21cfd951e1696da5e8b5f8",
+    "data/scripts/journey_campaign_gates.inc": "cc4181153246ef1e1f6f91f183a3c95193019960d185b4197aed3e6a5e31eae7",
+    "data/maps/LavenderTown_VolunteerPokemonHouse_Frlg/scripts.inc": "87cad34a319ba12f3cd17070fb34e5204576febc438b14f11b13add094d470c5"
+  },
+  "prepared_sha256": {
+    "data/maps/RustboroCity_Gym/scripts.inc": "e3e4b1b20755c7f83bf8b83baeb5f60288f6dc00b520ece64228062cd337551d",
+    "data/maps/DewfordTown_Gym/scripts.inc": "1e03eccdd690ddef9473e78a55ed6072d289620253145c8d1676c319952fe85a",
+    "data/maps/MauvilleCity_Gym/scripts.inc": "63b84189370b5c2cc48dfa9327c56952011d8f69d2c99b59dbec08f594bcd6c6",
+    "data/maps/LavaridgeTown_Gym_1F/scripts.inc": "33302a5d446cbce42c67327e9c49c649a6066ffa95af2abd80962c39ea99cf4a",
+    "data/maps/PetalburgCity_Gym/scripts.inc": "09278bbe81b3632b56c27ead92d35eaed307a0929e6c789f5ee3aebb8b7e3bdd",
+    "data/maps/FortreeCity_Gym/scripts.inc": "cc5ad05b87383b9e994c90a78b8f2cc91d08d2511acae147db6e918d84f4fe39",
+    "data/maps/MossdeepCity_Gym/scripts.inc": "1d7dc995f75f5d34abf3775a76040823b80762355d6d09973b1f671cfe640046",
+    "data/maps/SootopolisCity_Gym_1F/scripts.inc": "fab593504a354b48e7418f8cea7075d9da2d58809b8870377ea58ecaeeb73a63",
+    "data/maps/PewterCity_Gym_Frlg/scripts.inc": "9973908e7bf9b3cf64c6b3a7c940a908de3ff2c6b9850b3c853ed67f4442bcdb",
+    "data/maps/CeruleanCity_Gym_Frlg/scripts.inc": "db3ca081424f217aa2aa54e9bb1b8565e685e7586c30fecbd95b09b5bc36190e",
+    "data/maps/VermilionCity_Gym_Frlg/scripts.inc": "5039a99b0b32de7fe833a81259931e2829eeabe5786d775f2c72a7d8ae816912",
+    "data/maps/CeladonCity_Gym_Frlg/scripts.inc": "0f2b45a344b26fbf98b336e2e86f5aab0d7c819aaa8f84bbe82a6b7c92205f0c",
+    "data/maps/FuchsiaCity_Gym_Frlg/scripts.inc": "27fd19396800e010248272f69ad60a27be16dfb48219638913c39377659a0caa",
+    "data/maps/SaffronCity_Gym_Frlg/scripts.inc": "bab077900cd73abf842b9298c6dec8ddad61f82975e786564c563abf1556257a",
+    "data/maps/CinnabarIsland_Gym_Frlg/scripts.inc": "84e8977a8d378efca2e6822f4a669d4adfda1bb0ee0d8596044e382487560fe7",
+    "data/maps/ViridianCity_Gym_Frlg/scripts.inc": "1f7cdb9d4600ea88903b649b2f9dc870a2340c6a9ddd9015764fa7bdc3846ea9",
+    "src/journey_campaign_gates.c": "fd6cf9eee0925dac154c2cf14220660073ee6f1bcb61c903ef1cdef739b8a714",
+    "data/specials.inc": "3734b1f7bcdc30442a50c2667743b117a30493a8eb02bfb6e0f52cdaffcdff1c",
+    "data/scripts/journey_campaign_gates.inc": "ed9bc157532f98da3ec4117d04bc2e3fccc252423fd2ee5451af703cf17aa30a",
+    "data/maps/LavenderTown_VolunteerPokemonHouse_Frlg/scripts.inc": "2a09337b46b63da42e696bb576d3692a91a100b7ea4d5707ae8dcbe8c222cf2e"
+  }
+}

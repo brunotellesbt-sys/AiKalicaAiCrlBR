@@ -9,6 +9,22 @@ VALIDATION = ROOT / 'mods/hoenn/integration-validation'
 
 
 class ConnectedWorldTests(unittest.TestCase):
+    def test_first_badge_reward_survives_region_change_and_full_bag(self):
+        prep = json.loads((VALIDATION / 'story-access-preparation.json').read_text())
+        runtime = json.loads((VALIDATION / 'connected-world.json').read_text())
+        check = next(c for c in runtime['checks'] if c['check'] == 'first_badge_flute_native_rewards')
+        self.assertEqual(set(check['gyms']), {g['map'] for g in prep['gyms']})
+        self.assertEqual(len(check['gyms']), 16)
+        self.assertEqual(sum(g['kanto'] for g in prep['gyms']), 8)
+        for invariant in ['no_reward_before_badges', 'repeated_reward_no_duplicate',
+                          'full_bag_retry', 'hoenn_reward_recognized_by_fuji', 'other_region_badges_unchanged']:
+            self.assertTrue(check[invariant])
+        self.assertTrue(check['battle_victory_simulated'])
+        self.assertTrue(prep['snorlax_encounters_unchanged'])
+        self.assertTrue(prep['mr_fuji_rescue_preserved'])
+        self.assertTrue(prep['magma_emblem_quest_preserved'])
+        self.assertFalse(prep['full_story_validated'])
+
     def test_square_cartography_and_provenance(self):
         data = json.loads((ROOT / 'web/world-layout.json').read_text())
         self.assertEqual(data['width'], data['height'])
