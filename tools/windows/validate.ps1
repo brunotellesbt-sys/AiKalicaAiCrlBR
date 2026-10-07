@@ -17,6 +17,7 @@ if ($LASTEXITCODE -ne 0 -or !($runtimes -match 'Microsoft.WindowsDesktop.App 6.0
 }
 $runtimes | Set-Content "$report\runtimes.txt"
 Add-Type -AssemblyName System.Drawing
+Add-Type -AssemblyName System.Windows.Forms
 Add-Type @'
 using System;
 using System.Runtime.InteropServices;
@@ -29,6 +30,8 @@ public static class DesktopProbe {
     [DllImport("user32.dll")] static extern uint GetWindowThreadProcessId(IntPtr hwnd, out uint pid);
     [DllImport("user32.dll", CharSet=CharSet.Unicode)] static extern int GetWindowText(IntPtr hwnd, StringBuilder text, int count);
     [DllImport("user32.dll")] static extern IntPtr SendMessageTimeout(IntPtr hwnd, uint msg, IntPtr wp, IntPtr lp, uint flags, uint timeout, out UIntPtr result);
+    [DllImport("user32.dll")] static extern bool SetForegroundWindow(IntPtr hwnd);
+    static HashSet<IntPtr> accepted = new HashSet<IntPtr>();
     public class Window { public IntPtr Handle; public string Title; public int Width, Height; }
     static string Title(IntPtr hwnd) { var text = new StringBuilder(1024); GetWindowText(hwnd, text, text.Capacity); return text.ToString(); }
     public static Window[] Windows(uint pid) {
@@ -47,12 +50,14 @@ public static class DesktopProbe {
             if (Title(hwnd).Replace("&", "").Equals(caption, StringComparison.OrdinalIgnoreCase)) {
                 UIntPtr checkedState;
                 if (caption == "I hereby accept this agreement.") {
+                    if (accepted.Contains(parent)) return false;
                     SendMessageTimeout(hwnd, 0x00F0, IntPtr.Zero, IntPtr.Zero, 2, 1000, out checkedState);
                     if (checkedState.ToUInt64() == 1) return false;
                 }
                 UIntPtr result;
                 // A click can start another modal loop; do not wait indefinitely.
                 SendMessageTimeout(hwnd, 0x00F5, IntPtr.Zero, IntPtr.Zero, 2, 1000, out result);
+                if (caption == "I hereby accept this agreement.") accepted.Add(parent);
                 return false;
             }
             return true;
@@ -73,7 +78,12 @@ public static class DesktopProbe {
             if (window.Title == "End user license agreement") {
                 Click(window.Handle, "I hereby accept this agreement."); Click(window.Handle, "OK");
             }
-            if (window.Title == "Frage") Click(window.Handle, "No");
+            if (window.Title == "Frage") {
+                // Lazarus draws the question buttons without HWND captions.
+                // Its German "Nein" and English "No" share Alt+N.
+                SetForegroundWindow(window.Handle);
+                System.Windows.Forms.SendKeys.SendWait("%n");
+            }
         }
     }
     public static bool HasInitialDialogs(uint pid) {
@@ -124,6 +134,16 @@ try {
         }
         if (!$process) { throw "$tool did not display a visible window within 60 seconds" }
         Start-Sleep -Seconds 3
+        if ($tool -eq 'AdvanceMap') {
+            $readyDeadline = (Get-Date).AddSeconds(60)
+            $stableSince = Get-Date
+            do {
+                [DesktopProbe]::InitialDialogs($process.Id)
+                if ([DesktopProbe]::HasInitialDialogs($process.Id)) { $stableSince = Get-Date }
+                Start-Sleep -Milliseconds 500
+                if ((Get-Date) -gt $readyDeadline) { throw 'AdvanceMap startup dialogs did not finish' }
+            } while (((Get-Date) - $stableSince).TotalSeconds -lt 10)
+        }
         $process.Refresh()
         if ($process.HasExited -or !$process.Responding) { throw "$tool exited or stopped responding" }
         # Startup dialogs can replace window handles after the first match.
