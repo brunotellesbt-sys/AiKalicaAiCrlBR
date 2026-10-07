@@ -1,5 +1,9 @@
 # Hoenn — inventário e porte pendente
 
+[Protótipo da travessia Rota 127 ↔ Rota 21](INTEGRATION.md): conexão física
+testada numa base experimental; **não substitui a ROM publicada nem conclui
+a integração da história**.
+
 A decisão é usar **uma única ROM**, com a mesma equipe e navegação por Surf.
 O navio Vermilion–Slateport exigirá um ticket; o caminho por mar será independente
 desse ticket. As ilhas hoje acessíveis por barco também devem permitir Surf.
@@ -42,14 +46,15 @@ Documentos incluídos no ZIP não são tratados como instruções.
 
 [Veja a prévia do mapa-múndi](validation/world-atlas.png), com cartografia real de
 Kanto, das ilhas Sevii e do PokéNav de Emerald. `web/world-map.html` oferece
-seleção de 36 lugares, consulta dos acessos, controles de teclado e opções para
+seleção de 38 lugares, consulta dos acessos, controles de teclado e opções para
 mostrar/ocultar rotas e Hoenn. O player tem um link para esse atlas.
 
 As nove conexões entre os dez portos seguem exatamente a cadeia de mapas da
 ROM de Surf. As linhas são esquemáticas: a disposição dos painéis não determina
-distâncias ou a geografia dos mapas marítimos jogáveis. As duas travessias para
-Slateport (Surf e barco com ticket) aparecem explicitamente como **planejadas**.
-Os 16 lugares de Hoenn também são marcados como não jogáveis.
+distâncias ou a geografia dos mapas marítimos jogáveis. A travessia Surf
+Rota 21 ↔ Rota 127 e o barco Vermilion ↔ Slateport aparecem explicitamente como
+**planejados na ROM publicada**. Os 17 lugares de Hoenn, incluindo a Rota 127,
+também são marcados como não jogáveis nessa versão.
 
 Esta é uma consulta externa no navegador, **não a implementação do PokéNav
 dentro da ROM**. Não acompanha o save nem teleporta o jogador. O menu regional

@@ -22,7 +22,7 @@ class AtlasTests(unittest.TestCase):
 
     def test_all_places_have_valid_panel_coordinates(self):
         panels = {p['id']: p for p in self.data['panels']}
-        self.assertEqual(len(self.points), 36)
+        self.assertEqual(len(self.points), 38)
         self.assertEqual(len(self.points), len(self.data['points']))
         for p in self.points.values():
             panel = panels[p['panel']]
@@ -47,7 +47,7 @@ class AtlasTests(unittest.TestCase):
     def test_hoenn_is_explicitly_pending(self):
         self.assertFalse(self.data['hoenn_story_integrated'])
         hoenn = [p for p in self.points.values() if p['panel'] == 'hoenn']
-        self.assertEqual(len(hoenn), 16)
+        self.assertEqual(len(hoenn), 17)
         self.assertTrue(all(p['status'] == 'planned' for p in hoenn))
         for link in self.data['links']:
             self.assertIn(link['source'], self.points); self.assertIn(link['target'], self.points)
@@ -55,6 +55,8 @@ class AtlasTests(unittest.TestCase):
                 self.assertEqual(link['status'], 'planned')
         pending = [l for l in self.data['links'] if l['status'] == 'planned']
         self.assertEqual({l['mode'] for l in pending}, {'Surf', 'Barco com ticket'})
+        surf = next(l for l in pending if l['mode'] == 'Surf')
+        self.assertEqual((surf['source'], surf['target']), ('MAPSEC_ROUTE_21', 'MAPSEC_ROUTE_127'))
 
     def test_recorded_browser_validation_matches_atlas(self):
         report = json.loads((ROOT / 'mods/hoenn/validation/atlas-browser.json').read_text())

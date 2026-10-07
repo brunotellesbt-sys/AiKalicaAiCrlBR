@@ -19,7 +19,7 @@ function select(id) {
   document.querySelector('#place-name').textContent = selected.name;
   document.querySelector('#place-status').textContent = selected.status === 'planned'
     ? 'Planejado: cartografia de Emerald disponível; região ainda não jogável nesta ROM.'
-    : 'Presente na ROM. ' + (selected.port_index !== null ? 'Porto conectado às novas rotas de Surf, sem ticket ou insígnias.' : 'Cidade de Kanto; acesso marítimo às ilhas por Vermilion.');
+    : 'Presente na ROM. ' + (selected.port_index !== null ? 'Porto conectado às novas rotas de Surf, sem ticket ou insígnias.' : 'Área de Kanto; acesso marítimo às ilhas por Vermilion.');
   const list = document.querySelector('#connections'); list.replaceChildren();
   for (const link of data.links.filter(l => l.source === id || l.target === id)) {
     const other = points.get(link.source === id ? link.target : link.source);

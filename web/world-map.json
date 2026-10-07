@@ -166,6 +166,16 @@
       "map": null
     },
     {
+      "id": "MAPSEC_ROUTE_21",
+      "name": "Route 21",
+      "panel": "kanto",
+      "x": 122.0,
+      "y": 340.0,
+      "status": "playable",
+      "port_index": null,
+      "map": null
+    },
+    {
       "id": "MAPSEC_ONE_ISLAND",
       "name": "One Island",
       "panel": "sevii_123",
@@ -414,6 +424,16 @@
       "status": "planned",
       "port_index": null,
       "map": null
+    },
+    {
+      "id": "MAPSEC_ROUTE_127",
+      "name": "Route 127",
+      "panel": "hoenn",
+      "x": 522.0,
+      "y": 600.0,
+      "status": "planned",
+      "port_index": null,
+      "map": null
     }
   ],
   "links": [
@@ -518,8 +538,8 @@
     },
     {
       "id": "hoenn-surf",
-      "source": "MAPSEC_VERMILION_CITY",
-      "target": "MAPSEC_SLATEPORT_CITY",
+      "source": "MAPSEC_ROUTE_21",
+      "target": "MAPSEC_ROUTE_127",
       "status": "planned",
       "mode": "Surf"
     },
@@ -534,7 +554,7 @@
   "projection": "Native regional maps arranged as an atlas; inter-panel links are schematic, not ocean distances.",
   "hoenn_story_integrated": false,
   "emerald_source_commit": "731ad5bfd6e6f265508d0efcca0ba42f9dcf5881",
-  "generator_sha256": "c9077094ebcb6c63161281d69ebb9c91581f135ed6690ae6606bb844fa200c14",
+  "generator_sha256": "e0bd6a95516912168cbae0b54e3fd9a7d22ef6848015613d04439183d60e6742",
   "sea_rom_sha256": "1caca9df7c4eaa560bfd67f5060015ad0560cb065947fd1ec0c97858e8937239",
   "input_sha256": {
     "leafgreen/graphics/region_map/region_map.pal": "35fc49a8f807f4d934381dfecd4440b1e5de24f7bab86bcb15859cc6adfcc83e",
