@@ -1,0 +1,73 @@
+{
+  "status": "all_acro_cliff_passages_yellow_candidate",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "replacements": [
+    {
+      "layout": "LAYOUT_SAFARI_ZONE_NORTH",
+      "x": 22,
+      "y": 21,
+      "before": 791,
+      "after": 791,
+      "surface": "yellow_stair"
+    },
+    {
+      "layout": "LAYOUT_SAFARI_ZONE_NORTH",
+      "x": 22,
+      "y": 22,
+      "before": 799,
+      "after": 20481,
+      "surface": "landing"
+    },
+    {
+      "layout": "LAYOUT_SAFARI_ZONE_NORTH",
+      "x": 22,
+      "y": 23,
+      "before": 803,
+      "after": 803,
+      "surface": "yellow_stair"
+    }
+  ],
+  "stair_passages": 6,
+  "yellow_stair_cells": 11,
+  "clear_landings": 6,
+  "imported_tile_ids": [
+    944,
+    945
+  ],
+  "native_foreground_sha256": [
+    "149b0937f12a14987540abe85a18850de24e9c53a2b642ac3282396b6c8928b9",
+    "dcd4e8afd466a6ac39527641976e02b8befa05d2f24bf5d437ded1939da8686e"
+  ],
+  "foreground_pixels_identical": true,
+  "foreground_palette_identical": true,
+  "original_lilycove_pixels_preserved": true,
+  "palette_12_previously_unused": true,
+  "native_yellow_reference": 687,
+  "requires_bicycle": false,
+  "original_events_unchanged": true,
+  "full_story_validated": false,
+  "input_sha256": {
+    "data/tilesets/secondary/lilycove/tiles.png": "b25529a506feb24b7c04af6b9e4ad38e7c88d67ac2e630984f75f9b41af82024",
+    "data/tilesets/secondary/lavaridge/tiles.png": "fa144501b1ef85bd26f45480852bbb793433e88706b6a577bffb7974262dec4d",
+    "data/tilesets/secondary/lilycove/metatiles.bin": "cb7b2efc00894275b76699be43f3215ee0a89cc129a16fe22cffc9cef30d0868",
+    "data/tilesets/secondary/lavaridge/palettes/08.pal": "74a2d349779b5c9df74a65934cdadf1c7c7bf96855cf554f28b53cff072b3d99",
+    "data/tilesets/secondary/lilycove/palettes/12.pal": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675",
+    "data/tilesets/secondary/lavaridge/metatiles.bin": "a8302e5167fae8e69db4532a983f710f4cbfb669eb23aa1df59b5e2a39212e10",
+    "data/tilesets/secondary/lilycove/metatile_attributes.bin": "89a199ac8077cdc00c77661f1f0e4c80149cc1f71adecc856cc02e7a04edc9c5",
+    "data/layouts/SafariZone_North/map.bin": "5d3b92cceaa6d9a6543802c998cfc89e8a405e740594c456ad7ed779a09c4e70"
+  },
+  "original_sha256": {
+    "data/tilesets/secondary/lilycove/tiles.png": "b25529a506feb24b7c04af6b9e4ad38e7c88d67ac2e630984f75f9b41af82024",
+    "data/tilesets/secondary/lilycove/palettes/12.pal": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675",
+    "data/tilesets/secondary/lilycove/metatiles.bin": "3261252c8021ea15f25c0de64f392f9ed98beef3f8b93d6caee9dd67fb83a647",
+    "data/tilesets/secondary/lilycove/metatile_attributes.bin": "6ed91a93c00aea229980cd4a7da9bfedc8bdf0cbc4d902cc7ea668e9a8ad8014",
+    "data/layouts/SafariZone_North/map.bin": "9ef86c5e36b41b01b3cd46c5884a516deacf46357f53d326d9e961113122f930"
+  },
+  "prepared_sha256": {
+    "data/tilesets/secondary/lilycove/tiles.png": "5131434ecdbd3064463b7975f5db7f0408d973918b6d4c433020e6458a5fa877",
+    "data/tilesets/secondary/lilycove/palettes/12.pal": "74a2d349779b5c9df74a65934cdadf1c7c7bf96855cf554f28b53cff072b3d99",
+    "data/tilesets/secondary/lilycove/metatiles.bin": "70bc24816b4d7748d673d3f6b510e3567ade8184ad4a81d44eeee0c9f864fe05",
+    "data/tilesets/secondary/lilycove/metatile_attributes.bin": "6ed91a93c00aea229980cd4a7da9bfedc8bdf0cbc4d902cc7ea668e9a8ad8014",
+    "data/layouts/SafariZone_North/map.bin": "03618f21311edc303a5aba4431fb83bc2e82d54604fc809ebfb2750d2a3a728a"
+  }
+}

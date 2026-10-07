@@ -198,6 +198,23 @@ class ConnectedWorldTests(unittest.TestCase):
         self.assertEqual(bike['physical_aqua_passages'],2)
         self.assertTrue(bike['aqua_missions_unchanged'])
 
+    def test_all_acro_cliff_passages_have_native_yellow_stairs(self):
+        prep=json.loads((VALIDATION/'yellow-stairs-preparation.json').read_text())
+        self.assertTrue(prep['foreground_pixels_identical'])
+        self.assertTrue(prep['foreground_palette_identical'])
+        self.assertTrue(prep['original_lilycove_pixels_preserved'])
+        self.assertTrue(prep['palette_12_previously_unused'])
+        self.assertFalse(prep['requires_bicycle'])
+        self.assertEqual(len(prep['replacements']),3)
+        middle=next(c for c in prep['replacements']if c['surface']=='landing')
+        self.assertEqual((middle['x'],middle['y'],middle['after']),(22,22,0x5001))
+        runtime=json.loads((VALIDATION/'connected-world.json').read_text())
+        check=next(c for c in runtime['checks']if c['check']=='all_acro_cliff_passages_yellow')
+        self.assertEqual(check['passages'],6)
+        self.assertEqual(check['on_foot_traversals'],12)
+        self.assertEqual(check['yellow_stair_cells'],11)
+        self.assertEqual(check['clear_landings'],6)
+
     def test_only_explicit_access_event_edits_are_recorded(self):
         prep=json.loads((VALIDATION/'free-access-preparation.json').read_text())
         self.assertEqual(len(prep['obstacles']),336)
