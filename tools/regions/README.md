@@ -52,6 +52,12 @@ copia os atributos e sprites dos doadores e restringe referências de evoluçõe
 formas a espécies ativas. Gigantamax/Eternamax ficam fora; o motor bloqueia
 Dynamax e Z-Moves, além de não habilitar Terastalização/Ultra Burst.
 
+O overlay `abilities.py` habilita Battle Bond clássico para Greninja com Hidden
+Ability e a reversão ao desmaiar/encerrar a batalha. O catálogo registra a troca
+para Torrent / Protean / Battle Bond na linha Froakie. Encontros naturais usam
+5% de chance de habilidade oculta; presentes/encontros roteirizados usam sua
+geração de habilidades existente. A reprodução mantém o suporte nativo de herança.
+
 ## Verificação
 
 ```sh

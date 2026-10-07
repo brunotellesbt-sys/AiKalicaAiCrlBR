@@ -1,5 +1,5 @@
 {
-  "rom_sha256": "7b46286af843112c1bcce17169381da2fda9046538478605c34e0990a7a2fa46",
+  "rom_sha256": "6ce89a78be4044223790b8aca1b800a2372a8dc62487c5db28bf9b3e720986ae",
   "checks": [
     {
       "check": "real-city-menu-and-fixed-birth",
@@ -14809,6 +14809,91 @@
       "species": "SPECIES_RAYQUAZA_MEGA",
       "method": 12,
       "requirement": 620
+    },
+    {
+      "check": "hidden-ability-wild-encounters",
+      "passed": true,
+      "samples": 600,
+      "slot_counts": [
+        294,
+        274,
+        32
+      ],
+      "configured_percent": 5
+    },
+    {
+      "check": "hidden-ability-absent-species-safe",
+      "passed": true
+    },
+    {
+      "check": "hidden-ability-daycare-inheritance",
+      "passed": true,
+      "ditto": false,
+      "samples": 200,
+      "hidden": 124
+    },
+    {
+      "check": "hidden-ability-daycare-inheritance",
+      "passed": true,
+      "ditto": true,
+      "samples": 200,
+      "hidden": 126
+    },
+    {
+      "check": "classic-battle-bond-knockout-and-reversion",
+      "passed": true,
+      "species": 658,
+      "ability_slot": 2,
+      "own_ko": true,
+      "transforms": true
+    },
+    {
+      "check": "classic-battle-bond-knockout-and-reversion",
+      "passed": true,
+      "species": 658,
+      "ability_slot": 0,
+      "own_ko": true,
+      "transforms": false
+    },
+    {
+      "check": "classic-battle-bond-knockout-and-reversion",
+      "passed": true,
+      "species": 658,
+      "ability_slot": 1,
+      "own_ko": true,
+      "transforms": false
+    },
+    {
+      "check": "classic-battle-bond-knockout-and-reversion",
+      "passed": true,
+      "species": 658,
+      "ability_slot": 2,
+      "own_ko": false,
+      "transforms": false
+    },
+    {
+      "check": "classic-battle-bond-knockout-and-reversion",
+      "passed": true,
+      "species": 656,
+      "ability_slot": 2,
+      "own_ko": true,
+      "transforms": false
+    },
+    {
+      "check": "classic-battle-bond-knockout-and-reversion",
+      "passed": true,
+      "species": 657,
+      "ability_slot": 2,
+      "own_ko": true,
+      "transforms": false
+    },
+    {
+      "check": "classic-battle-bond-knockout-and-reversion",
+      "passed": true,
+      "species": 1112,
+      "ability_slot": 0,
+      "own_ko": true,
+      "transforms": true
     },
     {
       "check": "real-battle-ui-mega-trigger-and-donor-sprites",

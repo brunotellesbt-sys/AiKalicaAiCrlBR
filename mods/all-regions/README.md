@@ -31,17 +31,28 @@ mantêm as regras da jornada anterior.
 
 ## Ash-Greninja
 
-O catálogo mantém Greninja normal, Greninja com Battle Bond e Ash-Greninja,
-com seus sprites e atributos. **A configuração atual de Battle Bond é a regra
-da geração 9:** após um nocaute válido, aumenta Ataque, Ataque Especial e Velocidade
-em um estágio, uma vez por batalha, sem transformar o Greninja normal.
-A regra clássica de Sun/Moon existe no motor, mas não está selecionada nesta versão.
+Froakie, Frogadier e Greninja têm **Torrent / Protean / Battle Bond**, nessa ordem.
+Battle Bond é a Hidden Ability, no terceiro slot. Greninja com essa habilidade
+se transforma em Ash-Greninja após causar um nocaute enquanto ainda há adversários
+vivos, usando a regra clássica da geração 7. Torrent e Protean não ativam a forma.
+Froakie e Frogadier mantêm a habilidade ao evoluir, mas não se transformam.
+Ash-Greninja retorna à espécie anterior ao desmaiar ou terminar a batalha,
+preservando o slot da habilidade.
 
 Ash-Greninja não é uma Mega Evolução e não usa Mega Stone. A forma Ash tem
 Ataque 145, Ataque Especial 153 e Velocidade 132. Water Shuriken nessa forma tem
-poder 20 por golpe e acerta três vezes. A variante com Battle Bond é um registro
-próprio; Greninja com Torrent/Protean não recebe automaticamente essa habilidade.
-Assim como os demais Pokémon novos, nenhuma dessas variantes é distribuída ainda.
+poder 20 por golpe e acerta três vezes. Assim como os demais Pokémon novos,
+nenhuma dessas variantes é distribuída ainda.
+
+## Hidden Abilities
+
+Encontros selvagens naturais têm **5% de chance** de usar a habilidade oculta
+quando a espécie possui uma. Pokémon sem habilidade oculta mantêm seus slots
+normais. Captura e armazenamento usam o campo nativo de habilidade do motor.
+A reprodução mantém a herança de habilidade oculta da geração 6 em diante:
+60% pelo progenitor elegível, inclusive ao cruzar o pai com Ditto.
+Presentes e encontros roteirizados conservam sua geração normal de habilidade;
+esta mudança não adiciona novos Pokémon às tabelas de encontros.
 
 ## Origem dos dados
 
@@ -88,4 +99,6 @@ no mGBA ao hash da ROM. As capturas mostram os iniciais das regiões posteriores
 Mega Diancie, Terapagos e os complementos. Há testes de integridade para todas
 as espécies e referências de evoluções/formas, além das regras anteriores da jornada.
 
-A versão final passou por **2.202 verificações no mGBA e 33 testes automatizados**.
+A versão inclui verificações de encontros com habilidade oculta, herança em ovos,
+nocaute e reversão de Battle Bond. Os resultados completos ficam no relatório
+de validação vinculado ao hash da ROM.

@@ -68,7 +68,7 @@ def tm_slots():return []
 def species():
     mon=s['gPlayerParty'];personality=lib.read32(mon);key=personality^lib.read32(mon+4)
     growth=[0,0,0,0,0,0,1,1,2,3,2,3,1,1,2,3,2,3,1,1,2,3,2,3][personality%24]
-    return (lib.read32(mon+32+growth*12)^key)&65535
+    return (lib.read32(mon+32+growth*12)^key)&2047
 
 def record(name,**detail):results.append({'check':name,'passed':True,**detail})
 
@@ -307,6 +307,84 @@ for r in [r for r in catalog if r['mega']]:
     assert native('GetMonData2',s['gPlayerParty'],abi['mon_data_species'])==base['species_id']
     record('native-mega-evolution-and-reversion',species=r['species'],method=method,requirement=param)
 print('All Mega changes/reversions passed',flush=True)
+if args.rom_name=='LeafGreen-Journey-AllRegions':
+    def mon_value(mon,field,value):
+        lib.write32(scratch+4,value)
+        native('SetMonData',mon,abi[field],scratch+4)
+    player=s['gPlayerParty'];enemy=s['gEnemyParty']
+    counts=[0,0,0]
+    for _ in range(600):
+        native('CreateWildMon',658,50,0)
+        slot=native('GetMonData2',enemy,abi['mon_data_ability_num'])
+        assert slot in [0,1,2]
+        counts[slot]+=1
+    assert counts[0]>150 and counts[1]>150 and 10<=counts[2]<=60,counts
+    record('hidden-ability-wild-encounters',samples=600,slot_counts=counts,configured_percent=5)
+    # A species without a Hidden Ability never receives slot 2.
+    for _ in range(30):
+        native('CreateWildMon',151,50,0)
+        assert native('GetMonData2',enemy,abi['mon_data_ability_num'])!=2
+    record('hidden-ability-absent-species-safe')
+    # Real daycare inheritance, including the father + Ditto route.
+    native('CreateScriptedWildMon',656,50,0)
+    for i in range(100):lib.write8(player+i,lib.read8(enemy+i))
+    father=player;mother=player+100;egg=player+200
+    for i in range(100):
+        lib.write8(mother+i,lib.read8(player+i));lib.write8(egg+i,lib.read8(player+i))
+    mon_value(mother,'mon_data_ability_num',2)
+    for ditto in [False,True]:
+        if ditto:
+            mon_value(father,'mon_data_ability_num',2)
+            mon_value(mother,'mon_data_species',132)
+            mon_value(mother,'mon_data_ability_num',0)
+        inherited=0
+        for _ in range(200):
+            mon_value(egg,'mon_data_ability_num',0)
+            native('InheritAbility',egg,father,mother)
+            inherited+=native('GetMonData2',egg,abi['mon_data_ability_num'])==2
+        assert 85<=inherited<=155,(ditto,inherited)
+        record('hidden-ability-daycare-inheritance',ditto=ditto,samples=200,hidden=inherited)
+    # Exercise the actual end-of-move ability handler with valid KO state.
+    for species_id,slot,damaged,expect in [(658,2,True,True),(658,0,True,False),(658,1,True,False),(658,2,False,False),(656,2,True,False),(657,2,True,False),(1112,0,True,True)]:
+        native('FreeBattleResources');native('AllocateBattleResources')
+        native('CreateScriptedWildMon',species_id,50,0)
+        for i in range(100):lib.write8(player+i,lib.read8(enemy+i))
+        mon_value(player,'mon_data_ability_num',slot)
+        lib.write8(s['gPlayerPartyCount'],1)
+        lib.write32(s['gBattleTypeFlags'],0);lib.write8(s['gBattlersCount'],2)
+        lib.write8(s['gBattlerPositions'],0);lib.write8(s['gBattlerPositions']+1,1)
+        lib.write16(s['gBattlerPartyIndexes'],0)
+        for i in range(2*abi['battle_mon_size']):lib.write8(s['gBattleMons']+i,0)
+        lib.write16(s['gBattleMons']+abi['battle_species'],species_id)
+        native('CopyMonLevelAndBaseStatsToBattleMon',0,player)
+        native('CopyMonAbilityAndTypesToBattleMon',0,player)
+        lib.write16(s['gBattleMons']+abi['battle_mon_size']+abi['battle_hp'],0)
+        lib.write32(s['gSpecialStatuses']+abi['special_status_size']+abi['special_physical_damage'],1 if damaged else 0)
+        assert native('HandleMoveEndAbilityBlock',0,1,352)==expect,(species_id,slot,damaged)
+        assert lib.read16(s['gBattleMons'])==(1113 if expect else species_id)
+        if expect:
+            # Controllers apply this species after the ability announcement.
+            mon_value(player,'mon_data_species',1113)
+            assert native('GetMonAbility',player)==abi['ability_battle_bond']
+            assert not native('HandleMoveEndAbilityBlock',0,1,352)
+            assert native('TryRevertPartyMonFormChange',0)
+            assert native('GetMonData2',player,abi['mon_data_species'])==species_id
+            assert native('GetMonData2',player,abi['mon_data_ability_num'])==slot
+            # Repeat for fainting, using the engine's native form-change path.
+            native('FreeBattleResources');native('AllocateBattleResources')
+            lib.write16(s['gBattleMons']+abi['battle_species'],species_id)
+            native('CopyMonLevelAndBaseStatsToBattleMon',0,player)
+            native('CopyMonAbilityAndTypesToBattleMon',0,player)
+            assert native('HandleMoveEndAbilityBlock',0,1,352)
+            mon_value(player,'mon_data_species',1113)
+            lib.write16(s['gBattleMons']+abi['battle_hp'],0)
+            assert native('TryBattleFormChange',0,abi['faint_method'])
+            assert native('GetMonData2',player,abi['mon_data_species'])==species_id
+            assert native('GetMonData2',player,abi['mon_data_ability_num'])==slot
+        record('classic-battle-bond-knockout-and-reversion',species=species_id,ability_slot=slot,own_ko=damaged,transforms=expect)
+    for i in range(600):lib.write8(player+i,0)
+    for i,value in enumerate(fixture):lib.write8(player+i,value)
+    print('Hidden Ability/Battle Bond checks passed',flush=True)
 # Start a real battle and select Mega Evolution using the actual move menu.
 native('FreeBattleResources')
 for i in range(600):lib.write8(s['gPlayerParty']+i,0)
@@ -328,6 +406,39 @@ for _ in range(2400):
 assert lib.read16(s['gBattleMons'])==906
 step(360);screenshot('battle-mega-venusaur-and-genesect')
 record('real-battle-ui-mega-trigger-and-donor-sprites')
+if args.rom_name=='LeafGreen-Journey-AllRegions':
+    # Independent real double battle: one KO while another opponent survives.
+    lib.stop();assert lib.start(str(directory/(args.rom_name+'.gba')).encode())
+    step(180)
+    for _ in range(12):step(10,8);step(120)
+    lib.write8(save()+abi['rival_name'],255);lib.write8(lib.read32(s['gSaveBlock2Ptr']),255)
+    lib.write32(s['gMain'],0);lib.write8(s['gMain']+abi['main_state'],0);lib.write32(s['gMain']+4,s['CB2_NewGame']|1)
+    step(300);tap(1);tap(128);tap(128);tap(1)
+    for _ in range(5):tap(1)
+    step(900)
+    for i in range(600):lib.write8(s['gPlayerParty']+i,0)
+    lib.write8(s['gPlayerPartyCount'],0)
+    assert native('ScriptGiveMon',658,50,0)==0
+    assert native('ScriptGiveMon',1,50,0)==0
+    mon_value(s['gPlayerParty'],'mon_data_ability_num',2)
+    native('ScriptSetMonMoveSlot',0,352,0) # Water Pulse: single target
+    native('ScriptSetMonMoveSlot',1,45,0) # Growl: leave second opponent alive
+    native('CreateScriptedWildMon',129,50,0)
+    for i in range(100):lib.write8(s['gEnemyParty']+100+i,lib.read8(s['gEnemyParty']+i))
+    mon_value(s['gEnemyParty'],'mon_data_hp',1)
+    mon_value(s['gEnemyParty']+100,'mon_data_hp',1)
+    warp('PalletTown',10,10)
+    native('BattleSetup_StartScriptedDoubleWildBattle');step(1000)
+    for _ in range(100):
+        if lib.read16(s['gBattleMons'])==1113:break
+        tap(1)
+    assert lib.read16(s['gBattleMons'])==1113,('Real KO did not trigger Ash',lib.read16(s['gBattleMons']))
+    for _ in range(20):
+        if species()==1113:break
+        tap(1)
+    assert species()==1113
+    step(180);screenshot('battle-ash-greninja-after-knockout')
+    record('real-battle-bond-ko-animation-party-update-and-sprite')
 lib.stop()
 (args.output/'results.json').write_text(json.dumps({'rom_sha256':__import__('hashlib').sha256((directory/(args.rom_name+'.gba')).read_bytes()).hexdigest(),'checks':results},indent=2)+'\n')
 print(f'{len(results)} mGBA checks passed')

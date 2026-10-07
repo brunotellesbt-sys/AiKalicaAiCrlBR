@@ -8,6 +8,7 @@ from prepare import prepare, COMMIT
 from import_catalog import apply as import_catalog, matching
 from configure import apply as configure, write_layout
 from build import export
+import abilities
 NAME='LeafGreen-Journey-AllRegions'
 OUT=ROOT/'mods/all-regions'
 
@@ -33,9 +34,10 @@ if __name__=='__main__':
   raw=subprocess.check_output([str(toolchain/'arm-none-eabi-cpp'),'-P','-iquote','include','-Wno-trigraphs','-DMODERN=1','-DTESTING=0','-DLEAFGREEN','-std=gnu17','src/pokemon.c'],cwd=source,text=True)
   (source/'.region-native.c').write_text(raw)
   restrict_mechanics(source)
-  import_catalog(source,toolchain/'arm-none-eabi-cpp',OUT/'donor-assets.zip',raw);configure(source)
+  import_catalog(source,toolchain/'arm-none-eabi-cpp',OUT/'donor-assets.zip',abilities.catalog_raw(raw));configure(source)
  elif a.reimport:
-  import_catalog(source,toolchain/'arm-none-eabi-cpp',OUT/'donor-assets.zip',(source/'.region-native.c').read_text())
+  import_catalog(source,toolchain/'arm-none-eabi-cpp',OUT/'donor-assets.zip',abilities.catalog_raw((source/'.region-native.c').read_text()))
+ abilities.apply(source)
  write_layout(source)
  if a.prepare_only:sys.exit(0)
  if not a.export_only:

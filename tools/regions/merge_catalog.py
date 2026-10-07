@@ -126,6 +126,12 @@ def extract(source,raw,donors,output):
     key=max(keys,key=len);nat=dex[entries[ident]['natDexNum']]
     rows[ident]=native_row(key,ident,nat);changed=True
  report=dict(species_count=len(rows),base_species_count=1025,form_count=len(rows)-1025,mega_count=sum(r['mega'] for r in rows.values()),missing_base_species=[],missing_mega_species=[],missing_base_species_from_uploads=missing_from_uploads,native_graphics_fallbacks=[r['species'] for r in rows.values() if r.get('native_graphics')],excluded_gmax_from_previous=[r['species'] for r in prior['catalog'] if '_GMAX' in r['species']],disabled_mechanics=['Dynamax','Gigantamax','Z-Moves'],sources=sources,donor_inventories=inventories,rejected_assets=rejected,catalog=sorted(rows.values(),key=lambda r:r['species_id']))
+ for r in report['catalog']:
+  if r['species'] in ['SPECIES_FROAKIE','SPECIES_FROGADIER','SPECIES_GRENINJA']:
+   r['ability_override']=['ABILITY_TORRENT','ABILITY_PROTEAN','ABILITY_BATTLE_BOND']
+  elif r['species'] in ['SPECIES_GRENINJA_BATTLE_BOND','SPECIES_GRENINJA_ASH']:
+   r['ability_override']=['ABILITY_BATTLE_BOND']*3
+ report['hidden_abilities']={'wild_percent':5,'normal_slots':[0,1],'hidden_slot':2,'inheritance_generation':6,'battle_bond_generation':7}
  output.mkdir(parents=True,exist_ok=True);assets['catalog.json']=(json.dumps(report,indent=2)+'\n').encode()
  with zipfile.ZipFile(output/'donor-assets.zip','w',zipfile.ZIP_DEFLATED,compresslevel=9) as z:
   for name,data in sorted(assets.items()):

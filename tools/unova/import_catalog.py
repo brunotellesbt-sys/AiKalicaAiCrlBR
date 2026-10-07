@@ -82,6 +82,8 @@ def apply(source, cpp, archive, raw=None):
             for key,value in zip(['evYield_HP','evYield_Attack','evYield_Defense','evYield_Speed','evYield_SpAttack','evYield_SpDefense'],r['ev_yields']): f[key] = str(value)
             f['eggGroups'] = '{'+','.join(map(str,r['egg_groups']))+'}'
             f['abilities'] = '{'+','.join(r['abilities'])+'}'
+        if r.get('ability_override'):
+            f['abilities'] = '{'+','.join(r['ability_override'])+'}'
         if not r.get('native_graphics'):
             for kind,field,ext,ctype in [('front','frontPic','4bpp.lz','U32'),('back','backPic','4bpp.lz','U32'),('palette','palette','gbapal','U16')]:
                 symbol = f'gUnova{kind.title()}{donor}'
