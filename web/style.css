@@ -1,0 +1,13 @@
+:root { color-scheme: dark; font-family: system-ui, sans-serif; background: #101922; color: #eef4f6; }
+body { margin: 0; }
+main { max-width: 900px; margin: auto; padding: 24px; }
+h1 { color: #80deb2; }
+p { line-height: 1.6; }
+a { color: #9edcff; }
+.notice { border-left: 4px solid #f2c86f; padding-left: 12px; }
+.actions { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+button { border: 0; border-radius: 8px; padding: 12px 28px; background: #80deb2; color: #10251c; font: inherit; cursor: pointer; }
+button:disabled { opacity: .6; cursor: default; }
+input { display: block; margin-top: 8px; max-width: 100%; }
+#game { width: 100%; min-height: 360px; aspect-ratio: 3 / 2; background: #080d12; border-radius: 12px; overflow: hidden; }
+@media (max-width: 600px) { main { padding: 16px; } #game { min-height: 400px; } }

@@ -1,0 +1,300 @@
+{
+  "routes": [
+    {
+      "name": "JourneySeaRoute00",
+      "port": "VermilionCity",
+      "width": 48,
+      "height": 24,
+      "origin_offset": 0,
+      "connections": [
+        {
+          "map": "MAP_VERMILION_CITY",
+          "offset": 0,
+          "direction": "up"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_01",
+          "offset": 0,
+          "direction": "right"
+        }
+      ]
+    },
+    {
+      "name": "JourneySeaRoute01",
+      "port": "OneIsland_Harbor",
+      "width": 48,
+      "height": 24,
+      "origin_offset": -15,
+      "connections": [
+        {
+          "map": "MAP_ONE_ISLAND_HARBOR",
+          "offset": 15,
+          "direction": "up"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_00",
+          "offset": 0,
+          "direction": "left"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_02",
+          "offset": 0,
+          "direction": "right"
+        }
+      ]
+    },
+    {
+      "name": "JourneySeaRoute02",
+      "port": "TwoIsland_Harbor",
+      "width": 48,
+      "height": 24,
+      "origin_offset": -15,
+      "connections": [
+        {
+          "map": "MAP_TWO_ISLAND_HARBOR",
+          "offset": 15,
+          "direction": "up"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_01",
+          "offset": 0,
+          "direction": "left"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_03",
+          "offset": 0,
+          "direction": "right"
+        }
+      ]
+    },
+    {
+      "name": "JourneySeaRoute03",
+      "port": "ThreeIsland_Harbor",
+      "width": 48,
+      "height": 24,
+      "origin_offset": -15,
+      "connections": [
+        {
+          "map": "MAP_THREE_ISLAND_HARBOR",
+          "offset": 15,
+          "direction": "up"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_02",
+          "offset": 0,
+          "direction": "left"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_04",
+          "offset": 0,
+          "direction": "right"
+        }
+      ]
+    },
+    {
+      "name": "JourneySeaRoute04",
+      "port": "FourIsland_Harbor",
+      "width": 48,
+      "height": 24,
+      "origin_offset": -15,
+      "connections": [
+        {
+          "map": "MAP_FOUR_ISLAND_HARBOR",
+          "offset": 15,
+          "direction": "up"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_03",
+          "offset": 0,
+          "direction": "left"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_05",
+          "offset": 0,
+          "direction": "right"
+        }
+      ]
+    },
+    {
+      "name": "JourneySeaRoute05",
+      "port": "FiveIsland_Harbor",
+      "width": 48,
+      "height": 24,
+      "origin_offset": -15,
+      "connections": [
+        {
+          "map": "MAP_FIVE_ISLAND_HARBOR",
+          "offset": 15,
+          "direction": "up"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_04",
+          "offset": 0,
+          "direction": "left"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_06",
+          "offset": 0,
+          "direction": "right"
+        }
+      ]
+    },
+    {
+      "name": "JourneySeaRoute06",
+      "port": "SixIsland_Harbor",
+      "width": 48,
+      "height": 24,
+      "origin_offset": -15,
+      "connections": [
+        {
+          "map": "MAP_SIX_ISLAND_HARBOR",
+          "offset": 15,
+          "direction": "up"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_05",
+          "offset": 0,
+          "direction": "left"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_07",
+          "offset": 0,
+          "direction": "right"
+        }
+      ]
+    },
+    {
+      "name": "JourneySeaRoute07",
+      "port": "SevenIsland_Harbor",
+      "width": 48,
+      "height": 24,
+      "origin_offset": -15,
+      "connections": [
+        {
+          "map": "MAP_SEVEN_ISLAND_HARBOR",
+          "offset": 15,
+          "direction": "up"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_06",
+          "offset": 0,
+          "direction": "left"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_08",
+          "offset": 0,
+          "direction": "right"
+        }
+      ]
+    },
+    {
+      "name": "JourneySeaRoute08",
+      "port": "BirthIsland_Harbor",
+      "width": 48,
+      "height": 24,
+      "origin_offset": -15,
+      "connections": [
+        {
+          "map": "MAP_BIRTH_ISLAND_HARBOR",
+          "offset": 15,
+          "direction": "up"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_07",
+          "offset": 0,
+          "direction": "left"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_09",
+          "offset": 0,
+          "direction": "right"
+        }
+      ]
+    },
+    {
+      "name": "JourneySeaRoute09",
+      "port": "NavelRock_Harbor",
+      "width": 48,
+      "height": 24,
+      "origin_offset": -15,
+      "connections": [
+        {
+          "map": "MAP_NAVEL_ROCK_HARBOR",
+          "offset": 15,
+          "direction": "up"
+        },
+        {
+          "map": "MAP_JOURNEY_SEA_ROUTE_08",
+          "offset": 0,
+          "direction": "left"
+        }
+      ]
+    }
+  ],
+  "water_block": 4569,
+  "original_hashes": {
+    "data/layouts/Island_Harbor/map.bin": "5eea78c3f4e1718aa04e1fb4bc6c3b6f41162e678ee1d9d4c4715b10d1c1f8ba",
+    "data/maps/VermilionCity/map.json": "b109631c9791cd330d4073ab183a283380ec25e9145c5e6e591b8111a38f1f4c",
+    "data/layouts/VermilionCity/map.bin": "2cfff972a1112b7b411063aae6d0032d308fd563d7c6aa82a0609f1aaef0a2ad",
+    "data/maps/JourneySeaRoute00/map.json": null,
+    "data/maps/JourneySeaRoute00/scripts.inc": null,
+    "data/layouts/JourneySeaRoute00/map.bin": null,
+    "data/layouts/JourneySeaRoute00/border.bin": null,
+    "data/maps/OneIsland_Harbor/map.json": "3c60db2441b6819840b399541f6068aa2cbfc845a9087f2ace1c64f6a7d62e1d",
+    "data/maps/JourneySeaRoute01/map.json": null,
+    "data/maps/JourneySeaRoute01/scripts.inc": null,
+    "data/layouts/JourneySeaRoute01/map.bin": null,
+    "data/layouts/JourneySeaRoute01/border.bin": null,
+    "data/maps/TwoIsland_Harbor/map.json": "b376ba407fbaa4633ccd43ec2135458438cddf93e2b7367f0a2ffbd26207a6d0",
+    "data/maps/JourneySeaRoute02/map.json": null,
+    "data/maps/JourneySeaRoute02/scripts.inc": null,
+    "data/layouts/JourneySeaRoute02/map.bin": null,
+    "data/layouts/JourneySeaRoute02/border.bin": null,
+    "data/maps/ThreeIsland_Harbor/map.json": "c5a7e683795248c49b4193d9010145e4552bc64ba4aa9a69c51bf5dfcc39449f",
+    "data/maps/JourneySeaRoute03/map.json": null,
+    "data/maps/JourneySeaRoute03/scripts.inc": null,
+    "data/layouts/JourneySeaRoute03/map.bin": null,
+    "data/layouts/JourneySeaRoute03/border.bin": null,
+    "data/maps/FourIsland_Harbor/map.json": "5d76e3d8af589e8855fd67eaf873797e8fde4f111fcdaf75f456e68634e96d0e",
+    "data/maps/JourneySeaRoute04/map.json": null,
+    "data/maps/JourneySeaRoute04/scripts.inc": null,
+    "data/layouts/JourneySeaRoute04/map.bin": null,
+    "data/layouts/JourneySeaRoute04/border.bin": null,
+    "data/maps/FiveIsland_Harbor/map.json": "33d1487c7988bc90f0069a0ae058dd2fc65f5e68f1e72fd08f43ec356b9860a4",
+    "data/maps/JourneySeaRoute05/map.json": null,
+    "data/maps/JourneySeaRoute05/scripts.inc": null,
+    "data/layouts/JourneySeaRoute05/map.bin": null,
+    "data/layouts/JourneySeaRoute05/border.bin": null,
+    "data/maps/SixIsland_Harbor/map.json": "ec3b8f064ce3082b0d018b22d13e429058e7454fd1c4ef90e2ac5ed7d079dee8",
+    "data/maps/JourneySeaRoute06/map.json": null,
+    "data/maps/JourneySeaRoute06/scripts.inc": null,
+    "data/layouts/JourneySeaRoute06/map.bin": null,
+    "data/layouts/JourneySeaRoute06/border.bin": null,
+    "data/maps/SevenIsland_Harbor/map.json": "bbc6c9cc6e8febbd47ddcec263f809bf6da35ca4b2f79c5a7f2abfaeafa7a75a",
+    "data/maps/JourneySeaRoute07/map.json": null,
+    "data/maps/JourneySeaRoute07/scripts.inc": null,
+    "data/layouts/JourneySeaRoute07/map.bin": null,
+    "data/layouts/JourneySeaRoute07/border.bin": null,
+    "data/maps/BirthIsland_Harbor/map.json": "c232c7679ee4f35e24f723dde93287211cea5baa03786c101034763ea158445b",
+    "data/maps/JourneySeaRoute08/map.json": null,
+    "data/maps/JourneySeaRoute08/scripts.inc": null,
+    "data/layouts/JourneySeaRoute08/map.bin": null,
+    "data/layouts/JourneySeaRoute08/border.bin": null,
+    "data/maps/NavelRock_Harbor/map.json": "a380e1d399f4bbf376b57e4eb873ccfd08b79de90d9a95ac6de73b688410a81b",
+    "data/maps/JourneySeaRoute09/map.json": null,
+    "data/maps/JourneySeaRoute09/scripts.inc": null,
+    "data/layouts/JourneySeaRoute09/map.bin": null,
+    "data/layouts/JourneySeaRoute09/border.bin": null,
+    "data/maps/map_groups.json": "cad6db897d4724828181501829ae9b6897b33e51121d96dd973eb07af5e365b2",
+    "data/layouts/layouts.json": "7456b9ec1e9f6ce4905d568b8307b6deb187d4edfc228abdb0dac270fa59f894"
+  },
+  "hoenn_integrated": false,
+  "aquatic_hms_preserved": [
+    "Surf",
+    "Waterfall"
+  ],
+  "missing_aquatic_field_moves": [
+    "Dive",
+    "Whirlpool"
+  ]
+}

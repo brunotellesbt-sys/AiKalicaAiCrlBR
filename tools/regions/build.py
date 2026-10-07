@@ -24,6 +24,7 @@ def restrict_mechanics(source):
 if __name__=='__main__':
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('--source',type=Path,required=True);p.add_argument('--toolchain',type=Path,default=ROOT/'.local/arm-gcc/usr/bin');p.add_argument('--nm',type=Path,default=ROOT/'.local/arm-binutils/usr/bin/arm-none-eabi-nm');p.add_argument('--export-only',action='store_true');p.add_argument('--prepare-only',action='store_true');p.add_argument('--reimport',action='store_true');p.add_argument('--jobs',type=int,default=4);a=p.parse_args();source=a.source.resolve()
  if subprocess.check_output(['git','rev-parse','HEAD'],cwd=source,text=True).strip()!=COMMIT:raise ValueError('Wrong pinned engine commit')
+ if (source/'.sea-routes-prepared').exists():raise ValueError('Use tools/sea_routes/build.py for a sea-route checkout; preserve the base release')
  toolchain=a.toolchain.resolve();nm=a.nm.resolve()
  env=os.environ.copy();env['PATH']=str(toolchain)+os.pathsep+str(nm.parent)+os.pathsep+env['PATH']
  if not (source/'.unova-prepared').exists():
