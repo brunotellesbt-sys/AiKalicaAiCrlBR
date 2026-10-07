@@ -83123,7 +83123,12 @@
       ],
       "mega": false,
       "learnset": [],
-      "native_metadata": true
+      "native_metadata": true,
+      "ability_override": [
+        "ABILITY_TORRENT",
+        "ABILITY_PROTEAN",
+        "ABILITY_BATTLE_BOND"
+      ]
     },
     {
       "species": "SPECIES_FROGADIER",
@@ -83152,7 +83157,12 @@
       ],
       "mega": false,
       "learnset": [],
-      "native_metadata": true
+      "native_metadata": true,
+      "ability_override": [
+        "ABILITY_TORRENT",
+        "ABILITY_PROTEAN",
+        "ABILITY_BATTLE_BOND"
+      ]
     },
     {
       "species": "SPECIES_GRENINJA",
@@ -83181,7 +83191,12 @@
       ],
       "mega": false,
       "learnset": [],
-      "native_metadata": true
+      "native_metadata": true,
+      "ability_override": [
+        "ABILITY_TORRENT",
+        "ABILITY_PROTEAN",
+        "ABILITY_BATTLE_BOND"
+      ]
     },
     {
       "species": "SPECIES_BUNNELBY",
@@ -107157,7 +107172,12 @@
       "mega": false,
       "learnset": [],
       "native_metadata": true,
-      "native_graphics": true
+      "native_graphics": true,
+      "ability_override": [
+        "ABILITY_BATTLE_BOND",
+        "ABILITY_BATTLE_BOND",
+        "ABILITY_BATTLE_BOND"
+      ]
     },
     {
       "species": "SPECIES_GRENINJA_ASH",
@@ -107186,7 +107206,12 @@
       ],
       "mega": false,
       "learnset": [],
-      "native_metadata": true
+      "native_metadata": true,
+      "ability_override": [
+        "ABILITY_BATTLE_BOND",
+        "ABILITY_BATTLE_BOND",
+        "ABILITY_BATTLE_BOND"
+      ]
     },
     {
       "species": "SPECIES_VIVILLON_POLAR",
@@ -117040,6 +117065,16 @@
       "native_graphics": true
     }
   ],
+  "hidden_abilities": {
+    "wild_percent": 5,
+    "normal_slots": [
+      0,
+      1
+    ],
+    "hidden_slot": 2,
+    "inheritance_generation": 6,
+    "battle_bond_generation": 7
+  },
   "corrected_fairy_species": [
     "SPECIES_CLEFAIRY",
     "SPECIES_CLEFABLE",

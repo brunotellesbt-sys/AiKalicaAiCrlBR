@@ -80,4 +80,16 @@ class RegionsTests(unova_tests.CatalogTests):
         for name,types in [('SPECIES_SYLVEON',[19,19]),('SPECIES_DIANCIE_MEGA',[6,19]),('SPECIES_ZORUA_HISUI',[1,8])]:
             p=self.offset(byname[name]);self.assertEqual(list(self.rom[p+6:p+8]),types)
 
+    def test_greninja_normal_and_hidden_ability_slots(self):
+        byname={r['species']:r for r in self.catalog['catalog']}
+        expected=[self.abi['ability_torrent'],self.abi['ability_protean'],self.abi['ability_battle_bond']]
+        for name in ['SPECIES_FROAKIE','SPECIES_FROGADIER','SPECIES_GRENINJA','SPECIES_GRENINJA_ASH']:
+            offset=self.offset(byname[name])+self.abi['species_abilities']
+            actual=list(struct.unpack_from('<3H',self.rom,offset))
+            self.assertEqual(actual,expected if name!='SPECIES_GRENINJA_ASH' else [expected[2]]*3)
+        self.assertEqual(self.catalog['hidden_abilities']['wild_percent'],5)
+        checks=json.loads((self.output/'validation/results.json').read_text())['checks']
+        for check in ['hidden-ability-wild-encounters','hidden-ability-daycare-inheritance','classic-battle-bond-knockout-and-reversion']:
+            self.assertTrue(any(r['check']==check and r['passed'] for r in checks),check)
+
 if __name__=='__main__':unittest.main()

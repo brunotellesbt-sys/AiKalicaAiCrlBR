@@ -28,7 +28,10 @@ public static class DesktopProbe {
     [DllImport("user32.dll")] static extern bool EnumChildWindows(IntPtr parent, Callback callback, IntPtr param);
     [DllImport("user32.dll")] static extern uint GetWindowThreadProcessId(IntPtr hwnd, out uint pid);
     [DllImport("user32.dll", CharSet=CharSet.Unicode)] static extern int GetWindowText(IntPtr hwnd, StringBuilder text, int count);
-    [DllImport("user32.dll")] static extern IntPtr SendMessage(IntPtr hwnd, uint msg, IntPtr wp, IntPtr lp);
+    [DllImport("user32.dll")] static extern IntPtr SendMessageTimeout(IntPtr hwnd, uint msg, IntPtr wp, IntPtr lp, uint flags, uint timeout, out UIntPtr result);
+    [DllImport("user32.dll")] static extern bool SetForegroundWindow(IntPtr hwnd);
+    [DllImport("user32.dll")] static extern void keybd_event(byte key, byte scan, uint flags, UIntPtr extra);
+    static HashSet<IntPtr> accepted = new HashSet<IntPtr>();
     public class Window { public IntPtr Handle; public string Title; public int Width, Height; }
     static string Title(IntPtr hwnd) { var text = new StringBuilder(1024); GetWindowText(hwnd, text, text.Capacity); return text.ToString(); }
     public static Window[] Windows(uint pid) {
@@ -45,10 +48,29 @@ public static class DesktopProbe {
     static void Click(IntPtr parent, string caption) {
         EnumChildWindows(parent, (hwnd, param) => {
             if (Title(hwnd).Replace("&", "").Equals(caption, StringComparison.OrdinalIgnoreCase)) {
-                SendMessage(hwnd, 0x00F5, IntPtr.Zero, IntPtr.Zero); return false;
+                UIntPtr checkedState;
+                if (caption == "I hereby accept this agreement.") {
+                    if (accepted.Contains(parent)) return false;
+                    SendMessageTimeout(hwnd, 0x00F0, IntPtr.Zero, IntPtr.Zero, 2, 1000, out checkedState);
+                    if (checkedState.ToUInt64() == 1) return false;
+                }
+                UIntPtr result;
+                // A click can start another modal loop; do not wait indefinitely.
+                SendMessageTimeout(hwnd, 0x00F5, IntPtr.Zero, IntPtr.Zero, 2, 1000, out result);
+                if (caption == "I hereby accept this agreement.") accepted.Add(parent);
+                return false;
             }
             return true;
         }, IntPtr.Zero);
+    }
+    public static string Contents(IntPtr parent) {
+        var captions = new List<string>();
+        EnumChildWindows(parent, (hwnd, param) => {
+            string text = Title(hwnd);
+            if (!string.IsNullOrWhiteSpace(text)) captions.Add(text);
+            return true;
+        }, IntPtr.Zero);
+        return string.Join(" | ", captions);
     }
     public static void InitialDialogs(uint pid) {
         foreach (var window in Windows(pid)) {
@@ -56,8 +78,21 @@ public static class DesktopProbe {
             if (window.Title == "End user license agreement") {
                 Click(window.Handle, "I hereby accept this agreement."); Click(window.Handle, "OK");
             }
-            if (window.Title == "Frage") Click(window.Handle, "No");
+            if (window.Title == "Frage") {
+                // Lazarus draws the question buttons without HWND captions.
+                // Its German "Nein" and English "No" share Alt+N.
+                SetForegroundWindow(window.Handle);
+                keybd_event(0x12, 0, 0, UIntPtr.Zero);
+                keybd_event(0x4E, 0, 0, UIntPtr.Zero);
+                keybd_event(0x4E, 0, 2, UIntPtr.Zero);
+                keybd_event(0x12, 0, 2, UIntPtr.Zero);
+            }
         }
+    }
+    public static bool HasInitialDialogs(uint pid) {
+        foreach (var window in Windows(pid))
+            if (window.Title == "Language select" || window.Title == "End user license agreement" || window.Title == "Frage") return true;
+        return false;
     }
     [DllImport("user32.dll")] public static extern bool IsWindowVisible(IntPtr window);
     [DllImport("user32.dll")] public static extern bool GetWindowRect(IntPtr window, out Rect rect);
@@ -85,7 +120,10 @@ try {
             $candidates = if ($tool -eq 'HexManiacAdvance') { @(Get-Process dotnet -ErrorAction SilentlyContinue) } else { @(Get-Process $tool -ErrorAction SilentlyContinue) }
             foreach ($candidate in $candidates) {
                 $candidate.Refresh()
-                if ($tool -eq 'AdvanceMap') { [DesktopProbe]::InitialDialogs($candidate.Id) }
+                if ($tool -eq 'AdvanceMap') {
+                    [DesktopProbe]::InitialDialogs($candidate.Id)
+                    if ([DesktopProbe]::HasInitialDialogs($candidate.Id)) { continue }
+                }
                 $window = [DesktopProbe]::Windows($candidate.Id) | Where-Object { $_.Title -match $pattern -and $_.Width -ge 100 -and $_.Height -ge 100 } | Sort-Object Width -Descending | Select-Object -First 1
                 if ($window) {
                     $process = $candidate
@@ -99,6 +137,16 @@ try {
         }
         if (!$process) { throw "$tool did not display a visible window within 60 seconds" }
         Start-Sleep -Seconds 3
+        if ($tool -eq 'AdvanceMap') {
+            $readyDeadline = (Get-Date).AddSeconds(60)
+            $stableSince = Get-Date
+            do {
+                [DesktopProbe]::InitialDialogs($process.Id)
+                if ([DesktopProbe]::HasInitialDialogs($process.Id)) { $stableSince = Get-Date }
+                Start-Sleep -Milliseconds 500
+                if ((Get-Date) -gt $readyDeadline) { throw 'AdvanceMap startup dialogs did not finish' }
+            } while (((Get-Date) - $stableSince).TotalSeconds -lt 10)
+        }
         $process.Refresh()
         if ($process.HasExited -or !$process.Responding) { throw "$tool exited or stopped responding" }
         # Startup dialogs can replace window handles after the first match.
@@ -128,7 +176,7 @@ try {
         }
         $launcher.Refresh()
         if (!$launcher.HasExited) {
-            $remaining = [DesktopProbe]::Windows($process.Id) | ForEach-Object { "$($_.Title) [$($_.Width)x$($_.Height)]" }
+            $remaining = [DesktopProbe]::Windows($process.Id) | ForEach-Object { "$($_.Title) [$($_.Width)x$($_.Height)]: $([DesktopProbe]::Contents($_.Handle))" }
             $remaining | Set-Content (Join-Path $report "$tool-close-windows.txt")
             throw "$tool launcher did not finish after closing the window: $($remaining -join '; ')"
         }

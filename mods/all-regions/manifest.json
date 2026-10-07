@@ -2,15 +2,15 @@
   "source_repository": "kerrymilan/roguemon-expansion",
   "source_commit": "7606f57650627704c9aad965a031fd3a454590e2",
   "original_sha256": "2f978f635b9593f6ca26ec42481c53a6b39f6cddd894ad5c062c1419fac58825",
-  "target_sha256": "7b46286af843112c1bcce17169381da2fda9046538478605c34e0990a7a2fa46",
-  "patch_sha256": "b735c1ee6917e73faf8af748bb3c918a9ba782ad6650eb871913776cbe9e985f",
+  "target_sha256": "6ce89a78be4044223790b8aca1b800a2372a8dc62487c5db28bf9b3e720986ae",
+  "patch_sha256": "98045edf7f41fb1ee2fefd88c320884f3a1bbcb84958a5039829ffb5dc41e6f7",
   "size": 33554432,
-  "donor_asset_sha256": "03ca19763024617c992c97a67bc4dcb20c0307d09f6f1ee6dd6ea79383f45da0",
+  "donor_asset_sha256": "a0c8fa3abb656ee20e6c5312d25c1b95ded3c1446881c7d99f82f9931eb2520d",
   "terrestrial_hm_changes": {
-    "source_sha256": "eb121fc52d0ee2ac7744ef8faebfd5870165ca31f8e11508e2df4d0adb7088f3",
-    "target_sha256": "7b46286af843112c1bcce17169381da2fda9046538478605c34e0990a7a2fa46",
+    "source_sha256": "cfa3cfd5cc1ca4f1b3bd916a19aefe08cf9c501a4b285dfa780492813855cee5",
+    "target_sha256": "6ce89a78be4044223790b8aca1b800a2372a8dc62487c5db28bf9b3e720986ae",
     "size": 33554432,
-    "changed_bytes": 3230,
+    "changed_bytes": 3228,
     "maps_scanned": 455,
     "layouts_scanned": 364,
     "counts": {
@@ -495,61 +495,61 @@
     "scripts": [
       {
         "symbol": "VictoryRoad_1F_OnLoad",
-        "offset": 2040591,
+        "offset": 2041727,
         "before": "216440640007",
         "after": "166440640002"
       },
       {
         "symbol": "VictoryRoad_2F_OnLoad",
-        "offset": 2040783,
-        "before": "21654064000705e6231f08",
+        "offset": 2041919,
+        "before": "2165406400070556281f08",
         "after": "1665406400166640640002"
       },
       {
         "symbol": "VictoryRoad_3F_OnLoad",
-        "offset": 2041203,
+        "offset": 2042339,
         "before": "216740640007",
         "after": "166740640002"
       },
       {
         "symbol": "SeafoamIslands_B3F_OnTransition",
-        "offset": 2051574,
-        "before": "2bd2020700094e",
+        "offset": 2052710,
+        "before": "2bd20207007952",
         "after": "29d202a7160102"
       },
       {
         "symbol": "SeafoamIslands_B3F_EventScript_EnterByFalling",
-        "offset": 2051646,
+        "offset": 2052782,
         "before": "6916024000002b",
         "after": "16014000006b02"
       },
       {
         "symbol": "SeafoamIslands_B4F_OnTransition",
-        "offset": 2051842,
-        "before": "2bbe020700494f1f082bd30207001e4f",
-        "after": "2bbe020700494f1f0829d302a7170102"
+        "offset": 2052978,
+        "before": "2bbe020700b9531f082bd30207008e53",
+        "after": "2bbe020700b9531f0829d302a7170102"
       },
       {
         "symbol": "SeafoamIslands_B4F_EventScript_EnterByFalling",
-        "offset": 2052029,
+        "offset": 2053165,
         "before": "6916024000002b",
         "after": "16014000006b02"
       },
       {
         "symbol": "SeafoamIslands_B4F_OnLoad",
-        "offset": 2051917,
-        "before": "16024000002b4c00070005501f082b4d000700",
+        "offset": 2053053,
+        "before": "16024000002b4c00070075541f082b4d000700",
         "after": "a20c000e002b010000a20d000e002b01000002"
       },
       {
         "symbol": "SeafoamIslands_B4F_EventScript_EnterOnCurrent",
-        "offset": 2052007,
-        "before": "694fff00b94f1f",
+        "offset": 2053143,
+        "before": "694fff0029541f",
         "after": "16634000006b02"
       },
       {
         "symbol": "SeafoamIslands_B4F_EventScript_UpwardCurrent",
-        "offset": 2052153,
+        "offset": 2053289,
         "before": "694f",
         "after": "6b02"
       }
@@ -19411,6 +19411,16 @@
       ]
     },
     "rejected_assets": [],
+    "hidden_abilities": {
+      "wild_percent": 5,
+      "normal_slots": [
+        0,
+        1
+      ],
+      "hidden_slot": 2,
+      "inheritance_generation": 6,
+      "battle_bond_generation": 7
+    },
     "corrected_fairy_species": [
       "SPECIES_CLEFAIRY",
       "SPECIES_CLEFABLE",
@@ -20104,20 +20114,21 @@
     "tools/unova/bootstrap.py": "aa2d14d3869398343f0c523a39c0ee5e11fb3df69580b80b3e686298b7f626f3",
     "tools/unova/bps.py": "fc34b2b3b6d04db1980004e540bb24afaa7ed1c2474df5dd9fca0742bbb59793",
     "tools/unova/build.py": "77f0f29fe91e76bba4a88bc06d82a71e280f0d16b8b56ef8e74e6a58f4d4762e",
-    "tools/unova/configure.py": "e73257fff36e8d1f98c4016863dbebc37bd045cadf48948bd236f218732d887b",
+    "tools/unova/configure.py": "759d216cb07e6f077bf7584770c6b2326eb8f6119f9f6107196ce4173dd85419",
     "tools/unova/donor-forms.json": "1f8fd6e928462c2b08c959163ed87dbcadbaaaf651389fe33598342a6e129cc4",
     "tools/unova/donor-names.json": "fdfc592f27cfc7cc859148a418d9d581e6cf6d55431de9802ade5c9dde9cb30c",
     "tools/unova/extract.py": "da4b39d2f1e198f2c5c383d40c6a40c23a7640afebbc424d559b46e56333ccd5",
-    "tools/unova/import_catalog.py": "8f8b29b2d9b5bcfa2ee86a6f685fb992eb3bc147c8d665455ff9e980aa56070e",
+    "tools/unova/import_catalog.py": "f80e4b237d1576b81762ea941e18ec2e2f8194610bc558e3598f99dbeb00e2c9",
     "tools/unova/open_world.py": "3cbefd17fcd99e691b01f5c814c18ef7c8e8314f240014d545890dd85c80d4e9",
     "tools/unova/prepare.py": "028753f61c1e8cb23c65a9074add8b76f71f51cbd136851e76a63619a4270915",
     "tools/unova/test_catalog.py": "b5bbffa080f8115319642785dbe17656b197ff7f71d8966658a4446380c1cbc9",
-    "tools/unova/validate_emulator.py": "69e299fbac535cfa91bcf5c4261e0de19eccafd038e6fcc9b4df604975a205a6",
+    "tools/unova/validate_emulator.py": "23c6fd9ffb17d1587ea66d806427acfbe7984375cc1c805257159d3bee207cb9",
     "tools/unova/wild-pools.json": "21d3d9074992da854f43bbaedf1fa7d8fd27b8e2169a78b2b04ce1dcdb64f81d",
     "tools/unova/wild_world.py": "9de260f2692e400f3bca0a9b887ae1aedb055297e53495e68c4378343e557c24",
-    "tools/regions/build.py": "cfc07fc6045330f8bc7ce7c86624c2718c6a9d6831e6e3406e4b8d723f8882bd",
-    "tools/regions/merge_catalog.py": "8293089db55188fc0a30ac8c3523a39d9d3e206e00d55f5965988ec848bc3607",
-    "tools/regions/test_regions.py": "99ae6a593acd13e47d2bbd941a13542f8df240adf760d8c7f7efe5e6f9c326da",
+    "tools/regions/abilities.py": "35711e0ed5dcd9b89dcfd9ce582fb651708939c8da78b0ad2aed7d7c8dda8766",
+    "tools/regions/build.py": "762b9fa30964bff52122a58b1994d8220ed9b3cb73af7b869e9ac657d5fdffd9",
+    "tools/regions/merge_catalog.py": "39e9eb8f2a75757d8cd80b5d717e27d981084ef17fe22ce7eb13c3f380faa03b",
+    "tools/regions/test_regions.py": "fc8117e14943cad546e0fe7af76a068c84d9a023181bbedc8ec7c50803c27180",
     "tools/journey/build.py": "c626b460345bef6a3c672ff4180860de500d82a800461a3715d095ddd4c7353b",
     "tools/journey/events.inc": "4eda426a33b780ae38721fd483e59db92968addb3595253527d691c717a0f399",
     "tools/journey/homes.json": "2e1efb76723374892aa93e38baeb85283d9af31c41283560bcaeeafe3f549c00",
