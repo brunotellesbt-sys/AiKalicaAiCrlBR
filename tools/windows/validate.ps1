@@ -101,6 +101,9 @@ try {
         Start-Sleep -Seconds 3
         $process.Refresh()
         if ($process.HasExited -or !$process.Responding) { throw "$tool exited or stopped responding" }
+        # Startup dialogs can replace window handles after the first match.
+        $window = [DesktopProbe]::Windows($process.Id) | Where-Object { $_.Title -match $pattern -and $_.Width -ge 100 -and $_.Height -ge 100 } | Sort-Object Width -Descending | Select-Object -First 1
+        if (!$window) { throw "$tool no longer has its application window" }
         $title = $window.Title
         if ($title -notmatch $pattern) { throw "$tool opened an unexpected window: $title" }
         $rect = New-Object DesktopProbe+Rect
@@ -117,7 +120,18 @@ try {
         } finally { $graphics.Dispose(); $bitmap.Dispose() }
         $results += [pscustomobject]@{ tool = $tool; title = $title; pid = $process.Id; visible = $true; responding = $true }
         [DesktopProbe]::PostMessage($window.Handle, 0x0010, [IntPtr]::Zero, [IntPtr]::Zero) | Out-Null
-        if (!$launcher.WaitForExit(10000)) { throw "$tool launcher did not finish after closing the window" }
+        $closeDeadline = (Get-Date).AddSeconds(15)
+        while (!$launcher.WaitForExit(250) -and (Get-Date) -lt $closeDeadline) {
+            # AdvanceMap may finish initialization through modal dialogs.
+            # Continue handling its known startup/update prompts while closing.
+            if ($tool -eq 'AdvanceMap') { [DesktopProbe]::InitialDialogs($process.Id) }
+        }
+        $launcher.Refresh()
+        if (!$launcher.HasExited) {
+            $remaining = [DesktopProbe]::Windows($process.Id) | ForEach-Object { "$($_.Title) [$($_.Width)x$($_.Height)]" }
+            $remaining | Set-Content (Join-Path $report "$tool-close-windows.txt")
+            throw "$tool launcher did not finish after closing the window: $($remaining -join '; ')"
+        }
         if ($launcher.ExitCode -ne 0) { throw "$tool launcher returned $($launcher.ExitCode)" }
     }
 } finally {
