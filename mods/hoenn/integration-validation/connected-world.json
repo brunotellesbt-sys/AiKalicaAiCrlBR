@@ -1,6 +1,6 @@
 {
   "status": "experimental_not_full_integration",
-  "rom_sha256": "33618498f8cde81d2547ff9e2b4d57a24d63d7f9a16d873f7ff3515d0b06b6c7",
+  "rom_sha256": "1d3b55f1bf477f99345773af29f929837165b66cd22c8a69323a8d1d621fbb1d",
   "checks": [
     {
       "check": "regional_flags_and_native_save_roundtrip",
@@ -8,6 +8,24 @@
       "kanto_badges_independent": true,
       "champion_independent": true,
       "trainer_flag_unchanged": true
+    },
+    {
+      "check": "native_gym_party_levels",
+      "passed": true,
+      "parties": 840,
+      "maps": 18,
+      "badge_counts": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "non_gym_level_preserved": true,
+      "access_or_free_order_validated": false
     },
     {
       "check": "physical_surf_seam",
@@ -25,6 +43,24 @@
         0
       ],
       "target": "JourneyWorldSea01",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        0
+      ],
+      "target": "JourneyHoennNorthSea",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        0
+      ],
+      "target": "JourneyFuchsiaSea",
       "passed": true
     },
     {
@@ -166,6 +202,15 @@
       "check": "physical_surf_seam",
       "source": [
         76,
+        4
+      ],
+      "target": "JourneyHoennMiddleSea",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
         5
       ],
       "target": "FiveIsland_Harbor_Frlg",
@@ -241,6 +286,15 @@
         6
       ],
       "target": "JourneyPacifidlogSea",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        6
+      ],
+      "target": "JourneyHoennSouthSea",
       "passed": true
     },
     {
@@ -727,6 +781,114 @@
         5
       ],
       "target": "Route105",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        0,
+        40
+      ],
+      "target": "JourneyHoennNorthSea",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        0,
+        42
+      ],
+      "target": "JourneyHoennMiddleSea",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        0,
+        44
+      ],
+      "target": "JourneyHoennSouthSea",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        37,
+        37
+      ],
+      "target": "JourneyFuchsiaSea",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        78,
+        0
+      ],
+      "target": "Route125",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        78,
+        0
+      ],
+      "target": "JourneyWorldSea00",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        78,
+        1
+      ],
+      "target": "Route127",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        78,
+        1
+      ],
+      "target": "JourneyWorldSea04",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        78,
+        2
+      ],
+      "target": "Route129",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        78,
+        2
+      ],
+      "target": "JourneyWorldSea06",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        78,
+        3
+      ],
+      "target": "Route19_Frlg",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        78,
+        3
+      ],
+      "target": "JourneyWorldSea00",
       "passed": true
     }
   ],

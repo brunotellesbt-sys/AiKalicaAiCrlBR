@@ -411,10 +411,49 @@
       "name": "Route 127",
       "panel": "hoenn",
       "x": 620.0,
-      "y": 1024.0,
-      "status": "planned",
-      "port_index": null,
-      "map": null
+      "y": 1000.0
+    },
+    {
+      "id": "MAPSEC_ROUTE_124",
+      "name": "Route 124",
+      "panel": "hoenn",
+      "x": 560.0,
+      "y": 928.0
+    },
+    {
+      "id": "MAPSEC_ROUTE_125",
+      "name": "Route 125",
+      "panel": "hoenn",
+      "x": 632.0,
+      "y": 916.0
+    },
+    {
+      "id": "MAPSEC_ROUTE_126",
+      "name": "Route 126",
+      "panel": "hoenn",
+      "x": 548.0,
+      "y": 1000.0
+    },
+    {
+      "id": "MAPSEC_ROUTE_128",
+      "name": "Route 128",
+      "panel": "hoenn",
+      "x": 632.0,
+      "y": 1048.0
+    },
+    {
+      "id": "MAPSEC_ROUTE_129",
+      "name": "Route 129",
+      "panel": "hoenn",
+      "x": 632.0,
+      "y": 1072.0
+    },
+    {
+      "id": "MAPSEC_ROUTE_130",
+      "name": "Route 130",
+      "panel": "hoenn",
+      "x": 572.0,
+      "y": 1072.0
     },
     {
       "id": "MAPSEC_ROUTE_131",
@@ -443,11 +482,29 @@
       "panel": "hoenn",
       "x": 44.0,
       "y": 1096.0
+    },
+    {
+      "id": "MAPSEC_ROUTE_19",
+      "name": "Route 19 · mar de Fuchsia",
+      "panel": "kanto",
+      "x": 332.0,
+      "y": 406.0
+    },
+    {
+      "id": "JOURNEY_VERMILION_SEA",
+      "name": "Mar ao sul de Vermilion",
+      "panel": "ocean",
+      "x": 540,
+      "y": 530
     }
   ],
   "surf_links": [
     {
       "source": "MAPSEC_VERMILION_CITY",
+      "target": "JOURNEY_VERMILION_SEA"
+    },
+    {
+      "source": "JOURNEY_VERMILION_SEA",
       "target": "MAPSEC_ONE_ISLAND"
     },
     {
@@ -503,6 +560,22 @@
       "target": "MAPSEC_NAVEL_ROCK_FRLG"
     },
     {
+      "source": "MAPSEC_ROUTE_125",
+      "target": "JOURNEY_VERMILION_SEA"
+    },
+    {
+      "source": "MAPSEC_ROUTE_127",
+      "target": "MAPSEC_FOUR_ISLAND"
+    },
+    {
+      "source": "MAPSEC_ROUTE_129",
+      "target": "MAPSEC_SIX_ISLAND"
+    },
+    {
+      "source": "MAPSEC_ROUTE_19",
+      "target": "JOURNEY_VERMILION_SEA"
+    },
+    {
       "source": "MAPSEC_CINNABAR_ISLAND",
       "target": "MAPSEC_ROUTE_114"
     },
@@ -517,8 +590,9 @@
   ],
   "cinnabar_south_endpoint": "MAPSEC_ROUTE_114",
   "full_story_validated": false,
-  "generator_sha256": "3786d2fbcf58910a860469fa083c21fd8f8995d541cfa069c38b74ecfd5f8203",
+  "generator_sha256": "be1c53a0722aa3965c5a97a05a71c4c032013f3623536c0be5c1009a303eaa62",
   "atlas_sha256": "99cd2d5cebe5738658b1fe71f1410124bc2ab03648b04ab3e80f95e35111870e",
   "section_source_sha256": "3a5f8c07c85c17f05cec06d049305962e9a9a1d2bd6eae935f3887866a4ad491",
-  "svg_sha256": "9c8e5ad46db4e557e5d8c64269140681870274b63453e4c49a83e1cff8c28e8e"
+  "kanto_sections_sha256": "061ad1da750c1868c4b9067fa328acbb4ff9433d25fe7db0d470d852772c3639",
+  "svg_sha256": "7f722754a55be4327581461791d564ded626220e3e2d44399cf219eaa9895413"
 }

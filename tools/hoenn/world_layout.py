@@ -34,13 +34,22 @@ def build():
     # lake. Read the native sections instead of inventing regional positions.
     native = json.loads((ROOT / '.local/emerald-base/src/data/region_map/region_map_sections.json').read_text())
     x, y, w, h = PLACEMENT['hoenn']
-    for ident in ['MAPSEC_ROUTE_131', 'MAPSEC_ROUTE_114', 'MAPSEC_ROUTE_115', 'MAPSEC_ROUTE_105']:
+    for ident in [f'MAPSEC_ROUTE_{n}' for n in range(124,132)] + ['MAPSEC_ROUTE_114', 'MAPSEC_ROUTE_115', 'MAPSEC_ROUTE_105']:
         section = next(s for s in native['map_sections'] if s['id'] == ident)
         points[ident] = dict(id=ident, name=section['name'].title(), panel='hoenn',
             x=x + (section['x'] + section['width'] / 2) * 8 * w / 224,
             y=y + (section['y'] + section['height'] / 2) * 8 * h / 136)
+    kanto_source = ROOT / '.local/all-regions-src/src/data/region_map/region_map_sections.json'
+    kanto = json.loads(kanto_source.read_text())
+    section = next(s for s in kanto['map_sections'] if s['id'] == 'MAPSEC_ROUTE_19')
+    x,y,w,h = PLACEMENT['kanto']
+    points[section['id']] = dict(id=section['id'],name='Route 19 · mar de Fuchsia',panel='kanto',
+        x=x+(section['x']+section['width']/2)*8*w/176,
+        y=y+(section['y']+section['height']/2)*8*h/120)
+    points['JOURNEY_VERMILION_SEA'] = dict(id='JOURNEY_VERMILION_SEA',name='Mar ao sul de Vermilion',
+        panel='ocean',x=540,y=530)
     def sid(n): return 'MAPSEC_' + n + '_ISLAND'
-    links = [('MAPSEC_VERMILION_CITY', sid('ONE')), (sid('ONE'), sid('TWO')),
+    links = [('MAPSEC_VERMILION_CITY', 'JOURNEY_VERMILION_SEA'), ('JOURNEY_VERMILION_SEA', sid('ONE')), (sid('ONE'), sid('TWO')),
              (sid('TWO'), sid('THREE')), (sid('FOUR'), sid('FIVE')),
              (sid('SIX'), sid('SEVEN')), (sid('ONE'), sid('FOUR')),
              (sid('TWO'), sid('FIVE')), (sid('FOUR'), sid('SIX')),
@@ -49,6 +58,8 @@ def build():
              ('MAPSEC_BIRTH_ISLAND_FRLG', 'MAPSEC_NAVEL_ROCK_FRLG'),
              (sid('FIVE'), 'MAPSEC_BIRTH_ISLAND_FRLG'),
              (sid('SEVEN'), 'MAPSEC_NAVEL_ROCK_FRLG')]
+    links += [('MAPSEC_ROUTE_125','JOURNEY_VERMILION_SEA'), ('MAPSEC_ROUTE_127',sid('FOUR')),
+              ('MAPSEC_ROUTE_129',sid('SIX')), ('MAPSEC_ROUTE_19','JOURNEY_VERMILION_SEA')]
     svg = ET.Element('{' + NS + '}svg', dict(viewBox='0 0 1288 1288', role='img',
         **{'aria-labelledby': 'title description'}))
     def add(tag, attrs=None, text=None):
@@ -96,6 +107,7 @@ def build():
         generator_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         atlas_sha256=hashlib.sha256(atlas_path.read_bytes()).hexdigest(),
         section_source_sha256=hashlib.sha256((ROOT / '.local/emerald-base/src/data/region_map/region_map_sections.json').read_bytes()).hexdigest(),
+        kanto_sections_sha256=hashlib.sha256(kanto_source.read_bytes()).hexdigest(),
         svg_sha256=hashlib.sha256(destination.read_bytes()).hexdigest())
     (ROOT / 'web/world-layout.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
     print('Square world chart generated with Route114/131 crossings; full campaign remains pending')

@@ -24,6 +24,10 @@ const assert = require('assert/strict');
     assert(placements.sevii_45[1] > placements.sevii_123[1]);
     assert(placements.sevii_67[1] > placements.sevii_45[1]);
     assert(data.surf_links.some(l => l.source === 'MAPSEC_ROUTE_131' && l.target === 'MAPSEC_SIX_ISLAND'));
+    assert(data.surf_links.some(l => l.source === 'MAPSEC_ROUTE_125' && l.target === 'JOURNEY_VERMILION_SEA'));
+    assert(data.surf_links.some(l => l.source === 'MAPSEC_ROUTE_127' && l.target === 'MAPSEC_FOUR_ISLAND'));
+    assert(data.surf_links.some(l => l.source === 'MAPSEC_ROUTE_129' && l.target === 'MAPSEC_SIX_ISLAND'));
+    assert(data.surf_links.some(l => l.source === 'MAPSEC_ROUTE_19' && l.target === 'JOURNEY_VERMILION_SEA'));
     assert.equal(await page.locator('#world-layout').evaluate(el => el.contentDocument.querySelectorAll('circle').length), data.points.length);
     assert.deepEqual(errors, []);
     fs.mkdirSync('mods/hoenn/validation', { recursive: true });
@@ -33,7 +37,8 @@ const assert = require('assert/strict');
     const report = { passed: true, browser: await browser.version(), points: data.points.length,
       data_sha256: crypto.createHash('sha256').update(fs.readFileSync('web/world-layout.json')).digest('hex'),
       checks: ['five native land charts load', 'square projection', 'Kanto north of Hoenn',
-        'Sevii in three eastern rows', 'Route131 to Six Island', 'Route114 southern crossing', 'mobile no overflow'],
+        'Sevii in three eastern rows', 'Route131 to Six Island', 'Route114 southern crossing', 'mobile no overflow',
+        'Route125/127/129 and Fuchsia ocean entrances'],
       page_errors: errors };
     fs.writeFileSync('mods/hoenn/validation/connected-world-browser.json', JSON.stringify(report, null, 2) + '\n');
     console.log('Connected-world browser checks passed');

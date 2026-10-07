@@ -1,0 +1,380 @@
+{
+  "status": "experimental_connected_east_coast_not_complete_campaign",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "maps": [
+    "JourneyHoennNorthSea",
+    "JourneyHoennMiddleSea",
+    "JourneyHoennSouthSea",
+    "JourneyFuchsiaSea"
+  ],
+  "channels": {
+    "Route125": [
+      73,
+      80,
+      8,
+      32
+    ],
+    "Route127": [
+      73,
+      80,
+      30,
+      54
+    ],
+    "Route129": [
+      73,
+      80,
+      8,
+      32
+    ],
+    "Route19_Frlg": [
+      20,
+      24,
+      40,
+      54
+    ]
+  },
+  "connections": {
+    "Route125": [
+      {
+        "map": "MAP_MOSSDEEP_CITY",
+        "offset": 0,
+        "direction": "down"
+      },
+      {
+        "map": "MAP_ROUTE124",
+        "offset": 0,
+        "direction": "left"
+      },
+      {
+        "map": "MAP_UNDERWATER_ROUTE125",
+        "offset": 0,
+        "direction": "dive"
+      },
+      {
+        "map": "MAP_JOURNEYHOENNNORTHSEA",
+        "direction": "right",
+        "offset": 8
+      }
+    ],
+    "Route127": [
+      {
+        "map": "MAP_MOSSDEEP_CITY",
+        "offset": 0,
+        "direction": "up"
+      },
+      {
+        "map": "MAP_ROUTE128",
+        "offset": 0,
+        "direction": "down"
+      },
+      {
+        "map": "MAP_ROUTE126",
+        "offset": 0,
+        "direction": "left"
+      },
+      {
+        "map": "MAP_UNDERWATER_ROUTE127",
+        "offset": 0,
+        "direction": "dive"
+      },
+      {
+        "map": "MAP_JOURNEYHOENNMIDDLESEA",
+        "direction": "right",
+        "offset": 30
+      }
+    ],
+    "Route129": [
+      {
+        "map": "MAP_ROUTE128",
+        "offset": 0,
+        "direction": "up"
+      },
+      {
+        "map": "MAP_ROUTE130",
+        "offset": 0,
+        "direction": "left"
+      },
+      {
+        "map": "MAP_UNDERWATER_ROUTE129",
+        "offset": 0,
+        "direction": "dive"
+      },
+      {
+        "map": "MAP_JOURNEYHOENNSOUTHSEA",
+        "direction": "right",
+        "offset": 8
+      }
+    ],
+    "Route19_Frlg": [
+      {
+        "map": "MAP_FUCHSIA_CITY",
+        "offset": -12,
+        "direction": "up"
+      },
+      {
+        "map": "MAP_ROUTE20",
+        "offset": 40,
+        "direction": "left"
+      },
+      {
+        "map": "MAP_JOURNEYFUCHSIASEA",
+        "direction": "right",
+        "offset": 40
+      }
+    ],
+    "JourneyWorldSea00": [
+      {
+        "map": "MAP_VERMILION_CITY",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA01",
+        "direction": "right",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYHOENNNORTHSEA",
+        "direction": "left",
+        "offset": 24
+      },
+      {
+        "map": "MAP_JOURNEYFUCHSIASEA",
+        "direction": "left",
+        "offset": 0
+      }
+    ],
+    "JourneyWorldSea04": [
+      {
+        "map": "MAP_FOUR_ISLAND_HARBOR",
+        "direction": "up",
+        "offset": 24
+      },
+      {
+        "map": "MAP_JOURNEYWORLDLANE10",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA05",
+        "direction": "right",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDLANE11",
+        "direction": "down",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYHOENNMIDDLESEA",
+        "direction": "left",
+        "offset": 0
+      }
+    ],
+    "JourneyWorldSea06": [
+      {
+        "map": "MAP_SIX_ISLAND_HARBOR",
+        "direction": "up",
+        "offset": 24
+      },
+      {
+        "map": "MAP_JOURNEYWORLDLANE11",
+        "direction": "up",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA07",
+        "direction": "right",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYPACIFIDLOGSEA",
+        "direction": "left",
+        "offset": 0
+      },
+      {
+        "map": "MAP_JOURNEYHOENNSOUTHSEA",
+        "direction": "down",
+        "offset": 0
+      }
+    ],
+    "JourneyHoennNorthSea": [
+      {
+        "map": "MAP_ROUTE125",
+        "direction": "left",
+        "offset": -8
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA00",
+        "direction": "right",
+        "offset": -24
+      }
+    ],
+    "JourneyHoennMiddleSea": [
+      {
+        "map": "MAP_ROUTE127",
+        "direction": "left",
+        "offset": -30
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA04",
+        "direction": "right",
+        "offset": 0
+      }
+    ],
+    "JourneyHoennSouthSea": [
+      {
+        "map": "MAP_ROUTE129",
+        "direction": "left",
+        "offset": -8
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA06",
+        "direction": "up",
+        "offset": 0
+      }
+    ],
+    "JourneyFuchsiaSea": [
+      {
+        "map": "MAP_ROUTE19",
+        "direction": "left",
+        "offset": -40
+      },
+      {
+        "map": "MAP_JOURNEYWORLDSEA00",
+        "direction": "right",
+        "offset": 0
+      }
+    ]
+  },
+  "preserved_event_sha256": {
+    "Route125": {
+      "object_events": "4a22143517eec926118667b715be2bff228a34bc5e3ec18ef9c8d54c4f6e30f6",
+      "warp_events": "ee04cc098f821d353ad9c0d357d59f2130080661ff5bdf0f875efc1c9510049e",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "56c7c8c4615ab5e24a761c64d186c4e3bfe79eb635a7c61ec433d3a0582ef3de"
+    },
+    "Route127": {
+      "object_events": "103a701ce74d4aa413f9705b42e4fee97572ab2d04157dc53c38ef8e1fb85e2e",
+      "warp_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "693c7db097f538314723db9baec9f0d220c2a88538dd971498f46fc911a60d97"
+    },
+    "Route129": {
+      "object_events": "512cb5d6bd9fccb1e1b1a5d2fad34b91266b9d095dc4247b7b2dd9263f79ad71",
+      "warp_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "Route19_Frlg": {
+      "object_events": "3526a0126f936a285b72f19d709e7df4a29ab252c09e73a38f1563685bcfbf51",
+      "warp_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "325f4ecc9b9d3202ced60bc5a26b561cb0e72e1f3a58d6fcaf37607975736d37"
+    },
+    "JourneyWorldSea00": {
+      "object_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "warp_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "JourneyWorldSea04": {
+      "object_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "warp_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "JourneyWorldSea06": {
+      "object_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "warp_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "coord_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bg_events": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  },
+  "original_sha256": {
+    "data/layouts/JourneyHoennNorthSea/map.bin": null,
+    "data/layouts/JourneyHoennNorthSea/border.bin": null,
+    "data/layouts/JourneyHoennMiddleSea/map.bin": null,
+    "data/layouts/JourneyHoennMiddleSea/border.bin": null,
+    "data/layouts/JourneyHoennSouthSea/map.bin": null,
+    "data/layouts/JourneyHoennSouthSea/border.bin": null,
+    "data/layouts/JourneyFuchsiaSea/map.bin": null,
+    "data/layouts/JourneyFuchsiaSea/border.bin": null,
+    "data/layouts/Route125/map.bin": "4edacf0c5d0ed044b9a265615742186db1c09db559707db4bef81c1aedd9827c",
+    "data/layouts/Route127/map.bin": "4defb0e8cd5024a4adb8a9d661740dc70f23987341a10c8e25f24ead535749a4",
+    "data/layouts/Route129/map.bin": "8f2667270702eb34efa808dbdafbee4d677e25bb2d89c24b51e577457f1011b6",
+    "data/layouts/Route19_Frlg/map.bin": "c8cc770496fd135bfc4f6a45415aa34fc683478621f72b25ffa1e0e0955b9e9c",
+    "data/maps/map_groups.json": "b28db58f544b9bdd509ec8fd1729706a6047a5be0ad89d12d5a6100180371a13",
+    "data/layouts/layouts.json": "72d423489975ced1d3422a550883a4259af82eebef1f66b2e87613b7f2d25b06",
+    "data/maps/JourneyHoennNorthSea/scripts.inc": null,
+    "data/maps/JourneyHoennMiddleSea/scripts.inc": null,
+    "data/maps/JourneyHoennSouthSea/scripts.inc": null,
+    "data/maps/JourneyFuchsiaSea/scripts.inc": null,
+    "data/event_scripts.s": "eb88431a54a16096e53f7e8fae5fe9e30b22bf5901678ba2eddde96d33a12478",
+    "data/maps/Route125/map.json": "dd9c367566ac66b8367d2f703e7d121e42d787be1de084ece8955387f6d5e3c9",
+    "data/maps/Route127/map.json": "7f1f624d39624f6d8e89c23b29dbba15fdb0da463fc4753d3895a74fa0d6fc62",
+    "data/maps/Route129/map.json": "cc3794ed331aee68511fc4ee741afa98b04f1441e53ba8464ac16093212d5bf7",
+    "data/maps/Route19_Frlg/map.json": "aa86d110d4a3abd9a37978ae7750170a3389d51c2bbcf77d1d4ea559ddf7b04b",
+    "data/maps/JourneyWorldSea00/map.json": "8c1bde226b1ec8a0fa25a6e9ebf281019461400502736359e4ee16d708130051",
+    "data/maps/JourneyWorldSea04/map.json": "3df3d93e0db095131d9f3a480b94932ede697a88559fd6409b279b69b7e4aa2a",
+    "data/maps/JourneyWorldSea06/map.json": "6e8d5af483625696aee3f761c1c220898af19019a44c8237e318f015eb6e03e3",
+    "data/maps/JourneyHoennNorthSea/map.json": null,
+    "data/maps/JourneyHoennMiddleSea/map.json": null,
+    "data/maps/JourneyHoennSouthSea/map.json": null,
+    "data/maps/JourneyFuchsiaSea/map.json": null
+  },
+  "prepared_sha256": {
+    "data/layouts/JourneyHoennNorthSea/map.bin": "8dbcee6768fa83c3a68c6bfd3d195afbaed438c348f49d01e1a8d8b467d9bb4d",
+    "data/layouts/JourneyHoennNorthSea/border.bin": "074adf1a5df149c325dc9367c1a2b807694f3b1e6c83bd26cf4a6f3840bb720b",
+    "data/layouts/JourneyHoennMiddleSea/map.bin": "8dbcee6768fa83c3a68c6bfd3d195afbaed438c348f49d01e1a8d8b467d9bb4d",
+    "data/layouts/JourneyHoennMiddleSea/border.bin": "074adf1a5df149c325dc9367c1a2b807694f3b1e6c83bd26cf4a6f3840bb720b",
+    "data/layouts/JourneyHoennSouthSea/map.bin": "8dbcee6768fa83c3a68c6bfd3d195afbaed438c348f49d01e1a8d8b467d9bb4d",
+    "data/layouts/JourneyHoennSouthSea/border.bin": "074adf1a5df149c325dc9367c1a2b807694f3b1e6c83bd26cf4a6f3840bb720b",
+    "data/layouts/JourneyFuchsiaSea/map.bin": "08b7c025e6bcfd8be5ecd075cc1ca77fa96fcbb5f3a39f7a5508a279f2e00668",
+    "data/layouts/JourneyFuchsiaSea/border.bin": "da32250fb74c947f1c44b37938d192a00eee00ccb3c727b2a9f4a37ea32497b1",
+    "data/layouts/Route125/map.bin": "4edacf0c5d0ed044b9a265615742186db1c09db559707db4bef81c1aedd9827c",
+    "data/layouts/Route127/map.bin": "4defb0e8cd5024a4adb8a9d661740dc70f23987341a10c8e25f24ead535749a4",
+    "data/layouts/Route129/map.bin": "8f2667270702eb34efa808dbdafbee4d677e25bb2d89c24b51e577457f1011b6",
+    "data/layouts/Route19_Frlg/map.bin": "227a45e72a915fcb5b75f84e8fe210904e11a4fe5e3919d30088f12659c4affb",
+    "data/maps/map_groups.json": "0922b48883b741515a4c2debe04b6d24d58169449ede7d286439d91e636dfd0e",
+    "data/layouts/layouts.json": "3cdbf9eced79e96685b8c3d1069a51c24b1b086a731859aca37c45048ede5cc5",
+    "data/maps/JourneyHoennNorthSea/scripts.inc": "7bba4b8e21cfb1fac32ee6c5e3c601ed82781a75d95b39653ab01ba05fbec379",
+    "data/maps/JourneyHoennMiddleSea/scripts.inc": "7ebe4bfeca9c25aee58add1c39bff99d3b88ac1a66e4613c82faa8e11df3e83d",
+    "data/maps/JourneyHoennSouthSea/scripts.inc": "c14f4d98ca3d7ecf01efa75e039488f372a49e4c7b90f98fffd7cd5639d51b45",
+    "data/maps/JourneyFuchsiaSea/scripts.inc": "0906e8fa24aaeab4794aa33c573985406e3279d1b2527a7505e4c8665abbca6a",
+    "data/event_scripts.s": "658812dd788e11d41011338f553da64ac3276272e0e35018eacea78c40ce2b96",
+    "data/maps/Route125/map.json": "8df5c3d4dc59754f0ced83dd1103c555005fc9b3736e152e6cb09b80294d7f64",
+    "data/maps/Route127/map.json": "b99f33d06197fbe357f9cf7771c82993054acb53ed543d981cd83a17e42d1d3e",
+    "data/maps/Route129/map.json": "2a67ce377569c8b6dc9e8075295b430393417d3a8d66d92d9c2711321d5c4db2",
+    "data/maps/Route19_Frlg/map.json": "c38d4a1e73ddfcc12b1c95c5877ffca844b7b7060cc5068a6acf9a0b0152b29a",
+    "data/maps/JourneyWorldSea00/map.json": "db27b02e2f13ed122ecdecd98e184e538d751ed0352dd5b2fd330724dc5e4003",
+    "data/maps/JourneyWorldSea04/map.json": "52757ad377af6347a6abd696f4809a42bebf047853fe77131cfa229ed557a9c5",
+    "data/maps/JourneyWorldSea06/map.json": "fae7a6bea210698197cd4ed53b1c91e1a738688f06496eaa66c1d44ef3f7b983",
+    "data/maps/JourneyHoennNorthSea/map.json": "694bae0598b63680d0034f44852077e17926401fc366bfc2473959b736b2dbff",
+    "data/maps/JourneyHoennMiddleSea/map.json": "e4747c9f8cbdbe8584fe80cef024c5d629189dbddb548b2fb66f71263ef9150b",
+    "data/maps/JourneyHoennSouthSea/map.json": "2a1fa616630de6b35250f8828bfd578f1b447340f6f87d8e6d7f2981335d3d29",
+    "data/maps/JourneyFuchsiaSea/map.json": "d8c991fbcdfece3e12e395eacad80a8d8643bcd7c89bba3bbfa5aa150c0bea23"
+  },
+  "native_eastern_routes_connected": [
+    "Route124",
+    "Route125",
+    "Route126",
+    "Route127",
+    "Route128",
+    "Route129",
+    "Route130",
+    "Route131"
+  ],
+  "ever_grande_entrance_preserved": true,
+  "full_story_validated": false,
+  "input_sha256": {
+    "data/maps/Route124/map.json": "200780bdca0a4b49fdddc8a6a763bc1fb0c8c182f086e24f7649766c08277313",
+    "data/maps/Route125/map.json": "dd9c367566ac66b8367d2f703e7d121e42d787be1de084ece8955387f6d5e3c9",
+    "data/maps/Route126/map.json": "04a444a2763bbc45947bfbf1689ae488b73837dc90c959e010b348928ddad980",
+    "data/maps/Route127/map.json": "7f1f624d39624f6d8e89c23b29dbba15fdb0da463fc4753d3895a74fa0d6fc62",
+    "data/maps/Route128/map.json": "d24ca27ff9e0103afb8d0a9829019097f6fcfea0e8884e2fffb89cfcc71b9d5d",
+    "data/maps/Route129/map.json": "cc3794ed331aee68511fc4ee741afa98b04f1441e53ba8464ac16093212d5bf7",
+    "data/maps/Route130/map.json": "1a3dff7b4f3ac3d9fa7d80edfa5793aab1e298e0a37b58fbd678690f88bd662b",
+    "data/maps/Route131/map.json": "913932c86c127e1fe069b3a7e32002bb2a0224ab5d57535423ea92d472d6aac6"
+  }
+}
