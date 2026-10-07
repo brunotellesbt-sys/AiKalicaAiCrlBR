@@ -1,0 +1,559 @@
+{
+  "title": "Atlas da jornada",
+  "width": 1288,
+  "height": 810,
+  "panels": [
+    {
+      "id": "kanto",
+      "name": "Kanto",
+      "x": 32,
+      "y": 80,
+      "width": 440,
+      "height": 300,
+      "image": "atlas/kanto.png",
+      "status": "playable"
+    },
+    {
+      "id": "sevii_123",
+      "name": "Sevii · ilhas 1–3",
+      "x": 520,
+      "y": 80,
+      "width": 352,
+      "height": 240,
+      "image": "atlas/sevii_123.png",
+      "status": "playable"
+    },
+    {
+      "id": "sevii_45",
+      "name": "Sevii · ilhas 4–5",
+      "x": 904,
+      "y": 80,
+      "width": 352,
+      "height": 240,
+      "image": "atlas/sevii_45.png",
+      "status": "playable"
+    },
+    {
+      "id": "sevii_67",
+      "name": "Sevii · ilhas 6–7",
+      "x": 904,
+      "y": 400,
+      "width": 352,
+      "height": 240,
+      "image": "atlas/sevii_67.png",
+      "status": "playable"
+    },
+    {
+      "id": "hoenn",
+      "name": "Hoenn · cartografia de Emerald",
+      "x": 32,
+      "y": 450,
+      "width": 560,
+      "height": 300,
+      "image": "atlas/hoenn.png",
+      "status": "planned"
+    }
+  ],
+  "points": [
+    {
+      "id": "MAPSEC_PALLET_TOWN",
+      "name": "Pallet Town",
+      "panel": "kanto",
+      "x": 122.0,
+      "y": 310.0,
+      "status": "playable",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_VIRIDIAN_CITY",
+      "name": "Viridian City",
+      "panel": "kanto",
+      "x": 122.0,
+      "y": 250.0,
+      "status": "playable",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_PEWTER_CITY",
+      "name": "Pewter City",
+      "panel": "kanto",
+      "x": 122.0,
+      "y": 170.0,
+      "status": "playable",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_CERULEAN_CITY",
+      "name": "Cerulean City",
+      "panel": "kanto",
+      "x": 322.0,
+      "y": 150.0,
+      "status": "playable",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_LAVENDER_TOWN",
+      "name": "Lavender Town",
+      "panel": "kanto",
+      "x": 402.0,
+      "y": 210.0,
+      "status": "playable",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_VERMILION_CITY",
+      "name": "Vermilion City",
+      "panel": "kanto",
+      "x": 322.0,
+      "y": 270.0,
+      "status": "playable",
+      "port_index": 0,
+      "map": "VermilionCity"
+    },
+    {
+      "id": "MAPSEC_CELADON_CITY",
+      "name": "Celadon City",
+      "panel": "kanto",
+      "x": 262.0,
+      "y": 210.0,
+      "status": "playable",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_FUCHSIA_CITY",
+      "name": "Fuchsia City",
+      "panel": "kanto",
+      "x": 282.0,
+      "y": 330.0,
+      "status": "playable",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_CINNABAR_ISLAND",
+      "name": "Cinnabar Island",
+      "panel": "kanto",
+      "x": 122.0,
+      "y": 370.0,
+      "status": "playable",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_INDIGO_PLATEAU",
+      "name": "Indigo Plateau",
+      "panel": "kanto",
+      "x": 82.0,
+      "y": 150.0,
+      "status": "playable",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_SAFFRON_CITY",
+      "name": "Saffron City",
+      "panel": "kanto",
+      "x": 322.0,
+      "y": 210.0,
+      "status": "playable",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_ONE_ISLAND",
+      "name": "One Island",
+      "panel": "sevii_123",
+      "x": 544.0,
+      "y": 216.0,
+      "status": "playable",
+      "port_index": 1,
+      "map": "OneIsland_Harbor"
+    },
+    {
+      "id": "MAPSEC_TWO_ISLAND",
+      "name": "Two Island",
+      "panel": "sevii_123",
+      "x": 672.0,
+      "y": 232.0,
+      "status": "playable",
+      "port_index": 2,
+      "map": "TwoIsland_Harbor"
+    },
+    {
+      "id": "MAPSEC_THREE_ISLAND",
+      "name": "Three Island",
+      "panel": "sevii_123",
+      "x": 816.0,
+      "y": 280.0,
+      "status": "playable",
+      "port_index": 3,
+      "map": "ThreeIsland_Harbor"
+    },
+    {
+      "id": "MAPSEC_FOUR_ISLAND",
+      "name": "Four Island",
+      "panel": "sevii_45",
+      "x": 960.0,
+      "y": 152.0,
+      "status": "playable",
+      "port_index": 4,
+      "map": "FourIsland_Harbor"
+    },
+    {
+      "id": "MAPSEC_FIVE_ISLAND",
+      "name": "Five Island",
+      "panel": "sevii_45",
+      "x": 1168.0,
+      "y": 264.0,
+      "status": "playable",
+      "port_index": 5,
+      "map": "FiveIsland_Harbor"
+    },
+    {
+      "id": "MAPSEC_SEVEN_ISLAND",
+      "name": "Seven Island",
+      "panel": "sevii_67",
+      "x": 992.0,
+      "y": 536.0,
+      "status": "playable",
+      "port_index": 7,
+      "map": "SevenIsland_Harbor"
+    },
+    {
+      "id": "MAPSEC_SIX_ISLAND",
+      "name": "Six Island",
+      "panel": "sevii_67",
+      "x": 1184.0,
+      "y": 488.0,
+      "status": "playable",
+      "port_index": 6,
+      "map": "SixIsland_Harbor"
+    },
+    {
+      "id": "MAPSEC_NAVEL_ROCK_FRLG",
+      "name": "Navel Rock",
+      "panel": "sevii_45",
+      "x": 1072.0,
+      "y": 216.0,
+      "status": "playable",
+      "port_index": 9,
+      "map": "NavelRock_Harbor"
+    },
+    {
+      "id": "MAPSEC_BIRTH_ISLAND_FRLG",
+      "name": "Birth Island",
+      "panel": "sevii_67",
+      "x": 1200.0,
+      "y": 616.0,
+      "status": "playable",
+      "port_index": 8,
+      "map": "BirthIsland_Harbor"
+    },
+    {
+      "id": "MAPSEC_LITTLEROOT_TOWN",
+      "name": "Littleroot Town",
+      "panel": "hoenn",
+      "x": 122.0,
+      "y": 680.0,
+      "status": "planned",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_OLDALE_TOWN",
+      "name": "Oldale Town",
+      "panel": "hoenn",
+      "x": 122.0,
+      "y": 640.0,
+      "status": "planned",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_DEWFORD_TOWN",
+      "name": "Dewford Town",
+      "panel": "hoenn",
+      "x": 82.0,
+      "y": 740.0,
+      "status": "planned",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_LAVARIDGE_TOWN",
+      "name": "Lavaridge Town",
+      "panel": "hoenn",
+      "x": 142.0,
+      "y": 520.0,
+      "status": "planned",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_FALLARBOR_TOWN",
+      "name": "Fallarbor Town",
+      "panel": "hoenn",
+      "x": 102.0,
+      "y": 460.0,
+      "status": "planned",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_VERDANTURF_TOWN",
+      "name": "Verdanturf Town",
+      "panel": "hoenn",
+      "x": 122.0,
+      "y": 580.0,
+      "status": "planned",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_PACIFIDLOG_TOWN",
+      "name": "Pacifidlog Town",
+      "panel": "hoenn",
+      "x": 382.0,
+      "y": 660.0,
+      "status": "planned",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_PETALBURG_CITY",
+      "name": "Petalburg City",
+      "panel": "hoenn",
+      "x": 62.0,
+      "y": 640.0,
+      "status": "planned",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_SLATEPORT_CITY",
+      "name": "Slateport City",
+      "panel": "hoenn",
+      "x": 202.0,
+      "y": 670.0,
+      "status": "planned",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_MAUVILLE_CITY",
+      "name": "Mauville City",
+      "panel": "hoenn",
+      "x": 212.0,
+      "y": 580.0,
+      "status": "planned",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_RUSTBORO_CITY",
+      "name": "Rustboro City",
+      "panel": "hoenn",
+      "x": 42.0,
+      "y": 570.0,
+      "status": "planned",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_FORTREE_CITY",
+      "name": "Fortree City",
+      "panel": "hoenn",
+      "x": 282.0,
+      "y": 460.0,
+      "status": "planned",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_LILYCOVE_CITY",
+      "name": "Lilycove City",
+      "panel": "hoenn",
+      "x": 412.0,
+      "y": 520.0,
+      "status": "planned",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_MOSSDEEP_CITY",
+      "name": "Mossdeep City",
+      "panel": "hoenn",
+      "x": 532.0,
+      "y": 560.0,
+      "status": "planned",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_SOOTOPOLIS_CITY",
+      "name": "Sootopolis City",
+      "panel": "hoenn",
+      "x": 462.0,
+      "y": 600.0,
+      "status": "planned",
+      "port_index": null,
+      "map": null
+    },
+    {
+      "id": "MAPSEC_EVER_GRANDE_CITY",
+      "name": "Ever Grande City",
+      "panel": "hoenn",
+      "x": 582.0,
+      "y": 630.0,
+      "status": "planned",
+      "port_index": null,
+      "map": null
+    }
+  ],
+  "links": [
+    {
+      "id": "sea-00-01",
+      "source": "MAPSEC_VERMILION_CITY",
+      "target": "MAPSEC_ONE_ISLAND",
+      "status": "playable",
+      "mode": "Surf",
+      "maps": [
+        "JourneySeaRoute00",
+        "JourneySeaRoute01"
+      ]
+    },
+    {
+      "id": "sea-01-02",
+      "source": "MAPSEC_ONE_ISLAND",
+      "target": "MAPSEC_TWO_ISLAND",
+      "status": "playable",
+      "mode": "Surf",
+      "maps": [
+        "JourneySeaRoute01",
+        "JourneySeaRoute02"
+      ]
+    },
+    {
+      "id": "sea-02-03",
+      "source": "MAPSEC_TWO_ISLAND",
+      "target": "MAPSEC_THREE_ISLAND",
+      "status": "playable",
+      "mode": "Surf",
+      "maps": [
+        "JourneySeaRoute02",
+        "JourneySeaRoute03"
+      ]
+    },
+    {
+      "id": "sea-03-04",
+      "source": "MAPSEC_THREE_ISLAND",
+      "target": "MAPSEC_FOUR_ISLAND",
+      "status": "playable",
+      "mode": "Surf",
+      "maps": [
+        "JourneySeaRoute03",
+        "JourneySeaRoute04"
+      ]
+    },
+    {
+      "id": "sea-04-05",
+      "source": "MAPSEC_FOUR_ISLAND",
+      "target": "MAPSEC_FIVE_ISLAND",
+      "status": "playable",
+      "mode": "Surf",
+      "maps": [
+        "JourneySeaRoute04",
+        "JourneySeaRoute05"
+      ]
+    },
+    {
+      "id": "sea-05-06",
+      "source": "MAPSEC_FIVE_ISLAND",
+      "target": "MAPSEC_SIX_ISLAND",
+      "status": "playable",
+      "mode": "Surf",
+      "maps": [
+        "JourneySeaRoute05",
+        "JourneySeaRoute06"
+      ]
+    },
+    {
+      "id": "sea-06-07",
+      "source": "MAPSEC_SIX_ISLAND",
+      "target": "MAPSEC_SEVEN_ISLAND",
+      "status": "playable",
+      "mode": "Surf",
+      "maps": [
+        "JourneySeaRoute06",
+        "JourneySeaRoute07"
+      ]
+    },
+    {
+      "id": "sea-07-08",
+      "source": "MAPSEC_SEVEN_ISLAND",
+      "target": "MAPSEC_BIRTH_ISLAND_FRLG",
+      "status": "playable",
+      "mode": "Surf",
+      "maps": [
+        "JourneySeaRoute07",
+        "JourneySeaRoute08"
+      ]
+    },
+    {
+      "id": "sea-08-09",
+      "source": "MAPSEC_BIRTH_ISLAND_FRLG",
+      "target": "MAPSEC_NAVEL_ROCK_FRLG",
+      "status": "playable",
+      "mode": "Surf",
+      "maps": [
+        "JourneySeaRoute08",
+        "JourneySeaRoute09"
+      ]
+    },
+    {
+      "id": "hoenn-surf",
+      "source": "MAPSEC_VERMILION_CITY",
+      "target": "MAPSEC_SLATEPORT_CITY",
+      "status": "planned",
+      "mode": "Surf"
+    },
+    {
+      "id": "hoenn-ferry",
+      "source": "MAPSEC_VERMILION_CITY",
+      "target": "MAPSEC_SLATEPORT_CITY",
+      "status": "planned",
+      "mode": "Barco com ticket"
+    }
+  ],
+  "projection": "Native regional maps arranged as an atlas; inter-panel links are schematic, not ocean distances.",
+  "hoenn_story_integrated": false,
+  "emerald_source_commit": "731ad5bfd6e6f265508d0efcca0ba42f9dcf5881",
+  "generator_sha256": "c9077094ebcb6c63161281d69ebb9c91581f135ed6690ae6606bb844fa200c14",
+  "sea_rom_sha256": "1caca9df7c4eaa560bfd67f5060015ad0560cb065947fd1ec0c97858e8937239",
+  "input_sha256": {
+    "leafgreen/graphics/region_map/region_map.pal": "35fc49a8f807f4d934381dfecd4440b1e5de24f7bab86bcb15859cc6adfcc83e",
+    "leafgreen/graphics/region_map/region_map.4bpp": "f9e8ddc403b2efcd9eaf87a8a1f16d9248f92d2372e42fb7aa88b09aed5fb3b4",
+    "leafgreen/graphics/region_map/kanto.bin": "c9f38c5d52099958c18efe737a45ba04ce8101b0eb349e9d2243bf8324d82b49",
+    "leafgreen/graphics/region_map/sevii_123.bin": "72c0b2615eaf061f5490779a3caf0470dbb88b08dd010c4887b8ed6d61eac124",
+    "leafgreen/graphics/region_map/sevii_45.bin": "cd68b8a70e21ac1f53344160234d1eabb7221040c62102c3a648faa550eb40db",
+    "leafgreen/graphics/region_map/sevii_67.bin": "2d0f7a665f88f15d28c213f7e490c232c3eeea8ffc12156aafce32499caa2400",
+    "emerald/graphics/pokenav/region_map/map.bin": "dcf3d464dad11083ece52687184c89ab069c108340ecf5540eb0f14c6d8c8096",
+    "emerald/graphics/pokenav/region_map/map.png": "c297c624313f1421c0ed5e4dd460b61720da00adeaac25a799dad94ce24051ab",
+    "emerald/graphics/pokenav/region_map/map.pal": "0a6136b38937c87d39e732709d854333f2c63df0dfd21880d861487d79e03686",
+    "leafgreen/src/data/region_map/region_map_sections.json": "061ad1da750c1868c4b9067fa328acbb4ff9433d25fe7db0d470d852772c3639",
+    "emerald/src/data/region_map/region_map_sections.json": "3a5f8c07c85c17f05cec06d049305962e9a9a1d2bd6eae935f3887866a4ad491"
+  },
+  "output_sha256": {
+    "hoenn.png": "0c5b10dff7b226d0c882910272b6658d0b28e0eafa6f5eba3718661e4f0fcf90",
+    "kanto.png": "12fa239e8f86a094a8e34ec871d46bc907a1f38ef8f9f1939bc197108108f5fb",
+    "sevii_123.png": "a6d8ec3bedca0587a5ea9d757aa8060ef5cfa0267b5a2894b1e07830185c08e9",
+    "sevii_45.png": "dfcd1cb0057f91089258bb9d00185ab8e133f8648a38dd0d1739329959b579a4",
+    "sevii_67.png": "f6a620c71e53a813a46cee8e4d1b9e9ed1225f77e9d96ac0622a2c2868a47297"
+  }
+}

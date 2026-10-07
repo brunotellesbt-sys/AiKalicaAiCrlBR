@@ -20,12 +20,12 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
-        with:
-          enablement: true
       - name: Stage static player and current ROM
         run: |
           mkdir -p /tmp/player-site/games
           cp web/index.html web/style.css web/player.js /tmp/player-site/
+          cp web/world-map.html web/world-map.css web/world-map.js web/world-map.json /tmp/player-site/
+          cp -R web/atlas /tmp/player-site/
           cp -R web/emulator /tmp/player-site/
           cp mods/sea-routes/LeafGreen-Journey-SeaRoutes.gba /tmp/player-site/games/
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3

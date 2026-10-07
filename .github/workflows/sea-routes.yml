@@ -1,10 +1,10 @@
 name: Validate Surf routes
 on:
   pull_request:
-    paths: ['mods/sea-routes/**', 'tools/sea_routes/**', 'web/**', '.github/workflows/sea-routes.yml']
+    paths: ['mods/sea-routes/**', 'tools/sea_routes/**', 'tools/hoenn/**', 'web/**', '.github/workflows/sea-routes.yml']
   push:
     branches: [main]
-    paths: ['mods/sea-routes/**', 'tools/sea_routes/**']
+    paths: ['mods/sea-routes/**', 'tools/sea_routes/**', 'tools/hoenn/**', 'web/**']
 permissions:
   contents: read
 jobs:
@@ -14,7 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - name: Verify catalog, water elevations, NPCs and connections
-        run: python3 -m unittest discover -s tools/sea_routes -v
+        run: |
+          python3 -m unittest discover -s tools/sea_routes -v
+          python3 -m unittest discover -s tools/hoenn -v
       - name: Install mGBA
         run: |
           sudo apt-get update

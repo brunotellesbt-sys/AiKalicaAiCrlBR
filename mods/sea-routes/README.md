@@ -55,9 +55,13 @@ alteração que desativa a consulta opcional de atualizações estão em
 `web/emulator/provenance.json`. Não é necessário um servidor de aplicação.
 
 O workflow `pages.yml` prepara o site e a ROM e publica no GitHub Pages quando
-estas alterações chegam à branch `main`. A ativação automática depende das
-permissões de Pages do repositório; se a organização proibir essa configuração,
-selecione GitHub Actions em Settings → Pages. A URL ainda depende desse deploy.
+estas alterações chegam à branch `main`. Primeiro, selecione GitHub Actions em
+Settings → Pages → Build and deployment → Source. A primeira tentativa de
+ativação automática falhou com `Resource not accessible by integration`; a
+integração desta sessão também não tem permissão para criar o site. Depois de
+ativar Pages, execute `Publish browser player` em Actions (Run workflow), ou
+aguarde o próximo push em `main` que altere o player. A URL depende desse deploy;
+o site ainda não está publicado. O atlas será servido em `world-map.html`.
 
 Para testar localmente:
 
@@ -69,3 +73,7 @@ python3 tools/sea_routes/serve.py
 Os saves ficam no navegador, com opção de exportação pelo menu do emulador.
 Uma ROM local também pode ser aberta; isso executa o arquivo selecionado e não
 o conecta a outro jogo ou transfere sua equipe.
+
+O player também oferece o [atlas externo da jornada](../hoenn/README.md#atlas-visual-da-jornada),
+com mapas nativos e acessos selecionáveis. Hoenn e suas travessias estão
+identificadas como planejadas. Esse atlas não altera o menu de mapas da ROM.

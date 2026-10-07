@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Atlas da jornada · LeafGreen</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="world-map.css">
+</head>
+<body>
+  <main>
+    <header><a href="index.html">← Voltar ao jogo</a><span>PRÉVIA EXTERNA · NÃO É O MENU DA ROM</span></header>
+    <h1>Atlas da jornada</h1>
+    <p class="intro">Cartografia real de Kanto, Sevii e do PokéNav de Emerald. Escolha um lugar para consultar os acessos.</p>
+    <section class="toolbar" aria-label="Controles do atlas">
+      <label>Lugar <select id="place" aria-label="Escolher lugar"></select></label>
+      <label><input id="show-routes" type="checkbox" checked> Mostrar ligações</label>
+      <label><input id="show-planned" type="checkbox" checked> Mostrar Hoenn planejada</label>
+      <button id="reset" type="button">Vermilion</button>
+    </section>
+    <figure id="atlas-board">
+      <svg id="atlas" viewBox="0 0 1288 810" role="group" aria-label="Atlas regional com lugares selecionáveis"></svg>
+      <figcaption><span class="legend current">● Surf jogável</span><span class="legend future">┄ Surf / barco para Hoenn: planejados</span><span>Regiões em painéis; ligações esquemáticas, sem escala de distância.</span></figcaption>
+    </figure>
+    <section id="details" aria-live="polite"><h2 id="place-name">Carregando atlas…</h2><p id="place-status"></p><ul id="connections"></ul></section>
+    <p class="notice">Hoenn aparece com seu mapa original para visualizar a expansão, mas seus mapas jogáveis, NPCs, história e travessias ainda não foram integrados. O atlas não acompanha a posição do seu save e não permite teleportar.</p>
+    <p>Teclado: Tab para acessar os lugares; Enter ou Espaço para selecionar. As setas percorrem os lugares quando um marcador está em foco.</p>
+  </main>
+  <script src="world-map.js"></script>
+</body>
+</html>
