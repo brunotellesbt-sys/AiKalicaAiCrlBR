@@ -1,0 +1,4561 @@
+{
+  "source_repository": "kerrymilan/roguemon-expansion",
+  "source_commit": "7606f57650627704c9aad965a031fd3a454590e2",
+  "original_sha256": "2f978f635b9593f6ca26ec42481c53a6b39f6cddd894ad5c062c1419fac58825",
+  "target_sha256": "6e1b1b53416a8e79289dc100d0b44bce0701d826979aeacde8fff653455d266b",
+  "patch_sha256": "336c9495909a5cd89ee85e52dc679f6e002330f4ac3644ed487ce36746624f09",
+  "size": 33554432,
+  "donor_asset_sha256": "111999e18bd51ec0790a06bc06e8de978add9c31bd1d3d94574354392929819c",
+  "terrestrial_hm_changes": {
+    "source_sha256": "3a0ffe4b9d36d8062bc421e6510dd60996b7a5899008d1c7c061835a8292ccdb",
+    "target_sha256": "6e1b1b53416a8e79289dc100d0b44bce0701d826979aeacde8fff653455d266b",
+    "size": 33554432,
+    "changed_bytes": 3229,
+    "maps_scanned": 455,
+    "layouts_scanned": 364,
+    "counts": {
+      "strength_boulder": 58,
+      "rock_smash_rock": 97,
+      "flash_maps": 2,
+      "cut_tree": 55,
+      "victory_road_gate_cells_opened": 8
+    },
+    "affected_maps": [
+      {
+        "map": "VictoryRoad_1F",
+        "group": 1,
+        "number": 39,
+        "removed": {
+          "strength_boulder": 3
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "VictoryRoad_2F",
+        "group": 1,
+        "number": 40,
+        "removed": {
+          "strength_boulder": 3
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "VictoryRoad_3F",
+        "group": 1,
+        "number": 41,
+        "removed": {
+          "strength_boulder": 4
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "CeruleanCave_1F",
+        "group": 1,
+        "number": 72,
+        "removed": {
+          "rock_smash_rock": 6
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "CeruleanCave_2F",
+        "group": 1,
+        "number": 73,
+        "removed": {
+          "rock_smash_rock": 10
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "CeruleanCave_B1F",
+        "group": 1,
+        "number": 74,
+        "removed": {
+          "rock_smash_rock": 9
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "RockTunnel_1F",
+        "group": 1,
+        "number": 81,
+        "removed": {},
+        "flash_removed": true
+      },
+      {
+        "map": "RockTunnel_B1F",
+        "group": 1,
+        "number": 82,
+        "removed": {
+          "rock_smash_rock": 15
+        },
+        "flash_removed": true
+      },
+      {
+        "map": "SeafoamIslands_1F",
+        "group": 1,
+        "number": 83,
+        "removed": {
+          "strength_boulder": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "SeafoamIslands_B1F",
+        "group": 1,
+        "number": 84,
+        "removed": {
+          "strength_boulder": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "SeafoamIslands_B2F",
+        "group": 1,
+        "number": 85,
+        "removed": {
+          "strength_boulder": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "SeafoamIslands_B3F",
+        "group": 1,
+        "number": 86,
+        "removed": {
+          "strength_boulder": 6
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "SeafoamIslands_B4F",
+        "group": 1,
+        "number": 87,
+        "removed": {
+          "strength_boulder": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_Exterior",
+        "group": 1,
+        "number": 97,
+        "removed": {
+          "rock_smash_rock": 6,
+          "strength_boulder": 5
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_SummitPath_2F",
+        "group": 1,
+        "number": 99,
+        "removed": {
+          "rock_smash_rock": 9
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_Summit",
+        "group": 1,
+        "number": 101,
+        "removed": {
+          "strength_boulder": 4
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_RubyPath_1F",
+        "group": 1,
+        "number": 103,
+        "removed": {
+          "rock_smash_rock": 5
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_RubyPath_B1F",
+        "group": 1,
+        "number": 104,
+        "removed": {
+          "rock_smash_rock": 4
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_RubyPath_B2F",
+        "group": 1,
+        "number": 105,
+        "removed": {
+          "strength_boulder": 3,
+          "rock_smash_rock": 4
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_RubyPath_B3F",
+        "group": 1,
+        "number": 106,
+        "removed": {
+          "strength_boulder": 4,
+          "rock_smash_rock": 6
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_RubyPath_B1F_Stairs",
+        "group": 1,
+        "number": 107,
+        "removed": {
+          "rock_smash_rock": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "MtEmber_RubyPath_B2F_Stairs",
+        "group": 1,
+        "number": 108,
+        "removed": {
+          "rock_smash_rock": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "ThreeIsland_BerryForest",
+        "group": 1,
+        "number": 109,
+        "removed": {
+          "cut_tree": 10
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "SevenIsland_SevaultCanyon_TanobyKey",
+        "group": 2,
+        "number": 35,
+        "removed": {
+          "strength_boulder": 7
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "ViridianCity",
+        "group": 3,
+        "number": 1,
+        "removed": {
+          "cut_tree": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "PewterCity",
+        "group": 3,
+        "number": 2,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "CeruleanCity",
+        "group": 3,
+        "number": 3,
+        "removed": {
+          "cut_tree": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "VermilionCity",
+        "group": 3,
+        "number": 5,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "CeladonCity",
+        "group": 3,
+        "number": 6,
+        "removed": {
+          "cut_tree": 3
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "FuchsiaCity",
+        "group": 3,
+        "number": 7,
+        "removed": {
+          "cut_tree": 4
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "TwoIsland",
+        "group": 3,
+        "number": 13,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "ThreeIsland",
+        "group": 3,
+        "number": 14,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "FourIsland",
+        "group": 3,
+        "number": 15,
+        "removed": {
+          "rock_smash_rock": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "FiveIsland",
+        "group": 3,
+        "number": 16,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route2",
+        "group": 3,
+        "number": 20,
+        "removed": {
+          "cut_tree": 5
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route7",
+        "group": 3,
+        "number": 25,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route8",
+        "group": 3,
+        "number": 26,
+        "removed": {
+          "cut_tree": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route9",
+        "group": 3,
+        "number": 27,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route10",
+        "group": 3,
+        "number": 28,
+        "removed": {
+          "cut_tree": 4
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route12",
+        "group": 3,
+        "number": 30,
+        "removed": {
+          "cut_tree": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route13",
+        "group": 3,
+        "number": 31,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route14",
+        "group": 3,
+        "number": 32,
+        "removed": {
+          "cut_tree": 3
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route15",
+        "group": 3,
+        "number": 33,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route16",
+        "group": 3,
+        "number": 34,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "Route25",
+        "group": 3,
+        "number": 44,
+        "removed": {
+          "cut_tree": 1
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "OneIsland_KindleRoad",
+        "group": 3,
+        "number": 45,
+        "removed": {
+          "rock_smash_rock": 13
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "ThreeIsland_BondBridge",
+        "group": 3,
+        "number": 48,
+        "removed": {
+          "cut_tree": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "FiveIsland_Meadow",
+        "group": 3,
+        "number": 56,
+        "removed": {
+          "cut_tree": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "SixIsland_RuinValley",
+        "group": 3,
+        "number": 61,
+        "removed": {
+          "strength_boulder": 8
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "SevenIsland_SevaultCanyon",
+        "group": 3,
+        "number": 64,
+        "removed": {
+          "rock_smash_rock": 6,
+          "strength_boulder": 2
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "CeladonCity_Gym",
+        "group": 10,
+        "number": 16,
+        "removed": {
+          "cut_tree": 3
+        },
+        "flash_removed": false
+      },
+      {
+        "map": "FuchsiaCity_WardensHouse",
+        "group": 11,
+        "number": 7,
+        "removed": {
+          "strength_boulder": 1
+        },
+        "flash_removed": false
+      }
+    ],
+    "scripts": [
+      {
+        "symbol": "VictoryRoad_1F_OnLoad",
+        "offset": 2040903,
+        "before": "216440640007",
+        "after": "166440640002"
+      },
+      {
+        "symbol": "VictoryRoad_2F_OnLoad",
+        "offset": 2041095,
+        "before": "216540640007051e251f08",
+        "after": "1665406400166640640002"
+      },
+      {
+        "symbol": "VictoryRoad_3F_OnLoad",
+        "offset": 2041515,
+        "before": "216740640007",
+        "after": "166740640002"
+      },
+      {
+        "symbol": "SeafoamIslands_B3F_OnTransition",
+        "offset": 2051886,
+        "before": "2bd2020700414f",
+        "after": "29d202a7160102"
+      },
+      {
+        "symbol": "SeafoamIslands_B3F_EventScript_EnterByFalling",
+        "offset": 2051958,
+        "before": "6916024000002b",
+        "after": "16014000006b02"
+      },
+      {
+        "symbol": "SeafoamIslands_B4F_OnTransition",
+        "offset": 2052154,
+        "before": "2bbe02070081501f082bd30207005650",
+        "after": "2bbe02070081501f0829d302a7170102"
+      },
+      {
+        "symbol": "SeafoamIslands_B4F_EventScript_EnterByFalling",
+        "offset": 2052341,
+        "before": "6916024000002b",
+        "after": "16014000006b02"
+      },
+      {
+        "symbol": "SeafoamIslands_B4F_OnLoad",
+        "offset": 2052229,
+        "before": "16024000002b4c0007003d511f082b4d000700",
+        "after": "a20c000e002b010000a20d000e002b01000002"
+      },
+      {
+        "symbol": "SeafoamIslands_B4F_EventScript_EnterOnCurrent",
+        "offset": 2052319,
+        "before": "694fff00f1501f",
+        "after": "16634000006b02"
+      },
+      {
+        "symbol": "SeafoamIslands_B4F_EventScript_UpwardCurrent",
+        "offset": 2052465,
+        "before": "694f",
+        "after": "6b02"
+      }
+    ]
+  },
+  "homes": [
+    {
+      "index": 1,
+      "city": "Pallet",
+      "house": "PalletTown_PlayersHouse_1F",
+      "original_map": "MAP_PALLET_TOWN_PLAYERS_HOUSE_1F",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_00",
+      "living_map": "MAP_JOURNEY_LIVING_00",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_MOM"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 2,
+      "city": "Viridian",
+      "house": "ViridianCity_House",
+      "original_map": "MAP_VIRIDIAN_CITY_HOUSE",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_01",
+      "living_map": "MAP_JOURNEY_LIVING_01",
+      "people": 2,
+      "original_people": [
+        "OBJ_EVENT_GFX_BALDING_MAN",
+        "OBJ_EVENT_GFX_LITTLE_GIRL"
+      ],
+      "roles": [
+        1,
+        4
+      ]
+    },
+    {
+      "index": 3,
+      "city": "Pewter",
+      "house": "PewterCity_House1",
+      "original_map": "MAP_PEWTER_CITY_HOUSE1",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_02",
+      "living_map": "MAP_JOURNEY_LIVING_02",
+      "people": 2,
+      "original_people": [
+        "OBJ_EVENT_GFX_BALDING_MAN",
+        "OBJ_EVENT_GFX_LITTLE_BOY"
+      ],
+      "roles": [
+        1,
+        3
+      ]
+    },
+    {
+      "index": 4,
+      "city": "Cerulean",
+      "house": "CeruleanCity_House1",
+      "original_map": "MAP_CERULEAN_CITY_HOUSE1",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_03",
+      "living_map": "MAP_JOURNEY_LIVING_03",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_GENTLEMAN"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 5,
+      "city": "Vermilion",
+      "house": "VermilionCity_House3",
+      "original_map": "MAP_VERMILION_CITY_HOUSE3",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_04",
+      "living_map": "MAP_JOURNEY_LIVING_04",
+      "people": 2,
+      "original_people": [
+        "OBJ_EVENT_GFX_LASS",
+        "OBJ_EVENT_GFX_BOY"
+      ],
+      "roles": [
+        1,
+        3
+      ]
+    },
+    {
+      "index": 6,
+      "city": "Lavender",
+      "house": "LavenderTown_House2",
+      "original_map": "MAP_LAVENDER_TOWN_HOUSE2",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_05",
+      "living_map": "MAP_JOURNEY_LIVING_05",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_GENTLEMAN"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "city": "Celadon",
+      "house": "CeladonCity_House1",
+      "original_map": "MAP_CELADON_CITY_HOUSE1",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_06",
+      "living_map": "MAP_JOURNEY_LIVING_06",
+      "people": 3,
+      "original_people": [
+        "OBJ_EVENT_GFX_OLD_MAN_2",
+        "OBJ_EVENT_GFX_ROCKET_M",
+        "OBJ_EVENT_GFX_ROCKET_M"
+      ],
+      "roles": [
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "index": 8,
+      "city": "Fuchsia",
+      "house": "FuchsiaCity_House1",
+      "original_map": "MAP_FUCHSIA_CITY_HOUSE1",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_07",
+      "living_map": "MAP_JOURNEY_LIVING_07",
+      "people": 3,
+      "original_people": [
+        "OBJ_EVENT_GFX_WOMAN_2",
+        "OBJ_EVENT_GFX_OLD_MAN_1",
+        "OBJ_EVENT_GFX_LITTLE_BOY"
+      ],
+      "roles": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "index": 9,
+      "city": "Saffron",
+      "house": "SaffronCity_House",
+      "original_map": "MAP_SAFFRON_CITY_HOUSE",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_08",
+      "living_map": "MAP_JOURNEY_LIVING_08",
+      "people": 2,
+      "original_people": [
+        "OBJ_EVENT_GFX_LASS",
+        "OBJ_EVENT_GFX_YOUNGSTER"
+      ],
+      "roles": [
+        1,
+        3
+      ]
+    },
+    {
+      "index": 10,
+      "city": "One Island",
+      "house": "OneIsland_House1",
+      "original_map": "MAP_ONE_ISLAND_HOUSE1",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_09",
+      "living_map": "MAP_JOURNEY_LIVING_09",
+      "people": 2,
+      "original_people": [
+        "OBJ_EVENT_GFX_OLD_WOMAN",
+        "OBJ_EVENT_GFX_OLD_MAN_1"
+      ],
+      "roles": [
+        1,
+        2
+      ]
+    },
+    {
+      "index": 11,
+      "city": "Two Island",
+      "house": "TwoIsland_House",
+      "original_map": "MAP_TWO_ISLAND_HOUSE",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_10",
+      "living_map": "MAP_JOURNEY_LIVING_10",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_FAT_MAN"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 12,
+      "city": "Three Island",
+      "house": "ThreeIsland_House3",
+      "original_map": "MAP_THREE_ISLAND_HOUSE3",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_11",
+      "living_map": "MAP_JOURNEY_LIVING_11",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_BEAUTY"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 13,
+      "city": "Four Island",
+      "house": "FourIsland_House2",
+      "original_map": "MAP_FOUR_ISLAND_HOUSE2",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_12",
+      "living_map": "MAP_JOURNEY_LIVING_12",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_MAN"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 14,
+      "city": "Five Island",
+      "house": "FiveIsland_House1",
+      "original_map": "MAP_FIVE_ISLAND_HOUSE1",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_13",
+      "living_map": "MAP_JOURNEY_LIVING_13",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_WOMAN_3"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 15,
+      "city": "Six Island",
+      "house": "SixIsland_House",
+      "original_map": "MAP_SIX_ISLAND_HOUSE",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_14",
+      "living_map": "MAP_JOURNEY_LIVING_14",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_OLD_MAN_1"
+      ],
+      "roles": [
+        1
+      ]
+    },
+    {
+      "index": 16,
+      "city": "Seven Island",
+      "house": "SevenIsland_House_Room1",
+      "original_map": "MAP_SEVEN_ISLAND_HOUSE_ROOM1",
+      "bedroom_map": "MAP_JOURNEY_BEDROOM_15",
+      "living_map": "MAP_JOURNEY_LIVING_15",
+      "people": 1,
+      "original_people": [
+        "OBJ_EVENT_GFX_OLD_WOMAN"
+      ],
+      "roles": [
+        1
+      ]
+    }
+  ],
+  "open_world": {
+    "ace_levels": [
+      14,
+      21,
+      28,
+      35,
+      42,
+      48,
+      54,
+      60
+    ],
+    "trainers": [
+      {
+        "name": "TRAINER_LEADER_BROCK",
+        "id": 414,
+        "gym": "PewterCity_Gym",
+        "highest": 14,
+        "levels": [
+          12,
+          14
+        ],
+        "species": [],
+        "leader": true,
+        "victory_script": "PewterCity_Gym_EventScript_DefeatedBrock"
+      },
+      {
+        "name": "TRAINER_CAMPER_LIAM",
+        "id": 142,
+        "gym": "PewterCity_Gym",
+        "highest": 11,
+        "levels": [
+          10,
+          11
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_LEADER_MISTY",
+        "id": 415,
+        "gym": "CeruleanCity_Gym",
+        "highest": 21,
+        "levels": [
+          18,
+          21
+        ],
+        "species": [],
+        "leader": true,
+        "victory_script": "CeruleanCity_Gym_EventScript_MistyDefeated"
+      },
+      {
+        "name": "TRAINER_PICNICKER_DIANA",
+        "id": 150,
+        "gym": "CeruleanCity_Gym",
+        "highest": 19,
+        "levels": [
+          19
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_SWIMMER_MALE_LUIS",
+        "id": 234,
+        "gym": "CeruleanCity_Gym",
+        "highest": 16,
+        "levels": [
+          16,
+          16
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_LEADER_LT_SURGE",
+        "id": 416,
+        "gym": "VermilionCity_Gym",
+        "highest": 24,
+        "levels": [
+          21,
+          18,
+          24
+        ],
+        "species": [],
+        "leader": true,
+        "victory_script": "VermilionCity_Gym_EventScript_DefeatedLtSurge"
+      },
+      {
+        "name": "TRAINER_SAILOR_DWAYNE",
+        "id": 141,
+        "gym": "VermilionCity_Gym",
+        "highest": 21,
+        "levels": [
+          21,
+          21
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_ENGINEER_BAILY",
+        "id": 220,
+        "gym": "VermilionCity_Gym",
+        "highest": 21,
+        "levels": [
+          21,
+          21
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_GENTLEMAN_TUCKER",
+        "id": 423,
+        "gym": "VermilionCity_Gym",
+        "highest": 23,
+        "levels": [
+          23
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_LEADER_ERIKA",
+        "id": 417,
+        "gym": "CeladonCity_Gym",
+        "highest": 29,
+        "levels": [
+          29,
+          24,
+          29
+        ],
+        "species": [],
+        "leader": true,
+        "victory_script": "CeladonCity_Gym_EventScript_DefeatedErika"
+      },
+      {
+        "name": "TRAINER_LASS_KAY",
+        "id": 132,
+        "gym": "CeladonCity_Gym",
+        "highest": 23,
+        "levels": [
+          23,
+          23
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_LASS_LISA",
+        "id": 133,
+        "gym": "CeladonCity_Gym",
+        "highest": 23,
+        "levels": [
+          23,
+          23
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_PICNICKER_TINA",
+        "id": 160,
+        "gym": "CeladonCity_Gym",
+        "highest": 24,
+        "levels": [
+          24,
+          24
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BEAUTY_BRIDGET",
+        "id": 265,
+        "gym": "CeladonCity_Gym",
+        "highest": 21,
+        "levels": [
+          21,
+          21,
+          21,
+          21
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BEAUTY_TAMIA",
+        "id": 266,
+        "gym": "CeladonCity_Gym",
+        "highest": 24,
+        "levels": [
+          24,
+          24
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BEAUTY_LORI",
+        "id": 267,
+        "gym": "CeladonCity_Gym",
+        "highest": 24,
+        "levels": [
+          24
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_COOLTRAINER_MARY",
+        "id": 402,
+        "gym": "CeladonCity_Gym",
+        "highest": 22,
+        "levels": [
+          22,
+          22,
+          22,
+          22,
+          22
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_LEADER_KOGA",
+        "id": 418,
+        "gym": "FuchsiaCity_Gym",
+        "highest": 43,
+        "levels": [
+          37,
+          39,
+          37,
+          43
+        ],
+        "species": [],
+        "leader": true,
+        "victory_script": "FuchsiaCity_Gym_EventScript_DefeatedKoga"
+      },
+      {
+        "name": "TRAINER_TAMER_PHIL",
+        "id": 294,
+        "gym": "FuchsiaCity_Gym",
+        "highest": 34,
+        "levels": [
+          34,
+          34
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_TAMER_EDGAR",
+        "id": 295,
+        "gym": "FuchsiaCity_Gym",
+        "highest": 33,
+        "levels": [
+          33,
+          33,
+          33
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_JUGGLER_KIRK",
+        "id": 288,
+        "gym": "FuchsiaCity_Gym",
+        "highest": 31,
+        "levels": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_JUGGLER_SHAWN",
+        "id": 289,
+        "gym": "FuchsiaCity_Gym",
+        "highest": 34,
+        "levels": [
+          34,
+          34
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_JUGGLER_KAYDEN",
+        "id": 292,
+        "gym": "FuchsiaCity_Gym",
+        "highest": 38,
+        "levels": [
+          38
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_JUGGLER_NATE",
+        "id": 293,
+        "gym": "FuchsiaCity_Gym",
+        "highest": 34,
+        "levels": [
+          34,
+          34
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_LEADER_SABRINA",
+        "id": 420,
+        "gym": "SaffronCity_Gym",
+        "highest": 43,
+        "levels": [
+          38,
+          37,
+          38,
+          43
+        ],
+        "species": [],
+        "leader": true,
+        "victory_script": "SaffronCity_Gym_EventScript_DefeatedSabrina"
+      },
+      {
+        "name": "TRAINER_PSYCHIC_JOHAN",
+        "id": 280,
+        "gym": "SaffronCity_Gym",
+        "highest": 31,
+        "levels": [
+          31,
+          31,
+          31,
+          31
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_PSYCHIC_TYRON",
+        "id": 281,
+        "gym": "SaffronCity_Gym",
+        "highest": 34,
+        "levels": [
+          34,
+          34
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_PSYCHIC_CAMERON",
+        "id": 282,
+        "gym": "SaffronCity_Gym",
+        "highest": 33,
+        "levels": [
+          33,
+          33,
+          33
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_PSYCHIC_PRESTON",
+        "id": 283,
+        "gym": "SaffronCity_Gym",
+        "highest": 38,
+        "levels": [
+          38
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_CHANNELER_AMANDA",
+        "id": 462,
+        "gym": "SaffronCity_Gym",
+        "highest": 34,
+        "levels": [
+          34,
+          34
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_CHANNELER_STACY",
+        "id": 463,
+        "gym": "SaffronCity_Gym",
+        "highest": 38,
+        "levels": [
+          38
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_CHANNELER_TASHA",
+        "id": 464,
+        "gym": "SaffronCity_Gym",
+        "highest": 33,
+        "levels": [
+          33,
+          33,
+          33
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_LEADER_BLAINE",
+        "id": 419,
+        "gym": "CinnabarIsland_Gym",
+        "highest": 47,
+        "levels": [
+          42,
+          40,
+          42,
+          47
+        ],
+        "species": [],
+        "leader": true,
+        "victory_script": "CinnabarIsland_Gym_EventScript_DefeatedBlaine"
+      },
+      {
+        "name": "TRAINER_SUPER_NERD_ERIK",
+        "id": 177,
+        "gym": "CinnabarIsland_Gym",
+        "highest": 36,
+        "levels": [
+          36,
+          36,
+          36
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_SUPER_NERD_AVERY",
+        "id": 178,
+        "gym": "CinnabarIsland_Gym",
+        "highest": 34,
+        "levels": [
+          34,
+          34,
+          34,
+          34
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_SUPER_NERD_DEREK",
+        "id": 179,
+        "gym": "CinnabarIsland_Gym",
+        "highest": 41,
+        "levels": [
+          41
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_SUPER_NERD_ZAC",
+        "id": 180,
+        "gym": "CinnabarIsland_Gym",
+        "highest": 37,
+        "levels": [
+          37,
+          37
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BURGLAR_QUINN",
+        "id": 213,
+        "gym": "CinnabarIsland_Gym",
+        "highest": 36,
+        "levels": [
+          36,
+          36,
+          36
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BURGLAR_RAMON",
+        "id": 214,
+        "gym": "CinnabarIsland_Gym",
+        "highest": 41,
+        "levels": [
+          41
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BURGLAR_DUSTY",
+        "id": 215,
+        "gym": "CinnabarIsland_Gym",
+        "highest": 37,
+        "levels": [
+          37,
+          37
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_LEADER_GIOVANNI",
+        "id": 350,
+        "gym": "ViridianCity_Gym",
+        "highest": 60,
+        "levels": [
+          56,
+          58,
+          56,
+          58,
+          58,
+          60
+        ],
+        "species": [],
+        "leader": true,
+        "victory_script": "ViridianCity_Gym_EventScript_DefeatedGiovanni"
+      },
+      {
+        "name": "TRAINER_TAMER_JASON",
+        "id": 296,
+        "gym": "ViridianCity_Gym",
+        "highest": 43,
+        "levels": [
+          43
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_TAMER_COLE",
+        "id": 297,
+        "gym": "ViridianCity_Gym",
+        "highest": 39,
+        "levels": [
+          39,
+          39
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BLACK_BELT_ATSUSHI",
+        "id": 322,
+        "gym": "ViridianCity_Gym",
+        "highest": 40,
+        "levels": [
+          40,
+          40
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BLACK_BELT_KIYO",
+        "id": 323,
+        "gym": "ViridianCity_Gym",
+        "highest": 43,
+        "levels": [
+          43
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_BLACK_BELT_TAKASHI",
+        "id": 324,
+        "gym": "ViridianCity_Gym",
+        "highest": 38,
+        "levels": [
+          38,
+          38,
+          38
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_COOLTRAINER_SAMUEL",
+        "id": 392,
+        "gym": "ViridianCity_Gym",
+        "highest": 39,
+        "levels": [
+          37,
+          37,
+          38,
+          39,
+          39
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_COOLTRAINER_YUJI",
+        "id": 400,
+        "gym": "ViridianCity_Gym",
+        "highest": 38,
+        "levels": [
+          38,
+          38,
+          38,
+          38,
+          38
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      },
+      {
+        "name": "TRAINER_COOLTRAINER_WARREN",
+        "id": 401,
+        "gym": "ViridianCity_Gym",
+        "highest": 39,
+        "levels": [
+          37,
+          37,
+          38,
+          39,
+          39
+        ],
+        "species": [],
+        "leader": false,
+        "victory_script": null
+      }
+    ],
+    "first_badge_item": "ITEM_POKE_FLUTE",
+    "league_requires_badges": 8,
+    "rival": "opposite-sex player sprite",
+    "viridian_leader": "BLUE"
+  },
+  "wild_world": {
+    "families": {
+      "SPECIES_ABRA": [
+        "SPECIES_ABRA",
+        "SPECIES_KADABRA",
+        "SPECIES_ALAKAZAM"
+      ],
+      "SPECIES_AZURILL": [
+        "SPECIES_AZURILL",
+        "SPECIES_MARILL",
+        "SPECIES_AZUMARILL"
+      ],
+      "SPECIES_BELLSPROUT": [
+        "SPECIES_BELLSPROUT",
+        "SPECIES_WEEPINBELL",
+        "SPECIES_VICTREEBEL"
+      ],
+      "SPECIES_CATERPIE": [
+        "SPECIES_CATERPIE",
+        "SPECIES_METAPOD",
+        "SPECIES_BUTTERFREE"
+      ],
+      "SPECIES_CHANSEY": [
+        "SPECIES_CHANSEY",
+        "SPECIES_BLISSEY",
+        "SPECIES_BLISSEY"
+      ],
+      "SPECIES_CLEFFA": [
+        "SPECIES_CLEFFA",
+        "SPECIES_CLEFAIRY",
+        "SPECIES_CLEFABLE"
+      ],
+      "SPECIES_CUBONE": [
+        "SPECIES_CUBONE",
+        "SPECIES_MAROWAK",
+        "SPECIES_MAROWAK"
+      ],
+      "SPECIES_DELIBIRD": [
+        "SPECIES_DELIBIRD",
+        "SPECIES_DELIBIRD",
+        "SPECIES_DELIBIRD"
+      ],
+      "SPECIES_DIGLETT": [
+        "SPECIES_DIGLETT",
+        "SPECIES_DUGTRIO",
+        "SPECIES_DUGTRIO"
+      ],
+      "SPECIES_DITTO": [
+        "SPECIES_DITTO",
+        "SPECIES_DITTO",
+        "SPECIES_DITTO"
+      ],
+      "SPECIES_DODUO": [
+        "SPECIES_DODUO",
+        "SPECIES_DODRIO",
+        "SPECIES_DODRIO"
+      ],
+      "SPECIES_DRATINI": [
+        "SPECIES_DRATINI",
+        "SPECIES_DRAGONAIR",
+        "SPECIES_DRAGONITE"
+      ],
+      "SPECIES_DROWZEE": [
+        "SPECIES_DROWZEE",
+        "SPECIES_HYPNO",
+        "SPECIES_HYPNO"
+      ],
+      "SPECIES_DUNSPARCE": [
+        "SPECIES_DUNSPARCE",
+        "SPECIES_DUNSPARCE",
+        "SPECIES_DUNSPARCE"
+      ],
+      "SPECIES_EKANS": [
+        "SPECIES_EKANS",
+        "SPECIES_ARBOK",
+        "SPECIES_ARBOK"
+      ],
+      "SPECIES_ELEKID": [
+        "SPECIES_ELEKID",
+        "SPECIES_ELECTABUZZ",
+        "SPECIES_ELECTABUZZ"
+      ],
+      "SPECIES_EXEGGCUTE": [
+        "SPECIES_EXEGGCUTE",
+        "SPECIES_EXEGGUTOR",
+        "SPECIES_EXEGGUTOR"
+      ],
+      "SPECIES_GASTLY": [
+        "SPECIES_GASTLY",
+        "SPECIES_HAUNTER",
+        "SPECIES_GENGAR"
+      ],
+      "SPECIES_GEODUDE": [
+        "SPECIES_GEODUDE",
+        "SPECIES_GRAVELER",
+        "SPECIES_GOLEM"
+      ],
+      "SPECIES_GOLDEEN": [
+        "SPECIES_GOLDEEN",
+        "SPECIES_SEAKING",
+        "SPECIES_SEAKING"
+      ],
+      "SPECIES_GRIMER": [
+        "SPECIES_GRIMER",
+        "SPECIES_MUK",
+        "SPECIES_MUK"
+      ],
+      "SPECIES_GROWLITHE": [
+        "SPECIES_GROWLITHE",
+        "SPECIES_ARCANINE",
+        "SPECIES_ARCANINE"
+      ],
+      "SPECIES_HERACROSS": [
+        "SPECIES_HERACROSS",
+        "SPECIES_HERACROSS",
+        "SPECIES_HERACROSS"
+      ],
+      "SPECIES_HOPPIP": [
+        "SPECIES_HOPPIP",
+        "SPECIES_SKIPLOOM",
+        "SPECIES_JUMPLUFF"
+      ],
+      "SPECIES_HORSEA": [
+        "SPECIES_HORSEA",
+        "SPECIES_SEADRA",
+        "SPECIES_KINGDRA"
+      ],
+      "SPECIES_IGGLYBUFF": [
+        "SPECIES_IGGLYBUFF",
+        "SPECIES_JIGGLYPUFF",
+        "SPECIES_WIGGLYTUFF"
+      ],
+      "SPECIES_KANGASKHAN": [
+        "SPECIES_KANGASKHAN",
+        "SPECIES_KANGASKHAN",
+        "SPECIES_KANGASKHAN"
+      ],
+      "SPECIES_KOFFING": [
+        "SPECIES_KOFFING",
+        "SPECIES_WEEZING",
+        "SPECIES_WEEZING"
+      ],
+      "SPECIES_KRABBY": [
+        "SPECIES_KRABBY",
+        "SPECIES_KINGLER",
+        "SPECIES_KINGLER"
+      ],
+      "SPECIES_LAPRAS": [
+        "SPECIES_LAPRAS",
+        "SPECIES_LAPRAS",
+        "SPECIES_LAPRAS"
+      ],
+      "SPECIES_LARVITAR": [
+        "SPECIES_LARVITAR",
+        "SPECIES_PUPITAR",
+        "SPECIES_TYRANITAR"
+      ],
+      "SPECIES_LEDYBA": [
+        "SPECIES_LEDYBA",
+        "SPECIES_LEDIAN",
+        "SPECIES_LEDIAN"
+      ],
+      "SPECIES_MACHOP": [
+        "SPECIES_MACHOP",
+        "SPECIES_MACHOKE",
+        "SPECIES_MACHAMP"
+      ],
+      "SPECIES_MAGBY": [
+        "SPECIES_MAGBY",
+        "SPECIES_MAGMAR",
+        "SPECIES_MAGMAR"
+      ],
+      "SPECIES_MAGIKARP": [
+        "SPECIES_MAGIKARP",
+        "SPECIES_GYARADOS",
+        "SPECIES_GYARADOS"
+      ],
+      "SPECIES_MAGNEMITE": [
+        "SPECIES_MAGNEMITE",
+        "SPECIES_MAGNETON",
+        "SPECIES_MAGNETON"
+      ],
+      "SPECIES_MANKEY": [
+        "SPECIES_MANKEY",
+        "SPECIES_PRIMEAPE",
+        "SPECIES_PRIMEAPE"
+      ],
+      "SPECIES_MANTINE": [
+        "SPECIES_MANTINE",
+        "SPECIES_MANTINE",
+        "SPECIES_MANTINE"
+      ],
+      "SPECIES_MEOWTH": [
+        "SPECIES_MEOWTH",
+        "SPECIES_PERSIAN",
+        "SPECIES_PERSIAN"
+      ],
+      "SPECIES_MISDREAVUS": [
+        "SPECIES_MISDREAVUS",
+        "SPECIES_MISDREAVUS",
+        "SPECIES_MISDREAVUS"
+      ],
+      "SPECIES_MURKROW": [
+        "SPECIES_MURKROW",
+        "SPECIES_MURKROW",
+        "SPECIES_MURKROW"
+      ],
+      "SPECIES_NATU": [
+        "SPECIES_NATU",
+        "SPECIES_XATU",
+        "SPECIES_XATU"
+      ],
+      "SPECIES_NIDORAN_F": [
+        "SPECIES_NIDORAN_F",
+        "SPECIES_NIDORINA",
+        "SPECIES_NIDOQUEEN"
+      ],
+      "SPECIES_NIDORAN_M": [
+        "SPECIES_NIDORAN_M",
+        "SPECIES_NIDORINO",
+        "SPECIES_NIDOKING"
+      ],
+      "SPECIES_ODDISH": [
+        "SPECIES_ODDISH",
+        "SPECIES_GLOOM",
+        "SPECIES_VILEPLUME"
+      ],
+      "SPECIES_ONIX": [
+        "SPECIES_ONIX",
+        "SPECIES_STEELIX",
+        "SPECIES_STEELIX"
+      ],
+      "SPECIES_PARAS": [
+        "SPECIES_PARAS",
+        "SPECIES_PARASECT",
+        "SPECIES_PARASECT"
+      ],
+      "SPECIES_PHANPY": [
+        "SPECIES_PHANPY",
+        "SPECIES_DONPHAN",
+        "SPECIES_DONPHAN"
+      ],
+      "SPECIES_PICHU": [
+        "SPECIES_PICHU",
+        "SPECIES_PIKACHU",
+        "SPECIES_RAICHU"
+      ],
+      "SPECIES_PIDGEY": [
+        "SPECIES_PIDGEY",
+        "SPECIES_PIDGEOTTO",
+        "SPECIES_PIDGEOT"
+      ],
+      "SPECIES_PINSIR": [
+        "SPECIES_PINSIR",
+        "SPECIES_PINSIR",
+        "SPECIES_PINSIR"
+      ],
+      "SPECIES_POLIWAG": [
+        "SPECIES_POLIWAG",
+        "SPECIES_POLIWHIRL",
+        "SPECIES_POLIWRATH"
+      ],
+      "SPECIES_PONYTA": [
+        "SPECIES_PONYTA",
+        "SPECIES_RAPIDASH",
+        "SPECIES_RAPIDASH"
+      ],
+      "SPECIES_PSYDUCK": [
+        "SPECIES_PSYDUCK",
+        "SPECIES_GOLDUCK",
+        "SPECIES_GOLDUCK"
+      ],
+      "SPECIES_QWILFISH": [
+        "SPECIES_QWILFISH",
+        "SPECIES_QWILFISH",
+        "SPECIES_QWILFISH"
+      ],
+      "SPECIES_RATTATA": [
+        "SPECIES_RATTATA",
+        "SPECIES_RATICATE",
+        "SPECIES_RATICATE"
+      ],
+      "SPECIES_REMORAID": [
+        "SPECIES_REMORAID",
+        "SPECIES_OCTILLERY",
+        "SPECIES_OCTILLERY"
+      ],
+      "SPECIES_RHYHORN": [
+        "SPECIES_RHYHORN",
+        "SPECIES_RHYDON",
+        "SPECIES_RHYDON"
+      ],
+      "SPECIES_SANDSHREW": [
+        "SPECIES_SANDSHREW",
+        "SPECIES_SANDSLASH",
+        "SPECIES_SANDSLASH"
+      ],
+      "SPECIES_SCYTHER": [
+        "SPECIES_SCYTHER",
+        "SPECIES_SCIZOR",
+        "SPECIES_SCIZOR"
+      ],
+      "SPECIES_SEEL": [
+        "SPECIES_SEEL",
+        "SPECIES_DEWGONG",
+        "SPECIES_DEWGONG"
+      ],
+      "SPECIES_SENTRET": [
+        "SPECIES_SENTRET",
+        "SPECIES_FURRET",
+        "SPECIES_FURRET"
+      ],
+      "SPECIES_SHELLDER": [
+        "SPECIES_SHELLDER",
+        "SPECIES_CLOYSTER",
+        "SPECIES_CLOYSTER"
+      ],
+      "SPECIES_SKARMORY": [
+        "SPECIES_SKARMORY",
+        "SPECIES_SKARMORY",
+        "SPECIES_SKARMORY"
+      ],
+      "SPECIES_SLOWPOKE": [
+        "SPECIES_SLOWPOKE",
+        "SPECIES_SLOWBRO",
+        "SPECIES_SLOWBRO"
+      ],
+      "SPECIES_SLUGMA": [
+        "SPECIES_SLUGMA",
+        "SPECIES_MAGCARGO",
+        "SPECIES_MAGCARGO"
+      ],
+      "SPECIES_SMEARGLE": [
+        "SPECIES_SMEARGLE",
+        "SPECIES_SMEARGLE",
+        "SPECIES_SMEARGLE"
+      ],
+      "SPECIES_SNEASEL": [
+        "SPECIES_SNEASEL",
+        "SPECIES_SNEASEL",
+        "SPECIES_SNEASEL"
+      ],
+      "SPECIES_SPEAROW": [
+        "SPECIES_SPEAROW",
+        "SPECIES_FEAROW",
+        "SPECIES_FEAROW"
+      ],
+      "SPECIES_SPINARAK": [
+        "SPECIES_SPINARAK",
+        "SPECIES_ARIADOS",
+        "SPECIES_ARIADOS"
+      ],
+      "SPECIES_STARYU": [
+        "SPECIES_STARYU",
+        "SPECIES_STARMIE",
+        "SPECIES_STARMIE"
+      ],
+      "SPECIES_SWINUB": [
+        "SPECIES_SWINUB",
+        "SPECIES_PILOSWINE",
+        "SPECIES_PILOSWINE"
+      ],
+      "SPECIES_TANGELA": [
+        "SPECIES_TANGELA",
+        "SPECIES_TANGELA",
+        "SPECIES_TANGELA"
+      ],
+      "SPECIES_TAUROS": [
+        "SPECIES_TAUROS",
+        "SPECIES_TAUROS",
+        "SPECIES_TAUROS"
+      ],
+      "SPECIES_TENTACOOL": [
+        "SPECIES_TENTACOOL",
+        "SPECIES_TENTACRUEL",
+        "SPECIES_TENTACRUEL"
+      ],
+      "SPECIES_UNOWN": [
+        "SPECIES_UNOWN",
+        "SPECIES_UNOWN",
+        "SPECIES_UNOWN"
+      ],
+      "SPECIES_VENONAT": [
+        "SPECIES_VENONAT",
+        "SPECIES_VENOMOTH",
+        "SPECIES_VENOMOTH"
+      ],
+      "SPECIES_VOLTORB": [
+        "SPECIES_VOLTORB",
+        "SPECIES_ELECTRODE",
+        "SPECIES_ELECTRODE"
+      ],
+      "SPECIES_VULPIX": [
+        "SPECIES_VULPIX",
+        "SPECIES_NINETALES",
+        "SPECIES_NINETALES"
+      ],
+      "SPECIES_WEEDLE": [
+        "SPECIES_WEEDLE",
+        "SPECIES_KAKUNA",
+        "SPECIES_BEEDRILL"
+      ],
+      "SPECIES_WOOPER": [
+        "SPECIES_WOOPER",
+        "SPECIES_QUAGSIRE",
+        "SPECIES_QUAGSIRE"
+      ],
+      "SPECIES_WYNAUT": [
+        "SPECIES_WYNAUT",
+        "SPECIES_WOBBUFFET",
+        "SPECIES_WOBBUFFET"
+      ],
+      "SPECIES_YANMA": [
+        "SPECIES_YANMA",
+        "SPECIES_YANMA",
+        "SPECIES_YANMA"
+      ],
+      "SPECIES_ZUBAT": [
+        "SPECIES_ZUBAT",
+        "SPECIES_GOLBAT",
+        "SPECIES_CROBAT"
+      ]
+    },
+    "pools": [
+      {
+        "map": "MAP_SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER",
+        "area": 0,
+        "families": [
+          "SPECIES_UNOWN"
+        ]
+      },
+      {
+        "map": "MAP_SEVEN_ISLAND_TANOBY_RUINS_LIPTOO_CHAMBER",
+        "area": 0,
+        "families": [
+          "SPECIES_UNOWN"
+        ]
+      },
+      {
+        "map": "MAP_SEVEN_ISLAND_TANOBY_RUINS_WEEPTH_CHAMBER",
+        "area": 0,
+        "families": [
+          "SPECIES_UNOWN"
+        ]
+      },
+      {
+        "map": "MAP_SEVEN_ISLAND_TANOBY_RUINS_DILFORD_CHAMBER",
+        "area": 0,
+        "families": [
+          "SPECIES_UNOWN"
+        ]
+      },
+      {
+        "map": "MAP_SEVEN_ISLAND_TANOBY_RUINS_SCUFIB_CHAMBER",
+        "area": 0,
+        "families": [
+          "SPECIES_UNOWN"
+        ]
+      },
+      {
+        "map": "MAP_SEVEN_ISLAND_TANOBY_RUINS_RIXY_CHAMBER",
+        "area": 0,
+        "families": [
+          "SPECIES_UNOWN"
+        ]
+      },
+      {
+        "map": "MAP_SEVEN_ISLAND_TANOBY_RUINS_VIAPOIS_CHAMBER",
+        "area": 0,
+        "families": [
+          "SPECIES_UNOWN"
+        ]
+      },
+      {
+        "map": "MAP_VIRIDIAN_FOREST",
+        "area": 0,
+        "families": [
+          "SPECIES_CATERPIE",
+          "SPECIES_WEEDLE",
+          "SPECIES_PICHU"
+        ]
+      },
+      {
+        "map": "MAP_MT_MOON_1F",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_PARAS",
+          "SPECIES_GEODUDE",
+          "SPECIES_CLEFFA"
+        ]
+      },
+      {
+        "map": "MAP_MT_MOON_B1F",
+        "area": 0,
+        "families": [
+          "SPECIES_PARAS"
+        ]
+      },
+      {
+        "map": "MAP_MT_MOON_B2F",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_PARAS",
+          "SPECIES_GEODUDE",
+          "SPECIES_CLEFFA"
+        ]
+      },
+      {
+        "map": "MAP_SSANNE_EXTERIOR",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_SSANNE_EXTERIOR",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SHELLDER",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_STARYU",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_DIGLETTS_CAVE_B1F",
+        "area": 0,
+        "families": [
+          "SPECIES_DIGLETT"
+        ]
+      },
+      {
+        "map": "MAP_VICTORY_ROAD_1F",
+        "area": 0,
+        "families": [
+          "SPECIES_EKANS",
+          "SPECIES_SANDSHREW",
+          "SPECIES_ZUBAT",
+          "SPECIES_MACHOP",
+          "SPECIES_GEODUDE",
+          "SPECIES_ONIX",
+          "SPECIES_CUBONE"
+        ]
+      },
+      {
+        "map": "MAP_VICTORY_ROAD_2F",
+        "area": 0,
+        "families": [
+          "SPECIES_EKANS",
+          "SPECIES_SANDSHREW",
+          "SPECIES_ZUBAT",
+          "SPECIES_MANKEY",
+          "SPECIES_MACHOP",
+          "SPECIES_GEODUDE",
+          "SPECIES_ONIX",
+          "SPECIES_CUBONE"
+        ]
+      },
+      {
+        "map": "MAP_VICTORY_ROAD_3F",
+        "area": 0,
+        "families": [
+          "SPECIES_EKANS",
+          "SPECIES_SANDSHREW",
+          "SPECIES_ZUBAT",
+          "SPECIES_MACHOP",
+          "SPECIES_GEODUDE",
+          "SPECIES_ONIX",
+          "SPECIES_CUBONE"
+        ]
+      },
+      {
+        "map": "MAP_POKEMON_MANSION_1F",
+        "area": 0,
+        "families": [
+          "SPECIES_RATTATA",
+          "SPECIES_VULPIX",
+          "SPECIES_GROWLITHE",
+          "SPECIES_GRIMER",
+          "SPECIES_KOFFING"
+        ]
+      },
+      {
+        "map": "MAP_POKEMON_MANSION_2F",
+        "area": 0,
+        "families": [
+          "SPECIES_RATTATA",
+          "SPECIES_VULPIX",
+          "SPECIES_GROWLITHE",
+          "SPECIES_GRIMER",
+          "SPECIES_KOFFING"
+        ]
+      },
+      {
+        "map": "MAP_POKEMON_MANSION_3F",
+        "area": 0,
+        "families": [
+          "SPECIES_RATTATA",
+          "SPECIES_VULPIX",
+          "SPECIES_GROWLITHE",
+          "SPECIES_GRIMER",
+          "SPECIES_KOFFING"
+        ]
+      },
+      {
+        "map": "MAP_POKEMON_MANSION_B1F",
+        "area": 0,
+        "families": [
+          "SPECIES_RATTATA",
+          "SPECIES_VULPIX",
+          "SPECIES_GROWLITHE",
+          "SPECIES_GRIMER",
+          "SPECIES_KOFFING",
+          "SPECIES_DITTO"
+        ]
+      },
+      {
+        "map": "MAP_SAFARI_ZONE_CENTER",
+        "area": 0,
+        "families": [
+          "SPECIES_NIDORAN_F",
+          "SPECIES_NIDORAN_M",
+          "SPECIES_PARAS",
+          "SPECIES_VENONAT",
+          "SPECIES_EXEGGCUTE",
+          "SPECIES_RHYHORN",
+          "SPECIES_CHANSEY",
+          "SPECIES_SCYTHER",
+          "SPECIES_PINSIR"
+        ]
+      },
+      {
+        "map": "MAP_SAFARI_ZONE_CENTER",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_SAFARI_ZONE_CENTER",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_POLIWAG",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_GOLDEEN",
+          "SPECIES_MAGIKARP",
+          "SPECIES_DRATINI"
+        ]
+      },
+      {
+        "map": "MAP_SAFARI_ZONE_EAST",
+        "area": 0,
+        "families": [
+          "SPECIES_NIDORAN_F",
+          "SPECIES_NIDORAN_M",
+          "SPECIES_PARAS",
+          "SPECIES_DODUO",
+          "SPECIES_EXEGGCUTE",
+          "SPECIES_KANGASKHAN",
+          "SPECIES_SCYTHER",
+          "SPECIES_PINSIR"
+        ]
+      },
+      {
+        "map": "MAP_SAFARI_ZONE_EAST",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_SAFARI_ZONE_EAST",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_POLIWAG",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_GOLDEEN",
+          "SPECIES_MAGIKARP",
+          "SPECIES_DRATINI"
+        ]
+      },
+      {
+        "map": "MAP_SAFARI_ZONE_NORTH",
+        "area": 0,
+        "families": [
+          "SPECIES_NIDORAN_F",
+          "SPECIES_NIDORAN_M",
+          "SPECIES_PARAS",
+          "SPECIES_VENONAT",
+          "SPECIES_EXEGGCUTE",
+          "SPECIES_RHYHORN",
+          "SPECIES_CHANSEY",
+          "SPECIES_TAUROS"
+        ]
+      },
+      {
+        "map": "MAP_SAFARI_ZONE_NORTH",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_SAFARI_ZONE_NORTH",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_POLIWAG",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_GOLDEEN",
+          "SPECIES_MAGIKARP",
+          "SPECIES_DRATINI"
+        ]
+      },
+      {
+        "map": "MAP_SAFARI_ZONE_WEST",
+        "area": 0,
+        "families": [
+          "SPECIES_NIDORAN_F",
+          "SPECIES_NIDORAN_M",
+          "SPECIES_VENONAT",
+          "SPECIES_DODUO",
+          "SPECIES_EXEGGCUTE",
+          "SPECIES_KANGASKHAN",
+          "SPECIES_TAUROS"
+        ]
+      },
+      {
+        "map": "MAP_SAFARI_ZONE_WEST",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_SAFARI_ZONE_WEST",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_POLIWAG",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_GOLDEEN",
+          "SPECIES_MAGIKARP",
+          "SPECIES_DRATINI"
+        ]
+      },
+      {
+        "map": "MAP_CERULEAN_CAVE_1F",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_PARAS",
+          "SPECIES_MANKEY",
+          "SPECIES_MACHOP",
+          "SPECIES_MAGNEMITE",
+          "SPECIES_VOLTORB",
+          "SPECIES_DITTO",
+          "SPECIES_WYNAUT"
+        ]
+      },
+      {
+        "map": "MAP_CERULEAN_CAVE_1F",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_CERULEAN_CAVE_1F",
+        "area": 2,
+        "families": [
+          "SPECIES_GEODUDE"
+        ]
+      },
+      {
+        "map": "MAP_CERULEAN_CAVE_1F",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_POLIWAG",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_GOLDEEN",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_CERULEAN_CAVE_2F",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_PARAS",
+          "SPECIES_ABRA",
+          "SPECIES_MACHOP",
+          "SPECIES_MAGNEMITE",
+          "SPECIES_VOLTORB",
+          "SPECIES_DITTO",
+          "SPECIES_WYNAUT"
+        ]
+      },
+      {
+        "map": "MAP_CERULEAN_CAVE_2F",
+        "area": 2,
+        "families": [
+          "SPECIES_GEODUDE"
+        ]
+      },
+      {
+        "map": "MAP_CERULEAN_CAVE_B1F",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_PARAS",
+          "SPECIES_ABRA",
+          "SPECIES_MACHOP",
+          "SPECIES_MAGNEMITE",
+          "SPECIES_VOLTORB",
+          "SPECIES_DITTO",
+          "SPECIES_WYNAUT"
+        ]
+      },
+      {
+        "map": "MAP_CERULEAN_CAVE_B1F",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_CERULEAN_CAVE_B1F",
+        "area": 2,
+        "families": [
+          "SPECIES_GEODUDE"
+        ]
+      },
+      {
+        "map": "MAP_CERULEAN_CAVE_B1F",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_POLIWAG",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_GOLDEEN",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_ROCK_TUNNEL_1F",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_MANKEY",
+          "SPECIES_MACHOP",
+          "SPECIES_GEODUDE",
+          "SPECIES_ONIX"
+        ]
+      },
+      {
+        "map": "MAP_ROCK_TUNNEL_B1F",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_MANKEY",
+          "SPECIES_MACHOP",
+          "SPECIES_GEODUDE",
+          "SPECIES_ONIX"
+        ]
+      },
+      {
+        "map": "MAP_ROCK_TUNNEL_B1F",
+        "area": 2,
+        "families": [
+          "SPECIES_GEODUDE"
+        ]
+      },
+      {
+        "map": "MAP_SEAFOAM_ISLANDS_1F",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_SEAFOAM_ISLANDS_B1F",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SEEL"
+        ]
+      },
+      {
+        "map": "MAP_SEAFOAM_ISLANDS_B2F",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SEEL"
+        ]
+      },
+      {
+        "map": "MAP_SEAFOAM_ISLANDS_B3F",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SEEL"
+        ]
+      },
+      {
+        "map": "MAP_SEAFOAM_ISLANDS_B3F",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SEEL",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA"
+        ]
+      },
+      {
+        "map": "MAP_SEAFOAM_ISLANDS_B3F",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_SEAFOAM_ISLANDS_B4F",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SEEL"
+        ]
+      },
+      {
+        "map": "MAP_SEAFOAM_ISLANDS_B4F",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SEEL",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA"
+        ]
+      },
+      {
+        "map": "MAP_SEAFOAM_ISLANDS_B4F",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_POKEMON_TOWER_3F",
+        "area": 0,
+        "families": [
+          "SPECIES_GASTLY",
+          "SPECIES_CUBONE"
+        ]
+      },
+      {
+        "map": "MAP_POKEMON_TOWER_4F",
+        "area": 0,
+        "families": [
+          "SPECIES_GASTLY",
+          "SPECIES_CUBONE"
+        ]
+      },
+      {
+        "map": "MAP_POKEMON_TOWER_5F",
+        "area": 0,
+        "families": [
+          "SPECIES_GASTLY",
+          "SPECIES_CUBONE"
+        ]
+      },
+      {
+        "map": "MAP_POKEMON_TOWER_6F",
+        "area": 0,
+        "families": [
+          "SPECIES_GASTLY",
+          "SPECIES_CUBONE"
+        ]
+      },
+      {
+        "map": "MAP_POKEMON_TOWER_7F",
+        "area": 0,
+        "families": [
+          "SPECIES_GASTLY",
+          "SPECIES_CUBONE"
+        ]
+      },
+      {
+        "map": "MAP_POWER_PLANT",
+        "area": 0,
+        "families": [
+          "SPECIES_MAGNEMITE",
+          "SPECIES_VOLTORB",
+          "SPECIES_PICHU",
+          "SPECIES_ELEKID"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_EXTERIOR",
+        "area": 0,
+        "families": [
+          "SPECIES_SPEAROW",
+          "SPECIES_MACHOP",
+          "SPECIES_GEODUDE",
+          "SPECIES_PONYTA",
+          "SPECIES_MAGBY"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_EXTERIOR",
+        "area": 2,
+        "families": [
+          "SPECIES_GEODUDE"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_SUMMIT_PATH_1F",
+        "area": 0,
+        "families": [
+          "SPECIES_MACHOP",
+          "SPECIES_GEODUDE"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_SUMMIT_PATH_2F",
+        "area": 0,
+        "families": [
+          "SPECIES_MACHOP",
+          "SPECIES_GEODUDE"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_SUMMIT_PATH_2F",
+        "area": 2,
+        "families": [
+          "SPECIES_GEODUDE"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_SUMMIT_PATH_3F",
+        "area": 0,
+        "families": [
+          "SPECIES_MACHOP",
+          "SPECIES_GEODUDE"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_RUBY_PATH_1F",
+        "area": 0,
+        "families": [
+          "SPECIES_MACHOP",
+          "SPECIES_GEODUDE"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_RUBY_PATH_1F",
+        "area": 2,
+        "families": [
+          "SPECIES_GEODUDE"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_RUBY_PATH_B1F",
+        "area": 0,
+        "families": [
+          "SPECIES_GEODUDE",
+          "SPECIES_SLUGMA"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_RUBY_PATH_B1F",
+        "area": 2,
+        "families": [
+          "SPECIES_GEODUDE"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_RUBY_PATH_B2F",
+        "area": 0,
+        "families": [
+          "SPECIES_GEODUDE",
+          "SPECIES_SLUGMA"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_RUBY_PATH_B2F",
+        "area": 2,
+        "families": [
+          "SPECIES_GEODUDE"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_RUBY_PATH_B3F",
+        "area": 0,
+        "families": [
+          "SPECIES_SLUGMA"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_RUBY_PATH_B3F",
+        "area": 2,
+        "families": [
+          "SPECIES_SLUGMA"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_RUBY_PATH_B1F_STAIRS",
+        "area": 0,
+        "families": [
+          "SPECIES_GEODUDE",
+          "SPECIES_SLUGMA"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_RUBY_PATH_B1F_STAIRS",
+        "area": 2,
+        "families": [
+          "SPECIES_GEODUDE"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_RUBY_PATH_B2F_STAIRS",
+        "area": 0,
+        "families": [
+          "SPECIES_GEODUDE",
+          "SPECIES_SLUGMA"
+        ]
+      },
+      {
+        "map": "MAP_MT_EMBER_RUBY_PATH_B2F_STAIRS",
+        "area": 2,
+        "families": [
+          "SPECIES_GEODUDE"
+        ]
+      },
+      {
+        "map": "MAP_THREE_ISLAND_BERRY_FOREST",
+        "area": 0,
+        "families": [
+          "SPECIES_PIDGEY",
+          "SPECIES_ODDISH",
+          "SPECIES_VENONAT",
+          "SPECIES_PSYDUCK",
+          "SPECIES_BELLSPROUT",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_DROWZEE",
+          "SPECIES_EXEGGCUTE"
+        ]
+      },
+      {
+        "map": "MAP_THREE_ISLAND_BERRY_FOREST",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_THREE_ISLAND_BERRY_FOREST",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_POLIWAG",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_GOLDEEN",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SEEL"
+        ]
+      },
+      {
+        "map": "MAP_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SEEL",
+          "SPECIES_WOOPER",
+          "SPECIES_AZURILL"
+        ]
+      },
+      {
+        "map": "MAP_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_POLIWAG",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_GOLDEEN",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_FOUR_ISLAND_ICEFALL_CAVE_1F",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_SEEL",
+          "SPECIES_SNEASEL",
+          "SPECIES_SWINUB",
+          "SPECIES_DELIBIRD"
+        ]
+      },
+      {
+        "map": "MAP_FOUR_ISLAND_ICEFALL_CAVE_B1F",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_SEEL",
+          "SPECIES_SNEASEL",
+          "SPECIES_SWINUB",
+          "SPECIES_DELIBIRD"
+        ]
+      },
+      {
+        "map": "MAP_FOUR_ISLAND_ICEFALL_CAVE_BACK",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SEEL"
+        ]
+      },
+      {
+        "map": "MAP_FOUR_ISLAND_ICEFALL_CAVE_BACK",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL",
+          "SPECIES_LAPRAS"
+        ]
+      },
+      {
+        "map": "MAP_FOUR_ISLAND_ICEFALL_CAVE_BACK",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SHELLDER",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_STARYU",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_SIX_ISLAND_PATTERN_BUSH",
+        "area": 0,
+        "families": [
+          "SPECIES_CATERPIE",
+          "SPECIES_WEEDLE",
+          "SPECIES_LEDYBA",
+          "SPECIES_SPINARAK",
+          "SPECIES_HERACROSS"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_LOST_CAVE_ROOM1",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_GASTLY",
+          "SPECIES_MURKROW",
+          "SPECIES_MISDREAVUS"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_LOST_CAVE_ROOM2",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_GASTLY",
+          "SPECIES_MURKROW",
+          "SPECIES_MISDREAVUS"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_LOST_CAVE_ROOM3",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_GASTLY",
+          "SPECIES_MURKROW",
+          "SPECIES_MISDREAVUS"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_LOST_CAVE_ROOM4",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_GASTLY",
+          "SPECIES_MURKROW",
+          "SPECIES_MISDREAVUS"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_LOST_CAVE_ROOM5",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_GASTLY",
+          "SPECIES_MURKROW",
+          "SPECIES_MISDREAVUS"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_LOST_CAVE_ROOM6",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_GASTLY",
+          "SPECIES_MURKROW",
+          "SPECIES_MISDREAVUS"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_LOST_CAVE_ROOM7",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_GASTLY",
+          "SPECIES_MURKROW",
+          "SPECIES_MISDREAVUS"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_LOST_CAVE_ROOM8",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_GASTLY",
+          "SPECIES_MURKROW",
+          "SPECIES_MISDREAVUS"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_LOST_CAVE_ROOM9",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_GASTLY",
+          "SPECIES_MURKROW",
+          "SPECIES_MISDREAVUS"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_LOST_CAVE_ROOM10",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_GASTLY",
+          "SPECIES_MURKROW",
+          "SPECIES_MISDREAVUS"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_LOST_CAVE_ROOM11",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_GASTLY",
+          "SPECIES_MURKROW",
+          "SPECIES_MISDREAVUS"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_LOST_CAVE_ROOM12",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_GASTLY",
+          "SPECIES_MURKROW",
+          "SPECIES_MISDREAVUS"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_LOST_CAVE_ROOM13",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_GASTLY",
+          "SPECIES_MURKROW",
+          "SPECIES_MISDREAVUS"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_LOST_CAVE_ROOM14",
+        "area": 0,
+        "families": [
+          "SPECIES_ZUBAT",
+          "SPECIES_GASTLY",
+          "SPECIES_MURKROW",
+          "SPECIES_MISDREAVUS"
+        ]
+      },
+      {
+        "map": "MAP_ONE_ISLAND_KINDLE_ROAD",
+        "area": 0,
+        "families": [
+          "SPECIES_SPEAROW",
+          "SPECIES_MEOWTH",
+          "SPECIES_PSYDUCK",
+          "SPECIES_GEODUDE",
+          "SPECIES_PONYTA",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_ONE_ISLAND_KINDLE_ROAD",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_ONE_ISLAND_KINDLE_ROAD",
+        "area": 2,
+        "families": [
+          "SPECIES_GEODUDE"
+        ]
+      },
+      {
+        "map": "MAP_ONE_ISLAND_KINDLE_ROAD",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_ONE_ISLAND_TREASURE_BEACH",
+        "area": 0,
+        "families": [
+          "SPECIES_SPEAROW",
+          "SPECIES_MEOWTH",
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_TANGELA"
+        ]
+      },
+      {
+        "map": "MAP_ONE_ISLAND_TREASURE_BEACH",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_ONE_ISLAND_TREASURE_BEACH",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_TWO_ISLAND_CAPE_BRINK",
+        "area": 0,
+        "families": [
+          "SPECIES_SPEAROW",
+          "SPECIES_ODDISH",
+          "SPECIES_MEOWTH",
+          "SPECIES_PSYDUCK",
+          "SPECIES_BELLSPROUT",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_TWO_ISLAND_CAPE_BRINK",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_TWO_ISLAND_CAPE_BRINK",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_POLIWAG",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_GOLDEEN",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_THREE_ISLAND_BOND_BRIDGE",
+        "area": 0,
+        "families": [
+          "SPECIES_PIDGEY",
+          "SPECIES_ODDISH",
+          "SPECIES_VENONAT",
+          "SPECIES_MEOWTH",
+          "SPECIES_PSYDUCK",
+          "SPECIES_BELLSPROUT",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_THREE_ISLAND_BOND_BRIDGE",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_THREE_ISLAND_BOND_BRIDGE",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_THREE_ISLAND_PORT",
+        "area": 0,
+        "families": [
+          "SPECIES_DUNSPARCE"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_RESORT_GORGEOUS",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL",
+          "SPECIES_HOPPIP"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_RESORT_GORGEOUS",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP",
+          "SPECIES_QWILFISH",
+          "SPECIES_REMORAID"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_WATER_LABYRINTH",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL",
+          "SPECIES_HOPPIP"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_WATER_LABYRINTH",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP",
+          "SPECIES_QWILFISH",
+          "SPECIES_REMORAID"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_MEADOW",
+        "area": 0,
+        "families": [
+          "SPECIES_PIDGEY",
+          "SPECIES_MEOWTH",
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SENTRET",
+          "SPECIES_HOPPIP"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_MEADOW",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL",
+          "SPECIES_HOPPIP"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_MEADOW",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP",
+          "SPECIES_QWILFISH",
+          "SPECIES_REMORAID"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_MEMORIAL_PILLAR",
+        "area": 0,
+        "families": [
+          "SPECIES_HOPPIP"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_MEMORIAL_PILLAR",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL",
+          "SPECIES_HOPPIP"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND_MEMORIAL_PILLAR",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP",
+          "SPECIES_QWILFISH",
+          "SPECIES_REMORAID"
+        ]
+      },
+      {
+        "map": "MAP_SIX_ISLAND_OUTCAST_ISLAND",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_SIX_ISLAND_OUTCAST_ISLAND",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP",
+          "SPECIES_QWILFISH",
+          "SPECIES_REMORAID"
+        ]
+      },
+      {
+        "map": "MAP_SIX_ISLAND_GREEN_PATH",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_SIX_ISLAND_GREEN_PATH",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP",
+          "SPECIES_QWILFISH",
+          "SPECIES_REMORAID"
+        ]
+      },
+      {
+        "map": "MAP_SIX_ISLAND_WATER_PATH",
+        "area": 0,
+        "families": [
+          "SPECIES_SPEAROW",
+          "SPECIES_ODDISH",
+          "SPECIES_MEOWTH",
+          "SPECIES_PSYDUCK",
+          "SPECIES_BELLSPROUT",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SENTRET"
+        ]
+      },
+      {
+        "map": "MAP_SIX_ISLAND_WATER_PATH",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_SIX_ISLAND_WATER_PATH",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP",
+          "SPECIES_QWILFISH",
+          "SPECIES_REMORAID"
+        ]
+      },
+      {
+        "map": "MAP_SIX_ISLAND_RUIN_VALLEY",
+        "area": 0,
+        "families": [
+          "SPECIES_SPEAROW",
+          "SPECIES_MEOWTH",
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_NATU",
+          "SPECIES_YANMA",
+          "SPECIES_WOOPER",
+          "SPECIES_AZURILL",
+          "SPECIES_WYNAUT"
+        ]
+      },
+      {
+        "map": "MAP_SIX_ISLAND_RUIN_VALLEY",
+        "area": 1,
+        "families": [
+          "SPECIES_WOOPER",
+          "SPECIES_AZURILL"
+        ]
+      },
+      {
+        "map": "MAP_SIX_ISLAND_RUIN_VALLEY",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_POLIWAG",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_GOLDEEN",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_SEVEN_ISLAND_TRAINER_TOWER",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL",
+          "SPECIES_MANTINE"
+        ]
+      },
+      {
+        "map": "MAP_SEVEN_ISLAND_TRAINER_TOWER",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP",
+          "SPECIES_QWILFISH",
+          "SPECIES_REMORAID"
+        ]
+      },
+      {
+        "map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE",
+        "area": 0,
+        "families": [
+          "SPECIES_SPEAROW",
+          "SPECIES_MEOWTH",
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SENTRET",
+          "SPECIES_PHANPY"
+        ]
+      },
+      {
+        "map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON",
+        "area": 0,
+        "families": [
+          "SPECIES_SPEAROW",
+          "SPECIES_MEOWTH",
+          "SPECIES_GEODUDE",
+          "SPECIES_ONIX",
+          "SPECIES_CUBONE",
+          "SPECIES_SKARMORY",
+          "SPECIES_PHANPY",
+          "SPECIES_LARVITAR"
+        ]
+      },
+      {
+        "map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON",
+        "area": 2,
+        "families": [
+          "SPECIES_GEODUDE"
+        ]
+      },
+      {
+        "map": "MAP_SEVEN_ISLAND_TANOBY_RUINS",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL",
+          "SPECIES_MANTINE"
+        ]
+      },
+      {
+        "map": "MAP_SEVEN_ISLAND_TANOBY_RUINS",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP",
+          "SPECIES_QWILFISH",
+          "SPECIES_REMORAID"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE1",
+        "area": 0,
+        "families": [
+          "SPECIES_PIDGEY",
+          "SPECIES_RATTATA"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE2",
+        "area": 0,
+        "families": [
+          "SPECIES_CATERPIE",
+          "SPECIES_WEEDLE",
+          "SPECIES_PIDGEY",
+          "SPECIES_RATTATA"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE3",
+        "area": 0,
+        "families": [
+          "SPECIES_PIDGEY",
+          "SPECIES_SPEAROW",
+          "SPECIES_NIDORAN_F",
+          "SPECIES_NIDORAN_M",
+          "SPECIES_MANKEY",
+          "SPECIES_IGGLYBUFF"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE4",
+        "area": 0,
+        "families": [
+          "SPECIES_RATTATA",
+          "SPECIES_SPEAROW",
+          "SPECIES_EKANS",
+          "SPECIES_SANDSHREW",
+          "SPECIES_MANKEY"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE4",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE4",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE5",
+        "area": 0,
+        "families": [
+          "SPECIES_PIDGEY",
+          "SPECIES_ODDISH",
+          "SPECIES_MEOWTH",
+          "SPECIES_BELLSPROUT"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE6",
+        "area": 0,
+        "families": [
+          "SPECIES_PIDGEY",
+          "SPECIES_ODDISH",
+          "SPECIES_MEOWTH",
+          "SPECIES_BELLSPROUT"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE6",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE6",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_POLIWAG",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_GOLDEEN",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE7",
+        "area": 0,
+        "families": [
+          "SPECIES_PIDGEY",
+          "SPECIES_VULPIX",
+          "SPECIES_ODDISH",
+          "SPECIES_MEOWTH",
+          "SPECIES_GROWLITHE",
+          "SPECIES_BELLSPROUT"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE8",
+        "area": 0,
+        "families": [
+          "SPECIES_PIDGEY",
+          "SPECIES_EKANS",
+          "SPECIES_SANDSHREW",
+          "SPECIES_VULPIX",
+          "SPECIES_MEOWTH",
+          "SPECIES_GROWLITHE"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE9",
+        "area": 0,
+        "families": [
+          "SPECIES_RATTATA",
+          "SPECIES_SPEAROW",
+          "SPECIES_EKANS",
+          "SPECIES_SANDSHREW"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE10",
+        "area": 0,
+        "families": [
+          "SPECIES_SPEAROW",
+          "SPECIES_EKANS",
+          "SPECIES_SANDSHREW",
+          "SPECIES_VOLTORB"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE10",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE10",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE11",
+        "area": 0,
+        "families": [
+          "SPECIES_SPEAROW",
+          "SPECIES_EKANS",
+          "SPECIES_SANDSHREW",
+          "SPECIES_DROWZEE"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE11",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE11",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE12",
+        "area": 0,
+        "families": [
+          "SPECIES_PIDGEY",
+          "SPECIES_ODDISH",
+          "SPECIES_VENONAT",
+          "SPECIES_BELLSPROUT"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE12",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE12",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE13",
+        "area": 0,
+        "families": [
+          "SPECIES_PIDGEY",
+          "SPECIES_ODDISH",
+          "SPECIES_VENONAT",
+          "SPECIES_BELLSPROUT",
+          "SPECIES_DITTO"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE13",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE13",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE14",
+        "area": 0,
+        "families": [
+          "SPECIES_PIDGEY",
+          "SPECIES_ODDISH",
+          "SPECIES_VENONAT",
+          "SPECIES_BELLSPROUT",
+          "SPECIES_DITTO"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE15",
+        "area": 0,
+        "families": [
+          "SPECIES_PIDGEY",
+          "SPECIES_ODDISH",
+          "SPECIES_VENONAT",
+          "SPECIES_BELLSPROUT",
+          "SPECIES_DITTO"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE16",
+        "area": 0,
+        "families": [
+          "SPECIES_RATTATA",
+          "SPECIES_SPEAROW",
+          "SPECIES_DODUO"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE17",
+        "area": 0,
+        "families": [
+          "SPECIES_RATTATA",
+          "SPECIES_SPEAROW",
+          "SPECIES_DODUO"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE18",
+        "area": 0,
+        "families": [
+          "SPECIES_RATTATA",
+          "SPECIES_SPEAROW",
+          "SPECIES_DODUO"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE19",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE19",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE20",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE20",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE21_NORTH",
+        "area": 0,
+        "families": [
+          "SPECIES_TANGELA"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE21_NORTH",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE21_NORTH",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE21_SOUTH",
+        "area": 0,
+        "families": [
+          "SPECIES_TANGELA"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE21_SOUTH",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE21_SOUTH",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE22",
+        "area": 0,
+        "families": [
+          "SPECIES_RATTATA",
+          "SPECIES_SPEAROW",
+          "SPECIES_MANKEY"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE22",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE22",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_POLIWAG",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_GOLDEEN",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE23",
+        "area": 0,
+        "families": [
+          "SPECIES_SPEAROW",
+          "SPECIES_EKANS",
+          "SPECIES_SANDSHREW",
+          "SPECIES_MANKEY"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE23",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE23",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_POLIWAG",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_GOLDEEN",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE24",
+        "area": 0,
+        "families": [
+          "SPECIES_CATERPIE",
+          "SPECIES_WEEDLE",
+          "SPECIES_PIDGEY",
+          "SPECIES_ODDISH",
+          "SPECIES_ABRA",
+          "SPECIES_BELLSPROUT"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE24",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE24",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE25",
+        "area": 0,
+        "families": [
+          "SPECIES_CATERPIE",
+          "SPECIES_WEEDLE",
+          "SPECIES_PIDGEY",
+          "SPECIES_ODDISH",
+          "SPECIES_ABRA",
+          "SPECIES_BELLSPROUT"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE25",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_ROUTE25",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_POLIWAG",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_GOLDEEN",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_PALLET_TOWN",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_PALLET_TOWN",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SHELLDER",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_STARYU",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_VIRIDIAN_CITY",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_VIRIDIAN_CITY",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_POLIWAG",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_GOLDEEN",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_CERULEAN_CITY",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_CERULEAN_CITY",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_VERMILION_CITY",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_VERMILION_CITY",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SHELLDER",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_STARYU",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_CELADON_CITY",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_KOFFING"
+        ]
+      },
+      {
+        "map": "MAP_CELADON_CITY",
+        "area": 3,
+        "families": [
+          "SPECIES_GRIMER",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_FUCHSIA_CITY",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE"
+        ]
+      },
+      {
+        "map": "MAP_FUCHSIA_CITY",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_POLIWAG",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_GOLDEEN",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_CINNABAR_ISLAND",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_CINNABAR_ISLAND",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SHELLDER",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_STARYU",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_ONE_ISLAND",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL"
+        ]
+      },
+      {
+        "map": "MAP_ONE_ISLAND",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SHELLDER",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_STARYU",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_FOUR_ISLAND",
+        "area": 1,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_WOOPER",
+          "SPECIES_AZURILL"
+        ]
+      },
+      {
+        "map": "MAP_FOUR_ISLAND",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_POLIWAG",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_GOLDEEN",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND",
+        "area": 1,
+        "families": [
+          "SPECIES_TENTACOOL",
+          "SPECIES_HOPPIP"
+        ]
+      },
+      {
+        "map": "MAP_FIVE_ISLAND",
+        "area": 3,
+        "families": [
+          "SPECIES_PSYDUCK",
+          "SPECIES_SLOWPOKE",
+          "SPECIES_SHELLDER",
+          "SPECIES_KRABBY",
+          "SPECIES_HORSEA",
+          "SPECIES_STARYU",
+          "SPECIES_MAGIKARP"
+        ]
+      },
+      {
+        "map": "MAP_SIX_ISLAND_ALTERING_CAVE",
+        "area": 0,
+        "families": [
+          "SPECIES_SMEARGLE"
+        ]
+      }
+    ],
+    "fire_red_exclusive_wild_species": [
+      "SPECIES_ARBOK",
+      "SPECIES_DELIBIRD",
+      "SPECIES_EKANS",
+      "SPECIES_ELECTABUZZ",
+      "SPECIES_GLOOM",
+      "SPECIES_GOLDUCK",
+      "SPECIES_GROWLITHE",
+      "SPECIES_MURKROW",
+      "SPECIES_ODDISH",
+      "SPECIES_PSYDUCK",
+      "SPECIES_QWILFISH",
+      "SPECIES_SCYTHER",
+      "SPECIES_SEADRA",
+      "SPECIES_SHELLDER",
+      "SPECIES_SKARMORY",
+      "SPECIES_WEEZING",
+      "SPECIES_WOOPER"
+    ]
+  },
+  "imported": {
+    "donor_sha256": "b3007eaccb1ae087dcb33389c4a0f1c0092e6b5b1650a28e3f9482929c55176b",
+    "species_count": 859,
+    "base_species_count": 649,
+    "form_count": 210,
+    "mega_count": 47,
+    "missing_base_species": [
+      650,
+      651,
+      652,
+      653,
+      654,
+      655,
+      656,
+      657,
+      658,
+      659,
+      660,
+      661,
+      662,
+      663,
+      664,
+      665,
+      666,
+      667,
+      668,
+      669,
+      670,
+      671,
+      672,
+      673,
+      674,
+      675,
+      676,
+      677,
+      678,
+      679,
+      680,
+      681,
+      682,
+      683,
+      684,
+      685,
+      686,
+      687,
+      688,
+      689,
+      690,
+      691,
+      692,
+      693,
+      694,
+      695,
+      696,
+      697,
+      698,
+      699,
+      700,
+      701,
+      702,
+      703,
+      704,
+      705,
+      706,
+      707,
+      708,
+      709,
+      710,
+      711,
+      712,
+      713,
+      714,
+      715,
+      716,
+      717,
+      718,
+      719,
+      720,
+      721,
+      722,
+      723,
+      724,
+      725,
+      726,
+      727,
+      728,
+      729,
+      730,
+      731,
+      732,
+      733,
+      734,
+      735,
+      736,
+      737,
+      738,
+      739,
+      740,
+      741,
+      742,
+      743,
+      744,
+      745,
+      746,
+      747,
+      748,
+      749,
+      750,
+      751,
+      752,
+      753,
+      754,
+      755,
+      756,
+      757,
+      758,
+      759,
+      760,
+      761,
+      762,
+      763,
+      764,
+      765,
+      766,
+      767,
+      768,
+      769,
+      770,
+      771,
+      772,
+      773,
+      774,
+      775,
+      776,
+      777,
+      778,
+      779,
+      780,
+      781,
+      782,
+      783,
+      784,
+      785,
+      786,
+      787,
+      788,
+      789,
+      790,
+      791,
+      792,
+      793,
+      794,
+      795,
+      796,
+      797,
+      798,
+      799,
+      800,
+      801,
+      802,
+      803,
+      804,
+      805,
+      806,
+      807,
+      808,
+      809,
+      810,
+      811,
+      812,
+      813,
+      814,
+      815,
+      816,
+      817,
+      818,
+      819,
+      820,
+      821,
+      822,
+      823,
+      824,
+      825,
+      826,
+      827,
+      828,
+      829,
+      830,
+      831,
+      832,
+      833,
+      834,
+      835,
+      836,
+      837,
+      838,
+      839,
+      840,
+      841,
+      842,
+      843,
+      844,
+      845,
+      846,
+      847,
+      848,
+      849,
+      850,
+      851,
+      852,
+      853,
+      854,
+      855,
+      856,
+      857,
+      858,
+      859,
+      860,
+      861,
+      862,
+      863,
+      864,
+      865,
+      866,
+      867,
+      868,
+      869,
+      870,
+      871,
+      872,
+      873,
+      874,
+      875,
+      876,
+      877,
+      878,
+      879,
+      880,
+      881,
+      882,
+      883,
+      884,
+      885,
+      886,
+      887,
+      888,
+      889,
+      890,
+      891,
+      892,
+      893,
+      894,
+      895,
+      896,
+      897,
+      898,
+      899,
+      900,
+      901,
+      902,
+      903,
+      904,
+      905,
+      906,
+      907,
+      908,
+      909,
+      910,
+      911,
+      912,
+      913,
+      914,
+      915,
+      916,
+      917,
+      918,
+      919,
+      920,
+      921,
+      922,
+      923,
+      924,
+      925,
+      926,
+      927,
+      928,
+      929,
+      930,
+      931,
+      932,
+      933,
+      934,
+      935,
+      936,
+      937,
+      938,
+      939,
+      940,
+      941,
+      942,
+      943,
+      944,
+      945,
+      946,
+      947,
+      948,
+      949,
+      950,
+      951,
+      952,
+      953,
+      954,
+      955,
+      956,
+      957,
+      958,
+      959,
+      960,
+      961,
+      962,
+      963,
+      964,
+      965,
+      966,
+      967,
+      968,
+      969,
+      970,
+      971,
+      972,
+      973,
+      974,
+      975,
+      976,
+      977,
+      978,
+      979,
+      980,
+      981,
+      982,
+      983,
+      984,
+      985,
+      986,
+      987,
+      988,
+      989,
+      990,
+      991,
+      992,
+      993,
+      994,
+      995,
+      996,
+      997,
+      998,
+      999,
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019,
+      1020,
+      1021,
+      1022,
+      1023,
+      1024,
+      1025
+    ],
+    "missing_mega_species": [
+      "Diancie"
+    ],
+    "corrected_fairy_species": [
+      "SPECIES_CLEFAIRY",
+      "SPECIES_CLEFABLE",
+      "SPECIES_JIGGLYPUFF",
+      "SPECIES_WIGGLYTUFF",
+      "SPECIES_MR_MIME",
+      "SPECIES_CLEFFA",
+      "SPECIES_IGGLYBUFF",
+      "SPECIES_TOGEPI",
+      "SPECIES_TOGETIC",
+      "SPECIES_MARILL",
+      "SPECIES_AZUMARILL",
+      "SPECIES_SNUBBULL",
+      "SPECIES_GRANBULL",
+      "SPECIES_AZURILL",
+      "SPECIES_MAWILE",
+      "SPECIES_RALTS",
+      "SPECIES_KIRLIA",
+      "SPECIES_GARDEVOIR",
+      "SPECIES_MIME_JR",
+      "SPECIES_TOGEKISS",
+      "SPECIES_COTTONEE",
+      "SPECIES_WHIMSICOTT",
+      "SPECIES_GARDEVOIR_MEGA",
+      "SPECIES_MAWILE_MEGA"
+    ],
+    "native_learnset_fallbacks": [
+      "SPECIES_SHAYMIN",
+      "SPECIES_RATTATA_ALOLA",
+      "SPECIES_RATICATE_ALOLA",
+      "SPECIES_RAICHU_ALOLA",
+      "SPECIES_SANDSHREW_ALOLA",
+      "SPECIES_SANDSLASH_ALOLA",
+      "SPECIES_VULPIX_ALOLA",
+      "SPECIES_NINETALES_ALOLA",
+      "SPECIES_DIGLETT_ALOLA",
+      "SPECIES_DUGTRIO_ALOLA",
+      "SPECIES_MEOWTH_ALOLA",
+      "SPECIES_PERSIAN_ALOLA",
+      "SPECIES_GEODUDE_ALOLA",
+      "SPECIES_GRAVELER_ALOLA",
+      "SPECIES_GOLEM_ALOLA",
+      "SPECIES_GRIMER_ALOLA",
+      "SPECIES_MUK_ALOLA",
+      "SPECIES_EXEGGUTOR_ALOLA",
+      "SPECIES_MAROWAK_ALOLA",
+      "SPECIES_MEOWTH_GMAX",
+      "SPECIES_GROWLITHE_HISUI",
+      "SPECIES_ARCANINE_HISUI",
+      "SPECIES_VOLTORB_HISUI",
+      "SPECIES_ELECTRODE_HISUI",
+      "SPECIES_TYPHLOSION_HISUI",
+      "SPECIES_QWILFISH_HISUI",
+      "SPECIES_SNEASEL_HISUI",
+      "SPECIES_SAMUROTT_HISUI",
+      "SPECIES_LILLIGANT_HISUI",
+      "SPECIES_ZORUA_HISUI",
+      "SPECIES_ZOROARK_HISUI",
+      "SPECIES_BRAVIARY_HISUI"
+    ]
+  },
+  "overlay_hashes": {
+    "tools/unova/bootstrap.py": "aa2d14d3869398343f0c523a39c0ee5e11fb3df69580b80b3e686298b7f626f3",
+    "tools/unova/bps.py": "fc34b2b3b6d04db1980004e540bb24afaa7ed1c2474df5dd9fca0742bbb59793",
+    "tools/unova/build.py": "79cd24a22d1f35472ecd4dfd18a1a2892bfa5cb22e0d903071b936d086819ea2",
+    "tools/unova/configure.py": "db04857645a6a8ee0b24822ccf73e5f05804b319cfe8bef6a0850cd45cfdeb8e",
+    "tools/unova/donor-forms.json": "1f8fd6e928462c2b08c959163ed87dbcadbaaaf651389fe33598342a6e129cc4",
+    "tools/unova/donor-names.json": "fdfc592f27cfc7cc859148a418d9d581e6cf6d55431de9802ade5c9dde9cb30c",
+    "tools/unova/extract.py": "da4b39d2f1e198f2c5c383d40c6a40c23a7640afebbc424d559b46e56333ccd5",
+    "tools/unova/import_catalog.py": "b20e32f4e6f779372c8dcc7d004625cf837d09444e32e9cf7b38349a4f6d195b",
+    "tools/unova/open_world.py": "3cbefd17fcd99e691b01f5c814c18ef7c8e8314f240014d545890dd85c80d4e9",
+    "tools/unova/prepare.py": "028753f61c1e8cb23c65a9074add8b76f71f51cbd136851e76a63619a4270915",
+    "tools/unova/test_catalog.py": "be99e86368648dbdcf91530002e712547b9d46b014efef2fb624e3471928018c",
+    "tools/unova/validate_emulator.py": "5ed8973cd842ef80833fc485102ddab7c07a387679fea585ecb6fe4901a7fb29",
+    "tools/unova/wild-pools.json": "21d3d9074992da854f43bbaedf1fa7d8fd27b8e2169a78b2b04ce1dcdb64f81d",
+    "tools/unova/wild_world.py": "9de260f2692e400f3bca0a9b887ae1aedb055297e53495e68c4378343e557c24",
+    "tools/journey/build.py": "c626b460345bef6a3c672ff4180860de500d82a800461a3715d095ddd4c7353b",
+    "tools/journey/events.inc": "4eda426a33b780ae38721fd483e59db92968addb3595253527d691c717a0f399",
+    "tools/journey/homes.json": "2e1efb76723374892aa93e38baeb85283d9af31c41283560bcaeeafe3f549c00",
+    "tools/journey/journey.c": "8b24dcb54f70989eb138ef7054391fce31aa4a8fe3d6d77d312c229ab3e34f9e",
+    "tools/journey/journey.h": "740b6790ac994e0967f648a8062016b821b294847f25fa4d1aff2aa9910caeb0",
+    "tools/journey/open_world.c": "50597dccab80d461548ebff3f24f04a6450397095828c184412753b76e5b6a4c",
+    "tools/journey/open_world.h": "0a264b0298b4a0bdc84d2fe093a4a2f7ce54c906dbd69557309bfd429c0488b6",
+    "tools/journey/open_world.inc": "f007b1904257c7e7df96ff466a658b05678025e0481877b5748ac2c25292f1f8",
+    "tools/journey/open_world.py": "9e202d4645fae6a601bcbcaa145684e5b744eba87ebb90cc794012eaca55d7b6",
+    "tools/journey/prepare.py": "157e187fd6f4cd38faefc89dcc53add816551c3c75bab90f4f1402e24da3f1c7",
+    "tools/journey/test_journey.py": "be539407756154da3d46d0a1665129b28dea933ec8293260793a471d3029add4",
+    "tools/journey/test_wild_world.py": "6db5545f7134d1062517daa83ec838dc13216faff97d2d34e70bb6e790f2e970",
+    "tools/journey/validate_emulator.py": "f01d331b8da9edf30d43e18b2fccfe796323c74d632615985644e10a415434f1",
+    "tools/journey/validate_open_world.py": "f3b9c5f98622f47aaeb22a6a12e08e67a5657c1b28d1551ce6848c0b995982ef",
+    "tools/journey/validate_wild_world.py": "8b1a313686659f8c021464a1c4846d6ed1dc3b851114f2f64ffe8287668afe2e",
+    "tools/journey/wild_world.c": "023b7e36a14ab3ba9282732428ab5dbe1f9080085bc5728fa9dd1792b3ae8c9a",
+    "tools/journey/wild_world.h": "dcd7fa6ec540fe6204b3d97e434d045dd03ec3db070f3b99e1dd9e1b61b37a93",
+    "tools/journey/wild_world.py": "fcf7518bad47fc0bac38081e0e7045882be92dff99232519c9d0a9a20ca19a59"
+  }
+}

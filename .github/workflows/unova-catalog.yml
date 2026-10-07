@@ -1,0 +1,30 @@
+name: Validate Unova catalog
+on:
+  pull_request:
+    paths: ['mods/unova-catalog/**', 'tools/unova/**', 'tools/rom_hacks/**', '.github/workflows/unova-catalog.yml']
+  push:
+    branches: [main]
+    paths: ['mods/unova-catalog/**', 'tools/unova/**', 'tools/rom_hacks/**', '.github/workflows/unova-catalog.yml']
+permissions:
+  contents: read
+jobs:
+  catalog:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Verify catalog, graphics, native typings and patch
+        run: python3 -m unittest discover -s tools/unova -v
+      - name: Verify previous journey and terrestrial HMs
+        run: |
+          python3 -m unittest discover -s tools/journey -v
+          python3 -m unittest discover -s tools/rom_hacks -v
+      - name: Install mGBA development package
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libmgba-dev
+      - name: Exercise native Pokemon, Fairy, gyms and Mega Evolution
+        run: |
+          gcc -shared -fPIC -O2 tools/rom_hacks/mgba_bridge.c -o /tmp/mgba-bridge.so -lmgba
+          python3 tools/unova/validate_emulator.py --library /tmp/mgba-bridge.so
+          python3 -m unittest discover -s tools/unova -v
