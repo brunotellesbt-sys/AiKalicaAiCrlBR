@@ -15,14 +15,18 @@ from prepare_crossing import prepare as crossing_prepare
 from prepare_worldsea import prepare as eastern_prepare
 from prepare_westsea import prepare as western_prepare
 from prepare_region_state import prepare as regional_prepare
+from prepare_east_coast import prepare as coast_prepare
+from prepare_gym_scaling import prepare as gym_prepare
 
 
 def verify(source, output):
     source = Path(source)
     acquired = json.loads((source / '.source-acquired.json').read_text())
     markers = ['.journey-hoenn-crossing', '.journey-worldsea', '.journey-westsea', '.journey-region-state']
+    if (source / '.journey-east-coast').exists(): markers.append('.journey-east-coast')
+    if (source / '.journey-gym-scaling').exists(): markers.append('.journey-gym-scaling')
     reports = [json.loads((source / p).read_text()) for p in markers]
-    original_paths = sorted({p for r in reports for p in r['original_sha256'] if p in acquired['sha256']})
+    original_paths = sorted({p for r in reports for p in (r['original_sha256'] | r.get('input_sha256', {})) if p in acquired['sha256']})
     expected = {}
     for r in reports: expected.update(r['prepared_sha256'])
     with tempfile.TemporaryDirectory(prefix='hoenn-world-repro-', dir='/tmp') as directory:
@@ -42,6 +46,10 @@ def verify(source, output):
         assert western_prepare(fresh) == json.loads(json.dumps(western))
         regional = regional_prepare(fresh)
         assert regional_prepare(fresh) == regional
+        if '.journey-east-coast' in markers:
+            coast = coast_prepare(fresh); assert coast_prepare(fresh) == json.loads(json.dumps(coast))
+        if '.journey-gym-scaling' in markers:
+            gym = gym_prepare(fresh); assert gym_prepare(fresh) == gym
         for path, digest in expected.items():
             if hashlib.sha256((fresh / path).read_bytes()).hexdigest() != digest:
                 raise ValueError('Fresh overlay mismatch: ' + path)
@@ -74,13 +82,26 @@ def verify(source, output):
                 for old_low, old_high in spans[c['direction']]:
                     assert high <= old_low or low >= old_high, ('Overlapping seam', m['name'], c)
                 spans[c['direction']].append((low, high)); edge_count += 1
+        eastern_connected = None
+        if '.journey-east-coast' in markers:
+            pending = ['MAP_JOURNEYWORLDSEA00']; visited=set()
+            while pending:
+                ident=pending.pop()
+                if ident in visited: continue
+                visited.add(ident)
+                if ident in by_id:
+                    pending.extend(c['map'] for c in by_id[ident].get('connections') or [] if c['direction'] in opposite)
+            required={f'MAP_ROUTE{n}' for n in range(124,132)} | {'MAP_ROUTE19','MAP_JOURNEYWORLDSEA06','MAP_JOURNEYWORLDSEA07'}
+            assert required <= visited, ('Disconnected eastern sea',required-visited)
+            eastern_connected=True
         result = dict(passed=True, source_commit=acquired['commit'], original_files=len(original_paths),
             prepared_files=len(expected), reciprocal_edges_checked=edge_count, idempotence=True,
             preserved_event_groups_checked=event_checks,
+            entire_eastern_sea_connected=eastern_connected,
             full_story_validated=False, prepared_sha256=expected)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, indent=2) + '\n')
-    for name, r in zip(['crossing-preparation', 'eastern-ocean-preparation', 'western-ocean-preparation', 'regional-state-preparation'], reports):
+    for name, r in zip(['crossing-preparation', 'eastern-ocean-preparation', 'western-ocean-preparation', 'regional-state-preparation', 'east-coast-preparation', 'gym-scaling-preparation'], reports):
         (output.parent / (name + '.json')).write_text(json.dumps(r, indent=2) + '\n')
     print(f'Reproduction passed: {len(expected)} files; {edge_count} reciprocal edges; no overlapping seams')
 

@@ -8,6 +8,7 @@ from pathlib import Path
 import re
 import struct
 import subprocess
+import tempfile
 import zlib
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -17,6 +18,8 @@ parser.add_argument('--library', type=Path, required=True)
 parser.add_argument('--worldsea', action='store_true', help='Also exercise every edge of the experimental eastern ocean grid')
 parser.add_argument('--westsea', action='store_true', help='Use the revised Cinnabar/Route114 crossing and validate the western coast')
 parser.add_argument('--region-state', action='store_true', help='Exercise separate badge/champion/story banks and native flash save/reload')
+parser.add_argument('--east-coast', action='store_true', help='Exercise the three eastern Hoenn exits and Fuchsia sea connection')
+parser.add_argument('--gym-scaling', action='store_true', help='Generate actual gym parties at every regional badge count')
 parser.add_argument('--output', type=Path, default=ROOT / 'mods/hoenn/integration-validation')
 args = parser.parse_args(); source = args.source.resolve(); args.output.mkdir(parents=True, exist_ok=True)
 raw = subprocess.check_output([str(ROOT / '.local/arm-binutils/usr/bin/arm-none-eabi-nm'), '-n', str(source / 'pokeemerald.elf')], text=True)
@@ -27,6 +30,17 @@ lib = ctypes.CDLL(str(args.library.resolve())); lib.start.argtypes = [ctypes.c_c
 lib.image.restype = ctypes.c_void_p; lib.read32.restype = ctypes.c_uint32
 assert lib.start(str(source / 'pokeemerald.gba').encode())
 results = []
+call4 = None
+abi = None
+if args.gym_scaling:
+    toolchain = ROOT / '.local/arm-gcc/usr/bin/arm-none-eabi-gcc'
+    with tempfile.TemporaryDirectory(prefix='gym-fixture-', dir='/tmp') as directory:
+        temp = Path(directory)
+        subprocess.run([str(ROOT / '.local/arm-binutils/usr/bin/arm-none-eabi-as'), '-mthumb', '-march=armv4t', str(ROOT / 'tools/hoenn/fixture_call4.s'), '-o', str(temp / 'call.o')], check=True)
+        subprocess.run([str(ROOT / '.local/arm-binutils/usr/bin/arm-none-eabi-objcopy'), '-O', 'binary', '-j', '.text', str(temp / 'call.o'), str(temp / 'call.bin')], check=True)
+        call4 = (temp / 'call.bin').read_bytes()
+        subprocess.run([str(toolchain), '-S', '-iquote', str(source / 'include'), '-DMODERN=1', '-DPOKEEMERALD', '-mthumb', '-march=armv4t', '-mabi=apcs-gnu', str(ROOT / 'tools/hoenn/fixture_gym_abi.c'), '-o', str(temp / 'abi.s')], check=True)
+        abi = [int(n) for n in re.findall(r'\.word\s+(\d+)', (temp / 'abi.s').read_text())]
 
 def step(n, keys=0): lib.frames(n, keys)
 def save(): return lib.read32(s['gSaveBlock1Ptr'])
@@ -60,10 +74,13 @@ def raw32(addr, value):
     for i, b in enumerate(struct.pack('<I', value)): lib.raw8(addr + i, b)
 
 def native(name, *values, max_frames=200):
-    code = bytearray.fromhex('00b505480549064a064b00f003f80649086000bd1847c0461111111122222222333333334444444455555555')
+    code = bytearray(call4) if len(values) == 4 else bytearray.fromhex('00b505480549064a064b00f003f80649086000bd1847c0461111111122222222333333334444444455555555')
     scratch = s['gStringVar4'] + 960
-    for sentinel, value in zip([0x11111111, 0x22222222, 0x33333333, 0x44444444, 0x55555555],
-                                [*(list(values) + [0]*3)[:3], s[name] | 1, scratch]):
+    sentinels = [0x11111111, 0x22222222, 0x33333333, 0x44444444, 0x55555555]
+    params = [*(list(values) + [0]*3)[:3], s[name] | 1, scratch]
+    if len(values) == 4:
+        sentinels += [0x66666666]; params = [*values, s[name] | 1, scratch]
+    for sentinel, value in zip(sentinels, params):
         struct.pack_into('<I', code, code.index(struct.pack('<I', sentinel)), value)
     for i, b in enumerate(code): lib.raw8(0x09f00200 + i, b)
     hook = s['gSpecials']; original = lib.read32(hook); raw32(hook, 0x09f00201)
@@ -151,12 +168,61 @@ if args.region_state:
     results.append(dict(check='regional_flags_and_native_save_roundtrip', passed=True,
         kanto_badges_independent=True, champion_independent=True, trainer_flag_unchanged=True))
     print('Regional badges/champion/story bank and native flash roundtrip passed', flush=True)
-if args.worldsea or args.westsea:
+if args.gym_scaling:
+    scaling = json.loads((source / '.journey-gym-scaling').read_text())
+    trainer_size, mon_size, pokemon_size, party_offset, class_offset, lvl_offset, level_data, species_data, leader, frlg_leader, battle_trainer, trainers_count, difficulty_normal = abi
+    trainers_base = s['gTrainers'] + difficulty_normal * trainers_count * trainer_size
+    ids = {}
+    for path in ['include/constants/opponents.h', 'include/constants/opponents_frlg.h']:
+        ids.update({n:int(v) for n,v in re.findall(r'#define\s+(TRAINER_\w+)\s+(\d+)\b', (source / path).read_text())})
+    native_badges = [lib.read16(s['gBadgeFlags'] + 2*i) for i in range(8)]
+    kanto_badges = list(range(0x1AB0,0x1AB8))
+    def set_bank(flags, count):
+        for i, flag in enumerate(flags):
+            address = save()+4720+flag//8
+            byte = lib.read8(address); mask = 1 << (flag & 7)
+            lib.write8(address, byte | mask if i < count else byte & ~mask)
+    parties_tested = 0
+    # Avoid gym on-entry story scripts: fixtures set the current map identity
+    # only. This isolates real party generation, not accessibility or battles.
+    for gym in scaling['gyms']:
+        group, number = map_id(gym['map'])
+        lib.write8(save()+4,group); lib.write8(save()+5,number)
+        lib.write8(s['isFrlg'], int(gym['kanto']))
+        for count in range(8):
+            set_bank(kanto_badges if gym['kanto'] else native_badges,count)
+            set_bank(native_badges if gym['kanto'] else kanto_badges,7-count)
+            assert native('JourneyGymBadgeCount',int(gym['kanto'])) == count
+            for name in gym['trainers']:
+                trainer = trainers_base+ids[name]*trainer_size
+                party_ptr = lib.read32(trainer+party_offset)
+                target_party = s['gParties']+6*pokemon_size
+                size = native('CreateNPCTrainerPartyFromTrainer',target_party,trainer,0,battle_trainer)
+                assert 1 <= size <= 6, (name,size)
+                original = [lib.read8(party_ptr+i*mon_size+lvl_offset) for i in range(size)]
+                highest = max(original)
+                is_leader = lib.read8(trainer+class_offset) in [leader,frlg_leader]
+                for i, level in enumerate(original):
+                    expected = scaling['ace_levels'][count] - min(6,highest-level) - (0 if is_leader else 2)
+                    actual = native('GetMonData3',target_party+i*pokemon_size,level_data,0)
+                    assert actual == expected,(gym['map'],name,count,i,actual,expected)
+                parties_tested += 1
+        print('Gym generated parties passed:',gym['map'],flush=True)
+    # Non-gym battles retain original levels.
+    group,number=map_id('Route131'); lib.write8(save()+4,group); lib.write8(save()+5,number)
+    trainer=trainers_base+ids['TRAINER_ROXANNE_1']*trainer_size
+    assert native('JourneyGymLevel',trainer,15) == 15
+    results.append(dict(check='native_gym_party_levels',passed=True,parties=parties_tested,
+        maps=len(scaling['gyms']),badge_counts=list(range(8)),non_gym_level_preserved=True,
+        access_or_free_order_validated=False))
+if args.worldsea or args.westsea or args.east_coast:
     ocean = dict(connections={})
     if args.worldsea:
         ocean['connections'].update(json.loads((source / '.journey-worldsea').read_text())['connections'])
     if args.westsea:
         ocean['connections'].update(json.loads((source / '.journey-westsea').read_text())['connections'])
+    if args.east_coast:
+        ocean['connections'].update(json.loads((source / '.journey-east-coast').read_text())['connections'])
     by_id = {json.loads((source / f'data/maps/{name}/map.json').read_text())['id']: name
              for name in ocean['connections']}
     keys = dict(up=64, down=128, left=32, right=16)

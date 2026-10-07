@@ -53,12 +53,33 @@ class ConnectedWorldTests(unittest.TestCase):
         reproduction = json.loads((VALIDATION / 'world-reproduction.json').read_text())
         runtime = json.loads((VALIDATION / 'connected-world.json').read_text())
         self.assertTrue(reproduction['passed']); self.assertTrue(reproduction['idempotence'])
-        self.assertEqual(reproduction['prepared_files'], 131)
+        self.assertEqual(reproduction['prepared_files'], 157)
+        self.assertTrue(reproduction['entire_eastern_sea_connected'])
         seams = [r for r in runtime['checks'] if r['check'] == 'physical_surf_seam']
-        self.assertEqual(len(seams), 80)
+        self.assertEqual(len(seams), 96)
         self.assertTrue(all(r['passed'] for r in runtime['checks']))
         self.assertTrue(any(r['check'] == 'regional_flags_and_native_save_roundtrip' for r in runtime['checks']))
         self.assertFalse(runtime['full_story_validated'])
+
+    def test_three_eastern_entrances_and_fuchsia(self):
+        coast=json.loads((VALIDATION/'east-coast-preparation.json').read_text())
+        self.assertEqual(set(coast['channels']),{'Route125','Route127','Route129','Route19_Frlg'})
+        self.assertTrue(coast['ever_grande_entrance_preserved'])
+        self.assertEqual(coast['channels']['Route19_Frlg'],[20,24,40,54])
+        links=coast['connections']['JourneyWorldSea00']
+        left=[c for c in links if c['direction']=='left']
+        self.assertEqual({c['offset'] for c in left},{0,24})
+
+    def test_gym_levels_cover_both_regions_and_all_floors(self):
+        scaling=json.loads((VALIDATION/'gym-scaling-preparation.json').read_text())
+        self.assertEqual(len(scaling['gyms']),18)
+        self.assertEqual(sum(g['kanto'] for g in scaling['gyms']),8)
+        self.assertEqual(scaling['ace_levels'],[14,21,28,35,42,48,54,60])
+        runtime=json.loads((VALIDATION/'connected-world.json').read_text())
+        check=next(r for r in runtime['checks'] if r['check']=='native_gym_party_levels')
+        self.assertTrue(check['passed'])
+        self.assertEqual(check['parties'],840)
+        self.assertFalse(check['access_or_free_order_validated'])
 
 
 if __name__ == '__main__': unittest.main()

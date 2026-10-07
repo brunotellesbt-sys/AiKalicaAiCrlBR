@@ -2,6 +2,32 @@
 
 ## Integração marítima atual
 
+A rede agora tem saídas nas rotas **125, 127 e 129**, além da 131.
+As rotas nativas 124–131 integram o mesmo componente marítimo de Sevii,
+Vermilion e da **Rota 19, no mar ao sul de Fuchsia**, sem alterar a rota
+terrestre 15 ou a entrada de Ever Grande. Quatro novos setores oceânicos
+fazem essas ligações; as duas entradas oeste do setor de Vermilion usam
+faixas separadas, sem sobreposição.
+
+Na candidata atual passaram **96 transições Surf novas**, nos dois sentidos,
+e **840 gerações de equipes reais dos ginásios**, abrangendo 105 treinadores
+e as oito contagens de insígnias. Líderes usam níveis máximos 14, 21, 28, 35,
+42, 48, 54 e 60; treinadores comuns ficam dois níveis abaixo, conservando
+diferenças internas de até seis níveis. As insígnias da outra região não
+alteram esses níveis. Batalhas fora dos ginásios mantêm os níveis originais.
+Há cobertura de 18 mapas/andares para os 16 ginásios, inclusive subsolos.
+
+**Escalar níveis não libera o acesso em ordem livre.** Portas, cenas de
+Norman, Sootopolis e demais requisitos da história ainda precisam ser
+adaptados e testados. Blue, rival e as demais regras da jornada anterior
+continuam pendentes de migração. Não foram alterados os times, espécies,
+golpes ou puzzles dos ginásios nesta etapa.
+
+Os overlays atuais foram reproduzidos em **157 arquivos**. Foram verificadas
+114 conexões recíprocas sem sobreposição e a conectividade de todo o mar
+leste de Hoenn com a rede de Kanto/Sevii. Os números de etapas anteriores
+abaixo são históricos. A ROM publicada continua separada.
+
 [Veja a projeção quadrada](validation/connected-world.png), também disponível
 em `web/world-layout.html`. Kanto fica ao norte, Hoenn ao sul e Sevii a leste:
 ilhas 1–3 na primeira faixa, 4–5 na segunda e 6–7 na terceira. Birth Island
@@ -104,6 +130,8 @@ python3 tools/hoenn/prepare_crossing.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_worldsea.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_westsea.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_region_state.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_east_coast.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_gym_scaling.py --source .local/hoenn-multiregion-src
 ```
 
 Na pasta de fonte, compile com os caminhos do compilador ARM, binutils,
@@ -113,7 +141,7 @@ Após editar mapas binários, force sua recompilação com `make modern -W data/
 ```sh
 python3 tools/hoenn/validate_crossing.py \
   --source .local/hoenn-multiregion-src --library .local/mgba-bridge.so \
-  --worldsea --westsea --region-state
+  --worldsea --westsea --region-state --east-coast --gym-scaling
 python3 tools/hoenn/verify_worldsea.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/world_layout.py
 node tools/hoenn/validate_world_layout.cjs
