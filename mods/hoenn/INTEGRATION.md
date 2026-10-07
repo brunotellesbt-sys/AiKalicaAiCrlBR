@@ -1,6 +1,51 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
-## Acessos e Viridian — etapa atual
+## Bicicleta única e passagens — continuação
+
+As ciclovias continuam exigindo a missão da bicicleta: receber a bicicleta de
+Rydel em Mauville ou trocar o Bike Voucher em Cerulean. Ambos entregam **Mach
+Bike**, que libera as quatro entradas das ciclovias nas duas regiões. Sem ela,
+os guardas continuam impedindo a passagem; depois de recebê-la também é possível
+passar a pé. Rydel não oferece troca por Acro Bike. A bicicleta registrada no
+SELECT não é trocada por um item que o jogador não possui.
+
+Foram inspecionados 452 layouts Emerald. Os **81 trechos transitáveis que
+exigiam Acro Bike** viram pontes de madeira ou escadas: Rota 119, Safari Zone
+norte/sul e Jagged Pass. Os desenhos usam metatiles nativos, com comportamento
+normal de caminhada; as escadas conectam os níveis dos terrenos originais.
+As escadas amarelas usam a camada coberta nativa, abaixo dos sprites, para
+não desenhar degraus sobre a cabeça do personagem. Essa passagem é a pé,
+sem exigir Mach Bike.
+Um vão de salto lateral na Rota 119 ganha um segmento de ponte. Quatro tiles
+decorativos debaixo da ponte permanecem separados do caminho elevado.
+Não foram removidas as ladeiras que usam a Mach Bike.
+
+Sete objetos Aqua das rotas 110 e 119 foram deslocados para fora dos caminhos.
+Seus IDs, scripts, diálogos e flags de visibilidade continuam; caminhar entre
+eles não conclui a missão do museu ou do instituto meteorológico. Os Snorlax,
+checkpoints regionais das equipes, exigências das Ligas e a escala dos líderes
+e treinadores internos dos ginásios permanecem nesta etapa.
+
+A validação verifica no motor os 81 tiles, atravessa cinco trechos a pé,
+atravessa as duas passagens Aqua e testa oito situações das ciclovias: quatro
+sem bicicleta e quatro com ela. Os dois scripts de recompensa entregam Mach
+Bike e não entregam Acro Bike; esses testes começam nos ramos de recompensa,
+portanto não certificam as duas missões completas desde o primeiro diálogo.
+As doze camadas reproduzem **323 arquivos** byte a byte, mantendo as 117
+conexões recíprocas da rede preparada.
+Passaram 20 testes offline e 104 verificações no emulador na ROM recompilada,
+incluindo as 840 equipes geradas dos ginásios e as 96 travessias de Surf.
+
+[Ponte da Rota 119](integration-validation/Route119-walkable-Acro-replacement-10.png),
+[escadas em Jagged Pass](integration-validation/JaggedPass-walkable-Acro-replacement-10.png),
+[preparação da bicicleta](integration-validation/mach-bike-preparation.json) e
+[deslocamentos Aqua](integration-validation/road-access-preparation.json).
+
+Esta continua sendo uma candidata que exige save novo. A ROM publicada não
+foi substituída; a validação completa das histórias e as migrações listadas
+abaixo continuam pendentes.
+
+## Acessos e Viridian — etapa anterior
 
 Viridian agora tem **Blue como líder normal**, sem contar como enfrentamento
 Rocket. Giovanni permanece no esconderijo, na Silph e na aliança contra Aqua.
@@ -337,6 +382,8 @@ python3 tools/hoenn/prepare_campaign_gates.py --source .local/hoenn-multiregion-
 python3 tools/hoenn/prepare_team_stories.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_free_access.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_blue_gym.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_road_access.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_mach_bike.py --source .local/hoenn-multiregion-src
 ```
 
 Na pasta de fonte, compile com os caminhos do compilador ARM, binutils,
@@ -346,7 +393,7 @@ Após editar mapas binários, force sua recompilação com `make modern -W data/
 ```sh
 python3 tools/hoenn/validate_crossing.py \
   --source .local/hoenn-multiregion-src --library .local/mgba-bridge.so \
-  --worldsea --westsea --region-state --east-coast --gym-scaling --campaign-gates --free-access --team-stories
+  --worldsea --westsea --region-state --east-coast --gym-scaling --campaign-gates --free-access --road-access --team-stories
 python3 tools/hoenn/verify_worldsea.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/world_layout.py
 node tools/hoenn/validate_world_layout.cjs

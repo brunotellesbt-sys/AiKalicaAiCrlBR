@@ -21,6 +21,7 @@ parser.add_argument('--region-state', action='store_true', help='Exercise separa
 parser.add_argument('--east-coast', action='store_true', help='Exercise the three eastern Hoenn exits and Fuchsia sea connection')
 parser.add_argument('--gym-scaling', action='store_true', help='Generate actual gym parties at every regional badge count')
 parser.add_argument('--free-access', action='store_true', help='Exercise terrestrial obstacle removal and free-order gym doors')
+parser.add_argument('--road-access', action='store_true', help='Exercise bike quest gates, former Acro terrain and relocated Aqua roadblocks')
 parser.add_argument('--team-stories', action='store_true', help='Validate regional incursions, casino stairs and actual Giovanni tag-battle startup')
 parser.add_argument('--campaign-gates', action='store_true', help='Exercise regional story checkpoints and gym-door guide objects')
 parser.add_argument('--output', type=Path, default=ROOT / 'mods/hoenn/integration-validation')
@@ -383,6 +384,93 @@ if args.free_access:
         norman_old_badge_states=4,opened_boulder_barrier_tiles=barriers,obstacle_samples=samples,all_obstacles_catalogued=len(access['obstacles']),
         surf_waterfall_without_badges=True,real_surf_prompt_without_badges=True,dive_rule_preserved=True,full_campaign_validated=False))
     print('Free gym entries and terrestrial HM samples passed',flush=True)
+if args.road_access:
+    road=json.loads((source/'.journey-road-access').read_text())
+    bike=json.loads((source/'.journey-mach-bike').read_text())
+    constants=(source/'include/constants/flags.h').read_text()
+    def roadflag(name,enabled):
+        f=int(re.search(r'^#define\s+'+name+r'\s+(0x[0-9A-Fa-f]+)',constants,re.M)[1],16)
+        address=save()+4720+f//8;mask=1<<(f&7);v=lib.read8(address)
+        lib.write8(address,v|mask if enabled else v&~mask)
+        return f
+    flags=[roadflag('FLAG_HIDE_ROUTE_110_TEAM_AQUA',False),roadflag('FLAG_HIDE_ROUTE_119_TEAM_AQUA',False)]
+    for name,x,y,key,axis,threshold in [('Route110',9,81,128,1,84),('Route119',11,33,16,0,13)]:
+        warp(name,x,y);native('SetPlayerAvatarTransitionFlags',1);step(30)
+        step(72 if name=='Route110' else 55,key);step(30)
+        assert position()[axis]>threshold, ('Still blocked by Aqua',name,position())
+        assert all(not native('FlagGet',f)for f in flags), 'Walking completed an Aqua mission'
+        picture(name+'-Aqua-passage-open')
+    # Audit the engine's behavior/collision at every converted tile after OnLoad.
+    by_layout={}
+    for path in (source/'data/maps').glob('*/map.json'):
+        m=json.loads(path.read_text());by_layout.setdefault(m['layout'],m['name'])
+    checked=0
+    for layout in sorted({v['layout']for v in bike['replacements']}):
+        cells=[v for v in bike['replacements']if v['layout']==layout]
+        warp(by_layout[layout],cells[0]['x'],cells[0]['y'])
+        for cell in cells:
+            x,y=cell['x']+7,cell['y']+7
+            assert native('MapGridGetCollisionAt',x,y)==0,cell
+            assert native('MapGridGetMetatileBehaviorAt',x,y)==0,cell
+            if cell['kind']=='stairs':
+                assert native('MapGridGetMetatileLayerTypeAt',x,y)==1, ('Stair overlays player',cell)
+            checked+=1
+    # Real movement across formerly restricted rails, a filled side-hop gap,
+    # and both high/low stair elevations. No Acro avatar is used.
+    walks=[('Route119',8,5,16,0,9),('Route119',9,10,16,0,10),
+           ('SafariZone_South',22,3,16,0,23),('SafariZone_North',22,24,64,1,23),
+           ('JaggedPass',18,10,64,1,9)]
+    for name,x,y,key,axis,threshold in walks:
+        warp(name,x,y);native('SetPlayerAvatarTransitionFlags',1);step(30)
+        step(40,key);step(30)
+        assert (position()[axis]>threshold if key==16 else position()[axis]<threshold), ('Acro replacement still blocked',name,position())
+        assert lib.read8(s['gPlayerAvatar'])&1,('Not walking',name)
+        picture(name+'-walkable-Acro-replacement-'+str(y))
+    items=(source/'include/constants/items.h').read_text()
+    def itemid(name):return int(re.search(r'^\s*'+name+r'\s*=\s*(\d+)',items,re.M)[1])
+    mach=itemid('ITEM_MACH_BIKE');acro=itemid('ITEM_ACRO_BIKE');voucher=itemid('ITEM_BIKE_VOUCHER')
+    native('RemoveBagItem',mach,1)
+    gates=[('Route16_NorthEntrance_1F_Frlg',7,12,32),('Route18_EastEntrance_1F_Frlg',7,6,32),
+           ('Route110_SeasideCyclingRoadNorthEntrance',6,4,16),('Route110_SeasideCyclingRoadSouthEntrance',6,4,16)]
+    gate_cases=0
+    for owned in [False,True]:
+        if owned:assert native('AddBagItem',mach,1)
+        for name,x,y,key in gates:
+            warp(name,x,y);native('SetPlayerAvatarTransitionFlags',1);step(30)
+            step(40,key)
+            for _ in range(80):
+                step(1,1);step(30)
+                if not lib.read8(s['sLockFieldControls']):break
+            assert not lib.read8(s['sLockFieldControls']),('Bicycle guard did not release controls',name,owned)
+            step(30)
+            after=position()[0]
+            assert (after<6 if owned else after>=6) if key==32 else (after>7 if owned else after<=7), (name,owned,position())
+            picture(name+('-bike-mission-complete'if owned else '-bike-mission-pending'))
+            gate_cases+=1
+    native('RemoveBagItem',mach,1)
+    # Execute both native reward branches; dialogue/choice preceding the reward
+    # is not a full end-to-end quest test.
+    rewards=[]
+    for name,label in [('MauvilleCity_BikeShop','MauvilleCity_BikeShop_EventScript_GetMachBike'),
+                       ('CeruleanCity_BikeShop_Frlg','CeruleanCity_BikeShop_EventScript_ExchangeBikeVoucher')]:
+        if name.endswith('_Frlg'):assert native('AddBagItem',voucher,1)
+        warp(name,3,3)
+        lib.write16(save()+0x496,mach)
+        script(b'\x05'+struct.pack('<I',s[label]),30)
+        for _ in range(30):step(16,1);step(16)
+        assert native('CheckBagHasItem',mach,1)
+        assert not native('CheckBagHasItem',acro,1)
+        assert lib.read16(save()+0x496)==mach,'Shop changed the registered bike'
+        if name.endswith('_Frlg'):assert not native('CheckBagHasItem',voucher,1)
+        rewards.append(name);picture(name+'-Mach-Bike-reward')
+        native('RemoveBagItem',mach,1)
+    results.append(dict(check='bike_quests_and_acro_replacements',passed=True,
+        converted_tiles=checked,physical_replacement_walks=len(walks),bike_gate_cases=gate_cases,
+        cycling_locked_without_bike=True,cycling_open_after_bike=True,reward_scripts=rewards,
+        full_bicycle_quests_validated=False,only_mach_awarded=True,registered_bike_preserved=True,
+        stairs_draw_below_player=True,aqua_missions_unchanged=True,
+        physical_aqua_passages=2,full_campaign_validated=False))
+    print('Bicycle mission gates, Acro replacements and Aqua road passages passed',flush=True)
 if args.team_stories:
     stories = json.loads((source / '.journey-team-stories').read_text())
     ids = {t['key']:t['id'] for t in stories['trainers']}

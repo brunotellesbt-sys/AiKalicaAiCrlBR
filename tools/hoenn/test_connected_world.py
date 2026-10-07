@@ -160,6 +160,37 @@ class ConnectedWorldTests(unittest.TestCase):
         parties=next(c for c in runtime['checks']if c['check']=='native_gym_party_levels')
         self.assertEqual(parties['parties'],840)
 
+    def test_cycling_gates_still_require_a_bicycle_quest(self):
+        runtime=json.loads((VALIDATION/'connected-world.json').read_text())
+        bike=next(c for c in runtime['checks']if c['check']=='bike_quests_and_acro_replacements')
+        self.assertEqual(bike['bike_gate_cases'],8)
+        self.assertTrue(bike['cycling_locked_without_bike'])
+        self.assertTrue(bike['cycling_open_after_bike'])
+        self.assertTrue(bike['only_mach_awarded'])
+        self.assertTrue(bike['registered_bike_preserved'])
+        self.assertEqual(set(bike['reward_scripts']),{'MauvilleCity_BikeShop','CeruleanCity_BikeShop_Frlg'})
+        self.assertFalse(bike['full_bicycle_quests_validated'])
+
+    def test_acro_replacements_and_aqua_passages_preserve_missions(self):
+        prep=json.loads((VALIDATION/'mach-bike-preparation.json').read_text())
+        self.assertEqual(len(prep['replacements']),81)
+        self.assertEqual({c['kind']for c in prep['replacements']},{'stairs','wood_bridge'})
+        self.assertEqual(len(prep['completed_bridge_gaps']),1)
+        self.assertEqual(len(prep['decorative_under_bridge_tiles_preserved']),4)
+        self.assertEqual(prep['only_obtainable_bike'],'ITEM_MACH_BIKE')
+        self.assertTrue(prep['stairs_draw_below_player'])
+        road=json.loads((VALIDATION/'road-access-preparation.json').read_text())
+        self.assertEqual(len(road['relocations']),7)
+        self.assertTrue(road['mission_flags_unchanged'])
+        self.assertEqual({e['path'][-1]for e in road['event_changes']},{'x','y'})
+        runtime=json.loads((VALIDATION/'connected-world.json').read_text())
+        bike=next(c for c in runtime['checks']if c['check']=='bike_quests_and_acro_replacements')
+        self.assertEqual(bike['converted_tiles'],81)
+        self.assertEqual(bike['physical_replacement_walks'],5)
+        self.assertTrue(bike['stairs_draw_below_player'])
+        self.assertEqual(bike['physical_aqua_passages'],2)
+        self.assertTrue(bike['aqua_missions_unchanged'])
+
     def test_only_explicit_access_event_edits_are_recorded(self):
         prep=json.loads((VALIDATION/'free-access-preparation.json').read_text())
         self.assertEqual(len(prep['obstacles']),336)
