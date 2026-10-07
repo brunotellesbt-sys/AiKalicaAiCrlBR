@@ -2,6 +2,11 @@
 
 Ambiente para trabalhar com uma cópia local de **Pokémon LeafGreen USA v1.1**.
 
+A expansão [de rotas marítimas](mods/sea-routes/README.md) adiciona viagens por
+Surf entre Kanto, as sete ilhas Sevii, Birth Island e Navel Rock. Inclui um player
+para GitHub Pages. **Hoenn e a segunda história de Emerald ainda estão pendentes**;
+o inventário e os requisitos do porte estão em [mods/hoenn](mods/hoenn/README.md).
+
 A versão atual tem **1.025 espécies-base, 457 formas adicionais, tipo Fada e
 48 Mega Evoluções**, preservando a jornada personalizada. Está em
 [mods/all-regions](mods/all-regions/README.md), com Dynamax, Gigantamax e Z-Moves

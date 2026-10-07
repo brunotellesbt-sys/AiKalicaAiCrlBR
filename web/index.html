@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LeafGreen Journey</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>LeafGreen Journey</h1>
+    <p>Jogue a versão com rotas de Surf entre Kanto e as ilhas Sevii, Birth Island e Navel Rock.</p>
+    <p class="notice">Hoenn e a história de Emerald ainda estão em desenvolvimento e não fazem parte desta versão.</p>
+    <div class="actions">
+      <button id="play">Jogar</button>
+      <label>Ou abra uma ROM .gba sua <input id="local-rom" type="file" accept=".gba"></label>
+    </div>
+    <p>Controles: setas para mover, X = A, Z = B, Enter = Start. No celular, use os controles na tela.</p>
+    <p>Comece um jogo novo nesta versão. Use o menu do emulador para exportar seus saves; os dados guardados pelo navegador podem ser apagados junto com os dados do site.</p>
+    <p id="status" role="status" aria-live="polite"></p>
+    <div id="game" aria-label="Emulador de Game Boy Advance"></div>
+    <p><a href="https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR">Código e ROM no GitHub</a> · Emulador: <a href="https://github.com/EmulatorJS/EmulatorJS/tree/v4.2.3">EmulatorJS 4.2.3</a></p>
+  </main>
+  <script src="player.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+{
+  "rom_sha256": "1caca9df7c4eaa560bfd67f5060015ad0560cb065947fd1ec0c97858e8937239",
+  "checks": [
+    {
+      "check": "sea-water-requires-surf",
+      "passed": true
+    },
+    {
+      "check": "port-sea-and-back-by-surf",
+      "passed": true,
+      "port": "OneIsland_Harbor",
+      "sea": "JourneySeaRoute01"
+    },
+    {
+      "check": "port-sea-and-back-by-surf",
+      "passed": true,
+      "port": "TwoIsland_Harbor",
+      "sea": "JourneySeaRoute02"
+    },
+    {
+      "check": "port-sea-and-back-by-surf",
+      "passed": true,
+      "port": "ThreeIsland_Harbor",
+      "sea": "JourneySeaRoute03"
+    },
+    {
+      "check": "port-sea-and-back-by-surf",
+      "passed": true,
+      "port": "FourIsland_Harbor",
+      "sea": "JourneySeaRoute04"
+    },
+    {
+      "check": "port-sea-and-back-by-surf",
+      "passed": true,
+      "port": "FiveIsland_Harbor",
+      "sea": "JourneySeaRoute05"
+    },
+    {
+      "check": "port-sea-and-back-by-surf",
+      "passed": true,
+      "port": "SixIsland_Harbor",
+      "sea": "JourneySeaRoute06"
+    },
+    {
+      "check": "port-sea-and-back-by-surf",
+      "passed": true,
+      "port": "SevenIsland_Harbor",
+      "sea": "JourneySeaRoute07"
+    },
+    {
+      "check": "port-sea-and-back-by-surf",
+      "passed": true,
+      "port": "BirthIsland_Harbor",
+      "sea": "JourneySeaRoute08"
+    },
+    {
+      "check": "port-sea-and-back-by-surf",
+      "passed": true,
+      "port": "NavelRock_Harbor",
+      "sea": "JourneySeaRoute09"
+    },
+    {
+      "check": "vermilion-sea-and-back-by-surf",
+      "passed": true
+    },
+    {
+      "check": "sea-chain-bidirectional-connection",
+      "passed": true,
+      "origin": "JourneySeaRoute00",
+      "destination": "JourneySeaRoute01"
+    },
+    {
+      "check": "sea-chain-bidirectional-connection",
+      "passed": true,
+      "origin": "JourneySeaRoute01",
+      "destination": "JourneySeaRoute02"
+    },
+    {
+      "check": "sea-chain-bidirectional-connection",
+      "passed": true,
+      "origin": "JourneySeaRoute02",
+      "destination": "JourneySeaRoute03"
+    },
+    {
+      "check": "sea-chain-bidirectional-connection",
+      "passed": true,
+      "origin": "JourneySeaRoute03",
+      "destination": "JourneySeaRoute04"
+    },
+    {
+      "check": "sea-chain-bidirectional-connection",
+      "passed": true,
+      "origin": "JourneySeaRoute04",
+      "destination": "JourneySeaRoute05"
+    },
+    {
+      "check": "sea-chain-bidirectional-connection",
+      "passed": true,
+      "origin": "JourneySeaRoute05",
+      "destination": "JourneySeaRoute06"
+    },
+    {
+      "check": "sea-chain-bidirectional-connection",
+      "passed": true,
+      "origin": "JourneySeaRoute06",
+      "destination": "JourneySeaRoute07"
+    },
+    {
+      "check": "sea-chain-bidirectional-connection",
+      "passed": true,
+      "origin": "JourneySeaRoute07",
+      "destination": "JourneySeaRoute08"
+    },
+    {
+      "check": "sea-chain-bidirectional-connection",
+      "passed": true,
+      "origin": "JourneySeaRoute08",
+      "destination": "JourneySeaRoute09"
+    },
+    {
+      "check": "sea-travel-with-no-badges-and-no-ticket",
+      "passed": true
+    }
+  ]
+}
