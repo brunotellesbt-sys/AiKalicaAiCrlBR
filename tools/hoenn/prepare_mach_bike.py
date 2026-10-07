@@ -82,12 +82,23 @@ def prepare(source):
                 decorative.append(dict(layout=layout['id'], x=x, y=y, tile=tile))
                 continue
             kind = 'stairs' if targets[behavior] == 'MB_BUMPY_SLOPE' else 'wood_bridge'
-            tile_definitions[(ap[secondary][0], ap[secondary][1], index)] = kind
-            # Elevation zero lets a staircase join the two original ledge levels.
-            new = mid if kind == 'stairs' else tile & ~0xC00
+            surface = None
+            if kind == 'stairs' and layout['id'] == 'LAYOUT_JAGGED_PASS':
+                # Acro hopping posts include a decoration on the upper floor.
+                # Do not put a stair there. Use the actual yellow lateral stair
+                # (Lavaridge 0x2AF) only on the cliff cells below that landing.
+                surface = 'landing' if mid in [0x303, 0x2FE] else 'yellow_stair'
+                new = 0x3271 if surface == 'landing' else 0x02AF
+            else:
+                tile_definitions[(ap[secondary][0], ap[secondary][1], index)] = kind
+                # Elevation zero lets a staircase join original ledge levels.
+                new = mid if kind == 'stairs' else tile & ~0xC00
             values[i] = new
             changed |= new != tile
-            replacements.append(dict(layout=layout['id'], x=x, y=y, before=tile, after=new, kind=kind))
+            entry = dict(layout=layout['id'], x=x, y=y, before=tile, after=new, kind=kind)
+            if surface:
+                entry['surface'] = surface
+            replacements.append(entry)
         if changed:
             stage(path, struct.pack('<' + 'H' * len(values), *values))
     for (attribute_path, graphics_path, index), kind in sorted(tile_definitions.items()):
@@ -189,6 +200,8 @@ def prepare(source):
                   audited_layouts=audits, cycling_entrances=entrances,
                   bicycle_quests=['Rydel in Mauville', 'Bike Voucher exchange in Cerulean'],
                   only_obtainable_bike='ITEM_MACH_BIKE', stairs_draw_below_player=True,
+                  jagged_pass_stair_reference=0x2AF, jagged_pass_landing_reference=0x271,
+                  upper_floor_stair_decorations_removed=5,
                   regional_gym_scaling_unchanged=True,
                   requires_new_save=True, full_story_validated=False, input_sha256=inputs,
                   original_sha256=originals, prepared_sha256={p: hashlib.sha256(v).hexdigest() for p, v in outputs.items()})

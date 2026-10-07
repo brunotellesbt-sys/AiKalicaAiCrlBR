@@ -1,6 +1,6 @@
 {
   "status": "experimental_not_full_integration",
-  "rom_sha256": "39222b3f10fe6f7e9a805a259b34b052979b56071c3c57a786072e8510c17e33",
+  "rom_sha256": "42ec402cbc7feeac0efe111455078dbf83a4e474e6c4e4b195faa9666a26da3c",
   "checks": [
     {
       "check": "regional_flags_and_native_save_roundtrip",
@@ -106,6 +106,8 @@
       "registered_bike_preserved": true,
       "stairs_draw_below_player": true,
       "aqua_missions_unchanged": true,
+      "yellow_stair_matches_native_lateral": true,
+      "upper_landings_have_no_stair": true,
       "physical_aqua_passages": 2,
       "full_campaign_validated": false
     },

@@ -543,112 +543,126 @@
       "x": 18,
       "y": 8,
       "before": 13059,
-      "after": 771,
-      "kind": "stairs"
+      "after": 12913,
+      "kind": "stairs",
+      "surface": "landing"
     },
     {
       "layout": "LAYOUT_JAGGED_PASS",
       "x": 18,
       "y": 9,
       "before": 13058,
-      "after": 770,
-      "kind": "stairs"
+      "after": 687,
+      "kind": "stairs",
+      "surface": "yellow_stair"
     },
     {
       "layout": "LAYOUT_JAGGED_PASS",
       "x": 21,
       "y": 10,
       "before": 13059,
-      "after": 771,
-      "kind": "stairs"
+      "after": 12913,
+      "kind": "stairs",
+      "surface": "landing"
     },
     {
       "layout": "LAYOUT_JAGGED_PASS",
       "x": 21,
       "y": 11,
       "before": 13058,
-      "after": 770,
-      "kind": "stairs"
+      "after": 687,
+      "kind": "stairs",
+      "surface": "yellow_stair"
     },
     {
       "layout": "LAYOUT_JAGGED_PASS",
       "x": 22,
       "y": 16,
       "before": 13059,
-      "after": 771,
-      "kind": "stairs"
+      "after": 12913,
+      "kind": "stairs",
+      "surface": "landing"
     },
     {
       "layout": "LAYOUT_JAGGED_PASS",
       "x": 22,
       "y": 17,
       "before": 13056,
-      "after": 768,
-      "kind": "stairs"
+      "after": 687,
+      "kind": "stairs",
+      "surface": "yellow_stair"
     },
     {
       "layout": "LAYOUT_JAGGED_PASS",
       "x": 22,
       "y": 18,
       "before": 13058,
-      "after": 770,
-      "kind": "stairs"
+      "after": 687,
+      "kind": "stairs",
+      "surface": "yellow_stair"
     },
     {
       "layout": "LAYOUT_JAGGED_PASS",
       "x": 21,
       "y": 27,
       "before": 13054,
-      "after": 766,
-      "kind": "stairs"
+      "after": 12913,
+      "kind": "stairs",
+      "surface": "landing"
     },
     {
       "layout": "LAYOUT_JAGGED_PASS",
       "x": 21,
       "y": 28,
       "before": 13056,
-      "after": 768,
-      "kind": "stairs"
+      "after": 687,
+      "kind": "stairs",
+      "surface": "yellow_stair"
     },
     {
       "layout": "LAYOUT_JAGGED_PASS",
       "x": 21,
       "y": 29,
       "before": 13056,
-      "after": 768,
-      "kind": "stairs"
+      "after": 687,
+      "kind": "stairs",
+      "surface": "yellow_stair"
     },
     {
       "layout": "LAYOUT_JAGGED_PASS",
       "x": 9,
       "y": 30,
       "before": 13054,
-      "after": 766,
-      "kind": "stairs"
+      "after": 12913,
+      "kind": "stairs",
+      "surface": "landing"
     },
     {
       "layout": "LAYOUT_JAGGED_PASS",
       "x": 21,
       "y": 30,
       "before": 13057,
-      "after": 769,
-      "kind": "stairs"
+      "after": 687,
+      "kind": "stairs",
+      "surface": "yellow_stair"
     },
     {
       "layout": "LAYOUT_JAGGED_PASS",
       "x": 9,
       "y": 31,
       "before": 13056,
-      "after": 768,
-      "kind": "stairs"
+      "after": 687,
+      "kind": "stairs",
+      "surface": "yellow_stair"
     },
     {
       "layout": "LAYOUT_JAGGED_PASS",
       "x": 9,
       "y": 32,
       "before": 13057,
-      "after": 769,
-      "kind": "stairs"
+      "after": 687,
+      "kind": "stairs",
+      "surface": "yellow_stair"
     }
   ],
   "completed_bridge_gaps": [
@@ -1152,6 +1166,9 @@
   ],
   "only_obtainable_bike": "ITEM_MACH_BIKE",
   "stairs_draw_below_player": true,
+  "jagged_pass_stair_reference": 687,
+  "jagged_pass_landing_reference": 625,
+  "upper_floor_stair_decorations_removed": 5,
   "regional_gym_scaling_unchanged": true,
   "requires_new_save": true,
   "full_story_validated": false,
@@ -1670,7 +1687,6 @@
     "data/layouts/SootopolisCity_MysteryEventsHouse_1F/map.bin": "2911489999f1f22a8a96f33486d0a997148c2e07549e6474370b223a5367ec70",
     "data/layouts/SootopolisCity_MysteryEventsHouse_B1F/map.bin": "4a84f95c2e11ba0f0cb11edc92ad05ebe049da57856a1a7225dc72908b8517be",
     "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin": "f094f4710bf9e01349202a835e34d048f5d8d61c01d41bd5edf4a5ad6c00251e",
-    "data/tilesets/secondary/lavaridge/metatiles.bin": "a8302e5167fae8e69db4532a983f710f4cbfb669eb23aa1df59b5e2a39212e10",
     "data/tilesets/secondary/lilycove/metatiles.bin": "cb7b2efc00894275b76699be43f3215ee0a89cc129a16fe22cffc9cef30d0868",
     "data/maps/MauvilleCity_BikeShop/scripts.inc": "5e57e4d812fc5ac9e8a0fff5ba8a6963673860b9e862d70651b9e5662b676dad",
     "data/maps/CeruleanCity_BikeShop_Frlg/scripts.inc": "b13dd37f2ba7f7c46f653906fb03753970ed16294278bc00b0385e9ce3523503",
@@ -1686,8 +1702,6 @@
     "data/layouts/JaggedPass/map.bin": "912233ef593db8109d90c4777eb65c8171bbfd3d3c7e2d713cb7f2969a35aa15",
     "data/tilesets/primary/general/metatiles.bin": "17974b0ba1bb9d105d5ba255c69a3b80d8484a26ea0b8ff22c6c6567c6c22910",
     "data/tilesets/primary/general/metatile_attributes.bin": "06c9548a6c70d133b6d47638090f5d36f3fec92aace3d90deca758a4404cfa9b",
-    "data/tilesets/secondary/lavaridge/metatiles.bin": "a8302e5167fae8e69db4532a983f710f4cbfb669eb23aa1df59b5e2a39212e10",
-    "data/tilesets/secondary/lavaridge/metatile_attributes.bin": "ef2ec94a84b2f49701f265ac320596f0bec8835d90bc0a5657c607cdb792e578",
     "data/tilesets/secondary/lilycove/metatiles.bin": "cb7b2efc00894275b76699be43f3215ee0a89cc129a16fe22cffc9cef30d0868",
     "data/tilesets/secondary/lilycove/metatile_attributes.bin": "89a199ac8077cdc00c77661f1f0e4c80149cc1f71adecc856cc02e7a04edc9c5",
     "data/layouts/Route119/map.bin": "f6c948a0fb90925afce408b4bf1742ba56e9e6c95ffb899a348d563d1ba5f47d",
@@ -1702,11 +1716,9 @@
   },
   "prepared_sha256": {
     "data/layouts/SafariZone_North/map.bin": "9ef86c5e36b41b01b3cd46c5884a516deacf46357f53d326d9e961113122f930",
-    "data/layouts/JaggedPass/map.bin": "f64fb2563112e2ac51d03545ee74391c79e71dfdd964f96f24731876ebb1f2c0",
+    "data/layouts/JaggedPass/map.bin": "7a9654c8ab5c2ee6a0886836dc70dc9c0461489bdcb457c895632ae88fc006c5",
     "data/tilesets/primary/general/metatiles.bin": "475189dcc70b3286add12cced7a230324f41ec3826270e48be0166e3c13c53a5",
     "data/tilesets/primary/general/metatile_attributes.bin": "7a511456099c0a64723e773c64fc3892450c46b83e8701aa43a3cb46d3019a07",
-    "data/tilesets/secondary/lavaridge/metatiles.bin": "7232d003705ea2cb93b13b1ba338cb045ad37042b89a53ca6a6e8633c147108b",
-    "data/tilesets/secondary/lavaridge/metatile_attributes.bin": "33135cd349feec4735fa05050d98b0d2c86f166befb7a28a4345ee9e8618135b",
     "data/tilesets/secondary/lilycove/metatiles.bin": "3261252c8021ea15f25c0de64f392f9ed98beef3f8b93d6caee9dd67fb83a647",
     "data/tilesets/secondary/lilycove/metatile_attributes.bin": "6ed91a93c00aea229980cd4a7da9bfedc8bdf0cbc4d902cc7ea668e9a8ad8014",
     "data/layouts/Route119/map.bin": "eb046093dcde38a6c301024a66a33f1e901a71079f4e112c7d488748de1d8d40",

@@ -13,9 +13,11 @@ Foram inspecionados 452 layouts Emerald. Os **81 trechos transitáveis que
 exigiam Acro Bike** viram pontes de madeira ou escadas: Rota 119, Safari Zone
 norte/sul e Jagged Pass. Os desenhos usam metatiles nativos, com comportamento
 normal de caminhada; as escadas conectam os níveis dos terrenos originais.
-As escadas amarelas usam a camada coberta nativa, abaixo dos sprites, para
-não desenhar degraus sobre a cabeça do personagem. Essa passagem é a pé,
-sem exigir Mach Bike.
+Em Jagged Pass, o degrau usa exatamente o tile amarelo da escada lateral
+(Lavaridge `0x2AF`). Os cinco antigos enfeites de salto sobre o patamar viram
+chão normal (`0x271`), deixando livre o quadrado acima da escada. Somente os
+trechos da encosta recebem degraus. Essa passagem é a pé, sem exigir Mach Bike.
+As escadas usam a camada coberta nativa, abaixo dos sprites.
 Um vão de salto lateral na Rota 119 ganha um segmento de ponte. Quatro tiles
 decorativos debaixo da ponte permanecem separados do caminho elevado.
 Não foram removidas as ladeiras que usam a Mach Bike.
@@ -31,13 +33,14 @@ atravessa as duas passagens Aqua e testa oito situações das ciclovias: quatro
 sem bicicleta e quatro com ela. Os dois scripts de recompensa entregam Mach
 Bike e não entregam Acro Bike; esses testes começam nos ramos de recompensa,
 portanto não certificam as duas missões completas desde o primeiro diálogo.
-As doze camadas reproduzem **323 arquivos** byte a byte, mantendo as 117
+As doze camadas reproduzem **321 arquivos** byte a byte, mantendo as 117
 conexões recíprocas da rede preparada.
 Passaram 20 testes offline e 104 verificações no emulador na ROM recompilada,
 incluindo as 840 equipes geradas dos ginásios e as 96 travessias de Surf.
 
 [Ponte da Rota 119](integration-validation/Route119-walkable-Acro-replacement-10.png),
 [escadas em Jagged Pass](integration-validation/JaggedPass-walkable-Acro-replacement-10.png),
+[degrau amarelo e patamar livre](integration-validation/JaggedPass-yellow-stair-and-clear-landing.png),
 [preparação da bicicleta](integration-validation/mach-bike-preparation.json) e
 [deslocamentos Aqua](integration-validation/road-access-preparation.json).
 

@@ -179,6 +179,11 @@ class ConnectedWorldTests(unittest.TestCase):
         self.assertEqual(len(prep['decorative_under_bridge_tiles_preserved']),4)
         self.assertEqual(prep['only_obtainable_bike'],'ITEM_MACH_BIKE')
         self.assertTrue(prep['stairs_draw_below_player'])
+        jagged=[c for c in prep['replacements']if c['layout']=='LAYOUT_JAGGED_PASS']
+        landings=[c for c in jagged if c['surface']=='landing']
+        self.assertEqual(len(landings),5)
+        self.assertTrue(all(c['after']==0x3271 for c in landings))
+        self.assertTrue(all(c['after']==0x02AF for c in jagged if c['surface']=='yellow_stair'))
         road=json.loads((VALIDATION/'road-access-preparation.json').read_text())
         self.assertEqual(len(road['relocations']),7)
         self.assertTrue(road['mission_flags_unchanged'])
@@ -188,6 +193,8 @@ class ConnectedWorldTests(unittest.TestCase):
         self.assertEqual(bike['converted_tiles'],81)
         self.assertEqual(bike['physical_replacement_walks'],5)
         self.assertTrue(bike['stairs_draw_below_player'])
+        self.assertTrue(bike['yellow_stair_matches_native_lateral'])
+        self.assertTrue(bike['upper_landings_have_no_stair'])
         self.assertEqual(bike['physical_aqua_passages'],2)
         self.assertTrue(bike['aqua_missions_unchanged'])
 

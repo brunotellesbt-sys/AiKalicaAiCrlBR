@@ -411,8 +411,11 @@ if args.road_access:
         for cell in cells:
             x,y=cell['x']+7,cell['y']+7
             assert native('MapGridGetCollisionAt',x,y)==0,cell
-            assert native('MapGridGetMetatileBehaviorAt',x,y)==0,cell
-            if cell['kind']=='stairs':
+            landing=cell.get('surface')=='landing'
+            assert native('MapGridGetMetatileBehaviorAt',x,y)==(12 if landing else 0),cell
+            if cell['layout']=='LAYOUT_JAGGED_PASS':
+                assert native('MapGridGetMetatileIdAt',x,y)==(0x271 if landing else 0x2AF), ('Wrong stair/landing sprite',cell)
+            if cell['kind']=='stairs' and not landing:
                 assert native('MapGridGetMetatileLayerTypeAt',x,y)==1, ('Stair overlays player',cell)
             checked+=1
     # Real movement across formerly restricted rails, a filled side-hop gap,
@@ -426,6 +429,8 @@ if args.road_access:
         assert (position()[axis]>threshold if key==16 else position()[axis]<threshold), ('Acro replacement still blocked',name,position())
         assert lib.read8(s['gPlayerAvatar'])&1,('Not walking',name)
         picture(name+'-walkable-Acro-replacement-'+str(y))
+    warp('JaggedPass',17,10);native('SetPlayerAvatarTransitionFlags',1);step(30)
+    picture('JaggedPass-yellow-stair-and-clear-landing')
     items=(source/'include/constants/items.h').read_text()
     def itemid(name):return int(re.search(r'^\s*'+name+r'\s*=\s*(\d+)',items,re.M)[1])
     mach=itemid('ITEM_MACH_BIKE');acro=itemid('ITEM_ACRO_BIKE');voucher=itemid('ITEM_BIKE_VOUCHER')
@@ -469,6 +474,7 @@ if args.road_access:
         cycling_locked_without_bike=True,cycling_open_after_bike=True,reward_scripts=rewards,
         full_bicycle_quests_validated=False,only_mach_awarded=True,registered_bike_preserved=True,
         stairs_draw_below_player=True,aqua_missions_unchanged=True,
+        yellow_stair_matches_native_lateral=True,upper_landings_have_no_stair=True,
         physical_aqua_passages=2,full_campaign_validated=False))
     print('Bicycle mission gates, Acro replacements and Aqua road passages passed',flush=True)
 if args.team_stories:
