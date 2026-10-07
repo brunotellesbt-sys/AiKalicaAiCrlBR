@@ -1,0 +1,464 @@
+{
+  "status": "blue_gym_candidate",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "trainer": "TRAINER_JOURNEY_BLUE",
+  "trainer_id": 1550,
+  "gym": "ViridianCity_Gym_Frlg",
+  "leader": "Blue",
+  "team_rocket_event": false,
+  "scaling": "existing_regional_rank",
+  "blue_remains_after_victory": true,
+  "route22_final_rival_requires_all_kanto_badges": true,
+  "event_changes": [
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "before": {
+        "id": "MAP_VIRIDIAN_CITY_GYM",
+        "name": "ViridianCity_Gym_Frlg",
+        "layout": "LAYOUT_VIRIDIAN_CITY_GYM",
+        "music": "MUS_RG_GYM",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_VIRIDIAN_CITY",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_GYM",
+        "connections": null,
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG",
+            "x": 10,
+            "y": 2,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "3",
+            "script": "ViridianCity_Gym_EventScript_Takashi",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
+            "x": 12,
+            "y": 10,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "3",
+            "script": "ViridianCity_Gym_EventScript_Yuji",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG",
+            "x": 11,
+            "y": 14,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "3",
+            "script": "ViridianCity_Gym_EventScript_Atsushi",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_MAN",
+            "x": 10,
+            "y": 10,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "3",
+            "script": "ViridianCity_Gym_EventScript_Jason",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_MAN",
+            "x": 2,
+            "y": 21,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "2",
+            "script": "ViridianCity_Gym_EventScript_Cole",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG",
+            "x": 3,
+            "y": 11,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "2",
+            "script": "ViridianCity_Gym_EventScript_Kiyo",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
+            "x": 6,
+            "y": 8,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "3",
+            "script": "ViridianCity_Gym_EventScript_Samuel",
+            "flag": "0"
+          },
+          {
+            "local_id": "LOCALID_VIRIDIAN_GIOVANNI",
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_GIOVANNI",
+            "x": 2,
+            "y": 2,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "ViridianCity_Gym_EventScript_Giovanni",
+            "flag": "FLAG_HIDE_VIRIDIAN_GIOVANNI"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
+            "x": 13,
+            "y": 7,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "3",
+            "script": "ViridianCity_Gym_EventScript_Warren",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_GYM_GUY",
+            "x": 16,
+            "y": 20,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "ViridianCity_Gym_EventScript_GymGuy",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 16,
+            "y": 22,
+            "elevation": 3,
+            "dest_map": "MAP_VIRIDIAN_CITY",
+            "dest_warp_id": "2"
+          },
+          {
+            "x": 17,
+            "y": 22,
+            "elevation": 3,
+            "dest_map": "MAP_VIRIDIAN_CITY",
+            "dest_warp_id": "2"
+          },
+          {
+            "x": 18,
+            "y": 22,
+            "elevation": 3,
+            "dest_map": "MAP_VIRIDIAN_CITY",
+            "dest_warp_id": "2"
+          }
+        ],
+        "coord_events": [],
+        "bg_events": [
+          {
+            "type": "sign",
+            "x": 15,
+            "y": 20,
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ViridianCity_Gym_EventScript_GymStatue"
+          },
+          {
+            "type": "sign",
+            "x": 19,
+            "y": 20,
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ViridianCity_Gym_EventScript_GymStatue"
+          },
+          {
+            "type": "hidden_item",
+            "x": 2,
+            "y": 2,
+            "elevation": 3,
+            "item": "ITEM_MACHO_BRACE",
+            "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_CITY_GYM_MACHO_BRACE",
+            "quantity": 1,
+            "underfoot": true
+          }
+        ]
+      },
+      "after": {
+        "id": "MAP_VIRIDIAN_CITY_GYM",
+        "name": "ViridianCity_Gym_Frlg",
+        "layout": "LAYOUT_VIRIDIAN_CITY_GYM",
+        "music": "MUS_RG_GYM",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_VIRIDIAN_CITY",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_GYM",
+        "connections": null,
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG",
+            "x": 10,
+            "y": 2,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "3",
+            "script": "ViridianCity_Gym_EventScript_Takashi",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
+            "x": 12,
+            "y": 10,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "3",
+            "script": "ViridianCity_Gym_EventScript_Yuji",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG",
+            "x": 11,
+            "y": 14,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "3",
+            "script": "ViridianCity_Gym_EventScript_Atsushi",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_MAN",
+            "x": 10,
+            "y": 10,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "3",
+            "script": "ViridianCity_Gym_EventScript_Jason",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_MAN",
+            "x": 2,
+            "y": 21,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "2",
+            "script": "ViridianCity_Gym_EventScript_Cole",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG",
+            "x": 3,
+            "y": 11,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "2",
+            "script": "ViridianCity_Gym_EventScript_Kiyo",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
+            "x": 6,
+            "y": 8,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "3",
+            "script": "ViridianCity_Gym_EventScript_Samuel",
+            "flag": "0"
+          },
+          {
+            "local_id": "LOCALID_VIRIDIAN_GIOVANNI",
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_BLUE",
+            "x": 2,
+            "y": 2,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "ViridianCity_Gym_EventScript_Giovanni",
+            "flag": "FLAG_HIDE_VIRIDIAN_GIOVANNI"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_COOLTRAINER_M",
+            "x": 13,
+            "y": 7,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "3",
+            "script": "ViridianCity_Gym_EventScript_Warren",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_GYM_GUY",
+            "x": 16,
+            "y": 20,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "ViridianCity_Gym_EventScript_GymGuy",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 16,
+            "y": 22,
+            "elevation": 3,
+            "dest_map": "MAP_VIRIDIAN_CITY",
+            "dest_warp_id": "2"
+          },
+          {
+            "x": 17,
+            "y": 22,
+            "elevation": 3,
+            "dest_map": "MAP_VIRIDIAN_CITY",
+            "dest_warp_id": "2"
+          },
+          {
+            "x": 18,
+            "y": 22,
+            "elevation": 3,
+            "dest_map": "MAP_VIRIDIAN_CITY",
+            "dest_warp_id": "2"
+          }
+        ],
+        "coord_events": [],
+        "bg_events": [
+          {
+            "type": "sign",
+            "x": 15,
+            "y": 20,
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ViridianCity_Gym_EventScript_GymStatue"
+          },
+          {
+            "type": "sign",
+            "x": 19,
+            "y": 20,
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "ViridianCity_Gym_EventScript_GymStatue"
+          },
+          {
+            "type": "hidden_item",
+            "x": 2,
+            "y": 2,
+            "elevation": 3,
+            "item": "ITEM_MACHO_BRACE",
+            "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_CITY_GYM_MACHO_BRACE",
+            "quantity": 1,
+            "underfoot": true
+          }
+        ]
+      }
+    }
+  ],
+  "input_sha256": {
+    "include/constants/opponents.h": "39da89de0f6e934939edd6d55c67c76c6a08f44b6cb7d18343dd9937bd164642",
+    "src/data/trainers.party": "d08e7a008df0f9eeaf58bbddf66d8a2d0a9cfc269d34d5f25d3fdb4042942e85",
+    "data/maps/ViridianCity_Gym_Frlg/map.json": "ad688b16c6b095ce1ed360afc730f2f14753b4a7c768218582a578259c9cd7d5",
+    "data/maps/ViridianCity_Gym_Frlg/scripts.inc": "6676479fdca2e65896415b8497c2ed7b87e1eb625c29590c869ef4d6299638da"
+  },
+  "original_sha256": {
+    "include/constants/opponents.h": "3332306002c40e8f6086337f1cb3bc4fa1f3a6e865a325cf63a70567014fc472",
+    "src/data/trainers.party": "f5f7a7575040e039dcbcc168290bf2b331e6823f46aee60ed4f311a4df4f9e6b",
+    "data/maps/ViridianCity_Gym_Frlg/map.json": "ad688b16c6b095ce1ed360afc730f2f14753b4a7c768218582a578259c9cd7d5",
+    "data/maps/ViridianCity_Gym_Frlg/scripts.inc": "6676479fdca2e65896415b8497c2ed7b87e1eb625c29590c869ef4d6299638da",
+    "src/journey_campaign_gates.c": "d2c86846b94f612a4bb82c5174755a3e128b5d38e566c0b696de903dbad3a370"
+  },
+  "prepared_sha256": {
+    "include/constants/opponents.h": "cc97d4a21eb841819d26f038c50184d7794b4ea2b2ac4bc71d1ef9d21bc35dd9",
+    "src/data/trainers.party": "1534d248efc5e16e3d1558e3cefc70caf67d34d8e2731f4b4f15f0d6d483d320",
+    "data/maps/ViridianCity_Gym_Frlg/map.json": "c6080f86ffed78b42307bdbcc01e1759a934e879d2468d4a48d26af97fd9a913",
+    "data/maps/ViridianCity_Gym_Frlg/scripts.inc": "5341b5347d17bdeff832aeec7650a2c55e0b39f6ac0807d20f85818db354c45d",
+    "src/journey_campaign_gates.c": "a7127c6c1cb82c6ede92a400f5f8643ec458671d36c9d4e3f71319caa9eb1bb1"
+  },
+  "full_story_validated": false
+}

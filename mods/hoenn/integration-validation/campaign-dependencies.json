@@ -28,17 +28,6 @@
       }
     },
     {
-      "region": "kanto",
-      "map": "ViridianCity_Gym_Frlg",
-      "trainer": "TRAINER_LEADER_GIOVANNI",
-      "boss": "Giovanni",
-      "original_usual_interval": "Eighth gym after the other seven",
-      "evidence": {
-        "line": 6,
-        "script": "trainerbattle_single TRAINER_LEADER_GIOVANNI, ViridianCity_Gym_Text_GiovanniIntro, ViridianCity_Gym_Text_GiovanniDefeat, ViridianCity_Gym_EventScript_DefeatedGiovanni, NO_MUSIC"
-      }
-    },
-    {
       "region": "hoenn",
       "map": "MtChimney",
       "trainer": "TRAINER_MAXIE_MT_CHIMNEY",
@@ -79,7 +68,20 @@
       "original_usual_interval": "Tate & Liza \u2192 Juan",
       "evidence": {
         "line": 36,
-        "script": "multi_2_vs_2 TRAINER_JOURNEY_ARCHIE_ALLIANCE, SeafloorCavern_Room9_Text_ArchieDefeat, TRAINER_JOURNEY_SHELLY_ALLIANCE, Journey_ShellyDefeat, PARTNER_GIOVANNI"
+        "script": "multi_fixed_2_vs_2 TRAINER_JOURNEY_ARCHIE_ALLIANCE, SeafloorCavern_Room9_Text_ArchieDefeat, TRAINER_JOURNEY_SHELLY_ALLIANCE, Journey_ShellyDefeat, PARTNER_GIOVANNI"
+      }
+    }
+  ],
+  "regular_gym_replacements": [
+    {
+      "region": "kanto",
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_JOURNEY_BLUE",
+      "boss": "Blue (regular gym, not a Rocket mission)",
+      "original_usual_interval": "Eighth gym after the other seven",
+      "evidence": {
+        "line": 5,
+        "script": "trainerbattle_single TRAINER_JOURNEY_BLUE, ViridianCity_Gym_Text_GiovanniIntro, ViridianCity_Gym_Text_GiovanniDefeat, ViridianCity_Gym_EventScript_DefeatedGiovanni, NO_MUSIC"
       }
     }
   ],
@@ -725,428 +727,436 @@
       "path": "data/maps/PetalburgCity_Gym/scripts.inc",
       "conditions": [
         {
-          "line": 9,
+          "line": 10,
           "script": "goto_if_eq VAR_PETALBURG_GYM_STATE, 6, PetalburgCity_Gym_EventScript_OpenUnlockedDoors"
         },
         {
-          "line": 10,
+          "line": 11,
           "script": "call_if_ge VAR_PETALBURG_GYM_STATE, 7, PetalburgCity_Gym_EventScript_UnlockAllDoors"
         },
         {
-          "line": 39,
+          "line": 40,
           "script": "call_if_eq VAR_PETALBURG_GYM_STATE, 1, PetalburgCity_Gym_EventScript_MoveWallyToEntrance"
         },
         {
-          "line": 40,
+          "line": 41,
           "script": "call_if_lt VAR_PETALBURG_GYM_STATE, 6, PetalburgCity_Gym_EventScript_MoveNormanToEntrance"
         },
         {
-          "line": 41,
+          "line": 42,
           "script": "call_if_set FLAG_SYS_GAME_CLEAR, PetalburgCity_Gym_EventScript_CheckNormanForRematch"
         },
         {
-          "line": 55,
+          "line": 56,
           "script": "goto_if_eq VAR_RESULT, TRUE, PetalburgCity_Gym_EventScript_DontMoveNormanToFront"
         },
         {
-          "line": 56,
+          "line": 57,
           "script": "goto_if_eq VAR_PETALBURG_GYM_STATE, 8, PetalburgCity_Gym_EventScript_DontMoveNormanToFront"
         },
         {
-          "line": 65,
+          "line": 66,
           "script": "map_script_2 VAR_PETALBURG_GYM_STATE, 1, PetalburgCity_Gym_EventScript_TurnPlayerNorth"
         },
         {
-          "line": 73,
+          "line": 74,
           "script": "map_script_2 VAR_PETALBURG_GYM_STATE, 1, PetalburgCity_Gym_EventScript_ReturnFromWallyTutorial"
         },
         {
-          "line": 106,
+          "line": 107,
           "script": "switch VAR_PETALBURG_GYM_STATE"
         },
         {
-          "line": 116,
+          "line": 117,
           "script": "switch VAR_FACING"
         },
         {
-          "line": 146,
+          "line": 147,
           "script": "call_if_eq VAR_0x8008, 0, PetalburgCity_Gym_EventScript_WallyArriveSouth"
         },
         {
-          "line": 147,
+          "line": 148,
           "script": "call_if_eq VAR_0x8008, 1, PetalburgCity_Gym_EventScript_WallyArriveNorth"
         },
         {
-          "line": 148,
+          "line": 149,
           "script": "call_if_eq VAR_0x8008, 2, PetalburgCity_Gym_EventScript_WallyArriveWestEast"
         },
         {
-          "line": 149,
+          "line": 150,
           "script": "call_if_eq VAR_0x8008, 3, PetalburgCity_Gym_EventScript_WallyArriveWestEast"
         },
         {
-          "line": 154,
+          "line": 155,
           "script": "call_if_eq VAR_0x8008, 0, PetalburgCity_Gym_EventScript_NormanAddressPlayerSouth"
         },
         {
-          "line": 155,
+          "line": 156,
           "script": "call_if_eq VAR_0x8008, 1, PetalburgCity_Gym_EventScript_NormanAddressPlayerNorth"
         },
         {
-          "line": 156,
+          "line": 157,
           "script": "call_if_eq VAR_0x8008, 2, PetalburgCity_Gym_EventScript_NormanAddressPlayerWest"
         },
         {
-          "line": 157,
+          "line": 158,
           "script": "call_if_eq VAR_0x8008, 3, PetalburgCity_Gym_EventScript_NormanAddressPlayerEast"
         },
         {
-          "line": 159,
+          "line": 160,
           "script": "call_if_eq VAR_0x8008, 0, PetalburgCity_Gym_EventScript_NormanAddressWallySouth"
         },
         {
-          "line": 160,
+          "line": 161,
           "script": "call_if_eq VAR_0x8008, 1, PetalburgCity_Gym_EventScript_NormanAddressWallyNorth"
         },
         {
-          "line": 161,
+          "line": 162,
           "script": "call_if_eq VAR_0x8008, 2, PetalburgCity_Gym_EventScript_NormanAddressWallyWest"
         },
         {
-          "line": 162,
+          "line": 163,
           "script": "call_if_eq VAR_0x8008, 3, PetalburgCity_Gym_EventScript_NormanAddressWallyEast"
         },
         {
-          "line": 166,
+          "line": 167,
           "script": "call_if_eq VAR_0x8008, 0, PetalburgCity_Gym_EventScript_NormanFaceDoorSouth"
         },
         {
-          "line": 167,
+          "line": 168,
           "script": "call_if_eq VAR_0x8008, 1, PetalburgCity_Gym_EventScript_NormanFaceDoorNorth"
         },
         {
-          "line": 168,
+          "line": 169,
           "script": "call_if_eq VAR_0x8008, 2, PetalburgCity_Gym_EventScript_NormanFaceDoorWest"
         },
         {
-          "line": 169,
+          "line": 170,
           "script": "call_if_eq VAR_0x8008, 3, PetalburgCity_Gym_EventScript_NormanFaceDoorEast"
         },
         {
-          "line": 170,
+          "line": 171,
           "script": "call_if_eq VAR_0x8008, 0, PetalburgCity_Gym_EventScript_WallyFacePlayer"
         },
         {
-          "line": 171,
+          "line": 172,
           "script": "call_if_eq VAR_0x8008, 1, PetalburgCity_Gym_EventScript_WallyFaceDown"
         },
         {
-          "line": 172,
+          "line": 173,
           "script": "call_if_eq VAR_0x8008, 2, PetalburgCity_Gym_EventScript_WallyFacePlayer"
         },
         {
-          "line": 173,
+          "line": 174,
           "script": "call_if_eq VAR_0x8008, 3, PetalburgCity_Gym_EventScript_WallyFacePlayer"
         },
         {
-          "line": 178,
+          "line": 179,
           "script": "call_if_eq VAR_0x8008, 0, PetalburgCity_Gym_EventScript_ExitGymWithWallySouth"
         },
         {
-          "line": 179,
+          "line": 180,
           "script": "call_if_eq VAR_0x8008, 1, PetalburgCity_Gym_EventScript_ExitGymWithWallyNorth"
         },
         {
-          "line": 180,
+          "line": 181,
           "script": "call_if_eq VAR_0x8008, 2, PetalburgCity_Gym_EventScript_ExitGymWithWallyWest"
         },
         {
-          "line": 181,
+          "line": 182,
           "script": "call_if_eq VAR_0x8008, 3, PetalburgCity_Gym_EventScript_ExitGymWithWallyEast"
         },
         {
-          "line": 331,
+          "line": 332,
           "script": "goto_if_eq VAR_RESULT, TRUE, PetalburgCity_Gym_EventScript_GiveEnigmaBerry"
         },
         {
-          "line": 332,
+          "line": 333,
           "script": "goto_if_unset FLAG_RECEIVED_TM_FACADE, PetalburgCity_Gym_EventScript_GiveFacade2"
         },
         {
-          "line": 333,
+          "line": 334,
           "script": "goto_if_set FLAG_SYS_GAME_CLEAR, PetalburgCity_Gym_EventScript_NoAmountOfTrainingIsEnough"
         },
         {
-          "line": 350,
+          "line": 351,
           "script": "goto_if_eq VAR_RESULT, FALSE, PetalburgCity_Gym_EventScript_DontGiveEnigmaBerry"
         },
         {
-          "line": 352,
-          "script": "goto_if_eq VAR_RESULT, TRUE, PetalburgCity_Gym_EventScript_DontGiveEnigmaBerry"
-        },
-        {
-          "line": 354,
+          "line": 353,
           "script": "goto_if_eq VAR_RESULT, TRUE, PetalburgCity_Gym_EventScript_DontGiveEnigmaBerry"
         },
         {
           "line": 355,
+          "script": "goto_if_eq VAR_RESULT, TRUE, PetalburgCity_Gym_EventScript_DontGiveEnigmaBerry"
+        },
+        {
+          "line": 356,
           "script": "goto_if_eq VAR_ENIGMA_BERRY_AVAILABLE, 0, PetalburgCity_Gym_EventScript_DontGiveEnigmaBerry"
         },
         {
-          "line": 366,
+          "line": 367,
           "script": "goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull"
         },
         {
-          "line": 398,
+          "line": 399,
           "script": "switch VAR_FACING"
         },
         {
-          "line": 406,
+          "line": 407,
           "script": "goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull"
         },
         {
-          "line": 432,
+          "line": 433,
           "script": "call_if_eq VAR_0x8008, 1, PetalburgCity_Gym_EventScript_WallysDadApproachPlayerNorth"
         },
         {
-          "line": 433,
+          "line": 434,
           "script": "call_if_eq VAR_0x8008, 2, PetalburgCity_Gym_EventScript_WallysDadApproachPlayerEast"
         },
         {
-          "line": 434,
+          "line": 435,
           "script": "call_if_eq VAR_0x8008, 3, PetalburgCity_Gym_EventScript_WallysDadApproachPlayerWest"
         },
         {
-          "line": 438,
+          "line": 439,
           "script": "call_if_eq VAR_0x8008, 1, PetalburgCity_Gym_EventScript_WallysDadFaceNormanNorth"
         },
         {
-          "line": 439,
+          "line": 440,
           "script": "call_if_eq VAR_0x8008, 2, PetalburgCity_Gym_EventScript_WallysDadFaceNormanEast"
         },
         {
-          "line": 440,
+          "line": 441,
           "script": "call_if_eq VAR_0x8008, 3, PetalburgCity_Gym_EventScript_WallysDadFaceNormanWest"
         },
         {
-          "line": 445,
+          "line": 446,
           "script": "call_if_eq VAR_0x8008, 1, PetalburgCity_Gym_EventScript_ExitGymWithWallysDadNorth"
         },
         {
-          "line": 446,
+          "line": 447,
           "script": "call_if_eq VAR_0x8008, 2, PetalburgCity_Gym_EventScript_ExitGymWithWallysDadEast"
         },
         {
-          "line": 447,
+          "line": 448,
           "script": "call_if_eq VAR_0x8008, 3, PetalburgCity_Gym_EventScript_ExitGymWithWallysDadWest"
         },
         {
-          "line": 736,
+          "line": 737,
           "script": "goto_if_lt VAR_PETALBURG_GYM_STATE, 6, PetalburgCity_Gym_EventScript_DoorLocked"
-        },
-        {
-          "line": 740,
-          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
         },
         {
           "line": 741,
+          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
+        },
+        {
+          "line": 742,
           "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
         },
         {
-          "line": 764,
+          "line": 765,
           "script": "goto_if_lt VAR_PETALBURG_GYM_STATE, 6, PetalburgCity_Gym_EventScript_DoorLocked"
         },
         {
-          "line": 768,
-          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
-        },
-        {
           "line": 769,
-          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
+          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
         },
         {
-          "line": 778,
-          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
+          "line": 770,
+          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
         },
         {
           "line": 779,
-          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
+          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
         },
         {
-          "line": 788,
-          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
+          "line": 780,
+          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
         },
         {
           "line": 789,
-          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
+          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
         },
         {
-          "line": 798,
-          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
+          "line": 790,
+          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
         },
         {
           "line": 799,
-          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
+          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
         },
         {
-          "line": 808,
-          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
+          "line": 800,
+          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
         },
         {
           "line": 809,
-          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
+          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
         },
         {
-          "line": 818,
-          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
+          "line": 810,
+          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
         },
         {
           "line": 819,
-          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
+          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
         },
         {
-          "line": 828,
-          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
+          "line": 820,
+          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
         },
         {
           "line": 829,
-          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
+          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
         },
         {
-          "line": 838,
-          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
+          "line": 830,
+          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
         },
         {
           "line": 839,
-          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
+          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
         },
         {
-          "line": 848,
-          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
+          "line": 840,
+          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
         },
         {
           "line": 849,
-          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
+          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
         },
         {
-          "line": 858,
-          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
+          "line": 850,
+          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
         },
         {
           "line": 859,
-          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
-        },
-        {
-          "line": 868,
           "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
         },
         {
-          "line": 869,
+          "line": 860,
           "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
         },
         {
-          "line": 874,
+          "line": 869,
+          "script": "goto_if_eq VAR_RESULT, YES, PetalburgCity_Gym_EventScript_EnterRoom"
+        },
+        {
+          "line": 870,
+          "script": "goto_if_eq VAR_RESULT, NO, PetalburgCity_Gym_EventScript_DontEnterRoom"
+        },
+        {
+          "line": 875,
           "script": "goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_RandallPostBadge"
         },
         {
-          "line": 891,
+          "line": 892,
           "script": "goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_ParkerPostBadge"
         },
         {
-          "line": 908,
+          "line": 909,
           "script": "goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_GeorgePostBadge"
         },
         {
-          "line": 925,
+          "line": 926,
           "script": "goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_BerkePostBadge"
         },
         {
-          "line": 942,
+          "line": 943,
           "script": "goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_MaryPostBadge"
         },
         {
-          "line": 959,
+          "line": 960,
           "script": "goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_AlexiaPostBadge"
         },
         {
-          "line": 976,
+          "line": 977,
           "script": "goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_JodyPostBadge"
         },
         {
-          "line": 995,
-          "script": "call_if_eq VAR_0x8005, 0, PetalburgCity_Gym_EventScript_SlideOpenRoomDoors"
-        },
-        {
           "line": 996,
-          "script": "call_if_eq VAR_0x8005, 1, PetalburgCity_Gym_EventScript_UnlockRoomDoors"
+          "script": "call_if_eq VAR_0x8005, 0, PetalburgCity_Gym_EventScript_SlideOpenRoomDoors"
         },
         {
-          "line": 1002,
-          "script": "call_if_eq VAR_0x8005, 0, PetalburgCity_Gym_EventScript_SlideOpenRoomDoors"
+          "line": 997,
+          "script": "call_if_eq VAR_0x8005, 1, PetalburgCity_Gym_EventScript_UnlockRoomDoors"
         },
         {
           "line": 1003,
-          "script": "call_if_eq VAR_0x8005, 1, PetalburgCity_Gym_EventScript_UnlockRoomDoors"
+          "script": "call_if_eq VAR_0x8005, 0, PetalburgCity_Gym_EventScript_SlideOpenRoomDoors"
         },
         {
-          "line": 1009,
-          "script": "call_if_eq VAR_0x8005, 0, PetalburgCity_Gym_EventScript_SlideOpenRoomDoors"
+          "line": 1004,
+          "script": "call_if_eq VAR_0x8005, 1, PetalburgCity_Gym_EventScript_UnlockRoomDoors"
         },
         {
           "line": 1010,
-          "script": "call_if_eq VAR_0x8005, 1, PetalburgCity_Gym_EventScript_UnlockRoomDoors"
+          "script": "call_if_eq VAR_0x8005, 0, PetalburgCity_Gym_EventScript_SlideOpenRoomDoors"
         },
         {
-          "line": 1016,
-          "script": "call_if_eq VAR_0x8005, 0, PetalburgCity_Gym_EventScript_SlideOpenRoomDoors"
+          "line": 1011,
+          "script": "call_if_eq VAR_0x8005, 1, PetalburgCity_Gym_EventScript_UnlockRoomDoors"
         },
         {
           "line": 1017,
-          "script": "call_if_eq VAR_0x8005, 1, PetalburgCity_Gym_EventScript_UnlockRoomDoors"
+          "script": "call_if_eq VAR_0x8005, 0, PetalburgCity_Gym_EventScript_SlideOpenRoomDoors"
         },
         {
-          "line": 1023,
-          "script": "call_if_eq VAR_0x8005, 0, PetalburgCity_Gym_EventScript_SlideOpenRoomDoors"
+          "line": 1018,
+          "script": "call_if_eq VAR_0x8005, 1, PetalburgCity_Gym_EventScript_UnlockRoomDoors"
         },
         {
           "line": 1024,
-          "script": "call_if_eq VAR_0x8005, 1, PetalburgCity_Gym_EventScript_UnlockRoomDoors"
+          "script": "call_if_eq VAR_0x8005, 0, PetalburgCity_Gym_EventScript_SlideOpenRoomDoors"
         },
         {
-          "line": 1030,
-          "script": "call_if_eq VAR_0x8005, 0, PetalburgCity_Gym_EventScript_SlideOpenRoomDoors"
+          "line": 1025,
+          "script": "call_if_eq VAR_0x8005, 1, PetalburgCity_Gym_EventScript_UnlockRoomDoors"
         },
         {
           "line": 1031,
-          "script": "call_if_eq VAR_0x8005, 1, PetalburgCity_Gym_EventScript_UnlockRoomDoors"
+          "script": "call_if_eq VAR_0x8005, 0, PetalburgCity_Gym_EventScript_SlideOpenRoomDoors"
         },
         {
-          "line": 1037,
-          "script": "call_if_eq VAR_0x8005, 0, PetalburgCity_Gym_EventScript_SlideOpenRoomDoors"
+          "line": 1032,
+          "script": "call_if_eq VAR_0x8005, 1, PetalburgCity_Gym_EventScript_UnlockRoomDoors"
         },
         {
           "line": 1038,
-          "script": "call_if_eq VAR_0x8005, 1, PetalburgCity_Gym_EventScript_UnlockRoomDoors"
-        },
-        {
-          "line": 1044,
           "script": "call_if_eq VAR_0x8005, 0, PetalburgCity_Gym_EventScript_SlideOpenRoomDoors"
         },
         {
-          "line": 1045,
+          "line": 1039,
           "script": "call_if_eq VAR_0x8005, 1, PetalburgCity_Gym_EventScript_UnlockRoomDoors"
         },
         {
-          "line": 1109,
+          "line": 1045,
+          "script": "call_if_eq VAR_0x8005, 0, PetalburgCity_Gym_EventScript_SlideOpenRoomDoors"
+        },
+        {
+          "line": 1046,
+          "script": "call_if_eq VAR_0x8005, 1, PetalburgCity_Gym_EventScript_UnlockRoomDoors"
+        },
+        {
+          "line": 1110,
           "script": "goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_GymGuidePostVictory"
         },
         {
-          "line": 1121,
+          "line": 1122,
           "script": "goto_if_set FLAG_BADGE05_GET, PetalburgCity_Gym_EventScript_GymStatueCertified"
         },
         {
-          "line": 1127,
+          "line": 1128,
           "script": "goto_if_set FLAG_BADGE05_GET, PetalburgCity_Gym_EventScript_GymStatueCertified"
+        },
+        {
+          "line": 1577,
+          "script": "goto_if_lt VAR_PETALBURG_GYM_STATE, 2, Common_EventScript_NopReturn"
+        },
+        {
+          "line": 1578,
+          "script": "goto_if_ge VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_NopReturn"
         }
       ]
     },
@@ -1273,27 +1283,23 @@
           "script": "goto_if_unset FLAG_RECEIVED_TM_WATER_PULSE, SootopolisCity_Gym_1F_EventScript_GiveWaterPulse2"
         },
         {
-          "line": 87,
-          "script": "goto_if_unset FLAG_BADGE06_GET, SootopolisCity_Gym_1F_EventScript_GoGetFortreeBadge"
-        },
-        {
-          "line": 120,
+          "line": 119,
           "script": "goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull"
         },
         {
-          "line": 127,
+          "line": 126,
           "script": "goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull"
         },
         {
-          "line": 146,
+          "line": 145,
           "script": "goto_if_set FLAG_DEFEATED_SOOTOPOLIS_GYM, SootopolisCity_Gym_1F_EventScript_GymGuidePostVictory"
         },
         {
-          "line": 158,
+          "line": 157,
           "script": "goto_if_set FLAG_BADGE08_GET, SootopolisCity_Gym_1F_EventScript_GymStatueCertified"
         },
         {
-          "line": 164,
+          "line": 163,
           "script": "goto_if_set FLAG_BADGE08_GET, SootopolisCity_Gym_1F_EventScript_GymStatueCertified"
         }
       ]
@@ -1343,19 +1349,19 @@
       "path": "data/maps/ViridianCity_Gym_Frlg/scripts.inc",
       "conditions": [
         {
-          "line": 7,
+          "line": 6,
           "script": "goto_if_unset FLAG_GOT_TM26_FROM_GIOVANNI, ViridianCity_Gym_EventScript_GiveTM26"
         },
         {
-          "line": 29,
+          "line": 22,
           "script": "goto_if_eq VAR_RESULT, FALSE, ViridianCity_Gym_EventScript_NoRoomForTM26"
         },
         {
-          "line": 84,
+          "line": 77,
           "script": "goto_if_set FLAG_DEFEATED_LEADER_GIOVANNI, ViridianCity_Gym_EventScript_GymGuyPostVictory"
         },
         {
-          "line": 97,
+          "line": 89,
           "script": "goto_if_set FLAG_BADGE08_GET, ViridianCity_Gym_EventScript_GymStatuePostVictory"
         }
       ]
@@ -1387,11 +1393,11 @@
   "input_sha256": {
     "data/maps/RocketHideout_B4F_Frlg/scripts.inc": "61cb23330802694879178497d72aa322fb703b990a23e56606f22aebe4e28832",
     "data/maps/SilphCo_11F_Frlg/scripts.inc": "b083bd19b463ec63b7f8e4623b37e5bb6141f0f19ce9a977605d65d2ac412ca3",
-    "data/maps/ViridianCity_Gym_Frlg/scripts.inc": "6676479fdca2e65896415b8497c2ed7b87e1eb625c29590c869ef4d6299638da",
+    "data/maps/ViridianCity_Gym_Frlg/scripts.inc": "5341b5347d17bdeff832aeec7650a2c55e0b39f6ac0807d20f85818db354c45d",
     "data/maps/MtChimney/scripts.inc": "9eaed775a7bde2edeaf487229bc2ef1b6b571b4f3f63b43f1bba6160c1517cbc",
     "data/maps/MagmaHideout_4F/scripts.inc": "e5e2c8c362fc88cb70f76ebd70ba47bc4c1d3673af6a3f0651ebd10e215e4d41",
     "data/maps/MossdeepCity_SpaceCenter_2F/scripts.inc": "04184e0e8a6ca56a6e1abd3f08e741d69a2b970dd816bb65cc742af7ab96db8d",
-    "data/maps/SeafloorCavern_Room9/scripts.inc": "9c189069c37a78a96bd686143de8e8fa1daa0ec2ed9b3f451059ac789fbefaad",
+    "data/maps/SeafloorCavern_Room9/scripts.inc": "efcbfdfa8ea6251a7ccd3c42d0db270585abb996c470d08ebca72c1a5b5598e1",
     "data/scripts/route23.inc": "1766e126903d471cdb46d91e013056405c1db8f25b17928dd41c6c4f6336a641",
     "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc": "dcd902ed5895ef76e769bbfb7852c6e6a979cd47334ba4c3884b65a930262a6a",
     "src/event_data.c": "bba81b22580819fafed74e22ba1833414c0b970b9f9bfa467260af37dfbe8726",
@@ -1405,11 +1411,11 @@
     "data/maps/LavaridgeTown_Gym_B1F/scripts.inc": "034236909b629ee3f3a180a0b2f98f17aad41e3487931c60edfbdff858651159",
     "data/maps/MauvilleCity_Gym/scripts.inc": "9fa32a400f7ac2e33a04f0e1beb3874b179a85b560aaf55dfe8e9ccf58cd4ffd",
     "data/maps/MossdeepCity_Gym/scripts.inc": "39e50e53f311b5e55687b898338e32ca3d85cf71d258d4cba6b9db4685d60e68",
-    "data/maps/PetalburgCity_Gym/scripts.inc": "b3c50a720c857068d70a9ad54700de498906e401e82f69032ff5798094ae1738",
+    "data/maps/PetalburgCity_Gym/scripts.inc": "0927f1ee7e91495faddf503dc1f3aba682f822d60fa92fb68b243dcbf6d400a9",
     "data/maps/PewterCity_Gym_Frlg/scripts.inc": "7e2f81ea8493e81eee3c3591587caefd1cf515039b70c6ad605b48574fde0be6",
     "data/maps/RustboroCity_Gym/scripts.inc": "0880fe95e8aa6981e9e54883364b8f37b30330c50ecb0d3c3758d40a3e773208",
     "data/maps/SaffronCity_Gym_Frlg/scripts.inc": "57fdc1576162c779d5c88e8b9016f856940df06ae56d88c4101a95d1bb7394c7",
-    "data/maps/SootopolisCity_Gym_1F/scripts.inc": "731683b579d64076400d00064b36e15b1d547e368396bbdfb99759f900c9c1be",
+    "data/maps/SootopolisCity_Gym_1F/scripts.inc": "7c5ea0c792bda12d8103da3fcab6dc044697b3d1abb548af2c8722b3168aafec",
     "data/maps/SootopolisCity_Gym_B1F/scripts.inc": "7caf16e86149d1cb2da7f2675311928fe54b1e0e83e2406b981d66fa372bd0a5",
     "data/maps/VermilionCity_Gym_Frlg/scripts.inc": "b6d693906fe2154ec314fdfc36ae36dd2e380022b2050a67a71f12b18115bd55"
   }

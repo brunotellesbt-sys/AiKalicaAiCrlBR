@@ -29,9 +29,12 @@ def audit(source):
         return raw.decode()
 
     bosses = []
+    regular_gyms = []
     for region, name, trainer, boss, interval in BOSSES:
         path = f'data/maps/{name}/scripts.inc'
         script = read(path)
+        if trainer == 'TRAINER_LEADER_GIOVANNI' and (source / '.journey-blue-gym').exists():
+            trainer='TRAINER_JOURNEY_BLUE';boss='Blue (regular gym, not a Rocket mission)'
         if trainer == 'TRAINER_ARCHIE' and (source / '.journey-team-stories').exists():
             trainer='TRAINER_JOURNEY_ARCHIE_ALLIANCE'; boss='Archie + Shelly, alongside Giovanni'
         matches = [dict(line=i, script=line.strip())
@@ -39,8 +42,10 @@ def audit(source):
                    if re.search(r'\b' + trainer + r'\b', line)]
         if len(matches) != 1:
             raise ValueError(f'Expected one native boss battle: {trainer}')
-        bosses.append(dict(region=region, map=name, trainer=trainer, boss=boss,
-                           original_usual_interval=interval, evidence=matches[0]))
+        record=dict(region=region, map=name, trainer=trainer, boss=boss,
+                    original_usual_interval=interval, evidence=matches[0])
+        if trainer=='TRAINER_JOURNEY_BLUE': regular_gyms.append(record)
+        else: bosses.append(record)
 
     leagues = {}
     for region, path, command in (
@@ -75,7 +80,7 @@ def audit(source):
         dependencies.append(dict(path=path, conditions=references))
 
     return dict(status='campaign_dependency_audit_not_complete_integration',
-                original_games=['LeafGreen', 'Emerald'], bosses=bosses,
+                original_games=['LeafGreen', 'Emerald'], bosses=bosses, regular_gym_replacements=regular_gyms,
                 league_guards=leagues, gym_conditions=dependencies,
                 policy=dict(independent_campaigns=True, independent_leagues=True,
                             free_choice_of_gym_order=True,

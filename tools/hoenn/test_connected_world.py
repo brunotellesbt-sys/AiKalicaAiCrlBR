@@ -132,5 +132,44 @@ class ConnectedWorldTests(unittest.TestCase):
         self.assertFalse(battle['victory_aftermath_validated'])
         self.assertTrue((VALIDATION/'Giovanni-Archie-Shelly-tag-battle.png').exists())
 
+    def test_native_free_order_access_preserves_missions_and_water(self):
+        runtime=json.loads((VALIDATION/'connected-world.json').read_text())
+        access=next(c for c in runtime['checks']if c['check']=='free_gym_doors_and_land_hms')
+        self.assertEqual(access['physical_gym_entries'],16)
+        self.assertEqual(access['norman_old_badge_states'],4)
+        self.assertEqual(access['opened_boulder_barrier_tiles'],8)
+        self.assertEqual(access['all_obstacles_catalogued'],336)
+        self.assertEqual(len(access['obstacle_samples']),6)
+        self.assertTrue(access['real_surf_prompt_without_badges'])
+        self.assertTrue(access['dive_rule_preserved'])
+        self.assertFalse(access['full_campaign_validated'])
+        # Mission-door tests must still pass on the same ROM as free entries.
+        gates=next(c for c in runtime['checks']if c['check']=='regional_campaign_checkpoints_and_guides')
+        self.assertTrue(gates['blocked_door_movement']);self.assertEqual(gates['city_guides'],16)
+
+    def test_blue_is_a_regular_scaled_gym_and_not_a_rocket_victory(self):
+        prep=json.loads((VALIDATION/'blue-gym-preparation.json').read_text())
+        self.assertEqual(prep['leader'],'Blue');self.assertFalse(prep['team_rocket_event'])
+        self.assertLessEqual(prep['trainer_id'],1622)
+        runtime=json.loads((VALIDATION/'connected-world.json').read_text())
+        blue=next(c for c in runtime['checks']if c['check']=='blue_regular_gym_reward')
+        self.assertTrue(blue['rocket_flags_unchanged']);self.assertTrue(blue['regional_badge_only'])
+        self.assertTrue(blue['route22_after_all_eight'])
+        self.assertTrue(blue['completed_final_rival_not_restarted'])
+        self.assertTrue(blue['battle_victory_simulated'])
+        parties=next(c for c in runtime['checks']if c['check']=='native_gym_party_levels')
+        self.assertEqual(parties['parties'],840)
+
+    def test_only_explicit_access_event_edits_are_recorded(self):
+        prep=json.loads((VALIDATION/'free-access-preparation.json').read_text())
+        self.assertEqual(len(prep['obstacles']),336)
+        self.assertEqual(len({o['map']for o in prep['obstacles']}),77)
+        self.assertEqual(prep['water_moves']['dive'],'unchanged')
+        self.assertTrue(prep['norman_tutorial_preserved']);self.assertTrue(prep['requires_new_save'])
+        self.assertFalse(prep['full_story_validated'])
+        # Every source map is inspected, so this catalogue covers both regions.
+        maps=[p for p in prep['input_sha256']if p.endswith('/map.json')]
+        self.assertEqual(len(maps),939)
+
 
 if __name__ == '__main__': unittest.main()

@@ -1,5 +1,88 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+## Acessos e Viridian — etapa atual
+
+Viridian agora tem **Blue como líder normal**, sem contar como enfrentamento
+Rocket. Giovanni permanece no esconderijo, na Silph e na aliança contra Aqua.
+O prêmio de Blue não oculta membros Rocket nem conclui essas missões. Blue
+permanece no ginásio depois da vitória. Os nomes históricos de alguns flags
+internos foram preservados para não renumerar eventos, mas não representam
+uma nova vitória contra a Rocket.
+
+Os níveis continuam pela ordem da jornada **na própria região**:
+
+| Ginásio enfrentado | Nível do Pokémon mais forte do líder |
+| --- | --- |
+| 1º | 14 |
+| 2º | 21 |
+| 3º | 28 |
+| 4º | 35 |
+| 5º | 42 |
+| 6º | 48 |
+| 7º | 54 |
+| 8º | 60 |
+
+Os treinadores internos usam a mesma escala com dois níveis a menos; as
+variações entre os Pokémon de cada equipe são preservadas, até seis níveis.
+Blue entra nessa regra como os demais líderes. Suas equipes foram geradas
+pelo motor real nas oito etapas, dentro das **840 equipes verificadas**.
+O rival final de Route 22 é preparado somente com as oito insígnias de Kanto,
+e uma cena já concluída não é reiniciada.
+
+A preparação inspeciona os **939 mapas originais** e retira da renderização
+e colisão **336 obstáculos de HMs terrestres em 77 mapas**: 82 árvores,
+141 pedras de Rock Smash e 113 blocos de Strength. Os IDs e scripts dos objetos
+continuam registrados; um flag reservado os mantém ausentes desde o novo jogo.
+Os NPCs que entregam esses golpes continuam presentes. Nove mapas deixam de
+exigir Flash. Os oito tiles das barreiras de Strength em Victory Road são
+abertos explicitamente, e as correntes de Seafoam são interrompidas sem
+exigir empurrar blocos.
+
+Os guardas de Saffron diante do ginásio e da Silph, e os dois Magma junto ao
+teleférico de Route 112, foram deslocados para espaços livres. Seus diálogos
+e estados de missão continuam. Os portões de Saffron não exigem Tea; o velho
+de Viridian fica fora do caminho; o deserto de Route 111 não exige Go-Goggles.
+Lilycove não cria a parede de Wailmer que fechava a passagem marítima.
+Nenhuma dessas mudanças concede vitória contra Aqua, Magma ou Rocket.
+
+Norman mantém o tutorial de Wally, mas depois aceita o desafio sem quatro
+insígnias. Fortree não exige Devon Scope para alcançar o ginásio; Cinnabar
+não exige Secret Key; a porta de Viridian não exige seis insígnias específicas;
+e a porta de Sootopolis não acrescenta a trava antiga de clima. **Os guias
+das missões regionais continuam bloqueando o próximo ginásio quando há um
+checkpoint pendente.** As duas Ligas continuam exigindo as oito insígnias da
+própria região; a candidata não concede nenhuma insígnia para abrir acessos.
+
+Surf e Waterfall passam a exigir o golpe no Pokémon, sem insígnias. O teste
+ativou Surf pelo diálogo real do botão A com zero insígnias. Terrenos de água,
+cachoeiras e áreas submersas permanecem; a regra de Dive permanece intacta.
+Esta base ainda não fornece um sistema de Whirlpool no campo: isso exige
+migração adicional e não é anunciado como funcional.
+
+A compilação passou. O mGBA entrou fisicamente nos **16 ginásios** sem a
+ordem antiga, verificou os quatro estados antigos de Norman, seis exemplos
+de obstáculos entre os dois formatos e os oito tiles de barreiras abertos.
+O prêmio de Blue foi executado com uma vitória simulada para conferir seus
+flags; esse teste não equivale a vencer sua batalha completa. Permaneceram
+aprovados os 16 guias/checkpoints, 96 travessias de Surf, bancos regionais/save,
+missões e a tela da aliança com Giovanni. Passaram **18 testes offline**.
+As dez camadas reproduzem **304 arquivos** byte a byte; 117 conexões da rede
+preparada são recíprocas e não se sobrepõem. Mudanças de eventos são registradas
+por campo, e a reprodução desfaz apenas essas alterações explícitas para
+conferir os hashes das etapas anteriores.
+
+[Surf sem insígnias](integration-validation/Surf-without-badges-active.png),
+[entrada de Viridian](integration-validation/ViridianCity_Frlg-free-gym-entry.png),
+[barreiras de Victory Road](integration-validation/VictoryRoad_2F_Frlg-open-boulder-barriers.png),
+[preparação de acessos](integration-validation/free-access-preparation.json) e
+[Blue](integration-validation/blue-gym-preparation.json).
+
+**Ainda não é a versão final publicada.** A auditoria das demais restrições
+de NPCs/eventos e as campanhas completas continuam pendentes. Também falta
+migrar a jornada personalizada, o rival do sexo oposto, o catálogo anterior,
+encontros adaptativos e viagens/tickets. A candidata continua exigindo save
+novo; a ROM e o player publicados preservam a versão anterior.
+
 ## Histórias independentes e ordem livre
 
 Cada região deve preservar sua própria campanha, próxima do jogo original.
@@ -17,8 +100,8 @@ de Sabrina, com a ordem de Koga variável; Giovanni como oitavo líder em
 Viridian. Em Emerald, Maxie no Monte Chimney fica entre Wattson e Flannery;
 no esconderijo Magma entre Winona e Tate & Liza; no Centro Espacial entre
 Tate & Liza e Juan. Archie na Caverna Submarina também fica entre o sétimo
-e o oitavo ginásio. A adaptação de Viridian continua prevendo Blue como
-líder, preservando Giovanni nos eventos Rocket.
+e o oitavo ginásio. Viridian foi substituída por Blue nesta etapa, preservando Giovanni nos
+eventos Rocket e na aliança.
 
 A candidata agora usa os seguintes checkpoints por quantidade de insígnias
 **da própria região**, independentemente da identidade dos ginásios vencidos:
@@ -86,8 +169,8 @@ após o Centro Espacial permanece; ainda é necessário um Pokémon com o golpe.
 
 ### Validação e limites desta etapa
 
-A compilação nativa passou. A reprodução das oito camadas compara 222 arquivos
-byte a byte com a candidata; 112 conexões dos mapas oceânicos preparados são
+A compilação nativa passou. A reprodução das dez camadas compara 304 arquivos
+byte a byte com a candidata; 117 conexões dos mapas oceânicos preparados são
 recíprocas e não se sobrepõem. As verificações de preservação usam os prefixos
 dos arrays de eventos, incluindo o warp adicional do cassino, preservando IDs.
 Conexões nativas fora da rede preparada não são certificadas por esse relatório.
@@ -98,10 +181,9 @@ físicas nas escadas e a tela de combate real com os quatro participantes de Gio
 Os testes configuram estados de missão diretamente na memória; **não simulam
 uma campanha completa nem comprovam a vitória e o roteiro posterior à dupla**.
 
-**Ainda falta retirar todos os bloqueios terrestres e adaptar integralmente
-os acessos em ordem livre.** A base mantém dependências originais como Norman,
-Fortree, a porta de Sootopolis e o Secret Key de Cinnabar. Esta etapa não deve
-ser publicada como o jogo final. Também falta migrar Blue e a jornada anterior.
+**A etapa de acessos descrita acima remove essas travas antigas de ginásio.**
+A auditoria das demais restrições de NPCs/eventos e a jornada anterior ainda
+precisam de adaptação e validação completa; esta candidata não é o jogo final.
 Os diálogos novos seguem em inglês, como o restante desta base.
 
 [Base Rocket: segundo andar](integration-validation/JourneyRocketBaseB2F-rocket-basement.png),
@@ -143,7 +225,7 @@ continuam pendentes de migração. Não foram alterados os times, espécies,
 golpes ou puzzles dos ginásios nesta etapa.
 
 Os oito overlays atuais foram reproduzidos em **222 arquivos**. Foram verificadas
-112 conexões dos mapas oceânicos preparados sem sobreposição e a conectividade de todo o mar
+117 conexões dos mapas oceânicos preparados sem sobreposição e a conectividade de todo o mar
 leste de Hoenn com a rede de Kanto/Sevii. Os números de etapas anteriores
 abaixo são históricos. A ROM publicada continua separada.
 
@@ -253,6 +335,8 @@ python3 tools/hoenn/prepare_east_coast.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_gym_scaling.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_campaign_gates.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_team_stories.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_free_access.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_blue_gym.py --source .local/hoenn-multiregion-src
 ```
 
 Na pasta de fonte, compile com os caminhos do compilador ARM, binutils,
@@ -262,7 +346,7 @@ Após editar mapas binários, force sua recompilação com `make modern -W data/
 ```sh
 python3 tools/hoenn/validate_crossing.py \
   --source .local/hoenn-multiregion-src --library .local/mgba-bridge.so \
-  --worldsea --westsea --region-state --east-coast --gym-scaling --campaign-gates --team-stories
+  --worldsea --westsea --region-state --east-coast --gym-scaling --campaign-gates --free-access --team-stories
 python3 tools/hoenn/verify_worldsea.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/world_layout.py
 node tools/hoenn/validate_world_layout.cjs
@@ -277,10 +361,10 @@ anteriores. Ele é específico ao ABI desta base fixada.
 1. Preservar a versão anterior; a candidata exige um novo jogo, sem conversão.
 2. Completar a auditoria de variáveis e todos os estados das histórias; validar
    ginásios livres, níveis adaptativos e bloqueio correto de cada Liga.
-3. Migrar cidades iniciais, famílias/Oak, rival, Blue, catálogo/sprites,
+3. Migrar cidades iniciais, famílias/Oak, rival do sexo oposto, catálogo/sprites,
    Habilidades Ocultas/Battle Bond, Megas e encontros adaptativos.
 4. Migrar as conexões Sevii, implementar o ticket Vermilion–Slateport,
-   liberar Surf/Waterfall desde o início e adaptar todos os puzzles que
-   exigem outros HMs, preservando Dive e Whirlpool.
+   concluir a entrega inicial dos HMs de água, auditar os demais eventos
+   de puzzles e migrar Whirlpool, preservando Dive.
 5. Validar Aqua/Magma, concursos, bases secretas, Frontier, viagens,
    salvamento e campanhas completas, antes de trocar a ROM no player.

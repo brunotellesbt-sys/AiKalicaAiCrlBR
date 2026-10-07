@@ -19,6 +19,8 @@ from prepare_east_coast import prepare as coast_prepare
 from prepare_gym_scaling import prepare as gym_prepare
 from prepare_campaign_gates import prepare as campaign_prepare
 from prepare_team_stories import prepare as stories_prepare
+from prepare_free_access import prepare as access_prepare
+from prepare_blue_gym import prepare as blue_prepare
 
 
 def verify(source, output):
@@ -29,6 +31,8 @@ def verify(source, output):
     if (source / '.journey-gym-scaling').exists(): markers.append('.journey-gym-scaling')
     if (source / '.journey-campaign-gates').exists(): markers.append('.journey-campaign-gates')
     if (source / '.journey-team-stories').exists(): markers.append('.journey-team-stories')
+    if (source / '.journey-free-access').exists(): markers.append('.journey-free-access')
+    if (source / '.journey-blue-gym').exists(): markers.append('.journey-blue-gym')
     reports = [json.loads((source / p).read_text()) for p in markers]
     original_paths = sorted({p for r in reports for p in (r['original_sha256'] | r.get('input_sha256', {})) if p in acquired['sha256']})
     expected = {}
@@ -58,6 +62,10 @@ def verify(source, output):
             campaign = campaign_prepare(fresh); assert campaign_prepare(fresh) == campaign
         if '.journey-team-stories' in markers:
             stories = stories_prepare(fresh); assert stories_prepare(fresh) == json.loads(json.dumps(stories))
+        if '.journey-free-access' in markers:
+            access=access_prepare(fresh);assert access_prepare(fresh)==access
+        if '.journey-blue-gym' in markers:
+            blue=blue_prepare(fresh);assert blue_prepare(fresh)==blue
         for path, digest in expected.items():
             if hashlib.sha256((fresh / path).read_bytes()).hexdigest() != digest:
                 raise ValueError('Fresh overlay mismatch: ' + path)
@@ -67,6 +75,18 @@ def verify(source, output):
         for r in reports:
             for name, events in r.get('preserved_event_sha256', {}).items():
                 actual = json.loads((fresh / f'data/maps/{name}/map.json').read_text())
+                for later in reversed(reports):
+                    for change in reversed(later.get('event_changes',[])):
+                        if change['map']==name:
+                            if 'path' in change:
+                                node=actual
+                                for key in change['path'][:-1]:node=node[key]
+                                key=change['path'][-1]
+                                assert node[key]==change['after'], ('Unexpected event field',name,change['path'])
+                                node[key]=change['before']
+                            else:
+                                assert actual==change['after'], ('Unexpected event modification',name)
+                                actual=change['before']
                 for key, digest in events.items():
                     values = actual.get(key, [])
                     # Later overlays append guides, opponents and one casino
@@ -115,7 +135,7 @@ def verify(source, output):
             full_story_validated=False, prepared_sha256=expected)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, indent=2) + '\n')
-    for name, r in zip(['crossing-preparation', 'eastern-ocean-preparation', 'western-ocean-preparation', 'regional-state-preparation', 'east-coast-preparation', 'gym-scaling-preparation', 'campaign-gates-preparation', 'team-stories-preparation'], reports):
+    for name, r in zip(['crossing-preparation', 'eastern-ocean-preparation', 'western-ocean-preparation', 'regional-state-preparation', 'east-coast-preparation', 'gym-scaling-preparation', 'campaign-gates-preparation', 'team-stories-preparation', 'free-access-preparation', 'blue-gym-preparation'], reports):
         (output.parent / (name + '.json')).write_text(json.dumps(r, indent=2) + '\n')
     print(f'Reproduction passed: {len(expected)} files; {edge_count} reciprocal edges; no overlapping seams')
 
