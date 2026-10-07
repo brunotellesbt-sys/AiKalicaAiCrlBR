@@ -47,11 +47,11 @@ def integer_expression(value):
         raise ValueError('Unexpected species index expression')
     return number(ast.parse(value.strip(),mode='eval').body)
 
-def apply(source, cpp, archive):
+def apply(source, cpp, archive, raw=None):
     # Let the engine's own preprocessor expand inherited form macros. This
     # preserves icon, cry, animation and form-change references, including
     # Unown and regional forms that don't have separate literal initializers.
-    raw = subprocess.check_output([str(cpp),'-P','-iquote','include','-Wno-trigraphs','-DMODERN=1','-DTESTING=0','-DLEAFGREEN','-std=gnu17','src/pokemon.c'],cwd=source,text=True)
+    if raw is None: raw = subprocess.check_output([str(cpp),'-P','-iquote','include','-Wno-trigraphs','-DMODERN=1','-DTESTING=0','-DLEAFGREEN','-std=gnu17','src/pokemon.c'],cwd=source,text=True)
     start = re.search(r'const struct SpeciesInfo gSpeciesInfo\[[^]]*\] =',raw).start()
     start = raw.index('{',start); end = matching(raw,start)
     table = raw[start+1:end]; entries = {}
@@ -72,19 +72,21 @@ def apply(source, cpp, archive):
     for r in report['catalog']:
         ident = r['species_id']; donor = r['donor_id']; f = entries[ident]
         for key,value in zip(['baseHP','baseAttack','baseDefense','baseSpeed','baseSpAttack','baseSpDefense'],r['stats']): f[key] = str(value)
-        # Retain the engine's canonical Fairy typings, including regional forms
-        # such as Alolan Ninetales; otherwise honor the donor's two types.
-        if 'TYPE_FAIRY' in f['types']:
-            if 'FAIRY' not in r['types']: corrected.append(r['species'])
-        else: f['types'] = '{'+', '.join('TYPE_'+t for t in r['types'])+'}'
-        for key,value in [('catchRate',r['catch_rate']),('expYield',r['exp_yield']),('genderRatio',r['gender']),('eggCycles',r['egg_cycles']),('friendship',r['friendship']),('growthRate',r['growth'])]: f[key] = str(value)
-        for key,value in zip(['evYield_HP','evYield_Attack','evYield_Defense','evYield_Speed','evYield_SpAttack','evYield_SpDefense'],r['ev_yields']): f[key] = str(value)
-        f['eggGroups'] = '{'+','.join(map(str,r['egg_groups']))+'}'
-        f['abilities'] = '{'+','.join(r['abilities'])+'}'
-        for kind,field,ext,ctype in [('front','frontPic','4bpp.lz','U32'),('back','backPic','4bpp.lz','U32'),('palette','palette','gbapal','U16')]:
-            symbol = f'gUnova{kind.title()}{donor}'
-            definitions.append(f'static const u{32 if ctype == "U32" else 16} {symbol}[] = INCBIN_{ctype}("graphics/unova/{donor}/{kind}.{ext}");')
-            f[field] = symbol
+        if not r.get('native_metadata'):
+            # Retain the engine's canonical Fairy typings, including regional forms
+            # such as Alolan Ninetales; otherwise honor the donor's two types.
+            if 'TYPE_FAIRY' in f['types']:
+                if 'FAIRY' not in r['types']: corrected.append(r['species'])
+            else: f['types'] = '{'+', '.join('TYPE_'+t for t in r['types'])+'}'
+            for key,value in [('catchRate',r['catch_rate']),('expYield',r['exp_yield']),('genderRatio',r['gender']),('eggCycles',r['egg_cycles']),('friendship',r['friendship']),('growthRate',r['growth'])]: f[key] = str(value)
+            for key,value in zip(['evYield_HP','evYield_Attack','evYield_Defense','evYield_Speed','evYield_SpAttack','evYield_SpDefense'],r['ev_yields']): f[key] = str(value)
+            f['eggGroups'] = '{'+','.join(map(str,r['egg_groups']))+'}'
+            f['abilities'] = '{'+','.join(r['abilities'])+'}'
+        if not r.get('native_graphics'):
+            for kind,field,ext,ctype in [('front','frontPic','4bpp.lz','U32'),('back','backPic','4bpp.lz','U32'),('palette','palette','gbapal','U16')]:
+                symbol = f'gUnova{kind.title()}{donor}'
+                definitions.append(f'static const u{32 if ctype == "U32" else 16} {symbol}[] = INCBIN_{ctype}("graphics/unova/{donor}/{kind}.{ext}");')
+                f[field] = symbol
         f['frontAnimFrames'] = 'sAnims_SingleFramePlaceHolder'
         f['frontAnimId'] = '0'
         for key in list(f):
@@ -109,6 +111,32 @@ def apply(source, cpp, archive):
                 if not target or int(target[1]) in allowed: kept.append(item)
                 p = e+1
             f['evolutions'] = '(const struct Evolution[]) {'+', '.join(kept)+'}'
+        if report.get('disabled_mechanics') and f.get('formSpeciesIdTable') not in [None, 'NULL']:
+            table_name = f['formSpeciesIdTable']
+            match = re.search(r'static const u16 '+re.escape(table_name)+r'\[\] =\s*\{',raw)
+            if not match: raise ValueError('Missing form species table '+table_name)
+            body = raw[match.end():matching(raw,match.end()-1)]
+            values = [int(v) for v in re.findall(r'\b\d+\b',body) if int(v) != 0]
+            # Preserve index positions; excluded size/Tera forms safely resolve
+            # to the family's normal form instead of shifting native indexes.
+            base = next(v for v in values if v in allowed)
+            values = [v if v in allowed else base for v in values]
+            symbol = f'sCatalogFormSpecies{ident}'
+            definitions.append('static const u16 '+symbol+'[] = {'+','.join(map(str,values))+',0xFFFF};')
+            f['formSpeciesIdTable'] = symbol
+        if report.get('disabled_mechanics') and f.get('formChangeTable') not in [None, 'NULL']:
+            table_name = f['formChangeTable']
+            match = re.search(r'static const struct FormChange '+re.escape(table_name)+r'\[\] =\s*\{',raw)
+            if not match: raise ValueError('Missing form table '+table_name)
+            body = raw[match.end():matching(raw,match.end()-1)]
+            kept = []
+            for item in re.findall(r'\{[^{}]*\}',body):
+                target = re.match(r'\{\s*(FORM_CHANGE_\w+),\s*(\d+)',item)
+                if target and (int(target[2]) not in allowed or any(k in target[1] for k in ['GIGANTAMAX','ULTRA_BURST','TERASTALLIZATION'])): continue
+                kept.append(item)
+            symbol = f'sCatalogFormChanges{ident}'
+            definitions.append('static const struct FormChange '+symbol+'[] = {'+','.join(kept)+'};')
+            f['formChangeTable'] = symbol
         generated.append(f'    [{r["species"]}] = {{\n'+''.join(f'        .{k} = {v},\n' for k,v in f.items())+'    },\n')
     # Keep exactly the imported catalog, NONE and EGG. Other species remain
     # zero-filled and cannot be created by ordinary game evolution paths.

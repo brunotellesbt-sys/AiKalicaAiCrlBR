@@ -2,9 +2,12 @@
 
 Ambiente para trabalhar com uma cópia local de **Pokémon LeafGreen USA v1.1**.
 
-A versão com **649 espécies, 210 formas, tipo Fada e Mega Evolução**, preservando
-a jornada personalizada, está em [mods/unova-catalog](mods/unova-catalog/README.md).
-Ela requer jogo novo; os novos encontros e as Mega Stones ainda não foram liberados.
+A versão atual tem **1.025 espécies-base, 457 formas adicionais, tipo Fada e
+48 Mega Evoluções**, preservando a jornada personalizada. Está em
+[mods/all-regions](mods/all-regions/README.md), com Dynamax, Gigantamax e Z-Moves
+bloqueados. Comece um jogo novo; novos encontros e entrega de Mega Stones ainda
+não foram liberados. A versão anterior permanece em
+[mods/unova-catalog](mods/unova-catalog/README.md).
 Os pacotes, versões, fontes de download, licenças e resultados dos testes estão em
 [tools/README.md](tools/README.md).
 

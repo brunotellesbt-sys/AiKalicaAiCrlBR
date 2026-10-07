@@ -10,13 +10,15 @@ from prepare import ROOT
 
 p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('--library',type=Path,required=True)
+p.add_argument('--directory',type=Path,default=ROOT/'mods/unova-catalog')
+p.add_argument('--rom-name',default='LeafGreen-Journey-Unova')
 p.add_argument('--output',type=Path,default=ROOT/'mods/unova-catalog/validation')
 args=p.parse_args();args.output.mkdir(parents=True,exist_ok=True)
 (args.output/'results.json').unlink(missing_ok=True)
-directory=ROOT/'mods/unova-catalog'
+directory=args.directory
 ref=json.loads((directory/'debug-reference.json').read_text());s=ref['symbols'];abi=ref['layout']
 lib=ctypes.CDLL(str(args.library.resolve()));lib.start.argtypes=[ctypes.c_char_p];lib.image.restype=ctypes.c_void_p;lib.read32.restype=ctypes.c_uint32
-assert lib.start(str(directory/'LeafGreen-Journey-Unova.gba').encode())
+assert lib.start(str(directory/(args.rom_name+'.gba')).encode())
 results=[]
 
 def step(n,keys=0):lib.frames(n,keys)
@@ -219,7 +221,12 @@ for index,r in enumerate(catalog):
     assert 1<=lib.read8(s['gEnemyParty']+abi['pokemon_level'])<=7
     record('native-pokemon-creation',species=r['species'],id=actual)
     if index%100==0:print('Species checked',index,flush=True)
-for name in ['SPECIES_VICTINI','SPECIES_GARDEVOIR_MEGA','SPECIES_GENESECT']:
+render_names=['SPECIES_VICTINI','SPECIES_GARDEVOIR_MEGA','SPECIES_GENESECT']
+if args.rom_name=='LeafGreen-Journey-AllRegions':
+    render_names += ['SPECIES_CHESPIN','SPECIES_ROWLET','SPECIES_GROOKEY','SPECIES_SPRIGATITO','SPECIES_DIANCIE_MEGA','SPECIES_WYRDEER','SPECIES_TERAPAGOS','SPECIES_TERAPAGOS_TERASTAL','SPECIES_PECHARUNT']
+if args.rom_name=='LeafGreen-Journey-AllRegions':
+    render_names += [r['species'] for r in catalog if r.get('native_graphics') and r['species'] not in render_names]
+for name in render_names:
     row=next(r for r in catalog if r['species']==name)
     assert native('ScriptMenu_ShowPokemonPic',row['species_id'],8,2)
     step(60);screenshot(name.lower())
@@ -251,6 +258,11 @@ lib.write32(s['gBattleTypeFlags'],8)
 native('CreateNPCTrainerParty',s['gEnemyParty'],349,1)
 assert [lib.read8(s['gEnemyParty']+i*100+84) for i in range(4)]==[37,35,37,41]
 record('rocket-boss-not-scaled')
+if args.rom_name=='LeafGreen-Journey-AllRegions':
+    for battler in [0,1]:
+        for gimmick in [2,3,4,5]:
+            assert native('CanActivateGimmick',battler,gimmick)==0
+            record('excluded-battle-mechanic-unavailable',battler=battler,gimmick=gimmick)
 print('Fairy/gym checks passed',flush=True)
 # Exercise each actual native Mega transformation and party reversion. Items
 # exist only in this temporary test session; no distribution script is added.
@@ -317,5 +329,5 @@ assert lib.read16(s['gBattleMons'])==906
 step(360);screenshot('battle-mega-venusaur-and-genesect')
 record('real-battle-ui-mega-trigger-and-donor-sprites')
 lib.stop()
-(args.output/'results.json').write_text(json.dumps({'rom_sha256':__import__('hashlib').sha256((directory/'LeafGreen-Journey-Unova.gba').read_bytes()).hexdigest(),'checks':results},indent=2)+'\n')
+(args.output/'results.json').write_text(json.dumps({'rom_sha256':__import__('hashlib').sha256((directory/(args.rom_name+'.gba')).read_bytes()).hexdigest(),'checks':results},indent=2)+'\n')
 print(f'{len(results)} mGBA checks passed')
