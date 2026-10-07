@@ -17,7 +17,6 @@ if ($LASTEXITCODE -ne 0 -or !($runtimes -match 'Microsoft.WindowsDesktop.App 6.0
 }
 $runtimes | Set-Content "$report\runtimes.txt"
 Add-Type -AssemblyName System.Drawing
-Add-Type -AssemblyName System.Windows.Forms
 Add-Type @'
 using System;
 using System.Runtime.InteropServices;
@@ -31,6 +30,7 @@ public static class DesktopProbe {
     [DllImport("user32.dll", CharSet=CharSet.Unicode)] static extern int GetWindowText(IntPtr hwnd, StringBuilder text, int count);
     [DllImport("user32.dll")] static extern IntPtr SendMessageTimeout(IntPtr hwnd, uint msg, IntPtr wp, IntPtr lp, uint flags, uint timeout, out UIntPtr result);
     [DllImport("user32.dll")] static extern bool SetForegroundWindow(IntPtr hwnd);
+    [DllImport("user32.dll")] static extern void keybd_event(byte key, byte scan, uint flags, UIntPtr extra);
     static HashSet<IntPtr> accepted = new HashSet<IntPtr>();
     public class Window { public IntPtr Handle; public string Title; public int Width, Height; }
     static string Title(IntPtr hwnd) { var text = new StringBuilder(1024); GetWindowText(hwnd, text, text.Capacity); return text.ToString(); }
@@ -82,7 +82,10 @@ public static class DesktopProbe {
                 // Lazarus draws the question buttons without HWND captions.
                 // Its German "Nein" and English "No" share Alt+N.
                 SetForegroundWindow(window.Handle);
-                System.Windows.Forms.SendKeys.SendWait("%n");
+                keybd_event(0x12, 0, 0, UIntPtr.Zero);
+                keybd_event(0x4E, 0, 0, UIntPtr.Zero);
+                keybd_event(0x4E, 0, 2, UIntPtr.Zero);
+                keybd_event(0x12, 0, 2, UIntPtr.Zero);
             }
         }
     }
