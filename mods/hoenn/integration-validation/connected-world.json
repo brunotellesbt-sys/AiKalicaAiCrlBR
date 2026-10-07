@@ -1,0 +1,735 @@
+{
+  "status": "experimental_not_full_integration",
+  "rom_sha256": "33618498f8cde81d2547ff9e2b4d57a24d63d7f9a16d873f7ff3515d0b06b6c7",
+  "checks": [
+    {
+      "check": "regional_flags_and_native_save_roundtrip",
+      "passed": true,
+      "kanto_badges_independent": true,
+      "champion_independent": true,
+      "trainer_flag_unchanged": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        0
+      ],
+      "target": "VermilionCity_Frlg",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        0
+      ],
+      "target": "JourneyWorldSea01",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        1
+      ],
+      "target": "OneIsland_Harbor_Frlg",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        1
+      ],
+      "target": "JourneyWorldSea00",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        1
+      ],
+      "target": "JourneyWorldSea02",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        1
+      ],
+      "target": "JourneyWorldLane10",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        2
+      ],
+      "target": "TwoIsland_Harbor_Frlg",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        2
+      ],
+      "target": "JourneyWorldSea01",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        2
+      ],
+      "target": "JourneyWorldSea03",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        2
+      ],
+      "target": "JourneyWorldLane20",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        3
+      ],
+      "target": "ThreeIsland_Harbor_Frlg",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        3
+      ],
+      "target": "JourneyWorldSea02",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        3
+      ],
+      "target": "JourneyWorldLane30",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        4
+      ],
+      "target": "FourIsland_Harbor_Frlg",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        4
+      ],
+      "target": "JourneyWorldLane10",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        4
+      ],
+      "target": "JourneyWorldSea05",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        4
+      ],
+      "target": "JourneyWorldLane11",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        5
+      ],
+      "target": "FiveIsland_Harbor_Frlg",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        5
+      ],
+      "target": "JourneyWorldLane20",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        5
+      ],
+      "target": "JourneyWorldSea04",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        5
+      ],
+      "target": "JourneyWorldSea08",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        5
+      ],
+      "target": "JourneyWorldLane21",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        6
+      ],
+      "target": "SixIsland_Harbor_Frlg",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        6
+      ],
+      "target": "JourneyWorldLane11",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        6
+      ],
+      "target": "JourneyWorldSea07",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        6
+      ],
+      "target": "JourneyPacifidlogSea",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        7
+      ],
+      "target": "SevenIsland_Harbor_Frlg",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        7
+      ],
+      "target": "JourneyWorldLane21",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        7
+      ],
+      "target": "JourneyWorldSea06",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        7
+      ],
+      "target": "JourneyWorldSea09",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        8
+      ],
+      "target": "BirthIsland_Harbor_Frlg",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        8
+      ],
+      "target": "JourneyWorldLane30",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        8
+      ],
+      "target": "JourneyWorldSea05",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        8
+      ],
+      "target": "JourneyWorldLane31",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        9
+      ],
+      "target": "NavelRock_Harbor_Frlg",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        9
+      ],
+      "target": "JourneyWorldSea07",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        9
+      ],
+      "target": "JourneyWorldLane31",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        10
+      ],
+      "target": "JourneyWorldSea01",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        10
+      ],
+      "target": "JourneyWorldSea04",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        11
+      ],
+      "target": "JourneyWorldSea02",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        11
+      ],
+      "target": "JourneyWorldSea05",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        12
+      ],
+      "target": "JourneyWorldSea03",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        12
+      ],
+      "target": "JourneyWorldSea08",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        13
+      ],
+      "target": "JourneyWorldSea04",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        13
+      ],
+      "target": "JourneyWorldSea06",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        14
+      ],
+      "target": "JourneyWorldSea05",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        14
+      ],
+      "target": "JourneyWorldSea07",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        15
+      ],
+      "target": "JourneyWorldSea08",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        15
+      ],
+      "target": "JourneyWorldSea09",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        16
+      ],
+      "target": "Route131",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        76,
+        16
+      ],
+      "target": "JourneyWorldSea06",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        37,
+        5
+      ],
+      "target": "JourneyWorldSea00",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        64,
+        4
+      ],
+      "target": "JourneyWorldSea01",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        65,
+        4
+      ],
+      "target": "JourneyWorldSea02",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        70,
+        0
+      ],
+      "target": "JourneyWorldSea03",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        67,
+        5
+      ],
+      "target": "JourneyWorldSea04",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        68,
+        2
+      ],
+      "target": "JourneyWorldSea05",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        69,
+        2
+      ],
+      "target": "JourneyWorldSea06",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        63,
+        5
+      ],
+      "target": "JourneyWorldSea07",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        36,
+        58
+      ],
+      "target": "JourneyWorldSea08",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        36,
+        59
+      ],
+      "target": "JourneyWorldSea09",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        0,
+        46
+      ],
+      "target": "JourneyPacifidlogSea",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        37,
+        8
+      ],
+      "target": "JourneyCinnabarSouthSea",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        0,
+        29
+      ],
+      "target": "JourneyWestRiver",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        0,
+        30
+      ],
+      "target": "JourneyRustboroGate",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        0,
+        20
+      ],
+      "target": "JourneyDewfordGate",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        0
+      ],
+      "target": "CinnabarIsland_Frlg",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        0
+      ],
+      "target": "JourneyWestRiver",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        1
+      ],
+      "target": "JourneyCinnabarSouthSea",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        1
+      ],
+      "target": "Route114",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        1
+      ],
+      "target": "JourneyRustboroCoast",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        2
+      ],
+      "target": "JourneyWestRiver",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        2
+      ],
+      "target": "JourneyRustboroGate",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        2
+      ],
+      "target": "JourneyDewfordCoast",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        3
+      ],
+      "target": "JourneyRustboroCoast",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        3
+      ],
+      "target": "Route115",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        4
+      ],
+      "target": "JourneyRustboroCoast",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        4
+      ],
+      "target": "JourneyDewfordGate",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        5
+      ],
+      "target": "JourneyDewfordCoast",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        5
+      ],
+      "target": "Route105",
+      "passed": true
+    }
+  ],
+  "full_story_validated": false,
+  "custom_journey_migrated": false
+}

@@ -1,0 +1,3083 @@
+{
+  "status": "experimental_regional_state_not_complete_campaign",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "requires_new_save": true,
+  "frlg_flags": {
+    "FLAG_HIDE_BULBASAUR_BALL": {
+      "original": 2053,
+      "allocated": 6149
+    },
+    "FLAG_HIDE_SQUIRTLE_BALL": {
+      "original": 2054,
+      "allocated": 6150
+    },
+    "FLAG_HIDE_CHARMANDER_BALL": {
+      "original": 2055,
+      "allocated": 6151
+    },
+    "FLAG_HIDE_OAK_IN_HIS_LAB": {
+      "original": 2056,
+      "allocated": 6152
+    },
+    "FLAG_HIDE_OAK_IN_PALLET_TOWN": {
+      "original": 2057,
+      "allocated": 6153
+    },
+    "FLAG_HIDE_RIVAL_IN_LAB": {
+      "original": 2058,
+      "allocated": 6154
+    },
+    "FLAG_HIDE_PEWTER_CITY_GYM_GUIDE": {
+      "original": 2059,
+      "allocated": 6155
+    },
+    "FLAG_HIDE_DOME_FOSSIL": {
+      "original": 2060,
+      "allocated": 6156
+    },
+    "FLAG_HIDE_HELIX_FOSSIL": {
+      "original": 2061,
+      "allocated": 6157
+    },
+    "FLAG_HIDE_NUGGET_BRIDGE_ROCKET": {
+      "original": 2062,
+      "allocated": 6158
+    },
+    "FLAG_HIDE_BILL_CLEFAIRY": {
+      "original": 2063,
+      "allocated": 6159
+    },
+    "FLAG_HIDE_BILL_HUMAN_SEA_COTTAGE": {
+      "original": 2064,
+      "allocated": 6160
+    },
+    "FLAG_HIDE_TOWER_FUJI": {
+      "original": 2065,
+      "allocated": 6161
+    },
+    "FLAG_HIDE_POKEHOUSE_FUJI": {
+      "original": 2066,
+      "allocated": 6162
+    },
+    "FLAG_HIDE_LIFT_KEY": {
+      "original": 2067,
+      "allocated": 6163
+    },
+    "FLAG_HIDE_SILPH_SCOPE": {
+      "original": 2068,
+      "allocated": 6164
+    },
+    "FLAG_HIDE_HIDEOUT_GIOVANNI": {
+      "original": 2069,
+      "allocated": 6165
+    },
+    "FLAG_HIDE_TOWN_MAP": {
+      "original": 2070,
+      "allocated": 6166
+    },
+    "FLAG_HIDE_POKEDEX": {
+      "original": 2071,
+      "allocated": 6167
+    },
+    "FLAG_HIDE_CERULEAN_ROCKET": {
+      "original": 2072,
+      "allocated": 6168
+    },
+    "FLAG_HIDE_CERULEAN_RIVAL": {
+      "original": 2073,
+      "allocated": 6169
+    },
+    "FLAG_HIDE_SS_ANNE_RIVAL": {
+      "original": 2074,
+      "allocated": 6170
+    },
+    "FLAG_HIDE_SAFFRON_ROCKETS": {
+      "original": 2075,
+      "allocated": 6171
+    },
+    "FLAG_HIDE_SAFFRON_CIVILIANS": {
+      "original": 2076,
+      "allocated": 6172
+    },
+    "FLAG_HIDE_SEAFOAM_1F_BOULDER_1": {
+      "original": 2077,
+      "allocated": 6173
+    },
+    "FLAG_HIDE_SEAFOAM_1F_BOULDER_2": {
+      "original": 2078,
+      "allocated": 6174
+    },
+    "FLAG_HIDE_SEAFOAM_B1F_BOULDER_1": {
+      "original": 2079,
+      "allocated": 6175
+    },
+    "FLAG_HIDE_SEAFOAM_B1F_BOULDER_2": {
+      "original": 2080,
+      "allocated": 6176
+    },
+    "FLAG_HIDE_SEAFOAM_B2F_BOULDER_1": {
+      "original": 2081,
+      "allocated": 6177
+    },
+    "FLAG_HIDE_SEAFOAM_B2F_BOULDER_2": {
+      "original": 2082,
+      "allocated": 6178
+    },
+    "FLAG_HIDE_SEAFOAM_B3F_BOULDER_1": {
+      "original": 2083,
+      "allocated": 6179
+    },
+    "FLAG_HIDE_SEAFOAM_B3F_BOULDER_2": {
+      "original": 2084,
+      "allocated": 6180
+    },
+    "FLAG_HIDE_SEAFOAM_B3F_BOULDER_3": {
+      "original": 2085,
+      "allocated": 6181
+    },
+    "FLAG_HIDE_SEAFOAM_B3F_BOULDER_4": {
+      "original": 2086,
+      "allocated": 6182
+    },
+    "FLAG_HIDE_SEAFOAM_B3F_BOULDER_5": {
+      "original": 2087,
+      "allocated": 6183
+    },
+    "FLAG_HIDE_SEAFOAM_B3F_BOULDER_6": {
+      "original": 2088,
+      "allocated": 6184
+    },
+    "FLAG_HIDE_SEAFOAM_B4F_BOULDER_1": {
+      "original": 2089,
+      "allocated": 6185
+    },
+    "FLAG_HIDE_SEAFOAM_B4F_BOULDER_2": {
+      "original": 2090,
+      "allocated": 6186
+    },
+    "FLAG_HIDE_SILPH_RIVAL": {
+      "original": 2091,
+      "allocated": 6187
+    },
+    "FLAG_HIDE_ROUTE_22_RIVAL": {
+      "original": 2092,
+      "allocated": 6188
+    },
+    "FLAG_HIDE_PEWTER_MUSEUM_GUIDE": {
+      "original": 2093,
+      "allocated": 6189
+    },
+    "FLAG_HIDE_TOWER_RIVAL": {
+      "original": 2094,
+      "allocated": 6190
+    },
+    "FLAG_HIDE_MOLTRES": {
+      "original": 2095,
+      "allocated": 6191
+    },
+    "FLAG_HIDE_SILPH_ROCKETS": {
+      "original": 2096,
+      "allocated": 6192
+    },
+    "FLAG_HIDE_ROUTE_12_SNORLAX": {
+      "original": 2097,
+      "allocated": 6193
+    },
+    "FLAG_HIDE_VIRIDIAN_GIOVANNI": {
+      "original": 2098,
+      "allocated": 6194
+    },
+    "FLAG_HIDE_OLD_AMBER": {
+      "original": 2099,
+      "allocated": 6195
+    },
+    "FLAG_HIDE_EEVEE_BALL": {
+      "original": 2100,
+      "allocated": 6196
+    },
+    "FLAG_HIDE_VICTORY_ROAD_2F_BOULDER": {
+      "original": 2101,
+      "allocated": 6197
+    },
+    "FLAG_HIDE_VICTORY_ROAD_3F_BOULDER": {
+      "original": 2102,
+      "allocated": 6198
+    },
+    "FLAG_HIDE_OAK_IN_CHAMP_ROOM": {
+      "original": 2103,
+      "allocated": 6199
+    },
+    "FLAG_HIDE_GAME_CORNER_ROCKET": {
+      "original": 2104,
+      "allocated": 6200
+    },
+    "FLAG_HIDE_CERULEAN_CAVE_GUARD": {
+      "original": 2105,
+      "allocated": 6201
+    },
+    "FLAG_HIDE_ZAPDOS": {
+      "original": 2106,
+      "allocated": 6202
+    },
+    "FLAG_HIDE_TOWER_ROCKET_1": {
+      "original": 2107,
+      "allocated": 6203
+    },
+    "FLAG_HIDE_CELADON_ROCKETS": {
+      "original": 2108,
+      "allocated": 6204
+    },
+    "FLAG_HIDE_DOJO_HITMONLEE_BALL": {
+      "original": 2109,
+      "allocated": 6205
+    },
+    "FLAG_HIDE_DOJO_HITMONCHAN_BALL": {
+      "original": 2110,
+      "allocated": 6206
+    },
+    "FLAG_HIDE_CINNABAR_BILL": {
+      "original": 2111,
+      "allocated": 6207
+    },
+    "FLAG_HIDE_UNION_ROOM_PLAYER_1": {
+      "original": 2112,
+      "allocated": 6208
+    },
+    "FLAG_HIDE_UNION_ROOM_PLAYER_2": {
+      "original": 2113,
+      "allocated": 6209
+    },
+    "FLAG_HIDE_UNION_ROOM_PLAYER_3": {
+      "original": 2114,
+      "allocated": 6210
+    },
+    "FLAG_HIDE_UNION_ROOM_PLAYER_4": {
+      "original": 2115,
+      "allocated": 6211
+    },
+    "FLAG_HIDE_UNION_ROOM_PLAYER_5": {
+      "original": 2116,
+      "allocated": 6212
+    },
+    "FLAG_HIDE_UNION_ROOM_PLAYER_6": {
+      "original": 2117,
+      "allocated": 6213
+    },
+    "FLAG_HIDE_UNION_ROOM_PLAYER_7": {
+      "original": 2118,
+      "allocated": 6214
+    },
+    "FLAG_HIDE_UNION_ROOM_PLAYER_8": {
+      "original": 2119,
+      "allocated": 6215
+    },
+    "FLAG_HIDE_CINNABAR_SEAGALLOP": {
+      "original": 2120,
+      "allocated": 6216
+    },
+    "FLAG_HIDE_SAFFRON_FAN_CLUB_BLACKBELT": {
+      "original": 2121,
+      "allocated": 6217
+    },
+    "FLAG_HIDE_SAFFRON_FAN_CLUB_ROCKER": {
+      "original": 2122,
+      "allocated": 6218
+    },
+    "FLAG_HIDE_SAFFRON_FAN_CLUB_WOMAN": {
+      "original": 2123,
+      "allocated": 6219
+    },
+    "FLAG_HIDE_SAFFRON_FAN_CLUB_BEAUTY": {
+      "original": 2124,
+      "allocated": 6220
+    },
+    "FLAG_HIDE_MG_DELIVERYMEN": {
+      "original": 2125,
+      "allocated": 6221
+    },
+    "FLAG_HIDE_ONE_ISLAND_BILL": {
+      "original": 2126,
+      "allocated": 6222
+    },
+    "FLAG_HIDE_ONE_ISLAND_POKECENTER_BILL": {
+      "original": 2127,
+      "allocated": 6223
+    },
+    "FLAG_HIDE_ONE_ISLAND_POKECENTER_CELIO": {
+      "original": 2128,
+      "allocated": 6224
+    },
+    "FLAG_HIDE_TWO_ISLAND_GAME_CORNER_BIKER": {
+      "original": 2129,
+      "allocated": 6225
+    },
+    "FLAG_HIDE_TWO_ISLAND_GAME_CORNER_LOSTELLE": {
+      "original": 2130,
+      "allocated": 6226
+    },
+    "FLAG_HIDE_LOSTELLE_IN_HER_HOME": {
+      "original": 2131,
+      "allocated": 6227
+    },
+    "FLAG_0x077": {
+      "original": 2542,
+      "allocated": 6638
+    },
+    "FLAG_0x078": {
+      "original": 2543,
+      "allocated": 6639
+    },
+    "FLAG_HIDE_THREE_ISLAND_BIKERS": {
+      "original": 2132,
+      "allocated": 6228
+    },
+    "FLAG_HIDE_LOSTELLE_IN_BERRY_FOREST": {
+      "original": 2133,
+      "allocated": 6229
+    },
+    "FLAG_HIDE_TWO_ISLAND_WOMAN": {
+      "original": 2134,
+      "allocated": 6230
+    },
+    "FLAG_HIDE_TWO_ISLAND_BEAUTY": {
+      "original": 2135,
+      "allocated": 6231
+    },
+    "FLAG_HIDE_TWO_ISLAND_SUPER_NERD": {
+      "original": 2136,
+      "allocated": 6232
+    },
+    "FLAG_HIDE_THREE_ISLAND_ANTIBIKERS": {
+      "original": 2137,
+      "allocated": 6233
+    },
+    "FLAG_0x07F": {
+      "original": 2544,
+      "allocated": 6640
+    },
+    "FLAG_HIDE_ROUTE_16_SNORLAX": {
+      "original": 2138,
+      "allocated": 6234
+    },
+    "FLAG_HIDE_MEWTWO": {
+      "original": 2139,
+      "allocated": 6235
+    },
+    "FLAG_HIDE_ARTICUNO": {
+      "original": 2140,
+      "allocated": 6236
+    },
+    "FLAG_HIDE_TOWER_ROCKET_2": {
+      "original": 2141,
+      "allocated": 6237
+    },
+    "FLAG_HIDE_TOWER_ROCKET_3": {
+      "original": 2142,
+      "allocated": 6238
+    },
+    "FLAG_HIDE_POWER_PLANT_ELECTRODE_1": {
+      "original": 2143,
+      "allocated": 6239
+    },
+    "FLAG_HIDE_POWER_PLANT_ELECTRODE_2": {
+      "original": 2336,
+      "allocated": 6432
+    },
+    "FLAG_HIDE_SS_ANNE": {
+      "original": 2337,
+      "allocated": 6433
+    },
+    "FLAG_HIDE_FIVE_ISLAND_ROCKETS": {
+      "original": 2338,
+      "allocated": 6434
+    },
+    "FLAG_HIDE_MT_EMBER_EXTERIOR_ROCKETS": {
+      "original": 2339,
+      "allocated": 6435
+    },
+    "FLAG_HIDE_RUBY": {
+      "original": 2340,
+      "allocated": 6436
+    },
+    "FLAG_HIDE_ICEFALL_CAVE_LORELEI": {
+      "original": 2341,
+      "allocated": 6437
+    },
+    "FLAG_HIDE_LORELEI_IN_HER_HOUSE": {
+      "original": 2342,
+      "allocated": 6438
+    },
+    "FLAG_HIDE_ICEFALL_CAVE_ROCKETS": {
+      "original": 2343,
+      "allocated": 6439
+    },
+    "FLAG_HIDE_RUIN_VALLEY_SCIENTIST": {
+      "original": 2344,
+      "allocated": 6440
+    },
+    "FLAG_HIDE_SAPPHIRE": {
+      "original": 2345,
+      "allocated": 6441
+    },
+    "FLAG_HIDE_DOTTED_HOLE_SCIENTIST": {
+      "original": 2346,
+      "allocated": 6442
+    },
+    "FLAG_HIDE_THREE_ISLAND_LONE_BIKER": {
+      "original": 2347,
+      "allocated": 6443
+    },
+    "FLAG_HIDE_PEWTER_CITY_RUNNING_SHOES_GUY": {
+      "original": 2348,
+      "allocated": 6444
+    },
+    "FLAG_HIDE_LOST_CAVE_SELPHY": {
+      "original": 2349,
+      "allocated": 6445
+    },
+    "FLAG_HIDE_RESORT_GORGEOUS_SELPHY": {
+      "original": 2350,
+      "allocated": 6446
+    },
+    "FLAG_HIDE_RESORT_GORGEOUS_INSIDE_SELPHY": {
+      "original": 2351,
+      "allocated": 6447
+    },
+    "FLAG_HIDE_SELPHYS_BUTLER": {
+      "original": 2352,
+      "allocated": 6448
+    },
+    "FLAG_HIDE_FOUR_ISLAND_RIVAL": {
+      "original": 2353,
+      "allocated": 6449
+    },
+    "FLAG_HIDE_SIX_ISLAND_POKECENTER_RIVAL": {
+      "original": 2354,
+      "allocated": 6450
+    },
+    "FLAG_HIDE_BIRTH_ISLAND_METEORITE": {
+      "original": 2355,
+      "allocated": 6451
+    },
+    "FLAG_HIDE_POSTGAME_GOSSIPERS": {
+      "original": 2356,
+      "allocated": 6452
+    },
+    "FLAG_HIDE_FAME_CHECKER_ERIKA_JOURNALS": {
+      "original": 2357,
+      "allocated": 6453
+    },
+    "FLAG_HIDE_FAME_CHECKER_KOGA_JOURNAL": {
+      "original": 2358,
+      "allocated": 6454
+    },
+    "FLAG_HIDE_FAME_CHECKER_LT_SURGE_JOURNAL": {
+      "original": 2359,
+      "allocated": 6455
+    },
+    "FLAG_HIDE_VERMILION_CITY_OAKS_AIDE": {
+      "original": 2360,
+      "allocated": 6456
+    },
+    "FLAG_HIDE_CINNABAR_POKECENTER_BILL": {
+      "original": 2361,
+      "allocated": 6457
+    },
+    "FLAG_HIDE_CREDITS_RIVAL": {
+      "original": 2362,
+      "allocated": 6458
+    },
+    "FLAG_HIDE_CREDITS_OAK": {
+      "original": 2363,
+      "allocated": 6459
+    },
+    "FLAG_HIDE_LORELEI_HOUSE_MEOWTH_DOLL": {
+      "original": 2364,
+      "allocated": 6460
+    },
+    "FLAG_HIDE_LORELEI_HOUSE_CHANSEY_DOLL": {
+      "original": 2365,
+      "allocated": 6461
+    },
+    "FLAG_HIDE_LORELEIS_HOUSE_NIDORAN_F_DOLL": {
+      "original": 2366,
+      "allocated": 6462
+    },
+    "FLAG_HIDE_LORELEI_HOUSE_JIGGLYPUFF_DOLL": {
+      "original": 2367,
+      "allocated": 6463
+    },
+    "FLAG_HIDE_LORELEIS_HOUSE_NIDORAN_M_DOLL": {
+      "original": 2368,
+      "allocated": 6464
+    },
+    "FLAG_HIDE_LORELEIS_HOUSE_FEAROW_DOLL": {
+      "original": 2369,
+      "allocated": 6465
+    },
+    "FLAG_HIDE_LORELEIS_HOUSE_PIDGEOT_DOLL": {
+      "original": 2370,
+      "allocated": 6466
+    },
+    "FLAG_HIDE_LORELEIS_HOUSE_LAPRAS_DOLL": {
+      "original": 2371,
+      "allocated": 6467
+    },
+    "FLAG_HIDE_MISC_KANTO_ROCKETS": {
+      "original": 2372,
+      "allocated": 6468
+    },
+    "FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS": {
+      "original": 2373,
+      "allocated": 6469
+    },
+    "FLAG_HIDE_ROUTE2_ETHER": {
+      "original": 2374,
+      "allocated": 6470
+    },
+    "FLAG_HIDE_ROUTE2_PARALYZE_HEAL": {
+      "original": 2375,
+      "allocated": 6471
+    },
+    "FLAG_HIDE_VIRIDIAN_FOREST_POKE_BALL": {
+      "original": 2376,
+      "allocated": 6472
+    },
+    "FLAG_HIDE_VIRIDIAN_FOREST_ANTIDOTE": {
+      "original": 2377,
+      "allocated": 6473
+    },
+    "FLAG_HIDE_VIRIDIAN_FOREST_POTION": {
+      "original": 2378,
+      "allocated": 6474
+    },
+    "FLAG_HIDE_MT_MOON_1F_PARALYZE_HEAL": {
+      "original": 2379,
+      "allocated": 6475
+    },
+    "FLAG_HIDE_MT_MOON_1F_TM09": {
+      "original": 2380,
+      "allocated": 6476
+    },
+    "FLAG_HIDE_MT_MOON_1F_POTION": {
+      "original": 2381,
+      "allocated": 6477
+    },
+    "FLAG_HIDE_MT_MOON_1F_RARE_CANDY": {
+      "original": 2382,
+      "allocated": 6478
+    },
+    "FLAG_HIDE_MT_MOON_1F_ESCAPE_ROPE": {
+      "original": 2383,
+      "allocated": 6479
+    },
+    "FLAG_HIDE_MT_MOON_1F_MOON_STONE": {
+      "original": 2384,
+      "allocated": 6480
+    },
+    "FLAG_HIDE_MT_MOON_B2F_STAR_PIECE": {
+      "original": 2385,
+      "allocated": 6481
+    },
+    "FLAG_HIDE_MT_MOON_B2F_TM46": {
+      "original": 2386,
+      "allocated": 6482
+    },
+    "FLAG_HIDE_ROUTE4_TM05": {
+      "original": 2387,
+      "allocated": 6483
+    },
+    "FLAG_HIDE_ROUTE24_TM45": {
+      "original": 2388,
+      "allocated": 6484
+    },
+    "FLAG_HIDE_ROUTE25_TM43": {
+      "original": 2389,
+      "allocated": 6485
+    },
+    "FLAG_HIDE_SSANNE_1F_ROOM2_TM31": {
+      "original": 2390,
+      "allocated": 6486
+    },
+    "FLAG_HIDE_SSANNE_2F_ROOM2_STARDUST": {
+      "original": 2391,
+      "allocated": 6487
+    },
+    "FLAG_HIDE_SSANNE_2F_ROOM4_X_ATTACK": {
+      "original": 2392,
+      "allocated": 6488
+    },
+    "FLAG_HIDE_SSANNE_B1F_ROOM2_TM44": {
+      "original": 2393,
+      "allocated": 6489
+    },
+    "FLAG_HIDE_SSANNE_B1F_ROOM3_ETHER": {
+      "original": 2394,
+      "allocated": 6490
+    },
+    "FLAG_HIDE_SSANNE_B1F_ROOM5_SUPER_POTION": {
+      "original": 2395,
+      "allocated": 6491
+    },
+    "FLAG_HIDE_SSANNE_KITCHEN_GREAT_BALL": {
+      "original": 2396,
+      "allocated": 6492
+    },
+    "FLAG_HIDE_ROUTE9_TM40": {
+      "original": 2397,
+      "allocated": 6493
+    },
+    "FLAG_HIDE_ROCKET_HIDEOUT_B1F_ESCAPE_ROPE": {
+      "original": 2398,
+      "allocated": 6494
+    },
+    "FLAG_HIDE_ROCKET_HIDEOUT_B1F_HYPER_POTION": {
+      "original": 2399,
+      "allocated": 6495
+    },
+    "FLAG_HIDE_ROCKET_HIDEOUT_B2F_X_SPEED": {
+      "original": 2400,
+      "allocated": 6496
+    },
+    "FLAG_HIDE_ROCKET_HIDEOUT_B2F_MOON_STONE": {
+      "original": 2401,
+      "allocated": 6497
+    },
+    "FLAG_HIDE_ROCKET_HIDEOUT_B2F_TM12": {
+      "original": 2402,
+      "allocated": 6498
+    },
+    "FLAG_HIDE_ROCKET_HIDEOUT_B2F_SUPER_POTION": {
+      "original": 2403,
+      "allocated": 6499
+    },
+    "FLAG_HIDE_ROCKET_HIDEOUT_B3F_RARE_CANDY": {
+      "original": 2404,
+      "allocated": 6500
+    },
+    "FLAG_HIDE_ROCKET_HIDEOUT_B3F_TM21": {
+      "original": 2405,
+      "allocated": 6501
+    },
+    "FLAG_HIDE_ROCKET_HIDEOUT_B4F_TM49": {
+      "original": 2406,
+      "allocated": 6502
+    },
+    "FLAG_HIDE_ROCKET_HIDEOUT_B4F_MAX_ETHER": {
+      "original": 2407,
+      "allocated": 6503
+    },
+    "FLAG_HIDE_ROCKET_HIDEOUT_B4F_CALCIUM": {
+      "original": 2408,
+      "allocated": 6504
+    },
+    "FLAG_HIDE_POKEMON_TOWER_3F_ESCAPE_ROPE": {
+      "original": 2409,
+      "allocated": 6505
+    },
+    "FLAG_HIDE_POKEMON_TOWER_4F_ELIXIR": {
+      "original": 2410,
+      "allocated": 6506
+    },
+    "FLAG_HIDE_POKEMON_TOWER_4F_AWAKENING": {
+      "original": 2411,
+      "allocated": 6507
+    },
+    "FLAG_HIDE_POKEMON_TOWER_4F_GREAT_BALL": {
+      "original": 2412,
+      "allocated": 6508
+    },
+    "FLAG_HIDE_POKEMON_TOWER_5F_NUGGET": {
+      "original": 2413,
+      "allocated": 6509
+    },
+    "FLAG_HIDE_POKEMON_TOWER_6F_RARE_CANDY": {
+      "original": 2414,
+      "allocated": 6510
+    },
+    "FLAG_HIDE_POKEMON_TOWER_6F_X_ACCURACY": {
+      "original": 2415,
+      "allocated": 6511
+    },
+    "FLAG_HIDE_ROUTE12_TM48": {
+      "original": 2416,
+      "allocated": 6512
+    },
+    "FLAG_HIDE_ROUTE12_IRON": {
+      "original": 2417,
+      "allocated": 6513
+    },
+    "FLAG_HIDE_ROUTE15_TM18": {
+      "original": 2418,
+      "allocated": 6514
+    },
+    "FLAG_HIDE_SAFARI_ZONE_CENTER_NUGGET": {
+      "original": 2419,
+      "allocated": 6515
+    },
+    "FLAG_HIDE_SAFARI_ZONE_EAST_MAX_POTION": {
+      "original": 2420,
+      "allocated": 6516
+    },
+    "FLAG_HIDE_SAFARI_ZONE_EAST_FULL_RESTORE": {
+      "original": 2421,
+      "allocated": 6517
+    },
+    "FLAG_HIDE_SAFARI_ZONE_EAST_TM11": {
+      "original": 2422,
+      "allocated": 6518
+    },
+    "FLAG_HIDE_SAFARI_ZONE_EAST_LEAF_STONE": {
+      "original": 2423,
+      "allocated": 6519
+    },
+    "FLAG_HIDE_SAFARI_ZONE_NORTH_PROTEIN": {
+      "original": 2424,
+      "allocated": 6520
+    },
+    "FLAG_HIDE_SAFARI_ZONE_NORTH_TM47": {
+      "original": 2425,
+      "allocated": 6521
+    },
+    "FLAG_HIDE_SAFARI_ZONE_WEST_TM32": {
+      "original": 2426,
+      "allocated": 6522
+    },
+    "FLAG_HIDE_SAFARI_ZONE_WEST_GOLD_TEETH": {
+      "original": 2427,
+      "allocated": 6523
+    },
+    "FLAG_HIDE_SAFARI_ZONE_WEST_MAX_POTION": {
+      "original": 2428,
+      "allocated": 6524
+    },
+    "FLAG_HIDE_SAFARI_ZONE_WEST_MAX_REVIVE": {
+      "original": 2429,
+      "allocated": 6525
+    },
+    "FLAG_HIDE_SILPH_CO_3F_HYPER_POTION": {
+      "original": 2430,
+      "allocated": 6526
+    },
+    "FLAG_HIDE_SILPH_CO_4F_MAX_REVIVE": {
+      "original": 2431,
+      "allocated": 6527
+    },
+    "FLAG_HIDE_SILPH_CO_4F_ESCAPE_ROPE": {
+      "original": 2432,
+      "allocated": 6528
+    },
+    "FLAG_HIDE_SILPH_CO_4F_FULL_HEAL": {
+      "original": 2433,
+      "allocated": 6529
+    },
+    "FLAG_HIDE_SILPH_CO_5F_PROTEIN": {
+      "original": 2434,
+      "allocated": 6530
+    },
+    "FLAG_HIDE_SILPH_CO_5F_TM01": {
+      "original": 2435,
+      "allocated": 6531
+    },
+    "FLAG_HIDE_SILPH_CO_5F_CARD_KEY": {
+      "original": 2436,
+      "allocated": 6532
+    },
+    "FLAG_HIDE_SILPH_CO_6F_HP_UP": {
+      "original": 2437,
+      "allocated": 6533
+    },
+    "FLAG_HIDE_SILPH_CO_6F_X_SPECIAL": {
+      "original": 2438,
+      "allocated": 6534
+    },
+    "FLAG_HIDE_SILPH_CO_7F_CALCIUM": {
+      "original": 2439,
+      "allocated": 6535
+    },
+    "FLAG_HIDE_SILPH_CO_7F_TM08": {
+      "original": 2440,
+      "allocated": 6536
+    },
+    "FLAG_HIDE_SILPH_CO_10F_CARBOS": {
+      "original": 2441,
+      "allocated": 6537
+    },
+    "FLAG_HIDE_SILPH_CO_10F_ULTRA_BALL": {
+      "original": 2442,
+      "allocated": 6538
+    },
+    "FLAG_HIDE_SILPH_CO_10F_RARE_CANDY": {
+      "original": 2443,
+      "allocated": 6539
+    },
+    "FLAG_HIDE_POWER_PLANT_MAX_POTION": {
+      "original": 2444,
+      "allocated": 6540
+    },
+    "FLAG_HIDE_POWER_PLANT_TM17": {
+      "original": 2445,
+      "allocated": 6541
+    },
+    "FLAG_HIDE_POWER_PLANT_TM25": {
+      "original": 2446,
+      "allocated": 6542
+    },
+    "FLAG_HIDE_POWER_PLANT_THUNDER_STONE": {
+      "original": 2447,
+      "allocated": 6543
+    },
+    "FLAG_HIDE_POWER_PLANT_ELIXIR": {
+      "original": 2448,
+      "allocated": 6544
+    },
+    "FLAG_HIDE_POKEMON_MANSION_1F_CARBOS": {
+      "original": 2449,
+      "allocated": 6545
+    },
+    "FLAG_HIDE_POKEMON_MANSION_1F_ESCAPE_ROPE": {
+      "original": 2450,
+      "allocated": 6546
+    },
+    "FLAG_HIDE_POKEMON_MANSION_2F_CALCIUM": {
+      "original": 2451,
+      "allocated": 6547
+    },
+    "FLAG_HIDE_POKEMON_MANSION_3F_MAX_POTION": {
+      "original": 2452,
+      "allocated": 6548
+    },
+    "FLAG_HIDE_POKEMON_MANSION_3F_IRON": {
+      "original": 2453,
+      "allocated": 6549
+    },
+    "FLAG_HIDE_POKEMON_MANSION_B1F_TM14": {
+      "original": 2454,
+      "allocated": 6550
+    },
+    "FLAG_HIDE_POKEMON_MANSION_B1F_FULL_RESTORE": {
+      "original": 2455,
+      "allocated": 6551
+    },
+    "FLAG_0x1A6": {
+      "original": 2545,
+      "allocated": 6641
+    },
+    "FLAG_HIDE_POKEMON_MANSION_B1F_TM22": {
+      "original": 2456,
+      "allocated": 6552
+    },
+    "FLAG_HIDE_POKEMON_MANSION_B1F_SECRET_KEY": {
+      "original": 2457,
+      "allocated": 6553
+    },
+    "FLAG_HIDE_VICTORY_ROAD_1F_RARE_CANDY": {
+      "original": 2458,
+      "allocated": 6554
+    },
+    "FLAG_HIDE_VICTORY_ROAD_1F_TM02": {
+      "original": 2459,
+      "allocated": 6555
+    },
+    "FLAG_HIDE_VICTORY_ROAD_2F_GUARD_SPEC": {
+      "original": 2460,
+      "allocated": 6556
+    },
+    "FLAG_HIDE_VICTORY_ROAD_2F_TM07": {
+      "original": 2461,
+      "allocated": 6557
+    },
+    "FLAG_HIDE_VICTORY_ROAD_2F_FULL_HEAL": {
+      "original": 2462,
+      "allocated": 6558
+    },
+    "FLAG_HIDE_VICTORY_ROAD_2F_TM37": {
+      "original": 2463,
+      "allocated": 6559
+    },
+    "FLAG_HIDE_VICTORY_ROAD_3F_MAX_REVIVE": {
+      "original": 2464,
+      "allocated": 6560
+    },
+    "FLAG_HIDE_VICTORY_ROAD_3F_TM50": {
+      "original": 2465,
+      "allocated": 6561
+    },
+    "FLAG_HIDE_CERULEAN_CAVE_1F_MAX_ELIXIR": {
+      "original": 2466,
+      "allocated": 6562
+    },
+    "FLAG_HIDE_CERULEAN_CAVE_1F_NUGGET": {
+      "original": 2467,
+      "allocated": 6563
+    },
+    "FLAG_HIDE_CERULEAN_CAVE_1F_FULL_RESTORE": {
+      "original": 2468,
+      "allocated": 6564
+    },
+    "FLAG_HIDE_CERULEAN_CAVE_2F_FULL_RESTORE": {
+      "original": 2469,
+      "allocated": 6565
+    },
+    "FLAG_HIDE_CERULEAN_CAVE_2F_PP_UP": {
+      "original": 2470,
+      "allocated": 6566
+    },
+    "FLAG_HIDE_CERULEAN_CAVE_2F_ULTRA_BALL": {
+      "original": 2471,
+      "allocated": 6567
+    },
+    "FLAG_HIDE_CERULEAN_CAVE_B1F_MAX_REVIVE": {
+      "original": 2472,
+      "allocated": 6568
+    },
+    "FLAG_HIDE_CERULEAN_CAVE_B1F_ULTRA_BALL": {
+      "original": 2473,
+      "allocated": 6569
+    },
+    "FLAG_HIDE_FUCHSIA_CITY_WARDENS_HOUSE_RARE_CANDY": {
+      "original": 2474,
+      "allocated": 6570
+    },
+    "FLAG_HIDE_TWO_ISLAND_REVIVE": {
+      "original": 2475,
+      "allocated": 6571
+    },
+    "FLAG_HIDE_THREE_ISLAND_ZINC": {
+      "original": 2476,
+      "allocated": 6572
+    },
+    "FLAG_0x1BC": {
+      "original": 2546,
+      "allocated": 6642
+    },
+    "FLAG_0x1BD": {
+      "original": 2547,
+      "allocated": 6643
+    },
+    "FLAG_HIDE_VIRIDIAN_FOREST_POTION_2": {
+      "original": 2477,
+      "allocated": 6573
+    },
+    "FLAG_HIDE_MT_MOON_B2F_REVIVE": {
+      "original": 2478,
+      "allocated": 6574
+    },
+    "FLAG_HIDE_MT_MOON_B2F_ANTIDOTE": {
+      "original": 2479,
+      "allocated": 6575
+    },
+    "FLAG_HIDE_ROUTE11_X_DEFEND": {
+      "original": 2480,
+      "allocated": 6576
+    },
+    "FLAG_HIDE_ROUTE9_BURN_HEAL": {
+      "original": 2481,
+      "allocated": 6577
+    },
+    "FLAG_HIDE_ROCK_TUNNEL_1F_REPEL": {
+      "original": 2482,
+      "allocated": 6578
+    },
+    "FLAG_HIDE_ROCK_TUNNEL_1F_PEARL": {
+      "original": 2483,
+      "allocated": 6579
+    },
+    "FLAG_HIDE_ROCK_TUNNEL_1F_ESCAPE_ROPE": {
+      "original": 2484,
+      "allocated": 6580
+    },
+    "FLAG_HIDE_ROCK_TUNNEL_B1F_REVIVE": {
+      "original": 2485,
+      "allocated": 6581
+    },
+    "FLAG_HIDE_ROCK_TUNNEL_B1F_MAX_ETHER": {
+      "original": 2486,
+      "allocated": 6582
+    },
+    "FLAG_HIDE_SILPH_CO_8F_IRON": {
+      "original": 2487,
+      "allocated": 6583
+    },
+    "FLAG_HIDE_SILPH_CO_11F_ZINC": {
+      "original": 2488,
+      "allocated": 6584
+    },
+    "FLAG_HIDE_POKEMON_MANSION_1F_PROTEIN": {
+      "original": 2489,
+      "allocated": 6585
+    },
+    "FLAG_HIDE_POKEMON_MANSION_2F_ZINC": {
+      "original": 2490,
+      "allocated": 6586
+    },
+    "FLAG_HIDE_POKEMON_MANSION_2F_HP_UP": {
+      "original": 2491,
+      "allocated": 6587
+    },
+    "FLAG_HIDE_VIRIDIAN_CITY_POTION": {
+      "original": 2492,
+      "allocated": 6588
+    },
+    "FLAG_HIDE_ROUTE11_GREAT_BALL": {
+      "original": 2493,
+      "allocated": 6589
+    },
+    "FLAG_HIDE_ROUTE11_AWAKENING": {
+      "original": 2494,
+      "allocated": 6590
+    },
+    "FLAG_HIDE_POKEMON_TOWER_5F_CLEANSE_TAG": {
+      "original": 2495,
+      "allocated": 6591
+    },
+    "FLAG_HIDE_CELADON_CITY_ETHER": {
+      "original": 2496,
+      "allocated": 6592
+    },
+    "FLAG_HIDE_ROCKET_HIDEOUT_B3F_BLACK_GLASSES": {
+      "original": 2497,
+      "allocated": 6593
+    },
+    "FLAG_HIDE_SAFARI_ZONE_NORTH_QUICK_CLAW": {
+      "original": 2498,
+      "allocated": 6594
+    },
+    "FLAG_HIDE_SEAFOAM_ISLANDS_1F_ICE_HEAL": {
+      "original": 2499,
+      "allocated": 6595
+    },
+    "FLAG_HIDE_SEAFOAM_ISLANDS_B1F_WATER_STONE": {
+      "original": 2500,
+      "allocated": 6596
+    },
+    "FLAG_HIDE_SEAFOAM_ISLANDS_B1F_REVIVE": {
+      "original": 2501,
+      "allocated": 6597
+    },
+    "FLAG_HIDE_SEAFOAM_ISLANDS_B2F_BIG_PEARL": {
+      "original": 2502,
+      "allocated": 6598
+    },
+    "FLAG_HIDE_SEAFOAM_ISLANDS_B4F_ULTRA_BALL": {
+      "original": 2503,
+      "allocated": 6599
+    },
+    "FLAG_HIDE_FOUR_ISLAND_STAR_PIECE": {
+      "original": 2504,
+      "allocated": 6600
+    },
+    "FLAG_HIDE_FOUR_ISLAND_STARDUST": {
+      "original": 2505,
+      "allocated": 6601
+    },
+    "FLAG_HIDE_ONE_ISLAND_KINDLE_ROAD_ETHER": {
+      "original": 2506,
+      "allocated": 6602
+    },
+    "FLAG_HIDE_ONE_ISLAND_KINDLE_ROAD_MAX_REPEL": {
+      "original": 2507,
+      "allocated": 6603
+    },
+    "FLAG_HIDE_ONE_ISLAND_KINDLE_ROAD_CARBOS": {
+      "original": 2508,
+      "allocated": 6604
+    },
+    "FLAG_HIDE_FIVE_ISLAND_MEADOW_MAX_POTION": {
+      "original": 2509,
+      "allocated": 6605
+    },
+    "FLAG_HIDE_FIVE_ISLAND_MEADOW_PP_UP": {
+      "original": 2510,
+      "allocated": 6606
+    },
+    "FLAG_HIDE_FIVE_ISLAND_MEMORIAL_PILLAR_METAL_COAT": {
+      "original": 2511,
+      "allocated": 6607
+    },
+    "FLAG_HIDE_SIX_ISLAND_OUTCAST_ISLAND_PP_UP": {
+      "original": 2512,
+      "allocated": 6608
+    },
+    "FLAG_HIDE_SIX_ISLAND_WATER_PATH_ELIXIR": {
+      "original": 2513,
+      "allocated": 6609
+    },
+    "FLAG_HIDE_SIX_ISLAND_WATER_PATH_DRAGON_SCALE": {
+      "original": 2514,
+      "allocated": 6610
+    },
+    "FLAG_HIDE_SIX_ISLAND_RUIN_VALLEY_FULL_RESTORE": {
+      "original": 2515,
+      "allocated": 6611
+    },
+    "FLAG_HIDE_SIX_ISLAND_RUIN_VALLEY_HP_UP": {
+      "original": 2516,
+      "allocated": 6612
+    },
+    "FLAG_HIDE_SIX_ISLAND_RUIN_VALLEY_SUN_STONE": {
+      "original": 2517,
+      "allocated": 6613
+    },
+    "FLAG_HIDE_SEVEN_ISLAND_SEVAULT_CANYON_KINGS_ROCK": {
+      "original": 2518,
+      "allocated": 6614
+    },
+    "FLAG_HIDE_SEVEN_ISLAND_SEVAULT_CANYON_MAX_ELIXIR": {
+      "original": 2519,
+      "allocated": 6615
+    },
+    "FLAG_HIDE_SEVEN_ISLAND_SEVAULT_CANYON_NUGGET": {
+      "original": 2520,
+      "allocated": 6616
+    },
+    "FLAG_HIDE_THREE_ISLAND_BERRY_FOREST_MAX_ETHER": {
+      "original": 2521,
+      "allocated": 6617
+    },
+    "FLAG_HIDE_THREE_ISLAND_BERRY_FOREST_FULL_HEAL": {
+      "original": 2522,
+      "allocated": 6618
+    },
+    "FLAG_HIDE_THREE_ISLAND_BERRY_FOREST_MAX_ELIXIR": {
+      "original": 2523,
+      "allocated": 6619
+    },
+    "FLAG_HIDE_MT_EMBER_EXTERIOR_ULTRA_BALL": {
+      "original": 2524,
+      "allocated": 6620
+    },
+    "FLAG_HIDE_MT_EMBER_EXTERIOR_FIRE_STONE": {
+      "original": 2525,
+      "allocated": 6621
+    },
+    "FLAG_HIDE_MT_EMBER_EXTERIOR_DIRE_HIT": {
+      "original": 2526,
+      "allocated": 6622
+    },
+    "FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_1F_ULTRA_BALL": {
+      "original": 2527,
+      "allocated": 6623
+    },
+    "FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_1F_HM07": {
+      "original": 2528,
+      "allocated": 6624
+    },
+    "FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_B1F_FULL_RESTORE": {
+      "original": 2529,
+      "allocated": 6625
+    },
+    "FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_B1F_NEVER_MELT_ICE": {
+      "original": 2530,
+      "allocated": 6626
+    },
+    "FLAG_HIDE_FIVE_ISLAND_ROCKET_WAREHOUSE_BIG_PEARL": {
+      "original": 2531,
+      "allocated": 6627
+    },
+    "FLAG_HIDE_FIVE_ISLAND_ROCKET_WAREHOUSE_TM36": {
+      "original": 2532,
+      "allocated": 6628
+    },
+    "FLAG_HIDE_FIVE_ISLAND_ROCKET_WAREHOUSE_PEARL": {
+      "original": 2533,
+      "allocated": 6629
+    },
+    "FLAG_HIDE_FIVE_ISLAND_ROCKET_WAREHOUSE_UP_GRADE": {
+      "original": 2534,
+      "allocated": 6630
+    },
+    "FLAG_HIDE_FIVE_ISLAND_LOST_CAVE_ROOM10_SILK_SCARF": {
+      "original": 2535,
+      "allocated": 6631
+    },
+    "FLAG_HIDE_FIVE_ISLAND_LOST_CAVE_ROOM11_LAX_INCENSE": {
+      "original": 2536,
+      "allocated": 6632
+    },
+    "FLAG_HIDE_FIVE_ISLAND_LOST_CAVE_ROOM12_SEA_INCENSE": {
+      "original": 2537,
+      "allocated": 6633
+    },
+    "FLAG_HIDE_FIVE_ISLAND_LOST_CAVE_ROOM13_MAX_REVIVE": {
+      "original": 2538,
+      "allocated": 6634
+    },
+    "FLAG_HIDE_FIVE_ISLAND_LOST_CAVE_ROOM14_RARE_CANDY": {
+      "original": 2539,
+      "allocated": 6635
+    },
+    "FLAG_HIDE_SEVEN_ISLAND_SEVAULT_CANYON_HOUSE_LUCKY_PUNCH": {
+      "original": 2540,
+      "allocated": 6636
+    },
+    "FLAG_HIDE_SILPH_CO_4F_TM41": {
+      "original": 2541,
+      "allocated": 6637
+    },
+    "FLAG_GOT_POTION_ON_ROUTE_1": {
+      "original": 355,
+      "allocated": 4451
+    },
+    "FLAG_GOT_TM34_FROM_SURGE": {
+      "original": 356,
+      "allocated": 4452
+    },
+    "FLAG_GOT_FOSSIL_FROM_MT_MOON": {
+      "original": 357,
+      "allocated": 4453
+    },
+    "FLAG_HELPED_BILL_IN_SEA_COTTAGE": {
+      "original": 2548,
+      "allocated": 6644
+    },
+    "FLAG_GOT_SS_TICKET": {
+      "original": 358,
+      "allocated": 4454
+    },
+    "FLAG_GOT_SS_TICKET_DUP": {
+      "original": 359,
+      "allocated": 4455
+    },
+    "FLAG_GOT_TM42_AT_MEMORIAL_PILLAR": {
+      "original": 360,
+      "allocated": 4456
+    },
+    "FLAG_GOT_HM01": {
+      "original": 361,
+      "allocated": 4457
+    },
+    "FLAG_GOT_HM02": {
+      "original": 362,
+      "allocated": 4458
+    },
+    "FLAG_GOT_HM03": {
+      "original": 363,
+      "allocated": 4459
+    },
+    "FLAG_GOT_HM04": {
+      "original": 364,
+      "allocated": 4460
+    },
+    "FLAG_GOT_HM05": {
+      "original": 365,
+      "allocated": 4461
+    },
+    "FLAG_RESCUED_MR_FUJI": {
+      "original": 2549,
+      "allocated": 6645
+    },
+    "FLAG_GOT_POKE_FLUTE": {
+      "original": 366,
+      "allocated": 4462
+    },
+    "FLAG_0x23E": {
+      "original": 2550,
+      "allocated": 6646
+    },
+    "FLAG_GOT_TM28_FROM_ROCKET": {
+      "original": 367,
+      "allocated": 4463
+    },
+    "FLAG_GOT_OLD_ROD": {
+      "original": 368,
+      "allocated": 4464
+    },
+    "FLAG_GOT_BIKE_VOUCHER": {
+      "original": 369,
+      "allocated": 4465
+    },
+    "FLAG_0x242": {
+      "original": 2551,
+      "allocated": 6647
+    },
+    "FLAG_GOT_COIN_CASE": {
+      "original": 370,
+      "allocated": 4466
+    },
+    "FLAG_GOT_GOOD_ROD": {
+      "original": 371,
+      "allocated": 4467
+    },
+    "FLAG_GOT_TM29_FROM_MR_PSYCHIC": {
+      "original": 372,
+      "allocated": 4468
+    },
+    "FLAG_GOT_LAPRAS_FROM_SILPH": {
+      "original": 373,
+      "allocated": 4469
+    },
+    "FLAG_GOT_POKEBALLS_FROM_OAK_AFTER_22_RIVAL": {
+      "original": 374,
+      "allocated": 4470
+    },
+    "FLAG_DID_MIMIEN_TRADE": {
+      "original": 2552,
+      "allocated": 6648
+    },
+    "FLAG_BOUGHT_MAGIKARP": {
+      "original": 2553,
+      "allocated": 6649
+    },
+    "FLAG_DID_ZYNX_TRADE": {
+      "original": 2554,
+      "allocated": 6650
+    },
+    "FLAG_DID_MS_NIDO_TRADE": {
+      "original": 2555,
+      "allocated": 6651
+    },
+    "FLAG_0x24C": {
+      "original": 2556,
+      "allocated": 6652
+    },
+    "FLAG_DID_CH_DING_TRADE": {
+      "original": 2557,
+      "allocated": 6653
+    },
+    "FLAG_GOT_TM38_FROM_BLAINE": {
+      "original": 375,
+      "allocated": 4471
+    },
+    "FLAG_OAK_SKIP_22_RIVAL_CHECK": {
+      "original": 2558,
+      "allocated": 6654
+    },
+    "FLAG_GOT_MASTER_BALL_FROM_SILPH": {
+      "original": 376,
+      "allocated": 4472
+    },
+    "FLAG_DID_NINA_TRADE": {
+      "original": 2559,
+      "allocated": 6655
+    },
+    "FLAG_GOT_ITEMFINDER": {
+      "original": 377,
+      "allocated": 4473
+    },
+    "FLAG_WOKE_UP_ROUTE_12_SNORLAX": {
+      "original": 2560,
+      "allocated": 6656
+    },
+    "FLAG_GOT_TM39_FROM_BROCK": {
+      "original": 378,
+      "allocated": 4474
+    },
+    "FLAG_GOT_SUPER_ROD": {
+      "original": 379,
+      "allocated": 4475
+    },
+    "FLAG_GOT_EXP_SHARE_FROM_OAKS_AIDE": {
+      "original": 380,
+      "allocated": 4476
+    },
+    "FLAG_DID_MARC_TRADE": {
+      "original": 2561,
+      "allocated": 6657
+    },
+    "FLAG_BEAT_RIVAL_IN_OAKS_LAB": {
+      "original": 2562,
+      "allocated": 6658
+    },
+    "FLAG_GOT_TM06_FROM_KOGA": {
+      "original": 381,
+      "allocated": 4477
+    },
+    "FLAG_0x25A": {
+      "original": 2563,
+      "allocated": 6659
+    },
+    "FLAG_GOT_TM27": {
+      "original": 382,
+      "allocated": 4478
+    },
+    "FLAG_0x25C": {
+      "original": 2564,
+      "allocated": 6660
+    },
+    "FLAG_0x25D": {
+      "original": 2565,
+      "allocated": 6661
+    },
+    "FLAG_GOT_OLD_AMBER": {
+      "original": 383,
+      "allocated": 4479
+    },
+    "FLAG_0x25F": {
+      "original": 2566,
+      "allocated": 6662
+    },
+    "FLAG_0x260": {
+      "original": 2567,
+      "allocated": 6663
+    },
+    "FLAG_0x261": {
+      "original": 2568,
+      "allocated": 6664
+    },
+    "FLAG_0x262": {
+      "original": 2569,
+      "allocated": 6665
+    },
+    "FLAG_GOT_EEVEE": {
+      "original": 384,
+      "allocated": 4480
+    },
+    "FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES": {
+      "original": 2570,
+      "allocated": 6666
+    },
+    "FLAG_CINNABAR_GYM_QUIZ_1": {
+      "original": 2571,
+      "allocated": 6667
+    },
+    "FLAG_CINNABAR_GYM_QUIZ_2": {
+      "original": 2572,
+      "allocated": 6668
+    },
+    "FLAG_CINNABAR_GYM_QUIZ_3": {
+      "original": 2573,
+      "allocated": 6669
+    },
+    "FLAG_CINNABAR_GYM_QUIZ_4": {
+      "original": 2574,
+      "allocated": 6670
+    },
+    "FLAG_CINNABAR_GYM_QUIZ_5": {
+      "original": 2575,
+      "allocated": 6671
+    },
+    "FLAG_CINNABAR_GYM_QUIZ_6": {
+      "original": 2576,
+      "allocated": 6672
+    },
+    "FLAG_POKEMON_MANSION_SWITCH_STATE": {
+      "original": 2577,
+      "allocated": 6673
+    },
+    "FLAG_OPENED_ROCKET_HIDEOUT": {
+      "original": 2578,
+      "allocated": 6674
+    },
+    "FLAG_GOT_10_COINS_FROM_GAMBLER": {
+      "original": 385,
+      "allocated": 4481
+    },
+    "FLAG_GOT_20_COINS_FROM_GAMBLER": {
+      "original": 386,
+      "allocated": 4482
+    },
+    "FLAG_GOT_20_COINS_FROM_GAMBLER_2": {
+      "original": 387,
+      "allocated": 4483
+    },
+    "FLAG_GOT_BICYCLE": {
+      "original": 388,
+      "allocated": 4484
+    },
+    "FLAG_GOT_DOME_FOSSIL": {
+      "original": 389,
+      "allocated": 4485
+    },
+    "FLAG_GOT_HELIX_FOSSIL": {
+      "original": 390,
+      "allocated": 4486
+    },
+    "FLAG_DID_ESPHERE_TRADE": {
+      "original": 2579,
+      "allocated": 6675
+    },
+    "FLAG_DID_TANGENY_TRADE": {
+      "original": 2580,
+      "allocated": 6676
+    },
+    "FLAG_DID_SEELOR_TRADE": {
+      "original": 2581,
+      "allocated": 6677
+    },
+    "FLAG_0x277": {
+      "original": 2582,
+      "allocated": 6678
+    },
+    "FLAG_GOT_HITMON_FROM_DOJO": {
+      "original": 391,
+      "allocated": 4487
+    },
+    "FLAG_0x279": {
+      "original": 2583,
+      "allocated": 6679
+    },
+    "FLAG_SILPH_2F_DOOR_1": {
+      "original": 2584,
+      "allocated": 6680
+    },
+    "FLAG_SILPH_2F_DOOR_2": {
+      "original": 2585,
+      "allocated": 6681
+    },
+    "FLAG_SILPH_3F_DOOR_1": {
+      "original": 2586,
+      "allocated": 6682
+    },
+    "FLAG_SILPH_3F_DOOR_2": {
+      "original": 2587,
+      "allocated": 6683
+    },
+    "FLAG_SILPH_4F_DOOR_1": {
+      "original": 2588,
+      "allocated": 6684
+    },
+    "FLAG_SILPH_4F_DOOR_2": {
+      "original": 2589,
+      "allocated": 6685
+    },
+    "FLAG_SILPH_5F_DOOR_1": {
+      "original": 2590,
+      "allocated": 6686
+    },
+    "FLAG_SILPH_5F_DOOR_2": {
+      "original": 2591,
+      "allocated": 6687
+    },
+    "FLAG_SILPH_5F_DOOR_3": {
+      "original": 2592,
+      "allocated": 6688
+    },
+    "FLAG_SILPH_6F_DOOR": {
+      "original": 2593,
+      "allocated": 6689
+    },
+    "FLAG_SILPH_7F_DOOR_1": {
+      "original": 2594,
+      "allocated": 6690
+    },
+    "FLAG_SILPH_7F_DOOR_2": {
+      "original": 2595,
+      "allocated": 6691
+    },
+    "FLAG_SILPH_7F_DOOR_3": {
+      "original": 2596,
+      "allocated": 6692
+    },
+    "FLAG_SILPH_8F_DOOR": {
+      "original": 2597,
+      "allocated": 6693
+    },
+    "FLAG_SILPH_9F_DOOR_1": {
+      "original": 2598,
+      "allocated": 6694
+    },
+    "FLAG_SILPH_9F_DOOR_2": {
+      "original": 2599,
+      "allocated": 6695
+    },
+    "FLAG_SILPH_9F_DOOR_3": {
+      "original": 2600,
+      "allocated": 6696
+    },
+    "FLAG_SILPH_9F_DOOR_4": {
+      "original": 2601,
+      "allocated": 6697
+    },
+    "FLAG_SILPH_10F_DOOR": {
+      "original": 2602,
+      "allocated": 6698
+    },
+    "FLAG_SILPH_11F_DOOR": {
+      "original": 2603,
+      "allocated": 6699
+    },
+    "FLAG_0x28E": {
+      "original": 2604,
+      "allocated": 6700
+    },
+    "FLAG_0x28F": {
+      "original": 2605,
+      "allocated": 6701
+    },
+    "FLAG_MET_STICKER_MAN": {
+      "original": 392,
+      "allocated": 4488
+    },
+    "FLAG_PALLET_LADY_NOT_BLOCKING_SIGN": {
+      "original": 2606,
+      "allocated": 6702
+    },
+    "FLAG_GOT_VS_SEEKER": {
+      "original": 393,
+      "allocated": 4489
+    },
+    "FLAG_GOT_TM19_FROM_ERIKA": {
+      "original": 394,
+      "allocated": 4490
+    },
+    "FLAG_GOT_TM33_FROM_THIRSTY_GIRL": {
+      "original": 395,
+      "allocated": 4491
+    },
+    "FLAG_GOT_TM20_FROM_THIRSTY_GIRL": {
+      "original": 396,
+      "allocated": 4492
+    },
+    "FLAG_GOT_TM16_FROM_THIRSTY_GIRL": {
+      "original": 397,
+      "allocated": 4493
+    },
+    "FLAG_GOT_TM03_FROM_MISTY": {
+      "original": 398,
+      "allocated": 4494
+    },
+    "FLAG_GOT_TM26_FROM_GIOVANNI": {
+      "original": 399,
+      "allocated": 4495
+    },
+    "FLAG_0x299": {
+      "original": 2607,
+      "allocated": 6703
+    },
+    "FLAG_GOT_TM04_FROM_SABRINA": {
+      "original": 400,
+      "allocated": 4496
+    },
+    "FLAG_GOT_FAME_CHECKER": {
+      "original": 401,
+      "allocated": 4497
+    },
+    "FLAG_GOT_RECORD_SETTING_MAGIKARP": {
+      "original": 402,
+      "allocated": 4498
+    },
+    "FLAG_TWO_ISLAND_SHOP_INTRODUCED": {
+      "original": 2608,
+      "allocated": 6704
+    },
+    "FLAG_TWO_ISLAND_SHOP_EXPANDED_1": {
+      "original": 2609,
+      "allocated": 6705
+    },
+    "FLAG_TWO_ISLAND_SHOP_EXPANDED_2": {
+      "original": 2610,
+      "allocated": 6706
+    },
+    "FLAG_TWO_ISLAND_SHOP_EXPANDED_3": {
+      "original": 2611,
+      "allocated": 6707
+    },
+    "FLAG_SEVII_DETOUR_FINISHED": {
+      "original": 2612,
+      "allocated": 6708
+    },
+    "FLAG_VISITED_TWO_ISLAND": {
+      "original": 403,
+      "allocated": 4499
+    },
+    "FLAG_RESCUED_LOSTELLE": {
+      "original": 2613,
+      "allocated": 6709
+    },
+    "FLAG_0x2A4": {
+      "original": 2614,
+      "allocated": 6710
+    },
+    "FLAG_CAN_USE_ROCKET_HIDEOUT_LIFT": {
+      "original": 2615,
+      "allocated": 6711
+    },
+    "FLAG_GOT_TEA": {
+      "original": 404,
+      "allocated": 4500
+    },
+    "FLAG_GOT_POWDER_JAR": {
+      "original": 405,
+      "allocated": 4501
+    },
+    "FLAG_FOUGHT_MEWTWO": {
+      "original": 2616,
+      "allocated": 6712
+    },
+    "FLAG_FOUGHT_MOLTRES": {
+      "original": 2617,
+      "allocated": 6713
+    },
+    "FLAG_FOUGHT_ARTICUNO": {
+      "original": 2618,
+      "allocated": 6714
+    },
+    "FLAG_FOUGHT_ZAPDOS": {
+      "original": 2619,
+      "allocated": 6715
+    },
+    "FLAG_TUTOR_DOUBLE_EDGE": {
+      "original": 2620,
+      "allocated": 6716
+    },
+    "FLAG_TUTOR_THUNDER_WAVE": {
+      "original": 2621,
+      "allocated": 6717
+    },
+    "FLAG_TUTOR_ROCK_SLIDE": {
+      "original": 2622,
+      "allocated": 6718
+    },
+    "FLAG_TUTOR_EXPLOSION": {
+      "original": 2623,
+      "allocated": 6719
+    },
+    "FLAG_TUTOR_MEGA_PUNCH": {
+      "original": 2624,
+      "allocated": 6720
+    },
+    "FLAG_TUTOR_MEGA_KICK": {
+      "original": 2625,
+      "allocated": 6721
+    },
+    "FLAG_TUTOR_DREAM_EATER": {
+      "original": 2626,
+      "allocated": 6722
+    },
+    "FLAG_TUTOR_SOFT_BOILED": {
+      "original": 2627,
+      "allocated": 6723
+    },
+    "FLAG_TUTOR_SUBSTITUTE": {
+      "original": 2628,
+      "allocated": 6724
+    },
+    "FLAG_TUTOR_SWORDS_DANCE": {
+      "original": 2629,
+      "allocated": 6725
+    },
+    "FLAG_TUTOR_SEISMIC_TOSS": {
+      "original": 2630,
+      "allocated": 6726
+    },
+    "FLAG_TUTOR_COUNTER": {
+      "original": 2631,
+      "allocated": 6727
+    },
+    "FLAG_TUTOR_METRONOME": {
+      "original": 2632,
+      "allocated": 6728
+    },
+    "FLAG_TUTOR_MIMIC": {
+      "original": 2633,
+      "allocated": 6729
+    },
+    "FLAG_TUTOR_BODY_SLAM": {
+      "original": 2634,
+      "allocated": 6730
+    },
+    "FLAG_VISITED_OAKS_LAB": {
+      "original": 406,
+      "allocated": 4502
+    },
+    "FLAG_FOUGHT_POWER_PLANT_ELECTRODE_1": {
+      "original": 2635,
+      "allocated": 6731
+    },
+    "FLAG_FOUGHT_POWER_PLANT_ELECTRODE_2": {
+      "original": 2636,
+      "allocated": 6732
+    },
+    "FLAG_STOPPED_SEAFOAM_B3F_CURRENT": {
+      "original": 2637,
+      "allocated": 6733
+    },
+    "FLAG_STOPPED_SEAFOAM_B4F_CURRENT": {
+      "original": 2638,
+      "allocated": 6734
+    },
+    "FLAG_TALKED_TO_LORELEI_AFTER_WAREHOUSE": {
+      "original": 2639,
+      "allocated": 6735
+    },
+    "FLAG_DEFEATED_ROCKETS_IN_WAREHOUSE": {
+      "original": 407,
+      "allocated": 4503
+    },
+    "FLAG_UNLOCKED_ROCKET_WAREHOUSE": {
+      "original": 2640,
+      "allocated": 6736
+    },
+    "FLAG_NO_ROOM_FOR_TM42_AT_MEMORIAL_PILLAR": {
+      "original": 2641,
+      "allocated": 6737
+    },
+    "FLAG_LEARNED_YES_NAH_CHANSEY": {
+      "original": 2642,
+      "allocated": 6738
+    },
+    "FLAG_GOT_NEST_BALL_FROM_WATER_PATH_HOUSE_1": {
+      "original": 408,
+      "allocated": 4504
+    },
+    "FLAG_GOT_TOGEPI_EGG": {
+      "original": 409,
+      "allocated": 4505
+    },
+    "FLAG_NO_ROOM_FOR_TOGEPI_EGG": {
+      "original": 2643,
+      "allocated": 6739
+    },
+    "FLAG_RECOVERED_SAPPHIRE": {
+      "original": 2644,
+      "allocated": 6740
+    },
+    "FLAG_GOT_RUBY": {
+      "original": 410,
+      "allocated": 4506
+    },
+    "FLAG_TUTOR_FRENZY_PLANT": {
+      "original": 2645,
+      "allocated": 6741
+    },
+    "FLAG_TUTOR_BLAST_BURN": {
+      "original": 2646,
+      "allocated": 6742
+    },
+    "FLAG_TUTOR_HYDRO_CANNON": {
+      "original": 2647,
+      "allocated": 6743
+    },
+    "FLAG_LEARNED_ALL_MOVES_AT_CAPE_BRINK": {
+      "original": 2648,
+      "allocated": 6744
+    },
+    "FLAG_GOT_NUGGET_FROM_DUNSPARCE_TUNNEL": {
+      "original": 411,
+      "allocated": 4507
+    },
+    "FLAG_USED_CUT_ON_RUIN_VALLEY_BRAILLE": {
+      "original": 2649,
+      "allocated": 6745
+    },
+    "FLAG_FOUGHT_DEOXYS": {
+      "original": 2650,
+      "allocated": 6746
+    },
+    "FLAG_0x2E5": {
+      "original": 2651,
+      "allocated": 6747
+    },
+    "FLAG_0x2E6": {
+      "original": 2652,
+      "allocated": 6748
+    },
+    "FLAG_0x2E7": {
+      "original": 2653,
+      "allocated": 6749
+    },
+    "FLAG_0x2E8": {
+      "original": 2654,
+      "allocated": 6750
+    },
+    "FLAG_0x2E9": {
+      "original": 2655,
+      "allocated": 6751
+    },
+    "FLAG_0x2EA": {
+      "original": 2656,
+      "allocated": 6752
+    },
+    "FLAG_0x2EB": {
+      "original": 2657,
+      "allocated": 6753
+    },
+    "FLAG_REVIVED_DOME": {
+      "original": 2658,
+      "allocated": 6754
+    },
+    "FLAG_REVIVED_HELIX": {
+      "original": 2659,
+      "allocated": 6755
+    },
+    "FLAG_REVIVED_AMBER": {
+      "original": 2660,
+      "allocated": 6756
+    },
+    "FLAG_GOT_HM06": {
+      "original": 412,
+      "allocated": 4508
+    },
+    "FLAG_FOUGHT_LUGIA": {
+      "original": 2661,
+      "allocated": 6757
+    },
+    "FLAG_FOUGHT_HO_OH": {
+      "original": 2662,
+      "allocated": 6758
+    },
+    "FLAG_OAK_SAW_DEX_COMPLETION": {
+      "original": 2663,
+      "allocated": 6759
+    },
+    "FLAG_LUGIA_FLEW_AWAY": {
+      "original": 2664,
+      "allocated": 6760
+    },
+    "FLAG_HO_OH_FLEW_AWAY": {
+      "original": 2665,
+      "allocated": 6761
+    },
+    "FLAG_DEOXYS_FLEW_AWAY": {
+      "original": 2666,
+      "allocated": 6762
+    },
+    "FLAG_TALKED_TO_TEA_LADY_AFTER_HOF": {
+      "original": 2667,
+      "allocated": 6763
+    },
+    "FLAG_TALKED_TO_OAKS_AIDE_IN_VERMILION": {
+      "original": 2668,
+      "allocated": 6764
+    },
+    "FLAG_GOT_EVERSTONE_FROM_OAKS_AIDE": {
+      "original": 413,
+      "allocated": 4509
+    },
+    "FLAG_GOT_MOON_STONE_FROM_JOYFUL_GAME_CORNER": {
+      "original": 414,
+      "allocated": 4510
+    },
+    "FLAG_GOT_FULL_RESTORE_FROM_THREE_ISLAND_DEFENDER": {
+      "original": 415,
+      "allocated": 4511
+    },
+    "FLAG_GOT_AMULET_COIN_FROM_OAKS_AIDE": {
+      "original": 416,
+      "allocated": 4512
+    },
+    "FLAG_NO_ROOM_FOR_JOYFUL_GAME_CORNER_MOON_STONE": {
+      "original": 2669,
+      "allocated": 6765
+    },
+    "FLAG_OAKS_RATING_IS_VIA_PC": {
+      "original": 2670,
+      "allocated": 6766
+    },
+    "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_POTION": {
+      "original": 703,
+      "allocated": 4799
+    },
+    "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_ANTIDOTE": {
+      "original": 704,
+      "allocated": 4800
+    },
+    "FLAG_HIDDEN_ITEM_MT_MOON_B2F_MOON_STONE": {
+      "original": 705,
+      "allocated": 4801
+    },
+    "FLAG_HIDDEN_ITEM_MT_MOON_B2F_ETHER": {
+      "original": 706,
+      "allocated": 4802
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE25_ELIXIR": {
+      "original": 707,
+      "allocated": 4803
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE25_ETHER": {
+      "original": 708,
+      "allocated": 4804
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE9_ETHER": {
+      "original": 709,
+      "allocated": 4805
+    },
+    "FLAG_HIDDEN_ITEM_UNUSED_0x07": {
+      "original": 710,
+      "allocated": 4806
+    },
+    "FLAG_HIDDEN_ITEM_SSANNE_B1F_CORRIDOR_HYPER_POTION": {
+      "original": 1280,
+      "allocated": 5376
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE10_SUPER_POTION": {
+      "original": 1281,
+      "allocated": 5377
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE10_MAX_ETHER": {
+      "original": 1282,
+      "allocated": 5378
+    },
+    "FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B1F_PP_UP": {
+      "original": 1283,
+      "allocated": 5379
+    },
+    "FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B3F_NUGGET": {
+      "original": 1284,
+      "allocated": 5380
+    },
+    "FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B4F_NEST_BALL": {
+      "original": 1285,
+      "allocated": 5381
+    },
+    "FLAG_HIDDEN_ITEM_POKEMON_TOWER_5F_BIG_MUSHROOM": {
+      "original": 1286,
+      "allocated": 5382
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE13_PP_UP": {
+      "original": 1287,
+      "allocated": 5383
+    },
+    "FLAG_HIDDEN_ITEM_UNUSED_0x10": {
+      "original": 1288,
+      "allocated": 5384
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE17_RARE_CANDY": {
+      "original": 1289,
+      "allocated": 5385
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE17_FULL_RESTORE": {
+      "original": 1290,
+      "allocated": 5386
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE17_PP_UP": {
+      "original": 1291,
+      "allocated": 5387
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE17_MAX_REVIVE": {
+      "original": 1292,
+      "allocated": 5388
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE17_MAX_ELIXIR": {
+      "original": 1293,
+      "allocated": 5389
+    },
+    "FLAG_HIDDEN_ITEM_SAFARI_ZONE_CENTER_LEAF_STONE": {
+      "original": 1294,
+      "allocated": 5390
+    },
+    "FLAG_HIDDEN_ITEM_SAFARI_ZONE_WEST_REVIVE": {
+      "original": 1295,
+      "allocated": 5391
+    },
+    "FLAG_HIDDEN_ITEM_SILPH_CO_5F_ELIXIR": {
+      "original": 1296,
+      "allocated": 5392
+    },
+    "FLAG_HIDDEN_ITEM_SILPH_CO_9F_MAX_POTION": {
+      "original": 1297,
+      "allocated": 5393
+    },
+    "FLAG_HIDDEN_ITEM_SAFFRON_CITY_COPYCATS_HOUSE_2F_NUGGET": {
+      "original": 1298,
+      "allocated": 5394
+    },
+    "FLAG_HIDDEN_ITEM_POWER_PLANT_MAX_ELIXIR": {
+      "original": 1299,
+      "allocated": 5395
+    },
+    "FLAG_HIDDEN_ITEM_POWER_PLANT_THUNDER_STONE": {
+      "original": 1300,
+      "allocated": 5396
+    },
+    "FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_B3F_NUGGET": {
+      "original": 1301,
+      "allocated": 5397
+    },
+    "FLAG_HIDDEN_ITEM_SEAFOAM_ISLANDS_B4F_WATER_STONE": {
+      "original": 1302,
+      "allocated": 5398
+    },
+    "FLAG_HIDDEN_ITEM_POKEMON_MANSION_1F_MOON_STONE": {
+      "original": 1303,
+      "allocated": 5399
+    },
+    "FLAG_HIDDEN_ITEM_POKEMON_MANSION_3F_RARE_CANDY": {
+      "original": 1304,
+      "allocated": 5400
+    },
+    "FLAG_HIDDEN_ITEM_POKEMON_MANSION_B1F_ELIXIR": {
+      "original": 1305,
+      "allocated": 5401
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE23_FULL_RESTORE": {
+      "original": 1306,
+      "allocated": 5402
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE23_ULTRA_BALL": {
+      "original": 1307,
+      "allocated": 5403
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE23_MAX_ETHER": {
+      "original": 1308,
+      "allocated": 5404
+    },
+    "FLAG_HIDDEN_ITEM_VICTORY_ROAD_1F_FULL_RESTORE": {
+      "original": 1309,
+      "allocated": 5405
+    },
+    "FLAG_HIDDEN_ITEM_CERULEAN_CAVE_1F_ULTRA_BALL": {
+      "original": 1310,
+      "allocated": 5406
+    },
+    "FLAG_HIDDEN_ITEM_UNUSED_0x28": {
+      "original": 1311,
+      "allocated": 5407
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE11_ESCAPE_ROPE": {
+      "original": 1312,
+      "allocated": 5408
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE12_HYPER_POTION": {
+      "original": 1313,
+      "allocated": 5409
+    },
+    "FLAG_HIDDEN_ITEM_UNUSED_0x2B": {
+      "original": 1314,
+      "allocated": 5410
+    },
+    "FLAG_HIDDEN_ITEM_UNUSED_0x2C": {
+      "original": 1315,
+      "allocated": 5411
+    },
+    "FLAG_HIDDEN_ITEM_UNUSED_0x2D": {
+      "original": 1316,
+      "allocated": 5412
+    },
+    "FLAG_HIDDEN_ITEM_UNUSED_0x2E": {
+      "original": 1317,
+      "allocated": 5413
+    },
+    "FLAG_HIDDEN_ITEM_CELADON_CITY_PP_UP": {
+      "original": 1318,
+      "allocated": 5414
+    },
+    "FLAG_HIDDEN_ITEM_VERMILION_CITY_MAX_ETHER": {
+      "original": 1319,
+      "allocated": 5415
+    },
+    "FLAG_HIDDEN_ITEM_CERULEAN_CITY_RARE_CANDY": {
+      "original": 1320,
+      "allocated": 5416
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE4_GREAT_BALL": {
+      "original": 1321,
+      "allocated": 5417
+    },
+    "FLAG_HIDDEN_ITEM_CELADON_CITY_GAME_CORNER_COINS": {
+      "original": 1322,
+      "allocated": 5418
+    },
+    "FLAG_HIDDEN_ITEM_CELADON_CITY_GAME_CORNER_COINS_2": {
+      "original": 1323,
+      "allocated": 5419
+    },
+    "FLAG_HIDDEN_ITEM_CELADON_CITY_GAME_CORNER_COINS_3": {
+      "original": 1324,
+      "allocated": 5420
+    },
+    "FLAG_HIDDEN_ITEM_CELADON_CITY_GAME_CORNER_COINS_4": {
+      "original": 1325,
+      "allocated": 5421
+    },
+    "FLAG_HIDDEN_ITEM_CELADON_CITY_GAME_CORNER_COINS_5": {
+      "original": 1326,
+      "allocated": 5422
+    },
+    "FLAG_HIDDEN_ITEM_CELADON_CITY_GAME_CORNER_COINS_6": {
+      "original": 1327,
+      "allocated": 5423
+    },
+    "FLAG_HIDDEN_ITEM_CELADON_CITY_GAME_CORNER_COINS_7": {
+      "original": 1328,
+      "allocated": 5424
+    },
+    "FLAG_HIDDEN_ITEM_CELADON_CITY_GAME_CORNER_COINS_8": {
+      "original": 1329,
+      "allocated": 5425
+    },
+    "FLAG_HIDDEN_ITEM_CELADON_CITY_GAME_CORNER_COINS_9": {
+      "original": 1330,
+      "allocated": 5426
+    },
+    "FLAG_HIDDEN_ITEM_CELADON_CITY_GAME_CORNER_COINS_10": {
+      "original": 1331,
+      "allocated": 5427
+    },
+    "FLAG_HIDDEN_ITEM_CELADON_CITY_GAME_CORNER_COINS_11": {
+      "original": 1332,
+      "allocated": 5428
+    },
+    "FLAG_HIDDEN_ITEM_CELADON_CITY_GAME_CORNER_COINS_12": {
+      "original": 1333,
+      "allocated": 5429
+    },
+    "FLAG_HIDDEN_ITEM_SEVEN_ISLAND_SEVAULT_CANYON_CHERI_BERRY": {
+      "original": 1334,
+      "allocated": 5430
+    },
+    "FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TANOBY_RUINS_HEART_SCALE_4": {
+      "original": 1335,
+      "allocated": 5431
+    },
+    "FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TANOBY_RUINS_HEART_SCALE": {
+      "original": 1336,
+      "allocated": 5432
+    },
+    "FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TANOBY_RUINS_HEART_SCALE_2": {
+      "original": 1337,
+      "allocated": 5433
+    },
+    "FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TANOBY_RUINS_HEART_SCALE_3": {
+      "original": 1338,
+      "allocated": 5434
+    },
+    "FLAG_HIDDEN_ITEM_FIVE_ISLAND_ROCKET_WAREHOUSE_NEST_BALL": {
+      "original": 1339,
+      "allocated": 5435
+    },
+    "FLAG_HIDDEN_ITEM_FIVE_ISLAND_ROCKET_WAREHOUSE_NET_BALL": {
+      "original": 1340,
+      "allocated": 5436
+    },
+    "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_POTION": {
+      "original": 1341,
+      "allocated": 5437
+    },
+    "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_ANTIDOTE": {
+      "original": 1342,
+      "allocated": 5438
+    },
+    "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_PARALYZE_HEAL": {
+      "original": 1343,
+      "allocated": 5439
+    },
+    "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_AWAKENING": {
+      "original": 1344,
+      "allocated": 5440
+    },
+    "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_BURN_HEAL": {
+      "original": 1345,
+      "allocated": 5441
+    },
+    "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_ICE_HEAL": {
+      "original": 1346,
+      "allocated": 5442
+    },
+    "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL_ETHER": {
+      "original": 1347,
+      "allocated": 5443
+    },
+    "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_POTION": {
+      "original": 1348,
+      "allocated": 5444
+    },
+    "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_ANTIDOTE": {
+      "original": 1349,
+      "allocated": 5445
+    },
+    "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_PARALYZE_HEAL": {
+      "original": 1350,
+      "allocated": 5446
+    },
+    "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_AWAKENING": {
+      "original": 1351,
+      "allocated": 5447
+    },
+    "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_BURN_HEAL": {
+      "original": 1352,
+      "allocated": 5448
+    },
+    "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_ICE_HEAL": {
+      "original": 1353,
+      "allocated": 5449
+    },
+    "FLAG_HIDDEN_ITEM_UNDERGROUND_PATH_EAST_WEST_TUNNEL_ETHER": {
+      "original": 1354,
+      "allocated": 5450
+    },
+    "FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM": {
+      "original": 1355,
+      "allocated": 5451
+    },
+    "FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM_2": {
+      "original": 1356,
+      "allocated": 5452
+    },
+    "FLAG_HIDDEN_ITEM_MT_MOON_B1F_TINY_MUSHROOM_3": {
+      "original": 1357,
+      "allocated": 5453
+    },
+    "FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM": {
+      "original": 1358,
+      "allocated": 5454
+    },
+    "FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM_2": {
+      "original": 1359,
+      "allocated": 5455
+    },
+    "FLAG_HIDDEN_ITEM_MT_MOON_B1F_BIG_MUSHROOM_3": {
+      "original": 1360,
+      "allocated": 5456
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_RAZZ_BERRY": {
+      "original": 1361,
+      "allocated": 5457
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_BLUK_BERRY": {
+      "original": 1362,
+      "allocated": 5458
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_NANAB_BERRY": {
+      "original": 1363,
+      "allocated": 5459
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_WEPEAR_BERRY": {
+      "original": 1364,
+      "allocated": 5460
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_ORAN_BERRY": {
+      "original": 1365,
+      "allocated": 5461
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_CHERI_BERRY": {
+      "original": 1366,
+      "allocated": 5462
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_CHESTO_BERRY": {
+      "original": 1367,
+      "allocated": 5463
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_PECHA_BERRY": {
+      "original": 1368,
+      "allocated": 5464
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_RAWST_BERRY": {
+      "original": 1369,
+      "allocated": 5465
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_ASPEAR_BERRY": {
+      "original": 1370,
+      "allocated": 5466
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_PERSIM_BERRY": {
+      "original": 1371,
+      "allocated": 5467
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_PINAP_BERRY": {
+      "original": 1372,
+      "allocated": 5468
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_BERRY_FOREST_LUM_BERRY": {
+      "original": 1373,
+      "allocated": 5469
+    },
+    "FLAG_HIDDEN_ITEM_ONE_ISLAND_TREASURE_BEACH_STARDUST": {
+      "original": 1374,
+      "allocated": 5470
+    },
+    "FLAG_HIDDEN_ITEM_ONE_ISLAND_TREASURE_BEACH_STARDUST_2": {
+      "original": 1375,
+      "allocated": 5471
+    },
+    "FLAG_HIDDEN_ITEM_ONE_ISLAND_TREASURE_BEACH_PEARL": {
+      "original": 1376,
+      "allocated": 5472
+    },
+    "FLAG_HIDDEN_ITEM_ONE_ISLAND_TREASURE_BEACH_PEARL_2": {
+      "original": 1377,
+      "allocated": 5473
+    },
+    "FLAG_HIDDEN_ITEM_ONE_ISLAND_TREASURE_BEACH_ULTRA_BALL": {
+      "original": 1378,
+      "allocated": 5474
+    },
+    "FLAG_HIDDEN_ITEM_ONE_ISLAND_TREASURE_BEACH_ULTRA_BALL_2": {
+      "original": 1379,
+      "allocated": 5475
+    },
+    "FLAG_HIDDEN_ITEM_ONE_ISLAND_TREASURE_BEACH_STAR_PIECE": {
+      "original": 1380,
+      "allocated": 5476
+    },
+    "FLAG_HIDDEN_ITEM_ONE_ISLAND_TREASURE_BEACH_BIG_PEARL": {
+      "original": 1381,
+      "allocated": 5477
+    },
+    "FLAG_HIDDEN_ITEM_TWO_ISLAND_CAPE_BRINK_RARE_CANDY": {
+      "original": 1382,
+      "allocated": 5478
+    },
+    "FLAG_HIDDEN_ITEM_PEWTER_CITY_POKE_BALL": {
+      "original": 1383,
+      "allocated": 5479
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE3_ORAN_BERRY": {
+      "original": 1384,
+      "allocated": 5480
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE4_PERSIM_BERRY": {
+      "original": 1385,
+      "allocated": 5481
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE24_PECHA_BERRY": {
+      "original": 1386,
+      "allocated": 5482
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE25_ORAN_BERRY": {
+      "original": 1387,
+      "allocated": 5483
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE25_BLUK_BERRY": {
+      "original": 1388,
+      "allocated": 5484
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE6_SITRUS_BERRY": {
+      "original": 1389,
+      "allocated": 5485
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE6_RARE_CANDY": {
+      "original": 1390,
+      "allocated": 5486
+    },
+    "FLAG_HIDDEN_ITEM_SSANNE_KITCHEN_PECHA_BERRY": {
+      "original": 1391,
+      "allocated": 5487
+    },
+    "FLAG_HIDDEN_ITEM_SSANNE_KITCHEN_CHERI_BERRY": {
+      "original": 1392,
+      "allocated": 5488
+    },
+    "FLAG_HIDDEN_ITEM_SSANNE_KITCHEN_CHESTO_BERRY": {
+      "original": 1393,
+      "allocated": 5489
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE9_RARE_CANDY": {
+      "original": 1394,
+      "allocated": 5490
+    },
+    "FLAG_HIDDEN_ITEM_UNUSED_0x7C": {
+      "original": 1395,
+      "allocated": 5491
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE10_PERSIM_BERRY": {
+      "original": 1396,
+      "allocated": 5492
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE10_CHERI_BERRY": {
+      "original": 1397,
+      "allocated": 5493
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE8_RAWST_BERRY": {
+      "original": 1398,
+      "allocated": 5494
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE8_LUM_BERRY": {
+      "original": 1399,
+      "allocated": 5495
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE8_LEPPA_BERRY": {
+      "original": 1400,
+      "allocated": 5496
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE12_RARE_CANDY": {
+      "original": 1401,
+      "allocated": 5497
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE12_LEFTOVERS": {
+      "original": 1402,
+      "allocated": 5498
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE16_LEFTOVERS": {
+      "original": 1403,
+      "allocated": 5499
+    },
+    "FLAG_HIDDEN_ITEM_FUCHSIA_CITY_MAX_REVIVE": {
+      "original": 1404,
+      "allocated": 5500
+    },
+    "FLAG_HIDDEN_ITEM_ROCKET_HIDEOUT_B4F_NET_BALL": {
+      "original": 1405,
+      "allocated": 5501
+    },
+    "FLAG_HIDDEN_ITEM_SILPH_CO_2F_ULTRA_BALL": {
+      "original": 1406,
+      "allocated": 5502
+    },
+    "FLAG_HIDDEN_ITEM_SILPH_CO_3F_PROTEIN": {
+      "original": 1407,
+      "allocated": 5503
+    },
+    "FLAG_HIDDEN_ITEM_SILPH_CO_4F_IRON": {
+      "original": 1408,
+      "allocated": 5504
+    },
+    "FLAG_HIDDEN_ITEM_SILPH_CO_5F_PP_UP": {
+      "original": 1409,
+      "allocated": 5505
+    },
+    "FLAG_HIDDEN_ITEM_SILPH_CO_6F_CARBOS": {
+      "original": 1410,
+      "allocated": 5506
+    },
+    "FLAG_HIDDEN_ITEM_SILPH_CO_7F_ZINC": {
+      "original": 1411,
+      "allocated": 5507
+    },
+    "FLAG_HIDDEN_ITEM_SILPH_CO_8F_NUGGET": {
+      "original": 1412,
+      "allocated": 5508
+    },
+    "FLAG_HIDDEN_ITEM_SILPH_CO_9F_CALCIUM": {
+      "original": 1413,
+      "allocated": 5509
+    },
+    "FLAG_HIDDEN_ITEM_SILPH_CO_10F_HP_UP": {
+      "original": 1414,
+      "allocated": 5510
+    },
+    "FLAG_HIDDEN_ITEM_SILPH_CO_11F_REVIVE": {
+      "original": 1415,
+      "allocated": 5511
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE23_LUM_BERRY": {
+      "original": 1416,
+      "allocated": 5512
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE23_SITRUS_BERRY": {
+      "original": 1417,
+      "allocated": 5513
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE23_ASPEAR_BERRY": {
+      "original": 1418,
+      "allocated": 5514
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE23_LEPPA_BERRY": {
+      "original": 1419,
+      "allocated": 5515
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE14_ZINC": {
+      "original": 1420,
+      "allocated": 5516
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE9_CHESTO_BERRY": {
+      "original": 1421,
+      "allocated": 5517
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE10_NANAB_BERRY": {
+      "original": 1422,
+      "allocated": 5518
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE7_WEPEAR_BERRY": {
+      "original": 1423,
+      "allocated": 5519
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE20_STARDUST": {
+      "original": 1424,
+      "allocated": 5520
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE21_NORTH_PEARL": {
+      "original": 1425,
+      "allocated": 5521
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE23_MAX_ELIXIR": {
+      "original": 1426,
+      "allocated": 5522
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE4_RAZZ_BERRY": {
+      "original": 1427,
+      "allocated": 5523
+    },
+    "FLAG_HIDDEN_ITEM_ROUTE14_PINAP_BERRY": {
+      "original": 1428,
+      "allocated": 5524
+    },
+    "FLAG_HIDDEN_ITEM_MT_EMBER_EXTERIOR_FIRE_STONE": {
+      "original": 1429,
+      "allocated": 5525
+    },
+    "FLAG_HIDDEN_ITEM_POKEMON_TOWER_7F_SOOTHE_BELL": {
+      "original": 1430,
+      "allocated": 5526
+    },
+    "FLAG_HIDDEN_ITEM_NAVEL_ROCK_SUMMIT_SACRED_ASH": {
+      "original": 1431,
+      "allocated": 5527
+    },
+    "FLAG_HIDDEN_ITEM_TWO_ISLAND_CAPE_BRINK_PP_MAX": {
+      "original": 1432,
+      "allocated": 5528
+    },
+    "FLAG_HIDDEN_ITEM_MT_EMBER_EXTERIOR_ULTRA_BALL": {
+      "original": 1433,
+      "allocated": 5529
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_DUNSPARCE_TUNNEL_NUGGET": {
+      "original": 1434,
+      "allocated": 5530
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_PP_UP": {
+      "original": 1435,
+      "allocated": 5531
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_BOND_BRIDGE_MAX_REPEL": {
+      "original": 1436,
+      "allocated": 5532
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_BOND_BRIDGE_PEARL": {
+      "original": 1437,
+      "allocated": 5533
+    },
+    "FLAG_HIDDEN_ITEM_THREE_ISLAND_BOND_BRIDGE_STARDUST": {
+      "original": 1438,
+      "allocated": 5534
+    },
+    "FLAG_HIDDEN_ITEM_FOUR_ISLAND_PEARL": {
+      "original": 1439,
+      "allocated": 5535
+    },
+    "FLAG_HIDDEN_ITEM_FOUR_ISLAND_ULTRA_BALL": {
+      "original": 1440,
+      "allocated": 5536
+    },
+    "FLAG_HIDDEN_ITEM_FIVE_ISLAND_MEMORIAL_PILLAR_BIG_PEARL": {
+      "original": 1441,
+      "allocated": 5537
+    },
+    "FLAG_HIDDEN_ITEM_FIVE_ISLAND_MEMORIAL_PILLAR_RAZZ_BERRY": {
+      "original": 1442,
+      "allocated": 5538
+    },
+    "FLAG_HIDDEN_ITEM_FIVE_ISLAND_MEMORIAL_PILLAR_SITRUS_BERRY": {
+      "original": 1443,
+      "allocated": 5539
+    },
+    "FLAG_HIDDEN_ITEM_FIVE_ISLAND_MEMORIAL_PILLAR_BLUK_BERRY": {
+      "original": 1444,
+      "allocated": 5540
+    },
+    "FLAG_HIDDEN_ITEM_FIVE_ISLAND_RESORT_GORGEOUS_NEST_BALL": {
+      "original": 1445,
+      "allocated": 5541
+    },
+    "FLAG_HIDDEN_ITEM_FIVE_ISLAND_RESORT_GORGEOUS_STARDUST": {
+      "original": 1446,
+      "allocated": 5542
+    },
+    "FLAG_HIDDEN_ITEM_FIVE_ISLAND_RESORT_GORGEOUS_STAR_PIECE": {
+      "original": 1447,
+      "allocated": 5543
+    },
+    "FLAG_HIDDEN_ITEM_FIVE_ISLAND_RESORT_GORGEOUS_STARDUST_2": {
+      "original": 1448,
+      "allocated": 5544
+    },
+    "FLAG_HIDDEN_ITEM_SIX_ISLAND_OUTCAST_ISLAND_STAR_PIECE": {
+      "original": 1449,
+      "allocated": 5545
+    },
+    "FLAG_HIDDEN_ITEM_SIX_ISLAND_OUTCAST_ISLAND_NET_BALL": {
+      "original": 1450,
+      "allocated": 5546
+    },
+    "FLAG_HIDDEN_ITEM_SIX_ISLAND_GREEN_PATH_ULTRA_BALL": {
+      "original": 1451,
+      "allocated": 5547
+    },
+    "FLAG_HIDDEN_ITEM_SIX_ISLAND_WATER_PATH_ASPEAR_BERRY": {
+      "original": 1452,
+      "allocated": 5548
+    },
+    "FLAG_HIDDEN_ITEM_SIX_ISLAND_WATER_PATH_ORAN_BERRY": {
+      "original": 1453,
+      "allocated": 5549
+    },
+    "FLAG_HIDDEN_ITEM_SIX_ISLAND_WATER_PATH_PINAP_BERRY": {
+      "original": 1454,
+      "allocated": 5550
+    },
+    "FLAG_HIDDEN_ITEM_SIX_ISLAND_LEPPA_BERRY": {
+      "original": 1455,
+      "allocated": 5551
+    },
+    "FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TRAINER_TOWER_BIG_PEARL": {
+      "original": 1456,
+      "allocated": 5552
+    },
+    "FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TRAINER_TOWER_PEARL": {
+      "original": 1457,
+      "allocated": 5553
+    },
+    "FLAG_HIDDEN_ITEM_SEVEN_ISLAND_TRAINER_TOWER_NANAB_BERRY": {
+      "original": 1458,
+      "allocated": 5554
+    },
+    "FLAG_HIDDEN_ITEM_SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE_RAWST_BERRY": {
+      "original": 1459,
+      "allocated": 5555
+    },
+    "FLAG_HIDDEN_ITEM_VIRIDIAN_CITY_GYM_MACHO_BRACE": {
+      "original": 1460,
+      "allocated": 5556
+    },
+    "FLAG_HIDDEN_ITEM_SSANNE_EXTERIOR_LAVA_COOKIE": {
+      "original": 1461,
+      "allocated": 5557
+    },
+    "FLAG_DEFEATED_BROCK": {
+      "original": 417,
+      "allocated": 4513
+    },
+    "FLAG_DEFEATED_MISTY": {
+      "original": 418,
+      "allocated": 4514
+    },
+    "FLAG_DEFEATED_LT_SURGE": {
+      "original": 419,
+      "allocated": 4515
+    },
+    "FLAG_DEFEATED_ERIKA": {
+      "original": 420,
+      "allocated": 4516
+    },
+    "FLAG_DEFEATED_KOGA": {
+      "original": 421,
+      "allocated": 4517
+    },
+    "FLAG_DEFEATED_SABRINA": {
+      "original": 422,
+      "allocated": 4518
+    },
+    "FLAG_DEFEATED_BLAINE": {
+      "original": 423,
+      "allocated": 4519
+    },
+    "FLAG_DEFEATED_LEADER_GIOVANNI": {
+      "original": 424,
+      "allocated": 4520
+    },
+    "FLAG_DEFEATED_LORELEI": {
+      "original": 425,
+      "allocated": 4521
+    },
+    "FLAG_DEFEATED_BRUNO": {
+      "original": 2049,
+      "allocated": 6145
+    },
+    "FLAG_DEFEATED_AGATHA": {
+      "original": 2050,
+      "allocated": 6146
+    },
+    "FLAG_DEFEATED_LANCE": {
+      "original": 2051,
+      "allocated": 6147
+    },
+    "FLAG_DEFEATED_CHAMP": {
+      "original": 2052,
+      "allocated": 6148
+    },
+    "FLAG_0x82A": {
+      "original": 2671,
+      "allocated": 6767
+    },
+    "FLAG_0x82B": {
+      "original": 2672,
+      "allocated": 6768
+    },
+    "FLAG_0x82E": {
+      "original": 2673,
+      "allocated": 6769
+    },
+    "FLAG_SYS_ON_CYCLING_ROAD": {
+      "original": 348,
+      "allocated": 4444
+    },
+    "FLAG_0x831": {
+      "original": 2674,
+      "allocated": 6770
+    },
+    "FLAG_0x832": {
+      "original": 2675,
+      "allocated": 6771
+    },
+    "FLAG_0x833": {
+      "original": 2676,
+      "allocated": 6772
+    },
+    "FLAG_0x835": {
+      "original": 2677,
+      "allocated": 6773
+    },
+    "FLAG_0x836": {
+      "original": 2678,
+      "allocated": 6774
+    },
+    "FLAG_0x838": {
+      "original": 2679,
+      "allocated": 6775
+    },
+    "FLAG_0x83A": {
+      "original": 2680,
+      "allocated": 6776
+    },
+    "FLAG_SYS_SAW_HELP_SYSTEM_INTRO": {
+      "original": 349,
+      "allocated": 4445
+    },
+    "FLAG_0x83D": {
+      "original": 2681,
+      "allocated": 6777
+    },
+    "FLAG_OPENED_START_MENU": {
+      "original": 2682,
+      "allocated": 6778
+    },
+    "FLAG_SYS_PC_STORAGE_DISABLED": {
+      "original": 350,
+      "allocated": 4446
+    },
+    "FLAG_SYS_SEVII_MAP_123": {
+      "original": 351,
+      "allocated": 4447
+    },
+    "FLAG_SYS_SEVII_MAP_4567": {
+      "original": 352,
+      "allocated": 4448
+    },
+    "FLAG_SYS_GOT_BERRY_POUCH": {
+      "original": 353,
+      "allocated": 4449
+    },
+    "FLAG_SYS_UNLOCKED_TANOBY_RUINS": {
+      "original": 354,
+      "allocated": 4450
+    },
+    "FLAG_GOT_FLIGHT_CALL": {
+      "original": 426,
+      "allocated": 4522
+    },
+    "FLAG_HIDE_ROUTE_PROF_ASSISTANT": {
+      "original": 427,
+      "allocated": 4523
+    },
+    "FLAG_WORLD_MAP_PALLET_TOWN": {
+      "original": 2683,
+      "allocated": 6779
+    },
+    "FLAG_WORLD_MAP_VIRIDIAN_CITY": {
+      "original": 2684,
+      "allocated": 6780
+    },
+    "FLAG_WORLD_MAP_PEWTER_CITY": {
+      "original": 2685,
+      "allocated": 6781
+    },
+    "FLAG_WORLD_MAP_CERULEAN_CITY": {
+      "original": 2686,
+      "allocated": 6782
+    },
+    "FLAG_WORLD_MAP_LAVENDER_TOWN": {
+      "original": 2687,
+      "allocated": 6783
+    },
+    "FLAG_WORLD_MAP_VERMILION_CITY": {
+      "original": 2688,
+      "allocated": 6784
+    },
+    "FLAG_WORLD_MAP_CELADON_CITY": {
+      "original": 2689,
+      "allocated": 6785
+    },
+    "FLAG_WORLD_MAP_FUCHSIA_CITY": {
+      "original": 2690,
+      "allocated": 6786
+    },
+    "FLAG_WORLD_MAP_CINNABAR_ISLAND": {
+      "original": 2691,
+      "allocated": 6787
+    },
+    "FLAG_WORLD_MAP_INDIGO_PLATEAU_EXTERIOR": {
+      "original": 2692,
+      "allocated": 6788
+    },
+    "FLAG_WORLD_MAP_SAFFRON_CITY": {
+      "original": 2693,
+      "allocated": 6789
+    },
+    "FLAG_WORLD_MAP_ONE_ISLAND": {
+      "original": 2694,
+      "allocated": 6790
+    },
+    "FLAG_WORLD_MAP_TWO_ISLAND": {
+      "original": 2695,
+      "allocated": 6791
+    },
+    "FLAG_WORLD_MAP_THREE_ISLAND": {
+      "original": 2696,
+      "allocated": 6792
+    },
+    "FLAG_WORLD_MAP_FOUR_ISLAND": {
+      "original": 2697,
+      "allocated": 6793
+    },
+    "FLAG_WORLD_MAP_FIVE_ISLAND": {
+      "original": 2698,
+      "allocated": 6794
+    },
+    "FLAG_WORLD_MAP_SEVEN_ISLAND": {
+      "original": 2699,
+      "allocated": 6795
+    },
+    "FLAG_WORLD_MAP_SIX_ISLAND": {
+      "original": 2700,
+      "allocated": 6796
+    },
+    "FLAG_WORLD_MAP_ROUTE4_POKEMON_CENTER_1F": {
+      "original": 2701,
+      "allocated": 6797
+    },
+    "FLAG_WORLD_MAP_ROUTE10_POKEMON_CENTER_1F": {
+      "original": 2702,
+      "allocated": 6798
+    },
+    "FLAG_WORLD_MAP_VIRIDIAN_FOREST": {
+      "original": 2703,
+      "allocated": 6799
+    },
+    "FLAG_WORLD_MAP_MT_MOON_1F": {
+      "original": 2704,
+      "allocated": 6800
+    },
+    "FLAG_WORLD_MAP_SSANNE_EXTERIOR": {
+      "original": 2705,
+      "allocated": 6801
+    },
+    "FLAG_WORLD_MAP_UNDERGROUND_PATH_NORTH_SOUTH_TUNNEL": {
+      "original": 2706,
+      "allocated": 6802
+    },
+    "FLAG_WORLD_MAP_UNDERGROUND_PATH_EAST_WEST_TUNNEL": {
+      "original": 2707,
+      "allocated": 6803
+    },
+    "FLAG_WORLD_MAP_DIGLETTS_CAVE_B1F": {
+      "original": 2708,
+      "allocated": 6804
+    },
+    "FLAG_WORLD_MAP_VICTORY_ROAD_1F": {
+      "original": 2709,
+      "allocated": 6805
+    },
+    "FLAG_WORLD_MAP_ROCKET_HIDEOUT_B1F": {
+      "original": 2710,
+      "allocated": 6806
+    },
+    "FLAG_WORLD_MAP_SILPH_CO_1F": {
+      "original": 2711,
+      "allocated": 6807
+    },
+    "FLAG_WORLD_MAP_POKEMON_MANSION_1F": {
+      "original": 2712,
+      "allocated": 6808
+    },
+    "FLAG_WORLD_MAP_SAFARI_ZONE_CENTER": {
+      "original": 2713,
+      "allocated": 6809
+    },
+    "FLAG_WORLD_MAP_POKEMON_LEAGUE_LORELEIS_ROOM": {
+      "original": 2714,
+      "allocated": 6810
+    },
+    "FLAG_WORLD_MAP_ROCK_TUNNEL_1F": {
+      "original": 2715,
+      "allocated": 6811
+    },
+    "FLAG_WORLD_MAP_SEAFOAM_ISLANDS_1F": {
+      "original": 2716,
+      "allocated": 6812
+    },
+    "FLAG_WORLD_MAP_POKEMON_TOWER_1F": {
+      "original": 2717,
+      "allocated": 6813
+    },
+    "FLAG_WORLD_MAP_CERULEAN_CAVE_1F": {
+      "original": 2718,
+      "allocated": 6814
+    },
+    "FLAG_WORLD_MAP_POWER_PLANT": {
+      "original": 2719,
+      "allocated": 6815
+    },
+    "FLAG_WORLD_MAP_NAVEL_ROCK_EXTERIOR": {
+      "original": 2720,
+      "allocated": 6816
+    },
+    "FLAG_WORLD_MAP_MT_EMBER_EXTERIOR": {
+      "original": 2721,
+      "allocated": 6817
+    },
+    "FLAG_WORLD_MAP_THREE_ISLAND_BERRY_FOREST": {
+      "original": 2722,
+      "allocated": 6818
+    },
+    "FLAG_WORLD_MAP_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE": {
+      "original": 2723,
+      "allocated": 6819
+    },
+    "FLAG_WORLD_MAP_FIVE_ISLAND_ROCKET_WAREHOUSE": {
+      "original": 2724,
+      "allocated": 6820
+    },
+    "FLAG_WORLD_MAP_TRAINER_TOWER_LOBBY": {
+      "original": 2725,
+      "allocated": 6821
+    },
+    "FLAG_WORLD_MAP_SIX_ISLAND_DOTTED_HOLE_1F": {
+      "original": 2726,
+      "allocated": 6822
+    },
+    "FLAG_WORLD_MAP_FIVE_ISLAND_LOST_CAVE_ENTRANCE": {
+      "original": 2727,
+      "allocated": 6823
+    },
+    "FLAG_WORLD_MAP_SIX_ISLAND_PATTERN_BUSH": {
+      "original": 2728,
+      "allocated": 6824
+    },
+    "FLAG_WORLD_MAP_SIX_ISLAND_ALTERING_CAVE": {
+      "original": 2729,
+      "allocated": 6825
+    },
+    "FLAG_WORLD_MAP_SEVEN_ISLAND_TANOBY_RUINS_MONEAN_CHAMBER": {
+      "original": 2730,
+      "allocated": 6826
+    },
+    "FLAG_WORLD_MAP_THREE_ISLAND_DUNSPARCE_TUNNEL": {
+      "original": 2731,
+      "allocated": 6827
+    },
+    "FLAG_WORLD_MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY": {
+      "original": 2732,
+      "allocated": 6828
+    },
+    "FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR": {
+      "original": 2733,
+      "allocated": 6829
+    }
+  },
+  "kanto_badges": [
+    6832,
+    6833,
+    6834,
+    6835,
+    6836,
+    6837,
+    6838,
+    6839
+  ],
+  "kanto_champion": 6840,
+  "flags_count": 6848,
+  "original_sha256": {
+    "include/constants/flags.h": "c17f112c8d15246e741e0b2401519e99022e68eb8780df59965aeed84cd4e5b5",
+    "src/event_data.c": "250c7e38ba89329f3f08ebeb616b6a26ecdca37f66d21194fce38e38211d9236",
+    "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc": "4ad7306b9c19a193234a50698335d12277ecfb9602c5a5438a207631e90026f4"
+  },
+  "prepared_sha256": {
+    "include/constants/flags.h": "163b5738bc01c163c20dc48ef5f4b4cab415aa1e72316136d70849cc8cf38dab",
+    "src/event_data.c": "bba81b22580819fafed74e22ba1833414c0b970b9f9bfa467260af37dfbe8726",
+    "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc": "dcd902ed5895ef76e769bbfb7852c6e6a979cd47334ba4c3884b65a930262a6a"
+  },
+  "full_story_validated": false,
+  "custom_journey_migrated": false
+}
