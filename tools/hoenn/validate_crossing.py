@@ -20,6 +20,7 @@ parser.add_argument('--westsea', action='store_true', help='Use the revised Cinn
 parser.add_argument('--region-state', action='store_true', help='Exercise separate badge/champion/story banks and native flash save/reload')
 parser.add_argument('--east-coast', action='store_true', help='Exercise the three eastern Hoenn exits and Fuchsia sea connection')
 parser.add_argument('--gym-scaling', action='store_true', help='Generate actual gym parties at every regional badge count')
+parser.add_argument('--team-stories', action='store_true', help='Validate regional incursions, casino stairs and actual Giovanni tag-battle startup')
 parser.add_argument('--campaign-gates', action='store_true', help='Exercise regional story checkpoints and gym-door guide objects')
 parser.add_argument('--output', type=Path, default=ROOT / 'mods/hoenn/integration-validation')
 args = parser.parse_args(); source = args.source.resolve(); args.output.mkdir(parents=True, exist_ok=True)
@@ -33,7 +34,7 @@ assert lib.start(str(source / 'pokeemerald.gba').encode())
 results = []
 call4 = None
 abi = None
-if args.gym_scaling:
+if args.gym_scaling or args.team_stories:
     toolchain = ROOT / '.local/arm-gcc/usr/bin/arm-none-eabi-gcc'
     with tempfile.TemporaryDirectory(prefix='gym-fixture-', dir='/tmp') as directory:
         temp = Path(directory)
@@ -113,7 +114,7 @@ def cross(name, key):
     raise AssertionError(('No seam transition', name, location(), position()))
 
 step(900)
-save2 = lib.read32(s['gSaveBlock2Ptr']); lib.write8(save2, 255); lib.write8(save2 + 8, 255)
+save2 = lib.read32(s['gSaveBlock2Ptr']); lib.write8(save2,255);lib.write8(save2+8,255)
 lib.write32(s['gMain'], 0); lib.write8(s['gMain'] + 0x438, 0)
 lib.write32(s['gMain'] + 4, s['CB2_NewGame'] | 1); step(300)
 warp('Route127', 79, 42)
@@ -185,27 +186,33 @@ if args.campaign_gates:
         lib.write8(address, value | mask if enabled else value & ~mask)
     def write_badges(flags, indices):
         for index, flag in enumerate(flags): write_flag(flag, index in indices)
+    stories = json.loads((source / '.journey-team-stories').read_text()) if (source / '.journey-team-stories').exists() else None
+    mission_trainers = {t['key']: t['id'] for t in stories['trainers']} if stories else {}
+    if stories:
+        for trainer in stories['trainers']: write_flag(0x500+trainer['id'],True)
     cases = 0
-    for kanto, thresholds, events in [(True, [2,3], [0,1]), (False, [2,5,6,6], [2,3,4,5])]:
+    for kanto, thresholds, events in [(True, [2,6] if stories else [2,3], [0,1]), (False, [2,5,7,7] if stories else [2,5,6,6], [2,3,4,5])]:
         for count in range(9):
             write_badges(kanto_badges if kanto else hoenn_badges, range(count))
             write_badges(hoenn_badges if kanto else kanto_badges, range(8-count))
             for completed in range(1 << len(events)):
                 for flag in event_flags: write_flag(flag, False)
+                if stories and not kanto: write_flag(event_flags[1],True)
                 for i,event in enumerate(events): write_flag(event_flags[event], bool(completed & (1 << i)))
                 expected = next((event+1 for i,(event,threshold) in enumerate(zip(events,thresholds))
                                  if count >= threshold and not completed & (1 << i)), 0)
                 assert native('JourneyPendingCampaignEvent',int(kanto)) == expected, (kanto,count,completed,expected)
                 cases += 1
-    # Prepare invasion before the seventh gym, preserve in-progress/completed
-    # scenes and never grant the seventh badge to satisfy the story dependency.
-    write_badges(hoenn_badges, range(6)); lib.write8(s['isFrlg'],0)
+    # Prepare invasion at the current checkpoint, preserve in-progress/completed
+    # scenes and never grant the next badge to satisfy the story dependency.
+    write_badges(hoenn_badges, range(7 if stories else 6)); lib.write8(s['isFrlg'],0)
     write_flag(event_flags[3],True); write_flag(event_flags[4],False)
     native('VarSet',0x409F,0); native('JourneyStartSpaceCenterInvasion')
     assert native('VarGet',0x409F) == 1
-    assert not native('FlagGet',hoenn_badges[6])
+    assert not native('FlagGet',hoenn_badges[7 if stories else 6])
     native('VarSet',0x409F,2); native('JourneyStartSpaceCenterInvasion')
     assert native('VarGet',0x409F) == 2
+    write_flag(hoenn_badges[6],False)
     assert native('IsFieldMoveUnlocked_Dive') == 0
     write_flag(event_flags[4],True); native('VarSet',0x409F,3)
     native('JourneyStartSpaceCenterInvasion'); assert native('VarGet',0x409F) == 3
@@ -267,13 +274,61 @@ if args.campaign_gates:
         state_combinations=cases,city_guides=guides,blocked_door_movement=True,
         completion_hides_guides=True,won_gyms_exempt=True,
         all_guide_dialogues_triggered=True,
-        invasion_before_seventh_gym=True,invasion_does_not_restart=True,
+        invasion_before_gym=8 if stories else 7,invasion_does_not_restart=True,
         dive_after_space_center_without_seventh_badge=True,
         representative_completed_door_warps=2,
         full_story_or_free_order_access_validated=False))
+if args.team_stories:
+    stories = json.loads((source / '.journey-team-stories').read_text())
+    ids = {t['key']:t['id'] for t in stories['trainers']}
+    def team_flag(flag, enabled):
+        address=save()+4720+flag//8; value=lib.read8(address);mask=1<<(flag&7)
+        lib.write8(address,value|mask if enabled else value&~mask)
+    def bank(flags,count):
+        for i,flag in enumerate(flags):team_flag(flag,i<count)
+    hb=[lib.read16(s['gBadgeFlags']+i*2)for i in range(8)];kb=list(range(0x1AB0,0x1AB8))
+    constants=(source/'include/constants/flags.h').read_text()
+    def flag_id(name):return int(re.search(r'^#define\s+'+name+r'\s+(0x[0-9A-Fa-f]+)',constants,re.M)[1],16)
+    for name in ['FLAG_HIDE_CELADON_ROCKETS','FLAG_HIDE_SAFFRON_ROCKETS','FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY',
+                 'FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT','FLAG_DEFEATED_MAGMA_SPACE_CENTER','FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN']:
+        team_flag(flag_id(name),True)
+    bank(hb,4);bank(kb,4)
+    for t in stories['trainers']:team_flag(0x500+t['id'],True)
+    cases=0
+    for mission in stories['missions']:
+        for name in mission['trainers']:
+            team_flag(0x500+ids[name],False)
+            assert native('JourneyPendingCampaignEvent',int(mission['kanto']))==mission['event'],(mission,name)
+            assert native('JourneyPendingCampaignEvent',int(not mission['kanto']))==0
+            assert native('JourneyRegionalMissionsComplete',int(mission['kanto']))==0
+            team_flag(0x500+ids[name],True);cases+=1
+        assert native('JourneyPendingCampaignEvent',int(mission['kanto']))==0
+    # Silph and the alliance require their exact regional rank and completed missions.
+    bank(kb,5);assert native('JourneyCanChallengeSilph')==0
+    bank(kb,6);assert native('JourneyCanChallengeSilph')==1
+    bank(hb,6);assert native('JourneyCanStartArchieAlliance')==0
+    bank(hb,7);assert native('JourneyCanStartArchieAlliance')==1
+    team_flag(flag_id('FLAG_HIDE_SAFFRON_ROCKETS'),False)
+    assert native('JourneyCanStartArchieAlliance')==0
+    assert native('JourneyPendingCampaignEvent',0)==13
+    team_flag(flag_id('FLAG_HIDE_SAFFRON_ROCKETS'),True)
+    # Walk on the actual stairs instead of invoking destination warps directly.
+    for origin,x,y,key,target in [
+        ('MauvilleCity_GameCorner',19,6,128,'JourneyRocketBaseB1F'),
+        ('JourneyRocketBaseB1F',18,15,128,'JourneyRocketBaseB2F'),
+        ('JourneyRocketBaseB2F',3,2,128,'JourneyRocketBaseB1F'),
+        ('JourneyRocketBaseB1F',3,2,128,'MauvilleCity_GameCorner')]:
+        warp(origin,x,y);native('SetPlayerAvatarTransitionFlags',1);step(30)
+        step(120,key);step(90)
+        assert location()==map_id(target),('Casino stairs',origin,target,location(),position(),lib.read8(s['gPlayerAvatar']))
+        picture(target+'-rocket-basement')
+    results.append(dict(check='regional_incursions_and_casino',passed=True,
+        individually_required_trainers=cases,regions_independent=True,physical_stair_warps=4,
+        silph_after_six=True,alliance_after_seven=True,giovanni_requires_silph=True))
+    print('Regional incursions and four casino stair warps passed',flush=True)
 if args.gym_scaling:
     scaling = json.loads((source / '.journey-gym-scaling').read_text())
-    trainer_size, mon_size, pokemon_size, party_offset, class_offset, lvl_offset, level_data, species_data, leader, frlg_leader, battle_trainer, trainers_count, difficulty_normal = abi
+    trainer_size, mon_size, pokemon_size, party_offset, class_offset, lvl_offset, level_data, species_data, leader, frlg_leader, battle_trainer, trainers_count, difficulty_normal = abi[:13]
     trainers_base = s['gTrainers'] + difficulty_normal * trainers_count * trainer_size
     ids = {}
     for path in ['include/constants/opponents.h', 'include/constants/opponents_frlg.h']:
@@ -357,6 +412,39 @@ if args.worldsea or args.westsea or args.east_coast:
             warp(origin, x, y)
             native('SetPlayerAvatarTransitionFlags', 8); step(30)
             cross(target, keys[direction])
+if args.team_stories:
+    bank(kb,6);bank(hb,7)
+    team_flag(flag_id('FLAG_HIDE_SAFFRON_ROCKETS'),True)
+    team_flag(flag_id('FLAG_DEFEATED_MAGMA_SPACE_CENTER'),True)
+    team_flag(flag_id('FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN'),False)
+    for trainer in stories['trainers']:team_flag(0x500+trainer['id'],True)
+    warp('SeafloorCavern_Room9',17,43)
+    native('SetPlayerAvatarTransitionFlags',1);step(30)
+    # Execute the real scene including Archie approach and Giovanni's dialogue.
+    lib.write32(s['gBattleTypeFlags'],0)
+    script(b'\x05'+struct.pack('<I',s['SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre']),30)
+    for _ in range(600):
+        if lib.read32(s['gBattleTypeFlags'])&0x8000:break
+        step(16,1);step(16)
+    flags=lib.read32(s['gBattleTypeFlags'])
+    assert flags&0x8000 and flags&0x40,('No two-opponent multi battle',hex(flags))
+    assert lib.read16(s['gTrainerBattleParameter']+abi[13])==ids['TRAINER_JOURNEY_ARCHIE_ALLIANCE']
+    opponent_b=s['gTrainerBattleParameter']+abi[14]
+    assert lib.read8(opponent_b)|(lib.read8(opponent_b+1)<<8)==ids['TRAINER_JOURNEY_SHELLY_ALLIANCE']
+    assert lib.read16(s['gPartnerTrainerId'])==abi[15],(lib.read16(s['gPartnerTrainerId']),abi[15])
+    step(600)
+    picture('Giovanni-Archie-Shelly-intro')
+    for _ in range(40):
+        step(16,1);step(16)
+    assert lib.read8(s['gBattlersCount'])==4
+    assert lib.read32(s['gMain']+4)&~1==s['BattleMainCB2']
+    pixels=ctypes.string_at(lib.image(),240*160*4)
+    assert len({pixels[i:i+3]for i in range(0,len(pixels),4)})>12, 'Battle never rendered'
+    picture('Giovanni-Archie-Shelly-tag-battle')
+    results.append(dict(check='real_giovanni_tag_battle_start',passed=True,partner_id=2,
+        opponents=['ARCHIE','SHELLY'],battle_type_flags=flags,rendered_battlers=4,
+        native_battle_screen_rendered=True,victory_aftermath_validated=False))
+    print('Real Giovanni/Archie/Shelly tag battle started',flush=True)
 lib.stop()
 (args.output / ('connected-world.json' if args.westsea else 'worldsea.json' if args.worldsea else 'campaign-gates.json' if args.campaign_gates else 'crossing.json')).write_text(json.dumps(dict(status='experimental_not_full_integration',
     rom_sha256=hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest(),

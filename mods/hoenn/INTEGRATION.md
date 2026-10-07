@@ -20,51 +20,93 @@ Tate & Liza e Juan. Archie na Caverna Submarina também fica entre o sétimo
 e o oitavo ginásio. A adaptação de Viridian continua prevendo Blue como
 líder, preservando Giovanni nos eventos Rocket.
 
-Esses intervalos descrevem a jornada original habitual, não requisitos
-universais de quantidade de insígnias. A regra autorizada para a candidata
-é bloquear o próximo ginásio ainda não vencido, independentemente de sua
-identidade, antes do ginásio que originalmente precedia o evento:
+A candidata agora usa os seguintes checkpoints por quantidade de insígnias
+**da própria região**, independentemente da identidade dos ginásios vencidos:
 
-| Região | Antes do ginásio da jornada | Evento exigido |
+| Região | Próximo ginásio bloqueado | Evento exigido |
 | --- | --- | --- |
-| Kanto | 3º, com duas insígnias de Kanto | Rocket Hideout, Celadon |
-| Kanto | 4º, com três insígnias de Kanto | Silph Co., Saffron |
-| Hoenn | 3º, com duas insígnias de Hoenn | Maxie no Monte Chimney |
-| Hoenn | 6º, com cinco insígnias de Hoenn | Maxie no esconderijo Magma |
-| Hoenn | 7º, com seis insígnias de Hoenn | Maxie/Tabitha no Centro Espacial; depois Archie na Caverna Submarina |
+| Kanto | 3º | Esconderijo Rocket de Celadon |
+| Kanto | 5º e seguintes | Magma em Pewter e Rock Tunnel; Aqua em Vermilion e no corredor marítimo oeste; invasores nas rotas 3, 6, 8 e 15 |
+| Kanto | 7º e 8º | Giovanni na Silph Co., após seis insígnias de Kanto |
+| Hoenn | 3º | Maxie no Monte Chimney |
+| Hoenn | 5º e seguintes | Base Rocket sob o cassino de Mauville |
+| Hoenn | 6º e seguintes | Maxie no esconderijo Magma |
+| Hoenn | 8º | Maxie/Tabitha no Centro Espacial; depois Archie/Shelly na Caverna Submarina |
 
-Um treinador na porta explica que o líder está ajudando a combater Rocket,
-Magma ou Aqua e informa a rota/local da missão. A candidata usa os diálogos
-em inglês, como o restante da base. O evento concluído libera a passagem
-ao retornar à cidade. Ginásios já vencidos não ficam bloqueados em revisitas.
-Tentar outro ginásio não contorna a missão pendente. Não é sorteado um
-ginásio específico: a trava vale para qualquer próximo desafio da região.
+As incursões de Kanto não são exigidas para o 5º ginásio de Hoenn, e a base
+Rocket de Hoenn não é exigida para o 5º de Kanto. Cada adversário da missão
+precisa ser derrotado: vencer apenas o administrador não libera o próximo
+checkpoint. É possível enfrentar os invasores antes da quarta insígnia;
+a obrigatoriedade começa depois dela. Ginásios já vencidos ficam disponíveis
+para revisitas. O treinador na entrada informa equipe, rota e local; o motor
+também verifica o warp da porta, que ocorre antes da colisão normal com NPCs.
 
-O motor inicia warps de portas antes da colisão normal com NPCs; por isso
-há também uma verificação da entrada real, além do treinador visível.
-Objetos originais e seus IDs são preservados. Os dois novos flags de
-visibilidade usam posições já reservadas no banco regional, sem aumentar
-novamente a estrutura do save.
+### Incursões e cassino
 
-O Centro Espacial antes era ativado pela vitória em Mossdeep. Agora sua
-invasão é preparada com seis insígnias de Hoenn e o evento do esconderijo
-Magma concluído, preservando cenas em andamento/concluídas. Vencer Mossdeep
-depois não reinicia a invasão. Concluir o Centro Espacial permite usar Dive
-antes da sétima insígnia; continua necessário um Pokémon com o golpe.
+Foram acrescentados 28 adversários obrigatórios: três Magma em Pewter,
+três Aqua em Vermilion, quatro Magma nos dois andares do Rock Tunnel,
+cinco Aqua no rio/costa entre Cinnabar, Rustboro e Dewford, quatro invasores
+nas rotas de Kanto e nove Rocket na base de Hoenn. Vermilion menciona
+Magma nas proximidades sem revelar sua localização no Rock Tunnel.
 
-Esta etapa não libera todos os acessos em ordem livre nem coloca fisicamente
-o líder escolhido nas cenas de combate às equipes. Portas, obstáculos,
-variáveis compartilhadas e demais dependências das campanhas ainda exigem
-adaptação e teste completo. Os limites acima seguem os checkpoints escolhidos,
-não comprovam uma campanha jogável do início ao fim.
+O cassino existente de **Mauville** ganha uma passagem ao fundo para dois
+novos andares da base Rocket. São quatro grunts no B1F e quatro grunts mais
+o administrador ATLAS no B2F. As escadas usam o comportamento de porta
+sem animação nativo; entram pelo lado norte. A entrada, descida ao segundo
+andar e ambas as saídas foram exercitadas por movimento real no emulador.
 
-Passaram no mGBA **180 combinações de contagem de insígnias/eventos**, as
-portas e os diálogos dos **16 treinadores**, a remoção dos treinadores após
-concluir a missão e duas entradas completas em ginásios após a liberação.
-Foram verificados o início antecipado da invasão, a preservação de cenas
-em andamento/concluídas e a permissão de Dive sem a sétima insígnia após
-o Centro Espacial. Os estados de missão são configurados diretamente na
-memória da fixture: não representam vitórias completas contra os chefes.
+Os 27 setores marítimos ativos recebem ilhotas copiadas de terrenos costeiros
+nativos e 42 nadadores comuns. As bordas dos mapas permanecem livres para
+as travessias. Os novos grunts/administradores têm níveis fixos 32/36 e os
+nadadores nível 28; a adaptação de níveis desta etapa continua restrita aos
+ginásios. Os eventos originais mantêm seus IDs; os novos objetos são anexados.
+
+### Aliança com Giovanni
+
+O confronto final de Archie passa a ser uma batalha verdadeira **2 contra 2**:
+jogador e Giovanni contra Archie e Shelly. Giovanni tem Nidoking, Nidoqueen
+e Rhydon. O jogador usa os três primeiros Pokémon da equipe; o motor salva
+e restaura a equipe original. Derrotas seguem para o desmaio, sem avançar Kyogre.
+Como esta base não tem sprite traseiro de Giovanni, a apresentação usa seu
+retrato frontal nativo espelhado, pelo mecanismo já usado no Battle Frontier.
+Seu diálogo reconhece o dano causado pela Rocket, explica a
+intenção inicial de defender Kanto e admite como poder e ganância a corromperam.
+Após a luta, o roteiro original de Kyogre, Maxie e Sootopolis continua.
+
+**Esta aliança exige vencer Giovanni na Silph Co. primeiro.** Portanto, o
+último evento de Hoenn depende desse encontro de Kanto, embora as incursões
+após a quarta insígnia sejam independentes. O guia informa esse requisito.
+Silph rejeita o confronto prematuro, e Archie exige sete insígnias de Hoenn,
+Centro Espacial concluído e a missão Rocket de Mauville concluída.
+
+A invasão do Centro Espacial é iniciada após **sete** insígnias de Hoenn,
+com o esconderijo Magma concluído, preservando cenas em andamento e concluídas.
+Vencer Mossdeep posteriormente não reinicia o evento. A permissão de Dive
+após o Centro Espacial permanece; ainda é necessário um Pokémon com o golpe.
+
+### Validação e limites desta etapa
+
+A compilação nativa passou. A reprodução das oito camadas compara 222 arquivos
+byte a byte com a candidata; 112 conexões dos mapas oceânicos preparados são
+recíprocas e não se sobrepõem. As verificações de preservação usam os prefixos
+dos arrays de eventos, incluindo o warp adicional do cassino, preservando IDs.
+Conexões nativas fora da rede preparada não são certificadas por esse relatório.
+
+O mGBA verifica 180 combinações de insígnias/eventos, as 16 portas e diálogos
+dos guias, cada um dos 28 adversários exigido isoladamente, quatro travessias
+físicas nas escadas e a tela de combate real com os quatro participantes de Giovanni/Archie/Shelly.
+Os testes configuram estados de missão diretamente na memória; **não simulam
+uma campanha completa nem comprovam a vitória e o roteiro posterior à dupla**.
+
+**Ainda falta retirar todos os bloqueios terrestres e adaptar integralmente
+os acessos em ordem livre.** A base mantém dependências originais como Norman,
+Fortree, a porta de Sootopolis e o Secret Key de Cinnabar. Esta etapa não deve
+ser publicada como o jogo final. Também falta migrar Blue e a jornada anterior.
+Os diálogos novos seguem em inglês, como o restante desta base.
+
+[Base Rocket: segundo andar](integration-validation/JourneyRocketBaseB2F-rocket-basement.png),
+[aliança com Giovanni](integration-validation/Giovanni-Archie-Shelly-tag-battle.png) e
+[preparação das missões](integration-validation/team-stories-preparation.json).
 
 [Aviso de Kanto](integration-validation/PewterCity_Frlg-checkpoint-dialogue.png)
 e [destino em Hoenn](integration-validation/RustboroCity-checkpoint-location.png).
@@ -100,8 +142,8 @@ adaptados e testados. Blue, rival e as demais regras da jornada anterior
 continuam pendentes de migração. Não foram alterados os times, espécies,
 golpes ou puzzles dos ginásios nesta etapa.
 
-Os overlays atuais foram reproduzidos em **195 arquivos**. Foram verificadas
-124 conexões recíprocas sem sobreposição e a conectividade de todo o mar
+Os oito overlays atuais foram reproduzidos em **222 arquivos**. Foram verificadas
+112 conexões dos mapas oceânicos preparados sem sobreposição e a conectividade de todo o mar
 leste de Hoenn com a rede de Kanto/Sevii. Os números de etapas anteriores
 abaixo são históricos. A ROM publicada continua separada.
 
@@ -141,7 +183,7 @@ em ambas as regiões, independência dos campeonatos, não alteração do flag
 de treinador coincidente e salvamento/carregamento nativo da flash do
 emulador. **Este motor exige um novo save.** Não há conversão de saves antigos.
 
-As 131 saídas dos quatro overlays foram reproduzidas em arquivos originais
+Na etapa histórica de quatro overlays, 131 saídas foram reproduzidas em arquivos originais
 do commit fixado. Foram verificadas 84 conexões recíprocas, sem sobreposição
 de entradas, e a reaplicação da última camada é idempotente.
 [Reprodução](integration-validation/world-reproduction.json).
@@ -210,6 +252,7 @@ python3 tools/hoenn/prepare_region_state.py --source .local/hoenn-multiregion-sr
 python3 tools/hoenn/prepare_east_coast.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_gym_scaling.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_campaign_gates.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_team_stories.py --source .local/hoenn-multiregion-src
 ```
 
 Na pasta de fonte, compile com os caminhos do compilador ARM, binutils,
@@ -219,7 +262,7 @@ Após editar mapas binários, force sua recompilação com `make modern -W data/
 ```sh
 python3 tools/hoenn/validate_crossing.py \
   --source .local/hoenn-multiregion-src --library .local/mgba-bridge.so \
-  --worldsea --westsea --region-state --east-coast --gym-scaling --campaign-gates
+  --worldsea --westsea --region-state --east-coast --gym-scaling --campaign-gates --team-stories
 python3 tools/hoenn/verify_worldsea.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/world_layout.py
 node tools/hoenn/validate_world_layout.cjs
