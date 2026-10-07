@@ -1,5 +1,35 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+## Poké Flauta e orientação da missão Magma
+
+A primeira insígnia da jornada, em qualquer um dos 16 ginásios de Kanto ou
+Hoenn, entrega a Poké Flauta. A recompensa usa a flag original compartilhada
+que os dois Snorlax consultam. As insígnias continuam separadas por região;
+essa entrega não conclui missões, não remove os Snorlax e não altera os
+níveis dos ginásios.
+
+Com a bolsa cheia, a recompensa fica pendente. Falar novamente com um líder
+permite recebê-la depois de liberar espaço. A flag só é marcada quando o
+item foi recebido ou já está na bolsa; as revisitas não duplicam a Flauta.
+O resgate do Sr. Fuji permanece, e ele reconhece a Flauta recebida em Hoenn.
+Antes de qualquer insígnia, ele orienta vencer um ginásio primeiro.
+
+O guia do checkpoint do esconderijo Magma agora explica também o pré-requisito
+original: visitar os anciãos no Monte Pyre, pela Rota 122, e obter o Magma
+Emblem para abrir a entrada em Jagged Pass. Essa missão não é concluída
+automaticamente. A nova camada é reproduzível a partir das 13 anteriores.
+
+Passaram 22 testes offline e 106 verificações nativas, incluindo a entrega
+nos 16 ginásios, bolsa cheia, duplicatas, reconhecimento pelo Sr. Fuji e
+ausência de recompensa antes da primeira insígnia. As 96 travessias Surf e
+840 equipes de ginásio continuam passando. As 14 camadas reproduzem 336
+arquivos e mantêm as 117 conexões recíprocas verificadas.
+
+Os testes nativos desta etapa isolam os comandos de entrega da insígnia e
+da recompensa; não representam vitórias reais em todas as batalhas nem uma
+validação completa das duas campanhas. A candidata continua exigindo save
+novo e não substitui a ROM publicada no jogador web.
+
 ## Escada amarela em todas as antigas passagens de salto
 
 As **seis passagens de Acro Bike** agora usam o desenho da escada amarela:
@@ -20,7 +50,7 @@ O emulador subiu e desceu nas seis passagens, totalizando 12 travessias sem
 bicicleta. Conferiu também a paleta efetivamente carregada, os tiles e a
 colisão. Encontros selvagens ficam desativados somente durante esse teste
 isolado de geometria e são reativados depois; a ROM mantém seus encontros.
-Passaram 21 testes offline e 105 verificações nativas, incluindo as 96
+Na etapa das escadas, passaram 21 testes offline e 105 verificações nativas, incluindo as 96
 travessias Surf e as 840 equipes de ginásio. As treze camadas reproduzem
 323 arquivos, mantendo as 117 conexões recíprocas da rede preparada.
 
@@ -422,6 +452,7 @@ python3 tools/hoenn/prepare_blue_gym.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_road_access.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_mach_bike.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_yellow_stairs.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_story_access.py --source .local/hoenn-multiregion-src
 ```
 
 Na pasta de fonte, compile com os caminhos do compilador ARM, binutils,
@@ -431,7 +462,7 @@ Após editar mapas binários, force sua recompilação com `make modern -W data/
 ```sh
 python3 tools/hoenn/validate_crossing.py \
   --source .local/hoenn-multiregion-src --library .local/mgba-bridge.so \
-  --worldsea --westsea --region-state --east-coast --gym-scaling --campaign-gates --free-access --road-access --team-stories
+  --worldsea --westsea --region-state --east-coast --gym-scaling --campaign-gates --free-access --road-access --team-stories --story-access
 python3 tools/hoenn/verify_worldsea.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/world_layout.py
 node tools/hoenn/validate_world_layout.cjs

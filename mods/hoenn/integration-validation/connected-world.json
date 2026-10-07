@@ -1,6 +1,6 @@
 {
   "status": "experimental_not_full_integration",
-  "rom_sha256": "9e9d57cfe37dcf25e90ae1966a942225e74d9d213db1e689fd33240ee35f53ad",
+  "rom_sha256": "d81a2e3dff6dbe579ed160e39f4e8a37cd90a647040f35493d0ce749a8c64245",
   "checks": [
     {
       "check": "regional_flags_and_native_save_roundtrip",
@@ -88,6 +88,35 @@
       "real_surf_prompt_without_badges": true,
       "dive_rule_preserved": true,
       "full_campaign_validated": false
+    },
+    {
+      "check": "first_badge_flute_native_rewards",
+      "passed": true,
+      "gyms": [
+        "RustboroCity_Gym",
+        "DewfordTown_Gym",
+        "MauvilleCity_Gym",
+        "LavaridgeTown_Gym_1F",
+        "PetalburgCity_Gym",
+        "FortreeCity_Gym",
+        "MossdeepCity_Gym",
+        "SootopolisCity_Gym_1F",
+        "PewterCity_Gym_Frlg",
+        "CeruleanCity_Gym_Frlg",
+        "VermilionCity_Gym_Frlg",
+        "CeladonCity_Gym_Frlg",
+        "FuchsiaCity_Gym_Frlg",
+        "SaffronCity_Gym_Frlg",
+        "CinnabarIsland_Gym_Frlg",
+        "ViridianCity_Gym_Frlg"
+      ],
+      "no_reward_before_badges": true,
+      "repeated_reward_no_duplicate": true,
+      "full_bag_retry": true,
+      "hoenn_reward_recognized_by_fuji": true,
+      "other_region_badges_unchanged": true,
+      "battle_victory_simulated": true,
+      "trainer_sight_disabled_only_in_fixture": true
     },
     {
       "check": "all_acro_cliff_passages_yellow",
