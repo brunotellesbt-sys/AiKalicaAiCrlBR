@@ -9,15 +9,16 @@ para compilar. A base e as dependências são as descritas em
 python3 tools/unova/bootstrap.py
 git clone https://github.com/kerrymilan/roguemon-expansion.git .local/all-regions-src
 git -C .local/all-regions-src checkout 7606f57650627704c9aad965a031fd3a454590e2
-python3 tools/regions/build.py --source .local/all-regions-src
+python3 tools/regions/build.py --source .local/all-regions-src --nm /usr/bin/arm-none-eabi-nm
 ```
 
 Use uma cópia limpa da base antes da primeira preparação; edições anteriores
 são preservadas e recusadas. O preparador guarda o catálogo canônico pré-processado
 em `.region-native.c`. Para revisar o pacote extraído, `--reimport` reaplica o
 catálogo a partir desse original, sem reutilizar tabelas já importadas.
-`--export-only` recalcula os artefatos sem compilar. Binutils devem estar em
-`.local/arm-binutils/usr/bin`, conforme o instalador original do projeto.
+`--export-only` recalcula os artefatos sem compilar. `--toolchain` e `--nm` permitem selecionar GCC e binutils. Nesta nuvem, binutils
+estão em `.local/arm-binutils/usr/bin`, usados por padrão; em Debian/Ubuntu com
+`binutils-arm-none-eabi` instalado, use `--nm /usr/bin/arm-none-eabi-nm`.
 
 ## Reextração
 
