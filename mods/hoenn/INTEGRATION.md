@@ -1,5 +1,39 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+## Histórias independentes e ordem livre
+
+Cada região deve preservar sua própria campanha, próxima do jogo original.
+Os oito ginásios de Kanto valem apenas para a Liga de Kanto; os oito de
+Hoenn valem apenas para a Liga de Hoenn. Ordem livre significa que o jogador
+escolhe a ordem, sem sorteio obrigatório. As insígnias e títulos de campeão
+já têm bancos separados. Isso não significa que todos os acessos e eventos
+das duas campanhas já estejam adaptados.
+
+A auditoria de dependências registra os sete encontros originais com os
+chefes, as condições dos 18 mapas/andares de ginásios e os oito requisitos
+de cada Liga. A sequência habitual em LeafGreen é Giovanni no esconderijo
+Rocket após Surge e normalmente antes de Erika; Giovanni na Silph Co. antes
+de Sabrina, com a ordem de Koga variável; Giovanni como oitavo líder em
+Viridian. Em Emerald, Maxie no Monte Chimney fica entre Wattson e Flannery;
+no esconderijo Magma entre Winona e Tate & Liza; no Centro Espacial entre
+Tate & Liza e Juan. Archie na Caverna Submarina também fica entre o sétimo
+e o oitavo ginásio. A adaptação de Viridian continua prevendo Blue como
+líder, preservando Giovanni nos eventos Rocket.
+
+Esses intervalos descrevem a jornada original habitual, não requisitos
+universais de quantidade de insígnias. A escolha entre atrelar os chefes
+à contagem regional e atrelar apenas à sequência de eventos está pendente
+de preferência do usuário. Não foram acrescentados limites novos por
+contagem de insígnias. A auditoria não valida campanhas completas em execução.
+
+Reproduzir a auditoria:
+
+```sh
+python tools/hoenn/audit_campaigns.py --source .local/hoenn-multiregion-src --output mods/hoenn/integration-validation/campaign-dependencies.json
+```
+
+[Dependências registradas](integration-validation/campaign-dependencies.json).
+
 ## Integração marítima atual
 
 A rede agora tem saídas nas rotas **125, 127 e 129**, além da 131.
