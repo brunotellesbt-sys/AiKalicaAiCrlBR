@@ -23,6 +23,7 @@ from prepare_free_access import prepare as access_prepare
 from prepare_blue_gym import prepare as blue_prepare
 from prepare_road_access import prepare as road_prepare
 from prepare_mach_bike import prepare as bike_prepare
+from prepare_yellow_stairs import prepare as yellow_prepare
 
 
 def verify(source, output):
@@ -37,6 +38,7 @@ def verify(source, output):
     if (source / '.journey-blue-gym').exists(): markers.append('.journey-blue-gym')
     if (source / '.journey-road-access').exists(): markers.append('.journey-road-access')
     if (source / '.journey-mach-bike').exists(): markers.append('.journey-mach-bike')
+    if (source / '.journey-yellow-stairs').exists(): markers.append('.journey-yellow-stairs')
     reports = [json.loads((source / p).read_text()) for p in markers]
     original_paths = sorted({p for r in reports for p in (r['original_sha256'] | r.get('input_sha256', {})) if p in acquired['sha256']})
     expected = {}
@@ -74,6 +76,8 @@ def verify(source, output):
             road=road_prepare(fresh);assert road_prepare(fresh)==road
         if '.journey-mach-bike' in markers:
             bike=bike_prepare(fresh);assert bike_prepare(fresh)==bike
+        if '.journey-yellow-stairs' in markers:
+            yellow=yellow_prepare(fresh);assert yellow_prepare(fresh)==yellow
         for path, digest in expected.items():
             if hashlib.sha256((fresh / path).read_bytes()).hexdigest() != digest:
                 raise ValueError('Fresh overlay mismatch: ' + path)
@@ -143,7 +147,7 @@ def verify(source, output):
             full_story_validated=False, prepared_sha256=expected)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, indent=2) + '\n')
-    for name, r in zip(['crossing-preparation', 'eastern-ocean-preparation', 'western-ocean-preparation', 'regional-state-preparation', 'east-coast-preparation', 'gym-scaling-preparation', 'campaign-gates-preparation', 'team-stories-preparation', 'free-access-preparation', 'blue-gym-preparation', 'road-access-preparation', 'mach-bike-preparation'], reports):
+    for name, r in zip(['crossing-preparation', 'eastern-ocean-preparation', 'western-ocean-preparation', 'regional-state-preparation', 'east-coast-preparation', 'gym-scaling-preparation', 'campaign-gates-preparation', 'team-stories-preparation', 'free-access-preparation', 'blue-gym-preparation', 'road-access-preparation', 'mach-bike-preparation', 'yellow-stairs-preparation'], reports):
         (output.parent / (name + '.json')).write_text(json.dumps(r, indent=2) + '\n')
     print(f'Reproduction passed: {len(expected)} files; {edge_count} reciprocal edges; no overlapping seams')
 

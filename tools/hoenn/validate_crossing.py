@@ -387,6 +387,8 @@ if args.free_access:
 if args.road_access:
     road=json.loads((source/'.journey-road-access').read_text())
     bike=json.loads((source/'.journey-mach-bike').read_text())
+    yellow=json.loads((source/'.journey-yellow-stairs').read_text()) if (source/'.journey-yellow-stairs').exists() else None
+    overrides={(c['layout'],c['x'],c['y']):c for c in yellow['replacements']}if yellow else {}
     constants=(source/'include/constants/flags.h').read_text()
     def roadflag(name,enabled):
         f=int(re.search(r'^#define\s+'+name+r'\s+(0x[0-9A-Fa-f]+)',constants,re.M)[1],16)
@@ -411,6 +413,13 @@ if args.road_access:
         for cell in cells:
             x,y=cell['x']+7,cell['y']+7
             assert native('MapGridGetCollisionAt',x,y)==0,cell
+            override=overrides.get((cell['layout'],cell['x'],cell['y']))
+            if override:
+                assert native('MapGridGetMetatileIdAt',x,y)==override['after']&1023,override
+                assert native('MapGridGetMetatileBehaviorAt',x,y)==0,override
+                assert native('MapGridGetMetatileLayerTypeAt',x,y)==(0 if override['surface']=='landing' else 1),override
+                checked+=1
+                continue
             landing=cell.get('surface')=='landing'
             assert native('MapGridGetMetatileBehaviorAt',x,y)==(12 if landing else 0),cell
             if cell['layout']=='LAYOUT_JAGGED_PASS':
@@ -431,6 +440,35 @@ if args.road_access:
         picture(name+'-walkable-Acro-replacement-'+str(y))
     warp('JaggedPass',17,10);native('SetPlayerAvatarTransitionFlags',1);step(30)
     picture('JaggedPass-yellow-stair-and-clear-landing')
+    if yellow:
+        # Exercise every former cliff-jump passage in both directions with an
+        # on-foot avatar. Riding any bicycle would invalidate this check.
+        native('DisableWildEncounters',1)
+        passage_cases=0
+        for name,x,bottom,top in [('JaggedPass',18,10,8),('JaggedPass',21,12,10),
+                                ('JaggedPass',22,19,16),('JaggedPass',21,31,27),
+                                ('JaggedPass',9,33,30),('SafariZone_North',22,24,20)]:
+            for y,key,target in [(bottom,64,top),(top,128,bottom)]:
+                warp(name,x,y);native('SetPlayerAvatarTransitionFlags',1);step(30)
+                for _ in range(12):
+                    step(16,key)
+                    if position()[1]<=target if key==64 else position()[1]>=target:break
+                assert position()[1]<=target if key==64 else position()[1]>=target,(name,x,y,key,position())
+                assert lib.read8(s['gPlayerAvatar'])&1,('Used bicycle on yellow stairs',name)
+                if name=='SafariZone_North':
+                    for color in range(1,16):
+                        assert lib.read16(s['gPlttBufferUnfaded']+12*32+color*2)==lib.read16(s['gTilesetPalettes_Lavaridge']+8*32+color*2),('Yellow stair palette was not loaded',color)
+                passage_cases+=1
+            picture(name+'-yellow-stairs-'+str(x)+'-'+str(bottom))
+        native('DisableWildEncounters',0)
+        results.append(dict(check='all_acro_cliff_passages_yellow',passed=True,
+            passages=6,on_foot_traversals=passage_cases,yellow_stair_cells=11,clear_landings=6,
+            foreground_pixels_identical=yellow['foreground_pixels_identical'],
+            foreground_palette_identical=yellow['foreground_palette_identical'],
+            native_loaded_palette_matches_yellow_reference=True,
+            original_lilycove_pixels_preserved=yellow['original_lilycove_pixels_preserved'],
+            encounters_disabled_only_for_geometry_fixture=True,
+            full_campaign_validated=False))
     items=(source/'include/constants/items.h').read_text()
     def itemid(name):return int(re.search(r'^\s*'+name+r'\s*=\s*(\d+)',items,re.M)[1])
     mach=itemid('ITEM_MACH_BIKE');acro=itemid('ITEM_ACRO_BIKE');voucher=itemid('ITEM_BIKE_VOUCHER')

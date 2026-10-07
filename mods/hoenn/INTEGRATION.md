@@ -1,5 +1,39 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+## Escada amarela em todas as antigas passagens de salto
+
+As **seis passagens de Acro Bike** agora usam o desenho da escada amarela:
+cinco em Jagged Pass e uma na Safari Zone norte. Jagged Pass mantém seus
+cinco patamares livres. Na Safari, os dois desníveis recebem degraus amarelos
+e o quadrado intermediário volta a ser chão, preservando seu nível original.
+São 11 tiles de degrau e seis tiles de patamar; todas as passagens são a pé.
+
+A preparação importa os dois tiles de primeiro plano de Lavaridge e a sua
+paleta para Lilycove, usada pela Safari. Os pixels e as cores originais do
+degrau são idênticos. A paleta 12 estava livre e é carregada pelo motor; não
+são usados os slots reservados além das 13 paletas de terreno. Os pixels
+anteriores de Lilycove são preservados integralmente, sem substituir prédios,
+NPCs, outros terrenos ou seus eventos. As pontes dos antigos trilhos e as
+missões de bicicleta nas ciclovias continuam.
+
+O emulador subiu e desceu nas seis passagens, totalizando 12 travessias sem
+bicicleta. Conferiu também a paleta efetivamente carregada, os tiles e a
+colisão. Encontros selvagens ficam desativados somente durante esse teste
+isolado de geometria e são reativados depois; a ROM mantém seus encontros.
+Passaram 21 testes offline e 105 verificações nativas, incluindo as 96
+travessias Surf e as 840 equipes de ginásio. As treze camadas reproduzem
+323 arquivos, mantendo as 117 conexões recíprocas da rede preparada.
+
+[Safari com escadas amarelas](integration-validation/stair-review/SafariZone-North.png),
+[segunda passagem de Jagged Pass](integration-validation/stair-review/JaggedPass-2.png),
+[terceira](integration-validation/stair-review/JaggedPass-3.png),
+[quarta](integration-validation/stair-review/JaggedPass-4.png) e
+[quinta](integration-validation/stair-review/JaggedPass-5.png).
+
+Esta continua sendo uma candidata experimental: a ROM/player publicados
+permanecem na versão anterior e a integração completa das histórias ainda
+precisa das migrações e validações listadas abaixo.
+
 ## Bicicleta única e passagens — continuação
 
 As ciclovias continuam exigindo a missão da bicicleta: receber a bicicleta de
@@ -387,6 +421,7 @@ python3 tools/hoenn/prepare_free_access.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_blue_gym.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_road_access.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_mach_bike.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_yellow_stairs.py --source .local/hoenn-multiregion-src
 ```
 
 Na pasta de fonte, compile com os caminhos do compilador ARM, binutils,

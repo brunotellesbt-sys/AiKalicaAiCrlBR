@@ -1,6 +1,6 @@
 {
   "status": "experimental_not_full_integration",
-  "rom_sha256": "42ec402cbc7feeac0efe111455078dbf83a4e474e6c4e4b195faa9666a26da3c",
+  "rom_sha256": "9e9d57cfe37dcf25e90ae1966a942225e74d9d213db1e689fd33240ee35f53ad",
   "checks": [
     {
       "check": "regional_flags_and_native_save_roundtrip",
@@ -87,6 +87,20 @@
       "surf_waterfall_without_badges": true,
       "real_surf_prompt_without_badges": true,
       "dive_rule_preserved": true,
+      "full_campaign_validated": false
+    },
+    {
+      "check": "all_acro_cliff_passages_yellow",
+      "passed": true,
+      "passages": 6,
+      "on_foot_traversals": 12,
+      "yellow_stair_cells": 11,
+      "clear_landings": 6,
+      "foreground_pixels_identical": true,
+      "foreground_palette_identical": true,
+      "native_loaded_palette_matches_yellow_reference": true,
+      "original_lilycove_pixels_preserved": true,
+      "encounters_disabled_only_for_geometry_fixture": true,
       "full_campaign_validated": false
     },
     {
