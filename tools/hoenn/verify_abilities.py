@@ -10,7 +10,9 @@ from prepare_abilities import prepare
 
 def verify(source, candidate, output, layer='abilities'):
     source, candidate, output = map(Path, [source, candidate, output])
-    if layer == 'league-access':
+    if layer == 'league-completion':
+        from prepare_league_completion import prepare as prepare_layer
+    elif layer == 'league-access':
         from prepare_league_access import prepare as prepare_layer
     elif layer == 'story-aftermath':
         from prepare_story_aftermath import prepare as prepare_layer
@@ -51,6 +53,6 @@ if __name__ == '__main__':
     parser.add_argument('--source', type=Path, required=True)
     parser.add_argument('--candidate', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--layer', choices=['abilities', 'mega-art', 'story-aftermath', 'league-access'], default='abilities')
+    parser.add_argument('--layer', choices=['abilities', 'mega-art', 'story-aftermath', 'league-access', 'league-completion'], default='abilities')
     args = parser.parse_args()
     verify(args.source, args.candidate, args.output, args.layer)
