@@ -10,7 +10,9 @@ from prepare_abilities import prepare
 
 def verify(source, candidate, output, layer='abilities'):
     source, candidate, output = map(Path, [source, candidate, output])
-    if layer == 'mega-art':
+    if layer == 'story-aftermath':
+        from prepare_story_aftermath import prepare as prepare_layer
+    elif layer == 'mega-art':
         from prepare_mega_art import prepare as prepare_layer
     else:
         prepare_layer = prepare
@@ -21,7 +23,9 @@ def verify(source, candidate, output, layer='abilities'):
         for marker in source.glob('.journey-*'):
             if marker.is_file() and marker.name != '.journey-' + layer:
                 shutil.copy2(marker, replay)
-        for path, digest in installed['original_sha256'].items():
+        required = dict(installed.get('preserved_native_sha256', {}))
+        required.update(installed['original_sha256'])
+        for path, digest in required.items():
             assert hashlib.sha256((source / path).read_bytes()).hexdigest() == digest, path
             (replay / path).parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source / path, replay / path)
@@ -45,6 +49,6 @@ if __name__ == '__main__':
     parser.add_argument('--source', type=Path, required=True)
     parser.add_argument('--candidate', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--layer', choices=['abilities', 'mega-art'], default='abilities')
+    parser.add_argument('--layer', choices=['abilities', 'mega-art', 'story-aftermath'], default='abilities')
     args = parser.parse_args()
     verify(args.source, args.candidate, args.output, args.layer)

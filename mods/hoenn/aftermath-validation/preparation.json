@@ -1,0 +1,32 @@
+{
+  "status": "original_hoenn_climate_aftermath_candidate",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "gate": 14,
+  "hoenn_badge_threshold": 7,
+  "completion": "original scene clears FLAG_SYS_WEATHER_CTRL",
+  "kanto_gates_unchanged": true,
+  "native_rayquaza_scene_preserved": true,
+  "rayquaza_capture_not_required": true,
+  "no_new_roadblocks": true,
+  "homes_accessible_during_crisis": true,
+  "new_flags_allocated": false,
+  "full_campaign_validated": false,
+  "preserved_native_sha256": {
+    "data/maps/SeafloorCavern_Room9/scripts.inc": "efcbfdfa8ea6251a7ccd3c42d0db270585abb996c470d08ebca72c1a5b5598e1",
+    "data/maps/SkyPillar_Top/scripts.inc": "5062f3a0d2e0a9372af0e269434410ab3e7d7b29f6ceca9b18c3616708a8f33d",
+    "data/maps/MossdeepCity_SpaceCenter_2F/scripts.inc": "04184e0e8a6ca56a6e1abd3f08e741d69a2b970dd816bb65cc742af7ab96db8d"
+  },
+  "input_sha256": {
+    "data/maps/SootopolisCity/scripts.inc": "7958562ceff7d316ed1ee512e32f4724c94fd641fd93f1a6d2bdd079c8607087"
+  },
+  "original_sha256": {
+    "src/journey_campaign_gates.c": "5b1b3289d52a252b4f3935b93517f1eaea1bc932d2dcfa40108d061429168407",
+    "data/scripts/journey_campaign_gates.inc": "bdd4ff225f16a05730a8334eb1953c882760e5a8871226188596b1fa2d31e4ef",
+    "data/maps/SootopolisCity/scripts.inc": "f3541d8229b61118b575ef105b15a7acae83436a229cb6188de26316eba4a5cd"
+  },
+  "prepared_sha256": {
+    "src/journey_campaign_gates.c": "8a6ad0d6e9f33c3fdb3373b7208b8e2033be2d43bbd7a15a6a741f180651ca0b",
+    "data/scripts/journey_campaign_gates.inc": "57661ff2c52d3dc5a2952bbba51f4055edf7cb55fd167f83c1ac644d343b3fa1",
+    "data/maps/SootopolisCity/scripts.inc": "ead5f6e417d537d08b6ad9c91e2637d4c776e16a2b76344801c93a199dad9df0"
+  }
+}

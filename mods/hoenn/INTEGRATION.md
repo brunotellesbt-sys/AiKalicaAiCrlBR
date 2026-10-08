@@ -838,3 +838,52 @@ forçam resultados de batalha. A matriz de missões usa flags de estado inicial
 para conferir decisões ARM, sem representar campanhas jogadas.
 
 [Inventário, resultados e limites](MEGA-STATUS.md).
+
+## Desfecho de Hoenn e batalhas duplas
+
+A camada `story-aftermath`, depois de `mega-art`, mantém o último ginásio
+livre de Hoenn fechado enquanto a crise climática original está ativa. Após
+Archie, o guia aponta a Cave of Origin, Wallace e o Sky Pillar na Rota 131.
+A cena original de Rayquaza em Sootopolis encerra a crise e libera qualquer
+último ginásio escolhido. A missão não exige capturar Rayquaza nem vencer uma
+Liga; as capturas especiais continuam exigindo as 16 insígnias.
+
+As casas de Sootopolis permanecem abertas durante a crise, incluindo a casa
+que pode ser escolhida como residência inicial. As cenas de Archie, Kyogre e
+Rayquaza e a batalha com Steven mantêm seus scripts anteriores. Nenhuma nova
+trava de rota, insígnia ou flag foi criada.
+
+Essa candidata fica em `.local/hoenn-aftermath-src`, copiada da árvore preparada
+de Megas. Seus relatórios ficam em `aftermath-validation`; os relatórios das
+bases anteriores mantêm seus hashes próprios.
+
+```sh
+python3 tools/hoenn/prepare_story_aftermath.py --source .local/hoenn-aftermath-src
+# Compilar antes de executar os validadores nativos.
+python3 tools/hoenn/verify_abilities.py --source .local/hoenn-mega-src --candidate .local/hoenn-aftermath-src --layer story-aftermath --output mods/hoenn/aftermath-validation
+python3 tools/hoenn/validate_campaign_matrix.py --source .local/hoenn-aftermath-src --library .local/mgba-bridge.so --output mods/hoenn/aftermath-validation
+python3 tools/hoenn/validate_archie_aftermath.py --source .local/hoenn-aftermath-src --library .local/mgba-bridge.so --output mods/hoenn/aftermath-validation
+```
+
+Executar `validate_double_battles.py` com os mesmos parâmetros para cada
+`--case`: `hidden`, `torrent`, `protean` e `event`. São batalhas reais contra
+Tate e Liza com uma Mega ao lado de Greninja; os casos normais não transformam
+em Ash-Greninja. A vitória concede uma insígnia real de Hoenn e passa pelo
+save/load nativo. Os itens Mega são fornecidos somente às equipes de teste.
+
+O teste de Archie inicia com seis insígnias de Kanto, sete de Hoenn e missões
+anteriores concluídas como fixtures. Joga a batalha em parceria com Giovanni,
+passa pelo despertar de Kyogre e saída para a Rota 128, executa o despertar e
+retorno de Rayquaza e entra fisicamente em Rustboro como último ginásio. A
+casa de Sootopolis é acessada fisicamente durante a crise; a equipe mantém
+suas seis espécies, personalidades, IDs de treinador e slots de habilidades.
+O save preserva o desfecho. Isso cobre esses trechos, sem representar as duas
+campanhas completas ou o percurso inteiro dos puzzles.
+
+O teste `validate_maxie_aftermath.py`, com os mesmos parâmetros de árvore,
+biblioteca e saída, passa pelo convite de Steven, escolha real de três Pokémon,
+vitória contra Maxie e Tabitha e pós-batalha. A chamada original do rival
+consome a flag temporária sem apagar a conclusão permanente. A permissão para
+Archie, as seis espécies/personalidades da equipe e o slot oculto sobrevivem à
+restauração da equipe e ao save/load. As missões anteriores e insígnias também
+são fixtures iniciais; essa validação não cobre todo o percurso do Centro Espacial.

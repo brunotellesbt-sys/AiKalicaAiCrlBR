@@ -22,6 +22,8 @@ bootstrap = (ROOT / 'tools/hoenn/validate_abilities.py').read_text().split('\nab
 exec(compile(bootstrap, str(ROOT / 'tools/hoenn/validate_abilities.py'), 'exec'))
 constants = (source / 'include/constants/flags.h').read_text()
 def flag_id(name):
+    if name == 'FLAG_SYS_WEATHER_CTRL':
+        return abi[111]
     return int(re.search(r'^#define\s+' + name + r'\s+(0x[0-9a-fA-F]+)', constants, re.M)[1], 16)
 def raw_flag(flag, enabled):
     address = save() + 4720 + flag // 8
@@ -45,17 +47,22 @@ scenarios = [(True, 'complete', 0, 0, None), (False, 'complete', 0, 0, None),
              (False, 'space_center', 7, 5, 'space_center'),
              (False, 'giovanni_required', 7, 13, completion[1]),
              (False, 'archie', 7, 6, completion[4])]
+if (source / '.journey-story-aftermath').exists():
+    scenarios.append((False, 'weather_crisis', 7, 14, 'weather_crisis'))
 for mission in stories['missions']:
     scenarios.append((mission['kanto'], mission['key'], mission['badge_count'],
                       mission['event'], 0x500 + trainer_ids[mission['trainers'][0]]))
 checks = []
 for kanto, name, threshold, event, missing in scenarios:
+    raw_flag(flag_id('FLAG_SYS_WEATHER_CTRL'), False)
     for flag in completion:
         raw_flag(flag_id(flag), True)
     native('VarSet', 0x409F, 3)
     for trainer in stories['trainers']:
         raw_flag(0x500 + trainer['id'], True)
-    if missing == 'space_center':
+    if missing == 'weather_crisis':
+        raw_flag(flag_id('FLAG_SYS_WEATHER_CTRL'), True)
+    elif missing == 'space_center':
         native('VarSet', 0x409F, 0)
     elif isinstance(missing, str):
         raw_flag(flag_id(missing), False)
