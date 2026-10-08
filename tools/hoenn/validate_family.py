@@ -16,13 +16,13 @@ p = argparse.ArgumentParser(description=__doc__)
 p.add_argument('--source', type=Path, required=True)
 p.add_argument('--library', type=Path, required=True)
 p.add_argument('--output', type=Path, default=ROOT / 'mods/hoenn/integration-validation')
-p.add_argument('--city', type=int, choices=range(16))
+p.add_argument('--city', type=int, choices=range(31))
 p.add_argument('--hoenn-control', action='store_true')
 options = p.parse_args()
 if options.city is None:
     samples = []
     with tempfile.TemporaryDirectory(prefix='family-emulator-', dir='/tmp') as directory:
-        for city in range(16):
+        for city in list(range(16)) + list(range(17,31)):
             out = Path(directory) / str(city)
             child = subprocess.run([sys.executable, str(Path(__file__).resolve()),
                 '--source', str(options.source.resolve()), '--library', str(options.library.resolve()),
@@ -36,7 +36,7 @@ if options.city is None:
         out = Path(directory) / 'hoenn'
         child = subprocess.run([sys.executable, str(Path(__file__).resolve()),
             '--source', str(options.source.resolve()), '--library', str(options.library.resolve()),
-            '--output', str(out), '--city', '0', '--hoenn-control'], capture_output=True, text=True)
+            '--output', str(out), '--city', '16', '--hoenn-control'], capture_output=True, text=True)
         assert child.returncode == 0, child.stdout + child.stderr
         control = json.loads((out / 'family.json').read_text())
     (options.output / 'family.json').write_text(json.dumps(dict(passed=True,
@@ -51,7 +51,9 @@ sys.argv = [sys.argv[0], '--source', str(options.source), '--library', str(optio
             '--output', str(options.output), '--water-hms', '--westsea']
 common = (ROOT / 'tools/hoenn/validate_crossing.py').read_text().split('\nstep(900)\n')[0]
 exec(compile(common, str(ROOT / 'tools/hoenn/validate_crossing.py'), 'exec'))
-home = json.loads((source / '.journey-family').read_text())['homes'][city]
+home = json.loads((source / '.journey-birth').read_text())['homes'][city]
+hoenn = city >= 16
+starter_species = abi[52:55] if hoenn else [1, 4, 7]
 
 def press(key, pause=30):
     step(1, key); step(pause)
@@ -80,16 +82,25 @@ step(900)
 save2 = lib.read32(s['gSaveBlock2Ptr'])
 lib.write8(save2, 255); lib.write8(save2 + 8, 255)
 lib.write8(save2 + abi[32], city % 2)
-lib.write8(save2 + abi[45], abi[51] if hoenn_control else abi[46])
+lib.write8(save2 + abi[45], abi[51] if hoenn else abi[46])
 lib.write32(s['gMain'], 0); lib.write8(s['gMain'] + 0x438, 0)
 lib.write32(s['gMain'] + 4, s['CB2_NewGame'] | 1)
 step(300)
 if hoenn_control:
+    advance_until(lambda: task('Task_HandleMultichoiceGridInput'))
+    press(1)
+    step(1500)
+    assert location() == map_id('InsideOfTruck')
+    step(90, 16); step(200)
+    finish()
+    assert location() == map_id('LittlerootTown_BrendansHouse_1F')
+    event('Journey_Family'); finish()
+    assert all(native('CountTotalItemQuantityInBag', item) == 1 for item in abi[17:20])
     warp('PalletTown_PlayersHouse_2F_Frlg', 6, 6)
     step(300)
     assert not task('Task_HandleMultichoiceGridInput')
     assert not lib.read8(s['sLockFieldControls'])
-    assert var(0x40F7) == 0 and var(0x40FA) == 1
+    assert var(0x40F7) == 17 and var(0x40FA) == 1
     assert lib.read8(s['gPartiesCount']) == 0
     warp('PalletTown_PlayersHouse_2F_Frlg', 6, 6)
     assert not task('Task_HandleMultichoiceGridInput')
@@ -99,35 +110,47 @@ if hoenn_control:
     sys.exit(0)
 advance_until(lambda: task('Task_HandleMultichoiceGridInput'))
 if city == 0: picture('family-city-menu')
-for _ in range(city // 2): press(128)
-if city % 2: press(16)
+choice = city - 16 if hoenn else city
+columns = 3 if hoenn else 2
+for _ in range(choice // columns): press(128)
+for _ in range(choice % columns): press(16)
 press(1)
+step(1500)
+assert location() == map_id('InsideOfTruck')
+step(90, 16); step(200)
+if city in [0, 9, 28, 30]: picture(f'family-{city:02d}-arrival')
 finish()
 assert var(0x40F7) == city + 1, ('Wrong city', city, var(0x40F7))
 assert lib.read8(s['gPartiesCount']) == 0
 assert native('JourneyGymBadgeCount', 0) == native('JourneyGymBadgeCount', 1) == 0
-bedname = 'PalletTown_PlayersHouse_2F_Frlg' if city == 0 else f'JourneyFamilyBedroom{city:02d}'
+bedname = f'JourneyHoennBedroom{city-16:02d}' if hoenn else 'PalletTown_PlayersHouse_2F_Frlg' if city == 0 else f'JourneyFamilyBedroom{city:02d}'
 assert location() == map_id(bedname), ('Wrong bedroom', home, location())
 original = json.loads((source / f'data/maps/{home["house"]}/map.json').read_text())
 # Only this house aliases to a new interior; the other fifteen keep their headers.
-for other in json.loads((source / '.journey-family').read_text())['homes']:
+for other in json.loads((source / '.journey-birth').read_text())['homes']:
     group, num = map_id(other['house'])
     assert bool(native('JourneyFamilyHomeHeader', group, num)) == (other['index'] == city + 1 and city != 0)
 
 def stairs(name):
-    behavior = native('MapGridGetMetatileBehaviorAt', 17, 9)
+    stair_x, stair_y = (7, 1) if hoenn and name == bedname else (8, 2) if hoenn else (10, 2)
+    warp(name, stair_x, stair_y + 1)
+    behavior = native('MapGridGetMetatileBehaviorAt', stair_x+7, stair_y+7)
     west = native('IsDirectionalStairWarpMetatileBehavior', behavior, 3)
-    assert west or native('IsDirectionalStairWarpMetatileBehavior', behavior, 4)
-    warp(name, 11 if west else 9, 2)
-    step(40, 32 if west else 16); step(150)
+    east = native('IsDirectionalStairWarpMetatileBehavior', behavior, 4)
+    if west or east:
+        warp(name, stair_x+1 if west else stair_x-1, stair_y)
+        step(40, 32 if west else 16)
+    else:
+        step(40, 64)
+    step(150)
 
 stairs(bedname)
 assert location() == map_id(home['house']), ('Stairs did not enter living room', city, location(), position(), lib.read8(s['sLockFieldControls']), lib.read8(s['gPlayerAvatar']))
-living_name = 'PalletTown_PlayersHouse_1F_Frlg' if city == 0 else f'JourneyFamilyLiving{city:02d}'
+living_name = f'JourneyHoennLiving{city-16:02d}' if hoenn else 'PalletTown_PlayersHouse_1F_Frlg' if city == 0 else f'JourneyFamilyLiving{city:02d}'
 living = json.loads((source / f'data/maps/{living_name}/map.json').read_text())
-if city in [1, 6, 15]: picture(f'family-{city:02d}-oak-living-room')
+if city in [1, 6, 15, 17, 28, 30]: picture(f'family-{city:02d}-oak-living-room')
 if city:
-    warp(home['house'], 4, 7)
+    warp(home['house'], 8 if hoenn else 4, 7)
     step(20, 128); step(60)
     finish()
     assert location() == map_id(home['house']) and var(0x40F9) == 1
@@ -183,10 +206,10 @@ if city:
     finish()
     assert native('FlagGet', 0x1ABE) and native('FlagGet', 0x1ABF)
     assert lib.read8(s['gPartiesCount']) == 1
-    assert native('GetMonData3', s['gParties'], abi[7], 0) == [1, 4, 7][starter]
+    assert native('GetMonData3', s['gParties'], abi[7], 0) == starter_species[starter]
     assert native('GetMonData3', s['gParties'], abi[6], 0) == 5
     assert var(0x40F9) == 2
-    assert var(abi[49]) == [0, 2, 1][starter]
+    assert var(abi[55] if hoenn else abi[49]) == (starter if hoenn else [0, 2, 1][starter])
     assert native('FlagGet', abi[50])
     # The converted mother runs the canonical post-starter healing event.
     hp = native('GetMonData3', s['gParties'], abi[48], 0)
@@ -198,7 +221,7 @@ if city:
     # One visit cannot give another Pokemon; starter choice is fixed in FRLG's bank.
     native('JourneyFamilyGiveStarter')
     assert lib.read8(s['gPartiesCount']) == 1
-    warp(home['house'], 4, 7)
+    warp(home['house'], 8 if hoenn else 4, 7)
     step(50, 128); step(150)
     exterior = next(w['dest_map'] for w in original['warp_events'] if not w['dest_map'].endswith('ROOM2'))
     by_id = {json.loads((source / f'data/maps/{n}/map.json').read_text())['id']: n
@@ -226,8 +249,9 @@ assert native('JourneyGymBadgeCount', 0) == native('JourneyGymBadgeCount', 1) ==
 lib.stop()
 (args.output / 'family.json').write_text(json.dumps(dict(passed=True, city=home['city'],
     house=home['house'], people=home['people'], roles=home['roles'], player_gender=city % 2,
-    real_city_menu=True, fixed_house_alias_only=True, actual_stairs_and_door=True,
-    family_gifts_once=True, starter_species=None if city == 0 else [1, 4, 7][starter],
+    vehicle=json.loads((source / '.journey-birth').read_text())['arrivals'][city]['vehicle'],
+    real_city_menu=True, selection_before_motion=True, fixed_house_alias_only=True, actual_stairs_and_door=True,
+    family_gifts_once=True, starter_species=None if city == 0 else starter_species[starter],
     starter_level=None if city == 0 else 5, original_pallet_intro=city == 0,
     native_save_roundtrip=city != 0, original_mother_heal=city != 0,
     full_bag_and_partial_retry=city == 3,
