@@ -72,6 +72,26 @@ relatórios estão em `league-validation`, com base `c10695f` e candidata
 `e2fb947f`. Os documentos de localização agora identificam essa candidata,
 com a mesma distribuição de Pokémon e os mesmos santuários.
 
+## Conclusão das Ligas e retorno à família
+
+A camada posterior `league-completion` grava o quarto da residência escolhida
+como destino de retorno após o Hall of Fame. Littleroot respeita o quarto de
+Brendan ou May conforme o personagem. Sem uma casa válida, os destinos originais
+de Pallet/Littleroot continuam como fallback. O layout do save não mudou.
+
+A candidata fica em `.local/hoenn-completion-final-src`, com relatórios em
+`completion-validation`, base `e2fb947f` e ROM `f7110f29`. Há verificações de
+62 destinos persistidos (31 casas × dois personagens), além das duas sequências
+de Elite Four, campeão, Hall of Fame, créditos e Continue. Kanto retorna à casa
+em Mauville e Hoenn à casa em Vermilion nos dois casos exercitados, mantendo
+equipe, habilidade oculta e a outra região sem concluir.
+
+Os níveis 100, as insígnias, a casa e a cura entre batalhas são fixtures de teste.
+Esses percursos não equivalem a jogar as campanhas completas. As duas sequências
+foram exercitadas em saves novos separados; vencer as duas Ligas no mesmo save,
+o histórico compartilhado do Hall of Fame e as revanches ainda precisam de
+validação. A candidata ainda não foi publicada no player.
+
 ## Trabalho que falta antes do lançamento
 
 1. Ampliar a validação para as demais habilidades do catálogo e combinações

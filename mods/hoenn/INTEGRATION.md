@@ -746,8 +746,8 @@ com coordenadas externas e posição de cada altar.
 Para regenerar os documentos e auditar os destinos na candidata posterior:
 
 ```sh
-python3 tools/hoenn/document_habitats.py --source .local/hoenn-league-src
-python3 tools/hoenn/audit_map_destinations.py --source .local/hoenn-league-src --output mods/hoenn/league-validation/map-destinations.json
+python3 tools/hoenn/document_habitats.py --source .local/hoenn-completion-final-src
+python3 tools/hoenn/audit_map_destinations.py --source .local/hoenn-completion-final-src --output mods/hoenn/completion-validation/map-destinations.json
 ```
 
 A auditoria verifica índices de destinos e conexões; mantém separadas as
@@ -943,3 +943,45 @@ após nocaute e reverte no final. Equipe e progresso da sala persistem no save.
 A candidata `e2fb947f96eb0b31a6934441c2731500259a52a45e2bafe20a3a20fc6542ef93`
 ainda não foi publicada no player. As demais batalhas de Elite Four, campeões,
 créditos e retorno ao jogo precisam de verificação completa.
+
+
+## Concluir uma Liga e continuar na residência escolhida
+
+A camada `league-completion` segue `league-access`. Os dois finais originais
+salvavam um destino fixo em Pallet/Littleroot; agora guardam o quarto da casa
+escolhida antes da viagem inicial. O novo helper retorna FALSE quando não existe
+uma escolha válida, preservando o fallback original. Não teleporta durante os
+créditos: o destino é gravado antes do save do Hall of Fame e usado pelo Continue.
+Littleroot usa a casa de May para o personagem feminino e a de Brendan para o
+masculino. Nenhuma insígnia, missão ou flag de campeão é concedida pelo helper.
+
+```sh
+cp -a --reflink=auto .local/hoenn-league-src .local/hoenn-completion-final-src
+python3 tools/hoenn/prepare_league_completion.py --source .local/hoenn-completion-final-src
+# Compile modern com a mesma toolchain e as variáveis locais anteriores.
+python3 tools/hoenn/verify_abilities.py --source .local/hoenn-league-src --candidate .local/hoenn-completion-final-src --layer league-completion --output mods/hoenn/completion-validation
+python3 tools/hoenn/validate_home_resume.py --source .local/hoenn-completion-final-src --library .local/mgba-bridge.so --output mods/hoenn/completion-validation
+python3 tools/hoenn/validate_league_completion.py --source .local/hoenn-completion-final-src --library .local/mgba-bridge.so --output mods/hoenn/completion-validation --region kanto
+python3 tools/hoenn/validate_league_completion.py --source .local/hoenn-completion-final-src --library .local/mgba-bridge.so --output mods/hoenn/completion-validation --region hoenn
+```
+
+O teste de destinos salva e recarrega as 31 casas para cada gênero, incluindo
+Littleroot, e verifica que as flags não mudaram. Não executa 62 sequências de
+créditos. Os testes das Ligas passam pelas portas físicas de todas as salas,
+vencem os cinco treinadores pelo menu normal, seguem os finais originais, deixam
+os créditos terminarem e selecionam Continue no menu. O personagem reaparece
+na casa de outra região; o progresso regional e a equipe são verificados após
+o retorno e novo save/reload.
+
+Os níveis, as insígnias e a escolha da residência são estados iniciais de fixture.
+A cura entre as batalhas também é fixture; o teste não mede dificuldade, gestão
+de itens ou o balanceamento das Ligas. As trocas obrigatórias percorrem o menu
+normal e escolhem um membro vivo considerando a ordem exibida na batalha.
+
+Relatórios finais identificam a ROM
+`f7110f297426cfbeda762ab3874df5d7191240b1b453a88317dad8f6bceefcee`.
+A subpasta `baseline` registra as sequências até o início dos créditos na base
+anterior, sem o retorno à residência escolhido nesta camada. Artefatos de
+exploração intermediários ficam ignorados em `.local`, fora desses relatórios.
+Ainda é necessário validar as duas Ligas vencidas sequencialmente no mesmo save,
+as revanches, o histórico do Hall of Fame e os eventos posteriores ao final.
