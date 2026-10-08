@@ -741,6 +741,12 @@ trava. Fugir ou derrotar permite tentar novamente; capturar desativa o altar.
 Os locais e espécies estão em [POKEMON-LOCATIONS.md](POKEMON-LOCATIONS.md) e
 [pokemon-locations.csv](pokemon-locations.csv).
 
+As regressões de casas, nascimento e mundo foram concluídas na mesma ROM
+SHA-256 `9227bb707e24e0c86f92ba92e56c76ee3131d14f760740e22ffd9fb6cff0699a`,
+incluindo 96 ligações físicas por Surf. Os testes offline exigem que os
+relatórios de catálogo, encontros, casas, nascimento, mundo e santuários
+correspondam à mesma candidata. Não substituem uma campanha jogada inteira.
+
 A validação nativa confirmou as 14 travessias de ida e volta e uma captura real
 de Pecharunt, incluindo fuga, nova tentativa e persistência da captura em save.
 A auditoria do catálogo verifica referências e cabeçalhos; não comprova a
