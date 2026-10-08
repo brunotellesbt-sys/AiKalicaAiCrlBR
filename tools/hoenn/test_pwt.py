@@ -20,9 +20,9 @@ class PWTRequirements(unittest.TestCase):
         r = report('reproduction.json')
         self.assertEqual(r['baseline_rom_sha256'], json.loads((ROOT / 'mods/hoenn/family-postgame-validation/reproduction.json').read_text())['rom_sha256'])
         self.assertTrue(r['deterministic_replay']); self.assertTrue(r['idempotent'])
-        self.assertEqual(r['files'], 19)
+        self.assertEqual(r['files'], 22)
         p = report('preparation.json')
-        self.assertEqual((p['participants'], p['rounds'], p['team_size'], p['level']), (8, 3, 3, 50))
+        self.assertEqual((p['participants'], p['rounds'], p['team_size'], p['level']), (8, 3, 6, 50))
         self.assertFalse(p['doubles_enabled'])
         self.assertTrue(p['save_layout_unchanged']); self.assertTrue(p['existing_dome_retained'])
         for path in ['src/battle_dome.c', 'src/journey_gym_scaling.c', 'data/maps/BattleFrontier_BattleDomeLobby/scripts.inc']:
@@ -31,6 +31,7 @@ class PWTRequirements(unittest.TestCase):
     def test_three_complete_native_tournaments_have_nine_victories(self):
         r = self.native('native/pwt.json')
         self.assertEqual(r['native_battle_victories'], 9)
+        self.assertEqual(r['team_size'], 6)
         self.assertEqual({t['pool'] for t in r['tournaments']}, {0, 1, 2})
         for t in r['tournaments']:
             self.assertEqual(len(t['leaves']), 8)
@@ -57,19 +58,28 @@ class PWTRequirements(unittest.TestCase):
             self.assertTrue(r[key])
         self.assertTrue(any(w['ash_seen'] for t in r['tournaments'] for w in t['wins']))
 
-    def test_all_rosters_have_three_distinct_mons_items_and_real_moves(self):
+    def test_all_rosters_have_six_distinct_mons_items_and_real_moves(self):
         r = self.native('native/pwt.json')
         self.assertEqual(len(r['native_roster_teams']), 18)
         self.assertEqual({t['index'] for t in r['native_roster_teams']}, set(range(18)))
         self.assertEqual(len({t['trainer'] for t in r['native_roster_teams']}), 18)
         for t in r['native_roster_teams']:
-            self.assertEqual(len(t['mons']), 3)
+            self.assertEqual(len(t['mons']), 6)
             self.assertEqual({m['level'] for m in t['mons']}, {50})
-            self.assertEqual(len({m['species'] for m in t['mons']}), 3)
-            self.assertEqual(len({m['item'] for m in t['mons']}), 3)
+            self.assertEqual(len({m['species'] for m in t['mons']}), 6)
+            self.assertEqual(len({m['item'] for m in t['mons']}), 6)
             self.assertTrue(all(m['move'] for m in t['mons']))
         self.assertEqual({c['case'] for c in r['entry_guards']}, {'slot_out_of_range', 'same_slot', 'same_species', 'same_national_forms', 'same_item', 'egg', 'banned_mewtwo'})
         self.assertTrue(all(c['refused'] and c['party_unchanged'] for c in r['entry_guards']))
+
+    def test_tail_slots_require_six_and_preserve_full_order(self):
+        r = self.native('six/pwt-six.json')
+        self.assertEqual(r['team_size'], 6)
+        self.assertEqual(len(r['guards']), 7)
+        self.assertTrue(all(c['refused'] and c['party_unchanged'] for c in r['guards']))
+        self.assertTrue(r['reversed_order_preserved'])
+        self.assertTrue(r['original_party_restored'])
+        self.assertTrue(r['no_reward_for_helper_setup'])
 
     def test_real_guide_counter_walk_and_door_connect_the_module(self):
         r = self.native('access/pwt-access.json')

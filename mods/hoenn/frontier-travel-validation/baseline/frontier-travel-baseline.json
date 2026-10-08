@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "rom_sha256": "4f1a70a006854cf304c32a5cdb80bd7009d779dddc5a6a43f573bbb7a6610b56",
+  "guards": [
+    {
+      "port": "Slateport",
+      "hoenn_champion": false,
+      "ticket": false,
+      "destination_menu": false
+    },
+    {
+      "port": "Slateport",
+      "hoenn_champion": false,
+      "ticket": true,
+      "destination_menu": false
+    },
+    {
+      "port": "Slateport",
+      "hoenn_champion": true,
+      "ticket": false,
+      "destination_menu": true
+    },
+    {
+      "port": "Slateport",
+      "hoenn_champion": true,
+      "ticket": true,
+      "destination_menu": true
+    },
+    {
+      "port": "Lilycove",
+      "hoenn_champion": false,
+      "ticket": false,
+      "destination_menu": false
+    },
+    {
+      "port": "Lilycove",
+      "hoenn_champion": false,
+      "ticket": true,
+      "destination_menu": false
+    },
+    {
+      "port": "Lilycove",
+      "hoenn_champion": true,
+      "ticket": false,
+      "destination_menu": true
+    },
+    {
+      "port": "Lilycove",
+      "hoenn_champion": true,
+      "ticket": true,
+      "destination_menu": true
+    }
+  ],
+  "allows_boarding_without_ticket": true
+}

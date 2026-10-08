@@ -1,23 +1,23 @@
 {
   "passed": true,
-  "rom_sha256": "a06c75b1e508638aa5e863b743d8bc376c47f7f9f070413bf2d01c74fed5dc1b",
+  "rom_sha256": "4f1a70a006854cf304c32a5cdb80bd7009d779dddc5a6a43f573bbb7a6610b56",
   "tournaments": [
     {
       "pool": 0,
       "leaves": [
-        0,
-        3,
-        255,
-        2,
-        6,
         4,
+        5,
         1,
-        5
+        3,
+        2,
+        255,
+        0,
+        7
       ],
       "wins": [
         {
           "round": 0,
-          "attacks": 9,
+          "attacks": 39,
           "outcome": 1,
           "bag_blocked": true,
           "ash_seen": true,
@@ -25,7 +25,7 @@
         },
         {
           "round": 1,
-          "attacks": 12,
+          "attacks": 20,
           "outcome": 1,
           "bag_blocked": false,
           "ash_seen": true,
@@ -33,7 +33,7 @@
         },
         {
           "round": 2,
-          "attacks": 18,
+          "attacks": 17,
           "outcome": 1,
           "bag_blocked": false,
           "ash_seen": true,
@@ -48,19 +48,19 @@
     {
       "pool": 1,
       "leaves": [
-        10,
-        12,
-        9,
         8,
         255,
+        10,
+        15,
+        9,
+        13,
         11,
-        14,
-        15
+        12
       ],
       "wins": [
         {
           "round": 0,
-          "attacks": 7,
+          "attacks": 53,
           "outcome": 1,
           "bag_blocked": false,
           "ash_seen": true,
@@ -68,7 +68,7 @@
         },
         {
           "round": 1,
-          "attacks": 14,
+          "attacks": 26,
           "outcome": 1,
           "bag_blocked": false,
           "ash_seen": true,
@@ -76,7 +76,7 @@
         },
         {
           "round": 2,
-          "attacks": 15,
+          "attacks": 28,
           "outcome": 1,
           "bag_blocked": false,
           "ash_seen": true,
@@ -91,19 +91,19 @@
     {
       "pool": 2,
       "leaves": [
-        9,
-        2,
         8,
-        7,
+        0,
+        5,
+        11,
+        16,
         6,
-        10,
-        15,
-        255
+        255,
+        12
       ],
       "wins": [
         {
           "round": 0,
-          "attacks": 9,
+          "attacks": 30,
           "outcome": 1,
           "bag_blocked": false,
           "ash_seen": true,
@@ -111,7 +111,7 @@
         },
         {
           "round": 1,
-          "attacks": 18,
+          "attacks": 22,
           "outcome": 1,
           "bag_blocked": false,
           "ash_seen": true,
@@ -119,7 +119,7 @@
         },
         {
           "round": 2,
-          "attacks": 6,
+          "attacks": 19,
           "outcome": 1,
           "bag_blocked": false,
           "ash_seen": true,
@@ -133,9 +133,10 @@
     }
   ],
   "native_battle_victories": 9,
+  "team_size": 6,
   "native_loss": {
     "round": 0,
-    "attacks": 3,
+    "attacks": 6,
     "outcome": 2,
     "bag_blocked": false,
     "ash_seen": false,
@@ -192,16 +193,34 @@
       "trainer": 1168,
       "mons": [
         {
-          "species": 526,
+          "species": 95,
           "level": 50,
-          "item": 522,
-          "move": 157
+          "item": 472,
+          "move": 21
+        },
+        {
+          "species": 142,
+          "level": 50,
+          "item": 481,
+          "move": 442
         },
         {
           "species": 248,
           "level": 50,
           "item": 523,
           "move": 89
+        },
+        {
+          "species": 526,
+          "level": 50,
+          "item": 522,
+          "move": 157
+        },
+        {
+          "species": 464,
+          "level": 50,
+          "item": 477,
+          "move": 350
         },
         {
           "species": 76,
@@ -216,16 +235,34 @@
       "trainer": 1169,
       "mons": [
         {
-          "species": 131,
+          "species": 350,
           "level": 50,
-          "item": 479,
-          "move": 362
+          "item": 477,
+          "move": 219
+        },
+        {
+          "species": 121,
+          "level": 50,
+          "item": 472,
+          "move": 33
         },
         {
           "species": 195,
           "level": 50,
           "item": 523,
           "move": 401
+        },
+        {
+          "species": 131,
+          "level": 50,
+          "item": 479,
+          "move": 362
+        },
+        {
+          "species": 658,
+          "level": 50,
+          "item": 522,
+          "move": 191
         },
         {
           "species": 130,
@@ -240,10 +277,22 @@
       "trainer": 1170,
       "mons": [
         {
-          "species": 26,
+          "species": 466,
           "level": 50,
-          "item": 472,
-          "move": 39
+          "item": 481,
+          "move": 9
+        },
+        {
+          "species": 479,
+          "level": 50,
+          "item": 522,
+          "move": 506
+        },
+        {
+          "species": 135,
+          "level": 50,
+          "item": 523,
+          "move": 42
         },
         {
           "species": 405,
@@ -252,10 +301,16 @@
           "move": 46
         },
         {
-          "species": 466,
+          "species": 462,
           "level": 50,
-          "item": 481,
-          "move": 9
+          "item": 479,
+          "move": 393
+        },
+        {
+          "species": 26,
+          "level": 50,
+          "item": 472,
+          "move": 39
         }
       ]
     },
@@ -263,12 +318,6 @@
       "index": 3,
       "trainer": 1171,
       "mons": [
-        {
-          "species": 407,
-          "level": 50,
-          "item": 477,
-          "move": 71
-        },
         {
           "species": 286,
           "level": 50,
@@ -280,6 +329,30 @@
           "level": 50,
           "item": 523,
           "move": 241
+        },
+        {
+          "species": 3,
+          "level": 50,
+          "item": 472,
+          "move": 36
+        },
+        {
+          "species": 45,
+          "level": 50,
+          "item": 481,
+          "move": 230
+        },
+        {
+          "species": 407,
+          "level": 50,
+          "item": 477,
+          "move": 71
+        },
+        {
+          "species": 465,
+          "level": 50,
+          "item": 479,
+          "move": 79
         }
       ]
     },
@@ -288,10 +361,22 @@
       "trainer": 1172,
       "mons": [
         {
+          "species": 452,
+          "level": 50,
+          "item": 477,
+          "move": 400
+        },
+        {
           "species": 169,
           "level": 50,
           "item": 472,
           "move": 314
+        },
+        {
+          "species": 49,
+          "level": 50,
+          "item": 523,
+          "move": 79
         },
         {
           "species": 454,
@@ -300,10 +385,16 @@
           "move": 398
         },
         {
-          "species": 49,
+          "species": 89,
           "level": 50,
-          "item": 523,
-          "move": 79
+          "item": 479,
+          "move": 482
+        },
+        {
+          "species": 110,
+          "level": 50,
+          "item": 481,
+          "move": 188
         }
       ]
     },
@@ -312,22 +403,40 @@
       "trainer": 1174,
       "mons": [
         {
+          "species": 196,
+          "level": 50,
+          "item": 479,
+          "move": 384
+        },
+        {
           "species": 475,
           "level": 50,
           "item": 522,
           "move": 182
         },
         {
-          "species": 65,
+          "species": 579,
           "level": 50,
-          "item": 472,
-          "move": 94
+          "item": 477,
+          "move": 502
         },
         {
           "species": 282,
           "level": 50,
           "item": 523,
           "move": 273
+        },
+        {
+          "species": 199,
+          "level": 50,
+          "item": 481,
+          "move": 94
+        },
+        {
+          "species": 65,
+          "level": 50,
+          "item": 472,
+          "move": 94
         }
       ]
     },
@@ -348,6 +457,24 @@
           "move": 43
         },
         {
+          "species": 38,
+          "level": 50,
+          "item": 481,
+          "move": 517
+        },
+        {
+          "species": 324,
+          "level": 50,
+          "item": 477,
+          "move": 334
+        },
+        {
+          "species": 637,
+          "level": 50,
+          "item": 522,
+          "move": 103
+        },
+        {
           "species": 78,
           "level": 50,
           "item": 479,
@@ -360,6 +487,30 @@
       "trainer": 1550,
       "mons": [
         {
+          "species": 130,
+          "level": 50,
+          "item": 477,
+          "move": 349
+        },
+        {
+          "species": 112,
+          "level": 50,
+          "item": 481,
+          "move": 350
+        },
+        {
+          "species": 18,
+          "level": 50,
+          "item": 472,
+          "move": 97
+        },
+        {
+          "species": 59,
+          "level": 50,
+          "item": 523,
+          "move": 43
+        },
+        {
           "species": 65,
           "level": 50,
           "item": 479,
@@ -370,12 +521,6 @@
           "level": 50,
           "item": 522,
           "move": 72
-        },
-        {
-          "species": 18,
-          "level": 50,
-          "item": 472,
-          "move": 97
         }
       ]
     },
@@ -384,10 +529,22 @@
       "trainer": 773,
       "mons": [
         {
-          "species": 697,
+          "species": 306,
           "level": 50,
-          "item": 477,
-          "move": 242
+          "item": 523,
+          "move": 442
+        },
+        {
+          "species": 745,
+          "level": 50,
+          "item": 522,
+          "move": 46
+        },
+        {
+          "species": 346,
+          "level": 50,
+          "item": 479,
+          "move": 254
         },
         {
           "species": 348,
@@ -396,10 +553,16 @@
           "move": 306
         },
         {
-          "species": 306,
+          "species": 697,
           "level": 50,
-          "item": 523,
-          "move": 442
+          "item": 477,
+          "move": 242
+        },
+        {
+          "species": 476,
+          "level": 50,
+          "item": 472,
+          "move": 414
         }
       ]
     },
@@ -408,10 +571,28 @@
       "trainer": 777,
       "mons": [
         {
-          "species": 308,
+          "species": 448,
           "level": 50,
-          "item": 481,
-          "move": 244
+          "item": 477,
+          "move": 198
+        },
+        {
+          "species": 620,
+          "level": 50,
+          "item": 522,
+          "move": 369
+        },
+        {
+          "species": 286,
+          "level": 50,
+          "item": 523,
+          "move": 388
+        },
+        {
+          "species": 297,
+          "level": 50,
+          "item": 472,
+          "move": 264
         },
         {
           "species": 68,
@@ -420,10 +601,10 @@
           "move": 70
         },
         {
-          "species": 297,
+          "species": 308,
           "level": 50,
-          "item": 472,
-          "move": 264
+          "item": 481,
+          "move": 244
         }
       ]
     },
@@ -432,10 +613,10 @@
       "trainer": 781,
       "mons": [
         {
-          "species": 596,
+          "species": 310,
           "level": 50,
-          "item": 477,
-          "move": 163
+          "item": 472,
+          "move": 46
         },
         {
           "species": 462,
@@ -444,10 +625,28 @@
           "move": 393
         },
         {
+          "species": 82,
+          "level": 50,
+          "item": 479,
+          "move": 393
+        },
+        {
+          "species": 596,
+          "level": 50,
+          "item": 477,
+          "move": 163
+        },
+        {
           "species": 181,
           "level": 50,
           "item": 523,
           "move": 109
+        },
+        {
+          "species": 101,
+          "level": 50,
+          "item": 481,
+          "move": 113
         }
       ]
     },
@@ -456,16 +655,34 @@
       "trainer": 785,
       "mons": [
         {
-          "species": 663,
+          "species": 609,
           "level": 50,
-          "item": 522,
-          "move": 512
+          "item": 523,
+          "move": 310
         },
         {
           "species": 324,
           "level": 50,
           "item": 472,
           "move": 334
+        },
+        {
+          "species": 555,
+          "level": 50,
+          "item": 477,
+          "move": 253
+        },
+        {
+          "species": 219,
+          "level": 50,
+          "item": 481,
+          "move": 436
+        },
+        {
+          "species": 663,
+          "level": 50,
+          "item": 522,
+          "move": 512
         },
         {
           "species": 323,
@@ -480,15 +697,27 @@
       "trainer": 789,
       "mons": [
         {
+          "species": 474,
+          "level": 50,
+          "item": 477,
+          "move": 105
+        },
+        {
+          "species": 143,
+          "level": 50,
+          "item": 481,
+          "move": 133
+        },
+        {
           "species": 115,
           "level": 50,
           "item": 522,
           "move": 242
         },
         {
-          "species": 289,
+          "species": 288,
           "level": 50,
-          "item": 472,
+          "item": 479,
           "move": 638
         },
         {
@@ -496,6 +725,12 @@
           "level": 50,
           "item": 523,
           "move": 113
+        },
+        {
+          "species": 289,
+          "level": 50,
+          "item": 472,
+          "move": 638
         }
       ]
     },
@@ -504,10 +739,22 @@
       "trainer": 793,
       "mons": [
         {
-          "species": 334,
+          "species": 715,
           "level": 50,
-          "item": 472,
-          "move": 538
+          "item": 477,
+          "move": 162
+        },
+        {
+          "species": 277,
+          "level": 50,
+          "item": 479,
+          "move": 501
+        },
+        {
+          "species": 227,
+          "level": 50,
+          "item": 481,
+          "move": 65
         },
         {
           "species": 279,
@@ -516,10 +763,16 @@
           "move": 256
         },
         {
-          "species": 227,
+          "species": 357,
           "level": 50,
-          "item": 481,
-          "move": 65
+          "item": 522,
+          "move": 403
+        },
+        {
+          "species": 334,
+          "level": 50,
+          "item": 472,
+          "move": 538
         }
       ]
     },
@@ -528,10 +781,28 @@
       "trainer": 797,
       "mons": [
         {
+          "species": 337,
+          "level": 50,
+          "item": 479,
+          "move": 444
+        },
+        {
           "species": 178,
           "level": 50,
           "item": 523,
           "move": 384
+        },
+        {
+          "species": 338,
+          "level": 50,
+          "item": 472,
+          "move": 444
+        },
+        {
+          "species": 437,
+          "level": 50,
+          "item": 477,
+          "move": 484
         },
         {
           "species": 344,
@@ -552,22 +823,40 @@
       "trainer": 801,
       "mons": [
         {
-          "species": 134,
-          "level": 50,
-          "item": 522,
-          "move": 392
-        },
-        {
           "species": 340,
           "level": 50,
           "item": 479,
           "move": 401
         },
         {
+          "species": 365,
+          "level": 50,
+          "item": 481,
+          "move": 62
+        },
+        {
           "species": 419,
           "level": 50,
           "item": 477,
           "move": 458
+        },
+        {
+          "species": 342,
+          "level": 50,
+          "item": 523,
+          "move": 400
+        },
+        {
+          "species": 230,
+          "level": 50,
+          "item": 472,
+          "move": 61
+        },
+        {
+          "species": 134,
+          "level": 50,
+          "item": 522,
+          "move": 392
         }
       ]
     },
@@ -576,22 +865,40 @@
       "trainer": 335,
       "mons": [
         {
-          "species": 272,
-          "level": 50,
-          "item": 479,
-          "move": 428
-        },
-        {
           "species": 130,
           "level": 50,
           "item": 523,
           "move": 349
         },
         {
+          "species": 260,
+          "level": 50,
+          "item": 477,
+          "move": 36
+        },
+        {
+          "species": 73,
+          "level": 50,
+          "item": 481,
+          "move": 506
+        },
+        {
+          "species": 272,
+          "level": 50,
+          "item": 479,
+          "move": 428
+        },
+        {
           "species": 121,
           "level": 50,
           "item": 522,
           "move": 33
+        },
+        {
+          "species": 350,
+          "level": 50,
+          "item": 472,
+          "move": 219
         }
       ]
     },
@@ -600,22 +907,40 @@
       "trainer": 804,
       "mons": [
         {
-          "species": 344,
-          "level": 50,
-          "item": 522,
-          "move": 470
-        },
-        {
           "species": 348,
           "level": 50,
           "item": 477,
           "move": 306
         },
         {
+          "species": 227,
+          "level": 50,
+          "item": 481,
+          "move": 65
+        },
+        {
+          "species": 376,
+          "level": 50,
+          "item": 472,
+          "move": 430
+        },
+        {
           "species": 346,
           "level": 50,
           "item": 523,
           "move": 254
+        },
+        {
+          "species": 306,
+          "level": 50,
+          "item": 479,
+          "move": 442
+        },
+        {
+          "species": 344,
+          "level": 50,
+          "item": 522,
+          "move": 470
         }
       ]
     }

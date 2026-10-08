@@ -10,7 +10,9 @@ from prepare_abilities import prepare
 
 def verify(source, candidate, output, layer='abilities'):
     source, candidate, output = map(Path, [source, candidate, output])
-    if layer == 'pwt':
+    if layer == 'frontier-travel':
+        from prepare_frontier_travel import prepare as prepare_layer
+    elif layer == 'pwt':
         from prepare_pwt import prepare as prepare_layer
     elif layer == 'family-postgame':
         from prepare_family_postgame import prepare as prepare_layer
@@ -61,6 +63,6 @@ if __name__ == '__main__':
     parser.add_argument('--source', type=Path, required=True)
     parser.add_argument('--candidate', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--layer', choices=['abilities', 'mega-art', 'story-aftermath', 'league-access', 'league-completion', 'league-history', 'league-display', 'family-postgame', 'pwt'], default='abilities')
+    parser.add_argument('--layer', choices=['abilities', 'mega-art', 'story-aftermath', 'league-access', 'league-completion', 'league-history', 'league-display', 'family-postgame', 'pwt', 'frontier-travel'], default='abilities')
     args = parser.parse_args()
     verify(args.source, args.candidate, args.output, args.layer)

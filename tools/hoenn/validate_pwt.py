@@ -99,7 +99,7 @@ def enter(pool, cancel=False):
         assert not lib.read8(state + pabi[5])
         assert snapshot() == original
         return
-    for index in range(3):
+    for index in range(6):
         until(lambda: task('Task_HandleChooseMonInput'))
         for _ in range(10):
             if lib.read8(s['gPartyMenu'] + abi[100]) == index: break
@@ -110,11 +110,11 @@ def enter(pool, cancel=False):
         assert lib.read8(s['gSelectedOrderFromParty'] + index) == index + 1
     until(lambda: task('Task_HandleChooseMonInput'))
     assert lib.read8(s['gPartyMenu'] + abi[100]) == 6
-    picture(f'pwt-{pool}-selected-three')
+    picture(f'pwt-{pool}-selected-six')
     press(1)
     wait_yesno()
     assert location() == map_id('JourneyPWTArena')
-    assert lib.read8(state + pabi[5]) and lib.read8(state + pabi[2]) == 3
+    assert lib.read8(state + pabi[5]) and lib.read8(state + pabi[2]) == 6
     leaves = [lib.read8(state + pabi[1] + i) for i in range(7, 15)]
     assert len(set(leaves)) == 8 and leaves.count(255) == 1
     allowed = set(range(8)) if pool == 0 else set(range(8, 16)) if pool == 1 else set(range(18))
@@ -131,13 +131,13 @@ def fight(round_number, test_bag=False, lose=False, forfeit=False):
     until(lambda: (lib.read32(s['gMain'] + 4) & ~1) == s['BattleMainCB2'])
     assert lib.read32(s['gBattleTypeFlags']) & (1 << 14)
     assert not lib.read32(s['gBattleTypeFlags']) & 1
-    assert lib.read8(s['gPartiesCount']) == 3
-    assert lib.read8(s['gPartiesCount'] + 1) == 3
+    assert lib.read8(s['gPartiesCount']) == 6
+    assert lib.read8(s['gPartiesCount'] + 1) == 6
     # Calling field specials during a battle is unsafe. Extract through the
     # battle-mon structure and party level fields; identity is audited in RAM
     # before entering via a separate helper matrix below.
-    assert all(lib.read8(party + i * abi[2] + pabi[17]) == 50 for i in range(3))
-    assert all(lib.read8(enemy + i * abi[2] + pabi[17]) == 50 for i in range(3))
+    assert all(lib.read8(party + i * abi[2] + pabi[17]) == 50 for i in range(6))
+    assert all(lib.read8(enemy + i * abi[2] + pabi[17]) == 50 for i in range(6))
     bag_checked = False
     forfeit_requested = ash_seen = False
     attacks = 0
@@ -147,7 +147,7 @@ def fight(round_number, test_bag=False, lose=False, forfeit=False):
             ash_seen |= lib.read16(s['gBattleMons'] + abi[75]) == abi[69]
             # Stats in this fixture make tests quick; do not modify ROM parties.
             if lose:
-                for i in range(3):
+                for i in range(6):
                     if lib.read16(party + i * abi[2] + abi[101]):
                         lib.write16(party + i * abi[2] + abi[101], 1)
                 if lib.read16(s['gBattleMons'] + abi[102]):
@@ -159,7 +159,7 @@ def fight(round_number, test_bag=False, lose=False, forfeit=False):
                 lib.write16(s['gBattleMons'] + pabi[20], 30000)
                 if lib.read16(s['gBattleMons'] + abi[102]):
                     lib.write16(s['gBattleMons'] + abi[102], 30000)
-                for i in range(3):
+                for i in range(6):
                     lib.write16(party + i * abi[2] + pabi[8], 16000)
                     lib.write16(party + i * abi[2] + pabi[9], 10000)
                     lib.write16(party + i * abi[2] + pabi[21], 30000)
@@ -251,7 +251,7 @@ catalog = json.loads((ROOT / 'tools/hoenn/catalog_metadata.json').read_text())
 ids = {v['name']: int(k) for k, v in catalog['species'].items()}
 for case in ['slot_out_of_range', 'same_slot', 'same_species', 'same_national_forms', 'same_item', 'egg', 'banned_mewtwo']:
     for i, value in enumerate(original): lib.write8(party + i, value)
-    for i, value in enumerate([1, 2, 3]): lib.write8(s['gSelectedOrderFromParty'] + i, value)
+    for i, value in enumerate([1, 2, 3, 4, 5, 6]): lib.write8(s['gSelectedOrderFromParty'] + i, value)
     if case == 'slot_out_of_range': lib.write8(s['gSelectedOrderFromParty'], 7)
     elif case == 'same_slot': lib.write8(s['gSelectedOrderFromParty'] + 1, 1)
     elif case == 'same_species':
@@ -272,19 +272,19 @@ for i, value in enumerate(original): lib.write8(party + i, value)
 # fixture, not eighteen extra battle victories or a simulated championship.
 rosters = []
 for index in range(18):
-    for i, value in enumerate([1, 2, 3]): lib.write8(s['gSelectedOrderFromParty'] + i, value)
+    for i, value in enumerate([1, 2, 3, 4, 5, 6]): lib.write8(s['gSelectedOrderFromParty'] + i, value)
     assert special('JourneyPWTBegin') == 1
     node = lib.read8(state + pabi[4])
     sibling = node + 1 if node & 1 else node - 1
     lib.write8(state + pabi[1] + sibling, index)
     native('JourneyPWTPrepareBattle')
     mons = []
-    for i in range(3):
+    for i in range(6):
         mon = enemy + i * abi[2]
         mons.append(dict(species=native('GetMonData2', mon, abi[7]), level=native('GetMonData2', mon, abi[6]),
                          item=native('GetMonData2', mon, abi[107]), move=native('GetMonData2', mon, pabi[19])))
     assert {m['level'] for m in mons} == {50}
-    assert len({m['species'] for m in mons}) == len({m['item'] for m in mons}) == 3
+    assert len({m['species'] for m in mons}) == len({m['item'] for m in mons}) == 6
     assert all(m['move'] for m in mons)
     trainer = lib.read16(s['sPWTTrainers'] + index * pabi[10])
     native('JourneyPWTFinish')
@@ -293,7 +293,7 @@ for index in range(18):
 assert any(w['ash_seen'] for r in records for w in r['wins'])
 lib.stop()
 result = dict(passed=True, rom_sha256=hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest(),
-              tournaments=records, native_battle_victories=9, native_loss=loss,
+              tournaments=records, native_battle_victories=9, team_size=6, native_loss=loss,
               native_forfeit=forfeit, entry_guards=entry_guards, native_roster_teams=rosters,
               battle_bond_and_hidden_slot_restored=True, physical_receptionist_interaction=True,
               selection_cancel_restores_party=True, between_round_retirement_restores_party=True,
