@@ -1,5 +1,80 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+## Surf, Dive e Waterfall no início; antigos HMs terrestres como TMs
+
+A mãe de Pallet e a mãe da casa do jogador em Littleroot agora oferecem o
+mesmo pacote de **Surf, Dive e Waterfall**, antes de qualquer insígnia. O
+script compartilhado pode ser reutilizado nas futuras famílias das outras
+cidades; a seleção de cidade/casa ainda precisa ser migrada para esta ROM
+nativa. Os diálogos e os eventos seguintes das mães continuam.
+
+Dive fica liberado desde o início, assim como Surf e Waterfall. Continua
+necessário ensinar o golpe a um Pokémon compatível e encontrar o terreno
+aquático apropriado. Whirlpool permanece como golpe de batalha, **não é HM**
+e não foram adicionados redemoinhos aos mapas, conforme solicitado.
+
+Os únicos HMs são HM01 Surf, HM02 Dive e HM03 Waterfall. Os antigos HMs
+terrestres agora são máquinas normais:
+
+| TM | Golpe | Tipo |
+| --- | --- | --- |
+| 51 | Cut | Grass |
+| 52 | Fly | Flying |
+| 53 | Strength | Rock |
+| 54 | Flash | Normal |
+| 55 | Rock Smash | Fighting |
+
+Esses cinco golpes podem ser substituídos normalmente, sem a restrição de
+esquecimento dos HMs. Sua distribuição original passa a entregar as TMs;
+os textos de instrução foram atualizados. Potência, precisão e demais
+efeitos de batalha continuam como na base. Os índices anteriores dos
+50 TMs são preservados. O teste de bolsa da base usa os novos nomes dos
+HMs em vez dos números antigos; a suíte completa de testes da base não
+foi executada nesta etapa.
+
+A entrega da família verifica cada item individualmente, permite retomar
+uma entrega parcial e só marca o pacote como concluído depois dos três
+HMs. Os professores originais de Surf/Waterfall e Steven verificam se o
+item já está na bolsa antes de entregar outra cópia. Não há novas travas
+terrestres nem alteração das missões obrigatórias. Giovanni permanece
+obrigatório contra Archie, após a Silph Co. e seis insígnias de Kanto.
+
+O emulador confere a tabela compilada de máquinas, os tipos de Cut/Strength,
+a classificação de HM, a compatibilidade dos três HMs com Squirtle e as
+duas mães. Exercita também mergulho e retorno à superfície sem insígnias,
+entrega com bolsa cheia e parcial, troca de região e revisitas.
+A nova numeração de HMs exige save novo. A ROM do
+jogador web continua na versão publicada anterior.
+
+## Vitória permanente no Centro Espacial
+
+A flag original `FLAG_DEFEATED_MAGMA_SPACE_CENTER` é temporária: a chamada
+do rival sobre Rayquaza a apaga depois de 250 passos. Usá-la nas travas de
+ginásio e na autorização de Dive poderia revogar o progresso, especialmente
+se Tate e Liza fossem o último ginásio da ordem livre.
+
+Agora a integração consulta `VAR_MOSSDEEP_SPACE_CENTER_STATE == 3`, o estado
+permanente que a cena original de vitória já grava. A chamada original
+permanece intacta; o presente de Dive do Steven evita duplicar o item
+recebido da família. A chamada acontece uma vez; sua flag
+temporária pode ser apagada sem reabrir a missão Magma, fechar o último
+ginásio, revogar Dive ou impedir a aliança contra Archie. Não há novos IDs
+de flags nem mudanças no formato do save.
+
+O emulador testa as 72 combinações de estados, flag temporária e quantidade
+de insígnias, executa a chamada nativa e o presente do Steven, entra no
+ginásio restante e salva/recarrega a flash. A vitória em batalha é simulada
+para isolar esses eventos; o teste não valida toda a campanha.
+
+Na candidata atual passaram **24 testes offline e 108 verificações nativas**,
+incluindo 96 travessias de Surf e 840 equipes de ginásio. As 16 camadas
+reproduzem 355 arquivos byte a byte e verificam 117 conexões recíprocas.
+Esses resultados validam os cenários isolados descritos, não uma partida
+completa das duas histórias.
+
+A orientação do checkpoint do Monte Chimney agora também indica visitar
+Meteor Falls pelas Rotas 114/115, onde ocorre o evento original do meteorito.
+
 ## Poké Flauta e orientação da missão Magma
 
 A primeira insígnia da jornada, em qualquer um dos 16 ginásios de Kanto ou
@@ -167,9 +242,9 @@ própria região; a candidata não concede nenhuma insígnia para abrir acessos.
 
 Surf e Waterfall passam a exigir o golpe no Pokémon, sem insígnias. O teste
 ativou Surf pelo diálogo real do botão A com zero insígnias. Terrenos de água,
-cachoeiras e áreas submersas permanecem; a regra de Dive permanece intacta.
-Esta base ainda não fornece um sistema de Whirlpool no campo: isso exige
-migração adicional e não é anunciado como funcional.
+cachoeiras e áreas submersas permanecem. A camada atual também libera Dive
+sem insígnias. Whirlpool permanece somente como golpe de batalha; sua
+implementação como HM foi cancelada.
 
 A compilação passou. O mGBA entrou fisicamente nos **16 ginásios** sem a
 ordem antiga, verificou os quatro estados antigos de Norman, seis exemplos
@@ -453,6 +528,8 @@ python3 tools/hoenn/prepare_road_access.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_mach_bike.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_yellow_stairs.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_story_access.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_story_completion.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_water_hms.py --source .local/hoenn-multiregion-src
 ```
 
 Na pasta de fonte, compile com os caminhos do compilador ARM, binutils,
@@ -462,7 +539,7 @@ Após editar mapas binários, force sua recompilação com `make modern -W data/
 ```sh
 python3 tools/hoenn/validate_crossing.py \
   --source .local/hoenn-multiregion-src --library .local/mgba-bridge.so \
-  --worldsea --westsea --region-state --east-coast --gym-scaling --campaign-gates --free-access --road-access --team-stories --story-access
+  --worldsea --westsea --region-state --east-coast --gym-scaling --campaign-gates --free-access --road-access --team-stories --story-access --story-completion --water-hms
 python3 tools/hoenn/verify_worldsea.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/world_layout.py
 node tools/hoenn/validate_world_layout.cjs
@@ -479,8 +556,8 @@ anteriores. Ele é específico ao ABI desta base fixada.
    ginásios livres, níveis adaptativos e bloqueio correto de cada Liga.
 3. Migrar cidades iniciais, famílias/Oak, rival do sexo oposto, catálogo/sprites,
    Habilidades Ocultas/Battle Bond, Megas e encontros adaptativos.
-4. Migrar as conexões Sevii, implementar o ticket Vermilion–Slateport,
-   concluir a entrega inicial dos HMs de água, auditar os demais eventos
-   de puzzles e migrar Whirlpool, preservando Dive.
+4. Validar as conexões Sevii durante uma campanha completa, implementar o
+   ticket Vermilion–Slateport, ligar a entrega dos três HMs às futuras
+   famílias das cidades iniciais e auditar os demais eventos de puzzles.
 5. Validar Aqua/Magma, concursos, bases secretas, Frontier, viagens,
    salvamento e campanhas completas, antes de trocar a ROM no player.

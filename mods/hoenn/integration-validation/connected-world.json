@@ -1,6 +1,6 @@
 {
   "status": "experimental_not_full_integration",
-  "rom_sha256": "d81a2e3dff6dbe579ed160e39f4e8a37cd90a647040f35493d0ce749a8c64245",
+  "rom_sha256": "d7c80506da75a32a68c1913d5e06ab6021286c643f608632a37ed274aa878cb6",
   "checks": [
     {
       "check": "regional_flags_and_native_save_roundtrip",
@@ -8,6 +8,19 @@
       "kanto_badges_independent": true,
       "champion_independent": true,
       "trainer_flag_unchanged": true
+    },
+    {
+      "check": "space_center_completion_survives_rival_call",
+      "passed": true,
+      "state_combinations": 72,
+      "native_rival_call_executed": true,
+      "call_does_not_repeat": true,
+      "native_steven_dive_gift": true,
+      "dive_without_tate_liza_badge": true,
+      "archie_permission_preserved": true,
+      "physical_eighth_gym_entry": true,
+      "native_flash_save_roundtrip": true,
+      "battle_victory_simulated": true
     },
     {
       "check": "regional_campaign_checkpoints_and_guides",
@@ -86,8 +99,40 @@
       "all_obstacles_catalogued": 336,
       "surf_waterfall_without_badges": true,
       "real_surf_prompt_without_badges": true,
-      "dive_rule_preserved": true,
+      "dive_rule_preserved": false,
+      "dive_without_badges": true,
       "full_campaign_validated": false
+    },
+    {
+      "check": "three_water_hms_and_family_package",
+      "passed": true,
+      "water_hms": [
+        "SURF",
+        "DIVE",
+        "WATERFALL"
+      ],
+      "terrestrial_tms": {
+        "CUT": 51,
+        "FLY": 52,
+        "STRENGTH": 53,
+        "FLASH": 54,
+        "ROCK_SMASH": 55
+      },
+      "native_machine_table_checked": true,
+      "native_hm_classification": true,
+      "native_move_types": {
+        "CUT": "GRASS",
+        "STRENGTH": "ROCK"
+      },
+      "squirtle_can_learn_all_three": true,
+      "mothers_in_both_regions": true,
+      "zero_badges": true,
+      "dive_without_badges": true,
+      "native_zero_badge_dive_roundtrip": true,
+      "shared_gift_no_duplicates": true,
+      "full_pocket_and_partial_delivery_retry": true,
+      "whirlpool_is_not_hm": true,
+      "whirlpool_terrain_not_added": true
     },
     {
       "check": "first_badge_flute_native_rewards",

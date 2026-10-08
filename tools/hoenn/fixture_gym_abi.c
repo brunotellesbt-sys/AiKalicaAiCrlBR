@@ -4,6 +4,10 @@
 #include "constants/pokemon.h"
 #include "constants/trainers.h"
 #include "constants/battle.h"
+#include "constants/items.h"
+#include "item.h"
+#include "move.h"
+#include "constants/flags.h"
 #include <stddef.h>
 const unsigned journey_fixture_abi[] = {
     sizeof(struct Trainer), sizeof(struct TrainerMon), sizeof(struct Pokemon),
@@ -13,5 +17,12 @@ const unsigned journey_fixture_abi[] = {
     TRAINERS_COUNT, DIFFICULTY_NORMAL,
     offsetof(TrainerBattleParameter, params.opponentA),
     offsetof(TrainerBattleParameter, params.opponentB),
-    TRAINER_PARTNER(2)
+    TRAINER_PARTNER(2), ITEM_HM_DIVE,
+#ifdef FLAG_JOURNEY_WATER_HMS_GIVEN
+    ITEM_HM_SURF, ITEM_HM_DIVE, ITEM_HM_WATERFALL,
+    ITEM_TM_CUT, ITEM_TM_FLY, ITEM_TM_STRENGTH, ITEM_TM_FLASH, ITEM_TM_ROCK_SMASH,
+    sizeof(struct TmHmIndexKey), offsetof(struct TmHmIndexKey, itemId), offsetof(struct TmHmIndexKey, moveId),
+    sizeof(struct MoveInfo), offsetof(struct MoveInfo, effect) + sizeof(enum BattleMoveEffects),
+    TYPE_GRASS, TYPE_ROCK
+#endif
 };
