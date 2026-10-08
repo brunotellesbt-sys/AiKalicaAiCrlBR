@@ -105,6 +105,12 @@ lib.write8(s['gPartiesCount'], 0)
 initial_species = event if options.event_form else froakie if options.pre_evolution else greninja
 expected_ability = bond if options.event_form else [torrent, protean, bond][options.ability_slot]
 assert native('ScriptGiveMon', initial_species, 100, 0) == 0
+# Keep the ordinary Gen9 obedience rule: train an owned low-level gift,
+# rather than introducing a newly received level-100 Pokemon before badges.
+lib.write8(scratch, 5)
+native('SetMonData', party, abi[96], scratch)
+assert native('GetMonData2', party, abi[96]) == 5
+assert native('GetMonData2', party, abi[6]) == 100
 assert native('GetMonData2', party, ability_field) < 2
 set_slot(party, options.ability_slot)
 assert native('GetMonAbility', party) == expected_ability
@@ -114,6 +120,7 @@ set_slot(party, 0)
 assert native('LoadGameSave', 0) == 1
 step(30)
 assert native('GetMonData2', party, ability_field) == options.ability_slot
+assert native('GetMonData2', party, abi[96]) == 5
 
 warp('PewterCity_Gym_Frlg', 4, 3)
 script(b'\x05' + struct.pack('<I', s['PewterCity_Gym_EventScript_Brock']), 30)
@@ -175,6 +182,7 @@ result = dict(passed=True, rom_sha256=hashlib.sha256((source / 'pokeemerald.gba'
               ash_after_ko=seen_ash, normal_species_and_ability_restored=True,
               ash_rendered_at_action_menu=ash_rendered_at_action_menu,
               event_form=options.event_form, pre_evolution=options.pre_evolution)
+result['fixture_met_level'] = 5
 suffix = 'event' if options.event_form else 'froakie' if options.pre_evolution else 'slot-' + str(options.ability_slot)
 (args.output / ('abilities-' + suffix + '.json')).write_text(json.dumps(result, indent=2) + '\n')
 print(result, flush=True)

@@ -800,3 +800,41 @@ python3 tools/hoenn/validate_abilities.py --source .local/hoenn-battle-bond-src 
 ```
 
 Veja [STATUS.md](STATUS.md) para as etapas restantes antes do lançamento.
+
+## Arte de Megas e regressões na candidata de batalhas
+
+A camada `mega-art`, depois de `abilities`, completa frente, costas e ambas
+as paletas de Mega Garchomp Z. Os quatro arquivos vêm de uma revisão fixada,
+com verificação de SHA-256 e Git blob; não altera atributos ou distribui pedras.
+A auditoria compilada passa para as 97 formas Mega. O diagnóstico original
+continua em `mega-validation/base-catalog.json`.
+
+A nova candidata usa `.local/hoenn-mega-src`. Clone a árvore preparada de
+habilidades, aplique a camada e compile usando o toolchain já documentado.
+Os relatórios dessa ROM ficam em `mega-validation`; não substituem a
+proveniência dos testes das duas bases anteriores.
+
+```sh
+python3 tools/hoenn/prepare_mega_art.py --source .local/hoenn-mega-src
+# Compilar a nova árvore antes das validações nativas.
+python3 tools/hoenn/verify_abilities.py --source .local/hoenn-battle-bond-src --candidate .local/hoenn-mega-src --layer mega-art --output mods/hoenn/mega-validation
+python3 tools/hoenn/audit_megas.py --source .local/hoenn-mega-src --output mods/hoenn/mega-validation/catalog.json
+python3 tools/hoenn/validate_sprite_codec.py --source .local/hoenn-mega-src --library .local/mgba-bridge.so --output mods/hoenn/mega-validation
+python3 tools/hoenn/validate_palettes.py --source .local/hoenn-mega-src --library .local/mgba-bridge.so --output mods/hoenn/mega-validation
+python3 tools/hoenn/validate_campaign_matrix.py --source .local/hoenn-mega-src --library .local/mgba-bridge.so --output mods/hoenn/mega-validation
+```
+
+Executar `validate_megas.py` com os mesmos parâmetros de árvore, biblioteca e
+saída para cada `--case`: `charizard-x`, `charizard-y`, `rayquaza`, `greninja`,
+`garchomp-z`, `no-ring` e `wrong-stone`. Executar
+`validate_battle_transitions.py` para `mega-switch`, `mega-faint`, `ash-switch`
+e `ash-faint`. Reexecutar os cinco casos de `validate_abilities.py` acima,
+substituindo a árvore e saída por esta candidata.
+
+Os testes usam Pokémon de nível 100 recebidos em nível 5, para respeitar a
+regra nativa de obediência; fornecem os itens somente na memória da equipe de
+teste. Transformações, nocautes e trocas acontecem pelo menu real. Não se
+forçam resultados de batalha. A matriz de missões usa flags de estado inicial
+para conferir decisões ARM, sem representar campanhas jogadas.
+
+[Inventário, resultados e limites](MEGA-STATUS.md).

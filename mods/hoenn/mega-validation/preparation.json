@@ -1,0 +1,44 @@
+{
+  "status": "mega_garchomp_z_battle_art_candidate",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "upstream": {
+    "repository": "rh-hideout/pokeemerald-expansion",
+    "commit": "6057b187f946094d614e9c34bc12731ea6a5b7bb",
+    "directory": "graphics/pokemon/garchomp/mega_z",
+    "files": {
+      "front.png": {
+        "git_blob": "baa227edef48d44c47a8c7591a3bbe3c9aff3f8e",
+        "sha256": "8bb8f8df14a0a11ea589865633b363e67a73570d7d41e2d96ba25f324734bb65"
+      },
+      "back.png": {
+        "git_blob": "7a18546f013581144afb8986fb427aa4b47ad5dd",
+        "sha256": "6305f64ffc6bf397567cfa81c69055ee629e639a6c1c1a6ae0aa8d5be8388d6d"
+      },
+      "normal.pal": {
+        "git_blob": "afa7c2b3506dd2f5e6389423a105594a262656b9",
+        "sha256": "444c01783407bea6df27e91000992cd3d00d1d65616ce0f2999a886b06380c51"
+      },
+      "shiny.pal": {
+        "git_blob": "2d5ad192dd02b24ba51a243fe3a9cdf4bbe3f1d0",
+        "sha256": "e12a1d2102f57a6d0154ade6ac6f177b910a00dfd3dcf65a203b0db5af8b0250"
+      }
+    }
+  },
+  "stones_distributed": false,
+  "input_sha256": {
+    "src/data/graphics/pokemon.h": "54295dc79833b4f79411ddd1ac59daa8de567bcd8f63d7631913cbd077489b31",
+    "src/data/pokemon/species_info/gen_4_families.h": "92665c22046a3c563818753394f4f0798b21d5f59d1e7c4467d26f371c0407ad"
+  },
+  "original_sha256": {
+    "src/data/graphics/pokemon.h": "54295dc79833b4f79411ddd1ac59daa8de567bcd8f63d7631913cbd077489b31",
+    "src/data/pokemon/species_info/gen_4_families.h": "92665c22046a3c563818753394f4f0798b21d5f59d1e7c4467d26f371c0407ad"
+  },
+  "prepared_sha256": {
+    "src/data/graphics/pokemon.h": "988a7d2366a107da5f6623b1ca3319eea75254bacfdc412b7115c867c81ac388",
+    "src/data/pokemon/species_info/gen_4_families.h": "d74d847f919d3ceaf6c94deac2d1341bd96481e222618e2ef0b28ff7e796ba0b",
+    "graphics/pokemon/garchomp/mega_z/front.png": "8bb8f8df14a0a11ea589865633b363e67a73570d7d41e2d96ba25f324734bb65",
+    "graphics/pokemon/garchomp/mega_z/back.png": "6305f64ffc6bf397567cfa81c69055ee629e639a6c1c1a6ae0aa8d5be8388d6d",
+    "graphics/pokemon/garchomp/mega_z/normal.pal": "444c01783407bea6df27e91000992cd3d00d1d65616ce0f2999a886b06380c51",
+    "graphics/pokemon/garchomp/mega_z/shiny.pal": "e12a1d2102f57a6d0154ade6ac6f177b910a00dfd3dcf65a203b0db5af8b0250"
+  }
+}

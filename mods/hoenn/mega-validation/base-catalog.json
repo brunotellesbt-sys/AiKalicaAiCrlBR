@@ -1,0 +1,3366 @@
+{
+  "passed": false,
+  "rom_sha256": "519630e1f931761c4dc00d389d458feb02229e9a5ffa0546a2076420fb206b9b",
+  "enabled_mega_forms": 97,
+  "reachable_mega_forms": 97,
+  "missing_mega_targets": [],
+  "incomplete_assets": [
+    {
+      "id": 1558,
+      "species": "SPECIES_GARCHOMP_MEGA_Z",
+      "missing": [
+        "back",
+        "front",
+        "palette",
+        "shiny_palette"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "species_id": 3,
+      "species": "SPECIES_VENUSAUR",
+      "target_id": 906,
+      "target": "SPECIES_VENUSAUR_MEGA",
+      "requirement_id": 292,
+      "requirement": "ITEM_VENUSAURITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "53afce251072b4ea4e96a2de13261b609140874e6db360d32516d892e4b1829b",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "ebec5c9b9970dbdf832acfea29ed934d5dd14d9d07c111a1691b32051bd32194",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "26b9f8ee24cd9f5a24918ac11b56868e9df9883d2fc2948c084f918fcf5d47c8",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "6f36dc4f951559a68668f585345e77da7cdd20aa4ded28030bf0694a3d1c84ce",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 6,
+      "species": "SPECIES_CHARIZARD",
+      "target_id": 907,
+      "target": "SPECIES_CHARIZARD_MEGA_X",
+      "requirement_id": 293,
+      "requirement": "ITEM_CHARIZARDITE_X",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "c3b4b5250fe0ae10aa244a7c22df5c6b26244ad985ce4281a66cf83bce380f89",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "9e80e2819d6e98de9efddbd4392f9e7373236e70ff906b87a5feaa17abe2e795",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "2ac92a3aeb0c4f8013fb6410c0ea3493781445907b6f5d5c0fe4d695b8ed01e8",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "b7583c7aa048b800fe15b75c9a75dc815986eac543b61297d098851a7f50eb53",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 6,
+      "species": "SPECIES_CHARIZARD",
+      "target_id": 908,
+      "target": "SPECIES_CHARIZARD_MEGA_Y",
+      "requirement_id": 294,
+      "requirement": "ITEM_CHARIZARDITE_Y",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "599b9cfd2f851a1b85eca27ca50c0e2a018c525a5d5ce4d908af3f1fff58f484",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "9fa6a0489bbaedeb5ffffd08245d987323d4843fb3c8588e494400b3f9e7fede",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "16783826c25bcc33d87a0219a073e7813ea042ed02e7788437bba687818a68b7",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "1329c24088d1254438a86c522a49e16cd576c2856e7734d1b24d157660d1a5c4",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 9,
+      "species": "SPECIES_BLASTOISE",
+      "target_id": 909,
+      "target": "SPECIES_BLASTOISE_MEGA",
+      "requirement_id": 295,
+      "requirement": "ITEM_BLASTOISINITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "69568ee4c1a24e597dfecd7262342e555ac1c07829558c8b0c2e8bb33833a846",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "7f2f78469ffcf98259a35064fcf7b59cc05c55cf626d44b09aaba655445fc090",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "5aefda3f40078b7534b2d242548c2271ec287aa08eb4b2981f3a512eab36b876",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "1b4182d464d266526fefabdc1d0c256771dac570d53dd629b06a44e1a59d12e4",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 15,
+      "species": "SPECIES_BEEDRILL",
+      "target_id": 910,
+      "target": "SPECIES_BEEDRILL_MEGA",
+      "requirement_id": 296,
+      "requirement": "ITEM_BEEDRILLITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "07097142abe6446a249c0e2e50af2fd7896556e7ee0c670708cd7d101f4c2916",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "4fdbb073cce33e90f2a2afd01b66d4d97c7c417b33678a3b9e223643cb144b4b",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "a842d59ffe255ef8e17d6a8068840cabb7f7cd532b33c9e52f349f36a9bc1bcd",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "fbd6c246779696e75acf7a9fc627ed2cc400606dc344ebe3f545b8658ffad9b2",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 18,
+      "species": "SPECIES_PIDGEOT",
+      "target_id": 911,
+      "target": "SPECIES_PIDGEOT_MEGA",
+      "requirement_id": 297,
+      "requirement": "ITEM_PIDGEOTITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "985b2abf30ab61234e114a546ed572134fb80cac149f33bcbef13bb8256d6d78",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "71a68de2b941920540856d73f45d1a1915ebd645832378bd9248c1c8f4f3965c",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "993b7486f6e3666abec05b1bc0cfbbf86ff3b4c23bb3eb5708a73f589d90c834",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "8192dede0d6866e4c470869ce9a2b053e0ff0194fe5c92a318aa14e3f9d02def",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 26,
+      "species": "SPECIES_RAICHU",
+      "target_id": 1553,
+      "target": "SPECIES_RAICHU_MEGA_X",
+      "requirement_id": 858,
+      "requirement": "ITEM_RAICHUNITE_X",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "625a41373c8859129de5e01017e1852d0c6e6b70eb17cf60cf2639357d56234d",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "f3e23433494b533cf93aaf864a3db4a8decbc1bc24d41b8130f35919b03dda28",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "9054c300ba43d00aaba1465663d0600917a3181b47f471cc7c27f7a77d36b0c7",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "d9fa3dcd833b6c7a745f0a8305a11c7b922a1d8e754cbf77398b7a699216b6c5",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 26,
+      "species": "SPECIES_RAICHU",
+      "target_id": 1554,
+      "target": "SPECIES_RAICHU_MEGA_Y",
+      "requirement_id": 859,
+      "requirement": "ITEM_RAICHUNITE_Y",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "dfd898bfef5211770663b9fc2be31c9bbe39087475966118de10f8c834266023",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "a0e742f167a4f2ccb32c6cbeebf9e9d4c668bb87e5c90175e11bf3053c5a89f0",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "674860b94c60ba04f4745c1b47065051b229ff6cddc0b77e859b60234a901d86",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "5531a9d6151195c5056a1d1696432c13f29330b4ec341762597bb7dbc01ba957",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 36,
+      "species": "SPECIES_CLEFABLE",
+      "target_id": 1524,
+      "target": "SPECIES_CLEFABLE_MEGA",
+      "requirement_id": 829,
+      "requirement": "ITEM_CLEFABLITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "fdb90901e0e7992ca4862297dbc725c82d7197adb98d3017f7ea82252055b13c",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "f33159e56a5965e0e4e336aeb6f7272afac5890bc8261d692fa51ff7212ac639",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "61eebe5833dde47ad465cb0e0c0d4a41526ceb4c1748da53f26752a2abe3e0cd",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "6c95f8c079499ffbbd7a15895d58303d4446d75769e2cd2ad48a55b72ddd1c39",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 65,
+      "species": "SPECIES_ALAKAZAM",
+      "target_id": 912,
+      "target": "SPECIES_ALAKAZAM_MEGA",
+      "requirement_id": 298,
+      "requirement": "ITEM_ALAKAZITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "6ec2bbd36646747d47f0e566298948c2be996323f34d19a015ae77462e61ff54",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "5ea907e7502365753165a640262d39fd1d275babb4354212953bf8e9701fc11f",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "1f064b31daa38ac39db8f3878641003179a18a74f971bac5669f1e29e3f5e350",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "4ade23ad51062787d7a42216c2b019e2bccca6519b586657cb9da2ade8914a97",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 71,
+      "species": "SPECIES_VICTREEBEL",
+      "target_id": 1525,
+      "target": "SPECIES_VICTREEBEL_MEGA",
+      "requirement_id": 830,
+      "requirement": "ITEM_VICTREEBELITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "34037720cce5c53386a4b3a15ffc1ad5b1f6fffc1a521be0d7230bf027bab6f8",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "5276095e58ec7dc7119a14d7ae80ef61d5d5ee0aed89b5b473a80a48afe1c165",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "50b8ecbc98c46ea88fd333679043c8892ff18ecd3f031980e7bbc5b481261a2e",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "bc2274dc6261632958bab6974aff2fd489161fe61e84a82ae2631b4b80486b5e",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 80,
+      "species": "SPECIES_SLOWBRO",
+      "target_id": 913,
+      "target": "SPECIES_SLOWBRO_MEGA",
+      "requirement_id": 299,
+      "requirement": "ITEM_SLOWBRONITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "48f05f3bd64c356d2d495a7912541cde3f2f507205e684a121e5f31a0abcabea",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "efd6a6db3c78bffd294599180365547d1467c986ff9f86e6dcc44fc5c4abe7aa",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "567e03afba4b0688a85df5a562646749dcae388e05fc9cd72b4c533d8a5f7897",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "1890d1b52739f94fd582b617a0ae996a93f6d9b3a23c4615dc5f886cb65271b9",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 94,
+      "species": "SPECIES_GENGAR",
+      "target_id": 914,
+      "target": "SPECIES_GENGAR_MEGA",
+      "requirement_id": 300,
+      "requirement": "ITEM_GENGARITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "f29ac4a161a87832bb8d3a7ddb15658c8279ba227b71572664aab2bb5c37b935",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "50ffed05a08f6bbfcbb085108a85f8c8318a2d25160567600c3e1369cd2c69df",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "2aac1277e2b8f47c209ee0a3d411c6dce8a4ad1ebf9986f6370c7371f915a422",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "7ffa442d0774e69289eeb18b4b1619fac0368e2f1f06b52237e1a13f9f6d0646",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 115,
+      "species": "SPECIES_KANGASKHAN",
+      "target_id": 915,
+      "target": "SPECIES_KANGASKHAN_MEGA",
+      "requirement_id": 301,
+      "requirement": "ITEM_KANGASKHANITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "f120b594c1608d4bd123e913e43e0592ce9b6ff417e930b35f79cee103c40fe6",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "da4de24e5a6f0756fce0281a87cb4abb2e5de0c9de2bb458545fcf783b9f2287",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "4e5bf7a142011de2c85d745ff9c0a58aaf2d5b0d7ee2ee5e4295ee04610d4f8a",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "9954f73944bb1eb09c973758fc9f2ade92d55c4a817d418f936e3dc96273b4e7",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 121,
+      "species": "SPECIES_STARMIE",
+      "target_id": 1526,
+      "target": "SPECIES_STARMIE_MEGA",
+      "requirement_id": 831,
+      "requirement": "ITEM_STARMINITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "9496c7b7bdc7f8506e7a21e613e6cb6053b09b462268a9fb181578bf42da9a75",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "348e5c93c907ad74def50b54c48f47c9512802a179bbae0f04ce303744f5486d",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "9fcbc216f90ed41faf5bb586dce80918f5de55a7b8b5708ab7a92809779d2e9e",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "db11e9007ec688cedf12e511348e95b260905e1c8d6a3e943130e2a4d17dc04a",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 127,
+      "species": "SPECIES_PINSIR",
+      "target_id": 916,
+      "target": "SPECIES_PINSIR_MEGA",
+      "requirement_id": 302,
+      "requirement": "ITEM_PINSIRITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "e1fa0da5f2c9cef2e270738d1dd71b09e7302b141d38d833f09d988968b3dd1f",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "eb212866c645d30a609bfd17f744d6986d4c869d9871aec298421dd8b3bd9462",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "2125ab640fa5629c79492b6c596eb78285307de3e9d1da42b272e5c4f5af6cdd",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "f0c56fbe9ead16f0828f48aa3ceb16fd5ebe1821c3e1e86cdf49af0e5b7cedbb",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 130,
+      "species": "SPECIES_GYARADOS",
+      "target_id": 917,
+      "target": "SPECIES_GYARADOS_MEGA",
+      "requirement_id": 303,
+      "requirement": "ITEM_GYARADOSITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "8277d403703f45ff943ce7f271a6be205ba3b8be50a7cc1af656524434149ecb",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "3cd2a69fc90fb51ae1ad46c7fc65c81da167020e21fe831e51d17865a83c10a9",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "b539168a8c8d8fc9e2158eb05a0e6565cb90358ad653832b2aec2714062cc050",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "807a2466a304d12a75fe64808f52624efc281afec6729ac7195da3128529563f",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 142,
+      "species": "SPECIES_AERODACTYL",
+      "target_id": 918,
+      "target": "SPECIES_AERODACTYL_MEGA",
+      "requirement_id": 304,
+      "requirement": "ITEM_AERODACTYLITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "9ccf60ffadc8568129eef189f93a46a0e1f0269077b93587910b4ae6c107f695",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "696c67ab6b7f0f2cd6c81c4fadb166bd9920e6fbc009d9618a9aec792f789909",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "d9c1d3098798d4c7ed69e15edf3a01dba4b370287d67bc9782e99ab1e9f2baaa",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "36aa77c6721f4f68fb627c8c6377546088ee2e7ba8689d558a8283dbe5daaf72",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 149,
+      "species": "SPECIES_DRAGONITE",
+      "target_id": 1527,
+      "target": "SPECIES_DRAGONITE_MEGA",
+      "requirement_id": 832,
+      "requirement": "ITEM_DRAGONINITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "09000ee7323b92f1043f71c16e996a61177f436f59a5af15ba9a046daefb0fcb",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "cc969d9d55730734ac7487e36a1f7e0a880ef6c03f604ac227cd757a1ca8e444",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "38fff7183cb8b8ab70b86f6e0507f5095aa1ebb9a028512b81d1acfd8a60ee0d",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "d5071a2fcdeee3829630cee9ec4edd0c0ff2fbbe3e640b639e819a8be2d870ce",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 150,
+      "species": "SPECIES_MEWTWO",
+      "target_id": 919,
+      "target": "SPECIES_MEWTWO_MEGA_X",
+      "requirement_id": 305,
+      "requirement": "ITEM_MEWTWONITE_X",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "782b0fa0ec24dc5adabfce23968522cdd28074cc6839441a3842839cb5de1d8e",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "1bad6fd5e87ffb99a7134fa55609c3465250365b37ca39d468ece70239f2ab74",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "1fe2d68d9ede5b4899d99449d2af09a09430ec9dd2b82a920d9de7d869f8d766",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "71688a470325e45f489dc6a620e8644fc534ac867ea7c339b67ab5d0a6a63a72",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 150,
+      "species": "SPECIES_MEWTWO",
+      "target_id": 920,
+      "target": "SPECIES_MEWTWO_MEGA_Y",
+      "requirement_id": 306,
+      "requirement": "ITEM_MEWTWONITE_Y",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "0c00fc8b4307daa773fbd9d39240be2e6b78679467b59e2c1e2e7a3132f56ff6",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "8088f38e0e1d49dcc6e190cdb89ee2b2345fc7f0d7533ca1f711f2e73561ae23",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "ae522a7d68d7d6afd3f34511239db3dd8f6175c8be484c72dd097e984ca908f5",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "d3f4a0687fa5d08f4897594f71e8721f4baa6a7f5ab66c05680397e20e4ca9e6",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 154,
+      "species": "SPECIES_MEGANIUM",
+      "target_id": 1528,
+      "target": "SPECIES_MEGANIUM_MEGA",
+      "requirement_id": 833,
+      "requirement": "ITEM_MEGANIUMITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "c3d843a0a01fb7f0ffa4bf11c5a4bb5b93918b923aacf69e8eb9f977815ade90",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "e3763b29504a6e7ddc7f9c9146f3b199069a601d75a529777c14f7c2be91bd83",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "901e9335494da6a20c79491a3562e83c15691ddaecbf98c12651d8add2c6f506",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "9ec8dfc5c22a9b8af5b81a779c7a5283b48d26720fe7f1388e3cf999feeee5fc",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 160,
+      "species": "SPECIES_FERALIGATR",
+      "target_id": 1529,
+      "target": "SPECIES_FERALIGATR_MEGA",
+      "requirement_id": 834,
+      "requirement": "ITEM_FERALIGITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "86c078ee459baf34adc13759865d9b3b461c11e29cf2a267f7c961cc50b4fb5a",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "d5ce6c7642610c630c65ecc7268a5d54de9168d65681a49d83b84545de9fab8c",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "76aab7a57d241b1342b4d082bff22e27bd6a3087385880b09a138ada6c944159",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "f329332185c2ed453b56db889ce06a5aa6e51782e1dd1cd2869e078ee0b2944e",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 181,
+      "species": "SPECIES_AMPHAROS",
+      "target_id": 921,
+      "target": "SPECIES_AMPHAROS_MEGA",
+      "requirement_id": 307,
+      "requirement": "ITEM_AMPHAROSITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "147cf6dd6ff83442b9390580b921ebec308f2ea80c439b75b1a29e5925e0b282",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "00f8253ef5a8594570041d9cadafde1d0a7e39decb15741f99831aa737c62bb2",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "71435340b3f5648f51fdd2e3565d8c9e11041df578270d770c328e00ed089820",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "84c5bf57a810f091b7a9ddd3085cd60629aab5d10a3ccf01e9a0d905bc9ebefd",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 208,
+      "species": "SPECIES_STEELIX",
+      "target_id": 922,
+      "target": "SPECIES_STEELIX_MEGA",
+      "requirement_id": 308,
+      "requirement": "ITEM_STEELIXITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "6a29baf8af87a94396bdc9fbb49e701bcb65c476c5d8d4cf4990bfeadfc45082",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "1041b7d4d8ef187c87d62230d61d256bd2a14ddd71564487d9eb38e1d394fdcc",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "255eb744736253643cab506b156e866cfe05bc0059cd6486a39dc05e874b15a0",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "dc453608f05d792a7ec9388e78eb91a55266c7a4cf9940c9ec9efabf1c6b774a",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 212,
+      "species": "SPECIES_SCIZOR",
+      "target_id": 923,
+      "target": "SPECIES_SCIZOR_MEGA",
+      "requirement_id": 309,
+      "requirement": "ITEM_SCIZORITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "fd3793e0cea8c30781cb031db053a1ad6bec6f5222efc8ee309dab7bba454e4d",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "f8d6dc35d3c53e6c315d0ca8ab9b34a5114115fb9362ea9d245995f474e4e787",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "7c2fc78e0ac03f9665001d23f8ddf1922af1177a50d32a110f7ae2b67c971d10",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "771896606f48a440be2ae70f1e21706c820911e784ed0ef8e6831f4bd8c1573e",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 214,
+      "species": "SPECIES_HERACROSS",
+      "target_id": 924,
+      "target": "SPECIES_HERACROSS_MEGA",
+      "requirement_id": 310,
+      "requirement": "ITEM_HERACRONITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "869907b41d70f26c8d4f139c80388b325e17c488bb0b5ecccde9f05325ab366e",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "73685bf4ab73efe0cb42df3e234da84a3549236a234a17ff970c8dc89ae27e7d",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "c92a1a8025ca6187287aad87f7e964e728d6a63a1e105eccf430dd5a8a6ce311",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "2c3c58c325a6bafbc179fdde8755dc72e91a14f993de57288cc891f230c564c8",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 227,
+      "species": "SPECIES_SKARMORY",
+      "target_id": 1530,
+      "target": "SPECIES_SKARMORY_MEGA",
+      "requirement_id": 835,
+      "requirement": "ITEM_SKARMORITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "5002c8ab62d42f9dbb3d024e6ef251ffd322b015629713d366d4e8aaf2676bac",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "39075d6a39018fae95373f6fb789fd24969c7ac558e4668221b91751add48c8e",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "bc71548fc4ba8a9e0a9968fcae43bf3b8b4de8801b5bc0c9b5aa74d65a1fba9c",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "c596e2d07939fc307c62651866e7a8e07aade27a1d74f046a632d08077c3eac9",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 229,
+      "species": "SPECIES_HOUNDOOM",
+      "target_id": 925,
+      "target": "SPECIES_HOUNDOOM_MEGA",
+      "requirement_id": 311,
+      "requirement": "ITEM_HOUNDOOMINITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "916514493333d1ae6974f7f0c10eebac5a75477251ddfc6e78ad189297242001",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "01bd069983184429e1c5115b7e37fc1c3c1c5c3119cea992fc3fd757ecde9b21",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "227642d0d67d1277c22ec0f986092e7274cce510aeb4b5ccce8e01bc1ae1e02a",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "fe58c6713242721c8bcd07e2aa0abfa097ae196887408e88fb037634315a213a",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 248,
+      "species": "SPECIES_TYRANITAR",
+      "target_id": 926,
+      "target": "SPECIES_TYRANITAR_MEGA",
+      "requirement_id": 312,
+      "requirement": "ITEM_TYRANITARITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "257cb057c008dcc2fc2527ff2f9e32bbab13de3d4f0d7ed9eae981a9904a1f8f",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "8715951b31d97c5ed0778259c9532efc32033c6f689b8ef3a4b71ed37c25996b",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "1511f54ebe4663c8e311b216db27cd683eecdcf9158c27d7c722b0bc1dacea34",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "bcc70a46874b9c15d6a261348afdc63ea9896b5829ce78e779281db476a44df3",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 254,
+      "species": "SPECIES_SCEPTILE",
+      "target_id": 927,
+      "target": "SPECIES_SCEPTILE_MEGA",
+      "requirement_id": 313,
+      "requirement": "ITEM_SCEPTILITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "f29db94d9d0f50f3991a364d61f132ecc9c6b0b423e555b24528fb3a618429ba",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "2bbbd847904b75ff62096a3b650d899b83c9472c5882cb6a856527d228bd6ba1",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "e445700fd57e0170fc59abaaac4e9d880bc2c8c04b4a70a2931af73f5364c2c3",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "b403920f65dd0c2223a8729e00a783d4aa1a18a2582d98ba7ee9e4fd9b236e56",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 257,
+      "species": "SPECIES_BLAZIKEN",
+      "target_id": 928,
+      "target": "SPECIES_BLAZIKEN_MEGA",
+      "requirement_id": 314,
+      "requirement": "ITEM_BLAZIKENITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "6f19060987d81ef65796cf7dbdd0dee8ef9c58aec1324e0661fa609be830b52e",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "ba8b7cf3c8bc056a541077ff565ed5d51078f2f7e1bcde9c22b4432770724661",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "a49d253be0d3d8d7c98c7a18a9761671db97f69904a3e8034698ea5ed0c251a9",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "630864452d544c8e8a568e57d9f3a52ede9ef4d69ba2540bb059d8709f02cbb0",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 260,
+      "species": "SPECIES_SWAMPERT",
+      "target_id": 929,
+      "target": "SPECIES_SWAMPERT_MEGA",
+      "requirement_id": 315,
+      "requirement": "ITEM_SWAMPERTITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "d25b4bb538025e9300bbea25938b271eccc5c29f34291c663545aef73974e329",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "cd6915d7d212d05ef581b55297b7da4be1392135c2d42b94b7540dcc80117306",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "328f89e32d29748577fb145d7c9c609b58ad58fbf4b6918d2043ccbf84236478",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "1c16ffc191d3120bc66aa02fb900ebc927c31c37af37dc7b9b06b4e2393cec88",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 282,
+      "species": "SPECIES_GARDEVOIR",
+      "target_id": 930,
+      "target": "SPECIES_GARDEVOIR_MEGA",
+      "requirement_id": 316,
+      "requirement": "ITEM_GARDEVOIRITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "bc88b96cf995801742da27ba96f12a6004c9da874b871f356674c36d4394f9f8",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "82d761e7fd8cd4d2b78dfacff5c7121e5ccdcf1591281d54e5ee87d5b9abb496",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "d968b92b51ca1a1439543e6c2d5bfe86a5045e8465182b8b28724245323ed513",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "7b0eabfa3f4e6180b97f80862f436596fc0ac6385cbdd3a569a4291599d0b92c",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 302,
+      "species": "SPECIES_SABLEYE",
+      "target_id": 931,
+      "target": "SPECIES_SABLEYE_MEGA",
+      "requirement_id": 317,
+      "requirement": "ITEM_SABLENITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "9444acb9bd37fd9e045b31e87168eab5c806ccbecfdb0c0efe2a49bdff8b16bd",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "6fca41dcd8618540dd2312cffac3a8c1e5430e1804ac4bd4dca7f0114389d2d7",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "7f62474d6841b316c348aa15725bbc0d771243dbe4dd9c9eb8d3864096b6028f",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "a6b2413df0f8e45667c4818df92dad84cb870bb0422ac83a73df0b0e305db320",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 303,
+      "species": "SPECIES_MAWILE",
+      "target_id": 932,
+      "target": "SPECIES_MAWILE_MEGA",
+      "requirement_id": 318,
+      "requirement": "ITEM_MAWILITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "320406d825dfed7a7a93bb7d4ac491cbdae0e377b0c6328833e239aae720115d",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "a9984aae1ed306d1d56e07df9b8dbc2b289d692833c0768d760590439338663f",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "083dc61c6e81e2f6fb3623f4ab77461eafa895e094176f4cfe88aee1ebe1d59f",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "246014a952b55525edb3240de18ff1f810c48606bbf08436d61acdb805a5b0f0",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 306,
+      "species": "SPECIES_AGGRON",
+      "target_id": 933,
+      "target": "SPECIES_AGGRON_MEGA",
+      "requirement_id": 319,
+      "requirement": "ITEM_AGGRONITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "253c9a61c8c59cf55a74ff0a34b60b42083eea532062e70806e2373000a18780",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "546aa024672e5433b0ebdc5a37f0dcb33eeb70a82b732734717d94ddafb82481",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "a914ed2a1f0e3d48e00a057885703fecaa747d55317bb4e18cdb8a5fa86dd556",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "ba3cbb854b6b821d67b45278d42e45c71af2873224f0c4866351ff2c545c65e3",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 308,
+      "species": "SPECIES_MEDICHAM",
+      "target_id": 934,
+      "target": "SPECIES_MEDICHAM_MEGA",
+      "requirement_id": 320,
+      "requirement": "ITEM_MEDICHAMITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "46c3ab535779105f026b58f68d7b90f59d72e33b170d4fde8d18d0099787c17e",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "23e5ae6c715653ad15f3f9c97dd8a99b26cdb763b4d7e3f4da58bee42b0f7c08",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "afecca19225b193c0f04fbffb9c825cfefd11430fff948ffb4632bb13e62f76c",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "0dd68020909177971ddfafb78963d52740de143d3f75b2202f15c502d5b7bc45",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 310,
+      "species": "SPECIES_MANECTRIC",
+      "target_id": 935,
+      "target": "SPECIES_MANECTRIC_MEGA",
+      "requirement_id": 321,
+      "requirement": "ITEM_MANECTITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "2337f091abdf58b43879de379d532bc90e5d5522381708e344c3a4c3b92dcb89",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "cc7ba929d525592d72bc5bfa0ba44451b4f9ffcf50f50ef39b2f2210e26e4e01",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "39a021923ee15943a0da7b901ae94ea4c7f4af3332f40f0bc0b00aaa9c9631ff",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "33be26e6ccd9bc1420c16ffa0ba1e1e1f171763e2c12a64414505f34182617d7",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 319,
+      "species": "SPECIES_SHARPEDO",
+      "target_id": 936,
+      "target": "SPECIES_SHARPEDO_MEGA",
+      "requirement_id": 322,
+      "requirement": "ITEM_SHARPEDONITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "ead0d747ee0445510f67a74f7b09c9eea3bcf0aa619e140e56ea06c1355e55f2",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "556cdc1d03c1de7b670aa20016991cbf95f0fe349e8740ddfdf6a18c62226ddc",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "daecc2f57f15bfec5eae9ab11fc7031a4ecf7da9adcf1e2f2bc0c779aa4e0b91",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "e9b3360ec845464ee7663b3945f950989e6f3d474d1a0786d4fe55c2cf1748e6",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 323,
+      "species": "SPECIES_CAMERUPT",
+      "target_id": 937,
+      "target": "SPECIES_CAMERUPT_MEGA",
+      "requirement_id": 323,
+      "requirement": "ITEM_CAMERUPTITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "7787dad60aaff7bc5351e75935a8685fb862b106783941021573e284dba40bb5",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "7cf353abd00bd4699066db8a7713cd65e1251179d8338a90e53f1a8ce9acf34d",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "3b6d4b589257273223ad1bedcc4d401972c8b3c08f24997af88d5c9f80bcb63e",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "12c3fce5b76101ab8220ea5de121e1fab6ec066acb9c05d0db4611859d41124b",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 334,
+      "species": "SPECIES_ALTARIA",
+      "target_id": 938,
+      "target": "SPECIES_ALTARIA_MEGA",
+      "requirement_id": 324,
+      "requirement": "ITEM_ALTARIANITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "a109486c519eb6c2ea22863e979c155a91da01409e27403d7e03b354aacdf2b0",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "446ac33daffce7fd6c4398dd1da93b087a2d6efc60a7f534bffcd9de278749b6",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "5def657bd9d7e9036f8f8d02dd25e060b10c6b76bd7e1052e7b2168757b72a73",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "c3506099a1786497c8c85e86ab579334228b42ce181999702ff2bb203fc7369e",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 354,
+      "species": "SPECIES_BANETTE",
+      "target_id": 939,
+      "target": "SPECIES_BANETTE_MEGA",
+      "requirement_id": 325,
+      "requirement": "ITEM_BANETTITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "57c72453e1777f241000fe52c57cfc78850095afac359e67c13f35f817aa5f2b",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "e5098ee52b638e7aeb6854e489f6bbda9493819466607b36d57e396c3896c131",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "46c5120467660f3d2a79bf954876595194139344a75081b801f5756fbdec0683",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "27f3ca59af6cc4a7e159cba6813c73f5cd51de95d78c03da570add4ac84c6969",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 358,
+      "species": "SPECIES_CHIMECHO",
+      "target_id": 1555,
+      "target": "SPECIES_CHIMECHO_MEGA",
+      "requirement_id": 860,
+      "requirement": "ITEM_CHIMECHITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "2974683669636eb1cd54cbf8748a123f1d5f8600cad7c4218f1d5e15502e7468",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "8c737cba290a7c9e8ace76bd50a16675900eeed2b546dbc771a930c0c074ccc8",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "85643f0b4cd5d8a1f45a4bc1da81b4abc6a398da9cf2cdf9757474af0daba933",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "7842cb78f8a755876576fa0c9266d1cf96f7729fa4c11cea540a6d45165c99c2",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 359,
+      "species": "SPECIES_ABSOL",
+      "target_id": 940,
+      "target": "SPECIES_ABSOL_MEGA",
+      "requirement_id": 326,
+      "requirement": "ITEM_ABSOLITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "fda2ad917e9e27a638fc9e7cdbbbcb0b84afe621372535ebd1e2289df9c46b87",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "9bad5cb7b04ab9e70779b15d41efe4b9b0dfab2d03aeed6f5cad9e5dc727bf51",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "11dbb4b85399408204b14da48fcaa193ad20565abf0cbb160077d3289d6a6e4e",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "fd642df9c98e379afb4c945bc9b99722c37edec42a1deb808738c6aec5d6102d",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 359,
+      "species": "SPECIES_ABSOL",
+      "target_id": 1556,
+      "target": "SPECIES_ABSOL_MEGA_Z",
+      "requirement_id": 861,
+      "requirement": "ITEM_ABSOLITE_Z",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "be7459f1a838ab9ed1856ea114aa6743adfb405e8f35186af493ddcf1be71823",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "8e318d59269f6fd2ef29fcadef18bbbb61002a47ed9fd1912e7cd1e451e7931a",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "92ab9fc1a3282481293edf33ab6c762bb49a79cc13778ad98bc7a9c3d9b2604a",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "6e6ed5c32ddc53b6d02ac032f81ba2a503a5c8913ab4bed2de40b0f5a29cd310",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 362,
+      "species": "SPECIES_GLALIE",
+      "target_id": 941,
+      "target": "SPECIES_GLALIE_MEGA",
+      "requirement_id": 327,
+      "requirement": "ITEM_GLALITITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "8cf2d68687bf90e256757a9f12f1ca76a7551e613f112dcb350c397c81def4b6",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "2c0c31c0c6dee3d3be858d5f3fff4e0baadf416caecd027429143a772c64324e",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "a19461458254cae1b093ec8d8685109a6c6ded3360e7268bc3ba4f0c9f3c79d8",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "554d7cef17e63112deafefdf5997da9867e4a300b24039b23077b281c31334f5",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 373,
+      "species": "SPECIES_SALAMENCE",
+      "target_id": 942,
+      "target": "SPECIES_SALAMENCE_MEGA",
+      "requirement_id": 328,
+      "requirement": "ITEM_SALAMENCITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "e88fcb18452c850e5f976d227ca00b8c4213e9901bb613daa61b0ace1c5ce341",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "e66b4b8f81857d282ddd9adb41e885dd864522ea93725fe5bfd591abf3c0673d",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "5d272964da78bbd1bdc1be3eebfed9fed56cb71415bcb846d8dd54e2d1995d6a",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "72257a96a581f7812e57faffe0069486ff15214a533eead41f7ab483d743d9e1",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 376,
+      "species": "SPECIES_METAGROSS",
+      "target_id": 943,
+      "target": "SPECIES_METAGROSS_MEGA",
+      "requirement_id": 329,
+      "requirement": "ITEM_METAGROSSITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "98c75c580b1680d7c092c8b69a91cf4ff3cd916ca4fe962018971f3b2577939f",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "5b9edce764fda091aec1304bf77fff52ae633ebcde6f787e24f5d156c9b955b0",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "cfc006e1417a7f83e9349b7642ee3100c77e95db5cfddc25217841f2c74be0ed",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "9973beefe7c15bef4d752fc604f7b4115bfb07c351d23b97befa125885b751fd",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 380,
+      "species": "SPECIES_LATIAS",
+      "target_id": 944,
+      "target": "SPECIES_LATIAS_MEGA",
+      "requirement_id": 330,
+      "requirement": "ITEM_LATIASITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "24450214687acf5ad33ee88cc43540b0d2f39feebfb8bad4e253cc1ce47d45e8",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "e3c547e606e97800ecc8c0b1315dcc7f8d8572fd7f966c075fef1ab1b5c700e1",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "71890aab6e4c420046f8421305773556adf220e2a8ac4c8e4d3e5a9b9572b30a",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "5d6dfaa9ce473eccd118417e71e1d595b640dd600e92bebeb3c8e93416d88eed",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 381,
+      "species": "SPECIES_LATIOS",
+      "target_id": 945,
+      "target": "SPECIES_LATIOS_MEGA",
+      "requirement_id": 331,
+      "requirement": "ITEM_LATIOSITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "24450214687acf5ad33ee88cc43540b0d2f39feebfb8bad4e253cc1ce47d45e8",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "e3c547e606e97800ecc8c0b1315dcc7f8d8572fd7f966c075fef1ab1b5c700e1",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "317e3b15fdadd8c085c91e4e27037f54086fc5e5023fc01f2723b0557306cb3e",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "4b670eef248942ddca0e8d2a27c9fa4a28a96312894d4efe8a03691c2d0d6606",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 384,
+      "species": "SPECIES_RAYQUAZA",
+      "target_id": 953,
+      "target": "SPECIES_RAYQUAZA_MEGA",
+      "requirement_id": 620,
+      "requirement": "move:620",
+      "method": "move",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "fd51e7e5de2c89c48d199c404bd2c93081910fbeee1e62267e353b821c3d8be4",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "029ef092c101f3aa87ff121b20b262c4e217ad38b3f8a7d982ad96bb8c65a2df",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "80d83b2f36935d034660c61c43c7ed06e338620f63be6386fa16f9cf43a077d4",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "b1dd4bf273ea23c708c08a2491390c21737be137e1d806236430c210c29c1073",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 398,
+      "species": "SPECIES_STARAPTOR",
+      "target_id": 1557,
+      "target": "SPECIES_STARAPTOR_MEGA",
+      "requirement_id": 862,
+      "requirement": "ITEM_STARAPTITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "58e5b1cfe9a6c54332e2424d73e363a5f64b6e5da67f77ff043f56037cbe62f5",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "e2cfb1355bad21efa36b79d06214d53cf4e83e153b84a12a9ed4a799ecba4d03",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "99e1b440f323ec3e3a4f2b63c146c4e1daf6f05e94def30994284dd380d202f4",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "65120c3d5b5398ed92f36bea52c13b36969d37a717b100b34083d321199d359c",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 428,
+      "species": "SPECIES_LOPUNNY",
+      "target_id": 946,
+      "target": "SPECIES_LOPUNNY_MEGA",
+      "requirement_id": 332,
+      "requirement": "ITEM_LOPUNNITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "2f44493634e66790f358836e13b65e8e38c27bd0512cfed0495264fa71c63c83",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "8f56631519fef625ac56aa9d98e21e3a3a393376f71c2f4572a71d549e15834d",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "8372bea5c7f236fe85a650e9eb4d9ad96f96df04169c9680987a66335d14f584",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "07d8da7a2803ea8c5076f35bb7332fe59b4a75441adb7459e4a05da1f96a89f2",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 445,
+      "species": "SPECIES_GARCHOMP",
+      "target_id": 947,
+      "target": "SPECIES_GARCHOMP_MEGA",
+      "requirement_id": 333,
+      "requirement": "ITEM_GARCHOMPITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "51aadfb30e61101c5b724168516108e30b8b570dc73fb10f20c39c27da08d73d",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "774e7a0cdad18997ec093805ad578b0dabf6fc53120ff9140b763164b0e0d9ac",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "1d1455538301c39e425a044de8c96d137e3faec9e52e5fdadd1a0c30d80c3225",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "415a32efb9a351eccd769a08f5699be953f7736d017840224a976e8f06ceed1a",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 445,
+      "species": "SPECIES_GARCHOMP",
+      "target_id": 1558,
+      "target": "SPECIES_GARCHOMP_MEGA_Z",
+      "requirement_id": 863,
+      "requirement": "ITEM_GARCHOMPITE_Z",
+      "method": "item",
+      "assets": {}
+    },
+    {
+      "species_id": 448,
+      "species": "SPECIES_LUCARIO",
+      "target_id": 948,
+      "target": "SPECIES_LUCARIO_MEGA",
+      "requirement_id": 334,
+      "requirement": "ITEM_LUCARIONITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "d09e64a3bfe788a05e0b64ef06c0c2140e04dc81ecd6b34e5a63ac13d3dfad65",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "8de7afdbc3f7a34c9c22fd19f7bd643c05cac38b35198e8374de70dc22f56bce",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "7530e3825a1d373e4fe805c0fa5bfb6fb4cfd82de5458fa82658a28b54d49100",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "e92b5ad18d6cb317f4549140e35487b4c0aaa3c8b24e0ed203f39930b4f27ee9",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 448,
+      "species": "SPECIES_LUCARIO",
+      "target_id": 1559,
+      "target": "SPECIES_LUCARIO_MEGA_Z",
+      "requirement_id": 864,
+      "requirement": "ITEM_LUCARIONITE_Z",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "6bb225c1b0f77c988e616c0e8047d3960629166c0e45f96adefabfed20a718d6",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "561db086fdc791b714c5fbd3ee2794722682755966ebfcaf1ce76d5c87f4af83",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "282a4da82d8788814bacf4c71f663564560fd2084073c0729a817fd9efec080f",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "12c5d3bd54bed6aff4da24c18ad8c236ed52fb042e91df30b87f9234645ed566",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 460,
+      "species": "SPECIES_ABOMASNOW",
+      "target_id": 949,
+      "target": "SPECIES_ABOMASNOW_MEGA",
+      "requirement_id": 335,
+      "requirement": "ITEM_ABOMASITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "8301d2ea9663e2d408a9d726e1c0dad6dfd1071936a3908756c8f5a7669c2ecc",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "5332de98df6a80fb4a18b5504450f811ac9247bd9331842a1115214db6018567",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "9d4f91e3e0c902b6010e8ed1b5d3d46eab0f9e86d926e39fddf0346013eb01c6",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "27c4a7872799d3526fdf7ea759cd08d5eab7ee697a006470250e40ebac5eeaec",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 475,
+      "species": "SPECIES_GALLADE",
+      "target_id": 950,
+      "target": "SPECIES_GALLADE_MEGA",
+      "requirement_id": 336,
+      "requirement": "ITEM_GALLADITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "7b3589b1e8775006488469bd3be14bf6dc29ae8b201c44667427a6c3724bf37c",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "fc3ecbb7ca2af6172e7be08ff37d609d13c995d5f790fd5ee32d846e8224f83e",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "783e7d86e7813e538f38fb3ced1bd3b136bfc606fe80bd6496ef8a5b0d81c8e6",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "db9032d925f804400d5f06bcbea2829cc7a9e2b16486eb6b84dfef65aff3855e",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 478,
+      "species": "SPECIES_FROSLASS",
+      "target_id": 1531,
+      "target": "SPECIES_FROSLASS_MEGA",
+      "requirement_id": 836,
+      "requirement": "ITEM_FROSLASSITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "0ce38b75f11f25522bcf342e528ca6353c63106afd78447e7347e2cc67dd8022",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "28123fd64eef728cc045553aae91b6a33088a9d8d510069ab2a68b2947768940",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "75196648e728f2a3c481ba2fc6bab873e7278c6e479da828b9580c93e2309077",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "093b51484f63bd8506eaddf096c14484d204e669f8d8e0b2cdaface871d7adaa",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 485,
+      "species": "SPECIES_HEATRAN",
+      "target_id": 1550,
+      "target": "SPECIES_HEATRAN_MEGA",
+      "requirement_id": 855,
+      "requirement": "ITEM_HEATRANITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "3f7bcd9b61da402be2d0c3c25325e3d4313389a57deedc5e50818786bca3b522",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "59850d0dd637e45237980afc7680088fa5ff43a070a82045476dd3a0560af748",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "20375f79e452f919f367a98258e3d42277d79d3ee40ee0a4837b309c5fb50d0d",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "4e5f79e0e7b547197fa8d7332fc07f6860bb5aeaa5edc74cb4dae28de3a952e7",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 491,
+      "species": "SPECIES_DARKRAI",
+      "target_id": 1551,
+      "target": "SPECIES_DARKRAI_MEGA",
+      "requirement_id": 856,
+      "requirement": "ITEM_DARKRANITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "8ba43c39c4a0c4463e34be5a25aabb8554a2ca52c9384eef0a74325613a35a98",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "2efb31be0e02de6036a77a94c0b10f0e75c430fbef48bd07990cef9fac5f415c",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "dea03540605453426fdfe4f24648dee32bb300d76a1ae75c6b9328b4067aef5b",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "b62793f16b70d25b98c9b3c8135f462437117c185ed904e7dfbd654faef5cc1e",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 500,
+      "species": "SPECIES_EMBOAR",
+      "target_id": 1532,
+      "target": "SPECIES_EMBOAR_MEGA",
+      "requirement_id": 837,
+      "requirement": "ITEM_EMBOARITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "c64afe4fe41b39c4219a48e0d5047939a8d446f442c265bd9e3dbc149df3438a",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "f4efac9c034a766194f8c6191f62f111b0b029b6f5c431a2e64e08da361802d9",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "c420fbf588b872bf960306de6ce7cbb30ef207449c18cfd85ac8625aef36a403",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "107506e1c4606e15229e7d3833921415b323fb6dfabf7c722d785b6fd6f52258",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 530,
+      "species": "SPECIES_EXCADRILL",
+      "target_id": 1533,
+      "target": "SPECIES_EXCADRILL_MEGA",
+      "requirement_id": 838,
+      "requirement": "ITEM_EXCADRITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "77cb5ce0b1d320d4c980ee233adad1fca5eb46859dad6af1713253492b65b36b",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "4e739a7ec74e5ab51e7a6214ff6c9959f80b61afb83bab50be46be18f409de39",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "d82887b18486d9c1d00537dd135b5c32045155c1fbd9bec92c450018afe79a86",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "1431d8f26912c0ee97079ff0f14dc55b68e3f2d93026cd0fa7d573840a69bf72",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 531,
+      "species": "SPECIES_AUDINO",
+      "target_id": 951,
+      "target": "SPECIES_AUDINO_MEGA",
+      "requirement_id": 337,
+      "requirement": "ITEM_AUDINITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "65e51831361a205b261485f474e3b1c70d6455f784162e1e70827b8673919d2a",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "2fe4fa0a814636be5bbf6aee8c38a8060e3c2a3308a846b7737ec0ad06feebc6",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "fdea9c90b31f475060b308cb5708fded251d30afffb97964d066b971a1591315",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "497bdb82837d682added4b36d5819c3f2662621bc1ce905a3dbe16dd53a4954e",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 545,
+      "species": "SPECIES_SCOLIPEDE",
+      "target_id": 1534,
+      "target": "SPECIES_SCOLIPEDE_MEGA",
+      "requirement_id": 839,
+      "requirement": "ITEM_SCOLIPITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "32a972763f50e6c1465767fd6e1ce6b97cc307292ced668820a3336bf1bd8525",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "429dc8832a234d64290ca2b7d208547a8099bef7b48813ae6b96596e8c7706f1",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "97f006eeb538d32e3c059db6d00e6b447576f7124f83bb25997bf8d2156f5b17",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "11c6958cbe87e6abf3fa67e816b6eabc231431f5f8cbb618c05dae35691fe375",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 560,
+      "species": "SPECIES_SCRAFTY",
+      "target_id": 1535,
+      "target": "SPECIES_SCRAFTY_MEGA",
+      "requirement_id": 840,
+      "requirement": "ITEM_SCRAFTINITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "63823537c8c13f39b0681670d6b5c37e43d48cdb15b0c37f12b72b8236fe3f56",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "eb2201139f0b00f85734e50e154125e613dde82e439b95a1dd7612cb4005fb2e",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "0d278064bdb6cec06dd2f4ab87ed900bfe18774b0689587339094d1cea564eb6",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "d076a0e7ddf98a6a57b9da1ad2fae78dc143a63f93832d47b4cdc48a3c3566c9",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 604,
+      "species": "SPECIES_EELEKTROSS",
+      "target_id": 1536,
+      "target": "SPECIES_EELEKTROSS_MEGA",
+      "requirement_id": 841,
+      "requirement": "ITEM_EELEKTROSSITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "6680f41d99d4df7ec23245dd19a858f14dbf53be273abae4f82a1edc0c7cb539",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "5ecdf6ee8b4d1f34e4c888583d6ffb7ae01b06142230f1e39b782c0f28917dda",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "6db8f6fd9e63558fc507bee8928d38ce25ed38e391085448bcfe917bfa4b2097",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "7c5389b98e625970438fea3485f58883bc46875ea047fbed17789142334ea1e7",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 609,
+      "species": "SPECIES_CHANDELURE",
+      "target_id": 1537,
+      "target": "SPECIES_CHANDELURE_MEGA",
+      "requirement_id": 842,
+      "requirement": "ITEM_CHANDELURITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "b73e1edb15a7551cb1bfee2d99cb43bf3eaf00cedf5b6ecfd4d496dc0a6501ba",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "2f54f90d7265c7c0e076f07dbe643afcd9f955b28155b0c565313b63145c9528",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "b7e3c429eb64c9fd002a9e408464fd89d3c544d68f2dec9058b7822c110bfc7a",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "0e9bc1cabcdf314a8150f880cf234e9a13f506eb573d292951e522315c43bdbd",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 623,
+      "species": "SPECIES_GOLURK",
+      "target_id": 1560,
+      "target": "SPECIES_GOLURK_MEGA",
+      "requirement_id": 865,
+      "requirement": "ITEM_GOLURKITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "4995d4f276f43855114feb45d0d399e934947dee3e9d57c7ea937b6af7858742",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "c7d24af20428781183992301d00424f39b600668995a662117d8b828f3102ff7",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "a8ca684452c3e4041445d8b5edd226fb8281acb5d48c613c8cdd02f15632910d",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "68096ebe775f5bedbda493d7ac2300f3c83e6d8061b460ddf2067e5b99b51818",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 652,
+      "species": "SPECIES_CHESNAUGHT",
+      "target_id": 1538,
+      "target": "SPECIES_CHESNAUGHT_MEGA",
+      "requirement_id": 843,
+      "requirement": "ITEM_CHESNAUGHTITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "2440e308add1f7c6c973756e76844a58367e16320e34b502126759c8fac99289",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "bdc72edd6b55f91e01906c9800d405378a8f7e5c16daefc8bc150c7acd8a4c26",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "9cc1fb4ba5c32c5dfa864699bab00d54901f42f7d5d5d6e066d8fbb508d49bfc",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "aad156e4839805bbb03297b105198fd5c19bb5260b1b4d0daab17ffec965dade",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 655,
+      "species": "SPECIES_DELPHOX",
+      "target_id": 1539,
+      "target": "SPECIES_DELPHOX_MEGA",
+      "requirement_id": 844,
+      "requirement": "ITEM_DELPHOXITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "654e80f4e9d6ec884457dd8a451b384725399494864f905a9821c256091b956e",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "9f4427a46fc92a069cf29bef93288e80db6546d933fef170343d16c455340dd9",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "4bd37cc70e073572c6b845bdc0c42f2c225b43f52c9294a0b96a975f6e31867a",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "27a0b7fef7dab9ef8fbfabe93b025d4bbf5f064983f094b229558947f3f24a5c",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 658,
+      "species": "SPECIES_GRENINJA",
+      "target_id": 1540,
+      "target": "SPECIES_GRENINJA_MEGA",
+      "requirement_id": 845,
+      "requirement": "ITEM_GRENINJITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "d00a63eedaf7338bcc28fe33a9c8c13d6887627a7b079427d2cb25722e10fae3",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "e45505a608a773186e6c6253d1645ae180b2b08045fdcf15dffc14e343392814",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "2460d5a97add7ed332600c2f0543af8d326e292b46cb748ae6e2f1ecfa850205",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "eaf1fb8fc5f9aea0291e9dd976cbb58fa0d8516e661b4aa353ae34fe41b42dbd",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 668,
+      "species": "SPECIES_PYROAR",
+      "target_id": 1541,
+      "target": "SPECIES_PYROAR_MEGA",
+      "requirement_id": 846,
+      "requirement": "ITEM_PYROARITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "faa2dcd5b7f568459de25bca94fecd18fd992d1f0da24972bf30905aaa19487d",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "582cba0b305e721e105fb8ebfa4bc4b8165f6d21abf3d2a7ac097572fc59f700",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "60d2476752eb8ba85583aa59405b869383d369521bbe7966b42b856f24b3dc19",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "8fae1579f447c7585c6d609254425eb2d63ce9ce088e6ccc2c4ae0994ae39ab3",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 678,
+      "species": "SPECIES_MEOWSTIC_M",
+      "target_id": 1561,
+      "target": "SPECIES_MEOWSTIC_M_MEGA",
+      "requirement_id": 866,
+      "requirement": "ITEM_MEOWSTICITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "ee67edab81688812742e35ca96c5486d48e44c4ec50fdacc8e6dcf8017618691",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "5661213747d1bf55b1cba24eca8b97985a068979165865c8f76c206015592a86",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "fb23c6d83a3a24fd0a391360272af03941cd09d9823bcd963bac40093a9dacd0",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "fcddfc12fd9141bc4441a584d9dd403a7bd920e1284856ceb73201706674c154",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 687,
+      "species": "SPECIES_MALAMAR",
+      "target_id": 1542,
+      "target": "SPECIES_MALAMAR_MEGA",
+      "requirement_id": 848,
+      "requirement": "ITEM_MALAMARITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "1f377b8db40c20b9068c1a8e3b67e8fca8287c1fa726c90a09d45a217ecd12d3",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "3259626752eb473bf30a97776262804c7dfee0bdc727f8f611698e1b16dc2787",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "f012484ffa76de917d6edf3d8af00588e585fcede5cc1531cfefc3e7885b5dd4",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "e2a697a1aabb4ca9e513a9d2974a9ae1878eab24318451bc1c004ef92c899237",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 689,
+      "species": "SPECIES_BARBARACLE",
+      "target_id": 1546,
+      "target": "SPECIES_BARBARACLE_MEGA",
+      "requirement_id": 849,
+      "requirement": "ITEM_BARBARACITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "e889d0fc6a4aa665d4f50417cf08bf317e680de5868ec4bca1c0747eebc70a2b",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "9d8f2f6cc9bec8c573a9cb30868d3914de7ae95bc480229e9870c40fe36cb36f",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "07eb0e7a1e7edaa72c0002b9172e94e8e39e545854db9328167df7fda04b14a8",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "816accd8a277c78ba3ea8d98db99e9e1bff4f87c68d36372c081712790bcdd2c",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 691,
+      "species": "SPECIES_DRAGALGE",
+      "target_id": 1543,
+      "target": "SPECIES_DRAGALGE_MEGA",
+      "requirement_id": 850,
+      "requirement": "ITEM_DRAGALGITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "b7060ef074e5735f9b1084e21bc4d34bad1792a36c1b81947bfde6417dcb5d6e",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "90d5320dd946f4c4afa9ff62c7e69b920c07a2d4b02fd193cbccfe9c4d9c4bff",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "750c4d922117c7fb1047c0783eed27fe70a346228ce82ea1c6d74b6b08aef8ee",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "51bc990fc13bfabdcdb8e18b393ce450f9267c7ac5dc33de7abd6f44870cf6d4",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 701,
+      "species": "SPECIES_HAWLUCHA",
+      "target_id": 1544,
+      "target": "SPECIES_HAWLUCHA_MEGA",
+      "requirement_id": 851,
+      "requirement": "ITEM_HAWLUCHANITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "41117d707855d64ea695a00b8e6043c02c93fc26c2604da3bdbbf21a0d5fe785",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "2bd1f34e2ea7f17bd09ba2d9eaca018caf9e3332628059dca0eb2738e7407ebf",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "d7ab886c3ed4a9bc590ff265dce6ccda504b4b334f3fef6c2702fbd817938034",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "6dd25aa5dc060fad715b2379f64fbf74a5dec2b83a689227a5e11f5006cf61a7",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 719,
+      "species": "SPECIES_DIANCIE",
+      "target_id": 952,
+      "target": "SPECIES_DIANCIE_MEGA",
+      "requirement_id": 338,
+      "requirement": "ITEM_DIANCITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "bb96f96a7dc0ddac668e0f1e018a54f4637ef4b5a406c4180e6f0742208fbaef",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "90ffe110ea56e04fe79cd818c061262bdbe16ffa6c796d3c8545e1f3fd115036",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "ef0e88d938d4723a5248ce5ee8d4a0082632134b8574383416e734e7064de3e2",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "bd9cb96f30e9ac95407f4546d6d6c3a8e1e7039256d2ee67f4e3ec38c296db34",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 740,
+      "species": "SPECIES_CRABOMINABLE",
+      "target_id": 1563,
+      "target": "SPECIES_CRABOMINABLE_MEGA",
+      "requirement_id": 867,
+      "requirement": "ITEM_CRABOMINITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "63342811fc839b5644c6d06cfa93f20172bcda890928259a2c2f819dbebd5088",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "98d2c408de74d7e2880f8bb2dde0eebfc88b39c90d3a341254da09f44e261237",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "d23bb1e7699ed5798331d1f9331b97af4898320a3e7b170d19ff26f6029718ad",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "48317054bc8e3c71c4c3cd4a0fe442856a3fb9f2c4e65dd0ed3161113429df3f",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 768,
+      "species": "SPECIES_GOLISOPOD",
+      "target_id": 1564,
+      "target": "SPECIES_GOLISOPOD_MEGA",
+      "requirement_id": 868,
+      "requirement": "ITEM_GOLISOPITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "5cb56c6b81c34b0d1a119830403ae6c5815e1a20c319d79d88151ab3fa9108ce",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "64fadf9a35845f8d74da4ffc70ba43c33bc68d345195947d9373a87030c43375",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "c3005d3016546a10737faf258d20166549d5812fd99b8f2041dbc94a037764f1",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "f2986239bc4ff27a7aceb43cc83e31b8cd0445a144902d142b37fa2be9f5b81c",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 780,
+      "species": "SPECIES_DRAMPA",
+      "target_id": 1548,
+      "target": "SPECIES_DRAMPA_MEGA",
+      "requirement_id": 853,
+      "requirement": "ITEM_DRAMPANITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "b71a1124c49300bfb47b47d48105b9b9da345ab06ee4cc8593c359d873e3c1c1",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "d3684285797830a6477ed8c9fbbfe767d99fc35e9504e6b4a01a5b0e9e32ea1e",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "284f1b53e710716e2dc17225679185c2196eb48f9d62242cf63bf2c4bc67d25c",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "bfc48d52c64f881f67619087c508eff2e28665554ea290d347d21b8d4c27b323",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 801,
+      "species": "SPECIES_MAGEARNA",
+      "target_id": 1565,
+      "target": "SPECIES_MAGEARNA_MEGA",
+      "requirement_id": 869,
+      "requirement": "ITEM_MAGEARNITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "4424bb5f145b590f6ccbb6093c2df81d667854c6728507898e10549e2a87fb54",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "50e633828a16f2c4afbff8daea06065c7a48cf801a63ac2429f88ee8402c665b",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "3430a0f6f8c65e13b8ac7f47f4c51ec0291f3965a77e37fc94df7a5415dc08ad",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "3cf7e4d7549db646ed32bf5a7410d7c7b42097adcf89f39a6dd541f04b654575",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 807,
+      "species": "SPECIES_ZERAORA",
+      "target_id": 1552,
+      "target": "SPECIES_ZERAORA_MEGA",
+      "requirement_id": 857,
+      "requirement": "ITEM_ZERAORITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "18cd019682df0c9de61119730786ddee05a0dce23562bdc8fb25625405b7d31f",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "0cb7d88574ff98906df079289e1c741c411bc478fff2bcbd6fd8190c659f6104",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "e6797ab80f91f4ad42d60b6b7ba43f6c633e7687bf914eb6f69c1b8f6ed4fc0d",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "4575518e60506e6e95ff346197eea59b61dee0d1a57ee4778c27450cb3069bb4",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 870,
+      "species": "SPECIES_FALINKS",
+      "target_id": 1549,
+      "target": "SPECIES_FALINKS_MEGA",
+      "requirement_id": 854,
+      "requirement": "ITEM_FALINKSITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "3d5c4f5fd506b96ffcea5053b63eea3cf77afaa7671d1a075612fb751f6aa403",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "43ae57e7907d5b29a5a0bc76f7b8ad236c426d1d05dc8cec1f611c25680fe9c0",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "32e2e352c967f59a6b6f601e358995719cfb7d04b5a6172f8bac1535214f0827",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "36683934d9e161c86f8e38ed05c4a1da5a71a30c0cc869c14687db56dad9c2bc",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 1141,
+      "species": "SPECIES_FLOETTE_ETERNAL",
+      "target_id": 1545,
+      "target": "SPECIES_FLOETTE_MEGA",
+      "requirement_id": 847,
+      "requirement": "ITEM_FLOETTITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "1d91dcb3b8de5ba1d04a4dddeee68647ef45334753e215e7767b8b43770bf18d",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "9b26ffc107be144415e2e33b3c0863dba1a151446eb74cfc162abd36eb061cee",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "6bf61fbbf4a341b0ccc2763298366f3bc54b885939efe0568ef23e9f65f1d017",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "56ac84228660ae11717e985a1feac207b76a2fb3c7948b5456b3ea2b96013db1",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 1155,
+      "species": "SPECIES_MEOWSTIC_F",
+      "target_id": 1562,
+      "target": "SPECIES_MEOWSTIC_F_MEGA",
+      "requirement_id": 866,
+      "requirement": "ITEM_MEOWSTICITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "ee67edab81688812742e35ca96c5486d48e44c4ec50fdacc8e6dcf8017618691",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "5661213747d1bf55b1cba24eca8b97985a068979165865c8f76c206015592a86",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "fb23c6d83a3a24fd0a391360272af03941cd09d9823bcd963bac40093a9dacd0",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "fcddfc12fd9141bc4441a584d9dd403a7bd920e1284856ceb73201706674c154",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 1167,
+      "species": "SPECIES_ZYGARDE_COMPLETE",
+      "target_id": 1547,
+      "target": "SPECIES_ZYGARDE_MEGA",
+      "requirement_id": 852,
+      "requirement": "ITEM_ZYGARDITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "b0b0533fd2189431d093f391e471f7908c8b637f9f9caf8fc91668bef59f4957",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "4d4c82e7829111a86711ce7e484c301fce8b6d2d3aca3e4357682027ef4c8b19",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "ddfca825a7f9f1ba2f41ea0e3e6721a8359c2df247db9762b07dcac2ba6e577e",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "0ea111e11a7f1acc1fed1bb450cd8458af56d265aaa0ce754934b3532d8f217c",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 1210,
+      "species": "SPECIES_MAGEARNA_ORIGINAL",
+      "target_id": 1566,
+      "target": "SPECIES_MAGEARNA_ORIGINAL_MEGA",
+      "requirement_id": 869,
+      "requirement": "ITEM_MAGEARNITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "6a7bc4067781aa0d127b3b6c76da4bade0556d8044b8a80333e07a1dcda56bdb",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "94e0314b4c0d511fb4bdf9c5785bc868f565fd1bed79564ce00d67eaf1bb5005",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "47116b6ec16aec9c63337bd8dbc99f846035d36d6a27cf107f5b7dd1019b1528",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "03e21fb697fad778304e4c4537762885b038978894b9dd48fdf25b2bb8d4992f",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 1340,
+      "species": "SPECIES_SCOVILLAIN",
+      "target_id": 1567,
+      "target": "SPECIES_SCOVILLAIN_MEGA",
+      "requirement_id": 870,
+      "requirement": "ITEM_SCOVILLAINITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "f4917e1e00082b7542f79739fe53c294b99c4c704017511dad3cee12d29c42c0",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "a8cbf32df87fa9e1aa6e8a785d4f3d1bddbf01802f2f1275e744ac984d521775",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "a66ba69a0ee968b18fcf94f70d5ee70a568a3c2528987a8a677f9756f8d12be6",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "b3f794d83285b51cc4d98336db7a94ed447e46d7f9dc5aafc2b09a00e803a0af",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 1359,
+      "species": "SPECIES_GLIMMORA",
+      "target_id": 1572,
+      "target": "SPECIES_GLIMMORA_MEGA",
+      "requirement_id": 873,
+      "requirement": "ITEM_GLIMMORANITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "c56b7a8a16ff7bd1e7b86165948b55f604ad546ec072c4f3139445bc8af43aea",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "429a94e14a54748a727fb5c4d0fbbf013f0b1866a7a81f0419012b379bd1a2e1",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "b483fce3bd1079714cca30513e0e6044661e55d9828e02b3b22c589d0139d50b",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "7138bd54f0c9c868bed26e3706e0182ce329fdfc26c4543547c93199e8107581",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 1367,
+      "species": "SPECIES_TATSUGIRI_CURLY",
+      "target_id": 1569,
+      "target": "SPECIES_TATSUGIRI_CURLY_MEGA",
+      "requirement_id": 872,
+      "requirement": "ITEM_TATSUGIRINITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "0f1468bdb781c3d0251447657dd9326c0e42db836e186714d04bf61915d134c5",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "06e2b0ffe089df6295bf95a6494f1c5790337c6f65781516bbb7b68fca97a854",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "f82367eab4588a74c7cbc327e98a31f16e83727bdc8a3a05d4dca53bc20f9601",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "e8af1efa03ab3585c5b9e86ab0bdaaf85b8f08905f16f9e91761a0ab120f4d4c",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 1368,
+      "species": "SPECIES_TATSUGIRI_DROOPY",
+      "target_id": 1570,
+      "target": "SPECIES_TATSUGIRI_DROOPY_MEGA",
+      "requirement_id": 872,
+      "requirement": "ITEM_TATSUGIRINITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "5da4ece351ab278a4e14bf3b468fcb5ae2fbb19b114b282f4b814ddf17b73787",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "5fe0c6cf0d7b736ede6ee37ddd2d34813936e58e5016a8fb54a84a8e851e7073",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "f82367eab4588a74c7cbc327e98a31f16e83727bdc8a3a05d4dca53bc20f9601",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "e8af1efa03ab3585c5b9e86ab0bdaaf85b8f08905f16f9e91761a0ab120f4d4c",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 1369,
+      "species": "SPECIES_TATSUGIRI_STRETCHY",
+      "target_id": 1571,
+      "target": "SPECIES_TATSUGIRI_STRETCHY_MEGA",
+      "requirement_id": 872,
+      "requirement": "ITEM_TATSUGIRINITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "a6e3caed5cb09c9042fcfbff7ce41e1390432d19efe032439d4ae1c8e436a5a2",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "d5db7e312062a16091e3cd93a5548759595fd9de7753ab79b57a8e5580ce0c58",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "f82367eab4588a74c7cbc327e98a31f16e83727bdc8a3a05d4dca53bc20f9601",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "e8af1efa03ab3585c5b9e86ab0bdaaf85b8f08905f16f9e91761a0ab120f4d4c",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 1390,
+      "species": "SPECIES_BAXCALIBUR",
+      "target_id": 1568,
+      "target": "SPECIES_BAXCALIBUR_MEGA",
+      "requirement_id": 871,
+      "requirement": "ITEM_BAXCALIBRITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "e435813c8b8109f2683ef5f4967d07ff6790b2b0d5bf14bbb1188fa14827d10f",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "d87e4171c41cc10d01c7516f8914dfd0c2da6b3d71350d1912648b06fc2b1601",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "e979c9b32e442efb8bfb31e2d1326e850a0b9b958916b56621534dc7c0eae57c",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "03858a4e170dce34966e4953ab92c87662b66773594f1295288240fc235d8330",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 1489,
+      "species": "SPECIES_VENUSAUR_GMAX",
+      "target_id": 906,
+      "target": "SPECIES_VENUSAUR_MEGA",
+      "requirement_id": 292,
+      "requirement": "ITEM_VENUSAURITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "53afce251072b4ea4e96a2de13261b609140874e6db360d32516d892e4b1829b",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "ebec5c9b9970dbdf832acfea29ed934d5dd14d9d07c111a1691b32051bd32194",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "26b9f8ee24cd9f5a24918ac11b56868e9df9883d2fc2948c084f918fcf5d47c8",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "6f36dc4f951559a68668f585345e77da7cdd20aa4ded28030bf0694a3d1c84ce",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 1490,
+      "species": "SPECIES_BLASTOISE_GMAX",
+      "target_id": 909,
+      "target": "SPECIES_BLASTOISE_MEGA",
+      "requirement_id": 295,
+      "requirement": "ITEM_BLASTOISINITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "69568ee4c1a24e597dfecd7262342e555ac1c07829558c8b0c2e8bb33833a846",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "7f2f78469ffcf98259a35064fcf7b59cc05c55cf626d44b09aaba655445fc090",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "5aefda3f40078b7534b2d242548c2271ec287aa08eb4b2981f3a512eab36b876",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "1b4182d464d266526fefabdc1d0c256771dac570d53dd629b06a44e1a59d12e4",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 1491,
+      "species": "SPECIES_CHARIZARD_GMAX",
+      "target_id": 907,
+      "target": "SPECIES_CHARIZARD_MEGA_X",
+      "requirement_id": 293,
+      "requirement": "ITEM_CHARIZARDITE_X",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "c3b4b5250fe0ae10aa244a7c22df5c6b26244ad985ce4281a66cf83bce380f89",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "9e80e2819d6e98de9efddbd4392f9e7373236e70ff906b87a5feaa17abe2e795",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "2ac92a3aeb0c4f8013fb6410c0ea3493781445907b6f5d5c0fe4d695b8ed01e8",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "b7583c7aa048b800fe15b75c9a75dc815986eac543b61297d098851a7f50eb53",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 1491,
+      "species": "SPECIES_CHARIZARD_GMAX",
+      "target_id": 908,
+      "target": "SPECIES_CHARIZARD_MEGA_Y",
+      "requirement_id": 294,
+      "requirement": "ITEM_CHARIZARDITE_Y",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "599b9cfd2f851a1b85eca27ca50c0e2a018c525a5d5ce4d908af3f1fff58f484",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "9fa6a0489bbaedeb5ffffd08245d987323d4843fb3c8588e494400b3f9e7fede",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "16783826c25bcc33d87a0219a073e7813ea042ed02e7788437bba687818a68b7",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "1329c24088d1254438a86c522a49e16cd576c2856e7734d1b24d157660d1a5c4",
+          "format": "raw"
+        }
+      }
+    },
+    {
+      "species_id": 1496,
+      "species": "SPECIES_GENGAR_GMAX",
+      "target_id": 914,
+      "target": "SPECIES_GENGAR_MEGA",
+      "requirement_id": 300,
+      "requirement": "ITEM_GENGARITE",
+      "method": "item",
+      "assets": {
+        "front": {
+          "bytes": 2048,
+          "header_sha256": "f29ac4a161a87832bb8d3a7ddb15658c8279ba227b71572664aab2bb5c37b935",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "back": {
+          "bytes": 2048,
+          "header_sha256": "50ffed05a08f6bbfcbb085108a85f8c8318a2d25160567600c3e1369cd2c69df",
+          "format": "smol",
+          "decompression_validated": false
+        },
+        "palette": {
+          "bytes": 32,
+          "sha256": "2aac1277e2b8f47c209ee0a3d411c6dce8a4ad1ebf9986f6370c7371f915a422",
+          "format": "raw"
+        },
+        "shiny_palette": {
+          "bytes": 32,
+          "sha256": "7ffa442d0774e69289eeb18b4b1619fac0368e2f1f06b52237e1a13f9f6d0646",
+          "format": "raw"
+        }
+      }
+    }
+  ],
+  "all_sprites_rendered": false,
+  "stones_distributed": false
+}
