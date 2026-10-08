@@ -1145,3 +1145,28 @@ com as 16 insígnias e ambos os campeonatos como fixtures. Passaram também as
 Os diálogos usam warps e invocação do script com o contexto da sala/mãe; não
 comprovam um percurso completo de campanha, embarque do S.S. Tidal, Battle
 Frontier ou todos os eventos de pós-jogo. A ROM do player permanece anterior.
+
+## Módulo PWT na Battle Frontier
+
+A camada `pwt` segue `family-postgame` e acrescenta duas salas e um módulo C
+próprio. O guia no lobby do Battle Dome leva à recepção do torneio; o Dome
+continua com seus desafios originais. A pedido do usuário, há apenas Singles:
+oito participantes, três Pokémon por equipe, todos no nível 50, três rodadas
+eliminatórias, bolsa bloqueada e restauração entre partidas.
+
+Os conjuntos Kanto, Hoenn e Misto sorteiam sete adversários distintos de 18
+entradas de líderes e campeões. O vencedor recebe 3 BP. As batalhas não concedem
+insígnias, eventos de história, experiência ou dinheiro. Ao concluir, perder
+ou desistir, a equipe completa volta exatamente ao estado da inscrição.
+Formas da mesma espécie obedecem à cláusula pelo número Nacional. Um bit
+próprio distingue as regras do PWT, mantendo os identificadores e retratos
+nativos dos treinadores. O layout dos saves e o escalonamento dos ginásios
+permanecem preservados.
+
+Regras, participantes, reprodução, capturas e limites em [PWT.md](PWT.md).
+Na candidata `a06c75b1e508638aa5e863b743d8bc376c47f7f9f070413bf2d01c74fed5dc1b`,
+passaram três torneios completos (nove vitórias), derrota, forfeit, cancelamentos,
+sete guardas de entrada, 18 equipes com golpes e acesso físico pela recepção
+até a porta de retorno. BP, equipe, habilidade Hidden e flags de história foram
+conferidos. Os atributos aumentados da fixture aceleram as batalhas, sem validar
+balanceamento. O player continua com a ROM anterior.

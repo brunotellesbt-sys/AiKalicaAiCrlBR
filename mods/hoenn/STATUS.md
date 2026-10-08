@@ -170,6 +170,21 @@ a alteração desta etapa foi conferida pelos scripts e helpers do pós-jogo.
 O embarque original do S.S. Tidal, Battle Frontier e os demais eventos de
 pós-jogo ainda precisam de validação. O player permanece sem atualização.
 
+## PWT Singles como módulo da Battle Frontier
+
+O guia no lobby do Battle Dome leva a uma recepção própria do PWT. São oito
+participantes, três Pokémon por equipe, nível 50 e três rodadas. Há torneios
+de Kanto, Hoenn e Misto, com 18 entradas de líderes/campeões. Vitória dá 3 BP;
+derrota, cancelamento e desistência restauram a equipe sem avançar a história.
+O Dome original continua disponível. Regras e reprodução em [PWT.md](PWT.md).
+
+A candidata `a06c75b1e508638aa5e863b743d8bc376c47f7f9f070413bf2d01c74fed5dc1b`
+passou nove vitórias nativas, derrota, forfeit, sete guardas de entrada, 18
+equipes com golpes e acesso físico pela recepção/porta. Battle Bond, habilidade
+Hidden, BP e equipe original foram conferidos com save/reload. As batalhas
+usam atributos aumentados na fixture; falta conferir a dificuldade sem ela.
+As outras instalações da Frontier e campanhas completas continuam pendentes.
+
 ## Trabalho que falta antes do lançamento
 
 1. Ampliar a validação para as demais habilidades do catálogo e combinações
