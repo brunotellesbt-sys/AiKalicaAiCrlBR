@@ -1,5 +1,36 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+## Rival de Kanto com a aparência do personagem do sexo oposto
+
+O rival agora usa **Leaf para jogador masculino** e **Red para jogadora
+feminina**, nos mapas e nos retratos de todas as suas 27 equipes, incluindo
+campeão e revanche. A introdução do Oak usa a arte correspondente, e o
+ícone na tela de nome também usa o personagem do sexo oposto. Oak diz
+“grandchild” em vez de “grandson”. O nome escolhido pelo jogador continua.
+
+Blue tem um ID gráfico próprio no ginásio de Viridian e preserva seu
+retrato original de campeão. A mudança visual do rival não altera Blue,
+Giovanni, Aqua/Magma ou o rival de Hoenn. As equipes e os scripts originais
+do rival foram preservados por hash; esta camada não muda iniciais,
+insígnias, níveis, missões ou condições de batalha.
+
+Os testes usam processos independentes do mGBA para os dois gêneros:
+comparam os 3.102 resultados de retrato (1.551 treinadores por gênero),
+verificam os gráficos de mapa e seus IDs dinâmicos, conferem os pixels
+descomprimidos e a paleta do retrato da introdução e iniciam a batalha
+nativa do laboratório nos dois casos, sem simular vitória. O teste de
+arte da introdução fornece recursos temporários ao carregador; não é um
+teste completo da introdução e do fluxo interativo da tela de nome.
+
+[Leaf como rival](integration-validation/opposite-rival-player-0-battle.png)
+e [Red como rival](integration-validation/opposite-rival-player-1-battle.png).
+
+Passaram **26 testes offline e 110 verificações nativas**, incluindo as
+96 travessias de Surf e as 840 equipes de ginásio. As 18 camadas reproduzem
+368 arquivos byte a byte, com 117 conexões recíprocas. A candidata exige
+save novo; as campanhas completas e outras migrações permanecem pendentes,
+e a ROM publicada no player continua na versão anterior.
+
 ## Linha de barco entre Kanto, Hoenn e Sevii
 
 Uma linha WORLD FERRY liga Vermilion, o interior do porto de Slateport e
@@ -565,6 +596,7 @@ python3 tools/hoenn/prepare_story_access.py --source .local/hoenn-multiregion-sr
 python3 tools/hoenn/prepare_story_completion.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_water_hms.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_ferry.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_rival.py --source .local/hoenn-multiregion-src
 ```
 
 Na pasta de fonte, compile com os caminhos do compilador ARM, binutils,
@@ -574,7 +606,7 @@ Após editar mapas binários, force sua recompilação com `make modern -W data/
 ```sh
 python3 tools/hoenn/validate_crossing.py \
   --source .local/hoenn-multiregion-src --library .local/mgba-bridge.so \
-  --worldsea --westsea --region-state --east-coast --gym-scaling --campaign-gates --free-access --road-access --team-stories --story-access --story-completion --water-hms --ferry
+  --worldsea --westsea --region-state --east-coast --gym-scaling --campaign-gates --free-access --road-access --team-stories --story-access --story-completion --water-hms --ferry --rival
 python3 tools/hoenn/verify_worldsea.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/world_layout.py
 node tools/hoenn/validate_world_layout.cjs
@@ -589,7 +621,7 @@ anteriores. Ele é específico ao ABI desta base fixada.
 1. Preservar a versão anterior; a candidata exige um novo jogo, sem conversão.
 2. Completar a auditoria de variáveis e todos os estados das histórias; validar
    ginásios livres, níveis adaptativos e bloqueio correto de cada Liga.
-3. Migrar cidades iniciais, famílias/Oak, rival do sexo oposto, catálogo/sprites,
+3. Migrar cidades iniciais, famílias/Oak e catálogo/sprites,
    Habilidades Ocultas/Battle Bond, Megas e encontros adaptativos.
 4. Validar as conexões Sevii e o serviço de barco durante uma campanha
    completa, ligar a entrega dos três HMs às futuras

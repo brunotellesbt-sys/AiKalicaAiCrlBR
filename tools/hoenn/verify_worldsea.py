@@ -28,6 +28,7 @@ from prepare_story_access import prepare as story_access_prepare
 from prepare_story_completion import prepare as story_completion_prepare
 from prepare_water_hms import prepare as water_prepare
 from prepare_ferry import prepare as ferry_prepare
+from prepare_rival import prepare as rival_prepare
 
 
 def verify(source, output):
@@ -47,6 +48,7 @@ def verify(source, output):
     if (source / '.journey-story-completion').exists(): markers.append('.journey-story-completion')
     if (source / '.journey-water-hms').exists(): markers.append('.journey-water-hms')
     if (source / '.journey-ferry').exists(): markers.append('.journey-ferry')
+    if (source / '.journey-rival').exists(): markers.append('.journey-rival')
     reports = [json.loads((source / p).read_text()) for p in markers]
     original_paths = sorted({p for r in reports for p in (r['original_sha256'] | r.get('input_sha256', {})) if p in acquired['sha256']})
     expected = {}
@@ -97,6 +99,10 @@ def verify(source, output):
         if '.journey-ferry' in markers:
             ferry=ferry_prepare(fresh);assert ferry_prepare(fresh)==ferry
             for path,digest in ferry['preserved_native_sha256'].items():
+                assert hashlib.sha256((fresh/path).read_bytes()).hexdigest()==digest,path
+        if '.journey-rival' in markers:
+            rival=rival_prepare(fresh);assert rival_prepare(fresh)==rival
+            for path,digest in rival['preserved_native_sha256'].items():
                 assert hashlib.sha256((fresh/path).read_bytes()).hexdigest()==digest,path
         for path, digest in expected.items():
             if hashlib.sha256((fresh / path).read_bytes()).hexdigest() != digest:
@@ -169,7 +175,7 @@ def verify(source, output):
             full_story_validated=False, prepared_sha256=expected)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, indent=2) + '\n')
-    for name, r in zip(['crossing-preparation', 'eastern-ocean-preparation', 'western-ocean-preparation', 'regional-state-preparation', 'east-coast-preparation', 'gym-scaling-preparation', 'campaign-gates-preparation', 'team-stories-preparation', 'free-access-preparation', 'blue-gym-preparation', 'road-access-preparation', 'mach-bike-preparation', 'yellow-stairs-preparation', 'story-access-preparation', 'story-completion-preparation', 'water-hms-preparation', 'ferry-preparation'], reports):
+    for name, r in zip(['crossing-preparation', 'eastern-ocean-preparation', 'western-ocean-preparation', 'regional-state-preparation', 'east-coast-preparation', 'gym-scaling-preparation', 'campaign-gates-preparation', 'team-stories-preparation', 'free-access-preparation', 'blue-gym-preparation', 'road-access-preparation', 'mach-bike-preparation', 'yellow-stairs-preparation', 'story-access-preparation', 'story-completion-preparation', 'water-hms-preparation', 'ferry-preparation', 'rival-preparation'], reports):
         (output.parent / (name + '.json')).write_text(json.dumps(r, indent=2) + '\n')
     print(f'Reproduction passed: {len(expected)} files; {edge_count} reciprocal edges; no overlapping seams')
 

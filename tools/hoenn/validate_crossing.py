@@ -6,6 +6,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import shutil
 import struct
 import subprocess
 import tempfile
@@ -28,6 +29,8 @@ parser.add_argument('--story-access', action='store_true', help='Exercise native
 parser.add_argument('--story-completion', action='store_true', help='Exercise the native rival call, Dive gift and permanent Space Center victory')
 parser.add_argument('--water-hms', action='store_true', help='Exercise early family gifts, three-HM classification and new terrestrial TMs')
 parser.add_argument('--ferry', action='store_true', help='Exercise the real early ferry NPCs, menus, ticket and regional roundtrips')
+parser.add_argument('--rival', action='store_true', help='Exercise both rival appearances, preserved leaders and real native lab battle starts')
+parser.add_argument('--rival-gender', type=int, choices=[0, 1], help='Isolate one rival battle in a separate emulator process')
 parser.add_argument('--output', type=Path, default=ROOT / 'mods/hoenn/integration-validation')
 args = parser.parse_args(); source = args.source.resolve(); args.output.mkdir(parents=True, exist_ok=True)
 raw = subprocess.check_output([str(ROOT / '.local/arm-binutils/usr/bin/arm-none-eabi-nm'), '-n', str(source / 'pokeemerald.elf')], text=True)
@@ -40,7 +43,7 @@ assert lib.start(str(source / 'pokeemerald.gba').encode())
 results = []
 call4 = None
 abi = None
-if args.gym_scaling or args.team_stories or args.story_access or args.story_completion or args.water_hms or args.ferry:
+if args.gym_scaling or args.team_stories or args.story_access or args.story_completion or args.water_hms or args.ferry or args.rival:
     toolchain = ROOT / '.local/arm-gcc/usr/bin/arm-none-eabi-gcc'
     with tempfile.TemporaryDirectory(prefix='gym-fixture-', dir='/tmp') as directory:
         temp = Path(directory)
@@ -1072,7 +1075,7 @@ if args.gym_scaling:
     results.append(dict(check='native_gym_party_levels',passed=True,parties=parties_tested,
         maps=len(scaling['gyms']),badge_counts=list(range(8)),non_gym_level_preserved=True,
         access_or_free_order_validated=False))
-if args.worldsea or args.westsea or args.east_coast:
+if (args.worldsea or args.westsea or args.east_coast) and args.rival_gender is None:
     ocean = dict(connections={})
     if args.worldsea:
         ocean['connections'].update(json.loads((source / '.journey-worldsea').read_text())['connections'])
@@ -1147,6 +1150,98 @@ if args.team_stories:
         opponents=['ARCHIE','SHELLY'],battle_type_flags=flags,rendered_battlers=4,
         native_battle_screen_rendered=True,victory_aftermath_validated=False))
     print('Real Giovanni/Archie/Shelly tag battle started',flush=True)
+if args.rival and args.rival_gender is not None:
+    rival = json.loads((source / '.journey-rival').read_text())
+    blue = rival['gym_blue_trainer_id']
+    rival_ids = set(rival['rival_trainer_ids'])
+    native_pics = set(abi[39:42])
+    trainer_base = s['gTrainers'] + abi[12] * abi[11] * abi[0]
+    read_pic = {1: lib.read8, 2: lib.read16, 4: lib.read32}[abi[44]]
+    originals = [read_pic(trainer_base + i * abi[0] + abi[43]) for i in range(abi[11])]
+    assert {i for i, pic in enumerate(originals) if pic in native_pics and i != blue} == rival_ids
+    checked, battle_genders = 0, []
+    for gender in [args.rival_gender]:
+        save2 = lib.read32(s['gSaveBlock2Ptr'])
+        lib.write8(save2 + abi[32], gender)
+        lib.write8(save2 + abi[45], abi[46])
+        warp('Route127', 79, 42)
+        expected_pic = abi[37 + gender]
+        for i, original in enumerate(originals):
+            expected = expected_pic if i in rival_ids else original
+            assert native('JourneyRivalTrainerPic', i) == expected, (gender, i, original, expected)
+            checked += 1
+        # Test the real graphics resolver, including its dynamic-object path.
+        expected_gfx = abi[34 + gender]
+        pointers = s['gObjectEventGraphicsInfoPointers']
+        assert native('GetObjectEventGraphicsInfo', abi[33]) == lib.read32(pointers + expected_gfx * 4)
+        assert native('GetObjectEventGraphicsInfo', abi[36]) == lib.read32(pointers + abi[33] * 4)
+        native('VarSet', 0x4010, abi[33])  # VAR_OBJ_GFX_ID_0 on this pinned engine.
+        assert native('GetObjectEventGraphicsInfo', abi[42]) == lib.read32(pointers + expected_gfx * 4)
+        variables = (source / 'include/constants/vars.h').read_text()
+        lab_state = int(re.search(r'^#define\s+VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB\s+(0x[0-9a-fA-F]+)', variables, re.M)[1], 16)
+        native('VarSet', lab_state, 6)
+        constants = (source / 'include/constants/flags.h').read_text()
+        hide_rival = int(re.search(r'^#define\s+FLAG_HIDE_RIVAL_IN_LAB\s+(0x[0-9a-fA-F]+)', constants, re.M)[1], 16)
+        native('FlagClear', hide_rival)
+        warp('PalletTown_ProfessorOaksLab_Frlg', 5, 6)
+        picture(f'opposite-rival-player-{gender}-overworld')
+        # Compare the intro's actual decompressed portrait and palette with
+        # the corresponding native player art, without claiming a full intro run.
+        loader = next(name for name in s if name.startswith('LoadTrainerPic.'))
+        original_resources = lib.read32(s['sOakSpeechResources'])
+        resources = native('AllocZeroed_', 128)
+        assert resources
+        lib.write32(s['sOakSpeechResources'], resources)
+        native(loader, 1 if gender == 0 else 0)
+        expected_tiles = bytes(lib.read8(0x06000600 + i) for i in range(6144))
+        native(loader, 2)
+        assert bytes(lib.read8(0x06000600 + i) for i in range(6144)) == expected_tiles
+        palette = s['sOakSpeech_Leaf_Pal' if gender == 0 else 'sOakSpeech_Red_Pal']
+        assert bytes(lib.read8(s['gPlttBufferUnfaded'] + 6 * 32 + i) for i in range(32)) == bytes(lib.read8(palette + i) for i in range(32))
+        native('Free', resources)
+        lib.write32(s['sOakSpeechResources'], original_resources)
+        warp('PalletTown_ProfessorOaksLab_Frlg', 5, 6)
+        # The original lab battle event uses the shared portrait accessor.
+        script(b'\x05' + struct.pack('<I', s['PalletTown_ProfessorOaksLab_EventScript_RivalBattleSquirtle']), 30)
+        for _ in range(100):
+            if lib.read32(s['gMain'] + 4) & ~1 == s['BattleMainCB2']: break
+            step(10)
+        assert lib.read32(s['gMain'] + 4) & ~1 == s['BattleMainCB2']
+        assert lib.read16(s['gTrainerBattleParameter'] + abi[13]) == rival['rival_trainer_ids'][0]
+        step(100)
+        pixels = ctypes.string_at(lib.image(), 240 * 160 * 4)
+        assert len({pixels[i:i + 3] for i in range(0, len(pixels), 4)}) > 12
+        picture(f'opposite-rival-player-{gender}-battle')
+        battle_genders.append(gender)
+    results.append(dict(check='opposite_sex_kanto_rival', passed=True,
+                        trainer_portraits_checked=checked, rival_teams=len(rival_ids),
+                        player_genders=battle_genders, male_player_rival='Leaf', female_player_rival='Red',
+                        real_lab_battle_starts=True, blue_leader_preserved=True,
+                        non_rival_portraits_preserved=True, overworld_graphics_resolved=True,
+                        dynamic_graphics_resolved=True, native_intro_assets_checked=True,
+                        full_intro_and_naming_flow_validated=False, victories_simulated=False))
+    print('Opposite-sex rival: isolated gender, every trainer portrait, native intro assets and actual lab battle passed', flush=True)
+if args.rival and args.rival_gender is None:
+    import sys
+    samples = []
+    with tempfile.TemporaryDirectory(prefix='rival-emulator-', dir='/tmp') as directory:
+        for gender in [0, 1]:
+            output = Path(directory) / str(gender)
+            child = subprocess.run([sys.executable, str(Path(__file__).resolve()),
+                '--source', str(source), '--library', str(args.library.resolve()),
+                '--westsea', '--rival', '--rival-gender', str(gender), '--output', str(output)],
+                capture_output=True, text=True)
+            assert child.returncode == 0, child.stdout + child.stderr
+            report = json.loads((output / 'connected-world.json').read_text())
+            samples.append(next(c for c in report['checks'] if c['check'] == 'opposite_sex_kanto_rival'))
+            for picture_path in output.glob('opposite-rival-*.png'):
+                shutil.copyfile(picture_path, args.output / picture_path.name)
+    merged = dict(samples[0])
+    merged['trainer_portraits_checked'] = sum(c['trainer_portraits_checked'] for c in samples)
+    merged['player_genders'] = [g for c in samples for g in c['player_genders']]
+    assert merged['player_genders'] == [0, 1]
+    results.append(merged)
+    print('Opposite-sex rival: both isolated native battle starts passed', flush=True)
 lib.stop()
 (args.output / ('connected-world.json' if args.westsea else 'worldsea.json' if args.worldsea else 'campaign-gates.json' if args.campaign_gates else 'crossing.json')).write_text(json.dumps(dict(status='experimental_not_full_integration',
     rom_sha256=hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest(),

@@ -1,6 +1,6 @@
 {
   "status": "experimental_not_full_integration",
-  "rom_sha256": "946d69414db127b199b255118e73cff4dd9edd79049bba52220f441bb38a86ae",
+  "rom_sha256": "44e74c17f3d71ff07c06b2d51b10800250119b0be1689c6f6d1d88d102016350",
   "checks": [
     {
       "check": "early_ticketed_interregional_ferry",
@@ -1185,6 +1185,26 @@
       "rendered_battlers": 4,
       "native_battle_screen_rendered": true,
       "victory_aftermath_validated": false
+    },
+    {
+      "check": "opposite_sex_kanto_rival",
+      "passed": true,
+      "trainer_portraits_checked": 3102,
+      "rival_teams": 27,
+      "player_genders": [
+        0,
+        1
+      ],
+      "male_player_rival": "Leaf",
+      "female_player_rival": "Red",
+      "real_lab_battle_starts": true,
+      "blue_leader_preserved": true,
+      "non_rival_portraits_preserved": true,
+      "overworld_graphics_resolved": true,
+      "dynamic_graphics_resolved": true,
+      "native_intro_assets_checked": true,
+      "full_intro_and_naming_flow_validated": false,
+      "victories_simulated": false
     }
   ],
   "full_story_validated": false,
