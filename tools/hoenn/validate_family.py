@@ -243,6 +243,7 @@ if city:
     native('VarSet', 0x40F7, 0)
     native('VarSet', 0x40F8, 0)
     assert native('LoadGameSave', 0) == 1
+    step(30)  # Allow the field script to settle after save-block relocation.
     assert var(0x40F7) == city + 1 and var(0x40F8) == 7
     assert native('FlagGet', 0x1ABE)
 assert native('JourneyGymBadgeCount', 0) == native('JourneyGymBadgeCount', 1) == 0

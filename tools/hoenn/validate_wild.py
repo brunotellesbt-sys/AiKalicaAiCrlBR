@@ -59,23 +59,43 @@ for kanto,hoenn in [(0,0),(5,0),(6,0),(8,3),(8,4),(8,8)]:
  assert native('JourneyWildSpecies',201,0)==201
  print('Parallel regional evolution phase passed:',kanto,hoenn,flush=True)
 # Complete catalog habitat membership, including highest-generation species.
-prep=json.loads((source/'.journey-habitats').read_text())
+prep=json.loads((source/('.journey-ecology' if (source/'.journey-ecology').exists() else '.journey-habitats')).read_text())
 metadata=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_text())
 observed_checks=[]
 for h in prep['locations_data']:
- name=h['maps'][0]
+ name=next((m for m in h['maps'] if prep.get('map_species',{}).get(m)),h['maps'][0])
+ area=next((p['area'] for p in prep.get('pools',[]) if p['map']==name),0)
  names=json.loads((source/'data/maps/map_groups.json').read_text())
  source_name=next(n for g in names['group_order'] for n in names[g] if json.loads((source/f'data/maps/{n}/map.json').read_text())['id']==name)
  warp(source_name,1,1)
- allowed={s['id'] for f in h['families'] for s in f['species']}
+ allowed=set(prep.get('map_species',{}).get(name,[s['id'] for f in h['families'] for s in f['species']]))
  roots={f['root'] for f in h['families']}
- got={native('JourneyWildSpecies',150,0) for _ in range(120)}
+ got={native('JourneyWildSpecies',150,area) for _ in range(120)}
  assert got<=allowed,(name,got-allowed)
  group,num=map_id(source_name)
  for member in allowed:assert native('JourneyHabitatHasSpecies',group,num,member)
  assert not native('JourneyHabitatHasSpecies',group,num,150)
  observed_checks.append(dict(map=name,observed=sorted(got),allowed_count=len(allowed)))
  print('Habitat verified:',name,flush=True)
+# Families with divergent evolutions retain their full land roster while water
+# selects aquatic branches. Native fishing odds also preserve rarity ordering.
+if (source/'.journey-ecology').exists():
+ for root_id in [133,128]:
+  h=next(h for h in prep['locations_data'] if any(f['root']==root_id for f in h['families']))
+  ident=next(p['map'] for p in prep['pools'] if p['map'] in h['maps'] and p['area']==3)
+  name=next(n for g in names['group_order'] for n in names[g] if json.loads((source/f'data/maps/{n}/map.json').read_text())['id']==ident)
+  warp(name,1,1)
+  observed={native('JourneyWildSpecies',root_id,3) for _ in range(80)}
+  assert all(prep['type_ids']['TYPE_WATER'] in metadata['species'][str(i)]['types'] for i in observed),(root_id,observed)
+  if root_id==133:assert observed=={134}
+ odds_cases=[]
+ for percentage in [15,40,75,100]:
+  ident=next((m for m,p in prep['fishing_bite_percent'].items() if p==percentage),None)
+  if ident is None:continue
+  name=next(n for g in names['group_order'] for n in names[g] if json.loads((source/f'data/maps/{n}/map.json').read_text())['id']==ident)
+  warp(name,1,1);assert native('JourneyFishingOdds',100)==percentage
+  odds_cases.append(dict(map=ident,base=100,actual=percentage))
+ print('Native aquatic branch filter and fishing rarity passed',flush=True)
 # Initial regional Pokedex immediately enables the complete National Dex.
 flag=abi[50]
 native('FlagSet',flag)
@@ -85,4 +105,4 @@ lib.stop()
  rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),level_cases=checks,
  eggs_excluded=True,fainted_included=True,regional_progress='floor mean',phase_cases=6,
  native_fixed_species_preserved=True,unown_preserved=True,national_dex_from_initial_pokedex=True,
- catalog_habitats=observed_checks,habitat_preserved=True,full_campaign_validated=False),indent=2)+'\n')
+ catalog_habitats=observed_checks,aquatic_branches_verified=(source/'.journey-ecology').exists(),fishing_odds_cases=odds_cases if (source/'.journey-ecology').exists() else [],habitat_preserved=True,full_campaign_validated=False),indent=2)+'\n')

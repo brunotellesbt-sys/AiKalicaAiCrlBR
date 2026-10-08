@@ -232,6 +232,7 @@ if args.ferry:
     assert native('TrySavingData', 0, max_frames=6000) == 1
     assert native('RemoveBagItem', ticket, 1)
     assert native('LoadGameSave', 0) == 1
+    step(30)  # Allow the field script to settle after save-block relocation.
     assert native('CountTotalItemQuantityInBag', ticket) == 1
     assert ferry_flags() == initial_flags
     picture('ferry-vermilion-arrival')
@@ -369,6 +370,7 @@ if args.story_completion:
     assert native('TrySavingData', 0, max_frames=6000) == 1
     native('VarSet', 0x409F, 0)
     assert native('LoadGameSave', 0) == 1
+    step(30)  # Allow the field script to settle after save-block relocation.
     assert native('VarGet', 0x409F) == 3
     assert not native('FlagGet', legacy)
     assert native('JourneyCanStartArchieAlliance') == 1

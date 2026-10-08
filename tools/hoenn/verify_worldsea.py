@@ -34,6 +34,8 @@ from prepare_travel_rules import prepare as travel_prepare
 from prepare_birth import prepare as birth_prepare
 from prepare_wild import prepare as wild_prepare
 from prepare_habitats import prepare as habitats_prepare
+from prepare_sanctuaries import prepare as sanctuaries_prepare
+from prepare_ecology import prepare as ecology_prepare
 
 
 def verify(source, output):
@@ -55,7 +57,7 @@ def verify(source, output):
     if (source / '.journey-ferry').exists(): markers.append('.journey-ferry')
     if (source / '.journey-rival').exists(): markers.append('.journey-rival')
     if (source / '.journey-family').exists(): markers.append('.journey-family')
-    for layer in ['travel-rules', 'birth', 'wild', 'habitats']:
+    for layer in ['travel-rules', 'birth', 'wild', 'habitats', 'sanctuaries', 'ecology']:
         if (source / ('.journey-' + layer)).exists(): markers.append('.journey-' + layer)
     reports = [json.loads((source / p).read_text()) for p in markers]
     original_paths = sorted({p for r in reports for p in (r['original_sha256'] | r.get('input_sha256', {})) if p in acquired['sha256']})
@@ -122,6 +124,10 @@ def verify(source, output):
             wild=wild_prepare(fresh);assert wild_prepare(fresh)==wild
         if '.journey-habitats' in markers:
             habitats=habitats_prepare(fresh);assert habitats_prepare(fresh)==habitats
+        if '.journey-sanctuaries' in markers:
+            sanctuaries=sanctuaries_prepare(fresh);assert sanctuaries_prepare(fresh)==sanctuaries
+        if '.journey-ecology' in markers:
+            ecology=ecology_prepare(fresh);assert ecology_prepare(fresh)==ecology
         for path, digest in expected.items():
             if hashlib.sha256((fresh / path).read_bytes()).hexdigest() != digest:
                 raise ValueError('Fresh overlay mismatch: ' + path)
@@ -193,7 +199,7 @@ def verify(source, output):
             full_story_validated=False, prepared_sha256=expected)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, indent=2) + '\n')
-    for name, r in zip(['crossing-preparation', 'eastern-ocean-preparation', 'western-ocean-preparation', 'regional-state-preparation', 'east-coast-preparation', 'gym-scaling-preparation', 'campaign-gates-preparation', 'team-stories-preparation', 'free-access-preparation', 'blue-gym-preparation', 'road-access-preparation', 'mach-bike-preparation', 'yellow-stairs-preparation', 'story-access-preparation', 'story-completion-preparation', 'water-hms-preparation', 'ferry-preparation', 'rival-preparation', 'family-preparation', 'travel-rules-preparation', 'birth-preparation', 'wild-preparation', 'habitats-preparation'], reports):
+    for name, r in zip(['crossing-preparation', 'eastern-ocean-preparation', 'western-ocean-preparation', 'regional-state-preparation', 'east-coast-preparation', 'gym-scaling-preparation', 'campaign-gates-preparation', 'team-stories-preparation', 'free-access-preparation', 'blue-gym-preparation', 'road-access-preparation', 'mach-bike-preparation', 'yellow-stairs-preparation', 'story-access-preparation', 'story-completion-preparation', 'water-hms-preparation', 'ferry-preparation', 'rival-preparation', 'family-preparation', 'travel-rules-preparation', 'birth-preparation', 'wild-preparation', 'habitats-preparation', 'sanctuaries-preparation', 'ecology-preparation'], reports):
         (output.parent / (name + '.json')).write_text(json.dumps(r, indent=2) + '\n')
     print(f'Reproduction passed: {len(expected)} files; {edge_count} reciprocal edges; no overlapping seams')
 
