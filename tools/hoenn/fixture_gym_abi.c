@@ -55,6 +55,10 @@ const unsigned journey_fixture_abi[] = {
       offsetof(struct BattlePokemon, status1), MON_DATA_MET_LEVEL,
       SPECIES_GARCHOMP, SPECIES_GARCHOMP_MEGA_Z, ITEM_GARCHOMPITE_Z,
       offsetof(struct PartyMenu, slotId), offsetof(struct Pokemon, hp),
-      offsetof(struct BattlePokemon, hp), MOVE_GROWL
+      offsetof(struct BattlePokemon, hp), MOVE_GROWL, MOVE_DARK_PULSE,
+      MON_DATA_PERSONALITY, MON_DATA_OT_ID, MON_DATA_HELD_ITEM,
+      offsetof(struct SaveBlock1, vars), VAR_SOOTOPOLIS_CITY_STATE, VAR_SKY_PILLAR_STATE, FLAG_SYS_WEATHER_CTRL,
+      TRAINER_PARTNER(1), TRAINER_MAXIE_MOSSDEEP, TRAINER_TABITHA_MOSSDEEP,
+      VAR_MOSSDEEP_SPACE_CENTER_STATE, FLAG_DEFEATED_MAGMA_SPACE_CENTER
 #endif
 };
