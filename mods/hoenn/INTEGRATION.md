@@ -1,5 +1,39 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+## Linha de barco entre Kanto, Hoenn e Sevii
+
+Uma linha WORLD FERRY liga Vermilion, o interior do porto de Slateport e
+os portos das sete ilhas Sevii. Fale com o novo marinheiro: ele entrega
+gratuitamente o **World Ticket**, um item-chave próprio e reutilizável,
+e abre o menu de destinos. Se a bolsa estiver cheia, libere um espaço e
+fale novamente com ele. O bilhete não é consumido nas viagens.
+
+No menu principal, escolha Vermilion, Slateport ou SEVII ISLANDS. A segunda
+página lista as sete ilhas e BACK; B também volta. CANCEL/B no menu
+principal encerra a conversa. Escolher o porto atual informa que você já
+está ali. O serviço funciona desde o início, independentemente de insígnias,
+Bill/Celio, passes antigos, League ou do progresso de Aqua/Magma/Rocket.
+
+Os novos marinheiros ficam ao lado dos acessos existentes, com desembarque
+em piso caminhável. O transporte usa diálogo de embarque e transição de
+mapa; **ainda não há interior de barco nem animação de navegação própria**.
+Não altera a viagem ou o ticket do S.S. Anne, os barcos originais, os eventos
+do submarino de Stern, as batalhas ou os canais de Surf. Todos os scripts
+originais dos nove portos foram preservados por hash.
+
+O mGBA exercita as interações reais dos nove NPCs e os menus por botões:
+16 viagens de ida/volta, troca dos formatos Emerald/FRLG, desembarque a pé,
+bilhete sem duplicação, bolsa de itens-chave cheia, cancelamento, retorno
+da segunda página e save/reload. As flags de insígnias e missões monitoradas
+permanecem iguais. As capturas mostram o [menu principal](integration-validation/ferry-vermilion-destinations.png)
+e o [menu das ilhas](integration-validation/ferry-seven-island-menu.png).
+
+Na candidata atual passaram **25 testes offline e 109 verificações nativas**,
+com as 96 travessias de Surf e as 840 equipes de ginásio. As 17 camadas
+reproduzem 359 arquivos byte a byte e 117 conexões recíprocas. Continua
+necessário iniciar um save novo; as campanhas completas ainda não foram
+validadas e a ROM publicada no player permanece na versão anterior.
+
 ## Surf, Dive e Waterfall no início; antigos HMs terrestres como TMs
 
 A mãe de Pallet e a mãe da casa do jogador em Littleroot agora oferecem o
@@ -530,6 +564,7 @@ python3 tools/hoenn/prepare_yellow_stairs.py --source .local/hoenn-multiregion-s
 python3 tools/hoenn/prepare_story_access.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_story_completion.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_water_hms.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_ferry.py --source .local/hoenn-multiregion-src
 ```
 
 Na pasta de fonte, compile com os caminhos do compilador ARM, binutils,
@@ -539,7 +574,7 @@ Após editar mapas binários, force sua recompilação com `make modern -W data/
 ```sh
 python3 tools/hoenn/validate_crossing.py \
   --source .local/hoenn-multiregion-src --library .local/mgba-bridge.so \
-  --worldsea --westsea --region-state --east-coast --gym-scaling --campaign-gates --free-access --road-access --team-stories --story-access --story-completion --water-hms
+  --worldsea --westsea --region-state --east-coast --gym-scaling --campaign-gates --free-access --road-access --team-stories --story-access --story-completion --water-hms --ferry
 python3 tools/hoenn/verify_worldsea.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/world_layout.py
 node tools/hoenn/validate_world_layout.cjs
@@ -556,8 +591,8 @@ anteriores. Ele é específico ao ABI desta base fixada.
    ginásios livres, níveis adaptativos e bloqueio correto de cada Liga.
 3. Migrar cidades iniciais, famílias/Oak, rival do sexo oposto, catálogo/sprites,
    Habilidades Ocultas/Battle Bond, Megas e encontros adaptativos.
-4. Validar as conexões Sevii durante uma campanha completa, implementar o
-   ticket Vermilion–Slateport, ligar a entrega dos três HMs às futuras
+4. Validar as conexões Sevii e o serviço de barco durante uma campanha
+   completa, ligar a entrega dos três HMs às futuras
    famílias das cidades iniciais e auditar os demais eventos de puzzles.
 5. Validar Aqua/Magma, concursos, bases secretas, Frontier, viagens,
    salvamento e campanhas completas, antes de trocar a ROM no player.

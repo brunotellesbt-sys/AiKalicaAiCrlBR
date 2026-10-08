@@ -1,7 +1,89 @@
 {
   "status": "experimental_not_full_integration",
-  "rom_sha256": "d7c80506da75a32a68c1913d5e06ab6021286c643f608632a37ed274aa878cb6",
+  "rom_sha256": "946d69414db127b199b255118e73cff4dd9edd79049bba52220f441bb38a86ae",
   "checks": [
+    {
+      "check": "early_ticketed_interregional_ferry",
+      "passed": true,
+      "ports_tested": 9,
+      "real_npc_interactions": true,
+      "actual_menu_inputs": true,
+      "trips": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "zero_badges": true,
+      "ticket_reusable": true,
+      "full_key_pocket_retry": true,
+      "cancel_and_back": true,
+      "duplicate_ticket_prevented": true,
+      "on_foot_arrivals": true,
+      "regional_format_switches": true,
+      "mission_flags_unchanged": true,
+      "native_flash_save_roundtrip": true
+    },
     {
       "check": "regional_flags_and_native_save_roundtrip",
       "passed": true,

@@ -1,0 +1,2407 @@
+{
+  "status": "early_interregional_ferry_candidate",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "ports": [
+    {
+      "map": "VermilionCity_Frlg",
+      "title": "VERMILION",
+      "npc": [
+        24,
+        31
+      ],
+      "arrival": [
+        23,
+        31
+      ],
+      "script": "Journey_FerryPort0",
+      "local_id": 13,
+      "map_constant": "MAP_VERMILION_CITY"
+    },
+    {
+      "map": "SlateportCity_Harbor",
+      "title": "SLATEPORT",
+      "npc": [
+        16,
+        13
+      ],
+      "arrival": [
+        16,
+        14
+      ],
+      "script": "Journey_FerryPort1",
+      "local_id": 9,
+      "map_constant": "MAP_SLATEPORT_CITY_HARBOR"
+    },
+    {
+      "map": "OneIsland_Harbor_Frlg",
+      "title": "ONE ISLAND",
+      "npc": [
+        9,
+        5
+      ],
+      "arrival": [
+        8,
+        5
+      ],
+      "script": "Journey_FerryPort2",
+      "local_id": 3,
+      "map_constant": "MAP_ONE_ISLAND_HARBOR"
+    },
+    {
+      "map": "TwoIsland_Harbor_Frlg",
+      "title": "TWO ISLAND",
+      "npc": [
+        9,
+        5
+      ],
+      "arrival": [
+        8,
+        5
+      ],
+      "script": "Journey_FerryPort3",
+      "local_id": 3,
+      "map_constant": "MAP_TWO_ISLAND_HARBOR"
+    },
+    {
+      "map": "ThreeIsland_Harbor_Frlg",
+      "title": "THREE ISLAND",
+      "npc": [
+        9,
+        5
+      ],
+      "arrival": [
+        8,
+        5
+      ],
+      "script": "Journey_FerryPort4",
+      "local_id": 3,
+      "map_constant": "MAP_THREE_ISLAND_HARBOR"
+    },
+    {
+      "map": "FourIsland_Harbor_Frlg",
+      "title": "FOUR ISLAND",
+      "npc": [
+        9,
+        5
+      ],
+      "arrival": [
+        8,
+        5
+      ],
+      "script": "Journey_FerryPort5",
+      "local_id": 3,
+      "map_constant": "MAP_FOUR_ISLAND_HARBOR"
+    },
+    {
+      "map": "FiveIsland_Harbor_Frlg",
+      "title": "FIVE ISLAND",
+      "npc": [
+        9,
+        5
+      ],
+      "arrival": [
+        8,
+        5
+      ],
+      "script": "Journey_FerryPort6",
+      "local_id": 3,
+      "map_constant": "MAP_FIVE_ISLAND_HARBOR"
+    },
+    {
+      "map": "SixIsland_Harbor_Frlg",
+      "title": "SIX ISLAND",
+      "npc": [
+        9,
+        5
+      ],
+      "arrival": [
+        8,
+        5
+      ],
+      "script": "Journey_FerryPort7",
+      "local_id": 3,
+      "map_constant": "MAP_SIX_ISLAND_HARBOR"
+    },
+    {
+      "map": "SevenIsland_Harbor_Frlg",
+      "title": "SEVEN ISLAND",
+      "npc": [
+        9,
+        5
+      ],
+      "arrival": [
+        8,
+        5
+      ],
+      "script": "Journey_FerryPort8",
+      "local_id": 3,
+      "map_constant": "MAP_SEVEN_ISLAND_HARBOR"
+    }
+  ],
+  "ticket_item_id": 875,
+  "reusable_ticket": true,
+  "ticket_free_at_each_port": true,
+  "no_badges_or_story_completion_required": true,
+  "event_changes": [
+    {
+      "map": "VermilionCity_Frlg",
+      "before": {
+        "id": "MAP_VERMILION_CITY",
+        "name": "VermilionCity_Frlg",
+        "layout": "LAYOUT_VERMILION_CITY",
+        "music": "MUS_RG_VERMILLION",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_VERMILION_CITY",
+        "requires_flash": false,
+        "weather": "WEATHER_SUNNY",
+        "map_type": "MAP_TYPE_TOWN",
+        "allow_cycling": true,
+        "allow_escaping": false,
+        "allow_running": true,
+        "show_map_name": true,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": [
+          {
+            "map": "MAP_ROUTE6",
+            "offset": 12,
+            "direction": "up"
+          },
+          {
+            "map": "MAP_ROUTE11",
+            "offset": 10,
+            "direction": "right"
+          },
+          {
+            "map": "MAP_JOURNEYWORLDSEA00",
+            "direction": "down",
+            "offset": 0
+          }
+        ],
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_WOMAN_1_FRLG",
+            "x": 22,
+            "y": 11,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+            "movement_range_x": 4,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "VermilionCity_EventScript_Woman",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+            "x": 17,
+            "y": 9,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "VermilionCity_EventScript_OldMan1",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_2",
+            "x": 36,
+            "y": 10,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "VermilionCity_EventScript_OldMan2",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_MACHOP",
+            "x": 35,
+            "y": 11,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+            "movement_range_x": 2,
+            "movement_range_y": 2,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "VermilionCity_EventScript_Machop",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 31,
+            "y": 30,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+            "movement_range_x": 4,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "VermilionCity_EventScript_Sailor",
+            "flag": "0"
+          },
+          {
+            "local_id": "LOCALID_VERMILION_FERRY_SAILOR",
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 24,
+            "y": 33,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "VermilionCity_EventScript_FerrySailor",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
+            "x": 19,
+            "y": 24,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "EventScript_CutTree",
+            "flag": "FLAG_HIDE_JOURNEY_LAND_OBSTACLES"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SCIENTIST",
+            "x": 25,
+            "y": 7,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+            "movement_range_x": 4,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "VermilionCity_EventScript_OaksAide",
+            "flag": "FLAG_HIDE_VERMILION_CITY_OAKS_AIDE"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_MAN",
+            "x": 14,
+            "y": 25,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "Journey_GymGuide",
+            "flag": "FLAG_HIDE_JOURNEY_KANTO_GYM_GUIDE"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+            "x": 29,
+            "y": 14,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "2",
+            "script": "JourneyTeam_Trainer1481",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+            "x": 29,
+            "y": 12,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "2",
+            "script": "JourneyTeam_Trainer1482",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+            "x": 28,
+            "y": 13,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "2",
+            "script": "JourneyTeam_Trainer1483",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 22,
+            "y": 34,
+            "elevation": 3,
+            "dest_map": "MAP_SSANNE_EXTERIOR",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 23,
+            "y": 34,
+            "elevation": 3,
+            "dest_map": "MAP_SSANNE_EXTERIOR",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 24,
+            "y": 34,
+            "elevation": 3,
+            "dest_map": "MAP_SSANNE_EXTERIOR",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 9,
+            "y": 6,
+            "elevation": 0,
+            "dest_map": "MAP_VERMILION_CITY_HOUSE1",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 15,
+            "y": 6,
+            "elevation": 3,
+            "dest_map": "MAP_VERMILION_CITY_POKEMON_CENTER_1F",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 12,
+            "y": 17,
+            "elevation": 0,
+            "dest_map": "MAP_VERMILION_CITY_POKEMON_FAN_CLUB",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 19,
+            "y": 17,
+            "elevation": 0,
+            "dest_map": "MAP_VERMILION_CITY_HOUSE2",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 29,
+            "y": 17,
+            "elevation": 0,
+            "dest_map": "MAP_VERMILION_CITY_MART",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 28,
+            "y": 24,
+            "elevation": 0,
+            "dest_map": "MAP_VERMILION_CITY_HOUSE3",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 14,
+            "y": 25,
+            "elevation": 0,
+            "dest_map": "MAP_VERMILION_CITY_GYM",
+            "dest_warp_id": "1"
+          }
+        ],
+        "coord_events": [
+          {
+            "type": "trigger",
+            "x": 22,
+            "y": 33,
+            "elevation": 0,
+            "var": "VAR_VERMILION_CITY_TICKET_CHECK_TRIGGER",
+            "var_value": "0",
+            "script": "VermilionCity_EventScript_CheckTicketLeft"
+          },
+          {
+            "type": "trigger",
+            "x": 23,
+            "y": 33,
+            "elevation": 0,
+            "var": "VAR_VERMILION_CITY_TICKET_CHECK_TRIGGER",
+            "var_value": "0",
+            "script": "VermilionCity_EventScript_CheckTicketRight"
+          },
+          {
+            "type": "trigger",
+            "x": 22,
+            "y": 32,
+            "elevation": 0,
+            "var": "VAR_TEMP_1",
+            "var_value": "0",
+            "script": "VermilionCity_EventScript_ExitedTicketCheck"
+          },
+          {
+            "type": "trigger",
+            "x": 23,
+            "y": 32,
+            "elevation": 0,
+            "var": "VAR_TEMP_1",
+            "var_value": "0",
+            "script": "VermilionCity_EventScript_ExitedTicketCheck"
+          }
+        ],
+        "bg_events": [
+          {
+            "type": "sign",
+            "x": 33,
+            "y": 6,
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "VermilionCity_EventScript_CitySign"
+          },
+          {
+            "type": "sign",
+            "x": 10,
+            "y": 17,
+            "elevation": 3,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "VermilionCity_EventScript_PokemonFanClubSign"
+          },
+          {
+            "type": "sign",
+            "x": 10,
+            "y": 24,
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "VermilionCity_EventScript_GymSign"
+          },
+          {
+            "type": "sign",
+            "x": 34,
+            "y": 18,
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "VermilionCity_EventScript_HarborSign"
+          },
+          {
+            "type": "sign",
+            "x": 45,
+            "y": 17,
+            "elevation": 3,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "VermilionCity_EventScript_SnorlaxNotice"
+          },
+          {
+            "type": "hidden_item",
+            "x": 14,
+            "y": 11,
+            "elevation": 3,
+            "item": "ITEM_MAX_ETHER",
+            "flag": "FLAG_HIDDEN_ITEM_VERMILION_CITY_MAX_ETHER",
+            "quantity": 1,
+            "underfoot": false
+          }
+        ]
+      },
+      "after": {
+        "id": "MAP_VERMILION_CITY",
+        "name": "VermilionCity_Frlg",
+        "layout": "LAYOUT_VERMILION_CITY",
+        "music": "MUS_RG_VERMILLION",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_VERMILION_CITY",
+        "requires_flash": false,
+        "weather": "WEATHER_SUNNY",
+        "map_type": "MAP_TYPE_TOWN",
+        "allow_cycling": true,
+        "allow_escaping": false,
+        "allow_running": true,
+        "show_map_name": true,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": [
+          {
+            "map": "MAP_ROUTE6",
+            "offset": 12,
+            "direction": "up"
+          },
+          {
+            "map": "MAP_ROUTE11",
+            "offset": 10,
+            "direction": "right"
+          },
+          {
+            "map": "MAP_JOURNEYWORLDSEA00",
+            "direction": "down",
+            "offset": 0
+          }
+        ],
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_WOMAN_1_FRLG",
+            "x": 22,
+            "y": 11,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+            "movement_range_x": 4,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "VermilionCity_EventScript_Woman",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+            "x": 17,
+            "y": 9,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "VermilionCity_EventScript_OldMan1",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_2",
+            "x": 36,
+            "y": 10,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "VermilionCity_EventScript_OldMan2",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_MACHOP",
+            "x": 35,
+            "y": 11,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+            "movement_range_x": 2,
+            "movement_range_y": 2,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "VermilionCity_EventScript_Machop",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 31,
+            "y": 30,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+            "movement_range_x": 4,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "VermilionCity_EventScript_Sailor",
+            "flag": "0"
+          },
+          {
+            "local_id": "LOCALID_VERMILION_FERRY_SAILOR",
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 24,
+            "y": 33,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "VermilionCity_EventScript_FerrySailor",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
+            "x": 19,
+            "y": 24,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "EventScript_CutTree",
+            "flag": "FLAG_HIDE_JOURNEY_LAND_OBSTACLES"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SCIENTIST",
+            "x": 25,
+            "y": 7,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+            "movement_range_x": 4,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "VermilionCity_EventScript_OaksAide",
+            "flag": "FLAG_HIDE_VERMILION_CITY_OAKS_AIDE"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_MAN",
+            "x": 14,
+            "y": 25,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "Journey_GymGuide",
+            "flag": "FLAG_HIDE_JOURNEY_KANTO_GYM_GUIDE"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+            "x": 29,
+            "y": 14,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "2",
+            "script": "JourneyTeam_Trainer1481",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+            "x": 29,
+            "y": 12,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "2",
+            "script": "JourneyTeam_Trainer1482",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_F",
+            "x": 28,
+            "y": 13,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NORMAL",
+            "trainer_sight_or_berry_tree_id": "2",
+            "script": "JourneyTeam_Trainer1483",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 24,
+            "y": 31,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "Journey_FerryPort0",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 22,
+            "y": 34,
+            "elevation": 3,
+            "dest_map": "MAP_SSANNE_EXTERIOR",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 23,
+            "y": 34,
+            "elevation": 3,
+            "dest_map": "MAP_SSANNE_EXTERIOR",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 24,
+            "y": 34,
+            "elevation": 3,
+            "dest_map": "MAP_SSANNE_EXTERIOR",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 9,
+            "y": 6,
+            "elevation": 0,
+            "dest_map": "MAP_VERMILION_CITY_HOUSE1",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 15,
+            "y": 6,
+            "elevation": 3,
+            "dest_map": "MAP_VERMILION_CITY_POKEMON_CENTER_1F",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 12,
+            "y": 17,
+            "elevation": 0,
+            "dest_map": "MAP_VERMILION_CITY_POKEMON_FAN_CLUB",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 19,
+            "y": 17,
+            "elevation": 0,
+            "dest_map": "MAP_VERMILION_CITY_HOUSE2",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 29,
+            "y": 17,
+            "elevation": 0,
+            "dest_map": "MAP_VERMILION_CITY_MART",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 28,
+            "y": 24,
+            "elevation": 0,
+            "dest_map": "MAP_VERMILION_CITY_HOUSE3",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 14,
+            "y": 25,
+            "elevation": 0,
+            "dest_map": "MAP_VERMILION_CITY_GYM",
+            "dest_warp_id": "1"
+          }
+        ],
+        "coord_events": [
+          {
+            "type": "trigger",
+            "x": 22,
+            "y": 33,
+            "elevation": 0,
+            "var": "VAR_VERMILION_CITY_TICKET_CHECK_TRIGGER",
+            "var_value": "0",
+            "script": "VermilionCity_EventScript_CheckTicketLeft"
+          },
+          {
+            "type": "trigger",
+            "x": 23,
+            "y": 33,
+            "elevation": 0,
+            "var": "VAR_VERMILION_CITY_TICKET_CHECK_TRIGGER",
+            "var_value": "0",
+            "script": "VermilionCity_EventScript_CheckTicketRight"
+          },
+          {
+            "type": "trigger",
+            "x": 22,
+            "y": 32,
+            "elevation": 0,
+            "var": "VAR_TEMP_1",
+            "var_value": "0",
+            "script": "VermilionCity_EventScript_ExitedTicketCheck"
+          },
+          {
+            "type": "trigger",
+            "x": 23,
+            "y": 32,
+            "elevation": 0,
+            "var": "VAR_TEMP_1",
+            "var_value": "0",
+            "script": "VermilionCity_EventScript_ExitedTicketCheck"
+          }
+        ],
+        "bg_events": [
+          {
+            "type": "sign",
+            "x": 33,
+            "y": 6,
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "VermilionCity_EventScript_CitySign"
+          },
+          {
+            "type": "sign",
+            "x": 10,
+            "y": 17,
+            "elevation": 3,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "VermilionCity_EventScript_PokemonFanClubSign"
+          },
+          {
+            "type": "sign",
+            "x": 10,
+            "y": 24,
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "VermilionCity_EventScript_GymSign"
+          },
+          {
+            "type": "sign",
+            "x": 34,
+            "y": 18,
+            "elevation": 0,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "VermilionCity_EventScript_HarborSign"
+          },
+          {
+            "type": "sign",
+            "x": 45,
+            "y": 17,
+            "elevation": 3,
+            "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+            "script": "VermilionCity_EventScript_SnorlaxNotice"
+          },
+          {
+            "type": "hidden_item",
+            "x": 14,
+            "y": 11,
+            "elevation": 3,
+            "item": "ITEM_MAX_ETHER",
+            "flag": "FLAG_HIDDEN_ITEM_VERMILION_CITY_MAX_ETHER",
+            "quantity": 1,
+            "underfoot": false
+          }
+        ]
+      }
+    },
+    {
+      "map": "SlateportCity_Harbor",
+      "before": {
+        "id": "MAP_SLATEPORT_CITY_HARBOR",
+        "name": "SlateportCity_Harbor",
+        "layout": "LAYOUT_HARBOR",
+        "music": "MUS_SLATEPORT",
+        "region_map_section": "MAPSEC_SLATEPORT_CITY",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": null,
+        "object_events": [
+          {
+            "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+            "x": 8,
+            "y": 10,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "SlateportCity_Harbor_EventScript_FerryAttendant",
+            "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_PATRONS"
+          },
+          {
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+            "x": 4,
+            "y": 12,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "SlateportCity_Harbor_EventScript_Sailor",
+            "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_PATRONS"
+          },
+          {
+            "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
+            "x": 1,
+            "y": 12,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "SlateportCity_Harbor_EventScript_FatMan",
+            "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_PATRONS"
+          },
+          {
+            "local_id": "LOCALID_SLATEPORT_HARBOR_CAPT_STERN",
+            "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+            "x": 6,
+            "y": 13,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "SlateportCity_Harbor_EventScript_CaptStern",
+            "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_CAPTAIN_STERN"
+          },
+          {
+            "local_id": "LOCALID_SLATEPORT_HARBOR_SS_TIDAL",
+            "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
+            "x": 8,
+            "y": 9,
+            "elevation": 1,
+            "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_SS_TIDAL"
+          },
+          {
+            "local_id": "LOCALID_SLATEPORT_HARBOR_GRUNT",
+            "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+            "x": 7,
+            "y": 10,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_AQUA_GRUNT"
+          },
+          {
+            "local_id": "LOCALID_SLATEPORT_HARBOR_ARCHIE",
+            "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
+            "x": 8,
+            "y": 10,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_ARCHIE"
+          },
+          {
+            "local_id": "LOCALID_SLATEPORT_HARBOR_SUBMARINE",
+            "graphics_id": "OBJ_EVENT_GFX_SUBMARINE_SHADOW",
+            "x": 7,
+            "y": 9,
+            "elevation": 1,
+            "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_SUBMARINE_SHADOW"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 11,
+            "y": 14,
+            "elevation": 0,
+            "dest_map": "MAP_SLATEPORT_CITY",
+            "dest_warp_id": "8"
+          },
+          {
+            "x": 12,
+            "y": 14,
+            "elevation": 0,
+            "dest_map": "MAP_SLATEPORT_CITY",
+            "dest_warp_id": "8"
+          },
+          {
+            "x": 19,
+            "y": 15,
+            "elevation": 0,
+            "dest_map": "MAP_SLATEPORT_CITY",
+            "dest_warp_id": "9"
+          },
+          {
+            "x": 20,
+            "y": 15,
+            "elevation": 0,
+            "dest_map": "MAP_SLATEPORT_CITY",
+            "dest_warp_id": "9"
+          }
+        ],
+        "coord_events": [
+          {
+            "type": "trigger",
+            "x": 8,
+            "y": 11,
+            "elevation": 3,
+            "var": "VAR_SLATEPORT_HARBOR_STATE",
+            "var_value": "1",
+            "script": "SlateportCity_Harbor_EventScript_AquaEscapeTrigger0"
+          },
+          {
+            "type": "trigger",
+            "x": 8,
+            "y": 12,
+            "elevation": 3,
+            "var": "VAR_SLATEPORT_HARBOR_STATE",
+            "var_value": "1",
+            "script": "SlateportCity_Harbor_EventScript_AquaEscapeTrigger1"
+          },
+          {
+            "type": "trigger",
+            "x": 8,
+            "y": 13,
+            "elevation": 3,
+            "var": "VAR_SLATEPORT_HARBOR_STATE",
+            "var_value": "1",
+            "script": "SlateportCity_Harbor_EventScript_AquaEscapeTrigger2"
+          },
+          {
+            "type": "trigger",
+            "x": 8,
+            "y": 14,
+            "elevation": 3,
+            "var": "VAR_SLATEPORT_HARBOR_STATE",
+            "var_value": "1",
+            "script": "SlateportCity_Harbor_EventScript_AquaEscapeTrigger3"
+          }
+        ],
+        "bg_events": []
+      },
+      "after": {
+        "id": "MAP_SLATEPORT_CITY_HARBOR",
+        "name": "SlateportCity_Harbor",
+        "layout": "LAYOUT_HARBOR",
+        "music": "MUS_SLATEPORT",
+        "region_map_section": "MAPSEC_SLATEPORT_CITY",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": null,
+        "object_events": [
+          {
+            "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+            "x": 8,
+            "y": 10,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "SlateportCity_Harbor_EventScript_FerryAttendant",
+            "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_PATRONS"
+          },
+          {
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+            "x": 4,
+            "y": 12,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "SlateportCity_Harbor_EventScript_Sailor",
+            "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_PATRONS"
+          },
+          {
+            "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
+            "x": 1,
+            "y": 12,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "SlateportCity_Harbor_EventScript_FatMan",
+            "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_PATRONS"
+          },
+          {
+            "local_id": "LOCALID_SLATEPORT_HARBOR_CAPT_STERN",
+            "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+            "x": 6,
+            "y": 13,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "SlateportCity_Harbor_EventScript_CaptStern",
+            "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_CAPTAIN_STERN"
+          },
+          {
+            "local_id": "LOCALID_SLATEPORT_HARBOR_SS_TIDAL",
+            "graphics_id": "OBJ_EVENT_GFX_SS_TIDAL",
+            "x": 8,
+            "y": 9,
+            "elevation": 1,
+            "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_SS_TIDAL"
+          },
+          {
+            "local_id": "LOCALID_SLATEPORT_HARBOR_GRUNT",
+            "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+            "x": 7,
+            "y": 10,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_AQUA_GRUNT"
+          },
+          {
+            "local_id": "LOCALID_SLATEPORT_HARBOR_ARCHIE",
+            "graphics_id": "OBJ_EVENT_GFX_ARCHIE",
+            "x": 8,
+            "y": 10,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_ARCHIE"
+          },
+          {
+            "local_id": "LOCALID_SLATEPORT_HARBOR_SUBMARINE",
+            "graphics_id": "OBJ_EVENT_GFX_SUBMARINE_SHADOW",
+            "x": 7,
+            "y": 9,
+            "elevation": 1,
+            "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "FLAG_HIDE_SLATEPORT_CITY_HARBOR_SUBMARINE_SHADOW"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+            "x": 16,
+            "y": 13,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "Journey_FerryPort1",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 11,
+            "y": 14,
+            "elevation": 0,
+            "dest_map": "MAP_SLATEPORT_CITY",
+            "dest_warp_id": "8"
+          },
+          {
+            "x": 12,
+            "y": 14,
+            "elevation": 0,
+            "dest_map": "MAP_SLATEPORT_CITY",
+            "dest_warp_id": "8"
+          },
+          {
+            "x": 19,
+            "y": 15,
+            "elevation": 0,
+            "dest_map": "MAP_SLATEPORT_CITY",
+            "dest_warp_id": "9"
+          },
+          {
+            "x": 20,
+            "y": 15,
+            "elevation": 0,
+            "dest_map": "MAP_SLATEPORT_CITY",
+            "dest_warp_id": "9"
+          }
+        ],
+        "coord_events": [
+          {
+            "type": "trigger",
+            "x": 8,
+            "y": 11,
+            "elevation": 3,
+            "var": "VAR_SLATEPORT_HARBOR_STATE",
+            "var_value": "1",
+            "script": "SlateportCity_Harbor_EventScript_AquaEscapeTrigger0"
+          },
+          {
+            "type": "trigger",
+            "x": 8,
+            "y": 12,
+            "elevation": 3,
+            "var": "VAR_SLATEPORT_HARBOR_STATE",
+            "var_value": "1",
+            "script": "SlateportCity_Harbor_EventScript_AquaEscapeTrigger1"
+          },
+          {
+            "type": "trigger",
+            "x": 8,
+            "y": 13,
+            "elevation": 3,
+            "var": "VAR_SLATEPORT_HARBOR_STATE",
+            "var_value": "1",
+            "script": "SlateportCity_Harbor_EventScript_AquaEscapeTrigger2"
+          },
+          {
+            "type": "trigger",
+            "x": 8,
+            "y": 14,
+            "elevation": 3,
+            "var": "VAR_SLATEPORT_HARBOR_STATE",
+            "var_value": "1",
+            "script": "SlateportCity_Harbor_EventScript_AquaEscapeTrigger3"
+          }
+        ],
+        "bg_events": []
+      }
+    },
+    {
+      "map": "OneIsland_Harbor_Frlg",
+      "before": {
+        "id": "MAP_ONE_ISLAND_HARBOR",
+        "name": "OneIsland_Harbor_Frlg",
+        "layout": "LAYOUT_ISLAND_HARBOR_FRLG",
+        "music": "MUS_RG_SEVII_123",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_ONE_ISLAND",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": [
+          {
+            "map": "MAP_JOURNEYWORLDSEA01",
+            "direction": "down",
+            "offset": -24
+          }
+        ],
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+            "x": 8,
+            "y": 9,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 8,
+            "y": 6,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "OneIsland_Harbor_EventScript_Sailor",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 8,
+            "y": 2,
+            "elevation": 3,
+            "dest_map": "MAP_ONE_ISLAND",
+            "dest_warp_id": "3"
+          }
+        ],
+        "coord_events": [],
+        "bg_events": []
+      },
+      "after": {
+        "id": "MAP_ONE_ISLAND_HARBOR",
+        "name": "OneIsland_Harbor_Frlg",
+        "layout": "LAYOUT_ISLAND_HARBOR_FRLG",
+        "music": "MUS_RG_SEVII_123",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_ONE_ISLAND",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": [
+          {
+            "map": "MAP_JOURNEYWORLDSEA01",
+            "direction": "down",
+            "offset": -24
+          }
+        ],
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+            "x": 8,
+            "y": 9,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 8,
+            "y": 6,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "OneIsland_Harbor_EventScript_Sailor",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 9,
+            "y": 5,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "Journey_FerryPort2",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 8,
+            "y": 2,
+            "elevation": 3,
+            "dest_map": "MAP_ONE_ISLAND",
+            "dest_warp_id": "3"
+          }
+        ],
+        "coord_events": [],
+        "bg_events": []
+      }
+    },
+    {
+      "map": "TwoIsland_Harbor_Frlg",
+      "before": {
+        "id": "MAP_TWO_ISLAND_HARBOR",
+        "name": "TwoIsland_Harbor_Frlg",
+        "layout": "LAYOUT_ISLAND_HARBOR_FRLG",
+        "music": "MUS_RG_SEVII_123",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_TWO_ISLAND",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": [
+          {
+            "map": "MAP_JOURNEYWORLDSEA02",
+            "direction": "down",
+            "offset": -24
+          }
+        ],
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+            "x": 8,
+            "y": 9,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 8,
+            "y": 6,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "TwoIsland_Harbor_EventScript_Sailor",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 8,
+            "y": 2,
+            "elevation": 3,
+            "dest_map": "MAP_TWO_ISLAND",
+            "dest_warp_id": "3"
+          }
+        ],
+        "coord_events": [],
+        "bg_events": []
+      },
+      "after": {
+        "id": "MAP_TWO_ISLAND_HARBOR",
+        "name": "TwoIsland_Harbor_Frlg",
+        "layout": "LAYOUT_ISLAND_HARBOR_FRLG",
+        "music": "MUS_RG_SEVII_123",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_TWO_ISLAND",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": [
+          {
+            "map": "MAP_JOURNEYWORLDSEA02",
+            "direction": "down",
+            "offset": -24
+          }
+        ],
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+            "x": 8,
+            "y": 9,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 8,
+            "y": 6,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "TwoIsland_Harbor_EventScript_Sailor",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 9,
+            "y": 5,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "Journey_FerryPort3",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 8,
+            "y": 2,
+            "elevation": 3,
+            "dest_map": "MAP_TWO_ISLAND",
+            "dest_warp_id": "3"
+          }
+        ],
+        "coord_events": [],
+        "bg_events": []
+      }
+    },
+    {
+      "map": "ThreeIsland_Harbor_Frlg",
+      "before": {
+        "id": "MAP_THREE_ISLAND_HARBOR",
+        "name": "ThreeIsland_Harbor_Frlg",
+        "layout": "LAYOUT_ISLAND_HARBOR_FRLG",
+        "music": "MUS_RG_SEVII_123",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_THREE_ISLE_PORT",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": [
+          {
+            "map": "MAP_JOURNEYWORLDSEA03",
+            "direction": "down",
+            "offset": -24
+          }
+        ],
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+            "x": 8,
+            "y": 9,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 8,
+            "y": 6,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "ThreeIsland_Harbor_EventScript_Sailor",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 8,
+            "y": 2,
+            "elevation": 3,
+            "dest_map": "MAP_THREE_ISLAND_PORT",
+            "dest_warp_id": "2"
+          }
+        ],
+        "coord_events": [],
+        "bg_events": []
+      },
+      "after": {
+        "id": "MAP_THREE_ISLAND_HARBOR",
+        "name": "ThreeIsland_Harbor_Frlg",
+        "layout": "LAYOUT_ISLAND_HARBOR_FRLG",
+        "music": "MUS_RG_SEVII_123",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_THREE_ISLE_PORT",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": [
+          {
+            "map": "MAP_JOURNEYWORLDSEA03",
+            "direction": "down",
+            "offset": -24
+          }
+        ],
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+            "x": 8,
+            "y": 9,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 8,
+            "y": 6,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "ThreeIsland_Harbor_EventScript_Sailor",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 9,
+            "y": 5,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "Journey_FerryPort4",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 8,
+            "y": 2,
+            "elevation": 3,
+            "dest_map": "MAP_THREE_ISLAND_PORT",
+            "dest_warp_id": "2"
+          }
+        ],
+        "coord_events": [],
+        "bg_events": []
+      }
+    },
+    {
+      "map": "FourIsland_Harbor_Frlg",
+      "before": {
+        "id": "MAP_FOUR_ISLAND_HARBOR",
+        "name": "FourIsland_Harbor_Frlg",
+        "layout": "LAYOUT_ISLAND_HARBOR_FRLG",
+        "music": "MUS_RG_SEVII_45",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_FOUR_ISLAND",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": [
+          {
+            "map": "MAP_JOURNEYWORLDSEA04",
+            "direction": "down",
+            "offset": -24
+          }
+        ],
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+            "x": 8,
+            "y": 9,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 8,
+            "y": 6,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "FourIsland_Harbor_EventScript_Sailor",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 8,
+            "y": 2,
+            "elevation": 3,
+            "dest_map": "MAP_FOUR_ISLAND",
+            "dest_warp_id": "6"
+          }
+        ],
+        "coord_events": [],
+        "bg_events": []
+      },
+      "after": {
+        "id": "MAP_FOUR_ISLAND_HARBOR",
+        "name": "FourIsland_Harbor_Frlg",
+        "layout": "LAYOUT_ISLAND_HARBOR_FRLG",
+        "music": "MUS_RG_SEVII_45",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_FOUR_ISLAND",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": [
+          {
+            "map": "MAP_JOURNEYWORLDSEA04",
+            "direction": "down",
+            "offset": -24
+          }
+        ],
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+            "x": 8,
+            "y": 9,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 8,
+            "y": 6,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "FourIsland_Harbor_EventScript_Sailor",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 9,
+            "y": 5,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "Journey_FerryPort5",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 8,
+            "y": 2,
+            "elevation": 3,
+            "dest_map": "MAP_FOUR_ISLAND",
+            "dest_warp_id": "6"
+          }
+        ],
+        "coord_events": [],
+        "bg_events": []
+      }
+    },
+    {
+      "map": "FiveIsland_Harbor_Frlg",
+      "before": {
+        "id": "MAP_FIVE_ISLAND_HARBOR",
+        "name": "FiveIsland_Harbor_Frlg",
+        "layout": "LAYOUT_ISLAND_HARBOR_FRLG",
+        "music": "MUS_RG_SEVII_45",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_FIVE_ISLAND",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": [
+          {
+            "map": "MAP_JOURNEYWORLDSEA05",
+            "direction": "down",
+            "offset": -24
+          }
+        ],
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+            "x": 8,
+            "y": 9,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 8,
+            "y": 6,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "FiveIsland_Harbor_EventScript_Sailor",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 8,
+            "y": 2,
+            "elevation": 3,
+            "dest_map": "MAP_FIVE_ISLAND",
+            "dest_warp_id": "0"
+          }
+        ],
+        "coord_events": [],
+        "bg_events": []
+      },
+      "after": {
+        "id": "MAP_FIVE_ISLAND_HARBOR",
+        "name": "FiveIsland_Harbor_Frlg",
+        "layout": "LAYOUT_ISLAND_HARBOR_FRLG",
+        "music": "MUS_RG_SEVII_45",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_FIVE_ISLAND",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": [
+          {
+            "map": "MAP_JOURNEYWORLDSEA05",
+            "direction": "down",
+            "offset": -24
+          }
+        ],
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+            "x": 8,
+            "y": 9,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 8,
+            "y": 6,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "FiveIsland_Harbor_EventScript_Sailor",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 9,
+            "y": 5,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "Journey_FerryPort6",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 8,
+            "y": 2,
+            "elevation": 3,
+            "dest_map": "MAP_FIVE_ISLAND",
+            "dest_warp_id": "0"
+          }
+        ],
+        "coord_events": [],
+        "bg_events": []
+      }
+    },
+    {
+      "map": "SixIsland_Harbor_Frlg",
+      "before": {
+        "id": "MAP_SIX_ISLAND_HARBOR",
+        "name": "SixIsland_Harbor_Frlg",
+        "layout": "LAYOUT_ISLAND_HARBOR_FRLG",
+        "music": "MUS_RG_SEVII_67",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_SIX_ISLAND",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": [
+          {
+            "map": "MAP_JOURNEYWORLDSEA06",
+            "direction": "down",
+            "offset": -24
+          }
+        ],
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+            "x": 8,
+            "y": 9,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 8,
+            "y": 6,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "SixIsland_Harbor_EventScript_Sailor",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 8,
+            "y": 2,
+            "elevation": 3,
+            "dest_map": "MAP_SIX_ISLAND",
+            "dest_warp_id": "0"
+          }
+        ],
+        "coord_events": [],
+        "bg_events": []
+      },
+      "after": {
+        "id": "MAP_SIX_ISLAND_HARBOR",
+        "name": "SixIsland_Harbor_Frlg",
+        "layout": "LAYOUT_ISLAND_HARBOR_FRLG",
+        "music": "MUS_RG_SEVII_67",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_SIX_ISLAND",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": [
+          {
+            "map": "MAP_JOURNEYWORLDSEA06",
+            "direction": "down",
+            "offset": -24
+          }
+        ],
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+            "x": 8,
+            "y": 9,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 8,
+            "y": 6,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "SixIsland_Harbor_EventScript_Sailor",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 9,
+            "y": 5,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "Journey_FerryPort7",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 8,
+            "y": 2,
+            "elevation": 3,
+            "dest_map": "MAP_SIX_ISLAND",
+            "dest_warp_id": "0"
+          }
+        ],
+        "coord_events": [],
+        "bg_events": []
+      }
+    },
+    {
+      "map": "SevenIsland_Harbor_Frlg",
+      "before": {
+        "id": "MAP_SEVEN_ISLAND_HARBOR",
+        "name": "SevenIsland_Harbor_Frlg",
+        "layout": "LAYOUT_ISLAND_HARBOR_FRLG",
+        "music": "MUS_RG_SEVII_67",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_SEVEN_ISLAND",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": [
+          {
+            "map": "MAP_JOURNEYWORLDSEA07",
+            "direction": "down",
+            "offset": -24
+          }
+        ],
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+            "x": 8,
+            "y": 9,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 8,
+            "y": 6,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "SevenIsland_Harbor_EventScript_Sailor",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 8,
+            "y": 2,
+            "elevation": 3,
+            "dest_map": "MAP_SEVEN_ISLAND",
+            "dest_warp_id": "3"
+          }
+        ],
+        "coord_events": [],
+        "bg_events": []
+      },
+      "after": {
+        "id": "MAP_SEVEN_ISLAND_HARBOR",
+        "name": "SevenIsland_Harbor_Frlg",
+        "layout": "LAYOUT_ISLAND_HARBOR_FRLG",
+        "music": "MUS_RG_SEVII_67",
+        "region": "REGION_KANTO",
+        "region_map_section": "MAPSEC_SEVEN_ISLAND",
+        "requires_flash": false,
+        "weather": "WEATHER_NONE",
+        "map_type": "MAP_TYPE_INDOOR",
+        "allow_cycling": false,
+        "allow_escaping": false,
+        "allow_running": false,
+        "show_map_name": false,
+        "floor_number": 0,
+        "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+        "connections": [
+          {
+            "map": "MAP_JOURNEYWORLDSEA07",
+            "direction": "down",
+            "offset": -24
+          }
+        ],
+        "object_events": [
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+            "x": 8,
+            "y": 9,
+            "elevation": 0,
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "0x0",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 8,
+            "y": 6,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_UP",
+            "movement_range_x": 1,
+            "movement_range_y": 1,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "SevenIsland_Harbor_EventScript_Sailor",
+            "flag": "0"
+          },
+          {
+            "type": "object",
+            "graphics_id": "OBJ_EVENT_GFX_SAILOR_FRLG",
+            "x": 9,
+            "y": 5,
+            "elevation": 3,
+            "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+            "movement_range_x": 0,
+            "movement_range_y": 0,
+            "trainer_type": "TRAINER_TYPE_NONE",
+            "trainer_sight_or_berry_tree_id": "0",
+            "script": "Journey_FerryPort8",
+            "flag": "0"
+          }
+        ],
+        "warp_events": [
+          {
+            "x": 8,
+            "y": 2,
+            "elevation": 3,
+            "dest_map": "MAP_SEVEN_ISLAND",
+            "dest_warp_id": "3"
+          }
+        ],
+        "coord_events": [],
+        "bg_events": []
+      }
+    }
+  ],
+  "native_port_scripts_unchanged": true,
+  "preserved_native_sha256": {
+    "data/maps/VermilionCity_Frlg/scripts.inc": "9e408e087d52ee618d1f1d2b0b028a39ab0705e1d2e6daf916932f50d4194afa",
+    "data/maps/SlateportCity_Harbor/scripts.inc": "1d9b5ccfee9b18a879fc65d4aab29a69e02d09c9b36ebb22eafd67de55ebdbfe",
+    "data/maps/OneIsland_Harbor_Frlg/scripts.inc": "4756709d54223f3f3bfec273c0067c8558fd69cf9c88a44f481ab3656c1ff6da",
+    "data/maps/TwoIsland_Harbor_Frlg/scripts.inc": "314f5c01a7e9e12babcc5d225a7411797b5c339d06acbb11b49f31a1bac808da",
+    "data/maps/ThreeIsland_Harbor_Frlg/scripts.inc": "e6248ff719e91cec661db599bf966a0d45c3e818129904203c97b4178a95f03e",
+    "data/maps/FourIsland_Harbor_Frlg/scripts.inc": "78a2776089f36e73a817685685edbe4a68366e8ddcfc076964e499f5d8d1ca25",
+    "data/maps/FiveIsland_Harbor_Frlg/scripts.inc": "abcc4f5fcedb14062fb72bd39d2f3f1a6b82d536bcefbbcb9924b843e1b296d9",
+    "data/maps/SixIsland_Harbor_Frlg/scripts.inc": "bc4a630b9f709464f71c0c5af1c5a7d51abff98f1f29d05d74eb618e7623ec60",
+    "data/maps/SevenIsland_Harbor_Frlg/scripts.inc": "e04098f95a6be4a02db54d13368cfb32880e2749b2508fcca57f0d2e3d4a31ce"
+  },
+  "boat_interior_or_sailing_animation": false,
+  "requires_new_save": true,
+  "full_story_validated": false,
+  "input_sha256": {
+    "include/constants/items.h": "e5dfc01b43b964d9bf2dad1d2ec03b20fed48a00efc2a72ca5139bda050eb5cb",
+    "src/data/items.h": "4c8b08bacf3304a14d2395ac68d69e94af626cb8ae10bf0fbf1a7b469cab0c84",
+    "include/constants/script_menu.h": "8f005b0191c7df551dede12d5880a4e40a61f40d6783945f64881ba44e69b469",
+    "src/data/script_menu.h": "43b5c348ec370be3d02b8fa64d461c1098f2cddad4f56ab1213a5f5bb04d6ffc",
+    "data/maps/VermilionCity_Frlg/map.json": "94fee207255c939e3e670352d0641926e303386664599b5db70d758da12e1835",
+    "data/maps/SlateportCity_Harbor/map.json": "d593e1587e5389366b64bbecdd5f05f2994d0ad0bab12dc338c3ccd45accfd7d",
+    "data/maps/OneIsland_Harbor_Frlg/map.json": "4793f1797a49afd1e6ea5df8ac842a82c747bc95ab24c11b948e06f9c521f0b6",
+    "data/maps/TwoIsland_Harbor_Frlg/map.json": "eec8f9aaca3070b2032afd04f01520c2c799399751ce282adfb3e782cb15d8d7",
+    "data/maps/ThreeIsland_Harbor_Frlg/map.json": "6a9358ddbdef3c47f013a64d9e7466ac2742cdd25ed1e29d2994f1d41b8d5ec1",
+    "data/maps/FourIsland_Harbor_Frlg/map.json": "90ad2d64d4ed5c3082416683d37af321538520a316d394498d197691247513b2",
+    "data/maps/FiveIsland_Harbor_Frlg/map.json": "7f1cd87bc6c40c1babc8d7c73e8c82498624c6a6c105901865f228166f72d197",
+    "data/maps/SixIsland_Harbor_Frlg/map.json": "a751dd3b6979f18f0acb146f7f55716fe9516a8b26609e515723cd59528708d4",
+    "data/maps/SevenIsland_Harbor_Frlg/map.json": "486949417b8107b5494baebcb272ccc92948b128994498f5ccd8963a72cc0390",
+    "data/maps/VermilionCity_Frlg/scripts.inc": "b256e8f87736ab2a9e3f6ef7d4c54554db7646a4106f6dae602ae82fe8a2b185",
+    "data/maps/SlateportCity_Harbor/scripts.inc": "1d9b5ccfee9b18a879fc65d4aab29a69e02d09c9b36ebb22eafd67de55ebdbfe",
+    "data/maps/OneIsland_Harbor_Frlg/scripts.inc": "4756709d54223f3f3bfec273c0067c8558fd69cf9c88a44f481ab3656c1ff6da",
+    "data/maps/TwoIsland_Harbor_Frlg/scripts.inc": "314f5c01a7e9e12babcc5d225a7411797b5c339d06acbb11b49f31a1bac808da",
+    "data/maps/ThreeIsland_Harbor_Frlg/scripts.inc": "e6248ff719e91cec661db599bf966a0d45c3e818129904203c97b4178a95f03e",
+    "data/maps/FourIsland_Harbor_Frlg/scripts.inc": "78a2776089f36e73a817685685edbe4a68366e8ddcfc076964e499f5d8d1ca25",
+    "data/maps/FiveIsland_Harbor_Frlg/scripts.inc": "abcc4f5fcedb14062fb72bd39d2f3f1a6b82d536bcefbbcb9924b843e1b296d9",
+    "data/maps/SixIsland_Harbor_Frlg/scripts.inc": "bc4a630b9f709464f71c0c5af1c5a7d51abff98f1f29d05d74eb618e7623ec60",
+    "data/maps/SevenIsland_Harbor_Frlg/scripts.inc": "e04098f95a6be4a02db54d13368cfb32880e2749b2508fcca57f0d2e3d4a31ce"
+  },
+  "original_sha256": {
+    "include/constants/items.h": "e5dfc01b43b964d9bf2dad1d2ec03b20fed48a00efc2a72ca5139bda050eb5cb",
+    "src/data/items.h": "a2768914c18cd1b826f320f199557649f1be3768d53c25eed5846bdebb9155ca",
+    "include/constants/script_menu.h": "8f005b0191c7df551dede12d5880a4e40a61f40d6783945f64881ba44e69b469",
+    "src/data/script_menu.h": "43b5c348ec370be3d02b8fa64d461c1098f2cddad4f56ab1213a5f5bb04d6ffc",
+    "data/maps/VermilionCity_Frlg/map.json": "432e05d9db0b118383d4acc745fff3ba604b9a4d8a60ea6767d9d3e2c006b46a",
+    "data/maps/SlateportCity_Harbor/map.json": "d593e1587e5389366b64bbecdd5f05f2994d0ad0bab12dc338c3ccd45accfd7d",
+    "data/maps/OneIsland_Harbor_Frlg/map.json": "f042633ddabe5ea8676d9546e55423cf8a14e8dbb4af9acc9d74d9ee4994e926",
+    "data/maps/TwoIsland_Harbor_Frlg/map.json": "b0f3e082e5e2d0e970da2b2ca9e665e36f8b36e07c65d2fb239832903efafcc9",
+    "data/maps/ThreeIsland_Harbor_Frlg/map.json": "77eb282cff174ed0e01918ec719545fc5b6acdef9b445e39e3304b5ee7e7c2ff",
+    "data/maps/FourIsland_Harbor_Frlg/map.json": "23bd797236f02eeb4b21fa5df9037dc02eb0c0d4f54e8c8b50c5e0bddca98944",
+    "data/maps/FiveIsland_Harbor_Frlg/map.json": "726c83a59c75e9092aea4b80dc4ce0b126b623f601269489d7597785c0b1a007",
+    "data/maps/SixIsland_Harbor_Frlg/map.json": "bb00663d20b52af19429d8f0f599658e4362e0d419de9ca0cefeb7ad2a6655a7",
+    "data/maps/SevenIsland_Harbor_Frlg/map.json": "7245f30b88679b4b83d0879511fafbe013ece77022478739fbfe4f775bebcec2",
+    "data/scripts/journey_campaign_gates.inc": "f632357f4fb959257dd075854543f3c8aa3460fe6b67fbc1451d9aee5fc47f5d"
+  },
+  "prepared_sha256": {
+    "include/constants/items.h": "579d86e35509689789f72ffd02156474d959962460dab2d7055326db63ebcd7f",
+    "src/data/items.h": "bc24c6b5d31cd6292bd7542384405332b03eeb0784f47d2b964b182c6fd60a0d",
+    "include/constants/script_menu.h": "d422d80e5e77cd39e15e4df9fba1a0678cd28481dd738dad509b1ced4bfd5051",
+    "src/data/script_menu.h": "72d49d72e923b7cd05e77b1e5deb92d853be719e8fcd20a2a8544bb0635f8e47",
+    "data/maps/VermilionCity_Frlg/map.json": "82e22f50809bbed603036a0fd208a97d3e9e3394d642e09e12148430c53a5c8e",
+    "data/maps/SlateportCity_Harbor/map.json": "cc7a8055596bd6ad47889798ec7553f4a3a664db08fcd58ba2ef3b245cf2e006",
+    "data/maps/OneIsland_Harbor_Frlg/map.json": "4a1bf2ca3e5f671558177bdea5863b758629d5a46757874207986adad070c571",
+    "data/maps/TwoIsland_Harbor_Frlg/map.json": "ef6cb353fd492a33d1e3d826a0ec0dd62e4768527dc8d2e33cfce6a2f61ee7c9",
+    "data/maps/ThreeIsland_Harbor_Frlg/map.json": "322173308bfe9f74d7e7c9fbf5ef0eb654d83c8aea227be1f6d7a2487bf28f72",
+    "data/maps/FourIsland_Harbor_Frlg/map.json": "ca5d23418eeea00453e796ae9cc9052924aab444745034df4e07920acad368b9",
+    "data/maps/FiveIsland_Harbor_Frlg/map.json": "ef712f5e1c3d3a1ddae483a27ee14d635c3d8b4be71d8c6de7247a5be264b9d6",
+    "data/maps/SixIsland_Harbor_Frlg/map.json": "906faa117733b6ea3b3123e1dad342f28051c606573024d4b3174ab79886483d",
+    "data/maps/SevenIsland_Harbor_Frlg/map.json": "1aa3975a4fab9261f7b15396032ada4e3cc9b33155d6b2de4605bb190aeafe5f",
+    "data/scripts/journey_campaign_gates.inc": "6684bef966b4124a4bd92b28d5d45ca9b7b690d94c1487fde56cdc08553a8565"
+  }
+}
