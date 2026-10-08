@@ -1,4 +1,4 @@
-"""Replay the ability overlay from the validated ecology baseline."""
+"""Replay a battle overlay from its validated preceding layer."""
 import argparse
 import hashlib
 import json
@@ -8,22 +8,26 @@ import tempfile
 from prepare_abilities import prepare
 
 
-def verify(source, candidate, output):
+def verify(source, candidate, output, layer='abilities'):
     source, candidate, output = map(Path, [source, candidate, output])
-    installed = json.loads((candidate / '.journey-abilities').read_text())
+    if layer == 'mega-art':
+        from prepare_mega_art import prepare as prepare_layer
+    else:
+        prepare_layer = prepare
+    installed = json.loads((candidate / ('.journey-' + layer)).read_text())
     with tempfile.TemporaryDirectory(prefix='ability-replay-', dir='/tmp') as directory:
         replay = Path(directory)
         shutil.copy2(source / '.source-acquired.json', replay)
         for marker in source.glob('.journey-*'):
-            if marker.is_file() and marker.name != '.journey-abilities':
+            if marker.is_file() and marker.name != '.journey-' + layer:
                 shutil.copy2(marker, replay)
         for path, digest in installed['original_sha256'].items():
             assert hashlib.sha256((source / path).read_bytes()).hexdigest() == digest, path
             (replay / path).parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source / path, replay / path)
-        generated = prepare(replay)
+        generated = prepare_layer(replay)
         assert generated == installed
-        assert prepare(replay) == installed  # Same-layer idempotence checks installed bytes.
+        assert prepare_layer(replay) == installed  # Same-layer idempotence checks installed bytes.
         for path, digest in installed['prepared_sha256'].items():
             assert hashlib.sha256((candidate / path).read_bytes()).hexdigest() == digest, path
     output.mkdir(parents=True, exist_ok=True)
@@ -41,5 +45,6 @@ if __name__ == '__main__':
     parser.add_argument('--source', type=Path, required=True)
     parser.add_argument('--candidate', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--layer', choices=['abilities', 'mega-art'], default='abilities')
     args = parser.parse_args()
-    verify(args.source, args.candidate, args.output)
+    verify(args.source, args.candidate, args.output, args.layer)

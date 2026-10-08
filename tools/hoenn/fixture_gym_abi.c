@@ -6,6 +6,7 @@
 #include "constants/battle.h"
 #include "constants/items.h"
 #include "constants/abilities.h"
+#include "party_menu.h"
 #include "item.h"
 #include "move.h"
 #include "constants/flags.h"
@@ -45,6 +46,15 @@ const unsigned journey_fixture_abi[] = {
       SPECIES_GRENINJA_ASH, SPECIES_GRENINJA_BATTLE_BOND,
       ABILITY_TORRENT, ABILITY_PROTEAN, ABILITY_BATTLE_BOND,
       sizeof(struct BattlePokemon), offsetof(struct BattlePokemon, species),
-      MOVE_SURF, MOVE_WATER_SHURIKEN, FORM_CHANGE_END_BATTLE, FORM_CHANGE_FAINT
+      MOVE_SURF, MOVE_WATER_SHURIKEN, FORM_CHANGE_END_BATTLE, FORM_CHANGE_FAINT,
+      ITEM_MEGA_RING, ITEM_CHARIZARDITE_X, ITEM_CHARIZARDITE_Y, ITEM_LEFTOVERS,
+      SPECIES_CHARIZARD, SPECIES_CHARIZARD_MEGA_X, SPECIES_CHARIZARD_MEGA_Y,
+      SPECIES_RAYQUAZA, SPECIES_RAYQUAZA_MEGA, MOVE_DRAGON_ASCENT,
+      ITEM_GRENINJITE, SPECIES_GRENINJA_MEGA, MON_DATA_MOVE1,
+      offsetof(struct BattlePokemon, moves), MON_DATA_STATUS,
+      offsetof(struct BattlePokemon, status1), MON_DATA_MET_LEVEL,
+      SPECIES_GARCHOMP, SPECIES_GARCHOMP_MEGA_Z, ITEM_GARCHOMPITE_Z,
+      offsetof(struct PartyMenu, slotId), offsetof(struct Pokemon, hp),
+      offsetof(struct BattlePokemon, hp), MOVE_GROWL
 #endif
 };

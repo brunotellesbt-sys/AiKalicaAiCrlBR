@@ -207,4 +207,4 @@ MAP_FIVE_ISLAND, MAP_FIVE_ISLAND_MEADOW, MAP_JOURNEYDEWFORDCOAST, MAP_JOURNEYRUS
 
 ## Limites da validação
 
-Os relatórios de mGBA documentam as passagens e encontros exercitados. Eles não equivalem a jogar as duas campanhas completas. A auditoria do catálogo verifica dados e referências de sprites; nem todos os sprites SMOL foram renderizados individualmente. Megas/Battle Bond e demais sistemas anteriores têm sua própria validação pendente.
+Os relatórios de mGBA documentam as passagens e encontros exercitados. Eles não equivalem a jogar as duas campanhas completas. A candidata de batalhas tem verificação ARM dos pixels de 3.323 imagens de 1.571 espécies/formas, incluindo variantes femininas. Megas e Battle Bond têm casos de batalha, troca e desmaio em `mega-validation`; isso não certifica todas as animações, habilidades ou campanhas. Consulte [STATUS.md](STATUS.md) e [MEGA-STATUS.md](MEGA-STATUS.md).
