@@ -9,7 +9,9 @@ A decisão é usar **uma única ROM**, com a mesma equipe e navegação por Surf
 O navio Vermilion–Slateport exigirá um ticket; o caminho por mar será independente
 desse ticket. As ilhas hoje acessíveis por barco também devem permitir Surf.
 
-**Hoenn ainda não foi integrado.** O arquivo enviado foi identificado como
+**A integração completa de Hoenn ainda está pendente.** A candidata nativa
+e suas validações parciais estão em [INTEGRATION.md](INTEGRATION.md).
+O arquivo enviado foi identificado como
 Emerald USA/Europe `BPEE`, SHA-256
 `a9dec84dfe7f62ab2220bafaef7479da0929d066ece16a6885f6226db19085af`.
 [source-inventory.json](source-inventory.json) registra os 518 mapas, 34 grupos,

@@ -10,6 +10,7 @@
 #include "constants/flags.h"
 #include "constants/event_objects.h"
 #include "constants/regions.h"
+#include "constants/vars.h"
 #include <stddef.h>
 const unsigned journey_fixture_abi[] = {
     sizeof(struct Trainer), sizeof(struct TrainerMon), sizeof(struct Pokemon),
@@ -34,5 +35,10 @@ const unsigned journey_fixture_abi[] = {
     OBJ_EVENT_GFX_VAR_0, offsetof(struct Trainer, trainerPic), sizeof(enum TrainerPicID),
     offsetof(struct SaveBlock2, playerRegion), REGION_KANTO
 #endif
+#endif
+#ifdef FLAG_JOURNEY_FAMILY_STARTER_RECEIVED
+    , MON_DATA_HP, MON_DATA_MAX_HP, VAR_STARTER_MON_FRLG, FLAG_SYS_POKEDEX_GET, REGION_HOENN,
+      SPECIES_TREECKO, SPECIES_TORCHIC, SPECIES_MUDKIP, VAR_STARTER_MON,
+      ITEM_MACH_BIKE, ITEM_BIKE_VOUCHER, FLAG_GOT_BICYCLE, FLAG_RECEIVED_BIKE, FLAG_GOT_BIKE_VOUCHER, BATTLE_TYPE_FIRST_BATTLE
 #endif
 };

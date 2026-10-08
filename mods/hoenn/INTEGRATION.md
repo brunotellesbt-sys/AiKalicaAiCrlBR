@@ -1,5 +1,83 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+## Cidade inicial, família e viagem de mudança
+
+A escolha acontece **antes da viagem**, na abertura de um save novo. São
+**16 opções em Kanto/Sevii e 15 em Hoenn**, com uma casa fixa por cidade:
+[birth-preparation.json](integration-validation/birth-preparation.json).
+Só a residência escolhida recebe quarto e sala naquele save; as outras
+mantêm seus eventos. Casas de Fuji, Warden, Lostelle, Lorelei, Copycat,
+rival, Wally/Wanda, Cozmo e Steven ficam preservadas. Cinnabar, Indigo e
+Ever Grande não têm residência elegível. Em Seven Island, apenas um
+apartamento é convertido. Itens e serviços opcionais da residência
+selecionada, como Coin Case, troca, tutor ou Move Relearner, cedem lugar à família.
+
+Pallet, Viridian, Pewter, Cerulean, Vermilion, Lavender, Celadon, Fuchsia e
+Saffron usam **caminhão**, assim como as cidades continentais de Hoenn com
+espaço. **Todas as Sevii, Dewford, Mossdeep, Sootopolis e Pacifidlog usam
+barco**. As Sevii aproveitam seus portos e barcos nativos. Nos outros
+casos, o barco aparece numa costa conectada à casa; o desembarque ocorre
+em terra caminhável. As passarelas de Pacifidlog permanecem intactas.
+O interior da mudança reutiliza a sala de carga e as caixas da abertura
+original; o trajeto marítimo usa sons de barco. Não há uma cabine nova
+nem animação de navegação pelo mapa inteiro.
+
+A mãe recebe você na chegada e leva ao quarto da casa. Fora de Pallet e
+Littleroot, **Oak ou Birch espera na sala**, conforme a região, com maleta
+ou bolsa e três iniciais regionais no **nível 5**, Pokédex e cinco Poké Balls.
+É preciso conversar antes de sair; depois ele retorna ao laboratório.
+Pallet conserva o inicial no laboratório. Littleroot conserva a chegada
+original de caminhão, a mãe, o relógio e o resgate de Birch. Visitar outra
+cidade posteriormente não muda a residência nem reabre a escolha inicial.
+
+A família tem de uma a três pessoas, conforme os moradores humanos.
+Uma pessoa é a mãe; os outros se tornam pai, irmão ou irmã. Com uma pessoa,
+ela entrega **Surf, Dive e Waterfall**. Com duas, a mãe entrega Surf/Dive
+e a outra Waterfall. Com três, entregam um HM cada. Isso vale nas duas
+regiões, inclusive Pallet/Littleroot. A entrega registra cada item,
+permite retomar com bolsa cheia e evita duplicações. A mãe mantém os
+diálogos e a cura da mãe nativa de sua região. Whirlpool fica fora dos HMs.
+
+Dewford, Mossdeep, Sootopolis e Pacifidlog têm um capitão adicional com
+viagem gratuita a Slateport, para permitir sair mesmo sem um Pokémon
+compatível com Surf. As Sevii já oferecem WORLD FERRY desde o início.
+Esse transporte local não altera os barcos e eventos originais de Hoenn.
+
+[Chegada de caminhão em Pallet](integration-validation/family-00-arrival.png),
+[desembarque nas Sevii](integration-validation/family-09-arrival.png),
+[chegada em Pacifidlog](integration-validation/family-30-arrival.png) e
+[Birch na sala](integration-validation/family-30-oak-living-room.png).
+O [teste no mGBA](integration-validation/family.json) percorre as 30 casas
+fora da introdução de Littleroot em processos separados: escolha real,
+chegada, escadas, presentes sem duplicação, porta bloqueada antes do
+inicial, saída e entrada depois, iniciais, Pokédex, cura e save/reload.
+Um controle separado verifica caminhão e presentes nativos de Littleroot,
+e ausência de outra escolha ao visitar Pallet. Cerulean testa bolsa cheia
+e entrega parcial. Warps encurtam deslocamentos dos testes; as campanhas
+completas ainda não estão certificadas.
+
+## Inicial da segunda região e bicicleta compartilhada
+
+Começando em Hoenn, Oak oferece em Pallet um inicial de Kanto no nível 5,
+sem substituir a equipe existente. Começando em Kanto, o resgate original
+de Birch na Rota 101 oferece o inicial de Hoenn e inicia a batalha selvagem.
+Cada região entrega uma vez. Equipe cheia impede o presente e permite
+voltar depois; não apaga nem envia a equipe antiga ao PC.
+
+**Só Mach Bike** é obtida nas duas regiões. Rydel e o vendedor de Cerulean
+consultam o mesmo recibo salvo e a bicicleta na bolsa/PC. Após receber em
+um lugar, o outro não entrega outra. A missão do voucher de Kanto continua;
+bolsa cheia não consome o voucher nem marca a bicicleta como recebida.
+Os Pokémon **não seguem mais o jogador**; acompanhantes humanos de eventos
+permanecem disponíveis.
+
+[birth-rules.json](integration-validation/birth-rules.json) exercita os dois
+sentidos da entrega de bicicleta, bolsa cheia/repetição, bicicleta no PC,
+recibo salvo, Oak com equipe cheia e preservação do Pokémon anterior,
+resgate/batalha de Birch e saída de Pacifidlog sem Pokémon ou Surf. A
+batalha de Birch foi iniciada e renderizada; sua vitória e os eventos
+posteriores ainda não foram validados nesse teste.
+
 ## Rival de Kanto com a aparência do personagem do sexo oposto
 
 O rival agora usa **Leaf para jogador masculino** e **Red para jogadora
@@ -25,9 +103,11 @@ teste completo da introdução e do fluxo interativo da tela de nome.
 [Leaf como rival](integration-validation/opposite-rival-player-0-battle.png)
 e [Red como rival](integration-validation/opposite-rival-player-1-battle.png).
 
-Passaram **26 testes offline e 110 verificações nativas**, incluindo as
-96 travessias de Surf e as 840 equipes de ginásio. As 18 camadas reproduzem
-368 arquivos byte a byte, com 117 conexões recíprocas. A candidata exige
+Passaram **28 testes offline, 110 verificações nativas do mundo, 30 fluxos
+de casa inicial, o controle de Littleroot e cinco cenários de viagem**,
+incluindo as 96 travessias de Surf e as 840 equipes de ginásio. As 21 camadas
+reproduzem 505 arquivos byte a byte,
+com 117 conexões recíprocas. A candidata exige
 save novo; as campanhas completas e outras migrações permanecem pendentes,
 e a ROM publicada no player continua na versão anterior.
 
@@ -67,11 +147,11 @@ validadas e a ROM publicada no player permanece na versão anterior.
 
 ## Surf, Dive e Waterfall no início; antigos HMs terrestres como TMs
 
-A mãe de Pallet e a mãe da casa do jogador em Littleroot agora oferecem o
-mesmo pacote de **Surf, Dive e Waterfall**, antes de qualquer insígnia. O
-script compartilhado pode ser reutilizado nas futuras famílias das outras
-cidades; a seleção de cidade/casa ainda precisa ser migrada para esta ROM
-nativa. Os diálogos e os eventos seguintes das mães continuam.
+No início nativo de Hoenn, a mãe de Littleroot oferece **Surf, Dive e
+Waterfall**, antes de qualquer insígnia. Ao escolher uma cidade de Kanto/Sevii,
+a família escolhida divide esse pacote como descrito acima; as mães das
+outras casas não antecipam os presentes dos familiares. Os diálogos e
+os eventos seguintes das mães continuam.
 
 Dive fica liberado desde o início, assim como Surf e Waterfall. Continua
 necessário ensinar o golpe a um Pokémon compatível e encontrar o terreno
@@ -597,6 +677,9 @@ python3 tools/hoenn/prepare_story_completion.py --source .local/hoenn-multiregio
 python3 tools/hoenn/prepare_water_hms.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_ferry.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_rival.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_family.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_travel_rules.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_birth.py --source .local/hoenn-multiregion-src
 ```
 
 Na pasta de fonte, compile com os caminhos do compilador ARM, binutils,
@@ -608,6 +691,8 @@ python3 tools/hoenn/validate_crossing.py \
   --source .local/hoenn-multiregion-src --library .local/mgba-bridge.so \
   --worldsea --westsea --region-state --east-coast --gym-scaling --campaign-gates --free-access --road-access --team-stories --story-access --story-completion --water-hms --ferry --rival
 python3 tools/hoenn/verify_worldsea.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/validate_family.py --source .local/hoenn-multiregion-src --library .local/mgba-bridge.so
+python3 tools/hoenn/validate_birth_rules.py --source .local/hoenn-multiregion-src --library .local/mgba-bridge.so
 python3 tools/hoenn/world_layout.py
 node tools/hoenn/validate_world_layout.cjs
 ```
@@ -621,10 +706,9 @@ anteriores. Ele é específico ao ABI desta base fixada.
 1. Preservar a versão anterior; a candidata exige um novo jogo, sem conversão.
 2. Completar a auditoria de variáveis e todos os estados das histórias; validar
    ginásios livres, níveis adaptativos e bloqueio correto de cada Liga.
-3. Migrar cidades iniciais, famílias/Oak e catálogo/sprites,
-   Habilidades Ocultas/Battle Bond, Megas e encontros adaptativos.
+3. Migrar catálogo/sprites, Habilidades Ocultas/Battle Bond, Megas e
+   encontros adaptativos.
 4. Validar as conexões Sevii e o serviço de barco durante uma campanha
-   completa, ligar a entrega dos três HMs às futuras
-   famílias das cidades iniciais e auditar os demais eventos de puzzles.
+   completa e auditar os demais eventos de puzzles e das casas iniciais.
 5. Validar Aqua/Magma, concursos, bases secretas, Frontier, viagens,
    salvamento e campanhas completas, antes de trocar a ROM no player.

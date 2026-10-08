@@ -29,6 +29,9 @@ from prepare_story_completion import prepare as story_completion_prepare
 from prepare_water_hms import prepare as water_prepare
 from prepare_ferry import prepare as ferry_prepare
 from prepare_rival import prepare as rival_prepare
+from prepare_family import prepare as family_prepare
+from prepare_travel_rules import prepare as travel_prepare
+from prepare_birth import prepare as birth_prepare
 
 
 def verify(source, output):
@@ -49,6 +52,9 @@ def verify(source, output):
     if (source / '.journey-water-hms').exists(): markers.append('.journey-water-hms')
     if (source / '.journey-ferry').exists(): markers.append('.journey-ferry')
     if (source / '.journey-rival').exists(): markers.append('.journey-rival')
+    if (source / '.journey-family').exists(): markers.append('.journey-family')
+    for layer in ['travel-rules', 'birth']:
+        if (source / ('.journey-' + layer)).exists(): markers.append('.journey-' + layer)
     reports = [json.loads((source / p).read_text()) for p in markers]
     original_paths = sorted({p for r in reports for p in (r['original_sha256'] | r.get('input_sha256', {})) if p in acquired['sha256']})
     expected = {}
@@ -104,6 +110,12 @@ def verify(source, output):
             rival=rival_prepare(fresh);assert rival_prepare(fresh)==rival
             for path,digest in rival['preserved_native_sha256'].items():
                 assert hashlib.sha256((fresh/path).read_bytes()).hexdigest()==digest,path
+        if '.journey-family' in markers:
+            family=family_prepare(fresh);assert family_prepare(fresh)==family
+        if '.journey-travel-rules' in markers:
+            travel=travel_prepare(fresh);assert travel_prepare(fresh)==travel
+        if '.journey-birth' in markers:
+            birth=birth_prepare(fresh);assert birth_prepare(fresh)==birth
         for path, digest in expected.items():
             if hashlib.sha256((fresh / path).read_bytes()).hexdigest() != digest:
                 raise ValueError('Fresh overlay mismatch: ' + path)
@@ -175,7 +187,7 @@ def verify(source, output):
             full_story_validated=False, prepared_sha256=expected)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, indent=2) + '\n')
-    for name, r in zip(['crossing-preparation', 'eastern-ocean-preparation', 'western-ocean-preparation', 'regional-state-preparation', 'east-coast-preparation', 'gym-scaling-preparation', 'campaign-gates-preparation', 'team-stories-preparation', 'free-access-preparation', 'blue-gym-preparation', 'road-access-preparation', 'mach-bike-preparation', 'yellow-stairs-preparation', 'story-access-preparation', 'story-completion-preparation', 'water-hms-preparation', 'ferry-preparation', 'rival-preparation'], reports):
+    for name, r in zip(['crossing-preparation', 'eastern-ocean-preparation', 'western-ocean-preparation', 'regional-state-preparation', 'east-coast-preparation', 'gym-scaling-preparation', 'campaign-gates-preparation', 'team-stories-preparation', 'free-access-preparation', 'blue-gym-preparation', 'road-access-preparation', 'mach-bike-preparation', 'yellow-stairs-preparation', 'story-access-preparation', 'story-completion-preparation', 'water-hms-preparation', 'ferry-preparation', 'rival-preparation', 'family-preparation', 'travel-rules-preparation', 'birth-preparation'], reports):
         (output.parent / (name + '.json')).write_text(json.dumps(r, indent=2) + '\n')
     print(f'Reproduction passed: {len(expected)} files; {edge_count} reciprocal edges; no overlapping seams')
 

@@ -9,6 +9,72 @@ VALIDATION = ROOT / 'mods/hoenn/integration-validation'
 
 
 class ConnectedWorldTests(unittest.TestCase):
+    def test_sixteen_native_starting_homes_match_the_candidate(self):
+        prep = json.loads((VALIDATION / 'family-preparation.json').read_text())
+        runtime = json.loads((VALIDATION / 'family.json').read_text())
+        world = json.loads((VALIDATION / 'connected-world.json').read_text())
+        self.assertTrue(runtime['passed'])
+        self.assertEqual(runtime['rom_sha256'], world['rom_sha256'])
+        self.assertEqual(len(runtime['cities'][:16]), 16)
+        self.assertEqual(len(prep['homes']), 16)
+        self.assertTrue(runtime['hoenn_origin_control']['passed'])
+        self.assertTrue(runtime['hoenn_origin_control']['no_late_city_chooser'])
+        self.assertEqual({c['starter_species'] for c in runtime['cities'][1:16]}, {1, 4, 7})
+        for home, check in zip(prep['homes'], runtime['cities']):
+            self.assertEqual(check['house'], home['house'])
+            self.assertEqual(check['people'], home['people'])
+            self.assertTrue(check['real_city_menu'])
+            self.assertTrue(check['fixed_house_alias_only'])
+            self.assertTrue(check['actual_stairs_and_door'])
+            self.assertTrue(check['family_gifts_once'])
+            self.assertFalse(check['full_story_validated'])
+            if home['index'] > 1:
+                self.assertTrue(check['original_mother_heal'])
+                self.assertTrue(check['native_save_roundtrip'])
+                self.assertEqual(check['starter_level'], 5)
+        self.assertTrue(runtime['cities'][3]['full_bag_and_partial_retry'])
+        self.assertTrue(prep['one_fixed_house_per_city'])
+        self.assertFalse(prep['additional_hoenn_starts'])
+        self.assert_final_layer_hashes(prep, ['travel-rules', 'birth'])
+
+    def test_thirty_one_birth_choices_and_native_travel_rules(self):
+        prep = json.loads((VALIDATION / 'birth-preparation.json').read_text())
+        runtime = json.loads((VALIDATION / 'family.json').read_text())
+        rules = json.loads((VALIDATION / 'birth-rules.json').read_text())
+        world = json.loads((VALIDATION / 'connected-world.json').read_text())
+        self.assertEqual(len(prep['homes']), 31)
+        self.assertEqual(len(runtime['cities']), 30)
+        self.assertEqual(runtime['rom_sha256'], rules['rom_sha256'])
+        self.assertEqual(rules['rom_sha256'], world['rom_sha256'])
+        self.assertTrue(rules['passed'])
+        self.assertEqual(len(rules['checks']), 5)
+        for home, check in zip(prep['homes'][17:], runtime['cities'][16:]):
+            self.assertEqual(home['house'], check['house'])
+            for name in ['real_city_menu', 'selection_before_motion', 'fixed_house_alias_only',
+                         'actual_stairs_and_door', 'family_gifts_once', 'native_save_roundtrip', 'original_mother_heal']:
+                self.assertTrue(check[name])
+            self.assertIn(check['starter_species'], [252, 255, 258])
+            self.assertEqual(check['starter_level'], 5)
+        boats = {a['city'] for a in prep['arrivals'] if a['vehicle'] == 'boat'}
+        self.assertTrue({'Pacifidlog', 'Dewford', 'Mossdeep', 'Sootopolis'} <= boats)
+        self.assertTrue(all(a['vehicle'] == 'boat' for a in prep['arrivals'][9:16]))
+        self.assertFalse(any(p.endswith('map.bin') for p in prep['prepared_sha256']))
+        self.assert_final_layer_hashes(prep, [])
+        travel = json.loads((VALIDATION / 'travel-rules-preparation.json').read_text())
+        self.assertFalse(travel['following_pokemon_enabled'])
+        self.assert_final_layer_hashes(travel, ['birth'])
+
+    def assert_final_layer_hashes(self, prep, later_names):
+        expected = dict(prep['prepared_sha256'])
+        for name in later_names:
+            later = json.loads((VALIDATION / (name + '-preparation.json')).read_text())
+            for path in expected.keys() & later['prepared_sha256'].keys():
+                self.assertEqual(later['original_sha256'][path], expected[path])
+                expected[path] = later['prepared_sha256'][path]
+        reproduction = json.loads((VALIDATION / 'world-reproduction.json').read_text())
+        for path, digest in expected.items():
+            self.assertEqual(reproduction['prepared_sha256'][path], digest)
+
     def test_opposite_sex_rival_keeps_blue_and_other_trainers(self):
         prep = json.loads((VALIDATION / 'rival-preparation.json').read_text())
         runtime = json.loads((VALIDATION / 'connected-world.json').read_text())
@@ -26,9 +92,7 @@ class ConnectedWorldTests(unittest.TestCase):
         self.assertFalse(check['full_intro_and_naming_flow_validated'])
         self.assertTrue(prep['parties_and_event_scripts_unchanged'])
         self.assertTrue(prep['hoenn_rival_preserved'])
-        reproduction = json.loads((VALIDATION / 'world-reproduction.json').read_text())
-        for path, digest in prep['prepared_sha256'].items():
-            self.assertEqual(reproduction['prepared_sha256'][path], digest)
+        self.assert_final_layer_hashes(prep, ['family', 'travel-rules', 'birth'])
 
     def test_early_ferry_preserves_regional_progress_and_ticket(self):
         prep = json.loads((VALIDATION / 'ferry-preparation.json').read_text())
@@ -47,9 +111,7 @@ class ConnectedWorldTests(unittest.TestCase):
         self.assertTrue(prep['native_port_scripts_unchanged'])
         self.assertFalse(prep['boat_interior_or_sailing_animation'])
         self.assertFalse(prep['full_story_validated'])
-        reproduction = json.loads((VALIDATION / 'world-reproduction.json').read_text())
-        for path, digest in prep['prepared_sha256'].items():
-            self.assertEqual(reproduction['prepared_sha256'][path], digest)
+        self.assert_final_layer_hashes(prep, ['rival', 'family', 'travel-rules', 'birth'])
 
     def test_three_water_hms_and_terrestrial_tm_conversion(self):
         prep = json.loads((VALIDATION / 'water-hms-preparation.json').read_text())

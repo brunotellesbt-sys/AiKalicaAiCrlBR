@@ -954,6 +954,10 @@ if args.road_access:
     rewards=[]
     for name,label in [('MauvilleCity_BikeShop','MauvilleCity_BikeShop_EventScript_GetMachBike'),
                        ('CeruleanCity_BikeShop_Frlg','CeruleanCity_BikeShop_EventScript_ExchangeBikeVoucher')]:
+        # Isolate each supplier's eligible reward branch. Shared once-only
+        # ownership and both orders are tested in validate_birth_rules.py.
+        native('VarSet', 0x40FB, 0)
+        native('FlagClear', abi[58]); native('FlagClear', abi[59])
         if name.endswith('_Frlg'):assert native('AddBagItem',voucher,1)
         warp(name,3,3)
         lib.write16(save()+0x496,mach)
