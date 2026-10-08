@@ -1,0 +1,38 @@
+{
+  "status": "native_classic_battle_bond_candidate",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "wild_hidden_percent": 5,
+  "hidden_slot": 2,
+  "ordinary_second_slot": 1,
+  "battle_bond_generation": 7,
+  "hidden_inheritance": "native Gen6+: 60%",
+  "no_gift_or_trainer_ability_roll": true,
+  "no_new_gimmick_unlock": true,
+  "input_sha256": {
+    "include/config/battle.h": "cec54ab173570e232f89183a25e2cc94c5d7782531b1a9db7594f24ffafa272a",
+    "src/data/pokemon/species_info/gen_6_families.h": "f1a5dab6e524d70473dafe65d5a340342efd011fbe9dd61c10afe47c49d35d68",
+    "src/battle_util.c": "ef600574f284bc815ffd87ad2d0736e5fe11d70f97eb9d1172a72cd5f28f76d8",
+    "src/data/pokemon/form_change_tables.h": "c28ff4c8195421e09262d78b134b0ae030397b0899116537daf736849431c0d8",
+    "src/pokemon.c": "e8380b574de6b6d5124c25217db9821c2d3da62c2ba50448ad8cd094b42765ed",
+    "src/wild_encounter.c": "28624c43f4dbcf02ba3d1a977ce0b0b182e31f3f46755aace90c6a2fb3645957",
+    "src/daycare.c": "2bd1469a5116c0fd24b7c2e88a4f189b0e26c62e5c4fe7149bd0f9d1ef067bf5"
+  },
+  "original_sha256": {
+    "include/config/battle.h": "cec54ab173570e232f89183a25e2cc94c5d7782531b1a9db7594f24ffafa272a",
+    "src/data/pokemon/species_info/gen_6_families.h": "f1a5dab6e524d70473dafe65d5a340342efd011fbe9dd61c10afe47c49d35d68",
+    "src/battle_util.c": "ef600574f284bc815ffd87ad2d0736e5fe11d70f97eb9d1172a72cd5f28f76d8",
+    "src/data/pokemon/form_change_tables.h": "c28ff4c8195421e09262d78b134b0ae030397b0899116537daf736849431c0d8",
+    "src/pokemon.c": "e8380b574de6b6d5124c25217db9821c2d3da62c2ba50448ad8cd094b42765ed",
+    "src/wild_encounter.c": "0c428020268fcd0546c70f2ddd01b56230e2913e5b3d315b0bad290cd7f787ef",
+    "src/daycare.c": "2bd1469a5116c0fd24b7c2e88a4f189b0e26c62e5c4fe7149bd0f9d1ef067bf5"
+  },
+  "prepared_sha256": {
+    "include/config/battle.h": "7fb953e0623ac1a08cd63dbb6940d6d5607785fe377eaca2995d97df1689e99f",
+    "src/data/pokemon/species_info/gen_6_families.h": "bc17771f5b6bf2d30766d813336b14c21ce49fd6c6ab09b6d03f00c04cda1102",
+    "src/battle_util.c": "58d1d6e0bd83dd544a51ca9719d19b43c1efb8c69a4ac42f18e39da4fe78ab0c",
+    "src/data/pokemon/form_change_tables.h": "d5d580985a856068e217db9cdad0f57fbac042e6a5e214a310eb6044b252249f",
+    "src/pokemon.c": "b0acf6c33366c0f6207caab49f841770aec99aae611cbbe388672124efd49e2d",
+    "src/wild_encounter.c": "7e801fbe347ccbb5beddeb35edf0c95c7af478ceb67daf47cf6a81a6777113f5",
+    "src/daycare.c": "9b550cdc2902a18d6485267349aa701fb2edc332c578d13e0c3f8f97ee78bd40"
+  }
+}
