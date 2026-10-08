@@ -37,6 +37,18 @@ versão anterior. A candidata exige um novo jogo; não há conversão de saves.
 - Matriz posterior de 4.096 decisões de missão, incluindo a crise climática.
 - Encontros com nível pela média da equipe e fase evolutiva pela média das
   insígnias das duas regiões; Pokédex Nacional desde o início.
+- Guia por região e habitat em [POKEMON-LOCATIONS.md](POKEMON-LOCATIONS.md),
+  índice de 71 lendários, 23 míticos e 11 Ultra Beasts com entradas e altares
+  em [SPECIAL-LOCATIONS.md](SPECIAL-LOCATIONS.md), e planilha filtrável em
+  [pokemon-locations.csv](pokemon-locations.csv). São 1.025 espécies-base e
+  55 variantes regionais; Megas e outras formas de batalha não são encontros
+  independentes. `location-documentation.json` identifica a candidata e os
+  arquivos utilizados para gerar os documentos.
+- Auditoria estática dos 1.046 mapas: 2.800 passagens e 372 conexões têm
+  destinos válidos, considerando os 29 interiores residenciais substituídos
+  pela escolha inicial. Não comprova colisões ou acesso jogável. Há 64 destinos
+  dinâmicos e sete origens fora dos limites normais para revisar no motor,
+  registrados em `aftermath-validation/map-destinations.json`.
 
 Essas verificações cobrem casos e trechos específicos. Não representam duas
 campanhas completas jogadas. Relatórios da base de mapas ficam em
@@ -56,6 +68,9 @@ campanhas completas jogadas. Relatórios da base de mapas ficam em
    ginásios, incluindo Ligas, concursos, bases secretas e Battle Frontier.
 4. Revisar personagens, interiores e eventos dos mapas durante viagens reais;
    procurar bloqueios indevidos, recompensas repetidas e regressões de save.
+   Conferir também os destinos dinâmicos e as sete origens indicadas pela
+   auditoria estática (Battle Dome, Slateport e seu porto); não reposicionar
+   essas entradas sem verificar os scripts que as utilizam.
 5. Validar as animações e renderização em batalha das espécies e formas
    restantes, além dos pixels e cabeçalhos já conferidos. Testar sessões prolongadas e salvamento no navegador.
 6. Jogar ambas as campanhas completas e revisar os resultados antes de
