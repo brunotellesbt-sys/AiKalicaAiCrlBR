@@ -764,3 +764,39 @@ python3 tools/hoenn/validate_sanctuary_capture.py --source .local/hoenn-multireg
 python3 tools/hoenn/validate_wild.py --source .local/hoenn-multiregion-src --library .local/mgba-bridge.so
 python3 -m unittest discover -s tools/hoenn -p 'test_*.py'
 ```
+
+## Habilidades Ocultas e Battle Bond na candidata de batalhas
+
+A camada `abilities`, aplicada depois de `ecology`, migra a regra solicitada:
+Froakie, Frogadier e Greninja usam Torrent no primeiro slot, Protean no segundo
+e Battle Bond no slot oculto. Greninja transforma em Ash-Greninja ao nocautear
+um adversário enquanto a batalha continua. Torrent e Protean não transformam;
+as pré-evoluções também não. A espécie e o slot original retornam ao encerrar
+a batalha. A forma separada de evento com Battle Bond é preservada.
+
+Encontros criados por `CreateWildMon` têm 5% de chance de habilidade oculta
+quando a espécie possui uma. A herança usa a implementação nativa da geração
+6 ou posterior, com 60% para habilidade oculta. Não se aplica esse sorteio a
+presentes ou equipes de treinadores. Nenhuma pedra ou novo recurso de batalha
+é entregue por esta camada.
+
+Os relatórios estão em `abilities-validation`. Essa candidata tem uma ROM
+própria; `reproduction.json` registra também o hash da base de mapas utilizada.
+A base em `integration-validation` continua identificada pelo hash anterior:
+não se reetiquetam resultados antigos como testes da nova ROM. O replay
+reproduz todos os arquivos alterados pela camada e verifica sua idempotência.
+As campanhas completas ainda precisam ser jogadas na candidata final.
+
+Preparação e validação, depois da compilação com o toolchain documentado:
+
+```sh
+python3 tools/hoenn/prepare_abilities.py --source .local/hoenn-battle-bond-src
+python3 tools/hoenn/verify_abilities.py --source .local/hoenn-multiregion-src --candidate .local/hoenn-battle-bond-src --output mods/hoenn/abilities-validation
+python3 tools/hoenn/validate_abilities.py --source .local/hoenn-battle-bond-src --library .local/mgba-bridge.so --output mods/hoenn/abilities-validation --ability-slot 2
+python3 tools/hoenn/validate_abilities.py --source .local/hoenn-battle-bond-src --library .local/mgba-bridge.so --output mods/hoenn/abilities-validation --ability-slot 0
+python3 tools/hoenn/validate_abilities.py --source .local/hoenn-battle-bond-src --library .local/mgba-bridge.so --output mods/hoenn/abilities-validation --ability-slot 1
+python3 tools/hoenn/validate_abilities.py --source .local/hoenn-battle-bond-src --library .local/mgba-bridge.so --output mods/hoenn/abilities-validation --ability-slot 0 --event-form
+python3 tools/hoenn/validate_abilities.py --source .local/hoenn-battle-bond-src --library .local/mgba-bridge.so --output mods/hoenn/abilities-validation --ability-slot 2 --pre-evolution
+```
+
+Veja [STATUS.md](STATUS.md) para as etapas restantes antes do lançamento.
