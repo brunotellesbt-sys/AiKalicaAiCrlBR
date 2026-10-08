@@ -1,0 +1,633 @@
+{
+  "passed": true,
+  "rom_sha256": "a06c75b1e508638aa5e863b743d8bc376c47f7f9f070413bf2d01c74fed5dc1b",
+  "tournaments": [
+    {
+      "pool": 0,
+      "leaves": [
+        0,
+        3,
+        255,
+        2,
+        6,
+        4,
+        1,
+        5
+      ],
+      "wins": [
+        {
+          "round": 0,
+          "attacks": 9,
+          "outcome": 1,
+          "bag_blocked": true,
+          "ash_seen": true,
+          "forfeit": false
+        },
+        {
+          "round": 1,
+          "attacks": 12,
+          "outcome": 1,
+          "bag_blocked": false,
+          "ash_seen": true,
+          "forfeit": false
+        },
+        {
+          "round": 2,
+          "attacks": 18,
+          "outcome": 1,
+          "bag_blocked": false,
+          "ash_seen": true,
+          "forfeit": false
+        }
+      ],
+      "original_party_byte_identical": true,
+      "flags_and_money_unchanged": true,
+      "reward_bp": 3,
+      "native_flash_save_reload": true
+    },
+    {
+      "pool": 1,
+      "leaves": [
+        10,
+        12,
+        9,
+        8,
+        255,
+        11,
+        14,
+        15
+      ],
+      "wins": [
+        {
+          "round": 0,
+          "attacks": 7,
+          "outcome": 1,
+          "bag_blocked": false,
+          "ash_seen": true,
+          "forfeit": false
+        },
+        {
+          "round": 1,
+          "attacks": 14,
+          "outcome": 1,
+          "bag_blocked": false,
+          "ash_seen": true,
+          "forfeit": false
+        },
+        {
+          "round": 2,
+          "attacks": 15,
+          "outcome": 1,
+          "bag_blocked": false,
+          "ash_seen": true,
+          "forfeit": false
+        }
+      ],
+      "original_party_byte_identical": true,
+      "flags_and_money_unchanged": true,
+      "reward_bp": 3,
+      "native_flash_save_reload": true
+    },
+    {
+      "pool": 2,
+      "leaves": [
+        9,
+        2,
+        8,
+        7,
+        6,
+        10,
+        15,
+        255
+      ],
+      "wins": [
+        {
+          "round": 0,
+          "attacks": 9,
+          "outcome": 1,
+          "bag_blocked": false,
+          "ash_seen": true,
+          "forfeit": false
+        },
+        {
+          "round": 1,
+          "attacks": 18,
+          "outcome": 1,
+          "bag_blocked": false,
+          "ash_seen": true,
+          "forfeit": false
+        },
+        {
+          "round": 2,
+          "attacks": 6,
+          "outcome": 1,
+          "bag_blocked": false,
+          "ash_seen": true,
+          "forfeit": false
+        }
+      ],
+      "original_party_byte_identical": true,
+      "flags_and_money_unchanged": true,
+      "reward_bp": 3,
+      "native_flash_save_reload": true
+    }
+  ],
+  "native_battle_victories": 9,
+  "native_loss": {
+    "round": 0,
+    "attacks": 3,
+    "outcome": 2,
+    "bag_blocked": false,
+    "ash_seen": false,
+    "forfeit": false
+  },
+  "native_forfeit": {
+    "round": 0,
+    "attacks": 0,
+    "outcome": 9,
+    "bag_blocked": false,
+    "ash_seen": false,
+    "forfeit": true
+  },
+  "entry_guards": [
+    {
+      "case": "slot_out_of_range",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "same_slot",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "same_species",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "same_national_forms",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "same_item",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "egg",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "banned_mewtwo",
+      "refused": true,
+      "party_unchanged": true
+    }
+  ],
+  "native_roster_teams": [
+    {
+      "index": 0,
+      "trainer": 1168,
+      "mons": [
+        {
+          "species": 526,
+          "level": 50,
+          "item": 522,
+          "move": 157
+        },
+        {
+          "species": 248,
+          "level": 50,
+          "item": 523,
+          "move": 89
+        },
+        {
+          "species": 76,
+          "level": 50,
+          "item": 479,
+          "move": 350
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "trainer": 1169,
+      "mons": [
+        {
+          "species": 131,
+          "level": 50,
+          "item": 479,
+          "move": 362
+        },
+        {
+          "species": 195,
+          "level": 50,
+          "item": 523,
+          "move": 401
+        },
+        {
+          "species": 130,
+          "level": 50,
+          "item": 481,
+          "move": 349
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "trainer": 1170,
+      "mons": [
+        {
+          "species": 26,
+          "level": 50,
+          "item": 472,
+          "move": 39
+        },
+        {
+          "species": 405,
+          "level": 50,
+          "item": 477,
+          "move": 46
+        },
+        {
+          "species": 466,
+          "level": 50,
+          "item": 481,
+          "move": 9
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "trainer": 1171,
+      "mons": [
+        {
+          "species": 407,
+          "level": 50,
+          "item": 477,
+          "move": 71
+        },
+        {
+          "species": 286,
+          "level": 50,
+          "item": 522,
+          "move": 388
+        },
+        {
+          "species": 470,
+          "level": 50,
+          "item": 523,
+          "move": 241
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "trainer": 1172,
+      "mons": [
+        {
+          "species": 169,
+          "level": 50,
+          "item": 472,
+          "move": 314
+        },
+        {
+          "species": 454,
+          "level": 50,
+          "item": 522,
+          "move": 398
+        },
+        {
+          "species": 49,
+          "level": 50,
+          "item": 523,
+          "move": 79
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "trainer": 1174,
+      "mons": [
+        {
+          "species": 475,
+          "level": 50,
+          "item": 522,
+          "move": 182
+        },
+        {
+          "species": 65,
+          "level": 50,
+          "item": 472,
+          "move": 94
+        },
+        {
+          "species": 282,
+          "level": 50,
+          "item": 523,
+          "move": 273
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "trainer": 1173,
+      "mons": [
+        {
+          "species": 467,
+          "level": 50,
+          "item": 523,
+          "move": 7
+        },
+        {
+          "species": 59,
+          "level": 50,
+          "item": 472,
+          "move": 43
+        },
+        {
+          "species": 78,
+          "level": 50,
+          "item": 479,
+          "move": 23
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "trainer": 1550,
+      "mons": [
+        {
+          "species": 65,
+          "level": 50,
+          "item": 479,
+          "move": 94
+        },
+        {
+          "species": 103,
+          "level": 50,
+          "item": 522,
+          "move": 72
+        },
+        {
+          "species": 18,
+          "level": 50,
+          "item": 472,
+          "move": 97
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "trainer": 773,
+      "mons": [
+        {
+          "species": 697,
+          "level": 50,
+          "item": 477,
+          "move": 242
+        },
+        {
+          "species": 348,
+          "level": 50,
+          "item": 481,
+          "move": 306
+        },
+        {
+          "species": 306,
+          "level": 50,
+          "item": 523,
+          "move": 442
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "trainer": 777,
+      "mons": [
+        {
+          "species": 308,
+          "level": 50,
+          "item": 481,
+          "move": 244
+        },
+        {
+          "species": 68,
+          "level": 50,
+          "item": 479,
+          "move": 70
+        },
+        {
+          "species": 297,
+          "level": 50,
+          "item": 472,
+          "move": 264
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "trainer": 781,
+      "mons": [
+        {
+          "species": 596,
+          "level": 50,
+          "item": 477,
+          "move": 163
+        },
+        {
+          "species": 462,
+          "level": 50,
+          "item": 522,
+          "move": 393
+        },
+        {
+          "species": 181,
+          "level": 50,
+          "item": 523,
+          "move": 109
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "trainer": 785,
+      "mons": [
+        {
+          "species": 663,
+          "level": 50,
+          "item": 522,
+          "move": 512
+        },
+        {
+          "species": 324,
+          "level": 50,
+          "item": 472,
+          "move": 334
+        },
+        {
+          "species": 323,
+          "level": 50,
+          "item": 479,
+          "move": 174
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "trainer": 789,
+      "mons": [
+        {
+          "species": 115,
+          "level": 50,
+          "item": 522,
+          "move": 242
+        },
+        {
+          "species": 289,
+          "level": 50,
+          "item": 472,
+          "move": 638
+        },
+        {
+          "species": 242,
+          "level": 50,
+          "item": 523,
+          "move": 113
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "trainer": 793,
+      "mons": [
+        {
+          "species": 334,
+          "level": 50,
+          "item": 472,
+          "move": 538
+        },
+        {
+          "species": 279,
+          "level": 50,
+          "item": 523,
+          "move": 256
+        },
+        {
+          "species": 227,
+          "level": 50,
+          "item": 481,
+          "move": 65
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "trainer": 797,
+      "mons": [
+        {
+          "species": 178,
+          "level": 50,
+          "item": 523,
+          "move": 384
+        },
+        {
+          "species": 344,
+          "level": 50,
+          "item": 481,
+          "move": 470
+        },
+        {
+          "species": 678,
+          "level": 50,
+          "item": 522,
+          "move": 115
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "trainer": 801,
+      "mons": [
+        {
+          "species": 134,
+          "level": 50,
+          "item": 522,
+          "move": 392
+        },
+        {
+          "species": 340,
+          "level": 50,
+          "item": 479,
+          "move": 401
+        },
+        {
+          "species": 419,
+          "level": 50,
+          "item": 477,
+          "move": 458
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "trainer": 335,
+      "mons": [
+        {
+          "species": 272,
+          "level": 50,
+          "item": 479,
+          "move": 428
+        },
+        {
+          "species": 130,
+          "level": 50,
+          "item": 523,
+          "move": 349
+        },
+        {
+          "species": 121,
+          "level": 50,
+          "item": 522,
+          "move": 33
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "trainer": 804,
+      "mons": [
+        {
+          "species": 344,
+          "level": 50,
+          "item": 522,
+          "move": 470
+        },
+        {
+          "species": 348,
+          "level": 50,
+          "item": 477,
+          "move": 306
+        },
+        {
+          "species": 346,
+          "level": 50,
+          "item": 523,
+          "move": 254
+        }
+      ]
+    }
+  ],
+  "battle_bond_and_hidden_slot_restored": true,
+  "physical_receptionist_interaction": true,
+  "selection_cancel_restores_party": true,
+  "between_round_retirement_restores_party": true,
+  "defeat_restores_party_without_whiteout": true,
+  "no_bag_items": true,
+  "levels_normalized_to_50": true,
+  "battle_stats_and_travel_are_fixtures": true,
+  "full_campaign_playthrough": false,
+  "balance_validated": false
+}
