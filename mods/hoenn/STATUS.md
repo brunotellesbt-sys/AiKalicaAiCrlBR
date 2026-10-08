@@ -133,7 +133,7 @@ compartilhado de 50 equipes também foi repetido na nova candidata, com os dois
 finais nativos, créditos, Continue e preservação dos outros 49 registros.
 
 As duas Ligas e suas visitas seguintes foram vencidas em sequência na candidata
-atual, nos dois sentidos: Kanto → Hoenn → Kanto → Hoenn e Hoenn → Kanto → Hoenn
+da etapa `league-display`, nos dois sentidos: Kanto → Hoenn → Kanto → Hoenn e Hoenn → Kanto → Hoenn
 → Kanto. Cada percurso contém 20 vitórias nativas, quatro Hall of Fame, créditos,
 Continue e save/reload, mantendo os registros anteriores e as duas regiões campeãs.
 A revanche de Kanto usa os trainers 1470, 1471, 1472, 1473 e 1476; Hoenn mantém
@@ -147,6 +147,28 @@ nem validam o balanceamento. As explorações interrompidas ficam ignoradas em
 `.local`; os relatórios publicados identificam a ROM efetivamente exercitada.
 A candidata ainda não foi publicada no player. Os demais eventos de pós-jogo
 continuam pendentes de revisão.
+
+## Pós-jogo da família e exclusão dos encontros errantes
+
+Na candidata `family-postgame`, a mãe da casa escolhida entrega o S.S. Ticket
+após a Liga de Hoenn, inclusive em Kanto, e apresenta a notícia de Latias/Latios.
+Vencer apenas Kanto não libera essa entrega. A passagem não duplica e a bolsa
+cheia permite tentar novamente. Passaram 248 estados das 31 residências e seis
+diálogos completos com save/reload, incluindo os dois gêneros em Littleroot.
+
+Os encontros errantes nativos de lendários nas rotas foram desativados.
+Latias, Latios e os três cães usam os santuários com exigência das 16 insígnias.
+A base produziu 30 encontros forçados de Latias em 100 tentativas; a candidata
+produziu zero antes das conquistas e zero com 16 insígnias e ambas as Ligas.
+As conquistas são fixtures. A matriz de missões e a auditoria do catálogo
+passaram novamente; não houve alteração nas equipes, níveis ou locais comuns.
+
+Evidências em [family-postgame-validation](family-postgame-validation/reproduction.json).
+Candidata: `4f3b1fc8412fdf783494b219b3366669dcbab22c2a3e1cfb0699ea7a0d3b87d8`.
+Os oito percursos de Liga da etapa anterior não foram repetidos nesta candidata;
+a alteração desta etapa foi conferida pelos scripts e helpers do pós-jogo.
+O embarque original do S.S. Tidal, Battle Frontier e os demais eventos de
+pós-jogo ainda precisam de validação. O player permanece sem atualização.
 
 ## Trabalho que falta antes do lançamento
 

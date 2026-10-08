@@ -1,6 +1,6 @@
 # Localização de lendários, míticos e Ultra Beasts
 
-Todos exigem **8 insígnias de Kanto e 8 de Hoenn**, antes das Ligas. Não aparecem nos encontros aleatórios. Os locais antigos permanecem como alternativas; este índice aponta os novos altares. Fugir ou derrotar permite outra tentativa; capturar encerra o encontro.
+Todos exigem **8 insígnias de Kanto e 8 de Hoenn**, antes das Ligas. Não aparecem nos encontros aleatórios. Os locais antigos permanecem como alternativas; este índice aponta os novos altares. Fugir ou derrotar permite outra tentativa; capturar encerra o encontro. Encontros errantes nas rotas estão desativados, inclusive após as Ligas. Latias, Latios, Raikou, Entei e Suicune usam os santuários deste índice; a notícia de Latias/Latios permanece um evento da família.
 
 Coordenadas externas em tiles: X cresce para a direita e Y para baixo, contando de zero. Surf indica a porta na ilha; Surf + Dive indica o centro do trecho de água profunda. A posição do altar é interna à caverna. Não some os sete tiles da borda interna do motor.
 

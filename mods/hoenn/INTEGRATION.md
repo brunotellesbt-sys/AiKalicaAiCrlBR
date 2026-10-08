@@ -1087,3 +1087,61 @@ de revanche 1470/1471/1472/1473/1476; Hoenn mantém o conjunto nativo de Emerald
 Os IDs e as conquistas aparecem separados nos quatro elementos de `sequences`.
 As capturas por região mostram a última visita. Não são campanhas completas ou
 testes de balanceamento, e os demais eventos do pós-jogo continuam em revisão.
+
+## Recompensa da mãe após a Liga de Hoenn e lendários errantes
+
+A camada `family-postgame` segue `league-display`. O evento original do S.S.
+Ticket pressupunha a mãe, Norman e coordenadas fixas da casa em Littleroot.
+As casas escolhidas em outras cidades não tinham esse evento. Agora falar
+com a mãe da residência escolhida, após vencer a Liga de Hoenn, entrega o
+S.S. Ticket enviado por Briney e apresenta a notícia original de Latias/Latios.
+A escolha vermelho/azul continua gravada no save. O evento é um diálogo da
+família, sem colocar Norman no papel do pai de todas as residências nem mover
+NPCs pelas coordenadas da casa original. Depois dele, a mãe retorna aos seus
+outros diálogos. A passagem antecipada das viagens entre regiões permanece
+separada do S.S. Ticket de Emerald.
+
+A consulta lê a conquista de Hoenn diretamente do seu banco de flags: vencer
+apenas Kanto não entrega essa recompensa, mesmo morando em Kanto. Bolsa cheia
+mantém a entrega pendente. Um S.S. Ticket já presente é reconhecido sem criar
+outro, e a flag de recebimento só avança após a entrega bem-sucedida. A preparação
+original do Hall of Fame permanece como alternativa para um save sem casa
+selecionada; com casa selecionada, não inicia a coreografia de Norman.
+
+Também foi corrigida uma alternativa que escapava à regra dos encontros:
+o dispatcher nativo ainda permitia lendários errantes em rotas. Agora ele
+não inicia esses encontros, antes ou depois das 16 insígnias e das Ligas.
+Latias, Latios, Raikou, Entei e Suicune permanecem disponíveis nos altares
+indicados em [SPECIAL-LOCATIONS.md](SPECIAL-LOCATIONS.md), com a exigência das
+16 insígnias. A notícia da família não cria encontros errantes adicionais.
+
+Reprodução e validação:
+
+```sh
+cp -a .local/hoenn-display-src .local/hoenn-family-postgame-src
+python3 tools/hoenn/prepare_family_postgame.py --source .local/hoenn-family-postgame-src
+# Compilar `modern` com a toolchain documentada acima antes dos testes nativos.
+python3 tools/hoenn/verify_abilities.py --source .local/hoenn-display-src --candidate .local/hoenn-family-postgame-src --layer family-postgame --output mods/hoenn/family-postgame-validation
+python3 tools/hoenn/validate_family_postgame.py --source .local/hoenn-display-src --library .local/mgba-bridge.so --output mods/hoenn/family-postgame-validation/baseline --baseline
+python3 tools/hoenn/validate_family_postgame.py --source .local/hoenn-family-postgame-src --library .local/mgba-bridge.so --output mods/hoenn/family-postgame-validation/native
+python3 tools/hoenn/validate_campaign_matrix.py --source .local/hoenn-family-postgame-src --library .local/mgba-bridge.so --output mods/hoenn/family-postgame-validation
+python3 tools/hoenn/audit_native_catalog.py --source .local/hoenn-family-postgame-src --output mods/hoenn/family-postgame-validation/catalog.json --summary
+python3 tools/hoenn/document_habitats.py --source .local/hoenn-family-postgame-src --output mods/hoenn
+```
+
+A candidata `4f3b1fc8412fdf783494b219b3366669dcbab22c2a3e1cfb0699ea7a0d3b87d8`
+passou 248 estados de recompensa: 31 casas, dois mapas regionais e quatro
+combinações de conquistas. Seis execuções dos scripts da mãe passaram até o
+fim, incluindo as duas casas de Littleroot conforme o gênero, Pallet,
+Viridian, Rustboro e Pacifidlog; a passagem, a notícia e sua escolha persistiram
+após save/reload nativo. As capturas mostram o menu original vermelho/azul.
+A bolsa cheia é uma fixture de slots ocupados por bicicletas repetidas, escritos
+pela rotina nativa de criptografia; não representa itens obtidos na campanha.
+
+Com Latias ativo e forçado à rota, a base gerou 30 encontros em 100 tentativas.
+A candidata gerou zero antes das conquistas e zero nas 100 tentativas adicionais
+com as 16 insígnias e ambos os campeonatos como fixtures. Passaram também as
+4.096 decisões de missão, 36 permissões e a auditoria das 1.025 espécies-base.
+Os diálogos usam warps e invocação do script com o contexto da sala/mãe; não
+comprovam um percurso completo de campanha, embarque do S.S. Tidal, Battle
+Frontier ou todos os eventos de pós-jogo. A ROM do player permanece anterior.
