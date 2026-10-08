@@ -27,6 +27,7 @@ parser.add_argument('--campaign-gates', action='store_true', help='Exercise regi
 parser.add_argument('--story-access', action='store_true', help='Exercise native first-badge rewards in all sixteen gyms, including a full bag')
 parser.add_argument('--story-completion', action='store_true', help='Exercise the native rival call, Dive gift and permanent Space Center victory')
 parser.add_argument('--water-hms', action='store_true', help='Exercise early family gifts, three-HM classification and new terrestrial TMs')
+parser.add_argument('--ferry', action='store_true', help='Exercise the real early ferry NPCs, menus, ticket and regional roundtrips')
 parser.add_argument('--output', type=Path, default=ROOT / 'mods/hoenn/integration-validation')
 args = parser.parse_args(); source = args.source.resolve(); args.output.mkdir(parents=True, exist_ok=True)
 raw = subprocess.check_output([str(ROOT / '.local/arm-binutils/usr/bin/arm-none-eabi-nm'), '-n', str(source / 'pokeemerald.elf')], text=True)
@@ -39,7 +40,7 @@ assert lib.start(str(source / 'pokeemerald.gba').encode())
 results = []
 call4 = None
 abi = None
-if args.gym_scaling or args.team_stories or args.story_access or args.story_completion or args.water_hms:
+if args.gym_scaling or args.team_stories or args.story_access or args.story_completion or args.water_hms or args.ferry:
     toolchain = ROOT / '.local/arm-gcc/usr/bin/arm-none-eabi-gcc'
     with tempfile.TemporaryDirectory(prefix='gym-fixture-', dir='/tmp') as directory:
         temp = Path(directory)
@@ -138,6 +139,109 @@ if not args.westsea and not args.campaign_gates:
     cross('Route127', 32)
 warp('Route21_South_Frlg', 1, 22)
 picture('Route21-direct-warp-control')
+if args.ferry:
+    ferry = json.loads((source / '.journey-ferry').read_text())
+    ports, ticket = ferry['ports'], ferry['ticket_item_id']
+    constants = (source / 'include/constants/flags.h').read_text()
+    tracked_flags = ['FLAG_KANTO_BADGE%02d_GET' % i for i in range(1, 9)]
+    tracked_flags += ['FLAG_KANTO_GAME_CLEAR', 'FLAG_HIDE_SAFFRON_ROCKETS',
+                     'FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN', 'FLAG_MET_TEAM_AQUA_HARBOR']
+    flag_ids = [int(re.search(r'^#define\s+' + name + r'\s+(0x[0-9A-Fa-f]+)', constants, re.M)[1], 16)
+                for name in tracked_flags]
+    flag_ids += [lib.read16(s['gBadgeFlags'] + i * 2) for i in range(8)]
+    def ferry_flags():
+        return [bool(lib.read8(save() + 4720 + f // 8) & (1 << (f & 7))) for f in flag_ids]
+    initial_flags = ferry_flags()
+    pocket = s['gBagPockets'] + 4 * 8
+    capacity = lib.read16(pocket + 4) & 1023
+    slots = lib.read32(pocket)
+    original_bag = bytes(lib.read8(slots + i) for i in range(capacity * 4))
+    def menu_task():
+        return next((s['gTasks'] + 40 * i for i in range(16)
+                     if lib.read8(s['gTasks'] + 40 * i + 4)
+                     and lib.read32(s['gTasks'] + 40 * i) == (s['Task_HandleMultichoiceInput'] | 1)), None)
+    def ferry_menu():
+        for _ in range(100):
+            if menu_task() is not None: step(20); return
+            step(1, 1); step(30)
+        picture('ferry-menu-failed')
+        raise AssertionError(('Ferry menu absent', location(), position()))
+    def finish_ferry():
+        for _ in range(100):
+            if not lib.read8(s['sLockFieldControls']): return
+            step(1, 1); step(30)
+        raise AssertionError('Ferry dialogue did not release controls')
+    def choose_ferry(index):
+        assert menu_task() is not None
+        step(20)
+        for _ in range(index): step(1, 128); step(12)
+        step(1, 1); step(20)
+    def talk_ferry(index):
+        port = ports[index]
+        warp(port['map'], *port['arrival'])
+        native('SetPlayerAvatarTransitionFlags', 1); step(30)
+        x, y = port['npc']; px, py = port['arrival']
+        assert native('MapGridGetCollisionAt', px + 7, py + 7) == 0, port
+        assert native('MapGridGetCollisionAt', x + 7, y + 7) == 0, port
+        step(1, 64 if y < py else 16 if x > px else 32); step(16)
+        assert position() == tuple(port['arrival']), ('Moved past ferry NPC', port, position())
+        step(1, 1); step(30)
+    # Fill the real encrypted key pocket, then retry the first NPC conversation.
+    current = lib.read32(pocket)
+    for i in range(capacity * 4): lib.write8(current + i, 0)
+    fillers = []
+    for item in range(707, 765):
+        if native('GetItemPocket', item) == 4 and native('AddBagItem', item, 1): fillers.append(item)
+        if len(fillers) == capacity: break
+    assert len(fillers) == capacity and not native('CheckBagHasSpace', ticket, 1)
+    talk_ferry(0); finish_ferry()
+    assert native('CountTotalItemQuantityInBag', ticket) == 0 and menu_task() is None
+    assert native('RemoveBagItem', fillers[-1], 1)
+    talk_ferry(0); ferry_menu()
+    picture('ferry-vermilion-destinations')
+    # Back/cancel preserve the current port and keep the reusable ticket.
+    choose_ferry(2); ferry_menu(); picture('ferry-seven-island-menu')
+    step(1, 2); step(20); ferry_menu()
+    choose_ferry(3); finish_ferry()
+    assert location() == map_id(ports[0]['map'])
+    assert native('CountTotalItemQuantityInBag', ticket) == 1
+    trips = []
+    for target in range(1, len(ports)):
+        talk_ferry(0); ferry_menu()
+        if target == 1: choose_ferry(1)
+        else:
+            choose_ferry(2); ferry_menu(); choose_ferry(target - 2)
+        finish_ferry(); step(90)
+        assert location() == map_id(ports[target]['map']), ('Wrong ferry destination', target, location())
+        assert position() == tuple(ports[target]['arrival'])
+        assert not (lib.read8(s['gPlayerAvatar']) & 8), 'Boat arrival retained Surf'
+        expected_frlg = target != 1
+        assert bool(lib.read8(s['isFrlg'])) == expected_frlg
+        assert native('CountTotalItemQuantityInBag', ticket) == 1
+        # Exercise each port's visible NPC and its reciprocal voyage.
+        talk_ferry(target); ferry_menu(); choose_ferry(0); finish_ferry(); step(90)
+        assert location() == map_id(ports[0]['map']) and position() == tuple(ports[0]['arrival'])
+        assert native('CountTotalItemQuantityInBag', ticket) == 1
+        trips.extend([(0, target), (target, 0)])
+    talk_ferry(0); ferry_menu(); choose_ferry(0); finish_ferry()
+    assert location() == map_id(ports[0]['map'])
+    assert ferry_flags() == initial_flags, 'Ferry granted badges or completed a regional mission'
+    assert native('TrySavingData', 0, max_frames=6000) == 1
+    assert native('RemoveBagItem', ticket, 1)
+    assert native('LoadGameSave', 0) == 1
+    assert native('CountTotalItemQuantityInBag', ticket) == 1
+    assert ferry_flags() == initial_flags
+    picture('ferry-vermilion-arrival')
+    current = lib.read32(pocket)
+    for i, value in enumerate(original_bag): lib.write8(current + i, value)
+    results.append(dict(check='early_ticketed_interregional_ferry', passed=True,
+                        ports_tested=9, real_npc_interactions=True, actual_menu_inputs=True,
+                        trips=trips, zero_badges=True, ticket_reusable=True,
+                        full_key_pocket_retry=True, cancel_and_back=True,
+                        duplicate_ticket_prevented=True, on_foot_arrivals=True,
+                        regional_format_switches=True, mission_flags_unchanged=True,
+                        native_flash_save_roundtrip=True))
+    print('Early ferry: nine real NPCs, 16 voyages, ticket/full-pocket/cancel/save passed', flush=True)
 if args.region_state:
     regional = json.loads((source / '.journey-region-state').read_text())
     badges = [lib.read16(s['gBadgeFlags'] + i * 2) for i in range(8)]

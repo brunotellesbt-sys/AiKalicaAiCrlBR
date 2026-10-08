@@ -9,6 +9,27 @@ VALIDATION = ROOT / 'mods/hoenn/integration-validation'
 
 
 class ConnectedWorldTests(unittest.TestCase):
+    def test_early_ferry_preserves_regional_progress_and_ticket(self):
+        prep = json.loads((VALIDATION / 'ferry-preparation.json').read_text())
+        runtime = json.loads((VALIDATION / 'connected-world.json').read_text())
+        check = next(c for c in runtime['checks'] if c['check'] == 'early_ticketed_interregional_ferry')
+        self.assertEqual(check['ports_tested'], len(prep['ports']))
+        self.assertEqual(len(check['trips']), 16)
+        self.assertEqual({tuple(trip) for trip in check['trips']},
+                         {(0, i) for i in range(1, 9)} | {(i, 0) for i in range(1, 9)})
+        for invariant in ['real_npc_interactions', 'actual_menu_inputs', 'zero_badges',
+                          'ticket_reusable', 'full_key_pocket_retry', 'cancel_and_back',
+                          'duplicate_ticket_prevented', 'on_foot_arrivals',
+                          'regional_format_switches', 'mission_flags_unchanged',
+                          'native_flash_save_roundtrip']:
+            self.assertTrue(check[invariant])
+        self.assertTrue(prep['native_port_scripts_unchanged'])
+        self.assertFalse(prep['boat_interior_or_sailing_animation'])
+        self.assertFalse(prep['full_story_validated'])
+        reproduction = json.loads((VALIDATION / 'world-reproduction.json').read_text())
+        for path, digest in prep['prepared_sha256'].items():
+            self.assertEqual(reproduction['prepared_sha256'][path], digest)
+
     def test_three_water_hms_and_terrestrial_tm_conversion(self):
         prep = json.loads((VALIDATION / 'water-hms-preparation.json').read_text())
         runtime = json.loads((VALIDATION / 'connected-world.json').read_text())
