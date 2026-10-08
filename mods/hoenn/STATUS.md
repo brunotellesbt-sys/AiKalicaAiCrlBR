@@ -79,7 +79,7 @@ como destino de retorno após o Hall of Fame. Littleroot respeita o quarto de
 Brendan ou May conforme o personagem. Sem uma casa válida, os destinos originais
 de Pallet/Littleroot continuam como fallback. O layout do save não mudou.
 
-A candidata fica em `.local/hoenn-completion-final-src`, com relatórios em
+A etapa anterior fica em `.local/hoenn-completion-final-src`, com relatórios em
 `completion-validation`, base `e2fb947f` e ROM `f7110f29`. Há verificações de
 62 destinos persistidos (31 casas × dois personagens), além das duas sequências
 de Elite Four, campeão, Hall of Fame, créditos e Continue. Kanto retorna à casa
@@ -87,10 +87,29 @@ em Mauville e Hoenn à casa em Vermilion nos dois casos exercitados, mantendo
 equipe, habilidade oculta e a outra região sem concluir.
 
 Os níveis 100, as insígnias, a casa e a cura entre batalhas são fixtures de teste.
-Esses percursos não equivalem a jogar as campanhas completas. As duas sequências
-foram exercitadas em saves novos separados; vencer as duas Ligas no mesmo save,
-o histórico compartilhado do Hall of Fame e as revanches ainda precisam de
-validação. A candidata ainda não foi publicada no player.
+Esses percursos não equivalem a jogar as campanhas completas. Na etapa anterior, as duas sequências
+foram exercitadas em saves novos separados.
+
+A candidata atual fica em `.local/hoenn-history-src`, base `f7110f29` e ROM
+`73135dc67a53928b13bc4c36319e14b688848284cee42a304f84e6e56f92d5e0`, com
+relatórios em `history-validation`. A primeira vitória na segunda região apagava
+o histórico da primeira: a decisão usava uma flag regional para um arquivo
+compartilhado. Agora usa o contador compartilhado de equipes efetivamente salvas.
+As duas interfaces usam a mesma capacidade de 50 equipes; o formato do save e
+as flags regionais permanecem iguais.
+
+Foram vencidas as dez batalhas nativas em sequência no mesmo save, nos dois
+sentidos, com créditos, Continue, retorno à residência e save/reload. A segunda
+vitória preserva o primeiro registro byte a byte e mantém as duas regiões campeãs.
+Com 50 equipes de fixture, novos registros nas duas interfaces removem somente
+o mais antigo. Uma revanche real contra Lorelei usa o trainer 1470 após uma
+flag de campeão de Kanto preparada pelo teste; a primeira visita continua usando
+1164 mesmo após vencer Hoenn. A revanche completa das Ligas e a consulta ao
+histórico pelo PC ainda precisam de validação.
+
+Foram repetidas na candidata atual as 4.096 decisões de missão, 36 permissões,
+o catálogo de 1.025 espécies-base, as 97 referências de Megas e a auditoria de
+destinos dos mapas. A candidata ainda não foi publicada no player.
 
 ## Trabalho que falta antes do lançamento
 
