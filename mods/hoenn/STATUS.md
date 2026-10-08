@@ -173,17 +173,40 @@ pós-jogo ainda precisam de validação. O player permanece sem atualização.
 ## PWT Singles como módulo da Battle Frontier
 
 O guia no lobby do Battle Dome leva a uma recepção própria do PWT. São oito
-participantes, três Pokémon por equipe, nível 50 e três rodadas. Há torneios
+participantes, seis Pokémon por equipe, nível 50 e três rodadas. Há torneios
 de Kanto, Hoenn e Misto, com 18 entradas de líderes/campeões. Vitória dá 3 BP;
 derrota, cancelamento e desistência restauram a equipe sem avançar a história.
 O Dome original continua disponível. Regras e reprodução em [PWT.md](PWT.md).
 
-A candidata `a06c75b1e508638aa5e863b743d8bc376c47f7f9f070413bf2d01c74fed5dc1b`
+A candidata `4f1a70a006854cf304c32a5cdb80bd7009d779dddc5a6a43f573bbb7a6610b56`
 passou nove vitórias nativas, derrota, forfeit, sete guardas de entrada, 18
 equipes com golpes e acesso físico pela recepção/porta. Battle Bond, habilidade
 Hidden, BP e equipe original foram conferidos com save/reload. As batalhas
 usam atributos aumentados na fixture; falta conferir a dificuldade sem ela.
 As outras instalações da Frontier e campanhas completas continuam pendentes.
+
+## Revisão para seis Pokémon e viagens nativas à Frontier
+
+O PWT foi ajustado para Singles **seis contra seis**, incluindo o quinto/sexto
+slot do menu, ordem dos seis e adversários com suas seis espécies. A candidata
+PWT `4f1a70a0` passou os três torneios, nove vitórias, derrota, forfeit,
+cancelamentos e sete guardas adicionais dos slots finais, além das 18 equipes.
+Os relatórios PWT foram reexecutados para esta candidata.
+
+A camada seguinte `frontier-travel` corrige o embarque sem S.S. Ticket nos dois
+portos de Hoenn, que podia deixar o jogador sem o bilhete exigido para voltar
+da Frontier. Requer a Liga de Hoenn e o bilhete entregue pela família. Mantém
+a primeira cena de Scott e o cruzeiro original. Houve testes físicos de oito
+estados de embarque, cabine/cama/marinheiro e quatro trechos de ferry entre
+Lilycove, Slateport e Frontier, com Continue e bilhete preservado.
+
+Candidata mais recente: `92c95316b5019ac31cfde8e3cc4476895e61f33714b18ec27478b702cc54a335`.
+Uma batalha adicional seis contra seis do PWT passou nessa ROM, incluindo
+Battle Bond e restauração da equipe após desistência na rodada seguinte.
+Os três torneios completos são da camada PWT anterior; os dois scripts de
+porto constituem a diferença desta camada. As fixtures não validam dificuldade
+ou campanhas completas. Reprodução e limites em [FRONTIER-TRAVEL.md](FRONTIER-TRAVEL.md).
+Prioridades para continuar em [REMAINING-WORK.md](REMAINING-WORK.md).
 
 ## Trabalho que falta antes do lançamento
 

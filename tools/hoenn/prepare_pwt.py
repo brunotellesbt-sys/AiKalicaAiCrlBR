@@ -57,7 +57,7 @@ def prepare(source):
     change('src/battle_main.c', '''static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
 {''', '''static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
 {
-    if (gBattleTypeFlags & BATTLE_TYPE_PWT) return 3; // Module prepared the opponent's copies.''')
+    if (gBattleTypeFlags & BATTLE_TYPE_PWT) return PARTY_SIZE; // Module prepared the opponent's copies.''')
     # Facility rules, while retaining native trainer names/portraits and parties
     # in all existing Frontier facilities. PWT is not part of FRONTIER's mask.
     path = 'src/battle_main.c'
@@ -77,6 +77,19 @@ def prepare(source):
     start = body.index('static void Cmd_tryswapitems(void)\n{')
     end = body.index('\nstatic void ', start + 1)
     body = body[:start] + body[start:end].replace('| BATTLE_TYPE_FRONTIER', '| BATTLE_TYPE_FRONTIER\n                                  | BATTLE_TYPE_PWT') + body[end:]
+    write(path, body)
+    # Only enlarge the RAM selection order; Frontier save arrays and its 3/4
+    # entry limits stay unchanged. Six-entry PWT labels need their own IDs.
+    change('include/party_menu.h', 'gSelectedOrderFromParty[MAX_FRONTIER_PARTY_SIZE]', 'gSelectedOrderFromParty[PARTY_SIZE]')
+    change('src/party_menu.c', 'gSelectedOrderFromParty[MAX_FRONTIER_PARTY_SIZE]', 'gSelectedOrderFromParty[PARTY_SIZE]')
+    change('include/constants/party_menu.h', '#define PARTYBOX_DESC_DONT_HAVE   12', '#define PARTYBOX_DESC_DONT_HAVE   12\n#define PARTYBOX_DESC_PWT_FIFTH   13\n#define PARTYBOX_DESC_PWT_SIXTH   14')
+    change('src/data/party_menu.h', 'static const u8 *const sDescriptionStringTable[] =', 'static const u8 sPWTEntryFifth[] = _(\"5th\");\nstatic const u8 sPWTEntrySixth[] = _(\"6th\");\nstatic const u8 *const sDescriptionStringTable[] =')
+    change('src/data/party_menu.h', '    [PARTYBOX_DESC_DONT_HAVE]  = gText_DontHave,', '    [PARTYBOX_DESC_DONT_HAVE]  = gText_DontHave,\n    [PARTYBOX_DESC_PWT_FIFTH]  = sPWTEntryFifth,\n    [PARTYBOX_DESC_PWT_SIXTH]  = sPWTEntrySixth,')
+    path = 'src/party_menu.c'
+    body = read(path)
+    body = body.replace('i + PARTYBOX_DESC_FIRST', 'GetBattleEntryDescription(i)')
+    body = body.replace('static u8 GetMaxBattleEntries(void);', 'static u8 GetBattleEntryDescription(u8 rank);\nstatic u8 GetMaxBattleEntries(void);')
+    body = body.replace('static u8 GetMaxBattleEntries(void)\n{', 'static u8 GetBattleEntryDescription(u8 rank)\n{\n    if (JourneyPWTSelectionActive() && rank >= 4)\n        return rank == 4 ? PARTYBOX_DESC_PWT_FIFTH : PARTYBOX_DESC_PWT_SIXTH;\n    return rank + PARTYBOX_DESC_FIRST;\n}\n\nstatic u8 GetMaxBattleEntries(void)\n{')
     write(path, body)
     change('src/party_menu.c', '#include "global.h"', '#include "global.h"\n#include "journey_pwt.h"\n#include "pokedex.h"')
     change('src/party_menu.c', '''if (species == GetMonData(&party[order[j] - 1], MON_DATA_SPECIES))''', '''if (species == GetMonData(&party[order[j] - 1], MON_DATA_SPECIES)
@@ -150,7 +163,7 @@ JourneyPWTArena_OnFrame:
 '''
         write(f'data/maps/{name}/scripts.inc', script)
     report = dict(status='independent_frontier_singles_pwt_candidate', source_commit=PIN,
-                  participants=8, rounds=3, team_size=3, level=50, reward_bp=3,
+                  participants=8, rounds=3, team_size=6, level=50, reward_bp=3,
                   doubles_enabled=False, trainer_pool_size=18, save_layout_unchanged=True,
                   existing_dome_retained=True, full_campaign_validated=False,
                   input_sha256=inputs, original_sha256=originals,

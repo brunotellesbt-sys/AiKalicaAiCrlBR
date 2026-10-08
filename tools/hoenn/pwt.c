@@ -46,7 +46,7 @@ static const struct PWTTrainer sPWTTrainers[] = {
 #define PWT_EMPTY 254
 struct PWTState {
     struct Pokemon original[PARTY_SIZE];
-    struct Pokemon selected[3];
+    struct Pokemon selected[PARTY_SIZE];
     u8 bracket[15]; // Binary tree; eight leaves occupy indices 7..14.
     u8 originalCount, size, round, playerNode, pool;
     u16 facility;
@@ -79,7 +79,7 @@ static void ReturnFromSelection(void)
 void JourneyPWTChoose(void)
 {
     if (sPWT.active || sPWT.selecting) { gSpecialVar_Result = FALSE; return; }
-    sPWT.size = 3;
+    sPWT.size = PARTY_SIZE;
     sPWT.pool = gSpecialVar_0x8006;
     sPWT.facility = VarGet(VAR_FRONTIER_FACILITY);
     VarSet(VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER);
@@ -132,7 +132,7 @@ void JourneyPWTBegin(void)
     u32 i, j, count;
     u8 pool[ARRAY_COUNT(sPWTTrainers)], temp;
     gSpecialVar_Result = FALSE;
-    if (sPWT.active || sPWT.size != 3 || !SelectionValid()) return;
+    if (sPWT.active || sPWT.size != PARTY_SIZE || !SelectionValid()) return;
     sPWT.originalCount = gPlayerPartyCount;
     memcpy(sPWT.original, gParties[B_TRAINER_0], sizeof(sPWT.original));
     for (i = 0; i < sPWT.size; i++)

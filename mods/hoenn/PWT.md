@@ -8,7 +8,7 @@ Dome; suas recepções e desafios originais continuam disponíveis.
 
 ## Regras
 
-- Somente Singles, conforme solicitado: três Pokémon escolhidos entre sua equipe.
+- Somente Singles, conforme solicitado: seis Pokémon por equipe. Leve seis elegíveis e escolha a ordem dos seis.
 - Oito participantes; quartas de final, semifinal e final. Três vitórias dão o título.
 - O sorteio mostra a chave antes de cada rodada. Os outros confrontos são resolvidos
   por sorteio; você disputa suas três partidas no motor normal de batalha.
@@ -18,7 +18,7 @@ Dome; suas recepções e desafios originais continuam disponíveis.
   Vários Pokémon sem item são permitidos.
 - Itens da bolsa ficam bloqueados. O estilo de batalha é Set, sem troca gratuita
   quando o adversário manda outro Pokémon. Run permite desistir da partida.
-- Antes de cada batalha, HP, PP, status e itens dos três selecionados são restaurados.
+- Antes de cada batalha, HP, PP, status e itens dos seis selecionados são restaurados.
 - Vitória no torneio dá 3 BP, até o limite de 9.999. Derrota ou desistência não premia.
 - Ao terminar, a equipe completa retorna ao estado da inscrição: mesma ordem,
   níveis, experiência, habilidades, personalidade, itens, golpes e condições.
@@ -40,10 +40,10 @@ Não é uma reprodução integral da interface e de todos os torneios de Black 2
 
 Cada inscrição sorteia sete adversários distintos e a posição do jogador na
 chave. São 18 entradas de treinadores no conjunto misto; Tate/Liza ocupam uma
-entrada e disputam Singles com uma equipe de três Pokémon.
+entrada e disputam Singles com uma equipe de seis Pokémon.
 
 Cada treinador tem um conjunto próprio de seis espécies associado à sua
-especialidade, do qual são sorteados três Pokémon. A lista está em
+especialidade, com os seis Pokémon em cada partida, em ordem sorteada. A lista está em
 [tools/hoenn/pwt.c](../../tools/hoenn/pwt.c). Os adversários têm IVs 31, EVs em
 velocidade e ataque físico ou especial conforme seus atributos, e os golpes
 aprendidos até o nível 50. Os itens são escolhidos sem repetição entre
@@ -66,6 +66,7 @@ python3 tools/hoenn/prepare_pwt.py --source .local/hoenn-pwt-src
 # Compilar `modern` com a toolchain descrita em INTEGRATION.md.
 python3 tools/hoenn/verify_abilities.py --source .local/hoenn-family-postgame-src --candidate .local/hoenn-pwt-src --layer pwt --output mods/hoenn/pwt-validation
 python3 tools/hoenn/validate_pwt.py --source .local/hoenn-pwt-src --library .local/mgba-bridge.so --output mods/hoenn/pwt-validation/native
+python3 tools/hoenn/validate_pwt_six.py --source .local/hoenn-pwt-src --library .local/mgba-bridge.so --output mods/hoenn/pwt-validation/six
 python3 tools/hoenn/validate_pwt_access.py --source .local/hoenn-pwt-src --library .local/mgba-bridge.so --output mods/hoenn/pwt-validation/access
 python3 tools/hoenn/validate_campaign_matrix.py --source .local/hoenn-pwt-src --library .local/mgba-bridge.so --output mods/hoenn/pwt-validation
 python3 tools/hoenn/audit_native_catalog.py --source .local/hoenn-pwt-src --output mods/hoenn/pwt-validation/catalog.json --summary
@@ -75,17 +76,20 @@ python3 tools/hoenn/audit_map_destinations.py --source .local/hoenn-pwt-src --ou
 ## Evidências e limites
 
 Candidata exercitada:
-`a06c75b1e508638aa5e863b743d8bc376c47f7f9f070413bf2d01c74fed5dc1b`.
+`4f1a70a006854cf304c32a5cdb80bd7009d779dddc5a6a43f573bbb7a6610b56`.
 Os relatórios em [pwt-validation](pwt-validation/reproduction.json) comprovam:
 
 - Três torneios completos, um de cada conjunto: nove vitórias no motor nativo,
-  com seleção de três Pokémon pelo menu e BP persistidos em flash/save/reload.
+  com seleção de seis Pokémon pelo menu e BP persistidos em flash/save/reload.
 - Uma derrota nativa, um forfeit pelo Run, cancelamento da inscrição e
   desistência entre rodadas, preservando equipe e prêmio anterior.
 - Sete rejeições de entrada, incluindo formas com o mesmo número Nacional,
   ovos, Mewtwo, itens repetidos e índices inválidos.
-- Formação de uma equipe nativa de cada uma das 18 entradas, com três espécies,
-  três itens distintos, nível 50 e golpes preenchidos.
+- Formação de uma equipe nativa de cada uma das 18 entradas, com seis espécies,
+  seis itens distintos, nível 50 e golpes preenchidos.
+- Sete verificações adicionais do quinto/sexto slot, rejeitando equipe de cinco,
+  seleção incompleta, repetição, ovo e espécie banida; ordem inversa dos seis
+  respeitada sem alterar a equipe original.
 - Battle Bond após nocaute e restauração byte a byte da equipe original,
   incluindo a habilidade Hidden de Greninja.
 - Conversa física com o guia, caminhada ao balcão, interação com a atendente
@@ -98,6 +102,10 @@ os percursos; não alteram as equipes da ROM. As capturas de batalha refletem
 essa fixture e não demonstram balanceamento competitivo. Os golpes dos
 adversários e as batalhas são reais. Os testes de cláusulas e das 18 equipes
 são chamadas de helpers, sem contabilizar vitórias simuladas como partidas.
+
+A camada seguinte `frontier-travel` mantém este módulo e confere o S.S. Ticket
+nos dois portos. Sua candidata tem um teste adicional de batalha seis contra seis
+com Battle Bond, desistência após a vitória e save/reload. Consulte [FRONTIER-TRAVEL.md](FRONTIER-TRAVEL.md).
 
 A dificuldade precisa de sessões normais de jogo. Os demais eventos e
 instalações da Battle Frontier, bem como as duas campanhas completas, continuam

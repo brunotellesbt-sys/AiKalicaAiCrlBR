@@ -1151,7 +1151,7 @@ Frontier ou todos os eventos de pós-jogo. A ROM do player permanece anterior.
 A camada `pwt` segue `family-postgame` e acrescenta duas salas e um módulo C
 próprio. O guia no lobby do Battle Dome leva à recepção do torneio; o Dome
 continua com seus desafios originais. A pedido do usuário, há apenas Singles:
-oito participantes, três Pokémon por equipe, todos no nível 50, três rodadas
+oito participantes, seis Pokémon por equipe, todos no nível 50, três rodadas
 eliminatórias, bolsa bloqueada e restauração entre partidas.
 
 Os conjuntos Kanto, Hoenn e Misto sorteiam sete adversários distintos de 18
@@ -1164,9 +1164,24 @@ nativos dos treinadores. O layout dos saves e o escalonamento dos ginásios
 permanecem preservados.
 
 Regras, participantes, reprodução, capturas e limites em [PWT.md](PWT.md).
-Na candidata `a06c75b1e508638aa5e863b743d8bc376c47f7f9f070413bf2d01c74fed5dc1b`,
+Na candidata `4f1a70a006854cf304c32a5cdb80bd7009d779dddc5a6a43f573bbb7a6610b56`,
 passaram três torneios completos (nove vitórias), derrota, forfeit, cancelamentos,
 sete guardas de entrada, 18 equipes com golpes e acesso físico pela recepção
 até a porta de retorno. BP, equipe, habilidade Hidden e flags de história foram
 conferidos. Os atributos aumentados da fixture aceleram as batalhas, sem validar
 balanceamento. O player continua com a ROM anterior.
+
+## S.S. Tidal e retomada do embarque após Continue
+
+A camada `frontier-travel` segue o PWT com seis Pokémon e confere a posse do
+S.S. Ticket nas recepções de Slateport e Lilycove, mantendo a exigência de
+campeão de Hoenn. A primeira cena de Scott, cabine/cama, saída pelo marinheiro
+e menus nativos são preservados. A viagem e a volta da Frontier exigem o mesmo
+bilhete, que não é consumido. O layout dos saves permanece igual.
+
+Candidata `92c95316`, com replay de dois scripts, oito casos de embarque e
+percurso físico pelo primeiro cruzeiro e quatro trechos da Frontier. O Continue
+reconstrói os NPCs antes do reembarque. Há uma batalha PWT adicional nessa
+candidata, com seis Pokémon e Battle Bond, sem alterar a distribuição por rota.
+Detalhes em [FRONTIER-TRAVEL.md](FRONTIER-TRAVEL.md); trabalho restante em
+[REMAINING-WORK.md](REMAINING-WORK.md). O player permanece sem atualização.

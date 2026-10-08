@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "rom_sha256": "4f1a70a006854cf304c32a5cdb80bd7009d779dddc5a6a43f573bbb7a6610b56",
+  "team_size": 6,
+  "guards": [
+    {
+      "case": "only_five_party_members",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "only_five_selected",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "sixth_repeats_first_slot",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "sixth_repeats_first_species",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "sixth_repeats_fifth_item",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "sixth_is_egg",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "sixth_is_banned",
+      "refused": true,
+      "party_unchanged": true
+    }
+  ],
+  "reversed_order_preserved": true,
+  "original_party_restored": true,
+  "no_reward_for_helper_setup": true,
+  "helper_and_travel_fixtures": true,
+  "full_campaign_playthrough": false
+}

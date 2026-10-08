@@ -92,7 +92,7 @@ JourneyPWT_Text_Welcome::
 	.string "Bem-vindo ao PWT!\n"
 	.string "Oito participantes, um campeao!$"
 JourneyPWT_Text_Rules::
-	.string "Singles: escolha tres POKeMON.\n"
+	.string "Singles: escolha seis POKeMON.\n"
 	.string "Todos lutarao no nivel 50.\p"
 	.string "Nao repita especies ou itens.\n"
 	.string "Ovos e especies banidas nao entram.\p"
@@ -112,7 +112,7 @@ JourneyPWT_Text_Mixed::
 	.string "Quer o torneio misto de lideres\n"
 	.string "e campeoes de KANTO e HOENN?$"
 JourneyPWT_Text_Select::
-	.string "Escolha os tres POKeMON\n"
+	.string "Escolha os seis POKeMON\n"
 	.string "na ordem de entrada.$"
 JourneyPWT_Text_Round::
 	.string "Rodada: {STR_VAR_1}.\n"

@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "rom_sha256": "92c95316b5019ac31cfde8e3cc4476895e61f33714b18ec27478b702cc54a335",
+  "guards": [
+    {
+      "port": "Slateport",
+      "hoenn_champion": false,
+      "ticket": false,
+      "destination_menu": false
+    },
+    {
+      "port": "Slateport",
+      "hoenn_champion": false,
+      "ticket": true,
+      "destination_menu": false
+    },
+    {
+      "port": "Slateport",
+      "hoenn_champion": true,
+      "ticket": false,
+      "destination_menu": false
+    },
+    {
+      "port": "Slateport",
+      "hoenn_champion": true,
+      "ticket": true,
+      "destination_menu": true
+    },
+    {
+      "port": "Lilycove",
+      "hoenn_champion": false,
+      "ticket": false,
+      "destination_menu": false
+    },
+    {
+      "port": "Lilycove",
+      "hoenn_champion": false,
+      "ticket": true,
+      "destination_menu": false
+    },
+    {
+      "port": "Lilycove",
+      "hoenn_champion": true,
+      "ticket": false,
+      "destination_menu": false
+    },
+    {
+      "port": "Lilycove",
+      "hoenn_champion": true,
+      "ticket": true,
+      "destination_menu": true
+    }
+  ],
+  "first_native_cruise_scott_invitation": true,
+  "physical_cabin_bed_and_arrival": true,
+  "native_ferry_trips": [
+    {
+      "origin": "Lilycove",
+      "via": "BattleFrontier",
+      "destination": "Slateport",
+      "ticket_quantity": 1
+    },
+    {
+      "origin": "Slateport",
+      "via": "BattleFrontier",
+      "destination": "Lilycove",
+      "ticket_quantity": 1
+    }
+  ],
+  "ticket_not_consumed": true,
+  "native_flash_save_reload": true,
+  "native_continue_rebuilds_map": true,
+  "initial_port_warps_and_champion_visibility_are_fixtures": true,
+  "full_campaign_playthrough": false
+}
