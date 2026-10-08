@@ -1034,3 +1034,56 @@ O teste de revanche prepara as flags de campeão e vence apenas Lorelei, usando
 trainer 1470, com passagem para Bruno e save/reload. Não cobre uma revanche
 completa. As sequências principais confirmam que vencer Hoenn primeiro não
 antecipa a revanche de Kanto. Nenhuma ROM foi publicada no player.
+
+
+## Consulta pelo PC e números de quatro dígitos
+
+A camada `league-display` segue `league-history`. O formatador de Kanto dividia
+o número por 100 e somava o resultado ao caractere zero. Acima de 999, o
+primeiro caractere saía da faixa dos dígitos: Pecharunt aparecia como `!25`.
+Agora a função nativa de conversão decimal usa quatro posições quando necessário,
+preservando três posições para os números menores e `???` para espécies sem
+número. O mesmo formatador atende às telas de registro e de consulta pelo PC.
+Não altera as batalhas, os arquivos do Hall of Fame ou os mapas.
+
+```sh
+cp -a --reflink=auto .local/hoenn-history-src .local/hoenn-display-src
+python3 tools/hoenn/prepare_league_display.py --source .local/hoenn-display-src
+# Compile modern com a toolchain e as variáveis locais anteriores.
+python3 tools/hoenn/verify_abilities.py --source .local/hoenn-history-src --candidate .local/hoenn-display-src --layer league-display --output mods/hoenn/postgame-validation
+python3 tools/hoenn/validate_hall_pc.py --source .local/hoenn-history-src --library .local/mgba-bridge.so --output mods/hoenn/postgame-validation/baseline-pc
+python3 tools/hoenn/validate_hall_pc.py --source .local/hoenn-display-src --library .local/mgba-bridge.so --output mods/hoenn/postgame-validation/pc
+python3 tools/hoenn/validate_hall_capacity.py --source .local/hoenn-display-src --library .local/mgba-bridge.so --output mods/hoenn/postgame-validation/capacity
+python3 tools/hoenn/validate_league_history.py --source .local/hoenn-display-src --library .local/mgba-bridge.so --output mods/hoenn/postgame-validation/kanto-first --first-region kanto --rematches
+python3 tools/hoenn/validate_league_history.py --source .local/hoenn-display-src --library .local/mgba-bridge.so --output mods/hoenn/postgame-validation/hoenn-first --first-region hoenn --rematches
+```
+
+O teste de PC procura o tile pela rotina nativa de comportamento do mapa,
+posiciona o personagem diante dele e interage com A. O arquivo e as flags de
+campeão são fixtures; o menu, a seleção do Hall of Fame, os sprites, a navegação,
+o retorno ao menu e o desligamento são nativos. A saída aguarda o fade do menu
+antes de pressionar B. São visitados todos os registros de arquivos de uma e
+50 equipes, e os seis membros podem ser selecionados sem ultrapassar os limites.
+A Pokédex Nacional é habilitada, como ocorre na jornada ao receber a Pokédex.
+
+As equipes de fixture incluem espécies de diferentes gerações e Pecharunt,
+nº 1025. Capturas `dex-1025` mostram o erro na base e a correção na candidata.
+Os testes comparam os pixels: apenas o retângulo do número muda em Kanto; as
+capturas equivalentes de Hoenn e do número de Bulbasaur permanecem iguais.
+
+O modo `--rematches` mantém o mesmo core e save por quatro conclusões de Liga.
+Na revanche de Kanto, a equipe de teste recebe Surf e Aerial Ace além de
+Dark Pulse e seleciona golpes pelo menu conforme o oponente. Isso evita que a
+fixture use exclusivamente um golpe resistido por Heracross. O resultado nativo
+da batalha deve ser vitória antes de registrar o percurso como aprovado.
+As insígnias, os níveis e a cura continuam sendo fixtures de teste.
+
+
+Passaram os dois percursos de quatro Ligas na candidata
+`24858d6c4653152c4267fe4b3acbb8d4ac79a140640196d7d0cc7b0f5c922334`:
+20 vitórias por ordem, quatro registros preservados, ambas as regiões campeãs,
+quatro créditos/Continue e retorno à residência escolhida. Kanto usa o conjunto
+de revanche 1470/1471/1472/1473/1476; Hoenn mantém o conjunto nativo de Emerald.
+Os IDs e as conquistas aparecem separados nos quatro elementos de `sequences`.
+As capturas por região mostram a última visita. Não são campanhas completas ou
+testes de balanceamento, e os demais eventos do pós-jogo continuam em revisão.

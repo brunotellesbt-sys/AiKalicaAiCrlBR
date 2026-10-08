@@ -90,7 +90,7 @@ Os níveis 100, as insígnias, a casa e a cura entre batalhas são fixtures de t
 Esses percursos não equivalem a jogar as campanhas completas. Na etapa anterior, as duas sequências
 foram exercitadas em saves novos separados.
 
-A candidata atual fica em `.local/hoenn-history-src`, base `f7110f29` e ROM
+A candidata da etapa anterior fica em `.local/hoenn-history-src`, base `f7110f29` e ROM
 `73135dc67a53928b13bc4c36319e14b688848284cee42a304f84e6e56f92d5e0`, com
 relatórios em `history-validation`. A primeira vitória na segunda região apagava
 o histórico da primeira: a decisão usava uma flag regional para um arquivo
@@ -104,12 +104,49 @@ vitória preserva o primeiro registro byte a byte e mantém as duas regiões cam
 Com 50 equipes de fixture, novos registros nas duas interfaces removem somente
 o mais antigo. Uma revanche real contra Lorelei usa o trainer 1470 após uma
 flag de campeão de Kanto preparada pelo teste; a primeira visita continua usando
-1164 mesmo após vencer Hoenn. A revanche completa das Ligas e a consulta ao
-histórico pelo PC ainda precisam de validação.
+1164 mesmo após vencer Hoenn. A validação de revanche daquela etapa cobre apenas Lorelei; os testes completos e a consulta pelo PC
+seguem na etapa abaixo.
 
 Foram repetidas na candidata atual as 4.096 decisões de missão, 36 permissões,
 o catálogo de 1.025 espécies-base, as 97 referências de Megas e a auditoria de
 destinos dos mapas. A candidata ainda não foi publicada no player.
+
+## Hall of Fame no PC e números da Pokédex acima de 999
+
+A candidata atual fica em `.local/hoenn-display-src`, base `73135dc6` e ROM
+`24858d6c4653152c4267fe4b3acbb8d4ac79a140640196d7d0cc7b0f5c922334`.
+A camada `league-display` altera somente o formatador de números em
+`src/hall_of_fame_frlg.c`: o nº 1025 aparecia como `!25`; agora aparece como
+`1025`. O estilo de três dígitos dos números menores, as espécies desconhecidas,
+as regras de batalha, os mapas e o formato do save permanecem iguais.
+
+Relatórios em `postgame-validation` exercitam o PC físico dos Centros Pokémon de
+Viridian e Oldale, com arquivos de uma e 50 equipes. A navegação visita todos os
+registros, seleciona os seis membros, respeita os limites e sai por B ou por A
+no registro mais antigo. O menu retorna e permite desligar o PC; o arquivo
+permanece igual após save/reload. As equipes são fixtures com Bulbasaur, Pikachu,
+Treecko, Turtwig, Greninja e Pecharunt, com Pokédex Nacional habilitada.
+
+A comparação de pixels antes/depois limita a mudança ao número 1025 em Kanto.
+O número de Bulbasaur e as telas equivalentes de Hoenn são idênticos. O limite
+compartilhado de 50 equipes também foi repetido na nova candidata, com os dois
+finais nativos, créditos, Continue e preservação dos outros 49 registros.
+
+As duas Ligas e suas visitas seguintes foram vencidas em sequência na candidata
+atual, nos dois sentidos: Kanto → Hoenn → Kanto → Hoenn e Hoenn → Kanto → Hoenn
+→ Kanto. Cada percurso contém 20 vitórias nativas, quatro Hall of Fame, créditos,
+Continue e save/reload, mantendo os registros anteriores e as duas regiões campeãs.
+A revanche de Kanto usa os trainers 1470, 1471, 1472, 1473 e 1476; Hoenn mantém
+os trainers de Emerald 261, 262, 263, 264 e 335. As equipes de NPCs permanecem
+originais. A equipe de teste usa golpes de cobertura contra o último campeão.
+
+As capturas por região mostram a última visita de cada percurso. Os relatórios
+completos distinguem as quatro sequências e seus IDs. Níveis, insígnias e cura
+entre batalhas são fixtures; esses percursos não equivalem às campanhas completas
+nem validam o balanceamento. As explorações interrompidas ficam ignoradas em
+`.local`; os relatórios publicados identificam a ROM efetivamente exercitada.
+A candidata ainda não foi publicada no player. Os demais eventos de pós-jogo
+continuam pendentes de revisão.
 
 ## Trabalho que falta antes do lançamento
 

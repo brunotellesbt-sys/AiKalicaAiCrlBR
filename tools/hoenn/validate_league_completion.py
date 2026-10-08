@@ -62,6 +62,7 @@ def battle(expected,name):
     else:press(1)
    else:press(1)
   elif started and cb==s['CB2_Overworld']:
+   assert lib.read8(s['gBattleOutcome'])==1, ('Battle lost',name,expected,lib.read8(s['gBattleOutcome']))
    picture(run_options.region+'-'+name+'-won')
    return dict(trainer=expected,name=name,attacks=attacks,ash_after_ko=ash_seen)
   else:press(1)
