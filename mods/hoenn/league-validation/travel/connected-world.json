@@ -1,0 +1,252 @@
+{
+  "status": "experimental_not_full_integration",
+  "rom_sha256": "e2fb947f96eb0b31a6934441c2731500259a52a45e2bafe20a3a20fc6542ef93",
+  "checks": [
+    {
+      "check": "early_ticketed_interregional_ferry",
+      "passed": true,
+      "ports_tested": 9,
+      "real_npc_interactions": true,
+      "actual_menu_inputs": true,
+      "trips": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          8,
+          0
+        ]
+      ],
+      "zero_badges": true,
+      "ticket_reusable": true,
+      "full_key_pocket_retry": true,
+      "cancel_and_back": true,
+      "duplicate_ticket_prevented": true,
+      "on_foot_arrivals": true,
+      "regional_format_switches": true,
+      "mission_flags_unchanged": true,
+      "native_flash_save_roundtrip": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        37,
+        8
+      ],
+      "target": "JourneyCinnabarSouthSea",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        0,
+        29
+      ],
+      "target": "JourneyWestRiver",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        0,
+        30
+      ],
+      "target": "JourneyRustboroGate",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        0,
+        20
+      ],
+      "target": "JourneyDewfordGate",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        0
+      ],
+      "target": "CinnabarIsland_Frlg",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        0
+      ],
+      "target": "JourneyWestRiver",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        1
+      ],
+      "target": "JourneyCinnabarSouthSea",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        1
+      ],
+      "target": "Route114",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        1
+      ],
+      "target": "JourneyRustboroCoast",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        2
+      ],
+      "target": "JourneyWestRiver",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        2
+      ],
+      "target": "JourneyRustboroGate",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        2
+      ],
+      "target": "JourneyDewfordCoast",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        3
+      ],
+      "target": "JourneyRustboroCoast",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        3
+      ],
+      "target": "Route115",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        4
+      ],
+      "target": "JourneyRustboroCoast",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        4
+      ],
+      "target": "JourneyDewfordGate",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        5
+      ],
+      "target": "JourneyDewfordCoast",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        5
+      ],
+      "target": "Route105",
+      "passed": true
+    }
+  ],
+  "full_story_validated": false,
+  "custom_journey_migrated": false
+}

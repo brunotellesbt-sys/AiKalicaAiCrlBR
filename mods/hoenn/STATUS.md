@@ -49,6 +49,17 @@ versão anterior. A candidata exige um novo jogo; não há conversão de saves.
   pela escolha inicial. Não comprova colisões ou acesso jogável. Há 64 destinos
   dinâmicos e sete origens fora dos limites normais para revisar no motor,
   registrados em `aftermath-validation/map-destinations.json`.
+- Liga de Kanto corrigida: a Pokédex Nacional inicial não ativa mais o bloqueio
+  original de Lorelei ausente. A porta depende das oito insígnias de Kanto.
+  O marcador de campeão/rematches também tem banco próprio, sem compartilhar
+  a vitória de Hoenn; o Hall of Fame de Kanto agora registra esse marcador.
+- Na candidata posterior, os 256 conjuntos de insígnias de Kanto e 20 casos
+  físicos das portas das duas Ligas foram exercitados. Vitórias reais contra
+  Lorelei e Sidney, portas para a sala seguinte, Battle Bond e save/reload
+  passaram, com a outra região previamente campeã como estado de teste.
+- Regressões posteriores: 4.096 decisões de missão, 97 referências de Megas,
+  16 viagens de barco em nove portos e 18 travessias por Surf na ligação oeste.
+  Ainda não são vitórias completas nas Ligas nem nas duas campanhas.
 
 Essas verificações cobrem casos e trechos específicos. Não representam duas
 campanhas completas jogadas. Relatórios da base de mapas ficam em
@@ -56,6 +67,10 @@ campanhas completas jogadas. Relatórios da base de mapas ficam em
 `abilities-validation`; arte, Megas e regressões posteriores ficam em
 `mega-validation`; o desfecho climático e as regressões posteriores ficam em
 `aftermath-validation`, com identificação da ROM própria e da base utilizada.
+A camada posterior `league-access` fica em `.local/hoenn-league-src`; seus
+relatórios estão em `league-validation`, com base `c10695f` e candidata
+`e2fb947f`. Os documentos de localização agora identificam essa candidata,
+com a mesma distribuição de Pokémon e os mesmos santuários.
 
 ## Trabalho que falta antes do lançamento
 
