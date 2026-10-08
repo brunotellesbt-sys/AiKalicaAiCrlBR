@@ -9,6 +9,45 @@ VALIDATION = ROOT / 'mods/hoenn/integration-validation'
 
 
 class ConnectedWorldTests(unittest.TestCase):
+    def test_sixteen_native_starting_homes_match_the_candidate(self):
+        prep = json.loads((VALIDATION / 'family-preparation.json').read_text())
+        runtime = json.loads((VALIDATION / 'family.json').read_text())
+        world = json.loads((VALIDATION / 'connected-world.json').read_text())
+        self.assertTrue(runtime['passed'])
+        self.assertEqual(runtime['rom_sha256'], world['rom_sha256'])
+        self.assertEqual(len(runtime['cities']), 16)
+        self.assertEqual(len(prep['homes']), 16)
+        self.assertTrue(runtime['hoenn_origin_control']['passed'])
+        self.assertTrue(runtime['hoenn_origin_control']['no_late_city_chooser'])
+        self.assertEqual({c['starter_species'] for c in runtime['cities'][1:]}, {1, 4, 7})
+        for home, check in zip(prep['homes'], runtime['cities']):
+            self.assertEqual(check['house'], home['house'])
+            self.assertEqual(check['people'], home['people'])
+            self.assertTrue(check['real_city_menu'])
+            self.assertTrue(check['fixed_house_alias_only'])
+            self.assertTrue(check['actual_stairs_and_door'])
+            self.assertTrue(check['family_gifts_once'])
+            self.assertFalse(check['full_story_validated'])
+            if home['index'] > 1:
+                self.assertTrue(check['original_mother_heal'])
+                self.assertTrue(check['native_save_roundtrip'])
+                self.assertEqual(check['starter_level'], 5)
+        self.assertTrue(runtime['cities'][3]['full_bag_and_partial_retry'])
+        self.assertTrue(prep['one_fixed_house_per_city'])
+        self.assertFalse(prep['additional_hoenn_starts'])
+        self.assert_final_layer_hashes(prep, [])
+
+    def assert_final_layer_hashes(self, prep, later_names):
+        expected = dict(prep['prepared_sha256'])
+        for name in later_names:
+            later = json.loads((VALIDATION / (name + '-preparation.json')).read_text())
+            for path in expected.keys() & later['prepared_sha256'].keys():
+                self.assertEqual(later['original_sha256'][path], expected[path])
+                expected[path] = later['prepared_sha256'][path]
+        reproduction = json.loads((VALIDATION / 'world-reproduction.json').read_text())
+        for path, digest in expected.items():
+            self.assertEqual(reproduction['prepared_sha256'][path], digest)
+
     def test_opposite_sex_rival_keeps_blue_and_other_trainers(self):
         prep = json.loads((VALIDATION / 'rival-preparation.json').read_text())
         runtime = json.loads((VALIDATION / 'connected-world.json').read_text())
@@ -26,9 +65,7 @@ class ConnectedWorldTests(unittest.TestCase):
         self.assertFalse(check['full_intro_and_naming_flow_validated'])
         self.assertTrue(prep['parties_and_event_scripts_unchanged'])
         self.assertTrue(prep['hoenn_rival_preserved'])
-        reproduction = json.loads((VALIDATION / 'world-reproduction.json').read_text())
-        for path, digest in prep['prepared_sha256'].items():
-            self.assertEqual(reproduction['prepared_sha256'][path], digest)
+        self.assert_final_layer_hashes(prep, ['family'])
 
     def test_early_ferry_preserves_regional_progress_and_ticket(self):
         prep = json.loads((VALIDATION / 'ferry-preparation.json').read_text())
@@ -47,9 +84,7 @@ class ConnectedWorldTests(unittest.TestCase):
         self.assertTrue(prep['native_port_scripts_unchanged'])
         self.assertFalse(prep['boat_interior_or_sailing_animation'])
         self.assertFalse(prep['full_story_validated'])
-        reproduction = json.loads((VALIDATION / 'world-reproduction.json').read_text())
-        for path, digest in prep['prepared_sha256'].items():
-            self.assertEqual(reproduction['prepared_sha256'][path], digest)
+        self.assert_final_layer_hashes(prep, ['rival', 'family'])
 
     def test_three_water_hms_and_terrestrial_tm_conversion(self):
         prep = json.loads((VALIDATION / 'water-hms-preparation.json').read_text())
