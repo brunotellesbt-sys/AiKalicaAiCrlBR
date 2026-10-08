@@ -1,6 +1,7 @@
 """Generate route and special encounter reference from installed map overlays."""
 import argparse
 import csv
+import hashlib
 import io
 import json
 from pathlib import Path
@@ -9,9 +10,27 @@ ROOT=Path(__file__).resolve().parents[2]
 def label(name):
  return name.removeprefix('SPECIES_').removeprefix('MAPSEC_').replace('_',' ').title()
 
+def special_category(mon):
+ return 'mítico' if mon['mythical'] else 'Ultra Beast' if mon['ultra_beast'] else 'lendário' if mon['legendary'] else 'especial'
+
+def map_region(data):
+ section=data['region_map_section']
+ islands=('ONE_ISLAND','TWO_ISLAND','THREE_ISLAND','FOUR_ISLAND','FIVE_ISLAND','SIX_ISLAND','SEVEN_ISLAND','THREE_ISLE','BIRTH_ISLAND','NAVEL_ROCK','TANOBY','TREASURE_BEACH','KINDLE_ROAD','MT_EMBER','BOND_BRIDGE','BERRY_FOREST','ICEFALL_CAVE','WATER_LABYRINTH','RESORT_GORGEOUS','LOST_CAVE','MEMORIAL_PILLAR','OUTCAST_ISLAND','GREEN_PATH','WATER_PATH','RUIN_VALLEY','DOTTED_HOLE','TRAINER_TOWER','CANYON_ENTRANCE','SEVAULT_CANYON')
+ if data.get('region','REGION_HOENN')=='REGION_KANTO':
+  return 'Sevii' if any(token in section or token in data['id'] for token in islands) else 'Kanto'
+ return 'Hoenn'
+
 def generate(source,output):
  source=Path(source);output=Path(output);output.mkdir(parents=True,exist_ok=True)
  ecology=json.loads((source/'.journey-ecology').read_text());special=json.loads((source/'.journey-sanctuaries').read_text());catalog=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_text())
+ maps={}
+ for path in sorted((source/'data/maps').glob('*/map.json')):
+  data=json.loads(path.read_text());maps[data['id']]=data;maps[path.parent.name]=data
+ referenced={m for h in ecology['locations_data'] for m in h['maps']}|{c[k] for c in special['captures'] for k in ('map','surface')}
+ missing=referenced-maps.keys()
+ if missing:raise ValueError(f'Mapas ausentes: {sorted(missing)}')
+ special_ids=[c['id'] for c in special['captures']]
+ if len(special_ids)!=len(set(special_ids)) or set(special_ids)!=set(catalog['special_species']):raise ValueError('Altares duplicados ou catálogo especial incompleto')
  ordinary=[];lines=['# Pokémon por habitat e encontros especiais','',
  'Referência da candidata nativa com Kanto, Hoenn e Sevii. Não é uma declaração de que todas as histórias e mecânicas da integração estão concluídas.','',
  'As 920 espécies-base comuns e as variantes regionais ficam em 444 famílias, sem repetir famílias entre habitats. Andares da mesma caverna, zonas de Safari e a superfície/subsolo da mesma rota marinha contam como um habitat.','',
@@ -20,15 +39,16 @@ def generate(source,output):
  'Nível: média inteira da equipe menos cinco até mais dois, limitada a 1–100. Ovos não contam; Pokémon desmaiados contam. Etapa evolutiva: média inteira das insígnias das duas regiões; 0–2 básicos, 3–5 básicos ou estágio 2, 6–8 estágios 2 ou 3. Famílias sem a etapa seguinte preservam a última disponível.','',
  'Na água, o filtro seleciona as evoluções aquáticas disponíveis da família: por exemplo, Vaporeon pode aparecer na água, enquanto as outras evoluções de Eevee continuam na grama do mesmo habitat. Famílias com etapas de tipos diferentes ficam em habitats terrestres com água, para que nenhuma espécie-base perca seu local.', '',
  'A Pokédex Nacional vem junto à primeira Pokédex e marca o habitat da família inteira. Os slots e as chances de cada modalidade constam no arquivo `integration-validation/ecology-preparation.json`; as chances de pesca dependem da vara.','',
- '## Encontros comuns por habitat','', '| Habitat | Famílias e espécies | Mapas |', '|---|---|---|']
+ '## Encontros comuns por habitat','', 'Use a busca pelo nome do Pokémon nesta página ou filtre a planilha `pokemon-locations.csv`. A coluna Região identifica Kanto, Hoenn e Sevii; os nomes internos dos mapas permitem localizar os arquivos exatos do jogo.', '', '| Região | Habitat | Famílias e espécies | Mapas |', '|---|---|---|---|']
  canonical={int(i) for i in catalog['canonical_species'].values()}
  for h in ecology['locations_data']:
+  region=' / '.join(sorted({map_region(maps[m]) for m in h['maps']}))
   text=[]
   for f in h['families']:
    text.append(' / '.join(label(m['name']) for m in f['species']))
    for m in f['species']:
-    ordinary.append(dict(national_dex=m['national_dex'],species=label(m['name']),internal_id=m['id'],category='comum' if m['id'] in canonical else 'forma regional',habitat=label(h['section']),maps='; '.join(h['maps']),access='grama/caverna e água local' if h['land'] and h['water'] else 'grama/caverna' if h['land'] else 'Surf/pesca',unlock='progressão evolutiva pela média regional',family=label(f['name'])))
-  lines.append('| '+label(h['section'])+' | '+'; '.join(text)+' | '+', '.join(h['maps'])+' |')
+    ordinary.append(dict(national_dex=m['national_dex'],species=label(m['name']),internal_id=m['id'],category='comum' if m['id'] in canonical else 'forma regional',region=region,habitat=label(h['section']),maps='; '.join(h['maps']),access='grama/caverna e água local' if h['land'] and h['water'] else 'grama/caverna' if h['land'] else 'Surf/pesca',unlock='progressão evolutiva pela média regional',family=label(f['name'])))
+  lines.append('| '+region+' | '+label(h['section'])+' | '+'; '.join(text)+' | '+', '.join(h['maps'])+' |')
  lines+=['','## Lendários, míticos e Ultra Beasts','',
  'Nenhum destes 105 Pokémon entra nos encontros aleatórios. Os altares só iniciam a batalha com oito insígnias de Kanto **e** oito de Hoenn, sem exigir vitória nas Ligas. Fugir ou derrotar o Pokémon permite tentar novamente. Capturá-lo desativa seu altar; capturas em locais antigos também são reconhecidas pela Pokédex.','',
  'As cavernas de Surf ficam nas novas ilhas desenhadas dentro do mar existente: desembarque e entre na montanha a pé. Nas cavernas de Dive, mergulhe no quadrado de água profunda, procure a entrada submersa e entre. As escadas internas levam de volta ao local de entrada.','',
@@ -38,17 +58,36 @@ def generate(source,output):
   mons=[c for c in special['captures'] if c['site']==site['theme']];x,y=site['entry'];entrance=(x,y-4) if site['access']=='surf' else (x,y)
   lines.append('| Caverna '+site['theme']+' | '+site['surface']+' ('+label(site['section'])+') | '+('Surf' if site['access']=='surf' else 'Surf + Dive')+f' ({entrance[0]}, {entrance[1]}) | '+', '.join(label(c['species']) for c in mons)+' |')
  for c in special['captures']:
-  ordinary.append(dict(national_dex=c['national_dex'],species=label(c['species']),internal_id=c['id'],category='encontro especial',habitat='Caverna '+c['site'],maps=c['map']+'; '+c['surface'],access='Surf' if c['access']=='surf' else 'Surf + Dive',unlock='8 insígnias de Kanto + 8 de Hoenn; antes das Ligas',family=''))
+  ordinary.append(dict(national_dex=c['national_dex'],species=label(c['species']),internal_id=c['id'],category=special_category(catalog['species'][str(c['id'])]),region=map_region(maps[c['surface']]),habitat='Caverna '+c['site'],maps=c['map']+'; '+c['surface'],access='Surf' if c['access']=='surf' else 'Surf + Dive',unlock='8 insígnias de Kanto + 8 de Hoenn; antes das Ligas',family=''))
  lines+=['','## Capturas especiais originais','',
  'Os eventos originais de captura também verificam as 16 insígnias. A movimentação dos personagens e os eventos de história foram preservados. Se o Pokémon já estiver marcado como capturado, a nova tentativa não inicia batalha.','']
  for entry in special['legacy_capture_gates']:lines.append('- '+entry['path'].split('/')[2]+': '+', '.join(label(s) for s in sorted(set(entry['species'])))+'.')
  lines+=['','## Pontos aquáticos sem encontros','',', '.join(ecology['quiet_water_maps'])+'.','',
  '## Limites da validação','',
- 'Os relatórios de mGBA documentam as passagens e encontros exercitados. Eles não equivalem a jogar as duas campanhas completas. A auditoria do catálogo verifica dados e referências de sprites; nem todos os sprites SMOL foram renderizados individualmente. Megas/Battle Bond e demais sistemas anteriores têm sua própria validação pendente.','']
+ 'Kanto, Hoenn e Sevii estão conectados na candidata; 96 travessias físicas por Surf e as entradas e saídas dos 14 santuários têm verificações nativas registradas. Ainda faltam revisão completa das rotas, interiores, NPCs, puzzles e as duas campanhas jogadas integralmente. Os relatórios de mGBA cobrem situações específicas; não equivalem a finalizar o jogo.', '',
+ 'A arte de 3.323 imagens e 3.154 paletas foi comparada no motor ARM aos dados compilados. As 97 Megas têm referências auditadas; cinco transformações reais, Battle Bond, trocas, desmaios e batalhas duplas possuem verificações específicas. Isso não significa que todas as animações e batalhas foram jogadas. Os locais deste guia são da candidata, ainda não publicada no player.','']
  (output/'POKEMON-LOCATIONS.md').write_text('\n'.join(lines))
- stream=io.StringIO();writer=csv.DictWriter(stream,fieldnames=['national_dex','species','internal_id','category','habitat','maps','access','unlock','family']);writer.writeheader();writer.writerows(sorted(ordinary,key=lambda r:(r['national_dex'],r['internal_id'])))
+ stream=io.StringIO();writer=csv.DictWriter(stream,lineterminator='\n',fieldnames=['national_dex','species','internal_id','category','region','habitat','maps','access','unlock','family']);writer.writeheader();writer.writerows(sorted(ordinary,key=lambda r:(r['national_dex'],r['internal_id'])))
  (output/'pokemon-locations.csv').write_text(stream.getvalue())
- base={r['national_dex'] for r in ordinary if r['internal_id'] in canonical};assert base==set(range(1,1026)),base
+ base_rows=[r for r in ordinary if r['internal_id'] in canonical]
+ base={r['national_dex'] for r in base_rows};assert base==set(range(1,1026)) and len(base_rows)==1025,base
+ guide=['# Localização de lendários, míticos e Ultra Beasts','', 'Todos exigem **8 insígnias de Kanto e 8 de Hoenn**, antes das Ligas. Não aparecem nos encontros aleatórios. Os locais antigos permanecem como alternativas; este índice aponta os novos altares. Fugir ou derrotar permite outra tentativa; capturar encerra o encontro.', '', 'Coordenadas externas em tiles: X cresce para a direita e Y para baixo, contando de zero. Surf indica a porta na ilha; Surf + Dive indica o centro do trecho de água profunda. A posição do altar é interna à caverna. Não some os sete tiles da borda interna do motor.', '']
+ categories={}
+ for category in ('lendário','mítico','Ultra Beast','especial'):
+  captures=[c for c in special['captures'] if special_category(catalog['species'][str(c['id'])])==category]
+  categories[category]=len(captures)
+  if not captures:continue
+  guide += [f'## {category.title()} — {len(captures)}', '', '| Nº Dex | Pokémon | Região | Santuário | Mapa externo | Acesso / entrada (X, Y) | Altar (X, Y) |', '|---|---|---|---|---|---|---|']
+  for c in sorted(captures,key=lambda c:c['national_dex']):
+   site=next(s for s in special['sites'] if s['theme']==c['site']);x,y=site['entry'];y-=4 if site['access']=='surf' else 0
+   guide.append(f"| {c['national_dex']} | {label(c['species'])} | {map_region(maps[c['surface']])} | {c['site']} | {c['surface']} | {'Surf' if c['access']=='surf' else 'Surf + Dive'} ({x}, {y}) | {tuple(c['position'])} |")
+  guide.append('')
+ (output/'SPECIAL-LOCATIONS.md').write_text('\n'.join(guide))
+ evidence=dict(base_species=1025,canonical_rows=len(base_rows),ordinary_base_species=920,special_categories=categories,habitats=len(ecology['locations_data']),special_sites=len(special['sites']),referenced_maps=len(referenced),all_referenced_maps_exist=True,source_commit=catalog['source_commit'],input_sha256={n:hashlib.sha256((source/n).read_bytes()).hexdigest() for n in ('.journey-ecology','.journey-sanctuaries')})
+ rom=source/'pokeemerald.gba'
+ if rom.exists():evidence['rom_sha256']=hashlib.sha256(rom.read_bytes()).hexdigest()
+ evidence['documents_sha256']={n:hashlib.sha256((output/n).read_bytes()).hexdigest() for n in ('POKEMON-LOCATIONS.md','SPECIAL-LOCATIONS.md','pokemon-locations.csv')}
+ (output/'location-documentation.json').write_text(json.dumps(evidence,indent=2,ensure_ascii=False)+'\n')
  return dict(base_species=1025,rows=len(ordinary),habitats=len(ecology['locations_data']),special_sites=len(special['sites']))
 
 if __name__=='__main__':

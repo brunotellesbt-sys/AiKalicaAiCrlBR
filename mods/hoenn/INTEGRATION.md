@@ -739,7 +739,19 @@ acessíveis por Surf e cinco cavernas acessíveis por Dive. Exigem oito insígni
 em cada região, sem exigir a Liga. Capturas antigas também respeitam essa
 trava. Fugir ou derrotar permite tentar novamente; capturar desativa o altar.
 Os locais e espécies estão em [POKEMON-LOCATIONS.md](POKEMON-LOCATIONS.md) e
-[pokemon-locations.csv](pokemon-locations.csv).
+[pokemon-locations.csv](pokemon-locations.csv). O índice separado de lendários,
+míticos e Ultra Beasts está em [SPECIAL-LOCATIONS.md](SPECIAL-LOCATIONS.md),
+com coordenadas externas e posição de cada altar.
+
+Para regenerar os documentos e auditar os destinos na candidata posterior:
+
+```sh
+python3 tools/hoenn/document_habitats.py --source .local/hoenn-aftermath-src
+python3 tools/hoenn/audit_map_destinations.py --source .local/hoenn-aftermath-src --output mods/hoenn/aftermath-validation/map-destinations.json
+```
+
+A auditoria verifica índices de destinos e conexões; mantém separadas as
+entradas dinâmicas e origens fora dos limites para revisão no motor.
 
 As regressões de casas, nascimento e mundo foram concluídas na mesma ROM
 SHA-256 `9227bb707e24e0c86f92ba92e56c76ee3131d14f760740e22ffd9fb6cff0699a`,
