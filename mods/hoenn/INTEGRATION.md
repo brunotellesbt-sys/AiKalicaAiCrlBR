@@ -682,6 +682,8 @@ python3 tools/hoenn/prepare_travel_rules.py --source .local/hoenn-multiregion-sr
 python3 tools/hoenn/prepare_birth.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_wild.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_habitats.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_sanctuaries.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_ecology.py --source .local/hoenn-multiregion-src
 ```
 
 Na pasta de fonte, compile com os caminhos do compilador ARM, binutils,
@@ -716,44 +718,43 @@ anteriores. Ele é específico ao ABI desta base fixada.
    salvamento e campanhas completas, antes de trocar a ROM no player.
 
 
-## Encontros: catálogo completo na candidata
+## Encontros e santuários na candidata
 
-As camadas `wild` e `habitats` habilitam os encontros adaptativos e distribuem
-as 920 espécies-base comuns do catálogo compilado de 1.025 espécies. As
-variantes regionais ficam agrupadas com suas famílias: 444 famílias em 89
-locais terrestres, com cinco famílias em 88 locais e quatro no restante.
-Andares de uma mesma caverna e zonas de Safari pertencem ao mesmo local.
-Não se repetem famílias entre locais distintos dessa distribuição terrestre.
+As camadas `sanctuaries` e `ecology`, posteriores a `habitats`, corrigem a
+classificação dos tipos nativos e distribuem 920 espécies comuns em 135
+habitats, sem repetir famílias entre locais diferentes. São 444 famílias:
+18 habitats terrestres com cinco, 79 com quatro e 38 exclusivamente marinhos
+com uma família cada. Andares de cavernas e zonas de Safari contam como um
+habitat. Vinte mapas com água secundária ficam sem encontros aquáticos para
+preservar a exclusividade das 77 famílias aquáticas disponíveis; a passagem
+continua livre. Ramos aquáticos, como Vaporeon, são filtrados na água.
 
-O nível usa a média inteira da equipe, entre cinco abaixo e dois acima,
-limitada a 1–100. Ovos não contam; Pokémon desmaiados contam. A fase evolutiva
-usa a média inteira das insígnias de Kanto e Hoenn: 0–2 básicos, 3–5 básicos
-ou estágio 2, 6–8 estágios 2 ou 3. Famílias sem o estágio solicitado preservam
-seu último estágio disponível. Não entram Megas ou Gigantamax na seleção.
+Os níveis permanecem entre a média da equipe menos cinco e mais dois. A fase
+evolutiva usa a média inteira das insígnias das duas regiões. Famílias raras
+recebem menos slots e menor frequência de encontros aquáticos e de mordidas.
+A Pokédex Nacional inicial consulta os locais de todos os estágios.
 
-As probabilidades usam os slots nativos e somam 100% por local. Famílias mais
-raras não recebem chance maior que famílias comuns. Os dados instalados,
-as famílias e as chances exatas estão em
-`integration-validation/habitats-preparation.json`. A Pokédex Nacional é
-ativada ao receber a Pokédex inicial e consulta todas as etapas evolutivas
-no local reservado, em vez de listar apenas a espécie-base do slot.
+Os 105 lendários, míticos e Ultra Beasts têm altares em nove ilhas montanhosas
+acessíveis por Surf e cinco cavernas acessíveis por Dive. Exigem oito insígnias
+em cada região, sem exigir a Liga. Capturas antigas também respeitam essa
+trava. Fugir ou derrotar permite tentar novamente; capturar desativa o altar.
+Os locais e espécies estão em [POKEMON-LOCATIONS.md](POKEMON-LOCATIONS.md) e
+[pokemon-locations.csv](pokemon-locations.csv).
 
-A auditoria `native-catalog.json` confirma espécies habilitadas e referências,
-paletas e cabeçalhos dos sprites no binário. Não comprova a renderização de
-todos os sprites SMOL, nem conclui a migração de Battle Bond e Megas.
+A validação nativa confirmou as 14 travessias de ida e volta e uma captura real
+de Pecharunt, incluindo fuga, nova tentativa e persistência da captura em save.
+A auditoria do catálogo verifica referências e cabeçalhos; não comprova a
+renderização de todos os sprites. Campanhas completas, Megas e Battle Bond
+continuam exigindo validação. A ROM do player não foi publicada nesta etapa.
 
-Pendências desta etapa: tabelas exclusivamente aquáticas ainda preservam seus
-encontros anteriores; cavernas via Dive e novas ilhas montanhosas ainda não
-foram construídas; os 105 lendários, míticos e Ultra Beasts estão excluídos
-**da nova distribuição aleatória terrestre**, mas os locais e o bloqueio de
-captura pelas 16 insígnias ainda precisam ser implementados. A regra de
-16 insígnias está registrada como requisito, não como funcionalidade pronta.
-O documento final de localizações deve ser gerado após essas alterações do mapa.
-
-Verificação específica depois de compilar:
+Depois das camadas anteriores, preparar e verificar:
 
 ```sh
-python3 tools/hoenn/audit_native_catalog.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_sanctuaries.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_ecology.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/document_habitats.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/validate_sanctuaries.py --source .local/hoenn-multiregion-src --library .local/mgba-bridge.so
+python3 tools/hoenn/validate_sanctuary_capture.py --source .local/hoenn-multiregion-src --library .local/mgba-bridge.so
 python3 tools/hoenn/validate_wild.py --source .local/hoenn-multiregion-src --library .local/mgba-bridge.so
 python3 -m unittest discover -s tools/hoenn -p 'test_*.py'
 ```
