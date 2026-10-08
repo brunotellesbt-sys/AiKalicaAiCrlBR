@@ -680,6 +680,8 @@ python3 tools/hoenn/prepare_rival.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_family.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_travel_rules.py --source .local/hoenn-multiregion-src
 python3 tools/hoenn/prepare_birth.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_wild.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/prepare_habitats.py --source .local/hoenn-multiregion-src
 ```
 
 Na pasta de fonte, compile com os caminhos do compilador ARM, binutils,
@@ -712,3 +714,46 @@ anteriores. Ele é específico ao ABI desta base fixada.
    completa e auditar os demais eventos de puzzles e das casas iniciais.
 5. Validar Aqua/Magma, concursos, bases secretas, Frontier, viagens,
    salvamento e campanhas completas, antes de trocar a ROM no player.
+
+
+## Encontros: catálogo completo na candidata
+
+As camadas `wild` e `habitats` habilitam os encontros adaptativos e distribuem
+as 920 espécies-base comuns do catálogo compilado de 1.025 espécies. As
+variantes regionais ficam agrupadas com suas famílias: 444 famílias em 89
+locais terrestres, com cinco famílias em 88 locais e quatro no restante.
+Andares de uma mesma caverna e zonas de Safari pertencem ao mesmo local.
+Não se repetem famílias entre locais distintos dessa distribuição terrestre.
+
+O nível usa a média inteira da equipe, entre cinco abaixo e dois acima,
+limitada a 1–100. Ovos não contam; Pokémon desmaiados contam. A fase evolutiva
+usa a média inteira das insígnias de Kanto e Hoenn: 0–2 básicos, 3–5 básicos
+ou estágio 2, 6–8 estágios 2 ou 3. Famílias sem o estágio solicitado preservam
+seu último estágio disponível. Não entram Megas ou Gigantamax na seleção.
+
+As probabilidades usam os slots nativos e somam 100% por local. Famílias mais
+raras não recebem chance maior que famílias comuns. Os dados instalados,
+as famílias e as chances exatas estão em
+`integration-validation/habitats-preparation.json`. A Pokédex Nacional é
+ativada ao receber a Pokédex inicial e consulta todas as etapas evolutivas
+no local reservado, em vez de listar apenas a espécie-base do slot.
+
+A auditoria `native-catalog.json` confirma espécies habilitadas e referências,
+paletas e cabeçalhos dos sprites no binário. Não comprova a renderização de
+todos os sprites SMOL, nem conclui a migração de Battle Bond e Megas.
+
+Pendências desta etapa: tabelas exclusivamente aquáticas ainda preservam seus
+encontros anteriores; cavernas via Dive e novas ilhas montanhosas ainda não
+foram construídas; os 105 lendários, míticos e Ultra Beasts estão excluídos
+**da nova distribuição aleatória terrestre**, mas os locais e o bloqueio de
+captura pelas 16 insígnias ainda precisam ser implementados. A regra de
+16 insígnias está registrada como requisito, não como funcionalidade pronta.
+O documento final de localizações deve ser gerado após essas alterações do mapa.
+
+Verificação específica depois de compilar:
+
+```sh
+python3 tools/hoenn/audit_native_catalog.py --source .local/hoenn-multiregion-src
+python3 tools/hoenn/validate_wild.py --source .local/hoenn-multiregion-src --library .local/mgba-bridge.so
+python3 -m unittest discover -s tools/hoenn -p 'test_*.py'
+```

@@ -35,7 +35,7 @@ class ConnectedWorldTests(unittest.TestCase):
         self.assertTrue(runtime['cities'][3]['full_bag_and_partial_retry'])
         self.assertTrue(prep['one_fixed_house_per_city'])
         self.assertFalse(prep['additional_hoenn_starts'])
-        self.assert_final_layer_hashes(prep, ['travel-rules', 'birth'])
+        self.assert_final_layer_hashes(prep, ['travel-rules', 'birth', 'wild', 'habitats'])
 
     def test_thirty_one_birth_choices_and_native_travel_rules(self):
         prep = json.loads((VALIDATION / 'birth-preparation.json').read_text())
@@ -59,10 +59,10 @@ class ConnectedWorldTests(unittest.TestCase):
         self.assertTrue({'Pacifidlog', 'Dewford', 'Mossdeep', 'Sootopolis'} <= boats)
         self.assertTrue(all(a['vehicle'] == 'boat' for a in prep['arrivals'][9:16]))
         self.assertFalse(any(p.endswith('map.bin') for p in prep['prepared_sha256']))
-        self.assert_final_layer_hashes(prep, [])
+        self.assert_final_layer_hashes(prep, ['wild', 'habitats'])
         travel = json.loads((VALIDATION / 'travel-rules-preparation.json').read_text())
         self.assertFalse(travel['following_pokemon_enabled'])
-        self.assert_final_layer_hashes(travel, ['birth'])
+        self.assert_final_layer_hashes(travel, ['birth', 'wild', 'habitats'])
 
     def assert_final_layer_hashes(self, prep, later_names):
         expected = dict(prep['prepared_sha256'])
@@ -92,7 +92,7 @@ class ConnectedWorldTests(unittest.TestCase):
         self.assertFalse(check['full_intro_and_naming_flow_validated'])
         self.assertTrue(prep['parties_and_event_scripts_unchanged'])
         self.assertTrue(prep['hoenn_rival_preserved'])
-        self.assert_final_layer_hashes(prep, ['family', 'travel-rules', 'birth'])
+        self.assert_final_layer_hashes(prep, ['family', 'travel-rules', 'birth', 'wild', 'habitats'])
 
     def test_early_ferry_preserves_regional_progress_and_ticket(self):
         prep = json.loads((VALIDATION / 'ferry-preparation.json').read_text())
@@ -111,7 +111,7 @@ class ConnectedWorldTests(unittest.TestCase):
         self.assertTrue(prep['native_port_scripts_unchanged'])
         self.assertFalse(prep['boat_interior_or_sailing_animation'])
         self.assertFalse(prep['full_story_validated'])
-        self.assert_final_layer_hashes(prep, ['rival', 'family', 'travel-rules', 'birth'])
+        self.assert_final_layer_hashes(prep, ['rival', 'family', 'travel-rules', 'birth', 'wild', 'habitats'])
 
     def test_three_water_hms_and_terrestrial_tm_conversion(self):
         prep = json.loads((VALIDATION / 'water-hms-preparation.json').read_text())

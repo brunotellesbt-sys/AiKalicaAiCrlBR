@@ -1,8 +1,8 @@
 {
   "passed": true,
   "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
-  "original_files": 1601,
-  "prepared_files": 505,
+  "original_files": 1618,
+  "prepared_files": 516,
   "reciprocal_edges_checked": 117,
   "idempotence": true,
   "preserved_event_groups_checked": 260,
@@ -138,7 +138,7 @@
     "data/maps/JourneyDewfordCoast/map.json": "145b1b1413b17adebc2a54d8aebc95510ecc2dbb29cffeafa0ed4748f6aa5ba5",
     "data/maps/JourneyDewfordGate/map.json": "6ef0947dc5b8902f5ec30bd3fc2b00bad2406b1904535243f7cab6c59312a5b5",
     "include/constants/flags.h": "1ddbab64ad773c0fca9966d7cddf1c9bfa9b530888450231148d1935e08c847c",
-    "src/event_data.c": "bba81b22580819fafed74e22ba1833414c0b970b9f9bfa467260af37dfbe8726",
+    "src/event_data.c": "3dee77ca397e84cefcb3c8ead050b3769cee227c5b67d0dbdc4ba59754c09122",
     "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc": "dcd902ed5895ef76e769bbfb7852c6e6a979cd47334ba4c3884b65a930262a6a",
     "data/layouts/JourneyHoennNorthSea/map.bin": "efd3c3469b7ec02c87d3e46f0b207f076a21fd28256af44813510b9683eec5c4",
     "data/layouts/JourneyHoennNorthSea/border.bin": "074adf1a5df149c325dc9367c1a2b807694f3b1e6c83bd26cf4a6f3840bb720b",
@@ -513,6 +513,17 @@
     "data/maps/Route101/scripts.inc": "407e73130774e5d4310fc3e2b891ca26c35e33f48308d808e690bb86796209f7",
     "src/battle_setup.c": "eabaa99f8e6af935b2b86771f6254520ca60cc701166713797c26ee62ac42b61",
     "data/maps/PacifidlogTown/map.json": "d7b4d5137d3360ff2d20ea98dff836ef9b2c71b90b4e4c77b4d6b86758a08cd0",
-    "include/journey_birth_arrivals.h": "7a50ee8d85550146e0b3fc4a8bb6c8b3e24a6c6b948c433170d36bac4ae4e1ef"
+    "include/journey_birth_arrivals.h": "7a50ee8d85550146e0b3fc4a8bb6c8b3e24a6c6b948c433170d36bac4ae4e1ef",
+    "include/journey_wild_data.h": "fe46cd680b0f2393645f0b64e1dca3ece2506a25f4b71ce3b8128cda0053c632",
+    "src/journey_wild.c": "af35d1c556d01287435bbe01663a958d232b94e268e3f7c62a3473d149f74874",
+    "include/journey_wild.h": "01dc1f31c570729e128581458e6901b56a5446e836a69a39e47fea5211d220cb",
+    "src/wild_encounter.c": "0c428020268fcd0546c70f2ddd01b56230e2913e5b3d315b0bad290cd7f787ef",
+    "src/script_pokemon_util.c": "18910ce90b317c9312868e1575ba2f039ccf41d493d854a10223133289df587d",
+    "src/roamer.c": "3fd1ae8d9cfa82bfae21f191de1d3c4615c7cbec7bd0068221e65306bd8aa262",
+    "src/data/wild_encounters.json": "4d1fc2852390e751baea6b7593c8ca0a6eb98aa338e420b909ce7fa2b93f0765",
+    "include/journey_habitats.h": "ad8dca8ded3cf606170ee00f0faf35f7b4ad7cd7d3a29a7cdf04ecf94b13a01c",
+    "include/journey_habitat_data.h": "8118c06fef6bb0c7fff156355ef0166fb922881c660d24b298c0eb573caae13e",
+    "src/journey_habitats.c": "6e0e14627802fecad239f5106bac92bfbb72c6c0f98dc37fc3ead48e19aab380",
+    "src/pokedex_area_screen.c": "3d420778ff531eb6d370e1e2044ecb2eb803206babaf9f49204a0eeb115ffdff"
   }
 }
