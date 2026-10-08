@@ -985,3 +985,52 @@ anterior, sem o retorno à residência escolhido nesta camada. Artefatos de
 exploração intermediários ficam ignorados em `.local`, fora desses relatórios.
 Ainda é necessário validar as duas Ligas vencidas sequencialmente no mesmo save,
 as revanches, o histórico do Hall of Fame e os eventos posteriores ao final.
+
+
+## Histórico compartilhado após as duas Ligas
+
+A camada `league-history` segue `league-completion`. Os dois Hall of Fame
+escrevem nos mesmos setores de flash. A primeira conclusão de outra região
+usava sua própria flag de jogo concluído e zerava esse arquivo. A decisão agora
+usa `GAME_STAT_ENTERED_HOF`, incrementado pelo salvamento nativo do Hall of Fame;
+a flag de conclusão continua sendo concedida somente à região atual. O loader
+mantém seu fallback original para um arquivo inválido. Não há novos campos de save.
+
+O limite de Hoenn era 30 e o de Kanto 50, apesar de compartilharem o arquivo.
+As duas interfaces agora importam `HALL_OF_FAME_MAX_TEAMS` do mesmo header, com
+50 equipes. Os dois asserts nativos de tamanho continuam verificando o espaço
+nos setores existentes. Ao lotar, somente a equipe mais antiga é removida.
+
+```sh
+cp -a --reflink=auto .local/hoenn-completion-final-src .local/hoenn-history-src
+python3 tools/hoenn/prepare_league_history.py --source .local/hoenn-history-src
+# Compile modern com a toolchain e variáveis locais anteriores.
+python3 tools/hoenn/verify_abilities.py --source .local/hoenn-completion-final-src --candidate .local/hoenn-history-src --layer league-history --output mods/hoenn/history-validation
+python3 tools/hoenn/validate_league_history.py --source .local/hoenn-completion-final-src --library .local/mgba-bridge.so --output mods/hoenn/history-validation/baseline --first-region kanto --baseline
+python3 tools/hoenn/validate_league_history.py --source .local/hoenn-history-src --library .local/mgba-bridge.so --output mods/hoenn/history-validation/kanto-first --first-region kanto
+python3 tools/hoenn/validate_league_history.py --source .local/hoenn-history-src --library .local/mgba-bridge.so --output mods/hoenn/history-validation/hoenn-first --first-region hoenn
+python3 tools/hoenn/validate_hall_capacity.py --source .local/hoenn-history-src --library .local/mgba-bridge.so --output mods/hoenn/history-validation/capacity
+python3 tools/hoenn/validate_league_battles.py --source .local/hoenn-history-src --library .local/mgba-bridge.so --output mods/hoenn/history-validation/rematch --region kanto --rematch
+```
+
+As duas ordens percorrem dez batalhas reais no mesmo core e save, com créditos
+e Continue entre as Ligas. A base reproduz um único registro após a segunda
+vitória; a candidata conserva dois, com o primeiro intacto. Os badges, os níveis
+e a cura entre batalhas são fixtures. O teste de capacidade prepara 50 equipes
+no arquivo e executa os dois finais nativos, sem alegar mais duas vitórias.
+A consulta do histórico pelo PC ainda não foi exercitada.
+
+A auditoria de catálogo pode gerar um relatório compacto mantendo a hash das
+linhas completas, além do índice de espécies canônicas e dos erros de assets:
+
+```sh
+python3 tools/hoenn/audit_native_catalog.py --source .local/hoenn-history-src --output mods/hoenn/history-validation/catalog.json --summary
+python3 tools/hoenn/audit_megas.py --source .local/hoenn-history-src --output mods/hoenn/history-validation/megas.json
+python3 tools/hoenn/audit_map_destinations.py --source .local/hoenn-history-src --output mods/hoenn/history-validation/map-destinations.json
+python3 tools/hoenn/validate_campaign_matrix.py --source .local/hoenn-history-src --library .local/mgba-bridge.so --output mods/hoenn/history-validation
+```
+
+O teste de revanche prepara as flags de campeão e vence apenas Lorelei, usando
+trainer 1470, com passagem para Bruno e save/reload. Não cobre uma revanche
+completa. As sequências principais confirmam que vencer Hoenn primeiro não
+antecipa a revanche de Kanto. Nenhuma ROM foi publicada no player.

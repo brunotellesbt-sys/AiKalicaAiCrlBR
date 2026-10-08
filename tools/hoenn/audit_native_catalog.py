@@ -87,5 +87,11 @@ def audit(source):
 if __name__=='__main__':
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('--source',type=Path,required=True)
  p.add_argument('--output',type=Path,default=ROOT/'mods/hoenn/integration-validation/native-catalog.json')
- a=p.parse_args();r=audit(a.source);a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(json.dumps(r,indent=2)+'\n')
+ p.add_argument('--summary',action='store_true',help='Omit detailed species rows, retaining their deterministic digest')
+ a=p.parse_args();r=audit(a.source)
+ if a.summary:
+  rows=r.pop('species')
+  r['species_rows_sha256']=hashlib.sha256(json.dumps(rows,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+  r['species_rows_count']=len(rows)
+ a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(json.dumps(r,indent=2)+'\n')
  print('Compiled catalog:',r['base_species_count'],'base species;',len(r['missing_assets']),'missing assets; audit passed:',r['passed'])

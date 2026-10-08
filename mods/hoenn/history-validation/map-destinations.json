@@ -1,0 +1,502 @@
+{
+  "passed": true,
+  "maps": 1046,
+  "warps": 2800,
+  "connections": 372,
+  "conditional_home_destinations": [
+    {
+      "map": "MAP_JOURNEY_FAMILY_BEDROOM_01",
+      "warp": 0,
+      "original": "MAP_VIRIDIAN_CITY_HOUSE",
+      "effective": "MAP_JOURNEY_FAMILY_LIVING_01"
+    },
+    {
+      "map": "MAP_JOURNEY_FAMILY_BEDROOM_02",
+      "warp": 0,
+      "original": "MAP_PEWTER_CITY_HOUSE1",
+      "effective": "MAP_JOURNEY_FAMILY_LIVING_02"
+    },
+    {
+      "map": "MAP_JOURNEY_FAMILY_BEDROOM_03",
+      "warp": 0,
+      "original": "MAP_CERULEAN_CITY_HOUSE1",
+      "effective": "MAP_JOURNEY_FAMILY_LIVING_03"
+    },
+    {
+      "map": "MAP_JOURNEY_FAMILY_BEDROOM_04",
+      "warp": 0,
+      "original": "MAP_VERMILION_CITY_HOUSE3",
+      "effective": "MAP_JOURNEY_FAMILY_LIVING_04"
+    },
+    {
+      "map": "MAP_JOURNEY_FAMILY_BEDROOM_05",
+      "warp": 0,
+      "original": "MAP_LAVENDER_TOWN_HOUSE2",
+      "effective": "MAP_JOURNEY_FAMILY_LIVING_05"
+    },
+    {
+      "map": "MAP_JOURNEY_FAMILY_BEDROOM_06",
+      "warp": 0,
+      "original": "MAP_CELADON_CITY_HOUSE1",
+      "effective": "MAP_JOURNEY_FAMILY_LIVING_06"
+    },
+    {
+      "map": "MAP_JOURNEY_FAMILY_BEDROOM_07",
+      "warp": 0,
+      "original": "MAP_FUCHSIA_CITY_HOUSE1",
+      "effective": "MAP_JOURNEY_FAMILY_LIVING_07"
+    },
+    {
+      "map": "MAP_JOURNEY_FAMILY_BEDROOM_08",
+      "warp": 0,
+      "original": "MAP_SAFFRON_CITY_HOUSE",
+      "effective": "MAP_JOURNEY_FAMILY_LIVING_08"
+    },
+    {
+      "map": "MAP_JOURNEY_FAMILY_BEDROOM_09",
+      "warp": 0,
+      "original": "MAP_ONE_ISLAND_HOUSE1",
+      "effective": "MAP_JOURNEY_FAMILY_LIVING_09"
+    },
+    {
+      "map": "MAP_JOURNEY_FAMILY_BEDROOM_10",
+      "warp": 0,
+      "original": "MAP_TWO_ISLAND_HOUSE",
+      "effective": "MAP_JOURNEY_FAMILY_LIVING_10"
+    },
+    {
+      "map": "MAP_JOURNEY_FAMILY_BEDROOM_11",
+      "warp": 0,
+      "original": "MAP_THREE_ISLAND_HOUSE3",
+      "effective": "MAP_JOURNEY_FAMILY_LIVING_11"
+    },
+    {
+      "map": "MAP_JOURNEY_FAMILY_BEDROOM_12",
+      "warp": 0,
+      "original": "MAP_FOUR_ISLAND_HOUSE2",
+      "effective": "MAP_JOURNEY_FAMILY_LIVING_12"
+    },
+    {
+      "map": "MAP_JOURNEY_FAMILY_BEDROOM_13",
+      "warp": 0,
+      "original": "MAP_FIVE_ISLAND_HOUSE1",
+      "effective": "MAP_JOURNEY_FAMILY_LIVING_13"
+    },
+    {
+      "map": "MAP_JOURNEY_FAMILY_BEDROOM_14",
+      "warp": 0,
+      "original": "MAP_SIX_ISLAND_HOUSE",
+      "effective": "MAP_JOURNEY_FAMILY_LIVING_14"
+    },
+    {
+      "map": "MAP_JOURNEY_FAMILY_BEDROOM_15",
+      "warp": 0,
+      "original": "MAP_SEVEN_ISLAND_HOUSE_ROOM1",
+      "effective": "MAP_JOURNEY_FAMILY_LIVING_15"
+    },
+    {
+      "map": "MAP_JOURNEY_HOENN_BEDROOM_01",
+      "warp": 0,
+      "original": "MAP_OLDALE_TOWN_HOUSE1",
+      "effective": "MAP_JOURNEY_HOENN_LIVING_01"
+    },
+    {
+      "map": "MAP_JOURNEY_HOENN_BEDROOM_02",
+      "warp": 0,
+      "original": "MAP_PETALBURG_CITY_HOUSE1",
+      "effective": "MAP_JOURNEY_HOENN_LIVING_02"
+    },
+    {
+      "map": "MAP_JOURNEY_HOENN_BEDROOM_03",
+      "warp": 0,
+      "original": "MAP_RUSTBORO_CITY_HOUSE2",
+      "effective": "MAP_JOURNEY_HOENN_LIVING_03"
+    },
+    {
+      "map": "MAP_JOURNEY_HOENN_BEDROOM_04",
+      "warp": 0,
+      "original": "MAP_DEWFORD_TOWN_HOUSE1",
+      "effective": "MAP_JOURNEY_HOENN_LIVING_04"
+    },
+    {
+      "map": "MAP_JOURNEY_HOENN_BEDROOM_05",
+      "warp": 0,
+      "original": "MAP_SLATEPORT_CITY_HOUSE",
+      "effective": "MAP_JOURNEY_HOENN_LIVING_05"
+    },
+    {
+      "map": "MAP_JOURNEY_HOENN_BEDROOM_06",
+      "warp": 0,
+      "original": "MAP_MAUVILLE_CITY_HOUSE2",
+      "effective": "MAP_JOURNEY_HOENN_LIVING_06"
+    },
+    {
+      "map": "MAP_JOURNEY_HOENN_BEDROOM_07",
+      "warp": 0,
+      "original": "MAP_VERDANTURF_TOWN_HOUSE",
+      "effective": "MAP_JOURNEY_HOENN_LIVING_07"
+    },
+    {
+      "map": "MAP_JOURNEY_HOENN_BEDROOM_08",
+      "warp": 0,
+      "original": "MAP_FALLARBOR_TOWN_MOVE_RELEARNERS_HOUSE",
+      "effective": "MAP_JOURNEY_HOENN_LIVING_08"
+    },
+    {
+      "map": "MAP_JOURNEY_HOENN_BEDROOM_09",
+      "warp": 0,
+      "original": "MAP_LAVARIDGE_TOWN_HOUSE",
+      "effective": "MAP_JOURNEY_HOENN_LIVING_09"
+    },
+    {
+      "map": "MAP_JOURNEY_HOENN_BEDROOM_10",
+      "warp": 0,
+      "original": "MAP_FORTREE_CITY_HOUSE1",
+      "effective": "MAP_JOURNEY_HOENN_LIVING_10"
+    },
+    {
+      "map": "MAP_JOURNEY_HOENN_BEDROOM_11",
+      "warp": 0,
+      "original": "MAP_LILYCOVE_CITY_HOUSE1",
+      "effective": "MAP_JOURNEY_HOENN_LIVING_11"
+    },
+    {
+      "map": "MAP_JOURNEY_HOENN_BEDROOM_12",
+      "warp": 0,
+      "original": "MAP_MOSSDEEP_CITY_HOUSE1",
+      "effective": "MAP_JOURNEY_HOENN_LIVING_12"
+    },
+    {
+      "map": "MAP_JOURNEY_HOENN_BEDROOM_13",
+      "warp": 0,
+      "original": "MAP_SOOTOPOLIS_CITY_HOUSE1",
+      "effective": "MAP_JOURNEY_HOENN_LIVING_13"
+    },
+    {
+      "map": "MAP_JOURNEY_HOENN_BEDROOM_14",
+      "warp": 0,
+      "original": "MAP_PACIFIDLOG_TOWN_HOUSE1",
+      "effective": "MAP_JOURNEY_HOENN_LIVING_14"
+    }
+  ],
+  "dynamic_destinations_not_statically_resolved": [
+    {
+      "map": "MAP_BATTLE_COLOSSEUM_2P",
+      "warp": 0
+    },
+    {
+      "map": "MAP_BATTLE_COLOSSEUM_2P",
+      "warp": 1
+    },
+    {
+      "map": "MAP_BATTLE_COLOSSEUM_2P_FRLG",
+      "warp": 0
+    },
+    {
+      "map": "MAP_BATTLE_COLOSSEUM_2P_FRLG",
+      "warp": 1
+    },
+    {
+      "map": "MAP_BATTLE_COLOSSEUM_4P",
+      "warp": 0
+    },
+    {
+      "map": "MAP_BATTLE_COLOSSEUM_4P",
+      "warp": 1
+    },
+    {
+      "map": "MAP_BATTLE_COLOSSEUM_4P",
+      "warp": 2
+    },
+    {
+      "map": "MAP_BATTLE_COLOSSEUM_4P",
+      "warp": 3
+    },
+    {
+      "map": "MAP_BATTLE_COLOSSEUM_4P_FRLG",
+      "warp": 0
+    },
+    {
+      "map": "MAP_BATTLE_COLOSSEUM_4P_FRLG",
+      "warp": 1
+    },
+    {
+      "map": "MAP_BATTLE_COLOSSEUM_4P_FRLG",
+      "warp": 2
+    },
+    {
+      "map": "MAP_BATTLE_COLOSSEUM_4P_FRLG",
+      "warp": 3
+    },
+    {
+      "map": "MAP_CELADON_CITY_DEPARTMENT_STORE_ELEVATOR",
+      "warp": 0
+    },
+    {
+      "map": "MAP_CELADON_CITY_DEPARTMENT_STORE_ELEVATOR",
+      "warp": 1
+    },
+    {
+      "map": "MAP_INSIDE_OF_TRUCK",
+      "warp": 0
+    },
+    {
+      "map": "MAP_INSIDE_OF_TRUCK",
+      "warp": 1
+    },
+    {
+      "map": "MAP_INSIDE_OF_TRUCK",
+      "warp": 2
+    },
+    {
+      "map": "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_ELEVATOR",
+      "warp": 0
+    },
+    {
+      "map": "MAP_LILYCOVE_CITY_DEPARTMENT_STORE_ELEVATOR",
+      "warp": 1
+    },
+    {
+      "map": "MAP_RECORD_CORNER",
+      "warp": 0
+    },
+    {
+      "map": "MAP_RECORD_CORNER",
+      "warp": 1
+    },
+    {
+      "map": "MAP_RECORD_CORNER",
+      "warp": 2
+    },
+    {
+      "map": "MAP_RECORD_CORNER",
+      "warp": 3
+    },
+    {
+      "map": "MAP_RECORD_CORNER_FRLG",
+      "warp": 0
+    },
+    {
+      "map": "MAP_RECORD_CORNER_FRLG",
+      "warp": 1
+    },
+    {
+      "map": "MAP_RECORD_CORNER_FRLG",
+      "warp": 2
+    },
+    {
+      "map": "MAP_RECORD_CORNER_FRLG",
+      "warp": 3
+    },
+    {
+      "map": "MAP_ROCKET_HIDEOUT_ELEVATOR",
+      "warp": 0
+    },
+    {
+      "map": "MAP_ROCKET_HIDEOUT_ELEVATOR",
+      "warp": 1
+    },
+    {
+      "map": "MAP_SECRET_BASE_BLUE_CAVE1",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_BLUE_CAVE2",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_BLUE_CAVE3",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_BLUE_CAVE4",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_BROWN_CAVE1",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_BROWN_CAVE2",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_BROWN_CAVE3",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_BROWN_CAVE4",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_RED_CAVE1",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_RED_CAVE2",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_RED_CAVE3",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_RED_CAVE4",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_SHRUB1",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_SHRUB2",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_SHRUB3",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_SHRUB4",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_TREE1",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_TREE2",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_TREE3",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_TREE4",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_YELLOW_CAVE1",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_YELLOW_CAVE2",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_YELLOW_CAVE3",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SECRET_BASE_YELLOW_CAVE4",
+      "warp": 0
+    },
+    {
+      "map": "MAP_SILPH_CO_ELEVATOR",
+      "warp": 0
+    },
+    {
+      "map": "MAP_TERRA_CAVE_ENTRANCE",
+      "warp": 0
+    },
+    {
+      "map": "MAP_TRADE_CENTER",
+      "warp": 0
+    },
+    {
+      "map": "MAP_TRADE_CENTER",
+      "warp": 1
+    },
+    {
+      "map": "MAP_TRADE_CENTER_FRLG",
+      "warp": 0
+    },
+    {
+      "map": "MAP_TRADE_CENTER_FRLG",
+      "warp": 1
+    },
+    {
+      "map": "MAP_TRAINER_TOWER_ELEVATOR",
+      "warp": 0
+    },
+    {
+      "map": "MAP_UNDERWATER_MARINE_CAVE",
+      "warp": 0
+    },
+    {
+      "map": "MAP_UNION_ROOM",
+      "warp": 0
+    },
+    {
+      "map": "MAP_UNION_ROOM",
+      "warp": 1
+    },
+    {
+      "map": "MAP_UNION_ROOM_FRLG",
+      "warp": 0
+    }
+  ],
+  "origin_bounds_requiring_runtime_review": [
+    {
+      "map": "MAP_BATTLE_FRONTIER_BATTLE_DOME_CORRIDOR",
+      "warp": 0,
+      "x": 6,
+      "y": 8,
+      "width": 48,
+      "height": 7
+    },
+    {
+      "map": "MAP_BATTLE_FRONTIER_BATTLE_DOME_CORRIDOR",
+      "warp": 1,
+      "x": 7,
+      "y": 8,
+      "width": 48,
+      "height": 7
+    },
+    {
+      "map": "MAP_BATTLE_FRONTIER_BATTLE_DOME_PRE_BATTLE_ROOM",
+      "warp": 0,
+      "x": 6,
+      "y": 8,
+      "width": 9,
+      "height": 8
+    },
+    {
+      "map": "MAP_BATTLE_FRONTIER_BATTLE_DOME_PRE_BATTLE_ROOM",
+      "warp": 1,
+      "x": 7,
+      "y": 8,
+      "width": 9,
+      "height": 8
+    },
+    {
+      "map": "MAP_SLATEPORT_CITY",
+      "warp": 9,
+      "x": 40,
+      "y": 7,
+      "width": 40,
+      "height": 60
+    },
+    {
+      "map": "MAP_SLATEPORT_CITY_HARBOR",
+      "warp": 2,
+      "x": 19,
+      "y": 15,
+      "width": 24,
+      "height": 15
+    },
+    {
+      "map": "MAP_SLATEPORT_CITY_HARBOR",
+      "warp": 3,
+      "x": 20,
+      "y": 15,
+      "width": 24,
+      "height": 15
+    }
+  ],
+  "errors": [],
+  "source_inputs_sha256": "eebad8e87d0f5321300e5ab32975104f8ef52331261b109f15d6485fe5e188b3",
+  "scope": "Passed checks cover destination map/warp indices and connection targets. Out-of-layout origins are reported separately: legacy scripted warps may be unused. Dynamic warps, collision, route design and full campaign reachability require runtime review.",
+  "rom_sha256": "73135dc67a53928b13bc4c36319e14b688848284cee42a304f84e6e56f92d5e0"
+}

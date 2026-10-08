@@ -16,7 +16,10 @@ parser.add_argument('--source', type=Path, required=True)
 parser.add_argument('--library', type=Path, required=True)
 parser.add_argument('--output', type=Path, required=True)
 parser.add_argument('--region', choices=['kanto','hoenn'], required=True)
+parser.add_argument('--rematch', action='store_true', help='Kanto championship fixture selects Lorelei rematch')
 run_options = parser.parse_args()
+if run_options.rematch and run_options.region != 'kanto':
+    parser.error('--rematch only applies to Kanto')
 sys.argv = [sys.argv[0], '--source', str(run_options.source), '--library', str(run_options.library),
             '--output', str(run_options.output)]
 bootstrap = (ROOT / 'tools/hoenn/validate_abilities.py').read_text().split('\nability_field,')[0]
@@ -38,6 +41,9 @@ champion = abi[111] - 0x2A + 0x1F
 game_clear = abi[111] - 0x2A + 4
 for flag, enabled in [(champion,kanto), (game_clear,kanto), (0x1AC2,not kanto), (0x1AB8,not kanto)]:
     raw_flag(flag,enabled)
+if run_options.rematch:
+    raw_flag(0x1AC2,True)
+    raw_flag(0x1AB8,True)
 native('EnableNationalPokedex')
 party, scratch = s['gParties'], s['gStringVar4'] + 800
 for i in range(6*abi[2]):
@@ -54,7 +60,7 @@ entry = 'IndigoPlateau_PokemonCenter_1F_Frlg' if kanto else 'EverGrandeCity_Poke
 room = 'PokemonLeague_LoreleisRoom_Frlg' if kanto else 'EverGrandeCity_SidneysRoom'
 next_room = 'PokemonLeague_BrunosRoom_Frlg' if kanto else 'EverGrandeCity_Hall1'
 defeated = abi[120] if kanto else abi[121]
-expected_trainer = abi[117] if kanto else abi[119]
+expected_trainer = abi[118 if run_options.rematch else 117] if kanto else abi[119]
 raw_flag(defeated,False)
 warp(entry,4 if kanto else 9,4)
 native('SetPlayerAvatarTransitionFlags',1);step(30)
@@ -105,7 +111,7 @@ assert started and ash_seen and attacks>0 and native('FlagGet',defeated)
 assert [native('GetMonData2',party+i*abi[2],abi[105]) for i in range(6)]==identity
 assert native('GetMonData2',party,abi[7])==abi[68]
 assert native('GetMonData2',party,abi[65])==2
-assert not native('FlagGet',champion), 'First Elite win marked own region champion'
+assert bool(native('FlagGet',champion)) == run_options.rematch, 'Own championship changed after first Elite battle'
 # The defeated trainer still occupies (6, 5); take the aisle to the open door.
 step(16,32);step(30)
 step(48,64);step(30)
@@ -124,13 +130,14 @@ assert native('LoadGameSave',0)==1
 step(30)
 assert native('FlagGet',defeated)
 assert native('GetMonData2',party,abi[65])==2
-assert not native('FlagGet',champion)
+assert bool(native('FlagGet',champion)) == run_options.rematch
 lib.stop()
 result=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),
             region=run_options.region,first_trainer_id=expected_trainer,real_first_elite_victory=True,
-            other_region_champion_does_not_select_kanto_rematch=True if kanto else None,
+            other_region_champion_does_not_select_kanto_rematch=True if kanto and not run_options.rematch else None,
+            own_kanto_champion_selects_rematch=run_options.rematch,
             attacks=attacks,ash_after_ko=ash_seen,party_identity_preserved=True,
             ash_reverted_after_battle=True,native_progression_door=True,native_flash_save_reload=True,
             badge_and_champion_states_are_fixtures=True,full_league_victory=False,full_campaign_playthrough=False)
-(args.output/(run_options.region+'-elite-battle.json')).write_text(json.dumps(result,indent=2)+'\n')
+(args.output/(run_options.region+('-elite-rematch.json' if run_options.rematch else '-elite-battle.json'))).write_text(json.dumps(result,indent=2)+'\n')
 print(result,flush=True)
