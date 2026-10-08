@@ -72,6 +72,8 @@ def generate(source,output):
  base_rows=[r for r in ordinary if r['internal_id'] in canonical]
  base={r['national_dex'] for r in base_rows};assert base==set(range(1,1026)) and len(base_rows)==1025,base
  guide=['# Localização de lendários, míticos e Ultra Beasts','', 'Todos exigem **8 insígnias de Kanto e 8 de Hoenn**, antes das Ligas. Não aparecem nos encontros aleatórios. Os locais antigos permanecem como alternativas; este índice aponta os novos altares. Fugir ou derrotar permite outra tentativa; capturar encerra o encontro.', '', 'Coordenadas externas em tiles: X cresce para a direita e Y para baixo, contando de zero. Surf indica a porta na ilha; Surf + Dive indica o centro do trecho de água profunda. A posição do altar é interna à caverna. Não some os sete tiles da borda interna do motor.', '']
+ if (source/'.journey-family-postgame').exists():
+  guide[2] += ' Encontros errantes nas rotas estão desativados, inclusive após as Ligas. Latias, Latios, Raikou, Entei e Suicune usam os santuários deste índice; a notícia de Latias/Latios permanece um evento da família.'
  categories={}
  for category in ('lendário','mítico','Ultra Beast','especial'):
   captures=[c for c in special['captures'] if special_category(catalog['species'][str(c['id'])])==category]
