@@ -1,8 +1,8 @@
 {
   "passed": true,
   "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
-  "original_files": 1573,
-  "prepared_files": 359,
+  "original_files": 1584,
+  "prepared_files": 368,
   "reciprocal_edges_checked": 117,
   "idempotence": true,
   "preserved_event_groups_checked": 260,
@@ -311,7 +311,7 @@
     "data/maps/VictoryRoad_3F_Frlg/scripts.inc": "4e774ea8a56e44bf7f6fed0a226b3ffc6732f05f66c6e1cce902bea61307246b",
     "data/maps/LilycoveCity/scripts.inc": "dbc8c02bf4354f625783f61fb79065266ed410c0402837cf3afbe53ca52f1a98",
     "data/maps/Route111/scripts.inc": "16e2d4b25c2e586d2a9ce377f8e4023a8dff9d4b69972f52c0da6ee37d056829",
-    "data/maps/ViridianCity_Gym_Frlg/map.json": "c6080f86ffed78b42307bdbcc01e1759a934e879d2468d4a48d26af97fd9a913",
+    "data/maps/ViridianCity_Gym_Frlg/map.json": "864943b7f0582f03f792c75554b1a533d593cbe5a7d95242c480dff86f6e11b3",
     "data/maps/ViridianCity_Gym_Frlg/scripts.inc": "1f7cdb9d4600ea88903b649b2f9dc870a2340c6a9ddd9015764fa7bdc3846ea9",
     "data/maps/Route110/map.json": "9cc3795c0a2c5f8c8686eef5389e271c06c3c67760d3efe7941baf4adb4f59f6",
     "data/maps/Route119/map.json": "8ebc9b771e8554a3d379a6b70d13aeb7d693e69b3a110f8be0f188103eb16239",
@@ -367,6 +367,15 @@
     "include/constants/items.h": "579d86e35509689789f72ffd02156474d959962460dab2d7055326db63ebcd7f",
     "include/constants/script_menu.h": "d422d80e5e77cd39e15e4df9fba1a0678cd28481dd738dad509b1ced4bfd5051",
     "src/data/script_menu.h": "72d49d72e923b7cd05e77b1e5deb92d853be719e8fcd20a2a8544bb0635f8e47",
-    "data/maps/SlateportCity_Harbor/map.json": "cc7a8055596bd6ad47889798ec7553f4a3a664db08fcd58ba2ef3b245cf2e006"
+    "data/maps/SlateportCity_Harbor/map.json": "cc7a8055596bd6ad47889798ec7553f4a3a664db08fcd58ba2ef3b245cf2e006",
+    "include/journey_rival.h": "7fc2b7c8cadc0a1feabd1efea30db5ea337432215839439b282c346769dc794a",
+    "src/journey_rival.c": "976340f1cbf5bd030651fdc854fcc4402bbd6b3a1cedb11d79ac5acc56c1a2c2",
+    "include/data.h": "576de632f40667d1d941edfe6152eaf3a0542859770eac44cb67dde83594a570",
+    "include/constants/event_objects.h": "44e9e0b9edceb70f80d77887926076e2f2acb37e1cf0d9514f574d0d008e742c",
+    "src/data/object_events/object_event_graphics_info_pointers.h": "1e2fae730dd1a9202886e8acd1f806151a40c67abb58154c420cac7dfe400417",
+    "src/event_object_movement.c": "59ae0202518b3cf63a24722c2adf104241725330f882021890e3b1297be5668a",
+    "src/oak_speech.c": "db2e01898d7fe53a6828cae4ab3bef7ce2e3f68995308ad5755d5f5b1f7c568a",
+    "src/naming_screen.c": "debe6c277c909085eb085cfd1d1a380856da78b293fdfdc64037aada52c97fd5",
+    "data/text/new_game_intro_frlg.inc": "8f211fde5e7ee5cc7c4354976b5da63453f34f5c705396e9c556f4a71469cb49"
   }
 }

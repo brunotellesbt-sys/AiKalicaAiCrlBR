@@ -8,6 +8,8 @@
 #include "item.h"
 #include "move.h"
 #include "constants/flags.h"
+#include "constants/event_objects.h"
+#include "constants/regions.h"
 #include <stddef.h>
 const unsigned journey_fixture_abi[] = {
     sizeof(struct Trainer), sizeof(struct TrainerMon), sizeof(struct Pokemon),
@@ -24,5 +26,13 @@ const unsigned journey_fixture_abi[] = {
     sizeof(struct TmHmIndexKey), offsetof(struct TmHmIndexKey, itemId), offsetof(struct TmHmIndexKey, moveId),
     sizeof(struct MoveInfo), offsetof(struct MoveInfo, effect) + sizeof(enum BattleMoveEffects),
     TYPE_GRASS, TYPE_ROCK
+#ifdef GUARD_JOURNEY_RIVAL_H
+    , offsetof(struct SaveBlock2, playerGender), OBJ_EVENT_GFX_BLUE,
+    OBJ_EVENT_GFX_GREEN_NORMAL, OBJ_EVENT_GFX_RED_NORMAL, OBJ_EVENT_GFX_JOURNEY_GYM_BLUE,
+    TRAINER_PIC_LEAF, TRAINER_PIC_RED, TRAINER_PIC_RIVAL_EARLY_FRLG,
+    TRAINER_PIC_RIVAL_LATE_FRLG, TRAINER_PIC_CHAMPION_RIVAL_FRLG,
+    OBJ_EVENT_GFX_VAR_0, offsetof(struct Trainer, trainerPic), sizeof(enum TrainerPicID),
+    offsetof(struct SaveBlock2, playerRegion), REGION_KANTO
+#endif
 #endif
 };

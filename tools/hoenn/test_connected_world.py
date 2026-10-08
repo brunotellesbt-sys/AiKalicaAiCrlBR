@@ -9,6 +9,27 @@ VALIDATION = ROOT / 'mods/hoenn/integration-validation'
 
 
 class ConnectedWorldTests(unittest.TestCase):
+    def test_opposite_sex_rival_keeps_blue_and_other_trainers(self):
+        prep = json.loads((VALIDATION / 'rival-preparation.json').read_text())
+        runtime = json.loads((VALIDATION / 'connected-world.json').read_text())
+        check = next(c for c in runtime['checks'] if c['check'] == 'opposite_sex_kanto_rival')
+        self.assertEqual(check['player_genders'], [0, 1])
+        self.assertEqual(check['rival_teams'], len(prep['rival_trainer_ids']))
+        self.assertEqual(check['trainer_portraits_checked'], 3102)
+        self.assertEqual(check['male_player_rival'], 'Leaf')
+        self.assertEqual(check['female_player_rival'], 'Red')
+        for invariant in ['real_lab_battle_starts', 'blue_leader_preserved',
+                          'non_rival_portraits_preserved', 'overworld_graphics_resolved',
+                          'dynamic_graphics_resolved', 'native_intro_assets_checked']:
+            self.assertTrue(check[invariant])
+        self.assertFalse(check['victories_simulated'])
+        self.assertFalse(check['full_intro_and_naming_flow_validated'])
+        self.assertTrue(prep['parties_and_event_scripts_unchanged'])
+        self.assertTrue(prep['hoenn_rival_preserved'])
+        reproduction = json.loads((VALIDATION / 'world-reproduction.json').read_text())
+        for path, digest in prep['prepared_sha256'].items():
+            self.assertEqual(reproduction['prepared_sha256'][path], digest)
+
     def test_early_ferry_preserves_regional_progress_and_ticket(self):
         prep = json.loads((VALIDATION / 'ferry-preparation.json').read_text())
         runtime = json.loads((VALIDATION / 'connected-world.json').read_text())
