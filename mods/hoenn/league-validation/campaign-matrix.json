@@ -1,0 +1,126 @@
+{
+  "passed": true,
+  "rom_sha256": "e2fb947f96eb0b31a6934441c2731500259a52a45e2bafe20a3a20fc6542ef93",
+  "native_gate_decisions": true,
+  "checks": [
+    {
+      "region": "kanto",
+      "scenario": "complete",
+      "badge_subsets": 256,
+      "threshold": 0,
+      "pending_event": 0
+    },
+    {
+      "region": "hoenn",
+      "scenario": "complete",
+      "badge_subsets": 256,
+      "threshold": 0,
+      "pending_event": 0
+    },
+    {
+      "region": "kanto",
+      "scenario": "rocket_hideout",
+      "badge_subsets": 256,
+      "threshold": 2,
+      "pending_event": 1
+    },
+    {
+      "region": "kanto",
+      "scenario": "silph",
+      "badge_subsets": 256,
+      "threshold": 6,
+      "pending_event": 2
+    },
+    {
+      "region": "hoenn",
+      "scenario": "chimney",
+      "badge_subsets": 256,
+      "threshold": 2,
+      "pending_event": 3
+    },
+    {
+      "region": "hoenn",
+      "scenario": "magma_hideout",
+      "badge_subsets": 256,
+      "threshold": 5,
+      "pending_event": 4
+    },
+    {
+      "region": "hoenn",
+      "scenario": "space_center",
+      "badge_subsets": 256,
+      "threshold": 7,
+      "pending_event": 5
+    },
+    {
+      "region": "hoenn",
+      "scenario": "giovanni_required",
+      "badge_subsets": 256,
+      "threshold": 7,
+      "pending_event": 13
+    },
+    {
+      "region": "hoenn",
+      "scenario": "archie",
+      "badge_subsets": 256,
+      "threshold": 7,
+      "pending_event": 6
+    },
+    {
+      "region": "hoenn",
+      "scenario": "weather_crisis",
+      "badge_subsets": 256,
+      "threshold": 7,
+      "pending_event": 14
+    },
+    {
+      "region": "kanto",
+      "scenario": "pewter",
+      "badge_subsets": 256,
+      "threshold": 4,
+      "pending_event": 7
+    },
+    {
+      "region": "kanto",
+      "scenario": "vermilion",
+      "badge_subsets": 256,
+      "threshold": 4,
+      "pending_event": 8
+    },
+    {
+      "region": "kanto",
+      "scenario": "rock_tunnel",
+      "badge_subsets": 256,
+      "threshold": 4,
+      "pending_event": 9
+    },
+    {
+      "region": "kanto",
+      "scenario": "western_sea",
+      "badge_subsets": 256,
+      "threshold": 4,
+      "pending_event": 10
+    },
+    {
+      "region": "kanto",
+      "scenario": "kanto_incursions",
+      "badge_subsets": 256,
+      "threshold": 4,
+      "pending_event": 11
+    },
+    {
+      "region": "hoenn",
+      "scenario": "hoenn_rocket",
+      "badge_subsets": 256,
+      "threshold": 4,
+      "pending_event": 12
+    }
+  ],
+  "gate_cases": 4096,
+  "permission_cases": 36,
+  "all_regional_badge_subsets": true,
+  "other_region_badges_cannot_bypass_gate": true,
+  "giovanni_and_space_center_required": true,
+  "flags_are_initial_state_fixtures": true,
+  "full_campaign_playthrough": false
+}

@@ -746,8 +746,8 @@ com coordenadas externas e posição de cada altar.
 Para regenerar os documentos e auditar os destinos na candidata posterior:
 
 ```sh
-python3 tools/hoenn/document_habitats.py --source .local/hoenn-aftermath-src
-python3 tools/hoenn/audit_map_destinations.py --source .local/hoenn-aftermath-src --output mods/hoenn/aftermath-validation/map-destinations.json
+python3 tools/hoenn/document_habitats.py --source .local/hoenn-league-src
+python3 tools/hoenn/audit_map_destinations.py --source .local/hoenn-league-src --output mods/hoenn/league-validation/map-destinations.json
 ```
 
 A auditoria verifica índices de destinos e conexões; mantém separadas as
@@ -899,3 +899,47 @@ consome a flag temporária sem apagar a conclusão permanente. A permissão para
 Archie, as seis espécies/personalidades da equipe e o slot oculto sobrevivem à
 restauração da equipe e ao save/load. As missões anteriores e insígnias também
 são fixtures iniciais; essa validação não cobre todo o percurso do Centro Espacial.
+
+
+## Entrada e estados independentes das Ligas
+
+A camada `league-access`, posterior a `story-aftermath`, corrige dois problemas
+reproduzidos na candidata anterior: a Pokédex Nacional inicial acionava o
+bloqueio de Lorelei ausente em Indigo Plateau mesmo com oito insígnias; e
+`FLAG_IS_CHAMPION`, usado para rematches, era compartilhado pelas duas regiões.
+
+O guarda de Indigo agora verifica as oito insígnias de Kanto e ocupa a porta
+somente quando falta alguma delas. A Pokédex e a vitória da outra região não
+alteram essa decisão. A porta de Hoenn preserva seu script original de oito
+insígnias. O marcador de campeão de Kanto usa `0x1AC2`, dentro do banco de flags
+já reservado, e é gravado pela rotina de conclusão do Hall of Fame de Kanto.
+O layout do save não mudou; a candidata continua exigindo um novo jogo.
+
+Prepare em uma cópia da árvore anterior, preservando os artefatos e relatórios:
+
+```sh
+cp -a --reflink=auto .local/hoenn-aftermath-src .local/hoenn-league-src
+python3 tools/hoenn/prepare_league_access.py --source .local/hoenn-league-src
+# Compile com a mesma toolchain e variáveis locais das camadas anteriores.
+python3 tools/hoenn/verify_abilities.py --source .local/hoenn-aftermath-src --candidate .local/hoenn-league-src --layer league-access --output mods/hoenn/league-validation
+python3 tools/hoenn/validate_league_access.py --source .local/hoenn-aftermath-src --library .local/mgba-bridge.so --output mods/hoenn/league-validation --baseline
+python3 tools/hoenn/validate_league_access.py --source .local/hoenn-league-src --library .local/mgba-bridge.so --output mods/hoenn/league-validation
+python3 tools/hoenn/validate_league_battles.py --source .local/hoenn-league-src --library .local/mgba-bridge.so --output mods/hoenn/league-validation --region kanto
+python3 tools/hoenn/validate_league_battles.py --source .local/hoenn-league-src --library .local/mgba-bridge.so --output mods/hoenn/league-validation --region hoenn
+python3 tools/hoenn/validate_crossing.py --source .local/hoenn-league-src --library .local/mgba-bridge.so --westsea --ferry --output mods/hoenn/league-validation/travel
+```
+
+Os testes de portas cobrem 256 conjuntos de insígnias de Kanto e 20 entradas
+físicas, incluindo cada insígnia faltante com a outra região completa. As rotinas
+de conclusão dos dois Hall of Fame foram executadas para verificar flags e
+save/reload; isso não representa derrotar todos os membros das Ligas.
+
+As batalhas reais contra Lorelei e Sidney entram pelas portas, vencem o primeiro
+membro, contornam o NPC pela lateral e atravessam a porta seguinte. A outra
+região campeã é um estado de fixture; em Kanto a batalha continua sendo a primeira
+Lorelei (trainer 1164), sem antecipar o rematch. Battle Bond transforma Greninja
+após nocaute e reverte no final. Equipe e progresso da sala persistem no save.
+
+A candidata `e2fb947f96eb0b31a6934441c2731500259a52a45e2bafe20a3a20fc6542ef93`
+ainda não foi publicada no player. As demais batalhas de Elite Four, campeões,
+créditos e retorno ao jogo precisam de verificação completa.
