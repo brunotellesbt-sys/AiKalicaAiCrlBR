@@ -52,7 +52,7 @@ by_location = {map_id(n): n for n in maps}
 blocks = {}
 passable = {}
 water_behaviors = {}
-behaviors, currents = {}, {}
+behaviors, currents, arrows = {}, {}, {}
 for n, m in maps.items():
     layout = layouts[m['layout']]
     blocks[n] = (layout['width'], layout['height'], struct.unpack('<' + 'H' * (layout['width'] * layout['height']), (source / layout['blockdata_filepath']).read_bytes()))
@@ -68,6 +68,8 @@ for n, m in maps.items():
         if behavior not in currents:
             currents[behavior] = next(((dx, dy) for direction, dx, dy in [('East', 1, 0), ('West', -1, 0), ('North', 0, -1), ('South', 0, 1)]
                                       if native('MetatileBehavior_Is' + direction + 'wardCurrent', behavior)), None)
+            arrows[behavior] = next((key for direction, key in [('East', 16), ('West', 32), ('North', 64), ('South', 128)]
+                                     if native('MetatileBehavior_Is' + direction + 'ArrowWarp', behavior)), None)
         if not tile & 0xC00: valid.add(i); continue
         if tile & 0xC00 != 0x400: continue
         if behavior not in water_behaviors:
@@ -97,6 +99,14 @@ def next_key(goal):
             while visited[current] and visited[current][0] != start: current = visited[current][0]
             return visited[current][1] if visited[current] else None
         width, height, tiles = blocks[n]
+        standing_warp = warps[n].get((x, y))
+        arrow_key = arrows[behaviors[n][y * width + x]]
+        if standing_warp and arrow_key and standing_warp['dest_map'] in by_id:
+            dest = by_id[standing_warp['dest_map']]
+            endpoint = maps[dest]['warp_events'][int(standing_warp['dest_warp_id'])]
+            nxt = (dest, endpoint['x'], endpoint['y'])
+            if nxt not in visited:
+                visited[nxt] = (current, arrow_key); queue.append(nxt)
         for dx, dy, key in keys:
             xx, yy = x + dx, y + dy
             if not (0 <= xx < width and 0 <= yy < height): continue
@@ -116,7 +126,7 @@ def next_key(goal):
             else: continue # Avoid a closed current loop.
             nxt = (n, xx, yy)
             event = warps[n].get((xx, yy))
-            if event:
+            if event and arrows[behaviors[n][yy * width + xx]] is None:
                 if event['dest_map'] not in by_id: continue
                 dest = by_id[event['dest_map']]
                 endpoint = maps[dest]['warp_events'][int(event['dest_warp_id'])]
@@ -130,7 +140,7 @@ def field():
     if lib.read32(s['gMain'] + 4) & ~1 == s['BattleMainCB2']:
         trainer = lib.read16(s['gTrainerBattleParameter'] + abi[13])
         assert trainer in allowed, trainer
-        wins.append(fight(dict(id=trainer, map=by_location[location()], mission='seafloor_route')))
+        wins.append(fight(dict(id=trainer, map=by_location[location()], mission='seafloor_route', fixture_clear_status=True)))
         native('HealPlayerParty') # Fixture; difficulty/PP balance is not tested.
         print('Native seafloor trainer defeated:', trainer, flush=True)
         return True
@@ -153,6 +163,13 @@ def walk(goal):
         if now == goal: return
         if tick % 100 == 0: print('Native route progress:', tick, now, flush=True)
         key = next_key(goal)
+        arrow = arrows[behaviors[now[0]][now[2] * blocks[now[0]][0] + now[1]]]
+        if arrow == key and (now[1], now[2]) in warps[now[0]]:
+            facing = {128: 1, 64: 2, 32: 3, 16: 4}[arrow]
+            if native('GetPlayerFacingDirection') != facing:
+                # Approach the arrow from behind, so the directional exit
+                # sees the correct facing before the player leaves its tile.
+                key = {16: 32, 32: 16, 64: 128, 128: 64}[arrow]
         for _ in range(80):
             step(1, key)
             if (by_location[location()], *position()) != now or not idle(): break
@@ -229,10 +246,76 @@ step(1500); finish()
 assert location() == map_id('SeafloorCavern_Room9')
 assert not flag(flag_id('FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN'))
 assert native('JourneyGymBadgeCount', 0) == native('JourneyGymBadgeCount', 1) == 0
+if not (source / '.journey-water-continue').exists():
+    # Retain the previous layer's outbound-only reproduction. Its underwater
+    # Continue regression is reproduced separately by validate_water_continue.
+    lib.stop()
+    result = dict(passed=True, rom_sha256=hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest(),
+                  dive_point=list(dive_point), native_zero_badge_dive=True, native_resurface_into_cavern=True,
+                  walked_steps=walked, original_map_transitions=transitions, wins=wins, surf_prompts=surf_prompts,
+                  reaches_archie_without_strength_rock_smash_flash_or_acro=True,
+                  relocated_grunt_visible_and_native_dialogue_retained=True,
+                  native_boss_trigger_refuses_missing_missions=True, native_save_continue_preserves_zero_badges=True,
+                  no_internal_position_warps_or_event_entries=True, starting_ocean_party_stats_healing_are_fixtures=True,
+                  in_battle_status_recovery_is_fixture=True,
+                  wild_encounters_disabled=True, full_campaign_playthrough=False, balance_validated=False)
+    (args.output / 'seafloor-route.json').write_text(json.dumps(result, indent=2) + '\n')
+    print('Native outbound Seafloor Cavern route passed', flush=True)
+    raise SystemExit(0)
+outbound_walked = walked
+outbound_transitions = list(transitions)
+outbound_surf_prompts = list(surf_prompts)
+
+def water_state():
+    return dict(map=next(n for n in ['Route128'] + names if location() == map_id(n)),
+                position=list(position()), avatar_mode=lib.read8(s['gPlayerAvatar']) & 25,
+                kanto_badges=native('JourneyGymBadgeCount', 1),
+                hoenn_badges=native('JourneyGymBadgeCount', 0),
+                kyogre_escaped=flag(flag_id('FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN')),
+                archie_permission=bool(native('JourneyCanStartArchieAlliance')))
+
+continues = []
+def continue_water():
+    before = water_state()
+    assert native('TrySavingData', 0, max_frames=6000) == 1
+    assert native('LoadGameSave', 0, max_frames=6000) == 1
+    lib.write32(s['gMain'] + 4, s['CB2_ContinueSavedGame'] | 1)
+    step(1500); finish()
+    after = water_state()
+    assert before == after, (before, after)
+    continues.append(dict(before=before, after=after))
+
+# Retrace native passages and currents, without internal map/position writes.
+walk(('SeafloorCavern_Entrance', 10, 17))
+assert native('TrySetDiveWarp') == 2
+for _ in range(160):
+    press(1)
+    if location() == map_id('Underwater_SeafloorCavern'): break
+step(120); finish()
+assert location() == map_id('Underwater_SeafloorCavern')
+picture('native-return-dive-underwater-cavern')
+continue_water()
+picture('native-underwater-return-after-continue')
+walk(('Underwater_Route128', *dive_point))
+assert native('TrySetDiveWarp') == 1
+continue_water()
+press(2)
+for _ in range(160):
+    press(1)
+    if location() == map_id('Route128'): break
+step(120); finish()
+assert location() == map_id('Route128') and lib.read8(s['gPlayerAvatar']) & 8
+picture('native-return-surface-route128')
+continue_water()
+picture('native-route128-return-after-continue')
 lib.stop()
 result = dict(passed=True, rom_sha256=hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest(),
               dive_point=list(dive_point), native_zero_badge_dive=True, native_resurface_into_cavern=True,
-              walked_steps=walked, original_map_transitions=transitions, wins=wins, surf_prompts=surf_prompts,
+              walked_steps=outbound_walked, original_map_transitions=outbound_transitions, wins=wins, surf_prompts=outbound_surf_prompts,
+              return_walked_steps=walked - outbound_walked, return_map_transitions=transitions[len(outbound_transitions):],
+              return_surf_prompts=surf_prompts[len(outbound_surf_prompts):],
+              native_dive_out_and_return_to_route128=True, water_save_continues=continues,
+              in_battle_status_recovery_is_fixture=True,
               reaches_archie_without_strength_rock_smash_flash_or_acro=True,
               relocated_grunt_visible_and_native_dialogue_retained=True,
               native_boss_trigger_refuses_missing_missions=True, native_save_continue_preserves_zero_badges=True,
