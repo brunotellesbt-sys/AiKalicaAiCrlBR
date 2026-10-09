@@ -5,6 +5,11 @@ versão anterior. A candidata exige um novo jogo; não há conversão de saves.
 
 ## Etapas com verificações específicas
 
+- Viagem contínua de Cinnabar ao lago da Rota 114, Rustboro e Dewford, com
+  volta ao ponto inicial: 13 mapas, 24 bordas, 1.262 mudanças de posição,
+  cinco batalhas e seis Continues. Planejador passa a respeitar conexões e
+  elevações; santuários e Sky Pillar repetidos. ROM em inglês `15f9edd8`
+  preservada; [OCEAN-JOURNEY.md](OCEAN-JOURNEY.md).
 - Idioma do jogo definido como inglês: traduzidos 97 textos/rótulos da
   integração, com comandos preservados, telas de família/professores em Kanto
   e Hoenn e inscrição PWT verificadas. Corrigida a Master Ball contra Ultra

@@ -23,7 +23,16 @@ Mantendo o tamanho recente dos PRs, a previsão é de **10 a 20 PRs para uma
 candidata de lançamento**, sujeita aos problemas encontrados nos percursos e
 campanhas completas. A quantidade de PRs não mede a conclusão do jogo.
 
-## Avanço atual: idioma e capturas persistentes
+## Avanço atual: viagem contínua no mar oeste
+
+Cinnabar–lago da Rota 114–Rustboro–Dewford–Cinnabar passou sem
+teletransportes intermediários: 13 mapas, 24 travessias, cinco batalhas e
+seis Continues. O planejador passou a respeitar conexões e elevações,
+com regressões de santuários e Sky Pillar. A candidata em inglês foi
+preservada. O mar leste/Sevii, outros percursos e as campanhas completas
+seguem pendentes. [OCEAN-JOURNEY.md](OCEAN-JOURNEY.md).
+
+## Etapa anterior: idioma e capturas persistentes
 
 O jogo passa a usar inglês também nos 97 textos/rótulos novos que estavam
 em português. A auditoria textual, duas casas iniciais e inscrição PWT

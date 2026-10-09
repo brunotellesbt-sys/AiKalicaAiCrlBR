@@ -1,5 +1,9 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+A viagem contínua pelo mar oeste até o lago da Rota 114, Rustboro e Dewford
+e de volta a Cinnabar passou: 13 mapas, 24 bordas e seis Continues.
+[OCEAN-JOURNEY.md](OCEAN-JOURNEY.md).
+
 O jogo usa inglês, incluindo os diálogos novos de família, professores,
 santuários e PWT. Foram corrigidos 97 textos e a Master Ball contra Ultra
 Beasts. Três capturas e sete Continues passaram na candidata `15f9edd8`.
