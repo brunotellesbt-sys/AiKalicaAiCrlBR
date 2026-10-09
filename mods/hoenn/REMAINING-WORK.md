@@ -23,7 +23,17 @@ Mantendo o tamanho recente dos PRs, a previsão é de **10 a 20 PRs para uma
 candidata de lançamento**, sujeita aos problemas encontrados nos percursos e
 campanhas completas. A quantidade de PRs não mede a conclusão do jogo.
 
-## Avanço atual: percursos dos 14 santuários
+## Avanço atual: idioma e capturas persistentes
+
+O jogo passa a usar inglês também nos 97 textos/rótulos novos que estavam
+em português. A auditoria textual, duas casas iniciais e inscrição PWT
+passaram. Corrigida a penalidade indevida da Master Ball contra Ultra Beasts.
+Pecharunt, Lugia e Nihilego passaram por fuga, nocaute, nova tentativa,
+captura, retorno e sete Continues, sem duplicação. Os outros 102 especiais,
+balanceamento e campanhas completas seguem pendentes.
+[ENGLISH-GAME.md](ENGLISH-GAME.md).
+
+## Etapa anterior: percursos dos 14 santuários
 
 Os nove acessos de ilha e cinco submersos passaram da aproximação no mar
 até os altares e de volta ao ponto inicial, sem colocações internas ou

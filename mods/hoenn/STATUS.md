@@ -5,6 +5,11 @@ versão anterior. A candidata exige um novo jogo; não há conversão de saves.
 
 ## Etapas com verificações específicas
 
+- Idioma do jogo definido como inglês: traduzidos 97 textos/rótulos da
+  integração, com comandos preservados, telas de família/professores em Kanto
+  e Hoenn e inscrição PWT verificadas. Corrigida a Master Ball contra Ultra
+  Beasts; Pecharunt, Lugia e Nihilego passaram por fuga, nocaute, captura e
+  sete Continues. Candidata `15f9edd8`; [ENGLISH-GAME.md](ENGLISH-GAME.md).
 - Percursos completos dos 14 santuários, com caminhada até os 105 altares,
   Dive/subida pelos controles e retorno ao ponto inicial no mar. Passaram
   1.422 mudanças de posição e 33 Continues, mantendo capturas bloqueadas com

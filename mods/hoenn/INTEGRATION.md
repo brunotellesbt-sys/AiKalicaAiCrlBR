@@ -1,5 +1,10 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+O jogo usa inglês, incluindo os diálogos novos de família, professores,
+santuários e PWT. Foram corrigidos 97 textos e a Master Ball contra Ultra
+Beasts. Três capturas e sete Continues passaram na candidata `15f9edd8`.
+[ENGLISH-GAME.md](ENGLISH-GAME.md).
+
 Os acessos locais e retornos dos 14 santuários passaram pelos controles,
 incluindo as 105 interações bloqueadas com zero insígnias e 33 Continues.
 A candidata permaneceu igual. [SANCTUARY-ROUTES.md](SANCTUARY-ROUTES.md).

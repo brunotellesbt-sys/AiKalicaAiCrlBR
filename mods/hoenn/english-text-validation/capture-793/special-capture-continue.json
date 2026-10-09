@@ -1,0 +1,154 @@
+{
+  "passed": true,
+  "rom_sha256": "15f9edd834559d723fcff3c8adb6e0ee87881e76c5c57702a38b044cc72b3509",
+  "species": "SPECIES_NIHILEGO",
+  "species_id": 793,
+  "national_dex": 793,
+  "access": "surf",
+  "locked_with_15_badges": true,
+  "unlocked_with_16_before_leagues": true,
+  "real_escape_and_retry": true,
+  "escape_outcome": 4,
+  "capture_outcome": 7,
+  "real_knockout_and_retry": true,
+  "knockout_outcome": 1,
+  "knockout_attacks": 1,
+  "real_master_ball_capture": true,
+  "native_surface_entry_return_and_reentry": true,
+  "no_internal_warps_or_script_entries": true,
+  "captured_npc_absent_after_continue_and_reentry": true,
+  "no_duplicate_after_continue": true,
+  "save_continue": [
+    {
+      "label": "captured-chamber",
+      "before": {
+        "map": "JourneySanctuaryCristais",
+        "position": [
+          5,
+          12
+        ],
+        "mode": 1,
+        "kanto_badges": 8,
+        "hoenn_badges": 8,
+        "league_clear": [
+          false,
+          false
+        ],
+        "caught_dex": true,
+        "capture_flag": true,
+        "party_count": 2,
+        "captured_species": 793,
+        "captured_personality": 2677845299,
+        "captured_ot": 682754048
+      },
+      "after": {
+        "map": "JourneySanctuaryCristais",
+        "position": [
+          5,
+          12
+        ],
+        "mode": 1,
+        "kanto_badges": 8,
+        "hoenn_badges": 8,
+        "league_clear": [
+          false,
+          false
+        ],
+        "caught_dex": true,
+        "capture_flag": true,
+        "party_count": 2,
+        "captured_species": 793,
+        "captured_personality": 2677845299,
+        "captured_ot": 682754048
+      }
+    },
+    {
+      "label": "captured-surf-return",
+      "before": {
+        "map": "JourneyWorldSea08",
+        "position": [
+          44,
+          23
+        ],
+        "mode": 8,
+        "kanto_badges": 8,
+        "hoenn_badges": 8,
+        "league_clear": [
+          false,
+          false
+        ],
+        "caught_dex": true,
+        "capture_flag": true,
+        "party_count": 2,
+        "captured_species": 793,
+        "captured_personality": 2677845299,
+        "captured_ot": 682754048
+      },
+      "after": {
+        "map": "JourneyWorldSea08",
+        "position": [
+          44,
+          23
+        ],
+        "mode": 8,
+        "kanto_badges": 8,
+        "hoenn_badges": 8,
+        "league_clear": [
+          false,
+          false
+        ],
+        "caught_dex": true,
+        "capture_flag": true,
+        "party_count": 2,
+        "captured_species": 793,
+        "captured_personality": 2677845299,
+        "captured_ot": 682754048
+      }
+    }
+  ],
+  "position_changes": 91,
+  "transitions": [
+    {
+      "source": [
+        "JourneyWorldSea08",
+        44,
+        11
+      ],
+      "destination": [
+        "JourneySanctuaryCristais",
+        14,
+        19
+      ]
+    },
+    {
+      "source": [
+        "JourneySanctuaryCristais",
+        13,
+        19
+      ],
+      "destination": [
+        "JourneyWorldSea08",
+        44,
+        11
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea08",
+        44,
+        11
+      ],
+      "destination": [
+        "JourneySanctuaryCristais",
+        14,
+        19
+      ]
+    }
+  ],
+  "party_badges_ball_and_initial_surface_position_are_fixtures": true,
+  "knockout_attack_boost_is_fixture": true,
+  "wild_encounters_disabled": true,
+  "full_campaign_playthrough": false,
+  "balance_validated": false,
+  "all_special_species_captures_validated": false
+}
