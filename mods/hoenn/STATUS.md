@@ -5,6 +5,10 @@ versão anterior. A candidata exige um novo jogo; não há conversão de saves.
 
 ## Etapas com verificações específicas
 
+- Sequência Maxie–Stern–roubo do submarino–Matt exercitada no motor: entrada
+  por Surf, 138 passos e oito transições pelos três andares do esconderijo,
+  cinco batalhas (duas duplas) e Continue. Viagens entre cidades e preparação
+  da equipe são fixtures; detalhes em [SUBMARINE-STORY.md](SUBMARINE-STORY.md).
 - Kanto, Hoenn e Sevii conectados, incluindo 96 travessias físicas por Surf.
 - Histórias conectadas, insígnias e Ligas separadas, missões nas portas dos ginásios e ligação
   obrigatória entre Giovanni na Silph e a batalha final contra Archie.

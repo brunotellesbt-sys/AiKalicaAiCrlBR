@@ -17,7 +17,17 @@ campanhas completas jogadas. O player não recebeu esta candidata.
 | 6 | Catálogo em batalha | Ampliar a cobertura de habilidades, formas, animações e Megas; a auditoria das 1.025 espécies e pixels não testa toda interação de batalha |
 | 7 | Sessões no navegador e versão de lançamento | Rodar sessões prolongadas, exportar/importar saves e testar os dois finais no navegador antes de atualizar o player |
 
-## Avanço atual: passagens e episódios Aqua
+## Avanço atual: sequência do submarino
+
+Maxie, entrevista de Stern, roubo do submarino, entrada por Surf e percurso
+até Matt passaram pelos eventos nativos. Foram 138 passos, oito transições
+nos três andares e cinco batalhas, incluindo duas duplas. Save/Continue
+conservou a progressão sem alterar as insígnias ou a pendência de Kanto.
+As viagens entre cidades, etapas anteriores e atributos de batalha continuam
+como fixtures; o percurso de volta e as campanhas completas seguem pendentes.
+Evidências e reprodução em [SUBMARINE-STORY.md](SUBMARINE-STORY.md).
+
+## Etapa anterior: passagens e episódios Aqua
 
 Três passagens dos Regis abrem ao ler suas inscrições, sem exigir golpes
 terrestres. Shelly após quatro insígnias de Hoenn e Matt após seis passam a

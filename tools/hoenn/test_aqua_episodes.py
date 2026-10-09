@@ -39,7 +39,7 @@ class MandatoryAquaEpisodes(unittest.TestCase):
             self.assertTrue(win['native_defeated_flag'])
         self.assertEqual([d['blocked'] for d in r['doors']], [True, False, True, False])
         self.assertTrue(all(d['physical_door'] for d in r['doors']))
-        for key in ['native_npc_interactions', 'shelly_at_four_badges', 'matt_at_six_badges', 'original_castform_received', 'original_submarine_departed', 'wins_do_not_award_badges', 'kanto_missions_and_badges_unchanged', 'native_save_reload_continue', 'magma_space_center_and_silph_still_required']:
+        for key in ['native_npc_interactions', 'native_interaction_tiles_walkable', 'shelly_at_four_badges', 'matt_at_six_badges', 'original_castform_received', 'original_submarine_departed', 'wins_do_not_award_badges', 'kanto_missions_and_badges_unchanged', 'native_save_reload_continue', 'magma_space_center_and_silph_still_required']:
             self.assertTrue(r[key], key)
         self.assertTrue(r['travel_badges_earlier_missions_later_scenes_and_battle_stats_are_fixtures'])
         self.assertFalse(r['balance_validated']); self.assertFalse(r['full_campaign_playthrough'])
