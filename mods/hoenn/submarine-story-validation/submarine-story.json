@@ -1,0 +1,176 @@
+{
+  "passed": true,
+  "rom_sha256": "0e4626b06423c27889a08588fdfd2f9d294df20fdb4064273c75af1da8b7c285",
+  "wins": [
+    {
+      "trainer": 601,
+      "map": "MagmaHideout_4F",
+      "mission": "magma_hideout",
+      "attacks": 3,
+      "outcome": 1,
+      "ash_seen": true,
+      "native_defeated_flag": true,
+      "double_battle": false,
+      "second_trainer": null,
+      "second_native_defeated_flag": false
+    },
+    {
+      "trainer": 27,
+      "map": "AquaHideout_B1F",
+      "mission": "aqua_hideout_route",
+      "attacks": 8,
+      "outcome": 1,
+      "ash_seen": false,
+      "native_defeated_flag": true,
+      "double_battle": false,
+      "second_trainer": null,
+      "second_native_defeated_flag": false
+    },
+    {
+      "trainer": 3,
+      "map": "AquaHideout_B1F",
+      "mission": "aqua_hideout_route",
+      "attacks": 6,
+      "outcome": 1,
+      "ash_seen": true,
+      "native_defeated_flag": true,
+      "double_battle": true,
+      "second_trainer": 192,
+      "second_native_defeated_flag": true
+    },
+    {
+      "trainer": 28,
+      "map": "AquaHideout_B2F",
+      "mission": "aqua_hideout_route",
+      "attacks": 2,
+      "outcome": 1,
+      "ash_seen": true,
+      "native_defeated_flag": true,
+      "double_battle": true,
+      "second_trainer": 193,
+      "second_native_defeated_flag": true
+    },
+    {
+      "trainer": 30,
+      "map": "AquaHideout_B2F",
+      "mission": "aqua_hideout",
+      "attacks": 2,
+      "outcome": 1,
+      "ash_seen": true,
+      "native_defeated_flag": true,
+      "double_battle": false,
+      "second_trainer": null,
+      "second_native_defeated_flag": false
+    }
+  ],
+  "native_maxie_victory_schedules_interview": true,
+  "native_stern_interview_enters_harbor": true,
+  "native_theft_opens_hideout": true,
+  "native_surf_entrance": true,
+  "hideout_walked_steps": 138,
+  "original_hideout_transitions": [
+    {
+      "source": [
+        "AquaHideout_1F",
+        22,
+        2
+      ],
+      "destination": [
+        "AquaHideout_B1F",
+        29,
+        2
+      ]
+    },
+    {
+      "source": [
+        "AquaHideout_B1F",
+        27,
+        3
+      ],
+      "destination": [
+        "AquaHideout_B1F",
+        3,
+        15
+      ]
+    },
+    {
+      "source": [
+        "AquaHideout_B1F",
+        32,
+        18
+      ],
+      "destination": [
+        "AquaHideout_B1F",
+        20,
+        4
+      ]
+    },
+    {
+      "source": [
+        "AquaHideout_B1F",
+        18,
+        2
+      ],
+      "destination": [
+        "AquaHideout_B2F",
+        18,
+        2
+      ]
+    },
+    {
+      "source": [
+        "AquaHideout_B2F",
+        31,
+        7
+      ],
+      "destination": [
+        "AquaHideout_B2F",
+        5,
+        8
+      ]
+    },
+    {
+      "source": [
+        "AquaHideout_B2F",
+        3,
+        4
+      ],
+      "destination": [
+        "AquaHideout_B1F",
+        3,
+        4
+      ]
+    },
+    {
+      "source": [
+        "AquaHideout_B1F",
+        12,
+        2
+      ],
+      "destination": [
+        "AquaHideout_B2F",
+        12,
+        2
+      ]
+    },
+    {
+      "source": [
+        "AquaHideout_B2F",
+        8,
+        7
+      ],
+      "destination": [
+        "AquaHideout_B2F",
+        31,
+        17
+      ]
+    }
+  ],
+  "no_hideout_position_or_event_entry_injections": true,
+  "native_matt_victory_and_submarine_departure": true,
+  "native_save_continue_after_maxie_theft_and_matt": true,
+  "regional_badges_and_kanto_missions_unchanged": true,
+  "prior_episodes_badges_intercity_travel_initial_surf_and_battle_stats_are_fixtures": true,
+  "full_campaign_playthrough": false,
+  "balance_validated": false
+}

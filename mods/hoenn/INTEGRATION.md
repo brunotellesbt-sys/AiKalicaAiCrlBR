@@ -1,5 +1,9 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+O trecho Maxie–Stern–roubo do submarino–Matt foi exercitado com caminhada
+nativa pelos três andares do esconderijo Aqua, incluindo batalhas duplas e
+Continue. Evidências e limites em [SUBMARINE-STORY.md](SUBMARINE-STORY.md).
+
 ## Cidade inicial, família e viagem de mudança
 
 A escolha acontece **antes da viagem**, na abertura de um save novo. São

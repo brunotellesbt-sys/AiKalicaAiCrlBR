@@ -58,6 +58,7 @@ doors = [door_probe('FortreeCity', True)]
 def talk(name, x, y, direction):
     native('HealPlayerParty')
     warp(name, x, y)
+    assert native('MapGridGetCollisionAt', x + 7, y + 7) == 0
     step(4, direction); step(30); press(1)
 
 talk('Route119_WeatherInstitute_2F', 5, 6, 32)
@@ -85,7 +86,7 @@ rawflag(hoenn_flags[2], True) # Sixth badge, leaving Fortree/Mossdeep unwon.
 badges_before_matt = [flag(f) for f in kanto_flags + hoenn_flags]
 assert pending(False) == 16 and pending(True) == 7
 doors.append(door_probe('FortreeCity', True))
-talk('AquaHideout_B2F', 23, 18, 128)
+talk('AquaHideout_B2F', 24, 19, 32)
 matt = fight(dict(id=30, map='AquaHideout_B2F', mission='aqua_hideout'))
 assert flag(flag_id('FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE'))
 assert flag(flag_id('FLAG_HIDE_LILYCOVE_CITY_AQUA_GRUNTS'))
@@ -116,7 +117,7 @@ assert native('JourneyCanStartArchieAlliance')
 picture('aqua-episodes-retained-after-continue')
 lib.stop()
 result = dict(passed=True, rom_sha256=hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest(),
-              native_npc_interactions=True, wins=[shelly, matt], doors=doors,
+              native_npc_interactions=True, native_interaction_tiles_walkable=True, wins=[shelly, matt], doors=doors,
               shelly_at_four_badges=True, matt_at_six_badges=True,
               original_castform_received=True, original_submarine_departed=True,
               wins_do_not_award_badges=True, kanto_missions_and_badges_unchanged=True,

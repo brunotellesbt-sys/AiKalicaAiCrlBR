@@ -84,7 +84,11 @@ def enter_trainer(t):
     script(b'\x05' + struct.pack('<I', s[f"JourneyTeam_Trainer{t['id']}"]), 30)
 
 def fight(t):
+    targets = {int(a, 16) for a, _, n in re.findall(r'^(\w+) (\w) (\S+)$', raw, re.M)
+               if n in ['HandleInputChooseTarget', 'HandleInputShowTargets', 'HandleInputShowEntireFieldTargets']}
     started = ash_seen = False
+    double_battle = False
+    second_trainer = None
     attacks = 0
     for tick in range(1800):
         cb = lib.read32(s['gMain'] + 4) & ~1
@@ -93,6 +97,10 @@ def fight(t):
             actual = lib.read16(s['gTrainerBattleParameter'] + abi[13])
             assert actual == t['id'], (t, actual)
             assert lib.read32(s['gBattleTypeFlags']) & abi[10]
+            double_battle |= lib.read8(s['gBattlersCount']) == 4
+            if lib.read32(s['gBattleTypeFlags']) & 0x8000:
+                address = s['gTrainerBattleParameter'] + abi[14]
+                second_trainer = lib.read8(address) | lib.read8(address + 1) << 8
             ash_seen |= lib.read16(s['gBattleMons'] + abi[75]) == abi[69]
             lib.write16(s['gBattleMons'] + pabi[15], 16000)
             lib.write16(s['gBattleMons'] + pabi[16], 10000)
@@ -103,17 +111,21 @@ def fight(t):
                 lib.write16(party + i * abi[2] + pabi[9], 10000)
                 lib.write16(party + i * abi[2] + pabi[21], 30000)
                 if lib.read16(party + i * abi[2] + abi[101]): lib.write16(party + i * abi[2] + abi[101], 30000)
-            ctrl = lib.read32(s['gBattlerControllerFuncs']) & ~1
-            if ctrl in actions or ctrl in moves:
+            controllers = {lib.read32(s['gBattlerControllerFuncs'] + 4 * i) & ~1 for i in range(4)}
+            if controllers & targets:
+                press(1)
+            elif controllers & (actions | moves):
                 step(1, 64); step(8); step(1, 32); step(8); press(1)
-                attacks += ctrl in moves
+                attacks += bool(controllers & moves)
             else: press(2)
         elif started and cb == s['CB2_Overworld']:
             assert lib.read8(s['gBattleOutcome']) == 1
             finish()
             assert native('FlagGet', 0x500 + t['id']) == 1
             assert attacks > 0
-            return dict(trainer=t['id'], map=t['map'], mission=t['mission'], attacks=attacks, outcome=1, ash_seen=ash_seen, native_defeated_flag=True)
+            if second_trainer is not None:
+                assert native('FlagGet', 0x500 + second_trainer) == 1
+            return dict(trainer=t['id'], map=t['map'], mission=t['mission'], attacks=attacks, outcome=1, ash_seen=ash_seen, native_defeated_flag=True, double_battle=double_battle, second_trainer=second_trainer, second_native_defeated_flag=second_trainer is not None)
         else: press(1)
     picture('mission-battle-failure')
     raise AssertionError(('Mission battle incomplete', t, attacks, hex(cb)))

@@ -80,6 +80,12 @@ Centro Espacial também são fixtures para conferir a ligação. Isso não compr
 balanceamento, o percurso integral do roubo em Slateport nem duas campanhas
 completas. O layout dos saves não mudou; a candidata continua exigindo novo jogo.
 
+Na validação posterior, a sequência local de Maxie, entrevista de Stern,
+roubo e percurso pelos três andares do esconderijo até Matt passou na mesma
+ROM. O teste isolado de Matt também passou novamente com o personagem sobre
+um tile caminhável. Evidências, fixtures e reprodução dessa etapa estão em
+[SUBMARINE-STORY.md](SUBMARINE-STORY.md).
+
 ## Reprodução
 
 As árvores abaixo devem ser cópias da candidata anterior já compilada, com a

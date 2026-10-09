@@ -13,6 +13,12 @@ suas próprias evidências.
 
 ## Sequência atual
 
+A ligação local entre Maxie no Magma Hideout, Stern, o roubo em Slateport e
+Matt passou no motor, com entrada por Surf e percurso pelas escadas e
+teletransportes originais. Relatório em [SUBMARINE-STORY.md](SUBMARINE-STORY.md).
+Esse trecho usa fixtures para viagens entre cidades e preparação da equipe;
+as campanhas completas continuam pendentes.
+
 A ordem dos ginásios é livre. Os números abaixo são a quantidade de insígnias
 daquela região, não um líder específico. Ginásios já vencidos podem ser revisitados.
 Os guias bloqueiam os ainda não vencidos enquanto houver a missão obrigatória

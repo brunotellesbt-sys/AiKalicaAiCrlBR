@@ -2,15 +2,19 @@
   "passed": true,
   "rom_sha256": "0e4626b06423c27889a08588fdfd2f9d294df20fdb4064273c75af1da8b7c285",
   "native_npc_interactions": true,
+  "native_interaction_tiles_walkable": true,
   "wins": [
     {
       "trainer": 32,
       "map": "Route119_WeatherInstitute_2F",
       "mission": "weather_institute",
-      "attacks": 5,
+      "attacks": 3,
       "outcome": 1,
       "ash_seen": true,
-      "native_defeated_flag": true
+      "native_defeated_flag": true,
+      "double_battle": false,
+      "second_trainer": null,
+      "second_native_defeated_flag": false
     },
     {
       "trainer": 30,
@@ -19,7 +23,10 @@
       "attacks": 2,
       "outcome": 1,
       "ash_seen": true,
-      "native_defeated_flag": true
+      "native_defeated_flag": true,
+      "double_battle": false,
+      "second_trainer": null,
+      "second_native_defeated_flag": false
     }
   ],
   "doors": [
