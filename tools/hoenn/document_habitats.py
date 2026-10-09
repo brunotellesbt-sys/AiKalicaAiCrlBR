@@ -23,6 +23,9 @@ def map_region(data):
 def generate(source,output):
  source=Path(source);output=Path(output);output.mkdir(parents=True,exist_ok=True)
  ecology=json.loads((source/'.journey-ecology').read_text());special=json.loads((source/'.journey-sanctuaries').read_text());catalog=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_text())
+ if (source/'.journey-lostelle-habitats').exists():
+  overlay=json.loads((source/'.journey-lostelle-habitats').read_text())
+  ecology.update({k:overlay[k] for k in ['locations_data','map_species','pools','field_slots']})
  maps={}
  for path in sorted((source/'data/maps').glob('*/map.json')):
   data=json.loads(path.read_text());maps[data['id']]=data;maps[path.parent.name]=data
@@ -33,12 +36,13 @@ def generate(source,output):
  if len(special_ids)!=len(set(special_ids)) or set(special_ids)!=set(catalog['special_species']):raise ValueError('Altares duplicados ou catálogo especial incompleto')
  ordinary=[];lines=['# Pokémon por habitat e encontros especiais','',
  'Referência da candidata nativa com Kanto, Hoenn e Sevii. Não é uma declaração de que todas as histórias e mecânicas da integração estão concluídas.','',
- 'As 920 espécies-base comuns e as variantes regionais ficam em 444 famílias, sem repetir famílias entre habitats. Andares da mesma caverna, zonas de Safari e a superfície/subsolo da mesma rota marinha contam como um habitat.','',
+ 'Os encontros aleatórios das 920 espécies-base comuns e variantes regionais ficam em 444 famílias, sem repetir famílias entre habitats. Andares da mesma caverna, zonas de Safari e a superfície/subsolo da mesma rota marinha contam como um habitat.','',
  'A distribuição corrigida tem 97 habitats terrestres: 18 com cinco famílias e 79 com quatro; outros 38 habitats exclusivamente aquáticos têm uma família cada. As 77 famílias com Pokémon do tipo Água estão reservadas para locais com Surf ou pesca, e também podem aparecer na grama do mesmo habitat quando ela existe.','',
  f'Existem mais lagos e pontos de pesca que famílias aquáticas. Para preservar a regra de não repetir famílias, {len(ecology["quiet_water_maps"])} mapas ficam sem encontros aquáticos; os encontros terrestres desses habitats permanecem. Esses pontos estão listados ao final. Nenhuma rota foi fechada por isso.','',
  'Nível: média inteira da equipe menos cinco até mais dois, limitada a 1–100. Ovos não contam; Pokémon desmaiados contam. Etapa evolutiva: média inteira das insígnias das duas regiões; 0–2 básicos, 3–5 básicos ou estágio 2, 6–8 estágios 2 ou 3. Famílias sem a etapa seguinte preservam a última disponível.','',
  'Na água, o filtro seleciona as evoluções aquáticas disponíveis da família: por exemplo, Vaporeon pode aparecer na água, enquanto as outras evoluções de Eevee continuam na grama do mesmo habitat. Famílias com etapas de tipos diferentes ficam em habitats terrestres com água, para que nenhuma espécie-base perca seu local.', '',
- 'A Pokédex Nacional vem junto à primeira Pokédex e marca o habitat da família inteira. Os slots e as chances de cada modalidade constam no arquivo `integration-validation/ecology-preparation.json`; as chances de pesca dependem da vara.','',
+ ('A Pokédex Nacional vem junto à primeira Pokédex e marca o habitat da família inteira. Os slots e as chances atuais constam em `lostelle-habitat-validation/preparation/preparation.json`; os locais não alterados seguem `integration-validation/ecology-preparation.json`. As chances de pesca dependem da vara.' if (source/'.journey-lostelle-habitats').exists() else 'A Pokédex Nacional vem junto à primeira Pokédex e marca o habitat da família inteira. Os slots e as chances de cada modalidade constam no arquivo `integration-validation/ecology-preparation.json`; as chances de pesca dependem da vara.'),'',
+ '## Encontro fixo de história verificado','', ('O Hypno do resgate de Lostelle permanece em Berry Forest. A família Drowzee/Hypno também está nos encontros aleatórios da mesma floresta; Skorupi/Drapion ocupa o lugar anterior em Mt. Pyre. O evento não adiciona outro habitat à família. Seu nível segue a média da equipe −5/+2. Percurso e resgate em [LOSTELLE-STORY.md](LOSTELLE-STORY.md); revisão de outros encontros fixos pendente, conforme [LOSTELLE-HABITATS.md](LOSTELLE-HABITATS.md).' if (source/'.journey-lostelle-habitats').exists() else 'O Hypno do resgate de Lostelle permanece em Berry Forest. Na distribuição anterior à camada lostelle-habitats, os encontros aleatórios da família ficam em Mt. Pyre.'),'',
  '## Encontros comuns por habitat','', 'Use a busca pelo nome do Pokémon nesta página ou filtre a planilha `pokemon-locations.csv`. A coluna Região identifica Kanto, Hoenn e Sevii; os nomes internos dos mapas permitem localizar os arquivos exatos do jogo.', '', '| Região | Habitat | Famílias e espécies | Mapas |', '|---|---|---|---|']
  canonical={int(i) for i in catalog['canonical_species'].values()}
  for h in ecology['locations_data']:
@@ -86,6 +90,7 @@ def generate(source,output):
   guide.append('')
  (output/'SPECIAL-LOCATIONS.md').write_text('\n'.join(guide))
  evidence=dict(base_species=1025,canonical_rows=len(base_rows),ordinary_base_species=920,special_categories=categories,habitats=len(ecology['locations_data']),special_sites=len(special['sites']),referenced_maps=len(referenced),all_referenced_maps_exist=True,source_commit=catalog['source_commit'],input_sha256={n:hashlib.sha256((source/n).read_bytes()).hexdigest() for n in ('.journey-ecology','.journey-sanctuaries')})
+ if (source/'.journey-lostelle-habitats').exists():evidence['input_sha256']['.journey-lostelle-habitats']=hashlib.sha256((source/'.journey-lostelle-habitats').read_bytes()).hexdigest()
  rom=source/'pokeemerald.gba'
  if rom.exists():evidence['rom_sha256']=hashlib.sha256(rom.read_bytes()).hexdigest()
  evidence['documents_sha256']={n:hashlib.sha256((output/n).read_bytes()).hexdigest() for n in ('POKEMON-LOCATIONS.md','SPECIAL-LOCATIONS.md','pokemon-locations.csv')}

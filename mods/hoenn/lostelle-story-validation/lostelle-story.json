@@ -1,0 +1,1145 @@
+{
+  "passed": true,
+  "rom_sha256": "0f1df90862f23c168e73a811588e21a6787f042e1808b0830796b52403a12afc",
+  "initial": {
+    "map": "JourneyWorldSea00",
+    "position": [
+      34,
+      6
+    ],
+    "mode": 8,
+    "kanto_badges": 0,
+    "hoenn_badges": 0,
+    "one_scene": 0,
+    "two_scene": 0,
+    "three_scene": 0,
+    "rescued": false,
+    "forest_lostelle_hidden": false,
+    "moon_reward_received": false,
+    "meteorite": 0,
+    "moon_stone": 0,
+    "iapapa": 0
+  },
+  "rescue": {
+    "map": "TwoIsland_JoyfulGameCorner_Frlg",
+    "position": [
+      6,
+      6
+    ],
+    "mode": 1,
+    "kanto_badges": 0,
+    "hoenn_badges": 0,
+    "one_scene": 1,
+    "two_scene": 3,
+    "three_scene": 4,
+    "rescued": true,
+    "forest_lostelle_hidden": true,
+    "moon_reward_received": false,
+    "meteorite": 1,
+    "moon_stone": 0,
+    "iapapa": 1
+  },
+  "delivered": {
+    "map": "TwoIsland_JoyfulGameCorner_Frlg",
+    "position": [
+      5,
+      6
+    ],
+    "mode": 1,
+    "kanto_badges": 0,
+    "hoenn_badges": 0,
+    "one_scene": 2,
+    "two_scene": 3,
+    "three_scene": 4,
+    "rescued": true,
+    "forest_lostelle_hidden": true,
+    "moon_reward_received": true,
+    "meteorite": 0,
+    "moon_stone": 1,
+    "iapapa": 1
+  },
+  "games_opened": {
+    "map": "TwoIsland_JoyfulGameCorner_Frlg",
+    "position": [
+      5,
+      6
+    ],
+    "mode": 1,
+    "kanto_badges": 0,
+    "hoenn_badges": 0,
+    "one_scene": 2,
+    "two_scene": 4,
+    "three_scene": 4,
+    "rescued": true,
+    "forest_lostelle_hidden": true,
+    "moon_reward_received": true,
+    "meteorite": 0,
+    "moon_stone": 1,
+    "iapapa": 1
+  },
+  "start": [
+    "JourneyWorldSea00",
+    34,
+    6
+  ],
+  "end": [
+    "JourneyWorldSea00",
+    34,
+    6
+  ],
+  "battles": [
+    {
+      "kind": "trainer",
+      "trainer": 1263,
+      "map": "ThreeIsland_Frlg",
+      "attacks": 17,
+      "opponent_species": 88,
+      "opponent_level": 37,
+      "double_battle": false,
+      "outcome": 1,
+      "native_defeated_flag": true
+    },
+    {
+      "kind": "trainer",
+      "trainer": 1264,
+      "map": "ThreeIsland_Frlg",
+      "attacks": 8,
+      "opponent_species": 109,
+      "opponent_level": 38,
+      "double_battle": false,
+      "outcome": 1,
+      "native_defeated_flag": true
+    },
+    {
+      "kind": "trainer",
+      "trainer": 1265,
+      "map": "ThreeIsland_Frlg",
+      "attacks": 17,
+      "opponent_species": 88,
+      "opponent_level": 38,
+      "double_battle": false,
+      "outcome": 1,
+      "native_defeated_flag": true
+    },
+    {
+      "kind": "trainer",
+      "trainer": 1477,
+      "map": "ThreeIsland_Frlg",
+      "attacks": 6,
+      "opponent_species": 89,
+      "opponent_level": 39,
+      "double_battle": false,
+      "outcome": 1,
+      "native_defeated_flag": true
+    },
+    {
+      "kind": "trainer",
+      "trainer": 1293,
+      "map": "ThreeIsland_BondBridge_Frlg",
+      "attacks": 26,
+      "double_battle": false,
+      "opponent_species": 2,
+      "opponent_level": 36,
+      "outcome": 1,
+      "native_defeated_flag": true
+    },
+    {
+      "kind": "trainer",
+      "trainer": 1259,
+      "map": "ThreeIsland_BondBridge_Frlg",
+      "attacks": 35,
+      "double_battle": false,
+      "opponent_species": 70,
+      "opponent_level": 37,
+      "outcome": 1,
+      "native_defeated_flag": true
+    },
+    {
+      "kind": "scripted_wild",
+      "trainer": null,
+      "map": "ThreeIsland_BerryForest_Frlg",
+      "attacks": 13,
+      "opponent_species": 97,
+      "opponent_level": 100,
+      "double_battle": false,
+      "outcome": 1
+    },
+    {
+      "kind": "trainer",
+      "trainer": 1294,
+      "map": "ThreeIsland_BondBridge_Frlg",
+      "attacks": 12,
+      "double_battle": false,
+      "opponent_species": 120,
+      "opponent_level": 34,
+      "outcome": 1,
+      "native_defeated_flag": true
+    }
+  ],
+  "wild_party_mean": 100,
+  "position_changes": 1646,
+  "transitions": [
+    {
+      "source": [
+        "JourneyWorldSea00",
+        63,
+        6
+      ],
+      "destination": [
+        "JourneyWorldSea01",
+        0,
+        6
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea01",
+        30,
+        0
+      ],
+      "destination": [
+        "OneIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "OneIsland_Harbor_Frlg",
+        8,
+        3
+      ],
+      "destination": [
+        "OneIsland_Frlg",
+        12,
+        18
+      ]
+    },
+    {
+      "source": [
+        "OneIsland_Frlg",
+        14,
+        6
+      ],
+      "destination": [
+        "OneIsland_PokemonCenter_1F_Frlg",
+        14,
+        7
+      ]
+    },
+    {
+      "source": [
+        "OneIsland_PokemonCenter_1F_Frlg",
+        9,
+        9
+      ],
+      "destination": [
+        "OneIsland_Frlg",
+        14,
+        6
+      ]
+    },
+    {
+      "source": [
+        "OneIsland_Frlg",
+        12,
+        18
+      ],
+      "destination": [
+        "OneIsland_Harbor_Frlg",
+        8,
+        3
+      ]
+    },
+    {
+      "source": [
+        "OneIsland_Harbor_Frlg",
+        6,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea01",
+        30,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea01",
+        63,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea02",
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea02",
+        30,
+        0
+      ],
+      "destination": [
+        "TwoIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "TwoIsland_Harbor_Frlg",
+        8,
+        3
+      ],
+      "destination": [
+        "TwoIsland_Frlg",
+        10,
+        8
+      ]
+    },
+    {
+      "source": [
+        "TwoIsland_Frlg",
+        39,
+        10
+      ],
+      "destination": [
+        "TwoIsland_JoyfulGameCorner_Frlg",
+        4,
+        8
+      ]
+    },
+    {
+      "source": [
+        "TwoIsland_JoyfulGameCorner_Frlg",
+        5,
+        8
+      ],
+      "destination": [
+        "TwoIsland_Frlg",
+        39,
+        10
+      ]
+    },
+    {
+      "source": [
+        "TwoIsland_Frlg",
+        10,
+        8
+      ],
+      "destination": [
+        "TwoIsland_Harbor_Frlg",
+        8,
+        3
+      ]
+    },
+    {
+      "source": [
+        "TwoIsland_Harbor_Frlg",
+        6,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea02",
+        30,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea02",
+        63,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea03",
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea03",
+        30,
+        0
+      ],
+      "destination": [
+        "ThreeIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_Harbor_Frlg",
+        8,
+        3
+      ],
+      "destination": [
+        "ThreeIsland_Port_Frlg",
+        12,
+        13
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_Port_Frlg",
+        10,
+        0
+      ],
+      "destination": [
+        "ThreeIsland_Frlg",
+        10,
+        39
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_Frlg",
+        0,
+        11
+      ],
+      "destination": [
+        "ThreeIsland_BondBridge_Frlg",
+        95,
+        11
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_BondBridge_Frlg",
+        13,
+        6
+      ],
+      "destination": [
+        "ThreeIsland_BerryForest_Frlg",
+        43,
+        41
+      ]
+    },
+    {
+      "source": [
+        "TwoIsland_JoyfulGameCorner_Frlg",
+        5,
+        8
+      ],
+      "destination": [
+        "TwoIsland_Frlg",
+        39,
+        10
+      ]
+    },
+    {
+      "source": [
+        "TwoIsland_Frlg",
+        39,
+        10
+      ],
+      "destination": [
+        "TwoIsland_JoyfulGameCorner_Frlg",
+        5,
+        8
+      ]
+    },
+    {
+      "source": [
+        "TwoIsland_JoyfulGameCorner_Frlg",
+        5,
+        8
+      ],
+      "destination": [
+        "TwoIsland_Frlg",
+        39,
+        10
+      ]
+    },
+    {
+      "source": [
+        "TwoIsland_Frlg",
+        10,
+        8
+      ],
+      "destination": [
+        "TwoIsland_Harbor_Frlg",
+        8,
+        3
+      ]
+    },
+    {
+      "source": [
+        "TwoIsland_Harbor_Frlg",
+        6,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea02",
+        30,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea02",
+        63,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea03",
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea03",
+        30,
+        0
+      ],
+      "destination": [
+        "ThreeIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_Harbor_Frlg",
+        8,
+        3
+      ],
+      "destination": [
+        "ThreeIsland_Port_Frlg",
+        12,
+        13
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_Port_Frlg",
+        10,
+        0
+      ],
+      "destination": [
+        "ThreeIsland_Frlg",
+        10,
+        39
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_Frlg",
+        0,
+        11
+      ],
+      "destination": [
+        "ThreeIsland_BondBridge_Frlg",
+        95,
+        11
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_BondBridge_Frlg",
+        13,
+        6
+      ],
+      "destination": [
+        "ThreeIsland_BerryForest_Frlg",
+        43,
+        41
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_BerryForest_Frlg",
+        42,
+        41
+      ],
+      "destination": [
+        "ThreeIsland_BondBridge_Frlg",
+        12,
+        6
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_BondBridge_Frlg",
+        95,
+        10
+      ],
+      "destination": [
+        "ThreeIsland_Frlg",
+        0,
+        10
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_Frlg",
+        12,
+        39
+      ],
+      "destination": [
+        "ThreeIsland_Port_Frlg",
+        12,
+        0
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_Port_Frlg",
+        12,
+        13
+      ],
+      "destination": [
+        "ThreeIsland_Harbor_Frlg",
+        8,
+        3
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_Harbor_Frlg",
+        3,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea03",
+        27,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea03",
+        0,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea02",
+        63,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea02",
+        0,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea01",
+        63,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea01",
+        0,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea00",
+        63,
+        0
+      ]
+    }
+  ],
+  "legs": [
+    {
+      "label": "celio-meteorite",
+      "goal": [
+        "OneIsland_PokemonCenter_1F_Frlg",
+        9,
+        7
+      ],
+      "position_changes": 99
+    },
+    {
+      "label": "lostelle-request",
+      "goal": [
+        "TwoIsland_JoyfulGameCorner_Frlg",
+        5,
+        6
+      ],
+      "position_changes": 152
+    },
+    {
+      "label": "biker-boss-introduction",
+      "goal": [
+        "ThreeIsland_Frlg",
+        9,
+        27
+      ],
+      "position_changes": 165
+    },
+    {
+      "label": "four-biker-battles",
+      "goal": [
+        "ThreeIsland_Frlg",
+        9,
+        25
+      ],
+      "position_changes": 2
+    },
+    {
+      "label": "berry-forest-lostelle",
+      "goal": [
+        "ThreeIsland_BerryForest_Frlg",
+        4,
+        9
+      ],
+      "position_changes": 273
+    },
+    {
+      "label": "father-meteorite-delivery",
+      "goal": [
+        "TwoIsland_JoyfulGameCorner_Frlg",
+        5,
+        6
+      ],
+      "position_changes": 1
+    },
+    {
+      "label": "reward-game-corner-exit",
+      "goal": [
+        "TwoIsland_Frlg",
+        39,
+        10
+      ],
+      "position_changes": 3
+    },
+    {
+      "label": "reward-game-corner-reentry",
+      "goal": [
+        "TwoIsland_JoyfulGameCorner_Frlg",
+        5,
+        6
+      ],
+      "position_changes": 3
+    },
+    {
+      "label": "forest-rescue-revisit",
+      "goal": [
+        "ThreeIsland_BerryForest_Frlg",
+        4,
+        9
+      ],
+      "position_changes": 436
+    },
+    {
+      "label": "original-sea-return",
+      "goal": [
+        "JourneyWorldSea00",
+        34,
+        6
+      ],
+      "position_changes": 512
+    }
+  ],
+  "save_continue": [
+    {
+      "label": "celio-introduction",
+      "before": {
+        "map": "OneIsland_PokemonCenter_1F_Frlg",
+        "position": [
+          9,
+          7
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "one_scene": 1,
+        "two_scene": 0,
+        "three_scene": 0,
+        "rescued": false,
+        "forest_lostelle_hidden": false,
+        "moon_reward_received": false,
+        "meteorite": 1,
+        "moon_stone": 0,
+        "iapapa": 0
+      },
+      "after": {
+        "map": "OneIsland_PokemonCenter_1F_Frlg",
+        "position": [
+          9,
+          7
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "one_scene": 1,
+        "two_scene": 0,
+        "three_scene": 0,
+        "rescued": false,
+        "forest_lostelle_hidden": false,
+        "moon_reward_received": false,
+        "meteorite": 1,
+        "moon_stone": 0,
+        "iapapa": 0
+      }
+    },
+    {
+      "label": "lostelle-request",
+      "before": {
+        "map": "TwoIsland_JoyfulGameCorner_Frlg",
+        "position": [
+          5,
+          6
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "one_scene": 1,
+        "two_scene": 1,
+        "three_scene": 2,
+        "rescued": false,
+        "forest_lostelle_hidden": false,
+        "moon_reward_received": false,
+        "meteorite": 1,
+        "moon_stone": 0,
+        "iapapa": 0
+      },
+      "after": {
+        "map": "TwoIsland_JoyfulGameCorner_Frlg",
+        "position": [
+          5,
+          6
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "one_scene": 1,
+        "two_scene": 1,
+        "three_scene": 2,
+        "rescued": false,
+        "forest_lostelle_hidden": false,
+        "moon_reward_received": false,
+        "meteorite": 1,
+        "moon_stone": 0,
+        "iapapa": 0
+      }
+    },
+    {
+      "label": "bikers-defeated",
+      "before": {
+        "map": "ThreeIsland_Frlg",
+        "position": [
+          9,
+          25
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "one_scene": 1,
+        "two_scene": 1,
+        "three_scene": 4,
+        "rescued": false,
+        "forest_lostelle_hidden": false,
+        "moon_reward_received": false,
+        "meteorite": 1,
+        "moon_stone": 0,
+        "iapapa": 0
+      },
+      "after": {
+        "map": "ThreeIsland_Frlg",
+        "position": [
+          9,
+          25
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "one_scene": 1,
+        "two_scene": 1,
+        "three_scene": 4,
+        "rescued": false,
+        "forest_lostelle_hidden": false,
+        "moon_reward_received": false,
+        "meteorite": 1,
+        "moon_stone": 0,
+        "iapapa": 0
+      }
+    },
+    {
+      "label": "forest-before-rescue",
+      "before": {
+        "map": "ThreeIsland_BerryForest_Frlg",
+        "position": [
+          4,
+          9
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "one_scene": 1,
+        "two_scene": 1,
+        "three_scene": 4,
+        "rescued": false,
+        "forest_lostelle_hidden": false,
+        "moon_reward_received": false,
+        "meteorite": 1,
+        "moon_stone": 0,
+        "iapapa": 0
+      },
+      "after": {
+        "map": "ThreeIsland_BerryForest_Frlg",
+        "position": [
+          4,
+          9
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "one_scene": 1,
+        "two_scene": 1,
+        "three_scene": 4,
+        "rescued": false,
+        "forest_lostelle_hidden": false,
+        "moon_reward_received": false,
+        "meteorite": 1,
+        "moon_stone": 0,
+        "iapapa": 0
+      }
+    },
+    {
+      "label": "lostelle-reunited",
+      "before": {
+        "map": "TwoIsland_JoyfulGameCorner_Frlg",
+        "position": [
+          6,
+          6
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "one_scene": 1,
+        "two_scene": 3,
+        "three_scene": 4,
+        "rescued": true,
+        "forest_lostelle_hidden": true,
+        "moon_reward_received": false,
+        "meteorite": 1,
+        "moon_stone": 0,
+        "iapapa": 1
+      },
+      "after": {
+        "map": "TwoIsland_JoyfulGameCorner_Frlg",
+        "position": [
+          6,
+          6
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "one_scene": 1,
+        "two_scene": 3,
+        "three_scene": 4,
+        "rescued": true,
+        "forest_lostelle_hidden": true,
+        "moon_reward_received": false,
+        "meteorite": 1,
+        "moon_stone": 0,
+        "iapapa": 1
+      }
+    },
+    {
+      "label": "moon-stone-reward",
+      "before": {
+        "map": "TwoIsland_JoyfulGameCorner_Frlg",
+        "position": [
+          5,
+          6
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "one_scene": 2,
+        "two_scene": 4,
+        "three_scene": 4,
+        "rescued": true,
+        "forest_lostelle_hidden": true,
+        "moon_reward_received": true,
+        "meteorite": 0,
+        "moon_stone": 1,
+        "iapapa": 1
+      },
+      "after": {
+        "map": "TwoIsland_JoyfulGameCorner_Frlg",
+        "position": [
+          5,
+          6
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "one_scene": 2,
+        "two_scene": 4,
+        "three_scene": 4,
+        "rescued": true,
+        "forest_lostelle_hidden": true,
+        "moon_reward_received": true,
+        "meteorite": 0,
+        "moon_stone": 1,
+        "iapapa": 1
+      }
+    },
+    {
+      "label": "forest-revisit",
+      "before": {
+        "map": "ThreeIsland_BerryForest_Frlg",
+        "position": [
+          4,
+          8
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "one_scene": 2,
+        "two_scene": 4,
+        "three_scene": 4,
+        "rescued": true,
+        "forest_lostelle_hidden": true,
+        "moon_reward_received": true,
+        "meteorite": 0,
+        "moon_stone": 1,
+        "iapapa": 1
+      },
+      "after": {
+        "map": "ThreeIsland_BerryForest_Frlg",
+        "position": [
+          4,
+          8
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "one_scene": 2,
+        "two_scene": 4,
+        "three_scene": 4,
+        "rescued": true,
+        "forest_lostelle_hidden": true,
+        "moon_reward_received": true,
+        "meteorite": 0,
+        "moon_stone": 1,
+        "iapapa": 1
+      }
+    },
+    {
+      "label": "sea-return",
+      "before": {
+        "map": "JourneyWorldSea00",
+        "position": [
+          34,
+          6
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "one_scene": 2,
+        "two_scene": 4,
+        "three_scene": 4,
+        "rescued": true,
+        "forest_lostelle_hidden": true,
+        "moon_reward_received": true,
+        "meteorite": 0,
+        "moon_stone": 1,
+        "iapapa": 1
+      },
+      "after": {
+        "map": "JourneyWorldSea00",
+        "position": [
+          34,
+          6
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "one_scene": 2,
+        "two_scene": 4,
+        "three_scene": 4,
+        "rescued": true,
+        "forest_lostelle_hidden": true,
+        "moon_reward_received": true,
+        "meteorite": 0,
+        "moon_stone": 1,
+        "iapapa": 1
+      }
+    }
+  ],
+  "surf_prompts": [
+    [
+      "JourneyWorldSea00",
+      52,
+      6
+    ],
+    [
+      "OneIsland_Harbor_Frlg",
+      7,
+      5
+    ],
+    [
+      "TwoIsland_Harbor_Frlg",
+      7,
+      5
+    ],
+    [
+      "ThreeIsland_BerryForest_Frlg",
+      9,
+      25
+    ],
+    [
+      "TwoIsland_Harbor_Frlg",
+      7,
+      5
+    ],
+    [
+      "ThreeIsland_BerryForest_Frlg",
+      9,
+      25
+    ],
+    [
+      "ThreeIsland_BerryForest_Frlg",
+      8,
+      28
+    ],
+    [
+      "ThreeIsland_BondBridge_Frlg",
+      33,
+      12
+    ],
+    [
+      "ThreeIsland_Harbor_Frlg",
+      7,
+      5
+    ]
+  ],
+  "visited_maps": [
+    "JourneyWorldSea00",
+    "JourneyWorldSea01",
+    "JourneyWorldSea02",
+    "JourneyWorldSea03",
+    "OneIsland_Frlg",
+    "OneIsland_Harbor_Frlg",
+    "OneIsland_PokemonCenter_1F_Frlg",
+    "ThreeIsland_BerryForest_Frlg",
+    "ThreeIsland_BondBridge_Frlg",
+    "ThreeIsland_Frlg",
+    "ThreeIsland_Harbor_Frlg",
+    "ThreeIsland_Port_Frlg",
+    "TwoIsland_Frlg",
+    "TwoIsland_Harbor_Frlg",
+    "TwoIsland_JoyfulGameCorner_Frlg"
+  ],
+  "original_lostelle_escort_warp": true,
+  "no_midroute_fixture_warps_or_direct_npc_scripts": true,
+  "rescued_child_revisit_has_no_second_battle": true,
+  "initial_party_position_and_prior_story_states_are_fixtures": true,
+  "boosted_battle_stats_and_pp_are_fixtures": true,
+  "random_wild_encounters_disabled": true,
+  "balance_validated": false,
+  "full_campaign_playthrough": false
+}
