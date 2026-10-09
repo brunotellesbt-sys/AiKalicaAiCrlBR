@@ -1,5 +1,10 @@
 # Missões originais obrigatórias na ordem livre de ginásios
 
+**Regra atual das Ligas:** oito insígnias de Kanto e oito de Hoenn, com mensagem
+própria. As missões continuam nos ginásios. A validação histórica abaixo foi
+substituída somente nas entradas das Ligas por
+[SIXTEEN-BADGE-LEAGUES.md](SIXTEEN-BADGE-LEAGUES.md).
+
 As missões de história devem ser concluídas. A ordem livre dos ginásios e
 as rotas abertas não tornam esses episódios opcionais. Esta etapa fecha sete
 lacunas de progressão: antes, as travas exigiam chefes e incursões adicionais,
@@ -31,10 +36,11 @@ estiverem pendentes. [História integrada](INTEGRATED-STORY.md).
 
 A candidata anterior permitiu entrar fisicamente na Liga de Kanto com oito
 insígnias e sem o resgate de Fuji. O teste usa estados anteriores de fixture;
-não simula que uma campanha completa tenha sido jogada. As duas Ligas agora
-verificam todas as pendências dos respectivos checkpoints, além das oito
+não simula que uma campanha completa tenha sido jogada. Na candidata desta etapa, as duas Ligas
+verificavam todas as pendências dos respectivos checkpoints, além das oito
 insígnias da própria região. A flag antiga de entrada na Elite Four não
-dispensa essa exigência. Os guardas indicam a missão pendente.
+dispensa essa exigência. Os guardas dessa etapa indicavam a missão pendente; essa mensagem foi corrigida
+na etapa das 16 insígnias.
 
 Steven também marcava a carta como entregue mesmo sem `LETTER` na mochila,
 porque o roteiro original pressupunha a passagem pela Devon. Esse comportamento

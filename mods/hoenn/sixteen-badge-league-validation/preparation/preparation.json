@@ -1,0 +1,77 @@
+{
+  "status": "sixteen_badge_leagues_candidate",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "required_badges": {
+    "kanto": 8,
+    "hoenn": 8
+  },
+  "both_leagues_require_sixteen": true,
+  "league_messages_are_not_gym_messages": true,
+  "mission_checks_remain_at_regional_gym_checkpoints": true,
+  "campaign_logic_outside_league_permissions_preserved": true,
+  "regional_champions_remain_separate": true,
+  "dialogue_lines": [
+    "Both LEAGUES require all",
+    "16 GYM BADGES: eight from",
+    "KANTO and eight from HOENN.",
+    "Complete both GYM circuits!"
+  ],
+  "original_sha256": {
+    "src/journey_campaign_gates.c": "ba18f7d72b50615f4b1b14f63d81c730a277172428cc6658c68188c7dd1a736c",
+    "data/maps/IndigoPlateau_PokemonCenter_1F_Frlg/scripts.inc": "4c384126ecf02887fb4ea26621608c6397dddfcdbe674fce69e79c85467d14d5",
+    "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc": "b65a144452f264f73cda26633ea703e5c6a6050408fc34bf178491952018efe3"
+  },
+  "preserved_native_sha256": {
+    "data/scripts/journey_campaign_gates.inc": "e3199ecfaa001dd199bc288d9df028785130c6501605f42562bdb4650a4e20ab",
+    "include/journey_team_missions.h": "843e759b66469943fc90467b83f9bdb3d12cd4c58dd514af49ddd0629570137c",
+    "src/journey_gym_scaling.c": "9b1b64746a70c12fcf7f54a661aea151d8ee9e030810046d3d2ce71bef889840",
+    "src/journey_wild.c": "8272d70ab73464f7df041efb43076308e537f773f5d4a5edbb4439c216565adb",
+    "src/journey_family.c": "6da12e86a46d5b6e5d8f0c298f80d188bd491bc39491a23aa8b8ed9d2cfe0089",
+    "data/maps/SilphCo_11F_Frlg/scripts.inc": "b083bd19b463ec63b7f8e4623b37e5bb6141f0f19ce9a977605d65d2ac412ca3",
+    "data/maps/MossdeepCity_SpaceCenter_2F/scripts.inc": "04184e0e8a6ca56a6e1abd3f08e741d69a2b970dd816bb65cc742af7ab96db8d",
+    "data/maps/SeafloorCavern_Room9/scripts.inc": "efcbfdfa8ea6251a7ccd3c42d0db270585abb996c470d08ebca72c1a5b5598e1"
+  },
+  "edits": [
+    {
+      "path": "src/journey_campaign_gates.c",
+      "before": "void JourneyKantoLeaguePermission(void)\n{\n    gSpecialVar_Result = JourneyGymBadgeCount(TRUE) == 8\n        && JourneyPendingCampaignEvent(TRUE) == 0;\n}",
+      "after": "void JourneyKantoLeaguePermission(void)\n{\n    gSpecialVar_Result = JourneyGymBadgeCount(TRUE) == 8\n        && JourneyGymBadgeCount(FALSE) == 8;\n}"
+    },
+    {
+      "path": "src/journey_campaign_gates.c",
+      "before": "void JourneyHoennLeaguePermission(void)\n{\n    gSpecialVar_Result = JourneyGymBadgeCount(FALSE) == 8\n        && JourneyPendingCampaignEvent(FALSE) == 0;\n}",
+      "after": "void JourneyHoennLeaguePermission(void)\n{\n    gSpecialVar_Result = JourneyGymBadgeCount(TRUE) == 8\n        && JourneyGymBadgeCount(FALSE) == 8;\n}"
+    },
+    {
+      "path": "data/maps/IndigoPlateau_PokemonCenter_1F_Frlg/scripts.inc",
+      "before": "\tspecial JourneyRegionalStoryGuide\n\tgoto_if_ne VAR_RESULT, 0, Journey_GymGuide_Dispatch\n",
+      "after": ""
+    },
+    {
+      "path": "data/maps/IndigoPlateau_PokemonCenter_1F_Frlg/scripts.inc",
+      "before": "\t.string \"The KANTO LEAGUE requires all\\n\"\n\t.string \"eight KANTO GYM BADGES.\\p\"\n\t.string \"HOENN BADGES count toward\\n\"\n\t.string \"the HOENN LEAGUE instead.$\"\n",
+      "after": "\t.string \"Both LEAGUES require all\\n\"\n\t.string \"16 GYM BADGES: eight from\\p\"\n\t.string \"KANTO and eight from HOENN.\\n\"\n\t.string \"Complete both GYM circuits!$\"\n"
+    },
+    {
+      "path": "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc",
+      "before": "\tspecial JourneyHoennLeaguePermission\n\tcall_if_eq VAR_RESULT, FALSE, EverGrandeCity_PokemonLeague_1F_EventScript_GuardsBlockDoor\n",
+      "after": "\tspecial JourneyHoennLeaguePermission\n\tcall_if_eq VAR_RESULT, FALSE, EverGrandeCity_PokemonLeague_1F_EventScript_GuardsBlockDoor\n\tcall_if_eq VAR_RESULT, TRUE, Journey_LeagueRestoreClearedEntrance\n"
+    },
+    {
+      "path": "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc",
+      "before": "\tgoto_if_eq VAR_RESULT, FALSE, Journey_HoennLeagueMissionDenied",
+      "after": "\tgoto_if_eq VAR_RESULT, FALSE, Journey_HoennLeagueSixteenBadgesDenied"
+    },
+    {
+      "path": "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc",
+      "before": "Journey_HoennLeagueMissionDenied::\n\tspecial JourneyRegionalStoryGuide\n\tgoto_if_ne VAR_RESULT, 0, Journey_GymGuide_Dispatch\n\tgoto EverGrandeCity_PokemonLeague_1F_EventScript_NotAllBadges\n",
+      "after": "Journey_HoennLeagueSixteenBadgesDenied::\n\tmsgbox Journey_LeagueSixteenBadgeText, MSGBOX_DEFAULT\n\treleaseall\n\tend\n\nJourney_LeagueSixteenBadgeText::\n\t.string \"Both LEAGUES require all\\n\"\n\t.string \"16 GYM BADGES: eight from\\p\"\n\t.string \"KANTO and eight from HOENN.\\n\"\n\t.string \"Complete both GYM circuits!$\"\n"
+    }
+  ],
+  "prepared_sha256": {
+    "src/journey_campaign_gates.c": "eaec31794670edc2943d1405ba3605d714dfb2447786f4cb3c2ff07d02300443",
+    "data/maps/IndigoPlateau_PokemonCenter_1F_Frlg/scripts.inc": "18bc02cbf88507188c5a80213b9a4e0f4d0e97058e71a2948e0c2d108e04981f",
+    "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc": "5c91a5d5b072735efcc62a7e38a6ed5d5a4884c36b8d4a471c2dbae57f1a0bd2"
+  },
+  "full_campaign_validated": false
+}

@@ -39,7 +39,7 @@ trainers continua baseada nessa quantidade regional.
 | Hoenn, 7 insígnias | Steven com você contra Maxie/Tabitha no Centro Espacial | O último |
 | Hoenn, 7 insígnias | Giovanni com você contra Archie/Shelly na Seafloor Cavern; exige a Silph de Kanto | O último |
 | Hoenn, 7 insígnias | Despertar Rayquaza e encerrar a crise climática em Sootopolis | O último |
-| Cada região, 8 insígnias | Liga daquela região | As insígnias da outra região não substituem nenhuma |
+| Kanto e Hoenn, 8 insígnias em cada | Ambas as Ligas | 16 insígnias obrigatórias; campeões separados |
 
 ```mermaid
 flowchart TB
@@ -49,7 +49,8 @@ flowchart TB
   Incursions --> K6[6 insígnias de Kanto]
   K6 --> Silph[Giovanni derrotado na Silph Co.]
   Silph --> K8[8 insígnias de Kanto]
-  K8 --> KLiga[Liga de Kanto]
+  K8 --> All16[16 insígnias: oito de cada região]
+  All16 --> KLiga[Liga de Kanto]
   H2[2 insígnias de Hoenn] --> Chimney[Maxie: Mt. Chimney]
   Chimney --> H4[4 insígnias de Hoenn]
   H4 --> Casino[Rocket em Mauville: 9 confrontos]
@@ -64,7 +65,8 @@ flowchart TB
   Silph -->|Aliado obrigatório| Archie
   Archie --> Peace[Rayquaza encerra a crise]
   Peace --> H8[8 insígnias de Hoenn]
-  H8 --> HLiga[Liga de Hoenn]
+  H8 --> All16
+  All16 --> HLiga[Liga de Hoenn]
 ```
 
 ## Ligação entre as equipes

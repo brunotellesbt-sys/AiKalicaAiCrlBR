@@ -23,12 +23,19 @@ Mantendo o tamanho recente dos PRs, a previsão é de **10 a 20 PRs para uma
 candidata de lançamento**, sujeita aos problemas encontrados nos percursos e
 campanhas completas. A quantidade de PRs não mede a conclusão do jogo.
 
-## Avanço atual: sete episódios originais com conclusão obrigatória
+## Avanço atual: acesso às duas Ligas com 16 insígnias
+
+Corrigida a mensagem de líder ocupado nas Ligas. Ambas exigem oito insígnias
+de cada região; as missões permanecem nos checkpoints dos ginásios.
+Candidata `19a4cd8a`; [SIXTEEN-BADGE-LEAGUES.md](SIXTEEN-BADGE-LEAGUES.md).
+Ainda falta jogar as duas campanhas completas sem fixtures.
+
+## Etapa anterior: sete episódios originais com conclusão obrigatória
 
 Mt. Moon, Rockets de Cerulean/Rota 24, resgate de Fuji, Petalburg Woods,
 Rusturf/Peeko, carta a Steven e Museu de Slateport entram nas travas regionais
-de ginásios. As duas Ligas exigem a conclusão dos checkpoints, além das oito
-insígnias próprias. Corrigidas a carta aceita sem item, a ativação Devon depois
+de ginásios. A regra de Liga desta etapa foi substituída pela exigência
+das 16 insígnias descrita acima. Corrigidas a carta aceita sem item, a ativação Devon depois
 de qualquer primeiro ginásio e o reinício indevido ao vencer Roxanne mais tarde.
 Candidata `127e1f2a`; [MANDATORY-NATIVE-MISSIONS.md](MANDATORY-NATIVE-MISSIONS.md).
 
