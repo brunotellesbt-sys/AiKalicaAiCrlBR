@@ -1,0 +1,276 @@
+{
+  "status": "mandatory_native_missions_candidate",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "quests": [
+    {
+      "key": "mt_moon",
+      "kanto": true,
+      "badges": 1,
+      "event": 17,
+      "trainers": [
+        "TRAINER_TEAM_ROCKET_GRUNT",
+        "TRAINER_TEAM_ROCKET_GRUNT_2",
+        "TRAINER_TEAM_ROCKET_GRUNT_3",
+        "TRAINER_TEAM_ROCKET_GRUNT_4",
+        "TRAINER_SUPER_NERD_MIGUEL"
+      ],
+      "flags": [
+        "FLAG_GOT_FOSSIL_FROM_MT_MOON"
+      ],
+      "variables": []
+    },
+    {
+      "key": "cerulean_rocket",
+      "kanto": true,
+      "badges": 2,
+      "event": 18,
+      "trainers": [
+        "TRAINER_TEAM_ROCKET_GRUNT_5",
+        "TRAINER_TEAM_ROCKET_GRUNT_6"
+      ],
+      "flags": [
+        "FLAG_GOT_TM28_FROM_ROCKET"
+      ],
+      "variables": [
+        [
+          "VAR_MAP_SCENE_ROUTE24",
+          1
+        ]
+      ]
+    },
+    {
+      "key": "fuji_rescue",
+      "kanto": true,
+      "badges": 4,
+      "event": 19,
+      "trainers": [
+        "TRAINER_TEAM_ROCKET_GRUNT_19",
+        "TRAINER_TEAM_ROCKET_GRUNT_20",
+        "TRAINER_TEAM_ROCKET_GRUNT_21"
+      ],
+      "flags": [
+        "FLAG_RESCUED_MR_FUJI"
+      ],
+      "variables": [
+        [
+          "VAR_MAP_SCENE_POKEMON_TOWER_6F",
+          1
+        ]
+      ]
+    },
+    {
+      "key": "petalburg_woods",
+      "kanto": false,
+      "badges": 1,
+      "event": 20,
+      "trainers": [
+        "TRAINER_GRUNT_PETALBURG_WOODS"
+      ],
+      "flags": [],
+      "variables": [
+        [
+          "VAR_PETALBURG_WOODS_STATE",
+          1
+        ]
+      ]
+    },
+    {
+      "key": "rusturf_recovery",
+      "kanto": false,
+      "badges": 1,
+      "event": 21,
+      "trainers": [
+        "TRAINER_GRUNT_RUSTURF_TUNNEL"
+      ],
+      "flags": [
+        "FLAG_RECOVERED_DEVON_GOODS"
+      ],
+      "variables": []
+    },
+    {
+      "key": "steven_letter",
+      "kanto": false,
+      "badges": 2,
+      "event": 23,
+      "trainers": [],
+      "flags": [
+        "FLAG_DELIVERED_STEVEN_LETTER"
+      ],
+      "variables": []
+    },
+    {
+      "key": "oceanic_museum",
+      "kanto": false,
+      "badges": 2,
+      "event": 22,
+      "trainers": [
+        "TRAINER_GRUNT_MUSEUM_1",
+        "TRAINER_GRUNT_MUSEUM_2"
+      ],
+      "flags": [
+        "FLAG_DELIVERED_DEVON_GOODS"
+      ],
+      "variables": []
+    }
+  ],
+  "new_dialogue_lines": [
+    "The GYM LEADER is busy",
+    "helping fight TEAM ROCKET!",
+    "Go to MT. MOON on ROUTE 4.",
+    "Clear the basement ROCKETS.",
+    "Help secure the fossils, too!",
+    "The GYM LEADER is busy",
+    "helping fight TEAM ROCKET!",
+    "Visit CERULEAN and ROUTE 24.",
+    "Recover the stolen TM and",
+    "stop the bridge recruiter!",
+    "The GYM LEADER is busy",
+    "helping fight TEAM ROCKET!",
+    "Go to LAVENDER via ROUTE 8.",
+    "Calm the ghost in the TOWER.",
+    "Clear floor 7 and save FUJI!",
+    "The GYM LEADER is busy",
+    "helping fight TEAM AQUA!",
+    "Go to PETALBURG WOODS,",
+    "on ROUTE 104.",
+    "Help the DEVON researcher!",
+    "The GYM LEADER is busy",
+    "helping fight TEAM AQUA!",
+    "Visit RUSTBORO, then take",
+    "ROUTE 116 to RUSTURF TUNNEL.",
+    "Rescue PEEKO and the package!",
+    "The GYM LEADER is busy",
+    "helping fight TEAM AQUA!",
+    "Go to SLATEPORT SHIPYARD,",
+    "then the OCEANIC MUSEUM.",
+    "Deliver the DEVON PARTS",
+    "and help STERN on floor 2!",
+    "The GYM LEADER is busy",
+    "helping DEVON researchers.",
+    "Visit DEVON CORP in RUSTBORO.",
+    "Take the LETTER to STEVEN",
+    "in GRANITE CAVE, ROUTE 106.",
+    "Please bring the LETTER from",
+    "DEVON CORP in RUSTBORO."
+  ],
+  "regional_leagues_require_story_completion": true,
+  "roads_not_closed": true,
+  "existing_boss_thresholds_preserved": true,
+  "devon_theft_after_first_arbitrary_hoenn_badge": true,
+  "late_roxanne_does_not_reset_devon": true,
+  "original_sha256": {
+    "src/journey_campaign_gates.c": "6e232439cdac2f0cb70cd28ba2aa6646d4e43554602d903b93f458c13076c8fb",
+    "data/scripts/journey_campaign_gates.inc": "3295963cca11d36901ad0a27cbfec8711895bd91c3c560f1345afe4362c9199e",
+    "data/specials.inc": "92109e5c56a845acd5eb53e2a3f1f432c0e0a90b4acb8db6e08de99004e29b7a",
+    "data/maps/IndigoPlateau_PokemonCenter_1F_Frlg/scripts.inc": "8e18e82b00238b175ef09dc9b5951017b6b129ba1704410f74f1fa37a758562d",
+    "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc": "dcd902ed5895ef76e769bbfb7852c6e6a979cd47334ba4c3884b65a930262a6a",
+    "data/maps/RustboroCity_Gym/scripts.inc": "e3e4b1b20755c7f83bf8b83baeb5f60288f6dc00b520ece64228062cd337551d",
+    "data/maps/GraniteCave_StevensRoom/scripts.inc": "ac8d5292630fed7581e2d42ac759ddb9418aee9d8cd4a5bc4e5df18b6b3b2d0f"
+  },
+  "preserved_native_sha256": {
+    "data/maps/MtMoon_B2F_Frlg/scripts.inc": "4c07e54cd76bcd3a1093d89a8a7a90e64b482914c11900080c1282cdcc10fac4",
+    "data/maps/Route24_Frlg/scripts.inc": "1411b48acab4b080e877fa865344dd6b468d6d8ec5a1cb6046ce3cc977222dcd",
+    "data/maps/CeruleanCity_Frlg/scripts.inc": "342c0da4b0382de8ff1e3446cb5431afd136a7a02c223b2db640524c38290293",
+    "data/maps/PokemonTower_6F_Frlg/scripts.inc": "b377d55ede45fafba1f2dcb2041d6fa746e430066fcef1144ddcb55d2d25a1d2",
+    "data/maps/PokemonTower_7F_Frlg/scripts.inc": "ff5a7aac52806426f57ae6b3672e0810c2fef642be09f6a605d99bf81cb1e954",
+    "data/maps/PetalburgWoods/scripts.inc": "1108c54edd44f6a9307d6f4a8d0b1bf7168f9a44fa0f61ed51046d8f584d93ba",
+    "data/maps/RusturfTunnel/scripts.inc": "55b05911c50e743fba753ff36bc6ae26cc536e974c95652354d0145fb5b5f27c",
+    "data/maps/RustboroCity/scripts.inc": "2ab915763f243a5767dca515da766bcdb8f2715045e55aa18660808cfcdf9667",
+    "data/maps/SlateportCity_OceanicMuseum_2F/scripts.inc": "aedfab902e49bbede6d4c689ce3fe880681cf1598ef67a2e230ee1bc43042fe1",
+    "src/journey_gym_scaling.c": "9b1b64746a70c12fcf7f54a661aea151d8ee9e030810046d3d2ce71bef889840",
+    "src/journey_wild.c": "8272d70ab73464f7df041efb43076308e537f773f5d4a5edbb4439c216565adb",
+    "src/journey_family.c": "6da12e86a46d5b6e5d8f0c298f80d188bd491bc39491a23aa8b8ed9d2cfe0089"
+  },
+  "edits": [
+    {
+      "path": "src/journey_campaign_gates.c",
+      "before": "u32 JourneyPendingCampaignEvent(bool32 kanto)",
+      "after": "static u32 JourneyNativeCampaignEvent(bool32 kanto, u32 count)\n{\n    if (kanto == TRUE && count >= 1\n        && (!RegionalFlag(TRAINER_FLAGS_START + TRAINER_TEAM_ROCKET_GRUNT)\n            || !RegionalFlag(TRAINER_FLAGS_START + TRAINER_TEAM_ROCKET_GRUNT_2)\n            || !RegionalFlag(TRAINER_FLAGS_START + TRAINER_TEAM_ROCKET_GRUNT_3)\n            || !RegionalFlag(TRAINER_FLAGS_START + TRAINER_TEAM_ROCKET_GRUNT_4)\n            || !RegionalFlag(TRAINER_FLAGS_START + TRAINER_SUPER_NERD_MIGUEL)\n            || !RegionalFlag(FLAG_GOT_FOSSIL_FROM_MT_MOON)))\n        return 17;\n    if (kanto == TRUE && count >= 2\n        && (!RegionalFlag(TRAINER_FLAGS_START + TRAINER_TEAM_ROCKET_GRUNT_5)\n            || !RegionalFlag(TRAINER_FLAGS_START + TRAINER_TEAM_ROCKET_GRUNT_6)\n            || !RegionalFlag(FLAG_GOT_TM28_FROM_ROCKET)\n            || VarGet(VAR_MAP_SCENE_ROUTE24) < 1))\n        return 18;\n    if (kanto == TRUE && count >= 4\n        && (!RegionalFlag(TRAINER_FLAGS_START + TRAINER_TEAM_ROCKET_GRUNT_19)\n            || !RegionalFlag(TRAINER_FLAGS_START + TRAINER_TEAM_ROCKET_GRUNT_20)\n            || !RegionalFlag(TRAINER_FLAGS_START + TRAINER_TEAM_ROCKET_GRUNT_21)\n            || !RegionalFlag(FLAG_RESCUED_MR_FUJI)\n            || VarGet(VAR_MAP_SCENE_POKEMON_TOWER_6F) < 1))\n        return 19;\n    if (kanto == FALSE && count >= 1\n        && (!RegionalFlag(TRAINER_FLAGS_START + TRAINER_GRUNT_PETALBURG_WOODS)\n            || VarGet(VAR_PETALBURG_WOODS_STATE) < 1))\n        return 20;\n    if (kanto == FALSE && count >= 1\n        && (!RegionalFlag(TRAINER_FLAGS_START + TRAINER_GRUNT_RUSTURF_TUNNEL)\n            || !RegionalFlag(FLAG_RECOVERED_DEVON_GOODS)))\n        return 21;\n    if (kanto == FALSE && count >= 2\n        && (!RegionalFlag(FLAG_DELIVERED_STEVEN_LETTER)))\n        return 23;\n    if (kanto == FALSE && count >= 2\n        && (!RegionalFlag(TRAINER_FLAGS_START + TRAINER_GRUNT_MUSEUM_1)\n            || !RegionalFlag(TRAINER_FLAGS_START + TRAINER_GRUNT_MUSEUM_2)\n            || !RegionalFlag(FLAG_DELIVERED_DEVON_GOODS)))\n        return 22;\n    return 0;\n}\n\nu32 JourneyPendingCampaignEvent(bool32 kanto)"
+    },
+    {
+      "path": "src/journey_campaign_gates.c",
+      "before": "    u32 i, count = JourneyGymBadgeCount(kanto);\n",
+      "after": "    u32 i, count = JourneyGymBadgeCount(kanto);\n    u32 nativeEvent = JourneyNativeCampaignEvent(kanto, count);\n    if (nativeEvent && nativeEvent != 19) return nativeEvent;\n"
+    },
+    {
+      "path": "src/journey_campaign_gates.c",
+      "before": "    for (i = 0; i < ARRAY_COUNT(sJourneyTeamMissions); i++)\n        if (sJourneyTeamMissions[i].kanto == kanto\n            && count >=",
+      "after": "    if (nativeEvent) return nativeEvent;\n    for (i = 0; i < ARRAY_COUNT(sJourneyTeamMissions); i++)\n        if (sJourneyTeamMissions[i].kanto == kanto\n            && count >="
+    },
+    {
+      "path": "src/journey_campaign_gates.c",
+      "before": "bool32 JourneyCanChallengeSilph(void)\n{\n    return JourneyGymBadgeCount(TRUE) >= 6",
+      "after": "bool32 JourneyCanChallengeSilph(void)\n{\n    return JourneyGymBadgeCount(TRUE) >= 6\n        && JourneyNativeCampaignEvent(TRUE, 8) == 0"
+    },
+    {
+      "path": "src/journey_campaign_gates.c",
+      "before": "bool32 JourneyCanStartArchieAlliance(void)\n{\n    return JourneyGymBadgeCount(FALSE) >= 7",
+      "after": "bool32 JourneyCanStartArchieAlliance(void)\n{\n    return JourneyGymBadgeCount(FALSE) >= 7\n        && JourneyNativeCampaignEvent(FALSE, 8) == 0"
+    },
+    {
+      "path": "src/journey_campaign_gates.c",
+      "before": "void JourneyUpdateGymGate(void)",
+      "after": "\nstatic void JourneyStartDevonRecovery(void)\n{\n    // Start the theft after the first arbitrary Hoenn badge, not just Roxanne.\n    if (JourneyGymBadgeCount(FALSE) >= 1\n        && JourneyNativeCampaignEvent(FALSE, 1) != 20\n        && VarGet(VAR_RUSTBORO_CITY_STATE) == 0)\n        VarSet(VAR_RUSTBORO_CITY_STATE, 1);\n}\n\nvoid JourneyKantoLeaguePermission(void)\n{\n    gSpecialVar_Result = JourneyGymBadgeCount(TRUE) == 8\n        && JourneyPendingCampaignEvent(TRUE) == 0;\n}\n\nvoid JourneyHoennLeaguePermission(void)\n{\n    gSpecialVar_Result = JourneyGymBadgeCount(FALSE) == 8\n        && JourneyPendingCampaignEvent(FALSE) == 0;\n}\n\nvoid JourneyRegionalStoryGuide(void)\n{\n    gSpecialVar_Result = JourneyPendingCampaignEvent(isFrlg);\n}\n\nvoid JourneyUpdateGymGate(void)"
+    },
+    {
+      "path": "src/journey_campaign_gates.c",
+      "before": "    if (!isFrlg)\n        JourneyStartSpaceCenterInvasion();",
+      "after": "    if (!isFrlg)\n    {\n        JourneyStartDevonRecovery();\n        JourneyStartSpaceCenterInvasion();\n    }"
+    },
+    {
+      "path": "data/scripts/journey_campaign_gates.inc",
+      "before": "\tspecial JourneyExplainGymGate\n",
+      "after": "\tspecial JourneyExplainGymGate\nJourney_GymGuide_Dispatch::\n"
+    },
+    {
+      "path": "data/scripts/journey_campaign_gates.inc",
+      "before": "\tgoto_if_eq VAR_RESULT, 16, Journey_GymGuide_Event16\n",
+      "after": "\tgoto_if_eq VAR_RESULT, 16, Journey_GymGuide_Event16\n\tgoto_if_eq VAR_RESULT, 17, Journey_GymGuide_Event17\n\tgoto_if_eq VAR_RESULT, 18, Journey_GymGuide_Event18\n\tgoto_if_eq VAR_RESULT, 19, Journey_GymGuide_Event19\n\tgoto_if_eq VAR_RESULT, 20, Journey_GymGuide_Event20\n\tgoto_if_eq VAR_RESULT, 21, Journey_GymGuide_Event21\n\tgoto_if_eq VAR_RESULT, 23, Journey_GymGuide_Event23\n\tgoto_if_eq VAR_RESULT, 22, Journey_GymGuide_Event22\n"
+    },
+    {
+      "path": "data/specials.inc",
+      "before": "\tdef_special JourneyFirstBadgeRewardPermission",
+      "after": "\tdef_special JourneyFirstBadgeRewardPermission\n\tdef_special JourneyKantoLeaguePermission\n\tdef_special JourneyHoennLeaguePermission\n\tdef_special JourneyRegionalStoryGuide"
+    },
+    {
+      "path": "data/maps/IndigoPlateau_PokemonCenter_1F_Frlg/scripts.inc",
+      "before": "\tsetvar VAR_RESULT, TRUE\n\treturn\n",
+      "after": "\tspecial JourneyKantoLeaguePermission\n\treturn\n"
+    },
+    {
+      "path": "data/maps/IndigoPlateau_PokemonCenter_1F_Frlg/scripts.inc",
+      "before": "IndigoPlateau_Journey_Denied::\n",
+      "after": "IndigoPlateau_Journey_Denied::\n\tspecial JourneyRegionalStoryGuide\n\tgoto_if_ne VAR_RESULT, 0, Journey_GymGuide_Dispatch\n"
+    },
+    {
+      "path": "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc",
+      "before": "\tcall_if_unset FLAG_ENTERED_ELITE_FOUR, EverGrandeCity_PokemonLeague_1F_EventScript_GuardsBlockDoor",
+      "after": "\tspecial JourneyHoennLeaguePermission\n\tcall_if_eq VAR_RESULT, FALSE, EverGrandeCity_PokemonLeague_1F_EventScript_GuardsBlockDoor\n\tcall_if_unset FLAG_ENTERED_ELITE_FOUR, EverGrandeCity_PokemonLeague_1F_EventScript_GuardsBlockDoor"
+    },
+    {
+      "path": "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc",
+      "before": "EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard::\n\tlockall\n",
+      "after": "EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard::\n\tlockall\n\tspecial JourneyHoennLeaguePermission\n\tgoto_if_eq VAR_RESULT, FALSE, Journey_HoennLeagueMissionDenied\n"
+    },
+    {
+      "path": "data/maps/RustboroCity_Gym/scripts.inc",
+      "before": "\tsetvar VAR_RUSTBORO_CITY_STATE, 1",
+      "after": "\tcall_if_eq VAR_RUSTBORO_CITY_STATE, 0, Journey_RoxanneStartDevonRecovery"
+    },
+    {
+      "path": "data/maps/GraniteCave_StevensRoom/scripts.inc",
+      "before": "GraniteCave_StevensRoom_EventScript_Steven::\n\tlock\n\tfaceplayer\n",
+      "after": "GraniteCave_StevensRoom_EventScript_Steven::\n\tlock\n\tfaceplayer\n\tgoto_if_set FLAG_DELIVERED_STEVEN_LETTER, Journey_StevenLetterReady\n\tcheckitem ITEM_LETTER\n\tgoto_if_eq VAR_RESULT, FALSE, Journey_StevenLetterNeeded\nJourney_StevenLetterReady::\n"
+    }
+  ],
+  "prepared_sha256": {
+    "src/journey_campaign_gates.c": "ba18f7d72b50615f4b1b14f63d81c730a277172428cc6658c68188c7dd1a736c",
+    "data/scripts/journey_campaign_gates.inc": "e3199ecfaa001dd199bc288d9df028785130c6501605f42562bdb4650a4e20ab",
+    "data/specials.inc": "3e3d4fce5d7f1f2a4be0086a3d8b66137a93532242477fe58d8a95fb993fe9e2",
+    "data/maps/IndigoPlateau_PokemonCenter_1F_Frlg/scripts.inc": "4c384126ecf02887fb4ea26621608c6397dddfcdbe674fce69e79c85467d14d5",
+    "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc": "b65a144452f264f73cda26633ea703e5c6a6050408fc34bf178491952018efe3",
+    "data/maps/RustboroCity_Gym/scripts.inc": "c635ea7f991afcad3fdc117ae67ae4566cfdbd3a3b9c33c2e8f5f576f27b4938",
+    "data/maps/GraniteCave_StevensRoom/scripts.inc": "a8e45f14c25592b64f10c295341c3f6612e429b097ed138c299411de5e8046ea"
+  },
+  "full_campaign_validated": false
+}

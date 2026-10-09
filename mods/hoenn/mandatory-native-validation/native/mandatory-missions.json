@@ -1,0 +1,172 @@
+{
+  "passed": true,
+  "rom_sha256": "127e1f2ae2eab558764d9e2f585c0ba1772e6f32b8d6f660d51a91ad094cfa03",
+  "gym_doors": [
+    {
+      "quest": "mt_moon",
+      "event": 17,
+      "physical_block": true,
+      "opens_after_completion": true
+    },
+    {
+      "quest": "cerulean_rocket",
+      "event": 18,
+      "physical_block": true,
+      "opens_after_completion": true
+    },
+    {
+      "quest": "fuji_rescue",
+      "event": 19,
+      "physical_block": true,
+      "opens_after_completion": true
+    },
+    {
+      "quest": "petalburg_woods",
+      "event": 20,
+      "physical_block": true,
+      "opens_after_completion": true
+    },
+    {
+      "quest": "rusturf_recovery",
+      "event": 21,
+      "physical_block": true,
+      "opens_after_completion": true
+    },
+    {
+      "quest": "steven_letter",
+      "event": 23,
+      "physical_block": true,
+      "opens_after_completion": true
+    },
+    {
+      "quest": "oceanic_museum",
+      "event": 22,
+      "physical_block": true,
+      "opens_after_completion": true
+    }
+  ],
+  "league_guards": [
+    {
+      "quest": "mt_moon",
+      "own_badges": 8,
+      "other_badges": 8,
+      "physical_guard": true,
+      "old_elite_entry_flag_cannot_bypass": true,
+      "native_save_roundtrip": true,
+      "opens_after_completion": true
+    },
+    {
+      "quest": "cerulean_rocket",
+      "own_badges": 8,
+      "other_badges": 8,
+      "physical_guard": true,
+      "old_elite_entry_flag_cannot_bypass": true,
+      "native_save_roundtrip": true,
+      "opens_after_completion": true
+    },
+    {
+      "quest": "fuji_rescue",
+      "own_badges": 8,
+      "other_badges": 8,
+      "physical_guard": true,
+      "old_elite_entry_flag_cannot_bypass": true,
+      "native_save_roundtrip": true,
+      "opens_after_completion": true
+    },
+    {
+      "quest": "petalburg_woods",
+      "own_badges": 8,
+      "other_badges": 8,
+      "physical_guard": true,
+      "old_elite_entry_flag_cannot_bypass": true,
+      "native_save_roundtrip": true,
+      "opens_after_completion": true
+    },
+    {
+      "quest": "rusturf_recovery",
+      "own_badges": 8,
+      "other_badges": 8,
+      "physical_guard": true,
+      "old_elite_entry_flag_cannot_bypass": true,
+      "native_save_roundtrip": true,
+      "opens_after_completion": true
+    },
+    {
+      "quest": "steven_letter",
+      "own_badges": 8,
+      "other_badges": 8,
+      "physical_guard": true,
+      "old_elite_entry_flag_cannot_bypass": true,
+      "native_save_roundtrip": true,
+      "opens_after_completion": true
+    },
+    {
+      "quest": "oceanic_museum",
+      "own_badges": 8,
+      "other_badges": 8,
+      "physical_guard": true,
+      "old_elite_entry_flag_cannot_bypass": true,
+      "native_save_roundtrip": true,
+      "opens_after_completion": true
+    }
+  ],
+  "league_badge_subset_cases": 512,
+  "devon_first_badge_cases": [
+    {
+      "first_badge": 1,
+      "theft_started": true,
+      "no_synthetic_recovery": true,
+      "late_revisit_keeps_state": true
+    },
+    {
+      "first_badge": 2,
+      "theft_started": true,
+      "no_synthetic_recovery": true,
+      "late_revisit_keeps_state": true
+    },
+    {
+      "first_badge": 3,
+      "theft_started": true,
+      "no_synthetic_recovery": true,
+      "late_revisit_keeps_state": true
+    },
+    {
+      "first_badge": 4,
+      "theft_started": true,
+      "no_synthetic_recovery": true,
+      "late_revisit_keeps_state": true
+    },
+    {
+      "first_badge": 5,
+      "theft_started": true,
+      "no_synthetic_recovery": true,
+      "late_revisit_keeps_state": true
+    },
+    {
+      "first_badge": 6,
+      "theft_started": true,
+      "no_synthetic_recovery": true,
+      "late_revisit_keeps_state": true
+    },
+    {
+      "first_badge": 7,
+      "theft_started": true,
+      "no_synthetic_recovery": true,
+      "late_revisit_keeps_state": true
+    },
+    {
+      "first_badge": 8,
+      "theft_started": true,
+      "no_synthetic_recovery": true,
+      "late_revisit_keeps_state": true
+    }
+  ],
+  "roxanne_postbattle_preserved_states": [
+    4,
+    7
+  ],
+  "actual_steven_interaction_requires_and_consumes_letter": true,
+  "completion_badges_travel_and_postbattle_entries_are_fixtures": true,
+  "original_quest_battles_played": false,
+  "full_campaign_playthrough": false
+}

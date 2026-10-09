@@ -46,6 +46,20 @@ def reset_aqua():
         raw_flag(0x500 + 32, True) # Shelly's native trainer flag.
         raw_flag(0x500 + 30, True) # Matt's native trainer flag.
         raw_flag(flag_id('FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE'), True)
+native_quests = []
+if (source / '.journey-mandatory-native-missions').exists():
+    native_quests = json.loads((source / '.journey-mandatory-native-missions').read_text())['quests']
+    names = sorted({n for q in native_quests for n in q['trainers'] + q['flags'] + [v for v, _ in q['variables']]})
+    compiled = subprocess.run([str(ROOT / '.local/arm-gcc/usr/bin/arm-none-eabi-gcc'), '-S', '-mabi=apcs-gnu',
+        '-iquote', str(source / 'include'), '-x', 'c', '-', '-o', '-'],
+        input='#include "global.h"\n#include "constants/flags.h"\n#include "constants/vars.h"\n#include "constants/opponents.h"\nconst u32 quest_ids[] = {' + ','.join(names) + '};',
+        text=True, capture_output=True, check=True).stdout
+    quest_ids = dict(zip(names, [int(n) for n in re.findall(r'\.word\s+(\d+)', compiled.split('quest_ids:', 1)[1].split('.size', 1)[0])]))
+def reset_native():
+    for q in native_quests:
+        for t in q['trainers']: raw_flag(0x500 + quest_ids[t], True)
+        for f in q['flags']: raw_flag(quest_ids[f], True)
+        for v, value in q['variables']: native('VarSet', quest_ids[v], value)
 scenarios = [(True, 'complete', 0, 0, None), (False, 'complete', 0, 0, None),
              (True, 'rocket_hideout', 2, 1, completion[0]),
              (True, 'silph', 6, 2, completion[1]),
@@ -64,16 +78,26 @@ if aqua_episodes:
 for mission in stories['missions']:
     scenarios.append((mission['kanto'], mission['key'], mission['badge_count'],
                       mission['event'], 0x500 + trainer_ids[mission['trainers'][0]]))
+for q in native_quests:
+    for name in q['trainers']:
+        scenarios.append((q['kanto'], q['key'] + ':' + name, q['badges'], q['event'], 0x500 + quest_ids[name]))
+    for name in q['flags']:
+        scenarios.append((q['kanto'], q['key'] + ':' + name, q['badges'], q['event'], quest_ids[name]))
+    for name, value in q['variables']:
+        scenarios.append((q['kanto'], q['key'] + ':' + name, q['badges'], q['event'], ('variable', quest_ids[name], value - 1)))
 checks = []
 for kanto, name, threshold, event, missing in scenarios:
     reset_aqua()
+    reset_native()
     raw_flag(flag_id('FLAG_SYS_WEATHER_CTRL'), False)
     for flag in completion:
         raw_flag(flag_id(flag), True)
     native('VarSet', 0x409F, 3)
     for trainer in stories['trainers']:
         raw_flag(0x500 + trainer['id'], True)
-    if missing == 'weather_institute':
+    if isinstance(missing, tuple):
+        native('VarSet', missing[1], missing[2])
+    elif missing == 'weather_institute':
         native('VarSet', 0x40B3, 0)
     elif missing == 'weather_crisis':
         raw_flag(flag_id('FLAG_SYS_WEATHER_CTRL'), True)
@@ -99,6 +123,7 @@ for kanto, name, threshold, event, missing in scenarios:
 # Permissions test the cross-region prerequisite separately from pending-door choice.
 for count in range(9):
     reset_aqua()
+    reset_native()
     bank(kanto_badges, (1 << count) - 1)
     bank(hoenn_badges, (1 << count) - 1)
     for flag in completion:
@@ -115,6 +140,7 @@ for count in range(9):
     assert not native('JourneyCanStartArchieAlliance')
 extra_permission_cases = 0
 if aqua_episodes:
+    reset_native()
     bank(hoenn_badges, 255)
     bank(kanto_badges, 255)
     raw_flag(flag_id('FLAG_HIDE_SAFFRON_ROCKETS'), True)
@@ -135,6 +161,7 @@ result = dict(passed=True, rom_sha256=hashlib.sha256((source / 'pokeemerald.gba'
               native_gate_decisions=True, checks=checks, gate_cases=len(checks) * 256,
               permission_cases=9 * 4 + extra_permission_cases, all_regional_badge_subsets=True,
               native_aqua_episodes_required=aqua_episodes,
+              native_story_quests_required=len(native_quests),
               other_region_badges_cannot_bypass_gate=True, giovanni_and_space_center_required=True,
               flags_are_initial_state_fixtures=True, full_campaign_playthrough=False)
 (args.output / 'campaign-matrix.json').write_text(json.dumps(result, indent=2) + '\n')
