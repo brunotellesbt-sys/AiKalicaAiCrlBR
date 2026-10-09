@@ -5,6 +5,11 @@ versão anterior. A candidata exige um novo jogo; não há conversão de saves.
 
 ## Etapas com verificações específicas
 
+- Altering Cave e Desert Underpass acessíveis antes da Liga: removidas duas
+  dependências antigas de campeão, com entradas, retornos, novas entradas e
+  quatro Continues nativos. Fossil Maniac e recompensas preservados; passaram
+  Sootopolis e a matriz de missões na candidata `6fb57b05`, camada de dois
+  scripts. [CAVE-ACCESS.md](CAVE-ACCESS.md).
 - Acesso e retorno de Sootopolis pela Rota 126 exercitados sem insígnias:
   Dive, Surf entre as duas margens, casa oeste e Centro Pokémon leste,
   190 mudanças de posição e seis Continues. Mesma candidata `12379c4e`;

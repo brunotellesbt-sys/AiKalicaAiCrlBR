@@ -23,7 +23,17 @@ Mantendo o tamanho recente dos PRs, a previsão é de **10 a 20 PRs para uma
 candidata de lançamento**, sujeita aos problemas encontrados nos percursos e
 campanhas completas. A quantidade de PRs não mede a conclusão do jogo.
 
-## Avanço atual: acesso e retorno de Sootopolis
+## Avanço atual: duas passagens antigas de pós-jogo
+
+Altering Cave e Desert Underpass ainda dependiam da vitória na Liga de
+Hoenn. Essa dependência foi retirada dos dois scripts de entrada. Passaram
+ida, volta e nova entrada após Continue com zero insígnias, além da descoberta
+nativa de Desert Underpass. Recompensas, encontros e missões foram preservados;
+Sootopolis e a matriz regional passaram na nova candidata. O interior completo
+da caverna, as campanhas e outros caminhos seguem pendentes.
+[CAVE-ACCESS.md](CAVE-ACCESS.md).
+
+## Etapa anterior: acesso e retorno de Sootopolis
 
 A Rota 126, a passagem submersa e as duas margens de Sootopolis foram
 percorridas no motor, com visita à casa oeste e ao Centro Pokémon leste.
