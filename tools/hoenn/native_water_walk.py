@@ -17,14 +17,17 @@ step_warps = {}
 for n, m in maps.items():
     layout = layouts[globals().get('walk_layout_overrides', {}).get(n, m['layout'])]
     blocks[n] = (layout['width'], layout['height'], struct.unpack('<' + 'H' * (layout['width'] * layout['height']), (source / layout['blockdata_filepath']).read_bytes()))
-    assert layout['layout_version'] == 'emerald'
+    assert layout['layout_version'] in ('emerald', 'frlg')
+    frlg = layout['layout_version'] == 'frlg'
+    primary_count, attribute_size, behavior_mask = (640, 4, 511) if frlg else (512, 2, 255)
     primary = s[layout['primary_tileset'].replace('gTileset_', 'gMetatileAttributes_')]
     secondary = s[layout['secondary_tileset'].replace('gTileset_', 'gMetatileAttributes_')]
     valid = set()
     behaviors[n] = []
     for i, tile in enumerate(blocks[n][2]):
         tid = tile & 1023
-        behavior = lib.read16((primary if tid < 512 else secondary) + 2 * (tid if tid < 512 else tid - 512)) & 255
+        address = (primary if tid < primary_count else secondary) + attribute_size * (tid if tid < primary_count else tid - primary_count)
+        behavior = (lib.read32(address) if frlg else lib.read16(address)) & behavior_mask
         behaviors[n].append(behavior)
         if any(w['x'] == i % blocks[n][0] and w['y'] == i // blocks[n][0]
                for w in m['warp_events']) and behavior not in step_warps:
