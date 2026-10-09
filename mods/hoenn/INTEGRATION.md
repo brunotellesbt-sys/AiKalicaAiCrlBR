@@ -415,7 +415,7 @@ migrar a jornada personalizada, o rival do sexo oposto, o catálogo anterior,
 encontros adaptativos e viagens/tickets. A candidata continua exigindo save
 novo; a ROM e o player publicados preservam a versão anterior.
 
-## Histórias independentes e ordem livre
+## Histórias regionais conectadas e ordem livre
 
 Cada região deve preservar sua própria campanha, próxima do jogo original.
 Os oito ginásios de Kanto valem apenas para a Liga de Kanto; os oito de
@@ -1185,3 +1185,20 @@ reconstrói os NPCs antes do reembarque. Há uma batalha PWT adicional nessa
 candidata, com seis Pokémon e Battle Bond, sem alterar a distribuição por rota.
 Detalhes em [FRONTIER-TRAVEL.md](FRONTIER-TRAVEL.md); trabalho restante em
 [REMAINING-WORK.md](REMAINING-WORK.md). O player permanece sem atualização.
+
+## Revisão da ligação entre histórias e progressão nativa
+
+As campanhas compartilham a ligação obrigatória da Silph com Giovanni aliado
+contra Archie/Shelly. A auditoria foi corrigida para registrar histórias
+conectadas com insígnias, missões e Ligas separadas; a antiga classificação de
+campanhas independentes era imprecisa. As regras e a candidata `92c95316`
+permanecem iguais. Relatórios históricos conservam suas evidências originais.
+
+Passaram 28 vitórias nativas nas seis missões adicionais, cinco verificações
+de portas físicas, revisitas sem nova batalha e Continue entre missões. Outra
+execução pegou o Card Key original, abriu a porta da Silph, recusou o confronto
+com cinco insígnias e venceu Giovanni com seis, confirmando que a conclusão
+libera sua participação em Hoenn e persiste após Continue. Insígnias iniciais,
+episódios anteriores, viagens e atributos aumentados são fixtures; não houve
+campanhas completas nem validação de dificuldade. Sequência, comandos e
+relatórios em [INTEGRATED-STORY.md](INTEGRATED-STORY.md).

@@ -79,10 +79,21 @@ def audit(source):
                       and re.search(r'FLAG_|VAR_', line)]
         dependencies.append(dict(path=path, conditions=references))
 
+    connected = (source / '.journey-team-stories').exists()
+    gate_source = read('src/journey_campaign_gates.c') if connected else ''
+    if connected and ('JourneyCanStartArchieAlliance' not in gate_source
+                      or 'RegionalFlag(FLAG_HIDE_SAFFRON_ROCKETS)' not in gate_source):
+        raise ValueError('Missing mandatory Silph prerequisite for Giovanni alliance')
     return dict(status='campaign_dependency_audit_not_complete_integration',
+                rom_sha256=(hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest() if (source / 'pokeemerald.gba').exists() else None),
                 original_games=['LeafGreen', 'Emerald'], bosses=bosses, regular_gym_replacements=regular_gyms,
                 league_guards=leagues, gym_conditions=dependencies,
-                policy=dict(independent_campaigns=True, independent_leagues=True,
+                policy=dict(independent_campaigns=not connected, connected_campaigns=connected,
+                            independent_leagues=True, independent_badge_counts=True,
+                            independent_regional_mission_tracking=True,
+                            mandatory_cross_region_prerequisite=(dict(event='Archie and Shelly alongside Giovanni',
+                                required='Giovanni defeated in Silph Co.',
+                                kanto_badges=6, hoenn_badges=7, optional=False) if connected else None),
                             free_choice_of_gym_order=True,
                             boss_badge_thresholds=dict(kanto_before_gym=[3,5,7] if (source / '.journey-team-stories').exists() else [3,4], hoenn_before_gym=[3,5,6,8,8] if (source / '.journey-team-stories').exists() else [3,6,7,7]),
                             gym_door_guide_explains_team_and_location=True,

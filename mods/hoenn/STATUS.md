@@ -6,7 +6,7 @@ versão anterior. A candidata exige um novo jogo; não há conversão de saves.
 ## Etapas com verificações específicas
 
 - Kanto, Hoenn e Sevii conectados, incluindo 96 travessias físicas por Surf.
-- Histórias e insígnias separadas, missões nas portas dos ginásios e ligação
+- Histórias conectadas, insígnias e Ligas separadas, missões nas portas dos ginásios e ligação
   obrigatória entre Giovanni na Silph e a batalha final contra Archie.
 - Ginásios em ordem livre com níveis por quantidade de insígnias da região.
 - Casas fixas, escolha da cidade antes da chegada por caminhão ou barco,
@@ -207,6 +207,18 @@ Os três torneios completos são da camada PWT anterior; os dois scripts de
 porto constituem a diferença desta camada. As fixtures não validam dificuldade
 ou campanhas completas. Reprodução e limites em [FRONTIER-TRAVEL.md](FRONTIER-TRAVEL.md).
 Prioridades para continuar em [REMAINING-WORK.md](REMAINING-WORK.md).
+
+## Progressão das histórias conectadas
+
+A auditoria atual distingue a ligação obrigatória Silph–Giovanni–Archie dos
+bancos regionais de insígnias, missões e Ligas. Passaram 28 vitórias nativas
+nas incursões/base Rocket, avanço das seis missões, portas físicas e Continue.
+Um teste adicional venceu Giovanni pelo evento da Silph após pegar o Card Key,
+confirmou a recusa com cinco insígnias e a liberação do aliado em Hoenn com seis.
+A candidata e as regras do jogo são as mesmas `92c95316`; esta revisão amplia
+as evidências, sem alterar a ROM. Os atributos aumentados, viagens e estados
+iniciais de fixture não validam balanceamento nem campanhas completas.
+Sequência e reprodução em [INTEGRATED-STORY.md](INTEGRATED-STORY.md).
 
 ## Trabalho que falta antes do lançamento
 
