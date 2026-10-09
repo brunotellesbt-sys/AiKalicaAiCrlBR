@@ -23,7 +23,16 @@ Mantendo o tamanho recente dos PRs, a previsão é de **10 a 20 PRs para uma
 candidata de lançamento**, sujeita aos problemas encontrados nos percursos e
 campanhas completas. A quantidade de PRs não mede a conclusão do jogo.
 
-## Avanço atual: reencontro de Wanda sem HM terrestre
+## Avanço atual: percursos iniciais com controle e galeria marítima
+
+As duas campanhas completas **continuam pendentes**. Foram percorridas as
+aberturas desde Novo Jogo: Kanto até vencer o rival, Hoenn até o resgate de
+Birch e a entrega do inicial no laboratório, sem conceder progresso ou
+alterar atributos. [CAMPAIGN-PLAYTHROUGH.md](CAMPAIGN-PLAYTHROUGH.md).
+A [galeria](SEA-MAP-GALLERY.md) mostra 25 mapas marítimos ativos; o desenho das
+ilhotas ainda precisa de variedade. A ROM permanece `407bd93b`.
+
+## Etapa anterior: reencontro de Wanda sem HM terrestre
 
 Corrigido o gatilho da cena de Rusturf Tunnel, que dependia das pedras removidas.
 Passaram as caminhadas pelo oeste/leste, recompensa TM53, salvar/Continue e
