@@ -1,5 +1,13 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+Silph Scope, Devon Scope e Wailmer Pail são entregues pela mãe desde o início,
+nas duas regiões, sem concluir as missões originais; a Poké Flute continua como
+recompensa do primeiro ginásio. Encontros fixos da história permanecem como
+exceções ao habitat único dos selvagens. Candidata `ba38f2ff`, com entrega ARM
+nas 31 casas, conversa nativa nas duas regiões, continuações dos donos,
+mochila/PC, salvar/carregar e prêmio nos 16 ginásios.
+[EARLY-STORY-TOOLS.md](EARLY-STORY-TOOLS.md).
+
 Cubone/Marowak fica reservado para a Pokémon Tower; Nidoran♀ e evoluções
 passam para Diglett’s Cave. Corrigida a reconstrução do fantasma com Silph
 Scope, que voltava ao nível 30 e ignorava a faixa da equipe. Passaram fuga,

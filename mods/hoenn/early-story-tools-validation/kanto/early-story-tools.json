@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "rom_sha256": "ba38f2ff2d305dd6636aea2e78b05e0297c4fa6d92f0506a941cf2fd68a6c3ae",
+  "city": "Viridian",
+  "region": "Kanto",
+  "real_city_choice_and_mother_input": true,
+  "all_selected_homes_native_special": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "mother_only": true,
+  "zero_badges": true,
+  "original_quest_flags_preserved_by_mother": true,
+  "poke_flute_not_given_at_start": true,
+  "pc_ownership_prevents_duplicates": true,
+  "full_bag_and_partial_retries": true,
+  "native_save_roundtrip": true,
+  "original_item_giver_continuations": [
+    {
+      "map": "Route104_PrettyPetalFlowerShop",
+      "script": "Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl",
+      "storage": "bag",
+      "original_receipt_flag_set": true,
+      "duplicate": false
+    },
+    {
+      "map": "Route104_PrettyPetalFlowerShop",
+      "script": "Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl",
+      "storage": "pc",
+      "original_receipt_flag_set": true,
+      "duplicate": false
+    },
+    {
+      "map": "Route104_PrettyPetalFlowerShop",
+      "script": "Route104_PrettyPetalFlowerShop_EventScript_WailmerPailGirl",
+      "storage": "missing",
+      "original_receipt_flag_set": true,
+      "duplicate": false
+    },
+    {
+      "map": "RocketHideout_B4F_Frlg",
+      "script": "RocketHideout_B4F_EventScript_SilphScope",
+      "storage": "bag",
+      "original_receipt_flag_set": true,
+      "duplicate": false
+    },
+    {
+      "map": "RocketHideout_B4F_Frlg",
+      "script": "RocketHideout_B4F_EventScript_SilphScope",
+      "storage": "pc",
+      "original_receipt_flag_set": true,
+      "duplicate": false
+    },
+    {
+      "map": "RocketHideout_B4F_Frlg",
+      "script": "RocketHideout_B4F_EventScript_SilphScope",
+      "storage": "missing",
+      "original_receipt_flag_set": true,
+      "duplicate": false
+    },
+    {
+      "map": "Route120",
+      "script": "Route120_EventScript_StevenGiveDeconScope",
+      "storage": "bag",
+      "original_receipt_flag_set": true,
+      "duplicate": false
+    },
+    {
+      "map": "Route120",
+      "script": "Route120_EventScript_StevenGiveDeconScope",
+      "storage": "pc",
+      "original_receipt_flag_set": true,
+      "duplicate": false
+    },
+    {
+      "map": "Route120",
+      "script": "Route120_EventScript_StevenGiveDeconScope",
+      "storage": "missing",
+      "original_receipt_flag_set": true,
+      "duplicate": false
+    }
+  ],
+  "silph_scope_pickup_full_bag_retry": true,
+  "fixtures": [
+    "warps",
+    "all-home C calls",
+    "encrypted pocket capacity and mother script entries",
+    "owner scene states and entries"
+  ],
+  "full_campaign_playthrough": false,
+  "original_boss_battles_played": false
+}
