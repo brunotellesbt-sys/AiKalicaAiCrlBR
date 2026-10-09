@@ -25,10 +25,15 @@ campanhas completas. A quantidade de PRs não mede a conclusão do jogo.
 
 ## Avanço atual: resgate de Lostelle e entrega do Meteorite
 
+Drowzee/Hypno fica reservado para Berry Forest, incluindo o Hypno de Lostelle;
+Skorupi/Drapion passa para Mt. Pyre. Foram atualizados encontros, Pokédex e
+documentos, com os 135 habitats conferidos no motor ARM. Candidata `0f1df908`;
+[LOSTELLE-HABITATS.md](LOSTELLE-HABITATS.md).
+
 Bill/Celio, pedido do pai, quatro motoqueiros, caminhada por Bond Bridge,
 Hypno e escolta original passaram, seguidos pela entrega e Moon Stone.
 Hypno manteve a faixa da média da equipe; oito batalhas e oito Continues,
-com revisita sem repetir o encontro. Mesma candidata `2f53d410`.
+com revisita sem repetir o encontro. Candidata `0f1df908`.
 Missões de Ruby/Sapphire, minigames e outras áreas de Sevii, campanhas
 completas e balanceamento seguem pendentes. [LOSTELLE-STORY.md](LOSTELLE-STORY.md).
 
@@ -179,7 +184,7 @@ Resultados e limites específicos estão em [PWT.md](PWT.md),
 
 Surf, Dive e Waterfall são os únicos HMs. As regiões mantêm suas oito insígnias
 separadas e a ligação obrigatória de Giovanni com a Silph. Os especiais exigem
-16 insígnias antes da Liga; a distribuição por habitat não mudou nesta etapa.
+16 insígnias antes da Liga; Drowzee/Hypno e Skorupi/Drapion trocaram de habitat.
 Não distribuir Mega Stones/itens de ativação nesta revisão: a instrução anterior
 foi preparar a mecânica sem liberar esses itens. A candidata exige novo jogo;
 não existe migração dos saves antigos.

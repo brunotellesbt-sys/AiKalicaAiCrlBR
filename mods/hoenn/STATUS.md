@@ -5,10 +5,15 @@ versão anterior. A candidata exige um novo jogo; não há conversão de saves.
 
 ## Etapas com verificações específicas
 
+Drowzee/Hypno fica reservado para Berry Forest, incluindo o Hypno de Lostelle;
+Skorupi/Drapion passa para Mt. Pyre. Foram atualizados encontros, Pokédex e
+documentos, com os 135 habitats conferidos no motor ARM. Candidata `0f1df908`;
+[LOSTELLE-HABITATS.md](LOSTELLE-HABITATS.md).
+
 - Resgate de Lostelle por interação: Bill/Celio, Meteorite, quatro motoqueiros,
   Bond Bridge, Hypno escalado pela média, escolta original, entrega e Moon
   Stone. 15 mapas, oito batalhas e oito Continues, com zero insígnias;
-  revisita sem outro Hypno. Mesma candidata `2f53d410`.
+  revisita sem outro Hypno. Candidata `0f1df908`.
   [LOSTELLE-STORY.md](LOSTELLE-STORY.md).
 - Acesso às sete cidades de Sevii e seus Centros Pokémon por caminhada desde
   o mar, cura pelas sete enfermeiras e retorno: 34 mapas, 62 transições,

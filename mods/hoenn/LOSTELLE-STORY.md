@@ -36,7 +36,7 @@ foram verificadas; não foram atribuídas sinteticamente.
 
 ## Níveis, itens e persistência
 
-Hypno apareceu no **nível 97**, com média da equipe **100**, dentro da faixa
+Hypno apareceu no **nível 100** na nova execução, com média da equipe **100**, dentro da faixa
 −5/+2 limitada a 1–100. O evento original anuncia um encontro fixo de nível 30,
 mas a rotina nativa já normaliza seu nível pela regra da jornada. Não foi
 necessária uma alteração na ROM para manter essa regra nesta batalha.
@@ -52,7 +52,8 @@ flags de resgate e quantidades dos itens observados.
 
 ## Validador e reprodução
 
-Não houve mudança na candidata em inglês `2f53d410`. O validador usa os
+O resgate foi repetido na candidata em inglês `0f1df908`, após a troca
+de famílias descrita em [LOSTELLE-HABITATS.md](LOSTELLE-HABITATS.md). O validador usa os
 IDs e offsets compilados dos cabeçalhos fixados. A lista de treinadores
 inclui os scripts compartilhados de `trainers_frlg.inc`: os NPCs de Bond
 Bridge referenciam esse arquivo, em vez de declarar as batalhas no script
@@ -66,7 +67,7 @@ para checkpoints sem cena ativa, evitando substituir o contexto do evento.
 - Base e construção: [EASTERN-OCEAN-JOURNEY.md](EASTERN-OCEAN-JOURNEY.md).
 
 ```sh
-python3 tools/hoenn/validate_lostelle_story.py --source .local/hoenn-route131-sea-src --library .local/mgba-bridge.so --output mods/hoenn/lostelle-story-validation
+python3 tools/hoenn/validate_lostelle_story.py --source .local/hoenn-lostelle-habitats-src --library .local/mgba-bridge.so --output mods/hoenn/lostelle-story-validation
 python3 -m unittest discover -s tools/hoenn -p test_lostelle_story.py -v
 ```
 

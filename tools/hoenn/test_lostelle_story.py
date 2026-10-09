@@ -10,7 +10,7 @@ class LostelleStory(unittest.TestCase):
     def report(self):
         r = json.loads((DIR / 'lostelle-story.json').read_text())
         self.assertTrue(r['passed'])
-        prior = json.loads((ROOT / 'mods/hoenn/eastern-ocean-journey-validation/preparation/reproduction.json').read_text())
+        prior = json.loads((ROOT / 'mods/hoenn/lostelle-habitat-validation/preparation/reproduction.json').read_text())
         self.assertEqual(r['rom_sha256'], prior['rom_sha256'])
         return r
 

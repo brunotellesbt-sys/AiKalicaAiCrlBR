@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "rom_sha256": "2f53d410522b8c1a186112875659791328ae6681f210e6b94a69f15f81049e09",
+  "rom_sha256": "0f1df90862f23c168e73a811588e21a6787f042e1808b0830796b52403a12afc",
   "initial": {
     "map": "JourneyWorldSea00",
     "position": [
@@ -92,7 +92,7 @@
       "kind": "trainer",
       "trainer": 1263,
       "map": "ThreeIsland_Frlg",
-      "attacks": 12,
+      "attacks": 17,
       "opponent_species": 88,
       "opponent_level": 37,
       "double_battle": false,
@@ -103,7 +103,7 @@
       "kind": "trainer",
       "trainer": 1264,
       "map": "ThreeIsland_Frlg",
-      "attacks": 9,
+      "attacks": 8,
       "opponent_species": 109,
       "opponent_level": 38,
       "double_battle": false,
@@ -114,7 +114,7 @@
       "kind": "trainer",
       "trainer": 1265,
       "map": "ThreeIsland_Frlg",
-      "attacks": 1,
+      "attacks": 17,
       "opponent_species": 88,
       "opponent_level": 38,
       "double_battle": false,
@@ -125,7 +125,7 @@
       "kind": "trainer",
       "trainer": 1477,
       "map": "ThreeIsland_Frlg",
-      "attacks": 14,
+      "attacks": 6,
       "opponent_species": 89,
       "opponent_level": 39,
       "double_battle": false,
@@ -136,7 +136,7 @@
       "kind": "trainer",
       "trainer": 1293,
       "map": "ThreeIsland_BondBridge_Frlg",
-      "attacks": 12,
+      "attacks": 26,
       "double_battle": false,
       "opponent_species": 2,
       "opponent_level": 36,
@@ -144,25 +144,25 @@
       "native_defeated_flag": true
     },
     {
-      "kind": "scripted_wild",
-      "trainer": null,
-      "map": "ThreeIsland_BerryForest_Frlg",
-      "attacks": 5,
-      "opponent_species": 97,
-      "opponent_level": 97,
-      "double_battle": false,
-      "outcome": 1
-    },
-    {
       "kind": "trainer",
       "trainer": 1259,
       "map": "ThreeIsland_BondBridge_Frlg",
-      "attacks": 53,
+      "attacks": 35,
       "double_battle": false,
       "opponent_species": 70,
       "opponent_level": 37,
       "outcome": 1,
       "native_defeated_flag": true
+    },
+    {
+      "kind": "scripted_wild",
+      "trainer": null,
+      "map": "ThreeIsland_BerryForest_Frlg",
+      "attacks": 13,
+      "opponent_species": 97,
+      "opponent_level": 100,
+      "double_battle": false,
+      "outcome": 1
     },
     {
       "kind": "trainer",

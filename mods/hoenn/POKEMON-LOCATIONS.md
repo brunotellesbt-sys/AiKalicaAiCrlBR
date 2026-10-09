@@ -12,16 +12,11 @@ Nível: média inteira da equipe menos cinco até mais dois, limitada a 1–100.
 
 Na água, o filtro seleciona as evoluções aquáticas disponíveis da família: por exemplo, Vaporeon pode aparecer na água, enquanto as outras evoluções de Eevee continuam na grama do mesmo habitat. Famílias com etapas de tipos diferentes ficam em habitats terrestres com água, para que nenhuma espécie-base perca seu local.
 
-A Pokédex Nacional vem junto à primeira Pokédex e marca o habitat da família inteira. Os slots e as chances de cada modalidade constam no arquivo `integration-validation/ecology-preparation.json`; as chances de pesca dependem da vara.
+A Pokédex Nacional vem junto à primeira Pokédex e marca o habitat da família inteira. Os slots e as chances atuais constam em `lostelle-habitat-validation/preparation/preparation.json`; os locais não alterados seguem `integration-validation/ecology-preparation.json`. As chances de pesca dependem da vara.
 
 ## Encontro fixo de história verificado
 
-Hypno aparece uma vez no resgate de Lostelle, em Berry Forest, Sevii 3,
-por interação com a personagem. Seu nível segue a média da equipe −5/+2,
-e o evento fica acessível antes das Ligas. A família Drowzee/Hypno também
-está nos encontros aleatórios de Mt. Pyre na distribuição atual.
-Este encontro de roteiro não consta nos slots aleatórios da planilha;
-o percurso e o resgate estão em [LOSTELLE-STORY.md](LOSTELLE-STORY.md).
+O Hypno do resgate de Lostelle permanece em Berry Forest. A família Drowzee/Hypno também está nos encontros aleatórios da mesma floresta; Skorupi/Drapion ocupa o lugar anterior em Mt. Pyre. O evento não adiciona outro habitat à família. Seu nível segue a média da equipe −5/+2. Percurso e resgate em [LOSTELLE-STORY.md](LOSTELLE-STORY.md); revisão de outros encontros fixos pendente, conforme [LOSTELLE-HABITATS.md](LOSTELLE-HABITATS.md).
 
 ## Encontros comuns por habitat
 
@@ -33,7 +28,7 @@ Use a busca pelo nome do Pokémon nesta página ou filtre a planilha `pokemon-lo
 | Hoenn | Altering Cave | Scyther / Scizor / Kleavor; Dratini / Dragonair / Dragonite; Skarmory; Larvitar / Pupitar / Tyranitar; Torchic / Combusken / Blaziken | MAP_ALTERING_CAVE |
 | Sevii | Altering Cave Frlg | Cyndaquil / Quilava / Typhlosion / Typhlosion Hisui; Sableye; Mawile; Lileep / Cradily; Castform Normal | MAP_SIX_ISLAND_ALTERING_CAVE |
 | Hoenn | Artisan Cave | Onix / Steelix; Treecko / Grovyle / Sceptile; Lunatone; Anorith / Armaldo; Absol | MAP_ARTISAN_CAVE_1F, MAP_ARTISAN_CAVE_B1F |
-| Sevii | Berry Forest | Bellsprout / Weepinbell / Victreebel; Tentacool / Tentacruel; Seedot / Nuzleaf / Shiftry; Seviper; Skorupi / Drapion | MAP_THREE_ISLAND_BERRY_FOREST |
+| Sevii | Berry Forest | Bellsprout / Weepinbell / Victreebel; Tentacool / Tentacruel; Drowzee / Hypno; Seedot / Nuzleaf / Shiftry; Seviper | MAP_THREE_ISLAND_BERRY_FOREST |
 | Sevii | Birth Island Frlg | Pidgey / Pidgeotto / Pidgeot; Mareep / Flaaffy / Ampharos; Ralts / Kirlia / Gardevoir / Gallade; Buizel / Floatzel; Riolu / Lucario | MAP_JOURNEYWORLDSEA08 |
 | Sevii | Bond Bridge | Furfrou Natural; Phantump / Trevenant; Crabrawler / Crabominable; Arctozolt; Cetoddle / Cetitan | MAP_THREE_ISLAND_BOND_BRIDGE |
 | Sevii | Canyon Entrance | Tangela / Tangrowth; Pinsir; Ditto; Aipom / Ambipom; Stantler / Wyrdeer | MAP_SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE |
@@ -68,7 +63,7 @@ Use a busca pelo nome do Pokémon nesta página ou filtre a planilha `pokemon-lo
 | Hoenn | Mossdeep City | Relicanth | MAP_MOSSDEEP_CITY |
 | Sevii | Mt Ember | Fennekin / Braixen / Delphox; Passimian; Scorbunny / Raboot / Cinderace; Falinks | MAP_MT_EMBER_EXTERIOR, MAP_MT_EMBER_RUBY_PATH_1F, MAP_MT_EMBER_RUBY_PATH_B1F, MAP_MT_EMBER_RUBY_PATH_B1F_STAIRS, MAP_MT_EMBER_RUBY_PATH_B2F, MAP_MT_EMBER_RUBY_PATH_B2F_STAIRS, MAP_MT_EMBER_RUBY_PATH_B3F, MAP_MT_EMBER_SUMMIT_PATH_1F, MAP_MT_EMBER_SUMMIT_PATH_2F, MAP_MT_EMBER_SUMMIT_PATH_3F |
 | Kanto | Mt Moon | Phanpy / Donphan; Baltoy / Claydol; Stunfisk / Stunfisk Galar; Stonjourner | MAP_MT_MOON_1F, MAP_MT_MOON_B1F, MAP_MT_MOON_B2F |
-| Hoenn | Mt Pyre | Grimer / Muk / Grimer Alola / Muk Alola; Drowzee / Hypno; Zorua / Zoroark / Zorua Hisui / Zoroark Hisui; Charcadet / Armarouge / Ceruledge | MAP_MT_PYRE_1F, MAP_MT_PYRE_2F, MAP_MT_PYRE_3F, MAP_MT_PYRE_4F, MAP_MT_PYRE_5F, MAP_MT_PYRE_6F, MAP_MT_PYRE_EXTERIOR, MAP_MT_PYRE_SUMMIT |
+| Hoenn | Mt Pyre | Grimer / Muk / Grimer Alola / Muk Alola; Skorupi / Drapion; Zorua / Zoroark / Zorua Hisui / Zoroark Hisui; Charcadet / Armarouge / Ceruledge | MAP_MT_PYRE_1F, MAP_MT_PYRE_2F, MAP_MT_PYRE_3F, MAP_MT_PYRE_4F, MAP_MT_PYRE_5F, MAP_MT_PYRE_6F, MAP_MT_PYRE_EXTERIOR, MAP_MT_PYRE_SUMMIT |
 | Hoenn | New Mauville | Spiritomb; Eiscue Ice; Flutter Mane; Iron Valiant | MAP_NEW_MAUVILLE_ENTRANCE, MAP_NEW_MAUVILLE_INSIDE |
 | Sevii | One Island | Tropius; Finneon / Lumineon; Maractus; Karrablast / Escavalier | MAP_JOURNEYWORLDSEA01, MAP_ONE_ISLAND |
 | Sevii | Outcast Island | Cramorant | MAP_SIX_ISLAND_OUTCAST_ISLAND |

@@ -60,6 +60,9 @@ for kanto,hoenn in [(0,0),(5,0),(6,0),(8,3),(8,4),(8,8)]:
  print('Parallel regional evolution phase passed:',kanto,hoenn,flush=True)
 # Complete catalog habitat membership, including highest-generation species.
 prep=json.loads((source/('.journey-ecology' if (source/'.journey-ecology').exists() else '.journey-habitats')).read_text())
+if (source/'.journey-lostelle-habitats').exists():
+ overlay=json.loads((source/'.journey-lostelle-habitats').read_text())
+ prep.update({k:overlay[k] for k in ['locations_data','map_species','pools','field_slots']})
 metadata=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_text())
 observed_checks=[]
 for h in prep['locations_data']:

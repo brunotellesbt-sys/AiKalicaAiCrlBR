@@ -26,6 +26,9 @@ def audit(baseline, candidate):
     for layer in PRIOR + ['english-text', 'special-ball']:
         marker = candidate / ('.journey-' + layer)
         expected.update(json.loads(marker.read_text())['prepared_sha256'])
+    for layer in ['route131-sea-access', 'lostelle-habitats']:
+        marker = candidate / ('.journey-' + layer)
+        if marker.exists(): expected.update(json.loads(marker.read_text())['prepared_sha256'])
     scanned, literal_count = 0, 0
     for path, digest in expected.items():
         if not path.endswith(('.inc', '.c', '.h', '.s')): continue

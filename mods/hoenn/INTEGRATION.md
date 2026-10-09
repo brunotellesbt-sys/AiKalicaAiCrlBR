@@ -1,5 +1,10 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+Drowzee/Hypno fica reservado para Berry Forest, incluindo o Hypno de Lostelle;
+Skorupi/Drapion passa para Mt. Pyre. Foram atualizados encontros, Pokédex e
+documentos, com os 135 habitats conferidos no motor ARM. Candidata `0f1df908`;
+[LOSTELLE-HABITATS.md](LOSTELLE-HABITATS.md).
+
 O resgate de Lostelle passou pela apresentação de Bill/Celio, Meteorite,
 quatro motoqueiros, Berry Forest, Hypno, escolta, entrega e Moon Stone:
 15 mapas, oito batalhas e oito Continues. [LOSTELLE-STORY.md](LOSTELLE-STORY.md).
