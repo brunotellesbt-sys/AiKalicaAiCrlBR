@@ -12,11 +12,13 @@ Nível: média inteira da equipe menos cinco até mais dois, limitada a 1–100.
 
 Na água, o filtro seleciona as evoluções aquáticas disponíveis da família: por exemplo, Vaporeon pode aparecer na água, enquanto as outras evoluções de Eevee continuam na grama do mesmo habitat. Famílias com etapas de tipos diferentes ficam em habitats terrestres com água, para que nenhuma espécie-base perca seu local.
 
-A Pokédex Nacional vem junto à primeira Pokédex e marca o habitat da família inteira. Os slots e as chances atuais constam em `lostelle-habitat-validation/preparation/preparation.json`; os locais não alterados seguem `integration-validation/ecology-preparation.json`. As chances de pesca dependem da vara.
+A Pokédex Nacional vem junto à primeira Pokédex e marca o habitat da família inteira. Os slots e as chances da troca em Berry Forest constam em `lostelle-habitat-validation/preparation/preparation.json`; os locais não alterados seguem `integration-validation/ecology-preparation.json`. As chances de pesca dependem da vara.
 
 ## Encontro fixo de história verificado
 
 O Hypno do resgate de Lostelle permanece em Berry Forest. A família Drowzee/Hypno também está nos encontros aleatórios da mesma floresta; Skorupi/Drapion ocupa o lugar anterior em Mt. Pyre. O evento não adiciona outro habitat à família. Seu nível segue a média da equipe −5/+2. Percurso e resgate em [LOSTELLE-STORY.md](LOSTELLE-STORY.md); revisão de outros encontros fixos pendente, conforme [LOSTELLE-HABITATS.md](LOSTELLE-HABITATS.md).
+
+Cubone/Marowak fica na Pokémon Tower, incluindo o fantasma original; Nidoran♀/Nidorina/Nidoqueen ocupa Diglett’s Cave. Os slots atuais estão em `tower-habitat-validation/preparation/preparation.json`. O fantasma continua não capturável. [TOWER-HABITATS.md](TOWER-HABITATS.md).
 
 ## Encontros comuns por habitat
 
@@ -40,7 +42,7 @@ Use a busca pelo nome do Pokémon nesta página ou filtre a planilha `pokemon-lo
 | Kanto | Cinnabar Island | Mudkip / Marshtomp / Swampert | MAP_CINNABAR_ISLAND |
 | Hoenn | Desert Underpass | Slugma / Magcargo; Purrloin / Liepard; Durant; Nacli / Naclstack / Garganacl; Iron Treads | MAP_DESERT_UNDERPASS |
 | Hoenn | Dewford Town | Oshawott / Dewott / Samurott / Samurott Hisui | MAP_DEWFORD_TOWN |
-| Kanto | Digletts Cave | Cubone / Marowak / Marowak Alola; Roggenrola / Boldore / Gigalith; Pawniard / Bisharp / Kingambit; Tinkatink / Tinkatuff / Tinkaton; Orthworm | MAP_DIGLETTS_CAVE_B1F |
+| Kanto | Digletts Cave | Nidoran F / Nidorina / Nidoqueen; Roggenrola / Boldore / Gigalith; Pawniard / Bisharp / Kingambit; Tinkatink / Tinkatuff / Tinkaton; Orthworm | MAP_DIGLETTS_CAVE_B1F |
 | Hoenn | Ever Grande City | Popplio / Brionne / Primarina | MAP_EVER_GRANDE_CITY |
 | Hoenn | Fiery Path | Tepig / Pignite / Emboar; Bouffalant; Larvesta / Volcarona; Chespin / Quilladin / Chesnaught; Amaura / Aurorus | MAP_FIERY_PATH |
 | Sevii | Five Island | Magnemite / Magneton / Magnezone; Blitzle / Zebstrika; Heatmor; Morelull / Shiinotic; Sizzlipede / Centiskorch | MAP_FIVE_ISLAND, MAP_JOURNEYWORLDSEA05 |
@@ -73,7 +75,7 @@ Use a busca pelo nome do Pokémon nesta página ou filtre a planilha `pokemon-lo
 | Hoenn | Petalburg City | Arctovish | MAP_PETALBURG_CITY |
 | Hoenn | Petalburg Woods | Ekans / Arbok; Kricketot / Kricketune; Salandit / Salazzle; Glimmet / Glimmora | MAP_PETALBURG_WOODS |
 | Kanto | Pokemon Mansion | Houndour / Houndoom; Shuppet / Banette; Duskull / Dusclops / Dusknoir; Chimecho / Chingling | MAP_POKEMON_MANSION_1F, MAP_POKEMON_MANSION_2F, MAP_POKEMON_MANSION_3F, MAP_POKEMON_MANSION_B1F |
-| Kanto | Pokemon Tower | Nidoran F / Nidorina / Nidoqueen; Geodude / Graveler / Golem / Geodude Alola / Graveler Alola / Golem Alola; Exeggcute / Exeggutor / Exeggutor Alola; Iron Crown | MAP_POKEMON_TOWER_3F, MAP_POKEMON_TOWER_4F, MAP_POKEMON_TOWER_5F, MAP_POKEMON_TOWER_6F, MAP_POKEMON_TOWER_7F |
+| Kanto | Pokemon Tower | Geodude / Graveler / Golem / Geodude Alola / Graveler Alola / Golem Alola; Exeggcute / Exeggutor / Exeggutor Alola; Cubone / Marowak / Marowak Alola; Iron Crown | MAP_POKEMON_TOWER_3F, MAP_POKEMON_TOWER_4F, MAP_POKEMON_TOWER_5F, MAP_POKEMON_TOWER_6F, MAP_POKEMON_TOWER_7F |
 | Kanto | Power Plant | Gligar / Gliscor; Joltik / Galvantula; Fletchling / Fletchinder / Talonflame; Flabebe Red / Floette Red / Florges Red | MAP_POWER_PLANT |
 | Sevii | Resort Gorgeous | Froakie / Frogadier / Greninja | MAP_FIVE_ISLAND_RESORT_GORGEOUS |
 | Kanto | Rock Tunnel | Swinub / Piloswine / Mamoswine; Aron / Lairon / Aggron; Klink / Klang / Klinklang; Gouging Fire | MAP_ROCK_TUNNEL_1F, MAP_ROCK_TUNNEL_B1F |

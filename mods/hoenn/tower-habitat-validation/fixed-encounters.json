@@ -1,0 +1,3455 @@
+{
+  "status": "static_fixed_encounter_inventory",
+  "records": [
+    {
+      "map": "AncientTomb",
+      "map_id": "MAP_ANCIENT_TOMB",
+      "section": "MAPSEC_ANCIENT_TOMB",
+      "script": "AncientTomb_EventScript_Registeel",
+      "path": "data/maps/AncientTomb/scripts.inc",
+      "script_chain": [
+        "AncientTomb_EventScript_Registeel"
+      ],
+      "species": "SPECIES_REGISTEEL",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "AquaHideout_B1F",
+      "map_id": "MAP_AQUA_HIDEOUT_B1F",
+      "section": "MAPSEC_AQUA_HIDEOUT",
+      "script": "AquaHideout_B1F_EventScript_Electrode2",
+      "path": "data/maps/AquaHideout_B1F/scripts.inc",
+      "script_chain": [
+        "AquaHideout_B1F_EventScript_Electrode2"
+      ],
+      "species": "SPECIES_ELECTRODE",
+      "ordinary_family": {
+        "root": 100,
+        "family": "SPECIES_VOLTORB",
+        "section": "MAPSEC_ROUTE_5"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "AquaHideout_B1F",
+      "map_id": "MAP_AQUA_HIDEOUT_B1F",
+      "section": "MAPSEC_AQUA_HIDEOUT",
+      "script": "AquaHideout_B1F_EventScript_Electrode1",
+      "path": "data/maps/AquaHideout_B1F/scripts.inc",
+      "script_chain": [
+        "AquaHideout_B1F_EventScript_Electrode1"
+      ],
+      "species": "SPECIES_ELECTRODE",
+      "ordinary_family": {
+        "root": 100,
+        "family": "SPECIES_VOLTORB",
+        "section": "MAPSEC_ROUTE_5"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "BattleFrontier_OutsideEast",
+      "map_id": "MAP_BATTLE_FRONTIER_OUTSIDE_EAST",
+      "section": "MAPSEC_BATTLE_FRONTIER",
+      "script": "BattleFrontier_OutsideEast_EventScript_WaterSudowoodo",
+      "path": "data/maps/BattleFrontier_OutsideEast/scripts.inc",
+      "script_chain": [
+        "BattleFrontier_OutsideEast_EventScript_WaterSudowoodo"
+      ],
+      "species": "SPECIES_SUDOWOODO",
+      "ordinary_family": {
+        "root": 438,
+        "family": "SPECIES_BONSLY",
+        "section": "MAPSEC_VICTORY_ROAD"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "CeruleanCave_B1F_Frlg",
+      "map_id": "MAP_CERULEAN_CAVE_B1F",
+      "section": "MAPSEC_CERULEAN_CAVE",
+      "script": "CeruleanCave_B1F_EventScript_Mewtwo",
+      "path": "data/maps/CeruleanCave_B1F_Frlg/scripts.inc",
+      "script_chain": [
+        "CeruleanCave_B1F_EventScript_Mewtwo"
+      ],
+      "species": "SPECIES_MEWTWO",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "DesertRuins",
+      "map_id": "MAP_DESERT_RUINS",
+      "section": "MAPSEC_DESERT_RUINS",
+      "script": "DesertRuins_EventScript_Regirock",
+      "path": "data/maps/DesertRuins/scripts.inc",
+      "script_chain": [
+        "DesertRuins_EventScript_Regirock"
+      ],
+      "species": "SPECIES_REGIROCK",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "IslandCave",
+      "map_id": "MAP_ISLAND_CAVE",
+      "section": "MAPSEC_ISLAND_CAVE",
+      "script": "IslandCave_EventScript_Regice",
+      "path": "data/maps/IslandCave/scripts.inc",
+      "script_chain": [
+        "IslandCave_EventScript_Regice"
+      ],
+      "species": "SPECIES_REGICE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryAbismo",
+      "map_id": "MAP_JOURNEYSANCTUARYABISMO",
+      "section": "MAPSEC_ROUTE_114",
+      "script": "JourneySanctuary_803",
+      "path": "data/maps/JourneySanctuaryAbismo/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_803"
+      ],
+      "species": "SPECIES_POIPOLE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryAbismo",
+      "map_id": "MAP_JOURNEYSANCTUARYABISMO",
+      "section": "MAPSEC_ROUTE_114",
+      "script": "JourneySanctuary_795",
+      "path": "data/maps/JourneySanctuaryAbismo/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_795"
+      ],
+      "species": "SPECIES_PHEROMOSA",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryAbismo",
+      "map_id": "MAP_JOURNEYSANCTUARYABISMO",
+      "section": "MAPSEC_ROUTE_114",
+      "script": "JourneySanctuary_794",
+      "path": "data/maps/JourneySanctuaryAbismo/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_794"
+      ],
+      "species": "SPECIES_BUZZWOLE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryAbismo",
+      "map_id": "MAP_JOURNEYSANCTUARYABISMO",
+      "section": "MAPSEC_ROUTE_114",
+      "script": "JourneySanctuary_772",
+      "path": "data/maps/JourneySanctuaryAbismo/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_772"
+      ],
+      "species": "SPECIES_TYPE_NULL",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryAbismo",
+      "map_id": "MAP_JOURNEYSANCTUARYABISMO",
+      "section": "MAPSEC_ROUTE_114",
+      "script": "JourneySanctuary_649",
+      "path": "data/maps/JourneySanctuaryAbismo/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_649"
+      ],
+      "species": "SPECIES_GENESECT",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryAbismo",
+      "map_id": "MAP_JOURNEYSANCTUARYABISMO",
+      "section": "MAPSEC_ROUTE_114",
+      "script": "JourneySanctuary_493",
+      "path": "data/maps/JourneySanctuaryAbismo/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_493"
+      ],
+      "species": "SPECIES_ARCEUS_NORMAL",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryAbismo",
+      "map_id": "MAP_JOURNEYSANCTUARYABISMO",
+      "section": "MAPSEC_ROUTE_114",
+      "script": "JourneySanctuary_1014",
+      "path": "data/maps/JourneySanctuaryAbismo/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_1014"
+      ],
+      "species": "SPECIES_OKIDOGI",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryAurora",
+      "map_id": "MAP_JOURNEYSANCTUARYAURORA",
+      "section": "MAPSEC_ONE_ISLAND",
+      "script": "JourneySanctuary_888",
+      "path": "data/maps/JourneySanctuaryAurora/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_888"
+      ],
+      "species": "SPECIES_ZACIAN_HERO",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryAurora",
+      "map_id": "MAP_JOURNEYSANCTUARYAURORA",
+      "section": "MAPSEC_ONE_ISLAND",
+      "script": "JourneySanctuary_800",
+      "path": "data/maps/JourneySanctuaryAurora/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_800"
+      ],
+      "species": "SPECIES_NECROZMA",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryAurora",
+      "map_id": "MAP_JOURNEYSANCTUARYAURORA",
+      "section": "MAPSEC_ONE_ISLAND",
+      "script": "JourneySanctuary_785",
+      "path": "data/maps/JourneySanctuaryAurora/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_785"
+      ],
+      "species": "SPECIES_TAPU_KOKO",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryAurora",
+      "map_id": "MAP_JOURNEYSANCTUARYAURORA",
+      "section": "MAPSEC_ONE_ISLAND",
+      "script": "JourneySanctuary_648",
+      "path": "data/maps/JourneySanctuaryAurora/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_648"
+      ],
+      "species": "SPECIES_MELOETTA_ARIA",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryAurora",
+      "map_id": "MAP_JOURNEYSANCTUARYAURORA",
+      "section": "MAPSEC_ONE_ISLAND",
+      "script": "JourneySanctuary_482",
+      "path": "data/maps/JourneySanctuaryAurora/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_482"
+      ],
+      "species": "SPECIES_AZELF",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryAurora",
+      "map_id": "MAP_JOURNEYSANCTUARYAURORA",
+      "section": "MAPSEC_ONE_ISLAND",
+      "script": "JourneySanctuary_386",
+      "path": "data/maps/JourneySanctuaryAurora/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_386"
+      ],
+      "species": "SPECIES_DEOXYS_NORMAL",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryAurora",
+      "map_id": "MAP_JOURNEYSANCTUARYAURORA",
+      "section": "MAPSEC_ONE_ISLAND",
+      "script": "JourneySanctuary_150",
+      "path": "data/maps/JourneySanctuaryAurora/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_150"
+      ],
+      "species": "SPECIES_MEWTWO",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryAurora",
+      "map_id": "MAP_JOURNEYSANCTUARYAURORA",
+      "section": "MAPSEC_ONE_ISLAND",
+      "script": "JourneySanctuary_1016",
+      "path": "data/maps/JourneySanctuaryAurora/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_1016"
+      ],
+      "species": "SPECIES_FEZANDIPITI",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryCristais",
+      "map_id": "MAP_JOURNEYSANCTUARYCRISTAIS",
+      "section": "MAPSEC_BIRTH_ISLAND_FRLG",
+      "script": "JourneySanctuary_896",
+      "path": "data/maps/JourneySanctuaryCristais/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_896"
+      ],
+      "species": "SPECIES_GLASTRIER",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryCristais",
+      "map_id": "MAP_JOURNEYSANCTUARYCRISTAIS",
+      "section": "MAPSEC_BIRTH_ISLAND_FRLG",
+      "script": "JourneySanctuary_793",
+      "path": "data/maps/JourneySanctuaryCristais/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_793"
+      ],
+      "species": "SPECIES_NIHILEGO",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryCristais",
+      "map_id": "MAP_JOURNEYSANCTUARYCRISTAIS",
+      "section": "MAPSEC_BIRTH_ISLAND_FRLG",
+      "script": "JourneySanctuary_646",
+      "path": "data/maps/JourneySanctuaryCristais/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_646"
+      ],
+      "species": "SPECIES_KYUREM",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryCristais",
+      "map_id": "MAP_JOURNEYSANCTUARYCRISTAIS",
+      "section": "MAPSEC_BIRTH_ISLAND_FRLG",
+      "script": "JourneySanctuary_639",
+      "path": "data/maps/JourneySanctuaryCristais/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_639"
+      ],
+      "species": "SPECIES_TERRAKION",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryCristais",
+      "map_id": "MAP_JOURNEYSANCTUARYCRISTAIS",
+      "section": "MAPSEC_BIRTH_ISLAND_FRLG",
+      "script": "JourneySanctuary_378",
+      "path": "data/maps/JourneySanctuaryCristais/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_378"
+      ],
+      "species": "SPECIES_REGICE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryCristais",
+      "map_id": "MAP_JOURNEYSANCTUARYCRISTAIS",
+      "section": "MAPSEC_BIRTH_ISLAND_FRLG",
+      "script": "JourneySanctuary_1002",
+      "path": "data/maps/JourneySanctuaryCristais/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_1002"
+      ],
+      "species": "SPECIES_CHIEN_PAO",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryDimensoes",
+      "map_id": "MAP_JOURNEYSANCTUARYDIMENSOES",
+      "section": "MAPSEC_ROUTE_114",
+      "script": "JourneySanctuary_792",
+      "path": "data/maps/JourneySanctuaryDimensoes/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_792"
+      ],
+      "species": "SPECIES_LUNALA",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryDimensoes",
+      "map_id": "MAP_JOURNEYSANCTUARYDIMENSOES",
+      "section": "MAPSEC_ROUTE_114",
+      "script": "JourneySanctuary_790",
+      "path": "data/maps/JourneySanctuaryDimensoes/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_790"
+      ],
+      "species": "SPECIES_COSMOEM",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryDimensoes",
+      "map_id": "MAP_JOURNEYSANCTUARYDIMENSOES",
+      "section": "MAPSEC_ROUTE_114",
+      "script": "JourneySanctuary_720",
+      "path": "data/maps/JourneySanctuaryDimensoes/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_720"
+      ],
+      "species": "SPECIES_HOOPA_CONFINED",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryDimensoes",
+      "map_id": "MAP_JOURNEYSANCTUARYDIMENSOES",
+      "section": "MAPSEC_ROUTE_114",
+      "script": "JourneySanctuary_494",
+      "path": "data/maps/JourneySanctuaryDimensoes/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_494"
+      ],
+      "species": "SPECIES_VICTINI",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryDimensoes",
+      "map_id": "MAP_JOURNEYSANCTUARYDIMENSOES",
+      "section": "MAPSEC_ROUTE_114",
+      "script": "JourneySanctuary_481",
+      "path": "data/maps/JourneySanctuaryDimensoes/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_481"
+      ],
+      "species": "SPECIES_MESPRIT",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryDimensoes",
+      "map_id": "MAP_JOURNEYSANCTUARYDIMENSOES",
+      "section": "MAPSEC_ROUTE_114",
+      "script": "JourneySanctuary_385",
+      "path": "data/maps/JourneySanctuaryDimensoes/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_385"
+      ],
+      "species": "SPECIES_JIRACHI",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryDimensoes",
+      "map_id": "MAP_JOURNEYSANCTUARYDIMENSOES",
+      "section": "MAPSEC_ROUTE_114",
+      "script": "JourneySanctuary_1015",
+      "path": "data/maps/JourneySanctuaryDimensoes/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_1015"
+      ],
+      "species": "SPECIES_MUNKIDORI",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryDragoes",
+      "map_id": "MAP_JOURNEYSANCTUARYDRAGOES",
+      "section": "MAPSEC_SIX_ISLAND",
+      "script": "JourneySanctuary_891",
+      "path": "data/maps/JourneySanctuaryDragoes/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_891"
+      ],
+      "species": "SPECIES_KUBFU",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryDragoes",
+      "map_id": "MAP_JOURNEYSANCTUARYDRAGOES",
+      "section": "MAPSEC_SIX_ISLAND",
+      "script": "JourneySanctuary_889",
+      "path": "data/maps/JourneySanctuaryDragoes/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_889"
+      ],
+      "species": "SPECIES_ZAMAZENTA_HERO",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryDragoes",
+      "map_id": "MAP_JOURNEYSANCTUARYDRAGOES",
+      "section": "MAPSEC_SIX_ISLAND",
+      "script": "JourneySanctuary_804",
+      "path": "data/maps/JourneySanctuaryDragoes/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_804"
+      ],
+      "species": "SPECIES_NAGANADEL",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryDragoes",
+      "map_id": "MAP_JOURNEYSANCTUARYDRAGOES",
+      "section": "MAPSEC_SIX_ISLAND",
+      "script": "JourneySanctuary_718",
+      "path": "data/maps/JourneySanctuaryDragoes/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_718"
+      ],
+      "species": "SPECIES_ZYGARDE_50",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryDragoes",
+      "map_id": "MAP_JOURNEYSANCTUARYDRAGOES",
+      "section": "MAPSEC_SIX_ISLAND",
+      "script": "JourneySanctuary_643",
+      "path": "data/maps/JourneySanctuaryDragoes/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_643"
+      ],
+      "species": "SPECIES_RESHIRAM",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryDragoes",
+      "map_id": "MAP_JOURNEYSANCTUARYDRAGOES",
+      "section": "MAPSEC_SIX_ISLAND",
+      "script": "JourneySanctuary_638",
+      "path": "data/maps/JourneySanctuaryDragoes/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_638"
+      ],
+      "species": "SPECIES_COBALION",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryDragoes",
+      "map_id": "MAP_JOURNEYSANCTUARYDRAGOES",
+      "section": "MAPSEC_SIX_ISLAND",
+      "script": "JourneySanctuary_483",
+      "path": "data/maps/JourneySanctuaryDragoes/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_483"
+      ],
+      "species": "SPECIES_DIALGA",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryDragoes",
+      "map_id": "MAP_JOURNEYSANCTUARYDRAGOES",
+      "section": "MAPSEC_SIX_ISLAND",
+      "script": "JourneySanctuary_384",
+      "path": "data/maps/JourneySanctuaryDragoes/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_384"
+      ],
+      "species": "SPECIES_RAYQUAZA",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryDragoes",
+      "map_id": "MAP_JOURNEYSANCTUARYDRAGOES",
+      "section": "MAPSEC_SIX_ISLAND",
+      "script": "JourneySanctuary_1007",
+      "path": "data/maps/JourneySanctuaryDragoes/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_1007"
+      ],
+      "species": "SPECIES_KORAIDON",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryEclipse",
+      "map_id": "MAP_JOURNEYSANCTUARYECLIPSE",
+      "section": "MAPSEC_FIVE_ISLAND",
+      "script": "JourneySanctuary_897",
+      "path": "data/maps/JourneySanctuaryEclipse/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_897"
+      ],
+      "species": "SPECIES_SPECTRIER",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryEclipse",
+      "map_id": "MAP_JOURNEYSANCTUARYECLIPSE",
+      "section": "MAPSEC_FIVE_ISLAND",
+      "script": "JourneySanctuary_802",
+      "path": "data/maps/JourneySanctuaryEclipse/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_802"
+      ],
+      "species": "SPECIES_MARSHADOW",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryEclipse",
+      "map_id": "MAP_JOURNEYSANCTUARYECLIPSE",
+      "section": "MAPSEC_FIVE_ISLAND",
+      "script": "JourneySanctuary_799",
+      "path": "data/maps/JourneySanctuaryEclipse/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_799"
+      ],
+      "species": "SPECIES_GUZZLORD",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryEclipse",
+      "map_id": "MAP_JOURNEYSANCTUARYECLIPSE",
+      "section": "MAPSEC_FIVE_ISLAND",
+      "script": "JourneySanctuary_717",
+      "path": "data/maps/JourneySanctuaryEclipse/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_717"
+      ],
+      "species": "SPECIES_YVELTAL",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryEclipse",
+      "map_id": "MAP_JOURNEYSANCTUARYECLIPSE",
+      "section": "MAPSEC_FIVE_ISLAND",
+      "script": "JourneySanctuary_491",
+      "path": "data/maps/JourneySanctuaryEclipse/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_491"
+      ],
+      "species": "SPECIES_DARKRAI",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryEclipse",
+      "map_id": "MAP_JOURNEYSANCTUARYECLIPSE",
+      "section": "MAPSEC_FIVE_ISLAND",
+      "script": "JourneySanctuary_487",
+      "path": "data/maps/JourneySanctuaryEclipse/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_487"
+      ],
+      "species": "SPECIES_GIRATINA_ALTERED",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryEclipse",
+      "map_id": "MAP_JOURNEYSANCTUARYECLIPSE",
+      "section": "MAPSEC_FIVE_ISLAND",
+      "script": "JourneySanctuary_486",
+      "path": "data/maps/JourneySanctuaryEclipse/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_486"
+      ],
+      "species": "SPECIES_REGIGIGAS",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryEclipse",
+      "map_id": "MAP_JOURNEYSANCTUARYECLIPSE",
+      "section": "MAPSEC_FIVE_ISLAND",
+      "script": "JourneySanctuary_1025",
+      "path": "data/maps/JourneySanctuaryEclipse/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_1025"
+      ],
+      "species": "SPECIES_PECHARUNT",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryEstrelas",
+      "map_id": "MAP_JOURNEYSANCTUARYESTRELAS",
+      "section": "MAPSEC_SEVEN_ISLAND",
+      "script": "JourneySanctuary_905",
+      "path": "data/maps/JourneySanctuaryEstrelas/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_905"
+      ],
+      "species": "SPECIES_ENAMORUS_INCARNATE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryEstrelas",
+      "map_id": "MAP_JOURNEYSANCTUARYESTRELAS",
+      "section": "MAPSEC_SEVEN_ISLAND",
+      "script": "JourneySanctuary_801",
+      "path": "data/maps/JourneySanctuaryEstrelas/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_801"
+      ],
+      "species": "SPECIES_MAGEARNA",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryEstrelas",
+      "map_id": "MAP_JOURNEYSANCTUARYESTRELAS",
+      "section": "MAPSEC_SEVEN_ISLAND",
+      "script": "JourneySanctuary_786",
+      "path": "data/maps/JourneySanctuaryEstrelas/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_786"
+      ],
+      "species": "SPECIES_TAPU_LELE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryEstrelas",
+      "map_id": "MAP_JOURNEYSANCTUARYESTRELAS",
+      "section": "MAPSEC_SEVEN_ISLAND",
+      "script": "JourneySanctuary_716",
+      "path": "data/maps/JourneySanctuaryEstrelas/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_716"
+      ],
+      "species": "SPECIES_XERNEAS_NEUTRAL",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryEstrelas",
+      "map_id": "MAP_JOURNEYSANCTUARYESTRELAS",
+      "section": "MAPSEC_SEVEN_ISLAND",
+      "script": "JourneySanctuary_488",
+      "path": "data/maps/JourneySanctuaryEstrelas/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_488"
+      ],
+      "species": "SPECIES_CRESSELIA",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryEstrelas",
+      "map_id": "MAP_JOURNEYSANCTUARYESTRELAS",
+      "section": "MAPSEC_SEVEN_ISLAND",
+      "script": "JourneySanctuary_480",
+      "path": "data/maps/JourneySanctuaryEstrelas/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_480"
+      ],
+      "species": "SPECIES_UXIE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryEstrelas",
+      "map_id": "MAP_JOURNEYSANCTUARYESTRELAS",
+      "section": "MAPSEC_SEVEN_ISLAND",
+      "script": "JourneySanctuary_151",
+      "path": "data/maps/JourneySanctuaryEstrelas/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_151"
+      ],
+      "species": "SPECIES_MEW",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryFloresta",
+      "map_id": "MAP_JOURNEYSANCTUARYFLORESTA",
+      "section": "MAPSEC_FOUR_ISLAND",
+      "script": "JourneySanctuary_898",
+      "path": "data/maps/JourneySanctuaryFloresta/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_898"
+      ],
+      "species": "SPECIES_CALYREX",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryFloresta",
+      "map_id": "MAP_JOURNEYSANCTUARYFLORESTA",
+      "section": "MAPSEC_FOUR_ISLAND",
+      "script": "JourneySanctuary_798",
+      "path": "data/maps/JourneySanctuaryFloresta/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_798"
+      ],
+      "species": "SPECIES_KARTANA",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryFloresta",
+      "map_id": "MAP_JOURNEYSANCTUARYFLORESTA",
+      "section": "MAPSEC_FOUR_ISLAND",
+      "script": "JourneySanctuary_787",
+      "path": "data/maps/JourneySanctuaryFloresta/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_787"
+      ],
+      "species": "SPECIES_TAPU_BULU",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryFloresta",
+      "map_id": "MAP_JOURNEYSANCTUARYFLORESTA",
+      "section": "MAPSEC_FOUR_ISLAND",
+      "script": "JourneySanctuary_773",
+      "path": "data/maps/JourneySanctuaryFloresta/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_773"
+      ],
+      "species": "SPECIES_SILVALLY_NORMAL",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryFloresta",
+      "map_id": "MAP_JOURNEYSANCTUARYFLORESTA",
+      "section": "MAPSEC_FOUR_ISLAND",
+      "script": "JourneySanctuary_640",
+      "path": "data/maps/JourneySanctuaryFloresta/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_640"
+      ],
+      "species": "SPECIES_VIRIZION",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryFloresta",
+      "map_id": "MAP_JOURNEYSANCTUARYFLORESTA",
+      "section": "MAPSEC_FOUR_ISLAND",
+      "script": "JourneySanctuary_492",
+      "path": "data/maps/JourneySanctuaryFloresta/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_492"
+      ],
+      "species": "SPECIES_SHAYMIN_LAND",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryFloresta",
+      "map_id": "MAP_JOURNEYSANCTUARYFLORESTA",
+      "section": "MAPSEC_FOUR_ISLAND",
+      "script": "JourneySanctuary_251",
+      "path": "data/maps/JourneySanctuaryFloresta/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_251"
+      ],
+      "species": "SPECIES_CELEBI",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryFloresta",
+      "map_id": "MAP_JOURNEYSANCTUARYFLORESTA",
+      "section": "MAPSEC_FOUR_ISLAND",
+      "script": "JourneySanctuary_1017",
+      "path": "data/maps/JourneySanctuaryFloresta/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_1017"
+      ],
+      "species": "SPECIES_OGERPON_TEAL",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryMares",
+      "map_id": "MAP_JOURNEYSANCTUARYMARES",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_721",
+      "path": "data/maps/JourneySanctuaryMares/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_721"
+      ],
+      "species": "SPECIES_VOLCANION",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryMares",
+      "map_id": "MAP_JOURNEYSANCTUARYMARES",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_490",
+      "path": "data/maps/JourneySanctuaryMares/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_490"
+      ],
+      "species": "SPECIES_MANAPHY",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryMares",
+      "map_id": "MAP_JOURNEYSANCTUARYMARES",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_484",
+      "path": "data/maps/JourneySanctuaryMares/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_484"
+      ],
+      "species": "SPECIES_PALKIA",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryMares",
+      "map_id": "MAP_JOURNEYSANCTUARYMARES",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_245",
+      "path": "data/maps/JourneySanctuaryMares/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_245"
+      ],
+      "species": "SPECIES_SUICUNE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryMares",
+      "map_id": "MAP_JOURNEYSANCTUARYMARES",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_1024",
+      "path": "data/maps/JourneySanctuaryMares/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_1024"
+      ],
+      "species": "SPECIES_TERAPAGOS_NORMAL",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryOrigens",
+      "map_id": "MAP_JOURNEYSANCTUARYORIGENS",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_895",
+      "path": "data/maps/JourneySanctuaryOrigens/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_895"
+      ],
+      "species": "SPECIES_REGIDRAGO",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryOrigens",
+      "map_id": "MAP_JOURNEYSANCTUARYORIGENS",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_890",
+      "path": "data/maps/JourneySanctuaryOrigens/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_890"
+      ],
+      "species": "SPECIES_ETERNATUS",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryOrigens",
+      "map_id": "MAP_JOURNEYSANCTUARYORIGENS",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_789",
+      "path": "data/maps/JourneySanctuaryOrigens/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_789"
+      ],
+      "species": "SPECIES_COSMOG",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryOrigens",
+      "map_id": "MAP_JOURNEYSANCTUARYORIGENS",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_644",
+      "path": "data/maps/JourneySanctuaryOrigens/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_644"
+      ],
+      "species": "SPECIES_ZEKROM",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryOrigens",
+      "map_id": "MAP_JOURNEYSANCTUARYORIGENS",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_381",
+      "path": "data/maps/JourneySanctuaryOrigens/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_381"
+      ],
+      "species": "SPECIES_LATIOS",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryOrigens",
+      "map_id": "MAP_JOURNEYSANCTUARYORIGENS",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_380",
+      "path": "data/maps/JourneySanctuaryOrigens/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_380"
+      ],
+      "species": "SPECIES_LATIAS",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryOrigens",
+      "map_id": "MAP_JOURNEYSANCTUARYORIGENS",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_249",
+      "path": "data/maps/JourneySanctuaryOrigens/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_249"
+      ],
+      "species": "SPECIES_LUGIA",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryOrigens",
+      "map_id": "MAP_JOURNEYSANCTUARYORIGENS",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_1008",
+      "path": "data/maps/JourneySanctuaryOrigens/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_1008"
+      ],
+      "species": "SPECIES_MIRAIDON",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryProfundezas",
+      "map_id": "MAP_JOURNEYSANCTUARYPROFUNDEZAS",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_893",
+      "path": "data/maps/JourneySanctuaryProfundezas/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_893"
+      ],
+      "species": "SPECIES_ZARUDE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryProfundezas",
+      "map_id": "MAP_JOURNEYSANCTUARYPROFUNDEZAS",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_892",
+      "path": "data/maps/JourneySanctuaryProfundezas/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_892"
+      ],
+      "species": "SPECIES_URSHIFU_SINGLE_STRIKE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryProfundezas",
+      "map_id": "MAP_JOURNEYSANCTUARYPROFUNDEZAS",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_788",
+      "path": "data/maps/JourneySanctuaryProfundezas/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_788"
+      ],
+      "species": "SPECIES_TAPU_FINI",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryProfundezas",
+      "map_id": "MAP_JOURNEYSANCTUARYPROFUNDEZAS",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_647",
+      "path": "data/maps/JourneySanctuaryProfundezas/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_647"
+      ],
+      "species": "SPECIES_KELDEO_ORDINARY",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryProfundezas",
+      "map_id": "MAP_JOURNEYSANCTUARYPROFUNDEZAS",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_489",
+      "path": "data/maps/JourneySanctuaryProfundezas/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_489"
+      ],
+      "species": "SPECIES_PHIONE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryProfundezas",
+      "map_id": "MAP_JOURNEYSANCTUARYPROFUNDEZAS",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_382",
+      "path": "data/maps/JourneySanctuaryProfundezas/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_382"
+      ],
+      "species": "SPECIES_KYOGRE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryProfundezas",
+      "map_id": "MAP_JOURNEYSANCTUARYPROFUNDEZAS",
+      "section": "MAPSEC_ROUTE_127",
+      "script": "JourneySanctuary_1001",
+      "path": "data/maps/JourneySanctuaryProfundezas/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_1001"
+      ],
+      "species": "SPECIES_WO_CHIEN",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryTempestades",
+      "map_id": "MAP_JOURNEYSANCTUARYTEMPESTADES",
+      "section": "MAPSEC_VERMILION_CITY",
+      "script": "JourneySanctuary_894",
+      "path": "data/maps/JourneySanctuaryTempestades/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_894"
+      ],
+      "species": "SPECIES_REGIELEKI",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryTempestades",
+      "map_id": "MAP_JOURNEYSANCTUARYTEMPESTADES",
+      "section": "MAPSEC_VERMILION_CITY",
+      "script": "JourneySanctuary_807",
+      "path": "data/maps/JourneySanctuaryTempestades/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_807"
+      ],
+      "species": "SPECIES_ZERAORA",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryTempestades",
+      "map_id": "MAP_JOURNEYSANCTUARYTEMPESTADES",
+      "section": "MAPSEC_VERMILION_CITY",
+      "script": "JourneySanctuary_796",
+      "path": "data/maps/JourneySanctuaryTempestades/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_796"
+      ],
+      "species": "SPECIES_XURKITREE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryTempestades",
+      "map_id": "MAP_JOURNEYSANCTUARYTEMPESTADES",
+      "section": "MAPSEC_VERMILION_CITY",
+      "script": "JourneySanctuary_642",
+      "path": "data/maps/JourneySanctuaryTempestades/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_642"
+      ],
+      "species": "SPECIES_THUNDURUS_INCARNATE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryTempestades",
+      "map_id": "MAP_JOURNEYSANCTUARYTEMPESTADES",
+      "section": "MAPSEC_VERMILION_CITY",
+      "script": "JourneySanctuary_641",
+      "path": "data/maps/JourneySanctuaryTempestades/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_641"
+      ],
+      "species": "SPECIES_TORNADUS_INCARNATE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryTempestades",
+      "map_id": "MAP_JOURNEYSANCTUARYTEMPESTADES",
+      "section": "MAPSEC_VERMILION_CITY",
+      "script": "JourneySanctuary_243",
+      "path": "data/maps/JourneySanctuaryTempestades/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_243"
+      ],
+      "species": "SPECIES_RAIKOU",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryTempestades",
+      "map_id": "MAP_JOURNEYSANCTUARYTEMPESTADES",
+      "section": "MAPSEC_VERMILION_CITY",
+      "script": "JourneySanctuary_145",
+      "path": "data/maps/JourneySanctuaryTempestades/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_145"
+      ],
+      "species": "SPECIES_ZAPDOS",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryTempestades",
+      "map_id": "MAP_JOURNEYSANCTUARYTEMPESTADES",
+      "section": "MAPSEC_VERMILION_CITY",
+      "script": "JourneySanctuary_144",
+      "path": "data/maps/JourneySanctuaryTempestades/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_144"
+      ],
+      "species": "SPECIES_ARTICUNO",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryTitans",
+      "map_id": "MAP_JOURNEYSANCTUARYTITANS",
+      "section": "MAPSEC_THREE_ISLE_PORT",
+      "script": "JourneySanctuary_809",
+      "path": "data/maps/JourneySanctuaryTitans/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_809"
+      ],
+      "species": "SPECIES_MELMETAL",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryTitans",
+      "map_id": "MAP_JOURNEYSANCTUARYTITANS",
+      "section": "MAPSEC_THREE_ISLE_PORT",
+      "script": "JourneySanctuary_808",
+      "path": "data/maps/JourneySanctuaryTitans/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_808"
+      ],
+      "species": "SPECIES_MELTAN",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryTitans",
+      "map_id": "MAP_JOURNEYSANCTUARYTITANS",
+      "section": "MAPSEC_THREE_ISLE_PORT",
+      "script": "JourneySanctuary_805",
+      "path": "data/maps/JourneySanctuaryTitans/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_805"
+      ],
+      "species": "SPECIES_STAKATAKA",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryTitans",
+      "map_id": "MAP_JOURNEYSANCTUARYTITANS",
+      "section": "MAPSEC_THREE_ISLE_PORT",
+      "script": "JourneySanctuary_797",
+      "path": "data/maps/JourneySanctuaryTitans/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_797"
+      ],
+      "species": "SPECIES_CELESTEELA",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryTitans",
+      "map_id": "MAP_JOURNEYSANCTUARYTITANS",
+      "section": "MAPSEC_THREE_ISLE_PORT",
+      "script": "JourneySanctuary_791",
+      "path": "data/maps/JourneySanctuaryTitans/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_791"
+      ],
+      "species": "SPECIES_SOLGALEO",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryTitans",
+      "map_id": "MAP_JOURNEYSANCTUARYTITANS",
+      "section": "MAPSEC_THREE_ISLE_PORT",
+      "script": "JourneySanctuary_719",
+      "path": "data/maps/JourneySanctuaryTitans/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_719"
+      ],
+      "species": "SPECIES_DIANCIE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryTitans",
+      "map_id": "MAP_JOURNEYSANCTUARYTITANS",
+      "section": "MAPSEC_THREE_ISLE_PORT",
+      "script": "JourneySanctuary_485",
+      "path": "data/maps/JourneySanctuaryTitans/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_485"
+      ],
+      "species": "SPECIES_HEATRAN",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryTitans",
+      "map_id": "MAP_JOURNEYSANCTUARYTITANS",
+      "section": "MAPSEC_THREE_ISLE_PORT",
+      "script": "JourneySanctuary_379",
+      "path": "data/maps/JourneySanctuaryTitans/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_379"
+      ],
+      "species": "SPECIES_REGISTEEL",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryTitans",
+      "map_id": "MAP_JOURNEYSANCTUARYTITANS",
+      "section": "MAPSEC_THREE_ISLE_PORT",
+      "script": "JourneySanctuary_377",
+      "path": "data/maps/JourneySanctuaryTitans/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_377"
+      ],
+      "species": "SPECIES_REGIROCK",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryVulcao",
+      "map_id": "MAP_JOURNEYSANCTUARYVULCAO",
+      "section": "MAPSEC_TWO_ISLAND",
+      "script": "JourneySanctuary_806",
+      "path": "data/maps/JourneySanctuaryVulcao/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_806"
+      ],
+      "species": "SPECIES_BLACEPHALON",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryVulcao",
+      "map_id": "MAP_JOURNEYSANCTUARYVULCAO",
+      "section": "MAPSEC_TWO_ISLAND",
+      "script": "JourneySanctuary_645",
+      "path": "data/maps/JourneySanctuaryVulcao/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_645"
+      ],
+      "species": "SPECIES_LANDORUS_INCARNATE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryVulcao",
+      "map_id": "MAP_JOURNEYSANCTUARYVULCAO",
+      "section": "MAPSEC_TWO_ISLAND",
+      "script": "JourneySanctuary_383",
+      "path": "data/maps/JourneySanctuaryVulcao/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_383"
+      ],
+      "species": "SPECIES_GROUDON",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryVulcao",
+      "map_id": "MAP_JOURNEYSANCTUARYVULCAO",
+      "section": "MAPSEC_TWO_ISLAND",
+      "script": "JourneySanctuary_250",
+      "path": "data/maps/JourneySanctuaryVulcao/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_250"
+      ],
+      "species": "SPECIES_HO_OH",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryVulcao",
+      "map_id": "MAP_JOURNEYSANCTUARYVULCAO",
+      "section": "MAPSEC_TWO_ISLAND",
+      "script": "JourneySanctuary_244",
+      "path": "data/maps/JourneySanctuaryVulcao/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_244"
+      ],
+      "species": "SPECIES_ENTEI",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryVulcao",
+      "map_id": "MAP_JOURNEYSANCTUARYVULCAO",
+      "section": "MAPSEC_TWO_ISLAND",
+      "script": "JourneySanctuary_146",
+      "path": "data/maps/JourneySanctuaryVulcao/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_146"
+      ],
+      "species": "SPECIES_MOLTRES",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryVulcao",
+      "map_id": "MAP_JOURNEYSANCTUARYVULCAO",
+      "section": "MAPSEC_TWO_ISLAND",
+      "script": "JourneySanctuary_1004",
+      "path": "data/maps/JourneySanctuaryVulcao/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_1004"
+      ],
+      "species": "SPECIES_CHI_YU",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "JourneySanctuaryVulcao",
+      "map_id": "MAP_JOURNEYSANCTUARYVULCAO",
+      "section": "MAPSEC_TWO_ISLAND",
+      "script": "JourneySanctuary_1003",
+      "path": "data/maps/JourneySanctuaryVulcao/scripts.inc",
+      "script_chain": [
+        "JourneySanctuary_1003"
+      ],
+      "species": "SPECIES_TING_LU",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "MarineCave_End",
+      "map_id": "MAP_MARINE_CAVE_END",
+      "section": "MAPSEC_MARINE_CAVE",
+      "script": "MarineCave_End_EventScript_Kyogre",
+      "path": "data/maps/MarineCave_End/scripts.inc",
+      "script_chain": [
+        "MarineCave_End_EventScript_Kyogre"
+      ],
+      "species": "SPECIES_KYOGRE",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "MtEmber_Summit_Frlg",
+      "map_id": "MAP_MT_EMBER_SUMMIT",
+      "section": "MAPSEC_MT_EMBER",
+      "script": "MtEmber_Summit_EventScript_Moltres",
+      "path": "data/maps/MtEmber_Summit_Frlg/scripts.inc",
+      "script_chain": [
+        "MtEmber_Summit_EventScript_Moltres"
+      ],
+      "species": "SPECIES_MOLTRES",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "NewMauville_Inside",
+      "map_id": "MAP_NEW_MAUVILLE_INSIDE",
+      "section": "MAPSEC_NEW_MAUVILLE",
+      "script": "NewMauville_Inside_EventScript_Voltorb3",
+      "path": "data/maps/NewMauville_Inside/scripts.inc",
+      "script_chain": [
+        "NewMauville_Inside_EventScript_Voltorb3"
+      ],
+      "species": "SPECIES_VOLTORB",
+      "ordinary_family": {
+        "root": 100,
+        "family": "SPECIES_VOLTORB",
+        "section": "MAPSEC_ROUTE_5"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "NewMauville_Inside",
+      "map_id": "MAP_NEW_MAUVILLE_INSIDE",
+      "section": "MAPSEC_NEW_MAUVILLE",
+      "script": "NewMauville_Inside_EventScript_Voltorb2",
+      "path": "data/maps/NewMauville_Inside/scripts.inc",
+      "script_chain": [
+        "NewMauville_Inside_EventScript_Voltorb2"
+      ],
+      "species": "SPECIES_VOLTORB",
+      "ordinary_family": {
+        "root": 100,
+        "family": "SPECIES_VOLTORB",
+        "section": "MAPSEC_ROUTE_5"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "NewMauville_Inside",
+      "map_id": "MAP_NEW_MAUVILLE_INSIDE",
+      "section": "MAPSEC_NEW_MAUVILLE",
+      "script": "NewMauville_Inside_EventScript_Voltorb1",
+      "path": "data/maps/NewMauville_Inside/scripts.inc",
+      "script_chain": [
+        "NewMauville_Inside_EventScript_Voltorb1"
+      ],
+      "species": "SPECIES_VOLTORB",
+      "ordinary_family": {
+        "root": 100,
+        "family": "SPECIES_VOLTORB",
+        "section": "MAPSEC_ROUTE_5"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "PokemonTower_6F_Frlg",
+      "map_id": "MAP_POKEMON_TOWER_6F",
+      "section": "MAPSEC_POKEMON_TOWER",
+      "script": "PokemonTower_6F_EventScript_MarowakGhost",
+      "path": "data/maps/PokemonTower_6F_Frlg/scripts.inc",
+      "script_chain": [
+        "PokemonTower_6F_EventScript_MarowakGhost"
+      ],
+      "species": "SPECIES_MAROWAK",
+      "ordinary_family": {
+        "root": 104,
+        "family": "SPECIES_CUBONE",
+        "section": "MAPSEC_POKEMON_TOWER"
+      },
+      "matches_random_habitat": true
+    },
+    {
+      "map": "PowerPlant_Frlg",
+      "map_id": "MAP_POWER_PLANT",
+      "section": "MAPSEC_POWER_PLANT",
+      "script": "PowerPlant_EventScript_Zapdos",
+      "path": "data/maps/PowerPlant_Frlg/scripts.inc",
+      "script_chain": [
+        "PowerPlant_EventScript_Zapdos"
+      ],
+      "species": "SPECIES_ZAPDOS",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "PowerPlant_Frlg",
+      "map_id": "MAP_POWER_PLANT",
+      "section": "MAPSEC_POWER_PLANT",
+      "script": "PowerPlant_EventScript_Electrode2",
+      "path": "data/maps/PowerPlant_Frlg/scripts.inc",
+      "script_chain": [
+        "PowerPlant_EventScript_Electrode2"
+      ],
+      "species": "SPECIES_ELECTRODE",
+      "ordinary_family": {
+        "root": 100,
+        "family": "SPECIES_VOLTORB",
+        "section": "MAPSEC_ROUTE_5"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "PowerPlant_Frlg",
+      "map_id": "MAP_POWER_PLANT",
+      "section": "MAPSEC_POWER_PLANT",
+      "script": "PowerPlant_EventScript_Electrode1",
+      "path": "data/maps/PowerPlant_Frlg/scripts.inc",
+      "script_chain": [
+        "PowerPlant_EventScript_Electrode1"
+      ],
+      "species": "SPECIES_ELECTRODE",
+      "ordinary_family": {
+        "root": 100,
+        "family": "SPECIES_VOLTORB",
+        "section": "MAPSEC_ROUTE_5"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "Route119",
+      "map_id": "MAP_ROUTE119",
+      "section": "MAPSEC_ROUTE_119",
+      "script": "EventScript_BattleKecleon",
+      "path": "data/scripts/kecleon.inc",
+      "script_chain": [
+        "Route119_EventScript_Kecleon2",
+        "EventScript_Kecleon",
+        "EventScript_AskUseDevonScope",
+        "EventScript_BattleKecleon"
+      ],
+      "species": "SPECIES_KECLEON",
+      "ordinary_family": {
+        "root": 352,
+        "family": "SPECIES_KECLEON",
+        "section": "MAPSEC_ROUTE_9"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "Route120",
+      "map_id": "MAP_ROUTE120",
+      "section": "MAPSEC_ROUTE_120",
+      "script": "Route120_EventScript_StevenBattleKecleon",
+      "path": "data/maps/Route120/scripts.inc",
+      "script_chain": [
+        "Route120_EventScript_Steven",
+        "Route120_EventScript_StevenBattleKecleon"
+      ],
+      "species": "SPECIES_KECLEON",
+      "ordinary_family": {
+        "root": 352,
+        "family": "SPECIES_KECLEON",
+        "section": "MAPSEC_ROUTE_9"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "Route120",
+      "map_id": "MAP_ROUTE120",
+      "section": "MAPSEC_ROUTE_120",
+      "script": "EventScript_BattleKecleon",
+      "path": "data/scripts/kecleon.inc",
+      "script_chain": [
+        "Route120_EventScript_Kecleon5",
+        "EventScript_Kecleon",
+        "EventScript_AskUseDevonScope",
+        "EventScript_BattleKecleon"
+      ],
+      "species": "SPECIES_KECLEON",
+      "ordinary_family": {
+        "root": 352,
+        "family": "SPECIES_KECLEON",
+        "section": "MAPSEC_ROUTE_9"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "Route12_Frlg",
+      "map_id": "MAP_ROUTE12",
+      "section": "MAPSEC_ROUTE_12",
+      "script": "Route12_EventScript_Snorlax",
+      "path": "data/maps/Route12_Frlg/scripts.inc",
+      "script_chain": [
+        "Route12_EventScript_Snorlax"
+      ],
+      "species": "SPECIES_SNORLAX",
+      "ordinary_family": {
+        "root": 446,
+        "family": "SPECIES_MUNCHLAX",
+        "section": "MAPSEC_CAPE_BRINK"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "Route16_Frlg",
+      "map_id": "MAP_ROUTE16",
+      "section": "MAPSEC_ROUTE_16",
+      "script": "Route16_EventScript_Snorlax",
+      "path": "data/maps/Route16_Frlg/scripts.inc",
+      "script_chain": [
+        "Route16_EventScript_Snorlax"
+      ],
+      "species": "SPECIES_SNORLAX",
+      "ordinary_family": {
+        "root": 446,
+        "family": "SPECIES_MUNCHLAX",
+        "section": "MAPSEC_CAPE_BRINK"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "SeafoamIslands_B4F_Frlg",
+      "map_id": "MAP_SEAFOAM_ISLANDS_B4F",
+      "section": "MAPSEC_SEAFOAM_ISLANDS",
+      "script": "SeafoamIslands_B4F_EventScript_Articuno",
+      "path": "data/maps/SeafoamIslands_B4F_Frlg/scripts.inc",
+      "script_chain": [
+        "SeafoamIslands_B4F_EventScript_Articuno"
+      ],
+      "species": "SPECIES_ARTICUNO",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "SkyPillar_Top",
+      "map_id": "MAP_SKY_PILLAR_TOP",
+      "section": "MAPSEC_SKY_PILLAR",
+      "script": "SkyPillar_Top_EventScript_Rayquaza",
+      "path": "data/maps/SkyPillar_Top/scripts.inc",
+      "script_chain": [
+        "SkyPillar_Top_EventScript_Rayquaza"
+      ],
+      "species": "SPECIES_RAYQUAZA",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "TerraCave_End",
+      "map_id": "MAP_TERRA_CAVE_END",
+      "section": "MAPSEC_TERRA_CAVE",
+      "script": "TerraCave_End_EventScript_Groudon",
+      "path": "data/maps/TerraCave_End/scripts.inc",
+      "script_chain": [
+        "TerraCave_End_EventScript_Groudon"
+      ],
+      "species": "SPECIES_GROUDON",
+      "ordinary_family": null,
+      "matches_random_habitat": null
+    },
+    {
+      "map": "ThreeIsland_BerryForest_Frlg",
+      "map_id": "MAP_THREE_ISLAND_BERRY_FOREST",
+      "section": "MAPSEC_BERRY_FOREST",
+      "script": "ThreeIsland_BerryForest_EventScript_Lostelle",
+      "path": "data/maps/ThreeIsland_BerryForest_Frlg/scripts.inc",
+      "script_chain": [
+        "ThreeIsland_BerryForest_EventScript_Lostelle"
+      ],
+      "species": "SPECIES_HYPNO",
+      "ordinary_family": {
+        "root": 96,
+        "family": "SPECIES_DROWZEE",
+        "section": "MAPSEC_BERRY_FOREST"
+      },
+      "matches_random_habitat": true
+    }
+  ],
+  "ordinary_habitat_mismatches": [
+    {
+      "map": "AquaHideout_B1F",
+      "map_id": "MAP_AQUA_HIDEOUT_B1F",
+      "section": "MAPSEC_AQUA_HIDEOUT",
+      "script": "AquaHideout_B1F_EventScript_Electrode2",
+      "path": "data/maps/AquaHideout_B1F/scripts.inc",
+      "script_chain": [
+        "AquaHideout_B1F_EventScript_Electrode2"
+      ],
+      "species": "SPECIES_ELECTRODE",
+      "ordinary_family": {
+        "root": 100,
+        "family": "SPECIES_VOLTORB",
+        "section": "MAPSEC_ROUTE_5"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "AquaHideout_B1F",
+      "map_id": "MAP_AQUA_HIDEOUT_B1F",
+      "section": "MAPSEC_AQUA_HIDEOUT",
+      "script": "AquaHideout_B1F_EventScript_Electrode1",
+      "path": "data/maps/AquaHideout_B1F/scripts.inc",
+      "script_chain": [
+        "AquaHideout_B1F_EventScript_Electrode1"
+      ],
+      "species": "SPECIES_ELECTRODE",
+      "ordinary_family": {
+        "root": 100,
+        "family": "SPECIES_VOLTORB",
+        "section": "MAPSEC_ROUTE_5"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "BattleFrontier_OutsideEast",
+      "map_id": "MAP_BATTLE_FRONTIER_OUTSIDE_EAST",
+      "section": "MAPSEC_BATTLE_FRONTIER",
+      "script": "BattleFrontier_OutsideEast_EventScript_WaterSudowoodo",
+      "path": "data/maps/BattleFrontier_OutsideEast/scripts.inc",
+      "script_chain": [
+        "BattleFrontier_OutsideEast_EventScript_WaterSudowoodo"
+      ],
+      "species": "SPECIES_SUDOWOODO",
+      "ordinary_family": {
+        "root": 438,
+        "family": "SPECIES_BONSLY",
+        "section": "MAPSEC_VICTORY_ROAD"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "NewMauville_Inside",
+      "map_id": "MAP_NEW_MAUVILLE_INSIDE",
+      "section": "MAPSEC_NEW_MAUVILLE",
+      "script": "NewMauville_Inside_EventScript_Voltorb3",
+      "path": "data/maps/NewMauville_Inside/scripts.inc",
+      "script_chain": [
+        "NewMauville_Inside_EventScript_Voltorb3"
+      ],
+      "species": "SPECIES_VOLTORB",
+      "ordinary_family": {
+        "root": 100,
+        "family": "SPECIES_VOLTORB",
+        "section": "MAPSEC_ROUTE_5"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "NewMauville_Inside",
+      "map_id": "MAP_NEW_MAUVILLE_INSIDE",
+      "section": "MAPSEC_NEW_MAUVILLE",
+      "script": "NewMauville_Inside_EventScript_Voltorb2",
+      "path": "data/maps/NewMauville_Inside/scripts.inc",
+      "script_chain": [
+        "NewMauville_Inside_EventScript_Voltorb2"
+      ],
+      "species": "SPECIES_VOLTORB",
+      "ordinary_family": {
+        "root": 100,
+        "family": "SPECIES_VOLTORB",
+        "section": "MAPSEC_ROUTE_5"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "NewMauville_Inside",
+      "map_id": "MAP_NEW_MAUVILLE_INSIDE",
+      "section": "MAPSEC_NEW_MAUVILLE",
+      "script": "NewMauville_Inside_EventScript_Voltorb1",
+      "path": "data/maps/NewMauville_Inside/scripts.inc",
+      "script_chain": [
+        "NewMauville_Inside_EventScript_Voltorb1"
+      ],
+      "species": "SPECIES_VOLTORB",
+      "ordinary_family": {
+        "root": 100,
+        "family": "SPECIES_VOLTORB",
+        "section": "MAPSEC_ROUTE_5"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "PowerPlant_Frlg",
+      "map_id": "MAP_POWER_PLANT",
+      "section": "MAPSEC_POWER_PLANT",
+      "script": "PowerPlant_EventScript_Electrode2",
+      "path": "data/maps/PowerPlant_Frlg/scripts.inc",
+      "script_chain": [
+        "PowerPlant_EventScript_Electrode2"
+      ],
+      "species": "SPECIES_ELECTRODE",
+      "ordinary_family": {
+        "root": 100,
+        "family": "SPECIES_VOLTORB",
+        "section": "MAPSEC_ROUTE_5"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "PowerPlant_Frlg",
+      "map_id": "MAP_POWER_PLANT",
+      "section": "MAPSEC_POWER_PLANT",
+      "script": "PowerPlant_EventScript_Electrode1",
+      "path": "data/maps/PowerPlant_Frlg/scripts.inc",
+      "script_chain": [
+        "PowerPlant_EventScript_Electrode1"
+      ],
+      "species": "SPECIES_ELECTRODE",
+      "ordinary_family": {
+        "root": 100,
+        "family": "SPECIES_VOLTORB",
+        "section": "MAPSEC_ROUTE_5"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "Route119",
+      "map_id": "MAP_ROUTE119",
+      "section": "MAPSEC_ROUTE_119",
+      "script": "EventScript_BattleKecleon",
+      "path": "data/scripts/kecleon.inc",
+      "script_chain": [
+        "Route119_EventScript_Kecleon2",
+        "EventScript_Kecleon",
+        "EventScript_AskUseDevonScope",
+        "EventScript_BattleKecleon"
+      ],
+      "species": "SPECIES_KECLEON",
+      "ordinary_family": {
+        "root": 352,
+        "family": "SPECIES_KECLEON",
+        "section": "MAPSEC_ROUTE_9"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "Route120",
+      "map_id": "MAP_ROUTE120",
+      "section": "MAPSEC_ROUTE_120",
+      "script": "Route120_EventScript_StevenBattleKecleon",
+      "path": "data/maps/Route120/scripts.inc",
+      "script_chain": [
+        "Route120_EventScript_Steven",
+        "Route120_EventScript_StevenBattleKecleon"
+      ],
+      "species": "SPECIES_KECLEON",
+      "ordinary_family": {
+        "root": 352,
+        "family": "SPECIES_KECLEON",
+        "section": "MAPSEC_ROUTE_9"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "Route120",
+      "map_id": "MAP_ROUTE120",
+      "section": "MAPSEC_ROUTE_120",
+      "script": "EventScript_BattleKecleon",
+      "path": "data/scripts/kecleon.inc",
+      "script_chain": [
+        "Route120_EventScript_Kecleon5",
+        "EventScript_Kecleon",
+        "EventScript_AskUseDevonScope",
+        "EventScript_BattleKecleon"
+      ],
+      "species": "SPECIES_KECLEON",
+      "ordinary_family": {
+        "root": 352,
+        "family": "SPECIES_KECLEON",
+        "section": "MAPSEC_ROUTE_9"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "Route12_Frlg",
+      "map_id": "MAP_ROUTE12",
+      "section": "MAPSEC_ROUTE_12",
+      "script": "Route12_EventScript_Snorlax",
+      "path": "data/maps/Route12_Frlg/scripts.inc",
+      "script_chain": [
+        "Route12_EventScript_Snorlax"
+      ],
+      "species": "SPECIES_SNORLAX",
+      "ordinary_family": {
+        "root": 446,
+        "family": "SPECIES_MUNCHLAX",
+        "section": "MAPSEC_CAPE_BRINK"
+      },
+      "matches_random_habitat": false
+    },
+    {
+      "map": "Route16_Frlg",
+      "map_id": "MAP_ROUTE16",
+      "section": "MAPSEC_ROUTE_16",
+      "script": "Route16_EventScript_Snorlax",
+      "path": "data/maps/Route16_Frlg/scripts.inc",
+      "script_chain": [
+        "Route16_EventScript_Snorlax"
+      ],
+      "species": "SPECIES_SNORLAX",
+      "ordinary_family": {
+        "root": 446,
+        "family": "SPECIES_MUNCHLAX",
+        "section": "MAPSEC_CAPE_BRINK"
+      },
+      "matches_random_habitat": false
+    }
+  ],
+  "dynamic_species": [],
+  "unresolved_event_roots": [
+    {
+      "map": "AquaHideout_B2F",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattleArenaBattleRoom",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattleArenaCorridor",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattleDomeBattleRoom",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattleDomeCorridor",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattleDomePreBattleRoom",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattleFactoryBattleRoom",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattleFactoryPreBattleRoom",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattlePalaceBattleRoom",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattlePalaceCorridor",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattlePikeCorridor",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattlePikeRoomFinal",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattlePyramidFloor",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattlePyramidTop",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattleTowerBattleRoom",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattleTowerCorridor",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattleTowerElevator",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattleTowerMultiBattleRoom",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_BattleTowerMultiCorridor",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_Lounge9",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_OutsideEast",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "map": "BattleFrontier_OutsideWest",
+      "script": "0x0"
+    },
+    {
+      "map": "BattleFrontier_OutsideWest",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "map": "BattleFrontier_PokemonCenter_2F",
+      "script": "Common_EventScript_DirectCornerAttendant"
+    },
+    {
+      "map": "BattleFrontier_PokemonCenter_2F",
+      "script": "Common_EventScript_UnionRoomAttendant"
+    },
+    {
+      "map": "BattleFrontier_PokemonCenter_2F",
+      "script": "Common_EventScript_WirelessClubAttendant"
+    },
+    {
+      "map": "BattleFrontier_ReceptionGate",
+      "script": "0x0"
+    },
+    {
+      "map": "BattlePyramidSquare02",
+      "script": "BattlePyramidSquare02_MapScripts"
+    },
+    {
+      "map": "BattlePyramidSquare03",
+      "script": "BattlePyramidSquare03_MapScripts"
+    },
+    {
+      "map": "BattlePyramidSquare04",
+      "script": "BattlePyramidSquare04_MapScripts"
+    },
+    {
+      "map": "BattlePyramidSquare05",
+      "script": "BattlePyramidSquare05_MapScripts"
+    },
+    {
+      "map": "BattlePyramidSquare06",
+      "script": "BattlePyramidSquare06_MapScripts"
+    },
+    {
+      "map": "BattlePyramidSquare07",
+      "script": "BattlePyramidSquare07_MapScripts"
+    },
+    {
+      "map": "BattlePyramidSquare08",
+      "script": "BattlePyramidSquare08_MapScripts"
+    },
+    {
+      "map": "BattlePyramidSquare09",
+      "script": "BattlePyramidSquare09_MapScripts"
+    },
+    {
+      "map": "BattlePyramidSquare10",
+      "script": "BattlePyramidSquare10_MapScripts"
+    },
+    {
+      "map": "BattlePyramidSquare11",
+      "script": "BattlePyramidSquare11_MapScripts"
+    },
+    {
+      "map": "BattlePyramidSquare12",
+      "script": "BattlePyramidSquare12_MapScripts"
+    },
+    {
+      "map": "BattlePyramidSquare13",
+      "script": "BattlePyramidSquare13_MapScripts"
+    },
+    {
+      "map": "BattlePyramidSquare14",
+      "script": "BattlePyramidSquare14_MapScripts"
+    },
+    {
+      "map": "BattlePyramidSquare15",
+      "script": "BattlePyramidSquare15_MapScripts"
+    },
+    {
+      "map": "BattlePyramidSquare16",
+      "script": "BattlePyramidSquare16_MapScripts"
+    },
+    {
+      "map": "BirthIsland_Exterior",
+      "script": "0x0"
+    },
+    {
+      "map": "BirthIsland_Exterior_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "BirthIsland_Harbor",
+      "script": "0x0"
+    },
+    {
+      "map": "BirthIsland_Harbor_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "CeladonCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "CeladonCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "CeladonCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "CeruleanCity_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "CeruleanCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "CeruleanCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "CeruleanCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "CinnabarIsland_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "CinnabarIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "CinnabarIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "CinnabarIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "ContestHall",
+      "script": "0x0"
+    },
+    {
+      "map": "ContestHallBeauty",
+      "script": "ContestHallBeauty_MapScripts"
+    },
+    {
+      "map": "ContestHallCool",
+      "script": "ContestHallCool_MapScripts"
+    },
+    {
+      "map": "ContestHallCute",
+      "script": "ContestHallCute_MapScripts"
+    },
+    {
+      "map": "ContestHallSmart",
+      "script": "ContestHallSmart_MapScripts"
+    },
+    {
+      "map": "ContestHallTough",
+      "script": "ContestHallTough_MapScripts"
+    },
+    {
+      "map": "DewfordTown",
+      "script": "0x0"
+    },
+    {
+      "map": "DewfordTown",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "map": "DewfordTown_PokemonCenter_2F",
+      "script": "Common_EventScript_DirectCornerAttendant"
+    },
+    {
+      "map": "DewfordTown_PokemonCenter_2F",
+      "script": "Common_EventScript_UnionRoomAttendant"
+    },
+    {
+      "map": "DewfordTown_PokemonCenter_2F",
+      "script": "Common_EventScript_WirelessClubAttendant"
+    },
+    {
+      "map": "EverGrandeCity",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "map": "EverGrandeCity_ChampionsRoom",
+      "script": "0x0"
+    },
+    {
+      "map": "EverGrandeCity_HallOfFame",
+      "script": "0x0"
+    },
+    {
+      "map": "EverGrandeCity_PokemonCenter_2F",
+      "script": "Common_EventScript_DirectCornerAttendant"
+    },
+    {
+      "map": "EverGrandeCity_PokemonCenter_2F",
+      "script": "Common_EventScript_UnionRoomAttendant"
+    },
+    {
+      "map": "EverGrandeCity_PokemonCenter_2F",
+      "script": "Common_EventScript_WirelessClubAttendant"
+    },
+    {
+      "map": "EverGrandeCity_PokemonLeague_2F",
+      "script": "Common_EventScript_DirectCornerAttendant"
+    },
+    {
+      "map": "EverGrandeCity_PokemonLeague_2F",
+      "script": "Common_EventScript_UnionRoomAttendant"
+    },
+    {
+      "map": "EverGrandeCity_PokemonLeague_2F",
+      "script": "Common_EventScript_WirelessClubAttendant"
+    },
+    {
+      "map": "FallarborTown",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "map": "FallarborTown",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "map": "FallarborTown_BattleTentBattleRoom",
+      "script": "0x0"
+    },
+    {
+      "map": "FallarborTown_BattleTentCorridor",
+      "script": "0x0"
+    },
+    {
+      "map": "FallarborTown_PokemonCenter_2F",
+      "script": "Common_EventScript_DirectCornerAttendant"
+    },
+    {
+      "map": "FallarborTown_PokemonCenter_2F",
+      "script": "Common_EventScript_UnionRoomAttendant"
+    },
+    {
+      "map": "FallarborTown_PokemonCenter_2F",
+      "script": "Common_EventScript_WirelessClubAttendant"
+    },
+    {
+      "map": "FarawayIsland_Entrance",
+      "script": "0x0"
+    },
+    {
+      "map": "FiveIsland_Harbor_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "FiveIsland_LostCave_Room10_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "FiveIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "FiveIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "FiveIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "FiveIsland_ResortGorgeous_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "FortreeCity",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "map": "FortreeCity",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "map": "FortreeCity_PokemonCenter_2F",
+      "script": "Common_EventScript_DirectCornerAttendant"
+    },
+    {
+      "map": "FortreeCity_PokemonCenter_2F",
+      "script": "Common_EventScript_UnionRoomAttendant"
+    },
+    {
+      "map": "FortreeCity_PokemonCenter_2F",
+      "script": "Common_EventScript_WirelessClubAttendant"
+    },
+    {
+      "map": "FourIsland_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "FourIsland_Harbor_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "FourIsland_IcefallCave_Back_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "FourIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "FourIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "FourIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "FuchsiaCity_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "FuchsiaCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "FuchsiaCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "FuchsiaCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "FuchsiaCity_SafariZone_Entrance_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "IndigoPlateau_Exterior_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "IndigoPlateau_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "IndigoPlateau_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "IndigoPlateau_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "JourneyFamilyBedroom01",
+      "script": "EventScript_PalletTown_PlayersHouse_2F_TurnOnPC"
+    },
+    {
+      "map": "JourneyFamilyBedroom02",
+      "script": "EventScript_PalletTown_PlayersHouse_2F_TurnOnPC"
+    },
+    {
+      "map": "JourneyFamilyBedroom03",
+      "script": "EventScript_PalletTown_PlayersHouse_2F_TurnOnPC"
+    },
+    {
+      "map": "JourneyFamilyBedroom04",
+      "script": "EventScript_PalletTown_PlayersHouse_2F_TurnOnPC"
+    },
+    {
+      "map": "JourneyFamilyBedroom05",
+      "script": "EventScript_PalletTown_PlayersHouse_2F_TurnOnPC"
+    },
+    {
+      "map": "JourneyFamilyBedroom06",
+      "script": "EventScript_PalletTown_PlayersHouse_2F_TurnOnPC"
+    },
+    {
+      "map": "JourneyFamilyBedroom07",
+      "script": "EventScript_PalletTown_PlayersHouse_2F_TurnOnPC"
+    },
+    {
+      "map": "JourneyFamilyBedroom08",
+      "script": "EventScript_PalletTown_PlayersHouse_2F_TurnOnPC"
+    },
+    {
+      "map": "JourneyFamilyBedroom09",
+      "script": "EventScript_PalletTown_PlayersHouse_2F_TurnOnPC"
+    },
+    {
+      "map": "JourneyFamilyBedroom10",
+      "script": "EventScript_PalletTown_PlayersHouse_2F_TurnOnPC"
+    },
+    {
+      "map": "JourneyFamilyBedroom11",
+      "script": "EventScript_PalletTown_PlayersHouse_2F_TurnOnPC"
+    },
+    {
+      "map": "JourneyFamilyBedroom12",
+      "script": "EventScript_PalletTown_PlayersHouse_2F_TurnOnPC"
+    },
+    {
+      "map": "JourneyFamilyBedroom13",
+      "script": "EventScript_PalletTown_PlayersHouse_2F_TurnOnPC"
+    },
+    {
+      "map": "JourneyFamilyBedroom14",
+      "script": "EventScript_PalletTown_PlayersHouse_2F_TurnOnPC"
+    },
+    {
+      "map": "JourneyFamilyBedroom15",
+      "script": "EventScript_PalletTown_PlayersHouse_2F_TurnOnPC"
+    },
+    {
+      "map": "JourneyPWTArena",
+      "script": "0x0"
+    },
+    {
+      "map": "LavaridgeTown",
+      "script": "0x0"
+    },
+    {
+      "map": "LavaridgeTown",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "map": "LavaridgeTown",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "map": "LavaridgeTown_PokemonCenter_2F",
+      "script": "Common_EventScript_DirectCornerAttendant"
+    },
+    {
+      "map": "LavaridgeTown_PokemonCenter_2F",
+      "script": "Common_EventScript_UnionRoomAttendant"
+    },
+    {
+      "map": "LavaridgeTown_PokemonCenter_2F",
+      "script": "Common_EventScript_WirelessClubAttendant"
+    },
+    {
+      "map": "LavenderTown_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "LavenderTown_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "LavenderTown_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "LilycoveCity",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "map": "LilycoveCity_ContestLobby",
+      "script": "0x0"
+    },
+    {
+      "map": "LilycoveCity_Harbor",
+      "script": "0x0"
+    },
+    {
+      "map": "LilycoveCity_PokemonCenter_2F",
+      "script": "Common_EventScript_DirectCornerAttendant"
+    },
+    {
+      "map": "LilycoveCity_PokemonCenter_2F",
+      "script": "Common_EventScript_UnionRoomAttendant"
+    },
+    {
+      "map": "LilycoveCity_PokemonCenter_2F",
+      "script": "Common_EventScript_WirelessClubAttendant"
+    },
+    {
+      "map": "LittlerootTown",
+      "script": "0x0"
+    },
+    {
+      "map": "LittlerootTown_BrendansHouse_1F",
+      "script": "0x0"
+    },
+    {
+      "map": "LittlerootTown_BrendansHouse_2F",
+      "script": "0x0"
+    },
+    {
+      "map": "LittlerootTown_MaysHouse_1F",
+      "script": "0x0"
+    },
+    {
+      "map": "LittlerootTown_MaysHouse_2F",
+      "script": "0x0"
+    },
+    {
+      "map": "MagmaHideout_4F",
+      "script": "0x0"
+    },
+    {
+      "map": "MarineCave_End",
+      "script": "0x0"
+    },
+    {
+      "map": "MauvilleCity",
+      "script": "0x0"
+    },
+    {
+      "map": "MauvilleCity",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "map": "MauvilleCity",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "map": "MauvilleCity_PokemonCenter_2F",
+      "script": "Common_EventScript_DirectCornerAttendant"
+    },
+    {
+      "map": "MauvilleCity_PokemonCenter_2F",
+      "script": "Common_EventScript_UnionRoomAttendant"
+    },
+    {
+      "map": "MauvilleCity_PokemonCenter_2F",
+      "script": "Common_EventScript_WirelessClubAttendant"
+    },
+    {
+      "map": "MeteorFalls_1F_1R",
+      "script": "0x0"
+    },
+    {
+      "map": "MeteorFalls_1F_2R",
+      "script": "0x0"
+    },
+    {
+      "map": "MossdeepCity",
+      "script": "0x0"
+    },
+    {
+      "map": "MossdeepCity",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "map": "MossdeepCity",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "map": "MossdeepCity_GameCorner_B1F",
+      "script": "0x0"
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "script": "0x0"
+    },
+    {
+      "map": "MossdeepCity_PokemonCenter_2F",
+      "script": "Common_EventScript_DirectCornerAttendant"
+    },
+    {
+      "map": "MossdeepCity_PokemonCenter_2F",
+      "script": "Common_EventScript_UnionRoomAttendant"
+    },
+    {
+      "map": "MossdeepCity_PokemonCenter_2F",
+      "script": "Common_EventScript_WirelessClubAttendant"
+    },
+    {
+      "map": "MtChimney_CableCarStation",
+      "script": "0x0"
+    },
+    {
+      "map": "MtPyre_Summit",
+      "script": "0x0"
+    },
+    {
+      "map": "NavelRock_Harbor",
+      "script": "0x0"
+    },
+    {
+      "map": "NavelRock_Harbor_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "NavelRock_Summit_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "NavelRock_Top",
+      "script": "0x0"
+    },
+    {
+      "map": "OldaleTown",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "map": "OldaleTown",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "map": "OldaleTown_PokemonCenter_2F",
+      "script": "Common_EventScript_DirectCornerAttendant"
+    },
+    {
+      "map": "OldaleTown_PokemonCenter_2F",
+      "script": "Common_EventScript_UnionRoomAttendant"
+    },
+    {
+      "map": "OldaleTown_PokemonCenter_2F",
+      "script": "Common_EventScript_WirelessClubAttendant"
+    },
+    {
+      "map": "OneIsland_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "OneIsland_Harbor_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "OneIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "OneIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "OneIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "PacifidlogTown",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "map": "PacifidlogTown_PokemonCenter_2F",
+      "script": "Common_EventScript_DirectCornerAttendant"
+    },
+    {
+      "map": "PacifidlogTown_PokemonCenter_2F",
+      "script": "Common_EventScript_UnionRoomAttendant"
+    },
+    {
+      "map": "PacifidlogTown_PokemonCenter_2F",
+      "script": "Common_EventScript_WirelessClubAttendant"
+    },
+    {
+      "map": "PalletTown_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "PalletTown_PlayersHouse_2F_Frlg",
+      "script": "EventScript_PalletTown_PlayersHouse_2F_TurnOnPC"
+    },
+    {
+      "map": "PetalburgCity",
+      "script": "0x0"
+    },
+    {
+      "map": "PetalburgCity",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "map": "PetalburgCity",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "script": "0x0"
+    },
+    {
+      "map": "PetalburgCity_PokemonCenter_2F",
+      "script": "Common_EventScript_DirectCornerAttendant"
+    },
+    {
+      "map": "PetalburgCity_PokemonCenter_2F",
+      "script": "Common_EventScript_UnionRoomAttendant"
+    },
+    {
+      "map": "PetalburgCity_PokemonCenter_2F",
+      "script": "Common_EventScript_WirelessClubAttendant"
+    },
+    {
+      "map": "PetalburgWoods",
+      "script": "0x0"
+    },
+    {
+      "map": "PewterCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "PewterCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "PewterCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "PokemonLeague_ChampionsRoom_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "PokemonLeague_HallOfFame_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "PokemonTower_2F_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "Route101",
+      "script": "0x0"
+    },
+    {
+      "map": "Route104",
+      "script": "0x0"
+    },
+    {
+      "map": "Route109",
+      "script": "0x0"
+    },
+    {
+      "map": "Route10_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "Route10_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "Route10_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "Route110",
+      "script": "0x0"
+    },
+    {
+      "map": "Route110_TrickHousePuzzle7",
+      "script": "0x0"
+    },
+    {
+      "map": "Route111",
+      "script": "0x0"
+    },
+    {
+      "map": "Route112_CableCarStation",
+      "script": "0x0"
+    },
+    {
+      "map": "Route117",
+      "script": "0x0"
+    },
+    {
+      "map": "Route118",
+      "script": "0x0"
+    },
+    {
+      "map": "Route119",
+      "script": "0x0"
+    },
+    {
+      "map": "Route119_WeatherInstitute_2F",
+      "script": "0x0"
+    },
+    {
+      "map": "Route120",
+      "script": "0x0"
+    },
+    {
+      "map": "Route121",
+      "script": "0x0"
+    },
+    {
+      "map": "Route121_SafariZoneEntrance",
+      "script": "0x0"
+    },
+    {
+      "map": "Route128",
+      "script": "0x0"
+    },
+    {
+      "map": "Route16_NorthEntrance_1F_Frlg",
+      "script": "EventScript_SetEnteringCyclingRoad"
+    },
+    {
+      "map": "Route16_NorthEntrance_1F_Frlg",
+      "script": "EventScript_SetExitingCyclingRoad"
+    },
+    {
+      "map": "Route18_EastEntrance_1F_Frlg",
+      "script": "EventScript_SetEnteringCyclingRoad"
+    },
+    {
+      "map": "Route18_EastEntrance_1F_Frlg",
+      "script": "EventScript_SetExitingCyclingRoad"
+    },
+    {
+      "map": "Route22_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "Route23_UnusedHouse",
+      "script": "Route23_UnusedHouse_MapScripts"
+    },
+    {
+      "map": "Route4_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "Route4_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "Route4_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "RustboroCity",
+      "script": "0x0"
+    },
+    {
+      "map": "RustboroCity",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "map": "RustboroCity",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "map": "RustboroCity_Flat1_2F",
+      "script": "0x0"
+    },
+    {
+      "map": "RustboroCity_PokemonCenter_2F",
+      "script": "Common_EventScript_DirectCornerAttendant"
+    },
+    {
+      "map": "RustboroCity_PokemonCenter_2F",
+      "script": "Common_EventScript_UnionRoomAttendant"
+    },
+    {
+      "map": "RustboroCity_PokemonCenter_2F",
+      "script": "Common_EventScript_WirelessClubAttendant"
+    },
+    {
+      "map": "RusturfTunnel",
+      "script": "0x0"
+    },
+    {
+      "map": "SSAnne_2F_Corridor_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "SSAnne_Exterior_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "SSTidalCorridor",
+      "script": "0x0"
+    },
+    {
+      "map": "SaffronCity_House_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "SaffronCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "SaffronCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "SaffronCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "SeafloorCavern_Room9",
+      "script": "0x0"
+    },
+    {
+      "map": "SeafoamIslands_B3F_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "SeafoamIslands_B4F_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_BlueCave1",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_BlueCave1",
+      "script": "SecretBase_BlueCave1_MapScripts"
+    },
+    {
+      "map": "SecretBase_BlueCave2",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_BlueCave2",
+      "script": "SecretBase_BlueCave2_MapScripts"
+    },
+    {
+      "map": "SecretBase_BlueCave3",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_BlueCave3",
+      "script": "SecretBase_BlueCave3_MapScripts"
+    },
+    {
+      "map": "SecretBase_BlueCave4",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_BlueCave4",
+      "script": "SecretBase_BlueCave4_MapScripts"
+    },
+    {
+      "map": "SecretBase_BrownCave1",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_BrownCave1",
+      "script": "SecretBase_BrownCave1_MapScripts"
+    },
+    {
+      "map": "SecretBase_BrownCave2",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_BrownCave2",
+      "script": "SecretBase_BrownCave2_MapScripts"
+    },
+    {
+      "map": "SecretBase_BrownCave3",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_BrownCave3",
+      "script": "SecretBase_BrownCave3_MapScripts"
+    },
+    {
+      "map": "SecretBase_BrownCave4",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_BrownCave4",
+      "script": "SecretBase_BrownCave4_MapScripts"
+    },
+    {
+      "map": "SecretBase_RedCave1",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_RedCave1",
+      "script": "SecretBase_RedCave1_MapScripts"
+    },
+    {
+      "map": "SecretBase_RedCave2",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_RedCave2",
+      "script": "SecretBase_RedCave2_MapScripts"
+    },
+    {
+      "map": "SecretBase_RedCave3",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_RedCave3",
+      "script": "SecretBase_RedCave3_MapScripts"
+    },
+    {
+      "map": "SecretBase_RedCave4",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_RedCave4",
+      "script": "SecretBase_RedCave4_MapScripts"
+    },
+    {
+      "map": "SecretBase_Shrub1",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_Shrub1",
+      "script": "SecretBase_Shrub1_MapScripts"
+    },
+    {
+      "map": "SecretBase_Shrub2",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_Shrub2",
+      "script": "SecretBase_Shrub2_MapScripts"
+    },
+    {
+      "map": "SecretBase_Shrub3",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_Shrub3",
+      "script": "SecretBase_Shrub3_MapScripts"
+    },
+    {
+      "map": "SecretBase_Shrub4",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_Shrub4",
+      "script": "SecretBase_Shrub4_MapScripts"
+    },
+    {
+      "map": "SecretBase_Tree1",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_Tree1",
+      "script": "SecretBase_Tree1_MapScripts"
+    },
+    {
+      "map": "SecretBase_Tree2",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_Tree2",
+      "script": "SecretBase_Tree2_MapScripts"
+    },
+    {
+      "map": "SecretBase_Tree3",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_Tree3",
+      "script": "SecretBase_Tree3_MapScripts"
+    },
+    {
+      "map": "SecretBase_Tree4",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_Tree4",
+      "script": "SecretBase_Tree4_MapScripts"
+    },
+    {
+      "map": "SecretBase_YellowCave1",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_YellowCave1",
+      "script": "SecretBase_YellowCave1_MapScripts"
+    },
+    {
+      "map": "SecretBase_YellowCave2",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_YellowCave2",
+      "script": "SecretBase_YellowCave2_MapScripts"
+    },
+    {
+      "map": "SecretBase_YellowCave3",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_YellowCave3",
+      "script": "SecretBase_YellowCave3_MapScripts"
+    },
+    {
+      "map": "SecretBase_YellowCave4",
+      "script": "0x0"
+    },
+    {
+      "map": "SecretBase_YellowCave4",
+      "script": "SecretBase_YellowCave4_MapScripts"
+    },
+    {
+      "map": "SevenIsland_Harbor_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "SevenIsland_House_Room2_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "SevenIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "SevenIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "SevenIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "SevenIsland_UnusedHouse",
+      "script": "SevenIsland_UnusedHouse_MapScripts"
+    },
+    {
+      "map": "SilphCo_11F_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "SilphCo_7F_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "SixIsland_DottedHole_SapphireRoom_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "SixIsland_Harbor_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "SixIsland_PokemonCenter_1F_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "SixIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "SixIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "SixIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "SkyPillar_Top",
+      "script": "0x0"
+    },
+    {
+      "map": "SlateportCity",
+      "script": "0x0"
+    },
+    {
+      "map": "SlateportCity",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "map": "SlateportCity",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "map": "SlateportCity_BattleTentBattleRoom",
+      "script": "0x0"
+    },
+    {
+      "map": "SlateportCity_BattleTentCorridor",
+      "script": "0x0"
+    },
+    {
+      "map": "SlateportCity_Harbor",
+      "script": "0x0"
+    },
+    {
+      "map": "SlateportCity_OceanicMuseum_2F",
+      "script": "0x0"
+    },
+    {
+      "map": "SlateportCity_PokemonCenter_2F",
+      "script": "Common_EventScript_DirectCornerAttendant"
+    },
+    {
+      "map": "SlateportCity_PokemonCenter_2F",
+      "script": "Common_EventScript_UnionRoomAttendant"
+    },
+    {
+      "map": "SlateportCity_PokemonCenter_2F",
+      "script": "Common_EventScript_WirelessClubAttendant"
+    },
+    {
+      "map": "SlateportCity_SternsShipyard_2F",
+      "script": "0x0"
+    },
+    {
+      "map": "SootopolisCity",
+      "script": "0x0"
+    },
+    {
+      "map": "SootopolisCity",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "map": "SootopolisCity",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "map": "SootopolisCity_MysteryEventsHouse_B1F",
+      "script": "0x0"
+    },
+    {
+      "map": "SootopolisCity_PokemonCenter_2F",
+      "script": "Common_EventScript_DirectCornerAttendant"
+    },
+    {
+      "map": "SootopolisCity_PokemonCenter_2F",
+      "script": "Common_EventScript_UnionRoomAttendant"
+    },
+    {
+      "map": "SootopolisCity_PokemonCenter_2F",
+      "script": "Common_EventScript_WirelessClubAttendant"
+    },
+    {
+      "map": "SouthernIsland_Exterior",
+      "script": "0x0"
+    },
+    {
+      "map": "SouthernIsland_Interior",
+      "script": "0x0"
+    },
+    {
+      "map": "TerraCave_End",
+      "script": "0x0"
+    },
+    {
+      "map": "ThreeIsland_Harbor_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "ThreeIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "ThreeIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "ThreeIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "TrainerTower_1F_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "TwoIsland_Harbor_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "TwoIsland_JoyfulGameCorner_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "TwoIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "TwoIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "TwoIsland_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "UnusedContestHall1",
+      "script": "UnusedContestHall1_MapScripts"
+    },
+    {
+      "map": "UnusedContestHall2",
+      "script": "UnusedContestHall2_MapScripts"
+    },
+    {
+      "map": "UnusedContestHall3",
+      "script": "UnusedContestHall3_MapScripts"
+    },
+    {
+      "map": "UnusedContestHall4",
+      "script": "UnusedContestHall4_MapScripts"
+    },
+    {
+      "map": "UnusedContestHall5",
+      "script": "UnusedContestHall5_MapScripts"
+    },
+    {
+      "map": "UnusedContestHall6",
+      "script": "UnusedContestHall6_MapScripts"
+    },
+    {
+      "map": "VerdanturfTown",
+      "script": "Common_EventScript_ShowPokemartSign"
+    },
+    {
+      "map": "VerdanturfTown",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "map": "VerdanturfTown_BattleTentBattleRoom",
+      "script": "0x0"
+    },
+    {
+      "map": "VerdanturfTown_BattleTentCorridor",
+      "script": "0x0"
+    },
+    {
+      "map": "VerdanturfTown_PokemonCenter_2F",
+      "script": "Common_EventScript_DirectCornerAttendant"
+    },
+    {
+      "map": "VerdanturfTown_PokemonCenter_2F",
+      "script": "Common_EventScript_UnionRoomAttendant"
+    },
+    {
+      "map": "VerdanturfTown_PokemonCenter_2F",
+      "script": "Common_EventScript_WirelessClubAttendant"
+    },
+    {
+      "map": "VermilionCity_House3_Frlg",
+      "script": "0x0"
+    },
+    {
+      "map": "VermilionCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "VermilionCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "VermilionCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    },
+    {
+      "map": "ViridianCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_DirectCornerAttendant_Frlg"
+    },
+    {
+      "map": "ViridianCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_UnionRoomAttendant_Frlg"
+    },
+    {
+      "map": "ViridianCity_PokemonCenter_2F_Frlg",
+      "script": "Common_EventScript_WirelessClubAttendant_Frlg"
+    }
+  ],
+  "duplicate_label_names": [
+    "MtChimney_EventScript_BagIsFull"
+  ],
+  "source_selected_callbacks": {
+    "BattleFrontier_OutsideEast": [
+      "BattleFrontier_OutsideEast_EventScript_WaterSudowoodo"
+    ]
+  },
+  "maps_scanned": 1048,
+  "script_files_scanned": 1087,
+  "conditions_and_flags_evaluated": false,
+  "native_event_reachability_verified": false,
+  "full_fixed_encounter_coverage": false,
+  "input_sha256": {
+    ".journey-ecology": "f5cbe9cc0016240859701114a1ad2110789a38cc8e30ed45ae1c03870b5c1000",
+    ".journey-lostelle-habitats": "7a8b79c191bb885203ee9968e2dcded3637d50dc52ec0cccdef40245a17c5bad",
+    ".journey-tower-habitats": "4be6141e612a7b042e323a0ecf17dcd5ed6d55862162562306f39fbbfe339cfd",
+    "src/item_use.c": "bfca2e7f6cb86ad630db1de67f79c27346855b5873ae81f34be5472195855fc0"
+  },
+  "rom_sha256": "cccad98c4ecb02105da420913043ee854355f875a14591a6fc144f4dd8f75d0a"
+}
