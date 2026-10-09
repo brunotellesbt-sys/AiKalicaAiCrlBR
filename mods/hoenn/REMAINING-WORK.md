@@ -23,7 +23,15 @@ Mantendo o tamanho recente dos PRs, a previsão é de **10 a 20 PRs para uma
 candidata de lançamento**, sujeita aos problemas encontrados nos percursos e
 campanhas completas. A quantidade de PRs não mede a conclusão do jogo.
 
-## Avanço atual: acesso às duas Ligas com 16 insígnias
+## Avanço atual: reencontro de Wanda sem HM terrestre
+
+Corrigido o gatilho da cena de Rusturf Tunnel, que dependia das pedras removidas.
+Passaram as caminhadas pelo oeste/leste, recompensa TM53, salvar/Continue e
+revisita; progresso anterior do resgate ainda é fixture.
+Candidata `407bd93b`; [RUSTURF-REUNION.md](RUSTURF-REUNION.md).
+As campanhas completas e os demais eventos de puzzle continuam pendentes.
+
+## Etapa anterior: acesso às duas Ligas com 16 insígnias
 
 Corrigida a mensagem de líder ocupado nas Ligas. Ambas exigem oito insígnias
 de cada região; as missões permanecem nos checkpoints dos ginásios.

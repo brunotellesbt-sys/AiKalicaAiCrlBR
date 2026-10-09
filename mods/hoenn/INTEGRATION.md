@@ -1,5 +1,11 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+Restaurada a cena de Wanda em Rusturf Tunnel após a remoção de Rock Smash.
+A caminhada pelo trecho, após Peeko e a apresentação do casal, inicia o
+reencontro original e entrega TM53 Strength. Passaram os dois lados,
+salvar/Continue e revisita sem repetir a recompensa. Candidata `407bd93b`;
+[RUSTURF-REUNION.md](RUSTURF-REUNION.md).
+
 As duas Ligas exigem **as 16 insígnias: oito de Kanto e oito de Hoenn**.
 Os guardas usam uma mensagem própria da Liga, em inglês. As missões Rocket,
 Aqua e Magma continuam nas travas regionais dos ginásios, nos checkpoints
