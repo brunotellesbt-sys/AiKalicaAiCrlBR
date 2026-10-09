@@ -23,7 +23,16 @@ Mantendo o tamanho recente dos PRs, a previsão é de **10 a 20 PRs para uma
 candidata de lançamento**, sujeita aos problemas encontrados nos percursos e
 campanhas completas. A quantidade de PRs não mede a conclusão do jogo.
 
-## Avanço atual: travessia contínua Kanto–Sevii–Hoenn
+## Avanço atual: cidades e Centros Pokémon de Sevii
+
+As sete cidades foram alcançadas desde o mar, com cura nativa pela enfermeira,
+Continue no Centro, saída pela cidade/porto e Continue em Surf. Passaram
+34 mapas, 62 transições, sete curas e 14 Continues. O validador usa os
+ponteiros reais dos tilesets de interiores; viagem oeste repetida.
+Missões de Celio/Lostelle, outros serviços, cavernas e exploração completa
+das ilhas continuam pendentes. [SEVII-TOWN-ACCESS.md](SEVII-TOWN-ACCESS.md).
+
+## Etapa anterior: travessia contínua Kanto–Sevii–Hoenn
 
 Corrigido o canal no layout alternativo da Rota 131, que voltava a fechar
 após recarregar o mapa. Passaram Vermilion, os sete portos de Sevii,

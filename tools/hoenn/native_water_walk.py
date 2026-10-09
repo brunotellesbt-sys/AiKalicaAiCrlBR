@@ -20,8 +20,13 @@ for n, m in maps.items():
     assert layout['layout_version'] in ('emerald', 'frlg')
     frlg = layout['layout_version'] == 'frlg'
     primary_count, attribute_size, behavior_mask = (640, 4, 511) if frlg else (512, 2, 255)
-    primary = s[layout['primary_tileset'].replace('gTileset_', 'gMetatileAttributes_')]
-    secondary = s[layout['secondary_tileset'].replace('gTileset_', 'gMetatileAttributes_')]
+    # Indoor FRLG tilesets can share attribute tables under another symbol.
+    # Read the pointers the native engine uses (pinned Tileset offset 0x10).
+    primary = lib.read32(s[layout['primary_tileset']] + 0x10)
+    secondary = lib.read32(s[layout['secondary_tileset']] + 0x10)
+    for tileset, address in [(layout['primary_tileset'], primary), (layout['secondary_tileset'], secondary)]:
+        known = s.get(tileset.replace('gTileset_', 'gMetatileAttributes_'))
+        if known is not None: assert address == known, (tileset, address, known)
     valid = set()
     behaviors[n] = []
     for i, tile in enumerate(blocks[n][2]):

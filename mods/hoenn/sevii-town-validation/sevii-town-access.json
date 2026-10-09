@@ -1,0 +1,1632 @@
+{
+  "passed": true,
+  "rom_sha256": "2f53d410522b8c1a186112875659791328ae6681f210e6b94a69f15f81049e09",
+  "continuous_roundtrip": true,
+  "start": [
+    "JourneyWorldSea00",
+    34,
+    6
+  ],
+  "end": [
+    "JourneyWorldSea00",
+    34,
+    6
+  ],
+  "planned_maps": [
+    "JourneyWorldSea00",
+    "JourneyWorldSea01",
+    "JourneyWorldSea02",
+    "JourneyWorldSea03",
+    "JourneyWorldSea04",
+    "JourneyWorldSea05",
+    "JourneyWorldSea06",
+    "JourneyWorldSea07",
+    "JourneyWorldLane10",
+    "JourneyWorldLane11",
+    "JourneyWorldLane20",
+    "JourneyWorldLane21",
+    "OneIsland_Harbor_Frlg",
+    "OneIsland_Frlg",
+    "OneIsland_PokemonCenter_1F_Frlg",
+    "TwoIsland_Harbor_Frlg",
+    "TwoIsland_Frlg",
+    "TwoIsland_PokemonCenter_1F_Frlg",
+    "ThreeIsland_Harbor_Frlg",
+    "ThreeIsland_Frlg",
+    "ThreeIsland_PokemonCenter_1F_Frlg",
+    "FourIsland_Harbor_Frlg",
+    "FourIsland_Frlg",
+    "FourIsland_PokemonCenter_1F_Frlg",
+    "FiveIsland_Harbor_Frlg",
+    "FiveIsland_Frlg",
+    "FiveIsland_PokemonCenter_1F_Frlg",
+    "SixIsland_Harbor_Frlg",
+    "SixIsland_Frlg",
+    "SixIsland_PokemonCenter_1F_Frlg",
+    "SevenIsland_Harbor_Frlg",
+    "SevenIsland_Frlg",
+    "SevenIsland_PokemonCenter_1F_Frlg",
+    "ThreeIsland_Port_Frlg"
+  ],
+  "visited_maps": [
+    "FiveIsland_Frlg",
+    "FiveIsland_Harbor_Frlg",
+    "FiveIsland_PokemonCenter_1F_Frlg",
+    "FourIsland_Frlg",
+    "FourIsland_Harbor_Frlg",
+    "FourIsland_PokemonCenter_1F_Frlg",
+    "JourneyWorldLane10",
+    "JourneyWorldLane11",
+    "JourneyWorldLane20",
+    "JourneyWorldLane21",
+    "JourneyWorldSea00",
+    "JourneyWorldSea01",
+    "JourneyWorldSea02",
+    "JourneyWorldSea03",
+    "JourneyWorldSea04",
+    "JourneyWorldSea05",
+    "JourneyWorldSea06",
+    "JourneyWorldSea07",
+    "OneIsland_Frlg",
+    "OneIsland_Harbor_Frlg",
+    "OneIsland_PokemonCenter_1F_Frlg",
+    "SevenIsland_Frlg",
+    "SevenIsland_Harbor_Frlg",
+    "SevenIsland_PokemonCenter_1F_Frlg",
+    "SixIsland_Frlg",
+    "SixIsland_Harbor_Frlg",
+    "SixIsland_PokemonCenter_1F_Frlg",
+    "ThreeIsland_Frlg",
+    "ThreeIsland_Harbor_Frlg",
+    "ThreeIsland_PokemonCenter_1F_Frlg",
+    "ThreeIsland_Port_Frlg",
+    "TwoIsland_Frlg",
+    "TwoIsland_Harbor_Frlg",
+    "TwoIsland_PokemonCenter_1F_Frlg"
+  ],
+  "islands": [
+    "One",
+    "Two",
+    "Three",
+    "Four",
+    "Five",
+    "Six",
+    "Seven"
+  ],
+  "legs": [
+    {
+      "label": "one-center",
+      "goal": [
+        "OneIsland_PokemonCenter_1F_Frlg",
+        9,
+        7
+      ],
+      "position_changes": 99
+    },
+    {
+      "label": "one-nurse-counter",
+      "goal": [
+        "OneIsland_PokemonCenter_1F_Frlg",
+        5,
+        4
+      ],
+      "position_changes": 7
+    },
+    {
+      "label": "one-town-return",
+      "goal": [
+        "OneIsland_Frlg",
+        14,
+        6
+      ],
+      "position_changes": 10
+    },
+    {
+      "label": "one-sea-return",
+      "goal": [
+        "JourneyWorldSea01",
+        32,
+        15
+      ],
+      "position_changes": 46
+    },
+    {
+      "label": "two-center",
+      "goal": [
+        "TwoIsland_PokemonCenter_1F_Frlg",
+        7,
+        7
+      ],
+      "position_changes": 113
+    },
+    {
+      "label": "two-nurse-counter",
+      "goal": [
+        "TwoIsland_PokemonCenter_1F_Frlg",
+        7,
+        4
+      ],
+      "position_changes": 3
+    },
+    {
+      "label": "two-town-return",
+      "goal": [
+        "TwoIsland_Frlg",
+        21,
+        8
+      ],
+      "position_changes": 5
+    },
+    {
+      "label": "two-sea-return",
+      "goal": [
+        "JourneyWorldSea02",
+        32,
+        15
+      ],
+      "position_changes": 51
+    },
+    {
+      "label": "three-center",
+      "goal": [
+        "ThreeIsland_PokemonCenter_1F_Frlg",
+        7,
+        7
+      ],
+      "position_changes": 119
+    },
+    {
+      "label": "three-nurse-counter",
+      "goal": [
+        "ThreeIsland_PokemonCenter_1F_Frlg",
+        7,
+        4
+      ],
+      "position_changes": 3
+    },
+    {
+      "label": "three-town-return",
+      "goal": [
+        "ThreeIsland_Frlg",
+        14,
+        28
+      ],
+      "position_changes": 5
+    },
+    {
+      "label": "three-sea-return",
+      "goal": [
+        "JourneyWorldSea03",
+        32,
+        15
+      ],
+      "position_changes": 57
+    },
+    {
+      "label": "four-center",
+      "goal": [
+        "FourIsland_PokemonCenter_1F_Frlg",
+        7,
+        7
+      ],
+      "position_changes": 254
+    },
+    {
+      "label": "four-nurse-counter",
+      "goal": [
+        "FourIsland_PokemonCenter_1F_Frlg",
+        7,
+        4
+      ],
+      "position_changes": 3
+    },
+    {
+      "label": "four-town-return",
+      "goal": [
+        "FourIsland_Frlg",
+        18,
+        21
+      ],
+      "position_changes": 5
+    },
+    {
+      "label": "four-sea-return",
+      "goal": [
+        "JourneyWorldSea04",
+        32,
+        15
+      ],
+      "position_changes": 45
+    },
+    {
+      "label": "five-center",
+      "goal": [
+        "FiveIsland_PokemonCenter_1F_Frlg",
+        7,
+        7
+      ],
+      "position_changes": 105
+    },
+    {
+      "label": "five-nurse-counter",
+      "goal": [
+        "FiveIsland_PokemonCenter_1F_Frlg",
+        7,
+        4
+      ],
+      "position_changes": 3
+    },
+    {
+      "label": "five-town-return",
+      "goal": [
+        "FiveIsland_Frlg",
+        18,
+        7
+      ],
+      "position_changes": 5
+    },
+    {
+      "label": "five-sea-return",
+      "goal": [
+        "JourneyWorldSea05",
+        32,
+        15
+      ],
+      "position_changes": 43
+    },
+    {
+      "label": "six-center",
+      "goal": [
+        "SixIsland_PokemonCenter_1F_Frlg",
+        7,
+        7
+      ],
+      "position_changes": 186
+    },
+    {
+      "label": "six-nurse-counter",
+      "goal": [
+        "SixIsland_PokemonCenter_1F_Frlg",
+        7,
+        4
+      ],
+      "position_changes": 3
+    },
+    {
+      "label": "six-town-return",
+      "goal": [
+        "SixIsland_Frlg",
+        11,
+        12
+      ],
+      "position_changes": 5
+    },
+    {
+      "label": "six-sea-return",
+      "goal": [
+        "JourneyWorldSea06",
+        32,
+        15
+      ],
+      "position_changes": 41
+    },
+    {
+      "label": "seven-center",
+      "goal": [
+        "SevenIsland_PokemonCenter_1F_Frlg",
+        7,
+        7
+      ],
+      "position_changes": 107
+    },
+    {
+      "label": "seven-nurse-counter",
+      "goal": [
+        "SevenIsland_PokemonCenter_1F_Frlg",
+        7,
+        4
+      ],
+      "position_changes": 3
+    },
+    {
+      "label": "seven-town-return",
+      "goal": [
+        "SevenIsland_Frlg",
+        12,
+        4
+      ],
+      "position_changes": 5
+    },
+    {
+      "label": "seven-sea-return",
+      "goal": [
+        "JourneyWorldSea07",
+        32,
+        15
+      ],
+      "position_changes": 43
+    },
+    {
+      "label": "original-sea-return",
+      "goal": [
+        "JourneyWorldSea00",
+        34,
+        6
+      ],
+      "position_changes": 327
+    }
+  ],
+  "healing": [
+    {
+      "island": "One",
+      "hp_before": 1,
+      "hp_after": 260,
+      "max_hp": 260,
+      "native_nurse_interaction": true,
+      "initial_damage_is_fixture": true
+    },
+    {
+      "island": "Two",
+      "hp_before": 1,
+      "hp_after": 260,
+      "max_hp": 260,
+      "native_nurse_interaction": true,
+      "initial_damage_is_fixture": true
+    },
+    {
+      "island": "Three",
+      "hp_before": 1,
+      "hp_after": 260,
+      "max_hp": 260,
+      "native_nurse_interaction": true,
+      "initial_damage_is_fixture": true
+    },
+    {
+      "island": "Four",
+      "hp_before": 1,
+      "hp_after": 260,
+      "max_hp": 260,
+      "native_nurse_interaction": true,
+      "initial_damage_is_fixture": true
+    },
+    {
+      "island": "Five",
+      "hp_before": 1,
+      "hp_after": 260,
+      "max_hp": 260,
+      "native_nurse_interaction": true,
+      "initial_damage_is_fixture": true
+    },
+    {
+      "island": "Six",
+      "hp_before": 1,
+      "hp_after": 260,
+      "max_hp": 260,
+      "native_nurse_interaction": true,
+      "initial_damage_is_fixture": true
+    },
+    {
+      "island": "Seven",
+      "hp_before": 1,
+      "hp_after": 260,
+      "max_hp": 260,
+      "native_nurse_interaction": true,
+      "initial_damage_is_fixture": true
+    }
+  ],
+  "position_changes": 1701,
+  "transitions": [
+    {
+      "source": [
+        "JourneyWorldSea00",
+        63,
+        6
+      ],
+      "destination": [
+        "JourneyWorldSea01",
+        0,
+        6
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea01",
+        30,
+        0
+      ],
+      "destination": [
+        "OneIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "OneIsland_Harbor_Frlg",
+        8,
+        3
+      ],
+      "destination": [
+        "OneIsland_Frlg",
+        12,
+        18
+      ]
+    },
+    {
+      "source": [
+        "OneIsland_Frlg",
+        14,
+        6
+      ],
+      "destination": [
+        "OneIsland_PokemonCenter_1F_Frlg",
+        14,
+        7
+      ]
+    },
+    {
+      "source": [
+        "OneIsland_PokemonCenter_1F_Frlg",
+        9,
+        9
+      ],
+      "destination": [
+        "OneIsland_Frlg",
+        14,
+        6
+      ]
+    },
+    {
+      "source": [
+        "OneIsland_Frlg",
+        12,
+        18
+      ],
+      "destination": [
+        "OneIsland_Harbor_Frlg",
+        8,
+        3
+      ]
+    },
+    {
+      "source": [
+        "OneIsland_Harbor_Frlg",
+        6,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea01",
+        30,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea01",
+        63,
+        15
+      ],
+      "destination": [
+        "JourneyWorldSea02",
+        0,
+        15
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea02",
+        30,
+        0
+      ],
+      "destination": [
+        "TwoIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "TwoIsland_Harbor_Frlg",
+        8,
+        3
+      ],
+      "destination": [
+        "TwoIsland_Frlg",
+        10,
+        8
+      ]
+    },
+    {
+      "source": [
+        "TwoIsland_Frlg",
+        21,
+        8
+      ],
+      "destination": [
+        "TwoIsland_PokemonCenter_1F_Frlg",
+        7,
+        8
+      ]
+    },
+    {
+      "source": [
+        "TwoIsland_PokemonCenter_1F_Frlg",
+        7,
+        8
+      ],
+      "destination": [
+        "TwoIsland_Frlg",
+        21,
+        8
+      ]
+    },
+    {
+      "source": [
+        "TwoIsland_Frlg",
+        10,
+        8
+      ],
+      "destination": [
+        "TwoIsland_Harbor_Frlg",
+        8,
+        3
+      ]
+    },
+    {
+      "source": [
+        "TwoIsland_Harbor_Frlg",
+        6,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea02",
+        30,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea02",
+        63,
+        15
+      ],
+      "destination": [
+        "JourneyWorldSea03",
+        0,
+        15
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea03",
+        30,
+        0
+      ],
+      "destination": [
+        "ThreeIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_Harbor_Frlg",
+        8,
+        3
+      ],
+      "destination": [
+        "ThreeIsland_Port_Frlg",
+        12,
+        13
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_Port_Frlg",
+        12,
+        0
+      ],
+      "destination": [
+        "ThreeIsland_Frlg",
+        12,
+        39
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_Frlg",
+        14,
+        28
+      ],
+      "destination": [
+        "ThreeIsland_PokemonCenter_1F_Frlg",
+        7,
+        8
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_PokemonCenter_1F_Frlg",
+        7,
+        8
+      ],
+      "destination": [
+        "ThreeIsland_Frlg",
+        14,
+        28
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_Frlg",
+        12,
+        39
+      ],
+      "destination": [
+        "ThreeIsland_Port_Frlg",
+        12,
+        0
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_Port_Frlg",
+        12,
+        13
+      ],
+      "destination": [
+        "ThreeIsland_Harbor_Frlg",
+        8,
+        3
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_Harbor_Frlg",
+        6,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea03",
+        30,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea03",
+        0,
+        15
+      ],
+      "destination": [
+        "JourneyWorldSea02",
+        63,
+        15
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea02",
+        0,
+        47
+      ],
+      "destination": [
+        "JourneyWorldLane20",
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldLane20",
+        0,
+        47
+      ],
+      "destination": [
+        "JourneyWorldSea05",
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea05",
+        0,
+        6
+      ],
+      "destination": [
+        "JourneyWorldSea04",
+        63,
+        6
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea04",
+        30,
+        0
+      ],
+      "destination": [
+        "FourIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "FourIsland_Harbor_Frlg",
+        8,
+        3
+      ],
+      "destination": [
+        "FourIsland_Frlg",
+        9,
+        28
+      ]
+    },
+    {
+      "source": [
+        "FourIsland_Frlg",
+        18,
+        21
+      ],
+      "destination": [
+        "FourIsland_PokemonCenter_1F_Frlg",
+        7,
+        8
+      ]
+    },
+    {
+      "source": [
+        "FourIsland_PokemonCenter_1F_Frlg",
+        7,
+        8
+      ],
+      "destination": [
+        "FourIsland_Frlg",
+        18,
+        21
+      ]
+    },
+    {
+      "source": [
+        "FourIsland_Frlg",
+        10,
+        28
+      ],
+      "destination": [
+        "FourIsland_Harbor_Frlg",
+        8,
+        3
+      ]
+    },
+    {
+      "source": [
+        "FourIsland_Harbor_Frlg",
+        6,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea04",
+        30,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea04",
+        63,
+        15
+      ],
+      "destination": [
+        "JourneyWorldSea05",
+        0,
+        15
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea05",
+        30,
+        0
+      ],
+      "destination": [
+        "FiveIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "FiveIsland_Harbor_Frlg",
+        8,
+        3
+      ],
+      "destination": [
+        "FiveIsland_Frlg",
+        12,
+        14
+      ]
+    },
+    {
+      "source": [
+        "FiveIsland_Frlg",
+        18,
+        7
+      ],
+      "destination": [
+        "FiveIsland_PokemonCenter_1F_Frlg",
+        7,
+        8
+      ]
+    },
+    {
+      "source": [
+        "FiveIsland_PokemonCenter_1F_Frlg",
+        7,
+        8
+      ],
+      "destination": [
+        "FiveIsland_Frlg",
+        18,
+        7
+      ]
+    },
+    {
+      "source": [
+        "FiveIsland_Frlg",
+        12,
+        14
+      ],
+      "destination": [
+        "FiveIsland_Harbor_Frlg",
+        8,
+        3
+      ]
+    },
+    {
+      "source": [
+        "FiveIsland_Harbor_Frlg",
+        6,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea05",
+        30,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea05",
+        0,
+        47
+      ],
+      "destination": [
+        "JourneyWorldLane21",
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldLane21",
+        0,
+        47
+      ],
+      "destination": [
+        "JourneyWorldSea07",
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea07",
+        0,
+        6
+      ],
+      "destination": [
+        "JourneyWorldSea06",
+        63,
+        6
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea06",
+        30,
+        0
+      ],
+      "destination": [
+        "SixIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "SixIsland_Harbor_Frlg",
+        8,
+        3
+      ],
+      "destination": [
+        "SixIsland_Frlg",
+        11,
+        23
+      ]
+    },
+    {
+      "source": [
+        "SixIsland_Frlg",
+        11,
+        12
+      ],
+      "destination": [
+        "SixIsland_PokemonCenter_1F_Frlg",
+        6,
+        8
+      ]
+    },
+    {
+      "source": [
+        "SixIsland_PokemonCenter_1F_Frlg",
+        7,
+        8
+      ],
+      "destination": [
+        "SixIsland_Frlg",
+        11,
+        12
+      ]
+    },
+    {
+      "source": [
+        "SixIsland_Frlg",
+        11,
+        23
+      ],
+      "destination": [
+        "SixIsland_Harbor_Frlg",
+        8,
+        3
+      ]
+    },
+    {
+      "source": [
+        "SixIsland_Harbor_Frlg",
+        6,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea06",
+        30,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea06",
+        63,
+        15
+      ],
+      "destination": [
+        "JourneyWorldSea07",
+        0,
+        15
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea07",
+        30,
+        0
+      ],
+      "destination": [
+        "SevenIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "SevenIsland_Harbor_Frlg",
+        8,
+        3
+      ],
+      "destination": [
+        "SevenIsland_Frlg",
+        16,
+        13
+      ]
+    },
+    {
+      "source": [
+        "SevenIsland_Frlg",
+        12,
+        4
+      ],
+      "destination": [
+        "SevenIsland_PokemonCenter_1F_Frlg",
+        7,
+        8
+      ]
+    },
+    {
+      "source": [
+        "SevenIsland_PokemonCenter_1F_Frlg",
+        7,
+        8
+      ],
+      "destination": [
+        "SevenIsland_Frlg",
+        12,
+        4
+      ]
+    },
+    {
+      "source": [
+        "SevenIsland_Frlg",
+        16,
+        13
+      ],
+      "destination": [
+        "SevenIsland_Harbor_Frlg",
+        8,
+        3
+      ]
+    },
+    {
+      "source": [
+        "SevenIsland_Harbor_Frlg",
+        6,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea07",
+        30,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea07",
+        0,
+        15
+      ],
+      "destination": [
+        "JourneyWorldSea06",
+        63,
+        15
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea06",
+        0,
+        0
+      ],
+      "destination": [
+        "JourneyWorldLane11",
+        0,
+        47
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldLane11",
+        0,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea04",
+        0,
+        47
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea04",
+        0,
+        0
+      ],
+      "destination": [
+        "JourneyWorldLane10",
+        0,
+        47
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldLane10",
+        0,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea01",
+        0,
+        47
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea01",
+        0,
+        40
+      ],
+      "destination": [
+        "JourneyWorldSea00",
+        63,
+        40
+      ]
+    }
+  ],
+  "surf_prompts": [
+    [
+      "JourneyWorldSea00",
+      52,
+      6
+    ],
+    [
+      "OneIsland_Harbor_Frlg",
+      7,
+      5
+    ],
+    [
+      "JourneyWorldSea01",
+      52,
+      15
+    ],
+    [
+      "TwoIsland_Harbor_Frlg",
+      7,
+      5
+    ],
+    [
+      "JourneyWorldSea02",
+      52,
+      15
+    ],
+    [
+      "ThreeIsland_Harbor_Frlg",
+      7,
+      5
+    ],
+    [
+      "JourneyWorldSea02",
+      36,
+      15
+    ],
+    [
+      "JourneyWorldSea04",
+      36,
+      6
+    ],
+    [
+      "FourIsland_Harbor_Frlg",
+      7,
+      5
+    ],
+    [
+      "JourneyWorldSea04",
+      52,
+      15
+    ],
+    [
+      "FiveIsland_Harbor_Frlg",
+      7,
+      5
+    ],
+    [
+      "JourneyWorldSea06",
+      36,
+      6
+    ],
+    [
+      "SixIsland_Harbor_Frlg",
+      7,
+      5
+    ],
+    [
+      "JourneyWorldSea06",
+      52,
+      15
+    ],
+    [
+      "SevenIsland_Harbor_Frlg",
+      7,
+      5
+    ],
+    [
+      "JourneyWorldSea06",
+      36,
+      15
+    ]
+  ],
+  "save_continue": [
+    {
+      "label": "one-center-land",
+      "before": {
+        "map": "OneIsland_PokemonCenter_1F_Frlg",
+        "position": [
+          5,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "OneIsland_PokemonCenter_1F_Frlg",
+        "position": [
+          5,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    },
+    {
+      "label": "one-sea-surf",
+      "before": {
+        "map": "JourneyWorldSea01",
+        "position": [
+          32,
+          15
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "JourneyWorldSea01",
+        "position": [
+          32,
+          15
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    },
+    {
+      "label": "two-center-land",
+      "before": {
+        "map": "TwoIsland_PokemonCenter_1F_Frlg",
+        "position": [
+          7,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "TwoIsland_PokemonCenter_1F_Frlg",
+        "position": [
+          7,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    },
+    {
+      "label": "two-sea-surf",
+      "before": {
+        "map": "JourneyWorldSea02",
+        "position": [
+          32,
+          15
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "JourneyWorldSea02",
+        "position": [
+          32,
+          15
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    },
+    {
+      "label": "three-center-land",
+      "before": {
+        "map": "ThreeIsland_PokemonCenter_1F_Frlg",
+        "position": [
+          7,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "ThreeIsland_PokemonCenter_1F_Frlg",
+        "position": [
+          7,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    },
+    {
+      "label": "three-sea-surf",
+      "before": {
+        "map": "JourneyWorldSea03",
+        "position": [
+          32,
+          15
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "JourneyWorldSea03",
+        "position": [
+          32,
+          15
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    },
+    {
+      "label": "four-center-land",
+      "before": {
+        "map": "FourIsland_PokemonCenter_1F_Frlg",
+        "position": [
+          7,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "FourIsland_PokemonCenter_1F_Frlg",
+        "position": [
+          7,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    },
+    {
+      "label": "four-sea-surf",
+      "before": {
+        "map": "JourneyWorldSea04",
+        "position": [
+          32,
+          15
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "JourneyWorldSea04",
+        "position": [
+          32,
+          15
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    },
+    {
+      "label": "five-center-land",
+      "before": {
+        "map": "FiveIsland_PokemonCenter_1F_Frlg",
+        "position": [
+          7,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "FiveIsland_PokemonCenter_1F_Frlg",
+        "position": [
+          7,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    },
+    {
+      "label": "five-sea-surf",
+      "before": {
+        "map": "JourneyWorldSea05",
+        "position": [
+          32,
+          15
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "JourneyWorldSea05",
+        "position": [
+          32,
+          15
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    },
+    {
+      "label": "six-center-land",
+      "before": {
+        "map": "SixIsland_PokemonCenter_1F_Frlg",
+        "position": [
+          7,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "SixIsland_PokemonCenter_1F_Frlg",
+        "position": [
+          7,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    },
+    {
+      "label": "six-sea-surf",
+      "before": {
+        "map": "JourneyWorldSea06",
+        "position": [
+          32,
+          15
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "JourneyWorldSea06",
+        "position": [
+          32,
+          15
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    },
+    {
+      "label": "seven-center-land",
+      "before": {
+        "map": "SevenIsland_PokemonCenter_1F_Frlg",
+        "position": [
+          7,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "SevenIsland_PokemonCenter_1F_Frlg",
+        "position": [
+          7,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    },
+    {
+      "label": "seven-sea-surf",
+      "before": {
+        "map": "JourneyWorldSea07",
+        "position": [
+          32,
+          15
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "JourneyWorldSea07",
+        "position": [
+          32,
+          15
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    }
+  ],
+  "native_trainer_battles": [],
+  "no_midroute_warps_or_direct_npc_scripts": true,
+  "initial_party_position_and_prior_story_states_are_fixtures": true,
+  "wild_encounters_disabled": true,
+  "full_campaign_playthrough": false,
+  "balance_validated": false
+}

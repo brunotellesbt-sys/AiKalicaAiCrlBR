@@ -5,6 +5,11 @@ versão anterior. A candidata exige um novo jogo; não há conversão de saves.
 
 ## Etapas com verificações específicas
 
+- Acesso às sete cidades de Sevii e seus Centros Pokémon por caminhada desde
+  o mar, cura pelas sete enfermeiras e retorno: 34 mapas, 62 transições,
+  1.701 mudanças de posição e 14 Continues. Ponteiros reais dos tilesets
+  usados pelo validador; viagem oeste repetida na candidata `2f53d410`.
+  [SEVII-TOWN-ACCESS.md](SEVII-TOWN-ACCESS.md).
 - Canal da Rota 131 corrigido no layout alternativo de Sky Pillar: 37 tiles,
   sem alterar eventos ou entrada da torre. Viagem contínua Vermilion–Sevii 1–7–
   Pacifidlog–Rota 127–Vermilion: 24 mapas, 42 bordas, seis batalhas e oito
