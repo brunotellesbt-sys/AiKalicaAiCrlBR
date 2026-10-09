@@ -70,6 +70,8 @@ viagens internas ou entradas de scripts. Evidências:
 - [Recusa do gatilho de Archie](seafloor-access-validation/native/native-archie-trigger-refuses-zero-badges.png).
 
 Esse teste cobre um caminho até a sala final, não todas as salas ou a volta.
+Na etapa posterior, a volta e o Continue submerso foram exercitados, com uma
+correção da restauração de Dive. Evidências em [WATER-CONTINUE.md](WATER-CONTINUE.md).
 Estados iniciais de
 história e insígnias, posição inicial no oceano, equipe, atributos e cura são
 fixtures. Encontros selvagens são desativados para testar o percurso. Isso não

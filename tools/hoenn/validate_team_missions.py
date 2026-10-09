@@ -102,6 +102,9 @@ def fight(t):
                 address = s['gTrainerBattleParameter'] + abi[14]
                 second_trainer = lib.read8(address) | lib.read8(address + 1) << 8
             ash_seen |= lib.read16(s['gBattleMons'] + abi[75]) == abi[69]
+            if t.get('fixture_clear_status'):
+                for battler in ([0, 2] if double_battle else [0]):
+                    lib.write32(s['gBattleMons'] + battler * abi[74] + abi[95], 0)
             lib.write16(s['gBattleMons'] + pabi[15], 16000)
             lib.write16(s['gBattleMons'] + pabi[16], 10000)
             lib.write16(s['gBattleMons'] + pabi[20], 30000)

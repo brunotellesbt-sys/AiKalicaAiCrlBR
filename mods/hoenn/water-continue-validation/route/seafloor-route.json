@@ -1,0 +1,284 @@
+{
+  "passed": true,
+  "rom_sha256": "12379c4eee922d73f1f90f167d4e53845510fc1b00fa55bc927a7e84728d9e6e",
+  "dive_point": [
+    38,
+    27
+  ],
+  "native_zero_badge_dive": true,
+  "native_resurface_into_cavern": true,
+  "walked_steps": 163,
+  "original_map_transitions": [
+    {
+      "source": [
+        "Underwater_Route128",
+        38,
+        27
+      ],
+      "destination": [
+        "Underwater_SeafloorCavern",
+        6,
+        7
+      ]
+    },
+    {
+      "source": [
+        "SeafloorCavern_Entrance",
+        10,
+        2
+      ],
+      "destination": [
+        "SeafloorCavern_Room1",
+        5,
+        18
+      ]
+    },
+    {
+      "source": [
+        "SeafloorCavern_Room1",
+        6,
+        3
+      ],
+      "destination": [
+        "SeafloorCavern_Room2",
+        10,
+        7
+      ]
+    },
+    {
+      "source": [
+        "SeafloorCavern_Room2",
+        6,
+        2
+      ],
+      "destination": [
+        "SeafloorCavern_Room6",
+        11,
+        21
+      ]
+    },
+    {
+      "source": [
+        "SeafloorCavern_Room6",
+        4,
+        2
+      ],
+      "destination": [
+        "SeafloorCavern_Room3",
+        4,
+        15
+      ]
+    },
+    {
+      "source": [
+        "SeafloorCavern_Room3",
+        8,
+        2
+      ],
+      "destination": [
+        "SeafloorCavern_Room8",
+        5,
+        12
+      ]
+    },
+    {
+      "source": [
+        "SeafloorCavern_Room8",
+        5,
+        3
+      ],
+      "destination": [
+        "SeafloorCavern_Room9",
+        5,
+        4
+      ]
+    }
+  ],
+  "wins": [
+    {
+      "trainer": 33,
+      "map": "SeafloorCavern_Room3",
+      "mission": "seafloor_route",
+      "attacks": 14,
+      "outcome": 1,
+      "ash_seen": true,
+      "native_defeated_flag": true,
+      "double_battle": true,
+      "second_trainer": 567,
+      "second_native_defeated_flag": true
+    }
+  ],
+  "surf_prompts": [
+    [
+      "SeafloorCavern_Room6",
+      11,
+      20
+    ]
+  ],
+  "return_walked_steps": 122,
+  "return_map_transitions": [
+    {
+      "source": [
+        "SeafloorCavern_Room9",
+        5,
+        4
+      ],
+      "destination": [
+        "SeafloorCavern_Room8",
+        5,
+        3
+      ]
+    },
+    {
+      "source": [
+        "SeafloorCavern_Room8",
+        5,
+        12
+      ],
+      "destination": [
+        "SeafloorCavern_Room3",
+        8,
+        2
+      ]
+    },
+    {
+      "source": [
+        "SeafloorCavern_Room3",
+        4,
+        15
+      ],
+      "destination": [
+        "SeafloorCavern_Room6",
+        4,
+        2
+      ]
+    },
+    {
+      "source": [
+        "SeafloorCavern_Room6",
+        14,
+        8
+      ],
+      "destination": [
+        "SeafloorCavern_Entrance",
+        10,
+        2
+      ]
+    },
+    {
+      "source": [
+        "Underwater_SeafloorCavern",
+        6,
+        7
+      ],
+      "destination": [
+        "Underwater_Route128",
+        38,
+        27
+      ]
+    }
+  ],
+  "return_surf_prompts": [
+    [
+      "SeafloorCavern_Room6",
+      5,
+      2
+    ],
+    [
+      "SeafloorCavern_Entrance",
+      10,
+      10
+    ]
+  ],
+  "native_dive_out_and_return_to_route128": true,
+  "water_save_continues": [
+    {
+      "before": {
+        "map": "Underwater_SeafloorCavern",
+        "position": [
+          6,
+          5
+        ],
+        "avatar_mode": 16,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false,
+        "archie_permission": false
+      },
+      "after": {
+        "map": "Underwater_SeafloorCavern",
+        "position": [
+          6,
+          5
+        ],
+        "avatar_mode": 16,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false,
+        "archie_permission": false
+      }
+    },
+    {
+      "before": {
+        "map": "Underwater_Route128",
+        "position": [
+          38,
+          27
+        ],
+        "avatar_mode": 16,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false,
+        "archie_permission": false
+      },
+      "after": {
+        "map": "Underwater_Route128",
+        "position": [
+          38,
+          27
+        ],
+        "avatar_mode": 16,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false,
+        "archie_permission": false
+      }
+    },
+    {
+      "before": {
+        "map": "Route128",
+        "position": [
+          38,
+          27
+        ],
+        "avatar_mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false,
+        "archie_permission": false
+      },
+      "after": {
+        "map": "Route128",
+        "position": [
+          38,
+          27
+        ],
+        "avatar_mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false,
+        "archie_permission": false
+      }
+    }
+  ],
+  "in_battle_status_recovery_is_fixture": true,
+  "reaches_archie_without_strength_rock_smash_flash_or_acro": true,
+  "relocated_grunt_visible_and_native_dialogue_retained": true,
+  "native_boss_trigger_refuses_missing_missions": true,
+  "native_save_continue_preserves_zero_badges": true,
+  "no_internal_position_warps_or_event_entries": true,
+  "starting_ocean_party_stats_healing_are_fixtures": true,
+  "wild_encounters_disabled": true,
+  "full_campaign_playthrough": false,
+  "balance_validated": false
+}

@@ -5,6 +5,11 @@ versão anterior. A candidata exige um novo jogo; não há conversão de saves.
 
 ## Etapas com verificações específicas
 
+- Continue submerso de Kanto corrigido: o modo é restaurado pelo tipo do mapa,
+  evitando confundir o sprite compartilhado de Surf/Dive. Passaram 16 casos
+  para quatro personagens e o percurso de volta da Seafloor Cavern, com três
+  Continues na água e regressão de missões. Candidata `12379c4e`, camada de um
+  arquivo. Evidências em [WATER-CONTINUE.md](WATER-CONTINUE.md).
 - Grunt da Seafloor Cavern retirado do único tile de entrada, mantendo sua
   conversa e evento de Steven. Dive sem insígnias, percurso nativo pelas
   correntezas até a sala final, batalha dupla de Shelly, recusa de Archie e

@@ -1,5 +1,9 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+Continue submerso restaura Dive para os personagens de Kanto que compartilham
+o sprite com Surf. Os quatro personagens e a volta da Seafloor Cavern foram
+exercitados na nova candidata. [WATER-CONTINUE.md](WATER-CONTINUE.md).
+
 O grunt da entrada da Seafloor Cavern foi deslocado para o lado. O caminho
 até a sala final passou com Dive sem insígnias e sem golpes terrestres;
 Archie conserva as exigências de história. [SEAFLOOR-ACCESS.md](SEAFLOOR-ACCESS.md).

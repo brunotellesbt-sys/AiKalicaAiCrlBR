@@ -17,7 +17,17 @@ campanhas completas jogadas. O player não recebeu esta candidata.
 | 6 | Catálogo em batalha | Ampliar a cobertura de habilidades, formas, animações e Megas; a auditoria das 1.025 espécies e pixels não testa toda interação de batalha |
 | 7 | Sessões no navegador e versão de lançamento | Rodar sessões prolongadas, exportar/importar saves e testar os dois finais no navegador antes de atualizar o player |
 
-## Avanço atual: acesso à Seafloor Cavern
+## Avanço atual: Continue submerso e volta da caverna
+
+Os dois personagens de Kanto retomavam um save submerso em Surf. A restauração
+agora respeita o tipo do mapa; 16 casos de terra/Surf/Dive/subida passaram para
+os quatro personagens. A volta da Seafloor Cavern também passou pelos controles
+normais, com três Continues conservando posição, modo, insígnias e pendências.
+A matriz regional passou novamente na candidata. Outros percursos, campanhas
+completas e balanceamento seguem pendentes. Os estados iniciais, viagens e
+equipe são fixtures; evidências em [WATER-CONTINUE.md](WATER-CONTINUE.md).
+
+## Etapa anterior: acesso à Seafloor Cavern
 
 O grunt que fechava a entrada foi movido para o lado, mantendo sua conversa
 e o evento de Steven. O percurso nativo passou por Dive com zero insígnias,
@@ -25,7 +35,7 @@ subida, salas 1/2/6/3/8/9, correntezas e batalha dupla de Shelly. Archie
 continuou recusando o confronto sem os requisitos de história; Save/Continue
 conservou o estado. A matriz regional passou novamente na nova candidata.
 A posição inicial no mar, equipe, atributos e cura são fixtures. Outros
-caminhos internos, a volta e as campanhas completas continuam pendentes.
+caminhos internos e as campanhas completas continuam pendentes.
 Evidências e reprodução em [SEAFLOOR-ACCESS.md](SEAFLOOR-ACCESS.md).
 
 ## Etapa anterior: sequência do submarino
