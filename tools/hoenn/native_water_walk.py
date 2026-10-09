@@ -15,7 +15,7 @@ water_behaviors = {}
 behaviors, currents, arrows = {}, {}, {}
 step_warps = {}
 for n, m in maps.items():
-    layout = layouts[m['layout']]
+    layout = layouts[globals().get('walk_layout_overrides', {}).get(n, m['layout'])]
     blocks[n] = (layout['width'], layout['height'], struct.unpack('<' + 'H' * (layout['width'] * layout['height']), (source / layout['blockdata_filepath']).read_bytes()))
     assert layout['layout_version'] == 'emerald'
     primary = s[layout['primary_tileset'].replace('gTileset_', 'gMetatileAttributes_')]
@@ -117,6 +117,9 @@ def next_key(goal):
                 xx, yy = fx, fy
             else: continue # Avoid a closed current loop.
             nxt = (n, xx, yy)
+            hole_destination = globals().get('walk_hole_destinations', {}).get(nxt)
+            if hole_destination:
+                nxt = hole_destination
             event = warps[n].get((xx, yy))
             if event and arrows[behaviors[n][yy * width + xx]] is None and step_warps.get(behaviors[n][yy * width + xx], False):
                 if event['dest_map'] not in by_id: continue
@@ -126,6 +129,7 @@ def next_key(goal):
             if nxt not in visited:
                 visited[nxt] = (current, key); queue.append(nxt)
     picture(walk_prefix + '-path-failure')
+    print('Native route search visited:', {n: sum(node[0] == n for node in visited) for n in maps}, flush=True)
     raise AssertionError(('No native route', start, goal, sorted(blocked)))
 
 def field():

@@ -5,6 +5,11 @@ versão anterior. A candidata exige um novo jogo; não há conversão de saves.
 
 ## Etapas com verificações específicas
 
+- Sky Pillar explorável antes de Wallace, com despertar protegido contra
+  visitas antecipadas. Passaram cinco andares, topo, queda, retorno e três
+  Continues, 4.352 permissões de despertar e o desfecho nativo Archie–Rayquaza
+  até a abertura do último ginásio. Candidata `3b3e16d6`, três arquivos;
+  [SKY-PILLAR-ACCESS.md](SKY-PILLAR-ACCESS.md).
 - Altering Cave e Desert Underpass acessíveis antes da Liga: removidas duas
   dependências antigas de campeão, com entradas, retornos, novas entradas e
   quatro Continues nativos. Fossil Maniac e recompensas preservados; passaram

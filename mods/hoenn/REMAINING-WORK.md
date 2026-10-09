@@ -23,7 +23,17 @@ Mantendo o tamanho recente dos PRs, a previsão é de **10 a 20 PRs para uma
 candidata de lançamento**, sujeita aos problemas encontrados nos percursos e
 campanhas completas. A quantidade de PRs não mede a conclusão do jogo.
 
-## Avanço atual: duas passagens antigas de pós-jogo
+## Avanço atual: Sky Pillar e proteção da sequência climática
+
+A porta externa da torre abre sem esperar Wallace. Uma visita antecipada
+não desperta Rayquaza: o evento exige sete insígnias de Hoenn, requisitos
+da aliança, Archie e o confronto inicial em Sootopolis. Passaram o percurso
+pelos cinco andares, queda, topo, retorno e três Continues. O desfecho nativo
+Archie–Rayquaza–paz–último ginásio também passou na nova candidata. Os layouts
+rachados posteriores, outras viagens e as campanhas completas ainda precisam
+ser percorridos. [SKY-PILLAR-ACCESS.md](SKY-PILLAR-ACCESS.md).
+
+## Etapa anterior: duas passagens antigas de pós-jogo
 
 Altering Cave e Desert Underpass ainda dependiam da vitória na Liga de
 Hoenn. Essa dependência foi retirada dos dois scripts de entrada. Passaram
