@@ -17,7 +17,17 @@ campanhas completas jogadas. O player não recebeu esta candidata.
 | 6 | Catálogo em batalha | Ampliar a cobertura de habilidades, formas, animações e Megas; a auditoria das 1.025 espécies e pixels não testa toda interação de batalha |
 | 7 | Sessões no navegador e versão de lançamento | Rodar sessões prolongadas, exportar/importar saves e testar os dois finais no navegador antes de atualizar o player |
 
-## Revisão de progressão das histórias
+## Avanço atual: passagens e episódios Aqua
+
+Três passagens dos Regis abrem ao ler suas inscrições, sem exigir golpes
+terrestres. Shelly após quatro insígnias de Hoenn e Matt após seis passam a
+bloquear ginásios ainda não vencidos, com orientação do guia. Houve vitórias
+nativas, recompensas/desfechos originais, travessia das portas e Continue,
+mais a matriz de todos os conjuntos de insígnias. A revisão geral de puzzles,
+rotas e campanhas continua pendente. Detalhes em
+[PUZZLES-AND-AQUA.md](PUZZLES-AND-AQUA.md).
+
+## Revisão anterior de progressão das histórias
 
 Foram conferidas 28 vitórias reais das incursões de Kanto/base Rocket de Hoenn,
 com missões regionais separadas, abertura das portas e salvamento/Continue.

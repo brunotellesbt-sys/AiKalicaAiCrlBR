@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "rom_sha256": "0e4626b06423c27889a08588fdfd2f9d294df20fdb4064273c75af1da8b7c285",
+  "native_npc_interactions": true,
+  "wins": [
+    {
+      "trainer": 32,
+      "map": "Route119_WeatherInstitute_2F",
+      "mission": "weather_institute",
+      "attacks": 5,
+      "outcome": 1,
+      "ash_seen": true,
+      "native_defeated_flag": true
+    },
+    {
+      "trainer": 30,
+      "map": "AquaHideout_B2F",
+      "mission": "aqua_hideout",
+      "attacks": 2,
+      "outcome": 1,
+      "ash_seen": true,
+      "native_defeated_flag": true
+    }
+  ],
+  "doors": [
+    {
+      "city": "FortreeCity",
+      "blocked": true,
+      "physical_door": true
+    },
+    {
+      "city": "FortreeCity",
+      "blocked": false,
+      "physical_door": true
+    },
+    {
+      "city": "FortreeCity",
+      "blocked": true,
+      "physical_door": true
+    },
+    {
+      "city": "FortreeCity",
+      "blocked": false,
+      "physical_door": true
+    }
+  ],
+  "shelly_at_four_badges": true,
+  "matt_at_six_badges": true,
+  "original_castform_received": true,
+  "original_submarine_departed": true,
+  "wins_do_not_award_badges": true,
+  "kanto_missions_and_badges_unchanged": true,
+  "native_save_reload_continue": true,
+  "magma_space_center_and_silph_still_required": true,
+  "travel_badges_earlier_missions_later_scenes_and_battle_stats_are_fixtures": true,
+  "balance_validated": false,
+  "full_campaign_playthrough": false
+}

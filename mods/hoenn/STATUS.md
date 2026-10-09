@@ -200,7 +200,7 @@ a primeira cena de Scott e o cruzeiro original. Houve testes físicos de oito
 estados de embarque, cabine/cama/marinheiro e quatro trechos de ferry entre
 Lilycove, Slateport e Frontier, com Continue e bilhete preservado.
 
-Candidata mais recente: `92c95316b5019ac31cfde8e3cc4476895e61f33714b18ec27478b702cc54a335`.
+Candidata da etapa de embarque: `92c95316b5019ac31cfde8e3cc4476895e61f33714b18ec27478b702cc54a335`.
 Uma batalha adicional seis contra seis do PWT passou nessa ROM, incluindo
 Battle Bond e restauração da equipe após desistência na rodada seguinte.
 Os três torneios completos são da camada PWT anterior; os dois scripts de
@@ -219,6 +219,22 @@ A candidata e as regras do jogo são as mesmas `92c95316`; esta revisão amplia
 as evidências, sem alterar a ROM. Os atributos aumentados, viagens e estados
 iniciais de fixture não validam balanceamento nem campanhas completas.
 Sequência e reprodução em [INTEGRATED-STORY.md](INTEGRATED-STORY.md).
+
+## Puzzles terrestres e episódios Aqua obrigatórios
+
+Candidata mais recente: `0e4626b06423c27889a08588fdfd2f9d294df20fdb4064273c75af1da8b7c285`.
+A leitura das inscrições abre as passagens de Desert Ruins, Ancient Tomb e
+Sealed Chamber externa, sem Rock Smash, Flash ou Dig. As capturas continuam
+exigindo 16 insígnias; Dive e o enigma da sala interna são preservados.
+
+Shelly no Instituto Meteorológico é exigida após quatro insígnias de Hoenn;
+Matt no esconderijo Aqua após seis. Os guias explicam equipe e local nas portas
+dos ginásios ainda não vencidos. As rotas e níveis dos ginásios não mudaram.
+Passaram as duas batalhas por interação nativa, Castform, fuga do submarino,
+portas e Continue; também 5.120 decisões de missões e 44 permissões ARM.
+As três passagens foram percorridas e reabertas após Continue na ROM final.
+Reprodução, evidências e fixtures em [PUZZLES-AND-AQUA.md](PUZZLES-AND-AQUA.md).
+Os documentos de localização foram conferidos e mantêm os mesmos locais.
 
 ## Trabalho que falta antes do lançamento
 

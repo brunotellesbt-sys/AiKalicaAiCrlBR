@@ -39,6 +39,13 @@ hoenn_badges = [lib.read16(s['gBadgeFlags'] + i * 2) for i in range(8)]
 completion = ['FLAG_HIDE_CELADON_ROCKETS', 'FLAG_HIDE_SAFFRON_ROCKETS',
               'FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY', 'FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT',
               'FLAG_KYOGRE_ESCAPED_SEAFLOOR_CAVERN']
+aqua_episodes = (source / '.journey-aqua-episodes').exists()
+def reset_aqua():
+    if aqua_episodes:
+        native('VarSet', 0x40B3, 1)
+        raw_flag(0x500 + 32, True) # Shelly's native trainer flag.
+        raw_flag(0x500 + 30, True) # Matt's native trainer flag.
+        raw_flag(flag_id('FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE'), True)
 scenarios = [(True, 'complete', 0, 0, None), (False, 'complete', 0, 0, None),
              (True, 'rocket_hideout', 2, 1, completion[0]),
              (True, 'silph', 6, 2, completion[1]),
@@ -49,18 +56,26 @@ scenarios = [(True, 'complete', 0, 0, None), (False, 'complete', 0, 0, None),
              (False, 'archie', 7, 6, completion[4])]
 if (source / '.journey-story-aftermath').exists():
     scenarios.append((False, 'weather_crisis', 7, 14, 'weather_crisis'))
+if aqua_episodes:
+    scenarios += [(False, 'shelly_battle', 4, 15, 0x500 + 32),
+                  (False, 'institute_completion', 4, 15, 'weather_institute'),
+                  (False, 'matt_battle', 6, 16, 0x500 + 30),
+                  (False, 'submarine_escape', 6, 16, 'FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE')]
 for mission in stories['missions']:
     scenarios.append((mission['kanto'], mission['key'], mission['badge_count'],
                       mission['event'], 0x500 + trainer_ids[mission['trainers'][0]]))
 checks = []
 for kanto, name, threshold, event, missing in scenarios:
+    reset_aqua()
     raw_flag(flag_id('FLAG_SYS_WEATHER_CTRL'), False)
     for flag in completion:
         raw_flag(flag_id(flag), True)
     native('VarSet', 0x409F, 3)
     for trainer in stories['trainers']:
         raw_flag(0x500 + trainer['id'], True)
-    if missing == 'weather_crisis':
+    if missing == 'weather_institute':
+        native('VarSet', 0x40B3, 0)
+    elif missing == 'weather_crisis':
         raw_flag(flag_id('FLAG_SYS_WEATHER_CTRL'), True)
     elif missing == 'space_center':
         native('VarSet', 0x409F, 0)
@@ -83,6 +98,7 @@ for kanto, name, threshold, event, missing in scenarios:
     print('All badge subsets passed:', name, flush=True)
 # Permissions test the cross-region prerequisite separately from pending-door choice.
 for count in range(9):
+    reset_aqua()
     bank(kanto_badges, (1 << count) - 1)
     bank(hoenn_badges, (1 << count) - 1)
     for flag in completion:
@@ -97,10 +113,28 @@ for count in range(9):
     raw_flag(flag_id('FLAG_HIDE_SAFFRON_ROCKETS'), True)
     native('VarSet', 0x409F, 1)
     assert not native('JourneyCanStartArchieAlliance')
+extra_permission_cases = 0
+if aqua_episodes:
+    bank(hoenn_badges, 255)
+    bank(kanto_badges, 255)
+    raw_flag(flag_id('FLAG_HIDE_SAFFRON_ROCKETS'), True)
+    for missing in ['weather_institute', 0x500 + 32, 0x500 + 30,
+                    'FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE']:
+        reset_aqua()
+        native('VarSet', 0x409F, 3)
+        if missing == 'weather_institute': native('VarSet', 0x40B3, 0)
+        elif isinstance(missing, str): raw_flag(flag_id(missing), False)
+        else: raw_flag(missing, False)
+        assert not native('JourneyCanStartArchieAlliance')
+        native('VarSet', 0x409F, 0)
+        native('JourneyStartSpaceCenterInvasion')
+        assert native('VarGet', 0x409F) == 0
+        extra_permission_cases += 2
 lib.stop()
 result = dict(passed=True, rom_sha256=hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest(),
               native_gate_decisions=True, checks=checks, gate_cases=len(checks) * 256,
-              permission_cases=9 * 4, all_regional_badge_subsets=True,
+              permission_cases=9 * 4 + extra_permission_cases, all_regional_badge_subsets=True,
+              native_aqua_episodes_required=aqua_episodes,
               other_region_badges_cannot_bypass_gate=True, giovanni_and_space_center_required=True,
               flags_are_initial_state_fixtures=True, full_campaign_playthrough=False)
 (args.output / 'campaign-matrix.json').write_text(json.dumps(result, indent=2) + '\n')

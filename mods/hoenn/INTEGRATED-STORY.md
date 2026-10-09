@@ -26,7 +26,9 @@ trainers continua baseada nessa quantidade regional.
 | Kanto, 6 insígnias | Giovanni na Silph Co., após concluir as missões anteriores | Os dois últimos |
 | Hoenn, 2 insígnias | Maxie no Mt. Chimney | A partir do 3º |
 | Hoenn, 4 insígnias | Base Rocket sob o cassino de Mauville, dois andares com grunts e Atlas | A partir do 5º |
+| Hoenn, 4 insígnias | Shelly no Instituto Meteorológico, Rota 119 | A partir do 5º |
 | Hoenn, 5 insígnias | Maxie no Magma Hideout, preservando a missão do Magma Emblem | A partir do 6º |
+| Hoenn, 6 insígnias | Matt no esconderijo Aqua em Lilycove; preservando o roubo em Slateport | A partir do 7º |
 | Hoenn, 7 insígnias | Steven com você contra Maxie/Tabitha no Centro Espacial | O último |
 | Hoenn, 7 insígnias | Giovanni com você contra Archie/Shelly na Seafloor Cavern; exige a Silph de Kanto | O último |
 | Hoenn, 7 insígnias | Despertar Rayquaza e encerrar a crise climática em Sootopolis | O último |
@@ -44,9 +46,12 @@ flowchart TB
   H2[2 insígnias de Hoenn] --> Chimney[Maxie: Mt. Chimney]
   Chimney --> H4[4 insígnias de Hoenn]
   H4 --> Casino[Rocket em Mauville: 9 confrontos]
-  Casino --> H5[5 insígnias de Hoenn]
+  Casino --> Institute[Shelly: Instituto Meteorológico]
+  Institute --> H5[5 insígnias de Hoenn]
   H5 --> Hideout[Maxie: Magma Hideout]
-  Hideout --> H7[7 insígnias de Hoenn]
+  Hideout --> H6[6 insígnias de Hoenn]
+  H6 --> Matt[Matt: esconderijo Aqua de Lilycove]
+  Matt --> H7[7 insígnias de Hoenn]
   H7 --> Space[Steven e você contra Maxie e Tabitha]
   Space --> Archie[Giovanni e você contra Archie e Shelly]
   Silph -->|Aliado obrigatório| Archie
@@ -84,7 +89,7 @@ caso ela esteja pendente: é necessário avançar Kanto até seis insígnias e
 vencer Giovanni. Essa ligação foi solicitada como obrigatória. Se a Silph já
 estiver concluída, o aliado estará liberado quando Hoenn chegar a esse ponto.
 
-## Validação desta revisão
+## Validação da revisão anterior
 
 Os relatórios em `story-progress-validation` usam a candidata
 `92c95316b5019ac31cfde8e3cc4476895e61f33714b18ec27478b702cc54a335`.
@@ -113,6 +118,10 @@ python3 tools/hoenn/audit_campaigns.py --source .local/hoenn-frontier-travel-src
 python3 tools/hoenn/validate_team_missions.py --source .local/hoenn-frontier-travel-src --library .local/mgba-bridge.so --output mods/hoenn/story-progress-validation
 python3 tools/hoenn/validate_silph_connection.py --source .local/hoenn-frontier-travel-src --library .local/mgba-bridge.so --output mods/hoenn/story-progress-validation/silph
 ```
+
+A revisão seguinte tornou Shelly e Matt obrigatórios e removeu exigências de
+golpes terrestres em três passagens dos Regis. Testes, nova candidata e limites
+em [PUZZLES-AND-AQUA.md](PUZZLES-AND-AQUA.md).
 
 A ROM do player não foi atualizada. As prioridades restantes estão em
 [REMAINING-WORK.md](REMAINING-WORK.md).
