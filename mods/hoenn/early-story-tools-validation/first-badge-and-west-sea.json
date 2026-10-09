@@ -1,0 +1,199 @@
+{
+  "status": "experimental_not_full_integration",
+  "rom_sha256": "ba38f2ff2d305dd6636aea2e78b05e0297c4fa6d92f0506a941cf2fd68a6c3ae",
+  "checks": [
+    {
+      "check": "first_badge_flute_native_rewards",
+      "passed": true,
+      "gyms": [
+        "RustboroCity_Gym",
+        "DewfordTown_Gym",
+        "MauvilleCity_Gym",
+        "LavaridgeTown_Gym_1F",
+        "PetalburgCity_Gym",
+        "FortreeCity_Gym",
+        "MossdeepCity_Gym",
+        "SootopolisCity_Gym_1F",
+        "PewterCity_Gym_Frlg",
+        "CeruleanCity_Gym_Frlg",
+        "VermilionCity_Gym_Frlg",
+        "CeladonCity_Gym_Frlg",
+        "FuchsiaCity_Gym_Frlg",
+        "SaffronCity_Gym_Frlg",
+        "CinnabarIsland_Gym_Frlg",
+        "ViridianCity_Gym_Frlg"
+      ],
+      "no_reward_before_badges": true,
+      "repeated_reward_no_duplicate": true,
+      "full_bag_retry": true,
+      "hoenn_reward_recognized_by_fuji": true,
+      "other_region_badges_unchanged": true,
+      "battle_victory_simulated": true,
+      "trainer_sight_disabled_only_in_fixture": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        37,
+        8
+      ],
+      "target": "JourneyCinnabarSouthSea",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        0,
+        29
+      ],
+      "target": "JourneyWestRiver",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        0,
+        30
+      ],
+      "target": "JourneyRustboroGate",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        0,
+        20
+      ],
+      "target": "JourneyDewfordGate",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        0
+      ],
+      "target": "CinnabarIsland_Frlg",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        0
+      ],
+      "target": "JourneyWestRiver",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        1
+      ],
+      "target": "JourneyCinnabarSouthSea",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        1
+      ],
+      "target": "Route114",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        1
+      ],
+      "target": "JourneyRustboroCoast",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        2
+      ],
+      "target": "JourneyWestRiver",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        2
+      ],
+      "target": "JourneyRustboroGate",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        2
+      ],
+      "target": "JourneyDewfordCoast",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        3
+      ],
+      "target": "JourneyRustboroCoast",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        3
+      ],
+      "target": "Route115",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        4
+      ],
+      "target": "JourneyRustboroCoast",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        4
+      ],
+      "target": "JourneyDewfordGate",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        5
+      ],
+      "target": "JourneyDewfordCoast",
+      "passed": true
+    },
+    {
+      "check": "physical_surf_seam",
+      "source": [
+        77,
+        5
+      ],
+      "target": "Route105",
+      "passed": true
+    }
+  ],
+  "full_story_validated": false,
+  "custom_journey_migrated": false
+}

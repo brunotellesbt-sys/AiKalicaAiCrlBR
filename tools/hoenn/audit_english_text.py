@@ -13,20 +13,31 @@ PORTUGUESE = re.compile(r'\b(?:voce|Você|MAE|Escolha|insignias|recepcao|QUARTAS
 
 def audit(baseline, candidate):
     rows = json.loads((ROOT / 'tools/hoenn/english_text.json').read_text())
+    early_marker = candidate / '.journey-early-story-tools'
+    early = json.loads(early_marker.read_text()) if early_marker.exists() else None
     checked = []
     for path in rows:
         before, after = [(p / path).read_text() for p in [baseline, candidate]]
-        assert QUOTED.sub('""', before) == QUOTED.sub('""', after), path
-        assert len(QUOTED.findall(before)) == len(QUOTED.findall(after)), path
+        translated = after
+        approved_edits = [e for e in early['edits'] if e['path'] == path] if early else []
+        # Reconstruct the translated file before the independently hash-checked
+        # gameplay overlay. Do not claim its new event logic is text-only.
+        for edit in reversed(approved_edits):
+            assert translated.count(edit['after']) == 1, path
+            translated = translated.replace(edit['after'], edit['before'])
+        assert QUOTED.sub('""', before) == QUOTED.sub('""', translated), path
+        assert len(QUOTED.findall(before)) == len(QUOTED.findall(translated)), path
         for row in rows[path]:
             assert '"' + row['after'] + '"' in after, (path, row)
             assert '"' + row['before'] + '"' not in after, (path, row)
-        checked.append(dict(path=path, non_text_bytes_unchanged=True))
+        checked.append(dict(path=path, non_text_bytes_unchanged=not bool(approved_edits),
+            translation_layer_non_text_bytes_unchanged=True,
+            approved_early_story_tools_edits=len(approved_edits)))
     expected = json.loads((candidate / '.source-acquired.json').read_text())['sha256']
     for layer in PRIOR + ['english-text', 'special-ball']:
         marker = candidate / ('.journey-' + layer)
         expected.update(json.loads(marker.read_text())['prepared_sha256'])
-    for layer in ['route131-sea-access', 'lostelle-habitats', 'tower-habitats']:
+    for layer in ['route131-sea-access', 'lostelle-habitats', 'tower-habitats', 'early-story-tools']:
         marker = candidate / ('.journey-' + layer)
         if marker.exists(): expected.update(json.loads(marker.read_text())['prepared_sha256'])
     scanned, literal_count = 0, 0
@@ -53,10 +64,21 @@ def audit(baseline, candidate):
                 pixels = sum(widths[charmap[c]] for c in line)
                 assert pixels <= 208, (path, line, pixels)
                 measured.append(pixels)
+    extra = []
+    if early:
+        from prepare_early_story_tools import TOOLS_SCRIPT
+        for text in QUOTED.findall(TOOLS_SCRIPT):
+            for line in re.split(r'\\[npl]', text[1:-1].rstrip('$')):
+                line = line.replace('{STR_VAR_1}', 'WAILMER PAIL')
+                pixels = sum(widths[charmap[c]] for c in line)
+                assert pixels <= 208, (line, pixels)
+                extra.append(pixels)
+        measured.extend(extra)
     return dict(passed=True, game_language='English', translated_literals=sum(map(len, rows.values())),
         text_files=checked, scanned_manifest_source_files=scanned, scanned_quoted_literals=literal_count,
         portuguese_marker_matches=0, checked_dialogue_lines=len(measured),
         maximum_normal_font_line_pixels=max(measured), normal_font_limit_pixels=208,
+        early_story_tools_additional_lines=len(extra),
         placeholder_widths_are_known_gift_round_or_name_bounds=True,
         every_dialogue_visually_reviewed=False, full_campaign_playthrough=False,
         rom_sha256=hashlib.sha256((candidate / 'pokeemerald.gba').read_bytes()).hexdigest())

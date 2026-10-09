@@ -20,6 +20,8 @@ O Hypno do resgate de Lostelle permanece em Berry Forest. A família Drowzee/Hyp
 
 Cubone/Marowak fica na Pokémon Tower, incluindo o fantasma original; Nidoran♀/Nidorina/Nidoqueen ocupa Diglett’s Cave. Os slots atuais estão em `tower-habitat-validation/preparation/preparation.json`. O fantasma continua não capturável. [TOWER-HABITATS.md](TOWER-HABITATS.md).
 
+Encontros fixos ligados à história são exceções à localização única dos encontros aleatórios: Snorlax permanece nas Rotas 12/16; Kecleon nas Rotas 119/120; Sudowoodo na Battle Frontier; e Voltorb/Electrode nos locais originais de itens disfarçados. Seus eventos não foram removidos nem realocados. Silph Scope, Devon Scope e Wailmer Pail vêm da mãe desde o começo; a Poké Flute continua sendo prêmio do primeiro ginásio em qualquer região. A entrega antecipada não conclui as missões. Detalhes, locais fixos e limites da auditoria em [EARLY-STORY-TOOLS.md](EARLY-STORY-TOOLS.md).
+
 ## Encontros comuns por habitat
 
 Use a busca pelo nome do Pokémon nesta página ou filtre a planilha `pokemon-locations.csv`. A coluna Região identifica Kanto, Hoenn e Sevii; os nomes internos dos mapas permitem localizar os arquivos exatos do jogo.

@@ -1,0 +1,89 @@
+{
+  "status": "early_story_tools_candidate",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "tools": [
+    "ITEM_SILPH_SCOPE",
+    "ITEM_DEVON_SCOPE",
+    "ITEM_WAILMER_PAIL"
+  ],
+  "giver": "selected mother in all 31 homes",
+  "required_badges": 0,
+  "poke_flute": "first badge in either region, unchanged",
+  "original_quest_flags_not_set_by_mother": true,
+  "original_fixed_encounters_preserved": true,
+  "bag_and_pc_ownership_checked": true,
+  "new_save_fields": false,
+  "full_campaign_validated": false,
+  "original_sha256": {
+    "src/journey_family.c": "20e892960ba89e61f09cc582ca0369042e0902f4d4be8fbb72b1037206656c7b",
+    "include/journey_family.h": "948959f2e025a82d4b5f6dc5fd4f15a6e00116ee09b0c0e5818d0ed62230e069",
+    "data/specials.inc": "b96f9f262402f623978d16d8f5ebeff5361d2c556ee3761cc9e8bc844e332a90",
+    "data/scripts/journey_family.inc": "1370234230fdabe6791d88bdd8997047e65080fd6b4589ae1b39525329a6ea67",
+    "data/maps/RocketHideout_B4F_Frlg/scripts.inc": "61cb23330802694879178497d72aa322fb703b990a23e56606f22aebe4e28832",
+    "data/maps/Route104_PrettyPetalFlowerShop/scripts.inc": "6a077e92737a39fb85ca62e227973ebc8dce2e98e0962af3f183394e11b61929",
+    "data/maps/Route120/scripts.inc": "f198facc670a4c5e18ed8c6cac6eb3467bf9c7b7b9754ed07a12a89bb3fa34d5"
+  },
+  "preserved_native_sha256": {
+    "data/scripts/journey_campaign_gates.inc": "3295963cca11d36901ad0a27cbfec8711895bd91c3c560f1345afe4362c9199e",
+    "data/maps/Route12_Frlg/scripts.inc": "dad097eefab9e04e62b3f58f75eae8199832564a5db886bd119d184d1ba2eea7",
+    "data/maps/Route16_Frlg/scripts.inc": "aa0297112c1bd9b63ab8bb6b1c6a024c842bbf5aa5bcc9f33629ab75fcd26eb3",
+    "data/maps/PokemonTower_6F_Frlg/scripts.inc": "b377d55ede45fafba1f2dcb2041d6fa746e430066fcef1144ddcb55d2d25a1d2",
+    "data/scripts/kecleon.inc": "e8ea4d379e9accb97f5eaf36548e3267d283c036c5863f004ec31d2750dd3b38",
+    "data/maps/BattleFrontier_OutsideEast/scripts.inc": "91a2d696db9bfe63c41236cc2607e4e46fd1678bb1facd7623503daf8701ad48",
+    "src/data/wild_encounters.json": "09639fc336435c01afd30b23a07f469a8c973b47a8ab3c7c4421b0170513b421",
+    "include/journey_wild_data.h": "17518269f1fe96b648936925b2aedd5016aefc12af78bb87c03d6b3d550bbbc5",
+    "include/journey_habitat_data.h": "af7b824883ce51f5e0db4a0899095d23d4d8394ec2d4c43cc2d23fecb24caf35",
+    "src/journey_wild.c": "8272d70ab73464f7df041efb43076308e537f773f5d4a5edbb4439c216565adb"
+  },
+  "edits": [
+    {
+      "path": "src/journey_family.c",
+      "before": "void JourneyFamilyGiveStarter(void)",
+      "after": "// Ownership, including PC storage, is independent of the original quest flags.\nvoid JourneyFamilyGiveStoryTool(void)\n{\n    static const u16 items[] = {ITEM_SILPH_SCOPE, ITEM_DEVON_SCOPE, ITEM_WAILMER_PAIL};\n    u32 i;\n    gSpecialVar_Result = 0;\n    if (JourneyFamilySelectedHome() == NULL || gSpecialVar_LastTalked != 1)\n        return;\n    for (i = 0; i < ARRAY_COUNT(items); i++)\n    {\n        if (CheckBagHasItem(items[i], 1) || CheckPCHasItem(items[i], 1))\n            continue;\n        if (!AddBagItem(items[i], 1)) { gSpecialVar_Result = 2; return; }\n        CopyItemName(items[i], gStringVar1);\n        gSpecialVar_Result = 1;\n        return;\n    }\n}\n\nvoid JourneyFamilyGiveStarter(void)"
+    },
+    {
+      "path": "include/journey_family.h",
+      "before": "void JourneyFamilyGiveGift(void);",
+      "after": "void JourneyFamilyGiveGift(void);\nvoid JourneyFamilyGiveStoryTool(void);"
+    },
+    {
+      "path": "data/specials.inc",
+      "before": "\tdef_special JourneyFamilyGiveGift",
+      "after": "\tdef_special JourneyFamilyGiveGift\n\tdef_special JourneyFamilyGiveStoryTool"
+    },
+    {
+      "path": "data/scripts/journey_family.inc",
+      "before": "Journey_AfterGift::\n",
+      "after": "Journey_AfterGift::\n\tcall_if_eq VAR_0x8008, 1, JourneyEarlyStoryTools_Give\n"
+    },
+    {
+      "path": "data/scripts/journey_family.inc",
+      "before": "JourneyBirth_FamilyMother::",
+      "after": "\nJourneyEarlyStoryTools_Give::\n\tspecial JourneyFamilyGiveStoryTool\n\tgoto_if_eq VAR_RESULT, 0, JourneyEarlyStoryTools_Return\n\tgoto_if_eq VAR_RESULT, 2, JourneyEarlyStoryTools_BagFull\n\tplayfanfare MUS_OBTAIN_ITEM\n\tmsgbox JourneyEarlyStoryTools_Text_Gift\n\twaitfanfare\n\tgoto JourneyEarlyStoryTools_Give\nJourneyEarlyStoryTools_BagFull::\n\tmsgbox Journey_Text_BagFull\nJourneyEarlyStoryTools_Return::\n\treturn\nJourneyEarlyStoryTools_HasSilphScope::\n\tcheckitem ITEM_SILPH_SCOPE\n\tgoto_if_eq VAR_RESULT, TRUE, JourneyEarlyStoryTools_Return\n\tcheckpcitem ITEM_SILPH_SCOPE, 1\n\treturn\nJourneyEarlyStoryTools_HasDevonScope::\n\tcheckitem ITEM_DEVON_SCOPE\n\tgoto_if_eq VAR_RESULT, TRUE, JourneyEarlyStoryTools_Return\n\tcheckpcitem ITEM_DEVON_SCOPE, 1\n\treturn\nJourneyEarlyStoryTools_HasWailmerPail::\n\tcheckitem ITEM_WAILMER_PAIL\n\tgoto_if_eq VAR_RESULT, TRUE, JourneyEarlyStoryTools_Return\n\tcheckpcitem ITEM_WAILMER_PAIL, 1\n\treturn\nJourneyEarlyStoryTools_Text_Gift::\n\t.string \"MOM: Take this on your journey.\\n\"\n\t.string \"You received the {STR_VAR_1}!\\p\"\n\t.string \"Visit its original owner, too.\\n\"\n\t.string \"Their story still awaits you!$\"\nJourneyEarlyStoryTools_Text_AlreadyOwned::\n\t.string \"You already have this tool.\\n\"\n\t.string \"Keep it safe on your journey!$\"\n\nJourneyBirth_FamilyMother::"
+    },
+    {
+      "path": "data/maps/RocketHideout_B4F_Frlg/scripts.inc",
+      "before": "\tremoveobject LOCALID_SILPH_SCOPE\n\tgiveitem ITEM_SILPH_SCOPE\n\tgoto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull\n",
+      "after": "\tcall JourneyEarlyStoryTools_HasSilphScope\n\tgoto_if_eq VAR_RESULT, TRUE, JourneyEarlyStoryTools_SilphOwned\n\tgiveitem ITEM_SILPH_SCOPE\n\tgoto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull\n\tgoto JourneyEarlyStoryTools_SilphCollected\nJourneyEarlyStoryTools_SilphOwned::\n\tmsgbox JourneyEarlyStoryTools_Text_AlreadyOwned, MSGBOX_DEFAULT\nJourneyEarlyStoryTools_SilphCollected::\n\tsetflag FLAG_HIDE_SILPH_SCOPE\n\tremoveobject LOCALID_SILPH_SCOPE\n"
+    },
+    {
+      "path": "data/maps/Route104_PrettyPetalFlowerShop/scripts.inc",
+      "before": "\tgiveitem ITEM_WAILMER_PAIL\n\tgoto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull\n",
+      "after": "\tcall JourneyEarlyStoryTools_HasWailmerPail\n\tgoto_if_eq VAR_RESULT, TRUE, JourneyEarlyStoryTools_PailOwned\n\tgiveitem ITEM_WAILMER_PAIL\n\tgoto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull\n\tgoto JourneyEarlyStoryTools_PailExplained\nJourneyEarlyStoryTools_PailOwned::\n\tmsgbox JourneyEarlyStoryTools_Text_AlreadyOwned, MSGBOX_DEFAULT\nJourneyEarlyStoryTools_PailExplained::\n"
+    },
+    {
+      "path": "data/maps/Route120/scripts.inc",
+      "before": "\tgiveitem ITEM_DEVON_SCOPE\n\tsetflag FLAG_RECEIVED_DEVON_SCOPE\n",
+      "after": "\tcall JourneyEarlyStoryTools_HasDevonScope\n\tgoto_if_eq VAR_RESULT, TRUE, JourneyEarlyStoryTools_DevonOwned\n\tgiveitem ITEM_DEVON_SCOPE\n\tgoto JourneyEarlyStoryTools_DevonReceived\nJourneyEarlyStoryTools_DevonOwned::\n\tmsgbox JourneyEarlyStoryTools_Text_AlreadyOwned, MSGBOX_DEFAULT\nJourneyEarlyStoryTools_DevonReceived::\n\tsetflag FLAG_RECEIVED_DEVON_SCOPE\n"
+    }
+  ],
+  "prepared_sha256": {
+    "src/journey_family.c": "6da12e86a46d5b6e5d8f0c298f80d188bd491bc39491a23aa8b8ed9d2cfe0089",
+    "include/journey_family.h": "1da8c999738267f8007943186e033412d6ee5e0fd406b28fc5fb730d84fe5936",
+    "data/specials.inc": "92109e5c56a845acd5eb53e2a3f1f432c0e0a90b4acb8db6e08de99004e29b7a",
+    "data/scripts/journey_family.inc": "c983086e1848cc48d140d85f177cf56ec16b7546d8613afda0a2c9fb0e82317f",
+    "data/maps/RocketHideout_B4F_Frlg/scripts.inc": "f9c713a8466cc3f191d7c61dd16c8d9a06daba60a9b3644cb7a1315a7ebe8a59",
+    "data/maps/Route104_PrettyPetalFlowerShop/scripts.inc": "d9ead41c9863b52df7901b8bc393c8a31958bd6d8074697e2976971f25390bcd",
+    "data/maps/Route120/scripts.inc": "3e79ef98c328d9854b36b0fc060e91c465436fe4806255ee604f34b0d1790114"
+  }
+}

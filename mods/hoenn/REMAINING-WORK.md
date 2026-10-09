@@ -23,7 +23,16 @@ Mantendo o tamanho recente dos PRs, a previsão é de **10 a 20 PRs para uma
 candidata de lançamento**, sujeita aos problemas encontrados nos percursos e
 campanhas completas. A quantidade de PRs não mede a conclusão do jogo.
 
-## Avanço atual: Pokémon Tower e inventário de encontros fixos
+## Avanço atual: ferramentas antecipadas e história preservada
+
+Silph Scope, Devon Scope e Wailmer Pail vêm da mãe desde o início, nas duas
+regiões, sem concluir as missões originais. Poké Flute continua após o primeiro
+ginásio. Encontros fixos de história permanecem como exceções à regra de
+habitat único dos selvagens. A candidata é `ba38f2ff`; testes de entrega nas
+31 casas, continuações dos três donos, mochila/PC, salvar/carregar e recompensa
+nos 16 ginásios. [EARLY-STORY-TOOLS.md](EARLY-STORY-TOOLS.md).
+
+## Etapa anterior: Pokémon Tower e inventário de encontros fixos
 
 Cubone/Marowak fica reservado para a Pokémon Tower; Nidoran♀ e evoluções
 passam para Diglett’s Cave. Corrigida a reconstrução do fantasma com Silph
@@ -32,8 +41,9 @@ quatro vitórias, Continue e escada para o sétimo andar, além dos 135 habitats
 Candidata `cccad98c`; [TOWER-HABITATS.md](TOWER-HABITATS.md).
 
 O inventário estático inclui scripts compartilhados e o callback de Sudowoodo.
-Continuam pendentes os eventos com famílias repetidas, a revisão de outros
-callbacks e as campanhas completas.
+As repetições nos encontros fixos de história foram autorizadas como exceções.
+Continuam pendentes a revisão de outros callbacks, suas condições de acesso
+e as campanhas completas.
 
 ## Etapa anterior: resgate de Lostelle e entrega do Meteorite
 
