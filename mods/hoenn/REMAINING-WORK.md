@@ -21,10 +21,12 @@ campanhas completas jogadas. O player não recebeu esta candidata.
 
 Maxie, entrevista de Stern, roubo do submarino, entrada por Surf e percurso
 até Matt passaram pelos eventos nativos. Foram 138 passos, oito transições
-nos três andares e cinco batalhas, incluindo duas duplas. Save/Continue
+nos três andares. A volta também passou: mais 49 passos, duas transições,
+Surf pela interação da margem e saída para Lilycove. Foram seis batalhas,
+incluindo duas duplas. Save/Continue já no mar
 conservou a progressão sem alterar as insígnias ou a pendência de Kanto.
-As viagens entre cidades, etapas anteriores e atributos de batalha continuam
-como fixtures; o percurso de volta e as campanhas completas seguem pendentes.
+As viagens entre cidades, etapas anteriores, cura e atributos de batalha continuam
+como fixtures; as campanhas completas seguem pendentes.
 Evidências e reprodução em [SUBMARINE-STORY.md](SUBMARINE-STORY.md).
 
 ## Etapa anterior: passagens e episódios Aqua

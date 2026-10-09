@@ -15,7 +15,8 @@ suas próprias evidências.
 
 A ligação local entre Maxie no Magma Hideout, Stern, o roubo em Slateport e
 Matt passou no motor, com entrada por Surf e percurso pelas escadas e
-teletransportes originais. Relatório em [SUBMARINE-STORY.md](SUBMARINE-STORY.md).
+teletransportes originais. A volta a Lilycove também passou, com Surf pela
+interação normal e Continue no mar. Relatório em [SUBMARINE-STORY.md](SUBMARINE-STORY.md).
 Esse trecho usa fixtures para viagens entre cidades e preparação da equipe;
 as campanhas completas continuam pendentes.
 

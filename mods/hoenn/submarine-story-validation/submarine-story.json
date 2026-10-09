@@ -18,7 +18,7 @@
       "trainer": 27,
       "map": "AquaHideout_B1F",
       "mission": "aqua_hideout_route",
-      "attacks": 8,
+      "attacks": 2,
       "outcome": 1,
       "ash_seen": false,
       "native_defeated_flag": true,
@@ -30,7 +30,7 @@
       "trainer": 3,
       "map": "AquaHideout_B1F",
       "mission": "aqua_hideout_route",
-      "attacks": 6,
+      "attacks": 12,
       "outcome": 1,
       "ash_seen": true,
       "native_defeated_flag": true,
@@ -42,7 +42,7 @@
       "trainer": 28,
       "map": "AquaHideout_B2F",
       "mission": "aqua_hideout_route",
-      "attacks": 2,
+      "attacks": 8,
       "outcome": 1,
       "ash_seen": true,
       "native_defeated_flag": true,
@@ -57,6 +57,18 @@
       "attacks": 2,
       "outcome": 1,
       "ash_seen": true,
+      "native_defeated_flag": true,
+      "double_battle": false,
+      "second_trainer": null,
+      "second_native_defeated_flag": false
+    },
+    {
+      "trainer": 2,
+      "map": "AquaHideout_1F",
+      "mission": "aqua_hideout_route",
+      "attacks": 1,
+      "outcome": 1,
+      "ash_seen": false,
       "native_defeated_flag": true,
       "double_battle": false,
       "second_trainer": null,
@@ -166,11 +178,48 @@
       ]
     }
   ],
+  "return_walked_steps": 49,
+  "original_return_transitions": [
+    {
+      "source": [
+        "AquaHideout_B2F",
+        32,
+        21
+      ],
+      "destination": [
+        "AquaHideout_B1F",
+        31,
+        4
+      ]
+    },
+    {
+      "source": [
+        "AquaHideout_B1F",
+        29,
+        2
+      ],
+      "destination": [
+        "AquaHideout_1F",
+        22,
+        2
+      ]
+    }
+  ],
+  "native_surf_prompts_on_return": [
+    [
+      "AquaHideout_1F",
+      13,
+      12
+    ]
+  ],
+  "native_return_to_lilycove": true,
+  "native_continue_in_surf_after_return": true,
   "no_hideout_position_or_event_entry_injections": true,
   "native_matt_victory_and_submarine_departure": true,
   "native_save_continue_after_maxie_theft_and_matt": true,
   "regional_badges_and_kanto_missions_unchanged": true,
   "prior_episodes_badges_intercity_travel_initial_surf_and_battle_stats_are_fixtures": true,
+  "healing_between_battles_is_fixture": true,
   "full_campaign_playthrough": false,
   "balance_validated": false
 }
