@@ -5,6 +5,11 @@ versão anterior. A candidata exige um novo jogo; não há conversão de saves.
 
 ## Etapas com verificações específicas
 
+- Canal da Rota 131 corrigido no layout alternativo de Sky Pillar: 37 tiles,
+  sem alterar eventos ou entrada da torre. Viagem contínua Vermilion–Sevii 1–7–
+  Pacifidlog–Rota 127–Vermilion: 24 mapas, 42 bordas, seis batalhas e oito
+  Continues; Sky Pillar e idioma verificados na candidata `2f53d410`.
+  [EASTERN-OCEAN-JOURNEY.md](EASTERN-OCEAN-JOURNEY.md).
 - Viagem contínua de Cinnabar ao lago da Rota 114, Rustboro e Dewford, com
   volta ao ponto inicial: 13 mapas, 24 bordas, 1.262 mudanças de posição,
   cinco batalhas e seis Continues. Planejador passa a respeitar conexões e
