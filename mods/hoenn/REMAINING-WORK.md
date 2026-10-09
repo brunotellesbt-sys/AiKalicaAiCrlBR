@@ -29,8 +29,10 @@ As duas campanhas completas **continuam pendentes**. Foram percorridas as
 aberturas desde Novo Jogo: Kanto até vencer o rival, Hoenn até o resgate de
 Birch e a entrega do inicial no laboratório, sem conceder progresso ou
 alterar atributos. [CAMPAIGN-PLAYTHROUGH.md](CAMPAIGN-PLAYTHROUGH.md).
-A [galeria](SEA-MAP-GALLERY.md) mostra 25 mapas marítimos ativos; o desenho das
-ilhotas ainda precisa de variedade. A ROM permanece `407bd93b`.
+As aberturas registradas usam a ROM `407bd93b`. A candidata de terreno
+`68bbf008` acrescenta praias variadas, rochedos completos e fachadas nativas
+de Seafoam, mantendo os interiores. A [galeria](SEA-MAP-GALLERY.md) inclui
+27 mapas marítimos e sprites dos NPCs. [Detalhes](SEA-LANDSCAPES.md).
 
 ## Etapa anterior: reencontro de Wanda sem HM terrestre
 

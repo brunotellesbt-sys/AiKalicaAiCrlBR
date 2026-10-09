@@ -1,12 +1,18 @@
 # Imagens das novas rotas marítimas
 
-Imagens geradas diretamente dos mapas, blocos e tilesets da candidata
-`407bd93bf4ee7e01878cdf3186a2a3a5b3d15f6954c8de6dcce942599ef9f3d9`.
-São vistas completas do terreno de cada mapa. NPCs, sprites de objetos e
-animações não fazem parte dessa exportação; não são capturas do PokéNav.
-Os nomes na borda são os identificadores internos; as ligações vêm do JSON
-real de cada mapa. A antiga passagem JourneyHoennCrossing está desativada
-e foi excluída desta galeria.
+Imagens geradas diretamente dos mapas e tilesets da candidata
+`68bbf008a3dcf522824aad80a6b7ae3ca061a7b7f15a39f03192d99c27177f63`.
+A galeria inclui **27 mapas marítimos e 14 interiores existentes**, com sprites
+reais dos NPCs e suas paletas nativas. Os objetos aparecem nas posições iniciais;
+flags do save, animações e movimento não são simulados na exportação.
+Capturas da ROM em mGBA ficam em [sea-landscapes-validation](sea-landscapes-validation).
+As ligações mostradas vêm dos dados reais do jogo; a antiga
+JourneyHoennCrossing está desativada e foi excluída.
+
+A formação externa das cavernas é copiada integralmente da segunda entrada
+de Seafoam, na Rota 20. As praias variam e os interiores foram preservados.
+Os pedregulhos usam blocos completos; as bordas sem conexão ficam fechadas.
+Veja [SEA-LANDSCAPES.md](SEA-LANDSCAPES.md).
 
 ## Cinnabar, rio da Rota 114, Rustboro e Dewford
 
@@ -36,10 +42,9 @@ Birth Island. Os canais abaixo unem as linhas do conjunto.
 
 ![Canais verticais de Sevii](sea-map-gallery/canais-sevii.png)
 
-As áreas novas ainda usam ilhotas semelhantes entre si. A conectividade
-foi implementada e testada em percursos anteriores; o acabamento visual e
-variedade dos desenhos continuam pendentes. Estas imagens permitem revisar
-o terreno existente, sem apresentar um desenho conceitual como mapa pronto.
+As praias têm contornos distintos e o mar predomina. Nadadores aparecem na
+água e na areia; os membros de Aqua estão nas ilhas da costa oeste.
+Os interiores dos santuários e suas saídas permanecem como antes.
 
 ## Reprodução
 

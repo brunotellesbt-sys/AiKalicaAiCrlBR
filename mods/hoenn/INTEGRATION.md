@@ -1,5 +1,11 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+A candidata `68bbf008` varia os 27 mares, copia a formação externa original
+de Seafoam e preserva os interiores. As pedras aquáticas são completas; o
+rio desemboca abaixo da cachoeira da Rota 114, com Waterfall necessário
+para subir. [SEA-LANDSCAPES.md](SEA-LANDSCAPES.md) e
+[galeria com NPCs](SEA-MAP-GALLERY.md).
+
 Restaurada a cena de Wanda em Rusturf Tunnel após a remoção de Rock Smash.
 A caminhada pelo trecho, após Peeko e a apresentação do casal, inicia o
 reencontro original e entrega TM53 Strength. Passaram os dois lados,
