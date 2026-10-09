@@ -1,0 +1,1180 @@
+{
+  "passed": true,
+  "rom_sha256": "2f53d410522b8c1a186112875659791328ae6681f210e6b94a69f15f81049e09",
+  "continuous_roundtrip": true,
+  "start": [
+    "VermilionCity_Frlg",
+    20,
+    20
+  ],
+  "end": [
+    "VermilionCity_Frlg",
+    20,
+    20
+  ],
+  "maps": [
+    "VermilionCity_Frlg",
+    "Route127",
+    "Route131",
+    "PacifidlogTown",
+    "JourneyHoennMiddleSea",
+    "JourneyPacifidlogSea",
+    "JourneyWorldSea00",
+    "JourneyWorldSea01",
+    "JourneyWorldSea02",
+    "JourneyWorldSea03",
+    "JourneyWorldSea04",
+    "JourneyWorldSea05",
+    "JourneyWorldSea06",
+    "JourneyWorldSea07",
+    "JourneyWorldLane10",
+    "JourneyWorldLane11",
+    "JourneyWorldLane20",
+    "JourneyWorldLane21",
+    "OneIsland_Harbor_Frlg",
+    "TwoIsland_Harbor_Frlg",
+    "ThreeIsland_Harbor_Frlg",
+    "FourIsland_Harbor_Frlg",
+    "FiveIsland_Harbor_Frlg",
+    "SixIsland_Harbor_Frlg",
+    "SevenIsland_Harbor_Frlg"
+  ],
+  "legs": [
+    {
+      "label": "vermilion-east-shore",
+      "goal": [
+        "VermilionCity_Frlg",
+        34,
+        30
+      ],
+      "position_changes": 24
+    },
+    {
+      "label": "vermilion-surf-channel",
+      "goal": [
+        "VermilionCity_Frlg",
+        34,
+        38
+      ],
+      "position_changes": 8
+    },
+    {
+      "label": "vermilion-sea",
+      "goal": [
+        "JourneyWorldSea00",
+        10,
+        20
+      ],
+      "position_changes": 46
+    },
+    {
+      "label": "one-island-harbor",
+      "goal": [
+        "OneIsland_Harbor_Frlg",
+        8,
+        4
+      ],
+      "position_changes": 115
+    },
+    {
+      "label": "two-island-harbor",
+      "goal": [
+        "TwoIsland_Harbor_Frlg",
+        8,
+        4
+      ],
+      "position_changes": 86
+    },
+    {
+      "label": "three-island-harbor",
+      "goal": [
+        "ThreeIsland_Harbor_Frlg",
+        8,
+        4
+      ],
+      "position_changes": 86
+    },
+    {
+      "label": "two-island-sea-return",
+      "goal": [
+        "JourneyWorldSea02",
+        8,
+        30
+      ],
+      "position_changes": 127
+    },
+    {
+      "label": "five-island-harbor",
+      "goal": [
+        "FiveIsland_Harbor_Frlg",
+        8,
+        4
+      ],
+      "position_changes": 99
+    },
+    {
+      "label": "four-island-harbor",
+      "goal": [
+        "FourIsland_Harbor_Frlg",
+        8,
+        4
+      ],
+      "position_changes": 86
+    },
+    {
+      "label": "six-island-harbor",
+      "goal": [
+        "SixIsland_Harbor_Frlg",
+        8,
+        4
+      ],
+      "position_changes": 148
+    },
+    {
+      "label": "seven-island-harbor",
+      "goal": [
+        "SevenIsland_Harbor_Frlg",
+        8,
+        4
+      ],
+      "position_changes": 86
+    },
+    {
+      "label": "pacifidlog-sea",
+      "goal": [
+        "JourneyPacifidlogSea",
+        6,
+        20
+      ],
+      "position_changes": 131
+    },
+    {
+      "label": "route131",
+      "goal": [
+        "Route131",
+        50,
+        25
+      ],
+      "position_changes": 41
+    },
+    {
+      "label": "pacifidlog-town",
+      "goal": [
+        "PacifidlogTown",
+        8,
+        18
+      ],
+      "position_changes": 69
+    },
+    {
+      "label": "pacifidlog-sea-return",
+      "goal": [
+        "JourneyPacifidlogSea",
+        6,
+        20
+      ],
+      "position_changes": 108
+    },
+    {
+      "label": "six-island-sea-return",
+      "goal": [
+        "JourneyWorldSea06",
+        10,
+        20
+      ],
+      "position_changes": 16
+    },
+    {
+      "label": "four-island-sea-return",
+      "goal": [
+        "JourneyWorldSea04",
+        10,
+        20
+      ],
+      "position_changes": 96
+    },
+    {
+      "label": "hoenn-middle-sea",
+      "goal": [
+        "JourneyHoennMiddleSea",
+        20,
+        12
+      ],
+      "position_changes": 46
+    },
+    {
+      "label": "route127",
+      "goal": [
+        "Route127",
+        75,
+        42
+      ],
+      "position_changes": 25
+    },
+    {
+      "label": "hoenn-middle-sea-return",
+      "goal": [
+        "JourneyHoennMiddleSea",
+        20,
+        12
+      ],
+      "position_changes": 25
+    },
+    {
+      "label": "four-island-sea-final",
+      "goal": [
+        "JourneyWorldSea04",
+        10,
+        20
+      ],
+      "position_changes": 46
+    },
+    {
+      "label": "one-island-sea-return",
+      "goal": [
+        "JourneyWorldSea01",
+        10,
+        20
+      ],
+      "position_changes": 96
+    },
+    {
+      "label": "vermilion-sea-return",
+      "goal": [
+        "JourneyWorldSea00",
+        10,
+        20
+      ],
+      "position_changes": 64
+    },
+    {
+      "label": "vermilion-surf-channel-return",
+      "goal": [
+        "VermilionCity_Frlg",
+        34,
+        38
+      ],
+      "position_changes": 46
+    },
+    {
+      "label": "vermilion-east-shore-return",
+      "goal": [
+        "VermilionCity_Frlg",
+        34,
+        30
+      ],
+      "position_changes": 8
+    },
+    {
+      "label": "vermilion-town-return",
+      "goal": [
+        "VermilionCity_Frlg",
+        20,
+        20
+      ],
+      "position_changes": 24
+    }
+  ],
+  "position_changes": 1752,
+  "transitions": [
+    {
+      "source": [
+        "VermilionCity_Frlg",
+        24,
+        39
+      ],
+      "destination": [
+        "JourneyWorldSea00",
+        24,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea00",
+        63,
+        20
+      ],
+      "destination": [
+        "JourneyWorldSea01",
+        0,
+        20
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea01",
+        30,
+        0
+      ],
+      "destination": [
+        "OneIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "OneIsland_Harbor_Frlg",
+        6,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea01",
+        30,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea01",
+        63,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea02",
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea02",
+        30,
+        0
+      ],
+      "destination": [
+        "TwoIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "TwoIsland_Harbor_Frlg",
+        6,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea02",
+        30,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea02",
+        63,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea03",
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea03",
+        30,
+        0
+      ],
+      "destination": [
+        "ThreeIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "ThreeIsland_Harbor_Frlg",
+        3,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea03",
+        27,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea03",
+        0,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea02",
+        63,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea02",
+        15,
+        47
+      ],
+      "destination": [
+        "JourneyWorldLane20",
+        15,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldLane20",
+        15,
+        47
+      ],
+      "destination": [
+        "JourneyWorldSea05",
+        15,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea05",
+        30,
+        0
+      ],
+      "destination": [
+        "FiveIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "FiveIsland_Harbor_Frlg",
+        3,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea05",
+        27,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea05",
+        0,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea04",
+        63,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea04",
+        30,
+        0
+      ],
+      "destination": [
+        "FourIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "FourIsland_Harbor_Frlg",
+        3,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea04",
+        27,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea04",
+        15,
+        47
+      ],
+      "destination": [
+        "JourneyWorldLane11",
+        15,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldLane11",
+        15,
+        47
+      ],
+      "destination": [
+        "JourneyWorldSea06",
+        15,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea06",
+        30,
+        0
+      ],
+      "destination": [
+        "SixIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "SixIsland_Harbor_Frlg",
+        6,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea06",
+        30,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea06",
+        63,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea07",
+        0,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea07",
+        30,
+        0
+      ],
+      "destination": [
+        "SevenIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "SevenIsland_Harbor_Frlg",
+        3,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea07",
+        27,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea07",
+        0,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea06",
+        63,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea06",
+        0,
+        0
+      ],
+      "destination": [
+        "JourneyPacifidlogSea",
+        11,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyPacifidlogSea",
+        6,
+        0
+      ],
+      "destination": [
+        "Route131",
+        54,
+        39
+      ]
+    },
+    {
+      "source": [
+        "Route131",
+        0,
+        24
+      ],
+      "destination": [
+        "PacifidlogTown",
+        19,
+        24
+      ]
+    },
+    {
+      "source": [
+        "PacifidlogTown",
+        19,
+        18
+      ],
+      "destination": [
+        "Route131",
+        0,
+        18
+      ]
+    },
+    {
+      "source": [
+        "Route131",
+        54,
+        39
+      ],
+      "destination": [
+        "JourneyPacifidlogSea",
+        6,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyPacifidlogSea",
+        11,
+        20
+      ],
+      "destination": [
+        "JourneyWorldSea06",
+        0,
+        20
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea06",
+        10,
+        0
+      ],
+      "destination": [
+        "JourneyWorldLane11",
+        10,
+        47
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldLane11",
+        10,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea04",
+        10,
+        47
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea04",
+        0,
+        20
+      ],
+      "destination": [
+        "JourneyHoennMiddleSea",
+        47,
+        20
+      ]
+    },
+    {
+      "source": [
+        "JourneyHoennMiddleSea",
+        0,
+        12
+      ],
+      "destination": [
+        "Route127",
+        79,
+        42
+      ]
+    },
+    {
+      "source": [
+        "Route127",
+        79,
+        42
+      ],
+      "destination": [
+        "JourneyHoennMiddleSea",
+        0,
+        12
+      ]
+    },
+    {
+      "source": [
+        "JourneyHoennMiddleSea",
+        47,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea04",
+        0,
+        12
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea04",
+        10,
+        0
+      ],
+      "destination": [
+        "JourneyWorldLane10",
+        10,
+        47
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldLane10",
+        10,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea01",
+        10,
+        47
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea01",
+        0,
+        20
+      ],
+      "destination": [
+        "JourneyWorldSea00",
+        63,
+        20
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea00",
+        34,
+        0
+      ],
+      "destination": [
+        "VermilionCity_Frlg",
+        34,
+        39
+      ]
+    }
+  ],
+  "surf_prompts": [
+    [
+      "VermilionCity_Frlg",
+      34,
+      24
+    ],
+    [
+      "VermilionCity_Frlg",
+      34,
+      30
+    ],
+    [
+      "JourneyWorldSea00",
+      52,
+      20
+    ],
+    [
+      "OneIsland_Harbor_Frlg",
+      7,
+      5
+    ],
+    [
+      "TwoIsland_Harbor_Frlg",
+      7,
+      5
+    ],
+    [
+      "ThreeIsland_Harbor_Frlg",
+      7,
+      5
+    ],
+    [
+      "FiveIsland_Harbor_Frlg",
+      7,
+      5
+    ],
+    [
+      "FourIsland_Harbor_Frlg",
+      7,
+      5
+    ],
+    [
+      "JourneyWorldSea04",
+      15,
+      13
+    ],
+    [
+      "SixIsland_Harbor_Frlg",
+      7,
+      5
+    ],
+    [
+      "SevenIsland_Harbor_Frlg",
+      7,
+      5
+    ],
+    [
+      "JourneyPacifidlogSea",
+      6,
+      14
+    ],
+    [
+      "JourneyPacifidlogSea",
+      6,
+      9
+    ],
+    [
+      "PacifidlogTown",
+      17,
+      24
+    ],
+    [
+      "PacifidlogTown",
+      14,
+      23
+    ],
+    [
+      "PacifidlogTown",
+      8,
+      18
+    ],
+    [
+      "JourneyPacifidlogSea",
+      6,
+      14
+    ],
+    [
+      "JourneyWorldSea00",
+      36,
+      20
+    ],
+    [
+      "VermilionCity_Frlg",
+      22,
+      29
+    ]
+  ],
+  "save_continue": [
+    {
+      "label": "vermilion-sea-surf",
+      "before": {
+        "map": "JourneyWorldSea00",
+        "position": [
+          10,
+          20
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "JourneyWorldSea00",
+        "position": [
+          10,
+          20
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    },
+    {
+      "label": "three-island-land",
+      "before": {
+        "map": "ThreeIsland_Harbor_Frlg",
+        "position": [
+          8,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "ThreeIsland_Harbor_Frlg",
+        "position": [
+          8,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    },
+    {
+      "label": "four-island-land",
+      "before": {
+        "map": "FourIsland_Harbor_Frlg",
+        "position": [
+          8,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "FourIsland_Harbor_Frlg",
+        "position": [
+          8,
+          4
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    },
+    {
+      "label": "pacifidlog-sea-surf",
+      "before": {
+        "map": "JourneyPacifidlogSea",
+        "position": [
+          6,
+          20
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": false
+      },
+      "after": {
+        "map": "JourneyPacifidlogSea",
+        "position": [
+          6,
+          20
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": false
+      }
+    },
+    {
+      "label": "route131-alternate-layout-surf",
+      "before": {
+        "map": "Route131",
+        "position": [
+          50,
+          25
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": false
+      },
+      "after": {
+        "map": "Route131",
+        "position": [
+          50,
+          25
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": false
+      }
+    },
+    {
+      "label": "pacifidlog-town-land",
+      "before": {
+        "map": "PacifidlogTown",
+        "position": [
+          8,
+          18
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": false
+      },
+      "after": {
+        "map": "PacifidlogTown",
+        "position": [
+          8,
+          18
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": false
+      }
+    },
+    {
+      "label": "route127-surf",
+      "before": {
+        "map": "Route127",
+        "position": [
+          75,
+          42
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": false
+      },
+      "after": {
+        "map": "Route127",
+        "position": [
+          75,
+          42
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": false
+      }
+    },
+    {
+      "label": "vermilion-return-land",
+      "before": {
+        "map": "VermilionCity_Frlg",
+        "position": [
+          20,
+          20
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "VermilionCity_Frlg",
+        "position": [
+          20,
+          20
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    }
+  ],
+  "native_trainer_battles": [
+    {
+      "trainer": 385,
+      "map": "Route131",
+      "mission": "seafloor_route",
+      "attacks": 10,
+      "outcome": 1,
+      "ash_seen": false,
+      "native_defeated_flag": true,
+      "double_battle": false,
+      "second_trainer": null,
+      "second_native_defeated_flag": false
+    },
+    {
+      "trainer": 171,
+      "map": "Route131",
+      "mission": "seafloor_route",
+      "attacks": 17,
+      "outcome": 1,
+      "ash_seen": false,
+      "native_defeated_flag": true,
+      "double_battle": false,
+      "second_trainer": null,
+      "second_native_defeated_flag": false
+    },
+    {
+      "trainer": 166,
+      "map": "Route131",
+      "mission": "seafloor_route",
+      "attacks": 5,
+      "outcome": 1,
+      "ash_seen": false,
+      "native_defeated_flag": true,
+      "double_battle": false,
+      "second_trainer": null,
+      "second_native_defeated_flag": false
+    },
+    {
+      "trainer": 456,
+      "map": "Route131",
+      "mission": "seafloor_route",
+      "attacks": 19,
+      "outcome": 1,
+      "ash_seen": false,
+      "native_defeated_flag": true,
+      "double_battle": false,
+      "second_trainer": null,
+      "second_native_defeated_flag": false
+    },
+    {
+      "trainer": 167,
+      "map": "Route131",
+      "mission": "seafloor_route",
+      "attacks": 10,
+      "outcome": 1,
+      "ash_seen": true,
+      "native_defeated_flag": true,
+      "double_battle": false,
+      "second_trainer": null,
+      "second_native_defeated_flag": false
+    },
+    {
+      "trainer": 457,
+      "map": "Route131",
+      "mission": "seafloor_route",
+      "attacks": 11,
+      "outcome": 1,
+      "ash_seen": false,
+      "native_defeated_flag": true,
+      "double_battle": false,
+      "second_trainer": null,
+      "second_native_defeated_flag": false
+    }
+  ],
+  "no_midroute_warps_or_direct_trainer_scripts": true,
+  "initial_party_position_and_prior_story_states_are_fixtures": true,
+  "trainer_stats_and_healing_are_fixtures": true,
+  "wild_encounters_disabled": true,
+  "full_campaign_playthrough": false,
+  "balance_validated": false
+}
