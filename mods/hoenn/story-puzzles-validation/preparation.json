@@ -1,0 +1,62 @@
+{
+  "status": "terrestrial_puzzle_doors_candidate",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "doors": [
+    {
+      "map": "DesertRuins",
+      "flag": "FLAG_SYS_REGIROCK_PUZZLE_COMPLETED",
+      "formerly": "Rock Smash",
+      "opening": "read center or side inscription"
+    },
+    {
+      "map": "AncientTomb",
+      "flag": "FLAG_SYS_REGISTEEL_PUZZLE_COMPLETED",
+      "formerly": "Flash",
+      "opening": "read center or side inscription"
+    },
+    {
+      "map": "SealedChamber_OuterRoom",
+      "flag": "FLAG_SYS_BRAILLE_DIG",
+      "formerly": "Dig",
+      "opening": "read center or side inscription"
+    }
+  ],
+  "dive_access_retained": true,
+  "inner_party_riddle_retained": true,
+  "regice_walking_puzzle_retained": true,
+  "sixteen_badges_capture_gate_retained": true,
+  "new_flags_allocated": false,
+  "save_layout_unchanged": true,
+  "full_campaign_validated": false,
+  "input_sha256": {
+    "data/maps/DesertRuins/scripts.inc": "3eebd703eeb724f8f2af5eae6599ee097b731ef1f812bfcc4a8b96c511ad3d8e",
+    "data/maps/AncientTomb/scripts.inc": "2d82e5458b532bc4d463982cea749813ecbe23e7b0f3f69e4810ce4c88cf5491",
+    "data/maps/SealedChamber_OuterRoom/scripts.inc": "53c2220f823e78ac6dc3e57cd31f78a9de7ac870f219c78b65b61c37eea2b450",
+    "data/maps/SealedChamber_InnerRoom/scripts.inc": "269d43206ada4bce97633c584dbc0c751ac23365e098dcbd278bb5e85b42cdda",
+    "data/maps/IslandCave/scripts.inc": "7c591551db2517f334934056ab362f4334ab36fb570a69b4e9142a03839db95d",
+    "src/field_move.c": "79cabadd300c6ad4775974077d16698eae0f12885adb21670b57981d0b93420f",
+    "include/constants/flags.h": "c17f112c8d15246e741e0b2401519e99022e68eb8780df59965aeed84cd4e5b5"
+  },
+  "original_sha256": {
+    "data/maps/DesertRuins/scripts.inc": "663c0c5039ec8151b1b0fd098d2b3d276218358c6556dccd976340c02e57a6ef",
+    "data/maps/AncientTomb/scripts.inc": "81e785b7f6ddf34e7d390cf1bb5180362aebe46f1f5bbdf1cf49ee3fd1bf3c4b",
+    "data/maps/SealedChamber_OuterRoom/scripts.inc": "53c2220f823e78ac6dc3e57cd31f78a9de7ac870f219c78b65b61c37eea2b450",
+    "data/scripts/journey_campaign_gates.inc": "57661ff2c52d3dc5a2952bbba51f4055edf7cb55fd167f83c1ac644d343b3fa1"
+  },
+  "preserved_native_sha256": {
+    "data/maps/SealedChamber_InnerRoom/scripts.inc": "269d43206ada4bce97633c584dbc0c751ac23365e098dcbd278bb5e85b42cdda",
+    "data/maps/IslandCave/scripts.inc": "6782b27ac36b2d4db1916185f568e85519386293a0ab0be6edfe771e9280c3b8",
+    "src/journey_special.c": "abf2eabe7210fb30d0c39759f98434e3e868a3e5eeb2e11101b649af8b649552",
+    "src/journey_campaign_gates.c": "8a6ad0d6e9f33c3fdb3373b7208b8e2033be2d43bbd7a15a6a741f180651ca0b",
+    "src/journey_gym_scaling.c": "9b1b64746a70c12fcf7f54a661aea151d8ee9e030810046d3d2ce71bef889840",
+    "src/journey_pwt.c": "f4761e70b3163fa1dcb6f3ec9017570f637d7090a85097a60e710bc910508558",
+    "src/field_move.c": "38d95467dace487e31080638d4069b52276a4e155fd8a4c848b7b8f843b43398",
+    "include/constants/flags.h": "4de1f1f5876188e98859ab521b8fe34f9c60d606e9ada749edd9068d6b6616bd"
+  },
+  "prepared_sha256": {
+    "data/maps/DesertRuins/scripts.inc": "0988e24be227ff4288fd2aef372f0f167f19f9121d55146ee492f1dab52d4cf5",
+    "data/maps/AncientTomb/scripts.inc": "640de34f5f42c6b6fb7fccab8dd45967f39878d2f721a12fa4cd66ebdcee952f",
+    "data/maps/SealedChamber_OuterRoom/scripts.inc": "2307078543c179e4df3078e4ae69f0dd5660e30953ef905aaca669517097153b",
+    "data/scripts/journey_campaign_gates.inc": "0a018893cb092cfd98b52ba40894b9ad3701863149d3e95831d5d9ad53560f3f"
+  }
+}

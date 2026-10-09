@@ -1,0 +1,8 @@
+#include "global.h"
+#include "pokemon.h"
+#include "constants/flags.h"
+const u32 gStoryPuzzleABI[] = {
+    MON_DATA_MOVE1, MON_DATA_MOVE2, MON_DATA_MOVE3, MON_DATA_MOVE4,
+    FLAG_SYS_REGIROCK_PUZZLE_COMPLETED, FLAG_SYS_REGISTEEL_PUZZLE_COMPLETED,
+    FLAG_SYS_BRAILLE_DIG, FLAG_REGI_DOORS_OPENED,
+};

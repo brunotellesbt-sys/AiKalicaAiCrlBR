@@ -1202,3 +1202,25 @@ libera sua participação em Hoenn e persiste após Continue. Insígnias iniciai
 episódios anteriores, viagens e atributos aumentados são fixtures; não houve
 campanhas completas nem validação de dificuldade. Sequência, comandos e
 relatórios em [INTEGRATED-STORY.md](INTEGRATED-STORY.md).
+
+## Inscrições dos Regis e episódios nativos de Aqua
+
+A camada `story-puzzles` abre três portas ao ler as inscrições: Desert Ruins,
+Ancient Tomb e Sealed Chamber externa. Usa os metatiles e flags nativos, sem
+Rock Smash, Flash ou Dig. Mantém Dive, a ordem Wailord/Relicanth na sala interna,
+o puzzle de Regice e a trava de captura das 16 insígnias.
+
+A camada `aqua-episodes` exige Shelly e a conclusão do Instituto Meteorológico
+após quatro insígnias de Hoenn; Matt e a fuga do submarino após seis. Os guias
+indicam Team Aqua, local e andar, fechando apenas ginásios ainda não vencidos.
+O motor exige vitória e desfecho original; o início da invasão ao Centro
+Espacial e a aliança de Giovanni contra Archie também verificam os episódios.
+Os níveis dos ginásios, rotas, duas Ligas e banco de insígnias de Kanto são
+preservados. A candidata final é `0e4626b0`.
+
+Passaram travessias físicas e Continue das três portas nas duas candidatas,
+as batalhas nativas de Shelly/Matt, Castform, fuga do submarino, portas de
+ginásios e salvamento. A matriz passou 5.120 decisões e 44 permissões ARM.
+Viagens, insígnias e estados anteriores/posteriores de fixture são explicitados;
+não houve balanceamento ou campanhas completas. Detalhes e reprodução em
+[PUZZLES-AND-AQUA.md](PUZZLES-AND-AQUA.md). O player continua sem atualização.

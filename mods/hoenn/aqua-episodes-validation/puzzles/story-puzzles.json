@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "rom_sha256": "0e4626b06423c27889a08588fdfd2f9d294df20fdb4064273c75af1da8b7c285",
+  "overlay_installed": true,
+  "doors": [
+    {
+      "map": "DesertRuins",
+      "completion_flag": "FLAG_SYS_REGIROCK_PUZZLE_COMPLETED",
+      "opened_by_inscription": true,
+      "physical_crossing": true,
+      "no_moves_or_badges": true,
+      "native_save_reload_continue_and_recross": true
+    },
+    {
+      "map": "AncientTomb",
+      "completion_flag": "FLAG_SYS_REGISTEEL_PUZZLE_COMPLETED",
+      "opened_by_inscription": true,
+      "physical_crossing": true,
+      "no_moves_or_badges": true,
+      "native_save_reload_continue_and_recross": true
+    },
+    {
+      "map": "SealedChamber_OuterRoom",
+      "completion_flag": "FLAG_SYS_BRAILLE_DIG",
+      "opened_by_inscription": true,
+      "physical_crossing": true,
+      "no_moves_or_badges": true,
+      "native_save_reload_continue_and_recross": true
+    }
+  ],
+  "capture_guard_combinations": [
+    {
+      "kanto_badges": 0,
+      "hoenn_badges": 0,
+      "capture_permission": false
+    },
+    {
+      "kanto_badges": 8,
+      "hoenn_badges": 0,
+      "capture_permission": false
+    },
+    {
+      "kanto_badges": 0,
+      "hoenn_badges": 8,
+      "capture_permission": false
+    },
+    {
+      "kanto_badges": 8,
+      "hoenn_badges": 8,
+      "capture_permission": true
+    }
+  ],
+  "original_inner_party_riddle_not_awarded": true,
+  "badges_not_awarded": true,
+  "travel_and_capture_badge_combinations_are_fixtures": true,
+  "full_campaign_playthrough": false
+}

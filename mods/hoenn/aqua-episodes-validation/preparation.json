@@ -1,0 +1,57 @@
+{
+  "status": "mandatory_native_aqua_episodes_candidate",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "events": [
+    {
+      "event": 15,
+      "boss": "Shelly",
+      "map": "Route119_WeatherInstitute_2F",
+      "badges": 4
+    },
+    {
+      "event": 16,
+      "boss": "Matt",
+      "map": "AquaHideout_B2F",
+      "badges": 6
+    }
+  ],
+  "only_unwon_gyms_blocked": true,
+  "guide_explains_team_and_location": true,
+  "roads_unchanged": true,
+  "native_castform_gift_retained": true,
+  "native_submarine_theft_escape_retained": true,
+  "archie_and_space_center_require_both_episodes": true,
+  "independent_kanto_badges_and_league_retained": true,
+  "new_flags_allocated": false,
+  "save_layout_unchanged": true,
+  "full_campaign_validated": false,
+  "input_sha256": {
+    "data/maps/Route119_WeatherInstitute_2F/scripts.inc": "5ff1a4b8edc664b8009648e20a0314c52e56a61079faebdf1605cc2a1122d675",
+    "data/maps/AquaHideout_B2F/scripts.inc": "700b9a7dd2017741cfee5986a219206b2a94419c2f587de40677eb017e462624",
+    "data/maps/SlateportCity_Harbor/scripts.inc": "1d9b5ccfee9b18a879fc65d4aab29a69e02d09c9b36ebb22eafd67de55ebdbfe",
+    "data/maps/MtPyre_Summit/scripts.inc": "20c868bd689ea9a6f4274d94143979602c66c86efb430e8d9e9bfe506ced4ca9",
+    "data/maps/Route119/map.json": "7303913b8cb5ea4f6875f47bba9b4219d0faf1210aacda0ed89d9fb2a801befc",
+    "data/maps/LilycoveCity/scripts.inc": "6cf8051ce784836337b3443ef9e1f28d8571f4b0846cecb1a906a7c1510c9014",
+    "include/constants/flags.h": "c17f112c8d15246e741e0b2401519e99022e68eb8780df59965aeed84cd4e5b5"
+  },
+  "original_sha256": {
+    "src/journey_campaign_gates.c": "8a6ad0d6e9f33c3fdb3373b7208b8e2033be2d43bbd7a15a6a741f180651ca0b",
+    "data/scripts/journey_campaign_gates.inc": "0a018893cb092cfd98b52ba40894b9ad3701863149d3e95831d5d9ad53560f3f"
+  },
+  "preserved_native_sha256": {
+    "data/maps/Route119_WeatherInstitute_2F/scripts.inc": "5ff1a4b8edc664b8009648e20a0314c52e56a61079faebdf1605cc2a1122d675",
+    "data/maps/AquaHideout_B2F/scripts.inc": "700b9a7dd2017741cfee5986a219206b2a94419c2f587de40677eb017e462624",
+    "data/maps/SlateportCity_Harbor/scripts.inc": "8aef7d2b286c8204813c981a0c11ebf95f2cc5f1793b14977458195af560fdc4",
+    "data/maps/MtPyre_Summit/scripts.inc": "20c868bd689ea9a6f4274d94143979602c66c86efb430e8d9e9bfe506ced4ca9",
+    "data/maps/Route119/map.json": "8ebc9b771e8554a3d379a6b70d13aeb7d693e69b3a110f8be0f188103eb16239",
+    "data/maps/LilycoveCity/scripts.inc": "dbc8c02bf4354f625783f61fb79065266ed410c0402837cf3afbe53ca52f1a98",
+    "src/journey_gym_scaling.c": "9b1b64746a70c12fcf7f54a661aea151d8ee9e030810046d3d2ce71bef889840",
+    "src/journey_special.c": "abf2eabe7210fb30d0c39759f98434e3e868a3e5eeb2e11101b649af8b649552",
+    "src/journey_pwt.c": "f4761e70b3163fa1dcb6f3ec9017570f637d7090a85097a60e710bc910508558",
+    "include/constants/flags.h": "4de1f1f5876188e98859ab521b8fe34f9c60d606e9ada749edd9068d6b6616bd"
+  },
+  "prepared_sha256": {
+    "src/journey_campaign_gates.c": "fb342cc6212079c7a2e2cfb40f5fb6f58b00505ba581fa123d5c05de5b343816",
+    "data/scripts/journey_campaign_gates.inc": "3295963cca11d36901ad0a27cbfec8711895bd91c3c560f1345afe4362c9199e"
+  }
+}
