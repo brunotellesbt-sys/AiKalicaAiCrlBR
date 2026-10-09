@@ -1,0 +1,247 @@
+{
+  "passed": true,
+  "candidate": true,
+  "rom_sha256": "6fb57b0539403b49d4cb1eb67dcba99f7102d83b8e6bc5a45b74bfa496009261",
+  "rows": [
+    {
+      "cave": "AlteringCave",
+      "native_entry_exit_and_reentry": true
+    },
+    {
+      "cave": "DesertUnderpass",
+      "native_entry_exit_and_reentry": true
+    }
+  ],
+  "save_continue": [
+    {
+      "label": "AlteringCave-inside",
+      "before": {
+        "map": "AlteringCave",
+        "position": [
+          18,
+          21
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kanto_champion": false,
+        "hoenn_champion": false,
+        "underpass_discovered": false,
+        "special_capture_unlocked": false
+      },
+      "after": {
+        "map": "AlteringCave",
+        "position": [
+          18,
+          21
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kanto_champion": false,
+        "hoenn_champion": false,
+        "underpass_discovered": false,
+        "special_capture_unlocked": false
+      }
+    },
+    {
+      "label": "AlteringCave-returned",
+      "before": {
+        "map": "Route103",
+        "position": [
+          45,
+          7
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kanto_champion": false,
+        "hoenn_champion": false,
+        "underpass_discovered": false,
+        "special_capture_unlocked": false
+      },
+      "after": {
+        "map": "Route103",
+        "position": [
+          45,
+          7
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kanto_champion": false,
+        "hoenn_champion": false,
+        "underpass_discovered": false,
+        "special_capture_unlocked": false
+      }
+    },
+    {
+      "label": "DesertUnderpass-inside",
+      "before": {
+        "map": "DesertUnderpass",
+        "position": [
+          10,
+          11
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kanto_champion": false,
+        "hoenn_champion": false,
+        "underpass_discovered": true,
+        "special_capture_unlocked": false
+      },
+      "after": {
+        "map": "DesertUnderpass",
+        "position": [
+          10,
+          11
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kanto_champion": false,
+        "hoenn_champion": false,
+        "underpass_discovered": true,
+        "special_capture_unlocked": false
+      }
+    },
+    {
+      "label": "DesertUnderpass-returned",
+      "before": {
+        "map": "Route114_FossilManiacsTunnel",
+        "position": [
+          6,
+          6
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kanto_champion": false,
+        "hoenn_champion": false,
+        "underpass_discovered": true,
+        "special_capture_unlocked": false
+      },
+      "after": {
+        "map": "Route114_FossilManiacsTunnel",
+        "position": [
+          6,
+          6
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kanto_champion": false,
+        "hoenn_champion": false,
+        "underpass_discovered": true,
+        "special_capture_unlocked": false
+      }
+    }
+  ],
+  "position_changes": 36,
+  "transitions": [
+    {
+      "source": [
+        "Route103",
+        45,
+        7
+      ],
+      "destination": [
+        "AlteringCave",
+        18,
+        22
+      ]
+    },
+    {
+      "source": [
+        "AlteringCave",
+        18,
+        22
+      ],
+      "destination": [
+        "Route103",
+        45,
+        7
+      ]
+    },
+    {
+      "source": [
+        "Route103",
+        45,
+        7
+      ],
+      "destination": [
+        "AlteringCave",
+        18,
+        22
+      ]
+    },
+    {
+      "source": [
+        "AlteringCave",
+        18,
+        22
+      ],
+      "destination": [
+        "Route103",
+        45,
+        7
+      ]
+    },
+    {
+      "source": [
+        "Route114_FossilManiacsTunnel",
+        6,
+        3
+      ],
+      "destination": [
+        "DesertUnderpass",
+        10,
+        12
+      ]
+    },
+    {
+      "source": [
+        "DesertUnderpass",
+        10,
+        12
+      ],
+      "destination": [
+        "Route114_FossilManiacsTunnel",
+        6,
+        3
+      ]
+    },
+    {
+      "source": [
+        "Route114_FossilManiacsTunnel",
+        6,
+        3
+      ],
+      "destination": [
+        "DesertUnderpass",
+        10,
+        12
+      ]
+    },
+    {
+      "source": [
+        "DesertUnderpass",
+        10,
+        12
+      ],
+      "destination": [
+        "Route114_FossilManiacsTunnel",
+        6,
+        3
+      ]
+    }
+  ],
+  "initial_badges_story_party_and_two_approach_positions_are_fixtures": true,
+  "no_internal_warps_during_each_cave_route": true,
+  "native_underpass_landmark": true,
+  "no_trainer_battles": true,
+  "wild_encounters_disabled": true,
+  "full_campaign_playthrough": false,
+  "balance_validated": false
+}

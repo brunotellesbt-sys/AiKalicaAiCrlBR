@@ -1,0 +1,36 @@
+{
+  "status": "ordinary_cave_access_candidate",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "altering_cave_open_before_league": true,
+  "desert_underpass_open_before_league": true,
+  "fossil_maniac_uses_original_postgame_position": true,
+  "cave_in_dialogue_updated": true,
+  "fossil_rewards_and_landmark_script_preserved": true,
+  "gym_missions_scaling_and_special_capture_gate_preserved": true,
+  "map_layouts_and_warps_unchanged": true,
+  "new_flags_allocated": false,
+  "full_campaign_validated": false,
+  "original_sha256": {
+    "data/maps/Route103/scripts.inc": "feeef10aea0673df7d1a6dd9d3040edb230a0814f4474d37e29c4a2c469db2bc",
+    "data/maps/Route114_FossilManiacsTunnel/scripts.inc": "ee040b753cf99c4a525a9a22a8ab1600587af8557346c7b97e23c65d50ca7a76"
+  },
+  "preserved_native_sha256": {
+    "data/maps/DesertUnderpass/scripts.inc": "560ade063577cfbc78abf6aa4da12ab6a4f90095600b0ebdecc5142bfeb27b2c",
+    "data/maps/AlteringCave/map.json": "5d91b9d8d86a698b177a69a3e64c49906ac060c70aa22ad90bb8f7f72941a76c",
+    "data/maps/Route103/map.json": "65fb09cb6ae1df024e3b85c379e7d033987ac534de96f5e544691855865c8a3d",
+    "data/maps/Route114_FossilManiacsTunnel/map.json": "b279a0324c4695fc1d6318642fa929b51ba7f7d12e6785a80986e5351d2e4c08",
+    "data/layouts/Route103/map.bin": "e9acf129a6fc0bef6755e6be721887ddcddeb69fe968289d98135e9195a3d837",
+    "data/layouts/Route114_FossilManiacsTunnel/map.bin": "858118767cb68d35a4fa85ec78ea67b9e2cc4d7a90e5a8aa6bb0043ed17bb2a8",
+    "src/journey_campaign_gates.c": "fb342cc6212079c7a2e2cfb40f5fb6f58b00505ba581fa123d5c05de5b343816",
+    "src/journey_gym_scaling.c": "9b1b64746a70c12fcf7f54a661aea151d8ee9e030810046d3d2ce71bef889840",
+    "src/journey_special.c": "abf2eabe7210fb30d0c39759f98434e3e868a3e5eeb2e11101b649af8b649552",
+    "src/journey_wild.c": "8272d70ab73464f7df041efb43076308e537f773f5d4a5edbb4439c216565adb",
+    "include/journey_habitat_data.h": "e5273de893bea003647d9d4044543391ffde846b53e8009f9f58181ba5673b6a",
+    "src/field_player_avatar.c": "7daf43585fe44eacc5723ec56b6e3019a77af8bcbed1b79988b732fd90e44d00",
+    "include/constants/flags.h": "4de1f1f5876188e98859ab521b8fe34f9c60d606e9ada749edd9068d6b6616bd"
+  },
+  "prepared_sha256": {
+    "data/maps/Route103/scripts.inc": "855bcb7831bbe9aa219fea4e7876e3f62ccaf9981f7d4abc27cd41ecdc26f409",
+    "data/maps/Route114_FossilManiacsTunnel/scripts.inc": "e5780e1a063a1b4913d4caebdadf9b34938df3b9b0b57b1f48a265c0e7ae6a7f"
+  }
+}

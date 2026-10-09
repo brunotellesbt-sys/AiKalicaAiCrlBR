@@ -50,6 +50,29 @@ keys = [(1, 0, 16), (-1, 0, 32), (0, 1, 128), (0, -1, 64)]
 blocked, transitions, wins, surf_prompts = set(), [], [], []
 walked = 0
 
+def refresh_loaded_warp_tiles():
+    """Observe entrances changed by native OnLoad scripts, not raw map.bin."""
+    n = by_location[location()]
+    width = blocks[n][0]
+    for x, y in warps[n]:
+        index = y * width + x
+        behavior = native('MapGridGetMetatileBehaviorAt', x + 7, y + 7)
+        collision = native('MapGridGetCollisionAt', x + 7, y + 7)
+        behaviors[n][index] = behavior
+        currents[behavior] = next(((dx, dy) for direction, dx, dy in [
+            ('East', 1, 0), ('West', -1, 0), ('North', 0, -1), ('South', 0, 1)]
+            if native('MetatileBehavior_Is' + direction + 'wardCurrent', behavior)), None)
+        arrows[behavior] = next((key for direction, key in [
+            ('East', 16), ('West', 32), ('North', 64), ('South', 128)]
+            if native('MetatileBehavior_Is' + direction + 'ArrowWarp', behavior)), None)
+        step_warps[behavior] = any(native('MetatileBehavior_Is' + kind, behavior) for kind in [
+            'WarpDoor', 'Ladder', 'Escalator', 'NonAnimDoor', 'LavaridgeB1FWarp',
+            'Lavaridge1FWarp', 'AquaHideoutWarp', 'MtPyreHole', 'MossdeepGymWarp', 'UnionRoomWarp'])
+        if collision == 0 or (collision == 1 and native('MetatileBehavior_IsWarpDoor', behavior)):
+            passable[n].add(index)
+        else:
+            passable[n].discard(index)
+
 def occupied():
     result = set()
     player = lib.read8(s['gPlayerAvatar'] + 5)

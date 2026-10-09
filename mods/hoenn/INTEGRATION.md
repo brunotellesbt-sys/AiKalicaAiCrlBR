@@ -1,5 +1,9 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+Altering Cave e Desert Underpass deixam de exigir vencer a Liga. Os dois
+acessos e seus retornos passaram com zero insígnias, sem liberar capturas
+especiais antecipadamente. [CAVE-ACCESS.md](CAVE-ACCESS.md).
+
 Acesso e volta de Sootopolis pela Rota 126 passaram no motor com zero
 insígnias, visitas às duas margens e seis Continues. Não houve alteração
 na candidata. [SOOTOPOLIS-ACCESS.md](SOOTOPOLIS-ACCESS.md).
