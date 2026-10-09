@@ -1,0 +1,39 @@
+{
+  "expected_old_rule_reproduced": true,
+  "rom_sha256": "127e1f2ae2eab558764d9e2f585c0ba1772e6f32b8d6f660d51a91ad094cfa03",
+  "cases": [
+    {
+      "kanto": 8,
+      "hoenn": 0,
+      "allowed": [
+        1,
+        0
+      ]
+    },
+    {
+      "kanto": 0,
+      "hoenn": 8,
+      "allowed": [
+        0,
+        1
+      ]
+    },
+    {
+      "kanto": 8,
+      "hoenn": 7,
+      "allowed": [
+        1,
+        0
+      ]
+    },
+    {
+      "kanto": 7,
+      "hoenn": 8,
+      "allowed": [
+        0,
+        1
+      ]
+    }
+  ],
+  "story_completions_and_badges_are_fixtures": true
+}

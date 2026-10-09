@@ -47,6 +47,7 @@ def audit(source):
         if trainer=='TRAINER_JOURNEY_BLUE': regular_gyms.append(record)
         else: bosses.append(record)
 
+    sixteen_badges = (source / ".journey-sixteen-badge-leagues").exists()
     leagues = {}
     for region, path, command in (
         ('kanto', 'data/scripts/route23.inc', 'goto_if_set'),
@@ -59,6 +60,8 @@ def audit(source):
             raise ValueError(f'Missing native league badge checks: {region}')
         leagues[region] = dict(path=path, required_badges=found,
                                other_region_badges_count=False,
+                               local_checks_only=True,
+                               final_entrance_required_badges=(dict(kanto=8, hoenn=8) if sixteen_badges else {region: 8}),
                                validation='source guards; regional flag bank tested separately')
 
     flags = read('src/event_data.c')
@@ -82,7 +85,13 @@ def audit(source):
     connected = (source / '.journey-team-stories').exists()
     native_marker = source / '.journey-mandatory-native-missions'
     required_native_episodes = json.loads(native_marker.read_text())['quests'] if native_marker.exists() else []
+    sixteen_badges = (source / '.journey-sixteen-badge-leagues').exists()
     gate_source = read('src/journey_campaign_gates.c') if connected else ''
+    if sixteen_badges:
+        for name in ('JourneyKantoLeaguePermission', 'JourneyHoennLeaguePermission'):
+            body = gate_source.split('void ' + name + '(void)', 1)[1].split('}', 1)[0]
+            if 'JourneyGymBadgeCount(TRUE) == 8' not in body or 'JourneyGymBadgeCount(FALSE) == 8' not in body or 'JourneyPendingCampaignEvent' in body:
+                raise ValueError('League does not require both badge banks: ' + name)
     if connected and ('JourneyCanStartArchieAlliance' not in gate_source
                       or 'RegionalFlag(FLAG_HIDE_SAFFRON_ROCKETS)' not in gate_source):
         raise ValueError('Missing mandatory Silph prerequisite for Giovanni alliance')
@@ -100,7 +109,9 @@ def audit(source):
                             boss_badge_thresholds=dict(kanto_before_gym=[3,5,7] if (source / '.journey-team-stories').exists() else [3,4], hoenn_before_gym=[3,5,6,8,8] if (source / '.journey-team-stories').exists() else [3,6,7,7]),
                             gym_door_guide_explains_team_and_location=True,
                             required_original_episodes=required_native_episodes,
-                            leagues_check_pending_story=(bool(required_native_episodes)),
+                            leagues_check_pending_story=(bool(required_native_episodes) and not sixteen_badges),
+                            both_leagues_require_sixteen_badges=sixteen_badges,
+                            league_total_required_badges=(16 if sixteen_badges else 8),
                             preserve_team_story_sequence=True,
                             viridian_leader_target='Blue'),
                 full_campaign_runtime_validated=False, input_sha256=evidence)

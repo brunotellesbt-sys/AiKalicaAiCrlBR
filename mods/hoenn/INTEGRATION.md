@@ -1,12 +1,16 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
-Sete episódios originais passam a exigir conclusão nas travas regionais de
-ginásios, incluindo Fuji e as entregas Devon. As duas Ligas também verificam
-as missões pendentes, além das oito insígnias da própria região. Corrigidos
-Steven aceitando carta ausente e a dependência de Roxanne para iniciar Devon.
-Candidata `127e1f2a`, com 11.008 decisões ARM, sete portas físicas, sete guardas
-de Liga, salvar/carregar e 512 combinações de insígnias nas permissões.
-[MANDATORY-NATIVE-MISSIONS.md](MANDATORY-NATIVE-MISSIONS.md).
+As duas Ligas exigem **as 16 insígnias: oito de Kanto e oito de Hoenn**.
+Os guardas usam uma mensagem própria da Liga, em inglês. As missões Rocket,
+Aqua e Magma continuam nas travas regionais dos ginásios, nos checkpoints
+combinados; níveis e ordem livre dos líderes permanecem. Candidata `19a4cd8a`,
+com 2.048 permissões de Liga, oito casos físicos com salvar/carregar e
+11.008 decisões de missão conferidas. [SIXTEEN-BADGE-LEAGUES.md](SIXTEEN-BADGE-LEAGUES.md).
+
+Sete episódios originais também exigem conclusão nos ginásios: Fuji, Mt. Moon,
+Rockets de Cerulean, Petalburg Woods e as entregas Devon. A etapa anterior
+corrigiu Steven aceitando carta ausente e a dependência de Roxanne para iniciar
+Devon. [MANDATORY-NATIVE-MISSIONS.md](MANDATORY-NATIVE-MISSIONS.md).
 
 Silph Scope, Devon Scope e Wailmer Pail são entregues pela mãe desde o início,
 nas duas regiões, sem concluir as missões originais; a Poké Flute continua como

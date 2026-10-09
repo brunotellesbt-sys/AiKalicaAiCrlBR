@@ -22,7 +22,7 @@ Cubone/Marowak fica na Pokémon Tower, incluindo o fantasma original; Nidoran♀
 
 Encontros fixos ligados à história são exceções à localização única dos encontros aleatórios: Snorlax permanece nas Rotas 12/16; Kecleon nas Rotas 119/120; Sudowoodo na Battle Frontier; e Voltorb/Electrode nos locais originais de itens disfarçados. Seus eventos não foram removidos nem realocados. Silph Scope, Devon Scope e Wailmer Pail vêm da mãe desde o começo; a Poké Flute continua sendo prêmio do primeiro ginásio em qualquer região. A entrega antecipada não conclui as missões. Detalhes, locais fixos e limites da auditoria em [EARLY-STORY-TOOLS.md](EARLY-STORY-TOOLS.md).
 
-O resgate de Fuji exige acalmar Marowak, vencer os três Rockets do 7º andar e falar com Fuji. Esse episódio e os demais descritos em [MANDATORY-NATIVE-MISSIONS.md](MANDATORY-NATIVE-MISSIONS.md) são obrigatórios para avançar nos ginásios e entrar na Liga regional; possuir os itens antecipados não substitui suas conclusões.
+O resgate de Fuji exige acalmar Marowak, vencer os três Rockets do 7º andar e falar com Fuji. Esse episódio e os demais descritos em [MANDATORY-NATIVE-MISSIONS.md](MANDATORY-NATIVE-MISSIONS.md) são obrigatórios para avançar nos ginásios regionais; possuir os itens antecipados não substitui suas conclusões.
 
 ## Encontros comuns por habitat
 
