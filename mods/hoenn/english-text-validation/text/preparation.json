@@ -1,0 +1,35 @@
+{
+  "status": "english_game_text_candidate",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "game_language": "English",
+  "conversation_and_documents_language": "Portuguese",
+  "translated_literals": 97,
+  "script_and_battle_logic_unchanged": true,
+  "placeholders_preserved": true,
+  "save_layout_unchanged": true,
+  "full_campaign_validated": false,
+  "original_sha256": {
+    "data/scripts/journey_family.inc": "4a6614e9134a5103f88a33b39457abc49385fd44058900083e900120ad747fb5",
+    "data/scripts/journey_birth.inc": "fc59af18d9a862726ce8cee304db72554ec0b18fb7573001e94463d74fbdc718",
+    "data/scripts/journey_pwt.inc": "9864be84a6805af74cc6cef19d9a1b047d90b35c9007b109c67ae79a74ed274b",
+    "data/scripts/journey_sanctuaries.inc": "f01795bb43a18e8aaf6a032cbbb7dd23a6d2b6770883f020bfc12f509281d9e8",
+    "src/journey_family.c": "e4d1a0d2b268f8391fed930998fe97c20f7d7b7384a5e4592542534b659aad10",
+    "src/journey_pwt.c": "f4761e70b3163fa1dcb6f3ec9017570f637d7090a85097a60e710bc910508558"
+  },
+  "preserved_native_sha256": {
+    "src/journey_special.c": "abf2eabe7210fb30d0c39759f98434e3e868a3e5eeb2e11101b649af8b649552",
+    "src/journey_campaign_gates.c": "6e232439cdac2f0cb70cd28ba2aa6646d4e43554602d903b93f458c13076c8fb",
+    "src/journey_gym_scaling.c": "9b1b64746a70c12fcf7f54a661aea151d8ee9e030810046d3d2ce71bef889840",
+    "src/journey_wild.c": "8272d70ab73464f7df041efb43076308e537f773f5d4a5edbb4439c216565adb",
+    "src/field_player_avatar.c": "7daf43585fe44eacc5723ec56b6e3019a77af8bcbed1b79988b732fd90e44d00",
+    "include/constants/flags.h": "4de1f1f5876188e98859ab521b8fe34f9c60d606e9ada749edd9068d6b6616bd"
+  },
+  "prepared_sha256": {
+    "data/scripts/journey_family.inc": "1370234230fdabe6791d88bdd8997047e65080fd6b4589ae1b39525329a6ea67",
+    "data/scripts/journey_birth.inc": "f00bbe3fb540c7f0e0eb37a8c89cb3f5be37a3c87ba794543ee641c94cf5573c",
+    "data/scripts/journey_pwt.inc": "f6f36248feb525eb66222c4760b7b8d3c516689406813cbe8ff00668bd573000",
+    "data/scripts/journey_sanctuaries.inc": "d9fc040044197dbe05a870b1de6c3f2e0fa69b3aba4776d5e212f707bb42496e",
+    "src/journey_family.c": "20e892960ba89e61f09cc582ca0369042e0902f4d4be8fbb72b1037206656c7b",
+    "src/journey_pwt.c": "5cf1cd0cfccd9c21421a883d2577d972ba75d56d0b45e63f4ad7efc099c938b1"
+  }
+}
