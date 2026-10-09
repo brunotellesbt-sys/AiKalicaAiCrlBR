@@ -1,7 +1,7 @@
 # O que falta para lançar a integração
 
 A candidata ainda é de desenvolvimento. Kanto, Hoenn e Sevii estão ligados;
-existem histórias/insígnias regionais, casas iniciais, família, encontros e
+existem histórias conectadas com insígnias regionais, casas iniciais, família, encontros e
 santuários. Há testes de trechos, batalhas e dados; ainda não houve duas
 campanhas completas jogadas. O player não recebeu esta candidata.
 
@@ -17,7 +17,17 @@ campanhas completas jogadas. O player não recebeu esta candidata.
 | 6 | Catálogo em batalha | Ampliar a cobertura de habilidades, formas, animações e Megas; a auditoria das 1.025 espécies e pixels não testa toda interação de batalha |
 | 7 | Sessões no navegador e versão de lançamento | Rodar sessões prolongadas, exportar/importar saves e testar os dois finais no navegador antes de atualizar o player |
 
-## Alterações desta etapa
+## Revisão de progressão das histórias
+
+Foram conferidas 28 vitórias reais das incursões de Kanto/base Rocket de Hoenn,
+com missões regionais separadas, abertura das portas e salvamento/Continue.
+Giovanni também foi vencido pelo evento original da Silph, liberando sua aliança
+obrigatória em Hoenn e conservando-a após Continue. As campanhas completas
+continuam como primeira prioridade: viagens, insígnias e episódios anteriores
+foram preparados como fixtures, e os atributos foram aumentados para acelerar
+os confrontos. Guia e evidências em [INTEGRATED-STORY.md](INTEGRATED-STORY.md).
+
+## Etapa anterior: PWT e embarque
 
 - PWT Singles passa a **seis contra seis**, com seleção da ordem dos seis,
   normalização no nível 50 e restauração completa. Adversários usam as seis
