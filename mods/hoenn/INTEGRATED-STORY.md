@@ -86,6 +86,11 @@ continua com **Blue** como líder regular; esse ginásio não é uma missão Roc
 
 ## Liberdade de viagem
 
+O grunt da entrada da Seafloor Cavern passa a ficar ao lado do corredor.
+Seu diálogo e evento de Steven permanecem, mas a passagem deixa de depender
+da entrega original de Dive. Archie conserva suas exigências de história.
+Detalhes em [SEAFLOOR-ACCESS.md](SEAFLOOR-ACCESS.md).
+
 As conexões por Surf unem fisicamente Kanto, Hoenn e Sevii. As missões fecham
 ginásios, não todas as estradas. Permanecem Snorlax, os terrenos que usam Surf,
 Dive/Waterfall e as missões de bicicleta já definidas. Não há Whirlpool, nem

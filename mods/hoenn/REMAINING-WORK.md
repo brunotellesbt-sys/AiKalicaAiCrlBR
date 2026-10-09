@@ -17,7 +17,18 @@ campanhas completas jogadas. O player não recebeu esta candidata.
 | 6 | Catálogo em batalha | Ampliar a cobertura de habilidades, formas, animações e Megas; a auditoria das 1.025 espécies e pixels não testa toda interação de batalha |
 | 7 | Sessões no navegador e versão de lançamento | Rodar sessões prolongadas, exportar/importar saves e testar os dois finais no navegador antes de atualizar o player |
 
-## Avanço atual: sequência do submarino
+## Avanço atual: acesso à Seafloor Cavern
+
+O grunt que fechava a entrada foi movido para o lado, mantendo sua conversa
+e o evento de Steven. O percurso nativo passou por Dive com zero insígnias,
+subida, salas 1/2/6/3/8/9, correntezas e batalha dupla de Shelly. Archie
+continuou recusando o confronto sem os requisitos de história; Save/Continue
+conservou o estado. A matriz regional passou novamente na nova candidata.
+A posição inicial no mar, equipe, atributos e cura são fixtures. Outros
+caminhos internos, a volta e as campanhas completas continuam pendentes.
+Evidências e reprodução em [SEAFLOOR-ACCESS.md](SEAFLOOR-ACCESS.md).
+
+## Etapa anterior: sequência do submarino
 
 Maxie, entrevista de Stern, roubo do submarino, entrada por Surf e percurso
 até Matt passaram pelos eventos nativos. Foram 138 passos, oito transições
