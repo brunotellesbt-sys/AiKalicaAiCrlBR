@@ -1,5 +1,11 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+Cubone/Marowak fica reservado para a Pokémon Tower; Nidoran♀ e evoluções
+passam para Diglett’s Cave. Corrigida a reconstrução do fantasma com Silph
+Scope, que voltava ao nível 30 e ignorava a faixa da equipe. Passaram fuga,
+quatro vitórias, Continue e escada para o sétimo andar, além dos 135 habitats.
+Candidata `cccad98c`; [TOWER-HABITATS.md](TOWER-HABITATS.md).
+
 Drowzee/Hypno fica reservado para Berry Forest, incluindo o Hypno de Lostelle;
 Skorupi/Drapion passa para Mt. Pyre. Foram atualizados encontros, Pokédex e
 documentos, com os 135 habitats conferidos no motor ARM. Candidata `0f1df908`;

@@ -63,6 +63,9 @@ prep=json.loads((source/('.journey-ecology' if (source/'.journey-ecology').exist
 if (source/'.journey-lostelle-habitats').exists():
  overlay=json.loads((source/'.journey-lostelle-habitats').read_text())
  prep.update({k:overlay[k] for k in ['locations_data','map_species','pools','field_slots']})
+if (source/'.journey-tower-habitats').exists():
+ overlay=json.loads((source/'.journey-tower-habitats').read_text())
+ prep.update({k:overlay[k] for k in ['locations_data','map_species','pools','field_slots']})
 metadata=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_text())
 observed_checks=[]
 for h in prep['locations_data']:

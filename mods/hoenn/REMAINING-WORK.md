@@ -23,7 +23,19 @@ Mantendo o tamanho recente dos PRs, a previsão é de **10 a 20 PRs para uma
 candidata de lançamento**, sujeita aos problemas encontrados nos percursos e
 campanhas completas. A quantidade de PRs não mede a conclusão do jogo.
 
-## Avanço atual: resgate de Lostelle e entrega do Meteorite
+## Avanço atual: Pokémon Tower e inventário de encontros fixos
+
+Cubone/Marowak fica reservado para a Pokémon Tower; Nidoran♀ e evoluções
+passam para Diglett’s Cave. Corrigida a reconstrução do fantasma com Silph
+Scope, que voltava ao nível 30 e ignorava a faixa da equipe. Passaram fuga,
+quatro vitórias, Continue e escada para o sétimo andar, além dos 135 habitats.
+Candidata `cccad98c`; [TOWER-HABITATS.md](TOWER-HABITATS.md).
+
+O inventário estático inclui scripts compartilhados e o callback de Sudowoodo.
+Continuam pendentes os eventos com famílias repetidas, a revisão de outros
+callbacks e as campanhas completas.
+
+## Etapa anterior: resgate de Lostelle e entrega do Meteorite
 
 Drowzee/Hypno fica reservado para Berry Forest, incluindo o Hypno de Lostelle;
 Skorupi/Drapion passa para Mt. Pyre. Foram atualizados encontros, Pokédex e
