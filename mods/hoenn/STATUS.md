@@ -5,6 +5,11 @@ versão anterior. A candidata exige um novo jogo; não há conversão de saves.
 
 ## Etapas com verificações específicas
 
+- Resgate de Lostelle por interação: Bill/Celio, Meteorite, quatro motoqueiros,
+  Bond Bridge, Hypno escalado pela média, escolta original, entrega e Moon
+  Stone. 15 mapas, oito batalhas e oito Continues, com zero insígnias;
+  revisita sem outro Hypno. Mesma candidata `2f53d410`.
+  [LOSTELLE-STORY.md](LOSTELLE-STORY.md).
 - Acesso às sete cidades de Sevii e seus Centros Pokémon por caminhada desde
   o mar, cura pelas sete enfermeiras e retorno: 34 mapas, 62 transições,
   1.701 mudanças de posição e 14 Continues. Ponteiros reais dos tilesets

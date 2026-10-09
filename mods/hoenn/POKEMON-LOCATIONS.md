@@ -2,7 +2,7 @@
 
 Referência da candidata nativa com Kanto, Hoenn e Sevii. Não é uma declaração de que todas as histórias e mecânicas da integração estão concluídas.
 
-As 920 espécies-base comuns e as variantes regionais ficam em 444 famílias, sem repetir famílias entre habitats. Andares da mesma caverna, zonas de Safari e a superfície/subsolo da mesma rota marinha contam como um habitat.
+Os encontros aleatórios das 920 espécies-base comuns e variantes regionais ficam em 444 famílias, sem repetir famílias entre habitats. Andares da mesma caverna, zonas de Safari e a superfície/subsolo da mesma rota marinha contam como um habitat.
 
 A distribuição corrigida tem 97 habitats terrestres: 18 com cinco famílias e 79 com quatro; outros 38 habitats exclusivamente aquáticos têm uma família cada. As 77 famílias com Pokémon do tipo Água estão reservadas para locais com Surf ou pesca, e também podem aparecer na grama do mesmo habitat quando ela existe.
 
@@ -13,6 +13,15 @@ Nível: média inteira da equipe menos cinco até mais dois, limitada a 1–100.
 Na água, o filtro seleciona as evoluções aquáticas disponíveis da família: por exemplo, Vaporeon pode aparecer na água, enquanto as outras evoluções de Eevee continuam na grama do mesmo habitat. Famílias com etapas de tipos diferentes ficam em habitats terrestres com água, para que nenhuma espécie-base perca seu local.
 
 A Pokédex Nacional vem junto à primeira Pokédex e marca o habitat da família inteira. Os slots e as chances de cada modalidade constam no arquivo `integration-validation/ecology-preparation.json`; as chances de pesca dependem da vara.
+
+## Encontro fixo de história verificado
+
+Hypno aparece uma vez no resgate de Lostelle, em Berry Forest, Sevii 3,
+por interação com a personagem. Seu nível segue a média da equipe −5/+2,
+e o evento fica acessível antes das Ligas. A família Drowzee/Hypno também
+está nos encontros aleatórios de Mt. Pyre na distribuição atual.
+Este encontro de roteiro não consta nos slots aleatórios da planilha;
+o percurso e o resgate estão em [LOSTELLE-STORY.md](LOSTELLE-STORY.md).
 
 ## Encontros comuns por habitat
 

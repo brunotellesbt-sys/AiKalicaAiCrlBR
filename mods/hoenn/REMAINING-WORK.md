@@ -23,7 +23,16 @@ Mantendo o tamanho recente dos PRs, a previsão é de **10 a 20 PRs para uma
 candidata de lançamento**, sujeita aos problemas encontrados nos percursos e
 campanhas completas. A quantidade de PRs não mede a conclusão do jogo.
 
-## Avanço atual: cidades e Centros Pokémon de Sevii
+## Avanço atual: resgate de Lostelle e entrega do Meteorite
+
+Bill/Celio, pedido do pai, quatro motoqueiros, caminhada por Bond Bridge,
+Hypno e escolta original passaram, seguidos pela entrega e Moon Stone.
+Hypno manteve a faixa da média da equipe; oito batalhas e oito Continues,
+com revisita sem repetir o encontro. Mesma candidata `2f53d410`.
+Missões de Ruby/Sapphire, minigames e outras áreas de Sevii, campanhas
+completas e balanceamento seguem pendentes. [LOSTELLE-STORY.md](LOSTELLE-STORY.md).
+
+## Etapa anterior: cidades e Centros Pokémon de Sevii
 
 As sete cidades foram alcançadas desde o mar, com cura nativa pela enfermeira,
 Continue no Centro, saída pela cidade/porto e Continue em Surf. Passaram

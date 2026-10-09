@@ -1,5 +1,9 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+O resgate de Lostelle passou pela apresentação de Bill/Celio, Meteorite,
+quatro motoqueiros, Berry Forest, Hypno, escolta, entrega e Moon Stone:
+15 mapas, oito batalhas e oito Continues. [LOSTELLE-STORY.md](LOSTELLE-STORY.md).
+
 As sete cidades de Sevii e seus Centros Pokémon passaram por entrada desde o
 mar, cura nativa, Continue e retorno: 34 mapas, 62 transições e 14 Continues.
 [SEVII-TOWN-ACCESS.md](SEVII-TOWN-ACCESS.md).
