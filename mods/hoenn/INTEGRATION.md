@@ -1,5 +1,10 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+A passagem da Rota 131 para Sevii permanece aberta também no layout alternativo
+usado por Sky Pillar. Passou a viagem Vermilion–portos de Sevii 1–7–Pacifidlog–
+Rota 127–Vermilion: 24 mapas, 42 bordas e oito Continues. Candidata `2f53d410`;
+[EASTERN-OCEAN-JOURNEY.md](EASTERN-OCEAN-JOURNEY.md).
+
 A viagem contínua pelo mar oeste até o lago da Rota 114, Rustboro e Dewford
 e de volta a Cinnabar passou: 13 mapas, 24 bordas e seis Continues.
 [OCEAN-JOURNEY.md](OCEAN-JOURNEY.md).
