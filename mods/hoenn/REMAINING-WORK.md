@@ -11,7 +11,7 @@ campanhas completas jogadas. O player não recebeu esta candidata.
 |---|---|---|
 | 1 | Jogar as duas campanhas, começando em cada região e variando a ordem dos ginásios | Chegar aos dois Hall of Fame com missões cumpridas por interação, sem flags ou níveis de fixture |
 | 2 | Revisar puzzles e estados de história originais | Remover dependências antigas de insígnias específicas, HMs terrestres e Acro Bike que ainda impeçam o caminho; manter as missões de ginásio e os três HMs aquáticos |
-| 3 | Percorrer mapas e novos mares | Conferir colisões, NPCs, escadas, Dive, saídas de cavernas, todos os acessos de santuário e destinos dinâmicos; uma auditoria de destinos não comprova esses percursos |
+| 3 | Percorrer mapas e novos mares | Conferir colisões, NPCs, escadas, Dive, saídas de cavernas e destinos dinâmicos; os 14 acessos locais de santuário passaram, mas faltam as viagens completas até seus mares e demais percursos |
 | 4 | Pós-jogo e demais instalações da Frontier | Exercitar concursos, bases secretas, serviços, recompensas e desafios nativos; conferir que não compartilham insígnias/conclusões indevidas |
 | 5 | Balanceamento | Sessões com atributos normais para ginásios livres, equipes vilãs, encontros e PWT; as fixtures aceleradas não servem para avaliar dificuldade |
 | 6 | Catálogo em batalha | Ampliar a cobertura de habilidades, formas, animações e Megas; a auditoria das 1.025 espécies e pixels não testa toda interação de batalha |
@@ -23,7 +23,17 @@ Mantendo o tamanho recente dos PRs, a previsão é de **10 a 20 PRs para uma
 candidata de lançamento**, sujeita aos problemas encontrados nos percursos e
 campanhas completas. A quantidade de PRs não mede a conclusão do jogo.
 
-## Avanço atual: Sky Pillar e proteção da sequência climática
+## Avanço atual: percursos dos 14 santuários
+
+Os nove acessos de ilha e cinco submersos passaram da aproximação no mar
+até os altares e de volta ao ponto inicial, sem colocações internas ou
+entrada direta de efeitos/scripts. Passaram as 105 interações bloqueadas
+com zero insígnias e 33 Continues. O planejador passa a ler formatos FRLG
+e Emerald; Sky Pillar foi repetido como regressão. A ROM permaneceu igual.
+Viagens completas entre regiões, batalhas e capturas de todos os especiais
+e campanhas completas seguem pendentes. [SANCTUARY-ROUTES.md](SANCTUARY-ROUTES.md).
+
+## Etapa anterior: Sky Pillar e proteção da sequência climática
 
 A porta externa da torre abre sem esperar Wallace. Uma visita antecipada
 não desperta Rayquaza: o evento exige sete insígnias de Hoenn, requisitos

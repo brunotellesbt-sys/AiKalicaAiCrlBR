@@ -5,6 +5,11 @@ versão anterior. A candidata exige um novo jogo; não há conversão de saves.
 
 ## Etapas com verificações específicas
 
+- Percursos completos dos 14 santuários, com caminhada até os 105 altares,
+  Dive/subida pelos controles e retorno ao ponto inicial no mar. Passaram
+  1.422 mudanças de posição e 33 Continues, mantendo capturas bloqueadas com
+  zero insígnias. Mesma candidata `3b3e16d6`;
+  [SANCTUARY-ROUTES.md](SANCTUARY-ROUTES.md).
 - Sky Pillar explorável antes de Wallace, com despertar protegido contra
   visitas antecipadas. Passaram cinco andares, topo, queda, retorno e três
   Continues, 4.352 permissões de despertar e o desfecho nativo Archie–Rayquaza

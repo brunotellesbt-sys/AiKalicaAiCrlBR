@@ -1,5 +1,9 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+Os acessos locais e retornos dos 14 santuários passaram pelos controles,
+incluindo as 105 interações bloqueadas com zero insígnias e 33 Continues.
+A candidata permaneceu igual. [SANCTUARY-ROUTES.md](SANCTUARY-ROUTES.md).
+
 Sky Pillar abre desde o início, mas Rayquaza só desperta após os requisitos
 da aliança com Giovanni, Archie e o confronto em Sootopolis. O percurso
 antecipado e o desfecho correto passaram. [SKY-PILLAR-ACCESS.md](SKY-PILLAR-ACCESS.md).
