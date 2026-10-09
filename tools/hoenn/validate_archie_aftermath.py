@@ -42,6 +42,10 @@ ids = {t['key']: t['id'] for t in stories['trainers']}
 for mission in stories['missions']:
     for trainer in mission['trainers']:
         raw_flag(0x500 + ids[trainer], True)
+if (source / '.journey-aqua-episodes').exists():
+    native('VarSet', 0x40B3, 1)
+    for trainer in [32, 30]: raw_flag(0x500 + trainer, True)
+    raw_flag(flag_id('FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE'), True)
 for trainer in ['TRAINER_JOURNEY_ARCHIE_ALLIANCE', 'TRAINER_JOURNEY_SHELLY_ALLIANCE']:
     raw_flag(0x500 + ids[trainer], False)
 native('VarSet', 0x409F, 3)

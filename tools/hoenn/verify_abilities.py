@@ -10,7 +10,9 @@ from prepare_abilities import prepare
 
 def verify(source, candidate, output, layer='abilities'):
     source, candidate, output = map(Path, [source, candidate, output])
-    if layer == 'cave-access':
+    if layer == 'sky-pillar-access':
+        from prepare_sky_pillar_access import prepare as prepare_layer
+    elif layer == 'cave-access':
         from prepare_cave_access import prepare as prepare_layer
     elif layer == 'water-continue':
         from prepare_water_continue import prepare as prepare_layer
@@ -73,6 +75,6 @@ if __name__ == '__main__':
     parser.add_argument('--source', type=Path, required=True)
     parser.add_argument('--candidate', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--layer', choices=['abilities', 'mega-art', 'story-aftermath', 'league-access', 'league-completion', 'league-history', 'league-display', 'family-postgame', 'pwt', 'frontier-travel', 'story-puzzles', 'aqua-episodes', 'seafloor-access', 'water-continue', 'cave-access'], default='abilities')
+    parser.add_argument('--layer', choices=['abilities', 'mega-art', 'story-aftermath', 'league-access', 'league-completion', 'league-history', 'league-display', 'family-postgame', 'pwt', 'frontier-travel', 'story-puzzles', 'aqua-episodes', 'seafloor-access', 'water-continue', 'cave-access', 'sky-pillar-access'], default='abilities')
     args = parser.parse_args()
     verify(args.source, args.candidate, args.output, args.layer)

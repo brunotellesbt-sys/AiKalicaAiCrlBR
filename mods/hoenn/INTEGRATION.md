@@ -1,5 +1,9 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+Sky Pillar abre desde o início, mas Rayquaza só desperta após os requisitos
+da aliança com Giovanni, Archie e o confronto em Sootopolis. O percurso
+antecipado e o desfecho correto passaram. [SKY-PILLAR-ACCESS.md](SKY-PILLAR-ACCESS.md).
+
 Altering Cave e Desert Underpass deixam de exigir vencer a Liga. Os dois
 acessos e seus retornos passaram com zero insígnias, sem liberar capturas
 especiais antecipadamente. [CAVE-ACCESS.md](CAVE-ACCESS.md).
