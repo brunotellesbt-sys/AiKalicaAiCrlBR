@@ -1,5 +1,9 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+O grunt da entrada da Seafloor Cavern foi deslocado para o lado. O caminho
+até a sala final passou com Dive sem insígnias e sem golpes terrestres;
+Archie conserva as exigências de história. [SEAFLOOR-ACCESS.md](SEAFLOOR-ACCESS.md).
+
 O trecho Maxie–Stern–roubo do submarino–Matt foi exercitado com caminhada
 nativa pelos três andares do esconderijo Aqua, incluindo batalhas duplas e
 Continue. Evidências e limites em [SUBMARINE-STORY.md](SUBMARINE-STORY.md).

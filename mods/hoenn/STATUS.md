@@ -5,6 +5,11 @@ versão anterior. A candidata exige um novo jogo; não há conversão de saves.
 
 ## Etapas com verificações específicas
 
+- Grunt da Seafloor Cavern retirado do único tile de entrada, mantendo sua
+  conversa e evento de Steven. Dive sem insígnias, percurso nativo pelas
+  correntezas até a sala final, batalha dupla de Shelly, recusa de Archie e
+  Continue passaram. Camada de um mapa, candidata `7a054af7`, com regressão
+  de 5.120 decisões e 44 permissões. [SEAFLOOR-ACCESS.md](SEAFLOOR-ACCESS.md).
 - Sequência Maxie–Stern–roubo do submarino–Matt exercitada no motor: entrada
   por Surf, 138 passos e oito transições pelos três andares do esconderijo,
   retorno com mais 49 passos e duas transições, Surf ativado na margem, seis

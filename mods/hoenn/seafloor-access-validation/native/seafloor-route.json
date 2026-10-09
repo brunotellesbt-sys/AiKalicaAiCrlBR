@@ -1,0 +1,127 @@
+{
+  "passed": true,
+  "rom_sha256": "7a054af7067d071e0bca051d5004898312f8bdb9e4722a7050ab05dac5a141ea",
+  "dive_point": [
+    38,
+    27
+  ],
+  "native_zero_badge_dive": true,
+  "native_resurface_into_cavern": true,
+  "walked_steps": 163,
+  "original_map_transitions": [
+    {
+      "source": [
+        "Underwater_Route128",
+        38,
+        27
+      ],
+      "destination": [
+        "Underwater_SeafloorCavern",
+        6,
+        7
+      ]
+    },
+    {
+      "source": [
+        "SeafloorCavern_Entrance",
+        10,
+        2
+      ],
+      "destination": [
+        "SeafloorCavern_Room1",
+        5,
+        18
+      ]
+    },
+    {
+      "source": [
+        "SeafloorCavern_Room1",
+        6,
+        3
+      ],
+      "destination": [
+        "SeafloorCavern_Room2",
+        10,
+        7
+      ]
+    },
+    {
+      "source": [
+        "SeafloorCavern_Room2",
+        6,
+        2
+      ],
+      "destination": [
+        "SeafloorCavern_Room6",
+        11,
+        21
+      ]
+    },
+    {
+      "source": [
+        "SeafloorCavern_Room6",
+        4,
+        2
+      ],
+      "destination": [
+        "SeafloorCavern_Room3",
+        4,
+        15
+      ]
+    },
+    {
+      "source": [
+        "SeafloorCavern_Room3",
+        8,
+        2
+      ],
+      "destination": [
+        "SeafloorCavern_Room8",
+        5,
+        12
+      ]
+    },
+    {
+      "source": [
+        "SeafloorCavern_Room8",
+        5,
+        3
+      ],
+      "destination": [
+        "SeafloorCavern_Room9",
+        5,
+        4
+      ]
+    }
+  ],
+  "wins": [
+    {
+      "trainer": 33,
+      "map": "SeafloorCavern_Room3",
+      "mission": "seafloor_route",
+      "attacks": 6,
+      "outcome": 1,
+      "ash_seen": true,
+      "native_defeated_flag": true,
+      "double_battle": true,
+      "second_trainer": 567,
+      "second_native_defeated_flag": true
+    }
+  ],
+  "surf_prompts": [
+    [
+      "SeafloorCavern_Room6",
+      11,
+      20
+    ]
+  ],
+  "reaches_archie_without_strength_rock_smash_flash_or_acro": true,
+  "relocated_grunt_visible_and_native_dialogue_retained": true,
+  "native_boss_trigger_refuses_missing_missions": true,
+  "native_save_continue_preserves_zero_badges": true,
+  "no_internal_position_warps_or_event_entries": true,
+  "starting_ocean_party_stats_healing_are_fixtures": true,
+  "wild_encounters_disabled": true,
+  "full_campaign_playthrough": false,
+  "balance_validated": false
+}
