@@ -23,13 +23,31 @@ Mantendo o tamanho recente dos PRs, a previsão é de **10 a 20 PRs para uma
 candidata de lançamento**, sujeita aos problemas encontrados nos percursos e
 campanhas completas. A quantidade de PRs não mede a conclusão do jogo.
 
-## Avanço atual: viagem contínua no mar oeste
+## Avanço atual: cidades e Centros Pokémon de Sevii
+
+As sete cidades foram alcançadas desde o mar, com cura nativa pela enfermeira,
+Continue no Centro, saída pela cidade/porto e Continue em Surf. Passaram
+34 mapas, 62 transições, sete curas e 14 Continues. O validador usa os
+ponteiros reais dos tilesets de interiores; viagem oeste repetida.
+Missões de Celio/Lostelle, outros serviços, cavernas e exploração completa
+das ilhas continuam pendentes. [SEVII-TOWN-ACCESS.md](SEVII-TOWN-ACCESS.md).
+
+## Etapa anterior: travessia contínua Kanto–Sevii–Hoenn
+
+Corrigido o canal no layout alternativo da Rota 131, que voltava a fechar
+após recarregar o mapa. Passaram Vermilion, os sete portos de Sevii,
+Pacifidlog, Rota 127 e retorno: 24 mapas, 42 bordas, seis batalhas e oito
+Continues. Sky Pillar e idioma verificados na candidata `2f53d410`.
+Exploração completa das ilhas, outras saídas do mar e campanhas completas
+seguem pendentes. [EASTERN-OCEAN-JOURNEY.md](EASTERN-OCEAN-JOURNEY.md).
+
+## Etapa anterior: viagem contínua no mar oeste
 
 Cinnabar–lago da Rota 114–Rustboro–Dewford–Cinnabar passou sem
 teletransportes intermediários: 13 mapas, 24 travessias, cinco batalhas e
 seis Continues. O planejador passou a respeitar conexões e elevações,
 com regressões de santuários e Sky Pillar. A candidata em inglês foi
-preservada. O mar leste/Sevii, outros percursos e as campanhas completas
+preservada. Os outros percursos e as campanhas completas
 seguem pendentes. [OCEAN-JOURNEY.md](OCEAN-JOURNEY.md).
 
 ## Etapa anterior: idioma e capturas persistentes
