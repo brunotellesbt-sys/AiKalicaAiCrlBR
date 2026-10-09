@@ -1,5 +1,5 @@
 """Follow native Maxie -> Stern interview -> theft -> Aqua hideout -> Matt.
-Initial badges/prior episodes, intercity travel and battle stats are fixtures.
+Initial badges/prior episodes, intercity travel, battle stats and healing are fixtures.
 The scenes, local walking, hideout warps and trainer victories remain native.
 """
 from collections import deque
@@ -143,6 +143,7 @@ def handle_field():
         trainer = lib.read16(s['gTrainerBattleParameter'] + abi[13])
         assert trainer in [2, 3, 4, 5, 27, 28, 192, 193], trainer
         wins.append(fight(dict(id=trainer, map=by_location[location()], mission='aqua_hideout_route')))
+        native('HealPlayerParty') # Fixture: restore PP for the extended round trip.
         print('Native route trainer defeated:', trainer, flush=True)
         return True
     if not idle():
@@ -150,35 +151,52 @@ def handle_field():
         press(1); return True
     return False
 
-last_stable = (by_location[location()], *position())
-for turn in range(1200):
-    if handle_field(): continue
-    name = by_location[location()]
-    current = (name, *position())
-    if current != last_stable:
-        walked_tiles += 1
-        if current[0] != last_stable[0] or abs(current[1] - last_stable[1]) + abs(current[2] - last_stable[2]) > 1:
-            transitions.append(dict(source=list(last_stable), destination=list(current)))
-            picture('hideout-transition-' + str(len(transitions)))
-        last_stable = current
-    if (name, *position()) == ('AquaHideout_B2F', 24, 19): break
-    key = next_step(('AquaHideout_B2F', 24, 19))
-    old = (name, *position())
-    for _ in range(80):
-        step(1, key)
-        if location() != map_id(name) or position() != old[1:] or not idle(): break
-    step(30)
-    if handle_field(): continue
-    step(12)
-    new = (by_location[location()], *position())
-    if old == new:
-        blocked_edges.add((*old, key))
+surf_prompts = []
 
-else: raise AssertionError(('Hideout traversal incomplete', location(), position()))
+def traverse(goal):
+    global walked_tiles
+    last_stable = (by_location[location()], *position())
+    for turn in range(1200):
+        if handle_field(): continue
+        name = by_location[location()]
+        current = (name, *position())
+        if current != last_stable:
+            walked_tiles += 1
+            if current[0] != last_stable[0] or abs(current[1] - last_stable[1]) + abs(current[2] - last_stable[2]) > 1:
+                transitions.append(dict(source=list(last_stable), destination=list(current)))
+                picture('hideout-transition-' + str(len(transitions)))
+            last_stable = current
+        if (name, *position()) == goal: break
+        key = next_step(goal)
+        old = (name, *position())
+        for _ in range(80):
+            step(1, key)
+            if location() != map_id(name) or position() != old[1:] or not idle(): break
+        step(30)
+        if handle_field(): continue
+        step(12)
+        new = (by_location[location()], *position())
+        if old == new:
+            dx, dy = next((dx, dy) for dx, dy, k in keys if k == key)
+            behavior = native('MapGridGetMetatileBehaviorAt', old[1] + dx + 7, old[2] + dy + 7)
+            if not lib.read8(s['gPlayerAvatar']) & 8 and native('MetatileBehavior_IsSurfableWaterOrUnderwater', behavior):
+                press(1); finish(limit=500)
+                assert lib.read8(s['gPlayerAvatar']) & 8, ('Surf prompt did not start Surf', old)
+                surf_prompts.append(list(old))
+                picture('native-surf-prompt-return')
+            else:
+                blocked_edges.add((*old, key))
+
+    else: raise AssertionError(('Hideout traversal incomplete', goal, location(), position()))
+
+traverse(('AquaHideout_B2F', 24, 19))
 assert walked_tiles > 20 and transitions
+outbound_walked_tiles = walked_tiles
+outbound_transitions = list(transitions)
 picture('native-hideout-path-reaches-matt')
 step(4, 32); step(30); press(1)
 wins.append(fight(dict(id=30, map='AquaHideout_B2F', mission='aqua_hideout')))
+native('HealPlayerParty') # Battle duration/resource balance is outside this test.
 assert flag(flag_id('FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE'))
 assert pending(False) == 0 and pending(True) == 7
 assert [flag(f) for f in kanto_flags + hoenn_flags] == badges_before_matt
@@ -189,16 +207,40 @@ assert flag(flag_id('FLAG_MET_TEAM_AQUA_HARBOR'))
 assert native('VarGet', 0x4058) == 2 and native('VarGet', 0x40A0) == 2
 assert flag(flag_id('FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE'))
 assert pending(False) == 0 and pending(True) == 7
+# Return physically, including the ordinary A/Yes Surf prompt at the shore.
+blocked_edges.clear()
+traverse(('AquaHideout_1F', 13, 26))
+assert surf_prompts and lib.read8(s['gPlayerAvatar']) & 8
+for _ in range(200):
+    step(1, 128)
+    if location() == map_id('LilycoveCity'): break
+step(150); finish()
+assert location() == map_id('LilycoveCity'), (location(), position())
+assert lib.read8(s['gPlayerAvatar']) & 8
+assert [flag(f) for f in kanto_flags + hoenn_flags] == badges_before_matt
+assert pending(False) == 0 and pending(True) == 7
+picture('native-return-to-lilycove-after-matt')
+continue_save()
+assert location() == map_id('LilycoveCity') and lib.read8(s['gPlayerAvatar']) & 8
+assert flag(flag_id('FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE'))
+assert pending(False) == 0 and pending(True) == 7
+assert [flag(f) for f in kanto_flags + hoenn_flags] == badges_before_matt
+picture('native-lilycove-return-after-continue')
 lib.stop()
 result = dict(passed=True, rom_sha256=hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest(),
               wins=wins, native_maxie_victory_schedules_interview=True,
               native_stern_interview_enters_harbor=True, native_theft_opens_hideout=True,
-              native_surf_entrance=True, hideout_walked_steps=walked_tiles,
-              original_hideout_transitions=transitions, no_hideout_position_or_event_entry_injections=True,
+              native_surf_entrance=True, hideout_walked_steps=outbound_walked_tiles,
+              original_hideout_transitions=outbound_transitions,
+              return_walked_steps=walked_tiles - outbound_walked_tiles,
+              original_return_transitions=transitions[len(outbound_transitions):],
+              native_surf_prompts_on_return=surf_prompts,
+              native_return_to_lilycove=True, native_continue_in_surf_after_return=True, no_hideout_position_or_event_entry_injections=True,
               native_matt_victory_and_submarine_departure=True,
               native_save_continue_after_maxie_theft_and_matt=True,
               regional_badges_and_kanto_missions_unchanged=True,
               prior_episodes_badges_intercity_travel_initial_surf_and_battle_stats_are_fixtures=True,
+              healing_between_battles_is_fixture=True,
               full_campaign_playthrough=False, balance_validated=False)
 (args.output / 'submarine-story.json').write_text(json.dumps(result, indent=2) + '\n')
 print('Native Maxie/Stern/theft/hideout/Matt sequence passed', flush=True)
