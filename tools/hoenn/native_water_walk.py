@@ -29,6 +29,8 @@ for n, m in maps.items():
         address = (primary if tid < primary_count else secondary) + attribute_size * (tid if tid < primary_count else tid - primary_count)
         behavior = (lib.read32(address) if frlg else lib.read16(address)) & behavior_mask
         behaviors[n].append(behavior)
+        if behavior not in water_behaviors:
+            water_behaviors[behavior] = bool(native('MetatileBehavior_IsSurfableWaterOrUnderwater', behavior))
         if any(w['x'] == i % blocks[n][0] and w['y'] == i // blocks[n][0]
                for w in m['warp_events']) and behavior not in step_warps:
             step_warps[behavior] = any(native('MetatileBehavior_Is' + kind, behavior) for kind in [
@@ -44,8 +46,6 @@ for n, m in maps.items():
         if any(w['x'] == i % blocks[n][0] and w['y'] == i // blocks[n][0]
                and w['dest_map'] in by_id for w in m['warp_events']) and native('MetatileBehavior_IsWarpDoor', behavior):
             valid.add(i); continue
-        if behavior not in water_behaviors:
-            water_behaviors[behavior] = bool(native('MetatileBehavior_IsSurfableWaterOrUnderwater', behavior))
         if water_behaviors[behavior]: valid.add(i)
     passable[n] = valid
 warps = {n: {(w['x'], w['y']): w for w in m['warp_events']} for n, m in maps.items()}
@@ -85,6 +85,19 @@ def occupied():
             result.add((lib.read16(o + 16) - 7, lib.read16(o + 18) - 7))
     return result
 
+def connection_step(n, x, y, key):
+    """Resolve native edge coordinates using the connection's signed offset."""
+    direction = {16: 'right', 32: 'left', 64: 'up', 128: 'down'}[key]
+    for connection in maps[n].get('connections') or []:
+        if connection['direction'] != direction or connection['map'] not in by_id: continue
+        dest = by_id[connection['map']]
+        width, height, _ = blocks[dest]
+        offset = connection['offset']
+        xx, yy = ((0 if key == 16 else width - 1), y - offset) if key in [16, 32] else (x - offset, height - 1 if key == 64 else 0)
+        if 0 <= xx < width and 0 <= yy < height and yy * width + xx in passable[dest]:
+            return dest, xx, yy
+    return None
+
 def next_key(goal):
     start = (by_location[location()], *position())
     queue, visited, objects = deque([start]), {start: None}, occupied()
@@ -104,10 +117,22 @@ def next_key(goal):
                 visited[nxt] = (current, arrow_key); queue.append(nxt)
         for dx, dy, key in keys:
             xx, yy = x + dx, y + dy
-            if not (0 <= xx < width and 0 <= yy < height): continue
+            if not (0 <= xx < width and 0 <= yy < height):
+                if (*current, key) in blocked: continue
+                nxt = connection_step(n, x, y, key)
+                if nxt is not None and nxt not in visited:
+                    visited[nxt] = (current, key); queue.append(nxt)
+                continue
             if yy * width + xx not in passable[n]: continue
             if n == start[0] and (xx, yy) in objects: continue
             if (*current, key) in blocked: continue
+            # Terrain at different elevations needs an actual transition tile.
+            # Surf can enter/leave elevation 1 water from elevation 3 ground.
+            ea, eb = tiles[y * width + x] >> 12, tiles[yy * width + xx] >> 12
+            wa = water_behaviors[behaviors[n][y * width + x]]
+            wb = water_behaviors[behaviors[n][yy * width + xx]]
+            if ea != eb and ea not in [0, 15] and eb not in [0, 15]:
+                if not ({ea, eb} == {1, 3} and wa != wb): continue
             # A current forces movement through its arrows. Plan its landing
             # tile rather than treating each arrow as a place to change course.
             flow_seen = set()
