@@ -80,6 +80,8 @@ def audit(source):
         dependencies.append(dict(path=path, conditions=references))
 
     connected = (source / '.journey-team-stories').exists()
+    native_marker = source / '.journey-mandatory-native-missions'
+    required_native_episodes = json.loads(native_marker.read_text())['quests'] if native_marker.exists() else []
     gate_source = read('src/journey_campaign_gates.c') if connected else ''
     if connected and ('JourneyCanStartArchieAlliance' not in gate_source
                       or 'RegionalFlag(FLAG_HIDE_SAFFRON_ROCKETS)' not in gate_source):
@@ -97,6 +99,8 @@ def audit(source):
                             free_choice_of_gym_order=True,
                             boss_badge_thresholds=dict(kanto_before_gym=[3,5,7] if (source / '.journey-team-stories').exists() else [3,4], hoenn_before_gym=[3,5,6,8,8] if (source / '.journey-team-stories').exists() else [3,6,7,7]),
                             gym_door_guide_explains_team_and_location=True,
+                            required_original_episodes=required_native_episodes,
+                            leagues_check_pending_story=(bool(required_native_episodes)),
                             preserve_team_story_sequence=True,
                             viridian_leader_target='Blue'),
                 full_campaign_runtime_validated=False, input_sha256=evidence)

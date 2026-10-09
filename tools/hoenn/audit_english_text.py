@@ -37,7 +37,7 @@ def audit(baseline, candidate):
     for layer in PRIOR + ['english-text', 'special-ball']:
         marker = candidate / ('.journey-' + layer)
         expected.update(json.loads(marker.read_text())['prepared_sha256'])
-    for layer in ['route131-sea-access', 'lostelle-habitats', 'tower-habitats', 'early-story-tools']:
+    for layer in ['route131-sea-access', 'lostelle-habitats', 'tower-habitats', 'early-story-tools', 'mandatory-native-missions']:
         marker = candidate / ('.journey-' + layer)
         if marker.exists(): expected.update(json.loads(marker.read_text())['prepared_sha256'])
     scanned, literal_count = 0, 0
@@ -74,11 +74,19 @@ def audit(baseline, candidate):
                 assert pixels <= 208, (line, pixels)
                 extra.append(pixels)
         measured.extend(extra)
+    mission_marker = candidate / '.journey-mandatory-native-missions'
+    mission_lines = []
+    if mission_marker.exists():
+        for line in json.loads(mission_marker.read_text())['new_dialogue_lines']:
+            pixels = sum(widths[charmap[c]] for c in line)
+            assert pixels <= 208, (line, pixels)
+            mission_lines.append(pixels)
+        measured.extend(mission_lines)
     return dict(passed=True, game_language='English', translated_literals=sum(map(len, rows.values())),
         text_files=checked, scanned_manifest_source_files=scanned, scanned_quoted_literals=literal_count,
         portuguese_marker_matches=0, checked_dialogue_lines=len(measured),
         maximum_normal_font_line_pixels=max(measured), normal_font_limit_pixels=208,
-        early_story_tools_additional_lines=len(extra),
+        early_story_tools_additional_lines=len(extra), mandatory_mission_additional_lines=len(mission_lines),
         placeholder_widths_are_known_gift_round_or_name_bounds=True,
         every_dialogue_visually_reviewed=False, full_campaign_playthrough=False,
         rom_sha256=hashlib.sha256((candidate / 'pokeemerald.gba').read_bytes()).hexdigest())

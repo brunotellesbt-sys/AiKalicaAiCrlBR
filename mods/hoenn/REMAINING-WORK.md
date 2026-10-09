@@ -23,7 +23,20 @@ Mantendo o tamanho recente dos PRs, a previsão é de **10 a 20 PRs para uma
 candidata de lançamento**, sujeita aos problemas encontrados nos percursos e
 campanhas completas. A quantidade de PRs não mede a conclusão do jogo.
 
-## Avanço atual: ferramentas antecipadas e história preservada
+## Avanço atual: sete episódios originais com conclusão obrigatória
+
+Mt. Moon, Rockets de Cerulean/Rota 24, resgate de Fuji, Petalburg Woods,
+Rusturf/Peeko, carta a Steven e Museu de Slateport entram nas travas regionais
+de ginásios. As duas Ligas exigem a conclusão dos checkpoints, além das oito
+insígnias próprias. Corrigidas a carta aceita sem item, a ativação Devon depois
+de qualquer primeiro ginásio e o reinício indevido ao vencer Roxanne mais tarde.
+Candidata `127e1f2a`; [MANDATORY-NATIVE-MISSIONS.md](MANDATORY-NATIVE-MISSIONS.md).
+
+O objetivo é concluir todas as missões de história. A revisão dos demais
+episódios e as campanhas completas permanecem trabalho obrigatório de
+implementação/validação; não são missões deixadas opcionais por projeto.
+
+## Etapa anterior: ferramentas antecipadas e história preservada
 
 Silph Scope, Devon Scope e Wailmer Pail vêm da mãe desde o início, nas duas
 regiões, sem concluir as missões originais. Poké Flute continua após o primeiro

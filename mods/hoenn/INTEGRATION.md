@@ -1,5 +1,13 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+Sete episódios originais passam a exigir conclusão nas travas regionais de
+ginásios, incluindo Fuji e as entregas Devon. As duas Ligas também verificam
+as missões pendentes, além das oito insígnias da própria região. Corrigidos
+Steven aceitando carta ausente e a dependência de Roxanne para iniciar Devon.
+Candidata `127e1f2a`, com 11.008 decisões ARM, sete portas físicas, sete guardas
+de Liga, salvar/carregar e 512 combinações de insígnias nas permissões.
+[MANDATORY-NATIVE-MISSIONS.md](MANDATORY-NATIVE-MISSIONS.md).
+
 Silph Scope, Devon Scope e Wailmer Pail são entregues pela mãe desde o início,
 nas duas regiões, sem concluir as missões originais; a Poké Flute continua como
 recompensa do primeiro ginásio. Encontros fixos da história permanecem como
