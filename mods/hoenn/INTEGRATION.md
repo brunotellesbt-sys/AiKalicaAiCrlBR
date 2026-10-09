@@ -1,5 +1,9 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+Acesso e volta de Sootopolis pela Rota 126 passaram no motor com zero
+insígnias, visitas às duas margens e seis Continues. Não houve alteração
+na candidata. [SOOTOPOLIS-ACCESS.md](SOOTOPOLIS-ACCESS.md).
+
 Continue submerso restaura Dive para os personagens de Kanto que compartilham
 o sprite com Surf. Os quatro personagens e a volta da Seafloor Cavern foram
 exercitados na nova candidata. [WATER-CONTINUE.md](WATER-CONTINUE.md).

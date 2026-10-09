@@ -17,7 +17,22 @@ campanhas completas jogadas. O player não recebeu esta candidata.
 | 6 | Catálogo em batalha | Ampliar a cobertura de habilidades, formas, animações e Megas; a auditoria das 1.025 espécies e pixels não testa toda interação de batalha |
 | 7 | Sessões no navegador e versão de lançamento | Rodar sessões prolongadas, exportar/importar saves e testar os dois finais no navegador antes de atualizar o player |
 
-## Avanço atual: Continue submerso e volta da caverna
+## Estimativa provisória
+
+Mantendo o tamanho recente dos PRs, a previsão é de **10 a 20 PRs para uma
+candidata de lançamento**, sujeita aos problemas encontrados nos percursos e
+campanhas completas. A quantidade de PRs não mede a conclusão do jogo.
+
+## Avanço atual: acesso e retorno de Sootopolis
+
+A Rota 126, a passagem submersa e as duas margens de Sootopolis foram
+percorridas no motor, com visita à casa oeste e ao Centro Pokémon leste.
+Passaram 190 mudanças de posição e seis Continues, mantendo zero insígnias
+e o episódio de Kyogre pendente. O planejador de testes foi compartilhado
+com a Seafloor Cavern; a candidata permaneceu igual. Isso não cobre todos
+os interiores nem a campanha. [SOOTOPOLIS-ACCESS.md](SOOTOPOLIS-ACCESS.md).
+
+## Etapa anterior: Continue submerso e volta da caverna
 
 Os dois personagens de Kanto retomavam um save submerso em Surf. A restauração
 agora respeita o tipo do mapa; 16 casos de terra/Surf/Dive/subida passaram para
