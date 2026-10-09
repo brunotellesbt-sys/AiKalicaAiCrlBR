@@ -5,6 +5,10 @@ versão anterior. A candidata exige um novo jogo; não há conversão de saves.
 
 ## Etapas com verificações específicas
 
+- Acesso e retorno de Sootopolis pela Rota 126 exercitados sem insígnias:
+  Dive, Surf entre as duas margens, casa oeste e Centro Pokémon leste,
+  190 mudanças de posição e seis Continues. Mesma candidata `12379c4e`;
+  detalhes e limites em [SOOTOPOLIS-ACCESS.md](SOOTOPOLIS-ACCESS.md).
 - Continue submerso de Kanto corrigido: o modo é restaurado pelo tipo do mapa,
   evitando confundir o sprite compartilhado de Surf/Dive. Passaram 16 casos
   para quatro personagens e o percurso de volta da Seafloor Cavern, com três

@@ -1,0 +1,256 @@
+{
+  "passed": true,
+  "rom_sha256": "12379c4eee922d73f1f90f167d4e53845510fc1b00fa55bc927a7e84728d9e6e",
+  "native_dive_and_resurface": true,
+  "native_walking_and_surf": true,
+  "position_changes": 190,
+  "transitions": [
+    {
+      "source": [
+        "Underwater_Route126",
+        45,
+        66
+      ],
+      "destination": [
+        "Underwater_SootopolisCity",
+        9,
+        8
+      ]
+    },
+    {
+      "source": [
+        "SootopolisCity",
+        9,
+        7
+      ],
+      "destination": [
+        "SootopolisCity_House1",
+        3,
+        6
+      ]
+    },
+    {
+      "source": [
+        "SootopolisCity_House1",
+        4,
+        6
+      ],
+      "destination": [
+        "SootopolisCity",
+        9,
+        7
+      ]
+    },
+    {
+      "source": [
+        "SootopolisCity",
+        43,
+        32
+      ],
+      "destination": [
+        "SootopolisCity_PokemonCenter_1F",
+        7,
+        8
+      ]
+    },
+    {
+      "source": [
+        "SootopolisCity_PokemonCenter_1F",
+        7,
+        8
+      ],
+      "destination": [
+        "SootopolisCity",
+        43,
+        32
+      ]
+    },
+    {
+      "source": [
+        "Underwater_SootopolisCity",
+        9,
+        8
+      ],
+      "destination": [
+        "Underwater_Route126",
+        45,
+        66
+      ]
+    }
+  ],
+  "surf_prompts": [
+    [
+      "SootopolisCity",
+      22,
+      36
+    ],
+    [
+      "SootopolisCity",
+      34,
+      36
+    ],
+    [
+      "SootopolisCity",
+      40,
+      38
+    ]
+  ],
+  "save_continue": [
+    {
+      "label": "underwater-sootopolis-entry",
+      "before": {
+        "map": "Underwater_SootopolisCity",
+        "position": [
+          9,
+          7
+        ],
+        "avatar_mode": 16,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false
+      },
+      "after": {
+        "map": "Underwater_SootopolisCity",
+        "position": [
+          9,
+          7
+        ],
+        "avatar_mode": 16,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false
+      }
+    },
+    {
+      "label": "sootopolis-lake-arrival",
+      "before": {
+        "map": "SootopolisCity",
+        "position": [
+          29,
+          53
+        ],
+        "avatar_mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false
+      },
+      "after": {
+        "map": "SootopolisCity",
+        "position": [
+          29,
+          53
+        ],
+        "avatar_mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false
+      }
+    },
+    {
+      "label": "sootopolis-west-house",
+      "before": {
+        "map": "SootopolisCity_House1",
+        "position": [
+          4,
+          5
+        ],
+        "avatar_mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false
+      },
+      "after": {
+        "map": "SootopolisCity_House1",
+        "position": [
+          4,
+          5
+        ],
+        "avatar_mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false
+      }
+    },
+    {
+      "label": "sootopolis-east-pokemon-center",
+      "before": {
+        "map": "SootopolisCity_PokemonCenter_1F",
+        "position": [
+          7,
+          7
+        ],
+        "avatar_mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false
+      },
+      "after": {
+        "map": "SootopolisCity_PokemonCenter_1F",
+        "position": [
+          7,
+          7
+        ],
+        "avatar_mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false
+      }
+    },
+    {
+      "label": "underwater-route126-return",
+      "before": {
+        "map": "Underwater_Route126",
+        "position": [
+          45,
+          66
+        ],
+        "avatar_mode": 16,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false
+      },
+      "after": {
+        "map": "Underwater_Route126",
+        "position": [
+          45,
+          66
+        ],
+        "avatar_mode": 16,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false
+      }
+    },
+    {
+      "label": "route126-surface-return",
+      "before": {
+        "map": "Route126",
+        "position": [
+          45,
+          66
+        ],
+        "avatar_mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false
+      },
+      "after": {
+        "map": "Route126",
+        "position": [
+          45,
+          66
+        ],
+        "avatar_mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "kyogre_escaped": false
+      }
+    }
+  ],
+  "no_trainer_battle_required": true,
+  "no_internal_warps_after_initial_ocean_fixture": true,
+  "initial_story_badges_origin_party_ocean_are_fixtures": true,
+  "wild_encounters_disabled": true,
+  "full_campaign_playthrough": false,
+  "balance_validated": false
+}
