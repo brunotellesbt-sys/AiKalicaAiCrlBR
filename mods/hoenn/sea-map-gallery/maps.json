@@ -1,0 +1,622 @@
+{
+  "rom_sha256": "407bd93bf4ee7e01878cdf3186a2a3a5b3d15f6954c8de6dcce942599ef9f3d9",
+  "maps": {
+    "JourneyCinnabarSouthSea": {
+      "map_sha256": "bc1e7db72d0a6f53725e205fc1787dc76f9ebb8c7e749ed3d7d019ab3946f3b0",
+      "blockdata_sha256": "4835867afad90bab13b9985d8da0afedf9865907761fb66ea5d43ab189bde0d3",
+      "width_tiles": 24,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_CINNABAR_ISLAND",
+          "direction": "up",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWESTRIVER",
+          "direction": "down",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyWestRiver": {
+      "map_sha256": "e6437a86c3bd324ec22079ac9fe2eadc05ba21937ea10c0ac9d66fd3e268a63f",
+      "blockdata_sha256": "5cbb2b807afd8565554d7e6183933b14030950c0eebd5b43c4101e54ea2ce812",
+      "width_tiles": 48,
+      "height_tiles": 14,
+      "connections": [
+        {
+          "map": "MAP_JOURNEYCINNABARSOUTHSEA",
+          "direction": "up",
+          "offset": 0
+        },
+        {
+          "map": "MAP_ROUTE114",
+          "direction": "right",
+          "offset": -10
+        },
+        {
+          "map": "MAP_JOURNEYRUSTBOROCOAST",
+          "direction": "down",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyRustboroCoast": {
+      "map_sha256": "e4979caac22c569957f5e4a77a3f20e1a87ab4438dc15097cb54c9c40c3d82b3",
+      "blockdata_sha256": "04b71079fc677804b5ce9469e323b6abc511f3f5c6774b861519de6061d68162",
+      "width_tiles": 48,
+      "height_tiles": 80,
+      "connections": [
+        {
+          "map": "MAP_JOURNEYWESTRIVER",
+          "direction": "up",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYRUSTBOROGATE",
+          "direction": "right",
+          "offset": 24
+        },
+        {
+          "map": "MAP_JOURNEYDEWFORDCOAST",
+          "direction": "down",
+          "offset": 0
+        },
+        {
+          "direction": "dive",
+          "map": "MAP_JOURNEYDEPTHDIMENSOES",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyDewfordCoast": {
+      "map_sha256": "dc6ec59743a584a6cfaa9ccd762e9e607b52d3f76d148849612be4d34392eb91",
+      "blockdata_sha256": "04b71079fc677804b5ce9469e323b6abc511f3f5c6774b861519de6061d68162",
+      "width_tiles": 48,
+      "height_tiles": 80,
+      "connections": [
+        {
+          "map": "MAP_JOURNEYRUSTBOROCOAST",
+          "direction": "up",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYDEWFORDGATE",
+          "direction": "right",
+          "offset": 30
+        },
+        {
+          "direction": "dive",
+          "map": "MAP_JOURNEYDEPTHABISMO",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyHoennNorthSea": {
+      "map_sha256": "db0d5cf4d85c3cf9ef9651dec0bad805c9e60a937f1cc9e2f2c35938b9dfdff2",
+      "blockdata_sha256": "38095ccf6421f5ba961d433017a612cf63b752f09ed4b7115ea9c2956b239de0",
+      "width_tiles": 48,
+      "height_tiles": 24,
+      "connections": [
+        {
+          "map": "MAP_ROUTE125",
+          "direction": "left",
+          "offset": -8
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA00",
+          "direction": "right",
+          "offset": -24
+        },
+        {
+          "direction": "dive",
+          "map": "MAP_JOURNEYDEPTHMARES",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyHoennMiddleSea": {
+      "map_sha256": "e38f8ff264882877f5fd3020c51638a5aed89073f949e1987038f2aaee8b61ba",
+      "blockdata_sha256": "38095ccf6421f5ba961d433017a612cf63b752f09ed4b7115ea9c2956b239de0",
+      "width_tiles": 48,
+      "height_tiles": 24,
+      "connections": [
+        {
+          "map": "MAP_ROUTE127",
+          "direction": "left",
+          "offset": -30
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA04",
+          "direction": "right",
+          "offset": 0
+        },
+        {
+          "direction": "dive",
+          "map": "MAP_JOURNEYDEPTHORIGENS",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyHoennSouthSea": {
+      "map_sha256": "3e2a13abb6563840eecab75202172e7aaa795b5cc3ff6232069b70e64a11275d",
+      "blockdata_sha256": "38095ccf6421f5ba961d433017a612cf63b752f09ed4b7115ea9c2956b239de0",
+      "width_tiles": 48,
+      "height_tiles": 24,
+      "connections": [
+        {
+          "map": "MAP_ROUTE129",
+          "direction": "left",
+          "offset": -8
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA06",
+          "direction": "up",
+          "offset": 0
+        },
+        {
+          "direction": "dive",
+          "map": "MAP_JOURNEYDEPTHPROFUNDEZAS",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyPacifidlogSea": {
+      "map_sha256": "2d2352ecc074b426680928c8077ddb1138700ab17a2575a72bdc3adc9a6a2752",
+      "blockdata_sha256": "eb0c3024400c07307332b3c3466c75958db56bd7bafab1d4ba88ac8bd85d7a64",
+      "width_tiles": 12,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_ROUTE131",
+          "direction": "up",
+          "offset": -48
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA06",
+          "direction": "right",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyFuchsiaSea": {
+      "map_sha256": "a65a7b310387633aa4d5a8f3e8d6e57b2e801cf7bb4aa31876ba9c9bcf809cfd",
+      "blockdata_sha256": "313d76144da00b0abe0fafd692eda64603c7ae0bc3dbf004c3765de48b75b36f",
+      "width_tiles": 48,
+      "height_tiles": 14,
+      "connections": [
+        {
+          "map": "MAP_ROUTE19",
+          "direction": "left",
+          "offset": -40
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA00",
+          "direction": "right",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyWorldSea00": {
+      "map_sha256": "df1b881f114859840044ced65d1dcd65511d45bffa0169e27d5dba6c918f2316",
+      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "width_tiles": 64,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_VERMILION_CITY",
+          "direction": "up",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA01",
+          "direction": "right",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYHOENNNORTHSEA",
+          "direction": "left",
+          "offset": 24
+        },
+        {
+          "map": "MAP_JOURNEYFUCHSIASEA",
+          "direction": "left",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyWorldSea01": {
+      "map_sha256": "d3a8deb36fe67a498c17f7b465aade176376ea6d0267c18d1572d27b081b705b",
+      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "width_tiles": 64,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_ONE_ISLAND_HARBOR",
+          "direction": "up",
+          "offset": 24
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA00",
+          "direction": "left",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA02",
+          "direction": "right",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDLANE10",
+          "direction": "down",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyWorldSea02": {
+      "map_sha256": "6360a8b9832ac2bc68d1248b2e8a345e217fdcccfa0e3e3f02c10884d113f1eb",
+      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "width_tiles": 64,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_TWO_ISLAND_HARBOR",
+          "direction": "up",
+          "offset": 24
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA01",
+          "direction": "left",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA03",
+          "direction": "right",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDLANE20",
+          "direction": "down",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyWorldSea03": {
+      "map_sha256": "3e3c0bd84a3ab89531366d0d5738f280dbb5f4295a48b1b310a636d5b5b2e894",
+      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "width_tiles": 64,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_THREE_ISLAND_HARBOR",
+          "direction": "up",
+          "offset": 24
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA02",
+          "direction": "left",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDLANE30",
+          "direction": "down",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyWorldSea04": {
+      "map_sha256": "5715380b2d8069c85c2e0749038e3d7845e9beff2781b24cf41c502215d0a28b",
+      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "width_tiles": 64,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_FOUR_ISLAND_HARBOR",
+          "direction": "up",
+          "offset": 24
+        },
+        {
+          "map": "MAP_JOURNEYWORLDLANE10",
+          "direction": "up",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA05",
+          "direction": "right",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDLANE11",
+          "direction": "down",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYHOENNMIDDLESEA",
+          "direction": "left",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyWorldSea05": {
+      "map_sha256": "395783bdb9b3580acff4f8b75dc8cf399c1e590e611392a5e8b0527ac7ac20b4",
+      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "width_tiles": 64,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_FIVE_ISLAND_HARBOR",
+          "direction": "up",
+          "offset": 24
+        },
+        {
+          "map": "MAP_JOURNEYWORLDLANE20",
+          "direction": "up",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA04",
+          "direction": "left",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA08",
+          "direction": "right",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDLANE21",
+          "direction": "down",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyWorldSea06": {
+      "map_sha256": "ab3aa7f9e58d58fcfcf25769006aae3a5a6a9bef34a089119976fb1334ce66a2",
+      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "width_tiles": 64,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_SIX_ISLAND_HARBOR",
+          "direction": "up",
+          "offset": 24
+        },
+        {
+          "map": "MAP_JOURNEYWORLDLANE11",
+          "direction": "up",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA07",
+          "direction": "right",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYPACIFIDLOGSEA",
+          "direction": "left",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYHOENNSOUTHSEA",
+          "direction": "down",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyWorldSea07": {
+      "map_sha256": "6ff2718137e8375099651be8fbff570b1a12c48a3f6ae23c04fecfec19e46c22",
+      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "width_tiles": 64,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_SEVEN_ISLAND_HARBOR",
+          "direction": "up",
+          "offset": 24
+        },
+        {
+          "map": "MAP_JOURNEYWORLDLANE21",
+          "direction": "up",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA06",
+          "direction": "left",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA09",
+          "direction": "right",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyWorldSea08": {
+      "map_sha256": "d1cfea12a4cd2a5cc9d53a8e6b866d1d4a6f0cd2152558f4ef8c6eb10eea61ea",
+      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "width_tiles": 64,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_BIRTH_ISLAND_HARBOR_FRLG",
+          "direction": "up",
+          "offset": 24
+        },
+        {
+          "map": "MAP_JOURNEYWORLDLANE30",
+          "direction": "up",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA05",
+          "direction": "left",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDLANE31",
+          "direction": "down",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyWorldSea09": {
+      "map_sha256": "494b83868f11a7a491fed5d73d70947c854a3107ce371b1c8c5883028b756b2b",
+      "blockdata_sha256": "123e9005cf48a01661641611c9dff623042196f68a2a1612fbc13285ecfd1010",
+      "width_tiles": 64,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_NAVEL_ROCK_HARBOR_FRLG",
+          "direction": "up",
+          "offset": 24
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA07",
+          "direction": "left",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDLANE31",
+          "direction": "up",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyWorldLane10": {
+      "map_sha256": "747af08e3215ef1529bdac1c5544347b320c14ff2f3a8b89e54d2ca40e6d7dc4",
+      "blockdata_sha256": "5f5741ad2a9b129e332bf5cb36cfd5ffb977aa5fdcc1b993a22d83681c1a5bee",
+      "width_tiles": 16,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_JOURNEYWORLDSEA01",
+          "direction": "up",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA04",
+          "direction": "down",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyWorldLane11": {
+      "map_sha256": "9afb768eac7af0fb87774e63b516759b9ef37a094d63afde713141e31ae449a0",
+      "blockdata_sha256": "5f5741ad2a9b129e332bf5cb36cfd5ffb977aa5fdcc1b993a22d83681c1a5bee",
+      "width_tiles": 16,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_JOURNEYWORLDSEA04",
+          "direction": "up",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA06",
+          "direction": "down",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyWorldLane20": {
+      "map_sha256": "96709ad188e2cffe974571449bea06a69242d4981f211a609c646c55cf7f4116",
+      "blockdata_sha256": "5f5741ad2a9b129e332bf5cb36cfd5ffb977aa5fdcc1b993a22d83681c1a5bee",
+      "width_tiles": 16,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_JOURNEYWORLDSEA02",
+          "direction": "up",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA05",
+          "direction": "down",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyWorldLane21": {
+      "map_sha256": "1d672096e70429888239bc444b07372978ea1dbb648ee57e0f40229b5b9ecc35",
+      "blockdata_sha256": "5f5741ad2a9b129e332bf5cb36cfd5ffb977aa5fdcc1b993a22d83681c1a5bee",
+      "width_tiles": 16,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_JOURNEYWORLDSEA05",
+          "direction": "up",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA07",
+          "direction": "down",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyWorldLane30": {
+      "map_sha256": "bec0e8e0d83f2e85e0ebe2f0a9b1ba418949d6efe478a54f2c61865d3bb6b4c8",
+      "blockdata_sha256": "5f5741ad2a9b129e332bf5cb36cfd5ffb977aa5fdcc1b993a22d83681c1a5bee",
+      "width_tiles": 16,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_JOURNEYWORLDSEA03",
+          "direction": "up",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA08",
+          "direction": "down",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    },
+    "JourneyWorldLane31": {
+      "map_sha256": "99b8ab06574e0dd2683b57fa26843955432cf30c559583e859b4e2f35f99c058",
+      "blockdata_sha256": "5f5741ad2a9b129e332bf5cb36cfd5ffb977aa5fdcc1b993a22d83681c1a5bee",
+      "width_tiles": 16,
+      "height_tiles": 48,
+      "connections": [
+        {
+          "map": "MAP_JOURNEYWORLDSEA08",
+          "direction": "up",
+          "offset": 0
+        },
+        {
+          "map": "MAP_JOURNEYWORLDSEA09",
+          "direction": "down",
+          "offset": 0
+        }
+      ],
+      "terrain_only": true
+    }
+  },
+  "terrain_only": true,
+  "campaign_validation": false
+}
