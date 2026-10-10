@@ -29,8 +29,15 @@ def checkpoint(label):
 def callback():return lib.read32(s['gMain']+4)&~1
 def locked():return bool(lib.read8(s['sLockFieldControls']))
 step(600)
-if region=='kanto':action(4,1,180)
+region_chosen=False
 for i in range(240):
+    if not region_chosen and map_name()=='InsideOfTruck' and any(
+        lib.read8(s['gTasks']+j*40+4) and lib.read32(s['gTasks']+j*40)&~1==s['Task_HandleMultichoiceInput']
+        for j in range(16)):
+        checkpoint('00-visible-region-choice')
+        step(30)
+        if region=='kanto':action(128)
+        action();region_chosen=True
     action(8 if i<3 else 1)
     if map_name()=='InsideOfTruck' and callback()==s['CB2_Overworld'] and not locked():break
 checkpoint('01-truck')
