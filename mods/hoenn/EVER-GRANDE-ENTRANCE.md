@@ -1,5 +1,7 @@
 # Entrada leste de Ever Grande e chegada a Vermilion
 
+> A ligação de Vermilion descrita abaixo foi substituída pelo [estaleiro da Rota 12](ROUTE12-SHIPYARD.md). A passagem de Fuchsia e a abertura de Ever Grande permanecem.
+
 A faixa de mar a leste de Hoenn chega ao oceano das Sevii. A ligação com
 Vermilion é **pela borda sul da cidade, no canal de Surf da costa sudeste**:
 Vermilion `(34, 38)` → borda sul `(34, 39)` → `JourneyWorldSea00 (34, 0)`.
