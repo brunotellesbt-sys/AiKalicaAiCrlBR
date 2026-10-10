@@ -1,0 +1,447 @@
+{
+  "passed": true,
+  "rom_sha256": "b478b3a5efb0352cc2a762eadee9746d1d254b0163c2d07a17cd63e18e88c9c8",
+  "continuous_surf_roundtrip": true,
+  "no_midtrip_fixture_warps": true,
+  "legs": [
+    {
+      "map": "Route20East",
+      "position": [
+        110,
+        10
+      ]
+    },
+    {
+      "map": "Route20West",
+      "position": [
+        10,
+        10
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Frlg",
+      "position": [
+        12,
+        14
+      ]
+    },
+    {
+      "map": "JourneyCinnabarSouthSea",
+      "position": [
+        12,
+        24
+      ]
+    },
+    {
+      "map": "JourneyWestRiver",
+      "position": [
+        24,
+        7
+      ]
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "position": [
+        24,
+        40
+      ]
+    },
+    {
+      "map": "JourneyRustboroGate",
+      "position": [
+        6,
+        12
+      ]
+    },
+    {
+      "map": "Route115",
+      "position": [
+        14,
+        40
+      ]
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "position": [
+        24,
+        40
+      ]
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "position": [
+        24,
+        40
+      ]
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "position": [
+        6,
+        12
+      ]
+    },
+    {
+      "map": "Route105",
+      "position": [
+        20,
+        40
+      ]
+    },
+    {
+      "map": "Route106",
+      "position": [
+        40,
+        10
+      ]
+    },
+    {
+      "map": "DewfordTown",
+      "position": [
+        11,
+        8
+      ]
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "position": [
+        24,
+        40
+      ]
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "position": [
+        24,
+        40
+      ]
+    },
+    {
+      "map": "JourneyWestRiver",
+      "position": [
+        24,
+        7
+      ]
+    },
+    {
+      "map": "JourneyCinnabarSouthSea",
+      "position": [
+        12,
+        24
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Frlg",
+      "position": [
+        12,
+        14
+      ]
+    },
+    {
+      "map": "Route20East",
+      "position": [
+        110,
+        10
+      ]
+    },
+    {
+      "map": "Route19_Frlg",
+      "position": [
+        15,
+        50
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "source": [
+        "Route19_Frlg",
+        0,
+        50
+      ],
+      "destination": [
+        "Route20_Frlg",
+        119,
+        10
+      ]
+    },
+    {
+      "source": [
+        "Route20_Frlg",
+        0,
+        10
+      ],
+      "destination": [
+        "CinnabarIsland_Frlg",
+        23,
+        10
+      ]
+    },
+    {
+      "source": [
+        "CinnabarIsland_Frlg",
+        12,
+        19
+      ],
+      "destination": [
+        "JourneyCinnabarSouthSea",
+        12,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyCinnabarSouthSea",
+        23,
+        47
+      ],
+      "destination": [
+        "JourneyWestRiver",
+        23,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWestRiver",
+        24,
+        13
+      ],
+      "destination": [
+        "JourneyRustboroCoast",
+        24,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyRustboroCoast",
+        47,
+        40
+      ],
+      "destination": [
+        "JourneyRustboroGate",
+        0,
+        16
+      ]
+    },
+    {
+      "source": [
+        "JourneyRustboroGate",
+        11,
+        12
+      ],
+      "destination": [
+        "Route115",
+        0,
+        36
+      ]
+    },
+    {
+      "source": [
+        "Route115",
+        0,
+        39
+      ],
+      "destination": [
+        "JourneyRustboroGate",
+        11,
+        15
+      ]
+    },
+    {
+      "source": [
+        "JourneyRustboroGate",
+        0,
+        15
+      ],
+      "destination": [
+        "JourneyRustboroCoast",
+        47,
+        39
+      ]
+    },
+    {
+      "source": [
+        "JourneyRustboroCoast",
+        25,
+        79
+      ],
+      "destination": [
+        "JourneyDewfordCoast",
+        25,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyDewfordCoast",
+        47,
+        40
+      ],
+      "destination": [
+        "JourneyDewfordGate",
+        0,
+        10
+      ]
+    },
+    {
+      "source": [
+        "JourneyDewfordGate",
+        11,
+        12
+      ],
+      "destination": [
+        "Route105",
+        0,
+        42
+      ]
+    },
+    {
+      "source": [
+        "Route105",
+        26,
+        79
+      ],
+      "destination": [
+        "Route106",
+        26,
+        0
+      ]
+    },
+    {
+      "source": [
+        "Route106",
+        71,
+        19
+      ],
+      "destination": [
+        "DewfordTown",
+        11,
+        0
+      ]
+    },
+    {
+      "source": [
+        "DewfordTown",
+        11,
+        0
+      ],
+      "destination": [
+        "Route106",
+        71,
+        19
+      ]
+    },
+    {
+      "source": [
+        "Route106",
+        19,
+        0
+      ],
+      "destination": [
+        "Route105",
+        19,
+        79
+      ]
+    },
+    {
+      "source": [
+        "Route105",
+        0,
+        53
+      ],
+      "destination": [
+        "JourneyDewfordGate",
+        11,
+        23
+      ]
+    },
+    {
+      "source": [
+        "JourneyDewfordGate",
+        0,
+        21
+      ],
+      "destination": [
+        "JourneyDewfordCoast",
+        47,
+        51
+      ]
+    },
+    {
+      "source": [
+        "JourneyDewfordCoast",
+        24,
+        0
+      ],
+      "destination": [
+        "JourneyRustboroCoast",
+        24,
+        79
+      ]
+    },
+    {
+      "source": [
+        "JourneyRustboroCoast",
+        24,
+        0
+      ],
+      "destination": [
+        "JourneyWestRiver",
+        24,
+        13
+      ]
+    },
+    {
+      "source": [
+        "JourneyWestRiver",
+        20,
+        0
+      ],
+      "destination": [
+        "JourneyCinnabarSouthSea",
+        20,
+        47
+      ]
+    },
+    {
+      "source": [
+        "JourneyCinnabarSouthSea",
+        12,
+        0
+      ],
+      "destination": [
+        "CinnabarIsland_Frlg",
+        12,
+        19
+      ]
+    },
+    {
+      "source": [
+        "CinnabarIsland_Frlg",
+        23,
+        15
+      ],
+      "destination": [
+        "Route20_Frlg",
+        0,
+        15
+      ]
+    },
+    {
+      "source": [
+        "Route20_Frlg",
+        119,
+        10
+      ],
+      "destination": [
+        "Route19_Frlg",
+        0,
+        50
+      ]
+    }
+  ],
+  "initial_party_and_location_are_fixtures": true,
+  "full_campaign_playthrough": false
+}

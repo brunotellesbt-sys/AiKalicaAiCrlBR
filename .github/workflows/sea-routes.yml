@@ -17,6 +17,7 @@ jobs:
         run: |
           python3 -m unittest discover -s tools/sea_routes -v
           python3 -m unittest discover -s tools/hoenn -v
+          python3 tools/hoenn/verify_playable.py
       - name: Install mGBA
         run: |
           sudo apt-get update

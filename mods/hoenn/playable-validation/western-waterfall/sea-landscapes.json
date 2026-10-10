@@ -1,0 +1,645 @@
+{
+  "passed": true,
+  "rom_sha256": "b478b3a5efb0352cc2a762eadee9746d1d254b0163c2d07a17cd63e18e88c9c8",
+  "maps": [
+    {
+      "map": "JourneyCinnabarSouthSea",
+      "native_npcs": 1
+    },
+    {
+      "map": "JourneyWestRiver",
+      "native_npcs": 2
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "native_npcs": 4
+    },
+    {
+      "map": "JourneyRustboroGate",
+      "native_npcs": 1
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "native_npcs": 4
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "native_npcs": 1
+    },
+    {
+      "map": "JourneyHoennNorthSea",
+      "native_npcs": 2
+    },
+    {
+      "map": "JourneyHoennMiddleSea",
+      "native_npcs": 2
+    },
+    {
+      "map": "JourneyHoennSouthSea",
+      "native_npcs": 2
+    },
+    {
+      "map": "JourneyPacifidlogSea",
+      "native_npcs": 1
+    },
+    {
+      "map": "JourneyFuchsiaSea",
+      "native_npcs": 1
+    },
+    {
+      "map": "JourneyWorldSea00",
+      "native_npcs": 2
+    },
+    {
+      "map": "JourneyWorldSea01",
+      "native_npcs": 2
+    },
+    {
+      "map": "JourneyWorldSea02",
+      "native_npcs": 2
+    },
+    {
+      "map": "JourneyWorldSea03",
+      "native_npcs": 2
+    },
+    {
+      "map": "JourneyWorldSea04",
+      "native_npcs": 2
+    },
+    {
+      "map": "JourneyWorldSea05",
+      "native_npcs": 2
+    },
+    {
+      "map": "JourneyWorldSea06",
+      "native_npcs": 2
+    },
+    {
+      "map": "JourneyWorldSea07",
+      "native_npcs": 2
+    },
+    {
+      "map": "JourneyWorldSea08",
+      "native_npcs": 2
+    },
+    {
+      "map": "JourneyWorldSea09",
+      "native_npcs": 2
+    },
+    {
+      "map": "JourneyWorldLane10",
+      "native_npcs": 1
+    },
+    {
+      "map": "JourneyWorldLane11",
+      "native_npcs": 1
+    },
+    {
+      "map": "JourneyWorldLane20",
+      "native_npcs": 1
+    },
+    {
+      "map": "JourneyWorldLane21",
+      "native_npcs": 1
+    },
+    {
+      "map": "JourneyWorldLane30",
+      "native_npcs": 1
+    },
+    {
+      "map": "JourneyWorldLane31",
+      "native_npcs": 1
+    }
+  ],
+  "npcs": [
+    {
+      "map": "JourneyCinnabarSouthSea",
+      "script": "JourneyTeam_Trainer1533",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        8,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyWestRiver",
+      "script": "JourneyTeam_Trainer1488",
+      "graphics": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "position": [
+        12,
+        7
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "script": "JourneyTeam_Trainer1534",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M",
+      "position": [
+        12,
+        4
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "script": "JourneyTeam_Trainer1489",
+      "graphics": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "position": [
+        12,
+        20
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "script": "JourneyTeam_Trainer1490",
+      "graphics": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "position": [
+        12,
+        18
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "script": "JourneyTeam_Trainer1535",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        16,
+        26
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "script": "JourneyTeam_Trainer1536",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M",
+      "position": [
+        13,
+        51
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyRustboroGate",
+      "script": "JourneyTeam_Trainer1537",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        3,
+        8
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "script": "JourneyTeam_Trainer1491",
+      "graphics": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "position": [
+        12,
+        20
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "script": "JourneyTeam_Trainer1492",
+      "graphics": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+      "position": [
+        12,
+        18
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "script": "JourneyTeam_Trainer1538",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        16,
+        26
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "script": "JourneyTeam_Trainer1539",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M",
+      "position": [
+        32,
+        38
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "script": "JourneyTeam_Trainer1540",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        3,
+        8
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyHoennNorthSea",
+      "script": "JourneyTeam_Trainer1541",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        16,
+        8
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyHoennNorthSea",
+      "script": "JourneyTeam_Trainer1542",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M",
+      "position": [
+        19,
+        14
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyHoennMiddleSea",
+      "script": "JourneyTeam_Trainer1543",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        16,
+        8
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyHoennMiddleSea",
+      "script": "JourneyTeam_Trainer1544",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M",
+      "position": [
+        39,
+        17
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyHoennSouthSea",
+      "script": "JourneyTeam_Trainer1545",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        16,
+        8
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyHoennSouthSea",
+      "script": "JourneyTeam_Trainer1546",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M",
+      "position": [
+        28,
+        11
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyPacifidlogSea",
+      "script": "JourneyTeam_Trainer1532",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        4,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyFuchsiaSea",
+      "script": "JourneyTeam_Trainer1547",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M",
+      "position": [
+        16,
+        7
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyWorldSea00",
+      "script": "JourneyTeam_Trainer1506",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        21,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyWorldSea00",
+      "script": "JourneyTeam_Trainer1507",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M",
+      "position": [
+        42,
+        27
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyWorldSea01",
+      "script": "JourneyTeam_Trainer1508",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        21,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyWorldSea01",
+      "script": "JourneyTeam_Trainer1509",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M",
+      "position": [
+        42,
+        17
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyWorldSea02",
+      "script": "JourneyTeam_Trainer1510",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        21,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyWorldSea02",
+      "script": "JourneyTeam_Trainer1511",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M",
+      "position": [
+        40,
+        27
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyWorldSea03",
+      "script": "JourneyTeam_Trainer1512",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        21,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyWorldSea03",
+      "script": "JourneyTeam_Trainer1513",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M",
+      "position": [
+        42,
+        16
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyWorldSea04",
+      "script": "JourneyTeam_Trainer1514",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        21,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyWorldSea04",
+      "script": "JourneyTeam_Trainer1515",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M",
+      "position": [
+        39,
+        31
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyWorldSea05",
+      "script": "JourneyTeam_Trainer1516",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        21,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyWorldSea05",
+      "script": "JourneyTeam_Trainer1517",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M",
+      "position": [
+        47,
+        25
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyWorldSea06",
+      "script": "JourneyTeam_Trainer1518",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        21,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyWorldSea06",
+      "script": "JourneyTeam_Trainer1519",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M",
+      "position": [
+        41,
+        36
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyWorldSea07",
+      "script": "JourneyTeam_Trainer1520",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        21,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyWorldSea07",
+      "script": "JourneyTeam_Trainer1521",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M",
+      "position": [
+        38,
+        29
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyWorldSea08",
+      "script": "JourneyTeam_Trainer1522",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        21,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyWorldSea08",
+      "script": "JourneyTeam_Trainer1523",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M",
+      "position": [
+        42,
+        18
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyWorldSea09",
+      "script": "JourneyTeam_Trainer1524",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        21,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyWorldSea09",
+      "script": "JourneyTeam_Trainer1525",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M",
+      "position": [
+        53,
+        34
+      ],
+      "native_visible": true,
+      "water": false
+    },
+    {
+      "map": "JourneyWorldLane10",
+      "script": "JourneyTeam_Trainer1526",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        5,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyWorldLane11",
+      "script": "JourneyTeam_Trainer1529",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        5,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyWorldLane20",
+      "script": "JourneyTeam_Trainer1527",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        5,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyWorldLane21",
+      "script": "JourneyTeam_Trainer1530",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        5,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyWorldLane30",
+      "script": "JourneyTeam_Trainer1528",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        5,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    },
+    {
+      "map": "JourneyWorldLane31",
+      "script": "JourneyTeam_Trainer1531",
+      "graphics": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+      "position": [
+        5,
+        16
+      ],
+      "native_visible": true,
+      "water": true
+    }
+  ],
+  "waterfall": {
+    "no_move_cannot_climb": true,
+    "native_prompt_and_climb": true,
+    "native_descent": true,
+    "upper_position": [
+      12,
+      9
+    ],
+    "zero_badges": true
+  },
+  "travel_party_and_trainer_flags_are_fixtures": true,
+  "full_campaign_playthrough": false
+}

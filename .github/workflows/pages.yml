@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['web/**', 'mods/sea-routes/LeafGreen-Journey-SeaRoutes.gba', '.github/workflows/pages.yml']
+    paths: ['web/**', 'mods/hoenn/playable/**', '.github/workflows/pages.yml']
 permissions:
   contents: read
   pages: write
@@ -25,9 +25,12 @@ jobs:
           mkdir -p /tmp/player-site/games
           cp web/index.html web/style.css web/player.js /tmp/player-site/
           cp web/world-map.html web/world-map.css web/world-map.js web/world-map.json /tmp/player-site/
+          cp web/world-layout.html web/world-layout.json web/world-layout.svg /tmp/player-site/
           cp -R web/atlas /tmp/player-site/
           cp -R web/emulator /tmp/player-site/
-          cp mods/sea-routes/LeafGreen-Journey-SeaRoutes.gba /tmp/player-site/games/
+          python3 tools/hoenn/verify_playable.py
+          cp mods/hoenn/playable/Pokemon-Journey-World-Alpha-1.gba mods/hoenn/playable/release.json /tmp/player-site/games/
+          cp mods/hoenn/playable/START-HERE.md /tmp/player-site/
       - uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:
           path: /tmp/player-site
