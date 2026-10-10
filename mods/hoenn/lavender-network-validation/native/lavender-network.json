@@ -1,0 +1,355 @@
+{
+  "passed": true,
+  "rom_sha256": "ec563245673d51f67296ed6dd1f990cddbaeddc4394415dbb74ccb86a643d277",
+  "trips": [
+    {
+      "origin": 0,
+      "destination": 1,
+      "scene_observations": 18
+    },
+    {
+      "origin": 1,
+      "destination": 2,
+      "scene_observations": 18
+    },
+    {
+      "origin": 2,
+      "destination": 3,
+      "scene_observations": 18
+    },
+    {
+      "origin": 3,
+      "destination": 4,
+      "scene_observations": 18
+    },
+    {
+      "origin": 4,
+      "destination": 5,
+      "scene_observations": 18
+    },
+    {
+      "origin": 5,
+      "destination": 6,
+      "scene_observations": 18
+    },
+    {
+      "origin": 6,
+      "destination": 7,
+      "scene_observations": 18
+    },
+    {
+      "origin": 7,
+      "destination": 8,
+      "scene_observations": 18
+    },
+    {
+      "origin": 8,
+      "destination": 9,
+      "scene_observations": 18
+    },
+    {
+      "origin": 9,
+      "destination": 10,
+      "scene_observations": 18
+    },
+    {
+      "origin": 10,
+      "destination": 11,
+      "scene_observations": 18
+    },
+    {
+      "origin": 11,
+      "destination": 12,
+      "scene_observations": 18
+    },
+    {
+      "origin": 12,
+      "destination": 13,
+      "scene_observations": 18
+    },
+    {
+      "origin": 13,
+      "destination": 14,
+      "scene_observations": 18
+    },
+    {
+      "origin": 14,
+      "destination": 15,
+      "scene_observations": 18
+    },
+    {
+      "origin": 15,
+      "destination": 16,
+      "scene_observations": 18
+    },
+    {
+      "origin": 16,
+      "destination": 17,
+      "scene_observations": 18
+    },
+    {
+      "origin": 17,
+      "destination": 0,
+      "scene_observations": 18
+    }
+  ],
+  "frontier_guards": [
+    {
+      "champion": false,
+      "ticket": false,
+      "scott": false,
+      "blocked": true
+    },
+    {
+      "champion": false,
+      "ticket": true,
+      "scott": true,
+      "blocked": true
+    },
+    {
+      "champion": true,
+      "ticket": false,
+      "scott": true,
+      "blocked": true
+    },
+    {
+      "champion": true,
+      "ticket": true,
+      "scott": false,
+      "blocked": true
+    }
+  ],
+  "self_audits": [
+    {
+      "origin": 0,
+      "current": "LAVENDER PORT",
+      "native_labels": [
+        "VERMILION",
+        "BACK"
+      ]
+    },
+    {
+      "origin": 1,
+      "current": "SLATEPORT",
+      "native_labels": [
+        "DEWFORD",
+        "PETALBURG COAST",
+        "SLATEPORT BEACH",
+        "BACK"
+      ]
+    },
+    {
+      "origin": 2,
+      "current": "ONE ISLAND",
+      "native_labels": [
+        "TWO ISLAND",
+        "THREE ISLAND",
+        "FOUR ISLAND",
+        "FIVE ISLAND",
+        "SIX ISLAND",
+        "SEVEN ISLAND",
+        "BACK"
+      ]
+    },
+    {
+      "origin": 3,
+      "current": "TWO ISLAND",
+      "native_labels": [
+        "ONE ISLAND",
+        "THREE ISLAND",
+        "FOUR ISLAND",
+        "FIVE ISLAND",
+        "SIX ISLAND",
+        "SEVEN ISLAND",
+        "BACK"
+      ]
+    },
+    {
+      "origin": 4,
+      "current": "THREE ISLAND",
+      "native_labels": [
+        "ONE ISLAND",
+        "TWO ISLAND",
+        "FOUR ISLAND",
+        "FIVE ISLAND",
+        "SIX ISLAND",
+        "SEVEN ISLAND",
+        "BACK"
+      ]
+    },
+    {
+      "origin": 5,
+      "current": "FOUR ISLAND",
+      "native_labels": [
+        "ONE ISLAND",
+        "TWO ISLAND",
+        "THREE ISLAND",
+        "FIVE ISLAND",
+        "SIX ISLAND",
+        "SEVEN ISLAND",
+        "BACK"
+      ]
+    },
+    {
+      "origin": 6,
+      "current": "FIVE ISLAND",
+      "native_labels": [
+        "ONE ISLAND",
+        "TWO ISLAND",
+        "THREE ISLAND",
+        "FOUR ISLAND",
+        "SIX ISLAND",
+        "SEVEN ISLAND",
+        "BACK"
+      ]
+    },
+    {
+      "origin": 7,
+      "current": "SIX ISLAND",
+      "native_labels": [
+        "ONE ISLAND",
+        "TWO ISLAND",
+        "THREE ISLAND",
+        "FOUR ISLAND",
+        "FIVE ISLAND",
+        "SEVEN ISLAND",
+        "BACK"
+      ]
+    },
+    {
+      "origin": 8,
+      "current": "SEVEN ISLAND",
+      "native_labels": [
+        "ONE ISLAND",
+        "TWO ISLAND",
+        "THREE ISLAND",
+        "FOUR ISLAND",
+        "FIVE ISLAND",
+        "SIX ISLAND",
+        "BACK"
+      ]
+    },
+    {
+      "origin": 9,
+      "current": "DEWFORD",
+      "native_labels": [
+        "SLATEPORT",
+        "PETALBURG COAST",
+        "SLATEPORT BEACH",
+        "BACK"
+      ]
+    },
+    {
+      "origin": 10,
+      "current": "LILYCOVE",
+      "native_labels": [
+        "PACIFIDLOG",
+        "MOSSDEEP",
+        "SOOTOPOLIS",
+        "BACK"
+      ]
+    },
+    {
+      "origin": 11,
+      "current": "PACIFIDLOG",
+      "native_labels": [
+        "LILYCOVE",
+        "MOSSDEEP",
+        "SOOTOPOLIS",
+        "BACK"
+      ]
+    },
+    {
+      "origin": 12,
+      "current": "PETALBURG COAST",
+      "native_labels": [
+        "SLATEPORT",
+        "DEWFORD",
+        "SLATEPORT BEACH",
+        "BACK"
+      ]
+    },
+    {
+      "origin": 13,
+      "current": "SLATEPORT BEACH",
+      "native_labels": [
+        "SLATEPORT",
+        "DEWFORD",
+        "PETALBURG COAST",
+        "BACK"
+      ]
+    },
+    {
+      "origin": 14,
+      "current": "VERMILION",
+      "native_labels": [
+        "LAVENDER PORT",
+        "BACK"
+      ]
+    },
+    {
+      "origin": 15,
+      "current": "BATTLE FRONTIER",
+      "native_labels": [
+        "WEST COAST",
+        "EAST COAST",
+        "BACK"
+      ]
+    },
+    {
+      "origin": 16,
+      "current": "MOSSDEEP",
+      "native_labels": [
+        "LILYCOVE",
+        "PACIFIDLOG",
+        "SOOTOPOLIS",
+        "BACK"
+      ]
+    },
+    {
+      "origin": 17,
+      "current": "SOOTOPOLIS",
+      "native_labels": [
+        "LILYCOVE",
+        "PACIFIDLOG",
+        "MOSSDEEP",
+        "BACK"
+      ]
+    }
+  ],
+  "legacy_seagallop_trips": [
+    {
+      "origin": 0,
+      "destination": 1,
+      "map": "OneIsland_Harbor_Frlg",
+      "position": [
+        8,
+        5
+      ],
+      "scene_observations": 17
+    },
+    {
+      "origin": 1,
+      "destination": 0,
+      "map": "VermilionCity_Frlg",
+      "position": [
+        23,
+        32
+      ],
+      "scene_observations": 17
+    }
+  ],
+  "legacy_script_entry_is_fixture": true,
+  "all_ports_visited": true,
+  "all_world_voyages_animated": true,
+  "lavender_region_map_is_kanto": true,
+  "actual_captain_interactions": true,
+  "actual_menu_choices": true,
+  "current_port_excluded": true,
+  "no_midtrip_fixture_warps": true,
+  "all_arrivals_on_walkable_dry_tiles": true,
+  "save_continue": true,
+  "initial_party_and_trainer_flags_are_fixtures": true,
+  "frontier_championship_ticket_and_scott_flags_are_fixtures": true,
+  "full_campaign_playthrough": false
+}

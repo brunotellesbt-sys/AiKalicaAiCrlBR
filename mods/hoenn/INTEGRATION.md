@@ -1,5 +1,7 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+[Lavender Port: rede dos 18 portos, menus sem destino atual e animação de barco](LAVENDER-PORT-NETWORK.md).
+
 [Estaleiro de madeira, casa dos barqueiros e nova ligação de Surf pela Rota 12](ROUTE12-SHIPYARD.md).
 
 [Abertura da entrada leste de Ever Grande e mapa amplo com Vermilion](EVER-GRANDE-ENTRANCE.md).
