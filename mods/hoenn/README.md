@@ -1,7 +1,7 @@
 # Hoenn — inventário e porte pendente
 
 [Mundo conectado e estados regionais](INTEGRATION.md): conexões físicas Surf
-de Cinnabar/Rota 114 e Rota 131/Sevii testadas numa base experimental;
+de Cinnabar/Rota 114 e do mar atrás de Ever Grande/Sevii numa base experimental;
 **não substitui a ROM publicada nem conclui
 a integração da história**.
 

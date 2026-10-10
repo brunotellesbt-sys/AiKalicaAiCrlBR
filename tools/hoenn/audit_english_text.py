@@ -37,7 +37,7 @@ def audit(baseline, candidate):
     for layer in PRIOR + ['english-text', 'special-ball']:
         marker = candidate / ('.journey-' + layer)
         expected.update(json.loads(marker.read_text())['prepared_sha256'])
-    for layer in ['route131-sea-access', 'lostelle-habitats', 'tower-habitats', 'early-story-tools', 'mandatory-native-missions', 'sixteen-badge-leagues', 'rusturf-reunion']:
+    for layer in ['route131-sea-access', 'lostelle-habitats', 'tower-habitats', 'early-story-tools', 'mandatory-native-missions', 'sixteen-badge-leagues', 'rusturf-reunion', 'sea-landscapes', 'eastern-sea-union']:
         marker = candidate / ('.journey-' + layer)
         if marker.exists(): expected.update(json.loads(marker.read_text())['prepared_sha256'])
     scanned, literal_count = 0, 0

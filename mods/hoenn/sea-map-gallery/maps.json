@@ -1,9 +1,9 @@
 {
-  "rom_sha256": "407bd93bf4ee7e01878cdf3186a2a3a5b3d15f6954c8de6dcce942599ef9f3d9",
+  "rom_sha256": "68bbf008a3dcf522824aad80a6b7ae3ca061a7b7f15a39f03192d99c27177f63",
   "maps": {
     "JourneyCinnabarSouthSea": {
       "map_sha256": "bc1e7db72d0a6f53725e205fc1787dc76f9ebb8c7e749ed3d7d019ab3946f3b0",
-      "blockdata_sha256": "4835867afad90bab13b9985d8da0afedf9865907761fb66ea5d43ab189bde0d3",
+      "blockdata_sha256": "27a61b7199d848d2951b11b24874aa7b9351a735bf120e9cb41cd58e1b5d332c",
       "width_tiles": 24,
       "height_tiles": 48,
       "connections": [
@@ -18,11 +18,27 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 8,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1533",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyWestRiver": {
-      "map_sha256": "e6437a86c3bd324ec22079ac9fe2eadc05ba21937ea10c0ac9d66fd3e268a63f",
-      "blockdata_sha256": "5cbb2b807afd8565554d7e6183933b14030950c0eebd5b43c4101e54ea2ce812",
+      "map_sha256": "14a3d954792b984cd5d396a4ea4b7e7247d9736f897844a924da50d04ee22f1f",
+      "blockdata_sha256": "415f82a08f2d24c1c8be40013f9f1a2e3f25e2aa83cf45b41d6787a77e3267da",
       "width_tiles": 48,
       "height_tiles": 14,
       "connections": [
@@ -42,11 +58,41 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+          "x": 12,
+          "y": 7,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1488",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+          "x": 12,
+          "y": 4,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1534",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyRustboroCoast": {
-      "map_sha256": "e4979caac22c569957f5e4a77a3f20e1a87ab4438dc15097cb54c9c40c3d82b3",
-      "blockdata_sha256": "04b71079fc677804b5ce9469e323b6abc511f3f5c6774b861519de6061d68162",
+      "map_sha256": "dd24f3af6d5c7ffd3d964c8bc5f814d09c092e876bb361611bf786d4ba744e2b",
+      "blockdata_sha256": "24702fd0aab7bb7ba2b9760bbc1cd8a7548f96ae98b98ea36909523dc63b0763",
       "width_tiles": 48,
       "height_tiles": 80,
       "connections": [
@@ -71,11 +117,104 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+          "x": 12,
+          "y": 20,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1489",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+          "x": 12,
+          "y": 18,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1490",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 16,
+          "y": 26,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1535",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+          "x": 13,
+          "y": 51,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1536",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
+    },
+    "JourneyRustboroGate": {
+      "map_sha256": "8de75fc5343874ad357c22472040a813b61201551899af7fb238aff8c3a8688f",
+      "blockdata_sha256": "0edc07c11101181ea28f56cbe30c53661579e5c5c5b9a3c1305d01e76171ac63",
+      "width_tiles": 12,
+      "height_tiles": 24,
+      "connections": [
+        {
+          "map": "MAP_JOURNEYRUSTBOROCOAST",
+          "direction": "left",
+          "offset": -24
+        },
+        {
+          "map": "MAP_ROUTE115",
+          "direction": "right",
+          "offset": -24
+        }
+      ],
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 3,
+          "y": 8,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1537",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyDewfordCoast": {
-      "map_sha256": "dc6ec59743a584a6cfaa9ccd762e9e607b52d3f76d148849612be4d34392eb91",
-      "blockdata_sha256": "04b71079fc677804b5ce9469e323b6abc511f3f5c6774b861519de6061d68162",
+      "map_sha256": "3bd916a928e4a804ed1510fabc2f0e8df608fde867b1b9b25ef6eb8ea0702f00",
+      "blockdata_sha256": "f60139ee67236b984ba9b0a00eceb5155d8c86100428358b070dd2eec95b4fc1",
       "width_tiles": 48,
       "height_tiles": 80,
       "connections": [
@@ -95,11 +234,104 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+          "x": 12,
+          "y": 20,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1491",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
+          "x": 12,
+          "y": 18,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1492",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 16,
+          "y": 26,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1538",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+          "x": 32,
+          "y": 38,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1539",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
+    },
+    "JourneyDewfordGate": {
+      "map_sha256": "6ef0947dc5b8902f5ec30bd3fc2b00bad2406b1904535243f7cab6c59312a5b5",
+      "blockdata_sha256": "8ac8d9a39d7ec5b3467119dd347d4dbc9abfb4b34e2343af4852b71fd9836ca8",
+      "width_tiles": 12,
+      "height_tiles": 24,
+      "connections": [
+        {
+          "map": "MAP_JOURNEYDEWFORDCOAST",
+          "direction": "left",
+          "offset": -30
+        },
+        {
+          "map": "MAP_ROUTE105",
+          "direction": "right",
+          "offset": -30
+        }
+      ],
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 3,
+          "y": 8,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1540",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyHoennNorthSea": {
-      "map_sha256": "db0d5cf4d85c3cf9ef9651dec0bad805c9e60a937f1cc9e2f2c35938b9dfdff2",
-      "blockdata_sha256": "38095ccf6421f5ba961d433017a612cf63b752f09ed4b7115ea9c2956b239de0",
+      "map_sha256": "b4024925cc63d59e05d29861163f01a9d850e3662579fb6f7ec19f9898530f61",
+      "blockdata_sha256": "1ec57021c7ceae60af1c46c5bbea904b1ee42bf437363bf881057a5d9f4f8911",
       "width_tiles": 48,
       "height_tiles": 24,
       "connections": [
@@ -119,11 +351,41 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 16,
+          "y": 8,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1541",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+          "x": 19,
+          "y": 14,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1542",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyHoennMiddleSea": {
-      "map_sha256": "e38f8ff264882877f5fd3020c51638a5aed89073f949e1987038f2aaee8b61ba",
-      "blockdata_sha256": "38095ccf6421f5ba961d433017a612cf63b752f09ed4b7115ea9c2956b239de0",
+      "map_sha256": "dea6202a19b6b42b7cd939a0a72fca2f98328564ea476a34f3844185e5851b9f",
+      "blockdata_sha256": "2ad3b635fdea20d866d0c6ec0b34c530412edbebc863fe71a719f7d5456dedc8",
       "width_tiles": 48,
       "height_tiles": 24,
       "connections": [
@@ -143,11 +405,41 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 16,
+          "y": 8,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1543",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+          "x": 39,
+          "y": 17,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1544",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyHoennSouthSea": {
-      "map_sha256": "3e2a13abb6563840eecab75202172e7aaa795b5cc3ff6232069b70e64a11275d",
-      "blockdata_sha256": "38095ccf6421f5ba961d433017a612cf63b752f09ed4b7115ea9c2956b239de0",
+      "map_sha256": "c6518ade701c880bb301c4ed62443f5ef46a85bd6cf6ed691257b1c793868e2c",
+      "blockdata_sha256": "c2e59253b1d0b59d2c4cdb3994d90febae3950b5504ffb26ba1ff9cc96f0b4a6",
       "width_tiles": 48,
       "height_tiles": 24,
       "connections": [
@@ -167,11 +459,41 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 16,
+          "y": 8,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1545",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+          "x": 28,
+          "y": 11,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1546",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyPacifidlogSea": {
       "map_sha256": "2d2352ecc074b426680928c8077ddb1138700ab17a2575a72bdc3adc9a6a2752",
-      "blockdata_sha256": "eb0c3024400c07307332b3c3466c75958db56bd7bafab1d4ba88ac8bd85d7a64",
+      "blockdata_sha256": "d5ad56dd3224132b5d82412a7f93b031d9bffa91a6840c470c649952fda95b19",
       "width_tiles": 12,
       "height_tiles": 48,
       "connections": [
@@ -186,11 +508,27 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 4,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1532",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyFuchsiaSea": {
-      "map_sha256": "a65a7b310387633aa4d5a8f3e8d6e57b2e801cf7bb4aa31876ba9c9bcf809cfd",
-      "blockdata_sha256": "313d76144da00b0abe0fafd692eda64603c7ae0bc3dbf004c3765de48b75b36f",
+      "map_sha256": "6838a0786e42979c12ab70d2b5c01f1a52469849714c5e9084b0ebddd47085b9",
+      "blockdata_sha256": "b92518fcfbe69271c38490a141e6054750f64c4948d5c90f3c74d1947922bc78",
       "width_tiles": 48,
       "height_tiles": 14,
       "connections": [
@@ -205,11 +543,27 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+          "x": 16,
+          "y": 7,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1547",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyWorldSea00": {
-      "map_sha256": "df1b881f114859840044ced65d1dcd65511d45bffa0169e27d5dba6c918f2316",
-      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "map_sha256": "24e61facbefede20f116929f6d0885991906837d58a13b37f1fe3f256d766449",
+      "blockdata_sha256": "f63990a2896d74ec17566c5e632677a2f77a4441005e6c98b80ec37490dae882",
       "width_tiles": 64,
       "height_tiles": 48,
       "connections": [
@@ -234,11 +588,41 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 21,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1506",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+          "x": 42,
+          "y": 27,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1507",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyWorldSea01": {
-      "map_sha256": "d3a8deb36fe67a498c17f7b465aade176376ea6d0267c18d1572d27b081b705b",
-      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "map_sha256": "d646ab54ac5a6431ae292eafc84d3126901a899e5b83c4516fc0a879686e181d",
+      "blockdata_sha256": "5bf6ce799f137d7476dc7006668f7ec104277a6168cf6ecb05ac4b8fede41de3",
       "width_tiles": 64,
       "height_tiles": 48,
       "connections": [
@@ -263,11 +647,41 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 21,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1508",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+          "x": 42,
+          "y": 17,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1509",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyWorldSea02": {
-      "map_sha256": "6360a8b9832ac2bc68d1248b2e8a345e217fdcccfa0e3e3f02c10884d113f1eb",
-      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "map_sha256": "b37777bbb9aefe6413dc7a80ffc9b740f5807d96d912209ad9acda290a7ca6f1",
+      "blockdata_sha256": "ab3f1a8d4a1701ba36107930e7821ee3fa6823422b0b40c6c076091d5f963f8d",
       "width_tiles": 64,
       "height_tiles": 48,
       "connections": [
@@ -292,11 +706,41 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 21,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1510",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+          "x": 40,
+          "y": 27,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1511",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyWorldSea03": {
-      "map_sha256": "3e3c0bd84a3ab89531366d0d5738f280dbb5f4295a48b1b310a636d5b5b2e894",
-      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "map_sha256": "c13c83012478c1d33aea118027a1ada2207ba83f419134f6659a7bc9f9fd4ece",
+      "blockdata_sha256": "9ccce1e71455154cd88d3798e4651795d9586d0449d0edd39ec00a1bb36c0c3e",
       "width_tiles": 64,
       "height_tiles": 48,
       "connections": [
@@ -316,11 +760,41 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 21,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1512",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+          "x": 42,
+          "y": 16,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1513",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyWorldSea04": {
-      "map_sha256": "5715380b2d8069c85c2e0749038e3d7845e9beff2781b24cf41c502215d0a28b",
-      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "map_sha256": "795be821d77c7e022e9d5b537dae8e5bc8ab150324dacd6433e970a2fc3bb97e",
+      "blockdata_sha256": "b29c27c2fbc1424715e170af1193406172026d7cd2ea5a3c4851c19739989e7f",
       "width_tiles": 64,
       "height_tiles": 48,
       "connections": [
@@ -350,11 +824,41 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 21,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1514",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+          "x": 39,
+          "y": 31,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1515",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyWorldSea05": {
-      "map_sha256": "395783bdb9b3580acff4f8b75dc8cf399c1e590e611392a5e8b0527ac7ac20b4",
-      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "map_sha256": "c0b442022cd8f28b4109b88dd0aff8ff9b1a4dc41b27413172e0ff22220d1279",
+      "blockdata_sha256": "9d3ed473809da9f9c06ab08a1bd615414fca3532ed2fb18802ff492403c5b14a",
       "width_tiles": 64,
       "height_tiles": 48,
       "connections": [
@@ -384,11 +888,41 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 21,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1516",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+          "x": 47,
+          "y": 25,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1517",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyWorldSea06": {
-      "map_sha256": "ab3aa7f9e58d58fcfcf25769006aae3a5a6a9bef34a089119976fb1334ce66a2",
-      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "map_sha256": "feac14c903a213963d6a755461604de322a7dd538cbd468c74176d5b6d23784a",
+      "blockdata_sha256": "b862f1e42224061dad837c8b1ce5436479e219daa8a38b47125f385dbdf13e88",
       "width_tiles": 64,
       "height_tiles": 48,
       "connections": [
@@ -418,11 +952,41 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 21,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1518",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+          "x": 41,
+          "y": 36,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1519",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyWorldSea07": {
-      "map_sha256": "6ff2718137e8375099651be8fbff570b1a12c48a3f6ae23c04fecfec19e46c22",
-      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "map_sha256": "0274e1ec837ae45fd993074a6a9318f9f0c82277f2d7015be7a683b347aaf41b",
+      "blockdata_sha256": "d052b5b7f7a8b05670ede386340033663bbe06d41e39ca1db7703d6b2d7c034c",
       "width_tiles": 64,
       "height_tiles": 48,
       "connections": [
@@ -447,11 +1011,41 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 21,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1520",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+          "x": 38,
+          "y": 29,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1521",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyWorldSea08": {
-      "map_sha256": "d1cfea12a4cd2a5cc9d53a8e6b866d1d4a6f0cd2152558f4ef8c6eb10eea61ea",
-      "blockdata_sha256": "8b6e51a3fd4923ef3ca5b982f7adefb0892d9cb7d6589f39683c59d7a56c53c5",
+      "map_sha256": "b0a4f5d587986ce7e0c467ddbe4fdf8a8fdf950198d904508fc5683fa15dc14d",
+      "blockdata_sha256": "1c97329764d188d9d68a07a8733f7238d18105680fd6baf66a981f80c444cc3e",
       "width_tiles": 64,
       "height_tiles": 48,
       "connections": [
@@ -476,11 +1070,41 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 21,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1522",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+          "x": 42,
+          "y": 18,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1523",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyWorldSea09": {
-      "map_sha256": "494b83868f11a7a491fed5d73d70947c854a3107ce371b1c8c5883028b756b2b",
-      "blockdata_sha256": "123e9005cf48a01661641611c9dff623042196f68a2a1612fbc13285ecfd1010",
+      "map_sha256": "1cc38088ba4bef81bd59efa7e2f3f2ee79d6336f63b6f5413cecfe24c9e3a6a8",
+      "blockdata_sha256": "a3cfaef322f422b7dc51b888fb09d9f2cf7340080d6f907779186734aa331d96",
       "width_tiles": 64,
       "height_tiles": 48,
       "connections": [
@@ -500,11 +1124,1651 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 21,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1524",
+          "flag": "0"
+        },
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
+          "x": 53,
+          "y": 34,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1525",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
+    },
+    "JourneySanctuaryTempestades": {
+      "map_sha256": "f365ed409eb08b5a662eac5e81ed33e0951448c01ec967c484b37c62869a2564",
+      "blockdata_sha256": "f5d72a12c44350b07f680c7a4c82bc6483d12f8fddba482fe58f99d553c17b43",
+      "width_tiles": 22,
+      "height_tiles": 22,
+      "connections": null,
+      "object_events": [
+        {
+          "local_id": "LOCALID_SPECIAL_144",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_144",
+          "flag": "FLAG_JOURNEY_SPECIAL_144"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_145",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_145",
+          "flag": "FLAG_JOURNEY_SPECIAL_145"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_243",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_243",
+          "flag": "FLAG_JOURNEY_SPECIAL_243"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_641",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_641",
+          "flag": "FLAG_JOURNEY_SPECIAL_641"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_642",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_642",
+          "flag": "FLAG_JOURNEY_SPECIAL_642"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_796",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_796",
+          "flag": "FLAG_JOURNEY_SPECIAL_796"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_807",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_807",
+          "flag": "FLAG_JOURNEY_SPECIAL_807"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_894",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_894",
+          "flag": "FLAG_JOURNEY_SPECIAL_894"
+        }
+      ],
+      "terrain_only": false
+    },
+    "JourneySanctuaryAurora": {
+      "map_sha256": "026cafdf29daf3c6fcc3a939f867d3e05e2d83c94417a181be97a4ce0fd66afd",
+      "blockdata_sha256": "f5d72a12c44350b07f680c7a4c82bc6483d12f8fddba482fe58f99d553c17b43",
+      "width_tiles": 22,
+      "height_tiles": 22,
+      "connections": null,
+      "object_events": [
+        {
+          "local_id": "LOCALID_SPECIAL_150",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_150",
+          "flag": "FLAG_JOURNEY_SPECIAL_150"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_386",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_386",
+          "flag": "FLAG_JOURNEY_SPECIAL_386"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_482",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_482",
+          "flag": "FLAG_JOURNEY_SPECIAL_482"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_648",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_648",
+          "flag": "FLAG_JOURNEY_SPECIAL_648"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_785",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_785",
+          "flag": "FLAG_JOURNEY_SPECIAL_785"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_800",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_800",
+          "flag": "FLAG_JOURNEY_SPECIAL_800"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_888",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_888",
+          "flag": "FLAG_JOURNEY_SPECIAL_888"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_1016",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_1016",
+          "flag": "FLAG_JOURNEY_SPECIAL_1016"
+        }
+      ],
+      "terrain_only": false
+    },
+    "JourneySanctuaryVulcao": {
+      "map_sha256": "18b2ccce9487e52b7e0b1c0f84c442c3559920bdb913807d3130f08611b8b2f8",
+      "blockdata_sha256": "f5d72a12c44350b07f680c7a4c82bc6483d12f8fddba482fe58f99d553c17b43",
+      "width_tiles": 22,
+      "height_tiles": 22,
+      "connections": null,
+      "object_events": [
+        {
+          "local_id": "LOCALID_SPECIAL_146",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_146",
+          "flag": "FLAG_JOURNEY_SPECIAL_146"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_244",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_244",
+          "flag": "FLAG_JOURNEY_SPECIAL_244"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_250",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_250",
+          "flag": "FLAG_JOURNEY_SPECIAL_250"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_383",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_383",
+          "flag": "FLAG_JOURNEY_SPECIAL_383"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_645",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_645",
+          "flag": "FLAG_JOURNEY_SPECIAL_645"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_806",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_806",
+          "flag": "FLAG_JOURNEY_SPECIAL_806"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_1003",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_1003",
+          "flag": "FLAG_JOURNEY_SPECIAL_1003"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_1004",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_1004",
+          "flag": "FLAG_JOURNEY_SPECIAL_1004"
+        }
+      ],
+      "terrain_only": false
+    },
+    "JourneySanctuaryTitans": {
+      "map_sha256": "abc2276dd84518824c5b8264d81886fc654fb889a3a9c1b36cdc78e55384535c",
+      "blockdata_sha256": "f5d72a12c44350b07f680c7a4c82bc6483d12f8fddba482fe58f99d553c17b43",
+      "width_tiles": 22,
+      "height_tiles": 22,
+      "connections": null,
+      "object_events": [
+        {
+          "local_id": "LOCALID_SPECIAL_377",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_377",
+          "flag": "FLAG_JOURNEY_SPECIAL_377"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_379",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_379",
+          "flag": "FLAG_JOURNEY_SPECIAL_379"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_485",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_485",
+          "flag": "FLAG_JOURNEY_SPECIAL_485"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_719",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_719",
+          "flag": "FLAG_JOURNEY_SPECIAL_719"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_791",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_791",
+          "flag": "FLAG_JOURNEY_SPECIAL_791"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_797",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_797",
+          "flag": "FLAG_JOURNEY_SPECIAL_797"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_805",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_805",
+          "flag": "FLAG_JOURNEY_SPECIAL_805"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_808",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_808",
+          "flag": "FLAG_JOURNEY_SPECIAL_808"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_809",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_809",
+          "flag": "FLAG_JOURNEY_SPECIAL_809"
+        }
+      ],
+      "terrain_only": false
+    },
+    "JourneySanctuaryFloresta": {
+      "map_sha256": "c6cb5ab6912f276056e0468c23d3aa1770e8b78baee9f498e37443fec90e0d65",
+      "blockdata_sha256": "f5d72a12c44350b07f680c7a4c82bc6483d12f8fddba482fe58f99d553c17b43",
+      "width_tiles": 22,
+      "height_tiles": 22,
+      "connections": null,
+      "object_events": [
+        {
+          "local_id": "LOCALID_SPECIAL_251",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_251",
+          "flag": "FLAG_JOURNEY_SPECIAL_251"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_492",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_492",
+          "flag": "FLAG_JOURNEY_SPECIAL_492"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_640",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_640",
+          "flag": "FLAG_JOURNEY_SPECIAL_640"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_773",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_773",
+          "flag": "FLAG_JOURNEY_SPECIAL_773"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_787",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_787",
+          "flag": "FLAG_JOURNEY_SPECIAL_787"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_798",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_798",
+          "flag": "FLAG_JOURNEY_SPECIAL_798"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_898",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_898",
+          "flag": "FLAG_JOURNEY_SPECIAL_898"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_1017",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_1017",
+          "flag": "FLAG_JOURNEY_SPECIAL_1017"
+        }
+      ],
+      "terrain_only": false
+    },
+    "JourneySanctuaryEclipse": {
+      "map_sha256": "ac12d5b50856f75ed94c86a23edc05529a029b439a3d3f66aa8f4903640ffd3b",
+      "blockdata_sha256": "f5d72a12c44350b07f680c7a4c82bc6483d12f8fddba482fe58f99d553c17b43",
+      "width_tiles": 22,
+      "height_tiles": 22,
+      "connections": null,
+      "object_events": [
+        {
+          "local_id": "LOCALID_SPECIAL_486",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_486",
+          "flag": "FLAG_JOURNEY_SPECIAL_486"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_487",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_487",
+          "flag": "FLAG_JOURNEY_SPECIAL_487"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_491",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_491",
+          "flag": "FLAG_JOURNEY_SPECIAL_491"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_717",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_717",
+          "flag": "FLAG_JOURNEY_SPECIAL_717"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_799",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_799",
+          "flag": "FLAG_JOURNEY_SPECIAL_799"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_802",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_802",
+          "flag": "FLAG_JOURNEY_SPECIAL_802"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_897",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_897",
+          "flag": "FLAG_JOURNEY_SPECIAL_897"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_1025",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_1025",
+          "flag": "FLAG_JOURNEY_SPECIAL_1025"
+        }
+      ],
+      "terrain_only": false
+    },
+    "JourneySanctuaryDragoes": {
+      "map_sha256": "e9155dd9149ffd8cd801fbaafab372a72f85333a51000a0a5760b897106bf986",
+      "blockdata_sha256": "f5d72a12c44350b07f680c7a4c82bc6483d12f8fddba482fe58f99d553c17b43",
+      "width_tiles": 22,
+      "height_tiles": 22,
+      "connections": null,
+      "object_events": [
+        {
+          "local_id": "LOCALID_SPECIAL_384",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_384",
+          "flag": "FLAG_JOURNEY_SPECIAL_384"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_483",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_483",
+          "flag": "FLAG_JOURNEY_SPECIAL_483"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_638",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_638",
+          "flag": "FLAG_JOURNEY_SPECIAL_638"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_643",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_643",
+          "flag": "FLAG_JOURNEY_SPECIAL_643"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_718",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_718",
+          "flag": "FLAG_JOURNEY_SPECIAL_718"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_804",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_804",
+          "flag": "FLAG_JOURNEY_SPECIAL_804"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_889",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_889",
+          "flag": "FLAG_JOURNEY_SPECIAL_889"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_891",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_891",
+          "flag": "FLAG_JOURNEY_SPECIAL_891"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_1007",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_1007",
+          "flag": "FLAG_JOURNEY_SPECIAL_1007"
+        }
+      ],
+      "terrain_only": false
+    },
+    "JourneySanctuaryEstrelas": {
+      "map_sha256": "895c263f813e511eceb1b6b966ff029939e48d6d5285c1fa82dba5519e360b9a",
+      "blockdata_sha256": "f5d72a12c44350b07f680c7a4c82bc6483d12f8fddba482fe58f99d553c17b43",
+      "width_tiles": 22,
+      "height_tiles": 22,
+      "connections": null,
+      "object_events": [
+        {
+          "local_id": "LOCALID_SPECIAL_151",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_151",
+          "flag": "FLAG_JOURNEY_SPECIAL_151"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_480",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_480",
+          "flag": "FLAG_JOURNEY_SPECIAL_480"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_488",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_488",
+          "flag": "FLAG_JOURNEY_SPECIAL_488"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_716",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_716",
+          "flag": "FLAG_JOURNEY_SPECIAL_716"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_786",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_786",
+          "flag": "FLAG_JOURNEY_SPECIAL_786"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_801",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_801",
+          "flag": "FLAG_JOURNEY_SPECIAL_801"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_905",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_905",
+          "flag": "FLAG_JOURNEY_SPECIAL_905"
+        }
+      ],
+      "terrain_only": false
+    },
+    "JourneySanctuaryCristais": {
+      "map_sha256": "9ca04b9321233e57b1e8ad90b77ca05f43982c6e5839c377cdca25ad91b22ac8",
+      "blockdata_sha256": "f5d72a12c44350b07f680c7a4c82bc6483d12f8fddba482fe58f99d553c17b43",
+      "width_tiles": 22,
+      "height_tiles": 22,
+      "connections": null,
+      "object_events": [
+        {
+          "local_id": "LOCALID_SPECIAL_378",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_378",
+          "flag": "FLAG_JOURNEY_SPECIAL_378"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_639",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_639",
+          "flag": "FLAG_JOURNEY_SPECIAL_639"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_646",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_646",
+          "flag": "FLAG_JOURNEY_SPECIAL_646"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_793",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_793",
+          "flag": "FLAG_JOURNEY_SPECIAL_793"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_896",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_896",
+          "flag": "FLAG_JOURNEY_SPECIAL_896"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_1002",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_1002",
+          "flag": "FLAG_JOURNEY_SPECIAL_1002"
+        }
+      ],
+      "terrain_only": false
+    },
+    "JourneySanctuaryMares": {
+      "map_sha256": "191f03ffe7541389d4453b6ed263202fc817c07ac5605eea2973ef670fc0bc0a",
+      "blockdata_sha256": "f5d72a12c44350b07f680c7a4c82bc6483d12f8fddba482fe58f99d553c17b43",
+      "width_tiles": 22,
+      "height_tiles": 22,
+      "connections": null,
+      "object_events": [
+        {
+          "local_id": "LOCALID_SPECIAL_245",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_245",
+          "flag": "FLAG_JOURNEY_SPECIAL_245"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_484",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_484",
+          "flag": "FLAG_JOURNEY_SPECIAL_484"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_490",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_490",
+          "flag": "FLAG_JOURNEY_SPECIAL_490"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_721",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_721",
+          "flag": "FLAG_JOURNEY_SPECIAL_721"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_1024",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_1024",
+          "flag": "FLAG_JOURNEY_SPECIAL_1024"
+        }
+      ],
+      "terrain_only": false
+    },
+    "JourneySanctuaryOrigens": {
+      "map_sha256": "139ab31f8cf0d01ca4a049a6d3303312126a751f58edcb2c1f5cf5486b4b0226",
+      "blockdata_sha256": "f5d72a12c44350b07f680c7a4c82bc6483d12f8fddba482fe58f99d553c17b43",
+      "width_tiles": 22,
+      "height_tiles": 22,
+      "connections": null,
+      "object_events": [
+        {
+          "local_id": "LOCALID_SPECIAL_249",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_249",
+          "flag": "FLAG_JOURNEY_SPECIAL_249"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_380",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_380",
+          "flag": "FLAG_JOURNEY_SPECIAL_380"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_381",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_381",
+          "flag": "FLAG_JOURNEY_SPECIAL_381"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_644",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_644",
+          "flag": "FLAG_JOURNEY_SPECIAL_644"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_789",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_789",
+          "flag": "FLAG_JOURNEY_SPECIAL_789"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_890",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_890",
+          "flag": "FLAG_JOURNEY_SPECIAL_890"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_895",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_895",
+          "flag": "FLAG_JOURNEY_SPECIAL_895"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_1008",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_1008",
+          "flag": "FLAG_JOURNEY_SPECIAL_1008"
+        }
+      ],
+      "terrain_only": false
+    },
+    "JourneySanctuaryProfundezas": {
+      "map_sha256": "77eac5f87f2c6a822061fc187326b0e7021200b0dde3d76d43042e04254007ed",
+      "blockdata_sha256": "f5d72a12c44350b07f680c7a4c82bc6483d12f8fddba482fe58f99d553c17b43",
+      "width_tiles": 22,
+      "height_tiles": 22,
+      "connections": null,
+      "object_events": [
+        {
+          "local_id": "LOCALID_SPECIAL_382",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_382",
+          "flag": "FLAG_JOURNEY_SPECIAL_382"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_489",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_489",
+          "flag": "FLAG_JOURNEY_SPECIAL_489"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_647",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_647",
+          "flag": "FLAG_JOURNEY_SPECIAL_647"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_788",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_788",
+          "flag": "FLAG_JOURNEY_SPECIAL_788"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_892",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_892",
+          "flag": "FLAG_JOURNEY_SPECIAL_892"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_893",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_893",
+          "flag": "FLAG_JOURNEY_SPECIAL_893"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_1001",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_1001",
+          "flag": "FLAG_JOURNEY_SPECIAL_1001"
+        }
+      ],
+      "terrain_only": false
+    },
+    "JourneySanctuaryDimensoes": {
+      "map_sha256": "7f246d24e0dd75c524444bc07fe3bcec69dfb602ee7f136b0d9873b3d8551171",
+      "blockdata_sha256": "f5d72a12c44350b07f680c7a4c82bc6483d12f8fddba482fe58f99d553c17b43",
+      "width_tiles": 22,
+      "height_tiles": 22,
+      "connections": null,
+      "object_events": [
+        {
+          "local_id": "LOCALID_SPECIAL_385",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_385",
+          "flag": "FLAG_JOURNEY_SPECIAL_385"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_481",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_481",
+          "flag": "FLAG_JOURNEY_SPECIAL_481"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_494",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_494",
+          "flag": "FLAG_JOURNEY_SPECIAL_494"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_720",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_720",
+          "flag": "FLAG_JOURNEY_SPECIAL_720"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_790",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_790",
+          "flag": "FLAG_JOURNEY_SPECIAL_790"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_792",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_792",
+          "flag": "FLAG_JOURNEY_SPECIAL_792"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_1015",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_1015",
+          "flag": "FLAG_JOURNEY_SPECIAL_1015"
+        }
+      ],
+      "terrain_only": false
+    },
+    "JourneySanctuaryAbismo": {
+      "map_sha256": "8efa4cf9bd8a129e1d4c31e559ee3dc5237847ddaba0853489e2a8fbf4f88b52",
+      "blockdata_sha256": "f5d72a12c44350b07f680c7a4c82bc6483d12f8fddba482fe58f99d553c17b43",
+      "width_tiles": 22,
+      "height_tiles": 22,
+      "connections": null,
+      "object_events": [
+        {
+          "local_id": "LOCALID_SPECIAL_493",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_493",
+          "flag": "FLAG_JOURNEY_SPECIAL_493"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_649",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_649",
+          "flag": "FLAG_JOURNEY_SPECIAL_649"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_772",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 6,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_772",
+          "flag": "FLAG_JOURNEY_SPECIAL_772"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_794",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_794",
+          "flag": "FLAG_JOURNEY_SPECIAL_794"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_795",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_795",
+          "flag": "FLAG_JOURNEY_SPECIAL_795"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_803",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 15,
+          "y": 11,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_803",
+          "flag": "FLAG_JOURNEY_SPECIAL_803"
+        },
+        {
+          "local_id": "LOCALID_SPECIAL_1014",
+          "graphics_id": "OBJ_EVENT_GFX_TRICK_HOUSE_STATUE",
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "JourneySanctuary_1014",
+          "flag": "FLAG_JOURNEY_SPECIAL_1014"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyWorldLane10": {
       "map_sha256": "747af08e3215ef1529bdac1c5544347b320c14ff2f3a8b89e54d2ca40e6d7dc4",
-      "blockdata_sha256": "5f5741ad2a9b129e332bf5cb36cfd5ffb977aa5fdcc1b993a22d83681c1a5bee",
+      "blockdata_sha256": "ab4d1e4fbe0a78814f20ac60c8675aed5a511cf3907122cee1d0755c9e1d99e5",
       "width_tiles": 16,
       "height_tiles": 48,
       "connections": [
@@ -519,11 +2783,27 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 5,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1526",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyWorldLane11": {
       "map_sha256": "9afb768eac7af0fb87774e63b516759b9ef37a094d63afde713141e31ae449a0",
-      "blockdata_sha256": "5f5741ad2a9b129e332bf5cb36cfd5ffb977aa5fdcc1b993a22d83681c1a5bee",
+      "blockdata_sha256": "26cae7cda1011bdf7780333396c7fac6f0e1e0ede5a997d247b27ec048933984",
       "width_tiles": 16,
       "height_tiles": 48,
       "connections": [
@@ -538,11 +2818,27 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 5,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1529",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyWorldLane20": {
       "map_sha256": "96709ad188e2cffe974571449bea06a69242d4981f211a609c646c55cf7f4116",
-      "blockdata_sha256": "5f5741ad2a9b129e332bf5cb36cfd5ffb977aa5fdcc1b993a22d83681c1a5bee",
+      "blockdata_sha256": "d4f0f6be6bcc09fac88beccf5331a83900ea6347d5aa330aabbecd2b1914b399",
       "width_tiles": 16,
       "height_tiles": 48,
       "connections": [
@@ -557,11 +2853,27 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 5,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1527",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyWorldLane21": {
       "map_sha256": "1d672096e70429888239bc444b07372978ea1dbb648ee57e0f40229b5b9ecc35",
-      "blockdata_sha256": "5f5741ad2a9b129e332bf5cb36cfd5ffb977aa5fdcc1b993a22d83681c1a5bee",
+      "blockdata_sha256": "b7497580328f9c2221c7ca2fd6c168ca7468f549a3888c0815d2757b312a74f5",
       "width_tiles": 16,
       "height_tiles": 48,
       "connections": [
@@ -576,11 +2888,27 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 5,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1530",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyWorldLane30": {
       "map_sha256": "bec0e8e0d83f2e85e0ebe2f0a9b1ba418949d6efe478a54f2c61865d3bb6b4c8",
-      "blockdata_sha256": "5f5741ad2a9b129e332bf5cb36cfd5ffb977aa5fdcc1b993a22d83681c1a5bee",
+      "blockdata_sha256": "4a947d793b29ec551e99818bf3d4bbb03e11a8fa20763a221a2b508303a41fbb",
       "width_tiles": 16,
       "height_tiles": 48,
       "connections": [
@@ -595,11 +2923,27 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 5,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1528",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     },
     "JourneyWorldLane31": {
       "map_sha256": "99b8ab06574e0dd2683b57fa26843955432cf30c559583e859b4e2f35f99c058",
-      "blockdata_sha256": "5f5741ad2a9b129e332bf5cb36cfd5ffb977aa5fdcc1b993a22d83681c1a5bee",
+      "blockdata_sha256": "4d538af396cfc84e3dc1a7483a42318a67f67f941c3114a551533088482867ba",
       "width_tiles": 16,
       "height_tiles": 48,
       "connections": [
@@ -614,9 +2958,25 @@
           "offset": 0
         }
       ],
-      "terrain_only": true
+      "object_events": [
+        {
+          "type": "object",
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER",
+          "x": 5,
+          "y": 16,
+          "elevation": 1,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NORMAL",
+          "trainer_sight_or_berry_tree_id": "2",
+          "script": "JourneyTeam_Trainer1531",
+          "flag": "0"
+        }
+      ],
+      "terrain_only": false
     }
   },
-  "terrain_only": true,
+  "terrain_only": false,
   "campaign_validation": false
 }

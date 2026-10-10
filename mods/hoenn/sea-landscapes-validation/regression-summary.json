@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "rom_sha256": "68bbf008a3dcf522824aad80a6b7ae3ca061a7b7f15a39f03192d99c27177f63",
+  "hoenn_tests": 243,
+  "sea_route_tests": 12,
+  "native_surf_seams": 96,
+  "native_visible_npcs": 47,
+  "native_ocean_transitions": 24,
+  "native_sanctuary_sites": 14,
+  "native_locked_altars": 105,
+  "native_save_continue": 39,
+  "regional_gym_gate_cases": 11008,
+  "regional_boss_permission_cases": 44,
+  "full_campaign_playthrough": false,
+  "validator_sha256": {
+    "prepare_sea_landscapes.py": "be0da1f9c6651dcd3939e4b014b7e16c1803bce8ad0bc27b2c76f22c8a123fa9",
+    "validate_sea_landscapes.py": "e88b2a6b4053bee20a45c55fa7762d2aa435499221a3266b8b49a326418cf5f3",
+    "validate_crossing.py": "67fa4e2a2ec58615ae928ec0dd893280dd9ae93d6ea1564a308742396d4fc595",
+    "validate_ocean_journey.py": "03c3233fcfa804e95a0040e10664df269222eef1cc2211cf31ef92ca97630138",
+    "validate_sanctuary_routes.py": "468feb6288f84f8de86beff37219cdb53f17626e309fa68dde0445433127f543",
+    "validate_campaign_matrix.py": "68b24fb28f2acd24ea6334918e2aa773e5b3d888fcc77c948e17df5191d625e6",
+    "render_sea_maps.py": "c6972405356a8cee2325cfd26d19d3d91eaed590014c3cdb326564573c8ae283"
+  }
+}

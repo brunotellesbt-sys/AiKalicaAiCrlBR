@@ -39,7 +39,11 @@ groups = json.loads((source / 'data/maps/map_groups.json').read_text())
 layouts = {l['id']: l for l in json.loads((source / 'data/layouts/layouts.json').read_text())['layouts']}
 lib = ctypes.CDLL(str(args.library.resolve())); lib.start.argtypes = [ctypes.c_char_p]
 lib.image.restype = ctypes.c_void_p; lib.read32.restype = ctypes.c_uint32
-assert lib.start(str(source / 'pokeemerald.gba').encode())
+# Each emulator owns its flash backing file, including parallel Continue tests.
+emulator_workspace=tempfile.TemporaryDirectory(prefix='journey-emulator-',dir='/tmp')
+emulator_rom=Path(emulator_workspace.name)/'pokeemerald.gba'
+shutil.copy2(source/'pokeemerald.gba',emulator_rom)
+assert lib.start(str(emulator_rom).encode())
 results = []
 call4 = None
 abi = None
