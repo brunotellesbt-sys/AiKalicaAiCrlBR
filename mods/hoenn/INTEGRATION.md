@@ -1,5 +1,7 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+[Abertura da entrada leste de Ever Grande e mapa amplo com Vermilion](EVER-GRANDE-ENTRANCE.md).
+
 A faixa leste foi remodelada para passar **atrás de Ever Grande** e ligar
 Hoenn às Sevii em um plano contínuo, com portos sem sobreposição. A saída
 antiga da Rota 131 foi retirada. [Mapa e detalhes](EASTERN-SEA-UNION.md).

@@ -10,7 +10,9 @@ from prepare_abilities import prepare
 
 def verify(source, candidate, output, layer='abilities'):
     source, candidate, output = map(Path, [source, candidate, output])
-    if layer == 'eastern-sea-union':
+    if layer == 'ever-grande-entrance':
+        from prepare_ever_grande_entrance import prepare as prepare_layer
+    elif layer == 'eastern-sea-union':
         from prepare_eastern_sea_union import prepare as prepare_layer
     elif layer == 'sea-landscapes':
         from prepare_sea_landscapes import prepare as prepare_layer
@@ -97,6 +99,6 @@ if __name__ == '__main__':
     parser.add_argument('--source', type=Path, required=True)
     parser.add_argument('--candidate', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
-    parser.add_argument('--layer', choices=['abilities', 'mega-art', 'story-aftermath', 'league-access', 'league-completion', 'league-history', 'league-display', 'family-postgame', 'pwt', 'frontier-travel', 'story-puzzles', 'aqua-episodes', 'seafloor-access', 'water-continue', 'cave-access', 'sky-pillar-access', 'english-text', 'special-ball', 'route131-sea-access', 'lostelle-habitats', 'tower-habitats', 'early-story-tools', 'mandatory-native-missions', 'sixteen-badge-leagues', 'rusturf-reunion', 'sea-landscapes', 'eastern-sea-union'], default='abilities')
+    parser.add_argument('--layer', choices=['abilities', 'mega-art', 'story-aftermath', 'league-access', 'league-completion', 'league-history', 'league-display', 'family-postgame', 'pwt', 'frontier-travel', 'story-puzzles', 'aqua-episodes', 'seafloor-access', 'water-continue', 'cave-access', 'sky-pillar-access', 'english-text', 'special-ball', 'route131-sea-access', 'lostelle-habitats', 'tower-habitats', 'early-story-tools', 'mandatory-native-missions', 'sixteen-badge-leagues', 'rusturf-reunion', 'sea-landscapes', 'eastern-sea-union', 'ever-grande-entrance'], default='abilities')
     args = parser.parse_args()
     verify(args.source, args.candidate, args.output, args.layer)
