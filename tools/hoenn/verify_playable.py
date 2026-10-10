@@ -23,11 +23,11 @@ def verify(directory):
     if (directory / 'SHA256SUMS').read_text() != digest + '  ' + ROM_NAME + '\n':
         raise ValueError('Checksum file does not match the release')
     evidence = ROOT / 'mods/hoenn/playable-validation'
-    for name in ['campaign-kanto/campaign-playthrough.json','campaign-hoenn/campaign-playthrough.json','browser.json','homes/family.json','birth-rules/birth-rules.json','eastern-ocean/eastern-union.json','leagues/sixteen-badge-leagues.json','world-map/world-map.json','coast/kanto-open-sea.json','western-coast/western-coast.json','world-fly/world-fly.json','coast-connectivity/coast-connectivity.json','western-waterfall/sea-landscapes.json']:
+    for name in ['campaign-kanto/campaign-playthrough.json','campaign-hoenn/campaign-playthrough.json','browser.json','homes/family.json','birth-rules/birth-rules.json','eastern-ocean/eastern-union.json','leagues/sixteen-badge-leagues.json','world-map/world-map.json','coast/kanto-open-sea.json','western-coast/western-coast.json','world-fly/world-fly.json','coast-connectivity/coast-connectivity.json','western-waterfall/sea-landscapes.json','remote-islands/remote-islands.json','campaign-matrix/campaign-matrix.json','league-kanto/kanto-elite-battle.json','league-hoenn/hoenn-elite-battle.json']:
         report = json.loads((evidence / name).read_text())
         if report['rom_sha256'] != digest:
             raise ValueError('Evidence belongs to another ROM: ' + name)
-        if name.startswith('campaign-'):
+        if name in ['campaign-kanto/campaign-playthrough.json','campaign-hoenn/campaign-playthrough.json']:
             if not report['controller_only'] or report['ram_writes'] or report['script_injection']:
                 raise ValueError('Opening was not controller-only: ' + name)
             if not report['battles'] or any(b['outcome'] != 1 for b in report['battles']):

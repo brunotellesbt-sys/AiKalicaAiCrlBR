@@ -26,7 +26,17 @@ class PlayableAlpha(unittest.TestCase):
  def test_exported_rom_matches_all_validation_evidence(self):
   r=verify(ROOT/'mods/hoenn/playable')
   self.assertFalse(r['full_campaign_playthrough'])
-  self.assertEqual(r['layers'][-1],'coastal-world-map')
+  self.assertEqual(r['layers'][-1],'remote-islands')
+ def test_remote_islands_have_real_landings_and_unique_eight_family_habitats(self):
+  r=json.loads((EVIDENCE/'remote-islands/remote-islands.json').read_text())
+  p=json.loads((EVIDENCE/'remote-islands-preparation/preparation.json').read_text())
+  self.assertTrue(r['passed'] and r['continuous_surf_and_land_roundtrip'] and r['no_midtrip_fixture_warps'])
+  self.assertTrue(r['relocated_families_removed_from_old_dex_locations'])
+  self.assertEqual([c['family_count'] for c in r['checks']],[1,8,8])
+  self.assertTrue(all(c['surf_landing'] and c['walkable_grass'] and c['native_dex_membership'] for c in r['checks']))
+  roots=[f['root'] for h in p['locations_data'] for f in h['families']]
+  self.assertEqual(len(roots),444);self.assertEqual(len(roots),len(set(roots)))
+  self.assertTrue(p['level_and_stage_rules_preserved'])
  def test_native_menu_map_returns_without_changing_location(self):
   r=json.loads((EVIDENCE/'world-map/world-map.json').read_text())
   self.assertTrue(r['pokenav_entry_and_return'] and r['native_save_menu_and_continue'])
@@ -35,14 +45,16 @@ class PlayableAlpha(unittest.TestCase):
   for c in r['checks']:
    self.assertTrue(all(c[k] for k in ['controller_open','move','recenter','back','position_preserved']))
  def test_world_map_layer_reproduces_and_preserves_campaign_and_terrain(self):
-  r=json.loads((EVIDENCE/'coastal-world-map-preparation/reproduction.json').read_text())
-  p=json.loads((EVIDENCE/'coastal-world-map-preparation/preparation.json').read_text())
+  r=json.loads((EVIDENCE/'remote-islands-preparation/reproduction.json').read_text())
+  p=json.loads((EVIDENCE/'remote-islands-preparation/preparation.json').read_text())
   self.assertTrue(r['passed'] and r['deterministic_replay'] and r['idempotent'])
   self.assertEqual(r['rom_sha256'],json.loads((EVIDENCE/'world-map/world-map.json').read_text())['rom_sha256'])
   for path in ['src/journey_campaign_gates.c','src/journey_gym_scaling.c','data/layouts/JourneyRoute12Shipyard/map.bin']:
    self.assertIn(path,p['preserved_native_sha256']);self.assertNotIn(path,p['prepared_sha256'])
-  self.assertIn('src/region_map.c',p['prepared_sha256'])
-  self.assertTrue(p['lavender_and_sevii_fly'] and p['caves_not_fly_destinations'])
+  self.assertIn('include/regions.h',p['prepared_sha256'])
+  self.assertIn('src/regions.c',p['prepared_sha256'])
+  fly=json.loads((EVIDENCE/'coastal-world-map-preparation/preparation.json').read_text())
+  self.assertTrue(fly['lavender_and_sevii_fly'] and fly['caves_not_fly_destinations'])
  def test_integrated_fly_and_western_surf_are_native(self):
   for name in ['world-fly/world-fly.json','western-coast/western-coast.json']:
    r=json.loads((EVIDENCE/name).read_text());self.assertTrue(r['passed'])

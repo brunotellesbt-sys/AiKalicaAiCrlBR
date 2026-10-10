@@ -137,6 +137,7 @@ def prepare(source, layer=LAYER, chain=CHAIN, refresh=False):
    [(85,40),(156,40)],[(57,60),(188,60)],
    [(90,40),(90,77)],[(124,39),(124,80)],
    [(156,40),(156,100)],[(188,50),(188,100)],
+   [(156,48),(192,48),(192,50)],[(172,48),(172,60)],
    [(117,60),(117,83)],[(117,80),(188,80)],
    [(108,100),(188,100)],[(128,94),(128,100)],
    [(188,50),(192,50)],[(147,67),(156,67)],
@@ -152,6 +153,10 @@ def prepare(source, layer=LAYER, chain=CHAIN, refresh=False):
  for yy in range(image.height):
   for xx in range(image.width):
    if base_image.getpixel((xx,yy))!=(112,184,232):image.putpixel((xx,yy),base_image.getpixel((xx,yy)))
+ if refresh:
+  # Short terrestrial continuation of Route 12 into Route 13, beside the port.
+  draw.rectangle((80,41,81,45),fill=(224,168,16))
+  draw.line([(82,38),(83,38),(83,39)],fill=(248,208,56),width=1)
  for p in points:
   if p['map'].startswith('JourneySanctuary'):
    if refresh:

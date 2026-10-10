@@ -25,3 +25,7 @@ A costa oeste mantém a faixa de Cinnabar pelo Western River, Rustboro Coast e D
 A subida do rio oeste conserva o requisito de Waterfall; a descida e a subida são exercitadas no emulador com zero insígnias. O grafo de colisões e comportamentos aquáticos da ROM confirma que os nove novos canais da costa de Kanto são alcançáveis pela rede de Surf.
 
 A conferência abrange os 54 mapas de mar integrado: todos têm tiles de areia e são alcançáveis pela rede de conexões. Os blocos de borda impedem avançar além de lados sem conexão. A barreira de dois pedregulhos da Rota 20 foi aberta para que Fuchsia e Cinnabar façam parte da mesma rede contínua de Surf. [Detalhes e imagens](SEA-NETWORK-AUDIT.md).
+
+A ligação terrestre entre as Rotas 12 e 13 aparece como uma faixa curta e uniforme ao lado de Lavender Port. Entre Two Island e Three Island, um filhete horizontal de Surf se une ao ramal vertical do Volcano Shrine. A navegação usa as conexões contínuas dos mapas WorldSea01, WorldSea02 e WorldSea03.
+
+Os três ramais orientais alcançam [ilhas com terreno jogável e marcador azul](REMOTE-ISLANDS.md), incluindo grama e oito famílias em Sunlit Isle e Tidewood Isle.

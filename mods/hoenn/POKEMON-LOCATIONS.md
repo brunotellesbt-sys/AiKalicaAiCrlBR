@@ -10,7 +10,7 @@ Referência da candidata nativa com Kanto, Hoenn e Sevii. Não é uma declaraç�
 
 Os encontros aleatórios das 920 espécies-base comuns e variantes regionais ficam em 444 famílias, sem repetir famílias entre habitats. Andares da mesma caverna, zonas de Safari e a superfície/subsolo da mesma rota marinha contam como um habitat.
 
-A distribuição corrigida tem 97 habitats terrestres: 18 com cinco famílias e 79 com quatro; outros 38 habitats exclusivamente aquáticos têm uma família cada. As 77 famílias com Pokémon do tipo Água estão reservadas para locais com Surf ou pesca, e também podem aparecer na grama do mesmo habitat quando ela existe.
+A distribuição atual tem 99 habitats terrestres e 38 habitats exclusivamente aquáticos. Sunlit Isle e Tidewood Isle têm oito famílias cada. As famílias com Pokémon do tipo Água ficam em locais com Surf ou pesca e também podem aparecer na grama do mesmo habitat.
 
 Existem mais lagos e pontos de pesca que famílias aquáticas. Para preservar a regra de não repetir famílias, 20 mapas ficam sem encontros aquáticos; os encontros terrestres desses habitats permanecem. Esses pontos estão listados ao final. Nenhuma rota foi fechada por isso.
 
@@ -41,7 +41,7 @@ Use a busca pelo nome do Pokémon nesta página ou filtre a planilha `pokemon-lo
 | Sevii | Altering Cave Frlg | Cyndaquil / Quilava / Typhlosion / Typhlosion Hisui; Sableye; Mawile; Lileep / Cradily; Castform Normal | MAP_SIX_ISLAND_ALTERING_CAVE |
 | Hoenn | Artisan Cave | Onix / Steelix; Treecko / Grovyle / Sceptile; Lunatone; Anorith / Armaldo; Absol | MAP_ARTISAN_CAVE_1F, MAP_ARTISAN_CAVE_B1F |
 | Sevii | Berry Forest | Bellsprout / Weepinbell / Victreebel; Tentacool / Tentacruel; Drowzee / Hypno; Seedot / Nuzleaf / Shiftry; Seviper | MAP_THREE_ISLAND_BERRY_FOREST |
-| Sevii | Birth Island Frlg | Pidgey / Pidgeotto / Pidgeot; Mareep / Flaaffy / Ampharos; Ralts / Kirlia / Gardevoir / Gallade; Buizel / Floatzel; Riolu / Lucario | MAP_JOURNEYWORLDSEA08 |
+| Sevii | Sunlit Isle | Pidgey / Pidgeotto / Pidgeot; Mareep / Flaaffy / Ampharos; Ralts / Kirlia / Gardevoir / Gallade; Buizel / Floatzel; Riolu / Lucario; Burmy Plant / Wormadam Plant / Mothim Plant; Combee / Vespiquen; Scatterbug Icy Snow / Spewpa Icy Snow / Vivillon Icy Snow | MAP_JOURNEYWORLDSEA08 |
 | Sevii | Bond Bridge | Furfrou Natural; Phantump / Trevenant; Crabrawler / Crabominable; Arctozolt; Cetoddle / Cetitan | MAP_THREE_ISLAND_BOND_BRIDGE |
 | Sevii | Canyon Entrance | Tangela / Tangrowth; Pinsir; Ditto; Aipom / Ambipom; Stantler / Wyrdeer | MAP_SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE |
 | Sevii | Cape Brink | Doduo / Dodrio; Togepi / Togetic / Togekiss; Snorlax / Munchlax; Togedemaru; Toedscool / Toedscruel | MAP_TWO_ISLAND_CAPE_BRINK |
@@ -55,7 +55,7 @@ Use a busca pelo nome do Pokémon nesta página ou filtre a planilha `pokemon-lo
 | Kanto | Digletts Cave | Nidoran F / Nidorina / Nidoqueen; Roggenrola / Boldore / Gigalith; Pawniard / Bisharp / Kingambit; Tinkatink / Tinkatuff / Tinkaton; Orthworm | MAP_DIGLETTS_CAVE_B1F |
 | Hoenn | Ever Grande City | Popplio / Brionne / Primarina | MAP_EVER_GRANDE_CITY |
 | Hoenn | Fiery Path | Tepig / Pignite / Emboar; Bouffalant; Larvesta / Volcarona; Chespin / Quilladin / Chesnaught; Amaura / Aurorus | MAP_FIERY_PATH |
-| Sevii | Five Island | Magnemite / Magneton / Magnezone; Blitzle / Zebstrika; Heatmor; Morelull / Shiinotic; Sizzlipede / Centiskorch | MAP_FIVE_ISLAND, MAP_JOURNEYWORLDSEA05 |
+| Sevii | Five Island | Magnemite / Magneton / Magnezone; Blitzle / Zebstrika; Heatmor; Sizzlipede / Centiskorch | MAP_FIVE_ISLAND |
 | Sevii | Five Isle Meadow | Paras / Parasect; Ponyta / Rapidash / Ponyta Galar / Rapidash Galar; Unown; Nincada / Ninjask / Shedinja; Impidimp / Morgrem / Grimmsnarl | MAP_FIVE_ISLAND_MEADOW |
 | Sevii | Four Island | Marill / Azumarill / Azurill; Minccino / Cinccino; Elgyem / Beheeyem; Vullaby / Mandibuzz; Skiddo / Gogoat | MAP_FOUR_ISLAND, MAP_JOURNEYWORLDSEA04 |
 | Kanto | Fuchsia City | Kabuto / Kabutops | MAP_FUCHSIA_CITY |
@@ -94,24 +94,24 @@ Use a busca pelo nome do Pokémon nesta página ou filtre a planilha `pokemon-lo
 | Hoenn | Route 101 | Patrat / Watchog; Cottonee / Whimsicott; Dedenne; Greavard / Houndstone | MAP_ROUTE101 |
 | Hoenn | Route 102 | Rockruff / Lycanroc Midday; Fomantis / Lurantis; Arrokuda / Barraskewda; Snom / Frosmoth | MAP_ROUTE102 |
 | Hoenn | Route 103 | Volbeat; Deerling Spring / Sawsbuck Spring; Wattrel / Kilowattrel; Klawf | MAP_ROUTE103 |
-| Hoenn | Route 104 | Venonat / Venomoth; Gulpin / Swalot; Roselia / Budew / Roserade; Skrelp / Dragalge | MAP_ROUTE104 |
+| Hoenn | Route 104 | Venonat / Venomoth; Gulpin / Swalot; Skrelp / Dragalge | MAP_ROUTE104 |
 | Hoenn | Route 105 | Poliwag / Poliwhirl / Poliwrath / Politoed | MAP_ROUTE105 |
 | Hoenn | Route 106 | Wingull / Pelipper | MAP_ROUTE106 |
 | Hoenn | Route 107 | Lotad / Lombre / Ludicolo | MAP_ROUTE107 |
 | Hoenn | Route 108 | Ducklett / Swanna | MAP_ROUTE108 |
 | Hoenn | Route 109 | Magikarp / Gyarados | MAP_ROUTE109 |
-| Kanto | Route 11 | Yanma / Yanmega; Drifloon / Drifblim; Foongus / Amoonguss; Tatsugiri Curly | MAP_ROUTE11 |
+| Kanto | Route 11 | Yanma / Yanmega; Foongus / Amoonguss; Tatsugiri Curly | MAP_ROUTE11 |
 | Hoenn | Route 110 | Psyduck / Golduck; Hitmonlee / Hitmonchan / Tyrogue / Hitmontop; Skwovet / Greedent; Morpeko Full Belly | MAP_ROUTE110 |
-| Hoenn | Route 111 | Carnivine; Hawlucha; Noibat / Noivern; Chewtle / Drednaw | MAP_ROUTE111 |
+| Hoenn | Route 111 | Hawlucha; Noibat / Noivern; Chewtle / Drednaw | MAP_ROUTE111 |
 | Hoenn | Route 112 | Goomy / Sliggoo / Goodra / Sliggoo Hisui / Goodra Hisui; Grookey / Thwackey / Rillaboom; Indeedee M; Dracozolt | MAP_ROUTE112 |
 | Hoenn | Route 113 | Koffing / Weezing / Weezing Galar; Taillow / Swellow; Yungoos / Gumshoos; Squawkabilly Green | MAP_ROUTE113 |
 | Hoenn | Route 114 | Timburr / Gurdurr / Conkeldurr; Swirlix / Slurpuff; Grubbin / Charjabug / Vikavolt; Flittle / Espathra | MAP_JOURNEYDEWFORDCOAST, MAP_JOURNEYRUSTBOROCOAST, MAP_ROUTE114 |
-| Hoenn | Route 115 | Krabby / Kingler; Pachirisu; Rowlet / Dartrix / Decidueye / Decidueye Hisui; Bramblin / Brambleghast | MAP_ROUTE115 |
+| Hoenn | Route 115 | Krabby / Kingler; Pachirisu; Bramblin / Brambleghast | MAP_ROUTE115 |
 | Hoenn | Route 116 | Munna / Musharna; Cutiefly / Ribombee; Nymble / Lokix; Fidough / Dachsbun | MAP_ROUTE116 |
 | Hoenn | Route 117 | Machop / Machoke / Machamp; Panpour / Simipour; Tynamo / Eelektrik / Eelektross; Silicobra / Sandaconda | MAP_ROUTE117 |
 | Hoenn | Route 118 | Corphish / Crawdaunt; Lillipup / Herdier / Stoutland; Rookidee / Corvisquire / Corviknight; Brute Bonnet | MAP_ROUTE118 |
 | Hoenn | Route 119 | Oddish / Gloom / Vileplume / Bellossom; Slowpoke / Slowbro / Slowking / Slowpoke Galar / Slowbro Galar / Slowking Galar; Wurmple / Silcoon / Beautifly / Cascoon / Dustox; Iron Moth | MAP_ROUTE119 |
-| Kanto | Route 12 | Clamperl / Huntail / Gorebyss; Snover / Abomasnow; Mudbray / Mudsdale; Cufant / Copperajah | MAP_ROUTE12 |
+| Kanto | Route 12 | Clamperl / Huntail / Gorebyss; Mudbray / Mudsdale; Cufant / Copperajah | MAP_ROUTE12 |
 | Hoenn | Route 120 | Weedle / Kakuna / Beedrill; Gastly / Haunter / Gengar; Mareanie / Toxapex; Rellor / Rabsca | MAP_ROUTE120 |
 | Hoenn | Route 121 | Rattata / Raticate / Rattata Alola / Raticate Alola; Croagunk / Toxicroak; Audino; Applin / Flapple / Appletun / Dipplin / Hydrapple | MAP_ROUTE121 |
 | Hoenn | Route 122 | Wishiwashi Solo | MAP_ROUTE122 |
@@ -123,7 +123,7 @@ Use a busca pelo nome do Pokémon nesta página ou filtre a planilha `pokemon-lo
 | Hoenn | Route 128 | Quaxly / Quaxwell / Quaquaval | MAP_ROUTE128 |
 | Hoenn | Route 129 | Piplup / Prinplup / Empoleon | MAP_ROUTE129 |
 | Kanto | Route 13 | Goldeen / Seaking; Whismur / Loudred / Exploud; Mr Mime / Mime Jr / Mr Rime / Mr Mime Galar; Woobat / Swoobat | MAP_ROUTE13 |
-| Hoenn | Route 130 | Mienfoo / Mienshao; Scatterbug Icy Snow / Spewpa Icy Snow / Vivillon Icy Snow; Veluza; Iron Jugulis | MAP_ROUTE130 |
+| Hoenn | Route 130 | Mienfoo / Mienshao; Veluza; Iron Jugulis | MAP_ROUTE130 |
 | Hoenn | Route 131 | Lapras | MAP_ROUTE131 |
 | Hoenn | Route 132 | Sobble / Drizzile / Inteleon | MAP_ROUTE132 |
 | Hoenn | Route 133 | Dondozo | MAP_ROUTE133 |
@@ -136,13 +136,13 @@ Use a busca pelo nome do Pokémon nesta página ou filtre a planilha `pokemon-lo
 | Kanto | Route 19 | Dewpider / Araquanid | MAP_ROUTE19 |
 | Kanto | Route 2 | Jigglypuff / Wigglytuff / Igglybuff; Makuhita / Hariyama; Spinda; Emolga | MAP_ROUTE2 |
 | Kanto | Route 20 | Chinchou / Lanturn | MAP_ROUTE20 |
-| Kanto | Route 21 | Shuckle; Combee / Vespiquen; Sewaddle / Swadloon / Leavanny; Stufful / Bewear | MAP_ROUTE21_NORTH, MAP_ROUTE21_SOUTH |
+| Kanto | Route 21 | Shuckle; Stufful / Bewear | MAP_ROUTE21_NORTH, MAP_ROUTE21_SOUTH |
 | Kanto | Route 22 | Ledyba / Ledian; Pidove / Tranquill / Unfezant; Basculin Red Striped; Scraggy / Scrafty | MAP_ROUTE22 |
 | Kanto | Route 23 | Illumise; Swablu / Altaria; Glameow / Purugly; Solosis / Duosion / Reuniclus | MAP_ROUTE23 |
 | Kanto | Route 24 | Hoppip / Skiploom / Jumpluff; Luvdisc; Bounsweet / Steenee / Tsareena; Slither Wing | MAP_ROUTE24 |
-| Kanto | Route 25 | Natu / Xatu; Pansage / Simisage; Pikipek / Trumbeak / Toucannon; Capsakid / Scovillain | MAP_ROUTE25 |
-| Kanto | Route 3 | Pikachu / Raichu / Pichu / Raichu Alola; Cherubi / Cherrim Overcast; Helioptile / Heliolisk; Poltchageist Counterfeit / Sinistcha Unremarkable | MAP_ROUTE3 |
-| Kanto | Route 4 | Teddiursa / Ursaring / Ursaluna; Burmy Plant / Wormadam Plant / Mothim Plant; Frillish / Jellicent; Hatenna / Hattrem / Hatterene | MAP_ROUTE4 |
+| Kanto | Route 25 | Natu / Xatu; Pikipek / Trumbeak / Toucannon; Capsakid / Scovillain | MAP_ROUTE25 |
+| Kanto | Route 3 | Pikachu / Raichu / Pichu / Raichu Alola; Helioptile / Heliolisk; Poltchageist Counterfeit / Sinistcha Unremarkable | MAP_ROUTE3 |
+| Kanto | Route 4 | Teddiursa / Ursaring / Ursaluna; Frillish / Jellicent; Hatenna / Hattrem / Hatterene | MAP_ROUTE4 |
 | Kanto | Route 5 | Voltorb / Electrode / Voltorb Hisui / Electrode Hisui; Nickit / Thievul; Lechonk / Oinkologne M; Cyclizar | MAP_ROUTE5 |
 | Kanto | Route 6 | Hoothoot / Noctowl; Skitty / Delcatty; Bidoof / Bibarel; Trubbish / Garbodor | MAP_ROUTE6 |
 | Kanto | Route 7 | Starly / Staravia / Staraptor; Pansear / Simisear; Rufflet / Braviary / Braviary Hisui; Comfey | MAP_ROUTE7 |
@@ -171,6 +171,8 @@ Use a busca pelo nome do Pokémon nesta página ou filtre a planilha `pokemon-lo
 | Kanto | Viridian Forest | Zubat / Golbat / Crobat; Spinarak / Ariados; Sunkern / Sunflora; Sneasel / Weavile / Sneasler / Sneasel Hisui | MAP_VIRIDIAN_FOREST |
 | Sevii | Water Labyrinth | Dracovish | MAP_FIVE_ISLAND_WATER_LABYRINTH |
 | Sevii | Water Path | Torkoal; Shinx / Luxio / Luxray; Petilil / Lilligant / Lilligant Hisui; Tarountula / Spidops | MAP_SIX_ISLAND_WATER_PATH |
+| Sevii | Emerald Cay | Morelull / Shiinotic | MAP_JOURNEYWORLDSEA05 |
+| Sevii | Tidewood Isle | Rowlet / Dartrix / Decidueye / Decidueye Hisui; Sewaddle / Swadloon / Leavanny; Roselia / Budew / Roserade; Cherubi / Cherrim Overcast; Drifloon / Drifblim; Carnivine; Snover / Abomasnow; Pansage / Simisage | MAP_JOURNEYWORLDSEA09 |
 
 ## Lendários, míticos e Ultra Beasts
 

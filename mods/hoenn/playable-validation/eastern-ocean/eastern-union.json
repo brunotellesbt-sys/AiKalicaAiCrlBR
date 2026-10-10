@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "rom_sha256": "b478b3a5efb0352cc2a762eadee9746d1d254b0163c2d07a17cd63e18e88c9c8",
+  "rom_sha256": "b07a385217a96bda269df1739ad1f1e3222a2c6bac3972a5f222d68705cc883d",
   "surf_seams": [
     {
       "source": "JourneyFuchsiaSea",
@@ -6395,6 +6395,41 @@
       ]
     },
     {
+      "map": "JourneyWorldSea01",
+      "position": [
+        50,
+        22
+      ]
+    },
+    {
+      "map": "JourneyWorldSea02",
+      "position": [
+        44,
+        22
+      ]
+    },
+    {
+      "map": "JourneyWorldSea03",
+      "position": [
+        10,
+        22
+      ]
+    },
+    {
+      "map": "JourneyWorldSea02",
+      "position": [
+        44,
+        22
+      ]
+    },
+    {
+      "map": "JourneyWorldSea01",
+      "position": [
+        50,
+        22
+      ]
+    },
+    {
       "map": "JourneyEverGrandeBackSea",
       "position": [
         80,
@@ -6561,13 +6596,121 @@
     {
       "source": [
         "JourneyWorldSea04",
+        42,
+        0
+      ],
+      "destination": [
+        "JourneyWorldFill10Right",
+        1,
+        47
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldFill10Right",
+        9,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea01",
+        50,
+        47
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea01",
+        63,
+        22
+      ],
+      "destination": [
+        "JourneyWorldSea02",
         0,
-        36
+        22
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea02",
+        63,
+        21
+      ],
+      "destination": [
+        "JourneyWorldSea03",
+        0,
+        21
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea03",
+        0,
+        22
+      ],
+      "destination": [
+        "JourneyWorldSea02",
+        63,
+        22
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea02",
+        0,
+        22
+      ],
+      "destination": [
+        "JourneyWorldSea01",
+        63,
+        22
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea01",
+        0,
+        22
+      ],
+      "destination": [
+        "JourneyWorldSea00",
+        63,
+        22
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea00",
+        50,
+        47
+      ],
+      "destination": [
+        "JourneyMossdeepOuterEastSea",
+        50,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyMossdeepOuterEastSea",
+        50,
+        31
+      ],
+      "destination": [
+        "JourneyHoennMiddleEastSea",
+        50,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyHoennMiddleEastSea",
+        50,
+        39
       ],
       "destination": [
         "JourneyEverGrandeBackSea",
-        93,
-        12
+        80,
+        0
       ]
     },
     {
@@ -6619,7 +6762,7 @@
       ]
     }
   ],
-  "position_changes": 854,
+  "position_changes": 1330,
   "save_continue": [
     "JourneyEverGrandeBackSouthSea",
     "JourneyWorldSea06"

@@ -46,18 +46,31 @@ const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8765/';
       fs.writeFileSync('/tmp/playable-browser-state.bin',bytes);
       throw new Error('Could not locate the native mGBA state header');
     }
+    await page.evaluate(gameCode => {
+      window.readNativeTestFrame = () => {
+        const bytes=EJS_emulator.gameManager.getState();
+        const view=new DataView(bytes.buffer,bytes.byteOffset,bytes.byteLength);
+        for(let at=0x1c;at+4<=bytes.length;at++) {
+          if(![...gameCode].every((c,i)=>bytes[at+i]===c.charCodeAt(0)))continue;
+          const base=at-0x1c;
+          if(base+0x200<=bytes.length && (view.getUint32(base,true)>>>8)===0x010000)
+            return view.getUint32(base+0x1fc,true);
+        }
+        throw new Error('Missing native mGBA state header');
+      };
+    },manifest.game_code);
     const state = await page.evaluate(() => Array.from(EJS_emulator.gameManager.getState()));
     const savedCoreFrame=coreFrame(state);
     if (state.length<1000) throw new Error('Could not export state');
     await page.waitForTimeout(1500);
-    const advanced=coreFrame(await page.evaluate(() => Array.from(EJS_emulator.gameManager.getState())));
+    const advanced=await page.evaluate(() => readNativeTestFrame());
     await page.evaluate(data => EJS_emulator.gameManager.loadState(new Uint8Array(data)),state);
     // The threaded core applies the request on its next iteration. Wait for
     // native frame rollback, rather than inspecting before the worker applies it.
     let restored, restoreSamples=[];
     for (let attempt=0;attempt<40;attempt++) {
       await page.waitForTimeout(25);
-      restored=coreFrame(await page.evaluate(() => Array.from(EJS_emulator.gameManager.getState())));
+      restored=await page.evaluate(() => readNativeTestFrame());
       restoreSamples.push(restored);
       if (restored<advanced && Math.abs(restored-savedCoreFrame)<=30) break;
     }

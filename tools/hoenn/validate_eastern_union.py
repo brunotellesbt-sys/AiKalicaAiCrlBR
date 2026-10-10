@@ -83,11 +83,15 @@ for n,x,y in [
  ('JourneyEverGrandeBackSea',30,20),('JourneyEverGrandeBackSouthSea',30,20),
  ('JourneyHoennSouthSea',90,12),('JourneyHoennSouthEastSea',40,12),
  ('JourneyWorldSea06',12,20),('JourneyWorldLane11',8,30),
- ('JourneyWorldSea04',12,36),('JourneyEverGrandeBackSea',80,20),
+ ('JourneyWorldSea04',12,36),
+ ('JourneyWorldSea01',50,22),('JourneyWorldSea02',44,22),
+ ('JourneyWorldSea03',10,22),('JourneyWorldSea02',44,22),
+ ('JourneyWorldSea01',50,22),('JourneyEverGrandeBackSea',80,20),
  ('JourneyHoennMiddleSea',100,30),('JourneyMossdeepOuterSea',100,20),
  ('JourneyHoennNorthSea',100,35),('JourneyHoennNorthSea',40,22),start]:
  leg(n,x,y)
  if n in ['JourneyEverGrandeBackSouthSea','JourneyWorldSea06']:checkpoint(n)
+ if n=='JourneyWorldSea02':picture('two-three-shrine-surf-access')
 assert location()==map_id(start[0]) and position()==start[1:]
 lib.stop()
 (args.output/'eastern-union.json').write_text(json.dumps(dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),surf_seams=seams,preserved_cliff_edges=cliffs,continuous_roundtrip=True,independent_seam_and_roundtrip_emulators=True,legs=legs,transitions=transitions,position_changes=walked,save_continue=saves,initial_party_location_and_defeated_trainer_flags_are_fixtures=True,no_midroute_warps=True,defeated_trainer_flags_count=trainer_count-1,safari_mode_disabled=True,full_campaign_playthrough=False),indent=2)+'\n')

@@ -53,3 +53,5 @@ python3 tools/hoenn/package_playable.py --source <nova-pasta> --build --output m
 ```
 
 O exportador verifica os arquivos finais das camadas. Uma fonte preparada pode ser reutilizada; uma cadeia com camadas ausentes no meio ou hashes divergentes é recusada. Os assets e executáveis de desenvolvimento permanecem fora do pacote jogável.
+
+As três novas ilhas e seus ramais estão incluídos nesta ROM: [Emerald Cay, Sunlit Isle e Tidewood Isle](REMOTE-ISLANDS.md). A grama das duas maiores contém oito famílias por ilha. A referência completa da Pokédex foi regenerada em `POKEMON-LOCATIONS.md` e `pokemon-locations.csv`.

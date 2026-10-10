@@ -67,20 +67,25 @@ def prepare(source):
  terrain={};rock_blocks={};landscape=[];rocks=[0x510,0x511,0x518,0x519];water=0x112B
  shore=[0x10C,0x10D,0x10E,0x114,0x115,0x116,0x11C,0x11D,0x11E]
  def decorate(n,v,w,h,actors=()):
-  rng=random.Random(n+'-compact-islands');land=set();patches=[];grass=0
+  rng=random.Random(n+'-uneven-coasts');land=set();patches=[];grass=0
   occupied={(o['x']+dx,o['y']+dy) for o in actors if o['elevation']==1 for dx in range(-2,3) for dy in range(-2,3)}
   protected=lambda x,y:min(x,y,w-1-x,h-1-y)<2 or abs(x-w//2)<2 or (h>=12 and abs(y-h//2)<2)
   count=1 if h<12 else 2 if min(w,h)<25 else min(5,2+w*h//1900)
   for _ in range(400):
    if len(patches)>=count:break
    cx=rng.randrange(3,w-3);cy=rng.randrange(2,h-2)
-   limit=min(5.2,(min(w,h)/2-3)/2) if h>=12 else 1.7
-   radius=rng.uniform(max(1.6,limit*.75),max(1.7,limit));rx=radius*rng.uniform(.9,1.12);ry=radius*rng.uniform(.9,1.12);phase=rng.random()*6.28
+   limit=min(5.2 if min(w,h)>=30 else 2.5,(min(w,h)/2-3)/2) if h>=12 else 1.7
+   radius=rng.uniform(max(1.6,limit*.75),max(1.7,limit));rx=radius*rng.uniform(1.05,1.35);ry=radius*rng.uniform(.75,1.05);phase=rng.random()*6.28
    patch=set()
    for y in range(int(cy-ry-2),int(cy+ry+3)):
     for x in range(int(cx-rx-2),int(cx+rx+3)):
-     angle=math.atan2(y-cy,x-cx);edge=1+.13*math.sin(3*angle+phase)+.07*math.sin(5*angle+phase)
+     angle=math.atan2(y-cy,x-cx);edge=1+.22*math.sin(3*angle+phase)+.12*math.sin(5*angle+phase)+.09*math.cos(angle-phase)
      if ((x-cx)/rx)**2+((y-cy)/ry)**2<edge**2:patch.add((x,y))
+   if h<12:
+    # A short channel permits only a three-tile shore. Stagger its rows so
+    # even the smallest island has an unequal coastline, never a square.
+    small=[(0,0),(1,0),(2,0),(0,1),(1,1),(2,1),(3,1),(1,2),(2,2),(3,2)]
+    flip=rng.choice([-1,1]);patch={(cx+flip*dx,cy+dy-1) for dx,dy in small}
    # Reject clipped islands wholesale: clipping created the repeated thin strips.
    if len(patch)<8 or any(protected(x,y) or (x,y) in occupied or v[y*w+x]!=water for x,y in patch):continue
    if any((x+dx,y+dy) in land for x,y in patch for dx in range(-2,3) for dy in range(-2,3)):continue

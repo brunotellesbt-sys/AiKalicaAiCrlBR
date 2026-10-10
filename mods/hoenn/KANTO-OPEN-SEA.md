@@ -10,7 +10,7 @@ O oceano une a costa de Fuchsia ao mar abaixo das Rotas 14 e 13, à aproximaçã
 
 O mapa do jogo mostra mar uniforme, a área navegável em azul escuro e a ponte em amarelo. Nomes e diálogos permanecem em inglês.
 
-Os trechos novos têm ilhotas compactas, de tamanhos diferentes, com interiores verdes e praias de areia, recifes espaçados e pedras aquáticas completas de 2×2 tiles nas bordas sem conexão. Os corredores centrais e as faixas abertas entre mapas permanecem livres. A maior parte de cada mapa continua sendo água.
+Os trechos novos têm ilhotas compactas, com lados desiguais, pequenas enseadas e pontas de areia, com interiores verdes e praias de areia, recifes espaçados e pedras aquáticas completas de 2×2 tiles nas bordas sem conexão. Os corredores centrais e as faixas abertas entre mapas permanecem livres. A maior parte de cada mapa continua sendo água.
 
 ![Terreno real das novas costas](coast-gallery/coast-overview.png)
 
