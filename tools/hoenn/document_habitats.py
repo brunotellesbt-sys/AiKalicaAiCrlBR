@@ -76,6 +76,11 @@ def generate(source,output):
  '## Limites da validação','',
  'Kanto, Hoenn e Sevii estão conectados na candidata; 96 travessias físicas por Surf e as entradas e saídas dos 14 santuários têm verificações nativas registradas. Ainda faltam revisão completa das rotas, interiores, NPCs, puzzles e as duas campanhas jogadas integralmente. Os relatórios de mGBA cobrem situações específicas; não equivalem a finalizar o jogo.', '',
  'A arte de 3.323 imagens e 3.154 paletas foi comparada no motor ARM aos dados compilados. As 97 Megas têm referências auditadas; cinco transformações reais, Battle Bond, trocas, desmaios e batalhas duplas possuem verificações específicas. Isso não significa que todas as animações e batalhas foram jogadas. Os locais deste guia são da candidata, ainda não publicada no player.','']
+ sea_note = ['O [traçado marítimo atual](EASTERN-SEA-UNION.md) passa atrás de Ever Grande.',
+ 'As coordenadas de entradas e Dive deste catálogo permanecem iguais; o mar',
+ '`JourneyHoennSouthSea` fica junto à Rota 129 e a saída antiga da Rota 131',
+ 'não existe mais.', '', '']
+ if (source/'.journey-eastern-sea-union').exists():lines[2:2] = sea_note
  (output/'POKEMON-LOCATIONS.md').write_text('\n'.join(lines))
  stream=io.StringIO();writer=csv.DictWriter(stream,lineterminator='\n',fieldnames=['national_dex','species','internal_id','category','region','habitat','maps','access','unlock','family']);writer.writeheader();writer.writerows(sorted(ordinary,key=lambda r:(r['national_dex'],r['internal_id'])))
  (output/'pokemon-locations.csv').write_text(stream.getvalue())
@@ -94,6 +99,7 @@ def generate(source,output):
    site=next(s for s in special['sites'] if s['theme']==c['site']);x,y=site['entry'];y-=4 if site['access']=='surf' else 0
    guide.append(f"| {c['national_dex']} | {label(c['species'])} | {map_region(maps[c['surface']])} | {c['site']} | {c['surface']} | {'Surf' if c['access']=='surf' else 'Surf + Dive'} ({x}, {y}) | {tuple(c['position'])} |")
   guide.append('')
+ if (source/'.journey-eastern-sea-union').exists():guide[2:2] = sea_note
  (output/'SPECIAL-LOCATIONS.md').write_text('\n'.join(guide))
  evidence=dict(base_species=1025,canonical_rows=len(base_rows),ordinary_base_species=920,special_categories=categories,habitats=len(ecology['locations_data']),special_sites=len(special['sites']),referenced_maps=len(referenced),all_referenced_maps_exist=True,source_commit=catalog['source_commit'],input_sha256={n:hashlib.sha256((source/n).read_bytes()).hexdigest() for n in ('.journey-ecology','.journey-sanctuaries')})
  if (source/'.journey-lostelle-habitats').exists():evidence['input_sha256']['.journey-lostelle-habitats']=hashlib.sha256((source/'.journey-lostelle-habitats').read_bytes()).hexdigest()
@@ -101,6 +107,7 @@ def generate(source,output):
  if (source/'.journey-early-story-tools').exists():evidence['input_sha256']['.journey-early-story-tools']=hashlib.sha256((source/'.journey-early-story-tools').read_bytes()).hexdigest()
  if (source/'.journey-mandatory-native-missions').exists():evidence['input_sha256']['.journey-mandatory-native-missions']=hashlib.sha256((source/'.journey-mandatory-native-missions').read_bytes()).hexdigest()
  if (source/'.journey-sixteen-badge-leagues').exists():evidence['input_sha256']['.journey-sixteen-badge-leagues']=hashlib.sha256((source/'.journey-sixteen-badge-leagues').read_bytes()).hexdigest()
+ if (source/'.journey-eastern-sea-union').exists():evidence['input_sha256']['.journey-eastern-sea-union']=hashlib.sha256((source/'.journey-eastern-sea-union').read_bytes()).hexdigest()
  rom=source/'pokeemerald.gba'
  if rom.exists():evidence['rom_sha256']=hashlib.sha256(rom.read_bytes()).hexdigest()
  evidence['documents_sha256']={n:hashlib.sha256((output/n).read_bytes()).hexdigest() for n in ('POKEMON-LOCATIONS.md','SPECIAL-LOCATIONS.md','pokemon-locations.csv')}

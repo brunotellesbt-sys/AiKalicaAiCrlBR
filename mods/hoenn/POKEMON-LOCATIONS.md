@@ -1,5 +1,11 @@
 # Pokémon por habitat e encontros especiais
 
+O [traçado marítimo atual](EASTERN-SEA-UNION.md) passa atrás de Ever Grande.
+As coordenadas de entradas e Dive deste catálogo permanecem iguais; o mar
+`JourneyHoennSouthSea` fica junto à Rota 129 e a saída antiga da Rota 131
+não existe mais.
+
+
 Referência da candidata nativa com Kanto, Hoenn e Sevii. Não é uma declaração de que todas as histórias e mecânicas da integração estão concluídas.
 
 Os encontros aleatórios das 920 espécies-base comuns e variantes regionais ficam em 444 famílias, sem repetir famílias entre habitats. Andares da mesma caverna, zonas de Safari e a superfície/subsolo da mesma rota marinha contam como um habitat.

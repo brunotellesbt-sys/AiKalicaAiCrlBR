@@ -1,5 +1,10 @@
 # Imagens das novas rotas marítimas
 
+Esta galeria registra a camada `sea-landscapes`. O traçado leste atual está
+na [união atrás de Ever Grande](EASTERN-SEA-UNION.md); a antiga saída da
+Rota 131 foi substituída.
+
+
 Imagens geradas diretamente dos mapas e tilesets da candidata
 `68bbf008a3dcf522824aad80a6b7ae3ca061a7b7f15a39f03192d99c27177f63`.
 A galeria inclui **27 mapas marítimos e 14 interiores existentes**, com sprites
