@@ -1,5 +1,7 @@
 # Mar contínuo atrás de Ever Grande
 
+[Abertura da entrada leste de Ever Grande e mapa amplo com Vermilion](EVER-GRANDE-ENTRANCE.md).
+
 A nova faixa fica **na borda leste de Hoenn, além de Mossdeep e atrás de
 Ever Grande**, no ponto marcado na imagem. A antiga saída pelo sul da
 Rota 131 foi retirada. Pacifidlog continua ligada pelas Rotas 131, 130 e 129;
