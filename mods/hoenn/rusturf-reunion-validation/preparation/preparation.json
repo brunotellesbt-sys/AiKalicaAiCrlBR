@@ -1,0 +1,51 @@
+{
+  "status": "rusturf_reunion_candidate",
+  "source_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "original_sha256": {
+    "data/maps/RusturfTunnel/scripts.inc": "55b05911c50e743fba753ff36bc6ae26cc536e974c95652354d0145fb5b5f27c"
+  },
+  "prepared_sha256": {
+    "data/maps/RusturfTunnel/scripts.inc": "524a05ae5cbd0c3ed5ea839b5ceab9ee2caee4dc793cea3fc719392ef0d51a37"
+  },
+  "preserved_native_sha256": {
+    "src/journey_campaign_gates.c": "eaec31794670edc2943d1405ba3605d714dfb2447786f4cb3c2ff07d02300443",
+    "src/journey_gym_scaling.c": "9b1b64746a70c12fcf7f54a661aea151d8ee9e030810046d3d2ce71bef889840",
+    "src/journey_wild.c": "8272d70ab73464f7df041efb43076308e537f773f5d4a5edbb4439c216565adb",
+    "src/journey_family.c": "6da12e86a46d5b6e5d8f0c298f80d188bd491bc39491a23aa8b8ed9d2cfe0089",
+    "data/maps/RusturfTunnel/map.json": "6a9d84ceab01ffa3a2cac370298465bd31596191a5c35905af07aa7f60f4e500"
+  },
+  "edits": [
+    {
+      "path": "data/maps/RusturfTunnel/scripts.inc",
+      "before": "RusturfTunnel_EventScript_TunnelBlockagePos1::\n\tsetvar VAR_TEMP_1, 1\n\tend",
+      "after": "RusturfTunnel_EventScript_TunnelBlockagePos1::\n\tsetvar VAR_TEMP_1, 1\n\tgoto_if_unset FLAG_RECOVERED_DEVON_GOODS, RusturfTunnel_Journey_ReunionEnd\n\tgoto_if_set FLAG_RUSTURF_TUNNEL_OPENED, RusturfTunnel_Journey_ReunionEnd\n\tgoto_if_set FLAG_HIDE_RUSTURF_TUNNEL_WANDA, RusturfTunnel_Journey_ReunionEnd\n\tgoto_if_set FLAG_HIDE_RUSTURF_TUNNEL_WANDAS_BOYFRIEND, RusturfTunnel_Journey_ReunionEnd\n\tsetvar VAR_RUSTURF_TUNNEL_STATE, 4\n\tend"
+    },
+    {
+      "path": "data/maps/RusturfTunnel/scripts.inc",
+      "before": "RusturfTunnel_EventScript_TunnelBlockagePos2::\n\tsetvar VAR_TEMP_1, 2\n\tend",
+      "after": "RusturfTunnel_EventScript_TunnelBlockagePos2::\n\tsetvar VAR_TEMP_1, 2\n\tgoto_if_unset FLAG_RECOVERED_DEVON_GOODS, RusturfTunnel_Journey_ReunionEnd\n\tgoto_if_set FLAG_RUSTURF_TUNNEL_OPENED, RusturfTunnel_Journey_ReunionEnd\n\tgoto_if_set FLAG_HIDE_RUSTURF_TUNNEL_WANDA, RusturfTunnel_Journey_ReunionEnd\n\tgoto_if_set FLAG_HIDE_RUSTURF_TUNNEL_WANDAS_BOYFRIEND, RusturfTunnel_Journey_ReunionEnd\n\tsetvar VAR_RUSTURF_TUNNEL_STATE, 4\n\tend"
+    },
+    {
+      "path": "data/maps/RusturfTunnel/scripts.inc",
+      "before": "RusturfTunnel_EventScript_TunnelBlockagePos3::\n\tsetvar VAR_TEMP_1, 3\n\tend",
+      "after": "RusturfTunnel_EventScript_TunnelBlockagePos3::\n\tsetvar VAR_TEMP_1, 3\n\tgoto_if_unset FLAG_RECOVERED_DEVON_GOODS, RusturfTunnel_Journey_ReunionEnd\n\tgoto_if_set FLAG_RUSTURF_TUNNEL_OPENED, RusturfTunnel_Journey_ReunionEnd\n\tgoto_if_set FLAG_HIDE_RUSTURF_TUNNEL_WANDA, RusturfTunnel_Journey_ReunionEnd\n\tgoto_if_set FLAG_HIDE_RUSTURF_TUNNEL_WANDAS_BOYFRIEND, RusturfTunnel_Journey_ReunionEnd\n\tsetvar VAR_RUSTURF_TUNNEL_STATE, 4\n\tend"
+    },
+    {
+      "path": "data/maps/RusturfTunnel/scripts.inc",
+      "before": "\t.string \"Wow! You shattered that boulder\\n\"\n\t.string \"blocking the way.\\p\"\n\t.string \"To show you how much I appreciate it,\\n\"\n\t.string \"I'd like you to have this TM.$\"",
+      "after": "\t.string \"The path is clear now!\\n\"\n\t.string \"I can finally see WANDA.\\p\"\n\t.string \"Thank you for helping us.\\n\"\n\t.string \"Please take this TM!$\""
+    }
+  ],
+  "dialogue_lines": [
+    "The path is clear now!",
+    "I can finally see WANDA.",
+    "Thank you for helping us.",
+    "Please take this TM!"
+  ],
+  "requires_peeko_rescue": true,
+  "no_rock_smash_or_badges_required": true,
+  "original_reunion_movements_and_reward_preserved": true,
+  "reward": "ITEM_TM_STRENGTH",
+  "regional_gym_and_league_rules_preserved": true,
+  "full_campaign_validated": false
+}

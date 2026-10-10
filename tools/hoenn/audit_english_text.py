@@ -37,7 +37,7 @@ def audit(baseline, candidate):
     for layer in PRIOR + ['english-text', 'special-ball']:
         marker = candidate / ('.journey-' + layer)
         expected.update(json.loads(marker.read_text())['prepared_sha256'])
-    for layer in ['route131-sea-access', 'lostelle-habitats', 'tower-habitats', 'early-story-tools', 'mandatory-native-missions', 'sixteen-badge-leagues']:
+    for layer in ['route131-sea-access', 'lostelle-habitats', 'tower-habitats', 'early-story-tools', 'mandatory-native-missions', 'sixteen-badge-leagues', 'rusturf-reunion']:
         marker = candidate / ('.journey-' + layer)
         if marker.exists(): expected.update(json.loads(marker.read_text())['prepared_sha256'])
     scanned, literal_count = 0, 0
@@ -90,7 +90,15 @@ def audit(baseline, candidate):
             assert pixels <= 208, (line, pixels)
             league_lines.append(pixels)
         measured.extend(league_lines)
-    return dict(passed=True, game_language='English', translated_literals=sum(map(len, rows.values())),
+    reunion_lines = []
+    reunion_marker = candidate / '.journey-rusturf-reunion'
+    if reunion_marker.exists():
+        for line in json.loads(reunion_marker.read_text())['dialogue_lines']:
+            pixels = sum(widths[charmap[c]] for c in line)
+            assert pixels <= 208, (line, pixels)
+            reunion_lines.append(pixels)
+        measured.extend(reunion_lines)
+    return dict(passed=True, rusturf_reunion_lines=len(reunion_lines), game_language='English', translated_literals=sum(map(len, rows.values())),
         text_files=checked, scanned_manifest_source_files=scanned, scanned_quoted_literals=literal_count,
         portuguese_marker_matches=0, checked_dialogue_lines=len(measured),
         maximum_normal_font_line_pixels=max(measured), normal_font_limit_pixels=208,

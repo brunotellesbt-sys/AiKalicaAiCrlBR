@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "rom_sha256": "407bd93bf4ee7e01878cdf3186a2a3a5b3d15f6954c8de6dcce942599ef9f3d9",
+  "baseline_unreachable_reproduced": false,
+  "cases": [
+    {
+      "approach": 1,
+      "pre_rescue_does_not_complete": true,
+      "hidden_couple_does_not_start_scene": true,
+      "scene_triggered_by_walking": true,
+      "original_couple_exit": true,
+      "tm_strength_quantity": 1,
+      "native_continue": true,
+      "revisit_no_duplicate": true,
+      "no_moves_or_badges": true
+    },
+    {
+      "approach": 3,
+      "pre_rescue_does_not_complete": true,
+      "hidden_couple_does_not_start_scene": true,
+      "scene_triggered_by_walking": true,
+      "original_couple_exit": true,
+      "tm_strength_quantity": 1,
+      "native_continue": true,
+      "revisit_no_duplicate": true,
+      "no_moves_or_badges": true
+    }
+  ],
+  "initial_location_rescue_and_party_are_fixtures": true,
+  "full_campaign_playthrough": false
+}
