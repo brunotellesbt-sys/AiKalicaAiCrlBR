@@ -2,6 +2,8 @@
 
 [Como baixar e jogar](PLAYABLE-ALPHA.md) · [Mapa integrado no menu MAP](WORLD-MAP.md). A alpha reúne as 58 camadas; as duas campanhas completas continuam em validação.
 
+A versão atual conserva a travessia Cinnabar–Rustboro–Dewford, acrescenta costas variadas entre Fuchsia e Lavender Port e usa Fly no mapa integrado. A borda oeste de Kanto tem terra contínua, com a cor da costa original e sem o fio de água na emenda. [Costa nova e galeria](KANTO-OPEN-SEA.md).
+
 [Lavender Port: rede dos 18 portos, menus sem destino atual e animação de barco](LAVENDER-PORT-NETWORK.md).
 
 [Estaleiro de madeira, casa dos barqueiros e nova ligação de Surf pela Rota 12](ROUTE12-SHIPYARD.md).

@@ -9,6 +9,8 @@ PANELS={'kanto':(2,0,96,62),'hoenn':(0,66,130,46),'sevii_123':(132,17,88,39),'se
 NAMES={'JourneyRoute12Shipyard':'LAVENDER PORT','JourneyRoute12OuterSea':'LAVENDER OUTER SEA','JourneyCinnabarSouthSea':'CINNABAR SOUTH SEA','JourneyWestRiver':'WESTERN RIVER','JourneyRustboroCoast':'RUSTBORO COAST','JourneyDewfordCoast':'DEWFORD COAST','JourneyRustboroGate':'RUSTBORO CHANNEL','JourneyDewfordGate':'DEWFORD CHANNEL','JourneyFuchsiaSea':'FUCHSIA SEA','JourneyHoennCrossing':'KANTO-HOENN CROSSING'}
 
 def prepare(source, layer=LAYER, chain=CHAIN, refresh=False):
+ panels=dict(PANELS)
+ if refresh:panels.update(hoenn=(6,66,124,46),sevii_123=(118,17,88,39),sevii_45=(137,59,60,26),sevii_67=(137,88,60,24))
  source=Path(source);marker=source/('.journey-'+layer)
  if marker.exists():
   r=json.loads(marker.read_text())
@@ -26,7 +28,7 @@ def prepare(source, layer=LAYER, chain=CHAIN, refresh=False):
  def asset(p):
   raw=(ROOT/p).read_bytes();assets[p]=hashlib.sha256(raw).hexdigest();return raw
  sections=json.loads(read('src/data/region_map/region_map_sections.json'))['map_sections'];bysec={x['id']:x for x in sections};secids={x['id']:i for i,x in enumerate(sections)}
- atlas=json.loads(asset('web/world-layout.json'));known={p['id']:p['panel'] for p in atlas['points'] if p['panel'] in PANELS}
+ atlas=json.loads(asset('web/world-layout.json'));known={p['id']:p['panel'] for p in atlas['points'] if p['panel'] in panels}
  regions=read('src/regions.c').decode()
  for key,panel_name in [('SEVII123','sevii_123'),('SEVII45','sevii_45'),('SEVII67','sevii_67')]:
   block=re.search(r'\[KANTO_SUBREGION_'+key+r'\]\s*=\s*\{(.*?)\}',regions,re.S)[1]
@@ -38,10 +40,10 @@ def prepare(source, layer=LAYER, chain=CHAIN, refresh=False):
   if secids['MAPSEC_ONE_ISLAND']<=secids[sec]<secids['MAPSEC_SEVII_ISLE_22']:return 'sevii_123'
   return 'kanto'
  def coord(sec):
-  d=bysec[sec];p=panel(sec);x,y,w,h=PANELS[p];sw,sh=Image.open(ROOT/'web/atlas'/(p+'.png')).size if refresh else ((176,120) if p=='kanto' else (224,136))
+  d=bysec[sec];p=panel(sec);x,y,w,h=panels[p];sw,sh=Image.open(ROOT/'web/atlas'/(p+'.png')).size if refresh else ((176,120) if p=='kanto' else (224,136))
   return (max(4,min(219,round(x+(d['x']+d['width']/2)*8*w/sw))),max(4,min(107,round(y+(d['y']+d['height']/2)*8*h/sh))))
  image=Image.new('RGB',(224,112),(112,184,232))
- for p,(x,y,w,h) in PANELS.items():
+ for p,(x,y,w,h) in panels.items():
   asset('web/atlas/'+p+'.png');im=Image.open(ROOT/'web/atlas'/ (p+'.png')).convert('RGB')
   # Water is a single world color. Native dark strips are reconstructed as
   # navigable route rectangles below; regional water palettes do not survive.
@@ -59,12 +61,16 @@ def prepare(source, layer=LAYER, chain=CHAIN, refresh=False):
     seen.add((xx,yy));im.putpixel((xx,yy),sea);todo.extend([(xx-1,yy),(xx+1,yy),(xx,yy-1),(xx,yy+1)])
   elif p=='kanto':ImageDraw.Draw(im).rectangle((im.width-10,im.height-10,im.width,im.height),fill=(112,184,232))
   image.paste(im.resize((w,h),Image.Resampling.NEAREST),(x,y))
+ if refresh:
+  terrain=ImageDraw.Draw(image)
+  terrain.polygon([(27,66),(29,64),(34,65),(38,63),(43,64),(48,62),(53,63),(58,63),(63,64),(68,63),(74,65),(80,64),(84,66)],fill=(24,112,0))
+  terrain.polygon([(30,66),(35,65),(39,64),(45,65),(49,63),(55,64),(62,65),(68,64),(74,66)],fill=(48,152,0))
  base_image=image.copy()
  draw=ImageDraw.Draw(image)
  # Retain the original sea-route positions using the sections' native bounds.
  for sec in sections:
   if re.fullmatch(r'MAPSEC_ROUTE_(19|20|21|10[5-9]|12[4-9]|13[0-4])',sec['id']):
-   p=panel(sec['id']);x,y,w,h=PANELS[p];sw,sh=Image.open(ROOT/'web/atlas'/(p+'.png')).size if refresh else ((176,120) if p=='kanto' else (224,136))
+   p=panel(sec['id']);x,y,w,h=panels[p];sw,sh=Image.open(ROOT/'web/atlas'/(p+'.png')).size if refresh else ((176,120) if p=='kanto' else (224,136))
    a=round(x+sec['x']*8*w/sw);b=round(y+sec['y']*8*h/sh)
    c=round(x+(sec['x']+sec['width'])*8*w/sw);d=round(y+(sec['y']+sec['height'])*8*h/sh)
    if a<c and b<d:draw.rectangle((a,b,c-1,d-1),fill=(48,104,176))
@@ -72,14 +78,17 @@ def prepare(source, layer=LAYER, chain=CHAIN, refresh=False):
  for group in groups['group_order']:
   for name in groups[group]:
    p='data/maps/'+name+'/map.json';d=json.loads(read(p))
-   if d.get('map_type') in ['MAP_TYPE_TOWN','MAP_TYPE_CITY','MAP_TYPE_ROUTE','MAP_TYPE_OCEAN_ROUTE'] or name.startswith('JourneySanctuary'):maps[name]=d
+   if d.get('map_type') in ['MAP_TYPE_TOWN','MAP_TYPE_CITY','MAP_TYPE_ROUTE','MAP_TYPE_OCEAN_ROUTE'] or name.startswith('JourneySanctuary') or (refresh and 'Harbor' in name and d.get('connections')):maps[name]=d
  points=[];loc={};native_cities=set()
  # One point per native outdoor section; new marine maps get separate points below.
  for name,d in maps.items():
   if name.startswith('Journey'):continue
   sec=d['region_map_section']
-  if sec not in bysec or sec in native_cities:continue
-  native_cities.add(sec);x,y=coord(sec)
+  if sec not in bysec:continue
+  x,y=coord(sec)
+  if refresh:loc[name]=(x,y)
+  if sec in native_cities:continue
+  native_cities.add(sec)
   points.append(dict(map=name,id=d['id'],section=sec,x=x,y=y,name=bysec[sec]['name'][:36]));loc[name]=(x,y)
  # Current eastern grid, in map-order: 1/2/3 above 4/5 above 6/7.
  east=json.loads((source/'.journey-eastern-sea-union').read_text())['rectangles']
@@ -88,10 +97,11 @@ def prepare(source, layer=LAYER, chain=CHAIN, refresh=False):
    loc[r['map']]=(max(105,min(216,round(111+(r['x']+r['width']/2-190)*.36))),max(45,min(106,round(47+(r['y']+r['height']/2)*.23))))
  loc.update(JourneyRoute12Shipyard=(103,43),JourneyRoute12OuterSea=(105,35),JourneyFuchsiaSea=(88,52),JourneyHoennCrossing=(68,67),JourneyCinnabarSouthSea=(18,65),JourneyWestRiver=(12,75),JourneyRustboroCoast=(7,83),JourneyDewfordCoast=(21,100),JourneyRustboroGate=(12,86),JourneyDewfordGate=(29,103))
  if (source/'.journey-kanto-open-sea').exists():
-  loc.update(JourneyFuchsiaSea=(63,60),JourneyKantoSouthWestSea=(63,57),JourneyKantoSouthSea=(76,57),JourneyRoute13Coast=(84,53),JourneyKantoCoastalBand=(77,61),JourneyLavenderApproach=(98,49),JourneyKantoEasternChannel=(90,61),JourneyOneIslandChannel=(84,59),JourneyFuchsiaInlet=(64,56),JourneyLavenderApproachSouth=(105,57),JourneyRoute12Shipyard=(93,43),JourneyRoute12OuterSea=(94,34))
-  # This is now a continuous navigable coastal sea, rather than isolated lines.
-  draw.polygon([(57,57),(87,57),(96,47),(112,47),(112,66),(57,66)],fill=(48,104,176))
-  draw.rectangle((107,60,194,105),fill=(48,104,176))
+  loc.update(JourneyFuchsiaSea=(63,60),JourneyKantoSouthWestSea=(66,60),JourneyKantoSouthSea=(76,60),JourneyRoute13Coast=(84,53),JourneyKantoCoastalBand=(77,60),JourneyLavenderApproach=(98,49),JourneyKantoEasternChannel=(90,61),JourneyOneIslandChannel=(84,59),JourneyFuchsiaInlet=(64,56),JourneyLavenderApproachSouth=(105,57),JourneyRoute12Shipyard=(85,40),JourneyRoute12OuterSea=(85,37))
+  if refresh:loc.update(JourneyWestRiver=(2,75),JourneyRustboroCoast=(2,83),JourneyDewfordCoast=(18,100))
+  # Depict the Fuchsia crossing as a narrow sea route, like Route 20.
+  draw.line([(57,60),(105,60)],fill=(48,104,176),width=2)
+
   NAMES.update(JourneyKantoSouthWestSea='FUCHSIA COAST',JourneyKantoSouthSea='KANTO SOUTH SEA',JourneyRoute13Coast='ROUTE 13 COAST',JourneyKantoCoastalBand='KANTO COASTAL CHANNEL',JourneyLavenderApproach='LAVENDER APPROACH')
  # Shrines belong to their actual parent sea, rather than to a reused native section.
  sites=json.loads((source/'.journey-sanctuaries').read_text())['sites']
@@ -118,18 +128,63 @@ def prepare(source, layer=LAYER, chain=CHAIN, refresh=False):
    p,q=loc[a],loc[b];connections.append(dict(source=a,destination=b,direction=c['direction'],start=list(p),end=list(q)))
    if not any('WorldFill' in n for n in [a,b]):
     bridge=(source/'.journey-kanto-open-sea').exists() and {a,b} in [{'Route12_Frlg','JourneyRoute12OuterSea'},{'JourneyRoute12OuterSea','JourneyRoute12Shipyard'}]
-    if not bridge:draw.line([p,(q[0],p[1]),q],fill=(48,104,176),width=2)
+    western=any(n in {'JourneyCinnabarSouthSea','JourneyWestRiver','JourneyRustboroCoast','JourneyDewfordCoast','JourneyRustboroGate','JourneyDewfordGate'} for n in [a,b])
+    if not bridge and (not refresh or western):draw.line([p,(q[0],p[1]),q],fill=(48,104,176),width=2)
+ if refresh:
+  # Regional route strips follow the approved sketch. The surrounding ocean
+  # stays light blue; only these corridors are marked, never a filled sea.
+  corridors=[
+   [(85,40),(156,40)],[(57,60),(188,60)],
+   [(90,40),(90,77)],[(124,39),(124,80)],
+   [(156,40),(156,100)],[(188,50),(188,100)],
+   [(117,60),(117,83)],[(117,80),(188,80)],
+   [(108,100),(188,100)],[(128,94),(128,100)],
+   [(188,50),(192,50)],[(147,67),(156,67)],
+   [(182,79),(188,79)],[(185,97),(188,97)],
+   [(152,102),(156,102)],[(156,100),(156,102)]
+  ]
+  for strip in corridors:draw.line(strip,fill=(48,104,176),width=2)
+  # Match the four-pixel native Route 20 band through the first crossing.
+  draw.rectangle((57,58,91,61),fill=(48,104,176))
  if (source/'.journey-kanto-open-sea').exists():
-  draw.line([(83,39),(89,39),(89,43),(93,43)],fill=(248,208,56),width=1)
+  draw.line([(83,39),(85,39),(85,40)],fill=(248,208,56),width=1)
  # Route markings may recolor sea, never cover land or native city markers.
  for yy in range(image.height):
   for xx in range(image.width):
    if base_image.getpixel((xx,yy))!=(112,184,232):image.putpixel((xx,yy),base_image.getpixel((xx,yy)))
  for p in points:
-  if p['map'].startswith('JourneySanctuary'):draw.rectangle((p['x']-1,p['y']-1,p['x']+1,p['y']+1),fill=(96,80,72))
-  elif p['map']=='JourneyRoute12Shipyard':
+  if p['map'].startswith('JourneySanctuary'):
+   if refresh:
+    navy=(48,104,176);x,y=p['x'],p['y']
+    candidates=[(xx,yy) for yy in range(image.height) for xx in range(image.width) if image.getpixel((xx,yy))==navy]
+    xx,yy=min(candidates,key=lambda q:abs(q[0]-x)+abs(q[1]-y))
+    spur=image.copy();ImageDraw.Draw(spur).line([(x,y),(xx,y),(xx,yy)],fill=navy,width=2)
+    for sy in range(max(0,min(y,yy)-1),min(image.height,max(y,yy)+2)):
+     for sx in range(max(0,min(x,xx)-1),min(image.width,max(x,xx)+2)):
+      if base_image.getpixel((sx,sy))==(112,184,232):image.putpixel((sx,sy),spur.getpixel((sx,sy)))
+    draw.rectangle((x-1,y-1,x+1,y+1),fill=(248,248,240))
+    draw.point((x,y),fill=(112,184,232))
+   else:draw.rectangle((p['x']-1,p['y']-1,p['x']+1,p['y']+1),fill=(96,80,72))
+  elif p['map']=='JourneyRoute12Shipyard' or (refresh and p['map'] in {'OneIsland_Frlg','TwoIsland_Frlg','ThreeIsland_Frlg','FourIsland_Frlg','FiveIsland_Frlg','SixIsland_Frlg','SevenIsland_Frlg'}):
    draw.rectangle((p['x']-1,p['y']-1,p['x']+1,p['y']+1),fill=(248,248,240) if refresh else (248,72,24))
-   if refresh:draw.point((p['x'],p['y']),fill=(248,72,24))
+   if refresh:draw.point((p['x'],p['y']),fill=(112,184,232))
+ if refresh:
+  compact=Image.new('RGB',(224,112),(16,24,32));compact.paste(image.crop((0,0,202,112)),(11,0));image=compact
+  # Kanto's continent continues west beyond the original regional crop.
+  west=ImageDraw.Draw(image)
+  west.rectangle((0,0,10,111),fill=(112,184,232))
+  mask=Image.new('1',image.size);ImageDraw.Draw(mask).polygon([(0,0),(11,0),(11,38),(8,41),(5,39),(7,34),(4,29),(6,25),(3,20),(5,15),(2,9),(0,7)],fill=1)
+  for yy in range(42):
+   adjacent=next((image.getpixel((xx,yy)) for xx in range(11,30) if image.getpixel((xx,yy))[1]>image.getpixel((xx,yy))[0] and image.getpixel((xx,yy))[2]<80),(24,112,0))
+   for xx in range(12):
+    if mask.getpixel((xx,yy)):image.putpixel((xx,yy),adjacent)
+   # Close the two-pixel sea margin inherited from the cropped native atlas.
+   shore=next((xx for xx in range(12,19) if image.getpixel((xx,yy))[1]>image.getpixel((xx,yy))[0] and image.getpixel((xx,yy))[2]<80),None)
+   if shore is not None and mask.getpixel((11,yy)):
+    for xx in range(11,shore):image.putpixel((xx,yy),image.getpixel((shore,yy)))
+  for point in points:point['x']+=11
+  for c in connections:c['start'][0]+=11;c['end'][0]+=11
+  panels={k:(x+11,y,w,h) for k,(x,y,w,h) in panels.items()}
  # Palette-indexed native tiles, not a mock overlay in the browser.
  colors=[(16,24,32),(112,184,232),(48,104,176),(24,112,0),(48,152,0),(80,200,0),(120,224,0),(184,240,64),(216,248,112),(184,120,8),(224,168,16),(248,208,56),(248,232,136),(248,72,24),(248,248,240),(96,80,72)]
  pal=[v for c in colors for v in c];palette_image=Image.new('P',(1,1));palette_image.putpalette(pal+[0]*(768-len(pal)))
@@ -147,8 +202,8 @@ def prepare(source, layer=LAYER, chain=CHAIN, refresh=False):
  def array(name,vals,ctype):return 'static const '+ctype+' '+name+'[] = {'+','.join(str(v) for v in vals)+'};\n'
  body=array('sWorldTiles',b''.join(tiles),'u8')+array('sWorldTilemap',tilemap,'u16')+array('sWorldPalette',palette,'u16')
  body+='static const struct JourneyWorldPoint sWorldPoints[] = {\n'+''.join('    {(MAP_GROUP('+p['id']+')<<8)|MAP_NUM('+p['id']+'), '+p['section']+', '+str(p['x'])+', '+str(p['y'])+', COMPOUND_STRING("'+p['name'].replace('"','')+'")},\n' for p in points)+'};\n'
- stage('src/data/journey_world_map.h',body);stage('src/journey_world_map.c',asset('tools/hoenn/world_map_screen.c'))
- stage('include/journey_world_map.h','#ifndef GUARD_JOURNEY_WORLD_MAP_H\n#define GUARD_JOURNEY_WORLD_MAP_H\n#include "main.h"\nvoid JourneyWorldMapOpen(MainCallback callback);\nu16 JourneyWorldMapPlayerPoint(void);\nvoid CB2_JourneyWorldMap(void);\n#endif\n')
+ stage('src/data/journey_world_map.h',body);stage('src/journey_world_map.c',asset('tools/hoenn/world_map_screen.c' if refresh else 'tools/hoenn/world_map_screen_base.c'))
+ stage('include/journey_world_map.h','#ifndef GUARD_JOURNEY_WORLD_MAP_H\n#define GUARD_JOURNEY_WORLD_MAP_H\n#include "main.h"\nvoid JourneyWorldMapOpen(MainCallback callback);\nu16 JourneyWorldMapPlayerPoint(void);\nvoid CB2_JourneyWorldMap(void);\nvoid JourneyWorldMapOpenFly(void);\nbool8 JourneyWorldFlyAllowed(u16 map, u16 section);\nvoid JourneyWorldFlyDestination(u16 map, u16 section);\n#endif\n')
  if not refresh:
   p='src/field_region_map.c';body=read(p).decode();a=body.index('void FieldInitRegionMap(MainCallback callback)');b=body.index('\nstatic void MCB2_InitRegionMapRegisters(void)\n{',a)
   body=body[:a]+'void FieldInitRegionMap(MainCallback callback)\n{\n    JourneyWorldMapOpen(callback);\n}\n'+body[b:];body=body.replace('#include "global.h"','#include "global.h"\n#include "journey_world_map.h"',1);stage(p,body)
@@ -166,8 +221,16 @@ def prepare(source, layer=LAYER, chain=CHAIN, refresh=False):
   p='src/pokenav.c';body=read(p).decode().replace('#include "global.h"','#include "global.h"\n#include "journey_world_map.h"',1)
   old='        if (menuId == POKENAV_MENU_FUNC_EXIT)';assert body.count(old)==1;body=body.replace(old,'        if (menuId == POKENAV_REGION_MAP)\n        {\n            ShutdownPokenav();\n            tState = 6;\n        }\n        else if (menuId == POKENAV_MENU_FUNC_EXIT)')
   old='    case 5:\n        if (!WaitForPokenavShutdownFade())';assert body.count(old)==1;body=body.replace(old,'    case 6:\n        if (!WaitForPokenavShutdownFade())\n        {\n            FreeMenuHandlerSubstruct1();\n            FreePokenavResources();\n            DestroyTask(taskId);\n            JourneyWorldMapOpen(CB2_InitPokeNav);\n        }\n        break;\n    case 5:\n        if (!WaitForPokenavShutdownFade())');stage(p,body)
- for p in ['src/region_map.c','src/journey_campaign_gates.c','src/journey_gym_scaling.c','src/journey_family.c','data/layouts/JourneyRoute12Shipyard/map.bin']:read(p)
- r=dict(layer=layer,points=points,connections=connections,tiles=len(tiles),panels={k:list(v) for k,v in PANELS.items()},field_map=True,pokenav_map=True,real_player_position=True,fly_engine_preserved=True,asset_sha256=assets,original_sha256=originals,preserved_native_sha256=preserved,prepared_sha256={p:hashlib.sha256(v).hexdigest() for p,v in outputs.items()})
+ if refresh:
+  flag='FLAG_JOURNEY_LAVENDER_PORT_VISITED'
+  p='include/constants/flags.h';body=read(p).decode();assert '0x1B39' not in body;stage(p,body+'\n#define '+flag+' 0x1B39\n')
+  p='data/maps/JourneyRoute12Shipyard/scripts.inc';body=read(p).decode();old='JourneyRoute12Shipyard_MapScripts::\n\t.byte 0';assert old in body;stage(p,body.replace(old,'JourneyRoute12Shipyard_MapScripts::\n\tmap_script MAP_SCRIPT_ON_LOAD, JourneyShipyard_Visit\n\t.byte 0\nJourneyShipyard_Visit::\n\tsetflag '+flag+'\n\tend',1))
+  p='src/region_map.c';body=read(p).decode().replace('#include "global.h"','#include "global.h"\n#include "journey_world_map.h"',1)
+  body=body.replace('void CB2_OpenFlyMap(void)\n{','void CB2_OpenFlyMap(void)\n{\n    JourneyWorldMapOpenFly();\n    return;',1)
+  body+='\nbool8 JourneyWorldFlyAllowed(u16 map, u16 section)\n{\n    if (map == ((MAP_GROUP(MAP_JOURNEYROUTE12SHIPYARD)<<8)|MAP_NUM(MAP_JOURNEYROUTE12SHIPYARD)))\n        return FlagGet('+flag+');\n    if (section >= MAPSEC_COUNT) return FALSE;\n    if (map != ((sMapHealLocations[section][0]<<8)|sMapHealLocations[section][1])) return FALSE;\n    return GetMapsecType(section) == MAPSECTYPE_CITY_CANFLY || GetMapsecType(section) == MAPSECTYPE_BATTLE_FRONTIER;\n}\n\nvoid JourneyWorldFlyDestination(u16 map, u16 section)\n{\n    struct RegionMap regionMap = {0};\n    if (map == ((MAP_GROUP(MAP_JOURNEYROUTE12SHIPYARD)<<8)|MAP_NUM(MAP_JOURNEYROUTE12SHIPYARD)))\n        SetWarpDestination(MAP_GROUP(MAP_JOURNEYROUTE12SHIPYARD), MAP_NUM(MAP_JOURNEYROUTE12SHIPYARD), WARP_ID_NONE, 24, 39);\n    else\n    {\n        regionMap.mapSecId = section;\n        regionMap.posWithinMapSec = 1;\n        SetFlyDestination(&regionMap);\n    }\n}\n'
+  stage(p,body)
+ for p in (['src/region_map.c'] if not refresh else [])+['src/journey_campaign_gates.c','src/journey_gym_scaling.c','src/journey_family.c','data/layouts/JourneyRoute12Shipyard/map.bin']:read(p)
+ r=dict(layer=layer,points=points,connections=connections,tiles=len(tiles),panels={k:list(v) for k,v in panels.items()},field_map=True,pokenav_map=True,real_player_position=True,fly_engine_preserved=not refresh,integrated_fly=refresh,lavender_and_sevii_fly=refresh,caves_not_fly_destinations=refresh,asset_sha256=assets,original_sha256=originals,preserved_native_sha256=preserved,prepared_sha256={p:hashlib.sha256(v).hexdigest() for p,v in outputs.items()})
  for p,v in outputs.items():(source/p).parent.mkdir(parents=True,exist_ok=True);(source/p).write_bytes(v)
  marker.write_text(json.dumps(r,indent=2)+'\n')
  gallery=ROOT/'mods/hoenn/world-map-gallery';gallery.mkdir(parents=True,exist_ok=True);quant.convert('RGB').resize((896,448),Image.Resampling.NEAREST).save(gallery/'world-map-art.png')

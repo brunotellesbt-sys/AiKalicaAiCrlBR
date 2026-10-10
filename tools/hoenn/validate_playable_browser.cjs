@@ -52,8 +52,16 @@ const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8765/';
     await page.waitForTimeout(1500);
     const advanced=coreFrame(await page.evaluate(() => Array.from(EJS_emulator.gameManager.getState())));
     await page.evaluate(data => EJS_emulator.gameManager.loadState(new Uint8Array(data)),state);
-    const restored=coreFrame(await page.evaluate(() => Array.from(EJS_emulator.gameManager.getState())));
-    if (advanced<=savedCoreFrame || restored>=advanced || Math.abs(restored-savedCoreFrame)>30) throw new Error('Native game state did not restore: '+JSON.stringify({savedCoreFrame,advanced,restored}));
+    // The threaded core applies the request on its next iteration. Wait for
+    // native frame rollback, rather than inspecting before the worker applies it.
+    let restored, restoreSamples=[];
+    for (let attempt=0;attempt<40;attempt++) {
+      await page.waitForTimeout(25);
+      restored=coreFrame(await page.evaluate(() => Array.from(EJS_emulator.gameManager.getState())));
+      restoreSamples.push(restored);
+      if (restored<advanced && Math.abs(restored-savedCoreFrame)<=30) break;
+    }
+    if (advanced<=savedCoreFrame || restored>=advanced || Math.abs(restored-savedCoreFrame)>30) throw new Error('Native game state did not restore: '+JSON.stringify({savedCoreFrame,advanced,restored,restoreSamples}));
     await page.screenshot({path:path.join(OUT,'browser-desktop.png')});
     await page.setViewportSize({width:390,height:844});
     await page.waitForTimeout(700);

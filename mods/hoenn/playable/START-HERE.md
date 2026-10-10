@@ -4,13 +4,13 @@ Esta é a primeira versão jogável do mundo integrado **Kanto + Hoenn + Sevii**
 
 ## Como jogar
 
-1. Baixe `Pokemon-Journey-World-Alpha-1.gba` ou extraia o ZIP da versão `world-alpha-1`.
+1. Baixe `Pokemon-Journey-World-Alpha-1.gba` na pasta `mods/hoenn/playable` do PR #67. Use a opção **Download raw file** do GitHub.
 2. Abra a ROM no **mGBA** atualizado, ou no player do projeto no navegador.
 3. **Comece um Novo Jogo.** Não importe um save das versões antigas de LeafGreen ou de outra ROM.
 4. O título começa em Hoenn. Para começar em Kanto, pressione **Select na tela de título**, antes de entrar no menu. No navegador, Select é **Shift**. A escolha da cidade aparece antes da chegada de caminhão ou barco.
 5. Converse com todos os familiares para receber **Surf, Dive e Waterfall** e com o professor para obter o inicial e a Pokédex. Pallet e Littleroot conservam os respectivos episódios iniciais originais.
 
-A configuração do player está preparada para GitHub Pages, mas a ativação do site foi recusada pela API do GitHub (403) nesta sessão. O download da ROM é a forma disponível para jogar esta alpha.
+A configuração do player está preparada para GitHub Pages, mas a ativação do site foi recusada pela API do GitHub (403) nesta sessão. O envio de assets para Releases também foi recusado; não há uma Release publicada. A ROM está disponível diretamente no repositório pelo PR #67.
 
 No navegador: **setas** movem, **X** confirma (A), **Z** volta (B), **Enter** abre Start, **Shift** é Select. No celular, use os controles na tela. Ao definir o relógio de Hoenn, confirme com **Yes**.
 
@@ -21,7 +21,8 @@ Use **Save no menu do próprio jogo**. Exporte também o arquivo de save pelo me
 - 31 opções de cidade inicial, família, professor, iniciais das duas regiões e National Dex.
 - Mar aberto entre Fuchsia, a costa das Rotas 14/13 e Lavender Port, com ponte a pé ao norte do cais.
 - Mundo conectado por Surf, incluindo o mar atrás de Ever Grande, as Sevii e a costa oeste de Hoenn; Waterfall permite subir ao rio da Rota 114.
-- Mapa integrado no menu **Start → MAP**, com posição real do jogador, mar uniforme e rotas navegáveis em azul escuro.
+- Mapa integrado no menu **Start → MAP**, com posição real do jogador, mar uniforme e faixas retas de Surf; contorno de terra completado a oeste de Kanto e ao norte de Hoenn.
+- Fly nesse mesmo mapa, incluindo Lavender Port e as sete cidades de Sevii após visita; cavernas novas são apenas marcadores, sem Fly.
 - Lavender Port e a rede de 18 portos, sem oferecer o porto atual; todas as viagens da rede têm animação.
 - Insígnias separadas e ginásios em ordem livre com escalonamento. As duas Ligas exigem as **16 insígnias**.
 - Missões regionais obrigatórias e ligação Silph–Giovanni–Archie, com as travas nos ginásios combinadas anteriormente.

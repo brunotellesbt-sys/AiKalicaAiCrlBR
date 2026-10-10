@@ -12,10 +12,16 @@
 #include "text_window.h"
 #include "window.h"
 #include "sound.h"
+#include "field_effect.h"
+#include "party_menu.h"
+#include "item_menu.h"
 #include "constants/maps.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
 #include "journey_world_map.h"
+
+extern bool8 gFlightCallFromBag;
+void ClearForcedFlightRegion(void);
 
 struct JourneyWorldPoint { u16 map; u16 section; u8 x, y; const u8 *name; };
 #include "data/journey_world_map.h"
@@ -24,7 +30,7 @@ static EWRAM_DATA struct {
     MainCallback callback;
     u16 tilemap[1024];
     u16 player, selected;
-    u8 x, y, state;
+    u8 x, y, state, fly;
 } *sJourneyWorldMap;
 
 static const struct BgTemplate sWorldBgs[] = {
@@ -55,6 +61,7 @@ static void WorldDraw(void)
     s16 dx,dy;
     const struct JourneyWorldPoint *player=&sWorldPoints[sJourneyWorldMap->player];
     for(i=0;i<ARRAY_COUNT(sWorldPoints);i++) {
+        if(sJourneyWorldMap->fly && !JourneyWorldFlyAllowed(sWorldPoints[i].map,sWorldPoints[i].section))continue;
         dx=sJourneyWorldMap->x-sWorldPoints[i].x;dy=sJourneyWorldMap->y-sWorldPoints[i].y;d=dx*dx+dy*dy;
         if(d<distance){distance=d;best=i;}
     }
@@ -66,7 +73,7 @@ static void WorldDraw(void)
     FillWindowPixelRect(2,PIXEL_FILL(2),sJourneyWorldMap->x,sJourneyWorldMap->y,1,1);
     FillWindowPixelBuffer(1,PIXEL_FILL(1));
     AddTextPrinterParameterized(1,FONT_SMALL,distance<100?sWorldPoints[best].name:COMPOUND_STRING("OPEN SEA"),0,0,0,NULL);
-    AddTextPrinterParameterized(1,FONT_SMALL,COMPOUND_STRING("D-PAD: MOVE  SELECT: YOU  B: BACK"),0,12,0,NULL);
+    AddTextPrinterParameterized(1,FONT_SMALL,sJourneyWorldMap->fly?COMPOUND_STRING("A: FLY  SELECT: YOU  B: BACK"):COMPOUND_STRING("D-PAD: MOVE  SELECT: YOU  B: BACK"),0,12,0,NULL);
     CopyWindowToVram(1,COPYWIN_FULL);CopyWindowToVram(2,COPYWIN_FULL);
 }
 
@@ -93,6 +100,13 @@ void CB2_JourneyWorldMap(void)
         BeginNormalPaletteFade(PALETTES_ALL,0,16,0,RGB_BLACK);sJourneyWorldMap->state=1;
     } else if(sJourneyWorldMap->state==1 && !gPaletteFade.active) {
         if(JOY_NEW(B_BUTTON)) { BeginNormalPaletteFade(PALETTES_ALL,0,0,16,RGB_BLACK);sJourneyWorldMap->state=2; }
+        else if(sJourneyWorldMap->fly && JOY_NEW(A_BUTTON)) {
+            const struct JourneyWorldPoint *p=&sWorldPoints[sJourneyWorldMap->selected];
+            s16 dx=sJourneyWorldMap->x-p->x,dy=sJourneyWorldMap->y-p->y;
+            if(dx*dx+dy*dy<=16 && JourneyWorldFlyAllowed(p->map,p->section)) {
+                BeginNormalPaletteFade(PALETTES_ALL,0,0,16,RGB_BLACK);sJourneyWorldMap->state=3;
+            }
+        }
         else {
             u8 x=sJourneyWorldMap->x,y=sJourneyWorldMap->y;
             if(JOY_REPEAT(DPAD_LEFT) && x>5)x-=3;
@@ -102,10 +116,22 @@ void CB2_JourneyWorldMap(void)
             if(JOY_NEW(SELECT_BUTTON)){x=sWorldPoints[sJourneyWorldMap->player].x;y=sWorldPoints[sJourneyWorldMap->player].y;}
             if(x!=sJourneyWorldMap->x || y!=sJourneyWorldMap->y){sJourneyWorldMap->x=x;sJourneyWorldMap->y=y;WorldDraw();}
         }
-    } else if(sJourneyWorldMap->state==2 && !gPaletteFade.active) {
+    } else if((sJourneyWorldMap->state==2 || sJourneyWorldMap->state==3) && !gPaletteFade.active) {
         MainCallback callback=sJourneyWorldMap->callback;
+        bool8 fly=sJourneyWorldMap->state==3;
+        bool8 wasFly=sJourneyWorldMap->fly;
+        u16 map=sWorldPoints[sJourneyWorldMap->selected].map,section=sWorldPoints[sJourneyWorldMap->selected].section;
         SetVBlankCallback(NULL);FreeAllWindowBuffers();UnsetBgTilemapBuffer(1);
-        FREE_AND_SET_NULL(sJourneyWorldMap);SetMainCallback2(callback);return;
+        FREE_AND_SET_NULL(sJourneyWorldMap);
+        if(fly) {
+            JourneyWorldFlyDestination(map,section);
+            if(gFlightCallFromBag)gSkipShowMonAnim=TRUE;
+            gFlightCallFromBag=FALSE;ClearForcedFlightRegion();ReturnToFieldFromFlyMapSelect();
+        } else {
+            if(wasFly){ClearForcedFlightRegion();gFlightCallFromBag=FALSE;}
+            SetMainCallback2(callback);
+        }
+        return;
     }
     UpdatePaletteFade();
 }
@@ -118,4 +144,10 @@ void JourneyWorldMapOpen(MainCallback callback)
     sJourneyWorldMap->callback=callback;sJourneyWorldMap->player=JourneyWorldMapPlayerPoint();
     sJourneyWorldMap->x=sWorldPoints[sJourneyWorldMap->player].x;sJourneyWorldMap->y=sWorldPoints[sJourneyWorldMap->player].y;
     SetMainCallback2(CB2_JourneyWorldMap);
+}
+
+void JourneyWorldMapOpenFly(void)
+{
+    JourneyWorldMapOpen(gFlightCallFromBag?CB2_ReturnToBagMenuPocket:CB2_ReturnToPartyMenuFromFlyMap);
+    if(sJourneyWorldMap!=NULL)sJourneyWorldMap->fly=TRUE;
 }

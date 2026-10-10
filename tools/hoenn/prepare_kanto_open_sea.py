@@ -1,5 +1,5 @@
 """Join the actual southern Kanto shoreline to Lavender's dock and eastern ocean."""
-import argparse,copy,hashlib,json,struct
+import argparse,copy,hashlib,json,struct,math,random
 from pathlib import Path
 from prepare_world_map import CHAIN as PREVIOUS
 LAYER='kanto-open-sea';CHAIN=PREVIOUS+['world-map']
@@ -41,6 +41,9 @@ def prepare(source):
   outputs[p]=v if isinstance(v,bytes) else (json.dumps(v,indent=2)+'\n').encode()
  ld=json.loads(read('data/layouts/layouts.json'));ls={l['id']:l for l in ld['layouts']}
  maps={n:json.loads(read(f'data/maps/{n}/map.json')) for n in POSITIONS if n not in SIZES}
+ maps['Route20_Frlg']=json.loads(read('data/maps/Route20_Frlg/map.json'))
+ extra=[r['map'] for r in json.loads((source/'.journey-eastern-sea-union').read_text())['rectangles'] if 'WorldLane' in r['map'] or 'WorldFill' in r['map']]
+ for n in extra:maps[n]=json.loads(read(f'data/maps/{n}/map.json'))
  template=maps['JourneyRoute12OuterSea'];tl=ls[template['layout']]
  for n,(w,h) in SIZES.items():
   assert (w+15)*(h+14)<=10240,(n,'Native map buffer exceeded')
@@ -61,17 +64,93 @@ def prepare(source):
   seams.append(dict(source=a,destination=b,direction=d,offset=off))
  # Coast borders are open only where a real map connection exists. Unconnected
  # edges use complete two-by-two aquatic rocks; the middle remains open sea.
- terrain={};rocks=[0x510,0x511,0x518,0x519];water=0x112B
+ terrain={};rock_blocks={};landscape=[];rocks=[0x510,0x511,0x518,0x519];water=0x112B
+ shore=[0x10C,0x10D,0x10E,0x114,0x115,0x116,0x11C,0x11D,0x11E]
+ def decorate(n,v,w,h,actors=()):
+  rng=random.Random(n+'-compact-islands');land=set();patches=[];grass=0
+  occupied={(o['x']+dx,o['y']+dy) for o in actors if o['elevation']==1 for dx in range(-2,3) for dy in range(-2,3)}
+  protected=lambda x,y:min(x,y,w-1-x,h-1-y)<2 or abs(x-w//2)<2 or (h>=12 and abs(y-h//2)<2)
+  count=1 if h<12 else 2 if min(w,h)<25 else min(5,2+w*h//1900)
+  for _ in range(400):
+   if len(patches)>=count:break
+   cx=rng.randrange(3,w-3);cy=rng.randrange(2,h-2)
+   limit=min(5.2,(min(w,h)/2-3)/2) if h>=12 else 1.7
+   radius=rng.uniform(max(1.6,limit*.75),max(1.7,limit));rx=radius*rng.uniform(.9,1.12);ry=radius*rng.uniform(.9,1.12);phase=rng.random()*6.28
+   patch=set()
+   for y in range(int(cy-ry-2),int(cy+ry+3)):
+    for x in range(int(cx-rx-2),int(cx+rx+3)):
+     angle=math.atan2(y-cy,x-cx);edge=1+.13*math.sin(3*angle+phase)+.07*math.sin(5*angle+phase)
+     if ((x-cx)/rx)**2+((y-cy)/ry)**2<edge**2:patch.add((x,y))
+   # Reject clipped islands wholesale: clipping created the repeated thin strips.
+   if len(patch)<8 or any(protected(x,y) or (x,y) in occupied or v[y*w+x]!=water for x,y in patch):continue
+   if any((x+dx,y+dy) in land for x,y in patch for dx in range(-2,3) for dy in range(-2,3)):continue
+   patches.append(patch);land.update(patch)
+   green=len(patches)%3!=0 or count==1
+   for x,y in patch:
+    row=0 if (x,y-1) not in patch else 2 if (x,y+1) not in patch else 1
+    col=0 if (x-1,y) not in patch else 2 if (x+1,y) not in patch else 1
+    v[y*w+x]=0x3000+shore[row*3+col]
+    if green and all((x+dx,y+dy) in patch for dx,dy in [(0,-1),(0,1),(-1,0),(1,0)]):v[y*w+x]=0x3001;grass+=1
+  assert land,('No compact island fits',n,w,h)
+  for o in actors:
+   if o['elevation']==3:v[o['y']*w+o['x']]=0x3115
+  return land,grass,len(patches),protected,rng
  for n,(w,h) in SIZES.items():
-  v=[water]*(w*h)
-  for y in range(h):
-   for x in range(w):
-    if x<2 or y<2 or x>=w-2 or y>=h-2:v[y*w+x]=rocks[y%2*2+x%2]
+  v=[water]*(w*h);stamps=[]
+  def rock(x,y):
+   cells=[(x+dx,y+dy) for dy in range(2) for dx in range(2)]
+   if any(v[yy*w+xx]!=water for xx,yy in cells):return
+   for i,(xx,yy) in enumerate(cells):v[yy*w+xx]=rocks[i]
+   stamps.append(cells)
+  for x in range(0,w-1,2):rock(x,0);rock(x,h-2)
+  for y in range(2,h-3,2):rock(0,y);rock(w-2,y)
+  land,grass,count,protected,rng=decorate(n,v,w,h)
+  if w>=32 and h>=24:
+   for _ in range(max(1,w*h//420)):
+    x=rng.randrange(4,w-5);y=rng.randrange(4,h-5)
+    if any(protected(x+dx,y+dy) or (x+dx,y+dy) in land for dx in range(-2,4) for dy in range(-2,4)):continue
+    if any(abs(x-a)+abs(y-b)<7 for cells in stamps for a,b in cells):continue
+    rock(x,y)
+  rock_blocks[n]=stamps;landscape.append(dict(map=n,land_tiles=len(land),grass_tiles=grass,islands=count))
   terrain[n]=v;stage(ls[maps[n]['layout']]['border_filepath'],struct.pack('<4H',*rocks))
  def values(n):
   if n not in terrain:
    w,h=size(n);terrain[n]=list(struct.unpack('<'+'H'*(w*h),read(ls[maps[n]['layout']]['blockdata_filepath'])))
   return terrain[n]
+ # Preserve existing beaches, trainers and scripts in the older narrow lanes,
+ # and add small off-center sandbanks instead of leaving long empty corridors.
+ all_headers={d['id']:d for row in json.loads((source/'.journey-eastern-sea-union').read_text())['rectangles'] if (d:=json.loads(read('data/maps/'+row['map']+'/map.json')))}
+ all_headers.update({d['id']:d for d in maps.values()})
+ for n in extra:
+  w,h=size(n);v=values(n);d=maps[n];stamps=[]
+  # These synthetic channels have no buildings: reshape their old repeated
+  # sand rectangles while keeping every trainer, event and connection.
+  for i,t in enumerate(v):
+   if t>>12==3 and (t&1023 in shore or t==0x3001):v[i]=water
+  added,grass,count,_,_=decorate(n,v,w,h,d['object_events'])
+  open_edges={direction:set() for direction in ['up','down','left','right']}
+  for c in d.get('connections') or []:
+   direction=c['direction']
+   if direction not in open_edges:continue
+   dest=all_headers[c['map']];other=ls[dest['layout']];limit=h if direction in ['left','right'] else w;length=other['height'] if direction in ['left','right'] else other['width']
+   open_edges[direction].update(range(max(0,c['offset']),min(limit,c['offset']+length)))
+  def edge_rock(x,y,direction,span):
+   cells=[(x+dx,y+dy) for dy in range(2) for dx in range(2)]
+   if any(z in open_edges[direction] for z in span) or any(v[yy*w+xx]!=water for xx,yy in cells):return
+   for i,(xx,yy) in enumerate(cells):v[yy*w+xx]=rocks[i]
+   stamps.append(cells)
+  for x in range(0,w-1,2):edge_rock(x,0,'up',[x,x+1]);edge_rock(x,h-2,'down',[x,x+1])
+  for y in range(2,h-3,2):edge_rock(0,y,'left',[y,y+1]);edge_rock(w-2,y,'right',[y,y+1])
+  rock_blocks[n]=stamps
+  stage(ls[d['layout']]['border_filepath'],struct.pack('<4H',*rocks))
+  landscape.append(dict(map=n,land_tiles=sum(t>>12==3 for t in v),added_sand_tiles=len(added),grass_tiles=grass,islands=count,water_fraction=round(v.count(water)/len(v),4),complete_rock_blocks=len(stamps),existing_trainers_and_missions_preserved=True))
+ # Two complete native aquatic boulders separate the Route 20 sea basins.
+ # Open a Surf passage without editing either Seafoam mountain or its beach.
+ route20=values('Route20_Frlg');route20_width,_=size('Route20_Frlg')
+ for x,y,pattern in [(78,10,[0x512,0x511,0x51A,0x519]),(79,12,rocks)]:
+  for i,(dx,dy) in enumerate([(0,0),(1,0),(0,1),(1,1)]):
+   assert route20[(y+dy)*route20_width+x+dx]==pattern[i],('Seafoam boulder mismatch',x,y,i)
+   route20[(y+dy)*route20_width+x+dx]=water
  # Clear every connected sea border, while retaining terrestrial shoreline tiles.
  for a,b,d in LINKS:
   for n,other,direction in [(a,b,d),(b,a,reverse[d])]:
@@ -82,6 +161,16 @@ def prepare(source):
     for depth in [0,1]:
      xx,yy={'left':(depth,z),'right':(w-1-depth,z),'up':(z,depth),'down':(z,h-1-depth)}[direction]
      v[yy*w+xx]=water if ls[maps[n]['layout']].get('layout_version')=='frlg' else 0x1170
+ # Opening a seam must remove entire boulders, never leave half a graphic.
+ for n,stamps in rock_blocks.items():
+  if n in extra:continue
+  w,h=size(n);v=terrain[n]
+  for cells in stamps:
+   if any(v[y*w+x] not in rocks for x,y in cells):
+    for x,y in cells:
+     if v[y*w+x] in rocks:v[y*w+x]=water
+  row=next(r for r in landscape if r['map']==n)
+  row.update(water_fraction=round(v.count(water)/len(v),4),complete_rock_blocks=sum(all(v[y*w+x]==rocks[i] for i,(x,y) in enumerate(cells)) for cells in stamps))
  # A northern wooden approach joins the original Route12 bridge to the dock's
  # existing northwest pier. The approved central island, house and boats remain.
  wood=0x32F3
@@ -106,7 +195,7 @@ def prepare(source):
  old_port=struct.unpack('<3840H',read(ls[maps['JourneyRoute12Shipyard']['layout']]['blockdata_filepath']))
  assert terrain['JourneyRoute12Shipyard'][28*64:]==list(old_port[28*64:])
  preserved.pop(ls[maps['JourneyRoute12Shipyard']['layout']]['blockdata_filepath'],None)
- r=dict(layer=LAYER,map_buffer_limit=10240,map_buffers_fit=True,no_rectangle_overlaps=True,approved_shipyard_core_preserved=True,rectangles=[dict(map=n,x=x,y=y,width=size(n)[0],height=size(n)[1]) for n,(x,y) in POSITIONS.items()],connections=seams,northern_pedestrian_bridge=True,vermilion_exit_not_restored=True,original_sha256=originals,preserved_native_sha256=preserved,prepared_sha256={p:hashlib.sha256(v).hexdigest() for p,v in outputs.items()})
+ r=dict(layer=LAYER,seafoam_surf_passage=dict(map="Route20_Frlg",removed_complete_boulders=[[78,10],[79,12]],mountains_beaches_and_entrances_preserved=True),landscape=landscape,complete_water_boulders=True,map_buffer_limit=10240,map_buffers_fit=True,no_rectangle_overlaps=True,approved_shipyard_core_preserved=True,rectangles=[dict(map=n,x=x,y=y,width=size(n)[0],height=size(n)[1]) for n,(x,y) in POSITIONS.items()],connections=seams,northern_pedestrian_bridge=True,vermilion_exit_not_restored=True,original_sha256=originals,preserved_native_sha256=preserved,prepared_sha256={p:hashlib.sha256(v).hexdigest() for p,v in outputs.items()})
  for p,v in outputs.items():(source/p).parent.mkdir(parents=True,exist_ok=True);(source/p).write_bytes(v)
  marker.write_text(json.dumps(r,indent=2)+'\n');return r
 if __name__=='__main__':

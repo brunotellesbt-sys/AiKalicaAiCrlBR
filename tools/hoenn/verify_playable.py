@@ -23,7 +23,7 @@ def verify(directory):
     if (directory / 'SHA256SUMS').read_text() != digest + '  ' + ROM_NAME + '\n':
         raise ValueError('Checksum file does not match the release')
     evidence = ROOT / 'mods/hoenn/playable-validation'
-    for name in ['campaign-kanto/campaign-playthrough.json','campaign-hoenn/campaign-playthrough.json','browser.json','homes/family.json','birth-rules/birth-rules.json','eastern-ocean/eastern-union.json','leagues/sixteen-badge-leagues.json','world-map/world-map.json','coast/kanto-open-sea.json']:
+    for name in ['campaign-kanto/campaign-playthrough.json','campaign-hoenn/campaign-playthrough.json','browser.json','homes/family.json','birth-rules/birth-rules.json','eastern-ocean/eastern-union.json','leagues/sixteen-badge-leagues.json','world-map/world-map.json','coast/kanto-open-sea.json','western-coast/western-coast.json','world-fly/world-fly.json','coast-connectivity/coast-connectivity.json','western-waterfall/sea-landscapes.json']:
         report = json.loads((evidence / name).read_text())
         if report['rom_sha256'] != digest:
             raise ValueError('Evidence belongs to another ROM: ' + name)
