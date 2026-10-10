@@ -10,9 +10,15 @@ def render(source,output,include_vermilion=False):
  source=Path(source);output=Path(output);output.mkdir(parents=True,exist_ok=True)
  report=json.loads((source/'.journey-eastern-sea-union').read_text());r=MapRenderer(source)
  rects=list(report['rectangles'])
+ entrance=source/'.journey-ever-grande-entrance'
+ if entrance.exists():
+  overrides={r['map']:r for r in json.loads(entrance.read_text()).get('rectangle_overrides',[])}
+  rects=[overrides.get(r['map'],r) for r in rects]
  if include_vermilion:
   # Native south connection offset 0: city sits directly above WorldSea00.
   rects.append(dict(map='VermilionCity_Frlg',x=190,y=-40,width=48,height=40))
+  if entrance.exists():
+   rects.extend([dict(map='Route19_Frlg',x=118,y=-60,width=24,height=60),dict(map='FuchsiaCity_Frlg',x=106,y=-100,width=48,height=40)])
  xmin=min(m['x'] for m in rects);ymin=min(m['y'] for m in rects)
  xmax=max(m['x']+m['width'] for m in rects);ymax=max(m['y']+m['height'] for m in rects)
  # Empty background remains labelled outside this rendered eastern-ocean section.
@@ -32,6 +38,11 @@ def render(source,output,include_vermilion=False):
   draw.line([(x,y-45),(x,y+85)],fill=(255,65,45),width=5)
   draw.polygon([(x,y+85),(x-12,y+66),(x+12,y+66)],fill=(255,65,45))
   draw.text((x+18,y-35),'Vermilion: southeast Surf channel',font=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',24),fill='white',stroke_width=2,stroke_fill='black')
+  if entrance.exists():
+   points=[((140-xmin)*scale,(-12-ymin)*scale),((160-xmin)*scale,(-12-ymin)*scale),((160-xmin)*scale,(8-ymin)*scale)]
+   draw.line(points,fill=(255,65,45),width=5)
+   x,y=points[-1];draw.polygon([(x,y),(x-12,y-19),(x+12,y-19)],fill=(255,65,45))
+   draw.text((points[0][0]+12,points[0][1]-38),'Fuchsia: Route 19 east channel',font=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',24),fill='white',stroke_width=2,stroke_fill='black')
  annotated.save(output/'eastern-union-labelled.png')
  (output/'metadata.json').write_text(json.dumps(dict(rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),source_metatiles=True,tile_scale=scale,rectangles=rects,full_world_map=False,includes_vermilion=include_vermilion),indent=2)+'\n')
 
