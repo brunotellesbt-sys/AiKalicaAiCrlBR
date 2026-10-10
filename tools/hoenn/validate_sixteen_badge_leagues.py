@@ -79,8 +79,9 @@ for kanto in [True, False]:
         finish()
         assert location() == map_id(name)
         assert native('TrySavingData', 0, max_frames=6000) == 1
+        step(60)  # Finish the flash call before installing the next ARM fixture.
         bank(kanto_badges, 255); bank(hoenn_badges, 255)
-        assert native('LoadGameSave', 0) == 1
+        assert native('LoadGameSave', 0, max_frames=6000) == 1
         step(30)
         assert permission(kanto) == 0
         bank(kanto_badges, 255); bank(hoenn_badges, 255)

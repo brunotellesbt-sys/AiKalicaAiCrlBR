@@ -5,6 +5,10 @@ existem histórias conectadas com insígnias regionais, casas iniciais, família
 santuários. Há testes de trechos, batalhas e dados; ainda não houve duas
 campanhas completas jogadas. O player não recebeu esta candidata.
 
+O mar a leste de Hoenn agora passa atrás de Ever Grande e ocupa um
+retângulo contínuo com as Sevii. [Terreno e validação](EASTERN-SEA-UNION.md).
+A atualização da tela regional do PokéNav continua pendente.
+
 ## Prioridades
 
 | Prioridade | Trabalho | Critério para concluir |
