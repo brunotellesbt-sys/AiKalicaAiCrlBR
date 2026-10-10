@@ -1,0 +1,438 @@
+{
+  "passed": true,
+  "rom_sha256": "b01f85fc9f4544b7d3808018280683cf406e4359b97d2e644d3f4d7973df4504",
+  "continuous_roundtrip": true,
+  "legs": [
+    {
+      "map": "JourneyRoute12Shipyard",
+      "position": [
+        2,
+        44
+      ]
+    },
+    {
+      "map": "JourneyRoute12Shipyard",
+      "position": [
+        5,
+        38
+      ]
+    },
+    {
+      "map": "JourneyRoute12Shipyard",
+      "position": [
+        20,
+        44
+      ]
+    },
+    {
+      "map": "JourneyRoute12OuterSea",
+      "position": [
+        10,
+        20
+      ]
+    },
+    {
+      "map": "TwoIsland_Harbor_Frlg",
+      "position": [
+        6,
+        10
+      ]
+    },
+    {
+      "map": "JourneyRoute12OuterSea",
+      "position": [
+        10,
+        20
+      ]
+    },
+    {
+      "map": "JourneyRoute12Shipyard",
+      "position": [
+        55,
+        52
+      ]
+    },
+    {
+      "map": "JourneyWorldSea02",
+      "position": [
+        40,
+        12
+      ]
+    },
+    {
+      "map": "JourneyWorldSea01",
+      "position": [
+        12,
+        20
+      ]
+    },
+    {
+      "map": "JourneyWorldSea00",
+      "position": [
+        12,
+        20
+      ]
+    },
+    {
+      "map": "JourneyHoennNorthSea",
+      "position": [
+        100,
+        20
+      ]
+    },
+    {
+      "map": "JourneyEverGrandeBackSouthSea",
+      "position": [
+        10,
+        34
+      ]
+    },
+    {
+      "map": "JourneyHoennNorthSea",
+      "position": [
+        100,
+        20
+      ]
+    },
+    {
+      "map": "JourneyWorldSea00",
+      "position": [
+        12,
+        20
+      ]
+    },
+    {
+      "map": "JourneyWorldSea01",
+      "position": [
+        12,
+        20
+      ]
+    },
+    {
+      "map": "JourneyWorldSea02",
+      "position": [
+        40,
+        12
+      ]
+    },
+    {
+      "map": "JourneyRoute12Shipyard",
+      "position": [
+        55,
+        52
+      ]
+    },
+    {
+      "map": "JourneyRoute12Shipyard",
+      "position": [
+        8,
+        44
+      ]
+    },
+    {
+      "map": "Route12_Frlg",
+      "position": [
+        17,
+        104
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "source": [
+        "Route12_Frlg",
+        23,
+        104
+      ],
+      "destination": [
+        "JourneyRoute12Shipyard",
+        0,
+        44
+      ]
+    },
+    {
+      "source": [
+        "JourneyRoute12Shipyard",
+        10,
+        0
+      ],
+      "destination": [
+        "JourneyRoute12OuterSea",
+        10,
+        59
+      ]
+    },
+    {
+      "source": [
+        "JourneyRoute12OuterSea",
+        30,
+        0
+      ],
+      "destination": [
+        "TwoIsland_Harbor_Frlg",
+        6,
+        12
+      ]
+    },
+    {
+      "source": [
+        "TwoIsland_Harbor_Frlg",
+        3,
+        12
+      ],
+      "destination": [
+        "JourneyRoute12OuterSea",
+        27,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyRoute12OuterSea",
+        55,
+        59
+      ],
+      "destination": [
+        "JourneyRoute12Shipyard",
+        55,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyRoute12Shipyard",
+        49,
+        59
+      ],
+      "destination": [
+        "JourneyWorldSea02",
+        50,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea02",
+        0,
+        12
+      ],
+      "destination": [
+        "JourneyWorldSea01",
+        63,
+        12
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea01",
+        0,
+        20
+      ],
+      "destination": [
+        "JourneyWorldSea00",
+        63,
+        20
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea00",
+        0,
+        20
+      ],
+      "destination": [
+        "JourneyHoennNorthSea",
+        109,
+        20
+      ]
+    },
+    {
+      "source": [
+        "JourneyHoennNorthSea",
+        90,
+        47
+      ],
+      "destination": [
+        "JourneyMossdeepOuterSea",
+        90,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyMossdeepOuterSea",
+        90,
+        31
+      ],
+      "destination": [
+        "JourneyHoennMiddleSea",
+        90,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyHoennMiddleSea",
+        90,
+        39
+      ],
+      "destination": [
+        "JourneyEverGrandeBackSea",
+        10,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyEverGrandeBackSea",
+        10,
+        39
+      ],
+      "destination": [
+        "JourneyEverGrandeBackSouthSea",
+        10,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyEverGrandeBackSouthSea",
+        18,
+        0
+      ],
+      "destination": [
+        "JourneyEverGrandeBackSea",
+        18,
+        39
+      ]
+    },
+    {
+      "source": [
+        "JourneyEverGrandeBackSea",
+        18,
+        0
+      ],
+      "destination": [
+        "JourneyHoennMiddleSea",
+        98,
+        39
+      ]
+    },
+    {
+      "source": [
+        "JourneyHoennMiddleSea",
+        98,
+        0
+      ],
+      "destination": [
+        "JourneyMossdeepOuterSea",
+        98,
+        31
+      ]
+    },
+    {
+      "source": [
+        "JourneyMossdeepOuterSea",
+        98,
+        0
+      ],
+      "destination": [
+        "JourneyHoennNorthSea",
+        98,
+        47
+      ]
+    },
+    {
+      "source": [
+        "JourneyHoennNorthSea",
+        109,
+        20
+      ],
+      "destination": [
+        "JourneyWorldSea00",
+        0,
+        20
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea00",
+        63,
+        20
+      ],
+      "destination": [
+        "JourneyWorldSea01",
+        0,
+        20
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea01",
+        63,
+        18
+      ],
+      "destination": [
+        "JourneyWorldSea02",
+        0,
+        18
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea02",
+        56,
+        0
+      ],
+      "destination": [
+        "JourneyRoute12Shipyard",
+        55,
+        59
+      ]
+    },
+    {
+      "source": [
+        "JourneyRoute12Shipyard",
+        0,
+        44
+      ],
+      "destination": [
+        "Route12_Frlg",
+        23,
+        104
+      ]
+    },
+    {
+      "source": [
+        "Route12_Frlg",
+        23,
+        104
+      ],
+      "destination": [
+        "JourneyRoute12Shipyard",
+        0,
+        44
+      ]
+    },
+    {
+      "source": [
+        "JourneyRoute12Shipyard",
+        0,
+        39
+      ],
+      "destination": [
+        "Route12_Frlg",
+        23,
+        99
+      ]
+    }
+  ],
+  "vermilion_old_exit_physically_closed": true,
+  "foot_access_from_existing_route12_walkway": true,
+  "save_continue_on_pier": true,
+  "sailors_lodge_native_entry_and_exit": true,
+  "no_midroute_warps": true,
+  "initial_party_and_trainer_flags_are_fixtures": true,
+  "wild_encounters_disabled": true,
+  "full_campaign_playthrough": false
+}

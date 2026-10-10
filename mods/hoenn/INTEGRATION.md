@@ -1,5 +1,7 @@
 # Mundo conectado — candidata experimental, não é a versão final
 
+[Estaleiro de madeira, casa dos barqueiros e nova ligação de Surf pela Rota 12](ROUTE12-SHIPYARD.md).
+
 [Abertura da entrada leste de Ever Grande e mapa amplo com Vermilion](EVER-GRANDE-ENTRANCE.md).
 
 A faixa leste foi remodelada para passar **atrás de Ever Grande** e ligar
