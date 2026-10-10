@@ -58,6 +58,11 @@ for i in range(6):
         move=(abi[104] if kanto else abi[76]) if slot==0 else abi[142] if slot==1 else 0
         native('ScriptSetMonMoveSlot',i,move,slot)
 identity=[native('GetMonData2',party+i*abi[2],abi[105]) for i in range(6)]
+with tempfile.TemporaryDirectory(dir='/tmp',prefix='elite-pp-') as temporary:
+    temp=Path(temporary)
+    (temp/'pp.c').write_text('#include "global.h"\n#include "pokemon.h"\n#include <stddef.h>\nconst u32 pp_offset=offsetof(struct BattlePokemon,pp);\n')
+    subprocess.run([str(ROOT/'.local/arm-gcc/usr/bin/arm-none-eabi-gcc'),'-S','-iquote',str(source/'include'),'-mabi=apcs-gnu',str(temp/'pp.c'),'-o',str(temp/'pp.s')],check=True)
+    pp_offset=int(re.search(r'pp_offset:\s*\.word\s+(\d+)',(temp/'pp.s').read_text())[1])
 entry = 'IndigoPlateau_PokemonCenter_1F_Frlg' if kanto else 'EverGrandeCity_PokemonLeague_1F'
 room = 'PokemonLeague_LoreleisRoom_Frlg' if kanto else 'EverGrandeCity_SidneysRoom'
 next_room = 'PokemonLeague_BrunosRoom_Frlg' if kanto else 'EverGrandeCity_Hall1'
@@ -97,10 +102,12 @@ for tick in range(2200):
         controller=lib.read32(s['gBattlerControllerFuncs'])&~1
         if controller in actions or controller in moves:
             step(1,64);step(8);step(1,32);step(8)
-            if controller in moves and not kanto:
+            if controller in moves:
                 enemy_species=lib.read16(s['gBattleMons']+abi[74]+abi[75])
-                if 13 in species_catalog.get(str(enemy_species),{}).get('types',[]):
-                    step(1,16);step(8) # Aerial Ace in move slot 2.
+                choice=1 if not kanto and 13 in species_catalog.get(str(enemy_species),{}).get('types',[]) else 0
+                available=[j for j in range(2) if lib.read8(s['gBattleMons']+pp_offset+j)]
+                if choice not in available and available:choice=available[0]
+                if choice:step(1,16);step(8) # Select the legal backup when PP runs out.
             if controller in actions and ash_seen:picture(run_options.region+'-elite-ash-battle')
             press(1)
             attacks += controller in moves

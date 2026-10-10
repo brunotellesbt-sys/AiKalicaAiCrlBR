@@ -3,6 +3,7 @@ import hashlib
 import json
 from pathlib import Path
 import argparse
+from audit_battle_database import decode_database,compare_database
 from package_playable import LAYERS, PIN, ROM_NAME
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -23,7 +24,7 @@ def verify(directory):
     if (directory / 'SHA256SUMS').read_text() != digest + '  ' + ROM_NAME + '\n':
         raise ValueError('Checksum file does not match the release')
     evidence = ROOT / 'mods/hoenn/playable-validation'
-    for name in ['campaign-kanto/campaign-playthrough.json','campaign-hoenn/campaign-playthrough.json','browser.json','homes/family.json','birth-rules/birth-rules.json','eastern-ocean/eastern-union.json','leagues/sixteen-badge-leagues.json','world-map/world-map.json','coast/kanto-open-sea.json','western-coast/western-coast.json','world-fly/world-fly.json','coast-connectivity/coast-connectivity.json','western-waterfall/sea-landscapes.json','remote-islands/remote-islands.json','campaign-matrix/campaign-matrix.json','league-kanto/kanto-elite-battle.json','league-hoenn/hoenn-elite-battle.json','trainer-levels/trainer-levels.json','surf-passages/surf-passages.json','start-sevii-1/sevii-opening.json','start-sevii-7/sevii-opening.json']:
+    for name in ['campaign-kanto/campaign-playthrough.json','campaign-hoenn/campaign-playthrough.json','browser.json','homes/family.json','birth-rules/birth-rules.json','eastern-ocean/eastern-union.json','leagues/sixteen-badge-leagues.json','world-map/world-map.json','coast/kanto-open-sea.json','western-coast/western-coast.json','world-fly/world-fly.json','coast-connectivity/coast-connectivity.json','western-waterfall/sea-landscapes.json','remote-islands/remote-islands.json','campaign-matrix/campaign-matrix.json','league-kanto/kanto-elite-battle.json','league-hoenn/hoenn-elite-battle.json','trainer-levels/trainer-levels.json','surf-passages/surf-passages.json','start-sevii-1/sevii-opening.json','start-sevii-7/sevii-opening.json','battle-database.json','learnsets/learnsets.json','wild/wild.json','abilities/abilities-slot-2.json','pwt/pwt.json','pwt-six/pwt-six.json','full-league-kanto/kanto-league-completion.json','full-league-hoenn/hoenn-league-completion.json','home-resume/home-resume.json','five-island-habitat/five-island-habitat.json','native-catalog.json','adaptive-gym-teams/adaptive-gym-teams.json','mossdeep-double/mossdeep-entry.json','mossdeep-odd/mossdeep-entry.json']:
         report = json.loads((evidence / name).read_text())
         if report['rom_sha256'] != digest:
             raise ValueError('Evidence belongs to another ROM: ' + name)
@@ -34,6 +35,9 @@ def verify(directory):
                 raise ValueError('Opening battle did not pass: ' + name)
         elif not report['passed']:
             raise ValueError('Failed release evidence: ' + name)
+    database = json.loads((evidence / 'battle-database.json').read_text())
+    if not compare_database(decode_database(raw,database['compiled_layout']))['passed']:
+        raise ValueError('Exported ROM move/learnset/type data differs from the reference')
     print('Playable alpha ROM, checksum, layer chain and matching native/browser evidence passed:', digest)
     return manifest
 

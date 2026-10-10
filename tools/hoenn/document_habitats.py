@@ -32,6 +32,9 @@ def generate(source,output):
  if (source/'.journey-remote-islands').exists():
   overlay=json.loads((source/'.journey-remote-islands').read_text())
   ecology.update({k:overlay[k] for k in ['locations_data','map_species','pools','field_slots']})
+ if (source/'.journey-five-island-habitat').exists():
+  overlay=json.loads((source/'.journey-five-island-habitat').read_text())
+  ecology.update({k:overlay[k] for k in ['locations_data','map_species','pools','field_slots']})
  maps={}
  for path in sorted((source/'data/maps').glob('*/map.json')):
   data=json.loads(path.read_text());maps[data['id']]=data;maps[path.parent.name]=data
@@ -112,6 +115,7 @@ def generate(source,output):
  if (source/'.journey-sixteen-badge-leagues').exists():evidence['input_sha256']['.journey-sixteen-badge-leagues']=hashlib.sha256((source/'.journey-sixteen-badge-leagues').read_bytes()).hexdigest()
  if (source/'.journey-eastern-sea-union').exists():evidence['input_sha256']['.journey-eastern-sea-union']=hashlib.sha256((source/'.journey-eastern-sea-union').read_bytes()).hexdigest()
  if (source/'.journey-remote-islands').exists():evidence['input_sha256']['.journey-remote-islands']=hashlib.sha256((source/'.journey-remote-islands').read_bytes()).hexdigest()
+ if (source/'.journey-five-island-habitat').exists():evidence['input_sha256']['.journey-five-island-habitat']=hashlib.sha256((source/'.journey-five-island-habitat').read_bytes()).hexdigest()
  rom=source/'pokeemerald.gba'
  if rom.exists():evidence['rom_sha256']=hashlib.sha256(rom.read_bytes()).hexdigest()
  evidence['documents_sha256']={n:hashlib.sha256((output/n).read_bytes()).hexdigest() for n in ('POKEMON-LOCATIONS.md','SPECIAL-LOCATIONS.md','pokemon-locations.csv')}

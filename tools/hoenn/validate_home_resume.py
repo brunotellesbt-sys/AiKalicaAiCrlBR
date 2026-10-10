@@ -12,6 +12,7 @@ options=parser.parse_args()
 sys.argv=[sys.argv[0],'--source',str(options.source),'--library',str(options.library),'--output',str(options.output)]
 bootstrap=(ROOT/'tools/hoenn/validate_abilities.py').read_text().split('\nability_field,')[0]
 exec(compile(bootstrap,str(ROOT/'tools/hoenn/validate_abilities.py'),'exec'))
+native('DisableWildEncounters',1)
 homes=json.loads((source/'.journey-birth').read_text())['homes']
 map_names={json.loads(p.read_text())['id']:p.parent.name for p in (source/'data/maps').glob('*/map.json')}
 def data():return bytes(lib.read8(save()+12+i) for i in range(8))
@@ -26,7 +27,9 @@ for gender in [0,1]:
   g,n=map_id(expected)
   assert data()==bytes([g,n,255,0,6,0,6,0]),(home['city'],gender,data(),expected)
   assert bytes(lib.read8(save()+4720+i) for i in range(len(flags_before)))==flags_before
+  print('Saving home destination',gender,home['city'],flush=True)
   assert native('TrySavingData',0,max_frames=6000)==1
+  step(30)
   for i in range(8):lib.write8(save()+12+i,0)
   assert native('LoadGameSave',0,max_frames=6000)==1
   step(30)

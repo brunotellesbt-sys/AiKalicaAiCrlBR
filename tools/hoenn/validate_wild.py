@@ -60,17 +60,15 @@ for kanto,hoenn in [(0,0),(5,0),(6,0),(8,3),(8,4),(8,8)]:
  print('Parallel regional evolution phase passed:',kanto,hoenn,flush=True)
 # Complete catalog habitat membership, including highest-generation species.
 prep=json.loads((source/('.journey-ecology' if (source/'.journey-ecology').exists() else '.journey-habitats')).read_text())
-if (source/'.journey-lostelle-habitats').exists():
- overlay=json.loads((source/'.journey-lostelle-habitats').read_text())
- prep.update({k:overlay[k] for k in ['locations_data','map_species','pools','field_slots']})
-if (source/'.journey-tower-habitats').exists():
- overlay=json.loads((source/'.journey-tower-habitats').read_text())
- prep.update({k:overlay[k] for k in ['locations_data','map_species','pools','field_slots']})
+for layer in ['lostelle-habitats','tower-habitats','remote-islands','five-island-habitat']:
+ if (source/('.journey-'+layer)).exists():
+  overlay=json.loads((source/('.journey-'+layer)).read_text())
+  prep.update({k:overlay[k] for k in ['locations_data','map_species','pools','field_slots']})
 metadata=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_text())
 observed_checks=[]
 for h in prep['locations_data']:
- name=next((m for m in h['maps'] if prep.get('map_species',{}).get(m)),h['maps'][0])
- area=next((p['area'] for p in prep.get('pools',[]) if p['map']==name),0)
+ pool=next(p for p in prep['pools'] if p['map'] in h['maps'])
+ name,area=pool['map'],pool['area']
  names=json.loads((source/'data/maps/map_groups.json').read_text())
  source_name=next(n for g in names['group_order'] for n in names[g] if json.loads((source/f'data/maps/{n}/map.json').read_text())['id']==name)
  warp(source_name,1,1)

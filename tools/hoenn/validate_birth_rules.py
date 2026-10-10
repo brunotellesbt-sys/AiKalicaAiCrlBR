@@ -58,6 +58,7 @@ lib.write8(save2+abi[45],abi[51] if scenario=='oak' else abi[46])
 lib.write32(s['gMain'],0);lib.write8(s['gMain']+0x438,0);lib.write32(s['gMain']+4,s['CB2_NewGame']|1)
 step(300);until(lambda:task('Task_HandleMultichoiceGridInput'));press();step(1500)
 warp('MauvilleCity_BikeShop',4,5)
+native('DisableWildEncounters',1)
 # Initial city menu completed before test warps; no task from the opening survives.
 result=dict(passed=True, scenario=scenario, script_entry_fixture=True, full_story_validated=False)
 if scenario.startswith('bike'):
@@ -87,7 +88,9 @@ if scenario.startswith('bike'):
     event(second);finish()
     assert quantity(mach)==0 and var(0x40FB)==1
     assert native('TrySavingData',0,max_frames=6000)==1
+    step(30)
     native('VarSet',0x40FB,0);assert native('LoadGameSave',0)==1
+    step(300)
     assert var(0x40FB)==1
     result.update(full_bag_retry=True, both_supplier_orders=True, pc_bike_no_duplicate=True, saved_shared_receipt=True)
 elif scenario=='oak':

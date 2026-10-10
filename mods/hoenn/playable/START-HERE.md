@@ -19,7 +19,7 @@ Use **Save no menu do próprio jogo**. Exporte também o arquivo de save pelo me
 ## Incluído nesta alpha
 
 - Menu explícito de três regiões e 31 opções de cidade inicial, família, professor, iniciais das duas regiões e National Dex.
-- Treinadores fora dos ginásios seguem a média de nível da equipe, de cinco abaixo a dois acima, entre 1 e 100. Os ginásios preservam a escala pela ordem das insígnias da região.
+- Treinadores fora dos ginásios seguem a média de nível da equipe, de cinco abaixo a dois acima, entre 1 e 100. Os ginásios preservam a escala pela ordem das insígnias da região e usam [times adaptados ao tamanho da equipe](ADAPTIVE-GYM-TEAMS.md), priorizando os Pokémon principais. Tate e Liza sempre lutam em dupla.
 - Cercas aquáticas antigas abertas nas rotas costeiras, incluindo os setores antes isolados das Rotas 124/125; as pedras completas nas bordas sem conexão permanecem.
 - Mar aberto entre Fuchsia, a costa das Rotas 14/13 e Lavender Port, com ponte a pé ao norte do cais.
 - Mundo conectado por Surf, incluindo o mar atrás de Ever Grande, as Sevii e a costa oeste de Hoenn; Waterfall permite subir ao rio da Rota 114.
@@ -29,7 +29,7 @@ Use **Save no menu do próprio jogo**. Exporte também o arquivo de save pelo me
 - Insígnias separadas e ginásios em ordem livre com escalonamento. As duas Ligas exigem as **16 insígnias**.
 - Missões regionais obrigatórias e ligação Silph–Giovanni–Archie, com as travas nos ginásios combinadas anteriormente.
 - Uma Mach Bike compartilhada entre regiões; passagens terrestres antigas de HM adaptadas. Apenas Surf, Dive e Waterfall permanecem HMs.
-- Catálogo ampliado, tipo Fairy, Hidden Abilities e Ash-Greninja por Battle Bond após um nocaute.
+- Catálogo ampliado, tipo Fairy, Hidden Abilities e Ash-Greninja por Battle Bond após um nocaute. Golpes e learnsets revisados pela referência de Scarlet/Violet com as DLCs; [detalhes](BATTLE-DATABASE.md).
 - Encontros distribuídos por família e estágios conforme a média do avanço regional; níveis relativos à média da equipe. Lendários/míticos ficam em locais especiais e exigem 16 insígnias.
 - PWT Singles com seis Pokémon na Battle Frontier. Mega Evolution está implementada; a distribuição de Mega Stones permanece desativada conforme solicitado. Dynamax, Gigantamax e Z-Moves permanecem desativados.
 
@@ -39,13 +39,15 @@ A localização dos Pokémon está em `mods/hoenn/POKEMON-LOCATIONS.md` e nos do
 
 A abertura das duas regiões passou desde a tela inicial, por controles normais, até o inicial e o primeiro combate, sem conceder insígnias ou aumentar atributos. Há verificações nativas das viagens, acessos, presentes e sistemas, além de testes do player. Os relatórios desta versão ficam em `mods/hoenn/playable-validation`.
 
+As sequências das duas Ligas passaram pelos cinco adversários, Hall of Fame, créditos e Continue com save nativo. Esses testes usam equipes de nível 100, insígnias e cura entre batalhas como fixtures, sem alterar os adversários. A matriz dos líderes cobre 768 combinações de ordem e tamanho de equipe, além de 128 casos com ovos e 3.808 conjuntos de golpes. O aprendizado nativo foi exercitado para os 1.025 Pokémon base em cinco níveis, incluindo golpes de evolução e doze relações de tipo Fada.
+
 **As duas campanhas completas, da abertura até os dois Hall of Fame, ainda não foram concluídas por controles normais na validação.** Balanceamento, eventos posteriores e acabamento podem precisar de correções. Esta é uma alpha para jogar e encontrar esses problemas; não é anunciada como a versão final.
 
 Se encontrar um problema, guarde um save anterior ao evento e informe: cidade/mapa, último evento feito, insígnias de cada região e como reproduzir. Uma captura da tela ajuda.
 
 ## Integridade e reprodução
 
-O pacote inclui `release.json` e `SHA256SUMS`. A ROM tem 32 MiB; confirme seu SHA-256 antes de usar. As 58 camadas de integração e seus hashes constam do manifesto. O pacote inclui o mapa integrado no menu MAP.
+O pacote inclui `release.json` e `SHA256SUMS`. A ROM tem 32 MiB; confirme seu SHA-256 antes de usar. As 63 camadas de integração e seus hashes constam do manifesto. O pacote inclui o mapa integrado no menu MAP.
 
 Para compilar e exportar a partir da fonte fixada, com a toolchain ARM já configurada:
 

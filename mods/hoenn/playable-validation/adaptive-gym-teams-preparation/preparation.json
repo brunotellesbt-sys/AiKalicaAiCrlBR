@@ -1,0 +1,16 @@
+{
+  "layer": "adaptive-gym-teams",
+  "leader_count": 16,
+  "party_rule": "rank >= 4: 6; otherwise rank + 2 + (non_egg_player_count > rank + 2)",
+  "signature_families_prioritized": true,
+  "regional_levels_unchanged": true,
+  "original_sha256": {
+    "include/journey_gym_scaling.h": "22eb762b3d672efe09658d17c991e6c64858a13347147263b8dd702b93cea2f2",
+    "src/battle_main.c": "394fcc00feaa63a4e4182da744244dee0146d34831b571418c69e3928d2390e4"
+  },
+  "prepared_sha256": {
+    "src/journey_adaptive_gym.c": "61a68ab7d1abf3bd33e06e9aff26e39166865c45b41286d91ce28272965b0e2a",
+    "include/journey_gym_scaling.h": "42fffc2f3684eae9dd31b743c9fb311ef57c2130e495cb8d9ea4d8fe15a1ed30",
+    "src/battle_main.c": "c413088e2cbe3201db37ce70d659968bd5bf1a14271f4b7becf96fbbe7839432"
+  }
+}

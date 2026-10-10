@@ -38,14 +38,14 @@ for gym in scaling['gyms']:
     for rank in range(8):
         for bank,count in [(kanto_flags,rank if gym['kanto'] else 7-rank),(hoenn_flags,7-rank if gym['kanto'] else rank)]:
             for i,f in enumerate(bank):rawflag(f,i<count)
-        for name in gym['trainers']:
+        for name in gym['trainers'] + (['TRAINER_NORMAN_1'] if gym['map']=='PetalburgCity_Gym' else []):
             if name=='TRAINER_LEADER_GIOVANNI':name='TRAINER_JOURNEY_BLUE'
             trainer=base+ids[name]*abi[0];pointer=lib.read32(trainer+abi[3]);result=generated(trainer)
-            highest=max(lib.read8(pointer+i*abi[1]+abi[5]) for i in range(len(result)))
             leader=lib.read8(trainer+abi[4]) in [abi[8],abi[9]]
+            highest=0 if leader else max(lib.read8(pointer+i*abi[1]+abi[5]) for i in range(len(result)))
             for i,actual in enumerate(result):
-                original=lib.read8(pointer+i*abi[1]+abi[5])
-                expected=scaling['ace_levels'][rank]-min(6,highest-original)-(0 if leader else 2)
+                original=0 if leader else lib.read8(pointer+i*abi[1]+abi[5])
+                expected=scaling['ace_levels'][rank]-(0 if i == len(result)-1 else min(3,i+1)) if leader else scaling['ace_levels'][rank]-min(6,highest-original)-2
                 assert actual==expected,(gym['map'],rank,name,actual,expected)
             gym_count+=1
 print('Regional gym parties passed:',gym_count,flush=True)

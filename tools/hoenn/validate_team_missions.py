@@ -7,6 +7,7 @@ import hashlib
 import json
 import re
 import struct
+import subprocess
 ROOT = Path(__file__).resolve().parents[2]
 exec(compile((ROOT / 'tools/hoenn/validate_pwt.py').read_text().split('\ndef enter(pool')[0], str(ROOT / 'tools/hoenn/validate_pwt.py'), 'exec'))
 stories = json.loads((source / '.journey-team-stories').read_text())
@@ -30,6 +31,22 @@ for name in ['FLAG_HIDE_SAFFRON_ROCKETS', 'FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT',
 rawflag(abi[111], False)
 native('VarSet', 0x409F, 0)
 for t in stories['trainers']: rawflag(0x500 + t['id'], False)
+# This mid-campaign fixture has already completed the earlier native quests.
+# Their actual battles and gates have separate validators.
+if (source/'.journey-mandatory-native-missions').exists():
+    quests=json.loads((source/'.journey-mandatory-native-missions').read_text())['quests']
+    names=sorted({name for q in quests for name in q['trainers']+q['flags']+[v for v,_ in q['variables']]})
+    assembly=subprocess.run([str(ROOT/'.local/arm-gcc/usr/bin/arm-none-eabi-gcc'),'-S','-mabi=apcs-gnu','-iquote',str(source/'include'),'-x','c','-','-o','-'],input='#include "global.h"\n#include "constants/flags.h"\n#include "constants/vars.h"\n#include "constants/opponents.h"\nconst u32 quest_ids[]={'+','.join(names)+'};',text=True,capture_output=True,check=True).stdout
+    ids=dict(zip(names,[int(n) for n in re.findall(r'\.word\s+(\d+)',assembly.split('quest_ids:',1)[1].split('.size',1)[0])]))
+    for quest in quests:
+        for trainer in quest['trainers']:rawflag(0x500+ids[trainer],True)
+        for flag_name in quest['flags']:rawflag(ids[flag_name],True)
+        for variable,value in quest['variables']:native('VarSet',ids[variable],value)
+# Shelly is a separate mandatory event at the same fourth-badge checkpoint.
+# Complete that earlier episode in this fixture; do not grant gym badges.
+if (source/'.journey-aqua-episodes').exists():
+    native('VarSet',0x40B3,1)
+    rawflag(0x500+32,True)
 for i in range(6 * abi[2]): lib.write8(party + i, 0)
 lib.write8(s['gPartiesCount'], 0)
 for i, mon in enumerate([658, 149, 376]):
