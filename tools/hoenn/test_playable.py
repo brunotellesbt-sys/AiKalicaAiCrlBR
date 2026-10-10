@@ -26,7 +26,7 @@ class PlayableAlpha(unittest.TestCase):
  def test_exported_rom_matches_all_validation_evidence(self):
   r=verify(ROOT/'mods/hoenn/playable')
   self.assertFalse(r['full_campaign_playthrough'])
-  self.assertEqual(r['layers'][-1],'surf-passages')
+  self.assertEqual(r['layers'][-1],'adaptive-gym-teams')
  def test_remote_islands_have_real_landings_and_unique_eight_family_habitats(self):
   r=json.loads((EVIDENCE/'remote-islands/remote-islands.json').read_text())
   p=json.loads((EVIDENCE/'remote-islands-preparation/preparation.json').read_text())

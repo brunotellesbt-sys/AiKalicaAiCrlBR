@@ -69,6 +69,13 @@ def port(city):
     native('VarSet', state, 2)
     warp(city + 'City_Harbor', 8, 11)
     talk_up()
+    local_service()
+
+def local_service():
+    if (source/'.journey-lavender-network').exists():
+        # The live clerk first offers WORLD PORTS / LOCAL SERVICE.
+        # Exercise the original S.S. Tidal service through its real wrapper.
+        until(menu);choose(1)
 
 for mon in [658, 149, 376, 121, 445, 637]: assert native('ScriptGiveMon', mon, 50, 0) == 0
 flag(0x1AB8, True) # Kanto victory alone must not unlock the Hoenn ferry.
@@ -128,7 +135,7 @@ for city in ['Lilycove', 'Slateport']:
     if city == 'Slateport':
         # The previous return went to Slateport, as selected below.
         assert location() == map_id('SlateportCity_Harbor')
-    talk_up(); until(menu); choose(1)
+    talk_up();local_service(); until(menu); choose(1)
     until(lambda: task('Task_HandleYesNoInput')); step(12)
     picture(f'{city.lower()}-frontier-confirmation')
     press(64); press(1)
@@ -136,7 +143,7 @@ for city in ['Lilycove', 'Slateport']:
     assert position() == (19, 67), position()
     picture(f'{city.lower()}-arrives-frontier')
     # Below the player is the actual Frontier clerk.
-    step(4, 128); step(20); press(1); until(menu)
+    step(4, 128); step(20); press(1);local_service(); until(menu)
     choose(0 if city == 'Lilycove' else 1) # Return to the other port.
     until(lambda: task('Task_HandleYesNoInput')); step(12); press(1)
     dest = 'Slateport' if city == 'Lilycove' else 'Lilycove'

@@ -1,0 +1,958 @@
+{
+  "passed": true,
+  "rom_sha256": "6b52815146a3b27c5ac83702001993b2cc0642134f435c361a0dc1a0c4b27241",
+  "tournaments": [
+    {
+      "pool": 0,
+      "leaves": [
+        7,
+        6,
+        5,
+        1,
+        3,
+        0,
+        255,
+        2
+      ],
+      "wins": [
+        {
+          "round": 0,
+          "attacks": 17,
+          "outcome": 1,
+          "bag_blocked": true,
+          "ash_seen": true,
+          "forfeit": false
+        },
+        {
+          "round": 1,
+          "attacks": 10,
+          "outcome": 1,
+          "bag_blocked": false,
+          "ash_seen": true,
+          "forfeit": false
+        },
+        {
+          "round": 2,
+          "attacks": 28,
+          "outcome": 1,
+          "bag_blocked": false,
+          "ash_seen": true,
+          "forfeit": false
+        }
+      ],
+      "original_party_byte_identical": true,
+      "flags_and_money_unchanged": true,
+      "reward_bp": 3,
+      "native_flash_save_reload": true
+    },
+    {
+      "pool": 1,
+      "leaves": [
+        11,
+        14,
+        13,
+        9,
+        8,
+        12,
+        10,
+        255
+      ],
+      "wins": [
+        {
+          "round": 0,
+          "attacks": 36,
+          "outcome": 1,
+          "bag_blocked": false,
+          "ash_seen": true,
+          "forfeit": false
+        },
+        {
+          "round": 1,
+          "attacks": 23,
+          "outcome": 1,
+          "bag_blocked": false,
+          "ash_seen": true,
+          "forfeit": false
+        },
+        {
+          "round": 2,
+          "attacks": 34,
+          "outcome": 1,
+          "bag_blocked": false,
+          "ash_seen": true,
+          "forfeit": false
+        }
+      ],
+      "original_party_byte_identical": true,
+      "flags_and_money_unchanged": true,
+      "reward_bp": 3,
+      "native_flash_save_reload": true
+    },
+    {
+      "pool": 2,
+      "leaves": [
+        15,
+        17,
+        1,
+        13,
+        255,
+        2,
+        9,
+        14
+      ],
+      "wins": [
+        {
+          "round": 0,
+          "attacks": 24,
+          "outcome": 1,
+          "bag_blocked": false,
+          "ash_seen": true,
+          "forfeit": false
+        },
+        {
+          "round": 1,
+          "attacks": 28,
+          "outcome": 1,
+          "bag_blocked": false,
+          "ash_seen": true,
+          "forfeit": false
+        },
+        {
+          "round": 2,
+          "attacks": 26,
+          "outcome": 1,
+          "bag_blocked": false,
+          "ash_seen": true,
+          "forfeit": false
+        }
+      ],
+      "original_party_byte_identical": true,
+      "flags_and_money_unchanged": true,
+      "reward_bp": 3,
+      "native_flash_save_reload": true
+    }
+  ],
+  "native_battle_victories": 9,
+  "team_size": 6,
+  "native_loss": {
+    "round": 0,
+    "attacks": 9,
+    "outcome": 2,
+    "bag_blocked": false,
+    "ash_seen": false,
+    "forfeit": false
+  },
+  "native_forfeit": {
+    "round": 0,
+    "attacks": 0,
+    "outcome": 9,
+    "bag_blocked": false,
+    "ash_seen": false,
+    "forfeit": true
+  },
+  "entry_guards": [
+    {
+      "case": "slot_out_of_range",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "same_slot",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "same_species",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "same_national_forms",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "same_item",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "egg",
+      "refused": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "banned_mewtwo",
+      "refused": true,
+      "party_unchanged": true
+    }
+  ],
+  "native_roster_teams": [
+    {
+      "index": 0,
+      "trainer": 1168,
+      "mons": [
+        {
+          "species": 95,
+          "level": 50,
+          "item": 472,
+          "move": 21
+        },
+        {
+          "species": 142,
+          "level": 50,
+          "item": 481,
+          "move": 442
+        },
+        {
+          "species": 76,
+          "level": 50,
+          "item": 479,
+          "move": 350
+        },
+        {
+          "species": 248,
+          "level": 50,
+          "item": 523,
+          "move": 89
+        },
+        {
+          "species": 464,
+          "level": 50,
+          "item": 477,
+          "move": 350
+        },
+        {
+          "species": 526,
+          "level": 50,
+          "item": 522,
+          "move": 157
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "trainer": 1169,
+      "mons": [
+        {
+          "species": 130,
+          "level": 50,
+          "item": 481,
+          "move": 349
+        },
+        {
+          "species": 658,
+          "level": 50,
+          "item": 522,
+          "move": 191
+        },
+        {
+          "species": 121,
+          "level": 50,
+          "item": 472,
+          "move": 33
+        },
+        {
+          "species": 131,
+          "level": 50,
+          "item": 479,
+          "move": 362
+        },
+        {
+          "species": 350,
+          "level": 50,
+          "item": 477,
+          "move": 219
+        },
+        {
+          "species": 195,
+          "level": 50,
+          "item": 523,
+          "move": 401
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "trainer": 1170,
+      "mons": [
+        {
+          "species": 479,
+          "level": 50,
+          "item": 522,
+          "move": 506
+        },
+        {
+          "species": 135,
+          "level": 50,
+          "item": 523,
+          "move": 42
+        },
+        {
+          "species": 405,
+          "level": 50,
+          "item": 477,
+          "move": 46
+        },
+        {
+          "species": 466,
+          "level": 50,
+          "item": 481,
+          "move": 9
+        },
+        {
+          "species": 462,
+          "level": 50,
+          "item": 479,
+          "move": 393
+        },
+        {
+          "species": 26,
+          "level": 50,
+          "item": 472,
+          "move": 39
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "trainer": 1171,
+      "mons": [
+        {
+          "species": 45,
+          "level": 50,
+          "item": 481,
+          "move": 230
+        },
+        {
+          "species": 470,
+          "level": 50,
+          "item": 523,
+          "move": 241
+        },
+        {
+          "species": 407,
+          "level": 50,
+          "item": 477,
+          "move": 71
+        },
+        {
+          "species": 286,
+          "level": 50,
+          "item": 522,
+          "move": 388
+        },
+        {
+          "species": 465,
+          "level": 50,
+          "item": 479,
+          "move": 79
+        },
+        {
+          "species": 3,
+          "level": 50,
+          "item": 472,
+          "move": 36
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "trainer": 1172,
+      "mons": [
+        {
+          "species": 49,
+          "level": 50,
+          "item": 523,
+          "move": 79
+        },
+        {
+          "species": 452,
+          "level": 50,
+          "item": 477,
+          "move": 400
+        },
+        {
+          "species": 454,
+          "level": 50,
+          "item": 522,
+          "move": 398
+        },
+        {
+          "species": 89,
+          "level": 50,
+          "item": 479,
+          "move": 482
+        },
+        {
+          "species": 169,
+          "level": 50,
+          "item": 472,
+          "move": 314
+        },
+        {
+          "species": 110,
+          "level": 50,
+          "item": 481,
+          "move": 188
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "trainer": 1174,
+      "mons": [
+        {
+          "species": 65,
+          "level": 50,
+          "item": 472,
+          "move": 94
+        },
+        {
+          "species": 579,
+          "level": 50,
+          "item": 477,
+          "move": 502
+        },
+        {
+          "species": 199,
+          "level": 50,
+          "item": 481,
+          "move": 94
+        },
+        {
+          "species": 282,
+          "level": 50,
+          "item": 523,
+          "move": 273
+        },
+        {
+          "species": 196,
+          "level": 50,
+          "item": 479,
+          "move": 384
+        },
+        {
+          "species": 475,
+          "level": 50,
+          "item": 522,
+          "move": 182
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "trainer": 1173,
+      "mons": [
+        {
+          "species": 59,
+          "level": 50,
+          "item": 472,
+          "move": 43
+        },
+        {
+          "species": 78,
+          "level": 50,
+          "item": 479,
+          "move": 23
+        },
+        {
+          "species": 467,
+          "level": 50,
+          "item": 523,
+          "move": 7
+        },
+        {
+          "species": 324,
+          "level": 50,
+          "item": 477,
+          "move": 334
+        },
+        {
+          "species": 38,
+          "level": 50,
+          "item": 481,
+          "move": 517
+        },
+        {
+          "species": 637,
+          "level": 50,
+          "item": 522,
+          "move": 103
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "trainer": 1550,
+      "mons": [
+        {
+          "species": 103,
+          "level": 50,
+          "item": 522,
+          "move": 72
+        },
+        {
+          "species": 65,
+          "level": 50,
+          "item": 479,
+          "move": 94
+        },
+        {
+          "species": 112,
+          "level": 50,
+          "item": 481,
+          "move": 350
+        },
+        {
+          "species": 18,
+          "level": 50,
+          "item": 472,
+          "move": 97
+        },
+        {
+          "species": 59,
+          "level": 50,
+          "item": 523,
+          "move": 43
+        },
+        {
+          "species": 130,
+          "level": 50,
+          "item": 477,
+          "move": 349
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "trainer": 773,
+      "mons": [
+        {
+          "species": 476,
+          "level": 50,
+          "item": 472,
+          "move": 414
+        },
+        {
+          "species": 745,
+          "level": 50,
+          "item": 522,
+          "move": 46
+        },
+        {
+          "species": 306,
+          "level": 50,
+          "item": 523,
+          "move": 442
+        },
+        {
+          "species": 348,
+          "level": 50,
+          "item": 481,
+          "move": 306
+        },
+        {
+          "species": 697,
+          "level": 50,
+          "item": 477,
+          "move": 242
+        },
+        {
+          "species": 346,
+          "level": 50,
+          "item": 479,
+          "move": 254
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "trainer": 777,
+      "mons": [
+        {
+          "species": 297,
+          "level": 50,
+          "item": 472,
+          "move": 264
+        },
+        {
+          "species": 286,
+          "level": 50,
+          "item": 523,
+          "move": 388
+        },
+        {
+          "species": 68,
+          "level": 50,
+          "item": 479,
+          "move": 70
+        },
+        {
+          "species": 620,
+          "level": 50,
+          "item": 522,
+          "move": 369
+        },
+        {
+          "species": 448,
+          "level": 50,
+          "item": 477,
+          "move": 198
+        },
+        {
+          "species": 308,
+          "level": 50,
+          "item": 481,
+          "move": 244
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "trainer": 781,
+      "mons": [
+        {
+          "species": 310,
+          "level": 50,
+          "item": 472,
+          "move": 46
+        },
+        {
+          "species": 181,
+          "level": 50,
+          "item": 523,
+          "move": 109
+        },
+        {
+          "species": 101,
+          "level": 50,
+          "item": 481,
+          "move": 113
+        },
+        {
+          "species": 462,
+          "level": 50,
+          "item": 522,
+          "move": 393
+        },
+        {
+          "species": 596,
+          "level": 50,
+          "item": 477,
+          "move": 163
+        },
+        {
+          "species": 82,
+          "level": 50,
+          "item": 479,
+          "move": 393
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "trainer": 785,
+      "mons": [
+        {
+          "species": 555,
+          "level": 50,
+          "item": 477,
+          "move": 253
+        },
+        {
+          "species": 663,
+          "level": 50,
+          "item": 522,
+          "move": 512
+        },
+        {
+          "species": 324,
+          "level": 50,
+          "item": 472,
+          "move": 334
+        },
+        {
+          "species": 609,
+          "level": 50,
+          "item": 523,
+          "move": 310
+        },
+        {
+          "species": 219,
+          "level": 50,
+          "item": 481,
+          "move": 436
+        },
+        {
+          "species": 323,
+          "level": 50,
+          "item": 479,
+          "move": 174
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "trainer": 789,
+      "mons": [
+        {
+          "species": 115,
+          "level": 50,
+          "item": 522,
+          "move": 242
+        },
+        {
+          "species": 242,
+          "level": 50,
+          "item": 523,
+          "move": 113
+        },
+        {
+          "species": 474,
+          "level": 50,
+          "item": 477,
+          "move": 105
+        },
+        {
+          "species": 288,
+          "level": 50,
+          "item": 479,
+          "move": 638
+        },
+        {
+          "species": 143,
+          "level": 50,
+          "item": 481,
+          "move": 133
+        },
+        {
+          "species": 289,
+          "level": 50,
+          "item": 472,
+          "move": 638
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "trainer": 793,
+      "mons": [
+        {
+          "species": 334,
+          "level": 50,
+          "item": 472,
+          "move": 538
+        },
+        {
+          "species": 279,
+          "level": 50,
+          "item": 523,
+          "move": 256
+        },
+        {
+          "species": 227,
+          "level": 50,
+          "item": 481,
+          "move": 65
+        },
+        {
+          "species": 715,
+          "level": 50,
+          "item": 477,
+          "move": 162
+        },
+        {
+          "species": 357,
+          "level": 50,
+          "item": 522,
+          "move": 403
+        },
+        {
+          "species": 277,
+          "level": 50,
+          "item": 479,
+          "move": 332
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "trainer": 797,
+      "mons": [
+        {
+          "species": 437,
+          "level": 50,
+          "item": 477,
+          "move": 484
+        },
+        {
+          "species": 338,
+          "level": 50,
+          "item": 472,
+          "move": 444
+        },
+        {
+          "species": 344,
+          "level": 50,
+          "item": 481,
+          "move": 470
+        },
+        {
+          "species": 178,
+          "level": 50,
+          "item": 523,
+          "move": 384
+        },
+        {
+          "species": 337,
+          "level": 50,
+          "item": 479,
+          "move": 444
+        },
+        {
+          "species": 678,
+          "level": 50,
+          "item": 522,
+          "move": 115
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "trainer": 801,
+      "mons": [
+        {
+          "species": 419,
+          "level": 50,
+          "item": 477,
+          "move": 458
+        },
+        {
+          "species": 365,
+          "level": 50,
+          "item": 481,
+          "move": 62
+        },
+        {
+          "species": 340,
+          "level": 50,
+          "item": 479,
+          "move": 401
+        },
+        {
+          "species": 134,
+          "level": 50,
+          "item": 522,
+          "move": 392
+        },
+        {
+          "species": 342,
+          "level": 50,
+          "item": 523,
+          "move": 400
+        },
+        {
+          "species": 230,
+          "level": 50,
+          "item": 472,
+          "move": 61
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "trainer": 335,
+      "mons": [
+        {
+          "species": 73,
+          "level": 50,
+          "item": 481,
+          "move": 506
+        },
+        {
+          "species": 121,
+          "level": 50,
+          "item": 522,
+          "move": 33
+        },
+        {
+          "species": 272,
+          "level": 50,
+          "item": 479,
+          "move": 428
+        },
+        {
+          "species": 350,
+          "level": 50,
+          "item": 472,
+          "move": 219
+        },
+        {
+          "species": 260,
+          "level": 50,
+          "item": 477,
+          "move": 36
+        },
+        {
+          "species": 130,
+          "level": 50,
+          "item": 523,
+          "move": 349
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "trainer": 804,
+      "mons": [
+        {
+          "species": 344,
+          "level": 50,
+          "item": 522,
+          "move": 470
+        },
+        {
+          "species": 346,
+          "level": 50,
+          "item": 523,
+          "move": 254
+        },
+        {
+          "species": 306,
+          "level": 50,
+          "item": 479,
+          "move": 442
+        },
+        {
+          "species": 348,
+          "level": 50,
+          "item": 477,
+          "move": 306
+        },
+        {
+          "species": 376,
+          "level": 50,
+          "item": 472,
+          "move": 430
+        },
+        {
+          "species": 227,
+          "level": 50,
+          "item": 481,
+          "move": 65
+        }
+      ]
+    }
+  ],
+  "battle_bond_and_hidden_slot_restored": true,
+  "physical_receptionist_interaction": true,
+  "selection_cancel_restores_party": true,
+  "between_round_retirement_restores_party": true,
+  "defeat_restores_party_without_whiteout": true,
+  "no_bag_items": true,
+  "levels_normalized_to_50": true,
+  "battle_stats_and_travel_are_fixtures": true,
+  "full_campaign_playthrough": false,
+  "balance_validated": false
+}

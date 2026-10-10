@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "rom_sha256": "c9ee5f7bf796158f0c33aa3e2a2bad931ff70c52da6c6d645f77259b4cec5dc9",
+  "rom_sha256": "6b52815146a3b27c5ac83702001993b2cc0642134f435c361a0dc1a0c4b27241",
   "continuous_surf_and_land_roundtrip": true,
   "no_midtrip_fixture_warps": true,
   "checks": [
@@ -14,7 +14,7 @@
         755
       ],
       "levels": [
-        98
+        99
       ],
       "mean": 100,
       "native_dex_membership": true,
@@ -38,12 +38,12 @@
       ],
       "levels": [
         98,
+        100,
+        95,
         96,
-        99,
         95,
         97,
         98,
-        100,
         96
       ],
       "mean": 100,
@@ -67,13 +67,13 @@
         722
       ],
       "levels": [
+        97,
         98,
+        97,
+        99,
+        95,
         98,
         100,
-        100,
-        95,
-        96,
-        95,
         99
       ],
       "mean": 100,
@@ -192,7 +192,7 @@
     }
   ],
   "relocated_families_removed_from_old_dex_locations": true,
-  "wild_battle_species": 511,
+  "wild_battle_species": 459,
   "wild_battle_level": 95,
   "initial_location_party_defeated_flags_and_navigation_encounter_suppression_are_fixtures": true,
   "final_battle_started_with_native_sweet_scent_function": true,
