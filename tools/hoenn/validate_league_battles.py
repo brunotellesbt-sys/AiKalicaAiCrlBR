@@ -54,7 +54,9 @@ for i in range(6):
     lib.write8(scratch,5);native('SetMonData',party+i*abi[2],abi[96],scratch)
     lib.write8(scratch,2 if i==0 else 0);native('SetMonData',party+i*abi[2],abi[65],scratch)
     for slot in range(4):
-        native('ScriptSetMonMoveSlot',i,(abi[104] if kanto else abi[76]) if slot==0 else 0,slot)
+        # Surf alone cannot defeat a Grass opponent with Water Absorb.
+        move=(abi[104] if kanto else abi[76]) if slot==0 else abi[142] if slot==1 else 0
+        native('ScriptSetMonMoveSlot',i,move,slot)
 identity=[native('GetMonData2',party+i*abi[2],abi[105]) for i in range(6)]
 entry = 'IndigoPlateau_PokemonCenter_1F_Frlg' if kanto else 'EverGrandeCity_PokemonLeague_1F'
 room = 'PokemonLeague_LoreleisRoom_Frlg' if kanto else 'EverGrandeCity_SidneysRoom'
@@ -84,6 +86,8 @@ actions={int(a,16) for a,kind,n in re.findall(r'^(\w+) (\w) (\S+)$',raw,re.M) if
 moves={int(a,16) for a,kind,n in re.findall(r'^(\w+) (\w) (\S+)$',raw,re.M) if n=='HandleInputChooseMove'}
 started=ash_seen=False
 attacks=0
+faint_switches=0
+species_catalog=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_text())['species']
 for tick in range(2200):
     callback=lib.read32(s['gMain']+4)&~1
     if callback==s['BattleMainCB2']:
@@ -93,12 +97,25 @@ for tick in range(2200):
         controller=lib.read32(s['gBattlerControllerFuncs'])&~1
         if controller in actions or controller in moves:
             step(1,64);step(8);step(1,32);step(8)
+            if controller in moves and not kanto:
+                enemy_species=lib.read16(s['gBattleMons']+abi[74]+abi[75])
+                if 13 in species_catalog.get(str(enemy_species),{}).get('types',[]):
+                    step(1,16);step(8) # Aerial Ace in move slot 2.
             if controller in actions and ash_seen:picture(run_options.region+'-elite-ash-battle')
             press(1)
             attacks += controller in moves
         else:press(2)
     elif started and callback==s['CB2_Overworld']:
         break
+    elif started and any(lib.read8(s['gTasks']+i*40+4)
+                         and lib.read32(s['gTasks']+i*40)&~1==s['Task_HandleChooseMonInput'] for i in range(16)):
+        # An equally leveled Elite can defeat the lead. Select the next living
+        # party member through the native menu instead of leaving the bot stuck.
+        slot=lib.read8(s['gPartyMenu']+abi[100])
+        if slot>=6 or lib.read16(party+slot*abi[2]+abi[101])==0:
+            press(16 if slot==0 else 128)
+        else:
+            press(1);faint_switches+=1
     else:press(1)
 else:
     picture(run_options.region+'-elite-incomplete')
@@ -137,6 +154,7 @@ result=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').rea
             other_region_champion_does_not_select_kanto_rematch=True if kanto and not run_options.rematch else None,
             own_kanto_champion_selects_rematch=run_options.rematch,
             attacks=attacks,ash_after_ko=ash_seen,party_identity_preserved=True,
+            native_party_switches_after_faint=faint_switches,enemy_levels_not_written=True,
             ash_reverted_after_battle=True,native_progression_door=True,native_flash_save_reload=True,
             badge_and_champion_states_are_fixtures=True,full_league_victory=False,full_campaign_playthrough=False)
 (args.output/(run_options.region+('-elite-rematch.json' if run_options.rematch else '-elite-battle.json'))).write_text(json.dumps(result,indent=2)+'\n')

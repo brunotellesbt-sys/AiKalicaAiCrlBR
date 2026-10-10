@@ -45,7 +45,11 @@ class SeaMapGallery(unittest.TestCase):
             for field in ['ram_writes','script_injection','synthetic_badges','boosted_stats','disabled_wild_encounters','full_campaign_playthrough']:self.assertFalse(r[field])
             self.assertEqual(r['starting_region'],region)
             self.assertEqual(r['status'],'initial_segment_passed_campaign_incomplete')
-            self.assertEqual(r['runner_sha256'],__import__('hashlib').sha256((ROOT/'tools/hoenn/validate_campaign_playthrough.py').read_bytes()).hexdigest())
+            self.assertEqual(len(r['runner_sha256']),64)
+            current=json.loads((ROOT/f'mods/hoenn/playable-validation/campaign-{region}/campaign-playthrough.json').read_text())
+            self.assertEqual(current['runner_sha256'],__import__('hashlib').sha256((ROOT/'tools/hoenn/validate_campaign_playthrough.py').read_bytes()).hexdigest())
+            self.assertTrue(current['controller_only'])
+            self.assertFalse(current['full_campaign_playthrough'])
             # Historical controller runs remain attached to the ROM they actually executed.
             self.assertEqual(r['rom_sha256'],json.loads((ROOT/'mods/hoenn/rusturf-reunion-validation/preparation/reproduction.json').read_text())['rom_sha256'])
             self.assertTrue(r['battles']);self.assertTrue(all(b['outcome']==1 for b in r['battles']))

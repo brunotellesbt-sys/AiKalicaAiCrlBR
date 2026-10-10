@@ -26,7 +26,7 @@ class PlayableAlpha(unittest.TestCase):
  def test_exported_rom_matches_all_validation_evidence(self):
   r=verify(ROOT/'mods/hoenn/playable')
   self.assertFalse(r['full_campaign_playthrough'])
-  self.assertEqual(r['layers'][-1],'remote-islands')
+  self.assertEqual(r['layers'][-1],'surf-passages')
  def test_remote_islands_have_real_landings_and_unique_eight_family_habitats(self):
   r=json.loads((EVIDENCE/'remote-islands/remote-islands.json').read_text())
   p=json.loads((EVIDENCE/'remote-islands-preparation/preparation.json').read_text())
@@ -37,6 +37,27 @@ class PlayableAlpha(unittest.TestCase):
   roots=[f['root'] for h in p['locations_data'] for f in h['families']]
   self.assertEqual(len(roots),444);self.assertEqual(len(roots),len(set(roots)))
   self.assertTrue(p['level_and_stage_rules_preserved'])
+ def test_ordinary_trainers_use_party_mean_and_gym_ranks_remain_independent(self):
+  r=json.loads((EVIDENCE/'trainer-levels/trainer-levels.json').read_text())
+  self.assertTrue(r['passed'] and r['all_normal_difficulty_trainers_generated'])
+  self.assertEqual({c['mean'] for c in r['checks']},{1,6,20,25,100})
+  self.assertEqual(len(r['checks']),10)
+  self.assertGreaterEqual(r['gym_parties'],840)
+  self.assertTrue(r['route125_tropius_battle'] and r['enemy_levels_not_written'])
+  self.assertLessEqual(r['enemy_level'],r['player_level']+2)
+  self.assertGreaterEqual(r['enemy_level'],max(1,r['player_level']-5))
+ def test_mossdeep_and_all_large_sea_basins_join_the_continuous_surf_network(self):
+  r=json.loads((EVIDENCE/'surf-passages/surf-passages.json').read_text())
+  self.assertTrue(r['passed'] and r['controller_surf_roundtrip'] and r['no_midroute_warps'])
+  self.assertGreaterEqual(len(r['components']),68)
+  self.assertTrue(all(c['all_large_components_connected'] for c in r['components']))
+  self.assertTrue({'MossdeepCity','Route124','Route125','JourneyHoennNorthSea','JourneyWorldSea03'} <= {l['map'] for l in r['legs']})
+ def test_new_game_has_visible_regions_and_the_last_menu_entries_can_be_chosen(self):
+  for name in ['start-sevii-1','start-sevii-7','start-saffron','start-pacifidlog']:
+   r=json.loads((EVIDENCE/name/'sevii-opening.json').read_text())
+   self.assertTrue(r['passed'] and r['controller_only'] and r['explicit_region_and_island_choice'])
+   self.assertFalse(r['ram_writes'] or r['script_injection'])
+  self.assertEqual(json.loads((EVIDENCE/'start-sevii-7/sevii-opening.json').read_text())['island'],7)
  def test_native_menu_map_returns_without_changing_location(self):
   r=json.loads((EVIDENCE/'world-map/world-map.json').read_text())
   self.assertTrue(r['pokenav_entry_and_return'] and r['native_save_menu_and_continue'])
@@ -48,7 +69,7 @@ class PlayableAlpha(unittest.TestCase):
   r=json.loads((EVIDENCE/'remote-islands-preparation/reproduction.json').read_text())
   p=json.loads((EVIDENCE/'remote-islands-preparation/preparation.json').read_text())
   self.assertTrue(r['passed'] and r['deterministic_replay'] and r['idempotent'])
-  self.assertEqual(r['rom_sha256'],json.loads((EVIDENCE/'world-map/world-map.json').read_text())['rom_sha256'])
+  self.assertEqual(r['rom_sha256'],json.loads((EVIDENCE/'surf-passages-preparation/reproduction.json').read_text())['baseline_rom_sha256'])
   for path in ['src/journey_campaign_gates.c','src/journey_gym_scaling.c','data/layouts/JourneyRoute12Shipyard/map.bin']:
    self.assertIn(path,p['preserved_native_sha256']);self.assertNotIn(path,p['prepared_sha256'])
   self.assertIn('include/regions.h',p['prepared_sha256'])

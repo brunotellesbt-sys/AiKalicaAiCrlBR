@@ -4,13 +4,13 @@ Esta é a primeira versão jogável do mundo integrado **Kanto + Hoenn + Sevii**
 
 ## Como jogar
 
-1. Baixe `Pokemon-Journey-World-Alpha-1.gba` na pasta `mods/hoenn/playable` do PR #67. Use a opção **Download raw file** do GitHub.
+1. Baixe `Pokemon-Journey-World-Alpha-1.gba` na pasta `mods/hoenn/playable`. Use a opção **Download raw file** do GitHub.
 2. Abra a ROM no **mGBA** atualizado, ou no player do projeto no navegador.
 3. **Comece um Novo Jogo.** Não importe um save das versões antigas de LeafGreen ou de outra ROM.
-4. O título começa em Hoenn. Para começar em Kanto, pressione **Select na tela de título**, antes de entrar no menu. No navegador, Select é **Shift**. A escolha da cidade aparece antes da chegada de caminhão ou barco.
+4. Depois de escolher **New Game**, confirme seu personagem. Antes da chegada, aparece um menu com **HOENN, KANTO e SEVII ISLANDS**. Escolha a região e depois a cidade/ilha. Não é necessário apertar Select no título. Há 15 cidades de Hoenn, nove de Kanto e sete ilhas de Sevii.
 5. Converse com todos os familiares para receber **Surf, Dive e Waterfall** e com o professor para obter o inicial e a Pokédex. Pallet e Littleroot conservam os respectivos episódios iniciais originais.
 
-A configuração do player está preparada para GitHub Pages, mas a ativação do site foi recusada pela API do GitHub (403) nesta sessão. O envio de assets para Releases também foi recusado; não há uma Release publicada. A ROM está disponível diretamente no repositório pelo PR #67.
+O player está publicado em https://brunotellesbt-sys.github.io/AiKalicaAiCrlBR/ por GitHub Actions. Ele usa o núcleo mGBA incluído no projeto, controles para teclado/celular e armazenamento de saves no navegador. O deploy publica a mesma ROM cujo hash é validado pelo player. Não há uma Release separada com assets.
 
 No navegador: **setas** movem, **X** confirma (A), **Z** volta (B), **Enter** abre Start, **Shift** é Select. No celular, use os controles na tela. Ao definir o relógio de Hoenn, confirme com **Yes**.
 
@@ -18,7 +18,9 @@ Use **Save no menu do próprio jogo**. Exporte também o arquivo de save pelo me
 
 ## Incluído nesta alpha
 
-- 31 opções de cidade inicial, família, professor, iniciais das duas regiões e National Dex.
+- Menu explícito de três regiões e 31 opções de cidade inicial, família, professor, iniciais das duas regiões e National Dex.
+- Treinadores fora dos ginásios seguem a média de nível da equipe, de cinco abaixo a dois acima, entre 1 e 100. Os ginásios preservam a escala pela ordem das insígnias da região.
+- Cercas aquáticas antigas abertas nas rotas costeiras, incluindo os setores antes isolados das Rotas 124/125; as pedras completas nas bordas sem conexão permanecem.
 - Mar aberto entre Fuchsia, a costa das Rotas 14/13 e Lavender Port, com ponte a pé ao norte do cais.
 - Mundo conectado por Surf, incluindo o mar atrás de Ever Grande, as Sevii e a costa oeste de Hoenn; Waterfall permite subir ao rio da Rota 114.
 - Mapa integrado no menu **Start → MAP**, com posição real do jogador, mar uniforme e faixas retas de Surf; contorno de terra completado a oeste de Kanto e ao norte de Hoenn.

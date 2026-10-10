@@ -86,6 +86,12 @@ lib.write8(save2 + abi[45], abi[51] if hoenn else abi[46])
 lib.write32(s['gMain'], 0); lib.write8(s['gMain'] + 0x438, 0)
 lib.write32(s['gMain'] + 4, s['CB2_NewGame'] | 1)
 step(300)
+visible_regions=(source/'.journey-surf-passages').exists()
+if visible_regions:
+    advance_until(lambda: task('Task_HandleMultichoiceInput'))
+    step(30)
+    for _ in range(0 if hoenn else 1 if city<9 else 2):press(128)
+    press(1)
 if hoenn_control:
     advance_until(lambda: task('Task_HandleMultichoiceGridInput'))
     press(1)
@@ -108,10 +114,11 @@ if hoenn_control:
     (args.output / 'family.json').write_text(json.dumps(dict(passed=True,
         native_hoenn_start_not_replaced=True, no_late_city_chooser=True)) + '\n')
     sys.exit(0)
-advance_until(lambda: task('Task_HandleMultichoiceGridInput'))
+advance_until(lambda: task('Task_HandleMultichoiceInput') if visible_regions and 9<=city<16 else task('Task_HandleMultichoiceGridInput'))
+if visible_regions:step(30)
 if city == 0: picture('family-city-menu')
-choice = city - 16 if hoenn else city
-columns = 3 if hoenn else 2
+choice = city - 16 if hoenn else city - 9 if visible_regions and city>=9 else city
+columns = 1 if visible_regions and 9<=city<16 else 3 if hoenn or visible_regions else 2
 for _ in range(choice // columns): press(128)
 for _ in range(choice % columns): press(16)
 press(1)
