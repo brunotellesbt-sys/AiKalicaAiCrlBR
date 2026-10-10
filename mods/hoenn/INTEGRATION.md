@@ -1,4 +1,6 @@
-# Mundo conectado — candidata experimental, não é a versão final
+# Mundo conectado — alpha jogável
+
+[Como baixar e jogar](PLAYABLE-ALPHA.md) · [Mapa integrado no menu MAP](WORLD-MAP.md). A alpha reúne as 58 camadas; as duas campanhas completas continuam em validação.
 
 [Lavender Port: rede dos 18 portos, menus sem destino atual e animação de barco](LAVENDER-PORT-NETWORK.md).
 

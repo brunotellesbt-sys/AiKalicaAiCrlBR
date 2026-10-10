@@ -1,0 +1,509 @@
+{
+  "layer": "kanto-open-sea",
+  "map_buffer_limit": 10240,
+  "map_buffers_fit": true,
+  "no_rectangle_overlaps": true,
+  "approved_shipyard_core_preserved": true,
+  "rectangles": [
+    {
+      "map": "Route19_Frlg",
+      "x": 118,
+      "y": -60,
+      "width": 24,
+      "height": 60
+    },
+    {
+      "map": "FuchsiaCity_Frlg",
+      "x": 106,
+      "y": -100,
+      "width": 48,
+      "height": 40
+    },
+    {
+      "map": "Route15_Frlg",
+      "x": 154,
+      "y": -90,
+      "width": 72,
+      "height": 20
+    },
+    {
+      "map": "Route14_Frlg",
+      "x": 226,
+      "y": -130,
+      "width": 24,
+      "height": 60
+    },
+    {
+      "map": "Route13_Frlg",
+      "x": 250,
+      "y": -130,
+      "width": 72,
+      "height": 20
+    },
+    {
+      "map": "Route12_Frlg",
+      "x": 298,
+      "y": -250,
+      "width": 24,
+      "height": 120
+    },
+    {
+      "map": "LavenderTown_Frlg",
+      "x": 298,
+      "y": -270,
+      "width": 24,
+      "height": 20
+    },
+    {
+      "map": "Route11_Frlg",
+      "x": 226,
+      "y": -190,
+      "width": 72,
+      "height": 20
+    },
+    {
+      "map": "VermilionCity_Frlg",
+      "x": 178,
+      "y": -200,
+      "width": 48,
+      "height": 40
+    },
+    {
+      "map": "JourneyFuchsiaSea",
+      "x": 142,
+      "y": -20,
+      "width": 48,
+      "height": 20
+    },
+    {
+      "map": "JourneyRoute12Shipyard",
+      "x": 322,
+      "y": -190,
+      "width": 64,
+      "height": 60
+    },
+    {
+      "map": "JourneyRoute12OuterSea",
+      "x": 322,
+      "y": -250,
+      "width": 64,
+      "height": 60
+    },
+    {
+      "map": "JourneyWorldSea00",
+      "x": 190,
+      "y": 0,
+      "width": 64,
+      "height": 48
+    },
+    {
+      "map": "JourneyWorldSea01",
+      "x": 254,
+      "y": 0,
+      "width": 64,
+      "height": 48
+    },
+    {
+      "map": "JourneyWorldSea02",
+      "x": 318,
+      "y": 0,
+      "width": 64,
+      "height": 48
+    },
+    {
+      "map": "JourneyWorldSea03",
+      "x": 382,
+      "y": 0,
+      "width": 64,
+      "height": 48
+    },
+    {
+      "map": "JourneyKantoSouthWestSea",
+      "x": 142,
+      "y": -60,
+      "width": 48,
+      "height": 40
+    },
+    {
+      "map": "JourneyKantoSouthSea",
+      "x": 190,
+      "y": -70,
+      "width": 132,
+      "height": 50
+    },
+    {
+      "map": "JourneyRoute13Coast",
+      "x": 250,
+      "y": -110,
+      "width": 72,
+      "height": 40
+    },
+    {
+      "map": "JourneyKantoCoastalBand",
+      "x": 190,
+      "y": -20,
+      "width": 88,
+      "height": 20
+    },
+    {
+      "map": "JourneyLavenderApproach",
+      "x": 322,
+      "y": -130,
+      "width": 64,
+      "height": 65
+    },
+    {
+      "map": "JourneyKantoEasternChannel",
+      "x": 295,
+      "y": -20,
+      "width": 27,
+      "height": 20
+    },
+    {
+      "map": "JourneyOneIslandChannel",
+      "x": 278,
+      "y": -20,
+      "width": 17,
+      "height": 7
+    },
+    {
+      "map": "OneIsland_Harbor_Frlg",
+      "x": 278,
+      "y": -13,
+      "width": 17,
+      "height": 13
+    },
+    {
+      "map": "TwoIsland_Harbor_Frlg",
+      "x": 346,
+      "y": -263,
+      "width": 17,
+      "height": 13
+    },
+    {
+      "map": "JourneyFuchsiaInlet",
+      "x": 154,
+      "y": -70,
+      "width": 36,
+      "height": 10
+    },
+    {
+      "map": "JourneyLavenderApproachSouth",
+      "x": 322,
+      "y": -65,
+      "width": 64,
+      "height": 65
+    }
+  ],
+  "connections": [
+    {
+      "source": "JourneyFuchsiaInlet",
+      "destination": "JourneyKantoSouthWestSea",
+      "direction": "down",
+      "offset": -12
+    },
+    {
+      "source": "JourneyFuchsiaInlet",
+      "destination": "JourneyKantoSouthSea",
+      "direction": "right",
+      "offset": 0
+    },
+    {
+      "source": "JourneyFuchsiaInlet",
+      "destination": "Route15_Frlg",
+      "direction": "up",
+      "offset": 0
+    },
+    {
+      "source": "JourneyFuchsiaInlet",
+      "destination": "FuchsiaCity_Frlg",
+      "direction": "left",
+      "offset": -30
+    },
+    {
+      "source": "JourneyKantoSouthWestSea",
+      "destination": "JourneyFuchsiaSea",
+      "direction": "down",
+      "offset": 0
+    },
+    {
+      "source": "JourneyKantoSouthWestSea",
+      "destination": "Route19_Frlg",
+      "direction": "left",
+      "offset": 0
+    },
+    {
+      "source": "JourneyKantoSouthWestSea",
+      "destination": "JourneyKantoSouthSea",
+      "direction": "right",
+      "offset": -10
+    },
+    {
+      "source": "JourneyFuchsiaSea",
+      "destination": "JourneyKantoCoastalBand",
+      "direction": "right",
+      "offset": 0
+    },
+    {
+      "source": "JourneyKantoSouthSea",
+      "destination": "JourneyKantoCoastalBand",
+      "direction": "down",
+      "offset": 0
+    },
+    {
+      "source": "JourneyKantoSouthSea",
+      "destination": "JourneyOneIslandChannel",
+      "direction": "down",
+      "offset": 88
+    },
+    {
+      "source": "JourneyKantoSouthSea",
+      "destination": "JourneyKantoEasternChannel",
+      "direction": "down",
+      "offset": 105
+    },
+    {
+      "source": "JourneyRoute13Coast",
+      "destination": "JourneyKantoSouthSea",
+      "direction": "down",
+      "offset": -60
+    },
+    {
+      "source": "JourneyRoute13Coast",
+      "destination": "Route13_Frlg",
+      "direction": "up",
+      "offset": 0
+    },
+    {
+      "source": "JourneyRoute13Coast",
+      "destination": "Route14_Frlg",
+      "direction": "left",
+      "offset": -20
+    },
+    {
+      "source": "JourneyKantoSouthSea",
+      "destination": "Route15_Frlg",
+      "direction": "up",
+      "offset": -36
+    },
+    {
+      "source": "JourneyKantoSouthSea",
+      "destination": "Route14_Frlg",
+      "direction": "up",
+      "offset": 36
+    },
+    {
+      "source": "JourneyKantoCoastalBand",
+      "destination": "JourneyWorldSea00",
+      "direction": "down",
+      "offset": 0
+    },
+    {
+      "source": "JourneyKantoCoastalBand",
+      "destination": "JourneyWorldSea01",
+      "direction": "down",
+      "offset": 64
+    },
+    {
+      "source": "JourneyKantoEasternChannel",
+      "destination": "JourneyWorldSea01",
+      "direction": "down",
+      "offset": -41
+    },
+    {
+      "source": "JourneyKantoEasternChannel",
+      "destination": "JourneyWorldSea02",
+      "direction": "down",
+      "offset": 23
+    },
+    {
+      "source": "JourneyKantoCoastalBand",
+      "destination": "JourneyOneIslandChannel",
+      "direction": "right",
+      "offset": 0
+    },
+    {
+      "source": "JourneyOneIslandChannel",
+      "destination": "JourneyKantoEasternChannel",
+      "direction": "right",
+      "offset": 0
+    },
+    {
+      "source": "JourneyKantoCoastalBand",
+      "destination": "OneIsland_Harbor_Frlg",
+      "direction": "right",
+      "offset": 7
+    },
+    {
+      "source": "OneIsland_Harbor_Frlg",
+      "destination": "JourneyKantoEasternChannel",
+      "direction": "right",
+      "offset": -7
+    },
+    {
+      "source": "JourneyOneIslandChannel",
+      "destination": "OneIsland_Harbor_Frlg",
+      "direction": "down",
+      "offset": 0
+    },
+    {
+      "source": "JourneyRoute12Shipyard",
+      "destination": "JourneyLavenderApproach",
+      "direction": "down",
+      "offset": 0
+    },
+    {
+      "source": "JourneyLavenderApproach",
+      "destination": "JourneyLavenderApproachSouth",
+      "direction": "down",
+      "offset": 0
+    },
+    {
+      "source": "JourneyLavenderApproachSouth",
+      "destination": "JourneyWorldSea02",
+      "direction": "down",
+      "offset": -4
+    },
+    {
+      "source": "JourneyLavenderApproachSouth",
+      "destination": "JourneyWorldSea03",
+      "direction": "down",
+      "offset": 60
+    },
+    {
+      "source": "JourneyLavenderApproach",
+      "destination": "Route13_Frlg",
+      "direction": "left",
+      "offset": 0
+    },
+    {
+      "source": "JourneyLavenderApproach",
+      "destination": "JourneyRoute13Coast",
+      "direction": "left",
+      "offset": 20
+    },
+    {
+      "source": "JourneyLavenderApproach",
+      "destination": "JourneyKantoSouthSea",
+      "direction": "left",
+      "offset": 60
+    },
+    {
+      "source": "JourneyLavenderApproachSouth",
+      "destination": "JourneyKantoSouthSea",
+      "direction": "left",
+      "offset": -5
+    },
+    {
+      "source": "JourneyLavenderApproachSouth",
+      "destination": "JourneyKantoEasternChannel",
+      "direction": "left",
+      "offset": 45
+    }
+  ],
+  "northern_pedestrian_bridge": true,
+  "vermilion_exit_not_restored": true,
+  "original_sha256": {
+    "data/layouts/JourneyFuchsiaSea/map.bin": "bdddff100d54ddbb6c28916cf95ea4826a7ba2ca1d50977830c124865e0505b5",
+    "data/layouts/JourneyWorldSea00/map.bin": "af11b96891073a4aadd4922aaee014babfb607e90da44e09fec22edc60b5e63c",
+    "data/layouts/JourneyWorldSea01/map.bin": "552aa0c1d4cbb8fcd0c1a0b2a544c3db8399646dd6870866921883882f2f9d87",
+    "data/layouts/JourneyWorldSea02/map.bin": "47ebbc30b1b5218f0c119bc9ac038f5ac5eb4f19f11189c2bc965aae4c43b642",
+    "data/layouts/JourneyWorldSea03/map.bin": "c15407c1df8471cd596135c4f48f37cb06cbf8840ac9a24e9eb544860b06a946",
+    "data/layouts/Route12_Frlg/map.bin": "6bcdc8d750bf57607ccf16d156a292c49bf2468b7a47488ce074db460f5498da",
+    "data/layouts/JourneyRoute12OuterSea/map.bin": "fd0ce6be58ed483d0b2ed9350f7911d644deabbda9805ebec3fc7d002ac0cc2d",
+    "data/layouts/JourneyRoute12Shipyard/map.bin": "79f0e06f7c91277a1a339a7bd28e093f91f7d1d70caec1f4142a5469b42adb1e",
+    "data/maps/Route19_Frlg/map.json": "c38d4a1e73ddfcc12b1c95c5877ffca844b7b7060cc5068a6acf9a0b0152b29a",
+    "data/maps/FuchsiaCity_Frlg/map.json": "4b0854fa681b77ba9fa6b455ea1038329f7d3bb36fecd3bb669c00d9f74f314b",
+    "data/maps/Route15_Frlg/map.json": "3ee978dfba7b5078be083c4aa9df33d9aa4ce9f44d612917fee321a54bde96ff",
+    "data/maps/Route14_Frlg/map.json": "ce57727f9bfbadbb0deacde8c483cee469c1c6a4bc81c4515dd4ac0baa13666f",
+    "data/maps/Route13_Frlg/map.json": "d8c08d96b4301d89f43129b4bd0608d003422d15af04f095a8eed6cc671f4ed8",
+    "data/maps/Route12_Frlg/map.json": "85183406aef8fe7a11adb8132984b2caae3cd49165cf2fe988afd599ae98d601",
+    "data/maps/LavenderTown_Frlg/map.json": "e1ae639aff15bee41e1eab31716e6b389ba4f041d9ef68eaf3f7823aeae53a6b",
+    "data/maps/Route11_Frlg/map.json": "a462f8190e555905b18bc258dd6cf48d5e5277ff9764e87b40aff45a1757de3c",
+    "data/maps/VermilionCity_Frlg/map.json": "df0e001f3ae07b490656a1e003775a9a1d15b28641fb7160345cdd4b19df43c8",
+    "data/maps/JourneyFuchsiaSea/map.json": "0e0bf0e3a16db103b2261bda9a1130b4e9bbe399c34cf8b896bc5efd29379ab6",
+    "data/maps/JourneyRoute12Shipyard/map.json": "bc97c280a6bd03a1ce50a4c18a6d1c2008849f10542ba0aefa957e36c9efede4",
+    "data/maps/JourneyRoute12OuterSea/map.json": "2fe34934c5de39eea3f26816c7c09de18132b4dbc4e11108d5dd5e411f8a0072",
+    "data/maps/JourneyWorldSea00/map.json": "0f2b63268bd127a75b6888edcf30d666ab1b2145cb0357cb1bdefa83eaacfaf0",
+    "data/maps/JourneyWorldSea01/map.json": "1fd55ccae94fbcc4482ebac42489831c63d15bae9dd34b56875d466d8840fc5f",
+    "data/maps/JourneyWorldSea02/map.json": "2c8ac4fb79e5e6887fa912c35e6fab27a408c6883fe4aac0b6e9e431cb9d5898",
+    "data/maps/JourneyWorldSea03/map.json": "2505d729685db9598e1698c75cefb438329338b6a22376eac1bda383a41cc084",
+    "data/maps/OneIsland_Harbor_Frlg/map.json": "dc75423cfcb880181015bca772456d1975907d297efd8bad4599fe7adf19b6ea",
+    "data/maps/TwoIsland_Harbor_Frlg/map.json": "4335b7f22bbb6c910d4bad493e0396f74a6a4670952e8d6df948045626520902",
+    "data/maps/map_groups.json": "7cfd777f3b0472c45a55c867a26a9417c8bd8ff1cab1a1e7561237a540ad9676",
+    "data/layouts/layouts.json": "d41df546a6c57585877180b4b182098d5b90888d5b4503baf317a3c57f87d6ec",
+    "data/event_scripts.s": "2bc6fdc5fbe30fab9be7a87a01de0d1c80fff5d8ca1ab9c30f2b3efe54561ba0"
+  },
+  "preserved_native_sha256": {
+    "src/journey_campaign_gates.c": "eaec31794670edc2943d1405ba3605d714dfb2447786f4cb3c2ff07d02300443",
+    "src/journey_gym_scaling.c": "9b1b64746a70c12fcf7f54a661aea151d8ee9e030810046d3d2ce71bef889840",
+    "data/maps/Route12_Frlg/scripts.inc": "dad097eefab9e04e62b3f58f75eae8199832564a5db886bd119d184d1ba2eea7"
+  },
+  "prepared_sha256": {
+    "data/maps/JourneyKantoSouthWestSea/scripts.inc": "c9a1a74e0b464afaaf6b3fa2804b045caab4fbc3c91c2489817643b51816d7fd",
+    "data/maps/JourneyKantoSouthSea/scripts.inc": "327c4c9103724a57b44f576d82d197c4e167b1e371bb47d69bd764196aa8fe11",
+    "data/maps/JourneyRoute13Coast/scripts.inc": "0ec3322201ceaaf0c39d234ee564f53b106bc7a68c3d36f90bf0cf7e8e8671a9",
+    "data/maps/JourneyKantoCoastalBand/scripts.inc": "d4ae77204c1fae5d2e1cd4ce4607ba690488775d3b166f87eb5dc64a17eef4a8",
+    "data/maps/JourneyLavenderApproach/scripts.inc": "a459fedefacced258c650ddd4bf6af9df47d2135e0578b305788547f6bf7fd29",
+    "data/maps/JourneyKantoEasternChannel/scripts.inc": "1cc5545564c153a4ba3ed96b574928d9186249721cbec2a6d084088ba61098c4",
+    "data/maps/JourneyOneIslandChannel/scripts.inc": "9f62db7e8c3e7c28d0bcace7f8d8defe34aa63668dd4bb4daabd83a582271413",
+    "data/maps/JourneyFuchsiaInlet/scripts.inc": "9c0e3e0f4961cc5e48bd9dc3f4b325b58ca37e3b50167b2da3f1714dab0ba725",
+    "data/maps/JourneyLavenderApproachSouth/scripts.inc": "6ad06b0a8c7c7051d895bbbdb00718fab3f77fb04c39922d8189859c952395ba",
+    "data/layouts/JourneyKantoSouthWestSea/border.bin": "bee0ddda0aa5b3e3672f0e37758dc01fe08d185a3f24f3a911581e89aba26acc",
+    "data/layouts/JourneyKantoSouthSea/border.bin": "bee0ddda0aa5b3e3672f0e37758dc01fe08d185a3f24f3a911581e89aba26acc",
+    "data/layouts/JourneyRoute13Coast/border.bin": "bee0ddda0aa5b3e3672f0e37758dc01fe08d185a3f24f3a911581e89aba26acc",
+    "data/layouts/JourneyKantoCoastalBand/border.bin": "bee0ddda0aa5b3e3672f0e37758dc01fe08d185a3f24f3a911581e89aba26acc",
+    "data/layouts/JourneyLavenderApproach/border.bin": "bee0ddda0aa5b3e3672f0e37758dc01fe08d185a3f24f3a911581e89aba26acc",
+    "data/layouts/JourneyKantoEasternChannel/border.bin": "bee0ddda0aa5b3e3672f0e37758dc01fe08d185a3f24f3a911581e89aba26acc",
+    "data/layouts/JourneyOneIslandChannel/border.bin": "bee0ddda0aa5b3e3672f0e37758dc01fe08d185a3f24f3a911581e89aba26acc",
+    "data/layouts/JourneyFuchsiaInlet/border.bin": "bee0ddda0aa5b3e3672f0e37758dc01fe08d185a3f24f3a911581e89aba26acc",
+    "data/layouts/JourneyLavenderApproachSouth/border.bin": "bee0ddda0aa5b3e3672f0e37758dc01fe08d185a3f24f3a911581e89aba26acc",
+    "data/layouts/JourneyKantoSouthWestSea/map.bin": "ec51cd25ef2d7c9a1857c36cdcb6f1b4eb6fe219e7c2b700afa9c05491156532",
+    "data/layouts/JourneyKantoSouthSea/map.bin": "ccbc905d19e8cb20755af4bc3ad5df42b63d948fa078a8d2229263acd6a75b52",
+    "data/layouts/JourneyRoute13Coast/map.bin": "394d1f5616fd0b4c19493d725357fddb98fd3ccb225b79f7a951c028e44a03ee",
+    "data/layouts/JourneyKantoCoastalBand/map.bin": "31b4ddf81a6ba461f0ef5ccd938638d4601de2b2bdbd3a6f567f7e5c4d0a3b8f",
+    "data/layouts/JourneyLavenderApproach/map.bin": "7e08be785098ee17e9c4c068ee6b40c3fb356187b9fd0c09af07e7f99b17c118",
+    "data/layouts/JourneyKantoEasternChannel/map.bin": "521b95649ce17527a5887ea77a518cff0d01fd7491b4544fbb197f9b3799481b",
+    "data/layouts/JourneyOneIslandChannel/map.bin": "b71dbfc46c53c6e2667ee57673f4627f9cd8efdef04aca93fa9b92479f537e67",
+    "data/layouts/JourneyFuchsiaInlet/map.bin": "38426ca5f3da9233bb8c22cd02b8e80e34e503b2b5eb4b1c65246fb3308d2301",
+    "data/layouts/JourneyLavenderApproachSouth/map.bin": "7e08be785098ee17e9c4c068ee6b40c3fb356187b9fd0c09af07e7f99b17c118",
+    "data/layouts/JourneyFuchsiaSea/map.bin": "c93d602efe9d15c76be473ae6e648a7ec28a26b69020ad5847a6e2c2fabdd925",
+    "data/layouts/JourneyWorldSea00/map.bin": "dd7cb73ac1028b07f4063a511f8bab44b9d182960c225dc536b4af4e1b4e1031",
+    "data/layouts/JourneyWorldSea01/map.bin": "f95ee6be992e26267b987c3f74d75d5457d6c75059d6290503dec151356c9177",
+    "data/layouts/JourneyWorldSea02/map.bin": "9e45f92f52aa73033a20503416ab6fa4d40f4a5e7d5e7fde879c11d13e86b0fd",
+    "data/layouts/JourneyWorldSea03/map.bin": "a7fe9441518301420f28297e559d55ddfa2b4d34ed7b0612c30e597616240087",
+    "data/layouts/Route12_Frlg/map.bin": "0d269c927174891f4021f5029d8e4539cb54e490fbb08e826e802ac887248c5e",
+    "data/layouts/JourneyRoute12OuterSea/map.bin": "58e8fddcc9833f7f62489bc5c321eaed3106692c70676a9c04d239aa5ce7eab9",
+    "data/layouts/JourneyRoute12Shipyard/map.bin": "f8044d08f375abba8b7eae34bb55a94581e86c324ca98cde97ae278268efa32c",
+    "data/maps/Route19_Frlg/map.json": "44545e05fd0a17428d35bf2cb54207356ae6ed366ea74f39278ffff832bd53c9",
+    "data/maps/FuchsiaCity_Frlg/map.json": "df35c0d3c2c4499353929bb970f77ca7070c1cd03a542a0bdb23178fc4ab33f2",
+    "data/maps/Route15_Frlg/map.json": "c25ac5bf96f4126c029c6692f894877d043100824a87451712ede2770460c478",
+    "data/maps/Route14_Frlg/map.json": "afd000661cbae85bc3931cbad34066791d4aca0bc38e754f1c64ca3557737b7b",
+    "data/maps/Route13_Frlg/map.json": "12d7f66077059fcfb99aa05ddc67f66f3bd999344cf5e5276e6d2bc8c32918a7",
+    "data/maps/Route12_Frlg/map.json": "85183406aef8fe7a11adb8132984b2caae3cd49165cf2fe988afd599ae98d601",
+    "data/maps/LavenderTown_Frlg/map.json": "ba2dfc1a6a3766def6a4fbe29e993cb536fc2d99b5c272497c0eddd92795f6db",
+    "data/maps/Route11_Frlg/map.json": "a462f8190e555905b18bc258dd6cf48d5e5277ff9764e87b40aff45a1757de3c",
+    "data/maps/VermilionCity_Frlg/map.json": "df0e001f3ae07b490656a1e003775a9a1d15b28641fb7160345cdd4b19df43c8",
+    "data/maps/JourneyFuchsiaSea/map.json": "52b8b4d6a1d08f1091bafefe2af22496e9dc73ac5b2aed908ab2eec83537fb9b",
+    "data/maps/JourneyRoute12Shipyard/map.json": "94f50bd80773b62534c5a64b8757beb6f9f8dab274913f85981d0ca1c83880bb",
+    "data/maps/JourneyRoute12OuterSea/map.json": "2fe34934c5de39eea3f26816c7c09de18132b4dbc4e11108d5dd5e411f8a0072",
+    "data/maps/JourneyWorldSea00/map.json": "c4267cd6f3e3003224e741f55d9087231b9efb2e333195fdcf974f29bdff352d",
+    "data/maps/JourneyWorldSea01/map.json": "abf77312c8e044cb00e6cc335af649731013ed159997e163cb349d77119dc2ce",
+    "data/maps/JourneyWorldSea02/map.json": "ed37f60fb08e354c744bd5f735991aa4fb0b3d24b3ff626bee3bd5354ff6dee7",
+    "data/maps/JourneyWorldSea03/map.json": "4dce3d788ccddf88a1d6c14fbc44b52ce156e7681eae075b4393a8284f17e515",
+    "data/maps/OneIsland_Harbor_Frlg/map.json": "eb170a5df1f4ad65f5ef220bf74072072534027b5e2a60135892c1b6d840a413",
+    "data/maps/TwoIsland_Harbor_Frlg/map.json": "4335b7f22bbb6c910d4bad493e0396f74a6a4670952e8d6df948045626520902",
+    "data/maps/JourneyKantoSouthWestSea/map.json": "e540d7919d22b9df024bee80624e705d58116f3470c49b1f6ae5f380f90982c3",
+    "data/maps/JourneyKantoSouthSea/map.json": "27aee4bf0230e70380459aed3807562a76f358b66d6180f04b2320e689995349",
+    "data/maps/JourneyRoute13Coast/map.json": "63bbd0b4839bae31f017735c524540c41423b05697b408663874368d01547573",
+    "data/maps/JourneyKantoCoastalBand/map.json": "ae8fd6ad9d068c8f6a42ae95172614ca73972bb66ff9314643af453e25bba858",
+    "data/maps/JourneyLavenderApproach/map.json": "6e2d9409e57236a46199b9e8dcb61a8cbc374b46f9ea156049b32504717bd990",
+    "data/maps/JourneyKantoEasternChannel/map.json": "2934487d9761137205db0f98ce9d45d7a775cd6f7378bcd0f86d3c91d4bdd71f",
+    "data/maps/JourneyOneIslandChannel/map.json": "48955ad087fcc2113ac2af61a2b47f53bd0895f6985ca23369895fd9e4832376",
+    "data/maps/JourneyFuchsiaInlet/map.json": "7e0eb5a13e4ba3cb22fbcf7f21dcc496d8811add3b71f6015e96d1a4a04278fa",
+    "data/maps/JourneyLavenderApproachSouth/map.json": "774245013b6c6b4eb746716e60a0954fcb6fca529f2f958a2e4c3298d91b7d8b",
+    "data/maps/map_groups.json": "743493963fd61014768b04702c07ac60e55eb7793a5afd305b009211f7a4df0e",
+    "data/layouts/layouts.json": "333c6b572d4e69092b460d2e25519d289e454b4b85dea6fea5649bf6819dd4e4",
+    "data/event_scripts.s": "2bacc264e123a717fbdab841f8a00b8f3788a514ef5ee4407efc6a73782f2a79"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "passed": true,
+      "scenario": "bike-kanto",
+      "script_entry_fixture": true,
+      "full_story_validated": false,
+      "full_bag_retry": true,
+      "both_supplier_orders": true,
+      "pc_bike_no_duplicate": true,
+      "saved_shared_receipt": true,
+      "following_pokemon_removed": true
+    },
+    {
+      "passed": true,
+      "scenario": "bike-hoenn",
+      "script_entry_fixture": true,
+      "full_story_validated": false,
+      "full_bag_retry": true,
+      "both_supplier_orders": true,
+      "pc_bike_no_duplicate": true,
+      "saved_shared_receipt": true,
+      "following_pokemon_removed": true
+    },
+    {
+      "passed": true,
+      "scenario": "oak",
+      "script_entry_fixture": true,
+      "full_story_validated": false,
+      "original_team_preserved": true,
+      "once_per_region": true,
+      "starter_species": 7,
+      "starter_level": 5,
+      "full_party_can_retry": true,
+      "following_pokemon_removed": true
+    },
+    {
+      "passed": true,
+      "scenario": "birch",
+      "script_entry_fixture": true,
+      "full_story_validated": false,
+      "original_team_preserved": true,
+      "native_birch_bag": true,
+      "native_wild_battle_started": true,
+      "battle_victory_validated": false
+    },
+    {
+      "passed": true,
+      "scenario": "boat",
+      "script_entry_fixture": true,
+      "full_story_validated": false,
+      "island_exit_without_surf_or_pokemon": true,
+      "following_pokemon_removed": true
+    }
+  ],
+  "rom_sha256": "918b0fb5fe516bf7ce254216b12d84af09a65a7a157d95942d16634f36478364",
+  "full_story_validated": false
+}

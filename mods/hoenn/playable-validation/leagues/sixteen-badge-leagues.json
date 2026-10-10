@@ -1,0 +1,88 @@
+{
+  "passed": true,
+  "rom_sha256": "918b0fb5fe516bf7ce254216b12d84af09a65a7a157d95942d16634f36478364",
+  "required_badges": {
+    "kanto": 8,
+    "hoenn": 8
+  },
+  "permission_cases": 2048,
+  "physical_cases": [
+    {
+      "region": "Kanto",
+      "own_badges": 8,
+      "other_badges": 0,
+      "old_elite_entry_flag": false,
+      "physical_denial": true,
+      "native_save_roundtrip": true,
+      "physical_entry_after_sixteen": true
+    },
+    {
+      "region": "Kanto",
+      "own_badges": 8,
+      "other_badges": 7,
+      "old_elite_entry_flag": false,
+      "physical_denial": true,
+      "native_save_roundtrip": true,
+      "physical_entry_after_sixteen": true
+    },
+    {
+      "region": "Kanto",
+      "own_badges": 8,
+      "other_badges": 7,
+      "old_elite_entry_flag": true,
+      "physical_denial": true,
+      "native_save_roundtrip": true,
+      "physical_entry_after_sixteen": true
+    },
+    {
+      "region": "Kanto",
+      "own_badges": 7,
+      "other_badges": 8,
+      "old_elite_entry_flag": true,
+      "physical_denial": true,
+      "native_save_roundtrip": true,
+      "physical_entry_after_sixteen": true
+    },
+    {
+      "region": "Hoenn",
+      "own_badges": 8,
+      "other_badges": 0,
+      "old_elite_entry_flag": false,
+      "physical_denial": true,
+      "native_save_roundtrip": true,
+      "physical_entry_after_sixteen": true
+    },
+    {
+      "region": "Hoenn",
+      "own_badges": 8,
+      "other_badges": 7,
+      "old_elite_entry_flag": false,
+      "physical_denial": true,
+      "native_save_roundtrip": true,
+      "physical_entry_after_sixteen": true
+    },
+    {
+      "region": "Hoenn",
+      "own_badges": 8,
+      "other_badges": 7,
+      "old_elite_entry_flag": true,
+      "physical_denial": true,
+      "native_save_roundtrip": true,
+      "physical_entry_after_sixteen": true
+    },
+    {
+      "region": "Hoenn",
+      "own_badges": 7,
+      "other_badges": 8,
+      "old_elite_entry_flag": true,
+      "physical_denial": true,
+      "native_save_roundtrip": true,
+      "physical_entry_after_sixteen": true
+    }
+  ],
+  "gym_story_requirement_not_reused_as_league_dialogue": true,
+  "badges_are_only_league_permission": true,
+  "gym_story_requirement_is_preserved": true,
+  "initial_badges_story_party_and_warps_are_fixtures": true,
+  "full_campaign_playthrough": false
+}
