@@ -15,7 +15,7 @@ def special_category(mon):
 
 def map_region(data):
  section=data['region_map_section']
- islands=('ONE_ISLAND','TWO_ISLAND','THREE_ISLAND','FOUR_ISLAND','FIVE_ISLAND','SIX_ISLAND','SEVEN_ISLAND','THREE_ISLE','BIRTH_ISLAND','NAVEL_ROCK','TANOBY','TREASURE_BEACH','KINDLE_ROAD','MT_EMBER','BOND_BRIDGE','BERRY_FOREST','ICEFALL_CAVE','WATER_LABYRINTH','RESORT_GORGEOUS','LOST_CAVE','MEMORIAL_PILLAR','OUTCAST_ISLAND','GREEN_PATH','WATER_PATH','RUIN_VALLEY','DOTTED_HOLE','TRAINER_TOWER','CANYON_ENTRANCE','SEVAULT_CANYON')
+ islands=('EMERALD_CAY','SUNLIT_ISLE','TIDEWOOD_ISLE','ONE_ISLAND','TWO_ISLAND','THREE_ISLAND','FOUR_ISLAND','FIVE_ISLAND','SIX_ISLAND','SEVEN_ISLAND','THREE_ISLE','BIRTH_ISLAND','NAVEL_ROCK','TANOBY','TREASURE_BEACH','KINDLE_ROAD','MT_EMBER','BOND_BRIDGE','BERRY_FOREST','ICEFALL_CAVE','WATER_LABYRINTH','RESORT_GORGEOUS','LOST_CAVE','MEMORIAL_PILLAR','OUTCAST_ISLAND','GREEN_PATH','WATER_PATH','RUIN_VALLEY','DOTTED_HOLE','TRAINER_TOWER','CANYON_ENTRANCE','SEVAULT_CANYON')
  if data.get('region','REGION_HOENN')=='REGION_KANTO':
   return 'Sevii' if any(token in section or token in data['id'] for token in islands) else 'Kanto'
  return 'Hoenn'
@@ -29,6 +29,9 @@ def generate(source,output):
  if (source/'.journey-tower-habitats').exists():
   overlay=json.loads((source/'.journey-tower-habitats').read_text())
   ecology.update({k:overlay[k] for k in ['locations_data','map_species','pools','field_slots']})
+ if (source/'.journey-remote-islands').exists():
+  overlay=json.loads((source/'.journey-remote-islands').read_text())
+  ecology.update({k:overlay[k] for k in ['locations_data','map_species','pools','field_slots']})
  maps={}
  for path in sorted((source/'data/maps').glob('*/map.json')):
   data=json.loads(path.read_text());maps[data['id']]=data;maps[path.parent.name]=data
@@ -40,7 +43,7 @@ def generate(source,output):
  ordinary=[];lines=['# Pokémon por habitat e encontros especiais','',
  'Referência da candidata nativa com Kanto, Hoenn e Sevii. Não é uma declaração de que todas as histórias e mecânicas da integração estão concluídas.','',
  'Os encontros aleatórios das 920 espécies-base comuns e variantes regionais ficam em 444 famílias, sem repetir famílias entre habitats. Andares da mesma caverna, zonas de Safari e a superfície/subsolo da mesma rota marinha contam como um habitat.','',
- 'A distribuição corrigida tem 97 habitats terrestres: 18 com cinco famílias e 79 com quatro; outros 38 habitats exclusivamente aquáticos têm uma família cada. As 77 famílias com Pokémon do tipo Água estão reservadas para locais com Surf ou pesca, e também podem aparecer na grama do mesmo habitat quando ela existe.','',
+ f'A distribuição atual tem {sum(bool(h["land"]) for h in ecology["locations_data"])} habitats terrestres e {sum(not h["land"] for h in ecology["locations_data"])} habitats exclusivamente aquáticos. Sunlit Isle e Tidewood Isle têm oito famílias cada. As famílias com Pokémon do tipo Água ficam em locais com Surf ou pesca e também podem aparecer na grama do mesmo habitat.','',
  f'Existem mais lagos e pontos de pesca que famílias aquáticas. Para preservar a regra de não repetir famílias, {len(ecology["quiet_water_maps"])} mapas ficam sem encontros aquáticos; os encontros terrestres desses habitats permanecem. Esses pontos estão listados ao final. Nenhuma rota foi fechada por isso.','',
  'Nível: média inteira da equipe menos cinco até mais dois, limitada a 1–100. Ovos não contam; Pokémon desmaiados contam. Etapa evolutiva: média inteira das insígnias das duas regiões; 0–2 básicos, 3–5 básicos ou estágio 2, 6–8 estágios 2 ou 3. Famílias sem a etapa seguinte preservam a última disponível.','',
  'Na água, o filtro seleciona as evoluções aquáticas disponíveis da família: por exemplo, Vaporeon pode aparecer na água, enquanto as outras evoluções de Eevee continuam na grama do mesmo habitat. Famílias com etapas de tipos diferentes ficam em habitats terrestres com água, para que nenhuma espécie-base perca seu local.', '',
@@ -76,6 +79,11 @@ def generate(source,output):
  '## Limites da validação','',
  'Kanto, Hoenn e Sevii estão conectados na candidata; 96 travessias físicas por Surf e as entradas e saídas dos 14 santuários têm verificações nativas registradas. Ainda faltam revisão completa das rotas, interiores, NPCs, puzzles e as duas campanhas jogadas integralmente. Os relatórios de mGBA cobrem situações específicas; não equivalem a finalizar o jogo.', '',
  'A arte de 3.323 imagens e 3.154 paletas foi comparada no motor ARM aos dados compilados. As 97 Megas têm referências auditadas; cinco transformações reais, Battle Bond, trocas, desmaios e batalhas duplas possuem verificações específicas. Isso não significa que todas as animações e batalhas foram jogadas. Os locais deste guia são da candidata, ainda não publicada no player.','']
+ sea_note = ['O [traçado marítimo atual](EASTERN-SEA-UNION.md) passa atrás de Ever Grande.',
+ 'As coordenadas de entradas e Dive deste catálogo permanecem iguais; o mar',
+ '`JourneyHoennSouthSea` fica junto à Rota 129 e a saída antiga da Rota 131',
+ 'não existe mais.', '', '']
+ if (source/'.journey-eastern-sea-union').exists():lines[2:2] = sea_note
  (output/'POKEMON-LOCATIONS.md').write_text('\n'.join(lines))
  stream=io.StringIO();writer=csv.DictWriter(stream,lineterminator='\n',fieldnames=['national_dex','species','internal_id','category','region','habitat','maps','access','unlock','family']);writer.writeheader();writer.writerows(sorted(ordinary,key=lambda r:(r['national_dex'],r['internal_id'])))
  (output/'pokemon-locations.csv').write_text(stream.getvalue())
@@ -94,6 +102,7 @@ def generate(source,output):
    site=next(s for s in special['sites'] if s['theme']==c['site']);x,y=site['entry'];y-=4 if site['access']=='surf' else 0
    guide.append(f"| {c['national_dex']} | {label(c['species'])} | {map_region(maps[c['surface']])} | {c['site']} | {c['surface']} | {'Surf' if c['access']=='surf' else 'Surf + Dive'} ({x}, {y}) | {tuple(c['position'])} |")
   guide.append('')
+ if (source/'.journey-eastern-sea-union').exists():guide[2:2] = sea_note
  (output/'SPECIAL-LOCATIONS.md').write_text('\n'.join(guide))
  evidence=dict(base_species=1025,canonical_rows=len(base_rows),ordinary_base_species=920,special_categories=categories,habitats=len(ecology['locations_data']),special_sites=len(special['sites']),referenced_maps=len(referenced),all_referenced_maps_exist=True,source_commit=catalog['source_commit'],input_sha256={n:hashlib.sha256((source/n).read_bytes()).hexdigest() for n in ('.journey-ecology','.journey-sanctuaries')})
  if (source/'.journey-lostelle-habitats').exists():evidence['input_sha256']['.journey-lostelle-habitats']=hashlib.sha256((source/'.journey-lostelle-habitats').read_bytes()).hexdigest()
@@ -101,6 +110,8 @@ def generate(source,output):
  if (source/'.journey-early-story-tools').exists():evidence['input_sha256']['.journey-early-story-tools']=hashlib.sha256((source/'.journey-early-story-tools').read_bytes()).hexdigest()
  if (source/'.journey-mandatory-native-missions').exists():evidence['input_sha256']['.journey-mandatory-native-missions']=hashlib.sha256((source/'.journey-mandatory-native-missions').read_bytes()).hexdigest()
  if (source/'.journey-sixteen-badge-leagues').exists():evidence['input_sha256']['.journey-sixteen-badge-leagues']=hashlib.sha256((source/'.journey-sixteen-badge-leagues').read_bytes()).hexdigest()
+ if (source/'.journey-eastern-sea-union').exists():evidence['input_sha256']['.journey-eastern-sea-union']=hashlib.sha256((source/'.journey-eastern-sea-union').read_bytes()).hexdigest()
+ if (source/'.journey-remote-islands').exists():evidence['input_sha256']['.journey-remote-islands']=hashlib.sha256((source/'.journey-remote-islands').read_bytes()).hexdigest()
  rom=source/'pokeemerald.gba'
  if rom.exists():evidence['rom_sha256']=hashlib.sha256(rom.read_bytes()).hexdigest()
  evidence['documents_sha256']={n:hashlib.sha256((output/n).read_bytes()).hexdigest() for n in ('POKEMON-LOCATIONS.md','SPECIAL-LOCATIONS.md','pokemon-locations.csv')}

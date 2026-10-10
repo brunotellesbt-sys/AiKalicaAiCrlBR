@@ -36,7 +36,7 @@ def raw_flag(flag, enabled):
 for flags, enabled in [(range(0x1AB0,0x1AB8), kanto),
                        ([lib.read16(s['gBadgeFlags'] + 2*i) for i in range(8)], not kanto)]:
     for flag in flags:
-        raw_flag(flag, enabled)
+        raw_flag(flag, True if (source/'.journey-sixteen-badge-leagues').exists() else enabled)
 champion = abi[111] - 0x2A + 0x1F
 game_clear = abi[111] - 0x2A + 4
 for flag, enabled in [(champion,kanto), (game_clear,kanto), (0x1AC2,not kanto), (0x1AB8,not kanto)]:

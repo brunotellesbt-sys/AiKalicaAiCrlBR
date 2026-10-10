@@ -1,4 +1,24 @@
-# Mundo conectado — candidata experimental, não é a versão final
+# Mundo conectado — alpha jogável
+
+[Como baixar e jogar](PLAYABLE-ALPHA.md) · [Mapa integrado no menu MAP](WORLD-MAP.md). A alpha reúne as 58 camadas; as duas campanhas completas continuam em validação.
+
+A versão atual conserva a travessia Cinnabar–Rustboro–Dewford, acrescenta costas variadas entre Fuchsia e Lavender Port e usa Fly no mapa integrado. A borda oeste de Kanto tem terra contínua, com a cor da costa original e sem o fio de água na emenda. [Costa nova e galeria](KANTO-OPEN-SEA.md).
+
+[Lavender Port: rede dos 18 portos, menus sem destino atual e animação de barco](LAVENDER-PORT-NETWORK.md).
+
+[Estaleiro de madeira, casa dos barqueiros e nova ligação de Surf pela Rota 12](ROUTE12-SHIPYARD.md).
+
+[Abertura da entrada leste de Ever Grande e mapa amplo com Vermilion](EVER-GRANDE-ENTRANCE.md).
+
+A faixa leste foi remodelada para passar **atrás de Ever Grande** e ligar
+Hoenn às Sevii em um plano contínuo, com portos sem sobreposição. A saída
+antiga da Rota 131 foi retirada. [Mapa e detalhes](EASTERN-SEA-UNION.md).
+
+A candidata `68bbf008` varia os 27 mares, copia a formação externa original
+de Seafoam e preserva os interiores. As pedras aquáticas são completas; o
+rio desemboca abaixo da cachoeira da Rota 114, com Waterfall necessário
+para subir. [SEA-LANDSCAPES.md](SEA-LANDSCAPES.md) e
+[galeria com NPCs](SEA-MAP-GALLERY.md).
 
 Restaurada a cena de Wanda em Rusturf Tunnel após a remoção de Rock Smash.
 A caminhada pelo trecho, após Peeko e a apresentação do casal, inicia o
@@ -45,8 +65,9 @@ As sete cidades de Sevii e seus Centros Pokémon passaram por entrada desde o
 mar, cura nativa, Continue e retorno: 34 mapas, 62 transições e 14 Continues.
 [SEVII-TOWN-ACCESS.md](SEVII-TOWN-ACCESS.md).
 
-A passagem da Rota 131 para Sevii permanece aberta também no layout alternativo
-usado por Sky Pillar. Passou a viagem Vermilion–portos de Sevii 1–7–Pacifidlog–
+Na candidata anterior, a passagem da Rota 131 para Sevii foi testada também
+no layout alternativo usado por Sky Pillar. Esse acesso foi substituído pelo
+[mar atrás de Ever Grande](EASTERN-SEA-UNION.md). Passou a viagem anterior Vermilion–portos de Sevii 1–7–Pacifidlog–
 Rota 127–Vermilion: 24 mapas, 42 bordas e oito Continues. Candidata `2f53d410`;
 [EASTERN-OCEAN-JOURNEY.md](EASTERN-OCEAN-JOURNEY.md).
 
@@ -654,10 +675,11 @@ ilhas 1–3 na primeira faixa, 4–5 na segunda e 6–7 na terceira. Birth Islan
 e Navel Rock permanecem ligadas ao setor leste. Não há teleporte nas novas
 conexões oceânicas: o jogador atravessa as bordas dos mapas por Surf.
 
-A ligação de Hoenn com Sevii usa a Rota 131, à direita de Pacifidlog.
-As ligações nativas Rota 131–Pacifidlog–Rota 130 e Rota 128–Ever Grande
-permanecem intactas. Uma malha de dez setores e seis corredores verticais
-substitui, na candidata, a cadeia linear da versão publicada.
+A ligação leste de Hoenn com Sevii agora contorna Ever Grande, conforme
+a imagem marcada. As ligações nativas Rota 131–Pacifidlog–Rota 130 e
+Rota 128–Ever Grande permanecem intactas; a antiga saída sul da Rota 131
+foi retirada. [O terreno atual e seus portos](EASTERN-SEA-UNION.md) formam
+um retângulo contínuo, substituindo os corredores estreitos anteriores.
 
 A travessia norte foi revisada conforme solicitado: agora sai **ao sul de
 Cinnabar**, entra no lago da **Rota 114**, a oeste da região de Lavaridge,

@@ -1,7 +1,13 @@
-# Hoenn — inventário e porte pendente
+# Hoenn — mundo integrado e alpha jogável
+
+Versão atual: [como jogar e limites da alpha](PLAYABLE-ALPHA.md), [mapa integrado dentro do jogo](WORLD-MAP.md) e [ROM e manifesto](playable/). Kanto, Hoenn e Sevii usam uma única ROM. Somente Surf, Dive e Waterfall permanecem HMs; Whirlpool foi cancelado. As campanhas completas ainda precisam de validação integral.
+
+## Inventário inicial e histórico do porte
+
+O texto abaixo registra o levantamento inicial; consulte os documentos acima para a candidata jogável atual.
 
 [Mundo conectado e estados regionais](INTEGRATION.md): conexões físicas Surf
-de Cinnabar/Rota 114 e Rota 131/Sevii testadas numa base experimental;
+de Cinnabar/Rota 114 e do mar atrás de Ever Grande/Sevii numa base experimental;
 **não substitui a ROM publicada nem conclui
 a integração da história**.
 

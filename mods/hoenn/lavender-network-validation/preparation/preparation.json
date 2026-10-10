@@ -1,0 +1,1236 @@
+{
+  "layer": "lavender-network",
+  "ports": [
+    {
+      "map": "JourneyRoute12Shipyard",
+      "npc": [
+        23,
+        39
+      ],
+      "arrival": [
+        24,
+        39
+      ],
+      "origin": 0,
+      "title": "LAVENDER PORT",
+      "region": "KANTO",
+      "original_events": 10
+    },
+    {
+      "map": "SlateportCity_Harbor",
+      "npc": [
+        16,
+        13
+      ],
+      "arrival": [
+        16,
+        14
+      ],
+      "origin": 1,
+      "title": "SLATEPORT",
+      "region": "HOENN",
+      "original_events": 9
+    },
+    {
+      "map": "OneIsland_Harbor_Frlg",
+      "npc": [
+        9,
+        5
+      ],
+      "arrival": [
+        8,
+        5
+      ],
+      "origin": 2,
+      "title": "ONE ISLAND",
+      "region": "SEVII",
+      "original_events": 3
+    },
+    {
+      "map": "TwoIsland_Harbor_Frlg",
+      "npc": [
+        9,
+        5
+      ],
+      "arrival": [
+        8,
+        5
+      ],
+      "origin": 3,
+      "title": "TWO ISLAND",
+      "region": "SEVII",
+      "original_events": 3
+    },
+    {
+      "map": "ThreeIsland_Harbor_Frlg",
+      "npc": [
+        9,
+        5
+      ],
+      "arrival": [
+        8,
+        5
+      ],
+      "origin": 4,
+      "title": "THREE ISLAND",
+      "region": "SEVII",
+      "original_events": 3
+    },
+    {
+      "map": "FourIsland_Harbor_Frlg",
+      "npc": [
+        9,
+        5
+      ],
+      "arrival": [
+        8,
+        5
+      ],
+      "origin": 5,
+      "title": "FOUR ISLAND",
+      "region": "SEVII",
+      "original_events": 3
+    },
+    {
+      "map": "FiveIsland_Harbor_Frlg",
+      "npc": [
+        9,
+        5
+      ],
+      "arrival": [
+        8,
+        5
+      ],
+      "origin": 6,
+      "title": "FIVE ISLAND",
+      "region": "SEVII",
+      "original_events": 3
+    },
+    {
+      "map": "SixIsland_Harbor_Frlg",
+      "npc": [
+        9,
+        5
+      ],
+      "arrival": [
+        8,
+        5
+      ],
+      "origin": 7,
+      "title": "SIX ISLAND",
+      "region": "SEVII",
+      "original_events": 3
+    },
+    {
+      "map": "SevenIsland_Harbor_Frlg",
+      "npc": [
+        9,
+        5
+      ],
+      "arrival": [
+        8,
+        5
+      ],
+      "origin": 8,
+      "title": "SEVEN ISLAND",
+      "region": "SEVII",
+      "original_events": 3
+    },
+    {
+      "map": "DewfordTown",
+      "npc": [
+        13,
+        11
+      ],
+      "arrival": [
+        13,
+        12
+      ],
+      "origin": 9,
+      "title": "DEWFORD",
+      "region": "HOENN",
+      "original_events": 7
+    },
+    {
+      "map": "LilycoveCity_Harbor",
+      "npc": [
+        3,
+        13
+      ],
+      "arrival": [
+        4,
+        13
+      ],
+      "origin": 10,
+      "title": "LILYCOVE",
+      "region": "HOENN",
+      "original_events": 5
+    },
+    {
+      "map": "PacifidlogTown",
+      "npc": [
+        14,
+        14
+      ],
+      "arrival": [
+        15,
+        14
+      ],
+      "origin": 11,
+      "title": "PACIFIDLOG",
+      "region": "HOENN",
+      "original_events": 4
+    },
+    {
+      "map": "Route104",
+      "npc": [
+        15,
+        52
+      ],
+      "arrival": [
+        16,
+        52
+      ],
+      "origin": 12,
+      "title": "PETALBURG COAST",
+      "region": "HOENN",
+      "original_events": 34
+    },
+    {
+      "map": "Route109",
+      "npc": [
+        22,
+        22
+      ],
+      "arrival": [
+        23,
+        22
+      ],
+      "origin": 13,
+      "title": "SLATEPORT BEACH",
+      "region": "HOENN",
+      "original_events": 24
+    },
+    {
+      "map": "VermilionCity_Frlg",
+      "npc": [
+        24,
+        33
+      ],
+      "arrival": [
+        23,
+        33
+      ],
+      "origin": 14,
+      "title": "VERMILION",
+      "region": "KANTO",
+      "original_events": 12
+    },
+    {
+      "map": "BattleFrontier_OutsideWest",
+      "npc": [
+        19,
+        68
+      ],
+      "arrival": [
+        20,
+        68
+      ],
+      "origin": 15,
+      "title": "BATTLE FRONTIER",
+      "region": "HOENN",
+      "original_events": 24
+    },
+    {
+      "map": "MossdeepCity",
+      "npc": [
+        16,
+        4
+      ],
+      "arrival": [
+        17,
+        4
+      ],
+      "origin": 16,
+      "title": "MOSSDEEP",
+      "region": "HOENN",
+      "original_events": 19
+    },
+    {
+      "map": "SootopolisCity",
+      "npc": [
+        21,
+        37
+      ],
+      "arrival": [
+        22,
+        37
+      ],
+      "origin": 17,
+      "title": "SOOTOPOLIS",
+      "region": "HOENN",
+      "original_events": 20
+    }
+  ],
+  "menus": [
+    {
+      "origin": 0,
+      "region": "KANTO",
+      "destinations": [
+        14
+      ],
+      "menu": "MULTI_LAVENDER_KANTO0"
+    },
+    {
+      "origin": 1,
+      "region": "KANTO",
+      "destinations": [
+        0,
+        14
+      ],
+      "menu": "MULTI_LAVENDER_KANTO1"
+    },
+    {
+      "origin": 2,
+      "region": "KANTO",
+      "destinations": [
+        0,
+        14
+      ],
+      "menu": "MULTI_LAVENDER_KANTO1"
+    },
+    {
+      "origin": 3,
+      "region": "KANTO",
+      "destinations": [
+        0,
+        14
+      ],
+      "menu": "MULTI_LAVENDER_KANTO1"
+    },
+    {
+      "origin": 4,
+      "region": "KANTO",
+      "destinations": [
+        0,
+        14
+      ],
+      "menu": "MULTI_LAVENDER_KANTO1"
+    },
+    {
+      "origin": 5,
+      "region": "KANTO",
+      "destinations": [
+        0,
+        14
+      ],
+      "menu": "MULTI_LAVENDER_KANTO1"
+    },
+    {
+      "origin": 6,
+      "region": "KANTO",
+      "destinations": [
+        0,
+        14
+      ],
+      "menu": "MULTI_LAVENDER_KANTO1"
+    },
+    {
+      "origin": 7,
+      "region": "KANTO",
+      "destinations": [
+        0,
+        14
+      ],
+      "menu": "MULTI_LAVENDER_KANTO1"
+    },
+    {
+      "origin": 8,
+      "region": "KANTO",
+      "destinations": [
+        0,
+        14
+      ],
+      "menu": "MULTI_LAVENDER_KANTO1"
+    },
+    {
+      "origin": 9,
+      "region": "KANTO",
+      "destinations": [
+        0,
+        14
+      ],
+      "menu": "MULTI_LAVENDER_KANTO1"
+    },
+    {
+      "origin": 10,
+      "region": "KANTO",
+      "destinations": [
+        0,
+        14
+      ],
+      "menu": "MULTI_LAVENDER_KANTO1"
+    },
+    {
+      "origin": 11,
+      "region": "KANTO",
+      "destinations": [
+        0,
+        14
+      ],
+      "menu": "MULTI_LAVENDER_KANTO1"
+    },
+    {
+      "origin": 12,
+      "region": "KANTO",
+      "destinations": [
+        0,
+        14
+      ],
+      "menu": "MULTI_LAVENDER_KANTO1"
+    },
+    {
+      "origin": 13,
+      "region": "KANTO",
+      "destinations": [
+        0,
+        14
+      ],
+      "menu": "MULTI_LAVENDER_KANTO1"
+    },
+    {
+      "origin": 14,
+      "region": "KANTO",
+      "destinations": [
+        0
+      ],
+      "menu": "MULTI_LAVENDER_KANTO14"
+    },
+    {
+      "origin": 15,
+      "region": "KANTO",
+      "destinations": [
+        0,
+        14
+      ],
+      "menu": "MULTI_LAVENDER_KANTO1"
+    },
+    {
+      "origin": 16,
+      "region": "KANTO",
+      "destinations": [
+        0,
+        14
+      ],
+      "menu": "MULTI_LAVENDER_KANTO1"
+    },
+    {
+      "origin": 17,
+      "region": "KANTO",
+      "destinations": [
+        0,
+        14
+      ],
+      "menu": "MULTI_LAVENDER_KANTO1"
+    },
+    {
+      "origin": 0,
+      "region": "HOENN_WEST",
+      "destinations": [
+        1,
+        9,
+        12,
+        13
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST0"
+    },
+    {
+      "origin": 1,
+      "region": "HOENN_WEST",
+      "destinations": [
+        9,
+        12,
+        13
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST1"
+    },
+    {
+      "origin": 2,
+      "region": "HOENN_WEST",
+      "destinations": [
+        1,
+        9,
+        12,
+        13
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST0"
+    },
+    {
+      "origin": 3,
+      "region": "HOENN_WEST",
+      "destinations": [
+        1,
+        9,
+        12,
+        13
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST0"
+    },
+    {
+      "origin": 4,
+      "region": "HOENN_WEST",
+      "destinations": [
+        1,
+        9,
+        12,
+        13
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST0"
+    },
+    {
+      "origin": 5,
+      "region": "HOENN_WEST",
+      "destinations": [
+        1,
+        9,
+        12,
+        13
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST0"
+    },
+    {
+      "origin": 6,
+      "region": "HOENN_WEST",
+      "destinations": [
+        1,
+        9,
+        12,
+        13
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST0"
+    },
+    {
+      "origin": 7,
+      "region": "HOENN_WEST",
+      "destinations": [
+        1,
+        9,
+        12,
+        13
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST0"
+    },
+    {
+      "origin": 8,
+      "region": "HOENN_WEST",
+      "destinations": [
+        1,
+        9,
+        12,
+        13
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST0"
+    },
+    {
+      "origin": 9,
+      "region": "HOENN_WEST",
+      "destinations": [
+        1,
+        12,
+        13
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST9"
+    },
+    {
+      "origin": 10,
+      "region": "HOENN_WEST",
+      "destinations": [
+        1,
+        9,
+        12,
+        13
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST0"
+    },
+    {
+      "origin": 11,
+      "region": "HOENN_WEST",
+      "destinations": [
+        1,
+        9,
+        12,
+        13
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST0"
+    },
+    {
+      "origin": 12,
+      "region": "HOENN_WEST",
+      "destinations": [
+        1,
+        9,
+        13
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST12"
+    },
+    {
+      "origin": 13,
+      "region": "HOENN_WEST",
+      "destinations": [
+        1,
+        9,
+        12
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST13"
+    },
+    {
+      "origin": 14,
+      "region": "HOENN_WEST",
+      "destinations": [
+        1,
+        9,
+        12,
+        13
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST0"
+    },
+    {
+      "origin": 15,
+      "region": "HOENN_WEST",
+      "destinations": [
+        1,
+        9,
+        12,
+        13
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST0"
+    },
+    {
+      "origin": 16,
+      "region": "HOENN_WEST",
+      "destinations": [
+        1,
+        9,
+        12,
+        13
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST0"
+    },
+    {
+      "origin": 17,
+      "region": "HOENN_WEST",
+      "destinations": [
+        1,
+        9,
+        12,
+        13
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_WEST0"
+    },
+    {
+      "origin": 0,
+      "region": "HOENN_EAST",
+      "destinations": [
+        10,
+        11,
+        16,
+        17
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST0"
+    },
+    {
+      "origin": 1,
+      "region": "HOENN_EAST",
+      "destinations": [
+        10,
+        11,
+        16,
+        17
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST0"
+    },
+    {
+      "origin": 2,
+      "region": "HOENN_EAST",
+      "destinations": [
+        10,
+        11,
+        16,
+        17
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST0"
+    },
+    {
+      "origin": 3,
+      "region": "HOENN_EAST",
+      "destinations": [
+        10,
+        11,
+        16,
+        17
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST0"
+    },
+    {
+      "origin": 4,
+      "region": "HOENN_EAST",
+      "destinations": [
+        10,
+        11,
+        16,
+        17
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST0"
+    },
+    {
+      "origin": 5,
+      "region": "HOENN_EAST",
+      "destinations": [
+        10,
+        11,
+        16,
+        17
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST0"
+    },
+    {
+      "origin": 6,
+      "region": "HOENN_EAST",
+      "destinations": [
+        10,
+        11,
+        16,
+        17
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST0"
+    },
+    {
+      "origin": 7,
+      "region": "HOENN_EAST",
+      "destinations": [
+        10,
+        11,
+        16,
+        17
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST0"
+    },
+    {
+      "origin": 8,
+      "region": "HOENN_EAST",
+      "destinations": [
+        10,
+        11,
+        16,
+        17
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST0"
+    },
+    {
+      "origin": 9,
+      "region": "HOENN_EAST",
+      "destinations": [
+        10,
+        11,
+        16,
+        17
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST0"
+    },
+    {
+      "origin": 10,
+      "region": "HOENN_EAST",
+      "destinations": [
+        11,
+        16,
+        17
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST10"
+    },
+    {
+      "origin": 11,
+      "region": "HOENN_EAST",
+      "destinations": [
+        10,
+        16,
+        17
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST11"
+    },
+    {
+      "origin": 12,
+      "region": "HOENN_EAST",
+      "destinations": [
+        10,
+        11,
+        16,
+        17
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST0"
+    },
+    {
+      "origin": 13,
+      "region": "HOENN_EAST",
+      "destinations": [
+        10,
+        11,
+        16,
+        17
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST0"
+    },
+    {
+      "origin": 14,
+      "region": "HOENN_EAST",
+      "destinations": [
+        10,
+        11,
+        16,
+        17
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST0"
+    },
+    {
+      "origin": 15,
+      "region": "HOENN_EAST",
+      "destinations": [
+        10,
+        11,
+        16,
+        17
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST0"
+    },
+    {
+      "origin": 16,
+      "region": "HOENN_EAST",
+      "destinations": [
+        10,
+        11,
+        17
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST16"
+    },
+    {
+      "origin": 17,
+      "region": "HOENN_EAST",
+      "destinations": [
+        10,
+        11,
+        16
+      ],
+      "menu": "MULTI_LAVENDER_HOENN_EAST17"
+    },
+    {
+      "origin": 0,
+      "region": "SEVII",
+      "destinations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "menu": "MULTI_LAVENDER_SEVII0"
+    },
+    {
+      "origin": 1,
+      "region": "SEVII",
+      "destinations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "menu": "MULTI_LAVENDER_SEVII0"
+    },
+    {
+      "origin": 2,
+      "region": "SEVII",
+      "destinations": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "menu": "MULTI_LAVENDER_SEVII2"
+    },
+    {
+      "origin": 3,
+      "region": "SEVII",
+      "destinations": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "menu": "MULTI_LAVENDER_SEVII3"
+    },
+    {
+      "origin": 4,
+      "region": "SEVII",
+      "destinations": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "menu": "MULTI_LAVENDER_SEVII4"
+    },
+    {
+      "origin": 5,
+      "region": "SEVII",
+      "destinations": [
+        2,
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "menu": "MULTI_LAVENDER_SEVII5"
+    },
+    {
+      "origin": 6,
+      "region": "SEVII",
+      "destinations": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "menu": "MULTI_LAVENDER_SEVII6"
+    },
+    {
+      "origin": 7,
+      "region": "SEVII",
+      "destinations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8
+      ],
+      "menu": "MULTI_LAVENDER_SEVII7"
+    },
+    {
+      "origin": 8,
+      "region": "SEVII",
+      "destinations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "menu": "MULTI_LAVENDER_SEVII8"
+    },
+    {
+      "origin": 9,
+      "region": "SEVII",
+      "destinations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "menu": "MULTI_LAVENDER_SEVII0"
+    },
+    {
+      "origin": 10,
+      "region": "SEVII",
+      "destinations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "menu": "MULTI_LAVENDER_SEVII0"
+    },
+    {
+      "origin": 11,
+      "region": "SEVII",
+      "destinations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "menu": "MULTI_LAVENDER_SEVII0"
+    },
+    {
+      "origin": 12,
+      "region": "SEVII",
+      "destinations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "menu": "MULTI_LAVENDER_SEVII0"
+    },
+    {
+      "origin": 13,
+      "region": "SEVII",
+      "destinations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "menu": "MULTI_LAVENDER_SEVII0"
+    },
+    {
+      "origin": 14,
+      "region": "SEVII",
+      "destinations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "menu": "MULTI_LAVENDER_SEVII0"
+    },
+    {
+      "origin": 15,
+      "region": "SEVII",
+      "destinations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "menu": "MULTI_LAVENDER_SEVII0"
+    },
+    {
+      "origin": 16,
+      "region": "SEVII",
+      "destinations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "menu": "MULTI_LAVENDER_SEVII0"
+    },
+    {
+      "origin": 17,
+      "region": "SEVII",
+      "destinations": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "menu": "MULTI_LAVENDER_SEVII0"
+    }
+  ],
+  "native_service_wrappers": [
+    {
+      "label": "LavenderNetwork_Service1_0",
+      "native": "SlateportCity_Harbor_EventScript_FerryAttendant",
+      "origin": 1
+    },
+    {
+      "label": "LavenderNetwork_Service2_1",
+      "native": "OneIsland_Harbor_EventScript_Sailor",
+      "origin": 2
+    },
+    {
+      "label": "LavenderNetwork_Service3_2",
+      "native": "TwoIsland_Harbor_EventScript_Sailor",
+      "origin": 3
+    },
+    {
+      "label": "LavenderNetwork_Service4_3",
+      "native": "ThreeIsland_Harbor_EventScript_Sailor",
+      "origin": 4
+    },
+    {
+      "label": "LavenderNetwork_Service5_4",
+      "native": "FourIsland_Harbor_EventScript_Sailor",
+      "origin": 5
+    },
+    {
+      "label": "LavenderNetwork_Service6_5",
+      "native": "FiveIsland_Harbor_EventScript_Sailor",
+      "origin": 6
+    },
+    {
+      "label": "LavenderNetwork_Service7_6",
+      "native": "SixIsland_Harbor_EventScript_Sailor",
+      "origin": 7
+    },
+    {
+      "label": "LavenderNetwork_Service8_7",
+      "native": "SevenIsland_Harbor_EventScript_Sailor",
+      "origin": 8
+    },
+    {
+      "label": "LavenderNetwork_Service9_8",
+      "native": "DewfordTown_EventScript_Briney",
+      "origin": 9
+    },
+    {
+      "label": "LavenderNetwork_Service10_9",
+      "native": "LilycoveCity_Harbor_EventScript_Sailor",
+      "origin": 10
+    },
+    {
+      "label": "LavenderNetwork_Service10_10",
+      "native": "LilycoveCity_Harbor_EventScript_FerryAttendant",
+      "origin": 10
+    },
+    {
+      "label": "LavenderNetwork_Service14_11",
+      "native": "VermilionCity_EventScript_FerrySailor",
+      "origin": 14
+    },
+    {
+      "label": "LavenderNetwork_Service15_12",
+      "native": "BattleFrontier_OutsideWest_EventScript_FerryAttendant",
+      "origin": 15
+    },
+    {
+      "label": "LavenderNetwork_Route104_MrBrineysHouse",
+      "native": "Route104_MrBrineysHouse_EventScript_Briney",
+      "origin": 12
+    },
+    {
+      "label": "LavenderNetwork_Route109",
+      "native": "Route109_EventScript_MrBriney",
+      "origin": 13
+    }
+  ],
+  "current_port_omitted": true,
+  "frontier_first_native_voyage_preserved": true,
+  "lavender_port_name": true,
+  "all_world_voyages_animated": true,
+  "shipyard_terrain_preserved": true,
+  "original_sha256": {
+    "src/data/region_map/region_map_sections.json": "0598e26c9b9cceb09560d42cde97d66db58c64bcafbd63be7463e7874394f33e",
+    "include/regions.h": "51939885fb525f6b4a9d6756430b10d07729e9ff5cf534a9e96801c3d5a7b6c3",
+    "src/map_name_popup.c": "5f7df0549fb8e1b440e8f8240bc64b58c4494eee716a1a42fe4f03fca55bfe51",
+    "src/seagallop.c": "7b682c71ad52e12291c5bc3ad2b657e67f47ebf65d17b12a9d1278613309f804",
+    "data/maps/JourneyRoute12Shipyard/map.json": "c15f518dd1c6d853c8e4faeb041a8b26035dc2f95d1c99580aeaee0d737c2383",
+    "data/maps/SlateportCity_Harbor/map.json": "cc7a8055596bd6ad47889798ec7553f4a3a664db08fcd58ba2ef3b245cf2e006",
+    "data/maps/OneIsland_Harbor_Frlg/map.json": "4a1bf2ca3e5f671558177bdea5863b758629d5a46757874207986adad070c571",
+    "data/maps/TwoIsland_Harbor_Frlg/map.json": "de7217fbb61902c5fdca67f0e2510900a9d178ecff5c6b5ce8d057346ed1ee09",
+    "data/maps/ThreeIsland_Harbor_Frlg/map.json": "322173308bfe9f74d7e7c9fbf5ef0eb654d83c8aea227be1f6d7a2487bf28f72",
+    "data/maps/FourIsland_Harbor_Frlg/map.json": "6a568b147a867e6b8e63a614daa989a71127d1e93797fdf551992bd75c0252e7",
+    "data/maps/FiveIsland_Harbor_Frlg/map.json": "a73f33bbb10a8eb1929da273bb9e49e755cd3f0e2ba6989a832c432e07ded607",
+    "data/maps/SixIsland_Harbor_Frlg/map.json": "e875182357fc86a600c654069ccf93134d569b915e962cbac527007347e34be8",
+    "data/maps/SevenIsland_Harbor_Frlg/map.json": "472558151160a55f5b5a20a744757e7337128417dc21da67373dc5b97c98b075",
+    "data/maps/DewfordTown/map.json": "5e2c9c692740f1671f58207c1d22388796e801ab9b52723a0c993dc487f367d1",
+    "data/maps/LilycoveCity_Harbor/map.json": "7f0b783d0b4c975cb8e2fc17c508a67b1c0567dde93415fbb67ab26d1d488a62",
+    "data/maps/PacifidlogTown/map.json": "d7b4d5137d3360ff2d20ea98dff836ef9b2c71b90b4e4c77b4d6b86758a08cd0",
+    "data/maps/Route104/map.json": "a1f13ace0c7932dc5b3be733ce5b1739697958942abc6d696574e09f0cd66ab7",
+    "data/maps/Route109/map.json": "9bf93a22c778d02ae473392dc523dd5a805da2740ca999a4e8437ee8c2c4f014",
+    "data/maps/VermilionCity_Frlg/map.json": "8b4695f4ae2f36474afd5d778a19c2eea74f2a314568a8b5503a191bc3259184",
+    "data/maps/BattleFrontier_OutsideWest/map.json": "1c1774eff96153b098dfdb6967e7ed2809fd30f2d836b3018b3724ca488ce5da",
+    "data/maps/MossdeepCity/map.json": "9a2e6265efc1e1a806171bbb326abb4d7a4971fd7d8dc0cd5ee3103805101850",
+    "data/maps/SootopolisCity/map.json": "13c4d7a8c1f1fc5eb3cfa5364752987570617de61ba9c37ef0f71de899338520",
+    "data/maps/Route104_MrBrineysHouse/map.json": "a92ecd36de5be0cdd3c9cdff5b3b099e0699dd6258a31033200899fcfd78ad9e",
+    "src/data/script_menu.h": "aa6ab7ee96a2fd4fa41fb197d830882483a53c14ca45a8a471324cd3899650d3",
+    "include/constants/script_menu.h": "55abef3cf0ad9fbd8fa9a31ddbf61cc3be64cc3847ed829ca22ee151c3220bf1",
+    "data/scripts/journey_campaign_gates.inc": "e0a881f5ba264387781065b47c7573413f28948dd89215ec05b704f176d4af02"
+  },
+  "preserved_native_sha256": {
+    "data/maps/JourneyRoute12Shipyard/scripts.inc": "643d1fa35f5a4dccbb927489846821612119ad3fc1496134b90e2b4535b327d8",
+    "data/maps/SlateportCity_Harbor/scripts.inc": "8aef7d2b286c8204813c981a0c11ebf95f2cc5f1793b14977458195af560fdc4",
+    "data/maps/OneIsland_Harbor_Frlg/scripts.inc": "4756709d54223f3f3bfec273c0067c8558fd69cf9c88a44f481ab3656c1ff6da",
+    "data/maps/TwoIsland_Harbor_Frlg/scripts.inc": "314f5c01a7e9e12babcc5d225a7411797b5c339d06acbb11b49f31a1bac808da",
+    "data/maps/ThreeIsland_Harbor_Frlg/scripts.inc": "e6248ff719e91cec661db599bf966a0d45c3e818129904203c97b4178a95f03e",
+    "data/maps/FourIsland_Harbor_Frlg/scripts.inc": "78a2776089f36e73a817685685edbe4a68366e8ddcfc076964e499f5d8d1ca25",
+    "data/maps/FiveIsland_Harbor_Frlg/scripts.inc": "abcc4f5fcedb14062fb72bd39d2f3f1a6b82d536bcefbbcb9924b843e1b296d9",
+    "data/maps/SixIsland_Harbor_Frlg/scripts.inc": "bc4a630b9f709464f71c0c5af1c5a7d51abff98f1f29d05d74eb618e7623ec60",
+    "data/maps/SevenIsland_Harbor_Frlg/scripts.inc": "e04098f95a6be4a02db54d13368cfb32880e2749b2508fcca57f0d2e3d4a31ce",
+    "data/maps/DewfordTown/scripts.inc": "5bddcec9dcfb6e7f3ea6f74869158bb67f4642ebcec387f19fcbd9dbdf72cf77",
+    "data/maps/LilycoveCity_Harbor/scripts.inc": "6402fd94cb40af860472f93b66b3eb0198bea5cef8085b739b06c7f2e2a30981",
+    "data/maps/PacifidlogTown/scripts.inc": "584b94336b16091d4732be45cd865bcbc2fa0aa7a0d6d5bfc1b8057bcd1c02af",
+    "data/maps/Route104/scripts.inc": "66a308b973b9c39331f141fd8eff010f9162dd018d6d6babbbf692f8c7c7bf88",
+    "data/maps/Route109/scripts.inc": "f22f628f1dc6143347f61dd78eb8be5e03ec052a88c3424fd24582301ddc0c7a",
+    "data/maps/VermilionCity_Frlg/scripts.inc": "9e408e087d52ee618d1f1d2b0b028a39ab0705e1d2e6daf916932f50d4194afa",
+    "data/maps/BattleFrontier_OutsideWest/scripts.inc": "67abc05f89d8a4eb88bec8514a313e815479cee3d990b2b70c08e74607b453fb",
+    "data/maps/MossdeepCity/scripts.inc": "22609f47cce3b095e22023dc5fb90f792e93511c1b9d6a1823e68ac877b3257f",
+    "data/maps/SootopolisCity/scripts.inc": "ead5f6e417d537d08b6ad9c91e2637d4c776e16a2b76344801c93a199dad9df0",
+    "data/maps/Route104_MrBrineysHouse/scripts.inc": "c99108701570a0950ab2794a9794fd84ec6d80e10011450debac3968055d56af",
+    "src/journey_campaign_gates.c": "eaec31794670edc2943d1405ba3605d714dfb2447786f4cb3c2ff07d02300443",
+    "src/journey_gym_scaling.c": "9b1b64746a70c12fcf7f54a661aea151d8ee9e030810046d3d2ce71bef889840",
+    "src/journey_pwt.c": "5cf1cd0cfccd9c21421a883d2577d972ba75d56d0b45e63f4ad7efc099c938b1",
+    "data/maps/SSTidalCorridor/scripts.inc": "de84085cb51087f8c017b515ec5dbc9894b6d0bf904dbcd2586e03c562526a2e",
+    "data/maps/SSAnne_CaptainsOffice_Frlg/scripts.inc": "faf00c07fe0328e32265492e21073782abcdbc8317ec3d40652c6f80298eb8b5",
+    "data/layouts/JourneyRoute12Shipyard/map.bin": "79f0e06f7c91277a1a339a7bd28e093f91f7d1d70caec1f4142a5469b42adb1e",
+    "data/maps/Route12_Frlg/scripts.inc": "dad097eefab9e04e62b3f58f75eae8199832564a5db886bd119d184d1ba2eea7"
+  },
+  "prepared_sha256": {
+    "src/data/region_map/region_map_sections.json": "16506c6f6e5d2c904b5d560e46f1ea2c760bfacab16e4d718873d82688608ea1",
+    "include/regions.h": "447b2890f19260c7c7595523dbba263aedff91fdaf85967015627f46af7c6a1b",
+    "src/map_name_popup.c": "1da66ffc37578a5de8dc5944786c5569b40ccebaf49dad91b0bba1b67b2a9d2c",
+    "src/seagallop.c": "f81bf19749098facd07d04957c2124226c21bcbda0072b673b89525001154cff",
+    "data/maps/JourneyRoute12Shipyard/map.json": "bc97c280a6bd03a1ce50a4c18a6d1c2008849f10542ba0aefa957e36c9efede4",
+    "data/maps/SlateportCity_Harbor/map.json": "a3588bb11f5b224c80a2b774cad1831b46b6ef1f947a2612a2809e48dd951bb4",
+    "data/maps/OneIsland_Harbor_Frlg/map.json": "dc75423cfcb880181015bca772456d1975907d297efd8bad4599fe7adf19b6ea",
+    "data/maps/TwoIsland_Harbor_Frlg/map.json": "4335b7f22bbb6c910d4bad493e0396f74a6a4670952e8d6df948045626520902",
+    "data/maps/ThreeIsland_Harbor_Frlg/map.json": "57970140bcbb382a70191ee5f911eb25ec1aac1f08f2debc0f8bc90c29ce4bf1",
+    "data/maps/FourIsland_Harbor_Frlg/map.json": "64e99993f96c65670de83ad0a7f537be19ed70d2fc107ed1c55f80bde9a4292d",
+    "data/maps/FiveIsland_Harbor_Frlg/map.json": "1e98402e6e6eff1621204de2bb79b4006368f03be7579e3892508be998d849fd",
+    "data/maps/SixIsland_Harbor_Frlg/map.json": "bb5fbb66ee1de5ef8d4e26e88e1a972b1d62a5e5fb6fe065ff68b850cad0a104",
+    "data/maps/SevenIsland_Harbor_Frlg/map.json": "665e2f19500f731563d5d36827e06e122046de205b55694b89b3e5cea1b71089",
+    "data/maps/DewfordTown/map.json": "6d7fb03a3b4f07a3a56177cf7697e824766a33240f4aa4069b3d1b7d78ab33c5",
+    "data/maps/LilycoveCity_Harbor/map.json": "695f2082fea18b6f51b571e2502f63e251b059c49e589085e4328fe7f9e2b050",
+    "data/maps/PacifidlogTown/map.json": "12b338c44c0e552bf783ddd5610e4f1853db9ab96a20a3d513b6d5f28e9a0ea2",
+    "data/maps/Route104/map.json": "93b869f91e5df9b252bc1ac6c11049fdfdcf2d3283014ff00b7ecb2c0828aaff",
+    "data/maps/Route109/map.json": "614df6ec190bd0fadd96397628dbbeb6b7215a2f3abb86b89c9a04b8b1fc5a3f",
+    "data/maps/VermilionCity_Frlg/map.json": "df0e001f3ae07b490656a1e003775a9a1d15b28641fb7160345cdd4b19df43c8",
+    "data/maps/BattleFrontier_OutsideWest/map.json": "dbd477fd1e7c6f9ca10c19215ceb9a0c4fdc11694054c5473f2622e7d7a63d66",
+    "data/maps/MossdeepCity/map.json": "49d5e8a2eba77fd827f0cbc5481a13d2eff08fe3a2e18e0b58d6edd7b91f8704",
+    "data/maps/SootopolisCity/map.json": "e412687c032f9bb4e6dd2b7404f201f132c8948e12631b6b81b9ccd86c106536",
+    "data/maps/Route104_MrBrineysHouse/map.json": "616734b0bc6071c96e02e22165d478ffa86ac8819599570bf7c4b9ad4152dc84",
+    "src/data/script_menu.h": "92874d60dae417a6eb952365210e8de11cf5beb849d149c767dfbec8ca03131a",
+    "include/constants/script_menu.h": "c9544569cb35099102f40b5fdfeb58bd8f3d643a20c695b1cac31f590b086572",
+    "data/scripts/journey_campaign_gates.inc": "7ef878f0c22c0ae016cfba1ce419cc467400dc805e29f6dc9929f025c69716f4"
+  }
+}

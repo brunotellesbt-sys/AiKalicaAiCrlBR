@@ -1,0 +1,774 @@
+{
+  "passed": true,
+  "rom_sha256": "68bbf008a3dcf522824aad80a6b7ae3ca061a7b7f15a39f03192d99c27177f63",
+  "continuous_roundtrip": true,
+  "start": [
+    "CinnabarIsland_Frlg",
+    11,
+    12
+  ],
+  "end": [
+    "CinnabarIsland_Frlg",
+    11,
+    12
+  ],
+  "maps": [
+    "CinnabarIsland_Frlg",
+    "JourneyCinnabarSouthSea",
+    "JourneyWestRiver",
+    "JourneyRustboroCoast",
+    "JourneyDewfordCoast",
+    "JourneyDewfordGate",
+    "Route105",
+    "Route106",
+    "DewfordTown",
+    "Route114",
+    "JourneyRustboroGate",
+    "Route115",
+    "RustboroCity"
+  ],
+  "legs": [
+    {
+      "label": "cinnabar-departure",
+      "goal": [
+        "JourneyCinnabarSouthSea",
+        10,
+        11
+      ],
+      "position_changes": 20
+    },
+    {
+      "label": "western-river",
+      "goal": [
+        "JourneyWestRiver",
+        7,
+        7
+      ],
+      "position_changes": 47
+    },
+    {
+      "label": "route114-lake",
+      "goal": [
+        "Route114",
+        4,
+        14
+      ],
+      "position_changes": 48
+    },
+    {
+      "label": "return-from-lake",
+      "goal": [
+        "JourneyWestRiver",
+        7,
+        7
+      ],
+      "position_changes": 48
+    },
+    {
+      "label": "rustboro-coast",
+      "goal": [
+        "JourneyRustboroCoast",
+        6,
+        60
+      ],
+      "position_changes": 68
+    },
+    {
+      "label": "rustboro-gate",
+      "goal": [
+        "Route115",
+        4,
+        36
+      ],
+      "position_changes": 82
+    },
+    {
+      "label": "rustboro-town",
+      "goal": [
+        "RustboroCity",
+        21,
+        38
+      ],
+      "position_changes": 109
+    },
+    {
+      "label": "return-rustboro-gate",
+      "goal": [
+        "Route115",
+        4,
+        36
+      ],
+      "position_changes": 109
+    },
+    {
+      "label": "return-from-rustboro",
+      "goal": [
+        "JourneyRustboroCoast",
+        6,
+        60
+      ],
+      "position_changes": 82
+    },
+    {
+      "label": "dewford-coast",
+      "goal": [
+        "JourneyDewfordCoast",
+        46,
+        42
+      ],
+      "position_changes": 102
+    },
+    {
+      "label": "dewford-gate",
+      "goal": [
+        "Route105",
+        4,
+        42
+      ],
+      "position_changes": 18
+    },
+    {
+      "label": "dewford-town",
+      "goal": [
+        "DewfordTown",
+        7,
+        13
+      ],
+      "position_changes": 134
+    },
+    {
+      "label": "return-route105",
+      "goal": [
+        "Route105",
+        4,
+        42
+      ],
+      "position_changes": 136
+    },
+    {
+      "label": "return-dewford-coast",
+      "goal": [
+        "JourneyDewfordCoast",
+        46,
+        42
+      ],
+      "position_changes": 18
+    },
+    {
+      "label": "return-rustboro-coast",
+      "goal": [
+        "JourneyRustboroCoast",
+        6,
+        60
+      ],
+      "position_changes": 102
+    },
+    {
+      "label": "return-western-river",
+      "goal": [
+        "JourneyWestRiver",
+        7,
+        7
+      ],
+      "position_changes": 68
+    },
+    {
+      "label": "return-cinnabar-sea",
+      "goal": [
+        "JourneyCinnabarSouthSea",
+        10,
+        11
+      ],
+      "position_changes": 53
+    },
+    {
+      "label": "return-cinnabar-town",
+      "goal": [
+        "CinnabarIsland_Frlg",
+        11,
+        12
+      ],
+      "position_changes": 20
+    }
+  ],
+  "position_changes": 1264,
+  "transitions": [
+    {
+      "source": [
+        "CinnabarIsland_Frlg",
+        10,
+        19
+      ],
+      "destination": [
+        "JourneyCinnabarSouthSea",
+        10,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyCinnabarSouthSea",
+        7,
+        47
+      ],
+      "destination": [
+        "JourneyWestRiver",
+        7,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWestRiver",
+        47,
+        6
+      ],
+      "destination": [
+        "Route114",
+        0,
+        16
+      ]
+    },
+    {
+      "source": [
+        "Route114",
+        0,
+        14
+      ],
+      "destination": [
+        "JourneyWestRiver",
+        47,
+        4
+      ]
+    },
+    {
+      "source": [
+        "JourneyWestRiver",
+        7,
+        13
+      ],
+      "destination": [
+        "JourneyRustboroCoast",
+        7,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyRustboroCoast",
+        47,
+        47
+      ],
+      "destination": [
+        "JourneyRustboroGate",
+        0,
+        23
+      ]
+    },
+    {
+      "source": [
+        "JourneyRustboroGate",
+        11,
+        21
+      ],
+      "destination": [
+        "Route115",
+        0,
+        45
+      ]
+    },
+    {
+      "source": [
+        "Route115",
+        21,
+        79
+      ],
+      "destination": [
+        "RustboroCity",
+        21,
+        0
+      ]
+    },
+    {
+      "source": [
+        "RustboroCity",
+        22,
+        0
+      ],
+      "destination": [
+        "Route115",
+        22,
+        79
+      ]
+    },
+    {
+      "source": [
+        "Route115",
+        0,
+        36
+      ],
+      "destination": [
+        "JourneyRustboroGate",
+        11,
+        12
+      ]
+    },
+    {
+      "source": [
+        "JourneyRustboroGate",
+        0,
+        12
+      ],
+      "destination": [
+        "JourneyRustboroCoast",
+        47,
+        36
+      ]
+    },
+    {
+      "source": [
+        "JourneyRustboroCoast",
+        45,
+        79
+      ],
+      "destination": [
+        "JourneyDewfordCoast",
+        45,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyDewfordCoast",
+        47,
+        42
+      ],
+      "destination": [
+        "JourneyDewfordGate",
+        0,
+        12
+      ]
+    },
+    {
+      "source": [
+        "JourneyDewfordGate",
+        11,
+        12
+      ],
+      "destination": [
+        "Route105",
+        0,
+        42
+      ]
+    },
+    {
+      "source": [
+        "Route105",
+        26,
+        79
+      ],
+      "destination": [
+        "Route106",
+        26,
+        0
+      ]
+    },
+    {
+      "source": [
+        "Route106",
+        66,
+        19
+      ],
+      "destination": [
+        "DewfordTown",
+        6,
+        0
+      ]
+    },
+    {
+      "source": [
+        "DewfordTown",
+        3,
+        0
+      ],
+      "destination": [
+        "Route106",
+        63,
+        19
+      ]
+    },
+    {
+      "source": [
+        "Route106",
+        19,
+        0
+      ],
+      "destination": [
+        "Route105",
+        19,
+        79
+      ]
+    },
+    {
+      "source": [
+        "Route105",
+        0,
+        42
+      ],
+      "destination": [
+        "JourneyDewfordGate",
+        11,
+        12
+      ]
+    },
+    {
+      "source": [
+        "JourneyDewfordGate",
+        0,
+        12
+      ],
+      "destination": [
+        "JourneyDewfordCoast",
+        47,
+        42
+      ]
+    },
+    {
+      "source": [
+        "JourneyDewfordCoast",
+        6,
+        0
+      ],
+      "destination": [
+        "JourneyRustboroCoast",
+        6,
+        79
+      ]
+    },
+    {
+      "source": [
+        "JourneyRustboroCoast",
+        7,
+        0
+      ],
+      "destination": [
+        "JourneyWestRiver",
+        7,
+        13
+      ]
+    },
+    {
+      "source": [
+        "JourneyWestRiver",
+        10,
+        0
+      ],
+      "destination": [
+        "JourneyCinnabarSouthSea",
+        10,
+        47
+      ]
+    },
+    {
+      "source": [
+        "JourneyCinnabarSouthSea",
+        11,
+        0
+      ],
+      "destination": [
+        "CinnabarIsland_Frlg",
+        11,
+        19
+      ]
+    }
+  ],
+  "surf_prompts": [
+    [
+      "CinnabarIsland_Frlg",
+      10,
+      13
+    ],
+    [
+      "JourneyWestRiver",
+      14,
+      6
+    ],
+    [
+      "JourneyWestRiver",
+      9,
+      5
+    ],
+    [
+      "Route115",
+      7,
+      71
+    ],
+    [
+      "JourneyDewfordGate",
+      5,
+      12
+    ],
+    [
+      "Route105",
+      17,
+      56
+    ],
+    [
+      "Route106",
+      41,
+      11
+    ],
+    [
+      "Route105",
+      13,
+      59
+    ],
+    [
+      "Route105",
+      6,
+      54
+    ],
+    [
+      "JourneyDewfordGate",
+      5,
+      12
+    ],
+    [
+      "JourneyWestRiver",
+      10,
+      4
+    ]
+  ],
+  "save_continue": [
+    {
+      "label": "cinnabar-south-surf",
+      "before": {
+        "map": "JourneyCinnabarSouthSea",
+        "position": [
+          10,
+          11
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "JourneyCinnabarSouthSea",
+        "position": [
+          10,
+          11
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    },
+    {
+      "label": "route114-lake-surf",
+      "before": {
+        "map": "Route114",
+        "position": [
+          4,
+          14
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": false
+      },
+      "after": {
+        "map": "Route114",
+        "position": [
+          4,
+          14
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": false
+      }
+    },
+    {
+      "label": "rustboro-coast-surf",
+      "before": {
+        "map": "JourneyRustboroCoast",
+        "position": [
+          6,
+          60
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": false
+      },
+      "after": {
+        "map": "JourneyRustboroCoast",
+        "position": [
+          6,
+          60
+        ],
+        "mode": 8,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": false
+      }
+    },
+    {
+      "label": "rustboro-town-land",
+      "before": {
+        "map": "RustboroCity",
+        "position": [
+          21,
+          38
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": false
+      },
+      "after": {
+        "map": "RustboroCity",
+        "position": [
+          21,
+          38
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": false
+      }
+    },
+    {
+      "label": "dewford-town-land",
+      "before": {
+        "map": "DewfordTown",
+        "position": [
+          7,
+          13
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": false
+      },
+      "after": {
+        "map": "DewfordTown",
+        "position": [
+          7,
+          13
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": false
+      }
+    },
+    {
+      "label": "cinnabar-return-land",
+      "before": {
+        "map": "CinnabarIsland_Frlg",
+        "position": [
+          11,
+          12
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      },
+      "after": {
+        "map": "CinnabarIsland_Frlg",
+        "position": [
+          11,
+          12
+        ],
+        "mode": 1,
+        "kanto_badges": 0,
+        "hoenn_badges": 0,
+        "special_capture_unlocked": false,
+        "frlg_format": true
+      }
+    }
+  ],
+  "native_trainer_battles": [
+    {
+      "trainer": 1534,
+      "map": "JourneyWestRiver",
+      "mission": "seafloor_route",
+      "attacks": 4,
+      "outcome": 1,
+      "ash_seen": true,
+      "native_defeated_flag": true,
+      "double_battle": false,
+      "second_trainer": null,
+      "second_native_defeated_flag": false
+    },
+    {
+      "trainer": 441,
+      "map": "Route105",
+      "mission": "seafloor_route",
+      "attacks": 5,
+      "outcome": 1,
+      "ash_seen": true,
+      "native_defeated_flag": true,
+      "double_battle": false,
+      "second_trainer": null,
+      "second_native_defeated_flag": false
+    },
+    {
+      "trainer": 339,
+      "map": "Route106",
+      "mission": "seafloor_route",
+      "attacks": 15,
+      "outcome": 1,
+      "ash_seen": true,
+      "native_defeated_flag": true,
+      "double_battle": false,
+      "second_trainer": null,
+      "second_native_defeated_flag": false
+    },
+    {
+      "trainer": 153,
+      "map": "Route106",
+      "mission": "seafloor_route",
+      "attacks": 3,
+      "outcome": 1,
+      "ash_seen": true,
+      "native_defeated_flag": true,
+      "double_battle": false,
+      "second_trainer": null,
+      "second_native_defeated_flag": false
+    },
+    {
+      "trainer": 151,
+      "map": "Route105",
+      "mission": "seafloor_route",
+      "attacks": 10,
+      "outcome": 1,
+      "ash_seen": false,
+      "native_defeated_flag": true,
+      "double_battle": false,
+      "second_trainer": null,
+      "second_native_defeated_flag": false
+    }
+  ],
+  "no_midroute_warps_or_direct_trainer_scripts": true,
+  "initial_party_position_and_prior_story_states_are_fixtures": true,
+  "trainer_stats_and_healing_are_fixtures": true,
+  "wild_encounters_disabled": true,
+  "full_campaign_playthrough": false,
+  "balance_validated": false
+}

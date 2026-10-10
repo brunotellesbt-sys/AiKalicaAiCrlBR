@@ -12,6 +12,11 @@ class Handler(SimpleHTTPRequestHandler):
     def translate_path(self, path):
         if path.split('?', 1)[0] == '/games/LeafGreen-Journey-SeaRoutes.gba':
             return str(ROOT / 'mods/sea-routes/LeafGreen-Journey-SeaRoutes.gba')
+        requested = path.split('?', 1)[0]
+        if requested in ['/games/Pokemon-Journey-World-Alpha-1.gba', '/games/release.json']:
+            return str(ROOT / 'mods/hoenn/playable' / requested.rsplit('/', 1)[1])
+        if requested == '/START-HERE.md':
+            return str(ROOT / 'mods/hoenn/playable/START-HERE.md')
         return super().translate_path(path)
 
 if __name__ == '__main__':

@@ -1,0 +1,485 @@
+{
+  "passed": true,
+  "rom_sha256": "f939526a55c5db284875addeebeb963402c70f65a64d9d9975d9212467ce4f9f",
+  "continuous_roundtrip": true,
+  "legs": [
+    {
+      "map": "Route19_Frlg",
+      "position": [
+        18,
+        48
+      ]
+    },
+    {
+      "map": "JourneyFuchsiaSea",
+      "position": [
+        10,
+        10
+      ]
+    },
+    {
+      "map": "JourneyHoennNorthSea",
+      "position": [
+        80,
+        8
+      ]
+    },
+    {
+      "map": "VermilionCity_Frlg",
+      "position": [
+        20,
+        20
+      ]
+    },
+    {
+      "map": "VermilionCity_Frlg",
+      "position": [
+        34,
+        38
+      ]
+    },
+    {
+      "map": "JourneyWorldSea00",
+      "position": [
+        10,
+        20
+      ]
+    },
+    {
+      "map": "JourneyHoennNorthSea",
+      "position": [
+        40,
+        22
+      ]
+    },
+    {
+      "map": "JourneyEverGrandeBackSouthSea",
+      "position": [
+        8,
+        34
+      ]
+    },
+    {
+      "map": "EverGrandeCity",
+      "position": [
+        34,
+        74
+      ]
+    },
+    {
+      "map": "EverGrandeCity",
+      "position": [
+        20,
+        72
+      ]
+    },
+    {
+      "map": "EverGrandeCity",
+      "position": [
+        20,
+        68
+      ]
+    },
+    {
+      "map": "EverGrandeCity",
+      "position": [
+        34,
+        74
+      ]
+    },
+    {
+      "map": "JourneyEverGrandeBackSouthSea",
+      "position": [
+        8,
+        34
+      ]
+    },
+    {
+      "map": "JourneyWorldSea00",
+      "position": [
+        10,
+        20
+      ]
+    },
+    {
+      "map": "VermilionCity_Frlg",
+      "position": [
+        20,
+        20
+      ]
+    },
+    {
+      "map": "VermilionCity_Frlg",
+      "position": [
+        34,
+        38
+      ]
+    },
+    {
+      "map": "JourneyWorldSea00",
+      "position": [
+        10,
+        20
+      ]
+    },
+    {
+      "map": "JourneyHoennNorthSea",
+      "position": [
+        80,
+        8
+      ]
+    },
+    {
+      "map": "JourneyFuchsiaSea",
+      "position": [
+        10,
+        10
+      ]
+    },
+    {
+      "map": "Route19_Frlg",
+      "position": [
+        18,
+        48
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Frlg",
+      "position": [
+        20,
+        20
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "source": [
+        "FuchsiaCity_Frlg",
+        28,
+        39
+      ],
+      "destination": [
+        "Route19_Frlg",
+        16,
+        0
+      ]
+    },
+    {
+      "source": [
+        "Route19_Frlg",
+        23,
+        48
+      ],
+      "destination": [
+        "JourneyFuchsiaSea",
+        0,
+        8
+      ]
+    },
+    {
+      "source": [
+        "JourneyFuchsiaSea",
+        18,
+        19
+      ],
+      "destination": [
+        "JourneyHoennNorthSea",
+        80,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyHoennNorthSea",
+        109,
+        8
+      ],
+      "destination": [
+        "JourneyWorldSea00",
+        0,
+        8
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea00",
+        20,
+        0
+      ],
+      "destination": [
+        "VermilionCity_Frlg",
+        20,
+        39
+      ]
+    },
+    {
+      "source": [
+        "VermilionCity_Frlg",
+        22,
+        39
+      ],
+      "destination": [
+        "JourneyWorldSea00",
+        22,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea00",
+        25,
+        0
+      ],
+      "destination": [
+        "VermilionCity_Frlg",
+        25,
+        39
+      ]
+    },
+    {
+      "source": [
+        "VermilionCity_Frlg",
+        24,
+        39
+      ],
+      "destination": [
+        "JourneyWorldSea00",
+        24,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea00",
+        0,
+        20
+      ],
+      "destination": [
+        "JourneyHoennNorthSea",
+        109,
+        20
+      ]
+    },
+    {
+      "source": [
+        "JourneyHoennNorthSea",
+        88,
+        47
+      ],
+      "destination": [
+        "JourneyMossdeepOuterSea",
+        88,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyMossdeepOuterSea",
+        88,
+        31
+      ],
+      "destination": [
+        "JourneyHoennMiddleSea",
+        88,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyHoennMiddleSea",
+        88,
+        39
+      ],
+      "destination": [
+        "JourneyEverGrandeBackSea",
+        8,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyEverGrandeBackSea",
+        8,
+        39
+      ],
+      "destination": [
+        "JourneyEverGrandeBackSouthSea",
+        8,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyEverGrandeBackSouthSea",
+        0,
+        34
+      ],
+      "destination": [
+        "EverGrandeCity",
+        39,
+        74
+      ]
+    },
+    {
+      "source": [
+        "EverGrandeCity",
+        39,
+        74
+      ],
+      "destination": [
+        "JourneyEverGrandeBackSouthSea",
+        0,
+        34
+      ]
+    },
+    {
+      "source": [
+        "JourneyEverGrandeBackSouthSea",
+        39,
+        0
+      ],
+      "destination": [
+        "JourneyEverGrandeBackSea",
+        39,
+        39
+      ]
+    },
+    {
+      "source": [
+        "JourneyEverGrandeBackSea",
+        40,
+        0
+      ],
+      "destination": [
+        "JourneyHoennMiddleEastSea",
+        10,
+        39
+      ]
+    },
+    {
+      "source": [
+        "JourneyHoennMiddleEastSea",
+        10,
+        0
+      ],
+      "destination": [
+        "JourneyMossdeepOuterEastSea",
+        10,
+        31
+      ]
+    },
+    {
+      "source": [
+        "JourneyMossdeepOuterEastSea",
+        10,
+        0
+      ],
+      "destination": [
+        "JourneyWorldSea00",
+        10,
+        47
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea00",
+        20,
+        0
+      ],
+      "destination": [
+        "VermilionCity_Frlg",
+        20,
+        39
+      ]
+    },
+    {
+      "source": [
+        "VermilionCity_Frlg",
+        22,
+        39
+      ],
+      "destination": [
+        "JourneyWorldSea00",
+        22,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea00",
+        25,
+        0
+      ],
+      "destination": [
+        "VermilionCity_Frlg",
+        25,
+        39
+      ]
+    },
+    {
+      "source": [
+        "VermilionCity_Frlg",
+        24,
+        39
+      ],
+      "destination": [
+        "JourneyWorldSea00",
+        24,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyWorldSea00",
+        0,
+        20
+      ],
+      "destination": [
+        "JourneyHoennNorthSea",
+        109,
+        20
+      ]
+    },
+    {
+      "source": [
+        "JourneyHoennNorthSea",
+        72,
+        0
+      ],
+      "destination": [
+        "JourneyFuchsiaSea",
+        10,
+        19
+      ]
+    },
+    {
+      "source": [
+        "JourneyFuchsiaSea",
+        0,
+        10
+      ],
+      "destination": [
+        "Route19_Frlg",
+        23,
+        50
+      ]
+    },
+    {
+      "source": [
+        "Route19_Frlg",
+        7,
+        0
+      ],
+      "destination": [
+        "FuchsiaCity_Frlg",
+        19,
+        39
+      ]
+    }
+  ],
+  "save_continue_at_waterfall_base": true,
+  "no_midroute_warps": true,
+  "defeated_trainer_and_party_fixtures": true,
+  "wild_encounters_disabled": true,
+  "full_campaign_playthrough": false
+}

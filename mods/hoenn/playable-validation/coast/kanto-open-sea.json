@@ -1,0 +1,228 @@
+{
+  "passed": true,
+  "rom_sha256": "b07a385217a96bda269df1739ad1f1e3222a2c6bac3972a5f222d68705cc883d",
+  "surf_legs": [
+    {
+      "map": "JourneyFuchsiaSea",
+      "position": [
+        20,
+        10
+      ]
+    },
+    {
+      "map": "JourneyKantoSouthWestSea",
+      "position": [
+        25,
+        25
+      ]
+    },
+    {
+      "map": "JourneyKantoSouthSea",
+      "position": [
+        60,
+        25
+      ]
+    },
+    {
+      "map": "JourneyRoute13Coast",
+      "position": [
+        40,
+        25
+      ]
+    },
+    {
+      "map": "JourneyLavenderApproach",
+      "position": [
+        25,
+        35
+      ]
+    },
+    {
+      "map": "JourneyRoute12Shipyard",
+      "position": [
+        45,
+        45
+      ]
+    },
+    {
+      "map": "JourneyRoute12OuterSea",
+      "position": [
+        30,
+        35
+      ]
+    },
+    {
+      "map": "JourneyRoute12Shipyard",
+      "position": [
+        45,
+        45
+      ]
+    },
+    {
+      "map": "JourneyLavenderApproachSouth",
+      "position": [
+        25,
+        30
+      ]
+    },
+    {
+      "map": "JourneyWorldSea02",
+      "position": [
+        35,
+        20
+      ]
+    },
+    {
+      "map": "JourneyWorldSea01",
+      "position": [
+        35,
+        20
+      ]
+    },
+    {
+      "map": "JourneyWorldSea00",
+      "position": [
+        35,
+        20
+      ]
+    },
+    {
+      "map": "JourneyKantoCoastalBand",
+      "position": [
+        40,
+        10
+      ]
+    },
+    {
+      "map": "Route19_Frlg",
+      "position": [
+        15,
+        50
+      ]
+    }
+  ],
+  "pedestrian_bridge_legs": [
+    {
+      "map": "JourneyRoute12OuterSea",
+      "position": [
+        5,
+        54
+      ]
+    },
+    {
+      "map": "JourneyRoute12OuterSea",
+      "position": [
+        5,
+        59
+      ]
+    },
+    {
+      "map": "JourneyRoute12Shipyard",
+      "position": [
+        5,
+        3
+      ]
+    },
+    {
+      "map": "JourneyRoute12Shipyard",
+      "position": [
+        5,
+        29
+      ]
+    },
+    {
+      "map": "JourneyRoute12OuterSea",
+      "position": [
+        5,
+        54
+      ]
+    },
+    {
+      "map": "Route12_Frlg",
+      "position": [
+        17,
+        53
+      ]
+    }
+  ],
+  "compiled_surf_graph_reachable_maps": [
+    "BirthIsland_Harbor_Frlg",
+    "EverGrandeCity",
+    "FiveIsland_Harbor_Frlg",
+    "FourIsland_Harbor_Frlg",
+    "JourneyEverGrandeBackSea",
+    "JourneyEverGrandeBackSouthSea",
+    "JourneyFuchsiaInlet",
+    "JourneyFuchsiaSea",
+    "JourneyHoennMiddleEastSea",
+    "JourneyHoennMiddleSea",
+    "JourneyHoennNorthSea",
+    "JourneyHoennSouthEastSea",
+    "JourneyHoennSouthSea",
+    "JourneyKantoCoastalBand",
+    "JourneyKantoEasternChannel",
+    "JourneyKantoSouthSea",
+    "JourneyKantoSouthWestSea",
+    "JourneyLavenderApproach",
+    "JourneyLavenderApproachSouth",
+    "JourneyMossdeepOuterEastSea",
+    "JourneyMossdeepOuterSea",
+    "JourneyOneIslandChannel",
+    "JourneyPacifidlogSea",
+    "JourneyRoute12OuterSea",
+    "JourneyRoute12Shipyard",
+    "JourneyRoute13Coast",
+    "JourneyWorldFill10Cap",
+    "JourneyWorldFill10Right",
+    "JourneyWorldFill11Cap",
+    "JourneyWorldFill11Right",
+    "JourneyWorldFill20Cap",
+    "JourneyWorldFill20Right",
+    "JourneyWorldFill21Cap",
+    "JourneyWorldFill21Right",
+    "JourneyWorldFill30Cap",
+    "JourneyWorldFill30Right",
+    "JourneyWorldFill31Cap",
+    "JourneyWorldFill31Right",
+    "JourneyWorldLane10",
+    "JourneyWorldLane11",
+    "JourneyWorldLane20",
+    "JourneyWorldLane21",
+    "JourneyWorldLane30",
+    "JourneyWorldLane31",
+    "JourneyWorldSea00",
+    "JourneyWorldSea01",
+    "JourneyWorldSea02",
+    "JourneyWorldSea03",
+    "JourneyWorldSea04",
+    "JourneyWorldSea05",
+    "JourneyWorldSea06",
+    "JourneyWorldSea07",
+    "JourneyWorldSea08",
+    "JourneyWorldSea09",
+    "MossdeepCity",
+    "NavelRock_Harbor_Frlg",
+    "OneIsland_Harbor_Frlg",
+    "Route124",
+    "Route125",
+    "Route126",
+    "Route127",
+    "Route128",
+    "Route129",
+    "Route12_Frlg",
+    "Route130",
+    "Route131",
+    "Route13_Frlg",
+    "Route14_Frlg",
+    "Route19_Frlg",
+    "SevenIsland_Harbor_Frlg",
+    "SixIsland_Harbor_Frlg",
+    "TwoIsland_Harbor_Frlg"
+  ],
+  "all_nine_new_channels_reachable": true,
+  "continuous_surf_roundtrip": true,
+  "no_midtrip_fixture_warps": true,
+  "bridge_walk_without_surf": true,
+  "initial_party_positions_and_defeated_trainer_flags_are_fixtures": true,
+  "full_campaign_playthrough": false
+}
