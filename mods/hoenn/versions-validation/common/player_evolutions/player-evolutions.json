@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "rom_sha256": "d686ad987059086a997cc657d92af33814c00ad2d316ec609daa123a516286bc",
+  "checks": [
+    {
+      "label": "early Thunder Stone",
+      "species": 25,
+      "level": 5,
+      "target": 26
+    },
+    {
+      "label": "Alola Thunder Stone",
+      "species": 25,
+      "level": 5,
+      "target": 958
+    },
+    {
+      "label": "Kadabra before 36",
+      "species": 64,
+      "level": 35,
+      "target": 0
+    },
+    {
+      "label": "Kadabra at 36",
+      "species": 64,
+      "level": 36,
+      "target": 65
+    },
+    {
+      "label": "Onix before 30",
+      "species": 95,
+      "level": 29,
+      "target": 0
+    },
+    {
+      "label": "Onix at 30 with coat",
+      "species": 95,
+      "level": 30,
+      "target": 208
+    },
+    {
+      "label": "Pawmo at 36",
+      "species": 1306,
+      "level": 36,
+      "target": 1307
+    },
+    {
+      "label": "Gimmighoul at 36",
+      "species": 1391,
+      "level": 36,
+      "target": 1393
+    }
+  ],
+  "native_six_argument_target_function": true,
+  "initial_party_and_items_are_fixtures": true,
+  "animation_and_consumption_tested": false
+}

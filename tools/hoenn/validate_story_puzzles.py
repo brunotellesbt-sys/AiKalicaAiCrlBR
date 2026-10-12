@@ -26,9 +26,9 @@ assert len(puzzle_abi) == 8
 flag_ids = dict(zip(['FLAG_SYS_REGIROCK_PUZZLE_COMPLETED', 'FLAG_SYS_REGISTEEL_PUZZLE_COMPLETED',
                      'FLAG_SYS_BRAILLE_DIG', 'FLAG_REGI_DOORS_OPENED'], puzzle_abi[4:]))
 def flag_id(name): return flag_ids[name]
-def flag(f): return bool(lib.read8(save() + 4720 + f // 8) & (1 << (f & 7)))
+def flag(f): return bool(lib.read8(save() + FLAG_OFFSET + f // 8) & (1 << (f & 7)))
 def rawflag(f, enabled):
-    address = save() + 4720 + f // 8
+    address = save() + FLAG_OFFSET + f // 8
     value, mask = lib.read8(address), 1 << (f & 7)
     lib.write8(address, value | mask if enabled else value & ~mask)
 def idle():

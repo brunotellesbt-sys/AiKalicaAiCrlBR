@@ -1,0 +1,54 @@
+/* Boot each actual release in bundled mGBA and verify edition/save identity. */
+const { chromium } = require('/opt/codex/runtimes/cua/lib/node_modules/playwright-core');
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
+const ROOT = path.resolve(__dirname, '../..');
+const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'mods/hoenn/versions/versions.json')));
+const OUT = path.join(ROOT, 'mods/hoenn/versions-validation/browser');
+const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
+(async () => {
+  const browser = await chromium.launch({executablePath:'/usr/bin/chromium',headless:true,
+    args:['--no-sandbox','--disable-dev-shm-usage','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+  fs.mkdirSync(OUT,{recursive:true});
+  try {
+    const invalid = await browser.newPage();
+    await invalid.route('**/games/versions.json',route=>route.fulfill({contentType:'application/json',body:JSON.stringify({...manifest,validated:false})}));
+    await invalid.goto(url);await invalid.locator('#play').click();
+    await invalid.waitForFunction(()=>document.querySelector('#status').textContent.includes('unavailable'));
+    if(await invalid.evaluate(()=>!!window.EJS_emulator))throw new Error('Unvalidated manifest booted');
+    if(await invalid.locator('#play').isDisabled())throw new Error('Manifest rejection prevented retry');
+    await invalid.close();
+    const incomplete = await browser.newPage();
+    await incomplete.route('**/games/*.gba?*',route=>route.fulfill({body:Buffer.alloc(192)}));
+    await incomplete.goto(url);await incomplete.locator('#play').click();
+    await incomplete.waitForFunction(()=>document.querySelector('#status').textContent.includes('incomplete'));
+    if(await incomplete.evaluate(()=>!!window.EJS_emulator))throw new Error('Corrupt ROM booted');
+    await incomplete.close();
+    const checks=[];
+    for(const row of manifest.variants){
+      const page=await browser.newPage({viewport:{width:row.max_national===493?1280:390,height:844}});
+      await page.goto(url);
+      await page.locator('#edition-label').waitFor({state:'visible'});
+      await page.locator('#edition').selectOption(row.file);
+      if(!((await page.locator('#download-rom').getAttribute('href')).endsWith(row.file)))throw new Error('Wrong edition download');
+      await page.locator('#play').click();
+      await page.waitForFunction(()=>window.EJS_emulator?.gameManager?.functions?.getFrameNum()>360,null,{timeout:120000});
+      const actual=await page.evaluate(()=>({name:EJS_gameName,frames:EJS_emulator.gameManager.functions.getFrameNum(),
+        state:EJS_emulator.gameManager.getState().length,controls:EJS_defaultControls[0]}));
+      if(actual.name!==row.file||actual.state<1000)throw new Error('Wrong edition/save identity or native state unavailable');
+      if(!await page.locator('#game canvas').count())throw new Error('Missing native renderer');
+      if(!await page.locator('#edition').isDisabled())throw new Error('Edition changed during running game');
+      await page.screenshot({path:path.join(OUT,row.file+'.png'),fullPage:true});
+      checks.push({file:row.file,rom_sha256:row.sha256,actual_game_name:actual.name,native_frames:actual.frames,
+        exported_native_state_bytes:actual.state,distinct_save_identity:true});
+      console.log('Bundled mGBA boot passed:',row.file);
+      await page.close();
+    }
+    if(new Set(checks.map(c=>c.actual_game_name)).size!==4)throw new Error('Save identities collide');
+    fs.writeFileSync(path.join(OUT,'browser-versions.json'),JSON.stringify({passed:true,checks,
+      invalid_manifest_rejected:true,incomplete_rom_rejected:true,bundled_mgba:true,
+      player_sources_sha256:Object.fromEntries(['index.html','player.js','style.css'].map(name=>[name,crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT,'web',name))).digest('hex')])),
+      desktop_and_mobile_viewports:true,full_campaign_playthrough:false},null,2)+'\n');
+  }finally{await browser.close();}
+})().catch(error=>{console.error(error);process.exit(1);});

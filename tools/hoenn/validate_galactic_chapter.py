@@ -63,7 +63,9 @@ for i,g in enumerate(chapter['grunts']):
  assert native('FlagGet',0x500+g['id'])==1
  wins.append(win);print('Galactic grunt',i+1,'won',flush=True)
 assert special('JourneyGalacticGruntsCleared')==1
-native('HealPlayerParty');warp('JourneyGalacticHall',15,7)
+native('HealPlayerParty');warp('JourneyGalacticHall',15,11)
+closed_fields=[native('MapGridGetCollisionAt',center+7,6+7) for center in [6,15,24]]
+assert all(closed_fields),closed_fields
 picture('galactic-prison-before-finale')
 script(b'\x05'+struct.pack('<I',s['JourneyGalactic_Cyrus']),30)
 last_cb=None;started=False;finale=[];states=[];timeout=0
@@ -85,11 +87,13 @@ else:
  picture('galactic-finale-timeout');raise AssertionError(('Finale timeout',states,finale,hex(cb)))
 assert len(finale)==4 and states[-1]==7,(states,finale)
 picture('galactic-prison-after-finale')
+open_fields=[native('MapGridGetCollisionAt',center+7,6+7) for center in [6,15,24]]
+assert not any(open_fields),open_fields
 assert native('JourneyGalacticCaptureLocked',483)==0
 assert native('JourneyGalacticCaptureLocked',484)==0
 assert native('JourneyGalacticCaptureLocked',487)==0
 assert native('JourneyGalacticNoCatch')==0
 assert hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest()==sha
 lib.stop()
-(args.output/'galactic-chapter.json').write_text(json.dumps(dict(passed=True,rom_sha256=sha,grunts=wins,finale=finale,states=states,optional_legendary_captures_unlock_after_chapter=True,enemy_party_not_written=True,player_battle_stats_boosted=True,prior_badges_and_travel_are_fixtures=True,full_campaign_playthrough=False),indent=2)+'\n')
+(args.output/'galactic-chapter.json').write_text(json.dumps(dict(passed=True,rom_sha256=sha,grunts=wins,finale=finale,states=states,prison_collision_before=closed_fields,prison_collision_after=open_fields,optional_legendary_captures_unlock_after_chapter=True,enemy_party_not_written=True,player_battle_stats_boosted=True,prior_badges_and_travel_are_fixtures=True,full_campaign_playthrough=False),indent=2)+'\n')
 print('Native Galactic chapter complete',flush=True)

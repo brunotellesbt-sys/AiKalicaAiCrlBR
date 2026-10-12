@@ -1,0 +1,332 @@
+{
+  "parent_rom_sha256": "d686ad987059086a997cc657d92af33814c00ad2d316ec609daa123a516286bc",
+  "build_rules_offset": 8060660,
+  "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
+  "parent_rules_hex": "01040100",
+  "variants": [
+    {
+      "file": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "max_national": 493,
+      "perfect_trainer_ivs": false,
+      "important_opponents_only": true,
+      "evs": 510,
+      "bytes": 33554432,
+      "sha256": "b587559609cb1e9c43c9303579853ef4d9915b680e8e8606ae5c4c19f411900d",
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189,
+        8060660,
+        8060661,
+        8060662
+      ],
+      "requires_new_save": true
+    },
+    {
+      "file": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "max_national": 493,
+      "perfect_trainer_ivs": true,
+      "important_opponents_only": true,
+      "evs": 510,
+      "bytes": 33554432,
+      "sha256": "bff13b678168f81a07867eb43d67b1cc2887e387885e6445667830c7a6ac8825",
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189,
+        8060660,
+        8060661
+      ],
+      "requires_new_save": true
+    },
+    {
+      "file": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "max_national": 1025,
+      "perfect_trainer_ivs": false,
+      "important_opponents_only": true,
+      "evs": 510,
+      "bytes": 33554432,
+      "sha256": "21cd5167bcba117024f4df4112b1b08c21cce32ddae74be28322b39c6b6212af",
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189,
+        8060662
+      ],
+      "requires_new_save": true
+    },
+    {
+      "file": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "max_national": 1025,
+      "perfect_trainer_ivs": true,
+      "important_opponents_only": true,
+      "evs": 510,
+      "bytes": 33554432,
+      "sha256": "64306d7d480ecb2e8a6b4ea16e8b4ab2e8a1c363d2064ab97d0e9181c2e9a45b",
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189
+      ],
+      "requires_new_save": true
+    }
+  ],
+  "all_other_bytes_identical": true,
+  "validated": true,
+  "proofs": [
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-4-Normal/gym-teams.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "gym-teams",
+      "sha256": "4da6be216fd2938cab96315ad51670748f9281accaa3b782b8970b2397505ed3"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-4-Normal/variant-rules.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "variant-rules",
+      "sha256": "478e5733cef62dea86ff14e1f4e45874241d370ea10b3fb03a74d17f6a0bf108"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-4-Hard/gym-teams.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "gym-teams",
+      "sha256": "74bfff6a2daf758c3239ebe56fc46ae34f562d74bb67d495bbcec71bc7c46340"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-4-Hard/variant-rules.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "variant-rules",
+      "sha256": "bad7c1bdb9aedf34c57acaaf5f7beba52a56b1eb0018af3cf830855e3c812865"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-9-Normal/gym-teams.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "gym-teams",
+      "sha256": "ce39d1fefffbea569db7250ffb85a7b84094c6acaa9548b2e3337ad1cd51ff7e"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-9-Normal/variant-rules.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "variant-rules",
+      "sha256": "b4fc0b2ef95e80521fa23489e60f2482d04babdc3b974404a97a9dc9f108a90a"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-9-Hard/gym-teams.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "gym-teams",
+      "sha256": "cbf2cbb352e231511691c1a043097af9c406d774db9c56ffc5af33f5b3a29226"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-9-Hard/variant-rules.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "variant-rules",
+      "sha256": "760ba75968aedef8618b322ad2494bf0cb1f50a7c0c1445afe18a45a43929ec1"
+    },
+    {
+      "file": "evidence/common/abilities/abilities-slot-2.json",
+      "target": "common",
+      "kind": "abilities-slot-2",
+      "sha256": "67e9c459b8078265c881272e708caf66ad918c6874b720a19794d7c8227124ed"
+    },
+    {
+      "file": "evidence/common/common/ability-item-registry.json",
+      "target": "common",
+      "kind": "ability-item-registry",
+      "sha256": "1d2bcf3026768bb7ac7fd3b9da277fc89b4ebed151f1821be74141683b76ca43"
+    },
+    {
+      "file": "evidence/common/badge_tabs/badge-tabs.json",
+      "target": "common",
+      "kind": "badge-tabs",
+      "sha256": "04d6fdc7c99516580616ac1a108632c07fa1e5ec359bb7e3fdeadb050c683502"
+    },
+    {
+      "file": "evidence/common/birth_confirmation/birth-confirmation.json",
+      "target": "common",
+      "kind": "birth-confirmation",
+      "sha256": "eb598bdc125a43a7974bfa689d2e01c7eab69bd9fe4c1f9e079f5f1cfed18603"
+    },
+    {
+      "file": "evidence/common/birth_rules/birth-rules.json",
+      "target": "common",
+      "kind": "birth-rules",
+      "sha256": "41a3dcda2bc9f48a879200f702535f6d80da1f22236c7bdc005deabf204727cf"
+    },
+    {
+      "file": "evidence/common/campaign_matrix/campaign-matrix.json",
+      "target": "common",
+      "kind": "campaign-matrix",
+      "sha256": "38d2c8ba684f167b16e76c294fe8fc6debb5abab277857160b513b239c766df4"
+    },
+    {
+      "file": "evidence/common/crossover_opponents/crossover-opponents.json",
+      "target": "common",
+      "kind": "crossover-opponents",
+      "sha256": "b315fde5f5c8bae2596ae3c92a4e7746202cad0fde5eb08e5a0ced92a1cda16b"
+    },
+    {
+      "file": "evidence/common/crossover_visits/crossover-visits.json",
+      "target": "common",
+      "kind": "crossover-visits",
+      "sha256": "57b8578e531737c1bf0868493d5abcaffd67df5e680504826d7605192f4823a3"
+    },
+    {
+      "file": "evidence/common/field_rules/field-rules.json",
+      "target": "common",
+      "kind": "field-rules",
+      "sha256": "5ef9869990182ab09f66e735627762d2e7cf4c6aa13e4c0712baba81b55d38f2"
+    },
+    {
+      "file": "evidence/common/final-hoenn-league/league-hoenn.json",
+      "target": "common",
+      "kind": "league-hoenn",
+      "sha256": "3880dbed6cdb42a4c9e94ead5f6d87587f2f4fcdabcb3b6b251351c91e001ee3"
+    },
+    {
+      "file": "evidence/common/final-kanto-league/league-kanto.json",
+      "target": "common",
+      "kind": "league-kanto",
+      "sha256": "a1465900bdaa671039d3a623fa7d6bd1e48b6de44b361854789d3b959c86be40"
+    },
+    {
+      "file": "evidence/common/final-mega-native/mega-reversion.json",
+      "target": "common",
+      "kind": "mega-reversion",
+      "sha256": "9a8b29d91fa08e26a39455262b6c76cda302a69336351be7bb91f89513e75ab8"
+    },
+    {
+      "file": "evidence/common/final-surf-passages/surf-passages.json",
+      "target": "common",
+      "kind": "surf-passages",
+      "sha256": "71a64c06978d780bf78d927b2a051bddedc8ac1cdeedeed2f2c1addd84c8b8d0"
+    },
+    {
+      "file": "evidence/common/galactic-chapter/galactic-chapter.json",
+      "target": "common",
+      "kind": "galactic-chapter",
+      "sha256": "ccbcd85b41aa21bbaa3a17c6a2f1d0e1468959539c50d9f2dc170db6c3a3692b"
+    },
+    {
+      "file": "evidence/common/modern_bag/modern-bag.json",
+      "target": "common",
+      "kind": "modern-bag",
+      "sha256": "d63bbb9add4448870013bf2cc50b261d01b72a5a9c7fefcba805dee5896b6cb6"
+    },
+    {
+      "file": "evidence/common/player_evolutions/player-evolutions.json",
+      "target": "common",
+      "kind": "player-evolutions",
+      "sha256": "075b6cf9695823046872d213bc989d68addee2888711fae92118f9b2bead8bbf"
+    },
+    {
+      "file": "evidence/common/protagonist-0/protagonist-0.json",
+      "target": "common",
+      "kind": "protagonist-0",
+      "sha256": "979ce9f6c839b235463d2499284c5f7389f5a764b6bcba94c1387c33e9c4cc86"
+    },
+    {
+      "file": "evidence/common/protagonist-1/protagonist-1.json",
+      "target": "common",
+      "kind": "protagonist-1",
+      "sha256": "5da6616aa2293273a7715ab144a826b2e3f46ce73b3408e8f412336036a8a2da"
+    },
+    {
+      "file": "evidence/common/protagonist-2/protagonist-2.json",
+      "target": "common",
+      "kind": "protagonist-2",
+      "sha256": "3a77c9440e2aa27a92cd320b0284bc39335f71ac7cd664ac86b389f0303c1a85"
+    },
+    {
+      "file": "evidence/common/protagonist-3/protagonist-3.json",
+      "target": "common",
+      "kind": "protagonist-3",
+      "sha256": "1e5a7a8afcd9263cc769204747a1b44fec6011c4506867527ae1996086e0766e"
+    },
+    {
+      "file": "evidence/common/pwt_six/pwt-six.json",
+      "target": "common",
+      "kind": "pwt-six",
+      "sha256": "33181c29f11b3aeed3d01729c71a36a2b8a1fdea8a9274584ef5450effa6bb6e"
+    },
+    {
+      "file": "evidence/common/reproduction/reproduction.json",
+      "target": "common",
+      "kind": "reproduction",
+      "sha256": "016c5392bb3eb3b6e69721d855df195d0f6faa819877fab234667b79752d39ce"
+    },
+    {
+      "file": "evidence/common/route12_ferry/route12-ferry.json",
+      "target": "common",
+      "kind": "route12-ferry",
+      "sha256": "dd799411681bd0ed8f9e96a6b400b6f072ebd4a7601ea45ffc573cb71569d0ae"
+    },
+    {
+      "file": "evidence/common/sharp_map/sharp-map.json",
+      "target": "common",
+      "kind": "sharp-map",
+      "sha256": "cdbc44dd47e960c449d046fca5898dcc68b31659c94f3b837b9a45eafe1c3eec"
+    },
+    {
+      "file": "evidence/common/common/species-stats.json",
+      "target": "common",
+      "kind": "species-stats",
+      "sha256": "2b574065807805e89a2deb890f6cc2bc9d32dfac36d103c2da75ca7b5c1bd3e8"
+    },
+    {
+      "file": "evidence/common/team_missions/team-missions.json",
+      "target": "common",
+      "kind": "team-missions",
+      "sha256": "f54304629b0305005cd4d716d4e336edee7a7baca9e5995058017fb2dde0096a"
+    },
+    {
+      "file": "evidence/common/trainer_item_evolutions/trainer-item-evolutions.json",
+      "target": "common",
+      "kind": "trainer-item-evolutions",
+      "sha256": "272fa0aa28a996e543df8ee1c3d7f98b270681b80078de0ed05ba3946ecfd4fa"
+    },
+    {
+      "file": "evidence/common/world_fly/world-fly.json",
+      "target": "common",
+      "kind": "world-fly",
+      "sha256": "8bcc9c58f8cf458dd6ee098be517478eac87cc36cf088d608085d0e75f8b5ead"
+    },
+    {
+      "file": "evidence/common/world_map_position/world-map-position.json",
+      "target": "common",
+      "kind": "world-map-position",
+      "sha256": "a65f423236f3fa75591b0e207d7c3b238ca9636f3c9b218752136d5de467aa70"
+    }
+  ]
+}

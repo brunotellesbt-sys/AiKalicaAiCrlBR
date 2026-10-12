@@ -44,6 +44,12 @@ emulator_workspace=tempfile.TemporaryDirectory(prefix='journey-emulator-',dir='/
 emulator_rom=Path(emulator_workspace.name)/'pokeemerald.gba'
 shutil.copy2(source/'pokeemerald.gba',emulator_rom)
 assert lib.start(str(emulator_rom).encode())
+FLAG_OFFSET=4720
+if (source/'.journey-modern-bag').exists():
+    with tempfile.TemporaryDirectory(prefix='save-layout-',dir='/tmp') as directory:
+        probe=Path(directory)/'offset.s'
+        subprocess.run([str(ROOT/'.local/arm-gcc/usr/bin/arm-none-eabi-gcc'),'-S','-mabi=apcs-gnu','-iquote',str(source/'include'),'-x','c','-','-o',str(probe)],input='#include "global.h"\n#include <stddef.h>\nconst u32 flags_offset=offsetof(struct SaveBlock1,flags);',text=True,check=True)
+        FLAG_OFFSET=int(re.search(r'\.word\s+(\d+)',probe.read_text())[1])
 results = []
 call4 = None
 abi = None
@@ -54,7 +60,8 @@ if args.gym_scaling or args.team_stories or args.story_access or args.story_comp
         subprocess.run([str(ROOT / '.local/arm-binutils/usr/bin/arm-none-eabi-as'), '-mthumb', '-march=armv4t', str(ROOT / 'tools/hoenn/fixture_call4.s'), '-o', str(temp / 'call.o')], check=True)
         subprocess.run([str(ROOT / '.local/arm-binutils/usr/bin/arm-none-eabi-objcopy'), '-O', 'binary', '-j', '.text', str(temp / 'call.o'), str(temp / 'call.bin')], check=True)
         call4 = (temp / 'call.bin').read_bytes()
-        subprocess.run([str(toolchain), '-S', '-iquote', str(source / 'include'), '-DMODERN=1', '-DPOKEEMERALD', '-mthumb', '-march=armv4t', '-mabi=apcs-gnu', str(ROOT / 'tools/hoenn/fixture_gym_abi.c'), '-o', str(temp / 'abi.s')], check=True)
+        compatibility=['-DITEM_TM_FLY=ITEM_HM_FLY'] if (source/'.journey-modern-field-moves').exists() else []
+        subprocess.run([str(toolchain), '-S', '-iquote', str(source / 'include'), '-DMODERN=1', '-DPOKEEMERALD', '-mthumb', '-march=armv4t', '-mabi=apcs-gnu', *compatibility, str(ROOT / 'tools/hoenn/fixture_gym_abi.c'), '-o', str(temp / 'abi.s')], check=True)
         abi = [int(n) for n in re.findall(r'\.word\s+(\d+)', (temp / 'abi.s').read_text())]
 
 def step(n, keys=0): lib.frames(n, keys)
@@ -164,7 +171,7 @@ if args.ferry:
                 for name in tracked_flags]
     flag_ids += [lib.read16(s['gBadgeFlags'] + i * 2) for i in range(8)]
     def ferry_flags():
-        return [bool(lib.read8(save() + 4720 + f // 8) & (1 << (f & 7))) for f in flag_ids]
+        return [bool(lib.read8(save() + FLAG_OFFSET + f // 8) & (1 << (f & 7))) for f in flag_ids]
     initial_flags = ferry_flags()
     pocket = s['gBagPockets'] + 4 * 8
     capacity = lib.read16(pocket + 4) & 1023
@@ -300,7 +307,7 @@ if args.story_completion:
     def completion_flag(name):
         return int(re.search(r'^#define\s+' + name + r'\s+(0x[0-9A-Fa-f]+)', constants, re.M)[1], 16)
     def completion_rawflag(f, enabled):
-        address = save() + 4720 + f // 8
+        address = save() + FLAG_OFFSET + f // 8
         value, mask = lib.read8(address), 1 << (f & 7)
         lib.write8(address, value | mask if enabled else value & ~mask)
     hb = [lib.read16(s['gBadgeFlags'] + i * 2) for i in range(8)]
@@ -404,7 +411,7 @@ if args.campaign_gates:
     hoenn_badges = [lib.read16(s['gBadgeFlags'] + i*2) for i in range(8)]
     kanto_badges = list(range(0x1AB0, 0x1AB8))
     def write_flag(flag, enabled):
-        address = save()+4720+flag//8
+        address = save()+FLAG_OFFSET+flag//8
         value = lib.read8(address); mask = 1 << (flag & 7)
         if (source / '.journey-story-completion').exists() and flag == event_flags[4]:
             native('VarSet', 0x409F, 3 if enabled else 0)
@@ -507,7 +514,7 @@ if args.campaign_gates:
 if args.free_access:
     access=json.loads((source/'.journey-free-access').read_text())
     def rawflag(flag,enabled):
-        p=save()+4720+flag//8;mask=1<<(flag&7);v=lib.read8(p)
+        p=save()+FLAG_OFFSET+flag//8;mask=1<<(flag&7);v=lib.read8(p)
         lib.write8(p,v|mask if enabled else v&~mask)
     hb=[lib.read16(s['gBadgeFlags']+i*2)for i in range(8)];kb=list(range(0x1AB0,0x1AB8))
     for b in hb+kb:rawflag(b,False)
@@ -624,7 +631,8 @@ if args.water_hms:
     for item, move in zip(water_items + terrestrial_items, water_moves + terrestrial_moves):
         assert linked_machines[item] == move, (item, move)
         assert native('GetItemPocket', item) == 2
-        assert native('IsMoveHM', move) == int(move in water_moves), move
+        expected_hms=water_moves+([19] if (source/'.journey-modern-field-moves').exists() else [])
+        assert native('IsMoveHM', move) == int(move in expected_hms), move
     assert all(native('CanLearnTeachableMove', 7, move) for move in water_moves), 'Squirtle water HM compatibility'
     assert not native('IsMoveHM', 250), 'Whirlpool is incorrectly marked as an HM'
     assert native('CanLearnTeachableMove', 1, 15), 'Bulbasaur Cut compatibility'
@@ -636,10 +644,10 @@ if args.water_hms:
     capacity = lib.read16(pocket + 4) & 1023
     original_slots = bytes(lib.read8(lib.read32(pocket) + i) for i in range(capacity * 4))
     def water_gift_flag(enabled):
-        address, mask = save() + 4720 + 0x1ABD // 8, 1 << (0x1ABD & 7)
+        address, mask = save() + FLAG_OFFSET + 0x1ABD // 8, 1 << (0x1ABD & 7)
         value = lib.read8(address)
         lib.write8(address, value | mask if enabled else value & ~mask)
-    original_gift_flag = bool(lib.read8(save() + 4720 + 0x1ABD // 8) & (1 << (0x1ABD & 7)))
+    original_gift_flag = bool(lib.read8(save() + FLAG_OFFSET + 0x1ABD // 8) & (1 << (0x1ABD & 7)))
     def empty_tm_pocket():
         for i in range(capacity * 4): lib.write8(lib.read32(pocket) + i, 0)
         water_gift_flag(False)
@@ -651,9 +659,9 @@ if args.water_hms:
         assert not lib.read8(s['sLockFieldControls']), 'Family water gift did not finish'
     # Use a temporary zero-badge fixture; restore these banks afterwards.
     badges = [lib.read16(s['gBadgeFlags'] + i * 2) for i in range(8)] + list(range(0x1AB0, 0x1AB8))
-    saved_badges = {f: bool(lib.read8(save() + 4720 + f // 8) & (1 << (f & 7))) for f in badges}
+    saved_badges = {f: bool(lib.read8(save() + FLAG_OFFSET + f // 8) & (1 << (f & 7))) for f in badges}
     for f in badges:
-        address = save() + 4720 + f // 8
+        address = save() + FLAG_OFFSET + f // 8
         lib.write8(address, lib.read8(address) & ~(1 << (f & 7)))
     empty_tm_pocket()
     for name, label, x, y in [('LittlerootTown_BrendansHouse_1F', 'PlayersHouse_1F_EventScript_Mom', 4, 7),
@@ -731,7 +739,7 @@ if args.water_hms:
     for i, value in enumerate(original_slots): lib.write8(slots + i, value)
     water_gift_flag(original_gift_flag)
     for f, enabled in saved_badges.items():
-        address, mask = save() + 4720 + f // 8, 1 << (f & 7)
+        address, mask = save() + FLAG_OFFSET + f // 8, 1 << (f & 7)
         value = lib.read8(address)
         lib.write8(address, value | mask if enabled else value & ~mask)
     results.append(dict(check='three_water_hms_and_family_package', passed=True,
@@ -754,16 +762,16 @@ if args.story_access:
     receipt = reward_flag('FLAG_GOT_POKE_FLUTE')
     flute = 724
     flags = hoenn_badges + kanto_badges + [receipt]
-    saved_flags = {f: bool(lib.read8(save() + 4720 + f // 8) & (1 << (f & 7))) for f in flags}
+    saved_flags = {f: bool(lib.read8(save() + FLAG_OFFSET + f // 8) & (1 << (f & 7))) for f in flags}
     def reward_rawflag(f, enabled):
-        address = save() + 4720 + f // 8
+        address = save() + FLAG_OFFSET + f // 8
         value, mask = lib.read8(address), 1 << (f & 7)
         lib.write8(address, value | mask if enabled else value & ~mask)
     # Isolate key-item scripts from automatic trainer sight battles. These
     # transient flags are restored and never alter the built ROM or a save.
     trainer_count = int(re.search(r'^#define\s+TRAINERS_COUNT\s+(\d+)',
                                  (source / 'include/constants/opponents.h').read_text(), re.M)[1])
-    saved_trainers = {f: bool(lib.read8(save() + 4720 + f // 8) & (1 << (f & 7)))
+    saved_trainers = {f: bool(lib.read8(save() + FLAG_OFFSET + f // 8) & (1 << (f & 7)))
                       for f in range(0x500, 0x500 + trainer_count)}
     for f in saved_trainers: reward_rawflag(f, True)
     # Native BagPocket pointer/capacity, rather than a hardcoded save offset.
@@ -817,7 +825,7 @@ if args.story_access:
         assert native('FlagGet', receipt), gym
         assert native('JourneyGymBadgeCount', int(gym['kanto'])) == 1
         assert native('JourneyGymBadgeCount', int(not gym['kanto'])) == 0
-        assert bool(lib.read8(save() + 4720 + own[gym['badge'] - 1] // 8)
+        assert bool(lib.read8(save() + FLAG_OFFSET + own[gym['badge'] - 1] // 8)
                     & (1 << (own[gym['badge'] - 1] & 7)))
         run_reward()
         assert native('CountTotalItemQuantityInBag', flute) == 1, ('Duplicate flute', gym)
@@ -863,7 +871,7 @@ if args.road_access:
     constants=(source/'include/constants/flags.h').read_text()
     def roadflag(name,enabled):
         f=int(re.search(r'^#define\s+'+name+r'\s+(0x[0-9A-Fa-f]+)',constants,re.M)[1],16)
-        address=save()+4720+f//8;mask=1<<(f&7);v=lib.read8(address)
+        address=save()+FLAG_OFFSET+f//8;mask=1<<(f&7);v=lib.read8(address)
         lib.write8(address,v|mask if enabled else v&~mask)
         return f
     flags=[roadflag('FLAG_HIDE_ROUTE_110_TEAM_AQUA',False),roadflag('FLAG_HIDE_ROUTE_119_TEAM_AQUA',False)]
@@ -994,7 +1002,7 @@ if args.team_stories:
     stories = json.loads((source / '.journey-team-stories').read_text())
     ids = {t['key']:t['id'] for t in stories['trainers']}
     def team_flag(flag, enabled):
-        address=save()+4720+flag//8; value=lib.read8(address);mask=1<<(flag&7)
+        address=save()+FLAG_OFFSET+flag//8; value=lib.read8(address);mask=1<<(flag&7)
         lib.write8(address,value|mask if enabled else value&~mask)
     def bank(flags,count):
         for i,flag in enumerate(flags):team_flag(flag,i<count)
@@ -1056,7 +1064,7 @@ if args.gym_scaling:
     kanto_badges = list(range(0x1AB0,0x1AB8))
     def set_bank(flags, count):
         for i, flag in enumerate(flags):
-            address = save()+4720+flag//8
+            address = save()+FLAG_OFFSET+flag//8
             byte = lib.read8(address); mask = 1 << (flag & 7)
             lib.write8(address, byte | mask if i < count else byte & ~mask)
     parties_tested = 0

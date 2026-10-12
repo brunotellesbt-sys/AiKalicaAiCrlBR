@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "rom_sha256": "d686ad987059086a997cc657d92af33814c00ad2d316ec609daa123a516286bc",
+  "checks": [
+    {
+      "move": "Cut",
+      "hm": false
+    },
+    {
+      "move": "Fly",
+      "hm": true
+    },
+    {
+      "move": "Surf",
+      "hm": true
+    },
+    {
+      "move": "Strength",
+      "hm": false
+    },
+    {
+      "move": "Waterfall",
+      "hm": true
+    },
+    {
+      "move": "Flash",
+      "hm": false
+    },
+    {
+      "move": "Rock Smash",
+      "hm": false
+    },
+    {
+      "move": "Whirlpool",
+      "hm": false
+    },
+    {
+      "move": "Dive",
+      "hm": true
+    }
+  ],
+  "cut_grass": true,
+  "strength_rock": true,
+  "no_maps_require_flash": true,
+  "native_flash_levels_zero": true,
+  "tunnel_travel_is_fixture": true
+}

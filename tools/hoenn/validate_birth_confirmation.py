@@ -8,7 +8,7 @@ p.add_argument('--library', type=Path, required=True)
 p.add_argument('--output', type=Path, required=True)
 options = p.parse_args()
 sys.argv = [sys.argv[0], '--source', str(options.source), '--library', str(options.library), '--output', str(options.output), '--region', 'hoenn']
-exec(compile((ROOT / 'tools/hoenn/validate_campaign_playthrough.py').read_text().split('step(600)')[0], str(ROOT / 'tools/hoenn/validate_campaign_playthrough.py'), 'exec'))
+exec(compile((ROOT / 'tools/hoenn/validate_campaign_playthrough.py').read_text().split('step(600)')[0].replace('4720','FLAG_OFFSET'), str(ROOT / 'tools/hoenn/validate_campaign_playthrough.py'), 'exec'))
 def active(name):
     return any(lib.read8(s['gTasks'] + j*40 + 4) and lib.read32(s['gTasks'] + j*40) & ~1 == s[name] for j in range(16))
 def wait_for(name, frames=16000):

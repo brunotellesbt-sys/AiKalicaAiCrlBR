@@ -47,7 +47,7 @@ assert native('JourneyWildMean')==20
 for kanto,hoenn in [(0,0),(5,0),(6,0),(8,3),(8,4),(8,8)]:
  for region,start in [(kanto,0x1AB0),(hoenn,abi[63])]:
   for i in range(8):
-   flag=start+i; address=save()+4720+flag//8; mask=1<<(flag&7)
+   flag=start+i; address=save()+FLAG_OFFSET+flag//8; mask=1<<(flag&7)
    value=lib.read8(address); lib.write8(address, value|mask if i<region else value&~mask)
  phase=0 if (kanto+hoenn)//2<3 else 1 if (kanto+hoenn)//2<6 else 2
  assert native('JourneyWildPhase')==phase,(kanto,hoenn)

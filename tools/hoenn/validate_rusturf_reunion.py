@@ -20,9 +20,9 @@ assembly = subprocess.run([str(ROOT / '.local/arm-gcc/usr/bin/arm-none-eabi-gcc'
 ids = dict(zip(fields, [int(n) for n in re.findall(r'\.word\s+(\d+)', assembly.split('reunion_ids:', 1)[1].split('.size', 1)[0])]))
 def flag(name):
     f = ids[name]
-    return bool(lib.read8(save() + 4720 + f // 8) & (1 << (f & 7)))
+    return bool(lib.read8(save() + FLAG_OFFSET + f // 8) & (1 << (f & 7)))
 def rawflag(name, enabled):
-    f = ids[name]; a = save() + 4720 + f // 8; value = lib.read8(a); mask = 1 << (f & 7)
+    f = ids[name]; a = save() + FLAG_OFFSET + f // 8; value = lib.read8(a); mask = 1 << (f & 7)
     lib.write8(a, value | mask if enabled else value & ~mask)
 def idle():
     return (lib.read32(s['gMain'] + 4) & ~1) == s['CB2_Overworld'] and not lib.read8(s['sLockFieldControls'])

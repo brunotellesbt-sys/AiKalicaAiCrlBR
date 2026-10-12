@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 
 import package_playable
-from prepare_battle_rule_coherence import PRIOR, LAYER
+from prepare_modern_field_moves import PRIOR, LAYER
 
 
 def main():

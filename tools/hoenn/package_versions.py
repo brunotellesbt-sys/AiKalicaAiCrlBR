@@ -15,7 +15,9 @@ def package(source,output):
    name=f'Pokemon-Journey-Gen1-{generation}-{difficulty}.gba';(output/name).write_bytes(raw)
    changes=[i for i,(a,b) in enumerate(zip(base,raw)) if a!=b];assert all(at<=i<at+4 or 0xA0<=i<0xAC or i==0xBD for i in changes)
    rows.append(dict(file=name,max_national=maxdex,perfect_trainer_ivs=bool(perfect),important_opponents_only=True,evs=510,bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest(),patched_byte_offsets=changes,requires_new_save=True))
- r=dict(parent_rom_sha256=hashlib.sha256(base).hexdigest(),build_rules_offset=at,variants=rows,all_other_bytes_identical=True,validated=False)
+ r=dict(parent_rom_sha256=hashlib.sha256(base).hexdigest(),build_rules_offset=at,
+        parent_header_hex=base[0xA0:0xBE].hex(),parent_rules_hex=base[at:at+4].hex(),
+        variants=rows,all_other_bytes_identical=True,validated=False)
  (output/'versions.json').write_text(json.dumps(r,indent=2)+'\n');(output/'SHA256SUMS').write_text(''.join(row['sha256']+'  '+row['file']+'\n' for row in rows));return r
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--source',type=Path,required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args();print(json.dumps(package(a.source,a.output),indent=2))

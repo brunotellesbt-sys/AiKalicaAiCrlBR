@@ -66,6 +66,10 @@ mon_size, species_offset, surf, shuriken, end_method, faint_method = abi[74:80]
 scratch = s['gStringVar4'] + 800
 party = s['gParties']
 enemy = party + 6 * abi[2]
+with tempfile.TemporaryDirectory(dir='/tmp') as directory:
+    probe=Path(directory)/'bond-stats.s'
+    subprocess.run([str(ROOT/'.local/arm-gcc/usr/bin/arm-none-eabi-gcc'),'-S','-mabi=apcs-gnu','-iquote',str(source/'include'),'-x','c','-','-o',str(probe)],input='#include "global.h"\n#include "pokemon.h"\n#include <stddef.h>\nconst u32 probe[]={offsetof(struct BattlePokemon,hp),offsetof(struct BattlePokemon,maxHP),offsetof(struct BattlePokemon,spAttack)};',text=True,check=True)
+    hp_offset,maxhp_offset,spatk_offset=[int(n) for n in re.findall(r'\.word\s+(\d+)',probe.read_text())]
 
 
 def set_slot(mon, slot):
@@ -121,7 +125,9 @@ assert native('GetMonData2', party, abi[6]) == 100
 assert native('GetMonData2', party, ability_field) < 2
 set_slot(party, options.ability_slot)
 assert native('GetMonAbility', party) == expected_ability
-native('ScriptSetMonMoveSlot', 0, surf, 0)
+# Multiple hits bypass Sturdy before a foe can faint from its own Explosion;
+# this fixture needs a KO credited to Greninja to exercise Battle Bond.
+native('ScriptSetMonMoveSlot', 0, surf if options.pre_evolution else shuriken, 0)
 assert native('TrySavingData', 0, max_frames=6000) == 1
 set_slot(party, 0)
 assert native('LoadGameSave', 0) == 1
@@ -143,6 +149,11 @@ for tick in range(1200):
     in_battle = (lib.read32(s['gMain'] + 4) & ~1) == s['BattleMainCB2']
     if in_battle:
         battle_started = True
+        # Only the player battle stats are boosted, isolating Battle Bond from
+        # the competitive gym's balance; enemy stats/outcomes remain native.
+        lib.write16(s['gBattleMons']+hp_offset,999)
+        lib.write16(s['gBattleMons']+maxhp_offset,999)
+        lib.write16(s['gBattleMons']+spatk_offset,2000)
         species = lib.read16(s['gBattleMons'] + species_offset)
         if species == ash:
             if not seen_ash:
@@ -167,6 +178,7 @@ for tick in range(1200):
     else:
         press(2)
 assert battle_started and attacks > 0
+print('Battle Bond fixture outcome:',lib.read8(s['gBattleOutcome']),'enemy count:',lib.read8(s['gPartiesCount']+1),'attacks:',attacks,'Ash observed:',seen_ash,flush=True)
 assert seen_ash == (options.event_form or (options.ability_slot == 2 and not options.pre_evolution)), (options.ability_slot, seen_ash)
 assert ash_rendered_at_action_menu == seen_ash
 if (lib.read32(s['gMain'] + 4) & ~1) != s['CB2_Overworld']:
@@ -190,6 +202,8 @@ result = dict(passed=True, rom_sha256=hashlib.sha256((source / 'pokeemerald.gba'
               ash_rendered_at_action_menu=ash_rendered_at_action_menu,
               event_form=options.event_form, pre_evolution=options.pre_evolution)
 result['fixture_met_level'] = 5
+result['player_battle_stats_boosted'] = True
+result['enemy_stats_and_outcomes_not_written'] = True
 suffix = 'event' if options.event_form else 'froakie' if options.pre_evolution else 'slot-' + str(options.ability_slot)
 (args.output / ('abilities-' + suffix + '.json')).write_text(json.dumps(result, indent=2) + '\n')
 print(result, flush=True)

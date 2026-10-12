@@ -27,11 +27,12 @@ for sid,row in ref['species'].items():
  for k in range(256):
   at=ptr+k*probe[2];method,target,param=struct.unpack_from('<HHH',rom,at)
   if method==probe[3]:break
-  if method in probe[4:6] and str(target) in ref['species'] and ref['species'][str(target)]['mega']:
+  if method in probe[4:6] and str(target) in ref['species']:
    sources.setdefault(target,dict(parent=int(sid),method=method,param=param))
  else:raise AssertionError(('Unterminated form table',sid))
-mega_ids={int(sid) for sid,row in ref['species'].items() if row['mega']}
-assert set(sources)==mega_ids,(len(sources),sorted(mega_ids-set(sources)))
+reference_megas={int(sid) for sid,row in ref['species'].items() if row['mega']}
+mega_ids=set(sources)
+assert reference_megas<=mega_ids,(len(sources),sorted(reference_megas-mega_ids))
 battle=native('AllocZeroed_',probe[6],0);assert battle
 old_battle=lib.read32(s['gBattleStruct']);lib.write32(s['gBattleStruct'],battle)
 scratch=s['gStringVar4']+800

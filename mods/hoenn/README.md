@@ -1,6 +1,6 @@
-# Hoenn — mundo integrado e alpha jogável
+# Pokémon Journey — Kanto, Hoenn e Sevii
 
-Versão atual: [como jogar e limites da alpha](PLAYABLE-ALPHA.md), [mapa integrado dentro do jogo](WORLD-MAP.md) e [ROM e manifesto](playable/). Kanto, Hoenn e Sevii usam uma única ROM. Somente Surf, Dive e Waterfall permanecem HMs; Whirlpool foi cancelado. As campanhas completas ainda precisam de validação integral.
+Entrega atual: [quatro edições GBA](versions/START-HERE.md), [guia completo](../../docs/README.md), [DOCX dos ginásios](../../docs/equipes-ginasios-quatro-versoes.docx) e [evidências/limites](INTEGRATION-STATUS.md). O player do GitHub Pages permite selecionar a edição. Os HMs são Surf, Dive, Waterfall e Fly; a Bag comporta todos os tipos de item, com TMs reutilizáveis. É necessário um save novo. A [alpha anterior](PLAYABLE-ALPHA.md) está preservada separadamente.
 
 ## Inventário inicial e histórico do porte
 
