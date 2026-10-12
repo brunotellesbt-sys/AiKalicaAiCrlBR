@@ -106,7 +106,14 @@ def native(name, *values, max_frames=200):
             if lib.read32(scratch) != 0xdeadc0de: break
             step(1)
         assert lib.read32(scratch) != 0xdeadc0de, ('Native fixture failed', name)
-        return lib.read32(scratch)
+        result = lib.read32(scratch)
+        # A long native call can publish its return value just before VBlank.
+        # Finish the special/end script before rewriting its context or ROM stub.
+        for _ in range(max_frames):
+            if lib.read8(s['sGlobalScriptContextStatus']) == 2: break
+            step(1)
+        assert lib.read8(s['sGlobalScriptContextStatus']) == 2, ('Native fixture did not finish', name)
+        return result
     finally: raw32(hook, original)
 
 def cross(name, key):

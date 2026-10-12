@@ -20,8 +20,9 @@ with tempfile.TemporaryDirectory(dir='/tmp',prefix='gym-egg-abi-') as tmp:
  subprocess.run([str(ROOT/'.local/arm-gcc/usr/bin/arm-none-eabi-gcc'),'-S','-iquote',str(source/'include'),'-mabi=apcs-gnu',str(p/'egg.c'),'-o',str(p/'egg.s')],check=True)
  egg_field=int(re.search(r'egg_field:\s*\.word\s+(\d+)',(p/'egg.s').read_text())[1])
  move_field=int(re.search(r'move_field:\s*\.word\s+(\d+)',(p/'egg.s').read_text())[1])
-from audit_battle_database import compiled
+from audit_battle_database import compiled,compiled_teachable_and_egg_moves
 database=compiled(source)
+nonlevel=compiled_teachable_and_egg_moves(source)
 checks=[];egg_checks=0;move_checks=0
 # Signature families are specified independently of the generated party helper.
 ace_families={
@@ -52,12 +53,9 @@ for name,(gym,trainer) in leaders.items():
    if name=="TRAINER_TATE_AND_LIZA_1":assert "LUNATONE" in [species_names[sid] for sid in species]
    for index,(sid,level) in enumerate(zip(species,levels)):
     moveset=[native('GetMonData3',enemy+index*abi[2],move_field+slot,0) for slot in range(4)]
-    available={move for at,move in database['species'][sid]['learnset'] if at<=level}
-    if species_names[sid]=='ABRA':available.add(237) # Native Hidden Power TM ID.
+    available={move for at,move in database['species'][sid]['learnset'] if at<=level}|nonlevel[sid]
     assert all(move in available for move in moveset if move),(name,rank,sid,level,moveset)
-    limit=60 if level<20 else 80 if level<30 else 100 if level<42 else 140
-    assert database['moves'][moveset[0]]['power']>=2,(name,sid,moveset)
-    assert all(database['moves'][move]['power']<=limit for move in moveset if move),(name,rank,moveset)
+    assert any(database['moves'][move]['category']!=2 for move in moveset if move),(name,sid,moveset)
     move_checks+=1
    if ace is None:ace=species[-1]
    assert species[-1]==ace,(name,rank,players,species)

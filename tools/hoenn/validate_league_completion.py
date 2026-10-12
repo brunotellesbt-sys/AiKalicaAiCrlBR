@@ -49,7 +49,7 @@ species_catalog=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_text(
 # Calibrate the packed PP field with the same ARM compiler, not a guessed offset.
 import subprocess,tempfile
 with tempfile.TemporaryDirectory(dir='/tmp',prefix='league-pp-') as temp:
- p=Path(temp);(p/'pp.c').write_text('#include "global.h"\n#include "pokemon.h"\n#include <stddef.h>\nconst u32 pp_offset=offsetof(struct BattlePokemon,pp);\nconst u32 moves_offset=offsetof(struct BattlePokemon,moves);\n')
+ p=Path(temp);(p/'pp.c').write_text('#include "global.h"\n#include "pokemon.h"\n#include <stddef.h>\nconst u32 pp_offset=offsetof(struct BattlePokemon,pp);\nconst u32 moves_offset=offsetof(struct BattlePokemon,moves);\nconst u32 iv_field=MON_DATA_IVS;\nconst u32 ev_fields[]={MON_DATA_HP_EV,MON_DATA_ATK_EV,MON_DATA_DEF_EV,MON_DATA_SPATK_EV,MON_DATA_SPDEF_EV,MON_DATA_SPEED_EV};\n')
  subprocess.run([str(ROOT/'.local/arm-gcc/usr/bin/arm-none-eabi-gcc'),'-S','-iquote',str(source/'include'),'-mabi=apcs-gnu',str(p/'pp.c'),'-o',str(p/'pp.s')],check=True)
  probe_source='#include "global.h"\n#include "pokemon.h"\n'+''.join('const struct BattlePokemon probe_'+field+'={.volatiles.'+field+'=~0u};\n' for field in ['disabledMove','encoredMove','encoreTimer','torment'])
  (p/'limits.c').write_text(probe_source)
@@ -64,11 +64,20 @@ with tempfile.TemporaryDirectory(dir='/tmp',prefix='league-pp-') as temp:
   assert mask==((1<<bits)-1)<<shift
   limit_fields[field]=(shift//8,shift%8,(1<<bits)-1,(shift%8+bits+7)//8)
  assert set(limit_fields)=={'disabledMove','encoredMove','encoreTimer','torment'}
+ fields_asm=(p/'pp.s').read_text()
+ iv_field=int(re.search(r'iv_field:\s*\.word\s+(\d+)',fields_asm)[1])
+ ev_fields=[int(v) for v in re.findall(r'\.word\s+(\d+)',fields_asm.split('ev_fields:',1)[1].split('.size',1)[0])]
  pp_offset=int(re.search(r'pp_offset:\s*\.word\s+(\d+)',(p/'pp.s').read_text())[1])
  moves_offset=int(re.search(r'moves_offset:\s*\.word\s+(\d+)',(p/'pp.s').read_text())[1])
+# Player stats are fixtures; enemy parties remain entirely native.
+for i in range(6):
+ lib.write32(scratch,0x3FFFFFFF);native('SetMonData',party+i*abi[2],iv_field,scratch)
+ for field,value in zip(ev_fields,[6,0,0,252,0,252]):
+  lib.write8(scratch,value);native('SetMonData',party+i*abi[2],field,scratch)
+ native('CalculateMonStats',party+i*abi[2])
 def coverage():
  for i in range(6):
-  for slot,move in enumerate([abi[104],abi[76] if i==0 else 85,58,326 if i==0 else 94]):
+  for slot,move in enumerate([abi[104],abi[76] if i==0 else 396,58,326 if i==0 else 94]):
    native('ScriptSetMonMoveSlot',i,move,slot)
 unavailable_choices_avoided=0
 def volatile(field):
@@ -81,9 +90,9 @@ def choose_move():
  own_types=species_catalog[str(own)]['types'];foe_types=set(species_catalog[str(foe)]['types'])
  # These four legal moves provide both STAB and coverage. Check actual PP so
  # the controller cannot repeatedly select an exhausted move.
- effectiveness={18:({8,15},{2,18,19},set()),12:({5,6,11},{12,13,17},set()),14:({3,12},{13,14,17},{5}),16:({3,5,13,17},{9,11,12,16},set()),15:({2,4},{9,15},{18})}
+ effectiveness={18:({8,15},{2,18,19},set()),12:({5,6,11},{12,13,17},set()),14:({3,12},{13,14,17},{5}),16:({3,5,13,17},{9,11,12,16},set()),15:({2,4},{9,15},{18}),2:({0,5,6,8,18},{3,4,7,15,19},{9})}
  current=[lib.read16(s['gBattleMons']+moves_offset+2*j) for j in range(4)]
- info={abi[104]:(18,80),abi[76]:(12,90),85:(14,90),58:(16,90),326:(15,80),94:(15,90)}
+ info={abi[104]:(18,80),abi[76]:(12,90),85:(14,90),396:(2,80),58:(16,90),326:(15,80),94:(15,90)}
  scores=[]
  disabled=volatile('disabledMove');encored=volatile('encoredMove') if volatile('encoreTimer') else 0
  last=lib.read16(s['gLastMoves']) if volatile('torment') else 0

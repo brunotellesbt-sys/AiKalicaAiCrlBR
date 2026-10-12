@@ -4,7 +4,7 @@ import hashlib,json,re
 ROOT=Path(__file__).resolve().parents[2]
 bootstrap=(ROOT/'tools/hoenn/validate_coast_connectivity.py').read_text().split('required={')[0]
 exec(compile(bootstrap,str(ROOT/'tools/hoenn/validate_coast_connectivity.py'),'exec'))
-projection=json.loads((source/'.journey-world-map-position').read_text())
+projection=json.loads((source/('.journey-world-dex-map' if (source/'.journey-world-dex-map').exists() else '.journey-world-map-position')).read_text())
 byname={p['map']:p for p in projection['projections']}
 import subprocess
 symbols=subprocess.check_output([str(ROOT/'.local/arm-binutils/usr/bin/arm-none-eabi-nm'),'-S',str(source/'pokeemerald.elf')],text=True)
@@ -67,4 +67,4 @@ for x in [15,35]:
 assert progress[-1]['marker'][0]>journey[-1]['marker'][0],('Marker did not follow eastward Surf',progress)
 print('Marker follows movement within route:',progress,flush=True)
 lib.stop()
-(args.output/'world-map-position.json').write_text(json.dumps(dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),connections=checks,mossdeep_short_controller_trip=journey,recenter_uses_real_position=True,within_route_controller_progress=progress,atlas_pixels_unchanged=True,compiled_anchor_offset=anchor_offset,compiled_anchor_bytes=len(compiled_anchors),compiled_anchor_stride=anchor_stride,compiled_anchor_sha256=hashlib.sha256(compiled_anchors).hexdigest(),maximum_neighbor_pixel_step=projection['maximum_neighbor_pixel_step'],projection_coordinates_are_fixtures=True,short_trip_has_no_midroute_fixture_warp=True),indent=2)+'\n')
+(args.output/'world-map-position.json').write_text(json.dumps(dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),connections=checks,mossdeep_short_controller_trip=journey,recenter_uses_real_position=True,within_route_controller_progress=progress,atlas_pixels_unchanged=not (source/'.journey-world-dex-map').exists(),compiled_anchor_offset=anchor_offset,compiled_anchor_bytes=len(compiled_anchors),compiled_anchor_stride=anchor_stride,compiled_anchor_sha256=hashlib.sha256(compiled_anchors).hexdigest(),maximum_neighbor_pixel_step=projection['maximum_neighbor_pixel_step'],projection_coordinates_are_fixtures=True,short_trip_has_no_midroute_fixture_warp=True),indent=2)+'\n')
