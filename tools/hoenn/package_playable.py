@@ -12,7 +12,7 @@ from prepare_crossing import PIN
 from prepare_lavender_network import CHAIN, LAYER
 
 ROOT = Path(__file__).resolve().parents[2]
-LAYERS = CHAIN + [LAYER, 'world-map', 'kanto-open-sea', 'coastal-world-map', 'remote-islands', 'surf-passages', 'battle-database', 'five-island-habitat', 'adaptive-gym-teams']
+LAYERS = CHAIN + [LAYER, 'world-map', 'kanto-open-sea', 'coastal-world-map', 'remote-islands', 'surf-passages', 'battle-database', 'five-island-habitat', 'adaptive-gym-teams', 'world-map-position']
 VERSION = 'world-alpha-1'
 ROM_NAME = 'Pokemon-Journey-World-Alpha-1.gba'
 

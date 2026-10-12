@@ -32,12 +32,13 @@ for name,x,y in [('JourneyRoute12Shipyard',24,39),('Route1_Frlg',5,12),('Littler
  warp(name,x,y);step(60)
  before=(location(),position())
  expected=native('JourneyWorldMapPlayerPoint');point=report['points'][expected]
+ packed=native('JourneyWorldMapPosition');player_xy=(packed&255,packed>>8)
  ptr=open_map();assert lib.read16(ptr+2052)==expected
  xy=lambda:(lib.read8(ptr+2056),lib.read8(ptr+2057))
- assert xy()==(point['x'],point['y'])
+ assert xy()==player_xy
  picture('world-map-'+name)
- press(16);assert xy()!=(point['x'],point['y'])
- press(4);assert xy()==(point['x'],point['y'])
+ press(16);assert xy()!=player_xy
+ press(4);assert xy()==player_xy
  press(2);wait_for(lambda:callback()==s['CB2_Overworld']);step(120)
  assert lib.read32(s['sJourneyWorldMap'])==0
  press(2);step(90);assert before==(location(),position())
