@@ -42,65 +42,9 @@ def prepare(source):
   header,count=re.subn(r'(\{\(MAP_GROUP\('+ident+r'\).*?, MAPSEC_\w+, )\d+, \d+,',lambda m:m[1]+f'{xy[0]}, {xy[1]},',header);assert count==1,n
  assert atlas=={k:hashlib.sha256(re.search(k+r'\[\] = \{[^}]+\}',header)[0].encode()).hexdigest() for k in atlas}
  stage('src/data/journey_world_map.h',header)
- seams=[];dimensions={n:(layouts[maps[n]['layout']]['width'],layouts[maps[n]['layout']]['height']) for n in coords}
- parent={}
- def root(k):
-  parent.setdefault(k,k)
-  while parent[k]!=k:parent[k]=parent[parent[k]];k=parent[k]
-  return k
- def join(a,b):
-  a,b=root(a),root(b)
-  if a!=b:parent[b]=a
- for n in sorted(coords):
-  m=maps[n];w,h=dimensions[n];cx,cy=coords[n]
-  for c in m.get('connections') or []:
-   other=by_id.get(c['map'],c['map']);direction=c['direction'];offset=c['offset']
-   if other not in coords or direction not in ['left','right','up','down']:continue
-   ow,oh=dimensions[other]
-   if direction in ['left','right']:
-    lo,hi=max(0,offset),min(h-1,offset+oh-1)
-    if lo>hi:continue
-    edge=0 if direction=='left' else w-1;box=[edge,lo,edge,hi]
-    pairs=[((n,edge,y),(other,ow-1 if direction=='left' else 0,y-offset)) for y in range(lo,hi+1)]
-   else:
-    lo,hi=max(0,offset),min(w-1,offset+ow-1)
-    if lo>hi:continue
-    edge=0 if direction=='up' else h-1;box=[lo,edge,hi,edge]
-    pairs=[((n,x,edge),(other,x-offset,oh-1 if direction=='up' else 0)) for x in range(lo,hi+1)]
-   for aa,bb in pairs:join(aa,bb)
-   ox,oy=coords[other]
-   seams.append(dict(map=n,other=other,direction=direction,offset=offset,box=box,position=[(cx+ox)//2,(cy+oy)//2]))
- # Every connected border tile shares one node, including three/four-way corners.
- members={}
- for k in sorted(parent):members.setdefault(root(k),[]).append(k)
- roots=sorted(members);index={k:i for i,k in enumerate(roots)};neighbors=[set() for _ in roots];targets=[]
- for k in roots:
-  centers=[coords[n] for n in sorted({v[0] for v in members[k]})]
-  targets.append(tuple(sum(v[axis] for v in centers)/len(centers) for axis in [0,1]))
- for k in sorted(parent):
-  n,x,y=k;i=index[root(k)]
-  for dx,dy in [(1,0),(0,1)]:
-   other=(n,x+dx,y+dy)
-   if other in parent:
-    j=index[root(other)]
-    if i!=j:neighbors[i].add(j);neighbors[j].add(i)
- # Smooth changes along a shore as well as across it. The weak centre prior
- # keeps the approved atlas anchors, without an abrupt change at T junctions.
- edges=[sorted(v) for v in neighbors];values=targets[:];prior=1/256
- for _ in range(1024):
-  values=[tuple((prior*targets[i][axis]+sum(values[j][axis] for j in near))/(prior+len(near)) if near else targets[i][axis] for axis in [0,1]) for i,near in enumerate(edges)]
- positions=[tuple(round(v) for v in xy) for xy in values]
- max_step=max((max(abs(positions[i][axis]-positions[j][axis]) for axis in [0,1]) for i,near in enumerate(edges) for j in near),default=0)
- assert max_step<=2,('Abrupt shore projection',max_step)
- border={n:[] for n in coords}
- for k in sorted(parent):
-  n,x,y=k;xx,yy=positions[index[root(k)]];border[n].append([x,y,x,y,xx,yy])
- anchors=[];projections=[]
- for n in sorted(coords):
-  m=maps[n];w,h=dimensions[n];first=len(anchors);cx,cy=coords[n]
-  anchors.append([w//2,h//2,w//2,h//2,cx,cy]);anchors.extend(border[n])
-  projections.append(dict(map=n,id=m['id'],first=first,count=len(border[n]),width=w,height=h,center=[cx,cy]))
- data='struct JourneyWorldAnchor { s16 left, top, right, bottom; u8 x, y; };\nstruct JourneyWorldProjection { u32 first; u16 map, count; };\nstatic const struct JourneyWorldAnchor sWorldAnchors[] = {\n'+''.join('{'+','.join(map(str,a))+'},\n' for a in anchors)+'};\nstatic const struct JourneyWorldProjection sWorldProjections[] = {\n'+''.join('{'+str(p['first'])+', (MAP_GROUP('+p['id']+')<<8)|MAP_NUM('+p['id']+'), '+str(p['count'])+'},\n' for p in projections)+'};\n'
+ from world_projection import project
+ geometry=project(maps,layouts,coords)
+ anchors=geometry['anchors'];projections=geometry['projections'];seams=geometry['seams'];max_step=geometry['maximum_neighbor_pixel_step'];data=geometry['data']
  stage('src/data/journey_world_position.h',data)
  p='src/journey_world_map.c';text=(source/p).read_text().replace('#include "global.h"','#include "global.h"\n#include "field_player_avatar.h"\n#include "fieldmap.h"',1)
  text=text.replace('#include "data/journey_world_map.h"','#include "data/journey_world_map.h"\n#include "data/journey_world_position.h"')
@@ -114,7 +58,7 @@ def prepare(source):
  text=text.replace('sJourneyWorldMap->x=sWorldPoints[sJourneyWorldMap->player].x;sJourneyWorldMap->y=sWorldPoints[sJourneyWorldMap->player].y;','sJourneyWorldMap->x=sJourneyWorldMap->playerX=position & 255;sJourneyWorldMap->y=sJourneyWorldMap->playerY=position >> 8;')
  stage(p,text)
  p='include/journey_world_map.h';stage(p,(source/p).read_text().replace('u16 JourneyWorldMapPlayerPoint(void);','u16 JourneyWorldMapPlayerPoint(void);\nu16 JourneyWorldMapPosition(void);'))
- r=dict(layer=LAYER,projections=projections,seams=seams,anchors=anchors,corrected_route_centers=CORRECTIONS,shared_boundary_positions=True,boundary_nodes=len(roots),maximum_neighbor_pixel_step=max_step,atlas_pixels_unchanged=True,atlas_arrays_sha256=atlas,original_sha256=originals,prepared_sha256={p:hashlib.sha256(v).hexdigest() for p,v in outputs.items()})
+ r=dict(layer=LAYER,projections=projections,seams=seams,anchors=anchors,corrected_route_centers=CORRECTIONS,shared_boundary_positions=True,boundary_nodes=geometry['boundary_nodes'],maximum_neighbor_pixel_step=max_step,atlas_pixels_unchanged=True,atlas_arrays_sha256=atlas,original_sha256=originals,prepared_sha256={p:hashlib.sha256(v).hexdigest() for p,v in outputs.items()})
  for p,raw in outputs.items():(source/p).write_bytes(raw)
  marker.write_text(json.dumps(r,indent=2)+'\n');return r
 if __name__=='__main__':

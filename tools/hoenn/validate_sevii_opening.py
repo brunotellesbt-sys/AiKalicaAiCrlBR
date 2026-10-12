@@ -19,13 +19,13 @@ def active(name):
 step(600)
 picture('journey-title')
 for i in range(360):
+    if not region_chosen and active('Task_HandleMultichoiceInput'):
+        step(30);picture('choose-hoenn-kanto-sevii')
+        for _ in range({'hoenn':0,'kanto':1,'sevii':2}[destination_region]):action(128)
+        action();region_chosen=True
+        continue
     if map_name()=='InsideOfTruck':
-        if not region_chosen and active('Task_HandleMultichoiceInput'):
-            step(30);picture('choose-hoenn-kanto-sevii')
-            for _ in range({'hoenn':0,'kanto':1,'sevii':2}[destination_region]):action(128)
-            action();region_chosen=True
-            continue
-        elif region_chosen and not city_chosen and active('Task_HandleMultichoiceInput' if destination_region=='sevii' else 'Task_HandleMultichoiceGridInput'):
+        if region_chosen and not city_chosen and active('Task_HandleMultichoiceInput' if destination_region=='sevii' else 'Task_HandleMultichoiceGridInput'):
             step(30);picture('choose-home-town')
             for _ in range(choice if destination_region=='sevii' else choice//3):action(128)
             if destination_region!='sevii':

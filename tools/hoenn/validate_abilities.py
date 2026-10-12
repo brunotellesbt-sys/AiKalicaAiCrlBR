@@ -50,6 +50,13 @@ for _ in range(100):
     press(1)
 assert task('Task_HandleMultichoiceGridInput')
 press(1)
+if (source/'.journey-birth-confirmation').exists():
+    for _ in range(100):
+        if task('Task_HandleYesNoInput'):
+            break
+        press(1)
+    assert task('Task_HandleYesNoInput'), 'Starting city confirmation did not open'
+    press(1)
 step(1500)
 warp('Route1_Frlg', 5, 12)
 native('DisableWildEncounters', 1)

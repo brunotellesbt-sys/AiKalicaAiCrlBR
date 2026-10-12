@@ -1,0 +1,194 @@
+{
+  "schema": 1,
+  "language": "en",
+  "rivals": {
+    "eren": {
+      "teams": [
+        [
+          "LARVITAR",
+          "GIBLE"
+        ],
+        [
+          "PUPITAR",
+          "GIBLE",
+          "DUSKULL"
+        ],
+        [
+          "PUPITAR",
+          "GABITE",
+          "DUSCLOPS"
+        ],
+        [
+          "TYRANITAR",
+          "LAIRON",
+          "GABITE",
+          "DUSKNOIR"
+        ],
+        [
+          "SCIZOR",
+          "TYRANITAR",
+          "DUSKNOIR",
+          "GARCHOMP",
+          "AGGRON"
+        ],
+        [
+          "SCIZOR",
+          "TYRANITAR",
+          "DUSKNOIR",
+          "GARCHOMP",
+          "AGGRON",
+          "REGIGIGAS"
+        ]
+      ],
+      "locations": [
+        "Route4_Frlg",
+        "Route10_Frlg",
+        "Route17_Frlg",
+        "Route112",
+        "Route113",
+        "PetalburgWoods"
+      ],
+      "progression": "own_completed_encounter_count",
+      "visiting_order": "any",
+      "kanto_encounters": 3,
+      "hoenn_encounters": 3
+    },
+    "luffy": {
+      "teams": [
+        [
+          "SOLROCK",
+          "LOTAD"
+        ],
+        [
+          "SOLROCK",
+          "LOMBRE",
+          "TOGEPI"
+        ],
+        [
+          "SOLROCK",
+          "LOMBRE",
+          "TOGETIC"
+        ],
+        [
+          "SOLROCK",
+          "LUDICOLO",
+          "TOGETIC",
+          "MACHOKE"
+        ],
+        [
+          "SOLROCK",
+          "LUDICOLO",
+          "TOGEKISS",
+          "MACHAMP",
+          "SNORLAX"
+        ],
+        [
+          "SOLROCK",
+          "LUDICOLO",
+          "TOGEKISS",
+          "MACHAMP",
+          "SNORLAX",
+          "EMPOLEON"
+        ]
+      ],
+      "locations": [
+        "Route6_Frlg",
+        "Route13_Frlg",
+        "Route20_Frlg",
+        "Route106",
+        "Route108",
+        "Route125"
+      ],
+      "progression": "own_completed_encounter_count",
+      "visiting_order": "any",
+      "kanto_encounters": 3,
+      "hoenn_encounters": 3
+    }
+  },
+  "partners": {
+    "eren": [
+      "ABSOL",
+      "MAROWAK",
+      "CELEBI"
+    ],
+    "luffy": [
+      "EMPOLEON",
+      "LUDICOLO",
+      "SOLROCK"
+    ]
+  },
+  "admins": {
+    "mars": [
+      "BRONZONG",
+      "GOLBAT",
+      "PURUGLY"
+    ],
+    "jupiter": [
+      "BRONZONG",
+      "GOLBAT",
+      "SKUNTANK"
+    ],
+    "saturn": [
+      "GOLBAT",
+      "BRONZONG",
+      "TOXICROAK"
+    ],
+    "charon": [
+      "ROTOM",
+      "MAGNEZONE",
+      "PORYGON_Z"
+    ],
+    "cyrus": [
+      "HOUNDOOM",
+      "HONCHKROW",
+      "CROBAT",
+      "GYARADOS",
+      "WEAVILE"
+    ]
+  },
+  "charon_team_is_custom": true,
+  "reference": "Pokemon Platinum (Mars/Jupiter Spear Pillar, Saturn rematch, Cyrus Distortion World); Charon custom scientist team approved by user",
+  "eren_final_ability_override": {
+    "species": "REGIGIGAS",
+    "ability": "MOLD_BREAKER"
+  },
+  "final_chapter": {
+    "map": "AbandonedShip",
+    "badges_required": 16,
+    "battles": [
+      {
+        "player_partner": "eren",
+        "opponents": [
+          "mars",
+          "charon"
+        ]
+      },
+      {
+        "player_partner": "luffy",
+        "opponents": [
+          "saturn",
+          "jupiter"
+        ]
+      },
+      {
+        "player_partner": null,
+        "opponents": [
+          "cyrus"
+        ]
+      }
+    ],
+    "origin_items": {
+      "eren": "ADAMANT_CRYSTAL",
+      "luffy": "LUSTROUS_GLOBE",
+      "cyrus": "GRISEOUS_CORE"
+    },
+    "capture_unlocks": [
+      "DIALGA",
+      "PALKIA",
+      "GIRATINA"
+    ],
+    "mandatory_before_both_leagues": true
+  },
+  "evolution_rule": "Revert an intended evolved species when the actual battle level does not meet its evolution requirement",
+  "implementation_status": "Roster specification; scene integration and native validation still pending"
+}

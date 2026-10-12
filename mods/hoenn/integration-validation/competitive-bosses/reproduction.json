@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "original_input_hashes_checked": true,
+  "idempotent": true,
+  "layers": {
+    "world-dex-map": {
+      "src/data/journey_world_map.h": "f0f578992884377701c342d34ac417cb144b202a8399482e3623a040e559d518",
+      "src/data/journey_world_position.h": "c265d4c3474d7138eb93b4d9c2078e78c8e269513623178d5ba3c70a6bdee574",
+      "src/data/journey_world_dex_locations.h": "34b2e44b93d645ae986066b2f8685bd7129b9de204bce77c71c4def277c116b5",
+      "src/journey_world_dex.c": "36f48a3607e3556eb777f22903bd8fe7af080643d28fd25e7df541dff30a697e",
+      "include/journey_world_dex.h": "7e699344a2e7ebfe9fd4326a4d45d9b17aa33a35534438130fc54b25a0579784",
+      "src/pokedex_area_screen.c": "b3c178e5fc5959f5e512be933f93fe5cafc3cd8f1c8b1b42ce02f4c94c02bdf6"
+    },
+    "competitive-bosses": {
+      "src/data/journey_competitive_profiles.h": "a1f7037953aea95606bd64a566a1d067167e93c586e3bc7a0d87ee8aa4a35dd2",
+      "src/journey_competitive.c": "822939401e7070072c71c287f74d39a8de028f898653cf7a6498d081b50c265a",
+      "include/journey_competitive.h": "41677d0efb95c29de05890b8374de73cff07e7fa1eea19b91a851a5ef07f9601",
+      "src/battle_main.c": "74e3a7caa3230d33a1175085b68b853d9ff54ba5b53e5f603780e4e025a240e8",
+      "src/battle_ai_main.c": "239878c0c193c42e7cc1eec782d34f243b815850393dc81ef7b30411718073a4"
+    }
+  }
+}
