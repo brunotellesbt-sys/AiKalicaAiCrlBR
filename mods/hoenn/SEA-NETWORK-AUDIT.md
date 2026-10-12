@@ -63,6 +63,6 @@ As travessias oeste e leste também têm validações com movimentos no emulador
 | JourneyWorldSea08 | 206 | [Ver](coast-gallery/JourneyWorldSea08.png) |
 | JourneyWorldSea09 | 128 | [Ver](coast-gallery/JourneyWorldSea09.png) |
 
-ROM validada: `6b52815146a3b27c5ac83702001993b2cc0642134f435c361a0dc1a0c4b27241`
+ROM validada: `031e77443df329f04eeb923b50efc1d695a15deefa6d22c2dbe5c474f7995cd7`
 
 A auditoria adicional de [passagens de Surf](SURF-AND-START-FIXES.md) cobre também os setores de água das costas originais, incluindo Mossdeep e as Rotas 124/125.

@@ -47,7 +47,7 @@ Se encontrar um problema, guarde um save anterior ao evento e informe: cidade/ma
 
 ## Integridade e reprodução
 
-O pacote inclui `release.json` e `SHA256SUMS`. A ROM tem 32 MiB; confirme seu SHA-256 antes de usar. As 63 camadas de integração e seus hashes constam do manifesto. O pacote inclui o mapa integrado no menu MAP.
+O pacote inclui `release.json` e `SHA256SUMS`. A ROM tem 32 MiB; confirme seu SHA-256 antes de usar. As 64 camadas de integração e seus hashes constam do manifesto. O pacote inclui o mapa integrado no menu MAP.
 
 Para compilar e exportar a partir da fonte fixada, com a toolchain ARM já configurada:
 
@@ -59,3 +59,5 @@ python3 tools/hoenn/package_playable.py --source <nova-pasta> --build --output m
 O exportador verifica os arquivos finais das camadas. Uma fonte preparada pode ser reutilizada; uma cadeia com camadas ausentes no meio ou hashes divergentes é recusada. Os assets e executáveis de desenvolvimento permanecem fora do pacote jogável.
 
 As três novas ilhas e seus ramais estão incluídos nesta ROM: [Emerald Cay, Sunlit Isle e Tidewood Isle](REMOTE-ISLANDS.md). A grama das duas maiores contém oito famílias por ilha. A referência completa da Pokédex foi regenerada em `POKEMON-LOCATIONS.md` e `pokemon-locations.csv`.
+
+O marcador do MAP acompanha as coordenadas reais dentro das rotas. As conexões de superfície, incluindo Mossdeep e os portos de Sevii, compartilham âncoras na borda para evitar saltos ao trocar de mapa. O desenho do atlas foi preservado.

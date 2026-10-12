@@ -23,6 +23,6 @@ As escolhas específicas deste projeto permanecem: **Cut é Grama**, **Strength 
 
 [Learnsets dos 1.025 Pokémon por nível, em CSV](level-up-learnsets.csv). Nível 0 indica golpe de evolução. O documento de localização continua em [POKEMON-LOCATIONS.md](POKEMON-LOCATIONS.md).
 
-A ROM resultante é `6b52815146a3b27c5ac83702001993b2cc0642134f435c361a0dc1a0c4b27241`. As evidências nativas desta versão ficam em `playable-validation`; testes de estado, equipe e viagem usam fixtures descritas nos relatórios. Uma sequência de Liga com essas fixtures não equivale a completar toda a campanha desde um Novo Jogo.
+A ROM resultante é `031e77443df329f04eeb923b50efc1d695a15deefa6d22c2dbe5c474f7995cd7`. As evidências nativas desta versão ficam em `playable-validation`; testes de estado, equipe e viagem usam fixtures descritas nos relatórios. Uma sequência de Liga com essas fixtures não equivale a completar toda a campanha desde um Novo Jogo.
 
 A revisão também corrigiu o habitat de Five Island: uma área de oito tiles de grama torna acessíveis Magnemite/Magneton/Magnezone, Blitzle/Zebstrika, Heatmor e Sizzlipede/Centiskorch. A auditoria dos habitats ativos agora encontra os 920 Pokémon base não especiais. Lendários e míticos permanecem nos locais próprios, com exigência de 16 insígnias.

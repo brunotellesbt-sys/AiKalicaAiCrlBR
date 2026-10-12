@@ -51,13 +51,32 @@ import subprocess,tempfile
 with tempfile.TemporaryDirectory(dir='/tmp',prefix='league-pp-') as temp:
  p=Path(temp);(p/'pp.c').write_text('#include "global.h"\n#include "pokemon.h"\n#include <stddef.h>\nconst u32 pp_offset=offsetof(struct BattlePokemon,pp);\nconst u32 moves_offset=offsetof(struct BattlePokemon,moves);\n')
  subprocess.run([str(ROOT/'.local/arm-gcc/usr/bin/arm-none-eabi-gcc'),'-S','-iquote',str(source/'include'),'-mabi=apcs-gnu',str(p/'pp.c'),'-o',str(p/'pp.s')],check=True)
+ probe_source='#include "global.h"\n#include "pokemon.h"\n'+''.join('const struct BattlePokemon probe_'+field+'={.volatiles.'+field+'=~0u};\n' for field in ['disabledMove','encoredMove','encoreTimer','torment'])
+ (p/'limits.c').write_text(probe_source)
+ subprocess.run([str(ROOT/'.local/arm-gcc/usr/bin/arm-none-eabi-gcc'),'-w','-S','-iquote',str(source/'include'),'-mabi=apcs-gnu',str(p/'limits.c'),'-o',str(p/'limits.s')],check=True)
+ subprocess.run([str(ROOT/'.local/arm-binutils/usr/bin/arm-none-eabi-as'),'-mcpu=arm7tdmi','-o',str(p/'limits.o'),str(p/'limits.s')],check=True)
+ subprocess.run([str(ROOT/'.local/arm-binutils/usr/bin/arm-none-eabi-objcopy'),'-O','binary','--only-section=.rodata',str(p/'limits.o'),str(p/'limits.bin')],check=True)
+ symbols=subprocess.check_output([str(ROOT/'.local/arm-binutils/usr/bin/arm-none-eabi-nm'),'-S',str(p/'limits.o')],text=True)
+ probes=(p/'limits.bin').read_bytes();limit_fields={}
+ for address,size,field in re.findall(r'^(\w+) (\w+) R probe_(\w+)$',symbols,re.M):
+  offset=int(address,16);mask=int.from_bytes(probes[offset:offset+int(size,16)],'little');assert mask
+  shift=(mask&-mask).bit_length()-1;bits=mask.bit_length()-shift
+  assert mask==((1<<bits)-1)<<shift
+  limit_fields[field]=(shift//8,shift%8,(1<<bits)-1,(shift%8+bits+7)//8)
+ assert set(limit_fields)=={'disabledMove','encoredMove','encoreTimer','torment'}
  pp_offset=int(re.search(r'pp_offset:\s*\.word\s+(\d+)',(p/'pp.s').read_text())[1])
  moves_offset=int(re.search(r'moves_offset:\s*\.word\s+(\d+)',(p/'pp.s').read_text())[1])
 def coverage():
  for i in range(6):
   for slot,move in enumerate([abi[104],abi[76] if i==0 else 85,58,326 if i==0 else 94]):
    native('ScriptSetMonMoveSlot',i,move,slot)
+unavailable_choices_avoided=0
+def volatile(field):
+ offset,shift,mask,size=limit_fields[field]
+ value=int.from_bytes(bytes(lib.read8(s['gBattleMons']+offset+i) for i in range(size)),'little')
+ return (value>>shift)&mask
 def choose_move():
+ global unavailable_choices_avoided
  own=lib.read16(s['gBattleMons']+abi[75]);foe=lib.read16(s['gBattleMons']+abi[74]+abi[75])
  own_types=species_catalog[str(own)]['types'];foe_types=set(species_catalog[str(foe)]['types'])
  # These four legal moves provide both STAB and coverage. Check actual PP so
@@ -66,8 +85,12 @@ def choose_move():
  current=[lib.read16(s['gBattleMons']+moves_offset+2*j) for j in range(4)]
  info={abi[104]:(18,80),abi[76]:(12,90),85:(14,90),58:(16,90),326:(15,80),94:(15,90)}
  scores=[]
+ disabled=volatile('disabledMove');encored=volatile('encoredMove') if volatile('encoreTimer') else 0
+ last=lib.read16(s['gLastMoves']) if volatile('torment') else 0
  for slot,move in enumerate(current):
   if not lib.read8(s['gBattleMons']+pp_offset+slot):scores.append(-1);continue
+  if move==disabled or (encored and move!=encored) or (last and move==last):
+   scores.append(-1);unavailable_choices_avoided+=1;continue
   kind,power=info[move];strong,weak,immune=effectiveness[kind];score=power*(1.5 if kind in own_types else 1)
   for kind in foe_types:score*=0 if kind in immune else 2 if kind in strong else .5 if kind in weak else 1
   scores.append(score)
@@ -145,7 +168,7 @@ for tick in range(5000):
  press(1)
 assert hof_seen and credits_seen
 picture(run_options.region+'-credits-start')
-result=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),region=run_options.region,wins=wins,native_hall_of_fame=hof_seen,native_credits=credits_seen,healing_between_battles_is_fixture=True,fixture_species=fixture_species,fixture_level=100,enemy_levels_not_written=True,full_campaign_playthrough=False)
+result=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),region=run_options.region,wins=wins,native_hall_of_fame=hof_seen,native_credits=credits_seen,healing_between_battles_is_fixture=True,fixture_species=fixture_species,fixture_level=100,unavailable_move_choices_avoided=unavailable_choices_avoided,disabled_encored_tormented_moves_checked=True,enemy_levels_not_written=True,full_campaign_playthrough=False)
 if (source/'.journey-league-completion').exists():
  # Credits must finish naturally. Use title/menu A inputs to Continue the native save.
  main_menu_seen=False

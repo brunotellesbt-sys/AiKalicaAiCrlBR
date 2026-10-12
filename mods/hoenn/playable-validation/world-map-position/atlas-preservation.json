@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "baseline_rom_sha256": "6b52815146a3b27c5ac83702001993b2cc0642134f435c361a0dc1a0c4b27241",
+  "rom_sha256": "031e77443df329f04eeb923b50efc1d695a15deefa6d22c2dbe5c474f7995cd7",
+  "arrays": {
+    "sWorldPalette": {
+      "bytes": 32,
+      "sha256": "da38567f7f701d0d76c5c53ef00407fc6eeb75632efdf6121590b9b2f7aca73a",
+      "baseline_offset": 8069604,
+      "current_offset": 8070004
+    },
+    "sWorldTiles": {
+      "bytes": 8000,
+      "sha256": "856f1abc70b6caca1004a11145eea76d0eb637cb360b36a6da11bc369deb4706",
+      "baseline_offset": 8074080,
+      "current_offset": 8288900
+    },
+    "sWorldTilemap": {
+      "bytes": 2048,
+      "sha256": "ba8a60f430f4938af52b5decd6dfc1e7d4a2b0be08836abf741ab49925a21bdf",
+      "baseline_offset": 8072032,
+      "current_offset": 8286852
+    }
+  }
+}
