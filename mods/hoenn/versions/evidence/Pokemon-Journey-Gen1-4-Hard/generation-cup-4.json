@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "rom_sha256": "31b1dfe0bb913c895ef8983f6300ce352fd23d343c370cdad861a1a3758eceda",
+  "rom_sha256": "de32562229215916a6d3a347a09a421623cb9a4ec98db856514bbf6f958460d2",
   "version_generation_cap": 4,
   "difficulty": "Hard",
   "cup_generation": 4,
@@ -8,41 +8,30 @@
   "actual_battles": [
     {
       "stage": 0,
-      "opponent": 10,
-      "attacks": 25,
+      "opponent": 9,
+      "attacks": 21,
       "outcome": 1,
-      "opponent_name": "Bertha",
-      "opponent_catalog_id": 53,
+      "opponent_name": "Aaron",
+      "opponent_catalog_id": 52,
       "level": 50,
       "player_team_size": 6,
       "enemy_team_size": 6
     },
     {
       "stage": 0,
-      "opponent": 1,
-      "attacks": 30,
+      "opponent": 7,
+      "attacks": 15,
       "outcome": 1,
-      "opponent_name": "Roark",
-      "opponent_catalog_id": 44,
+      "opponent_name": "Candice",
+      "opponent_catalog_id": 50,
       "level": 50,
       "player_team_size": 6,
       "enemy_team_size": 6
     },
     {
       "stage": 0,
-      "opponent": 6,
-      "attacks": 28,
-      "outcome": 1,
-      "opponent_name": "Byron",
-      "opponent_catalog_id": 49,
-      "level": 50,
-      "player_team_size": 6,
-      "enemy_team_size": 6
-    },
-    {
-      "stage": 1,
       "opponent": 8,
-      "attacks": 18,
+      "attacks": 31,
       "outcome": 1,
       "opponent_name": "Volkner",
       "opponent_catalog_id": 51,
@@ -51,9 +40,31 @@
       "enemy_team_size": 6
     },
     {
+      "stage": 0,
+      "opponent": 17,
+      "attacks": 31,
+      "outcome": 1,
+      "opponent_name": "Ash",
+      "opponent_catalog_id": 161,
+      "level": 50,
+      "player_team_size": 6,
+      "enemy_team_size": 6
+    },
+    {
+      "stage": 1,
+      "opponent": 1,
+      "attacks": 18,
+      "outcome": 1,
+      "opponent_name": "Roark",
+      "opponent_catalog_id": 44,
+      "level": 50,
+      "player_team_size": 6,
+      "enemy_team_size": 6
+    },
+    {
       "stage": 1,
       "opponent": 16,
-      "attacks": 16,
+      "attacks": 21,
       "outcome": 1,
       "opponent_name": "Luffy",
       "opponent_catalog_id": 160,
@@ -63,11 +74,11 @@
     },
     {
       "stage": 1,
-      "opponent": 3,
-      "attacks": 31,
+      "opponent": 4,
+      "attacks": 19,
       "outcome": 1,
-      "opponent_name": "Maylene",
-      "opponent_catalog_id": 46,
+      "opponent_name": "Crasher Wake",
+      "opponent_catalog_id": 47,
       "level": 50,
       "player_team_size": 6,
       "enemy_team_size": 6
@@ -87,7 +98,7 @@
   "player_battle_stats_boosted_for_flow_test": true,
   "competitive_balance_test": false,
   "full_campaign_playthrough": false,
-  "unavailable_move_choices_avoided": 0,
+  "unavailable_move_choices_avoided": 6,
   "exhausted_pp_for_struggle_fixture": false,
   "native_struggle_observed": false
 }

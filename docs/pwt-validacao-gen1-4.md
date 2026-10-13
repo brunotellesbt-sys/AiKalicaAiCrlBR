@@ -1,17 +1,17 @@
 # PWT Gen 1–4 — validação e correções de batalha
 
-Os quatro torneios por geração foram concluídos nas edições Normal e Hard: oito torneios e 58 batalhas nativas, incluindo grupos e mata-mata. Cada torneio retornou à recepção, entregou 10 BP uma vez e restaurou a equipe original byte a byte.
+Os quatro torneios por geração foram concluídos nas edições Normal e Hard: oito torneios e 57 batalhas nativas, incluindo grupos e mata-mata. Cada torneio retornou à recepção, entregou 10 BP uma vez e restaurou a equipe original byte a byte.
 
 | Edição | Geração | Batalhas | Relatório |
 | --- | --- | ---: | --- |
 | Normal | 1 | 7 | [JSON](../mods/hoenn/pwt-gen1-4-validation/Normal-gen1/pwt-generation-cup.json) |
-| Normal | 2 | 8 | [JSON](../mods/hoenn/pwt-gen1-4-validation/Normal-gen2/pwt-generation-cup.json) |
-| Normal | 3 | 8 | [JSON](../mods/hoenn/pwt-gen1-4-validation/Normal-gen3/pwt-generation-cup.json) |
+| Normal | 2 | 7 | [JSON](../mods/hoenn/pwt-gen1-4-validation/Normal-gen2/pwt-generation-cup.json) |
+| Normal | 3 | 7 | [JSON](../mods/hoenn/pwt-gen1-4-validation/Normal-gen3/pwt-generation-cup.json) |
 | Normal | 4 | 7 | [JSON](../mods/hoenn/pwt-gen1-4-validation/Normal-gen4/pwt-generation-cup.json) |
 | Hard | 1 | 7 | [JSON](../mods/hoenn/pwt-gen1-4-validation/Hard-gen1/pwt-generation-cup.json) |
 | Hard | 2 | 7 | [JSON](../mods/hoenn/pwt-gen1-4-validation/Hard-gen2/pwt-generation-cup.json) |
 | Hard | 3 | 8 | [JSON](../mods/hoenn/pwt-gen1-4-validation/Hard-gen3/pwt-generation-cup.json) |
-| Hard | 4 | 6 | [JSON](../mods/hoenn/pwt-gen1-4-validation/Hard-gen4/pwt-generation-cup.json) |
+| Hard | 4 | 7 | [JSON](../mods/hoenn/pwt-gen1-4-validation/Hard-gen4/pwt-generation-cup.json) |
 
 Cada relatório identifica a SHA-256 da ROM testada, os adversários, a fase e o resultado. A validação usa mGBA com viagem, inscrição e equipe preparadas. HP, Ataque, Ataque Especial e Velocidade do jogador são aumentados somente na memória do emulador para testar o fluxo. As equipes inimigas, os resultados e a progressão executam no motor real. Isso não mede o equilíbrio de uma partida sem esses aumentos nem substitui uma campanha contínua.
 
@@ -34,7 +34,7 @@ As edições Gen 1–4 mantêm somente as Megas de espécies permitidas até #49
 
 ## Reproduzir
 
-Com a árvore de 108 camadas preparada e a biblioteca mGBA do projeto:
+Com a árvore de 109 camadas preparada e a biblioteca mGBA do projeto:
 
 ```sh
 python3 tools/hoenn/validate_move_restrictions.py --source .local/hoenn-route12-src --library .local/mgba-bridge.so --output .local/move-rules

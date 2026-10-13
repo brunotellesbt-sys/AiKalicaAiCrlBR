@@ -42,9 +42,9 @@ O escopo de validação desta atualização é **PWT e regressões de golpes**, 
 
 Os [relatórios nativos](../mods/hoenn/pwt-world-validation/validation.json) identificam a SHA-256 exata de cada ROM de desenvolvimento. As quatro edições passaram pelas verificações de catálogo, geração de equipes, EVs, IVs, conservação dos golpes do jogador, navegação do painel e restauração byte a byte. Foram inspecionadas 446 equipes: 61 em cada edição Gen 1–4 e 162 em cada edição Gen 1–9.
 
-A reconstrução independente chegou às 108 camadas e reproduziu os 1.367 arquivos preparados sem diferenças. Ela parte da reconstrução anterior que verificou os 30.038 arquivos upstream. A normalização determinística dos aliases de nomes de golpes não alterou nenhum byte da ROM validada.
+A reconstrução independente chegou às 109 camadas e reproduziu os 1.368 arquivos preparados sem diferenças. Ela parte da reconstrução anterior que verificou os 30.038 arquivos upstream. A normalização determinística dos aliases de nomes de golpes não alterou nenhum byte da ROM validada.
 
-Foram jogados os quatro torneios por geração nas edições Gen 1–4 Normal e Hard: oito torneios e 58 batalhas. Também foram repetidos os torneios das gerações 6 e 9 nas edições Gen 1–9 Normal e Hard, respectivamente. Veja a [validação detalhada e as correções de golpes](pwt-validacao-gen1-4.md). As vitórias são produzidas pelo motor de batalha, com retorno à recepção, premiação única de 10 BP e restauração da equipe. Viagem, criação da equipe e atributos de batalha elevados são fixtures declaradas para testar o fluxo; esse resultado não valida o equilíbrio competitivo nem uma campanha completa.
+Foram jogados os quatro torneios por geração nas edições Gen 1–4 Normal e Hard: oito torneios e 57 batalhas. Também foram repetidos os torneios das gerações 6 e 9 nas edições Gen 1–9 Normal e Hard, respectivamente. Veja a [validação detalhada e as correções de golpes](pwt-validacao-gen1-4.md). As vitórias são produzidas pelo motor de batalha, com retorno à recepção, premiação única de 10 BP e restauração da equipe. Viagem, criação da equipe e atributos de batalha elevados são fixtures declaradas para testar o fluxo; esse resultado não valida o equilíbrio competitivo nem uma campanha completa.
 
 Casos específicos testados em todas as edições:
 

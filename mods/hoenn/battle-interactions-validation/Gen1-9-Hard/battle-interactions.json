@@ -1,0 +1,5582 @@
+{
+  "passed": true,
+  "rom_sha256": "03b568f1e5e36a783ff115cc7b9edfb11ace90690616c1b4f123859e09dfcc1d",
+  "version_generation_cap": 9,
+  "max_national": 1025,
+  "perfect_ivs": true,
+  "cases": 684,
+  "checks": [
+    {
+      "group": "type_chart",
+      "case": "NORMAL-NORMAL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "NORMAL-FIRE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "NORMAL-WATER",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "NORMAL-ELECTRIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "NORMAL-GRASS",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "NORMAL-ICE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "NORMAL-FIGHTING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "NORMAL-POISON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "NORMAL-GROUND",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "NORMAL-FLYING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "NORMAL-PSYCHIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "NORMAL-BUG",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "NORMAL-ROCK",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "NORMAL-GHOST",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "NORMAL-DRAGON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "NORMAL-DARK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "NORMAL-STEEL",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "NORMAL-FAIRY",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-NORMAL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-FIRE",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-WATER",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-ELECTRIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-GRASS",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-ICE",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-FIGHTING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-POISON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-GROUND",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-FLYING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-PSYCHIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-BUG",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-ROCK",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-GHOST",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-DRAGON",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-DARK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-STEEL",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIRE-FAIRY",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-NORMAL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-FIRE",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-WATER",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-ELECTRIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-GRASS",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-ICE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-FIGHTING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-POISON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-GROUND",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-FLYING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-PSYCHIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-BUG",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-ROCK",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-GHOST",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-DRAGON",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-DARK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-STEEL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "WATER-FAIRY",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-NORMAL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-FIRE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-WATER",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-ELECTRIC",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-GRASS",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-ICE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-FIGHTING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-POISON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-GROUND",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-FLYING",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-PSYCHIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-BUG",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-ROCK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-GHOST",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-DRAGON",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-DARK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-STEEL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ELECTRIC-FAIRY",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-NORMAL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-FIRE",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-WATER",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-ELECTRIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-GRASS",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-ICE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-FIGHTING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-POISON",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-GROUND",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-FLYING",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-PSYCHIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-BUG",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-ROCK",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-GHOST",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-DRAGON",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-DARK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-STEEL",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GRASS-FAIRY",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-NORMAL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-FIRE",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-WATER",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-ELECTRIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-GRASS",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-ICE",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-FIGHTING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-POISON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-GROUND",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-FLYING",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-PSYCHIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-BUG",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-ROCK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-GHOST",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-DRAGON",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-DARK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-STEEL",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ICE-FAIRY",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-NORMAL",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-FIRE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-WATER",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-ELECTRIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-GRASS",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-ICE",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-FIGHTING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-POISON",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-GROUND",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-FLYING",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-PSYCHIC",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-BUG",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-ROCK",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-GHOST",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-DRAGON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-DARK",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-STEEL",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FIGHTING-FAIRY",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-NORMAL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-FIRE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-WATER",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-ELECTRIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-GRASS",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-ICE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-FIGHTING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-POISON",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-GROUND",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-FLYING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-PSYCHIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-BUG",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-ROCK",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-GHOST",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-DRAGON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-DARK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-STEEL",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "POISON-FAIRY",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-NORMAL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-FIRE",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-WATER",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-ELECTRIC",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-GRASS",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-ICE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-FIGHTING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-POISON",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-GROUND",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-FLYING",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-PSYCHIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-BUG",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-ROCK",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-GHOST",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-DRAGON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-DARK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-STEEL",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GROUND-FAIRY",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-NORMAL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-FIRE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-WATER",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-ELECTRIC",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-GRASS",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-ICE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-FIGHTING",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-POISON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-GROUND",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-FLYING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-PSYCHIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-BUG",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-ROCK",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-GHOST",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-DRAGON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-DARK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-STEEL",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FLYING-FAIRY",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-NORMAL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-FIRE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-WATER",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-ELECTRIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-GRASS",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-ICE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-FIGHTING",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-POISON",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-GROUND",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-FLYING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-PSYCHIC",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-BUG",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-ROCK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-GHOST",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-DRAGON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-DARK",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-STEEL",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "PSYCHIC-FAIRY",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-NORMAL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-FIRE",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-WATER",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-ELECTRIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-GRASS",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-ICE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-FIGHTING",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-POISON",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-GROUND",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-FLYING",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-PSYCHIC",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-BUG",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-ROCK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-GHOST",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-DRAGON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-DARK",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-STEEL",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "BUG-FAIRY",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-NORMAL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-FIRE",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-WATER",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-ELECTRIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-GRASS",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-ICE",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-FIGHTING",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-POISON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-GROUND",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-FLYING",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-PSYCHIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-BUG",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-ROCK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-GHOST",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-DRAGON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-DARK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-STEEL",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "ROCK-FAIRY",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-NORMAL",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-FIRE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-WATER",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-ELECTRIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-GRASS",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-ICE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-FIGHTING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-POISON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-GROUND",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-FLYING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-PSYCHIC",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-BUG",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-ROCK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-GHOST",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-DRAGON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-DARK",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-STEEL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "GHOST-FAIRY",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-NORMAL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-FIRE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-WATER",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-ELECTRIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-GRASS",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-ICE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-FIGHTING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-POISON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-GROUND",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-FLYING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-PSYCHIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-BUG",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-ROCK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-GHOST",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-DRAGON",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-DARK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-STEEL",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DRAGON-FAIRY",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-NORMAL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-FIRE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-WATER",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-ELECTRIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-GRASS",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-ICE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-FIGHTING",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-POISON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-GROUND",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-FLYING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-PSYCHIC",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-BUG",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-ROCK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-GHOST",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-DRAGON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-DARK",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-STEEL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "DARK-FAIRY",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-NORMAL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-FIRE",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-WATER",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-ELECTRIC",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-GRASS",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-ICE",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-FIGHTING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-POISON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-GROUND",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-FLYING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-PSYCHIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-BUG",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-ROCK",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-GHOST",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-DRAGON",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-DARK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-STEEL",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "STEEL-FAIRY",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-NORMAL",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-FIRE",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-WATER",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-ELECTRIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-GRASS",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-ICE",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-FIGHTING",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-POISON",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-GROUND",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-FLYING",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-PSYCHIC",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-BUG",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-ROCK",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-GHOST",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-DRAGON",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-DARK",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-STEEL",
+      "inputs": {},
+      "actual": 2048,
+      "expected": 2048,
+      "passed": true
+    },
+    {
+      "group": "type_chart",
+      "case": "FAIRY-FAIRY",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-NORMAL",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-NORMAL",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-NORMAL",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-NORMAL",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-NORMAL",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-FIRE",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-FIRE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-FIRE",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-FIRE",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-FIRE",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-WATER",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-WATER",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-WATER",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-WATER",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-WATER",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-ELECTRIC",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-ELECTRIC",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-ELECTRIC",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-ELECTRIC",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-ELECTRIC",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-GRASS",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-GRASS",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-GRASS",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-GRASS",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-GRASS",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-ICE",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-ICE",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-ICE",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-ICE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-ICE",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-FIGHTING",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-FIGHTING",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-FIGHTING",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-FIGHTING",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-FIGHTING",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-POISON",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-POISON",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-POISON",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-POISON",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-POISON",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-GROUND",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-GROUND",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-GROUND",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-GROUND",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-GROUND",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-FLYING",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-FLYING",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-FLYING",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-FLYING",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-FLYING",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-PSYCHIC",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-PSYCHIC",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-PSYCHIC",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-PSYCHIC",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-PSYCHIC",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-BUG",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-BUG",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-BUG",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-BUG",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-BUG",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-ROCK",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-ROCK",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-ROCK",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-ROCK",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-ROCK",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-GHOST",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-GHOST",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-GHOST",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-GHOST",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-GHOST",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-DRAGON",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-DRAGON",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-DRAGON",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-DRAGON",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-DRAGON",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-DARK",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-DARK",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-DARK",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-DARK",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-DARK",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-STEEL",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-STEEL",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-STEEL",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-STEEL",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-STEEL",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Poisoned-FAIRY",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Burned-FAIRY",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Paralyzed-FAIRY",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Frozen-FAIRY",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_type",
+      "case": "Slept-FAIRY",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Poisoned-IMMUNITY",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Poisoned-COMATOSE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Poisoned-PURIFYING_SALT",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Burned-WATER_VEIL",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Burned-WATER_BUBBLE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Burned-THERMAL_EXCHANGE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Burned-COMATOSE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Burned-PURIFYING_SALT",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Paralyzed-LIMBER",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Paralyzed-COMATOSE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Paralyzed-PURIFYING_SALT",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Frozen-MAGMA_ARMOR",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Frozen-COMATOSE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Frozen-PURIFYING_SALT",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Slept-INSOMNIA",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Slept-VITAL_SPIRIT",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Slept-COMATOSE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "Slept-PURIFYING_SALT",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "corrosion-POISON",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_ability",
+      "case": "corrosion-STEEL",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "terrain",
+      "case": "misty-Poisoned",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "terrain",
+      "case": "airborne-misty-Poisoned",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "terrain",
+      "case": "misty-Burned",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "terrain",
+      "case": "airborne-misty-Burned",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "terrain",
+      "case": "misty-Paralyzed",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "terrain",
+      "case": "airborne-misty-Paralyzed",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "terrain",
+      "case": "misty-Frozen",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "terrain",
+      "case": "airborne-misty-Frozen",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "terrain",
+      "case": "misty-Slept",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "terrain",
+      "case": "airborne-misty-Slept",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "terrain",
+      "case": "electric-sleep",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "terrain",
+      "case": "airborne-electric-sleep",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "status_side",
+      "case": "safeguard-Poisoned",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_side",
+      "case": "safeguard-Burned",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_side",
+      "case": "safeguard-Paralyzed",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_side",
+      "case": "safeguard-Frozen",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_side",
+      "case": "safeguard-Slept",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "status_side",
+      "case": "infiltrator-poison",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "double_partner",
+      "case": "PASTEL_VEIL",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "double_partner",
+      "case": "PASTEL_VEIL-fainted",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "double_partner",
+      "case": "SWEET_VEIL",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "double_partner",
+      "case": "SWEET_VEIL-fainted",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "double_partner",
+      "case": "FLOWER_VEIL",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "double_partner",
+      "case": "FLOWER_VEIL-fainted",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "confusion",
+      "case": "NONE",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "confusion",
+      "case": "OWN_TEMPO",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "confusion",
+      "case": "misty",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "grounding",
+      "case": "NORMAL-NONE-NONE-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "grounding",
+      "case": "FLYING-NONE-NONE-False",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "grounding",
+      "case": "NORMAL-LEVITATE-NONE-False",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "grounding",
+      "case": "NORMAL-NONE-AIR_BALLOON-False",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "grounding",
+      "case": "FLYING-LEVITATE-IRON_BALL-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "grounding",
+      "case": "FLYING-LEVITATE-AIR_BALLOON-True",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "grounding",
+      "case": "root",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "grounding",
+      "case": "smackDown",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "grounding",
+      "case": "magnetRise",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "grounding",
+      "case": "telekinesis",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "ability_resolution",
+      "case": "plain-NONE",
+      "inputs": {},
+      "actual": 26,
+      "expected": 26,
+      "passed": true
+    },
+    {
+      "group": "ability_resolution",
+      "case": "plain-NONE-ground-immunity",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "ability_resolution",
+      "case": "mold-NONE",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "ability_resolution",
+      "case": "mold-NONE-ground-immunity",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "ability_resolution",
+      "case": "mold-ABILITY_SHIELD",
+      "inputs": {},
+      "actual": 26,
+      "expected": 26,
+      "passed": true
+    },
+    {
+      "group": "ability_resolution",
+      "case": "mold-ABILITY_SHIELD-ground-immunity",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "ability_resolution",
+      "case": "gas-NONE",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "ability_resolution",
+      "case": "gas-NONE-ground-immunity",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "ability_resolution",
+      "case": "gas-ABILITY_SHIELD",
+      "inputs": {},
+      "actual": 26,
+      "expected": 26,
+      "passed": true
+    },
+    {
+      "group": "ability_resolution",
+      "case": "gas-ABILITY_SHIELD-ground-immunity",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "ability_resolution",
+      "case": "acid-NONE",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "ability_resolution",
+      "case": "acid-NONE-ground-immunity",
+      "inputs": {},
+      "actual": 4096,
+      "expected": 4096,
+      "passed": true
+    },
+    {
+      "group": "item_negation",
+      "case": "plain",
+      "inputs": {},
+      "actual": 29,
+      "expected": 29,
+      "passed": true
+    },
+    {
+      "group": "item_negation",
+      "case": "embargo",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "item_negation",
+      "case": "magic-room",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "item_negation",
+      "case": "klutz",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "item_negation",
+      "case": "gas-klutz",
+      "inputs": {},
+      "actual": 29,
+      "expected": 29,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "VOLT_ABSORB-THUNDERBOLT",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "VOLT_ABSORB-TACKLE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "WATER_ABSORB-SURF",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "WATER_ABSORB-TACKLE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "DRY_SKIN-SURF",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "DRY_SKIN-TACKLE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "EARTH_EATER-EARTHQUAKE",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "EARTH_EATER-TACKLE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "MOTOR_DRIVE-THUNDERBOLT",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "MOTOR_DRIVE-TACKLE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "LIGHTNING_ROD-THUNDERBOLT",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "LIGHTNING_ROD-TACKLE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "STORM_DRAIN-SURF",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "STORM_DRAIN-TACKLE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "SAP_SIPPER-GIGA_DRAIN",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "SAP_SIPPER-TACKLE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "WELL_BAKED_BODY-FLAMETHROWER",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "WELL_BAKED_BODY-TACKLE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "FLASH_FIRE-FLAMETHROWER",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "FLASH_FIRE-TACKLE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "SOUNDPROOF-HYPER_VOICE",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "SOUNDPROOF-TACKLE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "BULLETPROOF-SHADOW_BALL",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "BULLETPROOF-TACKLE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "GOOD_AS_GOLD-TOXIC",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "move_block",
+      "case": "GOOD_AS_GOLD-TACKLE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "powder",
+      "case": "NORMAL-NONE-NONE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "powder",
+      "case": "GRASS-NONE-NONE",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "powder",
+      "case": "NORMAL-SAFETY_GOGGLES-NONE",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "powder",
+      "case": "NORMAL-NONE-OVERCOAT",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "priority",
+      "case": "psychic-NORMAL-1",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "priority",
+      "case": "psychic-FLYING-1",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "priority",
+      "case": "psychic-NORMAL-0",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "priority",
+      "case": "prankster-dark",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "huge-power",
+      "baseline": 28,
+      "actual": 55,
+      "expected_ratio": 2,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "choice-band",
+      "baseline": 28,
+      "actual": 42,
+      "expected_ratio": 1.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "choice-specs",
+      "baseline": 41,
+      "actual": 61,
+      "expected_ratio": 1.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "life-orb",
+      "baseline": 28,
+      "actual": 36,
+      "expected_ratio": 1.3,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "adaptability-stab",
+      "baseline": 28,
+      "actual": 38,
+      "expected_ratio": 1.3333333333333333,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "technician",
+      "baseline": 28,
+      "actual": 42,
+      "expected_ratio": 1.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "tough-claws-contact",
+      "baseline": 28,
+      "actual": 36,
+      "expected_ratio": 1.3,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "sheer-force",
+      "baseline": 41,
+      "actual": 53,
+      "expected_ratio": 1.3,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "punk-rock",
+      "baseline": 61,
+      "actual": 79,
+      "expected_ratio": 1.3,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "burn",
+      "baseline": 28,
+      "actual": 14,
+      "expected_ratio": 0.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "guts-burn",
+      "baseline": 28,
+      "actual": 42,
+      "expected_ratio": 1.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "facade-burn",
+      "baseline": 48,
+      "actual": 94,
+      "expected_ratio": 2,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "multiscale-full",
+      "baseline": 28,
+      "actual": 14,
+      "expected_ratio": 0.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "multiscale-damaged",
+      "baseline": 28,
+      "actual": 28,
+      "expected_ratio": 1,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "shadow-shield",
+      "baseline": 28,
+      "actual": 14,
+      "expected_ratio": 0.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "fur-coat",
+      "baseline": 28,
+      "actual": 15,
+      "expected_ratio": 0.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "ice-scales",
+      "baseline": 41,
+      "actual": 20,
+      "expected_ratio": 0.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "thick-fat-fire",
+      "baseline": 41,
+      "actual": 21,
+      "expected_ratio": 0.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "fluffy-contact",
+      "baseline": 28,
+      "actual": 14,
+      "expected_ratio": 0.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "fluffy-fire",
+      "baseline": 41,
+      "actual": 82,
+      "expected_ratio": 2,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "assault-vest",
+      "baseline": 41,
+      "actual": 28,
+      "expected_ratio": 0.6666666666666666,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "eviolite-unevolved",
+      "baseline": 28,
+      "actual": 19,
+      "expected_ratio": 0.6666666666666666,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "eviolite-fully-evolved",
+      "baseline": 28,
+      "actual": 28,
+      "expected_ratio": 1,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "sun-fire",
+      "baseline": 41,
+      "actual": 61,
+      "expected_ratio": 1.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "rain-fire",
+      "baseline": 41,
+      "actual": 20,
+      "expected_ratio": 0.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "sun-water",
+      "baseline": 41,
+      "actual": 20,
+      "expected_ratio": 0.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "rain-water",
+      "baseline": 41,
+      "actual": 61,
+      "expected_ratio": 1.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "reflect",
+      "baseline": 28,
+      "actual": 14,
+      "expected_ratio": 0.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "light-screen",
+      "baseline": 41,
+      "actual": 20,
+      "expected_ratio": 0.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "critical-reflect",
+      "baseline": 28,
+      "actual": 42,
+      "expected_ratio": 1.5,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "damage",
+      "case": "infiltrator-reflect",
+      "baseline": 28,
+      "actual": 28,
+      "expected_ratio": 1,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "speed",
+      "case": "SWIFT_SWIM",
+      "inputs": {},
+      "actual": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "group": "speed",
+      "case": "CHLOROPHYLL",
+      "inputs": {},
+      "actual": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "group": "speed",
+      "case": "SAND_RUSH",
+      "inputs": {},
+      "actual": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "group": "speed",
+      "case": "SLUSH_RUSH",
+      "inputs": {},
+      "actual": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "group": "speed",
+      "case": "NONE-NONE-none",
+      "inputs": {},
+      "actual": 100,
+      "expected": 100,
+      "passed": true
+    },
+    {
+      "group": "speed",
+      "case": "NONE-CHOICE_SCARF-none",
+      "inputs": {},
+      "actual": 150,
+      "expected": 150,
+      "passed": true
+    },
+    {
+      "group": "speed",
+      "case": "NONE-IRON_BALL-none",
+      "inputs": {},
+      "actual": 50,
+      "expected": 50,
+      "passed": true
+    },
+    {
+      "group": "speed",
+      "case": "NONE-MACHO_BRACE-none",
+      "inputs": {},
+      "actual": 50,
+      "expected": 50,
+      "passed": true
+    },
+    {
+      "group": "speed",
+      "case": "NONE-NONE-paralysis",
+      "inputs": {},
+      "actual": 50,
+      "expected": 50,
+      "passed": true
+    },
+    {
+      "group": "speed",
+      "case": "QUICK_FEET-NONE-paralysis",
+      "inputs": {},
+      "actual": 150,
+      "expected": 150,
+      "passed": true
+    },
+    {
+      "group": "speed",
+      "case": "SWIFT_SWIM-UTILITY_UMBRELLA-rain",
+      "inputs": {},
+      "actual": 100,
+      "expected": 100,
+      "passed": true
+    },
+    {
+      "group": "speed",
+      "case": "SWIFT_SWIM-CHOICE_SCARF-rain",
+      "inputs": {},
+      "actual": 300,
+      "expected": 300,
+      "passed": true
+    },
+    {
+      "group": "speed",
+      "case": "SURGE_SURFER-NONE-electric",
+      "inputs": {},
+      "actual": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "group": "speed",
+      "case": "SLOW_START-NONE-slow-start",
+      "inputs": {},
+      "actual": 50,
+      "expected": 50,
+      "passed": true
+    },
+    {
+      "group": "speed",
+      "case": "UNBURDEN-NONE-unburden",
+      "inputs": {},
+      "actual": 200,
+      "expected": 200,
+      "passed": true
+    },
+    {
+      "group": "speed",
+      "case": "NONE-CHOICE_SCARF-tailwind-paralysis",
+      "inputs": {},
+      "actual": 150,
+      "expected": 150,
+      "passed": true
+    },
+    {
+      "group": "critical",
+      "case": "NONE-TACKLE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "critical",
+      "case": "NONE-STORM_THROW",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "critical",
+      "case": "BATTLE_ARMOR-STORM_THROW",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "critical",
+      "case": "SHELL_ARMOR-STORM_THROW",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "survival",
+      "case": "NONE-NONE-100",
+      "inputs": {},
+      "actual": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "group": "survival",
+      "case": "STURDY-NONE-100",
+      "inputs": {},
+      "actual": 99,
+      "expected": 99,
+      "passed": true
+    },
+    {
+      "group": "survival",
+      "case": "STURDY-NONE-99",
+      "inputs": {},
+      "actual": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "group": "survival",
+      "case": "NONE-FOCUS_SASH-100",
+      "inputs": {},
+      "actual": 99,
+      "expected": 99,
+      "passed": true
+    },
+    {
+      "group": "survival",
+      "case": "NONE-FOCUS_SASH-99",
+      "inputs": {},
+      "actual": 1000,
+      "expected": 1000,
+      "passed": true
+    },
+    {
+      "group": "survival",
+      "case": "false-swipe",
+      "inputs": {},
+      "actual": 99,
+      "expected": 99,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "CHERI_BERRY-unnerve-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "CHERI_BERRY-status-cleared-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "CHERI_BERRY-unnerve-True",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "CHERI_BERRY-status-cleared-True",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "PECHA_BERRY-unnerve-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "PECHA_BERRY-status-cleared-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "PECHA_BERRY-unnerve-True",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "PECHA_BERRY-status-cleared-True",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "RAWST_BERRY-unnerve-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "RAWST_BERRY-status-cleared-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "RAWST_BERRY-unnerve-True",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "RAWST_BERRY-status-cleared-True",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "ASPEAR_BERRY-unnerve-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "ASPEAR_BERRY-status-cleared-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "ASPEAR_BERRY-unnerve-True",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "ASPEAR_BERRY-status-cleared-True",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "CHESTO_BERRY-unnerve-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "CHESTO_BERRY-status-cleared-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "CHESTO_BERRY-unnerve-True",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "CHESTO_BERRY-status-cleared-True",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "LUM_BERRY-unnerve-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "LUM_BERRY-status-cleared-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "LUM_BERRY-unnerve-True",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "berry",
+      "case": "LUM_BERRY-status-cleared-True",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "orbs",
+      "case": "TOXIC_ORB-NORMAL",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "orbs",
+      "case": "TOXIC_ORB-status-NORMAL",
+      "inputs": {},
+      "actual": 128,
+      "expected": 128,
+      "passed": true
+    },
+    {
+      "group": "orbs",
+      "case": "TOXIC_ORB-STEEL",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "orbs",
+      "case": "TOXIC_ORB-status-STEEL",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "orbs",
+      "case": "FLAME_ORB-NORMAL",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "orbs",
+      "case": "FLAME_ORB-status-NORMAL",
+      "inputs": {},
+      "actual": 16,
+      "expected": 16,
+      "passed": true
+    },
+    {
+      "group": "orbs",
+      "case": "FLAME_ORB-FIRE",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "orbs",
+      "case": "FLAME_ORB-status-FIRE",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "residual_item",
+      "case": "LEFTOVERS-NORMAL-NONE-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "residual_item",
+      "case": "LEFTOVERS-NORMAL-NONE-True",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "residual_item",
+      "case": "BLACK_SLUDGE-POISON-NONE-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "residual_item",
+      "case": "BLACK_SLUDGE-NORMAL-NONE-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "residual_item",
+      "case": "BLACK_SLUDGE-NORMAL-MAGIC_GUARD-False",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "mental_herb",
+      "case": "tauntTimer",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "mental_herb",
+      "case": "tauntTimer-cleared",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "mental_herb",
+      "case": "encoreTimer",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "mental_herb",
+      "case": "encoreTimer-cleared",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "mental_herb",
+      "case": "healBlock",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "mental_herb",
+      "case": "healBlock-cleared",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "mental_herb",
+      "case": "disableTimer",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "mental_herb",
+      "case": "disableTimer-cleared",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "mental_herb",
+      "case": "torment",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "mental_herb",
+      "case": "torment-cleared",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "mental_herb",
+      "case": "infatuation",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "mental_herb",
+      "case": "infatuation-cleared",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "berry_heal",
+      "case": "ORAN_BERRY-NONE-50-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry_heal",
+      "case": "ORAN_BERRY-scheduled-heal-NONE-50-False",
+      "inputs": {},
+      "actual": -10,
+      "expected": -10,
+      "passed": true
+    },
+    {
+      "group": "berry_heal",
+      "case": "ORAN_BERRY-RIPEN-50-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry_heal",
+      "case": "ORAN_BERRY-scheduled-heal-RIPEN-50-False",
+      "inputs": {},
+      "actual": -20,
+      "expected": -20,
+      "passed": true
+    },
+    {
+      "group": "berry_heal",
+      "case": "SITRUS_BERRY-NONE-50-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry_heal",
+      "case": "SITRUS_BERRY-scheduled-heal-NONE-50-False",
+      "inputs": {},
+      "actual": -25,
+      "expected": -25,
+      "passed": true
+    },
+    {
+      "group": "berry_heal",
+      "case": "SITRUS_BERRY-RIPEN-50-False",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry_heal",
+      "case": "SITRUS_BERRY-scheduled-heal-RIPEN-50-False",
+      "inputs": {},
+      "actual": -50,
+      "expected": -50,
+      "passed": true
+    },
+    {
+      "group": "berry_heal",
+      "case": "SITRUS_BERRY-NONE-51-False",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "berry_heal",
+      "case": "SITRUS_BERRY-scheduled-heal-NONE-51-False",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "berry_heal",
+      "case": "SITRUS_BERRY-NONE-50-True",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "berry_heal",
+      "case": "SITRUS_BERRY-scheduled-heal-NONE-50-True",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "berry_threshold",
+      "case": "NONE-26",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "berry_threshold",
+      "case": "NONE-25",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry_threshold",
+      "case": "GLUTTONY-50",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "berry_threshold",
+      "case": "GLUTTONY-51",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "leppa",
+      "case": "TACKLE-NONE-False-activated",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "leppa",
+      "case": "TACKLE-NONE-False-pp",
+      "inputs": {},
+      "actual": 10,
+      "expected": 10,
+      "passed": true
+    },
+    {
+      "group": "leppa",
+      "case": "TACKLE-RIPEN-False-activated",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "leppa",
+      "case": "TACKLE-RIPEN-False-pp",
+      "inputs": {},
+      "actual": 20,
+      "expected": 20,
+      "passed": true
+    },
+    {
+      "group": "leppa",
+      "case": "TACKLE-NONE-True-activated",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "leppa",
+      "case": "TACKLE-NONE-True-pp",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "leppa",
+      "case": "EARTH_POWER-NONE-False-activated",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "leppa",
+      "case": "EARTH_POWER-NONE-False-pp",
+      "inputs": {},
+      "actual": 10,
+      "expected": 10,
+      "passed": true
+    },
+    {
+      "group": "leppa",
+      "case": "EARTH_POWER-RIPEN-False-activated",
+      "inputs": {},
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "group": "leppa",
+      "case": "EARTH_POWER-RIPEN-False-pp",
+      "inputs": {},
+      "actual": 10,
+      "expected": 10,
+      "passed": true
+    },
+    {
+      "group": "leppa",
+      "case": "EARTH_POWER-NONE-True-activated",
+      "inputs": {},
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "group": "leppa",
+      "case": "EARTH_POWER-NONE-True-pp",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "stat_stages",
+      "case": "NONE-attack-boost",
+      "baseline": 46,
+      "actual": 90,
+      "expected_ratio": 2,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "stat_stages",
+      "case": "UNAWARE-attack-boost",
+      "baseline": 46,
+      "actual": 46,
+      "expected_ratio": 1,
+      "tolerance": 3,
+      "passed": true
+    },
+    {
+      "group": "double_damage",
+      "case": "NONE",
+      "baseline": 28,
+      "actual": 28,
+      "expected_ratio": 1,
+      "tolerance": 2,
+      "passed": true
+    },
+    {
+      "group": "double_damage",
+      "case": "FRIEND_GUARD",
+      "baseline": 28,
+      "actual": 21,
+      "expected_ratio": 0.75,
+      "tolerance": 2,
+      "passed": true
+    },
+    {
+      "group": "double_damage",
+      "case": "telepathy-ally",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "wonder_guard",
+      "case": "neutral",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "wonder_guard",
+      "case": "super-effective",
+      "inputs": {},
+      "actual": 8192,
+      "expected": 8192,
+      "passed": true
+    },
+    {
+      "group": "weather_suppression",
+      "case": "CLOUD_NINE-get-weather",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "weather_suppression",
+      "case": "CLOUD_NINE-swift-swim",
+      "inputs": {},
+      "actual": 100,
+      "expected": 100,
+      "passed": true
+    },
+    {
+      "group": "weather_suppression",
+      "case": "AIR_LOCK-get-weather",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "weather_suppression",
+      "case": "AIR_LOCK-swift-swim",
+      "inputs": {},
+      "actual": 100,
+      "expected": 100,
+      "passed": true
+    },
+    {
+      "group": "turn_order",
+      "case": "False-TACKLE-TACKLE-NONE-NONE",
+      "inputs": {},
+      "actual": 4294967295,
+      "expected": 4294967295,
+      "passed": true
+    },
+    {
+      "group": "turn_order",
+      "case": "True-TACKLE-TACKLE-NONE-NONE",
+      "inputs": {},
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "group": "turn_order",
+      "case": "True-QUICK_ATTACK-TACKLE-NONE-NONE",
+      "inputs": {},
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "group": "turn_order",
+      "case": "True-TACKLE-QUICK_ATTACK-NONE-NONE",
+      "inputs": {},
+      "actual": 4294967295,
+      "expected": 4294967295,
+      "passed": true
+    },
+    {
+      "group": "turn_order",
+      "case": "False-TACKLE-TACKLE-NONE-CHOICE_SCARF",
+      "inputs": {},
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "group": "turn_order",
+      "case": "True-TACKLE-TACKLE-NONE-CHOICE_SCARF",
+      "inputs": {},
+      "actual": 4294967295,
+      "expected": 4294967295,
+      "passed": true
+    },
+    {
+      "group": "turn_order",
+      "case": "True-TACKLE-TACKLE-STALL-NONE",
+      "inputs": {},
+      "actual": 4294967295,
+      "expected": 4294967295,
+      "passed": true
+    },
+    {
+      "group": "ai_hazards",
+      "case": "SPIKES-NONE-NONE-plain",
+      "inputs": {},
+      "actual": 12,
+      "expected": 12,
+      "passed": true
+    },
+    {
+      "group": "ai_hazards",
+      "case": "SPIKES-HEAVY_DUTY_BOOTS-NONE-plain",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "ai_hazards",
+      "case": "SPIKES-NONE-MAGIC_GUARD-plain",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "ai_hazards",
+      "case": "SPIKES-HEAVY_DUTY_BOOTS-NONE-magic-room",
+      "inputs": {},
+      "actual": 12,
+      "expected": 12,
+      "passed": true
+    },
+    {
+      "group": "ai_hazards",
+      "case": "SPIKES-HEAVY_DUTY_BOOTS-KLUTZ-plain",
+      "inputs": {},
+      "actual": 12,
+      "expected": 12,
+      "passed": true
+    },
+    {
+      "group": "ai_hazards",
+      "case": "SPIKES-NONE-LEVITATE-plain",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "ai_hazards",
+      "case": "TOXIC_SPIKES-NONE-NONE-plain",
+      "inputs": {},
+      "actual": 12,
+      "expected": 12,
+      "passed": true
+    },
+    {
+      "group": "ai_hazards",
+      "case": "TOXIC_SPIKES-HEAVY_DUTY_BOOTS-NONE-plain",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "group": "ai_hazards",
+      "case": "STEALTH_ROCK-NONE-NONE-plain",
+      "inputs": {},
+      "actual": 12,
+      "expected": 12,
+      "passed": true
+    },
+    {
+      "group": "ai_hazards",
+      "case": "STEALTH_ROCK-HEAVY_DUTY_BOOTS-NONE-plain",
+      "inputs": {},
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    }
+  ],
+  "groups": {
+    "ability_resolution": 12,
+    "ai_hazards": 10,
+    "berry": 24,
+    "berry_heal": 12,
+    "berry_threshold": 4,
+    "confusion": 3,
+    "critical": 4,
+    "damage": 31,
+    "double_damage": 3,
+    "double_partner": 6,
+    "grounding": 10,
+    "item_negation": 5,
+    "leppa": 12,
+    "mental_herb": 12,
+    "move_block": 26,
+    "orbs": 8,
+    "powder": 4,
+    "priority": 4,
+    "residual_item": 5,
+    "speed": 16,
+    "stat_stages": 2,
+    "status_ability": 20,
+    "status_side": 6,
+    "status_type": 90,
+    "survival": 6,
+    "terrain": 12,
+    "turn_order": 7,
+    "type_chart": 324,
+    "weather_suppression": 4,
+    "wonder_guard": 2
+  },
+  "engine_functions_native": true,
+  "called_functions": [
+    "AllocZeroed_",
+    "ApplyModifiersAfterDmgRoll",
+    "CalcCritChanceStage",
+    "CalcTypeEffectivenessMultiplier",
+    "CalculateMoveDamageVars",
+    "CanBeBurned",
+    "CanBeConfused",
+    "CanBeFrozen",
+    "CanBeParalyzed",
+    "CanBePoisoned",
+    "CanBeSlept",
+    "CanMoveBeBlockedByTarget",
+    "GetAdjustedDamage",
+    "GetBattlerAbility",
+    "GetBattlerHoldEffect",
+    "GetBattlerTotalSpeedStat",
+    "GetSwitchinHazardsDamage",
+    "GetTypeModifier",
+    "GetWeather",
+    "GetWhichBattlerFasterOrTies",
+    "HasEnoughHpToEatBerry",
+    "IsBattlerGrounded",
+    "ItemBattleEffects",
+    "PushHazardTypeToQueue",
+    "SetMonData"
+  ],
+  "battle_state_is_prepared_fixture": true,
+  "damage_random_rolls_disabled": true,
+  "item_animation_and_consumption_scripts_not_played": true,
+  "full_campaign_playthrough": false,
+  "exhaustive_ability_item_coverage": false
+}
