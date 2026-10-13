@@ -11,6 +11,7 @@ p.add_argument('--source',type=Path,required=True);p.add_argument('--library',ty
 p.add_argument('--output',type=Path,required=True)
 p.add_argument('--play-cup',action='store_true',help='Also win one real cup; player battle stats are explicitly boosted fixtures')
 p.add_argument('--cup-generation',type=int,default=3)
+p.add_argument('--exhaust-pp-once',action='store_true',help='Set the first active battler PP to zero as an explicit Struggle fixture')
 a=p.parse_args()
 sys.argv=[sys.argv[0],'--source',str(a.source),'--library',str(a.library),'--output',str(a.output)]
 exec(compile((ROOT/'tools/hoenn/validate_abilities.py').read_text().split('\nability_field,')[0],str(ROOT/'tools/hoenn/validate_abilities.py'),'exec'))
@@ -132,6 +133,9 @@ assert bytes(lib.read8(cup+i) for i in range(offsets[6]))==before
 finish()
 actual_battles=[]
 if a.play_cup:
+    from pwt_cup_controller import CupController
+    controller=CupController(source,lib,s)
+    exhausted_pp=False;struggle_seen=False
     # This isolates the tournament lifecycle, not competitive difficulty.
     # Battle outcomes are produced by the battle engine/controller, never set.
     for i in range(6):native('ScriptSetMonMoveSlot',i,abi[142],0)
@@ -160,19 +164,34 @@ if a.play_cup:
             callback=lib.read32(s['gMain']+4)&~1
             if callback==s['BattleMainCB2']:
                 lib.write16(s['gBattleMons']+offsets[63],16000)
+                lib.write16(s['gBattleMons']+controller.abi[2],16000)
                 lib.write16(s['gBattleMons']+offsets[64],10000)
                 lib.write16(s['gBattleMons']+offsets[65],30000)
                 if lib.read16(s['gBattleMons']+abi[102]):lib.write16(s['gBattleMons']+abi[102],30000)
                 for i in range(6):
                     lib.write16(party+i*abi[2]+offsets[66],16000)
+                    lib.write16(party+i*abi[2]+controller.abi[3],16000)
                     lib.write16(party+i*abi[2]+offsets[67],10000)
                     lib.write16(party+i*abi[2]+offsets[68],30000)
                     if lib.read16(party+i*abi[2]+abi[101]):lib.write16(party+i*abi[2]+abi[101],30000)
                 handler=lib.read32(s['gBattlerControllerFuncs'])&~1
+                if a.exhaust_pp_once and not exhausted_pp and handler in actions:
+                    for slot in range(4):lib.write8(s['gBattleMons']+controller.abi[1]+slot,0)
+                    exhausted_pp=True
+                struggle_seen |= exhausted_pp and lib.read16(s['gCurrentMove'])==165 and lib.read8(s['gBattlerAttacker'])==0
                 if handler in actions or handler in move_actions:
-                    step(1,64);step(8);step(1,32);step(8);press(1)
+                    step(1,64);step(8);step(1,32);step(8)
+                    if handler in move_actions:
+                        choice=controller.choose_move()
+                        if choice>=2:step(1,128);step(8)
+                        if choice&1:step(1,16);step(8)
+                    press(1)
                     attacks+=handler in move_actions
                 else:press(2)
+            elif task('Task_HandleChooseMonInput'):
+                slot=lib.read8(s['gPartyMenu']+controller.abi[4])
+                if slot>=6 or not lib.read16(party+slot*abi[2]+abi[101]):press(16 if slot==0 else 128)
+                else:press(1)
             elif callback==s['CB2_Overworld']:
                 assert lib.read8(s['gBattleOutcome'])==1
                 actual_battles.append(dict(stage=stage,opponent=entrant,attacks=attacks,outcome=1))
@@ -192,6 +211,7 @@ if a.play_cup:
     assert bytes(lib.read8(party+i) for i in range(6*abi[2]))==tournament_original
     assert lib.read16(bp_at)==bp_before+10
     assert lib.read8(cup+offsets[12])==2
+    if a.exhaust_pp_once:assert exhausted_pp and struggle_seen,'Native Struggle was not observed'
     picture('pwt-world-cup-champion-return')
 lib.stop()
 report=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),

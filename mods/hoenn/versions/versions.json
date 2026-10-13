@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "385374542208e22e67eed413674f44c7186d973985970b79a4de23f1fdc8a227",
-  "build_rules_offset": 9045640,
+  "parent_rom_sha256": "6d548ac57dae199a867a9392f9a9ba6d7feb5a6d9c2deaa05233268e85faa651",
+  "build_rules_offset": 9045160,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "bd10918c4656cdd5d8e1a3a227fc2de463c4168ac93ec69ff7e32243607e205d",
+      "sha256": "f34ca39b79b8118824a6b7377491843b2c49671de4c309a2663c4de903e639e9",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        9045640,
-        9045641,
-        9045642
+        9045160,
+        9045161,
+        9045162
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "f38001e5d6ef65269895f1a1c3a5707203d600bb74fdd70b20ad2e938f5cc283",
+      "sha256": "31b1dfe0bb913c895ef8983f6300ce352fd23d343c370cdad861a1a3758eceda",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        9045640,
-        9045641
+        9045160,
+        9045161
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "168a19007fa2b32c39ae4b29dc5eb5ca8ebe16ef2e739839d2de38e3c77e7f38",
+      "sha256": "7729cd94714b7ed0b52675fb8bb5ee4792123815dc97abd3b2f20283da1c7ec9",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        9045642
+        9045162
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "3f8a6c20602af3128d3d7ebf3140b12eed878df3604411d8631eeaef5f32f64d",
+      "sha256": "977deaf4b2da269a6446d9afcce6e493d7d7bb7ca70824f502ab913557e72036",
       "patched_byte_offsets": [
         160,
         162,
@@ -211,256 +211,121 @@
     "pwt-builds",
     "pwt-stadium",
     "pwt-stadium-camera",
-    "pwt-entrance-wait"
+    "pwt-entrance-wait",
+    "pwt-encore-guard",
+    "move-history-rules"
   ],
   "validation_scope": "pwt-update",
   "full_campaign_playthrough": false,
+  "generation_cups_validated": true,
   "proofs": [
-    {
-      "file": "evidence/Pokemon-Journey-Gen1-4-Normal/gym-teams.json",
-      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "gym-teams",
-      "sha256": "fb49f67491c03a673a90f68646ab1fc6953a69502061d813a8f11f11934358b7"
-    },
-    {
-      "file": "evidence/Pokemon-Journey-Gen1-4-Normal/variant-rules.json",
-      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "variant-rules",
-      "sha256": "35a1504eafb1e6c89965d15e4b2551d9b6942c56217d7148ef571c17b0feb020"
-    },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Normal/pwt-world.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "pwt-world",
-      "sha256": "98fe7aa81d935fa4b2134fb4270c3decb4450470ae5fc2a19e1fa4200c28c391"
+      "sha256": "6a74b52722219f7cb68f3df26b3bc7cb5ab9d2ff0929b3810fa08c1fcee1bfbf"
     },
     {
-      "file": "evidence/Pokemon-Journey-Gen1-4-Hard/gym-teams.json",
-      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "gym-teams",
-      "sha256": "24793e15c21b0c72c0ebdbde5e865af4e8cc812566a59798ad235ff34b0d71c7"
+      "file": "evidence/Pokemon-Journey-Gen1-4-Normal/generation-cup-1.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "generation-cup-1",
+      "sha256": "13a402da5ff08740fba539880e3aba712e64b8796845ceffccfdb9773352a7b9"
     },
     {
-      "file": "evidence/Pokemon-Journey-Gen1-4-Hard/variant-rules.json",
-      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "variant-rules",
-      "sha256": "3293bfec6c9ee60d2f815d07841bbc3c4f7467998ea7e4cefab2d888650d921f"
+      "file": "evidence/Pokemon-Journey-Gen1-4-Normal/generation-cup-2.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "generation-cup-2",
+      "sha256": "fec42903f501f0ded06834ab924e5d86e2f0a229975e980488c4d576b2afe9b0"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-4-Normal/generation-cup-3.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "generation-cup-3",
+      "sha256": "63d1bc56c571043bbca43a836f49677a15d38620be37dc8b201ccfc23c11bdd7"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-4-Normal/generation-cup-4.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "generation-cup-4",
+      "sha256": "ab07d5140b7873f620a489a1fa1c00e532273c8b93350016e3f242476d735cd8"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Hard/pwt-world.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "pwt-world",
-      "sha256": "2a557a7080f369e9eec2ab8a3f7a541cd43a60a092291fe294ae46d59914f7fc"
+      "sha256": "f1bf50c229e6a587256a57591c3df8f65782be2d67d13487992977daa7ced6c6"
     },
     {
-      "file": "evidence/Pokemon-Journey-Gen1-9-Normal/gym-teams.json",
-      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "gym-teams",
-      "sha256": "e0addb01ac0ecdd92f9bc123a223af251adfd7607f88f8f7b71545f5159590b8"
+      "file": "evidence/Pokemon-Journey-Gen1-4-Hard/generation-cup-1.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "generation-cup-1",
+      "sha256": "e1f714b2a553781f6b810442737a983cdf5e9d8e562abf4c0af08e3130ed7ece"
     },
     {
-      "file": "evidence/Pokemon-Journey-Gen1-9-Normal/variant-rules.json",
-      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "variant-rules",
-      "sha256": "19c385fd16348fdaea736c212582139283ed2b5cb7ff203c28afb2f81651cfb9"
+      "file": "evidence/Pokemon-Journey-Gen1-4-Hard/generation-cup-2.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "generation-cup-2",
+      "sha256": "1116637ef5778b769af682d818370b2417da4bafeca884584889e5726d8e3ba7"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-4-Hard/generation-cup-3.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "generation-cup-3",
+      "sha256": "a1994a51d974e873a92d4cb3dc019ec88620713a03eecfb01fad0e817113e79c"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-4-Hard/generation-cup-4.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "generation-cup-4",
+      "sha256": "47abe559bd0032d84397c3e91ce74f07f2a5d0219f21822b94b5fa8068274bc0"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Normal/pwt-world.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "pwt-world",
-      "sha256": "62c78e951b96c1e071128112995872b47baac27e0b23d33b4592857a666a0afc"
-    },
-    {
-      "file": "evidence/Pokemon-Journey-Gen1-9-Hard/gym-teams.json",
-      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "gym-teams",
-      "sha256": "b91c6f34944c1274778fe5273860f869d4ef829e17aa6a6c50f45e43e62ab0cf"
-    },
-    {
-      "file": "evidence/Pokemon-Journey-Gen1-9-Hard/variant-rules.json",
-      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "variant-rules",
-      "sha256": "71ea740bca4886aece6c4be478ddd8583c4171cfd30b24beea301bf5be19067a"
+      "sha256": "825a01d4cbf504363d71174d65e1f1ec22f29757318fa4ba50489a67df82eea2"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Hard/pwt-world.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "pwt-world",
-      "sha256": "14298221cdb60c8762ff0a74f2416c1379153240fce8143e1b109a99fe06a2f0"
+      "sha256": "ec830f3e88d8f61f58c7800dfdb68c5d592cac7295049b5d03aae3c695fac485"
     },
     {
-      "file": "evidence/common/abilities/abilities-slot-2.json",
+      "file": "evidence/common/move-restrictions/move-restrictions.json",
       "target": "common",
-      "kind": "abilities-slot-2",
-      "sha256": "4e3a0ad372e3c018b2f5a43045996935afc880875ba014356c32a6b3521a53e5"
+      "kind": "move-restrictions",
+      "sha256": "f1ea36aaa9ed008c2db963580ed3d300ac1889fc702d6d47e7e2933e0466815a"
     },
     {
-      "file": "evidence/common/badge_tabs/badge-tabs.json",
+      "file": "evidence/common/pwt-encore/pwt-encore.json",
       "target": "common",
-      "kind": "badge-tabs",
-      "sha256": "3ff8eeced4cdb773c88b8b75972883d16b52b52e941e21007c63c0773e56bb1c"
-    },
-    {
-      "file": "evidence/common/birth_confirmation/birth-confirmation.json",
-      "target": "common",
-      "kind": "birth-confirmation",
-      "sha256": "e2dd87b4635502f61502b393ff146cbf63cb2dd62fc8f3c57f53de9d7a5db0b2"
-    },
-    {
-      "file": "evidence/common/crossover_visits/crossover-visits.json",
-      "target": "common",
-      "kind": "crossover-visits",
-      "sha256": "e9839bdcca78da068544d60f7a175c1473b90be27c41dd6c3e74d80f1ec4a0a9"
-    },
-    {
-      "file": "evidence/common/field_rules/field-rules.json",
-      "target": "common",
-      "kind": "field-rules",
-      "sha256": "ee8361442c235a99b28fbf171661d49eeb8584b74d8659ee236c60b5a5781589"
-    },
-    {
-      "file": "evidence/common/galactic_chapter/galactic-chapter.json",
-      "target": "common",
-      "kind": "galactic-chapter",
-      "sha256": "ff754fbe3da002909ee6aac383cebd307d966729537129013e714de873fc8ba7"
-    },
-    {
-      "file": "evidence/common/initial-campaign-hoenn/initial-campaign-hoenn.json",
-      "target": "common",
-      "kind": "initial-campaign-hoenn",
-      "sha256": "2fe4c23b2cfc25074a34befe611811f2797ba743b596db1c3eeaaeb43d4bcab0"
-    },
-    {
-      "file": "evidence/common/initial-campaign-kanto/initial-campaign-kanto.json",
-      "target": "common",
-      "kind": "initial-campaign-kanto",
-      "sha256": "d47fbee0e38ab2efa822bd60b52f056f28a66ec5fbf7dc64f31507165dbbb9de"
-    },
-    {
-      "file": "evidence/common/item-menu-actions/item-menu-actions.json",
-      "target": "common",
-      "kind": "item-menu-actions",
-      "sha256": "b2a16869ce466d19a8379ec1b5cee8f1a403958582bf04ba276bbf276b24637a"
-    },
-    {
-      "file": "evidence/common/item-menu-alola-stone/item-menu-alola-stone.json",
-      "target": "common",
-      "kind": "item-menu-alola-stone",
-      "sha256": "45a22619a56892575066bd1fa01630001e62b556ae8a8c5e0a590704e8302df7"
-    },
-    {
-      "file": "evidence/common/item-menu-gimmighoul/item-menu-gimmighoul.json",
-      "target": "common",
-      "kind": "item-menu-gimmighoul",
-      "sha256": "34102f1272ce421ac56e04fc6feae5d068ff7dae97aa9cfe5595bf6292be555d"
-    },
-    {
-      "file": "evidence/common/item-menu-kadabra/item-menu-kadabra.json",
-      "target": "common",
-      "kind": "item-menu-kadabra",
-      "sha256": "90e14ecc5f9a742c721f6e54bc57157d8e7eaf9114d760a12e38f0c071f7113a"
-    },
-    {
-      "file": "evidence/common/item-menu-onix/item-menu-onix.json",
-      "target": "common",
-      "kind": "item-menu-onix",
-      "sha256": "c1ecb0e85e3edf59c24047fabc127cdcc752a2424c4a4ee461ddd98de9169629"
-    },
-    {
-      "file": "evidence/common/item-menu-pawmo/item-menu-pawmo.json",
-      "target": "common",
-      "kind": "item-menu-pawmo",
-      "sha256": "fced3238e55d9a478a364611a4580980a8f2d8dbb3157055341dc8113f350293"
-    },
-    {
-      "file": "evidence/common/league-kanto/league-kanto.json",
-      "target": "common",
-      "kind": "league-kanto",
-      "sha256": "921533254e76330f68927e5eeabed681c80f180441722f37249f45afd1bfd2ce"
-    },
-    {
-      "file": "evidence/common/mega_reversion/mega-reversion.json",
-      "target": "common",
-      "kind": "mega-reversion",
-      "sha256": "46a4d656438699cf6ab50919279fbe16091811d2e462fc234e6fb25f594b02d3"
-    },
-    {
-      "file": "evidence/common/modern_bag/modern-bag.json",
-      "target": "common",
-      "kind": "modern-bag",
-      "sha256": "75fee77ce0f8e5ed32f0fa5f76ac95ad9f2c334360120fd906c06705dcd134ce"
-    },
-    {
-      "file": "evidence/common/player_evolutions/player-evolutions.json",
-      "target": "common",
-      "kind": "player-evolutions",
-      "sha256": "8d5380fa1795e42e167290e915ff2f581f3cf3dc7820aa93002d09aa1101fde3"
-    },
-    {
-      "file": "evidence/common/protagonist-0/protagonist-0.json",
-      "target": "common",
-      "kind": "protagonist-0",
-      "sha256": "5b2e15003a9e2578ea168fe5827ecc417ca33c26a5992e6058614461b3964fed"
-    },
-    {
-      "file": "evidence/common/protagonist-1/protagonist-1.json",
-      "target": "common",
-      "kind": "protagonist-1",
-      "sha256": "66be87e77a15c983a6d754dfdd347e96af19c34f7b874bdc77b705e1136c864b"
-    },
-    {
-      "file": "evidence/common/protagonist-2/protagonist-2.json",
-      "target": "common",
-      "kind": "protagonist-2",
-      "sha256": "db3491cdf2eb6a2f072edbeb01be9fef9c3d41c982640a24d47375aa1f2dd6d7"
-    },
-    {
-      "file": "evidence/common/protagonist-3/protagonist-3.json",
-      "target": "common",
-      "kind": "protagonist-3",
-      "sha256": "58ca4bf6c97b7d440701ef200223770efc9877bf8e23e5b65f154ebd6b82b20c"
+      "kind": "pwt-encore",
+      "sha256": "8e44a5a6d1cde1ebd3fcf7a408c4da6501c9523ab231af9ded61f6a38d71012a"
     },
     {
       "file": "evidence/common/pwt-retirement/pwt-retirement.json",
       "target": "common",
       "kind": "pwt-retirement",
-      "sha256": "9de9f69031a3833d7e7661afed879b85113e0a07b0806cbadb1a08858ba6ebed"
+      "sha256": "99d27b91b1cfa7c5cc6023e9b4779087e9d3b6b5c767ea26e9aa4c075f9e83f4"
     },
     {
       "file": "evidence/common/pwt-stadium/pwt-stadium.json",
       "target": "common",
       "kind": "pwt-stadium",
-      "sha256": "2bf431abb5bcb454672f8d710a9999722167c95ebd280abede762279bffe2fe5"
-    },
-    {
-      "file": "evidence/common/registry/ability-item-registry.json",
-      "target": "common",
-      "kind": "ability-item-registry",
-      "sha256": "11f980a8929065bb478f6b38d3b6f7a826b370e1e7da7dc39db66701acce5765"
+      "sha256": "3e4ffbaf62b19a04596b50de60e25016ddd0fe1dd991e1fbd8d94526a3a7370a"
     },
     {
       "file": "evidence/common/reproduction/reproduction.json",
       "target": "common",
       "kind": "reproduction",
-      "sha256": "091ed0bcaed96e66808ab505ee82efebb026d99c67ecedaa9f3be1b98661a01a"
-    },
-    {
-      "file": "evidence/common/sharp_map/sharp-map.json",
-      "target": "common",
-      "kind": "sharp-map",
-      "sha256": "97a9c9f0a9b880e1dcb9d1f16c12129286074f5d6f61682abdb9446018fd0f8c"
+      "sha256": "22601fe19cc73e1ede0f956d592752ed8bde76120b0242117feb9ef02c23f6f5"
     },
     {
       "file": "evidence/common/stats/species-stats.json",
       "target": "common",
       "kind": "species-stats",
-      "sha256": "ad406a20a451f98b582e2fbc98bbd0c9f62dc69ea987b53c5219550bf70f7562"
-    },
-    {
-      "file": "evidence/common/surf_passages/surf-passages.json",
-      "target": "common",
-      "kind": "surf-passages",
-      "sha256": "24178dd205d564d58456d19e69feb32472cd4f8dc3a0f7a2ac11386729fcce5c"
+      "sha256": "85ab040b1b5339b04d735fb04469bb1441b3ec51653e455248dc828d3b53e913"
     }
   ]
 }

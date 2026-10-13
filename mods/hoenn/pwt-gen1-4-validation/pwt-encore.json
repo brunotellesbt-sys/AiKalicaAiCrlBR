@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "rom_sha256": "6d548ac57dae199a867a9392f9a9ba6d7feb5a6d9c2deaa05233268e85faa651",
+  "checks": [
+    {
+      "last_move": 0,
+      "failed_normally": true,
+      "invalid_move_assertion": false
+    },
+    {
+      "last_move": 65535,
+      "failed_normally": true,
+      "invalid_move_assertion": false
+    },
+    {
+      "last_move": 935,
+      "failed_normally": true,
+      "invalid_move_assertion": false
+    },
+    {
+      "last_move": 57,
+      "chosen_move": 57,
+      "encore_applied": true
+    },
+    {
+      "last_move": 57,
+      "chosen_move": 65535,
+      "encore_applied": true
+    }
+  ],
+  "no_history_fails_without_crashing": true,
+  "valid_encore_preserved": true,
+  "invalid_chosen_move_sentinel_safe": true,
+  "battle_state_and_script_arguments_are_fixtures": true
+}

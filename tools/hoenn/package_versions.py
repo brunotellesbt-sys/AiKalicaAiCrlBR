@@ -30,7 +30,13 @@ def package(source,output):
  r=dict(parent_rom_sha256=hashlib.sha256(base).hexdigest(),build_rules_offset=at,
         parent_header_hex=base[0xA0:0xBE].hex(),parent_rules_hex=base[at:at+4].hex(),
         variants=rows,all_other_bytes_identical=True,validated=False)
- if (source/'.journey-pwt-entrance-wait').exists():
+ if (source/'.journey-move-history-rules').exists():
+  from prepare_move_history_rules import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-pwt-encore-guard').exists():
+  from prepare_pwt_encore_guard import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-pwt-entrance-wait').exists():
   from prepare_pwt_entrance_wait import PRIOR,LAYER
   r['integration_layers']=PRIOR+[LAYER]
  (output/'versions.json').write_text(json.dumps(r,indent=2)+'\n');(output/'SHA256SUMS').write_text(''.join(row['sha256']+'  '+row['file']+'\n' for row in rows))

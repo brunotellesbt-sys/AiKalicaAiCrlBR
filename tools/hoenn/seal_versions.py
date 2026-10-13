@@ -23,9 +23,13 @@ def seal(source,validation,output,validation_scope='full'):
         proofs.append(dict(file=relative.as_posix(),target=target,kind=kind,sha256=hashlib.sha256(destination.read_bytes()).hexdigest()))
     for row in info['variants']:
         view=row['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba')
-        kinds=['gym-teams','variant-rules']
+        kinds=[] if validation_scope=='pwt-update' else ['gym-teams','variant-rules']
         if 'integration_layers' in info:kinds.append('pwt-world')
         for kind in kinds:add(validation/view/(kind+'.json'),row['file'],kind)
+        if (Path(source)/'.journey-move-history-rules').exists() and row['max_national']==493:
+            info['generation_cups_validated']=True
+            for generation in range(1,5):
+                add(validation/view/f'generation-cup-{generation}.json',row['file'],f'generation-cup-{generation}')
     for path in sorted((validation/'common').rglob('*.json')):
         report=json.loads(path.read_text())
         if report.get('passed') is True:

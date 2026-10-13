@@ -20,11 +20,11 @@ A entrega contém quatro ROMs GBA: Gen 1–4 Normal/Hard e Gen 1–9 Normal/Hard
 
 ## Escopo desta atualização
 
-Esta atualização foi solicitada com validação somente do PWT. O manifesto declara `validation_scope: pwt-update`; `validated` confirma esse escopo e a integridade das quatro ROMs, sem declarar uma validação completa das campanhas. Os relatórios adicionais concluídos antes dessa mudança de escopo permanecem identificados pela ROM testada. Uma tentativa de replay da Liga de Hoenn terminou em derrota da equipe de teste contra Phoebe e não foi usada como aprovação; ela não foi repetida após o pedido de limitar a validação ao PWT.
+Esta atualização valida o PWT e os problemas de Disable, Encore, Torment e PP solicitados em seguida. O manifesto declara `validation_scope: pwt-update`; `validated` confirma esse escopo e a integridade das quatro ROMs, sem declarar uma validação completa das campanhas. Os relatórios adicionais concluídos antes dessa mudança de escopo permanecem identificados pela ROM testada. Uma tentativa de replay da Liga de Hoenn terminou em derrota da equipe de teste contra Phoebe e não foi usada como aprovação; ela não foi repetida após o pedido de limitar a validação ao PWT.
 
 ## O que as evidências comprovam
 
-Os relatórios em `versions/evidence/` indicam o SHA-256 do alvo testado e distinguem os estados preparados. Os testes nativos usam mGBA e incluem equipes dos ginásios, limites de geração, habitats aquáticos, interfaces de início/mapa/Pokédex/cartão, transporte, missões, capítulo Galactic, Ligas, Mega/reversão, atributos e save/Continue. A reprodução compara os arquivos finais das 106 camadas com uma árvore limpa proveniente dos 30.038 arquivos verificados do upstream.
+Os relatórios atuais em `versions/evidence/` identificam o alvo exato para PWT e regressões de golpes. Os relatórios históricos, mantidos nos diretórios de cada módulo e identificados por sua ROM, usam mGBA e incluem equipes dos ginásios, limites de geração, habitats aquáticos, interfaces de início/mapa/Pokédex/cartão, transporte, missões, capítulo Galactic, Ligas, Mega/reversão, atributos e save/Continue. A reprodução compara os arquivos finais das 108 camadas com uma árvore limpa proveniente dos 30.038 arquivos verificados do upstream.
 
 As batalhas de missão usam deslocamento/progresso anterior preparados e, em alguns testes, atributos do jogador aumentados na memória do emulador. Os adversários, resultados e flags de vitória são nativos. Esses aumentos não alteram a ROM nem seus base stats. As equipes dos ginásios no DOCX são extrações do gerador nativo, sem esses aumentos.
 
@@ -42,4 +42,4 @@ Saves antigos não são compatíveis com a Bag ampliada. A ROM mantém o formato
 
 A alpha anterior de 64 camadas permanece preservada em `playable/`, com suas próprias evidências. Seus relatórios não são apresentados como testes das novas ROMs.
 
-O PWT atual passou por inspeção das 446 equipes elegíveis nas quatro edições, instanciação das 162 identidades na arena e torneios completos com partidas reais nas gerações 6 e 9. A apresentação é adaptada à GBA. A auditoria de todos os times canônicos de personagens modernos ainda está pendente; veja o documento do PWT.
+O PWT atual passou por inspeção das 446 equipes elegíveis nas quatro edições, instanciação das 162 identidades na arena e oito torneios Gen 1–4 completos (58 batalhas) e torneios completos nas gerações 6 e 9. Foram aprovados 65 cenários de histórico, restrições e PP, mais cinco de Encore; a auditoria de atributos atual conferiu as 91 Megas da referência, incluindo Mega Dimension. A apresentação é adaptada à GBA. A auditoria de todos os times canônicos de personagens modernos ainda está pendente; veja o documento do PWT.

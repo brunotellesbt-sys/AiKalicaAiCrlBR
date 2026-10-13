@@ -1,0 +1,1 @@
+Capturas anteriores às correções: geração 2 atingia a asserção de Encore com histórico inválido; geração 1 mostrou o controlador antigo insistindo em um golpe bloqueado por Disable. Não são evidências de aprovação das ROMs atuais.
