@@ -199,7 +199,7 @@ if (source/'.journey-league-completion').exists():
  assert [native('GetMonData2',party+j*abi[2],abi[105]) for j in range(6)]==identity
  assert native('GetMonData2',party,abi[7])==abi[68]
  assert native('GetMonData2',party,abi[65])==2
- def raw_get(flag):return bool(lib.read8(save()+4720+flag//8)&(1<<(flag&7)))
+ def raw_get(flag):return bool(lib.read8(save()+FLAG_OFFSET+flag//8)&(1<<(flag&7)))
  own_flags=(0x1AC2,0x1AB8) if kanto else (champion,game_clear)
  other_flags=(champion,game_clear) if kanto else (0x1AC2,0x1AB8)
  assert all(raw_get(f) for f in own_flags)

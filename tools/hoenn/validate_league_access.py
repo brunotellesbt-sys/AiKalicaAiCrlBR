@@ -24,7 +24,7 @@ exec(compile(bootstrap, str(ROOT / 'tools/hoenn/validate_abilities.py'), 'exec')
 
 
 def raw_flag(flag, enabled):
-    address = save() + 4720 + flag // 8
+    address = save() + FLAG_OFFSET + flag // 8
     value, mask = lib.read8(address), 1 << (flag & 7)
     lib.write8(address, value | mask if enabled else value & ~mask)
 

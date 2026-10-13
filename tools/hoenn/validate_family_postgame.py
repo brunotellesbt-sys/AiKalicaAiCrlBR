@@ -26,7 +26,7 @@ def special(name):
     return lib.read16(s['gSpecialVar_Result'])
 
 def rawflag(flag, value):
-    ptr = save() + 4720 + flag // 8
+    ptr = save() + FLAG_OFFSET + flag // 8
     old = lib.read8(ptr)
     lib.write8(ptr, old | (1 << (flag % 8)) if value else old & ~(1 << (flag % 8)))
 

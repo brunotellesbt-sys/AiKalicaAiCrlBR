@@ -26,7 +26,7 @@ def flag_id(name):
         return abi[111]
     return int(re.search(r'^#define\s+' + name + r'\s+(0x[0-9a-fA-F]+)', constants, re.M)[1], 16)
 def raw_flag(flag, enabled):
-    address = save() + 4720 + flag // 8
+    address = save() + FLAG_OFFSET + flag // 8
     value, mask = lib.read8(address), 1 << (flag & 7)
     lib.write8(address, value | mask if enabled else value & ~mask)
 def bank(flags, mask):

@@ -39,7 +39,7 @@ def snapshot():
     return bytes(lib.read8(party + i) for i in range(6 * abi[2]))
 
 def flags():
-    return bytes(lib.read8(save() + 4720 + i) for i in range(872))
+    return bytes(lib.read8(save() + FLAG_OFFSET + i) for i in range(872))
 
 def points():
     return lib.read16(lib.read32(s['gSaveBlock2Ptr']) + pabi[6])
@@ -68,6 +68,8 @@ def event(label):
 for i in range(6 * abi[2]): lib.write8(party + i, 0)
 lib.write8(s['gPartiesCount'], 0)
 species = [658, 149, 376, 121, 445, 637]
+if 'gJourneyBuildRules' in s and lib.read16(s['gJourneyBuildRules'])==493:
+    species = [260, 149, 376, 121, 445, 6]
 levels = [12, 75, 30, 5, 100, 20]
 for i, (mon, level) in enumerate(zip(species, levels)):
     assert native('ScriptGiveMon', mon, level, 0) == 0

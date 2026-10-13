@@ -16,7 +16,7 @@ native('DisableWildEncounters',1)
 homes=json.loads((source/'.journey-birth').read_text())['homes']
 map_names={json.loads(p.read_text())['id']:p.parent.name for p in (source/'data/maps').glob('*/map.json')}
 def data():return bytes(lib.read8(save()+12+i) for i in range(8))
-flags_before=bytes(lib.read8(save()+4720+i) for i in range((0x1B3F+8)//8))
+flags_before=bytes(lib.read8(save()+FLAG_OFFSET+i) for i in range((0x1B3F+8)//8))
 cases=[]
 for gender in [0,1]:
  lib.write8(lib.read32(s['gSaveBlock2Ptr'])+abi[32],gender) # ABI's playerGender offset is stable.
@@ -26,7 +26,7 @@ for gender in [0,1]:
   expected='LittlerootTown_MaysHouse_2F' if home['index']==17 and gender==1 else map_names[home['bedroom_map']]
   g,n=map_id(expected)
   assert data()==bytes([g,n,255,0,6,0,6,0]),(home['city'],gender,data(),expected)
-  assert bytes(lib.read8(save()+4720+i) for i in range(len(flags_before)))==flags_before
+  assert bytes(lib.read8(save()+FLAG_OFFSET+i) for i in range(len(flags_before)))==flags_before
   print('Saving home destination',gender,home['city'],flush=True)
   assert native('TrySavingData',0,max_frames=6000)==1
   step(30)

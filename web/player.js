@@ -6,16 +6,28 @@ const dataPath = 'emulator/';
 let launched = false;
 let launching = false;
 let objectUrl;
-
-async function sha256(bytes) {
-  return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)),
-    byte => byte.toString(16).padStart(2, '0')).join('');
-}
-
-async function release() {
-  const response = await fetch('games/release.json', { cache: 'no-store' });
-  if (!response.ok) throw new Error('The release is unavailable. You can open a downloaded .gba file instead.');
+const edition = document.querySelector('#edition');
+let editions;
+let editionError;
+const editionsReady = fetch('games/versions.json', {cache: 'no-store'}).then(async response => {
+  if (response.status === 404) return;
+  if (!response.ok) throw new Error('The edition list could not load. Please retry.');
   const info = await response.json();
+  if (info.validated !== true || !Array.isArray(info.variants) || info.variants.length !== 4) {
+    throw new Error('The four editions are unavailable.');
+  }
+  for (const row of info.variants) validateRelease(row);
+  const names = new Set(info.variants.map(row => row.file));
+  if (names.size !== 4 || [...edition.options].some(option => !names.has(option.value))) {
+    throw new Error('The edition list is invalid.');
+  }
+  editions = info.variants;
+  document.querySelector('#edition-label').hidden = false;
+  document.querySelector('#edition-description').hidden = false;
+  updateDownload();
+}).catch(error => { editionError = error; status.textContent = error.message; });
+
+function validateRelease(info) {
   if (!/^Pokemon-Journey-[A-Za-z0-9-]+\.gba$/.test(info.file) ||
       !/^[a-f0-9]{64}$/.test(info.sha256) || !Number.isInteger(info.bytes) ||
       info.bytes < 192 || info.bytes > 32 * 1024 * 1024) {
@@ -23,12 +35,33 @@ async function release() {
   }
   return info;
 }
+function updateDownload() {
+  const anchor = document.querySelector('#download-rom');
+  if (editions) anchor.href = 'games/' + edition.value;
+}
+edition.addEventListener('change', updateDownload);
+
+async function sha256(bytes) {
+  return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)),
+    byte => byte.toString(16).padStart(2, '0')).join('');
+}
+
+async function release() {
+  await editionsReady;
+  if (editionError) throw editionError;
+  if (editions) return editions.find(row => row.file === edition.value);
+  const response = await fetch('games/release.json', { cache: 'no-store' });
+  if (!response.ok) throw new Error('The release is unavailable. You can open a downloaded .gba file instead.');
+  const info = await response.json();
+  return validateRelease(info);
+}
 
 async function launch(localFile) {
   if (launched || launching) return;
   launching = true;
   play.disabled = true;
   fileInput.disabled = true;
+  edition.disabled = true;
   status.textContent = 'Loading and checking the game…';
   try {
     let bytes;
@@ -42,7 +75,9 @@ async function launch(localFile) {
       const hash = await sha256(bytes);
       // A matching downloaded release uses the same save slot as Play.
       try { expected = await release(); } catch (_) { expected = null; }
-      name = expected && hash === expected.sha256 ? expected.file : 'Local-' + hash + '.gba';
+      const matching = editions?.find(row => row.sha256 === hash) || (expected && hash === expected.sha256 ? expected : null);
+      name = matching ? matching.file : 'Local-' + hash + '.gba';
+      if (matching && editions) { edition.value = matching.file; updateDownload(); }
     } else {
       expected = await release();
       const response = await fetch('games/' + expected.file + '?sha256=' + expected.sha256);
@@ -88,6 +123,7 @@ async function launch(localFile) {
     if (objectUrl) { URL.revokeObjectURL(objectUrl); objectUrl = undefined; }
     play.disabled = false;
     fileInput.disabled = false;
+    edition.disabled = false;
     fileInput.value = '';
   } finally {
     launching = false;

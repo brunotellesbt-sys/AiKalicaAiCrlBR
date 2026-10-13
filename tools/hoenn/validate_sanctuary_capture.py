@@ -15,7 +15,7 @@ native('FlagSet',abi[50]);assert native('AddBagItem',abi[64],1)
 def badges(k,h):
  for count,start in [(k,0x1AB0),(h,abi[63])]:
   for i in range(8):
-   f=start+i;a=save()+4720+f//8;v=lib.read8(a);mask=1<<(f&7);lib.write8(a,v|mask if i<count else v&~mask)
+   f=start+i;a=save()+FLAG_OFFSET+f//8;v=lib.read8(a);mask=1<<(f&7);lib.write8(a,v|mask if i<count else v&~mask)
 def talk():
  x,y=cap['position'];warp(cap['map'],x,y+1);native('SetPlayerAvatarTransitionFlags',1);step(30);step(1,64);step(15);step(1,1);step(35)
 badges(8,7);talk();picture('special-pecharunt-locked')

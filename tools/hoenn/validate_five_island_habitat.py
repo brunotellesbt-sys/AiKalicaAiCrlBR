@@ -7,7 +7,7 @@ r=json.loads((source/'.journey-five-island-habitat').read_text());party=s['gPart
 for i in range(6*abi[2]):lib.write8(party+i,0)
 lib.write8(s['gPartiesCount'],0);assert native('ScriptGiveMon',abi[59],6,0)==0
 for f in list(range(0x1AB0,0x1AB8))+[lib.read16(s['gBadgeFlags']+2*i) for i in range(8)]:
- address=save()+4720+f//8;lib.write8(address,lib.read8(address)&~(1<<(f&7)))
+ address=save()+FLAG_OFFSET+f//8;lib.write8(address,lib.read8(address)&~(1<<(f&7)))
 warp('FiveIsland_Frlg',18,7);native('SetPlayerAvatarTransitionFlags',1);native('DisableWildEncounters',True);step(30)
 for x in range(17,12,-1):
  for _ in range(100):

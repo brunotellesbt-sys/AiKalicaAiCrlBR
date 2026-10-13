@@ -16,10 +16,10 @@ missions = stories['missions']
 constants = (source / 'include/constants/flags.h').read_text()
 def flag_id(name): return int(re.search(r'^#define\s+' + name + r'\s+(0x\w+)', constants, re.M)[1], 16)
 def rawflag(flag, enabled):
-    address = save() + 4720 + flag // 8
+    address = save() + FLAG_OFFSET + flag // 8
     value, mask = lib.read8(address), 1 << (flag & 7)
     lib.write8(address, value | mask if enabled else value & ~mask)
-def flag(flag): return bool(lib.read8(save() + 4720 + flag // 8) & (1 << (flag & 7)))
+def flag(flag): return bool(lib.read8(save() + FLAG_OFFSET + flag // 8) & (1 << (flag & 7)))
 kanto_flags = list(range(0x1AB0, 0x1AB8))
 hoenn_flags = [lib.read16(s['gBadgeFlags'] + i * 2) for i in range(8)]
 for own, chosen in [(kanto_flags, {0, 2, 4, 7}), (hoenn_flags, {1, 3, 4, 7})]:
@@ -49,7 +49,8 @@ if (source/'.journey-aqua-episodes').exists():
     rawflag(0x500+32,True)
 for i in range(6 * abi[2]): lib.write8(party + i, 0)
 lib.write8(s['gPartiesCount'], 0)
-for i, mon in enumerate([658, 149, 376]):
+fixture_team=[260,149,376] if 'gJourneyBuildRules' in s and lib.read16(s['gJourneyBuildRules'])==493 else [658,149,376]
+for i, mon in enumerate(fixture_team):
     assert native('ScriptGiveMon', mon, 100, 0) == 0
     for slot in range(4): native('ScriptSetMonMoveSlot', i, abi[142] if slot == 0 else abi[76] if slot == 1 else 0, slot)
 scratch = s['gStringVar4'] + 800

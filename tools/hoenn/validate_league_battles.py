@@ -25,10 +25,13 @@ sys.argv = [sys.argv[0], '--source', str(run_options.source), '--library', str(r
 bootstrap = (ROOT / 'tools/hoenn/validate_abilities.py').read_text().split('\nability_field,')[0]
 exec(compile(bootstrap, str(ROOT / 'tools/hoenn/validate_abilities.py'), 'exec'))
 kanto = run_options.region == 'kanto'
+if (source/'.journey-galactic-chapter').exists():
+    from campaign_fixture import complete_campaign
+    league_story_fixture=complete_campaign(source,native)
 
 
 def raw_flag(flag, enabled):
-    address = save() + 4720 + flag // 8
+    address = save() + FLAG_OFFSET + flag // 8
     value, mask = lib.read8(address), 1 << (flag & 7)
     lib.write8(address, value | mask if enabled else value & ~mask)
 
@@ -37,6 +40,8 @@ for flags, enabled in [(range(0x1AB0,0x1AB8), kanto),
                        ([lib.read16(s['gBadgeFlags'] + 2*i) for i in range(8)], not kanto)]:
     for flag in flags:
         raw_flag(flag, True if (source/'.journey-sixteen-badge-leagues').exists() else enabled)
+if (source/'.journey-galactic-chapter').exists():
+    assert native('JourneyGalacticLeagueReady')==1, 'Completed-story League fixture is incomplete'
 champion = abi[111] - 0x2A + 0x1F
 game_clear = abi[111] - 0x2A + 4
 for flag, enabled in [(champion,kanto), (game_clear,kanto), (0x1AC2,not kanto), (0x1AB8,not kanto)]:

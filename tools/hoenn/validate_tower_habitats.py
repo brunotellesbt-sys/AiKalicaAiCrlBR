@@ -22,7 +22,7 @@ phases = []
 for phase, count in [(0, 0), (1, 3), (2, 6)]:
     for flags in [list(range(0x1AB0, 0x1AB8)), [lib.read16(s['gBadgeFlags'] + i * 2) for i in range(8)]]:
         for i, flag in enumerate(flags):
-            address = save() + 4720 + flag // 8; mask = 1 << (flag & 7)
+            address = save() + FLAG_OFFSET + flag // 8; mask = 1 << (flag & 7)
             old = lib.read8(address); lib.write8(address, old | mask if i < count else old & ~mask)
     assert native('JourneyWildPhase') == phase
     for root, section in [(104, 'MAPSEC_POKEMON_TOWER'), (29, 'MAPSEC_DIGLETTS_CAVE')]:

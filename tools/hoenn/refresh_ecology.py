@@ -1,11 +1,21 @@
 """Compile updated allocations using the same weighted native ecology writer."""
-import json,textwrap
+import copy,json,textwrap
 from pathlib import Path
 from prepare_ecology import FIELDS,LAND_RATES,WATER_RATES,weighted_slots
+from aquatic_species import aquatic_ids
 ROOT=Path(__file__).resolve().parents[2]
-def compile_tables(source,locations):
- catalog=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_text());species={int(i):s for i,s in catalog['species'].items()};habitats={h['section']:h for h in locations};families={f['root']:f for h in locations for f in h['families']};water_roots={r for r in families if 12 in species[r]['types']}
+def compile_tables(source,locations,restore_native_water=False):
+ catalog=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_text());species={int(i):s for i,s in catalog['species'].items()};habitats={h['section']:h for h in locations};families={f['root']:f for h in locations for f in h['families']};water_roots=set(families)&aquatic_ids(catalog['species'])
  encounters=json.loads((Path(source)/'src/data/wild_encounters.json').read_text());rows=encounters['wild_encounter_groups'][0]['encounters'];outputs={}
+ if restore_native_water:
+  original=json.loads((Path(source)/'.journey-five-island-habitat').read_text())['field_slots']
+  template=next(e for e in rows if e['map']=='MAP_ROUTE108')
+  for row in rows:
+   for field in ['water_mons','fishing_mons']:
+    if field in original.get(row['map'],{}) and field not in row:row[field]=copy.deepcopy(template[field])
+   if row['map']=='MAP_FOUR_ISLAND':
+    native=json.loads((ROOT/'tools/hoenn/data/four-island-water-fields.json').read_text())['fields']
+    row.update(copy.deepcopy(native))
  def stage(p,raw):outputs[p]=raw.encode() if isinstance(raw,str) else raw
  # Reuse the established native slot weights, family stages and fishing rates.
  code=(ROOT/'tools/hoenn/prepare_ecology.py').read_text();code=code.split(' by_map={m:h for h in habitats.values()',1)[1];code=' by_map={m:h for h in habitats.values()'+code;code=code.split(" p='src/journey_wild.c'",1)[0]

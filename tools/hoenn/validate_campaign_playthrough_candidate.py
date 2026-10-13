@@ -21,7 +21,7 @@ def valid_save():return 0x02000000<=save()<0x02040000
 def map_name():return by_location.get(location()) if valid_save() else None
 def badge_counts():
     bank=[lib.read16(s['gBadgeFlags']+i*2) for i in range(8)]
-    def count(flags):return sum(bool(lib.read8(save()+4720+f//8)&(1<<(f&7))) for f in flags)
+    def count(flags):return sum(bool(lib.read8(save()+FLAG_OFFSET+f//8)&(1<<(f&7))) for f in flags)
     return dict(kanto=count(range(0x1AB0,0x1AB8)),hoenn=count(bank))
 def checkpoint(label):
     picture(label)

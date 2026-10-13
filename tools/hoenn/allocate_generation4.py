@@ -1,13 +1,15 @@
 """Allocate the actual Gen 1–4 families once per habitat, retaining aquatic roots."""
 from pathlib import Path
 import copy,json
+from aquatic_species import aquatic_ids
 ROOT=Path(__file__).resolve().parents[2]
 def allocate(source):
  source=Path(source);locations=copy.deepcopy(json.loads((source/'.journey-five-island-habitat').read_text())['locations_data']);catalog=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_text())['species']
  families={f['root']:copy.deepcopy(f) for l in locations for f in l['families'] if any(s['national_dex']<=493 for s in f['species'])}
  original={f['root']:l['section'] for l in locations for f in l['families']}
  for f in families.values():f['species']=[s for s in f['species'] if s['national_dex']<=493]
- aquatic=lambda f:12 in catalog[str(f['root'])]['types']
+ swimmers=aquatic_ids(catalog)
+ aquatic=lambda f:f['root'] in swimmers
  # Keep families with fixed story encounters in their established habitat.
  protected={96,104,131,201,352,446}
  for l in locations:l['families']=[]

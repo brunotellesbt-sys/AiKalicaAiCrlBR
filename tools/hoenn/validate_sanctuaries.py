@@ -21,7 +21,7 @@ r=json.loads((source/'.journey-sanctuaries').read_text());checks=[]
 for k,h in [(0,0),(8,0),(0,8),(8,7),(7,8),(8,8)]:
  for count,start in [(k,0x1AB0),(h,abi[63])]:
   for i in range(8):
-   f=start+i;a=save()+4720+f//8;v=lib.read8(a);mask=1<<(f&7);lib.write8(a,v|mask if i<count else v&~mask)
+   f=start+i;a=save()+FLAG_OFFSET+f//8;v=lib.read8(a);mask=1<<(f&7);lib.write8(a,v|mask if i<count else v&~mask)
  assert bool(native('JourneySpecialUnlocked'))==(k==h==8),(k,h)
 print('Both regional badge banks gate captures at exactly 16 badges',flush=True)
 for site in r['sites']:

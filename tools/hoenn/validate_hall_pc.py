@@ -18,7 +18,7 @@ champion=abi[111]-0x2A+0x1F;game_clear=abi[111]-0x2A+4
 native('EnableNationalPokedex')
 
 def set_flag(flag,enabled):
- address=save()+4720+flag//8;old=lib.read8(address);mask=1<<(flag&7)
+ address=save()+FLAG_OFFSET+flag//8;old=lib.read8(address);mask=1<<(flag&7)
  lib.write8(address,old|mask if enabled else old&~mask)
 
 def symbols(name):
