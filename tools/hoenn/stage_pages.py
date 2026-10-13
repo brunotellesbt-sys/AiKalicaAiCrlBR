@@ -18,7 +18,8 @@ def stage(output):
         release=verify_versions(versions)
         verify_browser(release)
         for name in [row['file'] for row in release['variants']]+['versions.json']:
-            shutil.copyfile(versions/name,games/name)
+            download=ROOT/'roms'/name if name.endswith('.gba') else versions/name
+            shutil.copyfile(download,games/name)
         shutil.copytree(ROOT/'docs',output/'docs',dirs_exist_ok=True)
         shutil.copyfile(versions/'START-HERE.md',output/'START-HERE.md')
     (output/'.nojekyll').write_text('')

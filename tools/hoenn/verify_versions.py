@@ -40,6 +40,11 @@ def verify(directory,require_seal=True):
         differences=[i for i,(a,b) in enumerate(zip(raw,parent)) if a!=b]
         assert differences==row['patched_byte_offsets']
         assert all(at<=i<at+4 or 0xA0<=i<0xAC or i==0xBD for i in differences)
+    if directory.resolve()==(ROOT/'mods/hoenn/versions').resolve():
+        assert {p.name for p in (ROOT/'roms').glob('*.gba')}==set(VARIANTS), 'roms/ must contain exactly four current editions'
+        for row in info['variants']:
+            assert digest((ROOT/'roms'/row['file']).read_bytes())==row['sha256'], ('Outdated roms/ download',row['file'])
+        assert (ROOT/'roms/SHA256SUMS').read_bytes()==(directory/'SHA256SUMS').read_bytes()
     proofs=info['proofs'];assert proofs,'Missing native evidence'
     tested=set();common=set()
     for proof in proofs:

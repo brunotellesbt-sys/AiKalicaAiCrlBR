@@ -2,6 +2,8 @@
 
 Escolha uma edição e comece um save novo. A Bag ampliada muda o formato do save; saves antigos não são compatíveis com esta entrega. Todas as edições possuem Kanto, Hoenn, Sevii e o capítulo Galactic.
 
+No repositório, as quatro ROMs atuais também ficam em [`roms/`](../../../roms/README.md), atualizadas automaticamente pelo empacotamento e conferidas pela CI.
+
 | Edição | Pokémon | IVs dos oponentes importantes |
 |---|---|---|
 | [Gen 1–4 Normal](Pokemon-Journey-Gen1-4-Normal.gba) | Até #493, incluindo Megas e formas regionais correspondentes | Aleatórios |
