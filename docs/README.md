@@ -4,6 +4,8 @@ Kanto, Hoenn e Sevii formam um mundo conectado por rotas marítimas. O jogo e se
 
 As quatro edições são Gen 1–4 Normal, Gen 1–4 Hard, Gen 1–9 Normal e Gen 1–9 Hard. As edições até a geração 4 permitem Megas e formas regionais das espécies com número nacional até 493, mas não suas evoluções de gerações posteriores.
 
+As quatro ROMs atuais ficam em [`roms/`](../roms/README.md), atualizadas pelo empacotamento. O pacote com guias está em [ZIP](../mods/hoenn/versions/Pokemon-Journey-Four-Editions.zip).
+
 - [História e missões obrigatórias](historia-e-missoes.md)
 - [Batalhas, níveis e regras](batalhas-e-regras.md)
 - [Encontros por local — Gen 1–4](encontros-gen1-4.md)

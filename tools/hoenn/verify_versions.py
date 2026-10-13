@@ -40,6 +40,11 @@ def verify(directory,require_seal=True):
         differences=[i for i,(a,b) in enumerate(zip(raw,parent)) if a!=b]
         assert differences==row['patched_byte_offsets']
         assert all(at<=i<at+4 or 0xA0<=i<0xAC or i==0xBD for i in differences)
+    if directory.resolve()==(ROOT/'mods/hoenn/versions').resolve():
+        assert {p.name for p in (ROOT/'roms').glob('*.gba')}==set(VARIANTS), 'roms/ must contain exactly four current editions'
+        for row in info['variants']:
+            assert digest((ROOT/'roms'/row['file']).read_bytes())==row['sha256'], ('Outdated roms/ download',row['file'])
+        assert (ROOT/'roms/SHA256SUMS').read_bytes()==(directory/'SHA256SUMS').read_bytes()
     proofs=info['proofs'];assert proofs,'Missing native evidence'
     tested=set();common=set()
     for proof in proofs:
@@ -51,7 +56,23 @@ def verify(directory,require_seal=True):
         if kind=='reproduction':
             assert len(report['layers'])==100 and not report['differences']
         else:assert report['rom_sha256']==expected,(target,kind,'Stale evidence')
-        if target=='common':common.add(kind)
+        if target=='common':
+            common.add(kind)
+            if kind=='item-menu-actions':
+                assert report['stone_animation_completed'] and report['stone_consumed_once']
+                assert report['reusable_tm_taught_to_two_pokemon'] and len(report['learned'])==2
+                assert report['item_activation_and_confirmation_are_controller_input']
+                assert report['flash_reload_preserves_evolved_species_and_item_quantities']
+            elif kind.startswith('item-menu-'):
+                assert report['animation_completed'] and report['used_item_consumed_once']
+                assert report['item_activation_and_confirmation_are_controller_input']
+                assert report['flash_reload_preserves_evolved_species_and_item_quantities']
+                if report['case']=='onix':assert report['held_item_after']==0 and report['level']==30
+            elif kind.startswith('initial-campaign-'):
+                assert kind=='initial-campaign-'+report['starting_region']
+                assert report['controller_only'] and not report['full_campaign_playthrough']
+                assert not any(report[key] for key in ['ram_writes','script_injection','synthetic_badges','boosted_stats','disabled_wild_encounters'])
+                assert len(report['checkpoints'])>=9 and report['battles']
         else:
             cap,hard=VARIANTS[target];assert report['max_national']==cap
             if kind=='gym-teams':
@@ -64,7 +85,9 @@ def verify(directory,require_seal=True):
     assert tested=={(name,kind) for name in VARIANTS for kind in ['gym-teams','variant-rules']}
     assert {'galactic-chapter','league-kanto','league-hoenn','mega-reversion','surf-passages','sharp-map','birth-confirmation','reproduction',
             'badge-tabs','crossover-visits','protagonist-0','protagonist-1','protagonist-2','protagonist-3',
-            'modern-bag','species-stats','ability-item-registry','player-evolutions','abilities-slot-2','field-rules'}<=common
+            'modern-bag','species-stats','ability-item-registry','player-evolutions','abilities-slot-2','field-rules',
+            'item-menu-actions','item-menu-alola-stone','item-menu-kadabra','item-menu-onix',
+            'item-menu-pawmo','item-menu-gimmighoul','initial-campaign-kanto','initial-campaign-hoenn'}<=common
     print('Verified four ROMs and',len(proofs),'native/reproduction reports')
     return info
 

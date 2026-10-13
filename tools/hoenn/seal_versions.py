@@ -40,10 +40,18 @@ def seal(source,validation,output):
         for name in [r['file'] for r in info['variants']]+['versions.json','SHA256SUMS']:
             if (output/name).exists():z.write(output/name,name)
         readme=(output/'START-HERE.md').read_text().replace('../../../docs/','docs/').replace('../INTEGRATION-STATUS.md','docs/VALIDATION.md')
+        readme=readme.replace('../../../roms/README.md','https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/tree/main/roms')
         z.writestr('START-HERE.md',readme)
         for proof in info['proofs']:z.write(output/proof['file'],proof['file'])
         for path in sorted((ROOT/'docs').rglob('*')):
-            if path.is_file():z.write(path,'docs/'+path.relative_to(ROOT/'docs').as_posix())
+            if not path.is_file():continue
+            name='docs/'+path.relative_to(ROOT/'docs').as_posix()
+            if path==ROOT/'docs/README.md':
+                guide=path.read_text().replace('../roms/README.md','https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/tree/main/roms')
+                guide=guide.replace('[ZIP](../mods/hoenn/versions/Pokemon-Journey-Four-Editions.zip)','[instruções das quatro edições](../START-HERE.md)')
+                guide=guide.replace('../mods/hoenn/INTEGRATION-STATUS.md','VALIDATION.md')
+                z.writestr(name,guide)
+            else:z.write(path,name)
         z.write(ROOT/'mods/hoenn/INTEGRATION-STATUS.md','docs/VALIDATION.md')
     return archive
 

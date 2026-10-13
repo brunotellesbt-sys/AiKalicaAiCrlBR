@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['web/**', 'docs/**', 'mods/hoenn/playable/**', 'mods/hoenn/versions/**', 'tools/hoenn/stage_pages.py', 'tools/hoenn/verify_versions.py', '.github/workflows/pages.yml']
+    paths: ['web/**', 'docs/**', 'roms/**', 'mods/hoenn/playable/**', 'mods/hoenn/versions/**', 'tools/hoenn/stage_pages.py', 'tools/hoenn/verify_versions.py', '.github/workflows/pages.yml']
 permissions:
   contents: read
   pages: write

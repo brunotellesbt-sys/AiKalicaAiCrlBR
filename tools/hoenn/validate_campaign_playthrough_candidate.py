@@ -127,7 +127,17 @@ if region=='kanto':
     assert lib.read8(s['gPartiesCount'])==1
     walk_local((6,8));step(180);settle()
     checkpoint('07-first-rival-battle')
-    assert battles and all(b['outcome']==1 for b in battles),battles
+    # The original tutorial advances after either a win or a loss and heals
+    # the party. Require that actual story result, rather than a fixture win.
+    assert len(battles)==1 and battles[0]['outcome'] in [1,2],battles
+    import re
+    flags=(source/'include/constants/flags.h').read_text()
+    flag=int(re.search(r'^#define\s+FLAG_BEAT_RIVAL_IN_OAKS_LAB\s+(0x[0-9A-Fa-f]+)',flags,re.M)[1],16)
+    assert lib.read8(save()+FLAG_OFFSET+flag//8)&(1<<(flag&7)), 'Lab tutorial did not complete'
+    assert not locked()
+    walk_local((6,11));action(128,24,180);settle()
+    assert map_name()=='PalletTown_Frlg',map_name()
+    checkpoint('08-lab-tutorial-completed-and-exited')
 
 else:
     walk_local((8,2));action(16,24,180);settle()
@@ -155,12 +165,12 @@ else:
 
 
 
-report=dict(rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),
+report=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),
     starting_region=region,controller_only=True,ram_writes=False,script_injection=False,
     synthetic_badges=False,boosted_stats=False,disabled_wild_encounters=False,
     checkpoints=checkpoints,battles=battles,input_log=inputs,full_campaign_playthrough=False,
     runner_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
     status='initial_segment_passed_campaign_incomplete',next_required='Original starter, family gifts, regional missions, sixteen gyms and both Hall of Fame')
-(args.output/'campaign-playthrough.json').write_text(json.dumps(report,indent=2)+'\n')
+(args.output/('initial-campaign-'+region+'.json')).write_text(json.dumps(report,indent=2)+'\n')
 lib.stop()
 print('Controller-only initial segment:',region,checkpoints,flush=True)
