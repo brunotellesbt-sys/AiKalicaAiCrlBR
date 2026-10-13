@@ -1,0 +1,11 @@
+Room ready EverGrandeCity_SidneysRoom (6, 7)
+Victory {'trainer': 261, 'name': 'EverGrandeCity_SidneysRoom', 'attacks': 10, 'ash_after_ko': True}
+Room ready EverGrandeCity_PhoebesRoom (6, 7)
+Traceback (most recent call last):
+  File "/workspace/AiKalicaAiCrlBR/tools/hoenn/validate_league_completion.py", line 152, in <module>
+    wins.append(battle(trainers[i],room))
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/AiKalicaAiCrlBR/tools/hoenn/validate_league_completion.py", line 132, in battle
+    assert lib.read8(s['gBattleOutcome'])==1, ('Battle lost',name,expected,lib.read8(s['gBattleOutcome']))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Battle lost', 'EverGrandeCity_PhoebesRoom', 262, 2)

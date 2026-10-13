@@ -4,9 +4,14 @@ from pathlib import Path
 from package_versions import package
 from verify_versions import verify,ROOT
 
-def seal(source,validation,output):
+def seal(source,validation,output,validation_scope='full'):
     validation=Path(validation);output=Path(output)
     info=package(source,output);proofs=[]
+    assert validation_scope in ('full','pwt-update')
+    if validation_scope=='pwt-update':
+        assert 'integration_layers' in info
+        info['validation_scope']=validation_scope
+        info['full_campaign_playthrough']=False
     # This directory contains only generated evidence from this packager.
     # Replacing it prevents unreferenced earlier-ROM reports from shipping.
     if (output/'evidence').exists():shutil.rmtree(output/'evidence')
@@ -18,7 +23,9 @@ def seal(source,validation,output):
         proofs.append(dict(file=relative.as_posix(),target=target,kind=kind,sha256=hashlib.sha256(destination.read_bytes()).hexdigest()))
     for row in info['variants']:
         view=row['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba')
-        for kind in ['gym-teams','variant-rules']:add(validation/view/(kind+'.json'),row['file'],kind)
+        kinds=['gym-teams','variant-rules']
+        if 'integration_layers' in info:kinds.append('pwt-world')
+        for kind in kinds:add(validation/view/(kind+'.json'),row['file'],kind)
     for path in sorted((validation/'common').rglob('*.json')):
         report=json.loads(path.read_text())
         if report.get('passed') is True:
@@ -57,4 +64,5 @@ def seal(source,validation,output):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--source',required=True);p.add_argument('--validation',required=True);p.add_argument('--output',required=True)
-    a=p.parse_args();print(seal(a.source,a.validation,a.output))
+    p.add_argument('--validation-scope',choices=['full','pwt-update'],default='full')
+    a=p.parse_args();print(seal(a.source,a.validation,a.output,a.validation_scope))

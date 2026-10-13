@@ -10,7 +10,12 @@ report=json.loads((source/'.journey-eastern-sea-union').read_text())
 names=[r['map'] for r in report['rectangles']];allowed=set();walk_prefix='eastern-union'
 # Battles are outside this terrain check. Suppress sightings using defeated flags.
 trainer_count=int(re.search(r'^#define\s+TRAINERS_COUNT\s+(\d+)',(source/'include/constants/opponents.h').read_text(),re.M)[1])
-assert trainer_count<=int(re.search(r'^#define\s+MAX_TRAINERS_COUNT\s+(\d+)',(source/'include/constants/opponents.h').read_text(),re.M)[1])
+persistent_limit=int(re.search(r'^#define\s+MAX_TRAINERS_COUNT\s+(\d+)',(source/'include/constants/opponents.h').read_text(),re.M)[1])
+if trainer_count>persistent_limit:
+    # PWT-only IDs are temporary and must never be written into story flags.
+    assert (source/'.journey-pwt-world-cup').exists()
+    trainer_count=int(re.search(r'^#define\s+TRAINER_JOURNEY_PWT_BROCK\s+(\d+)',(source/'include/constants/opponents.h').read_text(),re.M)[1])
+assert trainer_count<=persistent_limit
 for i in range(1,trainer_count):rawflag(0x500+i,True)
 assert native('GetSafariZoneFlag')==0,'Trainer fixture must not enable system flags'
 native('ScriptSetMonMoveSlot',0,57,1)

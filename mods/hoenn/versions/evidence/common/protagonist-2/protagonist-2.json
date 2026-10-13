@@ -1,12 +1,12 @@
 {
   "passed": true,
-  "rom_sha256": "d686ad987059086a997cc657d92af33814c00ad2d316ec609daa123a516286bc",
-  "starting_region": "kanto",
+  "rom_sha256": "385374542208e22e67eed413674f44c7186d973985970b79a4de23f1fdc8a227",
+  "starting_region": "sevii",
   "protagonist": "Brendan",
   "protagonist_choice_and_overworld_match": true,
   "city_index": 0,
-  "island": null,
-  "home": "PalletTown_PlayersHouse_2F_Frlg",
+  "island": 1,
+  "home": "JourneyFamilyBedroom09",
   "explicit_region_and_island_choice": true,
   "controller_only": true,
   "ram_writes": false,
@@ -14,7 +14,7 @@
   "checkpoints": [
     {
       "label": "selected-sevii-home-arrival",
-      "map": "PalletTown_PlayersHouse_2F_Frlg",
+      "map": "JourneyFamilyBedroom09",
       "position": [
         6,
         6
@@ -73,6 +73,11 @@
       "pause_frames": 45
     },
     {
+      "key": 128,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
       "key": 1,
       "held_frames": 1,
       "pause_frames": 45
@@ -918,29 +923,44 @@
       "pause_frames": 45
     },
     {
+      "key": 16,
+      "held_frames": 8,
+      "pause_frames": 20
+    },
+    {
+      "key": 16,
+      "held_frames": 8,
+      "pause_frames": 20
+    },
+    {
+      "key": 16,
+      "held_frames": 8,
+      "pause_frames": 20
+    },
+    {
+      "key": 16,
+      "held_frames": 8,
+      "pause_frames": 20
+    },
+    {
       "key": 1,
       "held_frames": 1,
       "pause_frames": 45
     },
     {
-      "key": 16,
-      "held_frames": 8,
-      "pause_frames": 20
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
     },
     {
-      "key": 16,
-      "held_frames": 8,
-      "pause_frames": 20
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
     },
     {
-      "key": 16,
-      "held_frames": 8,
-      "pause_frames": 20
-    },
-    {
-      "key": 16,
-      "held_frames": 8,
-      "pause_frames": 20
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
     },
     {
       "key": 1,

@@ -21,7 +21,7 @@ sys.argv = [sys.argv[0], '--source', str(options.source), '--library', str(optio
 exec(compile((ROOT / 'tools/hoenn/validate_abilities.py').read_text().split('\nability_field,')[0], str(ROOT / 'tools/hoenn/validate_abilities.py'), 'exec'))
 with tempfile.TemporaryDirectory(prefix='pwt-abi-', dir='/tmp') as directory:
     out = Path(directory) / 'abi.s'
-    subprocess.run([str(ROOT / '.local/arm-gcc/usr/bin/arm-none-eabi-gcc'), '-S', '-iquote', str(source / 'include'), '-include', str(source / 'src/journey_pwt.c'), '-D_(x)=x', '-DMODERN=1', '-DPOKEEMERALD', '-mthumb', '-march=armv4t', '-mabi=apcs-gnu', str(ROOT / 'tools/hoenn/fixture_pwt_abi.c'), '-o', str(out)], check=True, capture_output=True)
+    subprocess.run([str(ROOT / '.local/arm-gcc/usr/bin/arm-none-eabi-gcc'), '-S', '-iquote', str(source / 'include'), '-include', str(source / 'src/journey_pwt.c'), '-D_(x)=x', '-DCOMPOUND_STRING(x)=((const u8 *)(x))', '-DMODERN=1', '-DPOKEEMERALD', '-mthumb', '-march=armv4t', '-mabi=apcs-gnu', str(ROOT / 'tools/hoenn/fixture_pwt_abi.c'), '-o', str(out)], check=True, capture_output=True)
     table = out.read_text().split('gPWTFixtureABI:', 1)[1].split('.size', 1)[0]
     pabi = [int(n) for n in re.findall(r'\.word\s+(\d+)', table)]
 assert len(pabi) == 22, pabi
