@@ -8,6 +8,7 @@ As quatro ROMs atuais ficam em [`roms/`](../roms/README.md), atualizadas pelo em
 
 - [História e missões obrigatórias](historia-e-missoes.md)
 - [Batalhas, níveis e regras](batalhas-e-regras.md)
+- [Novo PWT — desenvolvimento, builds temporárias e validação](pwt-em-desenvolvimento.md)
 - [Encontros por local — Gen 1–4](encontros-gen1-4.md)
 - [Encontros por local — Gen 1–9](encontros-gen1-9.md)
 - [Lendários, míticos e Paradoxos](lendarios-miticos-paradoxos.md)
