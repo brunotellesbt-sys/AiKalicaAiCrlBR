@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 
 import package_playable
-from prepare_pwt_entrance_wait import PRIOR, LAYER
+from prepare_move_history_rules import PRIOR, LAYER
 
 
 def main():

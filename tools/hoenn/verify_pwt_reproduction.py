@@ -5,7 +5,7 @@ checkout. Its verified baseline contract is required, not silently assumed.
 """
 import argparse,hashlib,importlib,json
 from pathlib import Path
-from prepare_pwt_entrance_wait import PRIOR,LAYER
+from prepare_move_history_rules import PRIOR,LAYER
 def verify(reference,reconstructed):
     reference,reconstructed=Path(reference),Path(reconstructed)
     baseline=json.loads((reconstructed/'.integration-reproduction.json').read_text())

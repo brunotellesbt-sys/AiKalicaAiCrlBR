@@ -77,7 +77,7 @@ def verify(directory,require_seal=True):
                 assert len(report['checkpoints'])>=9 and report['battles']
         else:
             cap,hard=VARIANTS[target]
-            if kind!='pwt-world':assert report['max_national']==cap
+            if kind!='pwt-world' and not kind.startswith('generation-cup-'):assert report['max_national']==cap
             if kind=='gym-teams':
                 assert len(report['checks'])==192
                 assert len({c['leader'] for c in report['checks']})==16
@@ -91,6 +91,14 @@ def verify(directory,require_seal=True):
                 assert report['pwt_perfect_stats_override_normal_edition']
                 if cap==1025:
                     assert report['complete_tournament_playthrough'] and len(report['actual_battles'])>=5
+            elif kind.startswith('generation-cup-'):
+                assert cap==493 and report['version_generation_cap']==4
+                assert report['difficulty']==('Hard' if hard else 'Normal')
+                assert report['cup_generation']==int(kind.rsplit('-',1)[1]) in range(1,5)
+                assert report['complete_tournament_playthrough'] and report['champion']
+                assert report['returned_to_lobby'] and report['party_restored_byte_exact'] and report['bp_reward']==10
+                assert {b['stage'] for b in report['actual_battles']}=={0,1}
+                assert all(b['outcome']==1 and b['level']==50 and b['player_team_size']==b['enemy_team_size']==6 for b in report['actual_battles'])
             else:raise AssertionError(('Unknown variant proof',kind))
             tested.add((target,kind))
     kinds=['gym-teams','variant-rules']
@@ -103,7 +111,16 @@ def verify(directory,require_seal=True):
         report=next(json.loads((directory/p['file']).read_text()) for p in proofs if p['kind']=='pwt-retirement')
         assert report['declined_round_with_controller'] and report['original_party_restored_byte_exact']
         assert report['no_bp_reward_for_retirement'] and report['player_ready_position']==[9,6]
-    assert tested=={(name,kind) for name in VARIANTS for kind in kinds}
+    expected={(name,kind) for name in VARIANTS for kind in kinds}
+    if info.get('validation_scope')=='pwt-update':
+        expected={(name,'pwt-world') for name in VARIANTS}
+    if info.get('generation_cups_validated'):
+        expected|={(name,f'generation-cup-{generation}') for name,(cap,_) in VARIANTS.items() if cap==493 for generation in range(1,5)}
+        assert {'pwt-encore','move-restrictions'}<=common
+        report=next(json.loads((directory/p['file']).read_text()) for p in proofs if p['kind']=='move-restrictions')
+        assert report['cases']>=60 and report['native_engine_functions']
+    assert expected<=tested
+    assert tested-expected<={(name,kind) for name in VARIANTS for kind in ['gym-teams','variant-rules']}
     required={'galactic-chapter','league-kanto','league-hoenn','mega-reversion','surf-passages','sharp-map','birth-confirmation','reproduction',
             'badge-tabs','crossover-visits','protagonist-0','protagonist-1','protagonist-2','protagonist-3',
             'modern-bag','species-stats','ability-item-registry','player-evolutions','abilities-slot-2','field-rules',

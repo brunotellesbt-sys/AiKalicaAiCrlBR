@@ -1,0 +1,343 @@
+{
+  "passed": true,
+  "rom_sha256": "6d548ac57dae199a867a9392f9a9ba6d7feb5a6d9c2deaa05233268e85faa651",
+  "cases": 65,
+  "checks": [
+    {
+      "case": "Cmd_disablelastusedattack",
+      "last_move": 0,
+      "failed_normally": true
+    },
+    {
+      "case": "Cmd_disablelastusedattack",
+      "last_move": 65535,
+      "failed_normally": true
+    },
+    {
+      "case": "Cmd_disablelastusedattack",
+      "last_move": 935,
+      "failed_normally": true
+    },
+    {
+      "case": "Cmd_mimicattackcopy",
+      "last_move": 0,
+      "failed_normally": true
+    },
+    {
+      "case": "Cmd_mimicattackcopy",
+      "last_move": 65535,
+      "failed_normally": true
+    },
+    {
+      "case": "Cmd_mimicattackcopy",
+      "last_move": 935,
+      "failed_normally": true
+    },
+    {
+      "case": "Cmd_copymovepermanently",
+      "last_move": 0,
+      "failed_normally": true
+    },
+    {
+      "case": "Cmd_copymovepermanently",
+      "last_move": 65535,
+      "failed_normally": true
+    },
+    {
+      "case": "Cmd_copymovepermanently",
+      "last_move": 935,
+      "failed_normally": true
+    },
+    {
+      "case": "Cmd_tryspiteppreduce",
+      "last_move": 0,
+      "failed_normally": true
+    },
+    {
+      "case": "Cmd_tryspiteppreduce",
+      "last_move": 65535,
+      "failed_normally": true
+    },
+    {
+      "case": "Cmd_tryspiteppreduce",
+      "last_move": 935,
+      "failed_normally": true
+    },
+    {
+      "case": "BS_TryInstruct",
+      "last_move": 0,
+      "failed_normally": true
+    },
+    {
+      "case": "BS_TryInstruct",
+      "last_move": 65535,
+      "failed_normally": true
+    },
+    {
+      "case": "BS_TryInstruct",
+      "last_move": 935,
+      "failed_normally": true
+    },
+    {
+      "case": "copycat_case",
+      "last_move": 0,
+      "returned_no_move": true
+    },
+    {
+      "case": "copycat_case",
+      "last_move": 65535,
+      "returned_no_move": true
+    },
+    {
+      "case": "copycat_case",
+      "last_move": 935,
+      "returned_no_move": true
+    },
+    {
+      "case": "mefirst_case",
+      "last_move": 0,
+      "returned_no_move": true
+    },
+    {
+      "case": "mefirst_case",
+      "last_move": 65535,
+      "returned_no_move": true
+    },
+    {
+      "case": "mefirst_case",
+      "last_move": 935,
+      "returned_no_move": true
+    },
+    {
+      "case": "Cmd_mimicattackcopy",
+      "last_move": 57,
+      "copied_normally": true,
+      "resulting_pp": 5
+    },
+    {
+      "case": "Cmd_copymovepermanently",
+      "last_move": 57,
+      "copied_normally": true,
+      "resulting_pp": 15
+    },
+    {
+      "case": "instruct_valid_history",
+      "chosen_move": 57,
+      "succeeded": true
+    },
+    {
+      "case": "instruct_valid_history",
+      "chosen_move": 65535,
+      "succeeded": true
+    },
+    {
+      "case": "instruct_no_pp",
+      "failed_normally": true
+    },
+    {
+      "case": "copycat_case",
+      "last_move": 57,
+      "called_valid_move": true
+    },
+    {
+      "case": "mefirst_case",
+      "last_move": 57,
+      "called_valid_move": true
+    },
+    {
+      "case": "disable_active_and_repeated",
+      "blocked_slot_mask": 1,
+      "repeated_disable_fails": true
+    },
+    {
+      "case": "Cmd_disablelastusedattack",
+      "last_move_pp": 0,
+      "failed_normally": true
+    },
+    {
+      "case": "Cmd_trysetencore",
+      "last_move_pp": 0,
+      "failed_normally": true
+    },
+    {
+      "case": "encore_plus_torment",
+      "all_slots_unusable": true,
+      "native_no_moves_script": true
+    },
+    {
+      "case": "choice_item_combination",
+      "restriction": "disable",
+      "native_no_moves_script": true
+    },
+    {
+      "case": "choice_item_combination",
+      "restriction": "torment",
+      "native_no_moves_script": true
+    },
+    {
+      "case": "choice_item_combination",
+      "restriction": "encore_other_move",
+      "native_no_moves_script": true
+    },
+    {
+      "case": "choice_item_combination",
+      "restriction": "no_pp",
+      "native_no_moves_script": true
+    },
+    {
+      "case": "all_pp_exhausted",
+      "all_slots_unusable": true
+    },
+    {
+      "case": "invalid_move_slot",
+      "slot_blocked_without_assertion": true
+    },
+    {
+      "case": "spite_pp",
+      "before": 1,
+      "after": 0
+    },
+    {
+      "case": "spite_pp",
+      "before": 2,
+      "after": 0
+    },
+    {
+      "case": "spite_pp",
+      "before": 4,
+      "after": 0
+    },
+    {
+      "case": "spite_pp",
+      "before": 5,
+      "after": 1
+    },
+    {
+      "case": "move_pp_pressure",
+      "pressure": false,
+      "before": 0,
+      "after": 0
+    },
+    {
+      "case": "move_pp_pressure",
+      "pressure": false,
+      "before": 1,
+      "after": 0
+    },
+    {
+      "case": "move_pp_pressure",
+      "pressure": false,
+      "before": 2,
+      "after": 1
+    },
+    {
+      "case": "move_pp_pressure",
+      "pressure": false,
+      "before": 3,
+      "after": 2
+    },
+    {
+      "case": "move_pp_pressure",
+      "pressure": true,
+      "before": 0,
+      "after": 0
+    },
+    {
+      "case": "move_pp_pressure",
+      "pressure": true,
+      "before": 1,
+      "after": 0
+    },
+    {
+      "case": "move_pp_pressure",
+      "pressure": true,
+      "before": 2,
+      "after": 0
+    },
+    {
+      "case": "move_pp_pressure",
+      "pressure": true,
+      "before": 3,
+      "after": 1
+    },
+    {
+      "case": "spread_move_two_pressure_opponents",
+      "before": 0,
+      "after": 0
+    },
+    {
+      "case": "spread_move_two_pressure_opponents",
+      "before": 1,
+      "after": 0
+    },
+    {
+      "case": "spread_move_two_pressure_opponents",
+      "before": 2,
+      "after": 0
+    },
+    {
+      "case": "spread_move_two_pressure_opponents",
+      "before": 3,
+      "after": 0
+    },
+    {
+      "case": "spread_move_two_pressure_opponents",
+      "before": 4,
+      "after": 1
+    },
+    {
+      "case": "spite_no_pp",
+      "failed_normally": true,
+      "pp_stays_zero": true
+    },
+    {
+      "case": "struggle_has_no_pp_cost",
+      "pp_preserved": true
+    },
+    {
+      "case": "encore_end",
+      "reason": "pp_exhausted",
+      "cleared": true
+    },
+    {
+      "case": "encore_end",
+      "reason": "move_removed",
+      "cleared": true
+    },
+    {
+      "case": "encore_end",
+      "reason": "timer_expired",
+      "cleared": true
+    },
+    {
+      "case": "disable_end",
+      "reason": "move_removed",
+      "cleared": true
+    },
+    {
+      "case": "disable_end",
+      "reason": "timer_expired",
+      "cleared": true
+    },
+    {
+      "case": "torment_end",
+      "cleared": true
+    },
+    {
+      "case": "normal_switch",
+      "restrictions_and_history_cleared": true
+    },
+    {
+      "case": "ai_stab_recording",
+      "recorded_moves": [
+        57,
+        0,
+        89,
+        0
+      ],
+      "status_and_invalid_moves_excluded": true
+    }
+  ],
+  "native_engine_functions": true,
+  "battle_state_and_script_arguments_are_fixtures": true
+}
