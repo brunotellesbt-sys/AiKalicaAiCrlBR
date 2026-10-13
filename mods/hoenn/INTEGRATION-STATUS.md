@@ -16,9 +16,15 @@ A entrega contém quatro ROMs GBA: Gen 1–4 Normal/Hard e Gen 1–9 Normal/Hard
 - Seleção das quatro edições no player estático de GitHub Pages, com verificação do download e saves separados pelo nome da edição.
 - Índices em `docs/` e DOCX das 768 equipes geradas para os 16 líderes, ordens e quatro edições.
 
+- PWT com torneios por geração, Copa global, líderes compartilhados separados, 162 retratos e conjuntos de caminhada, arena própria e builds temporárias com restauração integral da equipe.
+
+## Escopo desta atualização
+
+Esta atualização foi solicitada com validação somente do PWT. O manifesto declara `validation_scope: pwt-update`; `validated` confirma esse escopo e a integridade das quatro ROMs, sem declarar uma validação completa das campanhas. Os relatórios adicionais concluídos antes dessa mudança de escopo permanecem identificados pela ROM testada. Uma tentativa de replay da Liga de Hoenn terminou em derrota da equipe de teste contra Phoebe e não foi usada como aprovação; ela não foi repetida após o pedido de limitar a validação ao PWT.
+
 ## O que as evidências comprovam
 
-Os relatórios em `versions/evidence/` indicam o SHA-256 do alvo testado e distinguem os estados preparados. Os testes nativos usam mGBA e incluem equipes dos ginásios, limites de geração, habitats aquáticos, interfaces de início/mapa/Pokédex/cartão, transporte, missões, capítulo Galactic, Ligas, Mega/reversão, atributos e save/Continue. A reprodução compara os arquivos finais das 100 camadas com uma árvore limpa proveniente dos 30.038 arquivos verificados do upstream.
+Os relatórios em `versions/evidence/` indicam o SHA-256 do alvo testado e distinguem os estados preparados. Os testes nativos usam mGBA e incluem equipes dos ginásios, limites de geração, habitats aquáticos, interfaces de início/mapa/Pokédex/cartão, transporte, missões, capítulo Galactic, Ligas, Mega/reversão, atributos e save/Continue. A reprodução compara os arquivos finais das 106 camadas com uma árvore limpa proveniente dos 30.038 arquivos verificados do upstream.
 
 As batalhas de missão usam deslocamento/progresso anterior preparados e, em alguns testes, atributos do jogador aumentados na memória do emulador. Os adversários, resultados e flags de vitória são nativos. Esses aumentos não alteram a ROM nem seus base stats. As equipes dos ginásios no DOCX são extrações do gerador nativo, sem esses aumentos.
 
@@ -35,3 +41,5 @@ Não foi feita uma campanha humana contínua desde New Game até os créditos na
 Saves antigos não são compatíveis com a Bag ampliada. A ROM mantém o formato histórico de metadados Game Freak; seu campo de um byte para o tamanho do bolso de itens é limitado a 255 para ferramentas externas. O motor e a Bag usam a capacidade real de 620; um editor externo deve conhecer este formato de save.
 
 A alpha anterior de 64 camadas permanece preservada em `playable/`, com suas próprias evidências. Seus relatórios não são apresentados como testes das novas ROMs.
+
+O PWT atual passou por inspeção das 446 equipes elegíveis nas quatro edições, instanciação das 162 identidades na arena e torneios completos com partidas reais nas gerações 6 e 9. A apresentação é adaptada à GBA. A auditoria de todos os times canônicos de personagens modernos ainda está pendente; veja o documento do PWT.

@@ -1,6 +1,6 @@
-# PWT — versão em desenvolvimento
+# PWT — torneios e arena
 
-Este documento descreve a nova implementação na branch `feat/pwt-generation-world-cup`. As ROMs publicadas em `roms/` ainda são da entrega anterior. A atualização final depende da conclusão da apresentação, da auditoria das equipes e da validação das campanhas.
+As quatro ROMs em `roms/` incluem esta implementação do PWT: torneios por geração, Copa global, 162 retratos de batalha, 162 identidades de caminhada e uma arena própria. Use um save novo conforme o guia das edições.
 
 ## Participantes e torneios
 
@@ -38,11 +38,13 @@ Ao terminar, ser eliminado ou desistir, o jogo restaura o backup completo da equ
 
 ## Evidência atual
 
+O escopo de validação desta atualização é **PWT**, conforme solicitado. O manifesto identifica esse escopo; os testes históricos de campanha não são reapresentados como aprovação desta ROM.
+
 Os [relatórios nativos](../mods/hoenn/pwt-world-validation/validation.json) identificam a SHA-256 exata de cada ROM de desenvolvimento. As quatro edições passaram pelas verificações de catálogo, geração de equipes, EVs, IVs, conservação dos golpes do jogador, navegação do painel e restauração byte a byte. Foram inspecionadas 446 equipes: 61 em cada edição Gen 1–4 e 162 em cada edição Gen 1–9.
 
-A reconstrução independente chegou às 103 camadas e reproduziu os 1.247 arquivos preparados sem diferenças. Ela parte da reconstrução anterior que verificou os 30.038 arquivos upstream. A normalização determinística dos aliases de nomes de golpes não alterou nenhum byte da ROM validada.
+A reconstrução independente chegou às 106 camadas e reproduziu os 1.366 arquivos preparados sem diferenças. Ela parte da reconstrução anterior que verificou os 30.038 arquivos upstream. A normalização determinística dos aliases de nomes de golpes não alterou nenhum byte da ROM validada.
 
-Também houve um torneio completo da geração 3 na edição Gen 1–9 Hard, com oito vitórias produzidas pelo motor de batalha, retorno à recepção, premiação única de 10 BP e restauração da equipe. Viagem, criação da equipe e atributos de batalha elevados são fixtures declaradas para testar o fluxo; esse resultado não valida o equilíbrio competitivo nem uma campanha completa.
+Foram jogados torneios completos nas gerações 6 e 9, nas edições Gen 1–9 Normal e Hard, respectivamente. As vitórias são produzidas pelo motor de batalha, com retorno à recepção, premiação única de 10 BP e restauração da equipe. Viagem, criação da equipe e atributos de batalha elevados são fixtures declaradas para testar o fluxo; esse resultado não valida o equilíbrio competitivo nem uma campanha completa.
 
 Casos específicos testados em todas as edições:
 
@@ -53,7 +55,15 @@ Casos específicos testados em todas as edições:
 | Atacante especial com nature que reduz Ataque | 31 / 0 / 31 / 31 / 31 / 31 |
 | Infernape misto | 31 / 31 / 31 / 31 / 31 / 31 |
 
-Ainda faltam 79 sprites de caminhada de personagens modernos, a adaptação fiel da arena de B2W2, a auditoria dos times originais que ainda estão marcados como pendentes e a continuação das campanhas até o final. Os 162 retratos de batalha estão preparados; 83 personagens já têm gráficos de caminhada registrados. A fonte de 14 equipes de Sinnoh foi conferida nos dados originais de Platinum.
+Os 79 personagens modernos receberam nove quadros próprios de caminhada, convertidos para 32×32 pixels e 15 cores mais transparência. Os 83 conjuntos anteriores foram preservados. A validação nativa instancia todas as 162 identidades e verifica seus quadros compilados.
+
+A arena usa uma arte própria adaptada à GBA: arquibancadas, telão, corredores laterais e palco central. Os participantes caminham por lados opostos antes de aparecer a classificação; a câmera acompanha o deslocamento real. O painel separado apresenta grupos e chaveamento. É uma adaptação ao estilo PWT de B2W2, sem afirmar uma reprodução pixel a pixel de toda a interface do Nintendo DS.
+
+![Arena completa](images/pwt-stadium.png)
+
+![79 novos personagens](images/pwt-walking-79.png)
+
+Continuam pendentes a auditoria dos times originais marcados como pendentes no catálogo e as campanhas completas de ponta a ponta. A fonte de 14 equipes de Sinnoh foi conferida nos dados originais de Platinum. Essas limitações não são contadas como testes aprovados.
 
 ## Fontes dos gráficos
 
@@ -63,3 +73,5 @@ As conversões são técnicas: encaixe com nearest-neighbor, paleta de 15 cores 
 - Adaman e Lacey: `christt105/pokemon-hof-generator`, revisão `e30aee2fab2b9d6d761e27f4fde29d33c2fef2e1`.
 - Caminhada das primeiras gerações: catálogo de doadores de `jbfish00/Unbound-Character-Mode`, revisão `1dbb46d3e1609cadade70cf2efe246cc75d7f8e8`; preserva os autores citados por esse catálogo, incluindo pret, recursos de Sinnoh e o recurso de Gen 5 em estilo Gen 4.
 - Eren, Luffy, Brendan e May: gráficos já integrados ao projeto.
+
+- Caminhada moderna e arena: artes criadas com `image_gen`; folhas originais, referências de aparência, recortes, paletas e hashes preservados em `tools/hoenn/data/pwt/generated/`.

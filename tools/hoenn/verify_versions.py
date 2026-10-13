@@ -54,7 +54,9 @@ def verify(directory,require_seal=True):
         target=proof['target'];kind=proof['kind']
         expected=info['parent_rom_sha256'] if target=='common' else next(r['sha256'] for r in info['variants'] if r['file']==target)
         if kind=='reproduction':
-            assert len(report['layers'])==100 and not report['differences']
+            if 'integration_layers' in info:assert report['layers']==info['integration_layers']
+            else:assert len(report['layers'])==100
+            assert not report['differences']
         else:assert report['rom_sha256']==expected,(target,kind,'Stale evidence')
         if target=='common':
             common.add(kind)
@@ -74,20 +76,43 @@ def verify(directory,require_seal=True):
                 assert not any(report[key] for key in ['ram_writes','script_injection','synthetic_badges','boosted_stats','disabled_wild_encounters'])
                 assert len(report['checkpoints'])>=9 and report['battles']
         else:
-            cap,hard=VARIANTS[target];assert report['max_national']==cap
+            cap,hard=VARIANTS[target]
+            if kind!='pwt-world':assert report['max_national']==cap
             if kind=='gym-teams':
                 assert len(report['checks'])==192
                 assert len({c['leader'] for c in report['checks']})==16
                 assert report['difficulty']==('Hard' if hard else 'Normal')
             elif kind=='variant-rules':assert report['perfect_ivs'] is hard and report['aquatic_samples']>0
+            elif kind=='pwt-world':
+                assert report['version_generation_cap']==(4 if cap==493 else 9)
+                assert report['perfect_ivs'] is hard
+                assert len(report['catalog_teams'])==(61 if cap==493 else 162)
+                assert report['party_restored_byte_exact'] and report['player_moves_items_ability_personality_preserved']
+                assert report['pwt_perfect_stats_override_normal_edition']
+                if cap==1025:
+                    assert report['complete_tournament_playthrough'] and len(report['actual_battles'])>=5
             else:raise AssertionError(('Unknown variant proof',kind))
             tested.add((target,kind))
-    assert tested=={(name,kind) for name in VARIANTS for kind in ['gym-teams','variant-rules']}
-    assert {'galactic-chapter','league-kanto','league-hoenn','mega-reversion','surf-passages','sharp-map','birth-confirmation','reproduction',
+    kinds=['gym-teams','variant-rules']
+    if 'integration_layers' in info:
+        kinds.append('pwt-world')
+        assert {'pwt-stadium','pwt-retirement'}<=common
+        report=next(json.loads((directory/p['file']).read_text()) for p in proofs if p['kind']=='pwt-stadium')
+        assert len(report['checks'])==162 and report['all_eligible_identities_spawned']
+        assert report['nine_frames_per_identity'] and report['entrance_lane_unblocked']
+        report=next(json.loads((directory/p['file']).read_text()) for p in proofs if p['kind']=='pwt-retirement')
+        assert report['declined_round_with_controller'] and report['original_party_restored_byte_exact']
+        assert report['no_bp_reward_for_retirement'] and report['player_ready_position']==[9,6]
+    assert tested=={(name,kind) for name in VARIANTS for kind in kinds}
+    required={'galactic-chapter','league-kanto','league-hoenn','mega-reversion','surf-passages','sharp-map','birth-confirmation','reproduction',
             'badge-tabs','crossover-visits','protagonist-0','protagonist-1','protagonist-2','protagonist-3',
             'modern-bag','species-stats','ability-item-registry','player-evolutions','abilities-slot-2','field-rules',
             'item-menu-actions','item-menu-alola-stone','item-menu-kadabra','item-menu-onix',
-            'item-menu-pawmo','item-menu-gimmighoul','initial-campaign-kanto','initial-campaign-hoenn'}<=common
+            'item-menu-pawmo','item-menu-gimmighoul','initial-campaign-kanto','initial-campaign-hoenn'}
+    if info.get('validation_scope')=='pwt-update':
+        assert 'integration_layers' in info and info['full_campaign_playthrough'] is False
+        required={'reproduction','pwt-stadium','pwt-retirement'}
+    assert required<=common
     print('Verified four ROMs and',len(proofs),'native/reproduction reports')
     return info
 

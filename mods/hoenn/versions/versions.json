@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "d686ad987059086a997cc657d92af33814c00ad2d316ec609daa123a516286bc",
-  "build_rules_offset": 8060660,
+  "parent_rom_sha256": "385374542208e22e67eed413674f44c7186d973985970b79a4de23f1fdc8a227",
+  "build_rules_offset": 9045640,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "b587559609cb1e9c43c9303579853ef4d9915b680e8e8606ae5c4c19f411900d",
+      "sha256": "bd10918c4656cdd5d8e1a3a227fc2de463c4168ac93ec69ff7e32243607e205d",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        8060660,
-        8060661,
-        8060662
+        9045640,
+        9045641,
+        9045642
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "bff13b678168f81a07867eb43d67b1cc2887e387885e6445667830c7a6ac8825",
+      "sha256": "f38001e5d6ef65269895f1a1c3a5707203d600bb74fdd70b20ad2e938f5cc283",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        8060660,
-        8060661
+        9045640,
+        9045641
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "21cd5167bcba117024f4df4112b1b08c21cce32ddae74be28322b39c6b6212af",
+      "sha256": "168a19007fa2b32c39ae4b29dc5eb5ca8ebe16ef2e739839d2de38e3c77e7f38",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        8060662
+        9045642
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "64306d7d480ecb2e8a6b4ea16e8b4ab2e8a1c363d2064ab97d0e9181c2e9a45b",
+      "sha256": "3f8a6c20602af3128d3d7ebf3140b12eed878df3604411d8631eeaef5f32f64d",
       "patched_byte_offsets": [
         160,
         162,
@@ -105,276 +105,362 @@
   ],
   "all_other_bytes_identical": true,
   "validated": true,
+  "integration_layers": [
+    "hoenn-crossing",
+    "worldsea",
+    "westsea",
+    "region-state",
+    "east-coast",
+    "gym-scaling",
+    "campaign-gates",
+    "team-stories",
+    "free-access",
+    "blue-gym",
+    "road-access",
+    "mach-bike",
+    "yellow-stairs",
+    "story-access",
+    "story-completion",
+    "water-hms",
+    "ferry",
+    "rival",
+    "family",
+    "travel-rules",
+    "birth",
+    "wild",
+    "habitats",
+    "sanctuaries",
+    "ecology",
+    "abilities",
+    "mega-art",
+    "story-aftermath",
+    "league-access",
+    "league-completion",
+    "league-history",
+    "league-display",
+    "family-postgame",
+    "pwt",
+    "frontier-travel",
+    "story-puzzles",
+    "aqua-episodes",
+    "seafloor-access",
+    "water-continue",
+    "cave-access",
+    "sky-pillar-access",
+    "english-text",
+    "special-ball",
+    "route131-sea-access",
+    "lostelle-habitats",
+    "tower-habitats",
+    "early-story-tools",
+    "mandatory-native-missions",
+    "sixteen-badge-leagues",
+    "rusturf-reunion",
+    "sea-landscapes",
+    "eastern-sea-union",
+    "ever-grande-entrance",
+    "route12-port",
+    "lavender-network",
+    "world-map",
+    "kanto-open-sea",
+    "coastal-world-map",
+    "remote-islands",
+    "surf-passages",
+    "battle-database",
+    "five-island-habitat",
+    "adaptive-gym-teams",
+    "world-map-position",
+    "world-dex-map",
+    "competitive-bosses",
+    "campaign-variants",
+    "version-play",
+    "small-ports",
+    "arrival-continuity",
+    "story-continuity",
+    "intro-region",
+    "paradox-caves",
+    "preferred-mossdeep-port",
+    "birth-confirmation",
+    "crossover-opponents",
+    "crossover-encounters",
+    "trainer-level-coherence",
+    "evolution-coherence",
+    "crossover-partners",
+    "galactic-chapter",
+    "trainer-item-evolutions",
+    "galactic-continuity",
+    "mega-origin-reversion",
+    "sharp-world-map",
+    "battle-rule-coherence",
+    "final-ecology",
+    "final-story",
+    "evolution-supplies",
+    "badge-case",
+    "variant-dex",
+    "water-habitat-recovery",
+    "reproducible-water",
+    "galactic-prison",
+    "final-balance",
+    "prison-visibility",
+    "named-character-presence",
+    "player-choice",
+    "modern-bag",
+    "modern-field-moves",
+    "pwt-world-cup",
+    "pwt-entrances",
+    "pwt-builds",
+    "pwt-stadium",
+    "pwt-stadium-camera",
+    "pwt-entrance-wait"
+  ],
+  "validation_scope": "pwt-update",
+  "full_campaign_playthrough": false,
   "proofs": [
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Normal/gym-teams.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "gym-teams",
-      "sha256": "4da6be216fd2938cab96315ad51670748f9281accaa3b782b8970b2397505ed3"
+      "sha256": "fb49f67491c03a673a90f68646ab1fc6953a69502061d813a8f11f11934358b7"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Normal/variant-rules.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "variant-rules",
-      "sha256": "478e5733cef62dea86ff14e1f4e45874241d370ea10b3fb03a74d17f6a0bf108"
+      "sha256": "35a1504eafb1e6c89965d15e4b2551d9b6942c56217d7148ef571c17b0feb020"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-4-Normal/pwt-world.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "pwt-world",
+      "sha256": "98fe7aa81d935fa4b2134fb4270c3decb4450470ae5fc2a19e1fa4200c28c391"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Hard/gym-teams.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "gym-teams",
-      "sha256": "74bfff6a2daf758c3239ebe56fc46ae34f562d74bb67d495bbcec71bc7c46340"
+      "sha256": "24793e15c21b0c72c0ebdbde5e865af4e8cc812566a59798ad235ff34b0d71c7"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Hard/variant-rules.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "variant-rules",
-      "sha256": "bad7c1bdb9aedf34c57acaaf5f7beba52a56b1eb0018af3cf830855e3c812865"
+      "sha256": "3293bfec6c9ee60d2f815d07841bbc3c4f7467998ea7e4cefab2d888650d921f"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-4-Hard/pwt-world.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "pwt-world",
+      "sha256": "2a557a7080f369e9eec2ab8a3f7a541cd43a60a092291fe294ae46d59914f7fc"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Normal/gym-teams.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "gym-teams",
-      "sha256": "ce39d1fefffbea569db7250ffb85a7b84094c6acaa9548b2e3337ad1cd51ff7e"
+      "sha256": "e0addb01ac0ecdd92f9bc123a223af251adfd7607f88f8f7b71545f5159590b8"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Normal/variant-rules.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "variant-rules",
-      "sha256": "b4fc0b2ef95e80521fa23489e60f2482d04babdc3b974404a97a9dc9f108a90a"
+      "sha256": "19c385fd16348fdaea736c212582139283ed2b5cb7ff203c28afb2f81651cfb9"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-9-Normal/pwt-world.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "pwt-world",
+      "sha256": "62c78e951b96c1e071128112995872b47baac27e0b23d33b4592857a666a0afc"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Hard/gym-teams.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "gym-teams",
-      "sha256": "cbf2cbb352e231511691c1a043097af9c406d774db9c56ffc5af33f5b3a29226"
+      "sha256": "b91c6f34944c1274778fe5273860f869d4ef829e17aa6a6c50f45e43e62ab0cf"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Hard/variant-rules.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "variant-rules",
-      "sha256": "760ba75968aedef8618b322ad2494bf0cb1f50a7c0c1445afe18a45a43929ec1"
+      "sha256": "71ea740bca4886aece6c4be478ddd8583c4171cfd30b24beea301bf5be19067a"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-9-Hard/pwt-world.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "pwt-world",
+      "sha256": "14298221cdb60c8762ff0a74f2416c1379153240fce8143e1b109a99fe06a2f0"
     },
     {
       "file": "evidence/common/abilities/abilities-slot-2.json",
       "target": "common",
       "kind": "abilities-slot-2",
-      "sha256": "67e9c459b8078265c881272e708caf66ad918c6874b720a19794d7c8227124ed"
-    },
-    {
-      "file": "evidence/common/common/ability-item-registry.json",
-      "target": "common",
-      "kind": "ability-item-registry",
-      "sha256": "1d2bcf3026768bb7ac7fd3b9da277fc89b4ebed151f1821be74141683b76ca43"
+      "sha256": "4e3a0ad372e3c018b2f5a43045996935afc880875ba014356c32a6b3521a53e5"
     },
     {
       "file": "evidence/common/badge_tabs/badge-tabs.json",
       "target": "common",
       "kind": "badge-tabs",
-      "sha256": "04d6fdc7c99516580616ac1a108632c07fa1e5ec359bb7e3fdeadb050c683502"
+      "sha256": "3ff8eeced4cdb773c88b8b75972883d16b52b52e941e21007c63c0773e56bb1c"
     },
     {
       "file": "evidence/common/birth_confirmation/birth-confirmation.json",
       "target": "common",
       "kind": "birth-confirmation",
-      "sha256": "eb598bdc125a43a7974bfa689d2e01c7eab69bd9fe4c1f9e079f5f1cfed18603"
-    },
-    {
-      "file": "evidence/common/birth_rules/birth-rules.json",
-      "target": "common",
-      "kind": "birth-rules",
-      "sha256": "41a3dcda2bc9f48a879200f702535f6d80da1f22236c7bdc005deabf204727cf"
-    },
-    {
-      "file": "evidence/common/campaign_matrix/campaign-matrix.json",
-      "target": "common",
-      "kind": "campaign-matrix",
-      "sha256": "38d2c8ba684f167b16e76c294fe8fc6debb5abab277857160b513b239c766df4"
-    },
-    {
-      "file": "evidence/common/crossover_opponents/crossover-opponents.json",
-      "target": "common",
-      "kind": "crossover-opponents",
-      "sha256": "b315fde5f5c8bae2596ae3c92a4e7746202cad0fde5eb08e5a0ced92a1cda16b"
+      "sha256": "e2dd87b4635502f61502b393ff146cbf63cb2dd62fc8f3c57f53de9d7a5db0b2"
     },
     {
       "file": "evidence/common/crossover_visits/crossover-visits.json",
       "target": "common",
       "kind": "crossover-visits",
-      "sha256": "57b8578e531737c1bf0868493d5abcaffd67df5e680504826d7605192f4823a3"
+      "sha256": "e9839bdcca78da068544d60f7a175c1473b90be27c41dd6c3e74d80f1ec4a0a9"
     },
     {
       "file": "evidence/common/field_rules/field-rules.json",
       "target": "common",
       "kind": "field-rules",
-      "sha256": "5ef9869990182ab09f66e735627762d2e7cf4c6aa13e4c0712baba81b55d38f2"
+      "sha256": "ee8361442c235a99b28fbf171661d49eeb8584b74d8659ee236c60b5a5781589"
     },
     {
-      "file": "evidence/common/final-hoenn-league/league-hoenn.json",
-      "target": "common",
-      "kind": "league-hoenn",
-      "sha256": "3880dbed6cdb42a4c9e94ead5f6d87587f2f4fcdabcb3b6b251351c91e001ee3"
-    },
-    {
-      "file": "evidence/common/final-kanto-league/league-kanto.json",
-      "target": "common",
-      "kind": "league-kanto",
-      "sha256": "a1465900bdaa671039d3a623fa7d6bd1e48b6de44b361854789d3b959c86be40"
-    },
-    {
-      "file": "evidence/common/final-mega-native/mega-reversion.json",
-      "target": "common",
-      "kind": "mega-reversion",
-      "sha256": "9a8b29d91fa08e26a39455262b6c76cda302a69336351be7bb91f89513e75ab8"
-    },
-    {
-      "file": "evidence/common/final-surf-passages/surf-passages.json",
-      "target": "common",
-      "kind": "surf-passages",
-      "sha256": "71a64c06978d780bf78d927b2a051bddedc8ac1cdeedeed2f2c1addd84c8b8d0"
-    },
-    {
-      "file": "evidence/common/galactic-chapter/galactic-chapter.json",
+      "file": "evidence/common/galactic_chapter/galactic-chapter.json",
       "target": "common",
       "kind": "galactic-chapter",
-      "sha256": "ccbcd85b41aa21bbaa3a17c6a2f1d0e1468959539c50d9f2dc170db6c3a3692b"
+      "sha256": "ff754fbe3da002909ee6aac383cebd307d966729537129013e714de873fc8ba7"
     },
     {
       "file": "evidence/common/initial-campaign-hoenn/initial-campaign-hoenn.json",
       "target": "common",
       "kind": "initial-campaign-hoenn",
-      "sha256": "bba042f9f6fad30e4bf1c4f8e2f61151f4694f366d99ee59bf69fcad5fadfb61"
+      "sha256": "2fe4c23b2cfc25074a34befe611811f2797ba743b596db1c3eeaaeb43d4bcab0"
     },
     {
       "file": "evidence/common/initial-campaign-kanto/initial-campaign-kanto.json",
       "target": "common",
       "kind": "initial-campaign-kanto",
-      "sha256": "9515c0451bb4e43f479148d4138ba1733886b09aa0bd9f9aa67255eb3a72d551"
+      "sha256": "d47fbee0e38ab2efa822bd60b52f056f28a66ec5fbf7dc64f31507165dbbb9de"
     },
     {
       "file": "evidence/common/item-menu-actions/item-menu-actions.json",
       "target": "common",
       "kind": "item-menu-actions",
-      "sha256": "896b78513e7e6905fc1c819e80a54346acc1126679aa858f2aa7a0ab55412745"
+      "sha256": "b2a16869ce466d19a8379ec1b5cee8f1a403958582bf04ba276bbf276b24637a"
     },
     {
-      "file": "evidence/common/item-menu-alola/item-menu-alola-stone.json",
+      "file": "evidence/common/item-menu-alola-stone/item-menu-alola-stone.json",
       "target": "common",
       "kind": "item-menu-alola-stone",
-      "sha256": "d2fc4f5469aabf1c1b1ae800943775ef57d41e4e764d5fe0f7a1e6400e86f5ce"
+      "sha256": "45a22619a56892575066bd1fa01630001e62b556ae8a8c5e0a590704e8302df7"
     },
     {
       "file": "evidence/common/item-menu-gimmighoul/item-menu-gimmighoul.json",
       "target": "common",
       "kind": "item-menu-gimmighoul",
-      "sha256": "1749db5528a627ecfb6ff96685901b17dba3f82cf76a7e47b42e463b5dfa0ac2"
+      "sha256": "34102f1272ce421ac56e04fc6feae5d068ff7dae97aa9cfe5595bf6292be555d"
     },
     {
       "file": "evidence/common/item-menu-kadabra/item-menu-kadabra.json",
       "target": "common",
       "kind": "item-menu-kadabra",
-      "sha256": "425be7a15b054c3256bc705286d8c3fc739060702c84e7dacb344ea4cf310be4"
+      "sha256": "90e14ecc5f9a742c721f6e54bc57157d8e7eaf9114d760a12e38f0c071f7113a"
     },
     {
       "file": "evidence/common/item-menu-onix/item-menu-onix.json",
       "target": "common",
       "kind": "item-menu-onix",
-      "sha256": "2bdf1f8959625f5fb5bc7c9a2d360ec3b915d9fbe28be5eaec910ed6874d15f7"
+      "sha256": "c1ecb0e85e3edf59c24047fabc127cdcc752a2424c4a4ee461ddd98de9169629"
     },
     {
       "file": "evidence/common/item-menu-pawmo/item-menu-pawmo.json",
       "target": "common",
       "kind": "item-menu-pawmo",
-      "sha256": "a7814c5da5bc7590c64f3aaf8f0347a1b9c3322f69cfd49415c8da39ae486eec"
+      "sha256": "fced3238e55d9a478a364611a4580980a8f2d8dbb3157055341dc8113f350293"
+    },
+    {
+      "file": "evidence/common/league-kanto/league-kanto.json",
+      "target": "common",
+      "kind": "league-kanto",
+      "sha256": "921533254e76330f68927e5eeabed681c80f180441722f37249f45afd1bfd2ce"
+    },
+    {
+      "file": "evidence/common/mega_reversion/mega-reversion.json",
+      "target": "common",
+      "kind": "mega-reversion",
+      "sha256": "46a4d656438699cf6ab50919279fbe16091811d2e462fc234e6fb25f594b02d3"
     },
     {
       "file": "evidence/common/modern_bag/modern-bag.json",
       "target": "common",
       "kind": "modern-bag",
-      "sha256": "d63bbb9add4448870013bf2cc50b261d01b72a5a9c7fefcba805dee5896b6cb6"
+      "sha256": "75fee77ce0f8e5ed32f0fa5f76ac95ad9f2c334360120fd906c06705dcd134ce"
     },
     {
       "file": "evidence/common/player_evolutions/player-evolutions.json",
       "target": "common",
       "kind": "player-evolutions",
-      "sha256": "075b6cf9695823046872d213bc989d68addee2888711fae92118f9b2bead8bbf"
+      "sha256": "8d5380fa1795e42e167290e915ff2f581f3cf3dc7820aa93002d09aa1101fde3"
     },
     {
       "file": "evidence/common/protagonist-0/protagonist-0.json",
       "target": "common",
       "kind": "protagonist-0",
-      "sha256": "979ce9f6c839b235463d2499284c5f7389f5a764b6bcba94c1387c33e9c4cc86"
+      "sha256": "5b2e15003a9e2578ea168fe5827ecc417ca33c26a5992e6058614461b3964fed"
     },
     {
       "file": "evidence/common/protagonist-1/protagonist-1.json",
       "target": "common",
       "kind": "protagonist-1",
-      "sha256": "5da6616aa2293273a7715ab144a826b2e3f46ce73b3408e8f412336036a8a2da"
+      "sha256": "66be87e77a15c983a6d754dfdd347e96af19c34f7b874bdc77b705e1136c864b"
     },
     {
       "file": "evidence/common/protagonist-2/protagonist-2.json",
       "target": "common",
       "kind": "protagonist-2",
-      "sha256": "3a77c9440e2aa27a92cd320b0284bc39335f71ac7cd664ac86b389f0303c1a85"
+      "sha256": "db3491cdf2eb6a2f072edbeb01be9fef9c3d41c982640a24d47375aa1f2dd6d7"
     },
     {
       "file": "evidence/common/protagonist-3/protagonist-3.json",
       "target": "common",
       "kind": "protagonist-3",
-      "sha256": "1e5a7a8afcd9263cc769204747a1b44fec6011c4506867527ae1996086e0766e"
+      "sha256": "58ca4bf6c97b7d440701ef200223770efc9877bf8e23e5b65f154ebd6b82b20c"
     },
     {
-      "file": "evidence/common/pwt_six/pwt-six.json",
+      "file": "evidence/common/pwt-retirement/pwt-retirement.json",
       "target": "common",
-      "kind": "pwt-six",
-      "sha256": "33181c29f11b3aeed3d01729c71a36a2b8a1fdea8a9274584ef5450effa6bb6e"
+      "kind": "pwt-retirement",
+      "sha256": "9de9f69031a3833d7e7661afed879b85113e0a07b0806cbadb1a08858ba6ebed"
+    },
+    {
+      "file": "evidence/common/pwt-stadium/pwt-stadium.json",
+      "target": "common",
+      "kind": "pwt-stadium",
+      "sha256": "2bf431abb5bcb454672f8d710a9999722167c95ebd280abede762279bffe2fe5"
+    },
+    {
+      "file": "evidence/common/registry/ability-item-registry.json",
+      "target": "common",
+      "kind": "ability-item-registry",
+      "sha256": "11f980a8929065bb478f6b38d3b6f7a826b370e1e7da7dc39db66701acce5765"
     },
     {
       "file": "evidence/common/reproduction/reproduction.json",
       "target": "common",
       "kind": "reproduction",
-      "sha256": "016c5392bb3eb3b6e69721d855df195d0f6faa819877fab234667b79752d39ce"
-    },
-    {
-      "file": "evidence/common/route12_ferry/route12-ferry.json",
-      "target": "common",
-      "kind": "route12-ferry",
-      "sha256": "dd799411681bd0ed8f9e96a6b400b6f072ebd4a7601ea45ffc573cb71569d0ae"
+      "sha256": "091ed0bcaed96e66808ab505ee82efebb026d99c67ecedaa9f3be1b98661a01a"
     },
     {
       "file": "evidence/common/sharp_map/sharp-map.json",
       "target": "common",
       "kind": "sharp-map",
-      "sha256": "cdbc44dd47e960c449d046fca5898dcc68b31659c94f3b837b9a45eafe1c3eec"
+      "sha256": "97a9c9f0a9b880e1dcb9d1f16c12129286074f5d6f61682abdb9446018fd0f8c"
     },
     {
-      "file": "evidence/common/common/species-stats.json",
+      "file": "evidence/common/stats/species-stats.json",
       "target": "common",
       "kind": "species-stats",
-      "sha256": "2b574065807805e89a2deb890f6cc2bc9d32dfac36d103c2da75ca7b5c1bd3e8"
+      "sha256": "ad406a20a451f98b582e2fbc98bbd0c9f62dc69ea987b53c5219550bf70f7562"
     },
     {
-      "file": "evidence/common/team_missions/team-missions.json",
+      "file": "evidence/common/surf_passages/surf-passages.json",
       "target": "common",
-      "kind": "team-missions",
-      "sha256": "f54304629b0305005cd4d716d4e336edee7a7baca9e5995058017fb2dde0096a"
-    },
-    {
-      "file": "evidence/common/trainer_item_evolutions/trainer-item-evolutions.json",
-      "target": "common",
-      "kind": "trainer-item-evolutions",
-      "sha256": "272fa0aa28a996e543df8ee1c3d7f98b270681b80078de0ed05ba3946ecfd4fa"
-    },
-    {
-      "file": "evidence/common/world_fly/world-fly.json",
-      "target": "common",
-      "kind": "world-fly",
-      "sha256": "8bcc9c58f8cf458dd6ee098be517478eac87cc36cf088d608085d0e75f8b5ead"
-    },
-    {
-      "file": "evidence/common/world_map_position/world-map-position.json",
-      "target": "common",
-      "kind": "world-map-position",
-      "sha256": "a65f423236f3fa75591b0e207d7c3b238ca9636f3c9b218752136d5de467aa70"
+      "kind": "surf-passages",
+      "sha256": "24178dd205d564d58456d19e69feb32472cd4f8dc3a0f7a2ac11386729fcce5c"
     }
   ]
 }

@@ -13,6 +13,8 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install indexed sprite validation dependency
+        run: python3 -m pip install Pillow==11.3.0
       - name: Verify catalog, water elevations, NPCs and connections
         run: |
           python3 -m unittest discover -s tools/sea_routes -v

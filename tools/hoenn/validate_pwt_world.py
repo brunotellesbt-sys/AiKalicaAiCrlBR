@@ -10,6 +10,7 @@ p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('--source',type=Path,required=True);p.add_argument('--library',type=Path,required=True)
 p.add_argument('--output',type=Path,required=True)
 p.add_argument('--play-cup',action='store_true',help='Also win one real cup; player battle stats are explicitly boosted fixtures')
+p.add_argument('--cup-generation',type=int,default=3)
 a=p.parse_args()
 sys.argv=[sys.argv[0],'--source',str(a.source),'--library',str(a.library),'--output',str(a.output)]
 exec(compile((ROOT/'tools/hoenn/validate_abilities.py').read_text().split('\nability_field,')[0],str(ROOT/'tools/hoenn/validate_abilities.py'),'exec'))
@@ -135,7 +136,7 @@ if a.play_cup:
     # Battle outcomes are produced by the battle engine/controller, never set.
     for i in range(6):native('ScriptSetMonMoveSlot',i,abi[142],0)
     tournament_original=bytes(lib.read8(party+i) for i in range(6*abi[2]))
-    begin(3);warp('JourneyPWTArena',9,6)
+    begin(a.cup_generation);warp('JourneyPWTArena',9,6)
     actions={int(addr,16) for addr,_,name in re.findall(r'^(\w+) (\w) (\S+)$',raw,re.M) if name=='HandleInputChooseAction'}
     move_actions={int(addr,16) for addr,_,name in re.findall(r'^(\w+) (\w) (\S+)$',raw,re.M) if name=='HandleInputChooseMove'}
     def ready():
@@ -144,7 +145,7 @@ if a.play_cup:
             press(1)
         picture('pwt-world-ready-failure');raise AssertionError('Round ready prompt missing')
     while lib.read8(state+offsets[4]):
-        ready();entrant=lib.read16(cup+offsets[9]);stage=lib.read8(cup+offsets[12])
+        ready();assert position()==(9,6),position();entrant=lib.read16(cup+offsets[9]);stage=lib.read8(cup+offsets[12])
         picture('pwt-world-ring-'+str(len(actual_battles)))
         press(1)
         for _ in range(300):

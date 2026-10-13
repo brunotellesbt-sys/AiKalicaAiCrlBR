@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "rom_sha256": "5bb6dbd7854c3589a38ad3769af33b39de21e512c27b2449ba340f626a773cb6",
+  "rom_sha256": "168a19007fa2b32c39ae4b29dc5eb5ca8ebe16ef2e739839d2de38e3c77e7f38",
   "catalog_identities": 162,
   "version_generation_cap": 9,
   "perfect_ivs": false,
@@ -27490,8 +27490,57 @@
   ],
   "pwt_perfect_stats_override_normal_edition": true,
   "helper_and_travel_fixtures": true,
-  "complete_tournament_playthrough": false,
-  "actual_battles": [],
-  "player_battle_stats_boosted_for_flow_test": false,
+  "complete_tournament_playthrough": true,
+  "actual_battles": [
+    {
+      "stage": 0,
+      "opponent": 18,
+      "attacks": 13,
+      "outcome": 1
+    },
+    {
+      "stage": 0,
+      "opponent": 2,
+      "attacks": 25,
+      "outcome": 1
+    },
+    {
+      "stage": 0,
+      "opponent": 20,
+      "attacks": 16,
+      "outcome": 1
+    },
+    {
+      "stage": 0,
+      "opponent": 13,
+      "attacks": 14,
+      "outcome": 1
+    },
+    {
+      "stage": 0,
+      "opponent": 5,
+      "attacks": 23,
+      "outcome": 1
+    },
+    {
+      "stage": 1,
+      "opponent": 11,
+      "attacks": 13,
+      "outcome": 1
+    },
+    {
+      "stage": 1,
+      "opponent": 8,
+      "attacks": 19,
+      "outcome": 1
+    },
+    {
+      "stage": 1,
+      "opponent": 10,
+      "attacks": 14,
+      "outcome": 1
+    }
+  ],
+  "player_battle_stats_boosted_for_flow_test": true,
   "full_campaign_playthrough": false
 }
