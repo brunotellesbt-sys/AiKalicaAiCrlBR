@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "rom_sha256": "31b1dfe0bb913c895ef8983f6300ce352fd23d343c370cdad861a1a3758eceda",
+  "rom_sha256": "de32562229215916a6d3a347a09a421623cb9a4ec98db856514bbf6f958460d2",
   "version_generation_cap": 4,
   "difficulty": "Hard",
   "cup_generation": 1,
@@ -8,22 +8,11 @@
   "actual_battles": [
     {
       "stage": 0,
-      "opponent": 5,
-      "attacks": 11,
+      "opponent": 6,
+      "attacks": 18,
       "outcome": 1,
-      "opponent_name": "Koga",
-      "opponent_catalog_id": 4,
-      "level": 50,
-      "player_team_size": 6,
-      "enemy_team_size": 6
-    },
-    {
-      "stage": 0,
-      "opponent": 12,
-      "attacks": 81,
-      "outcome": 1,
-      "opponent_name": "Lance",
-      "opponent_catalog_id": 11,
+      "opponent_name": "Sabrina",
+      "opponent_catalog_id": 5,
       "level": 50,
       "player_team_size": 6,
       "enemy_team_size": 6
@@ -31,7 +20,7 @@
     {
       "stage": 0,
       "opponent": 3,
-      "attacks": 11,
+      "attacks": 17,
       "outcome": 1,
       "opponent_name": "Lt. Surge",
       "opponent_catalog_id": 2,
@@ -42,7 +31,7 @@
     {
       "stage": 0,
       "opponent": 7,
-      "attacks": 6,
+      "attacks": 30,
       "outcome": 1,
       "opponent_name": "Blaine",
       "opponent_catalog_id": 6,
@@ -51,20 +40,9 @@
       "enemy_team_size": 6
     },
     {
-      "stage": 1,
-      "opponent": 9,
-      "attacks": 21,
-      "outcome": 1,
-      "opponent_name": "Lorelei",
-      "opponent_catalog_id": 8,
-      "level": 50,
-      "player_team_size": 6,
-      "enemy_team_size": 6
-    },
-    {
-      "stage": 1,
+      "stage": 0,
       "opponent": 17,
-      "attacks": 23,
+      "attacks": 14,
       "outcome": 1,
       "opponent_name": "Ash",
       "opponent_catalog_id": 161,
@@ -74,11 +52,33 @@
     },
     {
       "stage": 1,
-      "opponent": 13,
-      "attacks": 23,
+      "opponent": 11,
+      "attacks": 29,
       "outcome": 1,
-      "opponent_name": "Blue",
-      "opponent_catalog_id": 12,
+      "opponent_name": "Agatha",
+      "opponent_catalog_id": 10,
+      "level": 50,
+      "player_team_size": 6,
+      "enemy_team_size": 6
+    },
+    {
+      "stage": 1,
+      "opponent": 14,
+      "attacks": 10,
+      "outcome": 1,
+      "opponent_name": "Red",
+      "opponent_catalog_id": 13,
+      "level": 50,
+      "player_team_size": 6,
+      "enemy_team_size": 6
+    },
+    {
+      "stage": 1,
+      "opponent": 2,
+      "attacks": 15,
+      "outcome": 1,
+      "opponent_name": "Misty",
+      "opponent_catalog_id": 1,
       "level": 50,
       "player_team_size": 6,
       "enemy_team_size": 6
@@ -98,7 +98,7 @@
   "player_battle_stats_boosted_for_flow_test": true,
   "competitive_balance_test": false,
   "full_campaign_playthrough": false,
-  "unavailable_move_choices_avoided": 3,
+  "unavailable_move_choices_avoided": 9,
   "exhausted_pp_for_struggle_fixture": false,
   "native_struggle_observed": false
 }

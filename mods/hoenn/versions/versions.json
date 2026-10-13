@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "6d548ac57dae199a867a9392f9a9ba6d7feb5a6d9c2deaa05233268e85faa651",
-  "build_rules_offset": 9045160,
+  "parent_rom_sha256": "baa42337d31eb304e122f8af61a1a3c9847812d96785965d52d544476cd930a8",
+  "build_rules_offset": 9045080,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "f34ca39b79b8118824a6b7377491843b2c49671de4c309a2663c4de903e639e9",
+      "sha256": "9a4518cc5dd3849741b9887b2309fa59b9149c4b3037cc5b50fef125a5adb936",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        9045160,
-        9045161,
-        9045162
+        9045080,
+        9045081,
+        9045082
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "31b1dfe0bb913c895ef8983f6300ce352fd23d343c370cdad861a1a3758eceda",
+      "sha256": "de32562229215916a6d3a347a09a421623cb9a4ec98db856514bbf6f958460d2",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        9045160,
-        9045161
+        9045080,
+        9045081
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "7729cd94714b7ed0b52675fb8bb5ee4792123815dc97abd3b2f20283da1c7ec9",
+      "sha256": "372fae43d071e7a3c5043011371331d01487c962757092dd1995c5da6966197e",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        9045162
+        9045082
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "977deaf4b2da269a6446d9afcce6e493d7d7bb7ca70824f502ab913557e72036",
+      "sha256": "03b568f1e5e36a783ff115cc7b9edfb11ace90690616c1b4f123859e09dfcc1d",
       "patched_byte_offsets": [
         160,
         162,
@@ -213,119 +213,151 @@
     "pwt-stadium-camera",
     "pwt-entrance-wait",
     "pwt-encore-guard",
-    "move-history-rules"
+    "move-history-rules",
+    "battle-interactions"
   ],
   "validation_scope": "pwt-update",
   "full_campaign_playthrough": false,
+  "battle_interactions_validated": true,
   "generation_cups_validated": true,
   "proofs": [
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Normal/pwt-world.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "pwt-world",
-      "sha256": "6a74b52722219f7cb68f3df26b3bc7cb5ab9d2ff0929b3810fa08c1fcee1bfbf"
+      "sha256": "cb931b1b609c28fda8d9ce62269c52d166f37b7dc2d4c5eead2035f5f4c3dadd"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-4-Normal/battle-interactions.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "battle-interactions",
+      "sha256": "82df378de306b6e797dcca9ce58d2e2e4ee6e00a5b57f91140cc6adc123c0789"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Normal/generation-cup-1.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "generation-cup-1",
-      "sha256": "13a402da5ff08740fba539880e3aba712e64b8796845ceffccfdb9773352a7b9"
+      "sha256": "56e53a098112667efed922dbd7bde6d7086924079e91251c369c83f8f8f95577"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Normal/generation-cup-2.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "generation-cup-2",
-      "sha256": "fec42903f501f0ded06834ab924e5d86e2f0a229975e980488c4d576b2afe9b0"
+      "sha256": "006ef9af4485d91aa928d63d83f686a0acdf8547f2442d049a128eec8dda810e"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Normal/generation-cup-3.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "generation-cup-3",
-      "sha256": "63d1bc56c571043bbca43a836f49677a15d38620be37dc8b201ccfc23c11bdd7"
+      "sha256": "fc2051b3c4ed2496fcd01dcdc6a0f5f703aacb9b29b45b9e2d3d5f415babecf7"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Normal/generation-cup-4.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "generation-cup-4",
-      "sha256": "ab07d5140b7873f620a489a1fa1c00e532273c8b93350016e3f242476d735cd8"
+      "sha256": "6e003dd1b17602757f2cd4b97159203ad8d44bd43db1cc8a4599c0176546fbbd"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Hard/pwt-world.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "pwt-world",
-      "sha256": "f1bf50c229e6a587256a57591c3df8f65782be2d67d13487992977daa7ced6c6"
+      "sha256": "67649690cf94572f555c4c728fb811ff4920a2f72b84f03402591684a65d4aa6"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-4-Hard/battle-interactions.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "battle-interactions",
+      "sha256": "a5c2f4938bec4a7637f7fcbad6e895cfb813827ddf6bee3c03bd9a4485a33c54"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Hard/generation-cup-1.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "generation-cup-1",
-      "sha256": "e1f714b2a553781f6b810442737a983cdf5e9d8e562abf4c0af08e3130ed7ece"
+      "sha256": "a0c1e83832732fbc3189d92e921d5410db54c7fcb1472bb0c495b4327422aaac"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Hard/generation-cup-2.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "generation-cup-2",
-      "sha256": "1116637ef5778b769af682d818370b2417da4bafeca884584889e5726d8e3ba7"
+      "sha256": "e5fb563e61099b256850308e679b602e76bdae29bee02d880e1889f258f70bb3"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Hard/generation-cup-3.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "generation-cup-3",
-      "sha256": "a1994a51d974e873a92d4cb3dc019ec88620713a03eecfb01fad0e817113e79c"
+      "sha256": "afb883c7875f2cb046d4fe7217a8eaab20cddbdb578fcb29cfece352f89a750d"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Hard/generation-cup-4.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "generation-cup-4",
-      "sha256": "47abe559bd0032d84397c3e91ce74f07f2a5d0219f21822b94b5fa8068274bc0"
+      "sha256": "178a2090d0382fc54dd516e3ea5cb11053c4769b21cbd13879dc30ee8b7dd828"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Normal/pwt-world.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "pwt-world",
-      "sha256": "825a01d4cbf504363d71174d65e1f1ec22f29757318fa4ba50489a67df82eea2"
+      "sha256": "6a65420728758fded4e6b7ca31975436fdf2d51497ca59b8edeb5e072d194122"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-9-Normal/battle-interactions.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "battle-interactions",
+      "sha256": "cbc682592a20bcc818e48253715ba9d1155650b514d18daf6194fa46c725a850"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Hard/pwt-world.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "pwt-world",
-      "sha256": "ec830f3e88d8f61f58c7800dfdb68c5d592cac7295049b5d03aae3c695fac485"
+      "sha256": "296ea03be1715df9853d46bd7c1197b9485ecf52449bb6cadb244a62ba98d660"
+    },
+    {
+      "file": "evidence/Pokemon-Journey-Gen1-9-Hard/battle-interactions.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "battle-interactions",
+      "sha256": "4c919d8902970dba2e585bf0e9672ac9d633aeea62fcda49cba50bb28f596efd"
+    },
+    {
+      "file": "evidence/common/battle-interactions/battle-interactions.json",
+      "target": "common",
+      "kind": "battle-interactions",
+      "sha256": "4d55a190e5b066ed4f303baada78b4d2198342454e0843d5c70512ef81d210bd"
     },
     {
       "file": "evidence/common/move-restrictions/move-restrictions.json",
       "target": "common",
       "kind": "move-restrictions",
-      "sha256": "f1ea36aaa9ed008c2db963580ed3d300ac1889fc702d6d47e7e2933e0466815a"
+      "sha256": "6cc8c5fe95d689ea44540d1cf36a082e6a31677fe8b3ff19f5a3ff9407d3124d"
     },
     {
       "file": "evidence/common/pwt-encore/pwt-encore.json",
       "target": "common",
       "kind": "pwt-encore",
-      "sha256": "8e44a5a6d1cde1ebd3fcf7a408c4da6501c9523ab231af9ded61f6a38d71012a"
+      "sha256": "dd0bd76159ca6630698eb7c104a7b4664c54be265112a44d4d85e5e88873682b"
     },
     {
       "file": "evidence/common/pwt-retirement/pwt-retirement.json",
       "target": "common",
       "kind": "pwt-retirement",
-      "sha256": "99d27b91b1cfa7c5cc6023e9b4779087e9d3b6b5c767ea26e9aa4c075f9e83f4"
+      "sha256": "cd9dbb72d7a996e6e4218b7d83d92a068c81fd00c1ea760dde51e274b1289d99"
     },
     {
       "file": "evidence/common/pwt-stadium/pwt-stadium.json",
       "target": "common",
       "kind": "pwt-stadium",
-      "sha256": "3e4ffbaf62b19a04596b50de60e25016ddd0fe1dd991e1fbd8d94526a3a7370a"
+      "sha256": "029df38668259aad7b175a16605a526ce9ac4856fbe3807d0673870785dd19f2"
     },
     {
       "file": "evidence/common/reproduction/reproduction.json",
       "target": "common",
       "kind": "reproduction",
-      "sha256": "22601fe19cc73e1ede0f956d592752ed8bde76120b0242117feb9ef02c23f6f5"
+      "sha256": "31dab50733d41706837090f90c5ee038d78b155a73b693abc0f67db74ad4d267"
     },
     {
       "file": "evidence/common/stats/species-stats.json",
       "target": "common",
       "kind": "species-stats",
-      "sha256": "85ab040b1b5339b04d735fb04469bb1441b3ec51653e455248dc828d3b53e913"
+      "sha256": "4d1964972a83ec8bacd975f92d30269682c454e88951592e4cb4df2fc0f3f1f0"
     }
   ]
 }

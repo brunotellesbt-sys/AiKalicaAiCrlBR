@@ -26,6 +26,9 @@ def seal(source,validation,output,validation_scope='full'):
         kinds=[] if validation_scope=='pwt-update' else ['gym-teams','variant-rules']
         if 'integration_layers' in info:kinds.append('pwt-world')
         for kind in kinds:add(validation/view/(kind+'.json'),row['file'],kind)
+        if (validation/view/'battle-interactions.json').exists():
+            info['battle_interactions_validated']=True
+            add(validation/view/'battle-interactions.json',row['file'],'battle-interactions')
         if (Path(source)/'.journey-move-history-rules').exists() and row['max_national']==493:
             info['generation_cups_validated']=True
             for generation in range(1,5):

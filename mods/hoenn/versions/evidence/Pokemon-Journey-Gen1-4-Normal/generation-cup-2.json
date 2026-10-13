@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "rom_sha256": "f34ca39b79b8118824a6b7377491843b2c49671de4c309a2663c4de903e639e9",
+  "rom_sha256": "9a4518cc5dd3849741b9887b2309fa59b9149c4b3037cc5b50fef125a5adb936",
   "version_generation_cap": 4,
   "difficulty": "Normal",
   "cup_generation": 2,
@@ -8,33 +8,11 @@
   "actual_battles": [
     {
       "stage": 0,
-      "opponent": 4,
-      "attacks": 9,
+      "opponent": 19,
+      "attacks": 15,
       "outcome": 1,
-      "opponent_name": "Blue",
-      "opponent_catalog_id": 12,
-      "level": 50,
-      "player_team_size": 6,
-      "enemy_team_size": 6
-    },
-    {
-      "stage": 0,
-      "opponent": 11,
-      "attacks": 28,
-      "outcome": 1,
-      "opponent_name": "Jasmine",
-      "opponent_catalog_id": 19,
-      "level": 50,
-      "player_team_size": 6,
-      "enemy_team_size": 6
-    },
-    {
-      "stage": 0,
-      "opponent": 9,
-      "attacks": 11,
-      "outcome": 1,
-      "opponent_name": "Morty",
-      "opponent_catalog_id": 17,
+      "opponent_name": "Luffy",
+      "opponent_catalog_id": 160,
       "level": 50,
       "player_team_size": 6,
       "enemy_team_size": 6
@@ -42,7 +20,7 @@
     {
       "stage": 0,
       "opponent": 16,
-      "attacks": 26,
+      "attacks": 18,
       "outcome": 1,
       "opponent_name": "Karen",
       "opponent_catalog_id": 24,
@@ -53,7 +31,7 @@
     {
       "stage": 0,
       "opponent": 13,
-      "attacks": 14,
+      "attacks": 9,
       "outcome": 1,
       "opponent_name": "Clair",
       "opponent_catalog_id": 21,
@@ -62,34 +40,45 @@
       "enemy_team_size": 6
     },
     {
-      "stage": 1,
-      "opponent": 14,
-      "attacks": 21,
+      "stage": 0,
+      "opponent": 3,
+      "attacks": 9,
       "outcome": 1,
-      "opponent_name": "Janine",
-      "opponent_catalog_id": 22,
+      "opponent_name": "Lance",
+      "opponent_catalog_id": 11,
       "level": 50,
       "player_team_size": 6,
       "enemy_team_size": 6
     },
     {
       "stage": 1,
-      "opponent": 12,
-      "attacks": 17,
+      "opponent": 17,
+      "attacks": 22,
       "outcome": 1,
-      "opponent_name": "Pryce",
-      "opponent_catalog_id": 20,
+      "opponent_name": "Silver",
+      "opponent_catalog_id": 25,
       "level": 50,
       "player_team_size": 6,
       "enemy_team_size": 6
     },
     {
       "stage": 1,
-      "opponent": 2,
-      "attacks": 17,
+      "opponent": 6,
+      "attacks": 10,
       "outcome": 1,
-      "opponent_name": "Bruno",
-      "opponent_catalog_id": 9,
+      "opponent_name": "Falkner",
+      "opponent_catalog_id": 14,
+      "level": 50,
+      "player_team_size": 6,
+      "enemy_team_size": 6
+    },
+    {
+      "stage": 1,
+      "opponent": 18,
+      "attacks": 23,
+      "outcome": 1,
+      "opponent_name": "Eren",
+      "opponent_catalog_id": 159,
       "level": 50,
       "player_team_size": 6,
       "enemy_team_size": 6
@@ -109,7 +98,7 @@
   "player_battle_stats_boosted_for_flow_test": true,
   "competitive_balance_test": false,
   "full_campaign_playthrough": false,
-  "unavailable_move_choices_avoided": 15,
+  "unavailable_move_choices_avoided": 6,
   "exhausted_pp_for_struggle_fixture": false,
   "native_struggle_observed": false
 }

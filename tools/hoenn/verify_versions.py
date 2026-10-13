@@ -60,7 +60,10 @@ def verify(directory,require_seal=True):
         else:assert report['rom_sha256']==expected,(target,kind,'Stale evidence')
         if target=='common':
             common.add(kind)
-            if kind=='item-menu-actions':
+            if kind=='battle-interactions':
+                from verify_battle_interactions import verify_report
+                verify_report(report,expected)
+            elif kind=='item-menu-actions':
                 assert report['stone_animation_completed'] and report['stone_consumed_once']
                 assert report['reusable_tm_taught_to_two_pokemon'] and len(report['learned'])==2
                 assert report['item_activation_and_confirmation_are_controller_input']
@@ -99,6 +102,9 @@ def verify(directory,require_seal=True):
                 assert report['returned_to_lobby'] and report['party_restored_byte_exact'] and report['bp_reward']==10
                 assert {b['stage'] for b in report['actual_battles']}=={0,1}
                 assert all(b['outcome']==1 and b['level']==50 and b['player_team_size']==b['enemy_team_size']==6 for b in report['actual_battles'])
+            elif kind=='battle-interactions':
+                from verify_battle_interactions import verify_report
+                verify_report(report,expected,cap,hard)
             else:raise AssertionError(('Unknown variant proof',kind))
             tested.add((target,kind))
     kinds=['gym-teams','variant-rules']
@@ -119,6 +125,9 @@ def verify(directory,require_seal=True):
         assert {'pwt-encore','move-restrictions'}<=common
         report=next(json.loads((directory/p['file']).read_text()) for p in proofs if p['kind']=='move-restrictions')
         assert report['cases']>=60 and report['native_engine_functions']
+    if info.get('battle_interactions_validated'):
+        expected|={(name,'battle-interactions') for name in VARIANTS}
+        assert 'battle-interactions' in common
     assert expected<=tested
     assert tested-expected<={(name,kind) for name in VARIANTS for kind in ['gym-teams','variant-rules']}
     required={'galactic-chapter','league-kanto','league-hoenn','mega-reversion','surf-passages','sharp-map','birth-confirmation','reproduction',

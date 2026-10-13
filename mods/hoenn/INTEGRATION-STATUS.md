@@ -24,7 +24,7 @@ Esta atualização valida o PWT e os problemas de Disable, Encore, Torment e PP 
 
 ## O que as evidências comprovam
 
-Os relatórios atuais em `versions/evidence/` identificam o alvo exato para PWT e regressões de golpes. Os relatórios históricos, mantidos nos diretórios de cada módulo e identificados por sua ROM, usam mGBA e incluem equipes dos ginásios, limites de geração, habitats aquáticos, interfaces de início/mapa/Pokédex/cartão, transporte, missões, capítulo Galactic, Ligas, Mega/reversão, atributos e save/Continue. A reprodução compara os arquivos finais das 108 camadas com uma árvore limpa proveniente dos 30.038 arquivos verificados do upstream.
+Os relatórios atuais em `versions/evidence/` identificam o alvo exato para PWT e regressões de golpes. Os relatórios históricos, mantidos nos diretórios de cada módulo e identificados por sua ROM, usam mGBA e incluem equipes dos ginásios, limites de geração, habitats aquáticos, interfaces de início/mapa/Pokédex/cartão, transporte, missões, capítulo Galactic, Ligas, Mega/reversão, atributos e save/Continue. A reprodução compara os arquivos finais das 109 camadas com uma árvore limpa proveniente dos 30.038 arquivos verificados do upstream.
 
 As batalhas de missão usam deslocamento/progresso anterior preparados e, em alguns testes, atributos do jogador aumentados na memória do emulador. Os adversários, resultados e flags de vitória são nativos. Esses aumentos não alteram a ROM nem seus base stats. As equipes dos ginásios no DOCX são extrações do gerador nativo, sem esses aumentos.
 
@@ -36,10 +36,12 @@ Os trechos iniciais de Kanto e Hoenn também foram percorridos desde New Game so
 
 ## Limites restantes
 
+A suíte de [interações de batalha](../../docs/interacoes-de-batalha.md) aprovou 684 cenários por edição (2.736 verificações). Ela corrigiu a previsão da IA para Spikes/Toxic Spikes com Heavy-Duty Boots ativas e conferiu o efeito de Magic Room/Klutz. Os casos incluem Trick Room, imunidades, dano, itens, terrenos, PP e efeitos em duplas. A cobertura não é exaustiva; animações e consumo dos itens não são reproduzidos nessa suíte.
+
 Não foi feita uma campanha humana contínua desde New Game até os créditos nas quatro edições. As Ligas foram vencidas e os saves retomados com progresso anterior preparado. As missões e as interfaces possuem verificações próprias, mas isso não comprova todas as combinações de ordem, diálogos e balanceamento em uma campanha completa. Relate a edição, o local e um save ao encontrar um problema.
 
 Saves antigos não são compatíveis com a Bag ampliada. A ROM mantém o formato histórico de metadados Game Freak; seu campo de um byte para o tamanho do bolso de itens é limitado a 255 para ferramentas externas. O motor e a Bag usam a capacidade real de 620; um editor externo deve conhecer este formato de save.
 
 A alpha anterior de 64 camadas permanece preservada em `playable/`, com suas próprias evidências. Seus relatórios não são apresentados como testes das novas ROMs.
 
-O PWT atual passou por inspeção das 446 equipes elegíveis nas quatro edições, instanciação das 162 identidades na arena e oito torneios Gen 1–4 completos (58 batalhas) e torneios completos nas gerações 6 e 9. Foram aprovados 65 cenários de histórico, restrições e PP, mais cinco de Encore; a auditoria de atributos atual conferiu as 91 Megas da referência, incluindo Mega Dimension. A apresentação é adaptada à GBA. A auditoria de todos os times canônicos de personagens modernos ainda está pendente; veja o documento do PWT.
+O PWT atual passou por inspeção das 446 equipes elegíveis nas quatro edições, instanciação das 162 identidades na arena e oito torneios Gen 1–4 completos (57 batalhas) e torneios completos nas gerações 6 e 9. Foram aprovados 65 cenários de histórico, restrições e PP, mais cinco de Encore; a auditoria de atributos atual conferiu as 91 Megas da referência, incluindo Mega Dimension. A apresentação é adaptada à GBA. A auditoria de todos os times canônicos de personagens modernos ainda está pendente; veja o documento do PWT.
