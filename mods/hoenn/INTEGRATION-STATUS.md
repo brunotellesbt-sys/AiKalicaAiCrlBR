@@ -22,7 +22,11 @@ Os relatórios em `versions/evidence/` indicam o SHA-256 do alvo testado e disti
 
 As batalhas de missão usam deslocamento/progresso anterior preparados e, em alguns testes, atributos do jogador aumentados na memória do emulador. Os adversários, resultados e flags de vitória são nativos. Esses aumentos não alteram a ROM nem seus base stats. As equipes dos ginásios no DOCX são extrações do gerador nativo, sem esses aumentos.
 
-A auditoria de habilidades e itens verifica registros, slots e referências válidas. Os testes específicos de Hidden Abilities, herança e Battle Bond exercitam efeitos reais. Isso não equivale a testar individualmente todas as interações possíveis das 318 habilidades e dos 870 itens. Os testes de evolução do jogador conferem alvos e requisitos; não percorrem todas as animações de evolução e consumo de pedras.
+A auditoria de habilidades e itens verifica registros, slots e referências válidas. Os testes específicos de Hidden Abilities, herança e Battle Bond exercitam efeitos reais. Isso não equivale a testar individualmente todas as interações possíveis das 318 habilidades e dos 870 itens.
+
+Além dos alvos e requisitos de evolução, foram executadas pelos menus reais as animações de Pikachu → Raichu/Raichu de Alola, Kadabra → Alakazam, Onix → Steelix, Pawmo → Pawmot e Gimmighoul → Gholdengo. Esses cenários verificam consumo da pedra ou Rare Candy, consumo do Metal Coat carregado, nível resultante e preservação no save. Uma única TM Thunderbolt foi ensinada a dois Pokémon sem consumo, e os golpes foram preservados após salvar/recarregar. Os Pokémon, itens e local iniciais desses cenários são preparados; o uso pelo menu e as animações não são simulados.
+
+Os trechos iniciais de Kanto e Hoenn também foram percorridos desde New Game somente com controles, sem escrever na RAM, forçar resultados ou aumentar atributos. Em Kanto, o tutorial do rival permite vitória ou derrota, como no original; o teste exige sua conclusão e a saída normal do laboratório. Em Hoenn, o resgate de Birch termina com uma vitória real. Esses relatórios cobrem a abertura, não a campanha completa.
 
 ## Limites restantes
 
