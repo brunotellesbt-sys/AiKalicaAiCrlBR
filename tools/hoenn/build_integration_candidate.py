@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 
 import package_playable
-from prepare_modern_field_moves import PRIOR, LAYER
+from prepare_pwt_builds import PRIOR, LAYER
 
 
 def main():
