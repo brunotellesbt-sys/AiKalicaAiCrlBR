@@ -30,7 +30,28 @@ def package(source,output):
  r=dict(parent_rom_sha256=hashlib.sha256(base).hexdigest(),build_rules_offset=at,
         parent_header_hex=base[0xA0:0xBE].hex(),parent_rules_hex=base[at:at+4].hex(),
         variants=rows,all_other_bytes_identical=True,validated=False)
- if (source/'.journey-cinnabar-shore-polish').exists():
+ if (source/'.journey-diglett-scout-battles').exists():
+  from prepare_diglett_scout_battles import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-native-coastal-fragments').exists():
+  from prepare_native_coastal_fragments import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-diglett-galactic-scouts').exists():
+  from prepare_diglett_galactic_scouts import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-close-vertical-boats').exists():
+  from prepare_close_vertical_boats import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-port-orientation-finish').exists():
+  from prepare_port_orientation_finish import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-final-port-alignment').exists():
+  from prepare_final_port_alignment import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-port-houses-and-ships').exists():
+  from prepare_port_houses_and_ships import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-cinnabar-shore-polish').exists():
   from prepare_cinnabar_shore_polish import PRIOR,LAYER
   r['integration_layers']=PRIOR+[LAYER]
  elif (source/'.journey-continuous-atlas-marker').exists():

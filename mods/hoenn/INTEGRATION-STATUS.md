@@ -1,12 +1,12 @@
 # Atualização costeira e níveis dinâmicos
 
-As quatro ROMs atuais contêm os portos compactos, a sala de Rotom com visual de Lavender, as bordas de areia e as correções de aproximação dos rivais e de níveis. As evidências novas ficam em `coastal-update-validation/`. A campanha inteira não foi jogada do começo aos créditos nesta entrega.
+As quatro ROMs atuais incluem as casas de Pallet/Fuchsia/Sevii, pontes e embarcações revisadas, navios maiores de Hoenn, os portos compactos, a sala de Rotom com visual de Lavender, bordas completas de areia, níveis dinâmicos e aproximações de até três passos de Eren/Luffy com diálogos maiores. O mapa marítimo usa as conexões reais, desenhadas em segmentos ortogonais. A Diglett’s Cave tem dois combates opcionais Galactic e um grunt de levantamento. As evidências novas ficam em `coastal-update-validation/`: 137 camadas, 1.482 arquivos reproduzidos, 21 portos, 343 mapas auditados estruturalmente e 57 costas geradas. A campanha inteira não foi jogada do começo aos créditos nesta entrega.
 
 Resultados de PWT e mecânicas das seções abaixo são históricos do PR #79. Seus bytes e hashes originais foram preservados em `validation-baselines/pr79/`; nenhum torneio foi repetido nesta atualização. Consulte [imagens e detalhes](../../docs/atualizacao-costeira.md).
 
 ---
 
-Atualização de 14/10/2026: build de 116 camadas, quatro ROMs atualizadas. Escopo desta entrega: PWT e encontros especiais, com provas nativas associadas aos hashes atuais. As campanhas completas não foram jogadas de ponta a ponta. Veja [balanceamento](../../docs/pwt-balanceamento.md) e [encontros especiais](../../docs/encontros-especiais-e-formas.md).
+Registro histórico do PR #79, de 14/10/2026: build de 116 camadas, PWT e encontros especiais. As seções abaixo descrevem essa validação anterior e seus limites. Veja [balanceamento](../../docs/pwt-balanceamento.md) e [encontros especiais](../../docs/encontros-especiais-e-formas.md).
 
 # Estado da integração
 

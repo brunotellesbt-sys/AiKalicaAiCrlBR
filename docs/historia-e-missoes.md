@@ -1,5 +1,11 @@
 # História e missões obrigatórias
 
+## Exploração Galactic na Diglett’s Cave
+
+O túnel entre a Rota 11, perto de Vermilion, e a Rota 2 tem três exploradores Galactic: dois grunts para batalhar, em (70,60) e (45,38) no andar subterrâneo, e um responsável pelo levantamento em (15,19). Eles explicam que estão explorando Kanto. Os combates são opcionais, acompanham a média atual da equipe e têm flags independentes dos grunts do navio; não criam uma trava de ginásio ou Liga. Os caminhos e as saídas originais foram preservados.
+
+O Rock Tunnel é outro local e mantém a missão anterior com quatro membros do Team Magma. Ambas as cavernas dispensam Flash.
+
 **Este guia contém spoilers.** Os circuitos de ginásios são independentes: insígnias de Kanto contam para a ordem dos ginásios de Kanto e as de Hoenn para Hoenn. As duas Ligas exigem as 16 insígnias e a conclusão das missões obrigatórias, incluindo o capítulo Galactic.
 
 ## Kanto

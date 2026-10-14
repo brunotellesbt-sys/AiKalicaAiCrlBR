@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "d40e842be6ac5de75ecc6c9d7a874e67a16b18507aa46921ec70d93964847986",
-  "build_rules_offset": 9069992,
+  "parent_rom_sha256": "90798bbdf85c70571b5fdba1fb175475eb49922895c6ec780a66c75c8370440c",
+  "build_rules_offset": 9074888,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "60474b4ad3cd7a17c93272bed22c520a982fc912b5dd8e30001c6d5e933954d9",
+      "sha256": "15c2a796ac9e56fcad780918bbb06aba1454fadbe1c44c05e243b4d806d6de18",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        9069992,
-        9069993,
-        9069994
+        9074888,
+        9074889,
+        9074890
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "f56dce4d5d18bce0c13998c81069a90a481ee9958af9415dc285ddcb150ad41f",
+      "sha256": "c3dcad24ceb852eac0d9e3b0071d9935d9f55925dd160a00c954c5939d873961",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        9069992,
-        9069993
+        9074888,
+        9074889
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "ca6e47c67793ff10ac28ca8039f49e6e143ded4a4885d91cd451f4bab016c4da",
+      "sha256": "92590ab956f2e0005789b4b0d7af4f96259d9fcfb88bb3d260610f7e15d59481",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        9069994
+        9074890
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "1476a69e7c9e2c0c74d7d4739091d964b9a9999365aaee1c9574476facf2c630",
+      "sha256": "464605e887c693412eedf94cc7d0414cbfd762755517d069962459cac2c6bc3f",
       "patched_byte_offsets": [
         160,
         162,
@@ -232,7 +232,17 @@
     "atlas-route-tracking",
     "final-moorings",
     "continuous-atlas-marker",
-    "cinnabar-shore-polish"
+    "cinnabar-shore-polish",
+    "port-houses-and-ships",
+    "final-port-alignment",
+    "port-orientation-finish",
+    "close-vertical-boats",
+    "rival-walk-and-coast-audit",
+    "connected-sea-chart",
+    "diglett-galactic-scouts",
+    "native-coastal-fragments",
+    "complete-beach-edges",
+    "diglett-scout-battles"
   ],
   "validation_scope": "campaign-coastal-update",
   "full_campaign_playthrough": false,
@@ -242,85 +252,109 @@
       "file": "evidence/common/coast-connectivity.json",
       "target": "common",
       "kind": "coast-connectivity",
-      "sha256": "0c2d4b46b0ce9c07f6f2dd12ab2a6924c9f7418f349398a2a1845c93e844daeb"
+      "sha256": "a879a1795d8116f4fc4d95baab029c0575a28bdc04246c271842d209d849b846"
+    },
+    {
+      "file": "evidence/common/eren-approach.json",
+      "target": "common",
+      "kind": "eren-approach",
+      "sha256": "e18e92586b076ff37c7949d850e4c73cdbd0bcb60b63c45e1cf02ec377d86fc6"
     },
     {
       "file": "evidence/common/compact-ferry.json",
       "target": "common",
       "kind": "compact-ferry",
-      "sha256": "2c77249c52628ef67a009b0ed4cd7e970b343fdb19bdede9634dba4187ade79a"
+      "sha256": "a85a52f7fcfe4731b699fa616616cc740b8109ad09f89afa63bb171051c77b35"
+    },
+    {
+      "file": "evidence/common/coastal-geometry.json",
+      "target": "common",
+      "kind": "coastal-geometry",
+      "sha256": "e87761fb7b7994553c4a08aa43769d63dc8e2f481c58a12fa27728975c1c3e9c"
     },
     {
       "file": "evidence/common/live-levels.json",
       "target": "common",
       "kind": "live-levels",
-      "sha256": "e01da2cd9220a211ec7c761ced8c7dbce512ca62ef772dc1628cc85e384554d7"
+      "sha256": "04a0c54f47144681f58185bc82d2094b3e3e611606f38a374e98b5199c11c578"
+    },
+    {
+      "file": "evidence/common/luffy-approach.json",
+      "target": "common",
+      "kind": "luffy-approach",
+      "sha256": "59a83ab3fa805980ec161d09e57e181e3ed3c0a6885a8e3cbf692166bb594b1b"
     },
     {
       "file": "evidence/common/ports-and-actors.json",
       "target": "common",
       "kind": "ports-and-actors",
-      "sha256": "55966afd7b3115098a37fed18e4990295fc2014573f26f66666f4b4414090180"
+      "sha256": "5b1fdb8c5526271c011bbcd299762ec0557547d11de57f4adac0ff5e73074a8a"
     },
     {
       "file": "evidence/common/world-map-position.json",
       "target": "common",
       "kind": "world-map-position",
-      "sha256": "088e68fca14c5658b7795c72a8203ab57804a513536efb257f57970d233b4dab"
+      "sha256": "58fac590ac67d22d76bd94d44e37ccaac7849b62832217cb27905e5e27e5dd1d"
     },
     {
       "file": "evidence/common/reproduction.json",
       "target": "common",
       "kind": "reproduction",
-      "sha256": "0776d187ef257afc2a82f9ffcde0543dc72e82db3a62ee50b316a3846cf7918a"
+      "sha256": "cbc8a07cadfcf7fb1e878d4775b718dc7b080ebe22f87a978382cf9cbd77c6df"
+    },
+    {
+      "file": "evidence/common/diglett-scouts.json",
+      "target": "common",
+      "kind": "diglett-scouts",
+      "sha256": "381fb19854bee6776e6943e36aa7e6d4759d888769b29847f5c76a24a5ac5874"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Normal/gym-teams.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "gym-teams",
-      "sha256": "b9419f8ae45ad035942627b93e0e73b522ebaa7122741f1c2f28977d36d7c102"
+      "sha256": "f4628d6d7fabffc6bd0b7d172626bf875e850bca52d6c1554f3ad19bf18cadee"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Normal/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "special-encounters",
-      "sha256": "38899f564317984d466ea1435a774f9ec15568bb0d8e93bf1e5c59df55fea2c2"
+      "sha256": "37ad12f0d9ccc3123326abe45efa2aa30fe944f2e9bf2cf6e4ce73506f26d813"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Hard/gym-teams.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "gym-teams",
-      "sha256": "ad821d049a4a5acc8a4cfcd034bc1e1217e40ba413b7a25a63d11f2adb49f979"
+      "sha256": "734e8ae66c6c73edeeb16b8fea43b8fb08f4ab4e51a636f2f29530f462d5b753"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Hard/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "special-encounters",
-      "sha256": "cd2512417fdefabb683a63b7e8f8cf78730134263493b29a6fa7f2ea7e82f303"
+      "sha256": "2fc2e6b426a4aa462623528a6f053eaae2b67bede9707cc29a376bb4295b6f0d"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Normal/gym-teams.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "gym-teams",
-      "sha256": "e5065b676487be6f2b841d1f1e279d2eff44ed7a7144cb5e3a0ee8272a093f42"
+      "sha256": "d8d14eb07ea824f3f19d69eae1595b6b07b89bae0da6d56fda353f82e7a07103"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Normal/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "special-encounters",
-      "sha256": "c2a507a7a8051af6dc1fedac2d6b3b76aef0cc2b7abb526b7670e6d8b3e50651"
+      "sha256": "3806460de8fdfd0a9df72b90a6ee21bf4e7d969c2015bd550192649b90aa31c9"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Hard/gym-teams.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "gym-teams",
-      "sha256": "ee07ff17e272f1f8026222611b370fdd42f27f2493739a05c2e9184d611e1f39"
+      "sha256": "f3b83f44c73982a1dc0c8d406942c85e7fb627b4c546cf25620256d7ac15c27c"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Hard/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "special-encounters",
-      "sha256": "ad6884a2a4261457d3a412d41a1c8e83eeac2247ad7c311d1bd45cb183cb69de"
+      "sha256": "5517027f3117627a4e8281369f247c7e45d9858e1d9f360e83d077625997654e"
     }
   ],
   "historical_validation": {

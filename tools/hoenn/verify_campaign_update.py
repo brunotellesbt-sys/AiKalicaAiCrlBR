@@ -26,6 +26,15 @@ def verify_update(directory,info):
   elif p['kind']=='compact-ferry':assert r['native_controller_menus'] and r['native_boat_animation'] and r['arrivals_on_accessible_dry_pier'] and len(r['trips'])==2
   elif p['kind']=='world-map-position':assert r['recenter_uses_real_position'] and r['short_trip_has_no_midroute_fixture_warp']
   elif p['kind']=='special-encounters':assert r['actual_tv_capture_and_form_ui'] and len(r['rotom_changes'])==6
+  elif p['kind'] in ['eren-approach','luffy-approach']:
+   assert r['actual_native_movement'] and r['controller_dialogue_and_battle_entry'] and r['actor_coordinates_not_written']
+   assert [c['distance'] for c in r['movement_samples']]==[4,3,2,1]
+  elif p['kind']=='diglett-scouts':
+   assert len(r['wins'])==2 and all(w['native_outcome']==1 and w['physical_npc_interaction'] for w in r['wins'])
+   assert r['independent_defeated_flags'] and r['ship_grunt_flags_unchanged']
+  elif p['kind']=='coastal-geometry':
+   assert len(r['generated_coasts'])==57 and len(r['compiled_shore_banks'])==9
+   assert all(c['grass_fragments']==0 for c in r['generated_coasts']) and r['approved_ports_preserved']
  assert {'reproduction','coast-connectivity','ports-and-actors','world-map-position','live-levels','compact-ferry'}<=common
  assert {(name,kind) for name in expected for kind in ['gym-teams','special-encounters']}<=covered
  assert info['full_campaign_playthrough'] is False and info['historical_validation']['retested_on_current_rom'] is False
