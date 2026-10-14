@@ -1,14 +1,15 @@
-"""Keep complete generation-cup evidence tied to the shipped Gen 1–4 ROMs."""
+"""Keep previous generation-cup evidence tied to its exact tested Gen 1–4 ROMs."""
 import hashlib,json,unittest
 from pathlib import Path
 from pwt_catalog import load,eligible
+from published_evidence import evidence_release,evidence_rom
 ROOT=Path(__file__).resolve().parents[2]
 class CompleteGenerationCups(unittest.TestCase):
-    def test_eight_complete_native_cups_match_the_current_roms_and_participant_pools(self):
-        rows=load()
+    def test_eight_completed_cups_match_the_exact_tested_roms_and_participant_pools(self):
+        rows=load();directory,_=evidence_release("generation-cup-1")
         for difficulty in ['Normal','Hard']:
             rom=ROOT/'roms'/f'Pokemon-Journey-Gen1-4-{difficulty}.gba'
-            sha=hashlib.sha256(rom.read_bytes()).hexdigest()
+            sha=hashlib.sha256(evidence_rom(directory,rom.name)).hexdigest()
             for generation in range(1,5):
                 with self.subTest(difficulty=difficulty,generation=generation):
                     path=ROOT/'mods/hoenn/pwt-gen1-4-validation'/f'{difficulty}-gen{generation}'/'pwt-generation-cup.json'

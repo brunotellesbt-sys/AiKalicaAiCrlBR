@@ -45,6 +45,11 @@ def verify(directory,require_seal=True):
         for row in info['variants']:
             assert digest((ROOT/'roms'/row['file']).read_bytes())==row['sha256'], ('Outdated roms/ download',row['file'])
         assert (ROOT/'roms/SHA256SUMS').read_bytes()==(directory/'SHA256SUMS').read_bytes()
+    if info.get('validation_scope')=='campaign-coastal-update':
+        from verify_campaign_update import verify_update
+        verify_update(directory,info)
+        print('Verified four current coastal ROMs and separately preserved historical evidence')
+        return info
     proofs=info['proofs'];assert proofs,'Missing native evidence'
     tested=set();common=set()
     for proof in proofs:

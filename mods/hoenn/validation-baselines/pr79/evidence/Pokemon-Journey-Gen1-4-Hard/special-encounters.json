@@ -1,0 +1,367 @@
+{
+  "passed": true,
+  "rom_sha256": "f2cddf5312b3674c3df175ac40dfdd92f7cd6a174fa643a77dba9902678f34f3",
+  "max_national": 493,
+  "version_generation_cap": 4,
+  "checks": [
+    {
+      "case": "workshop_entry_and_exit",
+      "controller_warps": true
+    },
+    {
+      "case": "rotom_tv_capture",
+      "actual_master_ball_capture": true,
+      "captured_base_form": true,
+      "repeat_capture_blocked": true
+    },
+    {
+      "case": "rotom_appliances",
+      "changes": [
+        {
+          "appliance_choice": 1,
+          "species": 1064,
+          "moves": [
+            85,
+            315,
+            0,
+            0
+          ],
+          "controller_native_animation": true
+        },
+        {
+          "appliance_choice": 2,
+          "species": 1065,
+          "moves": [
+            85,
+            56,
+            0,
+            0
+          ],
+          "controller_native_animation": true
+        },
+        {
+          "appliance_choice": 3,
+          "species": 1066,
+          "moves": [
+            85,
+            59,
+            0,
+            0
+          ],
+          "controller_native_animation": true
+        },
+        {
+          "appliance_choice": 4,
+          "species": 1067,
+          "moves": [
+            85,
+            403,
+            0,
+            0
+          ],
+          "controller_native_animation": true
+        },
+        {
+          "appliance_choice": 5,
+          "species": 1068,
+          "moves": [
+            85,
+            437,
+            0,
+            0
+          ],
+          "controller_native_animation": true
+        },
+        {
+          "appliance_choice": 0,
+          "species": 479,
+          "moves": [
+            85,
+            84,
+            0,
+            0
+          ],
+          "controller_native_animation": true
+        }
+      ],
+      "owned_non_appliance_move_preserved": true
+    },
+    {
+      "case": "deoxys_meteorite",
+      "four_forms": [
+        1054,
+        1055,
+        1056,
+        386
+      ],
+      "controller_native_animation": true
+    },
+    {
+      "case": "keystone_installation",
+      "missing_item_blocks": true,
+      "consumed_once": true,
+      "retry_without_second_item": true
+    },
+    {
+      "case": "fossil_restoration",
+      "recipes": [
+        {
+          "species": "OMANYTE",
+          "allowed": true,
+          "result": 1
+        },
+        {
+          "species": "KABUTO",
+          "allowed": true,
+          "result": 1
+        },
+        {
+          "species": "AERODACTYL",
+          "allowed": true,
+          "result": 1
+        },
+        {
+          "species": "LILEEP",
+          "allowed": true,
+          "result": 1
+        },
+        {
+          "species": "ANORITH",
+          "allowed": true,
+          "result": 1
+        },
+        {
+          "species": "CRANIDOS",
+          "allowed": true,
+          "result": 1
+        },
+        {
+          "species": "SHIELDON",
+          "allowed": true,
+          "result": 1
+        },
+        {
+          "species": "TIRTOUGA",
+          "allowed": false,
+          "result": 3
+        },
+        {
+          "species": "ARCHEN",
+          "allowed": false,
+          "result": 3
+        },
+        {
+          "species": "TYRUNT",
+          "allowed": false,
+          "result": 3
+        },
+        {
+          "species": "AMAURA",
+          "allowed": false,
+          "result": 3
+        },
+        {
+          "species": "DRACOZOLT",
+          "allowed": false,
+          "result": 3
+        },
+        {
+          "species": "ARCTOZOLT",
+          "allowed": false,
+          "result": 3
+        },
+        {
+          "species": "DRACOVISH",
+          "allowed": false,
+          "result": 3
+        },
+        {
+          "species": "ARCTOVISH",
+          "allowed": false,
+          "result": 3
+        }
+      ],
+      "unavailable_species_do_not_consume_items": true
+    }
+  ],
+  "rotom_changes": [
+    {
+      "appliance_choice": 1,
+      "species": 1064,
+      "moves": [
+        85,
+        315,
+        0,
+        0
+      ],
+      "controller_native_animation": true
+    },
+    {
+      "appliance_choice": 2,
+      "species": 1065,
+      "moves": [
+        85,
+        56,
+        0,
+        0
+      ],
+      "controller_native_animation": true
+    },
+    {
+      "appliance_choice": 3,
+      "species": 1066,
+      "moves": [
+        85,
+        59,
+        0,
+        0
+      ],
+      "controller_native_animation": true
+    },
+    {
+      "appliance_choice": 4,
+      "species": 1067,
+      "moves": [
+        85,
+        403,
+        0,
+        0
+      ],
+      "controller_native_animation": true
+    },
+    {
+      "appliance_choice": 5,
+      "species": 1068,
+      "moves": [
+        85,
+        437,
+        0,
+        0
+      ],
+      "controller_native_animation": true
+    },
+    {
+      "appliance_choice": 0,
+      "species": 479,
+      "moves": [
+        85,
+        84,
+        0,
+        0
+      ],
+      "controller_native_animation": true
+    }
+  ],
+  "dex_locations": [
+    {
+      "species": "SPECIES_ROTOM",
+      "destination": "JourneyLavenderWorkshop",
+      "available": true
+    },
+    {
+      "species": "SPECIES_SPIRITOMB",
+      "destination": "FiveIsland_MemorialPillar_Frlg",
+      "available": true
+    },
+    {
+      "species": "SPECIES_UNOWN",
+      "destination": "SevenIsland_TanobyRuins_MoneanChamber_Frlg",
+      "available": true
+    },
+    {
+      "species": "SPECIES_GIMMIGHOUL_CHEST",
+      "destination": "FiveIsland_LostCave_Room10_Frlg",
+      "available": false
+    },
+    {
+      "species": "SPECIES_CASTFORM_NORMAL",
+      "destination": "Route119_WeatherInstitute_2F",
+      "available": true
+    },
+    {
+      "species": "SPECIES_PORYGON",
+      "destination": "CeladonCity_GameCorner_PrizeRoom_Frlg",
+      "available": true
+    },
+    {
+      "species": "SPECIES_OMANYTE",
+      "destination": "PewterCity_Museum_1F_Frlg",
+      "available": true
+    },
+    {
+      "species": "SPECIES_KABUTO",
+      "destination": "PewterCity_Museum_1F_Frlg",
+      "available": true
+    },
+    {
+      "species": "SPECIES_AERODACTYL",
+      "destination": "PewterCity_Museum_1F_Frlg",
+      "available": true
+    },
+    {
+      "species": "SPECIES_LILEEP",
+      "destination": "PewterCity_Museum_1F_Frlg",
+      "available": true
+    },
+    {
+      "species": "SPECIES_ANORITH",
+      "destination": "PewterCity_Museum_1F_Frlg",
+      "available": true
+    },
+    {
+      "species": "SPECIES_CRANIDOS",
+      "destination": "PewterCity_Museum_1F_Frlg",
+      "available": true
+    },
+    {
+      "species": "SPECIES_SHIELDON",
+      "destination": "PewterCity_Museum_1F_Frlg",
+      "available": true
+    },
+    {
+      "species": "SPECIES_TIRTOUGA",
+      "destination": "PewterCity_Museum_1F_Frlg",
+      "available": false
+    },
+    {
+      "species": "SPECIES_ARCHEN",
+      "destination": "PewterCity_Museum_1F_Frlg",
+      "available": false
+    },
+    {
+      "species": "SPECIES_TYRUNT",
+      "destination": "PewterCity_Museum_1F_Frlg",
+      "available": false
+    },
+    {
+      "species": "SPECIES_AMAURA",
+      "destination": "PewterCity_Museum_1F_Frlg",
+      "available": false
+    },
+    {
+      "species": "SPECIES_DRACOZOLT",
+      "destination": "PewterCity_Museum_1F_Frlg",
+      "available": false
+    },
+    {
+      "species": "SPECIES_ARCTOZOLT",
+      "destination": "PewterCity_Museum_1F_Frlg",
+      "available": false
+    },
+    {
+      "species": "SPECIES_DRACOVISH",
+      "destination": "PewterCity_Museum_1F_Frlg",
+      "available": false
+    },
+    {
+      "species": "SPECIES_ARCTOVISH",
+      "destination": "PewterCity_Museum_1F_Frlg",
+      "available": false
+    }
+  ],
+  "event_only_families": 21,
+  "form_tools_available": 54,
+  "helper_party_travel_items_are_fixtures": true,
+  "actual_tv_capture_and_form_ui": true,
+  "full_campaign_playthrough": false
+}

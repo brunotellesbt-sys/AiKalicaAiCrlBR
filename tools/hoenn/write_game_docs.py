@@ -74,6 +74,7 @@ def generate(source,output,reports):
     doc=Document();doc.add_heading('Pokémon Journey — equipes dos ginásios',0)
     doc.add_paragraph('Equipes extraídas diretamente das quatro ROMs, usando o gerador nativo de adversários. A ordem significa a posição do ginásio dentro da própria região, independentemente da outra região. As amostras cobrem as duas possibilidades de tamanho nos quatro primeiros ginásios e a equipe completa a partir do quinto.')
     doc.add_paragraph('1º: 2 adversários para 1–2 Pokémon do jogador, ou 3 para 3–6. 2º: 3 para 1–3, ou 4 para 4–6. 3º: 4 para 1–4, ou 5 para 5–6. 4º: 5 para 1–5, ou 6 para 6. 5º–8º: 6. Tate e Liza continuam em dupla; é necessário ter dois Pokémon aptos para uma batalha dupla.')
+    doc.add_paragraph('Esta extração usa média 30 na equipe do jogador. O principal tem nível 35; os demais variam entre 29 e 35. A ordem regional define a quantidade, não fixa o nível. Em outra média, o jogo recalcula níveis, formas legais e golpes. Nature, EVs, IVs e golpes desta tabela são uma amostra efetiva da ROM.')
     doc.add_paragraph('EVs na ordem HP/Atk/Def/SpA/SpD/Spe; orçamento 510. Hard: IVs 31. Normal: IVs aleatórios; os valores extraídos são amostras, não IVs fixos do líder. Golpes de TM, tutor e breeding são permitidos cedo; level-up respeita o nível. Evoluções de treinadores respeitam a cadeia e os mínimos por item.')
     for name in ['Gen1-4-Normal','Gen1-4-Hard','Gen1-9-Normal','Gen1-9-Hard']:
         report=json.loads((reports/name/'gym-teams.json').read_text())

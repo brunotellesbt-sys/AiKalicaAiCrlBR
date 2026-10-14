@@ -1,0 +1,7512 @@
+{
+  "passed": true,
+  "rom_sha256": "d40e842be6ac5de75ecc6c9d7a874e67a16b18507aa46921ec70d93964847986",
+  "current_party_mean": true,
+  "ace_offset": 5,
+  "ordinary_offset": [
+    -5,
+    2
+  ],
+  "leader_offset": [
+    -1,
+    5
+  ],
+  "maps": [
+    "CeladonCity_Gym_Frlg",
+    "CeruleanCity_Gym_Frlg",
+    "CinnabarIsland_Gym_Frlg",
+    "DewfordTown_Gym",
+    "FortreeCity_Gym",
+    "FuchsiaCity_Gym_Frlg",
+    "LavaridgeTown_Gym_1F",
+    "LavaridgeTown_Gym_B1F",
+    "MauvilleCity_Gym",
+    "MossdeepCity_Gym",
+    "PetalburgCity_Gym",
+    "PewterCity_Gym_Frlg",
+    "RustboroCity_Gym",
+    "SaffronCity_Gym_Frlg",
+    "SootopolisCity_Gym_1F",
+    "SootopolisCity_Gym_B1F",
+    "VermilionCity_Gym_Frlg",
+    "ViridianCity_Gym_Frlg"
+  ],
+  "checks": [
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_ROXANNE_1",
+      "leader": true,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        4,
+        5,
+        8,
+        4,
+        5,
+        10
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_JOSH",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_TOMMY",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        3,
+        2
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_MARC",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6,
+        7
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_BRAWLY_1",
+      "leader": true,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        4,
+        5,
+        7,
+        9,
+        9,
+        10
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_TAKAO",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_JOCELYN",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        5
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_LAURA",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        1
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_BRENDEN",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        2
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_CRISTIAN",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        3
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_LILITH",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        3
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_WATTSON_1",
+      "leader": true,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6,
+        7,
+        9,
+        8,
+        5,
+        10
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_KIRK",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        4,
+        7
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_SHAWN",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        3,
+        7
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_BEN",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        7,
+        4
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_VIVIAN",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        4,
+        5
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_ANGELO",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        1,
+        4
+      ]
+    },
+    {
+      "map": "LavaridgeTown_Gym_1F",
+      "trainer": "TRAINER_FLANNERY_1",
+      "leader": true,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        8,
+        8,
+        9,
+        7,
+        8,
+        10
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_RANDALL",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        4
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_PARKER",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        5
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_GEORGE",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_BERKE",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        1
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_MARY",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        4
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_ALEXIA",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        1
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_JODY",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_NORMAN_1",
+      "leader": true,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        8,
+        8,
+        9,
+        8,
+        7,
+        10
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_WINONA_1",
+      "leader": true,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        5,
+        6,
+        5,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_JARED",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        7,
+        3,
+        4
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_EDWARDO",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        3,
+        1
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_FLINT",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6,
+        1
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_ASHLEY",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6,
+        2,
+        3
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_HUMBERTO",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        7
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_DARIUS",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        5
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_TATE_AND_LIZA_1",
+      "leader": true,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        8,
+        8,
+        7,
+        9,
+        6,
+        10
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_PRESTON",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_VIRGIL",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        5
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_BLAKE",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        7
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_HANNAH",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        1
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_SAMANTHA",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        3
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_MAURA",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        7
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_SYLVIA",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        3
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_NATE",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        2
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_MACEY",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        1
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_CLIFFORD",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        2
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_NICHOLAS",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        4
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_KATHLEEN",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        3
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_1F",
+      "trainer": "TRAINER_JUAN_1",
+      "leader": true,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        5,
+        7,
+        6,
+        4,
+        8,
+        10
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_ANDREA",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        7
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_CRISSY",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        7,
+        4
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_BRIANNA",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_CONNIE",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        2
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_BRIDGET",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        2
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_OLIVIA",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6,
+        7,
+        5
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_TIFFANY",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        1,
+        7
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_BETHANY",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        7,
+        2,
+        4
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_ANNIKA",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        4,
+        2
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_DAPHNE",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6,
+        4
+      ]
+    },
+    {
+      "map": "PewterCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_BROCK",
+      "leader": true,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6,
+        8,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "map": "PewterCity_Gym_Frlg",
+      "trainer": "TRAINER_CAMPER_LIAM",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        3,
+        3
+      ]
+    },
+    {
+      "map": "CeruleanCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_MISTY",
+      "leader": true,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        8,
+        7,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "map": "CeruleanCity_Gym_Frlg",
+      "trainer": "TRAINER_PICNICKER_DIANA",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        5
+      ]
+    },
+    {
+      "map": "CeruleanCity_Gym_Frlg",
+      "trainer": "TRAINER_SWIMMER_MALE_LUIS",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        2,
+        6
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_LT_SURGE",
+      "leader": true,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        7,
+        9,
+        8,
+        9,
+        6,
+        10
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_SAILOR_DWAYNE",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        5,
+        6
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_ENGINEER_BAILY",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6,
+        4
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_GENTLEMAN_TUCKER",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_ERIKA",
+      "leader": true,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        9,
+        4,
+        5,
+        9,
+        9,
+        10
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_LASS_KAY",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        4,
+        4
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_LASS_LISA",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        1,
+        3
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_PICNICKER_TINA",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        3,
+        4
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_BEAUTY_BRIDGET",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6,
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_BEAUTY_TAMIA",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        1,
+        6
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_BEAUTY_LORI",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        2
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_MARY",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        2,
+        2,
+        3,
+        7,
+        1
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_KOGA",
+      "leader": true,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        8,
+        6,
+        5,
+        7,
+        6,
+        10
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_PHIL",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        3,
+        6
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_EDGAR",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6,
+        4,
+        5
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_KIRK",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        1,
+        3,
+        2,
+        7
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_SHAWN",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        5,
+        1
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_KAYDEN",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        1
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_NATE",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        5,
+        6
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_SABRINA",
+      "leader": true,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6,
+        8,
+        8,
+        4,
+        6,
+        10
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_JOHAN",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        2,
+        2,
+        5,
+        3
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_TYRON",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        4,
+        2
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_CAMERON",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6,
+        6,
+        4
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_PRESTON",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        2
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_CHANNELER_AMANDA",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        3,
+        2
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_CHANNELER_STACY",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        5
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_CHANNELER_TASHA",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6,
+        1,
+        1
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_BLAINE",
+      "leader": true,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        9,
+        4,
+        7,
+        4,
+        8,
+        10
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_ERIK",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        1,
+        6,
+        2
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_AVERY",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        3,
+        3,
+        3,
+        7
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_DEREK",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        2
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_ZAC",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        3,
+        2
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_BURGLAR_QUINN",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        5,
+        5,
+        3
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_BURGLAR_RAMON",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        4
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_BURGLAR_DUSTY",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        1,
+        5
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_JOURNEY_BLUE",
+      "leader": true,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        9,
+        9,
+        9,
+        4,
+        4,
+        10
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_JASON",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        1
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_COLE",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        4,
+        5
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_BLACK_BELT_ATSUSHI",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        2,
+        7
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_BLACK_BELT_KIYO",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        2
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_BLACK_BELT_TAKASHI",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        3,
+        7,
+        6
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_SAMUEL",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        7,
+        7,
+        7,
+        2,
+        6
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_YUJI",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        5,
+        3,
+        4,
+        3,
+        6
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_WARREN",
+      "leader": false,
+      "player_levels": [
+        5
+      ],
+      "mean": 5,
+      "enemy_levels": [
+        6,
+        1,
+        4,
+        2,
+        3
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_ROXANNE_1",
+      "leader": true,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        22,
+        19,
+        21,
+        18,
+        17,
+        23
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_JOSH",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        20
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_TOMMY",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        15,
+        17
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_MARC",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        19,
+        15
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_BRAWLY_1",
+      "leader": true,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        17,
+        22,
+        17,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_TAKAO",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        16
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_JOCELYN",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        13
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_LAURA",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        14
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_BRENDEN",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        14
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_CRISTIAN",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        19
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_LILITH",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        19
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_WATTSON_1",
+      "leader": true,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        17,
+        18,
+        18,
+        20,
+        20,
+        23
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_KIRK",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        15,
+        18
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_SHAWN",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        17,
+        17
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_BEN",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        20,
+        20
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_VIVIAN",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        18,
+        18
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_ANGELO",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        13,
+        18
+      ]
+    },
+    {
+      "map": "LavaridgeTown_Gym_1F",
+      "trainer": "TRAINER_FLANNERY_1",
+      "leader": true,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        17,
+        19,
+        18,
+        18,
+        20,
+        23
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_RANDALL",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        18
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_PARKER",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        15
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_GEORGE",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        16
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_BERKE",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        18
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_MARY",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        15
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_ALEXIA",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        18
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_JODY",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        16
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_NORMAN_1",
+      "leader": true,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        18,
+        18,
+        22,
+        22,
+        22,
+        23
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_WINONA_1",
+      "leader": true,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        19,
+        20,
+        17,
+        18,
+        22,
+        23
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_JARED",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        14,
+        18,
+        13
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_EDWARDO",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        19,
+        18
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_FLINT",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        18,
+        20
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_ASHLEY",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        20,
+        19,
+        15
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_HUMBERTO",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        17
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_DARIUS",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        20
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_TATE_AND_LIZA_1",
+      "leader": true,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        20,
+        20,
+        20,
+        19,
+        22,
+        23
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_PRESTON",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        19
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_VIRGIL",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        19
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_BLAKE",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        14
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_HANNAH",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        16
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_SAMANTHA",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        13
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_MAURA",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        15
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_SYLVIA",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        16
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_NATE",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        15
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_MACEY",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        15
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_CLIFFORD",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        14
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_NICHOLAS",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        14
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_KATHLEEN",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        18
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_1F",
+      "trainer": "TRAINER_JUAN_1",
+      "leader": true,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        19,
+        18,
+        18,
+        17,
+        17,
+        23
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_ANDREA",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        16
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_CRISSY",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        16,
+        17
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_BRIANNA",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        15
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_CONNIE",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        13
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_BRIDGET",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        19
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_OLIVIA",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        15,
+        13,
+        17
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_TIFFANY",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        16,
+        17
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_BETHANY",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        20,
+        18,
+        20
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_ANNIKA",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        18,
+        16
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_DAPHNE",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        18,
+        18
+      ]
+    },
+    {
+      "map": "PewterCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_BROCK",
+      "leader": true,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        22,
+        22,
+        19,
+        18,
+        17,
+        23
+      ]
+    },
+    {
+      "map": "PewterCity_Gym_Frlg",
+      "trainer": "TRAINER_CAMPER_LIAM",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        19,
+        20
+      ]
+    },
+    {
+      "map": "CeruleanCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_MISTY",
+      "leader": true,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        18,
+        19,
+        17,
+        19,
+        21,
+        23
+      ]
+    },
+    {
+      "map": "CeruleanCity_Gym_Frlg",
+      "trainer": "TRAINER_PICNICKER_DIANA",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        16
+      ]
+    },
+    {
+      "map": "CeruleanCity_Gym_Frlg",
+      "trainer": "TRAINER_SWIMMER_MALE_LUIS",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        18,
+        20
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_LT_SURGE",
+      "leader": true,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        18,
+        20,
+        22,
+        17,
+        18,
+        23
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_SAILOR_DWAYNE",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        14,
+        17
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_ENGINEER_BAILY",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        13,
+        18
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_GENTLEMAN_TUCKER",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        18
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_ERIKA",
+      "leader": true,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        19,
+        17,
+        22,
+        18,
+        17,
+        23
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_LASS_KAY",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        20,
+        14
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_LASS_LISA",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        20,
+        17
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_PICNICKER_TINA",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        14,
+        15
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_BEAUTY_BRIDGET",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        13,
+        20,
+        16,
+        15
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_BEAUTY_TAMIA",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        17,
+        18
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_BEAUTY_LORI",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        16
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_MARY",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        13,
+        19,
+        20,
+        18,
+        20
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_KOGA",
+      "leader": true,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        21,
+        17,
+        22,
+        19,
+        22,
+        23
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_PHIL",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        17,
+        15
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_EDGAR",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        16,
+        15,
+        14
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_KIRK",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        13,
+        15,
+        19,
+        17
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_SHAWN",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        17,
+        16
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_KAYDEN",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        14
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_NATE",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        18,
+        20
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_SABRINA",
+      "leader": true,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        22,
+        22,
+        20,
+        19,
+        18,
+        23
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_JOHAN",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        19,
+        16,
+        18,
+        17
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_TYRON",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        19,
+        19
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_CAMERON",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        20,
+        15,
+        20
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_PRESTON",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        13
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_CHANNELER_AMANDA",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        16,
+        14
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_CHANNELER_STACY",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        15
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_CHANNELER_TASHA",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        20,
+        17,
+        18
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_BLAINE",
+      "leader": true,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        21,
+        21,
+        21,
+        17,
+        22,
+        23
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_ERIK",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        14,
+        18,
+        14
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_AVERY",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        14,
+        20,
+        20,
+        16
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_DEREK",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        15
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_ZAC",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        20,
+        17
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_BURGLAR_QUINN",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        19,
+        18,
+        18
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_BURGLAR_RAMON",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        18
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_BURGLAR_DUSTY",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        18,
+        14
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_JOURNEY_BLUE",
+      "leader": true,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        22,
+        21,
+        18,
+        17,
+        22,
+        23
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_JASON",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        18
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_COLE",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        14,
+        16
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_BLACK_BELT_ATSUSHI",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        14,
+        17
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_BLACK_BELT_KIYO",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        20
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_BLACK_BELT_TAKASHI",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        17,
+        18,
+        14
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_SAMUEL",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        17,
+        20,
+        17,
+        14,
+        15
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_YUJI",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        20,
+        17,
+        16,
+        18,
+        15
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_WARREN",
+      "leader": false,
+      "player_levels": [
+        18,
+        19
+      ],
+      "mean": 18,
+      "enemy_levels": [
+        17,
+        17,
+        17,
+        17,
+        14
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_ROXANNE_1",
+      "leader": true,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        23,
+        20,
+        20,
+        19,
+        19,
+        25
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_JOSH",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        15
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_TOMMY",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        18,
+        18
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_MARC",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        21,
+        19
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_BRAWLY_1",
+      "leader": true,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        22,
+        24,
+        24,
+        20,
+        20,
+        25
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_TAKAO",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        19
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_JOCELYN",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        18
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_LAURA",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        17
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_BRENDEN",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_CRISTIAN",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        18
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_LILITH",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_WATTSON_1",
+      "leader": true,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        19,
+        22,
+        22,
+        24,
+        19,
+        25
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_KIRK",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        15,
+        19
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_SHAWN",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20,
+        15
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_BEN",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20,
+        17
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_VIVIAN",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        16,
+        20
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_ANGELO",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        15,
+        21
+      ]
+    },
+    {
+      "map": "LavaridgeTown_Gym_1F",
+      "trainer": "TRAINER_FLANNERY_1",
+      "leader": true,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        24,
+        19,
+        24,
+        21,
+        22,
+        25
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_RANDALL",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        17
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_PARKER",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        15
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_GEORGE",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        17
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_BERKE",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        18
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_MARY",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        21
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_ALEXIA",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        15
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_JODY",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_NORMAN_1",
+      "leader": true,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        22,
+        19,
+        23,
+        19,
+        24,
+        25
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_WINONA_1",
+      "leader": true,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        23,
+        21,
+        24,
+        23,
+        22,
+        25
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_JARED",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        18,
+        21,
+        22
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_EDWARDO",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        22,
+        20
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_FLINT",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        19,
+        20
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_ASHLEY",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        17,
+        22,
+        21
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_HUMBERTO",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        16
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_DARIUS",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        21
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_TATE_AND_LIZA_1",
+      "leader": true,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        22,
+        19,
+        24,
+        22,
+        23,
+        25
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_PRESTON",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        17
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_VIRGIL",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        18
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_BLAKE",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        22
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_HANNAH",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_SAMANTHA",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        21
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_MAURA",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        22
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_SYLVIA",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        19
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_NATE",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        22
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_MACEY",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        22
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_CLIFFORD",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        16
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_NICHOLAS",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        15
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_KATHLEEN",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        17
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_1F",
+      "trainer": "TRAINER_JUAN_1",
+      "leader": true,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        22,
+        21,
+        24,
+        22,
+        20,
+        25
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_ANDREA",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        17
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_CRISSY",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20,
+        17
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_BRIANNA",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        16
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_CONNIE",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        16
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_BRIDGET",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        18
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_OLIVIA",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        19,
+        17,
+        16
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_TIFFANY",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        18,
+        20
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_BETHANY",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        19,
+        18,
+        22
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_ANNIKA",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        16,
+        19
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_DAPHNE",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        22,
+        20
+      ]
+    },
+    {
+      "map": "PewterCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_BROCK",
+      "leader": true,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        22,
+        21,
+        21,
+        22,
+        23,
+        25
+      ]
+    },
+    {
+      "map": "PewterCity_Gym_Frlg",
+      "trainer": "TRAINER_CAMPER_LIAM",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        15,
+        21
+      ]
+    },
+    {
+      "map": "CeruleanCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_MISTY",
+      "leader": true,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        19,
+        22,
+        19,
+        19,
+        22,
+        25
+      ]
+    },
+    {
+      "map": "CeruleanCity_Gym_Frlg",
+      "trainer": "TRAINER_PICNICKER_DIANA",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20
+      ]
+    },
+    {
+      "map": "CeruleanCity_Gym_Frlg",
+      "trainer": "TRAINER_SWIMMER_MALE_LUIS",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        17,
+        17
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_LT_SURGE",
+      "leader": true,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        21,
+        20,
+        22,
+        22,
+        19,
+        25
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_SAILOR_DWAYNE",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        21,
+        19
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_ENGINEER_BAILY",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        15,
+        22
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_GENTLEMAN_TUCKER",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        16
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_ERIKA",
+      "leader": true,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        22,
+        19,
+        20,
+        23,
+        22,
+        25
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_LASS_KAY",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        15,
+        16
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_LASS_LISA",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20,
+        17
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_PICNICKER_TINA",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        17,
+        20
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_BEAUTY_BRIDGET",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        15,
+        17,
+        19,
+        22
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_BEAUTY_TAMIA",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        18,
+        19
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_BEAUTY_LORI",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        21
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_MARY",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        18,
+        19,
+        17,
+        21,
+        20
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_KOGA",
+      "leader": true,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        24,
+        20,
+        24,
+        24,
+        24,
+        25
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_PHIL",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        15,
+        21
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_EDGAR",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_KIRK",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        21,
+        16,
+        17,
+        17
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_SHAWN",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        16,
+        22
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_KAYDEN",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        17
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_NATE",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        18,
+        21
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_SABRINA",
+      "leader": true,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        19,
+        20,
+        23,
+        20,
+        24,
+        25
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_JOHAN",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        18,
+        18,
+        17,
+        15
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_TYRON",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        15,
+        22
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_CAMERON",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20,
+        20,
+        20
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_PRESTON",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_CHANNELER_AMANDA",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        19,
+        20
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_CHANNELER_STACY",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_CHANNELER_TASHA",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        17,
+        20,
+        18
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_BLAINE",
+      "leader": true,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        21,
+        24,
+        19,
+        19,
+        21,
+        25
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_ERIK",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20,
+        21,
+        18
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_AVERY",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20,
+        16,
+        21,
+        15
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_DEREK",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_ZAC",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        15,
+        18
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_BURGLAR_QUINN",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        21,
+        16,
+        19
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_BURGLAR_RAMON",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        16
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_BURGLAR_DUSTY",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        18,
+        19
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_JOURNEY_BLUE",
+      "leader": true,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        24,
+        20,
+        24,
+        20,
+        19,
+        25
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_JASON",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        15
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_COLE",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        21,
+        18
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_BLACK_BELT_ATSUSHI",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        21,
+        19
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_BLACK_BELT_KIYO",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_BLACK_BELT_TAKASHI",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20,
+        19,
+        19
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_SAMUEL",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        20,
+        22,
+        20,
+        15,
+        22
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_YUJI",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        17,
+        20,
+        17,
+        19,
+        17
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_WARREN",
+      "leader": false,
+      "player_levels": [
+        20
+      ],
+      "mean": 20,
+      "enemy_levels": [
+        15,
+        20,
+        16,
+        15,
+        18
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_ROXANNE_1",
+      "leader": true,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        98,
+        96,
+        99,
+        94,
+        95,
+        100
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_JOSH",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        96
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_TOMMY",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        92,
+        91
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_MARC",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        96,
+        93
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_BRAWLY_1",
+      "leader": true,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        95,
+        99,
+        97,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_TAKAO",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        90
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_JOCELYN",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        94
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_LAURA",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        91
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_BRENDEN",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        95
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_CRISTIAN",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        97
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_LILITH",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        97
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_WATTSON_1",
+      "leader": true,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        94,
+        97,
+        97,
+        96,
+        96,
+        100
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_KIRK",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        94,
+        97
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_SHAWN",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        96,
+        90
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_BEN",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        92,
+        96
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_VIVIAN",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        90,
+        95
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_ANGELO",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        93,
+        94
+      ]
+    },
+    {
+      "map": "LavaridgeTown_Gym_1F",
+      "trainer": "TRAINER_FLANNERY_1",
+      "leader": true,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        96,
+        98,
+        98,
+        98,
+        96,
+        100
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_RANDALL",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        94
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_PARKER",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        97
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_GEORGE",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        90
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_BERKE",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        91
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_MARY",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        93
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_ALEXIA",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        94
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_JODY",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        93
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_NORMAN_1",
+      "leader": true,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        98,
+        95,
+        94,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_WINONA_1",
+      "leader": true,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        94,
+        97,
+        98,
+        99,
+        95,
+        100
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_JARED",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        92,
+        96,
+        94
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_EDWARDO",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        93,
+        97
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_FLINT",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        91,
+        90
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_ASHLEY",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        94,
+        93,
+        91
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_HUMBERTO",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        90
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_DARIUS",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        93
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_TATE_AND_LIZA_1",
+      "leader": true,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        94,
+        94,
+        97,
+        96,
+        97,
+        100
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_PRESTON",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        96
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_VIRGIL",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        90
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_BLAKE",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        95
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_HANNAH",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        91
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_SAMANTHA",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        97
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_MAURA",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        93
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_SYLVIA",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        92
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_NATE",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        95
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_MACEY",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        93
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_CLIFFORD",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        94
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_NICHOLAS",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        96
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_KATHLEEN",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        91
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_1F",
+      "trainer": "TRAINER_JUAN_1",
+      "leader": true,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        97,
+        94,
+        98,
+        98,
+        99,
+        100
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_ANDREA",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        94
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_CRISSY",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        92,
+        92
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_BRIANNA",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        95
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_CONNIE",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        97
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_BRIDGET",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        95
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_OLIVIA",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        96,
+        96,
+        91
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_TIFFANY",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        90,
+        90
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_BETHANY",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        95,
+        97,
+        91
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_ANNIKA",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        91,
+        94
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_DAPHNE",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        97,
+        90
+      ]
+    },
+    {
+      "map": "PewterCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_BROCK",
+      "leader": true,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        99,
+        99,
+        98,
+        96,
+        96,
+        100
+      ]
+    },
+    {
+      "map": "PewterCity_Gym_Frlg",
+      "trainer": "TRAINER_CAMPER_LIAM",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        94,
+        96
+      ]
+    },
+    {
+      "map": "CeruleanCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_MISTY",
+      "leader": true,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        96,
+        94,
+        98,
+        99,
+        99,
+        100
+      ]
+    },
+    {
+      "map": "CeruleanCity_Gym_Frlg",
+      "trainer": "TRAINER_PICNICKER_DIANA",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        95
+      ]
+    },
+    {
+      "map": "CeruleanCity_Gym_Frlg",
+      "trainer": "TRAINER_SWIMMER_MALE_LUIS",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        95,
+        91
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_LT_SURGE",
+      "leader": true,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        97,
+        99,
+        95,
+        95,
+        99,
+        100
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_SAILOR_DWAYNE",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        90,
+        96
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_ENGINEER_BAILY",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        93,
+        90
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_GENTLEMAN_TUCKER",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        90
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_ERIKA",
+      "leader": true,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        99,
+        99,
+        99,
+        95,
+        99,
+        100
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_LASS_KAY",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        93,
+        94
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_LASS_LISA",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        97,
+        93
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_PICNICKER_TINA",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        93,
+        92
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_BEAUTY_BRIDGET",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        96,
+        90,
+        96,
+        91
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_BEAUTY_TAMIA",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        93,
+        94
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_BEAUTY_LORI",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        92
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_MARY",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        90,
+        96,
+        96,
+        97,
+        95
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_KOGA",
+      "leader": true,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        99,
+        94,
+        96,
+        96,
+        98,
+        100
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_PHIL",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        95,
+        97
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_EDGAR",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        97,
+        91,
+        95
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_KIRK",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        94,
+        91,
+        97,
+        94
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_SHAWN",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        92,
+        97
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_KAYDEN",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        92
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_NATE",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        97,
+        91
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_SABRINA",
+      "leader": true,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        95,
+        96,
+        95,
+        95,
+        98,
+        100
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_JOHAN",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        95,
+        92,
+        91,
+        95
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_TYRON",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        92,
+        90
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_CAMERON",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        90,
+        96,
+        94
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_PRESTON",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        97
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_CHANNELER_AMANDA",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        96,
+        94
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_CHANNELER_STACY",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        95
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_CHANNELER_TASHA",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        94,
+        94,
+        94
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_BLAINE",
+      "leader": true,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        95,
+        96,
+        98,
+        94,
+        98,
+        100
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_ERIK",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        90,
+        91,
+        95
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_AVERY",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        93,
+        95,
+        91,
+        91
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_DEREK",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        93
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_ZAC",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        96,
+        91
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_BURGLAR_QUINN",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        97,
+        92,
+        95
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_BURGLAR_RAMON",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        94
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_BURGLAR_DUSTY",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        90,
+        94
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_JOURNEY_BLUE",
+      "leader": true,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        97,
+        98,
+        95,
+        97,
+        96,
+        100
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_JASON",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        97
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_COLE",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        97,
+        94
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_BLACK_BELT_ATSUSHI",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        92,
+        93
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_BLACK_BELT_KIYO",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        95
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_BLACK_BELT_TAKASHI",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        94,
+        91,
+        92
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_SAMUEL",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        93,
+        96,
+        90,
+        97,
+        96
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_YUJI",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        97,
+        91,
+        93,
+        95,
+        97
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_WARREN",
+      "leader": false,
+      "player_levels": [
+        95
+      ],
+      "mean": 95,
+      "enemy_levels": [
+        96,
+        91,
+        92,
+        93,
+        92
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_ROXANNE_1",
+      "leader": true,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        16,
+        13,
+        13,
+        15,
+        15,
+        17
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_JOSH",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        14
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_TOMMY",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        14,
+        8
+      ]
+    },
+    {
+      "map": "RustboroCity_Gym",
+      "trainer": "TRAINER_MARC",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        10,
+        9
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_BRAWLY_1",
+      "leader": true,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        13,
+        16,
+        11,
+        14,
+        14,
+        17
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_TAKAO",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        14
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_JOCELYN",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        13
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_LAURA",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        7
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_BRENDEN",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        14
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_CRISTIAN",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11
+      ]
+    },
+    {
+      "map": "DewfordTown_Gym",
+      "trainer": "TRAINER_LILITH",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_WATTSON_1",
+      "leader": true,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        14,
+        12,
+        14,
+        13,
+        15,
+        17
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_KIRK",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        13,
+        9
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_SHAWN",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        10,
+        8
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_BEN",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        9,
+        8
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_VIVIAN",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        13,
+        13
+      ]
+    },
+    {
+      "map": "MauvilleCity_Gym",
+      "trainer": "TRAINER_ANGELO",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11,
+        9
+      ]
+    },
+    {
+      "map": "LavaridgeTown_Gym_1F",
+      "trainer": "TRAINER_FLANNERY_1",
+      "leader": true,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        16,
+        16,
+        13,
+        12,
+        14,
+        17
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_RANDALL",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        13
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_PARKER",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_GEORGE",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        8
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_BERKE",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_MARY",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        8
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_ALEXIA",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        14
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_JODY",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        14
+      ]
+    },
+    {
+      "map": "PetalburgCity_Gym",
+      "trainer": "TRAINER_NORMAN_1",
+      "leader": true,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        14,
+        16,
+        12,
+        14,
+        16,
+        17
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_WINONA_1",
+      "leader": true,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        15,
+        13,
+        13,
+        13,
+        13,
+        17
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_JARED",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        9,
+        14,
+        13
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_EDWARDO",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        7,
+        14
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_FLINT",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        12,
+        9
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_ASHLEY",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11,
+        11,
+        11
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_HUMBERTO",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11
+      ]
+    },
+    {
+      "map": "FortreeCity_Gym",
+      "trainer": "TRAINER_DARIUS",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        13
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_TATE_AND_LIZA_1",
+      "leader": true,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        12,
+        16,
+        13,
+        15,
+        11,
+        17
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_PRESTON",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_VIRGIL",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        12
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_BLAKE",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        8
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_HANNAH",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_SAMANTHA",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        7
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_MAURA",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        13
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_SYLVIA",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_NATE",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        9
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_MACEY",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        12
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_CLIFFORD",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        10
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_NICHOLAS",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        9
+      ]
+    },
+    {
+      "map": "MossdeepCity_Gym",
+      "trainer": "TRAINER_KATHLEEN",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        10
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_1F",
+      "trainer": "TRAINER_JUAN_1",
+      "leader": true,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        12,
+        15,
+        16,
+        14,
+        14,
+        17
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_ANDREA",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        14
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_CRISSY",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11,
+        13
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_BRIANNA",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        7
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_CONNIE",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        14
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_BRIDGET",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        9
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_OLIVIA",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        8,
+        7,
+        7
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_TIFFANY",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        9,
+        13
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_BETHANY",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        13,
+        11,
+        14
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_ANNIKA",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        8,
+        8
+      ]
+    },
+    {
+      "map": "SootopolisCity_Gym_B1F",
+      "trainer": "TRAINER_DAPHNE",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        12,
+        10
+      ]
+    },
+    {
+      "map": "PewterCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_BROCK",
+      "leader": true,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11,
+        15,
+        15,
+        12,
+        14,
+        17
+      ]
+    },
+    {
+      "map": "PewterCity_Gym_Frlg",
+      "trainer": "TRAINER_CAMPER_LIAM",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        9,
+        8
+      ]
+    },
+    {
+      "map": "CeruleanCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_MISTY",
+      "leader": true,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        16,
+        11,
+        12,
+        12,
+        11,
+        17
+      ]
+    },
+    {
+      "map": "CeruleanCity_Gym_Frlg",
+      "trainer": "TRAINER_PICNICKER_DIANA",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        9
+      ]
+    },
+    {
+      "map": "CeruleanCity_Gym_Frlg",
+      "trainer": "TRAINER_SWIMMER_MALE_LUIS",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11,
+        10
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_LT_SURGE",
+      "leader": true,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        16,
+        11,
+        14,
+        11,
+        12,
+        17
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_SAILOR_DWAYNE",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11,
+        13
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_ENGINEER_BAILY",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11,
+        14
+      ]
+    },
+    {
+      "map": "VermilionCity_Gym_Frlg",
+      "trainer": "TRAINER_GENTLEMAN_TUCKER",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        12
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_ERIKA",
+      "leader": true,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        16,
+        15,
+        15,
+        13,
+        15,
+        17
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_LASS_KAY",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        8,
+        8
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_LASS_LISA",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        9,
+        8
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_PICNICKER_TINA",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        7,
+        10
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_BEAUTY_BRIDGET",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        12,
+        14,
+        7,
+        7
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_BEAUTY_TAMIA",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        8,
+        10
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_BEAUTY_LORI",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        10
+      ]
+    },
+    {
+      "map": "CeladonCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_MARY",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        10,
+        7,
+        13,
+        10,
+        11
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_KOGA",
+      "leader": true,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11,
+        14,
+        15,
+        14,
+        14,
+        17
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_PHIL",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        7,
+        11
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_EDGAR",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        7,
+        14,
+        13
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_KIRK",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        10,
+        12,
+        12,
+        13
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_SHAWN",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        10,
+        11
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_KAYDEN",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        10
+      ]
+    },
+    {
+      "map": "FuchsiaCity_Gym_Frlg",
+      "trainer": "TRAINER_JUGGLER_NATE",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11,
+        9
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_SABRINA",
+      "leader": true,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11,
+        16,
+        16,
+        16,
+        12,
+        17
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_JOHAN",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        7,
+        10,
+        12,
+        9
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_TYRON",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        9,
+        10
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_CAMERON",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11,
+        13,
+        12
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_PSYCHIC_PRESTON",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        14
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_CHANNELER_AMANDA",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        9,
+        7
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_CHANNELER_STACY",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        14
+      ]
+    },
+    {
+      "map": "SaffronCity_Gym_Frlg",
+      "trainer": "TRAINER_CHANNELER_TASHA",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        14,
+        13,
+        13
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_LEADER_BLAINE",
+      "leader": true,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        16,
+        16,
+        15,
+        12,
+        11,
+        17
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_ERIK",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        9,
+        13,
+        11
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_AVERY",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        13,
+        13,
+        10,
+        10
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_DEREK",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        12
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_SUPER_NERD_ZAC",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11,
+        9
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_BURGLAR_QUINN",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        12,
+        10,
+        11
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_BURGLAR_RAMON",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        10
+      ]
+    },
+    {
+      "map": "CinnabarIsland_Gym_Frlg",
+      "trainer": "TRAINER_BURGLAR_DUSTY",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        9,
+        11
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_JOURNEY_BLUE",
+      "leader": true,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        16,
+        12,
+        13,
+        11,
+        11,
+        17
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_JASON",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        11
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_TAMER_COLE",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        10,
+        7
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_BLACK_BELT_ATSUSHI",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        10,
+        11
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_BLACK_BELT_KIYO",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        14
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_BLACK_BELT_TAKASHI",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        7,
+        12,
+        14
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_SAMUEL",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        9,
+        10,
+        11,
+        11,
+        10
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_YUJI",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        10,
+        11,
+        7,
+        7,
+        9
+      ]
+    },
+    {
+      "map": "ViridianCity_Gym_Frlg",
+      "trainer": "TRAINER_COOLTRAINER_WARREN",
+      "leader": false,
+      "player_levels": [
+        5,
+        10,
+        21
+      ],
+      "mean": 12,
+      "enemy_levels": [
+        12,
+        7,
+        13,
+        14,
+        9
+      ]
+    }
+  ],
+  "native_generated_parties": true,
+  "enemy_levels_written": false,
+  "actual_mossdeep_battle_levels": [
+    21,
+    23
+  ],
+  "initial_party_badges_and_script_are_fixtures": true,
+  "full_campaign_playthrough": false
+}

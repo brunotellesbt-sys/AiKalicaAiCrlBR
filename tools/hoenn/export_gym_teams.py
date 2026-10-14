@@ -19,7 +19,8 @@ for gym in scaling['gyms']:
             for bank,count in [(kanto_flags,rank if gym['kanto'] else 0),(hoenn_flags,0 if gym['kanto'] else rank)]:
                 for i,flag in enumerate(bank):rawflag(flag,i<count)
             for players in ([2,6] if rank<4 else [6]):
-                team([6]*players);levels=generated(trainer);mons=[]
+                team([30]*players);levels=generated(trainer);mons=[]
+                assert levels[-1]==35 and all(29<=v<=35 for v in levels)
                 expected=6 if rank>=4 else rank+2+(players>rank+2)
                 assert len(levels)==expected,(name,rank,players,levels)
                 for i,level in enumerate(levels):
@@ -42,4 +43,4 @@ if not hard:
 assert hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest()==initial_sha
 lib.stop()
 (args.output/'gym-teams.json').write_text(json.dumps(dict(passed=True,rom_sha256=initial_sha,max_national=rules,
-    difficulty='Hard' if hard else 'Normal',checks=checks,native_parties=True,initial_state_is_fixture=True),indent=2)+'\n')
+    difficulty='Hard' if hard else 'Normal',reference_party_mean=30,levels_are_dynamic=True,checks=checks,native_parties=True,initial_state_is_fixture=True),indent=2)+'\n')

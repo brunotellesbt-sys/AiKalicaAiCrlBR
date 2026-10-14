@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 
 import package_playable
-from prepare_pwt_obedience import PRIOR, LAYER
+from prepare_cinnabar_shore_polish import PRIOR, LAYER
 
 
 def main():

@@ -1,5 +1,7 @@
 # Interações de batalha — validação nativa
 
+Os resultados desta página pertencem à ROM do PR #79, preservada com seus hashes em `mods/hoenn/validation-baselines/pr79/`. A atualização costeira posterior valida os mapas e encontros alterados, sem repetir torneios ou afirmar nova validação completa destas mecânicas.
+
 A suíte executou **684 cenários em cada uma das quatro edições**, totalizando 2.736 verificações. Os relatórios identificam a SHA-256 exata de cada ROM, os resultados observados e as expectativas. Dos 684 casos, 324 verificam a tabela dos 18 tipos e 360 exercitam as demais interações.
 
 ## Correção encontrada
