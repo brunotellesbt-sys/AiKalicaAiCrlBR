@@ -1,5 +1,7 @@
 # Balanceamento e correções do PWT
 
+Os resultados desta página pertencem à ROM do PR #79, preservada com seus hashes em `mods/hoenn/validation-baselines/pr79/`. A atualização costeira posterior valida os mapas e encontros alterados, sem repetir torneios ou afirmar nova validação completa destas mecânicas.
+
 As execuções adicionais foram interrompidas a pedido do usuário. O manifesto enumera apenas as combinações concluídas; Gen1–9 Hard / geração 6 não foi concluída neste build.
 
 O teste usa entradas de controle de um bot que escolhe ataques por tipo, STAB e atributos. Não altera HP, PP, atributos ou resultados durante as lutas. O bot não equivale a um jogador competitivo humano. Os testes antigos de fluxo, que usam atributos aumentados, ficam separados.

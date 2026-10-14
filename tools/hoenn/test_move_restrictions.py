@@ -1,10 +1,11 @@
-"""Bind native move-effect regression reports to the current release ROM."""
+"""Bind native move-effect regression reports to their recorded release ROM."""
 import hashlib,json,unittest
 from pathlib import Path
+from published_evidence import evidence_release
 ROOT=Path(__file__).resolve().parents[2]
 class NativeMoveRestrictions(unittest.TestCase):
     def test_history_pp_and_status_regressions_match_the_release(self):
-        manifest=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
+        _,manifest=evidence_release('move-restrictions')
         for kind in ['move-restrictions','pwt-encore']:
             report=json.loads((ROOT/f'mods/hoenn/pwt-gen1-4-validation/{kind}.json').read_text())
             self.assertTrue(report['passed'])

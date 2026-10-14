@@ -13,8 +13,10 @@ No repositório, as quatro ROMs atuais também ficam em [`roms/`](../../../roms/
 
 [Baixar as quatro edições em ZIP](Pokemon-Journey-Four-Editions.zip). [SHA-256](SHA256SUMS). [Manifesto e evidências](versions.json).
 
-Rivais, líderes, Elite Four, campeões, chefes e administradores recebem builds competitivas, 510 EVs e IA avançada nas duas dificuldades. Treinadores comuns preservam o tratamento comum. Os níveis e evoluções respeitam a progressão configurada.
+Rivais, líderes, Elite Four, campeões, chefes e administradores recebem builds competitivas, 510 EVs e IA avançada nas duas dificuldades. Treinadores comuns preservam o tratamento comum. Treinadores comuns usam a média atual −5/+2, inclusive dentro dos ginásios. Líderes usam −1/+5 e o principal fica obrigatoriamente em +5; quantidades continuam por ordem regional. Evoluções e golpes respeitam o nível final.
 
 Red, Leaf, Brendan e May podem começar em qualquer região. Surf, Dive e Waterfall são entregues pela família; Fly é o quarto HM. Os demais antigos HMs são TMs reutilizáveis, sem barreiras terrestres. As cavernas são iluminadas.
 
 Leia o [guia completo](../../../docs/README.md), o [DOCX das equipes](../../../docs/equipes-ginasios-quatro-versoes.docx) e os [limites da validação](../INTEGRATION-STATUS.md). O jogo pode ser aberto num emulador GBA com flash de 128 KiB ou no player do GitHub Pages. Guarde backups dos saves.
+
+[Imagens dos portos e detalhes desta atualização](../../../docs/atualizacao-costeira.md). As validações de PWT/mecânicas do PR #79 foram preservadas como históricas; a campanha inteira não foi jogada novamente nesta entrega.

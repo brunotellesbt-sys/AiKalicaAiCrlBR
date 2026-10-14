@@ -17,36 +17,44 @@ class MapRenderer:
         self.tile_images={}
         self.sprites={}
 
-    def sprite(self,graphics_id):
-        if graphics_id in self.sprites:return self.sprites[graphics_id]
+    def sprite(self,graphics_id,frame_index=0):
+        key=(graphics_id,frame_index)
+        if key in self.sprites:return self.sprites[key]
         root=self.source/'src/data/object_events'
         pointers=(root/'object_event_graphics_info_pointers.h').read_text()
         symbol=re.search(r'\['+re.escape(graphics_id)+r'\]\s*=\s*&([A-Za-z0-9_]+)',pointers)[1]
-        info=re.search(r'const struct ObjectEventGraphicsInfo '+symbol+r' = \{(.*?)\};',(root/'object_event_graphics_info.h').read_text(),re.S)[1]
-        pic=re.search(r'\.images = (\w+)',info)[1]
-        table=re.search(r'static const struct SpriteFrameImage '+pic+r'\[\] = \{(.*?)\};',(root/'object_event_pic_tables.h').read_text(),re.S)[1]
+        info=re.search(r'const struct ObjectEventGraphicsInfo '+symbol+r'\s*=\s*\{(.*?)\};',(root/'object_event_graphics_info.h').read_text(),re.S)[1]
+        pic=re.search(r'\.images\s*=\s*(\w+)',info)[1]
+        table=re.search(r'static const struct SpriteFrameImage '+pic+r'\[\]\s*=\s*\{(.*?)\};',(root/'object_event_pic_tables.h').read_text(),re.S)[1]
         graphic=re.search(r'(?:overworld_(?:ascending_frames|frame)|obj_frame_tiles)\((\w+)',table)[1]
         path=re.search(r'\b'+graphic+r'\[\].*?"([^"]+)"',(root/'object_event_graphics.h').read_text())[1]
-        width=int(re.search(r'\.width = (\d+)',info)[1]);height=int(re.search(r'\.height = (\d+)',info)[1])
+        width=int(re.search(r'\.width\s*=\s*(\d+)',info)[1]);height=int(re.search(r'\.height\s*=\s*(\d+)',info)[1])
         original=Image.open((self.source/path).with_suffix('.png'))
         # PNG palette is the same indexed source consumed by the native build.
-        palette_tag=re.search(r'\.paletteTag = (\w+)',info)[1]
+        palette_tag=re.search(r'\.paletteTag\s*=\s*(\w+)',info)[1]
         palette_symbol=re.search(r'\{(gObjectEventPal_\w+),\s*'+palette_tag+r'\}',(self.source/'src/event_object_movement.c').read_text())[1]
         palette_path=re.search(r'\b'+palette_symbol+r'\[\].*?"([^"]+)"',(root/'object_event_graphics.h').read_text())[1]
-        palette_lines=(self.source/palette_path).with_suffix('.pal').read_text().splitlines()[3:]
+        palette_file=(self.source/palette_path).with_suffix('.pal')
+        if palette_file.exists():
+            palette_lines=palette_file.read_text().splitlines()[3:]
+        else:
+            raw_palette=(self.source/palette_path).read_bytes()
+            native_colors=struct.unpack('<'+'H'*(len(raw_palette)//2),raw_palette)
+            palette_lines=[' '.join(str(((value>>shift)&31)*8) for shift in [0,5,10]) for value in native_colors]
         native_palette=[int(v) for line in palette_lines for v in line.split()]
-        frame=original.crop((0,0,width,height));frame.putpalette(native_palette)
+        left=(frame_index%(original.width//width))*width;top=(frame_index//(original.width//width))*height
+        frame=original.crop((left,top,left+width,top+height));frame.putpalette(native_palette)
         sprite=frame.convert('RGBA')
         for y in range(height):
             for x in range(width):
-                if original.getpixel((x,y))==0:sprite.putpixel((x,y),(0,0,0,0))
-        self.sprites[graphics_id]=sprite
+                if original.getpixel((left+x,top+y))==0:sprite.putpixel((x,y),(0,0,0,0))
+        self.sprites[key]=sprite
         return sprite
 
     def tileset(self,name):
         if name in self.cache:return self.cache[name]
         h=re.search(r'const struct Tileset '+name+r'\s*=\s*\{(.*?)\};',self.headers,re.S)[1]
-        symbol=re.search(r'\.metatiles = (\w+)',h)[1]
+        symbol=re.search(r'\.metatiles\s*=\s*(\w+)',h)[1]
         path=re.search(r'\b'+symbol+r'\[\].*?"([^"]+)"',self.metas)[1]
         folder=(self.source/path).parent
         tiles=Image.open(folder/'tiles.png');assert tiles.mode=='P'
@@ -89,7 +97,8 @@ class MapRenderer:
             result.paste(tile_image,(cell%l['width']*16,cell//l['width']*16))
         if npcs:
             for event in sorted(m['object_events'],key=lambda e:e['y']):
-                sprite=self.sprite(event['graphics_id'])
+                frame=2 if event['graphics_id']=='OBJ_EVENT_GFX_MR_BRINEYS_BOAT' and event['movement_type'] in ['MOVEMENT_TYPE_FACE_LEFT','MOVEMENT_TYPE_FACE_RIGHT'] else 0
+                sprite=self.sprite(event['graphics_id'],frame)
                 result.paste(sprite,(event['x']*16+8-sprite.width//2,event['y']*16+16-sprite.height),sprite)
         return result,m
 

@@ -1,5 +1,7 @@
 # PWT Gen 1–4 — validação e correções de batalha
 
+Os resultados desta página pertencem à ROM do PR #79, preservada com seus hashes em `mods/hoenn/validation-baselines/pr79/`. A atualização costeira posterior valida os mapas e encontros alterados, sem repetir torneios ou afirmar nova validação completa destas mecânicas.
+
 Os quatro torneios por geração foram concluídos nas edições Normal e Hard: oito torneios e 56 batalhas nativas, incluindo grupos e mata-mata. Cada torneio retornou à recepção, entregou 10 BP uma vez e restaurou a equipe original byte a byte.
 
 | Edição | Geração | Batalhas | Relatório |

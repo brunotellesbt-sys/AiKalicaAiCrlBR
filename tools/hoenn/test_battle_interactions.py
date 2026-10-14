@@ -1,20 +1,21 @@
-"""Require reproducible mechanics coverage bound to every current ROM edition."""
+"""Require reproducible mechanics coverage bound to the exact tested ROM edition; historical evidence is labeled explicitly."""
 import hashlib
 import json
 import unittest
 from pathlib import Path
 from verify_battle_interactions import verify_report
+from published_evidence import evidence_release,evidence_rom
 
 ROOT=Path(__file__).resolve().parents[2]
 REPORTS=ROOT/'mods/hoenn/battle-interactions-validation'
 
 class NativeBattleInteractions(unittest.TestCase):
     def test_all_four_editions_have_matching_native_mechanics_results(self):
-        manifest=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
+        directory,manifest=evidence_release('battle-interactions')
         baseline=None
         for row in manifest['variants']:
             with self.subTest(edition=row['file']):
-                sha=hashlib.sha256((ROOT/'roms'/row['file']).read_bytes()).hexdigest()
+                sha=hashlib.sha256(evidence_rom(directory,row['file'])).hexdigest()
                 self.assertEqual(sha,row['sha256'])
                 edition=row['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba')
                 report=json.loads((REPORTS/edition/'battle-interactions.json').read_text())
@@ -51,15 +52,15 @@ class NativeBattleInteractions(unittest.TestCase):
         self.assertFalse(before['passed'])
         self.assertEqual(before['actual'],12)
         self.assertEqual(before['expected'],0)
-        manifest=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
+        directory,manifest=evidence_release('battle-interactions')
         self.assertNotEqual(before['rom_sha256'],manifest['parent_rom_sha256'])
 
     def test_release_seal_includes_the_new_evidence(self):
-        manifest=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
+        directory,manifest=evidence_release('battle-interactions')
         self.assertTrue(manifest['battle_interactions_validated'])
         proofs=[p for p in manifest['proofs'] if p['kind']=='battle-interactions']
         self.assertEqual(len(proofs),5)
         for proof in proofs:
-            self.assertEqual(hashlib.sha256((ROOT/'mods/hoenn/versions'/proof['file']).read_bytes()).hexdigest(),proof['sha256'])
+            self.assertEqual(hashlib.sha256((directory/proof['file']).read_bytes()).hexdigest(),proof['sha256'])
 
 if __name__=='__main__':unittest.main()

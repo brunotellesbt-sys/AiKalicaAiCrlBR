@@ -1,16 +1,17 @@
-"""Bind completed unboosted cups and modern legality regressions to shipped ROMs."""
+"""Bind previous unboosted cups to their preserved tested ROMs."""
 import hashlib,json,unittest
 from pathlib import Path
 from verify_pwt_balance import verify_report
+from published_evidence import evidence_release,evidence_rom
 ROOT=Path(__file__).resolve().parents[2]
 class PWTBalanceTests(unittest.TestCase):
-    def test_completed_edition_pool_combinations_are_current_and_unboosted(self):
+    def test_completed_edition_pool_combinations_match_tested_roms_and_are_unboosted(self):
         count=0
-        release=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
+        directory,release=evidence_release('pwt-unboosted-0')
         for cap in (4,9):
             for difficulty in ('Normal','Hard'):
                 edition=f'Gen1-{cap}-{difficulty}'
-                sha=hashlib.sha256((ROOT/'roms'/f'Pokemon-Journey-{edition}.gba').read_bytes()).hexdigest()
+                sha=hashlib.sha256(evidence_rom(directory,f'Pokemon-Journey-{edition}.gba')).hexdigest()
                 pools=release['pwt_balance_tested_pools'][f'Pokemon-Journey-{edition}.gba']
                 self.assertTrue(pools)
                 for pool in pools:
@@ -20,10 +21,10 @@ class PWTBalanceTests(unittest.TestCase):
                         verify_report(report,sha,cap,difficulty=='Hard',pool)
                     count+=1
         self.assertGreaterEqual(count,4)
-    def test_nonlevel_reference_and_native_regressions_are_current(self):
-        release=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
+    def test_nonlevel_reference_and_native_regressions_match_validation_release(self):
+        directory,release=evidence_release('nonlevel-moves')
         proof=next(p for p in release['proofs'] if p['kind']=='nonlevel-moves')
-        r=json.loads((ROOT/'mods/hoenn/versions'/proof['file']).read_text())
+        r=json.loads((directory/proof['file']).read_text())
         self.assertEqual(r['rom_sha256'],release['parent_rom_sha256'])
         self.assertEqual(r['species_and_forms_checked'],1571)
         self.assertEqual(r['independently_checked_tables'],3142)

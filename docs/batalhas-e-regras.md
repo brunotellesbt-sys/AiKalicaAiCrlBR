@@ -15,7 +15,9 @@ Os perfis dão prioridade a OU da geração 9 e usam análises adequadas de Nati
 
 ## Níveis e evolução
 
-Treinadores fora dos ginásios e selvagens ficam entre cinco níveis abaixo e dois acima da média da equipe, com limite de 1–100. Ginásios e seus treinadores usam a ordem das insígnias da própria região, independentemente da outra região.
+Todos os treinadores comuns, inclusive dentro dos ginásios, e os selvagens ficam entre cinco níveis abaixo e dois acima da média atual da equipe, com limite de 1–100. Líderes usam essa mesma média: os demais Pokémon variam de −1 a +4, e o principal obrigatoriamente fica em +5, respeitando o limite 100. A ordem das insígnias da própria região determina a quantidade da equipe; não fixa seus níveis.
+
+Exemplo: média 18 → treinadores comuns 13–20; líder 17–23, principal 23. Ao crescer para média 20, os próximos adversários são recalculados: comuns 15–22; líder 19–25, principal 25.
 
 Treinadores usam a pré-evolução quando o nível é insuficiente. A cadeia inteira é conferida. Evoluções por pedra ou item carregado exigem nível 30 para soma de atributos base abaixo de 500, nível 35 para 500–529 e nível 40 para 530 ou mais. Requisitos por nível maiores continuam valendo. Essa regra de 30/35/40 não modifica as pedras do jogador nem as transformações temporárias de Mega Evolução.
 

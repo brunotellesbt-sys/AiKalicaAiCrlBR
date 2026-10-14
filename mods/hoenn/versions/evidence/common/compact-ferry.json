@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "rom_sha256": "d40e842be6ac5de75ecc6c9d7a874e67a16b18507aa46921ec70d93964847986",
+  "trips": [
+    {
+      "origin": "PalletTown_Frlg",
+      "destination": "Route25_Frlg",
+      "arrival": [
+        63,
+        11
+      ],
+      "animation_observations": 18
+    },
+    {
+      "origin": "Route25_Frlg",
+      "destination": "PalletTown_Frlg",
+      "arrival": [
+        12,
+        17
+      ],
+      "animation_observations": 18
+    }
+  ],
+  "native_controller_menus": true,
+  "native_boat_animation": true,
+  "arrivals_on_accessible_dry_pier": true,
+  "initial_travel_and_campaign_state_are_fixtures": true
+}
