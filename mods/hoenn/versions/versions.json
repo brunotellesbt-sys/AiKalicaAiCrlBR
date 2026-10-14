@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "efc1eb1376d1603e4fa8be0cdbe37da8fd8f537141967632743147cd2472eca8",
-  "build_rules_offset": 9075928,
+  "parent_rom_sha256": "3082af11187ff5db36bc4ba85642001c1918fd909815797ab60550c62421f788",
+  "build_rules_offset": 9075848,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "133c84575f2b53e59264c79a67e9023684c9e0940282643ad5cae2ed01c5d36d",
+      "sha256": "887b5b61c903d81e945c81d16bb1acf5e30a874ea5001d55d30c74364a3f25bc",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        9075928,
-        9075929,
-        9075930
+        9075848,
+        9075849,
+        9075850
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "5cf5c9b74968d3249c725ed3c0bd6447105d56d45c8fd335cc14e5bc52ed3270",
+      "sha256": "e4b6b278467fc04cd0499fea285ee4e19cfee227c3ce217dd8997394075ebad9",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        9075928,
-        9075929
+        9075848,
+        9075849
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "3a3a060936be18cc8d048aa1bd220a36868317a5d8b8b79454dcc33b1f17f4ac",
+      "sha256": "2eed2ecadfe3afbda4fb301d38b947cbb8f3b4598c11c81d2ff35f74afb2afc3",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        9075930
+        9075850
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "eb4f9f981bf5ce9ae2d8608fed4956c2218abe7426b90936fd55512841771256",
+      "sha256": "c7866f99de3253e8154ac530d41e2834c26628f31d836bfcdce8d1364a8a353e",
       "patched_byte_offsets": [
         160,
         162,
@@ -243,125 +243,138 @@
     "native-coastal-fragments",
     "complete-beach-edges",
     "diglett-scout-battles",
-    "offscreen-rival-entrances"
+    "offscreen-rival-entrances",
+    "complete-marine-atlas"
   ],
   "validation_scope": "campaign-coastal-update",
   "full_campaign_playthrough": false,
   "special_encounters_validated": true,
   "proofs": [
     {
+      "file": "evidence/common/marine-atlas.json",
+      "target": "common",
+      "kind": "marine-atlas",
+      "sha256": "fa7c6d77235fdabb14817e7bdc890da06290c9d81e617d4c07e1a4ce5710ec8a"
+    },
+    {
       "file": "evidence/common/coast-connectivity.json",
       "target": "common",
       "kind": "coast-connectivity",
-      "sha256": "102c8d0e4f0396ed8668d6f0637c2757fea011714c8c3dce20d6bb0325c31641"
+      "sha256": "362baa18c97855d3ba83e2c1a7ea9689a03c25a8a0fae7a2288a54d99e73bb69"
     },
     {
       "file": "evidence/common/crossover-sites.json",
       "target": "common",
       "kind": "crossover-sites",
-      "sha256": "1c158c15686f9039b1a426ca69ec0ec69b49e8f44d1e9060539b636a36646a83"
+      "sha256": "63d40a38f69f4338e8126df90243512453495320fc275b48efec09070b4b3213"
     },
     {
       "file": "evidence/common/eren-approach.json",
       "target": "common",
       "kind": "eren-approach",
-      "sha256": "51e8a39c80dca32cf2eaadf60c5634a9d8b4d72fc456600dcbb228b5858fd725"
+      "sha256": "605b9e736cc77118e7534ecd45fabd5879131bf67251c5896da733b9bf2a4771"
     },
     {
       "file": "evidence/common/compact-ferry.json",
       "target": "common",
       "kind": "compact-ferry",
-      "sha256": "84c272982791f96036caa8d7672dcd3d689f4e449de85b7341350745485fac14"
+      "sha256": "f2e793fafdae3380844dff4d23dc0190a1748d7712ff11091f9bcebee3c2ed1b"
     },
     {
       "file": "evidence/common/coastal-geometry.json",
       "target": "common",
       "kind": "coastal-geometry",
-      "sha256": "ef853970a1036393ab8c6d4795f1d44dfd44d7d2e09d35a73957fe70c28f5522"
+      "sha256": "9f0a8f1192780e28a26099314e852adc98a8752b3ad2158d502c5abafa85993e"
     },
     {
       "file": "evidence/common/live-levels.json",
       "target": "common",
       "kind": "live-levels",
-      "sha256": "f24b1acf4e19d2ac51cf8a91ec3d32af73aff667bf491381c212bbcc893aab09"
+      "sha256": "76a8d8e53f8f1cf5eb08173955b7a4a9b8a192acff4f41b78431a9ca754b74ce"
     },
     {
       "file": "evidence/common/luffy-approach.json",
       "target": "common",
       "kind": "luffy-approach",
-      "sha256": "582568e06ec7ff28eb0581b4c35df94f2dcce151aefcd9920c8cafdbf01fce10"
+      "sha256": "63355cdf2482d99f3c3f2c57f8bf6f4e4493577bcce38d41f0d5f8ab35639520"
     },
     {
       "file": "evidence/common/ports-and-actors.json",
       "target": "common",
       "kind": "ports-and-actors",
-      "sha256": "69f917b2e5a05e11ca6959883eb0548f5eaad17c536f4397ca31d8d5be909b59"
+      "sha256": "9115a66cacb47caebec82cf6aa7d25a079bca4c35eea9ab6a9b5bb475930876f"
     },
     {
       "file": "evidence/common/world-map-position.json",
       "target": "common",
       "kind": "world-map-position",
-      "sha256": "5c351bd5ba814ec361de1017e88f081e3fb723fb65a66dcffcadfc60f845b10b"
+      "sha256": "3646b949283667fe4ce7799bd0547dfb6402819e6496581ef6e8d16c3bf63937"
     },
     {
       "file": "evidence/common/reproduction.json",
       "target": "common",
       "kind": "reproduction",
-      "sha256": "c9beafb8e2c68b8308449086025440d90e7eafd0222f36ccbdbe1cfee7a9fe68"
+      "sha256": "da09d8a84b3816b18f62a253728eaa07da5878429ff4640926b6edfddfe9c928"
     },
     {
       "file": "evidence/common/diglett-scouts.json",
       "target": "common",
       "kind": "diglett-scouts",
-      "sha256": "6b3ca1d424683e943fb38515b09149b064f9cf3501a9caee487fee5656eb4829"
+      "sha256": "15b6161e81b815065c264effd8290a247a2a7a59401a95f8182dc386f86adbd8"
+    },
+    {
+      "file": "evidence/common/sharp-map.json",
+      "target": "common",
+      "kind": "sharp-map",
+      "sha256": "dbe0c187a79c2ebf72918256052572a6a55fb2688cbbd64b55e617b43a8bb9e4"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Normal/gym-teams.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "gym-teams",
-      "sha256": "81775fa6524dab37ba8c85fea2c441d2502cede99609a47a51d1be5e2322617b"
+      "sha256": "f39deaeb3db8132cb876f737d5a3f2a5bdb391e6a2ffcfdfd895d09cce6611a8"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Normal/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "special-encounters",
-      "sha256": "5e6f49ca2b49a5d6a5ca6e13c9569fa9f5d4e3b2d073c47a485c3f7aa614bbb0"
+      "sha256": "9a4f56c814ab2c7af717be512282d76f3104ce6200507c3472da39c3e656a911"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Hard/gym-teams.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "gym-teams",
-      "sha256": "201f2d16f9ae09dec0a709e7709d7a4f59d090634cd17452e1712cff770a06e1"
+      "sha256": "3fe00db197aadaae2ab3207bda61c8ee932b1cd32b477543c146b20404f00901"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Hard/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "special-encounters",
-      "sha256": "240ce0ada01e2617a61f2d1d380193164d55df6a8044d809c30162a7ce4c3cbb"
+      "sha256": "100b8f36917de3595c23d72552fa69632780da954f5cc0a39b6f32e709cf3b95"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Normal/gym-teams.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "gym-teams",
-      "sha256": "7c61f0af12969a7eb62e8f00936af3a640d8cf8c8beb2c64ba8ab2aa55f3d476"
+      "sha256": "6dd324f9673c4c7b41a585b7899f3ecf792cc3cef78bb10d72fa4b8b331bac98"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Normal/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "special-encounters",
-      "sha256": "e138852f1158a490d39c07e88edf56a86d02956520c52fc64f06d45b7432795d"
+      "sha256": "d3aadb1602f7c4ffd6fd76b57bfd4c8447ba1dbb76da9365a998950a4430f61b"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Hard/gym-teams.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "gym-teams",
-      "sha256": "4b2a1e998d7f7d9a042613a67e1f640be334238200ccaab6240c94736a582fa2"
+      "sha256": "d37aac48472b6ff0f533babc230d10b1c5f2df02f1b4640a6c233981e9aa7864"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Hard/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "special-encounters",
-      "sha256": "7c313933742d193ec96688c045ba9004a693627e9860701231ab05e131c99f4d"
+      "sha256": "eb61721c7be845e2a8fa9b7e3780931bed36d4c2a2b0ea891bd71eb1c75f60ef"
     }
   ],
   "historical_validation": {

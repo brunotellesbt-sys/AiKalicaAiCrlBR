@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 
 import package_playable
-from prepare_offscreen_rival_entrances import PRIOR, LAYER
+from prepare_complete_marine_atlas import PRIOR, LAYER
 
 
 def main():

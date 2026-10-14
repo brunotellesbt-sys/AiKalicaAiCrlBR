@@ -21,6 +21,14 @@ required={r['map'] for r in json.loads((source/'.journey-sea-landscapes').read_t
 required.update(r['map'] for r in json.loads((source/'.journey-kanto-open-sea').read_text())['landscape'])
 required.update(r['map'] for r in report['rectangles'] if r['map'].startswith('Journey'))
 assert required<=set(reachable_maps),('Disconnected integrated sea map',sorted(required-set(reachable_maps)))
+native_routes=[]
+if (source/'.journey-complete-marine-atlas').exists():
+ from prepare_complete_marine_atlas import SURF_ROUTES
+ # Routes 107–109 lie across Dewford's dry town. This graph follows Surf
+ # only; it cannot disembark, walk through the town and embark on its east.
+ requested={'Route19_Frlg','Route20_Frlg','Route21_North_Frlg','Route21_South_Frlg','Route104','Route105','Route106'}
+ assert requested<=set(reachable_maps),('Requested native Surf route missing',sorted(requested-set(reachable_maps)))
+ native_routes=sorted(SURF_ROUTES&set(reachable_maps))
 # The engine uses these collision-marked border blocks beyond unconnected sides.
 terrain=[]
 for n in sorted(required):
@@ -30,5 +38,5 @@ for n in sorted(required):
  sand=sum(t&1023 in shore for t in blocks[n][2]);assert sand>0,('Empty water-only route',n)
  terrain.append(dict(map=n,sand_tiles=sand,outer_border_collision=True))
 lib.stop()
-(args.output/'coast-connectivity.json').write_text(json.dumps(dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),all_nine_new_channels_reachable=True,all_integrated_surface_seas_reachable=True,unconnected_outer_borders_blocked=True,no_water_only_surface_maps=True,terrain=terrain,required_sea_maps=sorted(required),reachable_maps=reachable_maps,visited_water_tiles=len(reachable),compiled_collision_and_water_behaviors=True,signed_map_connection_offsets=True,graph_audit_not_controller_playthrough=True),indent=2)+'\n')
+(args.output/'coast-connectivity.json').write_text(json.dumps(dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),all_nine_new_channels_reachable=True,all_integrated_surface_seas_reachable=True,unconnected_outer_borders_blocked=True,no_water_only_surface_maps=True,terrain=terrain,required_sea_maps=sorted(required),native_surf_routes_reachable=native_routes,reachable_maps=reachable_maps,visited_water_tiles=len(reachable),compiled_collision_and_water_behaviors=True,signed_map_connection_offsets=True,graph_audit_not_controller_playthrough=True),indent=2)+'\n')
 print('All integrated sea maps connected:',len(required),'maps;',len(reachable),'compiled water tiles',flush=True)

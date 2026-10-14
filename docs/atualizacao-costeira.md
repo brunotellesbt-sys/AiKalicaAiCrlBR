@@ -70,7 +70,19 @@ O desenho marítimo foi recalculado a partir das conexões reais entre os mapas:
 
 ![Mapa integrado com conexões reais](images/coast-review/connected-world-chart.png)
 
-![Posição no mapa após sair a leste de Mossdeep](images/stage-one/Map-native.png)
+As rotas originais de Surf também estão desenhadas: Pallet → Rota 21 → Cinnabar; Fuchsia → Rota 19 → Rota 20/Seafoam → Cinnabar; costa de Petalburg → Rotas 105/106 → Dewford. O corredor oeste liga a Rota 114 e a costa de Rustboro ao canal de Dewford. Lavaridge permanece no interior.
+
+Os ícones das 14 cavernas novas usam a projeção das coordenadas das portas verdadeiras, incluindo os acessos de Dive. Seafoam tem ponto próprio, compartilhado por seus cinco andares. Os marcadores da AREA acompanham essas correções; Porygon, os fósseis e as outras famílias especiais apontam para seus locais de obtenção, incluindo cassino, museu e workshop.
+
+O zoom usa um atlas de 448×224 com detalhes das imagens regionais nativas, em vez de somente duplicar os pixels do mapa geral. Os corredores e ícones continuam nas mesmas coordenadas; menu, parede e Pokédex compartilham os mesmos dados.
+
+![Mapa no jogo perto de Seafoam](images/coast-review/world-map-restored-corridors.png)
+
+![Zoom de Kanto no jogo](images/coast-review/world-map-kanto-detail.png)
+
+![Zoom de Hoenn no jogo](images/coast-review/world-map-hoenn-detail.png)
+
+![AREA da Pokédex com zoom](images/coast-review/pokedex-detail.png)
 
 ## Diglett’s Cave e Rock Tunnel
 
@@ -86,9 +98,10 @@ O Rock Tunnel é outra caverna: continua iluminado sem Flash e conserva sua miss
 - Vinte e uma áreas de porto: colisão do casco completo, um capitão de serviço mundial por local; entradas e retornos das nove casas adicionais, acesso às pontes e saída de Sevii verificados com controles.
 - Viagem Pallet → Rota 25 → Pallet realizada pelos menus dos capitães e animação nativa de barco.
 - As quatro edições: 192 amostras de ginásio cada, EVs/IVs, golpes e formas legais; captura de Rotom na TV, seis mudanças de forma, poço de Spiritomb, fósseis e localizações da Pokédex.
-- Vinte e duas novas camadas reproduzidas sobre a fonte independente da versão anterior; 1.483 arquivos finais comparados por hash.
+- Vinte e três novas camadas reproduzidas sobre a fonte independente da versão anterior; 1.483 arquivos finais comparados por hash.
 - Auditoria estrutural de 343 mapas editados, 57 áreas costeiras geradas e nove bancos de bordas de praia comparados com os bytes compilados. Isso não declara perfeição visual de todos os mapas.
 - Entradas fora da câmera e transição nativa de batalha de Eren/Luffy gravadas nas Rotas 4/6; 24 posições verificadas nas 12 rotas, com caminhos livres. Orientação lateral conferida nas animações da campanha e do PWT. Dois grunts da Diglett’s Cave derrotados por controles, sem alterar flags do navio. As vitórias usam atributos do jogador aumentados apenas na memória para encurtar o teste, sem afirmar balanceamento.
+- Doze ligações originais conferidas no desenho; quinze entradas de cavernas e os cinco andares de Seafoam conferidos pelo código nativo. As 1.025 espécies canônicas possuem localizações disponíveis na AREA; pixels do zoom de menu/Pokédex e retorno das telas verificados.
 - Verificação final das quatro ROMs, hashes e inicialização no navegador com mGBA.
 
 A revisão e validação foram organizadas em até cinco rodadas direcionadas, incluindo as correções dos defeitos encontrados. Nenhum torneio foi repetido. Os testes antigos de PWT e mecânicas ficam associados à ROM do PR #79, preservada separadamente. Esta entrega não inclui uma campanha inteira jogada do início aos créditos.

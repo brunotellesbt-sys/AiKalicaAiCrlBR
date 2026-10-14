@@ -39,6 +39,12 @@ def verify_update(directory,info):
   elif p['kind']=='coastal-geometry':
    assert len(r['generated_coasts'])==57 and len(r['compiled_shore_banks'])==9
    assert all(c['grass_fragments']==0 for c in r['generated_coasts']) and r['approved_ports_preserved']
+  elif p['kind']=='marine-atlas':
+   assert len(r['restored_native_connections'])==12 and len(r['caves'])==15
+   assert r['all_seafoam_floors_resolve_correctly'] and r['controller_zoom_and_return']
+  elif p['kind']=='sharp-map':
+   assert r['native_detail_zoom'] and r['pokedex_zoom_and_restore'] and r['menu_map_zoom_and_restore']
+   assert r['nearest_neighbor_pixel_differences_excluding_marker_scaling']<512
  assert {'reproduction','coast-connectivity','ports-and-actors','world-map-position','live-levels','compact-ferry'}<=common
  assert {(name,kind) for name in expected for kind in ['gym-teams','special-encounters']}<=covered
  assert info['full_campaign_playthrough'] is False and info['historical_validation']['retested_on_current_rom'] is False
