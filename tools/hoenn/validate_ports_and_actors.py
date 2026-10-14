@@ -77,10 +77,10 @@ warp(well['map'],well['x'],well['y']+1);step(90);picture('spiritomb-well')
 # Observe actors created by the regular route hook, then their one-tile approach.
 heroes=[];rawflag(lib.read16(s['gBadgeFlags'])-7,True);native('VarSet',0x40FE,0);native('VarSet',0x40FF,0)
 for route,x,y in [('Route4_Frlg',30,8),('Route6_Frlg',12,20)]:
- warp(route,x,y);step(100)
+ warp(route,x,y);step(700)
  group,num=map_id(route);oid=native('GetObjectEventIdByLocalIdAndMap',240,num,group);assert oid<16,(route,'Rival not spawned',position())
  obj=s['gObjectEvents']+oid*36;initial=[lib.read16(obj+12)-7,lib.read16(obj+14)-7];current=[lib.read16(obj+16)-7,lib.read16(obj+18)-7];player=list(position())
- assert 2<=sum(abs(a-b) for a,b in zip(initial,player))<=4,(route,initial,current,player)
+ assert sum(abs(a-b) for a,b in zip(initial,player))>=7,(route,initial,current,player)
  assert sum(abs(a-b) for a,b in zip(current,player))==1,(route,initial,current,player)
  assert not(lib.read8(obj+1)&0x60),(route,'Hidden/offscreen actor')
  picture(route+'-visible-rival');heroes.append(dict(map=route,initial=initial,after_approach=current,player=player,object_id=oid,visible=True))

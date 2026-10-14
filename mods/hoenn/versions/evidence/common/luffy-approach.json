@@ -2,49 +2,133 @@
   "passed": true,
   "hero": "Luffy",
   "route": "Route6_Frlg",
-  "rom_sha256": "90798bbdf85c70571b5fdba1fb175475eb49922895c6ec780a66c75c8370440c",
+  "rom_sha256": "efc1eb1376d1603e4fa8be0cdbe37da8fd8f537141967632743147cd2472eca8",
   "player": [
     12,
     20
   ],
   "initial": [
+    12,
+    13
+  ],
+  "initial_screen_box": [
+    112,
+    -56,
+    128,
+    -24
+  ],
+  "spawn_entirely_outside_camera": true,
+  "first_visible_native_frame": 27,
+  "movement_actions": [
     8,
-    20
+    8,
+    8,
+    8,
+    8,
+    8
   ],
   "movement_samples": [
     {
-      "frame": 0,
+      "frame": 1,
       "actor": [
-        8,
-        20
+        12,
+        13
       ],
-      "distance": 4
+      "distance": 7,
+      "screen_box": [
+        112,
+        -56,
+        128,
+        -24
+      ]
     },
     {
-      "frame": 2,
+      "frame": 3,
       "actor": [
+        12,
+        14
+      ],
+      "distance": 6,
+      "screen_box": [
+        112,
+        -55,
+        128,
+        -23
+      ]
+    },
+    {
+      "frame": 19,
+      "actor": [
+        12,
+        15
+      ],
+      "distance": 5,
+      "screen_box": [
+        112,
+        -39,
+        128,
+        -7
+      ]
+    },
+    {
+      "frame": 35,
+      "actor": [
+        12,
+        16
+      ],
+      "distance": 4,
+      "screen_box": [
+        112,
+        -23,
+        128,
+        9
+      ]
+    },
+    {
+      "frame": 51,
+      "actor": [
+        12,
+        17
+      ],
+      "distance": 3,
+      "screen_box": [
+        112,
+        -7,
+        128,
+        25
+      ]
+    },
+    {
+      "frame": 67,
+      "actor": [
+        12,
+        18
+      ],
+      "distance": 2,
+      "screen_box": [
+        112,
         9,
-        20
-      ],
-      "distance": 3
+        128,
+        41
+      ]
     },
     {
-      "frame": 18,
+      "frame": 83,
       "actor": [
-        10,
-        20
+        12,
+        19
       ],
-      "distance": 2
-    },
-    {
-      "frame": 34,
-      "actor": [
-        11,
-        20
-      ],
-      "distance": 1
+      "distance": 1,
+      "screen_box": [
+        112,
+        25,
+        128,
+        57
+      ]
     }
   ],
+  "lateral_animation_trace": [],
+  "lateral_facing_preserved": true,
   "visible": true,
   "actual_native_movement": true,
   "controller_dialogue_and_battle_entry": true,

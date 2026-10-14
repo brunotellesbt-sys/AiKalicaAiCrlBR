@@ -2,49 +2,185 @@
   "passed": true,
   "hero": "Eren",
   "route": "Route4_Frlg",
-  "rom_sha256": "90798bbdf85c70571b5fdba1fb175475eb49922895c6ec780a66c75c8370440c",
+  "rom_sha256": "efc1eb1376d1603e4fa8be0cdbe37da8fd8f537141967632743147cd2472eca8",
   "player": [
     30,
     8
   ],
   "initial": [
-    34,
+    39,
     8
+  ],
+  "initial_screen_box": [
+    256,
+    56,
+    272,
+    88
+  ],
+  "spawn_entirely_outside_camera": true,
+  "first_visible_native_frame": 18,
+  "movement_actions": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
   ],
   "movement_samples": [
     {
       "frame": 0,
       "actor": [
-        34,
+        39,
         8
       ],
-      "distance": 4
+      "distance": 9,
+      "screen_box": [
+        256,
+        56,
+        272,
+        88
+      ]
     },
     {
       "frame": 2,
       "actor": [
-        33,
+        38,
         8
       ],
-      "distance": 3
+      "distance": 8,
+      "screen_box": [
+        255,
+        56,
+        271,
+        88
+      ]
     },
     {
       "frame": 18,
       "actor": [
-        32,
+        37,
         8
       ],
-      "distance": 2
+      "distance": 7,
+      "screen_box": [
+        239,
+        56,
+        255,
+        88
+      ]
     },
     {
       "frame": 34,
       "actor": [
+        36,
+        8
+      ],
+      "distance": 6,
+      "screen_box": [
+        223,
+        56,
+        239,
+        88
+      ]
+    },
+    {
+      "frame": 50,
+      "actor": [
+        35,
+        8
+      ],
+      "distance": 5,
+      "screen_box": [
+        207,
+        56,
+        223,
+        88
+      ]
+    },
+    {
+      "frame": 66,
+      "actor": [
+        34,
+        8
+      ],
+      "distance": 4,
+      "screen_box": [
+        191,
+        56,
+        207,
+        88
+      ]
+    },
+    {
+      "frame": 82,
+      "actor": [
+        33,
+        8
+      ],
+      "distance": 3,
+      "screen_box": [
+        175,
+        56,
+        191,
+        88
+      ]
+    },
+    {
+      "frame": 98,
+      "actor": [
+        32,
+        8
+      ],
+      "distance": 2,
+      "screen_box": [
+        159,
+        56,
+        175,
+        88
+      ]
+    },
+    {
+      "frame": 114,
+      "actor": [
         31,
         8
       ],
-      "distance": 1
+      "distance": 1,
+      "screen_box": [
+        143,
+        56,
+        159,
+        88
+      ]
     }
   ],
+  "lateral_animation_trace": [
+    {
+      "animation": 6,
+      "image": 7,
+      "physical_frame": 7,
+      "hflip": false,
+      "facing": "left"
+    },
+    {
+      "animation": 6,
+      "image": 2,
+      "physical_frame": 7,
+      "hflip": false,
+      "facing": "left"
+    },
+    {
+      "animation": 6,
+      "image": 8,
+      "physical_frame": 8,
+      "hflip": true,
+      "facing": "left"
+    }
+  ],
+  "lateral_facing_preserved": true,
   "visible": true,
   "actual_native_movement": true,
   "controller_dialogue_and_battle_entry": true,

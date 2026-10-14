@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 bootstrap=(ROOT/'tools/hoenn/validate_trainer_levels.py').read_text().split('\nchecks=[]')[0]
 exec(compile(bootstrap,str(ROOT/'tools/hoenn/validate_trainer_levels.py'),'exec'))
-from prepare_diglett_scout_battles import PRIOR,LAYER
+from prepare_offscreen_rival_entrances import PRIOR,LAYER
 from render_sea_maps import MapRenderer
 from prepare_world_dex_map import decode
 from prepare_native_coastal_fragments import REPAIRS

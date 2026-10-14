@@ -28,7 +28,11 @@ def verify_update(directory,info):
   elif p['kind']=='special-encounters':assert r['actual_tv_capture_and_form_ui'] and len(r['rotom_changes'])==6
   elif p['kind'] in ['eren-approach','luffy-approach']:
    assert r['actual_native_movement'] and r['controller_dialogue_and_battle_entry'] and r['actor_coordinates_not_written']
-   assert [c['distance'] for c in r['movement_samples']]==[4,3,2,1]
+   assert r['spawn_entirely_outside_camera'] and r['lateral_facing_preserved']
+   assert len(r['movement_actions'])>=6 and r['movement_samples'][-1]['distance']==1
+  elif p['kind']=='crossover-sites':
+   assert len(r['routes'])==12 and all(len(c['valid_sites'])==2 for c in r['routes'])
+   assert all(a['offscreen'] for c in r['routes'] for a in c['valid_sites'])
   elif p['kind']=='diglett-scouts':
    assert len(r['wins'])==2 and all(w['native_outcome']==1 and w['physical_npc_interaction'] for w in r['wins'])
    assert r['independent_defeated_flags'] and r['ship_grunt_flags_unchanged']

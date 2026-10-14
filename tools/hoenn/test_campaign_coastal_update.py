@@ -19,7 +19,7 @@ class CoastalRelease(unittest.TestCase):
   r=json.loads((ROOT/'mods/hoenn/coastal-update-validation/common/ports/ports-and-actors.json').read_text())
   self.assertEqual(len(r['crossover_visible_approaches']),2)
   for a in r['crossover_visible_approaches']:
-   self.assertTrue(a['visible']);self.assertIn(sum(abs(x-y) for x,y in zip(a['initial'],a['player'])),[2,3,4]);self.assertEqual(sum(abs(x-y) for x,y in zip(a['after_approach'],a['player'])),1)
+   self.assertTrue(a['visible']);self.assertGreaterEqual(sum(abs(x-y) for x,y in zip(a['initial'],a['player'])),7);self.assertEqual(sum(abs(x-y) for x,y in zip(a['after_approach'],a['player'])),1)
   self.assertEqual(len(r['ports']),21)
   self.assertTrue(all(p['world_ferry_captains']==1 for p in r['ports'] if p['map']!='JourneyRoute12Shipyard'))
 if __name__=='__main__':unittest.main()

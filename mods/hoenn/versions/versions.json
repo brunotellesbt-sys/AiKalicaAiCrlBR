@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "90798bbdf85c70571b5fdba1fb175475eb49922895c6ec780a66c75c8370440c",
-  "build_rules_offset": 9074888,
+  "parent_rom_sha256": "efc1eb1376d1603e4fa8be0cdbe37da8fd8f537141967632743147cd2472eca8",
+  "build_rules_offset": 9075928,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "15c2a796ac9e56fcad780918bbb06aba1454fadbe1c44c05e243b4d806d6de18",
+      "sha256": "133c84575f2b53e59264c79a67e9023684c9e0940282643ad5cae2ed01c5d36d",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        9074888,
-        9074889,
-        9074890
+        9075928,
+        9075929,
+        9075930
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "c3dcad24ceb852eac0d9e3b0071d9935d9f55925dd160a00c954c5939d873961",
+      "sha256": "5cf5c9b74968d3249c725ed3c0bd6447105d56d45c8fd335cc14e5bc52ed3270",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        9074888,
-        9074889
+        9075928,
+        9075929
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "92590ab956f2e0005789b4b0d7af4f96259d9fcfb88bb3d260610f7e15d59481",
+      "sha256": "3a3a060936be18cc8d048aa1bd220a36868317a5d8b8b79454dcc33b1f17f4ac",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        9074890
+        9075930
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "464605e887c693412eedf94cc7d0414cbfd762755517d069962459cac2c6bc3f",
+      "sha256": "eb4f9f981bf5ce9ae2d8608fed4956c2218abe7426b90936fd55512841771256",
       "patched_byte_offsets": [
         160,
         162,
@@ -242,7 +242,8 @@
     "diglett-galactic-scouts",
     "native-coastal-fragments",
     "complete-beach-edges",
-    "diglett-scout-battles"
+    "diglett-scout-battles",
+    "offscreen-rival-entrances"
   ],
   "validation_scope": "campaign-coastal-update",
   "full_campaign_playthrough": false,
@@ -252,109 +253,115 @@
       "file": "evidence/common/coast-connectivity.json",
       "target": "common",
       "kind": "coast-connectivity",
-      "sha256": "a879a1795d8116f4fc4d95baab029c0575a28bdc04246c271842d209d849b846"
+      "sha256": "102c8d0e4f0396ed8668d6f0637c2757fea011714c8c3dce20d6bb0325c31641"
+    },
+    {
+      "file": "evidence/common/crossover-sites.json",
+      "target": "common",
+      "kind": "crossover-sites",
+      "sha256": "1c158c15686f9039b1a426ca69ec0ec69b49e8f44d1e9060539b636a36646a83"
     },
     {
       "file": "evidence/common/eren-approach.json",
       "target": "common",
       "kind": "eren-approach",
-      "sha256": "e18e92586b076ff37c7949d850e4c73cdbd0bcb60b63c45e1cf02ec377d86fc6"
+      "sha256": "51e8a39c80dca32cf2eaadf60c5634a9d8b4d72fc456600dcbb228b5858fd725"
     },
     {
       "file": "evidence/common/compact-ferry.json",
       "target": "common",
       "kind": "compact-ferry",
-      "sha256": "a85a52f7fcfe4731b699fa616616cc740b8109ad09f89afa63bb171051c77b35"
+      "sha256": "84c272982791f96036caa8d7672dcd3d689f4e449de85b7341350745485fac14"
     },
     {
       "file": "evidence/common/coastal-geometry.json",
       "target": "common",
       "kind": "coastal-geometry",
-      "sha256": "e87761fb7b7994553c4a08aa43769d63dc8e2f481c58a12fa27728975c1c3e9c"
+      "sha256": "ef853970a1036393ab8c6d4795f1d44dfd44d7d2e09d35a73957fe70c28f5522"
     },
     {
       "file": "evidence/common/live-levels.json",
       "target": "common",
       "kind": "live-levels",
-      "sha256": "04a0c54f47144681f58185bc82d2094b3e3e611606f38a374e98b5199c11c578"
+      "sha256": "f24b1acf4e19d2ac51cf8a91ec3d32af73aff667bf491381c212bbcc893aab09"
     },
     {
       "file": "evidence/common/luffy-approach.json",
       "target": "common",
       "kind": "luffy-approach",
-      "sha256": "59a83ab3fa805980ec161d09e57e181e3ed3c0a6885a8e3cbf692166bb594b1b"
+      "sha256": "582568e06ec7ff28eb0581b4c35df94f2dcce151aefcd9920c8cafdbf01fce10"
     },
     {
       "file": "evidence/common/ports-and-actors.json",
       "target": "common",
       "kind": "ports-and-actors",
-      "sha256": "5b1fdb8c5526271c011bbcd299762ec0557547d11de57f4adac0ff5e73074a8a"
+      "sha256": "69f917b2e5a05e11ca6959883eb0548f5eaad17c536f4397ca31d8d5be909b59"
     },
     {
       "file": "evidence/common/world-map-position.json",
       "target": "common",
       "kind": "world-map-position",
-      "sha256": "58fac590ac67d22d76bd94d44e37ccaac7849b62832217cb27905e5e27e5dd1d"
+      "sha256": "5c351bd5ba814ec361de1017e88f081e3fb723fb65a66dcffcadfc60f845b10b"
     },
     {
       "file": "evidence/common/reproduction.json",
       "target": "common",
       "kind": "reproduction",
-      "sha256": "cbc8a07cadfcf7fb1e878d4775b718dc7b080ebe22f87a978382cf9cbd77c6df"
+      "sha256": "c9beafb8e2c68b8308449086025440d90e7eafd0222f36ccbdbe1cfee7a9fe68"
     },
     {
       "file": "evidence/common/diglett-scouts.json",
       "target": "common",
       "kind": "diglett-scouts",
-      "sha256": "381fb19854bee6776e6943e36aa7e6d4759d888769b29847f5c76a24a5ac5874"
+      "sha256": "6b3ca1d424683e943fb38515b09149b064f9cf3501a9caee487fee5656eb4829"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Normal/gym-teams.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "gym-teams",
-      "sha256": "f4628d6d7fabffc6bd0b7d172626bf875e850bca52d6c1554f3ad19bf18cadee"
+      "sha256": "81775fa6524dab37ba8c85fea2c441d2502cede99609a47a51d1be5e2322617b"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Normal/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "special-encounters",
-      "sha256": "37ad12f0d9ccc3123326abe45efa2aa30fe944f2e9bf2cf6e4ce73506f26d813"
+      "sha256": "5e6f49ca2b49a5d6a5ca6e13c9569fa9f5d4e3b2d073c47a485c3f7aa614bbb0"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Hard/gym-teams.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "gym-teams",
-      "sha256": "734e8ae66c6c73edeeb16b8fea43b8fb08f4ab4e51a636f2f29530f462d5b753"
+      "sha256": "201f2d16f9ae09dec0a709e7709d7a4f59d090634cd17452e1712cff770a06e1"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-4-Hard/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "special-encounters",
-      "sha256": "2fc2e6b426a4aa462623528a6f053eaae2b67bede9707cc29a376bb4295b6f0d"
+      "sha256": "240ce0ada01e2617a61f2d1d380193164d55df6a8044d809c30162a7ce4c3cbb"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Normal/gym-teams.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "gym-teams",
-      "sha256": "d8d14eb07ea824f3f19d69eae1595b6b07b89bae0da6d56fda353f82e7a07103"
+      "sha256": "7c61f0af12969a7eb62e8f00936af3a640d8cf8c8beb2c64ba8ab2aa55f3d476"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Normal/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "special-encounters",
-      "sha256": "3806460de8fdfd0a9df72b90a6ee21bf4e7d969c2015bd550192649b90aa31c9"
+      "sha256": "e138852f1158a490d39c07e88edf56a86d02956520c52fc64f06d45b7432795d"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Hard/gym-teams.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "gym-teams",
-      "sha256": "f3b83f44c73982a1dc0c8d406942c85e7fb627b4c546cf25620256d7ac15c27c"
+      "sha256": "4b2a1e998d7f7d9a042613a67e1f640be334238200ccaab6240c94736a582fa2"
     },
     {
       "file": "evidence/Pokemon-Journey-Gen1-9-Hard/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "special-encounters",
-      "sha256": "5517027f3117627a4e8281369f247c7e45d9858e1d9f360e83d077625997654e"
+      "sha256": "7c313933742d193ec96688c045ba9004a693627e9860701231ab05e131c99f4d"
     }
   ],
   "historical_validation": {

@@ -48,7 +48,9 @@ A sala do Rotom conserva os pontos de interação da TV e dos cinco eletrodomés
 
 ## Rivais, níveis e mapa
 
-Eren e Luffy procuram uma posição livre a quatro tiles do jogador e caminham três passos até ele. Se o corredor for estreito, a aproximação usa dois ou um passo. Todos os tiles do caminho precisam estar livres, na mesma elevação e sem outros personagens. Os 12 encontros têm introduções maiores e falas próprias após a batalha.
+Eren e Luffy nascem inteiramente fora da câmera atual e caminham por um caminho livre até um tile do jogador. A busca considera a posição e o deslocamento da câmera; não depende da direção pela qual o jogador entrou. Evita água, pedras, paredes, ledges, warps e outros personagens. Se não houver um caminho vindo de fora da tela naquela posição, aguarda o jogador avançar: não usa aparição dentro da tela como alternativa. Foram observadas entradas válidas em dois pontos de cada uma das 12 rotas.
+
+A sequência lateral agora mantém a orientação em todos os frames: a pose parada usa o perfil correto e os passos têm espelhamento consistente. A mesma correção vale para Eren/Luffy no PWT; os PNGs e as paletas originais foram preservados. Os 12 encontros têm introduções maiores e falas próprias após a batalha.
 
 As animações abaixo foram gravadas no mGBA. A equipe, as flags e a posição inicial são preparadas para a demonstração; os sprites, a caminhada, os diálogos e a entrada na batalha são nativos, sem escrita nas coordenadas dos rivais.
 
@@ -84,9 +86,9 @@ O Rock Tunnel é outra caverna: continua iluminado sem Flash e conserva sua miss
 - Vinte e uma áreas de porto: colisão do casco completo, um capitão de serviço mundial por local; entradas e retornos das nove casas adicionais, acesso às pontes e saída de Sevii verificados com controles.
 - Viagem Pallet → Rota 25 → Pallet realizada pelos menus dos capitães e animação nativa de barco.
 - As quatro edições: 192 amostras de ginásio cada, EVs/IVs, golpes e formas legais; captura de Rotom na TV, seis mudanças de forma, poço de Spiritomb, fósseis e localizações da Pokédex.
-- Vinte e uma novas camadas reproduzidas sobre a fonte independente da versão anterior; 1.482 arquivos finais comparados por hash.
+- Vinte e duas novas camadas reproduzidas sobre a fonte independente da versão anterior; 1.483 arquivos finais comparados por hash.
 - Auditoria estrutural de 343 mapas editados, 57 áreas costeiras geradas e nove bancos de bordas de praia comparados com os bytes compilados. Isso não declara perfeição visual de todos os mapas.
-- Aproximação visível e entrada nativa de batalha de Eren/Luffy gravadas nas Rotas 4/6; dois grunts da Diglett’s Cave derrotados por controles, sem alterar flags do navio. As vitórias usam atributos do jogador aumentados apenas na memória para encurtar o teste, sem afirmar balanceamento.
+- Entradas fora da câmera e transição nativa de batalha de Eren/Luffy gravadas nas Rotas 4/6; 24 posições verificadas nas 12 rotas, com caminhos livres. Orientação lateral conferida nas animações da campanha e do PWT. Dois grunts da Diglett’s Cave derrotados por controles, sem alterar flags do navio. As vitórias usam atributos do jogador aumentados apenas na memória para encurtar o teste, sem afirmar balanceamento.
 - Verificação final das quatro ROMs, hashes e inicialização no navegador com mGBA.
 
 A revisão e validação foram organizadas em até cinco rodadas direcionadas, incluindo as correções dos defeitos encontrados. Nenhum torneio foi repetido. Os testes antigos de PWT e mecânicas ficam associados à ROM do PR #79, preservada separadamente. Esta entrega não inclui uma campanha inteira jogada do início aos créditos.

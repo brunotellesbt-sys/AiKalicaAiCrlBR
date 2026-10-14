@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 
 import package_playable
-from prepare_diglett_scout_battles import PRIOR, LAYER
+from prepare_offscreen_rival_entrances import PRIOR, LAYER
 
 
 def main():
