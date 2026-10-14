@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 
 import package_playable
-from prepare_complete_marine_atlas import PRIOR, LAYER
+from prepare_navigated_sea_atlas import PRIOR, LAYER
 
 
 def main():

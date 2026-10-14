@@ -45,7 +45,22 @@ def verify_update(directory,info):
   elif p['kind']=='sharp-map':
    assert r['native_detail_zoom'] and r['pokedex_zoom_and_restore'] and r['menu_map_zoom_and_restore']
    assert r['nearest_neighbor_pixel_differences_excluding_marker_scaling']<512
+  elif p['kind'] in ['pallet-cinnabar-fuchsia','petalburg-dewford','western-river-dewford','rustboro-dewford']:
+   assert r['controller_roundtrip'] and r['no_midroute_warps_or_coordinate_writes']
+   assert r['save_continue_preserves_location'] and r['walked_tiles']>0 and r['transitions']
+   assert len(r['marker_samples'])==r['walked_tiles']+1
+  elif p['kind'].startswith('generated-sea-journey-'):
+   assert r['controller_roundtrip'] and r['no_midroute_warps_or_coordinate_writes'] and r['save_continue_preserves_location']
+   assert not r['gps_jumps'] and r['physical_route_roundtrip_passed'] and r['required_maps']
+  elif p['kind']=='native-cave-points':
+   assert len(r['checks'])>=145 and r['all_registered_cave_floors_have_own_point'] and r['actual_map_ui']
+  elif p['kind']=='navigated-sea-atlas':
+   assert len(r['all_generated_seas_visited'])==56 and len(r['trips'])==8
+   assert r['compiled_gps_tiles']==408618 and r['maximum_neighbor_pixel_step']<=2
+   assert r['compiled_shared_edges']>=570 and r['unconnected_prototype_hidden']
  assert {'reproduction','coast-connectivity','ports-and-actors','world-map-position','live-levels','compact-ferry'}<=common
+ if 'navigated-sea-atlas' in info['integration_layers']:
+  assert {'navigated-sea-atlas','native-cave-points',*[f'generated-sea-journey-{i}' for i in range(4)],'pallet-cinnabar-fuchsia','petalburg-dewford','western-river-dewford','rustboro-dewford'}<=common
  assert {(name,kind) for name in expected for kind in ['gym-teams','special-encounters']}<=covered
  assert info['full_campaign_playthrough'] is False and info['historical_validation']['retested_on_current_rom'] is False
  from published_evidence import baseline,evidence_rom,evidence_release

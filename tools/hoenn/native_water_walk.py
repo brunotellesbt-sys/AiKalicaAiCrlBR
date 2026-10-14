@@ -103,12 +103,27 @@ def connection_step(n, x, y, key):
             return dest, xx, yy
     return None
 
+_planned_goal, _planned_keys = None, {}
 def next_key(goal):
+    global _planned_goal, _planned_keys
     start = (by_location[location()], *position())
+    if globals().get('walk_cache_paths', False):
+        if _planned_goal != goal:
+            _planned_goal, _planned_keys = goal, {}
+        cached = _planned_keys.get(start)
+        if cached is not None and (*start, cached) not in blocked:
+            return cached
+        _planned_keys.clear()
     queue, visited, objects = deque([start]), {start: None}, occupied()
     while queue:
         n, x, y = current = queue.popleft()
         if current == goal:
+            if globals().get('walk_cache_paths', False):
+                while visited[current]:
+                    previous, key = visited[current]
+                    _planned_keys[previous] = key
+                    current = previous
+                return _planned_keys.get(start)
             while visited[current] and visited[current][0] != start: current = visited[current][0]
             return visited[current][1] if visited[current] else None
         width, height, tiles = blocks[n]
@@ -180,14 +195,17 @@ def walk(goal):
     global walked
     blocked.clear()
     last = (by_location[location()], *position())
-    for tick in range(600):
+    for tick in range(globals().get('walk_max_ticks', 600)):
         if field(): continue
         now = (by_location[location()], *position())
         if now != last:
             walked += 1
+            observer = globals().get('walk_observer')
+            if observer is not None: observer(last, now)
             if now[0] != last[0]:
                 transitions.append(dict(source=list(last), destination=list(now)))
-                picture(walk_prefix + '-transition-' + str(len(transitions)))
+                if globals().get('walk_transition_pictures', True):
+                    picture(walk_prefix + '-transition-' + str(len(transitions)))
             last = now
         if now == goal: return
         if tick % 100 == 0: print('Native route progress:', tick, now, flush=True)

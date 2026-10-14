@@ -9,6 +9,7 @@ As quatro ROMs atuais ficam em [`roms/`](../roms/README.md), atualizadas pelo em
 - [Galeria de todos os portos e sala do Rotom](PORTOS-GALERIA.md)
 - [Atualização costeira: imagens, portos, níveis e validação](atualizacao-costeira.md)
 - [Revisão visual das costas e novo mapa integrado](revisao-das-costas.md)
+- [Percursos reais de navegação e pendências para a versão final](navegacao-e-pendencias-finais.md)
 - [História e missões obrigatórias](historia-e-missoes.md)
 - [Batalhas, níveis e regras](batalhas-e-regras.md)
 - [Interações de batalha — cobertura, correção de Boots e resultados](interacoes-de-batalha.md)

@@ -1,0 +1,8354 @@
+{
+  "passed": true,
+  "rom_sha256": "233c8d4e8a428c5ca4d2de757750e41b7cdfe2698c6baf8edca381cc8b6c0eee",
+  "profile": "western-river-dewford",
+  "arrivals": [
+    {
+      "direction": "outbound",
+      "map": "JourneyWestRiver",
+      "tile": [
+        24,
+        7
+      ],
+      "marker": [
+        13,
+        75
+      ]
+    },
+    {
+      "direction": "outbound",
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        35
+      ],
+      "marker": [
+        14,
+        82
+      ]
+    },
+    {
+      "direction": "outbound",
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        40
+      ],
+      "marker": [
+        13,
+        101
+      ]
+    },
+    {
+      "direction": "outbound",
+      "map": "JourneyDewfordGate",
+      "tile": [
+        6,
+        11
+      ],
+      "marker": [
+        16,
+        101
+      ]
+    },
+    {
+      "direction": "outbound",
+      "map": "Route105",
+      "tile": [
+        5,
+        42
+      ],
+      "marker": [
+        18,
+        101
+      ]
+    },
+    {
+      "direction": "outbound",
+      "map": "Route106",
+      "tile": [
+        20,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ]
+    },
+    {
+      "direction": "outbound",
+      "map": "DewfordTown",
+      "tile": [
+        10,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ]
+    },
+    {
+      "direction": "return",
+      "map": "Route106",
+      "tile": [
+        20,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ]
+    },
+    {
+      "direction": "return",
+      "map": "Route105",
+      "tile": [
+        5,
+        42
+      ],
+      "marker": [
+        18,
+        101
+      ]
+    },
+    {
+      "direction": "return",
+      "map": "JourneyDewfordGate",
+      "tile": [
+        6,
+        11
+      ],
+      "marker": [
+        16,
+        101
+      ]
+    },
+    {
+      "direction": "return",
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        40
+      ],
+      "marker": [
+        13,
+        101
+      ]
+    },
+    {
+      "direction": "return",
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        35
+      ],
+      "marker": [
+        14,
+        82
+      ]
+    },
+    {
+      "direction": "return",
+      "map": "JourneyWestRiver",
+      "tile": [
+        24,
+        7
+      ],
+      "marker": [
+        13,
+        75
+      ]
+    },
+    {
+      "direction": "return",
+      "map": "Route114",
+      "tile": [
+        2,
+        16
+      ],
+      "marker": [
+        17,
+        76
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "source": [
+        "Route114",
+        0,
+        16
+      ],
+      "destination": [
+        "JourneyWestRiver",
+        47,
+        6
+      ]
+    },
+    {
+      "source": [
+        "JourneyWestRiver",
+        24,
+        13
+      ],
+      "destination": [
+        "JourneyRustboroCoast",
+        24,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyRustboroCoast",
+        25,
+        79
+      ],
+      "destination": [
+        "JourneyDewfordCoast",
+        25,
+        0
+      ]
+    },
+    {
+      "source": [
+        "JourneyDewfordCoast",
+        47,
+        40
+      ],
+      "destination": [
+        "JourneyDewfordGate",
+        0,
+        10
+      ]
+    },
+    {
+      "source": [
+        "JourneyDewfordGate",
+        11,
+        11
+      ],
+      "destination": [
+        "Route105",
+        0,
+        41
+      ]
+    },
+    {
+      "source": [
+        "Route105",
+        20,
+        79
+      ],
+      "destination": [
+        "Route106",
+        20,
+        0
+      ]
+    },
+    {
+      "source": [
+        "Route106",
+        66,
+        19
+      ],
+      "destination": [
+        "DewfordTown",
+        6,
+        0
+      ]
+    },
+    {
+      "source": [
+        "DewfordTown",
+        3,
+        0
+      ],
+      "destination": [
+        "Route106",
+        63,
+        19
+      ]
+    },
+    {
+      "source": [
+        "Route106",
+        9,
+        0
+      ],
+      "destination": [
+        "Route105",
+        9,
+        79
+      ]
+    },
+    {
+      "source": [
+        "Route105",
+        0,
+        42
+      ],
+      "destination": [
+        "JourneyDewfordGate",
+        11,
+        12
+      ]
+    },
+    {
+      "source": [
+        "JourneyDewfordGate",
+        0,
+        11
+      ],
+      "destination": [
+        "JourneyDewfordCoast",
+        47,
+        41
+      ]
+    },
+    {
+      "source": [
+        "JourneyDewfordCoast",
+        24,
+        0
+      ],
+      "destination": [
+        "JourneyRustboroCoast",
+        24,
+        79
+      ]
+    },
+    {
+      "source": [
+        "JourneyRustboroCoast",
+        24,
+        0
+      ],
+      "destination": [
+        "JourneyWestRiver",
+        24,
+        13
+      ]
+    },
+    {
+      "source": [
+        "JourneyWestRiver",
+        47,
+        7
+      ],
+      "destination": [
+        "Route114",
+        0,
+        17
+      ]
+    }
+  ],
+  "walked_tiles": 664,
+  "marker_samples": [
+    {
+      "map": "Route114",
+      "tile": [
+        2,
+        16
+      ],
+      "marker": [
+        17,
+        76
+      ]
+    },
+    {
+      "map": "Route114",
+      "tile": [
+        1,
+        16
+      ],
+      "marker": [
+        17,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route114",
+      "tile": [
+        0,
+        16
+      ],
+      "marker": [
+        17,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        47,
+        6
+      ],
+      "marker": [
+        17,
+        76
+      ],
+      "seam": true
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        46,
+        6
+      ],
+      "marker": [
+        17,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        45,
+        6
+      ],
+      "marker": [
+        16,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        44,
+        6
+      ],
+      "marker": [
+        16,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        43,
+        6
+      ],
+      "marker": [
+        16,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        42,
+        6
+      ],
+      "marker": [
+        16,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        41,
+        6
+      ],
+      "marker": [
+        16,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        40,
+        6
+      ],
+      "marker": [
+        16,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        39,
+        6
+      ],
+      "marker": [
+        16,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        38,
+        6
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        37,
+        6
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        36,
+        6
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        35,
+        6
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        34,
+        6
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        33,
+        6
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        32,
+        6
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        31,
+        6
+      ],
+      "marker": [
+        15,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        30,
+        6
+      ],
+      "marker": [
+        15,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        29,
+        6
+      ],
+      "marker": [
+        15,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        28,
+        6
+      ],
+      "marker": [
+        15,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        27,
+        6
+      ],
+      "marker": [
+        15,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        26,
+        6
+      ],
+      "marker": [
+        15,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        25,
+        6
+      ],
+      "marker": [
+        15,
+        75
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        24,
+        6
+      ],
+      "marker": [
+        14,
+        75
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        24,
+        7
+      ],
+      "marker": [
+        13,
+        75
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        24,
+        8
+      ],
+      "marker": [
+        14,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        24,
+        9
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        24,
+        10
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        24,
+        11
+      ],
+      "marker": [
+        14,
+        78
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        24,
+        12
+      ],
+      "marker": [
+        14,
+        78
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        24,
+        13
+      ],
+      "marker": [
+        14,
+        78
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        0
+      ],
+      "marker": [
+        14,
+        78
+      ],
+      "seam": true
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        1
+      ],
+      "marker": [
+        14,
+        78
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        2
+      ],
+      "marker": [
+        14,
+        78
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        3
+      ],
+      "marker": [
+        14,
+        78
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        4
+      ],
+      "marker": [
+        14,
+        78
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        5
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        6
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        7
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        8
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        9
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        10
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        11
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        12
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        13
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        14
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        15
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        16
+      ],
+      "marker": [
+        14,
+        80
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        17
+      ],
+      "marker": [
+        14,
+        80
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        18
+      ],
+      "marker": [
+        14,
+        80
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        19
+      ],
+      "marker": [
+        14,
+        80
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        20
+      ],
+      "marker": [
+        14,
+        80
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        21
+      ],
+      "marker": [
+        14,
+        80
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        22
+      ],
+      "marker": [
+        14,
+        80
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        23
+      ],
+      "marker": [
+        14,
+        81
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        24
+      ],
+      "marker": [
+        14,
+        81
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        25
+      ],
+      "marker": [
+        14,
+        81
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        26
+      ],
+      "marker": [
+        14,
+        81
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        27
+      ],
+      "marker": [
+        14,
+        81
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        28
+      ],
+      "marker": [
+        14,
+        81
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        29
+      ],
+      "marker": [
+        14,
+        81
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        30
+      ],
+      "marker": [
+        14,
+        82
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        31
+      ],
+      "marker": [
+        14,
+        82
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        32
+      ],
+      "marker": [
+        14,
+        82
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        33
+      ],
+      "marker": [
+        14,
+        82
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        34
+      ],
+      "marker": [
+        14,
+        82
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        35
+      ],
+      "marker": [
+        14,
+        82
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        35
+      ],
+      "marker": [
+        14,
+        82
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        36
+      ],
+      "marker": [
+        13,
+        83
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        37
+      ],
+      "marker": [
+        13,
+        83
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        38
+      ],
+      "marker": [
+        13,
+        83
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        39
+      ],
+      "marker": [
+        13,
+        83
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        40
+      ],
+      "marker": [
+        13,
+        83
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        41
+      ],
+      "marker": [
+        13,
+        83
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        42
+      ],
+      "marker": [
+        13,
+        83
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        43
+      ],
+      "marker": [
+        13,
+        83
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        44
+      ],
+      "marker": [
+        13,
+        83
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        45
+      ],
+      "marker": [
+        13,
+        84
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        46
+      ],
+      "marker": [
+        13,
+        84
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        47
+      ],
+      "marker": [
+        13,
+        84
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        48
+      ],
+      "marker": [
+        13,
+        85
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        49
+      ],
+      "marker": [
+        13,
+        85
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        50
+      ],
+      "marker": [
+        13,
+        85
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        51
+      ],
+      "marker": [
+        13,
+        85
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        52
+      ],
+      "marker": [
+        13,
+        86
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        53
+      ],
+      "marker": [
+        13,
+        86
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        54
+      ],
+      "marker": [
+        13,
+        86
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        55
+      ],
+      "marker": [
+        13,
+        87
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        56
+      ],
+      "marker": [
+        13,
+        87
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        57
+      ],
+      "marker": [
+        13,
+        87
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        58
+      ],
+      "marker": [
+        13,
+        88
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        59
+      ],
+      "marker": [
+        13,
+        88
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        60
+      ],
+      "marker": [
+        13,
+        88
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        61
+      ],
+      "marker": [
+        13,
+        89
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        62
+      ],
+      "marker": [
+        13,
+        89
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        63
+      ],
+      "marker": [
+        13,
+        89
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        64
+      ],
+      "marker": [
+        13,
+        90
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        65
+      ],
+      "marker": [
+        13,
+        90
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        66
+      ],
+      "marker": [
+        13,
+        90
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        67
+      ],
+      "marker": [
+        13,
+        90
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        68
+      ],
+      "marker": [
+        13,
+        91
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        69
+      ],
+      "marker": [
+        13,
+        91
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        70
+      ],
+      "marker": [
+        13,
+        91
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        71
+      ],
+      "marker": [
+        13,
+        91
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        72
+      ],
+      "marker": [
+        13,
+        91
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        73
+      ],
+      "marker": [
+        13,
+        91
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        74
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        75
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        76
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        77
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        78
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        25,
+        79
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        0
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": true
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        1
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        2
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        3
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        4
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        5
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        6
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        7
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        8
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        9
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        10
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        11
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        12
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        13
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        13
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        14
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        15
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        16
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        17
+      ],
+      "marker": [
+        13,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        18
+      ],
+      "marker": [
+        13,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        19
+      ],
+      "marker": [
+        13,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        20
+      ],
+      "marker": [
+        13,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        21
+      ],
+      "marker": [
+        13,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        22
+      ],
+      "marker": [
+        13,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        23
+      ],
+      "marker": [
+        13,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        24
+      ],
+      "marker": [
+        13,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        25
+      ],
+      "marker": [
+        13,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        26
+      ],
+      "marker": [
+        13,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        27
+      ],
+      "marker": [
+        13,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        28
+      ],
+      "marker": [
+        13,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        29
+      ],
+      "marker": [
+        13,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        30
+      ],
+      "marker": [
+        13,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        31
+      ],
+      "marker": [
+        13,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        32
+      ],
+      "marker": [
+        13,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        33
+      ],
+      "marker": [
+        13,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        34
+      ],
+      "marker": [
+        13,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        35
+      ],
+      "marker": [
+        13,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        36
+      ],
+      "marker": [
+        13,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        37
+      ],
+      "marker": [
+        13,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        38
+      ],
+      "marker": [
+        13,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        39
+      ],
+      "marker": [
+        13,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        40
+      ],
+      "marker": [
+        13,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        40
+      ],
+      "marker": [
+        13,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        26,
+        40
+      ],
+      "marker": [
+        13,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        27,
+        40
+      ],
+      "marker": [
+        13,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        28,
+        40
+      ],
+      "marker": [
+        13,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        29,
+        40
+      ],
+      "marker": [
+        13,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        30,
+        40
+      ],
+      "marker": [
+        14,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        31,
+        40
+      ],
+      "marker": [
+        14,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        32,
+        40
+      ],
+      "marker": [
+        14,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        33,
+        40
+      ],
+      "marker": [
+        14,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        34,
+        40
+      ],
+      "marker": [
+        14,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        35,
+        40
+      ],
+      "marker": [
+        14,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        36,
+        40
+      ],
+      "marker": [
+        14,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        37,
+        40
+      ],
+      "marker": [
+        14,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        38,
+        40
+      ],
+      "marker": [
+        14,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        39,
+        40
+      ],
+      "marker": [
+        14,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        40,
+        40
+      ],
+      "marker": [
+        14,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        41,
+        40
+      ],
+      "marker": [
+        14,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        42,
+        40
+      ],
+      "marker": [
+        14,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        43,
+        40
+      ],
+      "marker": [
+        14,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        44,
+        40
+      ],
+      "marker": [
+        14,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        45,
+        40
+      ],
+      "marker": [
+        14,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        46,
+        40
+      ],
+      "marker": [
+        14,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        47,
+        40
+      ],
+      "marker": [
+        14,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        0,
+        10
+      ],
+      "marker": [
+        14,
+        101
+      ],
+      "seam": true
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        1,
+        10
+      ],
+      "marker": [
+        14,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        2,
+        10
+      ],
+      "marker": [
+        15,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        3,
+        10
+      ],
+      "marker": [
+        15,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        4,
+        10
+      ],
+      "marker": [
+        15,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        5,
+        10
+      ],
+      "marker": [
+        16,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        6,
+        10
+      ],
+      "marker": [
+        16,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        6,
+        11
+      ],
+      "marker": [
+        16,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        7,
+        11
+      ],
+      "marker": [
+        16,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        8,
+        11
+      ],
+      "marker": [
+        17,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        9,
+        11
+      ],
+      "marker": [
+        17,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        10,
+        11
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        11,
+        11
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        0,
+        41
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": true
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        1,
+        41
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        2,
+        41
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        3,
+        41
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        4,
+        41
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        5,
+        41
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        5,
+        42
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        6,
+        42
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        42
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        8,
+        42
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        9,
+        42
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        10,
+        42
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        11,
+        42
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        12,
+        42
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        13,
+        42
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        14,
+        42
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        15,
+        42
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        42
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        17,
+        42
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        18,
+        42
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        19,
+        42
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        42
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        43
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        44
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        45
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        46
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        47
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        48
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        49
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        50
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        51
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        52
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        53
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        54
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        55
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        56
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        57
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        58
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        59
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        60
+      ],
+      "marker": [
+        19,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        61
+      ],
+      "marker": [
+        19,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        62
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        63
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        64
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        65
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        66
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        67
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        68
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        69
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        70
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        71
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        72
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        73
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        74
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        75
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        76
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        77
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        78
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        79
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        0
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": true
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        1
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        2
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        3
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        4
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        5
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        6
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        7
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        8
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        9
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        21,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        22,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        23,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        24,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        25,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        26,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        27,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        28,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        28,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        29,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        30,
+        11
+      ],
+      "marker": [
+        21,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        31,
+        11
+      ],
+      "marker": [
+        21,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        32,
+        11
+      ],
+      "marker": [
+        21,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        33,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        34,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        35,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        36,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        37,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        38,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        39,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        40,
+        11
+      ],
+      "marker": [
+        21,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        41,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        42,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        43,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        44,
+        11
+      ],
+      "marker": [
+        22,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        45,
+        11
+      ],
+      "marker": [
+        22,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        46,
+        11
+      ],
+      "marker": [
+        22,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        47,
+        11
+      ],
+      "marker": [
+        22,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        48,
+        11
+      ],
+      "marker": [
+        23,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        49,
+        11
+      ],
+      "marker": [
+        23,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        50,
+        11
+      ],
+      "marker": [
+        23,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        51,
+        11
+      ],
+      "marker": [
+        24,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        52,
+        11
+      ],
+      "marker": [
+        24,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        53,
+        11
+      ],
+      "marker": [
+        24,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        54,
+        11
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        55,
+        11
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        56,
+        11
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        57,
+        11
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        58,
+        11
+      ],
+      "marker": [
+        26,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        59,
+        11
+      ],
+      "marker": [
+        26,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        60,
+        11
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        61,
+        11
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        62,
+        11
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        63,
+        11
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        64,
+        11
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        65,
+        11
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        11
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        12
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        13
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        14
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        15
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        16
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        17
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        18
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        19
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        0
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": true
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        1
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        2
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        3
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        4
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        5
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        6
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        7
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        8
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        7,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        8,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        9,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        10,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        9,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        8,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        7,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        8
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        7
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        6
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        5
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        4
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        3
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        2
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        1
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        0
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        5,
+        0
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        4,
+        0
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        3,
+        0
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        63,
+        19
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": true
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        62,
+        19
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        62,
+        18
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        61,
+        18
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        60,
+        18
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        60,
+        17
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        59,
+        17
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        58,
+        17
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        58,
+        16
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        57,
+        16
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        56,
+        16
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        55,
+        16
+      ],
+      "marker": [
+        26,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        54,
+        16
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        53,
+        16
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        52,
+        16
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        52,
+        15
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        52,
+        14
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        52,
+        13
+      ],
+      "marker": [
+        24,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        52,
+        12
+      ],
+      "marker": [
+        24,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        51,
+        12
+      ],
+      "marker": [
+        24,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        51,
+        11
+      ],
+      "marker": [
+        24,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        50,
+        11
+      ],
+      "marker": [
+        23,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        49,
+        11
+      ],
+      "marker": [
+        23,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        48,
+        11
+      ],
+      "marker": [
+        23,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        47,
+        11
+      ],
+      "marker": [
+        22,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        46,
+        11
+      ],
+      "marker": [
+        22,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        45,
+        11
+      ],
+      "marker": [
+        22,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        44,
+        11
+      ],
+      "marker": [
+        22,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        43,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        42,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        41,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        40,
+        11
+      ],
+      "marker": [
+        21,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        39,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        38,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        37,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        36,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        35,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        34,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        33,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        32,
+        11
+      ],
+      "marker": [
+        21,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        31,
+        11
+      ],
+      "marker": [
+        21,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        30,
+        11
+      ],
+      "marker": [
+        21,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        29,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        28,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        27,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        26,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        25,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        24,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        23,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        22,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        21,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        19,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        18,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        18,
+        9
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        18,
+        8
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        17,
+        8
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        16,
+        8
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        15,
+        8
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        14,
+        8
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        14,
+        7
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        13,
+        7
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        12,
+        7
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        12,
+        6
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        12,
+        5
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        12,
+        4
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        12,
+        3
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        12,
+        2
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        12,
+        1
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        11,
+        1
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        10,
+        1
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        9,
+        1
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        9,
+        0
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        9,
+        79
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": true
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        9,
+        78
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        9,
+        77
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        9,
+        76
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        9,
+        75
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        9,
+        74
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        8,
+        74
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        9,
+        74
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        9,
+        73
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        9,
+        72
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        8,
+        72
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        8,
+        71
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        71
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        70
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        69
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        68
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        67
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        66
+      ],
+      "marker": [
+        19,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        65
+      ],
+      "marker": [
+        19,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        64
+      ],
+      "marker": [
+        19,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        63
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        62
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        61
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        60
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        59
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        58
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        57
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        56
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        7,
+        55
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        6,
+        55
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        6,
+        54
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        6,
+        53
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        5,
+        53
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        5,
+        52
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        5,
+        51
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        5,
+        50
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        5,
+        49
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        5,
+        48
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        5,
+        47
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        5,
+        46
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        5,
+        45
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        5,
+        44
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        5,
+        43
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        5,
+        42
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        4,
+        42
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        3,
+        42
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        2,
+        42
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        1,
+        42
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        0,
+        42
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        11,
+        12
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": true
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        10,
+        12
+      ],
+      "marker": [
+        18,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        9,
+        12
+      ],
+      "marker": [
+        17,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        8,
+        12
+      ],
+      "marker": [
+        17,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        7,
+        12
+      ],
+      "marker": [
+        16,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        6,
+        12
+      ],
+      "marker": [
+        16,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        6,
+        11
+      ],
+      "marker": [
+        16,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        5,
+        11
+      ],
+      "marker": [
+        16,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        4,
+        11
+      ],
+      "marker": [
+        15,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        3,
+        11
+      ],
+      "marker": [
+        15,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        2,
+        11
+      ],
+      "marker": [
+        15,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        1,
+        11
+      ],
+      "marker": [
+        14,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordGate",
+      "tile": [
+        0,
+        11
+      ],
+      "marker": [
+        14,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        47,
+        41
+      ],
+      "marker": [
+        14,
+        101
+      ],
+      "seam": true
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        46,
+        41
+      ],
+      "marker": [
+        14,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        45,
+        41
+      ],
+      "marker": [
+        14,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        44,
+        41
+      ],
+      "marker": [
+        14,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        43,
+        41
+      ],
+      "marker": [
+        14,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        42,
+        41
+      ],
+      "marker": [
+        14,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        41,
+        41
+      ],
+      "marker": [
+        14,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        40,
+        41
+      ],
+      "marker": [
+        14,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        39,
+        41
+      ],
+      "marker": [
+        14,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        38,
+        41
+      ],
+      "marker": [
+        14,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        37,
+        41
+      ],
+      "marker": [
+        14,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        36,
+        41
+      ],
+      "marker": [
+        14,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        35,
+        41
+      ],
+      "marker": [
+        14,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        34,
+        41
+      ],
+      "marker": [
+        14,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        33,
+        41
+      ],
+      "marker": [
+        14,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        32,
+        41
+      ],
+      "marker": [
+        14,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        31,
+        41
+      ],
+      "marker": [
+        14,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        30,
+        41
+      ],
+      "marker": [
+        14,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        29,
+        41
+      ],
+      "marker": [
+        14,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        28,
+        41
+      ],
+      "marker": [
+        13,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        27,
+        41
+      ],
+      "marker": [
+        13,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        26,
+        41
+      ],
+      "marker": [
+        13,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        41
+      ],
+      "marker": [
+        13,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        41
+      ],
+      "marker": [
+        13,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        40
+      ],
+      "marker": [
+        13,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        40
+      ],
+      "marker": [
+        13,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        39
+      ],
+      "marker": [
+        13,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        38
+      ],
+      "marker": [
+        13,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        37
+      ],
+      "marker": [
+        13,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        36
+      ],
+      "marker": [
+        13,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        35
+      ],
+      "marker": [
+        13,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        34
+      ],
+      "marker": [
+        13,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        33
+      ],
+      "marker": [
+        13,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        32
+      ],
+      "marker": [
+        13,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        31
+      ],
+      "marker": [
+        13,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        30
+      ],
+      "marker": [
+        13,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        29
+      ],
+      "marker": [
+        13,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        28
+      ],
+      "marker": [
+        13,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        27
+      ],
+      "marker": [
+        13,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        26
+      ],
+      "marker": [
+        13,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        25
+      ],
+      "marker": [
+        13,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        24
+      ],
+      "marker": [
+        13,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        23
+      ],
+      "marker": [
+        13,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        22
+      ],
+      "marker": [
+        13,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        21
+      ],
+      "marker": [
+        13,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        20
+      ],
+      "marker": [
+        13,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        19
+      ],
+      "marker": [
+        13,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        18
+      ],
+      "marker": [
+        13,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        17
+      ],
+      "marker": [
+        13,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        16
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        15
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        14
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        13
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        12
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        11
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        25,
+        10
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        10
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        9
+      ],
+      "marker": [
+        13,
+        93
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        8
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        7
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        6
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        5
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        4
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        3
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        2
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        1
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyDewfordCoast",
+      "tile": [
+        24,
+        0
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        79
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": true
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        78
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        77
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        76
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        75
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        74
+      ],
+      "marker": [
+        13,
+        92
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        73
+      ],
+      "marker": [
+        13,
+        91
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        72
+      ],
+      "marker": [
+        13,
+        91
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        71
+      ],
+      "marker": [
+        13,
+        91
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        70
+      ],
+      "marker": [
+        13,
+        91
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        69
+      ],
+      "marker": [
+        13,
+        91
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        68
+      ],
+      "marker": [
+        13,
+        91
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        67
+      ],
+      "marker": [
+        13,
+        90
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        66
+      ],
+      "marker": [
+        13,
+        90
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        65
+      ],
+      "marker": [
+        13,
+        90
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        64
+      ],
+      "marker": [
+        13,
+        90
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        63
+      ],
+      "marker": [
+        13,
+        89
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        62
+      ],
+      "marker": [
+        13,
+        89
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        61
+      ],
+      "marker": [
+        13,
+        89
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        60
+      ],
+      "marker": [
+        13,
+        89
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        59
+      ],
+      "marker": [
+        13,
+        88
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        58
+      ],
+      "marker": [
+        13,
+        88
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        57
+      ],
+      "marker": [
+        13,
+        88
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        56
+      ],
+      "marker": [
+        13,
+        87
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        55
+      ],
+      "marker": [
+        13,
+        87
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        54
+      ],
+      "marker": [
+        13,
+        87
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        53
+      ],
+      "marker": [
+        13,
+        86
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        52
+      ],
+      "marker": [
+        13,
+        86
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        51
+      ],
+      "marker": [
+        13,
+        86
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        50
+      ],
+      "marker": [
+        13,
+        85
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        49
+      ],
+      "marker": [
+        13,
+        85
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        48
+      ],
+      "marker": [
+        13,
+        85
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        47
+      ],
+      "marker": [
+        13,
+        84
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        46
+      ],
+      "marker": [
+        13,
+        84
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        45
+      ],
+      "marker": [
+        13,
+        84
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        44
+      ],
+      "marker": [
+        13,
+        84
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        43
+      ],
+      "marker": [
+        13,
+        83
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        42
+      ],
+      "marker": [
+        13,
+        83
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        41
+      ],
+      "marker": [
+        13,
+        83
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        40
+      ],
+      "marker": [
+        13,
+        83
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        39
+      ],
+      "marker": [
+        13,
+        83
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        38
+      ],
+      "marker": [
+        13,
+        83
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        37
+      ],
+      "marker": [
+        13,
+        83
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        36
+      ],
+      "marker": [
+        13,
+        83
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        35
+      ],
+      "marker": [
+        14,
+        82
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        34
+      ],
+      "marker": [
+        14,
+        82
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        33
+      ],
+      "marker": [
+        14,
+        82
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        32
+      ],
+      "marker": [
+        14,
+        82
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        31
+      ],
+      "marker": [
+        14,
+        82
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        30
+      ],
+      "marker": [
+        14,
+        82
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        29
+      ],
+      "marker": [
+        14,
+        81
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        28
+      ],
+      "marker": [
+        14,
+        81
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        27
+      ],
+      "marker": [
+        14,
+        81
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        26
+      ],
+      "marker": [
+        14,
+        81
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        25
+      ],
+      "marker": [
+        14,
+        81
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        24
+      ],
+      "marker": [
+        14,
+        81
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        23
+      ],
+      "marker": [
+        14,
+        81
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        22
+      ],
+      "marker": [
+        14,
+        80
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        21
+      ],
+      "marker": [
+        14,
+        80
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        20
+      ],
+      "marker": [
+        14,
+        80
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        19
+      ],
+      "marker": [
+        14,
+        80
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        18
+      ],
+      "marker": [
+        14,
+        80
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        17
+      ],
+      "marker": [
+        14,
+        80
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        16
+      ],
+      "marker": [
+        14,
+        80
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        15
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        14
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        13
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        12
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        11
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        10
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        9
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        8
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        7
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        6
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        5
+      ],
+      "marker": [
+        14,
+        79
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        4
+      ],
+      "marker": [
+        14,
+        78
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        3
+      ],
+      "marker": [
+        14,
+        78
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        2
+      ],
+      "marker": [
+        14,
+        78
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        1
+      ],
+      "marker": [
+        14,
+        78
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyRustboroCoast",
+      "tile": [
+        24,
+        0
+      ],
+      "marker": [
+        14,
+        78
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        24,
+        13
+      ],
+      "marker": [
+        14,
+        78
+      ],
+      "seam": true
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        24,
+        12
+      ],
+      "marker": [
+        14,
+        78
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        24,
+        11
+      ],
+      "marker": [
+        14,
+        78
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        24,
+        10
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        24,
+        9
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        24,
+        8
+      ],
+      "marker": [
+        14,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        24,
+        7
+      ],
+      "marker": [
+        13,
+        75
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        25,
+        7
+      ],
+      "marker": [
+        14,
+        75
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        26,
+        7
+      ],
+      "marker": [
+        15,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        27,
+        7
+      ],
+      "marker": [
+        15,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        28,
+        7
+      ],
+      "marker": [
+        15,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        29,
+        7
+      ],
+      "marker": [
+        15,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        30,
+        7
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        31,
+        7
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        32,
+        7
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        33,
+        7
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        34,
+        7
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        35,
+        7
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        36,
+        7
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        37,
+        7
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        38,
+        7
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        39,
+        7
+      ],
+      "marker": [
+        15,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        40,
+        7
+      ],
+      "marker": [
+        16,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        41,
+        7
+      ],
+      "marker": [
+        16,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        42,
+        7
+      ],
+      "marker": [
+        16,
+        77
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        43,
+        7
+      ],
+      "marker": [
+        16,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        44,
+        7
+      ],
+      "marker": [
+        16,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        45,
+        7
+      ],
+      "marker": [
+        16,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        46,
+        7
+      ],
+      "marker": [
+        16,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "JourneyWestRiver",
+      "tile": [
+        47,
+        7
+      ],
+      "marker": [
+        16,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route114",
+      "tile": [
+        0,
+        17
+      ],
+      "marker": [
+        16,
+        76
+      ],
+      "seam": true
+    },
+    {
+      "map": "Route114",
+      "tile": [
+        1,
+        17
+      ],
+      "marker": [
+        16,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route114",
+      "tile": [
+        2,
+        17
+      ],
+      "marker": [
+        17,
+        76
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route114",
+      "tile": [
+        2,
+        16
+      ],
+      "marker": [
+        17,
+        76
+      ],
+      "seam": false
+    }
+  ],
+  "surf_prompts": [
+    [
+      "Route106",
+      55,
+      11
+    ],
+    [
+      "Route106",
+      41,
+      11
+    ],
+    [
+      "Route105",
+      9,
+      73
+    ],
+    [
+      "Route105",
+      6,
+      54
+    ]
+  ],
+  "controller_roundtrip": true,
+  "no_midroute_warps_or_coordinate_writes": true,
+  "save_continue_preserves_location": true,
+  "initial_party_flags_and_position_are_fixtures": true,
+  "trainer_battles_and_balance_not_tested": true
+}

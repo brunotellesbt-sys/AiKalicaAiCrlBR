@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "rom_sha256": "233c8d4e8a428c5ca4d2de757750e41b7cdfe2698c6baf8edca381cc8b6c0eee",
+  "compiled_gps_tiles": 408618,
+  "compiled_shared_edges": 572,
+  "maximum_neighbor_pixel_step": 2,
+  "all_generated_seas_visited": [
+    "JourneyCinnabarSouthSea",
+    "JourneyDewfordCoast",
+    "JourneyDewfordGate",
+    "JourneyEverGrandeBackSea",
+    "JourneyEverGrandeBackSouthSea",
+    "JourneyFuchsiaInlet",
+    "JourneyFuchsiaSea",
+    "JourneyHoennMiddleEastSea",
+    "JourneyHoennMiddleSea",
+    "JourneyHoennNorthSea",
+    "JourneyHoennSouthEastSea",
+    "JourneyHoennSouthSea",
+    "JourneyKantoCoastalBand",
+    "JourneyKantoEasternChannel",
+    "JourneyKantoSouthSea",
+    "JourneyKantoSouthWestSea",
+    "JourneyLavenderApproach",
+    "JourneyLavenderApproachSouth",
+    "JourneyMossdeepOuterEastSea",
+    "JourneyMossdeepOuterSea",
+    "JourneyOneIslandChannel",
+    "JourneyPacifidlogSea",
+    "JourneyRoute12OuterSea",
+    "JourneyRoute12Shipyard",
+    "JourneyRoute13Coast",
+    "JourneyRustboroCoast",
+    "JourneyRustboroGate",
+    "JourneyWestRiver",
+    "JourneyWorldFill10Cap",
+    "JourneyWorldFill10Right",
+    "JourneyWorldFill11Cap",
+    "JourneyWorldFill11Right",
+    "JourneyWorldFill20Cap",
+    "JourneyWorldFill20Right",
+    "JourneyWorldFill21Cap",
+    "JourneyWorldFill21Right",
+    "JourneyWorldFill30Cap",
+    "JourneyWorldFill30Right",
+    "JourneyWorldFill31Cap",
+    "JourneyWorldFill31Right",
+    "JourneyWorldLane10",
+    "JourneyWorldLane11",
+    "JourneyWorldLane20",
+    "JourneyWorldLane21",
+    "JourneyWorldLane30",
+    "JourneyWorldLane31",
+    "JourneyWorldSea00",
+    "JourneyWorldSea01",
+    "JourneyWorldSea02",
+    "JourneyWorldSea03",
+    "JourneyWorldSea04",
+    "JourneyWorldSea05",
+    "JourneyWorldSea06",
+    "JourneyWorldSea07",
+    "JourneyWorldSea08",
+    "JourneyWorldSea09"
+  ],
+  "trips": [
+    {
+      "profile": 0,
+      "walked_tiles": 1436,
+      "transitions": 26,
+      "proof_sha256": "9c8b78babacdae37dc18ff46074010c778877b3576976cd194d5f4b08235753c"
+    },
+    {
+      "profile": 1,
+      "walked_tiles": 376,
+      "transitions": 8,
+      "proof_sha256": "071c6588d7d3c7c8939046de04d9aafcf93ebef150ce0fcd1493bfcf7c65001e"
+    },
+    {
+      "profile": 2,
+      "walked_tiles": 1080,
+      "transitions": 25,
+      "proof_sha256": "f78c50fb317b2f4600e08d86f73f31101ed780e6dc6ac742552eb2e3e4708a9e"
+    },
+    {
+      "profile": 3,
+      "walked_tiles": 1872,
+      "transitions": 45,
+      "proof_sha256": "c3b313b23aa759ad0bc287527f54f1663f33a9b6ff127171d3acf687bee4095f"
+    },
+    {
+      "profile": "pallet-cinnabar-fuchsia",
+      "walked_tiles": 894,
+      "transitions": 12,
+      "proof_sha256": "d9c51121779e9330d9c3651714a63f350525a5a40f0d87c39449c671ebdfdc17"
+    },
+    {
+      "profile": "petalburg-dewford",
+      "walked_tiles": 382,
+      "transitions": 6,
+      "proof_sha256": "67804bba255591314d98c82d5a00f1a0a1ffed8cfddda71521bcfd5d05a06ada"
+    },
+    {
+      "profile": "rustboro-dewford",
+      "walked_tiles": 764,
+      "transitions": 16,
+      "proof_sha256": "ccb9ae8a9b58a5fc317f22e5523a493a1c1c945de49f275d6c3af02281faa8df"
+    },
+    {
+      "profile": "western-river-dewford",
+      "walked_tiles": 664,
+      "transitions": 14,
+      "proof_sha256": "370ea97f7c07810487d1ed42a7a9851df6c54c3a5f791dc52433e2a4d7f6495c"
+    }
+  ],
+  "total_controller_tiles": 7468,
+  "total_controller_transitions": 152,
+  "unconnected_prototype_hidden": true,
+  "large_sea_areas_without_internal_grid": true,
+  "no_terrain_or_port_changes": true,
+  "level_100_and_repels_are_test_fixtures": true,
+  "full_campaign_playthrough": false
+}
