@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 
 import package_playable
-from prepare_battle_interactions import PRIOR, LAYER
+from prepare_pwt_obedience import PRIOR, LAYER
 
 
 def main():

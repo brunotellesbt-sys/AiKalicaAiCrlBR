@@ -80,7 +80,7 @@ def verify(directory,require_seal=True):
                 assert len(report['checkpoints'])>=9 and report['battles']
         else:
             cap,hard=VARIANTS[target]
-            if kind!='pwt-world' and not kind.startswith('generation-cup-'):assert report['max_national']==cap
+            if kind!='pwt-world' and not kind.startswith(('generation-cup-','pwt-unboosted-')):assert report['max_national']==cap
             if kind=='gym-teams':
                 assert len(report['checks'])==192
                 assert len({c['leader'] for c in report['checks']})==16
@@ -105,6 +105,18 @@ def verify(directory,require_seal=True):
             elif kind=='battle-interactions':
                 from verify_battle_interactions import verify_report
                 verify_report(report,expected,cap,hard)
+            elif kind.startswith('pwt-unboosted-'):
+                from verify_pwt_balance import verify_report
+                verify_report(report,expected,4 if cap==493 else 9,hard,int(kind.rsplit('-',1)[1]))
+            elif kind=='special-encounters':
+                assert report['event_only_families']==21 and report['actual_tv_capture_and_form_ui']
+                assert len(report['rotom_changes'])==6 and len(report['dex_locations'])==21
+                checks={c['case']:c for c in report['checks']}
+                assert checks['rotom_tv_capture']['captured_base_form']
+                assert checks['rotom_tv_capture']['repeat_capture_blocked']
+                assert len(checks['deoxys_meteorite']['four_forms'])==4
+                assert checks['keystone_installation']['consumed_once'] and checks['keystone_installation']['retry_without_second_item']
+                assert len(checks['fossil_restoration']['recipes'])==15
             else:raise AssertionError(('Unknown variant proof',kind))
             tested.add((target,kind))
     kinds=['gym-teams','variant-rules']
@@ -118,7 +130,7 @@ def verify(directory,require_seal=True):
         assert report['declined_round_with_controller'] and report['original_party_restored_byte_exact']
         assert report['no_bp_reward_for_retirement'] and report['player_ready_position']==[9,6]
     expected={(name,kind) for name in VARIANTS for kind in kinds}
-    if info.get('validation_scope')=='pwt-update':
+    if info.get('validation_scope') in ('pwt-update','pwt-and-special-encounters'):
         expected={(name,'pwt-world') for name in VARIANTS}
     if info.get('generation_cups_validated'):
         expected|={(name,f'generation-cup-{generation}') for name,(cap,_) in VARIANTS.items() if cap==493 for generation in range(1,5)}
@@ -128,6 +140,17 @@ def verify(directory,require_seal=True):
     if info.get('battle_interactions_validated'):
         expected|={(name,'battle-interactions') for name in VARIANTS}
         assert 'battle-interactions' in common
+    if info.get('pwt_balance_validated'):
+        coverage=info['pwt_balance_tested_pools']
+        assert set(coverage)==set(VARIANTS)
+        for name,(cap,_) in VARIANTS.items():
+            pools=coverage[name]
+            assert pools and pools==sorted(set(pools))
+            assert all(0<=pool<=(4 if cap==493 else 9) for pool in pools)
+            expected|={(name,f'pwt-unboosted-{pool}') for pool in pools}
+        assert {'pwt-registration','nonlevel-moves','pwt-obedience'}<=common
+    if info.get('special_encounters_validated'):
+        expected|={(name,'special-encounters') for name in VARIANTS}
     assert expected<=tested
     assert tested-expected<={(name,kind) for name in VARIANTS for kind in ['gym-teams','variant-rules']}
     required={'galactic-chapter','league-kanto','league-hoenn','mega-reversion','surf-passages','sharp-map','birth-confirmation','reproduction',
@@ -135,7 +158,7 @@ def verify(directory,require_seal=True):
             'modern-bag','species-stats','ability-item-registry','player-evolutions','abilities-slot-2','field-rules',
             'item-menu-actions','item-menu-alola-stone','item-menu-kadabra','item-menu-onix',
             'item-menu-pawmo','item-menu-gimmighoul','initial-campaign-kanto','initial-campaign-hoenn'}
-    if info.get('validation_scope')=='pwt-update':
+    if info.get('validation_scope') in ('pwt-update','pwt-and-special-encounters'):
         assert 'integration_layers' in info and info['full_campaign_playthrough'] is False
         required={'reproduction','pwt-stadium','pwt-retirement'}
     assert required<=common

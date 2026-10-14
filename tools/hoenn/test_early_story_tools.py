@@ -97,8 +97,8 @@ class EarlyStoryTools(unittest.TestCase):
         self.assertIn('Silph Scope, Devon Scope e Wailmer Pail', guide)
         with (ROOT / 'mods/hoenn/pokemon-locations.csv').open() as stream:
             rows = list(csv.DictReader(stream))
-        self.assertEqual(len([r for r in rows if r['category'] == 'comum']), 920)
-        self.assertEqual(len([r for r in rows if r['category'] not in ['comum', 'forma regional']]), 105)
+        self.assertEqual(len([r for r in rows if r['category'] in ['comum', 'evento', 'paradoxo']]), 920)
+        self.assertEqual(len([r for r in rows if r['category'] not in ['comum', 'evento', 'paradoxo', 'forma regional']]), 105)
 
     def test_western_crossing_regression_and_validation_limits(self):
         r = read('first-badge-and-west-sea.json')

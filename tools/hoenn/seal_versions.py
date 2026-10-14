@@ -7,8 +7,9 @@ from verify_versions import verify,ROOT
 def seal(source,validation,output,validation_scope='full'):
     validation=Path(validation);output=Path(output)
     info=package(source,output);proofs=[]
-    assert validation_scope in ('full','pwt-update')
-    if validation_scope=='pwt-update':
+    partial=validation_scope in ('pwt-update','pwt-and-special-encounters')
+    assert validation_scope in ('full','pwt-update','pwt-and-special-encounters')
+    if partial:
         assert 'integration_layers' in info
         info['validation_scope']=validation_scope
         info['full_campaign_playthrough']=False
@@ -23,12 +24,26 @@ def seal(source,validation,output,validation_scope='full'):
         proofs.append(dict(file=relative.as_posix(),target=target,kind=kind,sha256=hashlib.sha256(destination.read_bytes()).hexdigest()))
     for row in info['variants']:
         view=row['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba')
-        kinds=[] if validation_scope=='pwt-update' else ['gym-teams','variant-rules']
+        kinds=[] if partial else ['gym-teams','variant-rules']
+        if partial and (validation/view/'gym-teams.json').exists():kinds.append('gym-teams')
+        if validation_scope=='pwt-and-special-encounters':
+            info['special_encounters_validated']=True
+            kinds.append('special-encounters')
         if 'integration_layers' in info:kinds.append('pwt-world')
         for kind in kinds:add(validation/view/(kind+'.json'),row['file'],kind)
         if (validation/view/'battle-interactions.json').exists():
             info['battle_interactions_validated']=True
             add(validation/view/'battle-interactions.json',row['file'],'battle-interactions')
+        completed=sorted((validation/view).glob('pwt-unboosted-*.json'))
+        if completed:
+            info['pwt_balance_validated']=True
+            pools=[]
+            for path in completed:
+                report=json.loads(path.read_text())
+                assert report['passed'] and report['full_cup_participation']
+                pools.append(report['pool'])
+                add(path,row['file'],path.stem)
+            info.setdefault('pwt_balance_tested_pools',{})[row['file']]=sorted(pools)
         if (Path(source)/'.journey-move-history-rules').exists() and row['max_national']==493:
             info['generation_cups_validated']=True
             for generation in range(1,5):
@@ -71,5 +86,5 @@ def seal(source,validation,output,validation_scope='full'):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--source',required=True);p.add_argument('--validation',required=True);p.add_argument('--output',required=True)
-    p.add_argument('--validation-scope',choices=['full','pwt-update'],default='full')
+    p.add_argument('--validation-scope',choices=['full','pwt-update','pwt-and-special-encounters'],default='full')
     a=p.parse_args();print(seal(a.source,a.validation,a.output,a.validation_scope))

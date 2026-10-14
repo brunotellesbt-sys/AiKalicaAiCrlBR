@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "rom_sha256": "6be718b3917eb6b6f639384ee99563280e272417beec5e22b6722c4cad033462",
+  "version_generation_cap": 9,
+  "checks": [
+    {
+      "case": "five_selected",
+      "rejected": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "same_slot_twice",
+      "rejected": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "missing_slot",
+      "rejected": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "only_five_owned",
+      "rejected": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "unavailable_generation",
+      "rejected": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "egg",
+      "rejected": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "duplicate_held_item",
+      "rejected": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "same_species_twice",
+      "rejected": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "frontier_banned_species",
+      "rejected": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "already_active",
+      "rejected": true,
+      "party_unchanged": true
+    },
+    {
+      "case": "global_reward",
+      "bp": 25,
+      "once_only": true,
+      "party_restored_byte_exact": true
+    },
+    {
+      "case": "generation_reward",
+      "bp": 10,
+      "once_only": true,
+      "party_restored_byte_exact": true
+    }
+  ],
+  "reward_stage_is_explicit_fixture": true,
+  "invalid_registration_native": true,
+  "full_campaign_playthrough": false
+}

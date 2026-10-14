@@ -37,7 +37,7 @@ class CupController:
         raw=int.from_bytes(bytes(self.lib.read8(at+i) for i in range(size)),'little')
         raw=(raw&~(mask<<shift))|((value&mask)<<shift)
         for i,b in enumerate(raw.to_bytes(size,'little')):self.lib.write8(at+i,b)
-    def choose_move(self):
+    def choose_move(self,damage_score=None):
         lib,s=self.lib,self.symbols;base=s['gBattleMons'];scores=[]
         foe=lib.read16(base+self.abi[6]+self.abi[5])
         foe_types=self.database['species'][foe]['types']
@@ -57,6 +57,7 @@ class CupController:
             if self.volatile('tauntTimer') and row['category']==2:
                 scores.append(-1);self.avoided+=1;continue
             immune=bool(immunities.get(row['type'],set())&set(foe_types)) or (row['type']==5 and foe_ability==self.abi[8])
-            scores.append((0 if immune else 1 if row['category']==2 else 1000)+row['power']*(not immune))
+            scores.append(damage_score(row) if damage_score is not None and not immune else
+                          (0 if immune else 1 if row['category']==2 else 1000)+row['power']*(not immune))
         # If no legal slot remains the engine selects Struggle itself.
         return max(range(4),key=lambda slot:scores[slot])

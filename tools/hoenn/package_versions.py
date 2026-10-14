@@ -30,7 +30,28 @@ def package(source,output):
  r=dict(parent_rom_sha256=hashlib.sha256(base).hexdigest(),build_rules_offset=at,
         parent_header_hex=base[0xA0:0xBE].hex(),parent_rules_hex=base[at:at+4].hex(),
         variants=rows,all_other_bytes_identical=True,validated=False)
- if (source/'.journey-battle-interactions').exists():
+ if (source/'.journey-pwt-obedience').exists():
+  from prepare_pwt_obedience import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-workshop-graphics-rules').exists():
+  from prepare_workshop_graphics_rules import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-pwt-score-retention').exists():
+  from prepare_pwt_score_retention import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-special-encounter-field-rules').exists():
+  from prepare_special_encounter_field_rules import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-special-encounter-workshop').exists():
+  from prepare_special_encounter_workshop import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-form-move-legality').exists():
+  from prepare_form_move_legality import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-nonlevel-moves').exists():
+  from prepare_nonlevel_moves import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-battle-interactions').exists():
   from prepare_battle_interactions import PRIOR,LAYER
   r['integration_layers']=PRIOR+[LAYER]
  elif (source/'.journey-move-history-rules').exists():

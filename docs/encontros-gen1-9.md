@@ -4,6 +4,8 @@ Cada família possui um local reservado. Os estágios encontrados acompanham a m
 
 Os membros de uma família listados abaixo não aparecem todos ao mesmo tempo. Formas, estágios e filtros aquáticos determinam quais podem aparecer naquele encontro. Lendários, míticos e Paradoxos estão no índice separado.
 
+Rotom, Spiritomb, Unown, Gimmighoul, Castform, Porygon e as famílias fósseis saíram dos encontros aleatórios. Consulte [encontros especiais e mudanças de forma](encontros-especiais-e-formas.md).
+
 ## Abandoned Ship
 
 Mapas: Abandoned Ship Hidden Floor Corridors, Abandoned Ship Rooms B1F.
@@ -33,8 +35,6 @@ Mapas: Six Island Altering Cave.
 | Cyndaquil | Cyndaquil, Quilava, Typhlosion, Typhlosion Hisui | 3 |
 | Sableye | Sableye | 3 |
 | Mawile | Mawile | 3 |
-| Lileep | Lileep, Cradily | 3 |
-| Castform Normal | Castform Normal | 3 |
 
 ## Artisan Cave
 
@@ -45,7 +45,6 @@ Mapas: Artisan Cave 1F, Artisan Cave B1F.
 | Onix | Onix, Steelix | 3 |
 | Treecko | Treecko, Grovyle, Sceptile | 3 |
 | Lunatone | Lunatone | 3 |
-| Anorith | Anorith, Armaldo | 3 |
 | Absol | Absol | 3 |
 
 ## Berry Forest
@@ -82,7 +81,6 @@ Mapas: Three Island Bond Bridge.
 | Furfrou Natural | Furfrou Natural | 0 |
 | Phantump | Phantump, Trevenant | 0 |
 | Crabrawler | Crabrawler, Crabominable | 0 |
-| Arctozolt | Arctozolt | 3 |
 | Cetoddle | Cetoddle, Cetitan | 0 |
 
 ## Canyon Entrance
@@ -137,8 +135,6 @@ Mapas: Cerulean Cave 1F, Cerulean Cave 2F, Cerulean Cave B1F.
 |---|---|---|
 | Corsola | Corsola, Cursola, Corsola Galar | 2 |
 | Chimchar | Chimchar, Monferno, Infernape | 3 |
-| Cranidos | Cranidos, Rampardos | 3 |
-| Shieldon | Shieldon, Bastiodon | 3 |
 | Chatot | Chatot | 3 |
 
 ## Cerulean City
@@ -206,7 +202,6 @@ Mapas: Fiery Path.
 | Bouffalant | Bouffalant | 3 |
 | Larvesta | Larvesta, Volcarona | 3 |
 | Chespin | Chespin, Quilladin, Chesnaught | 3 |
-| Amaura | Amaura, Aurorus | 3 |
 
 ## Five Island
 
@@ -227,7 +222,6 @@ Mapas: Five Island Meadow.
 |---|---|---|
 | Paras | Paras, Parasect | 0 |
 | Ponyta | Ponyta, Rapidash, Ponyta Galar, Rapidash Galar | 0 |
-| Unown | Unown | 0 |
 | Nincada | Nincada, Ninjask, Shedinja | 1 |
 | Impidimp | Impidimp, Morgrem, Grimmsnarl | 1 |
 
@@ -249,7 +243,6 @@ Mapas: Fuchsia City.
 
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
-| Kabuto | Kabuto, Kabutops | 3 |
 
 ## Granite Cave
 
@@ -281,7 +274,6 @@ Mapas: Four Island Icefall Cave 1F, Four Island Icefall Cave B1F, Four Island Ic
 | Cryogonal | Cryogonal | 3 |
 | Druddigon | Druddigon | 3 |
 | Deino | Deino, Zweilous, Hydreigon | 3 |
-| Tyrunt | Tyrunt, Tyrantrum | 3 |
 
 ## Jagged Pass
 
@@ -289,10 +281,8 @@ Mapas: Jagged Pass.
 
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
-| Rotom | Rotom | 3 |
 | Snivy | Snivy, Servine, Serperior | 3 |
 | Throh | Throh | 3 |
-| Archen | Archen, Archeops | 3 |
 
 ## Kanto Safari Zone
 
@@ -385,7 +375,6 @@ Mapas: Mirage Tower 1F, Mirage Tower 2F, Mirage Tower 3F, Mirage Tower 4F.
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
 | Dreepy | Dreepy, Drakloak, Dragapult | 3 |
-| Gimmighoul Chest | Gimmighoul Chest, Gholdengo | 3 |
 
 ## Mossdeep City
 
@@ -434,7 +423,6 @@ Mapas: New Mauville Entrance, New Mauville Inside.
 
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
-| Spiritomb | Spiritomb | 0 |
 | Sigilyph | Sigilyph | 3 |
 
 ## One Island
@@ -462,7 +450,6 @@ Mapas: Pacifidlog Town.
 
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
-| Tirtouga | Tirtouga, Carracosta | 3 |
 
 ## Pallet Town
 
@@ -489,7 +476,6 @@ Mapas: Petalburg City.
 
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
-| Arctovish | Arctovish | 3 |
 
 ## Petalburg Woods
 
@@ -697,7 +683,6 @@ Mapas: Route112.
 | Goomy | Goomy, Sliggoo, Goodra, Sliggoo Hisui, Goodra Hisui | 3 |
 | Grookey | Grookey, Thwackey, Rillaboom | 3 |
 | Indeedee M | Indeedee M | 3 |
-| Dracozolt | Dracozolt | 3 |
 
 ## Route 113
 
@@ -921,7 +906,6 @@ Mapas: Route134.
 
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
-| Omanyte | Omanyte, Omastar | 3 |
 
 ## Route 14
 
@@ -1168,7 +1152,6 @@ Mapas: Seafloor Cavern Entrance, Seafloor Cavern Room1, Seafloor Cavern Room2, S
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
 | Horsea | Horsea, Seadra, Kingdra | 1 |
-| Aerodactyl | Aerodactyl | 3 |
 | Smoochum | Jynx, Smoochum | 3 |
 | Solrock | Solrock | 3 |
 
@@ -1190,7 +1173,6 @@ Mapas: Seven Island Sevault Canyon.
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
 | Farfetchd | Farfetchd, Sirfetchd, Farfetchd Galar | 3 |
-| Porygon | Porygon, Porygon2, Porygon Z | 3 |
 | Murkrow | Murkrow, Honchkrow | 3 |
 | Miltank | Miltank | 3 |
 
@@ -1351,7 +1333,6 @@ Mapas: Five Island Water Labyrinth.
 
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
-| Dracovish | Dracovish | 3 |
 
 ## Water Path
 

@@ -17,6 +17,12 @@ def generate(source,output,reports):
     catalog=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_text())['species']
     ecology=json.loads((source/'.journey-reproducible-water').read_text())['ecology']
     gen4=json.loads((source/'.journey-final-ecology').read_text())['generation4']
+    events=None
+    if (source/'.journey-special-encounter-workshop').exists():
+        events=json.loads((source/'.journey-special-encounter-workshop').read_text())
+        event_roots={f['root'] for f in events['event_families']}
+        for location in ecology['locations_data']+gen4['locations']:
+            location['families']=[f for f in location['families'] if f['root'] not in event_roots]
     species={int(k):label(v['name']) for k,v in catalog.items()}
     database=compiled(source)
     with tempfile.TemporaryDirectory(dir='/tmp') as temporary:
@@ -35,6 +41,7 @@ def generate(source,output,reports):
         body=f'# Encontros por local — gerações 1–{cap}\n\n'
         body+='Cada família possui um local reservado. Os estágios encontrados acompanham a média das insígnias de Kanto e Hoenn: 0–2, básicos; 3–5, básicos e intermediários; 6–8, intermediários e finais. O nível fica entre a média da equipe menos 5 e mais 2, limitado a 1–100.\n\n'
         body+='Os membros de uma família listados abaixo não aparecem todos ao mesmo tempo. Formas, estágios e filtros aquáticos determinam quais podem aparecer naquele encontro. Lendários, míticos e Paradoxos estão no índice separado.\n\n'
+        if events:body+='Rotom, Spiritomb, Unown, Gimmighoul, Castform, Porygon e as famílias fósseis saíram dos encontros aleatórios. Consulte [encontros especiais e mudanças de forma](encontros-especiais-e-formas.md).\n\n'
         for location in locations:
             body+='## '+label(location['section'],'MAPSEC_')+'\n\n'
             body+='Mapas: '+', '.join(label(m,'MAP_') for m in location['maps'])+'.\n\n'

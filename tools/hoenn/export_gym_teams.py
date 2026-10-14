@@ -30,7 +30,8 @@ for gym in scaling['gyms']:
                     assert native('JourneyTrainerSpecies',species,level)==species
                     assert sum(evs)==510 and max(evs)<=252
                     if hard:assert ivs&0x3FFFFFFF==0x3FFFFFFF
-                    assert all(move in nonlevel[species]|{mid for at,mid in database['species'][species]['learnset'] if at<=level} for move in moveset if move)
+                    assert all(move in nonlevel[species]|{mid for at,mid in database['species'][species]['learnset'] if at<=level}
+                               or native('JourneyBossMoveLegal',species,move,level) for move in moveset if move)
                     mons.append(dict(species=species,level=level,moves=moveset,nature=native('GetNature',mon),
                                      ability_slot=data(mon,'MON_DATA_ABILITY_NUM'),item=data(mon,'MON_DATA_HELD_ITEM'),evs=evs,ivs=ivs))
                 checks.append(dict(leader=name,map=gym['map'],kanto=gym['kanto'],rank=rank+1,player_count=players,mons=mons))
