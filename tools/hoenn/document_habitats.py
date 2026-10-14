@@ -35,17 +35,26 @@ def generate(source,output):
  if (source/'.journey-five-island-habitat').exists():
   overlay=json.loads((source/'.journey-five-island-habitat').read_text())
   ecology.update({k:overlay[k] for k in ['locations_data','map_species','pools','field_slots']})
+ events=None
+ if (source/'.journey-special-encounter-workshop').exists():
+  events=json.loads((source/'.journey-special-encounter-workshop').read_text())
+  latest=json.loads((source/'.journey-reproducible-water').read_text())['ecology']
+  ecology.update(latest)
+  event_roots={f['root'] for f in events['event_families']}
+  for h in ecology['locations_data']:
+   h['families']=[f for f in h['families'] if f['root'] not in event_roots]
  maps={}
  for path in sorted((source/'data/maps').glob('*/map.json')):
   data=json.loads(path.read_text());maps[data['id']]=data;maps[path.parent.name]=data
  referenced={m for h in ecology['locations_data'] for m in h['maps']}|{c[k] for c in special['captures'] for k in ('map','surface')}
+ if events:referenced.update(d['map'] for d in events['destinations'])
  missing=referenced-maps.keys()
  if missing:raise ValueError(f'Mapas ausentes: {sorted(missing)}')
  special_ids=[c['id'] for c in special['captures']]
  if len(special_ids)!=len(set(special_ids)) or set(special_ids)!=set(catalog['special_species']):raise ValueError('Altares duplicados ou catálogo especial incompleto')
  ordinary=[];lines=['# Pokémon por habitat e encontros especiais','',
  'Referência da candidata nativa com Kanto, Hoenn e Sevii. Não é uma declaração de que todas as histórias e mecânicas da integração estão concluídas.','',
- 'Os encontros aleatórios das 920 espécies-base comuns e variantes regionais ficam em 444 famílias, sem repetir famílias entre habitats. Andares da mesma caverna, zonas de Safari e a superfície/subsolo da mesma rota marinha contam como um habitat.','',
+ ('Rotom e outras 20 famílias comuns passaram para eventos e restauração. Paradoxos ficam somente nas cavernas dedicadas. Consulte também `docs/encontros-especiais-e-formas.md`.' if events else 'Os encontros aleatórios das 920 espécies-base comuns e variantes regionais ficam em 444 famílias, sem repetir famílias entre habitats. Andares da mesma caverna, zonas de Safari e a superfície/subsolo da mesma rota marinha contam como um habitat.'),'',
  f'A distribuição atual tem {sum(bool(h["land"]) for h in ecology["locations_data"])} habitats terrestres e {sum(not h["land"] for h in ecology["locations_data"])} habitats exclusivamente aquáticos. Sunlit Isle e Tidewood Isle têm oito famílias cada. As famílias com Pokémon do tipo Água ficam em locais com Surf ou pesca e também podem aparecer na grama do mesmo habitat.','',
  f'Existem mais lagos e pontos de pesca que famílias aquáticas. Para preservar a regra de não repetir famílias, {len(ecology["quiet_water_maps"])} mapas ficam sem encontros aquáticos; os encontros terrestres desses habitats permanecem. Esses pontos estão listados ao final. Nenhuma rota foi fechada por isso.','',
  'Nível: média inteira da equipe menos cinco até mais dois, limitada a 1–100. Ovos não contam; Pokémon desmaiados contam. Etapa evolutiva: média inteira das insígnias das duas regiões; 0–2 básicos, 3–5 básicos ou estágio 2, 6–8 estágios 2 ou 3. Famílias sem a etapa seguinte preservam a última disponível.','',
@@ -65,6 +74,19 @@ def generate(source,output):
    for m in f['species']:
     ordinary.append(dict(national_dex=m['national_dex'],species=label(m['name']),internal_id=m['id'],category='comum' if m['id'] in canonical else 'forma regional',region=region,habitat=label(h['section']),maps='; '.join(h['maps']),access='grama/caverna e água local' if h['land'] and h['water'] else 'grama/caverna' if h['land'] else 'Surf/pesca',unlock='progressão evolutiva pela média regional',family=label(f['name'])))
   lines.append('| '+region+' | '+label(h['section'])+' | '+'; '.join(text)+' | '+', '.join(h['maps'])+' |')
+ if events:
+  lines+=['','## Famílias comuns por evento e restauração','','| Família | Local | Método |','|---|---|---|']
+  families={f['root']:f for f in events['event_families']}
+  for dest in events['destinations']:
+   family=families[dest['root']]
+   lines.append('| '+label(family['name'])+' | '+dest['map']+' | '+dest['method']+' |')
+   for member in family['species']:
+    ordinary.append(dict(national_dex=member['national_dex'],species=label(member['name']),internal_id=member['id'],category='evento',region=map_region(maps[dest['map']]),habitat='Evento: '+label(family['name']),maps=dest['map'],access=dest['method'],unlock='evento local; limite de geração da edição',family=label(family['name'])))
+ if (source/'.journey-paradox-caves').exists():
+  lines+=['','## Paradoxos — cavernas dedicadas','','| Pokémon | Caverna |','|---|---|']
+  for c in json.loads((source/'.journey-paradox-caves').read_text())['paradox_captures']:
+   lines.append('| '+label(c['species'])+' | '+c['map']+' |')
+   ordinary.append(dict(national_dex=c['national_dex'],species=label(c['species']),internal_id=c['id'],category='paradoxo',region='Hoenn',habitat='Caverna de Paradoxos',maps=c['map']+'; '+c['parent'],access='santuário dimensional',unlock='16 insígnias; antes das Ligas',family=''))
  lines+=['','## Lendários, míticos e Ultra Beasts','',
  'Nenhum destes 105 Pokémon entra nos encontros aleatórios. Os altares só iniciam a batalha com oito insígnias de Kanto **e** oito de Hoenn, sem exigir vitória nas Ligas. Fugir ou derrotar o Pokémon permite tentar novamente. Capturá-lo desativa seu altar; capturas em locais antigos também são reconhecidas pela Pokédex.','',
  'As cavernas de Surf ficam nas novas ilhas desenhadas dentro do mar existente: desembarque e entre na montanha a pé. Nas cavernas de Dive, mergulhe no quadrado de água profunda, procure a entrada submersa e entre. As escadas internas levam de volta ao local de entrada.','',

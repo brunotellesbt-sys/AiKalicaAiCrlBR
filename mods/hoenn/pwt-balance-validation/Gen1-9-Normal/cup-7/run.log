@@ -1,0 +1,13 @@
+In file included from <command-line>:
+/workspace/AiKalicaAiCrlBR/.local/pwt-validation-views/Gen1-9-Normal/src/journey_pwt.c: In function 'JourneyPWTBufferBracket':
+/workspace/AiKalicaAiCrlBR/.local/pwt-validation-views/Gen1-9-Normal/src/journey_pwt.c:207:71: warning: unknown escape sequence: '\p'
+  207 |             StringAppend(gStringVar4, rank == 3 ? COMPOUND_STRING("\p") : COMPOUND_STRING("\n"));
+      |                                                                       ^
+Native unboosted battle 1 Mallow outcome 1 input frame budget 39450
+Native unboosted battle 2 Trace outcome 1 input frame budget 25350
+Native unboosted battle 3 Nanu outcome 2 input frame budget 36675
+Native unboosted battle 4 Acerola outcome 1 input frame budget 18450
+Native unboosted battle 5 Molayne outcome 1 input frame budget 22425
+Native unboosted battle 6 Kiawe outcome 1 input frame budget 25875
+Native unboosted battle 7 Hau outcome 1 input frame budget 28050
+Unboosted PWT run passed: 6 wins 1 losses 10 BP

@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "rom_sha256": "6be718b3917eb6b6f639384ee99563280e272417beec5e22b6722c4cad033462",
+  "checks": [
+    {
+      "case": "pwt_level_50_met_100_no_badges",
+      "seeds": 32,
+      "always_obeys": true
+    },
+    {
+      "case": "regional_badge_obedience",
+      "kanto": 8,
+      "hoenn": 0,
+      "met_level": 100,
+      "obeys": true
+    },
+    {
+      "case": "regional_badge_obedience",
+      "kanto": 0,
+      "hoenn": 8,
+      "met_level": 100,
+      "obeys": true
+    },
+    {
+      "case": "regional_badge_obedience",
+      "kanto": 3,
+      "hoenn": 0,
+      "met_level": 40,
+      "obeys": true
+    },
+    {
+      "case": "regional_badge_obedience",
+      "kanto": 0,
+      "hoenn": 3,
+      "met_level": 40,
+      "obeys": true
+    },
+    {
+      "case": "regional_badge_obedience",
+      "kanto": 5,
+      "hoenn": 1,
+      "met_level": 60,
+      "obeys": true
+    },
+    {
+      "case": "regional_badge_obedience",
+      "kanto": 1,
+      "hoenn": 5,
+      "met_level": 60,
+      "obeys": true
+    }
+  ],
+  "pwt_no_badge_obedience": true,
+  "both_regional_cases_count": true,
+  "prepared_native_state": true
+}

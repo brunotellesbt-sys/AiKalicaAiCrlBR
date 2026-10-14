@@ -1,0 +1,145 @@
+{
+  "passed": true,
+  "rom_sha256": "6be718b3917eb6b6f639384ee99563280e272417beec5e22b6722c4cad033462",
+  "reference_sha256": "69b0ebfd7643416996a986b67e3f44c9f13ed2b972ded7894ad821be59f05d47",
+  "reference_commit": "942cda71d14bf0618bd57991708a2e2734b6daba",
+  "species_and_forms_checked": 1571,
+  "independently_checked_tables": 3142,
+  "differences": [],
+  "native_checks": [
+    {
+      "species": "SCIZOR",
+      "move": "U_TURN",
+      "level": 100,
+      "legal": true
+    },
+    {
+      "species": "SCIZOR",
+      "move": "CALM_MIND",
+      "level": 100,
+      "legal": false
+    },
+    {
+      "species": "ROTOM_WASH",
+      "move": "VOLT_SWITCH",
+      "level": 100,
+      "legal": true
+    },
+    {
+      "species": "ROTOM_WASH",
+      "move": "HYDRO_PUMP",
+      "level": 100,
+      "legal": true
+    },
+    {
+      "species": "ROTOM",
+      "move": "HYDRO_PUMP",
+      "level": 100,
+      "legal": false
+    },
+    {
+      "species": "ROTOM_HEAT",
+      "move": "OVERHEAT",
+      "legal": true,
+      "teachable": false
+    },
+    {
+      "species": "ROTOM_WASH",
+      "move": "HYDRO_PUMP",
+      "legal": true,
+      "teachable": false
+    },
+    {
+      "species": "ROTOM_FROST",
+      "move": "BLIZZARD",
+      "legal": true,
+      "teachable": false
+    },
+    {
+      "species": "ROTOM_FAN",
+      "move": "AIR_SLASH",
+      "legal": true,
+      "teachable": false
+    },
+    {
+      "species": "ROTOM_MOW",
+      "move": "LEAF_STORM",
+      "legal": true,
+      "teachable": false
+    },
+    {
+      "species": "PIKACHU_ROCK_STAR",
+      "move": "METEOR_MASH",
+      "legal": true,
+      "teachable": false
+    },
+    {
+      "species": "PIKACHU_BELLE",
+      "move": "ICICLE_CRASH",
+      "legal": true,
+      "teachable": false
+    },
+    {
+      "species": "PIKACHU_POP_STAR",
+      "move": "DRAINING_KISS",
+      "legal": true,
+      "teachable": false
+    },
+    {
+      "species": "PIKACHU_PHD",
+      "move": "ELECTRIC_TERRAIN",
+      "legal": true,
+      "teachable": false
+    },
+    {
+      "species": "PIKACHU_LIBRE",
+      "move": "FLYING_PRESS",
+      "legal": true,
+      "teachable": false
+    },
+    {
+      "species": "NECROZMA_DUSK_MANE",
+      "move": "SUNSTEEL_STRIKE",
+      "legal": true,
+      "teachable": false
+    },
+    {
+      "species": "NECROZMA_DAWN_WINGS",
+      "move": "MOONGEIST_BEAM",
+      "legal": true,
+      "teachable": false
+    },
+    {
+      "species": "NECROZMA_ULTRA",
+      "move": "SUNSTEEL_STRIKE",
+      "legal": true,
+      "teachable": false
+    },
+    {
+      "species": "NECROZMA_ULTRA",
+      "move": "MOONGEIST_BEAM",
+      "legal": true,
+      "teachable": false
+    },
+    {
+      "species": "ZACIAN_CROWNED",
+      "move": "BEHEMOTH_BLADE",
+      "legal": true,
+      "teachable": false
+    },
+    {
+      "species": "ZAMAZENTA_CROWNED",
+      "move": "BEHEMOTH_BASH",
+      "legal": true,
+      "teachable": false
+    }
+  ],
+  "native_egg_only_case": [
+    1,
+    80
+  ],
+  "egg_capacity": 22,
+  "tm_tutor_and_egg_lists_separate": true,
+  "form_moves_not_tms": true,
+  "official_transfer_compatibility": true
+}

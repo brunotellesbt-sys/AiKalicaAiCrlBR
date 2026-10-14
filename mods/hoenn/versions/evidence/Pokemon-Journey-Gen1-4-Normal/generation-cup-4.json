@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "rom_sha256": "9a4518cc5dd3849741b9887b2309fa59b9149c4b3037cc5b50fef125a5adb936",
+  "rom_sha256": "705c738c5ed0ea9af4361dadea147fc1831a6a6ddd77e91bbf1e7837a83a74a1",
   "version_generation_cap": 4,
   "difficulty": "Normal",
   "cup_generation": 4,
@@ -8,11 +8,11 @@
   "actual_battles": [
     {
       "stage": 0,
-      "opponent": 10,
-      "attacks": 17,
+      "opponent": 6,
+      "attacks": 9,
       "outcome": 1,
-      "opponent_name": "Bertha",
-      "opponent_catalog_id": 53,
+      "opponent_name": "Byron",
+      "opponent_catalog_id": 49,
       "level": 50,
       "player_team_size": 6,
       "enemy_team_size": 6
@@ -20,7 +20,7 @@
     {
       "stage": 0,
       "opponent": 16,
-      "attacks": 14,
+      "attacks": 6,
       "outcome": 1,
       "opponent_name": "Luffy",
       "opponent_catalog_id": 160,
@@ -30,8 +30,19 @@
     },
     {
       "stage": 0,
+      "opponent": 13,
+      "attacks": 6,
+      "outcome": 1,
+      "opponent_name": "Cynthia",
+      "opponent_catalog_id": 56,
+      "level": 50,
+      "player_team_size": 6,
+      "enemy_team_size": 6
+    },
+    {
+      "stage": 0,
       "opponent": 12,
-      "attacks": 36,
+      "attacks": 8,
       "outcome": 1,
       "opponent_name": "Lucian",
       "opponent_catalog_id": 55,
@@ -40,9 +51,9 @@
       "enemy_team_size": 6
     },
     {
-      "stage": 0,
+      "stage": 1,
       "opponent": 4,
-      "attacks": 23,
+      "attacks": 7,
       "outcome": 1,
       "opponent_name": "Crasher Wake",
       "opponent_catalog_id": 47,
@@ -52,22 +63,11 @@
     },
     {
       "stage": 1,
-      "opponent": 11,
-      "attacks": 26,
+      "opponent": 1,
+      "attacks": 7,
       "outcome": 1,
-      "opponent_name": "Flint",
-      "opponent_catalog_id": 54,
-      "level": 50,
-      "player_team_size": 6,
-      "enemy_team_size": 6
-    },
-    {
-      "stage": 1,
-      "opponent": 7,
-      "attacks": 25,
-      "outcome": 1,
-      "opponent_name": "Candice",
-      "opponent_catalog_id": 50,
+      "opponent_name": "Roark",
+      "opponent_catalog_id": 44,
       "level": 50,
       "player_team_size": 6,
       "enemy_team_size": 6
@@ -75,7 +75,7 @@
     {
       "stage": 1,
       "opponent": 15,
-      "attacks": 11,
+      "attacks": 7,
       "outcome": 1,
       "opponent_name": "Eren",
       "opponent_catalog_id": 159,
@@ -98,7 +98,7 @@
   "player_battle_stats_boosted_for_flow_test": true,
   "competitive_balance_test": false,
   "full_campaign_playthrough": false,
-  "unavailable_move_choices_avoided": 6,
+  "unavailable_move_choices_avoided": 0,
   "exhausted_pp_for_struggle_fixture": false,
   "native_struggle_observed": false
 }

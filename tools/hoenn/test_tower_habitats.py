@@ -64,7 +64,7 @@ class TowerHabitats(unittest.TestCase):
             rows = {int(r['internal_id']): r for r in csv.DictReader(stream)}
         for species, habitat in [(104, 'Pokemon Tower'), (105, 'Pokemon Tower'), (973, 'Pokemon Tower'), (29, 'Digletts Cave'), (30, 'Digletts Cave'), (31, 'Digletts Cave')]:
             self.assertEqual(rows[species]['habitat'], habitat)
-        self.assertEqual(len([r for r in rows.values() if r['category'] == 'comum']), 920)
+        self.assertEqual(len([r for r in rows.values() if r['category'] in ['comum', 'evento', 'paradoxo']]), 920)
 
     def test_rarer_families_keep_lower_land_chances(self):
         for habitat in self.prep['locations_data']:

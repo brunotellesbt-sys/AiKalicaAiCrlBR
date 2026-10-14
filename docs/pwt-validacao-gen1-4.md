@@ -1,6 +1,6 @@
 # PWT Gen 1–4 — validação e correções de batalha
 
-Os quatro torneios por geração foram concluídos nas edições Normal e Hard: oito torneios e 57 batalhas nativas, incluindo grupos e mata-mata. Cada torneio retornou à recepção, entregou 10 BP uma vez e restaurou a equipe original byte a byte.
+Os quatro torneios por geração foram concluídos nas edições Normal e Hard: oito torneios e 56 batalhas nativas, incluindo grupos e mata-mata. Cada torneio retornou à recepção, entregou 10 BP uma vez e restaurou a equipe original byte a byte.
 
 | Edição | Geração | Batalhas | Relatório |
 | --- | --- | ---: | --- |
@@ -34,7 +34,7 @@ As edições Gen 1–4 mantêm somente as Megas de espécies permitidas até #49
 
 ## Reproduzir
 
-Com a árvore de 109 camadas preparada e a biblioteca mGBA do projeto:
+Com a árvore de 116 camadas preparada e a biblioteca mGBA do projeto:
 
 ```sh
 python3 tools/hoenn/validate_move_restrictions.py --source .local/hoenn-route12-src --library .local/mgba-bridge.so --output .local/move-rules

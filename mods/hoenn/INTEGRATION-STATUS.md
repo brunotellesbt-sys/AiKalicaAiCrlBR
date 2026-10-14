@@ -1,3 +1,5 @@
+Atualização de 14/10/2026: build de 116 camadas, quatro ROMs atualizadas. Escopo desta entrega: PWT e encontros especiais, com provas nativas associadas aos hashes atuais. As campanhas completas não foram jogadas de ponta a ponta. Veja [balanceamento](../../docs/pwt-balanceamento.md) e [encontros especiais](../../docs/encontros-especiais-e-formas.md).
+
 # Estado da integração
 
 A entrega contém quatro ROMs GBA: Gen 1–4 Normal/Hard e Gen 1–9 Normal/Hard. Todas usam a mesma integração de Kanto, Hoenn, Sevii e do capítulo Galactic. As diferenças binárias permitidas são somente o registro de geração/IVs, o título e seu checksum. O manifesto verifica os hashes das ROMs e dos relatórios nativos.

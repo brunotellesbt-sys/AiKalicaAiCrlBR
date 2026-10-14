@@ -4,6 +4,8 @@ Cada família possui um local reservado. Os estágios encontrados acompanham a m
 
 Os membros de uma família listados abaixo não aparecem todos ao mesmo tempo. Formas, estágios e filtros aquáticos determinam quais podem aparecer naquele encontro. Lendários, míticos e Paradoxos estão no índice separado.
 
+Rotom, Spiritomb, Unown, Gimmighoul, Castform, Porygon e as famílias fósseis saíram dos encontros aleatórios. Consulte [encontros especiais e mudanças de forma](encontros-especiais-e-formas.md).
+
 ## Abandoned Ship
 
 Mapas: Abandoned Ship Hidden Floor Corridors, Abandoned Ship Rooms B1F.
@@ -105,7 +107,6 @@ Mapas: Cerulean Cave 1F, Cerulean Cave 2F, Cerulean Cave B1F.
 
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
-| Shieldon | Shieldon, Bastiodon | 3 |
 | Aipom | Aipom, Ambipom | 3 |
 
 ## Cerulean City
@@ -163,7 +164,6 @@ Mapas: Fiery Path.
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
 | Larvitar | Larvitar, Pupitar, Tyranitar | 3 |
-| Anorith | Anorith, Armaldo | 3 |
 
 ## Five Island
 
@@ -179,7 +179,6 @@ Mapas: Five Island Meadow.
 
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
-| Unown | Unown | 0 |
 | Ponyta | Ponyta, Rapidash, Ponyta Galar, Rapidash Galar | 0 |
 
 ## Four Island
@@ -196,7 +195,6 @@ Mapas: Fuchsia City.
 
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
-| Kabuto | Kabuto, Kabutops | 3 |
 
 ## Granite Cave
 
@@ -230,8 +228,6 @@ Mapas: Jagged Pass.
 
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
-| Rotom | Rotom | 3 |
-| Lileep | Lileep, Cradily | 3 |
 
 ## Kanto Safari Zone
 
@@ -240,7 +236,6 @@ Mapas: Safari Zone Center, Safari Zone East, Safari Zone North Frlg, Safari Zone
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
 | Tauros | Tauros, Tauros Paldea Combat, Tauros Paldea Blaze, Tauros Paldea Aqua | 3 |
-| Porygon | Porygon, Porygon2, Porygon Z | 3 |
 
 ## Kanto Victory Road
 
@@ -302,7 +297,6 @@ Mapas: Meteor Falls 1F 1R, Meteor Falls 1F 2R, Meteor Falls B1F 1R, Meteor Falls
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
 | Growlithe | Growlithe, Arcanine, Growlithe Hisui, Arcanine Hisui | 0 |
-| Cranidos | Cranidos, Rampardos | 3 |
 
 ## Mirage Tower
 
@@ -354,7 +348,6 @@ Mapas: New Mauville Entrance, New Mauville Inside.
 
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
-| Spiritomb | Spiritomb | 0 |
 
 ## One Island
 
@@ -371,7 +364,6 @@ Mapas: Six Island Outcast Island.
 
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
-| Omanyte | Omanyte, Omastar | 3 |
 
 ## Pacifidlog Town
 
@@ -988,7 +980,6 @@ Mapas: Seafloor Cavern Entrance, Seafloor Cavern Room1, Seafloor Cavern Room2, S
 
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
-| Aerodactyl | Aerodactyl | 3 |
 | Chikorita | Chikorita, Bayleef, Meganium | 3 |
 
 ## Seafoam Islands
@@ -1016,7 +1007,6 @@ Mapas: Journeyworldsea07.
 | Família | Membros elegíveis | Raridade da família |
 |---|---|---|
 | Happiny | Chansey, Blissey, Happiny | 1 |
-| Castform Normal | Castform Normal | 3 |
 
 ## Shoal Cave
 

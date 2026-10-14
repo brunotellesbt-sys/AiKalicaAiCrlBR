@@ -28,6 +28,9 @@ def compile_probe(source, constants):
         'ctx_holds': 'offsetof(struct DamageContext,holdEffects)',
         'ctx_field': 'offsetof(struct DamageContext,fieldStatuses)',
         'ctx_modifier': 'offsetof(struct DamageContext,typeEffectivenessModifier)',
+        'party_action': 'offsetof(struct PartyMenu,action)',
+        'party_slot2': 'offsetof(struct PartyMenu,slotId2)',
+        'bag_pocket': 'offsetof(struct BagPosition,pocket)',
         'protect_size': 'sizeof(struct ProtectStruct)',
         'special_size': 'sizeof(struct SpecialStatus)',
         'scripting_size': 'sizeof(struct BattleScripting)',
@@ -70,6 +73,9 @@ def compile_probe(source, constants):
     declarations.append('const struct SideTimer mask_side_spikesAmount={.spikesAmount=~0u};')
     declarations.append('const struct SideTimer mask_side_toxicSpikesAmount={.toxicSpikesAmount=~0u};')
     masks['side_spikesAmount']='side';masks['side_toxicSpikesAmount']='side'
+    declarations.append('const struct SaveBlock2 mask_save_sceneOff={.optionsBattleSceneOff=1};')
+    declarations.append('const struct SaveBlock2 mask_save_textSpeed={.optionsTextSpeed=~0u};')
+    masks['save_sceneOff']='save';masks['save_textSpeed']='save'
     for name in ['battlerAtk','battlerDef','move']:
         declarations.append(f'const struct BattleCalcValues mask_cv_{name}={{.{name}=~0u}};')
         masks['cv_'+name]='cv'
@@ -79,7 +85,7 @@ def compile_probe(source, constants):
         masks['ctx_'+name]='ctx'
     code = ('#include "global.h"\n#include "battle.h"\n#include "battle_util.h"\n'
         '#include "battle_hold_effects.h"\n#include "constants/abilities.h"\n'
-        '#include "constants/items.h"\n#include <stddef.h>\n' + '\n'.join(declarations))
+        '#include "constants/items.h"\n#include "constants/daycare.h"\n#include "party_menu.h"\n#include "item_menu.h"\n#include "constants/party_menu.h"\n#include "constants/battle_move_resolution.h"\n#include <stddef.h>\n' + '\n'.join(declarations))
     toolchain=ROOT/'.local'
     with tempfile.TemporaryDirectory(dir='/tmp',prefix='battle-interaction-abi-') as d:
         d=Path(d);(d/'probe.c').write_text(code)

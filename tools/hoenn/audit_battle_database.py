@@ -68,7 +68,7 @@ if __name__=='__main__':
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('--source',type=Path,required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args()
  r=audit(a.source);a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(json.dumps(r,indent=2)+'\n');print('Database audit:',r['species_checked'],'species,',r['moves_checked'],'moves,',len(r['differences']),'differences');raise SystemExit(0 if r['passed'] else 1)
 
-def compiled_teachable_and_egg_moves(source):
+def compiled_teachable_and_egg_moves(source,separate=False):
  """Read both legal non-level learnsets independently from compiled ROM pointers."""
  source=Path(source);rom=(source/'pokeemerald.gba').read_bytes()
  with tempfile.TemporaryDirectory(dir='/tmp',prefix='nonlevel-learnsets-') as d:
@@ -77,17 +77,26 @@ def compiled_teachable_and_egg_moves(source):
   size,tm,egg,count=[int(v) for v in re.findall(r'\.word\s+(\d+)',(d/'abi.s').read_text())]
  raw=subprocess.check_output([str(ROOT/'.local/arm-binutils/usr/bin/arm-none-eabi-nm'),str(source/'pokeemerald.elf')],text=True)
  at=int(re.search(r'^(\w+) \w gSpeciesInfo$',raw,re.M)[1],16)-0x08000000
+ overrides={}
+ for offset,name in [(tm,'gJourneyTeachable'),(egg,'gJourneyEgg')]:
+  match=re.search(r'^(\w+) \w '+name+'$',raw,re.M)
+  if match:overrides[offset]=int(match[1],16)-0x08000000
  result={}
  for sid in range(1,count):
-  allowed=set()
+  allowed=set();kinds={}
   for offset in [tm,egg]:
+   current=set()
    ptr=struct.unpack_from('<I',rom,at+sid*size+offset)[0]
+   if offset in overrides:
+    modern=struct.unpack_from('<I',rom,overrides[offset]+sid*4)[0]
+    if modern:ptr=modern
    if not ptr:continue
    ptr-=0x08000000;assert 0<=ptr<len(rom),(sid,ptr)
    for i in range(2048):
     move=struct.unpack_from('<H',rom,ptr+i*2)[0]
     if move==0xFFFF:break
-    allowed.add(move)
+    allowed.add(move);current.add(move)
    else:raise AssertionError(('Unterminated non-level learnset',sid,offset))
-  result[sid]=allowed
+   kinds['teachable' if offset==tm else 'egg']=current
+  result[sid]=kinds if separate else allowed
  return result
