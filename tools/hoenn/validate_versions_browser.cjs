@@ -1,5 +1,5 @@
 /* Boot each actual release in bundled mGBA and verify edition/save identity. */
-const { chromium } = require('/opt/codex/runtimes/cua/lib/node_modules/playwright-core');
+const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
@@ -8,7 +8,7 @@ const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'mods/hoenn/versions
 const OUT = path.join(ROOT, 'mods/hoenn/versions-validation/browser');
 const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
 (async () => {
-  const browser = await chromium.launch({executablePath:'/usr/bin/chromium',headless:true,
+  const browser = await chromium.launch({executablePath:process.env.CHROMIUM_PATH || (fs.existsSync('/usr/bin/chromium') ? '/usr/bin/chromium' : undefined),headless:true,
     args:['--no-sandbox','--disable-dev-shm-usage','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
   fs.mkdirSync(OUT,{recursive:true});
   try {
@@ -32,7 +32,19 @@ const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
       await page.locator('#edition-label').waitFor({state:'visible'});
       await page.locator('#edition').selectOption(row.file);
       if(!((await page.locator('#download-rom').getAttribute('href')).endsWith(row.file)))throw new Error('Wrong edition download');
+      // Hash the real server response and pass those same bytes to the player.
+      // A 32 MiB ROM exceeds Chromium's response-inspection cache.
+      let bytes;
+      await page.route('**/games/' + row.file + '?*', async route => {
+        const response = await route.fetch();
+        bytes = await response.body();
+        await route.fulfill({response, body:bytes});
+      });
+      const downloaded = page.waitForResponse(response => new URL(response.url()).pathname === '/games/' + row.file && response.ok());
       await page.locator('#play').click();
+      await downloaded;
+      const observedHash = crypto.createHash('sha256').update(bytes).digest('hex');
+      if (bytes.length !== row.bytes || observedHash !== row.sha256) throw new Error('Served ROM does not match the current edition');
       await page.waitForFunction(()=>window.EJS_emulator?.gameManager?.functions?.getFrameNum()>360,null,{timeout:120000});
       const actual=await page.evaluate(()=>({name:EJS_gameName,frames:EJS_emulator.gameManager.functions.getFrameNum(),
         state:EJS_emulator.gameManager.getState().length,controls:EJS_defaultControls[0]}));
@@ -40,7 +52,7 @@ const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
       if(!await page.locator('#game canvas').count())throw new Error('Missing native renderer');
       if(!await page.locator('#edition').isDisabled())throw new Error('Edition changed during running game');
       await page.screenshot({path:path.join(OUT,row.file+'.png'),fullPage:true});
-      checks.push({file:row.file,rom_sha256:row.sha256,actual_game_name:actual.name,native_frames:actual.frames,
+      checks.push({file:row.file,rom_sha256:observedHash,downloaded_bytes:bytes.length,actual_game_name:actual.name,native_frames:actual.frames,
         exported_native_state_bytes:actual.state,distinct_save_identity:true});
       console.log('Bundled mGBA boot passed:',row.file);
       await page.close();

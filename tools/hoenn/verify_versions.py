@@ -16,7 +16,7 @@ def verify_browser(release):
     expected={r['file']:r['sha256'] for r in release['variants']}
     checks=report['checks'];assert len(checks)==4 and {c['file'] for c in checks}==set(expected)
     for row in checks:
-        assert row['rom_sha256']==expected[row['file']] and row['actual_game_name']==row['file']
+        assert row['rom_sha256']==expected[row['file']] and row['actual_game_name']==row['file'], ('Stale browser evidence; rerun validate_versions_browser.cjs', row['file'])
         assert row['native_frames']>360 and row['exported_native_state_bytes']>1000
     sources=report['player_sources_sha256'];assert set(sources)=={'index.html','player.js','style.css'}
     for name,sha in sources.items():assert digest((ROOT/'web'/name).read_bytes())==sha,('Untested player source',name)

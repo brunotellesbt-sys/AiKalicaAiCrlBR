@@ -28,6 +28,8 @@ def render(source, output):
         im = im.crop(tuple(v*16 for v in box))
         im = im.resize((im.width*3, im.height*3), Image.Resampling.NEAREST)
         im.save(output/(name+'.png'))
+        if name == 'SootopolisCity':
+            im.crop((0, 480, 240, 720)).resize((480, 480), Image.Resampling.NEAREST).save(output/'shore-junction.png')
         panels.append((title, im))
     height = max(im.height for _, im in panels)+48
     sheet = Image.new('RGB', (sum(im.width for _, im in panels)+12, height), '#182030')

@@ -4,7 +4,7 @@ from pathlib import Path
 from PIL import Image
 from render_sea_maps import MapRenderer
 
-def import_pier(source,target,emerald=False,donor="gTileset_LavenderTown",mids=None,donor_emerald=False,overrides=None,donor_palettes=None):
+def import_pier(source,target,emerald=False,donor="gTileset_LavenderTown",mids=None,donor_emerald=False,overrides=None,donor_palettes=None,transparent_colors=None):
  source=Path(source);r=MapRenderer(source);primary='gTileset_General' if emerald else 'gTileset_General_Frlg';cut=512 if emerald else 640
  donor_cut=512 if donor_emerald else 640
  source_primary=r.tileset('gTileset_General' if donor_emerald else 'gTileset_General_Frlg')
@@ -33,6 +33,7 @@ def import_pier(source,target,emerald=False,donor="gTileset_LavenderTown",mids=N
    tile=word&1023;pal=word>>12;key=(tile,pal)
    if key not in mapping:
     im=source_primary[0] if tile<donor_cut else dt;idx=tile if tile<donor_cut else tile-donor_cut;cols=im.width//8;colors=donor_colors(pal);values=[im.getpixel((idx%cols*8+x,idx//cols*8+y)) for y in range(8) for x in range(8)];options=[]
+    values=[0 if v in (transparent_colors or {}).get(pal,()) else v for v in values]
     for bank,entries in palettes:
      conversion=[0]
      for c in colors[1:16]:conversion.append(1+min(range(15),key=lambda i:sum((a-b)**2 for a,b in zip(c,entries[i+1]))))

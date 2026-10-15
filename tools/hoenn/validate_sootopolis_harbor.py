@@ -114,12 +114,14 @@ for name, value in [('VAR_SOOTOPOLIS_CITY_STATE', 0), ('VAR_SLATEPORT_HARBOR_STA
 warp('SootopolisCity', 16, 44)
 native('SetPlayerAvatarTransitionFlags', 1)
 step(30)
-shore_mid = native('MapGridGetMetatileIdAt', 16+7, 45+7)
-assert shore_mid >= 512
-shore_background = s['gMetatiles_Sootopolis']+(shore_mid-512)*16
-grass_background = s['gMetatiles_General']+16
-assert [lib.read16(shore_background+i*2) for i in range(4)] == [
-    lib.read16(grass_background+i*2) for i in range(4)], 'Shore-end background is not native grass'
+for y in (45, 46):
+    shore_mid = native('MapGridGetMetatileIdAt', 16+7, y+7)
+    assert shore_mid >= 512, 'Wooden bridge end was replaced or moved'
+    shore_background = s['gMetatiles_Sootopolis']+(shore_mid-512)*16
+    grass_background = s['gMetatiles_General']+16
+    assert [lib.read16(shore_background+i*2) for i in range(4)] == [
+        lib.read16(grass_background+i*2) for i in range(4)], 'Shore end does not use native grass'
+    assert native('MapGridGetCollisionAt', 16+7, y+7) == 0
 for x in range(19, 27):
     assert native('MapGridGetCollisionAt', x+7, 47+7) == 0, 'Extra bridge row remains'
     behavior = native('MapGridGetMetatileBehaviorAt', x+7, 47+7)
@@ -177,6 +179,7 @@ report = dict(passed=True, rom_sha256=hashlib.sha256((source/'pokeemerald.gba').
               captain_interacted_physically=True, submarine_hull_blocked_over_water=True,
               submarine_sprite_size=[64, 64], crisis_layout_controller_access=True,
               shore_end_uses_native_grass=True, extra_bottom_bridge_row_removed=True,
+              bridge_end_stays_in_original_tile=True,
               trips=trips, returned_to_original_land=True,
               initial_story_state_and_first_placement_are_fixtures=True,
               full_campaign_playthrough=False)

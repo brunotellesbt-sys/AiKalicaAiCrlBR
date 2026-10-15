@@ -73,13 +73,20 @@ def prepare(source):
     for path, raw in files.items():
         layer.stage(path, raw)
 
-    # Only the land-facing end gets grass beneath its wooden foreground.
-    # Reuse the native grass metatile's background words, including its texture;
-    # changing a shared palette would also recolor water beside the terminal.
+    # Keep the wooden end at its original cell, but remove the water/foam
+    # pixels baked into its foreground as well as the blue background. Only
+    # the donor's wood colors remain opaque over the native grass texture.
+    shore, files = import_pier(s, exterior['secondary_tileset'], emerald=True,
+                              donor='gTileset_Pacifidlog', donor_emerald=True,
+                              mids=[0x220], overrides=layer.outputs,
+                              donor_palettes=dock_colors,
+                              transparent_colors={8: set(range(9)) | {14, 15}})
+    for path, raw in files.items():
+        layer.stage(path, raw)
     path = 'data/tilesets/secondary/sootopolis/metatiles.bin'
     raw = bytearray(layer.outputs[path])
-    grass = renderer.tileset('gTileset_General')[2][8:12]
-    struct.pack_into('<4H', raw, (pier[0x220]-512)*16, *grass)
+    struct.pack_into('<4H', raw, (shore[0x220]-512)*16,
+                     *renderer.tileset('gTileset_General')[2][8:12])
     layer.stage(path, raw)
 
     # Remove the old ferry objects only; native story NPCs and their local IDs
@@ -105,10 +112,8 @@ def prepare(source):
     bridge = []
     for y in (45, 46):
         for x in range(16, 27):
-            # All deck cells are on elevation 3, with zero collision, including
-            # the shore cell. This prevents the one-tile water gap in the concept.
-            mid = 0x220 if x == 16 else 0x224 if x == 26 else 0x221
-            blocks[y*width+x] = 0x3000 | pier[mid]
+            mid = shore[0x220] if x == 16 else pier[0x224 if x == 26 else 0x221]
+            blocks[y*width+x] = 0x3000 | mid
             bridge.append([x, y])
     # Keep the native lake immediately below the two-row bridge. The old
     # third row was an unwanted strip protruding beyond the wooden deck.
@@ -230,7 +235,8 @@ def prepare(source):
                         submarine_sprite_size=[64, 64], submarine_scale=2,
                         world_port_id=17, native_story_objects_preserved=True,
                         crisis_layout_supported=True, bridge_extended_left_tiles=1,
-                        shore_end_background='native_grass', extra_bottom_row_removed=True,
+                        shore_end_background='native_grass_with_wood_only_foreground',
+                        shore_end_water_pixels_removed=True, extra_bottom_row_removed=True,
                         outside_captain_removed=True, private_interior_layout=True)
 
 
