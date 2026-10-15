@@ -26,7 +26,41 @@ def verify_update(directory,info):
   elif p['kind']=='compact-ferry':assert r['native_controller_menus'] and r['native_boat_animation'] and r['arrivals_on_accessible_dry_pier'] and len(r['trips'])==2
   elif p['kind']=='world-map-position':assert r['recenter_uses_real_position'] and r['short_trip_has_no_midroute_fixture_warp']
   elif p['kind']=='special-encounters':assert r['actual_tv_capture_and_form_ui'] and len(r['rotom_changes'])==6
+  elif p['kind'] in ['eren-approach','luffy-approach']:
+   assert r['actual_native_movement'] and r['controller_dialogue_and_battle_entry'] and r['actor_coordinates_not_written']
+   assert r['spawn_entirely_outside_camera'] and r['lateral_facing_preserved']
+   assert len(r['movement_actions'])>=6 and r['movement_samples'][-1]['distance']==1
+  elif p['kind']=='crossover-sites':
+   assert len(r['routes'])==12 and all(len(c['valid_sites'])==2 for c in r['routes'])
+   assert all(a['offscreen'] for c in r['routes'] for a in c['valid_sites'])
+  elif p['kind']=='diglett-scouts':
+   assert len(r['wins'])==2 and all(w['native_outcome']==1 and w['physical_npc_interaction'] for w in r['wins'])
+   assert r['independent_defeated_flags'] and r['ship_grunt_flags_unchanged']
+  elif p['kind']=='coastal-geometry':
+   assert len(r['generated_coasts'])==57 and len(r['compiled_shore_banks'])==9
+   assert all(c['grass_fragments']==0 for c in r['generated_coasts']) and r['approved_ports_preserved']
+  elif p['kind']=='marine-atlas':
+   assert len(r['restored_native_connections'])==12 and len(r['caves'])==15
+   assert r['all_seafoam_floors_resolve_correctly'] and r['controller_zoom_and_return']
+  elif p['kind']=='sharp-map':
+   assert r['native_detail_zoom'] and r['pokedex_zoom_and_restore'] and r['menu_map_zoom_and_restore']
+   assert r['nearest_neighbor_pixel_differences_excluding_marker_scaling']<512
+  elif p['kind'] in ['pallet-cinnabar-fuchsia','petalburg-dewford','western-river-dewford','rustboro-dewford']:
+   assert r['controller_roundtrip'] and r['no_midroute_warps_or_coordinate_writes']
+   assert r['save_continue_preserves_location'] and r['walked_tiles']>0 and r['transitions']
+   assert len(r['marker_samples'])==r['walked_tiles']+1
+  elif p['kind'].startswith('generated-sea-journey-'):
+   assert r['controller_roundtrip'] and r['no_midroute_warps_or_coordinate_writes'] and r['save_continue_preserves_location']
+   assert not r['gps_jumps'] and r['physical_route_roundtrip_passed'] and r['required_maps']
+  elif p['kind']=='native-cave-points':
+   assert len(r['checks'])>=145 and r['all_registered_cave_floors_have_own_point'] and r['actual_map_ui']
+  elif p['kind']=='navigated-sea-atlas':
+   assert len(r['all_generated_seas_visited'])==56 and len(r['trips'])==8
+   assert r['compiled_gps_tiles']==408618 and r['maximum_neighbor_pixel_step']<=2
+   assert r['compiled_shared_edges']>=570 and r['unconnected_prototype_hidden']
  assert {'reproduction','coast-connectivity','ports-and-actors','world-map-position','live-levels','compact-ferry'}<=common
+ if 'navigated-sea-atlas' in info['integration_layers']:
+  assert {'navigated-sea-atlas','native-cave-points',*[f'generated-sea-journey-{i}' for i in range(4)],'pallet-cinnabar-fuchsia','petalburg-dewford','western-river-dewford','rustboro-dewford'}<=common
  assert {(name,kind) for name in expected for kind in ['gym-teams','special-encounters']}<=covered
  assert info['full_campaign_playthrough'] is False and info['historical_validation']['retested_on_current_rom'] is False
  from published_evidence import baseline,evidence_rom,evidence_release

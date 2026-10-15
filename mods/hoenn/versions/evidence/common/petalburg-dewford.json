@@ -1,0 +1,4773 @@
+{
+  "passed": true,
+  "rom_sha256": "233c8d4e8a428c5ca4d2de757750e41b7cdfe2698c6baf8edca381cc8b6c0eee",
+  "profile": "petalburg-dewford",
+  "arrivals": [
+    {
+      "direction": "outbound",
+      "map": "Route105",
+      "tile": [
+        20,
+        40
+      ],
+      "marker": [
+        19,
+        101
+      ]
+    },
+    {
+      "direction": "outbound",
+      "map": "Route106",
+      "tile": [
+        20,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ]
+    },
+    {
+      "direction": "outbound",
+      "map": "DewfordTown",
+      "tile": [
+        10,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ]
+    },
+    {
+      "direction": "return",
+      "map": "Route106",
+      "tile": [
+        20,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ]
+    },
+    {
+      "direction": "return",
+      "map": "Route105",
+      "tile": [
+        20,
+        40
+      ],
+      "marker": [
+        19,
+        101
+      ]
+    },
+    {
+      "direction": "return",
+      "map": "Route104",
+      "tile": [
+        12,
+        56
+      ],
+      "marker": [
+        20,
+        94
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "source": [
+        "Route104",
+        20,
+        79
+      ],
+      "destination": [
+        "Route105",
+        20,
+        0
+      ]
+    },
+    {
+      "source": [
+        "Route105",
+        20,
+        79
+      ],
+      "destination": [
+        "Route106",
+        20,
+        0
+      ]
+    },
+    {
+      "source": [
+        "Route106",
+        66,
+        19
+      ],
+      "destination": [
+        "DewfordTown",
+        6,
+        0
+      ]
+    },
+    {
+      "source": [
+        "DewfordTown",
+        3,
+        0
+      ],
+      "destination": [
+        "Route106",
+        63,
+        19
+      ]
+    },
+    {
+      "source": [
+        "Route106",
+        20,
+        0
+      ],
+      "destination": [
+        "Route105",
+        20,
+        79
+      ]
+    },
+    {
+      "source": [
+        "Route105",
+        12,
+        0
+      ],
+      "destination": [
+        "Route104",
+        12,
+        79
+      ]
+    }
+  ],
+  "walked_tiles": 382,
+  "marker_samples": [
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        56
+      ],
+      "marker": [
+        20,
+        94
+      ]
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        13,
+        56
+      ],
+      "marker": [
+        20,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        14,
+        56
+      ],
+      "marker": [
+        20,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        15,
+        56
+      ],
+      "marker": [
+        20,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        16,
+        56
+      ],
+      "marker": [
+        20,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        17,
+        56
+      ],
+      "marker": [
+        20,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        18,
+        56
+      ],
+      "marker": [
+        20,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        18,
+        57
+      ],
+      "marker": [
+        20,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        18,
+        58
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        18,
+        59
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        19,
+        59
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        19,
+        60
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        19,
+        61
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        61
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        62
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        63
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        64
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        65
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        66
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        67
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        68
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        69
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        70
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        71
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        72
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        73
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        74
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        75
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        76
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        77
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        78
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        20,
+        79
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        0
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": true
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        1
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        2
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        3
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        4
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        5
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        6
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        7
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        8
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        9
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        10
+      ],
+      "marker": [
+        19,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        11
+      ],
+      "marker": [
+        19,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        12
+      ],
+      "marker": [
+        19,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        13
+      ],
+      "marker": [
+        19,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        14
+      ],
+      "marker": [
+        19,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        15
+      ],
+      "marker": [
+        19,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        16
+      ],
+      "marker": [
+        19,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        17
+      ],
+      "marker": [
+        19,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        18
+      ],
+      "marker": [
+        19,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        19
+      ],
+      "marker": [
+        19,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        20
+      ],
+      "marker": [
+        19,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        21
+      ],
+      "marker": [
+        19,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        22
+      ],
+      "marker": [
+        19,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        23
+      ],
+      "marker": [
+        19,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        24
+      ],
+      "marker": [
+        19,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        25
+      ],
+      "marker": [
+        19,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        26
+      ],
+      "marker": [
+        19,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        27
+      ],
+      "marker": [
+        19,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        28
+      ],
+      "marker": [
+        19,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        29
+      ],
+      "marker": [
+        19,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        30
+      ],
+      "marker": [
+        19,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        31
+      ],
+      "marker": [
+        19,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        32
+      ],
+      "marker": [
+        19,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        33
+      ],
+      "marker": [
+        19,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        34
+      ],
+      "marker": [
+        19,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        35
+      ],
+      "marker": [
+        19,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        36
+      ],
+      "marker": [
+        19,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        37
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        38
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        39
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        40
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        41
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        42
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        43
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        44
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        45
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        46
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        47
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        48
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        49
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        50
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        51
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        52
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        53
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        54
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        55
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        56
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        57
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        58
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        59
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        60
+      ],
+      "marker": [
+        19,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        61
+      ],
+      "marker": [
+        19,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        62
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        63
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        64
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        65
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        66
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        67
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        68
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        69
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        70
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        71
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        72
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        73
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        74
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        75
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        76
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        77
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        78
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        79
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        0
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": true
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        1
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        2
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        3
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        4
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        5
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        6
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        7
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        8
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        9
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        21,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        22,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        23,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        24,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        25,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        26,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        27,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        28,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        28,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        29,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        30,
+        11
+      ],
+      "marker": [
+        21,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        31,
+        11
+      ],
+      "marker": [
+        21,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        32,
+        11
+      ],
+      "marker": [
+        21,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        33,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        34,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        35,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        36,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        37,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        38,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        39,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        40,
+        11
+      ],
+      "marker": [
+        21,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        41,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        42,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        43,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        44,
+        11
+      ],
+      "marker": [
+        22,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        45,
+        11
+      ],
+      "marker": [
+        22,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        46,
+        11
+      ],
+      "marker": [
+        22,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        47,
+        11
+      ],
+      "marker": [
+        22,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        48,
+        11
+      ],
+      "marker": [
+        23,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        49,
+        11
+      ],
+      "marker": [
+        23,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        50,
+        11
+      ],
+      "marker": [
+        23,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        51,
+        11
+      ],
+      "marker": [
+        24,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        52,
+        11
+      ],
+      "marker": [
+        24,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        53,
+        11
+      ],
+      "marker": [
+        24,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        54,
+        11
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        55,
+        11
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        56,
+        11
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        57,
+        11
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        58,
+        11
+      ],
+      "marker": [
+        26,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        59,
+        11
+      ],
+      "marker": [
+        26,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        60,
+        11
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        61,
+        11
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        62,
+        11
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        63,
+        11
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        64,
+        11
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        65,
+        11
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        11
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        12
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        13
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        14
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        15
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        16
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        17
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        18
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        66,
+        19
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        0
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": true
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        1
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        2
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        3
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        4
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        5
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        6
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        7
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        8
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        7,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        8,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        9,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        10,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        9,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        8,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        7,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        9
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        8
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        7
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        6
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        5
+      ],
+      "marker": [
+        28,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        4
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        3
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        2
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        1
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        6,
+        0
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        5,
+        0
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        4,
+        0
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "DewfordTown",
+      "tile": [
+        3,
+        0
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        63,
+        19
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": true
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        62,
+        19
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        62,
+        18
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        61,
+        18
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        60,
+        18
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        60,
+        17
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        59,
+        17
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        58,
+        17
+      ],
+      "marker": [
+        27,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        58,
+        16
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        57,
+        16
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        56,
+        16
+      ],
+      "marker": [
+        26,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        55,
+        16
+      ],
+      "marker": [
+        26,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        54,
+        16
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        53,
+        16
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        52,
+        16
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        52,
+        15
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        52,
+        14
+      ],
+      "marker": [
+        25,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        52,
+        13
+      ],
+      "marker": [
+        24,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        52,
+        12
+      ],
+      "marker": [
+        24,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        51,
+        12
+      ],
+      "marker": [
+        24,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        51,
+        11
+      ],
+      "marker": [
+        24,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        50,
+        11
+      ],
+      "marker": [
+        23,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        49,
+        11
+      ],
+      "marker": [
+        23,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        48,
+        11
+      ],
+      "marker": [
+        23,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        47,
+        11
+      ],
+      "marker": [
+        22,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        46,
+        11
+      ],
+      "marker": [
+        22,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        45,
+        11
+      ],
+      "marker": [
+        22,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        44,
+        11
+      ],
+      "marker": [
+        22,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        43,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        42,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        41,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        40,
+        11
+      ],
+      "marker": [
+        21,
+        107
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        39,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        38,
+        11
+      ],
+      "marker": [
+        21,
+        106
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        37,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        36,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        35,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        34,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        33,
+        11
+      ],
+      "marker": [
+        21,
+        105
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        32,
+        11
+      ],
+      "marker": [
+        21,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        31,
+        11
+      ],
+      "marker": [
+        21,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        30,
+        11
+      ],
+      "marker": [
+        21,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        29,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        28,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        27,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        26,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        25,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        24,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        23,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        22,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        21,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        11
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        10
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        9
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        8
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        7
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        6
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        5
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        4
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        3
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        2
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        1
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route106",
+      "tile": [
+        20,
+        0
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        79
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": true
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        78
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        77
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        76
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        75
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        74
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        73
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        72
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        71
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        70
+      ],
+      "marker": [
+        20,
+        104
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        69
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        68
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        67
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        66
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        65
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        64
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        63
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        62
+      ],
+      "marker": [
+        20,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        61
+      ],
+      "marker": [
+        19,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        60
+      ],
+      "marker": [
+        19,
+        103
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        59
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        58
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        57
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        56
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        55
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        54
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        53
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        52
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        51
+      ],
+      "marker": [
+        19,
+        102
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        50
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        49
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        48
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        47
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        46
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        45
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        44
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        43
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        42
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        41
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        20,
+        40
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        19,
+        40
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        18,
+        40
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        17,
+        40
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        40
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        39
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        38
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        37
+      ],
+      "marker": [
+        19,
+        101
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        36
+      ],
+      "marker": [
+        19,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        35
+      ],
+      "marker": [
+        19,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        34
+      ],
+      "marker": [
+        19,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        33
+      ],
+      "marker": [
+        19,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        32
+      ],
+      "marker": [
+        19,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        31
+      ],
+      "marker": [
+        19,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        30
+      ],
+      "marker": [
+        19,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        29
+      ],
+      "marker": [
+        19,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        28
+      ],
+      "marker": [
+        19,
+        100
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        27
+      ],
+      "marker": [
+        19,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        26
+      ],
+      "marker": [
+        19,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        25
+      ],
+      "marker": [
+        19,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        24
+      ],
+      "marker": [
+        19,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        23
+      ],
+      "marker": [
+        19,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        22
+      ],
+      "marker": [
+        19,
+        99
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        21
+      ],
+      "marker": [
+        19,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        20
+      ],
+      "marker": [
+        19,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        19
+      ],
+      "marker": [
+        19,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        16,
+        18
+      ],
+      "marker": [
+        19,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        15,
+        18
+      ],
+      "marker": [
+        19,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        14,
+        18
+      ],
+      "marker": [
+        19,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        14,
+        17
+      ],
+      "marker": [
+        19,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        14,
+        16
+      ],
+      "marker": [
+        19,
+        98
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        14,
+        15
+      ],
+      "marker": [
+        19,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        14,
+        14
+      ],
+      "marker": [
+        19,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        14,
+        13
+      ],
+      "marker": [
+        19,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        14,
+        12
+      ],
+      "marker": [
+        19,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        14,
+        11
+      ],
+      "marker": [
+        19,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        14,
+        10
+      ],
+      "marker": [
+        19,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        14,
+        9
+      ],
+      "marker": [
+        19,
+        97
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        14,
+        8
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        14,
+        7
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        14,
+        6
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        14,
+        5
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        14,
+        4
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        14,
+        3
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        13,
+        3
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        12,
+        3
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        12,
+        2
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        12,
+        1
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route105",
+      "tile": [
+        12,
+        0
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        79
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": true
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        78
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        77
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        76
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        75
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        74
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        73
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        72
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        71
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        70
+      ],
+      "marker": [
+        19,
+        96
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        69
+      ],
+      "marker": [
+        19,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        68
+      ],
+      "marker": [
+        19,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        67
+      ],
+      "marker": [
+        19,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        66
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        65
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        64
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        63
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        62
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        61
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        60
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        59
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        58
+      ],
+      "marker": [
+        20,
+        95
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        57
+      ],
+      "marker": [
+        20,
+        94
+      ],
+      "seam": false
+    },
+    {
+      "map": "Route104",
+      "tile": [
+        12,
+        56
+      ],
+      "marker": [
+        20,
+        94
+      ],
+      "seam": false
+    }
+  ],
+  "surf_prompts": [
+    [
+      "Route104",
+      20,
+      74
+    ],
+    [
+      "Route106",
+      55,
+      11
+    ],
+    [
+      "Route106",
+      41,
+      11
+    ]
+  ],
+  "controller_roundtrip": true,
+  "no_midroute_warps_or_coordinate_writes": true,
+  "save_continue_preserves_location": true,
+  "initial_party_flags_and_position_are_fixtures": true,
+  "trainer_battles_and_balance_not_tested": true
+}

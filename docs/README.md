@@ -6,7 +6,10 @@ As quatro edições são Gen 1–4 Normal, Gen 1–4 Hard, Gen 1–9 Normal e Ge
 
 As quatro ROMs atuais ficam em [`roms/`](../roms/README.md), atualizadas pelo empacotamento. O pacote com guias está em [ZIP](../mods/hoenn/versions/Pokemon-Journey-Four-Editions.zip).
 
+- [Galeria de todos os portos e sala do Rotom](PORTOS-GALERIA.md)
 - [Atualização costeira: imagens, portos, níveis e validação](atualizacao-costeira.md)
+- [Revisão visual das costas e novo mapa integrado](revisao-das-costas.md)
+- [Percursos reais de navegação e pendências para a versão final](navegacao-e-pendencias-finais.md)
 - [História e missões obrigatórias](historia-e-missoes.md)
 - [Batalhas, níveis e regras](batalhas-e-regras.md)
 - [Interações de batalha — cobertura, correção de Boots e resultados](interacoes-de-batalha.md)

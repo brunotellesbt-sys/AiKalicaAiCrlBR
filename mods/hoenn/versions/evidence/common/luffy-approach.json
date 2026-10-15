@@ -1,0 +1,137 @@
+{
+  "passed": true,
+  "hero": "Luffy",
+  "route": "Route6_Frlg",
+  "rom_sha256": "233c8d4e8a428c5ca4d2de757750e41b7cdfe2698c6baf8edca381cc8b6c0eee",
+  "player": [
+    12,
+    20
+  ],
+  "initial": [
+    12,
+    13
+  ],
+  "initial_screen_box": [
+    112,
+    -56,
+    128,
+    -24
+  ],
+  "spawn_entirely_outside_camera": true,
+  "first_visible_native_frame": 27,
+  "movement_actions": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+  ],
+  "movement_samples": [
+    {
+      "frame": 1,
+      "actor": [
+        12,
+        13
+      ],
+      "distance": 7,
+      "screen_box": [
+        112,
+        -56,
+        128,
+        -24
+      ]
+    },
+    {
+      "frame": 3,
+      "actor": [
+        12,
+        14
+      ],
+      "distance": 6,
+      "screen_box": [
+        112,
+        -55,
+        128,
+        -23
+      ]
+    },
+    {
+      "frame": 19,
+      "actor": [
+        12,
+        15
+      ],
+      "distance": 5,
+      "screen_box": [
+        112,
+        -39,
+        128,
+        -7
+      ]
+    },
+    {
+      "frame": 35,
+      "actor": [
+        12,
+        16
+      ],
+      "distance": 4,
+      "screen_box": [
+        112,
+        -23,
+        128,
+        9
+      ]
+    },
+    {
+      "frame": 51,
+      "actor": [
+        12,
+        17
+      ],
+      "distance": 3,
+      "screen_box": [
+        112,
+        -7,
+        128,
+        25
+      ]
+    },
+    {
+      "frame": 67,
+      "actor": [
+        12,
+        18
+      ],
+      "distance": 2,
+      "screen_box": [
+        112,
+        9,
+        128,
+        41
+      ]
+    },
+    {
+      "frame": 83,
+      "actor": [
+        12,
+        19
+      ],
+      "distance": 1,
+      "screen_box": [
+        112,
+        25,
+        128,
+        57
+      ]
+    }
+  ],
+  "lateral_animation_trace": [],
+  "lateral_facing_preserved": true,
+  "visible": true,
+  "actual_native_movement": true,
+  "controller_dialogue_and_battle_entry": true,
+  "initial_route_party_and_flags_are_fixtures": true,
+  "actor_coordinates_not_written": true
+}

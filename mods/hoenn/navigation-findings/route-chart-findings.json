@@ -1,0 +1,130 @@
+{
+  "completed": true,
+  "rom_sha256": "3082af11187ff5db36bc4ba85642001c1918fd909815797ab60550c62421f788",
+  "physical_route_roundtrips_passed": true,
+  "visual_alignment_complete": false,
+  "checks": [
+    {
+      "profile": "pallet-cinnabar-fuchsia",
+      "painted_corridor": 241,
+      "open_sea": 283,
+      "water_samples_over_land_art": {
+        "CinnabarIsland_Frlg": [
+          [
+            34,
+            61,
+            10
+          ],
+          [
+            35,
+            60,
+            3
+          ],
+          [
+            35,
+            61,
+            3
+          ]
+        ],
+        "Route20_Frlg": [
+          [
+            46,
+            60,
+            3
+          ],
+          [
+            47,
+            60,
+            3
+          ],
+          [
+            49,
+            60,
+            3
+          ]
+        ]
+      }
+    },
+    {
+      "profile": "petalburg-dewford",
+      "painted_corridor": 164,
+      "open_sea": 116,
+      "water_samples_over_land_art": {}
+    },
+    {
+      "profile": "rustboro-dewford",
+      "painted_corridor": 194,
+      "open_sea": 209,
+      "water_samples_over_land_art": {
+        "Route115": [
+          [
+            18,
+            77,
+            12
+          ],
+          [
+            19,
+            77,
+            10
+          ],
+          [
+            19,
+            78,
+            12
+          ],
+          [
+            19,
+            79,
+            10
+          ],
+          [
+            19,
+            80,
+            10
+          ]
+        ],
+        "JourneyRustboroGate": [
+          [
+            17,
+            77,
+            12
+          ],
+          [
+            17,
+            78,
+            12
+          ],
+          [
+            18,
+            77,
+            12
+          ]
+        ]
+      }
+    },
+    {
+      "profile": "western-river-dewford",
+      "painted_corridor": 305,
+      "open_sea": 226,
+      "water_samples_over_land_art": {
+        "Route114": [
+          [
+            17,
+            76,
+            12
+          ]
+        ],
+        "JourneyWestRiver": [
+          [
+            17,
+            76,
+            12
+          ]
+        ]
+      }
+    }
+  ],
+  "observed_position_samples_not_synthetic": true,
+  "compiled_tileset_water_flags": true,
+  "not_a_passing_visual_release_proof": true
+}

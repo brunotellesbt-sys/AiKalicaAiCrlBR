@@ -20,3 +20,5 @@ Red, Leaf, Brendan e May podem começar em qualquer região. Surf, Dive e Waterf
 Leia o [guia completo](../../../docs/README.md), o [DOCX das equipes](../../../docs/equipes-ginasios-quatro-versoes.docx) e os [limites da validação](../INTEGRATION-STATUS.md). O jogo pode ser aberto num emulador GBA com flash de 128 KiB ou no player do GitHub Pages. Guarde backups dos saves.
 
 [Imagens dos portos e detalhes desta atualização](../../../docs/atualizacao-costeira.md). As validações de PWT/mecânicas do PR #79 foram preservadas como históricas; a campanha inteira não foi jogada novamente nesta entrega.
+
+[Atlas, oito viagens pelos mares e pontos das cavernas](../../../docs/navegacao-e-pendencias-finais.md). O GPS não altera níveis ou equipes; os recursos de nível 100 e repel mostrados nas viagens pertencem exclusivamente aos testes.

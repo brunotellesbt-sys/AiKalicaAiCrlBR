@@ -1,12 +1,14 @@
 # Atualização costeira e níveis dinâmicos
 
-As quatro ROMs atuais contêm os portos compactos, a sala de Rotom com visual de Lavender, as bordas de areia e as correções de aproximação dos rivais e de níveis. As evidências novas ficam em `coastal-update-validation/`. A campanha inteira não foi jogada do começo aos créditos nesta entrega.
+As quatro ROMs atuais incluem as casas de Pallet/Fuchsia/Sevii, pontes e embarcações revisadas, navios maiores de Hoenn, os portos compactos, a sala de Rotom com visual de Lavender, bordas completas de areia, níveis dinâmicos e entradas de Eren/Luffy fora da câmera, com orientação estável e diálogos maiores. O mapa marítimo inclui os corredores originais de Surf e as conexões novas, desenhados em segmentos ortogonais; Seafoam e as 14 cavernas novas usam acessos reais. O zoom detalhado de 448×224 funciona no menu e na AREA, com locais especiais corrigidos. A Diglett’s Cave tem dois combates opcionais Galactic e um grunt de levantamento. As evidências novas ficam em `coastal-update-validation/`: 140 camadas, 1.483 arquivos reproduzidos, 21 portos, 343 mapas auditados estruturalmente e 57 costas geradas. Foram observados dois pontos válidos de entrada dos rivais em cada uma das 12 rotas. A campanha inteira não foi jogada do começo aos créditos nesta entrega.
+
+O atlas agora une os mares contínuos sem desenhar divisões entre arquivos como rotas, usa grandes áreas retangulares e oculta o protótipo desconectado. O GPS compilado cobre 408.618 tiles, com deslocamento máximo de dois pixels entre vizinhos e igualdade nas bordas compartilhadas. Há pontos próprios para 145 andares de cavernas originais. Oito viagens por controles atravessam os 56 mares gerados ativos e os corredores nativos solicitados, totalizando 7.468 tiles e 152 transições. A equipe de nível 100, Rare Candies e repels são recursos do teste. Veja [navegação, imagens e pendências finais](../../docs/navegacao-e-pendencias-finais.md).
 
 Resultados de PWT e mecânicas das seções abaixo são históricos do PR #79. Seus bytes e hashes originais foram preservados em `validation-baselines/pr79/`; nenhum torneio foi repetido nesta atualização. Consulte [imagens e detalhes](../../docs/atualizacao-costeira.md).
 
 ---
 
-Atualização de 14/10/2026: build de 116 camadas, quatro ROMs atualizadas. Escopo desta entrega: PWT e encontros especiais, com provas nativas associadas aos hashes atuais. As campanhas completas não foram jogadas de ponta a ponta. Veja [balanceamento](../../docs/pwt-balanceamento.md) e [encontros especiais](../../docs/encontros-especiais-e-formas.md).
+Registro histórico do PR #79, de 14/10/2026: build de 116 camadas, PWT e encontros especiais. As seções abaixo descrevem essa validação anterior e seus limites. Veja [balanceamento](../../docs/pwt-balanceamento.md) e [encontros especiais](../../docs/encontros-especiais-e-formas.md).
 
 # Estado da integração
 

@@ -17,6 +17,10 @@ class MapRenderer:
         self.tile_images={}
         self.sprites={}
 
+    def sprite_offset(self,graphics_id):
+        marker=self.source/'.journey-close-vertical-boats'
+        return json.loads(marker.read_text()).get('render_pixel_offsets',{}).get(graphics_id,[0,0]) if marker.exists() else [0,0]
+
     def sprite(self,graphics_id,frame_index=0):
         key=(graphics_id,frame_index)
         if key in self.sprites:return self.sprites[key]
@@ -98,8 +102,8 @@ class MapRenderer:
         if npcs:
             for event in sorted(m['object_events'],key=lambda e:e['y']):
                 frame=2 if event['graphics_id']=='OBJ_EVENT_GFX_MR_BRINEYS_BOAT' and event['movement_type'] in ['MOVEMENT_TYPE_FACE_LEFT','MOVEMENT_TYPE_FACE_RIGHT'] else 0
-                sprite=self.sprite(event['graphics_id'],frame)
-                result.paste(sprite,(event['x']*16+8-sprite.width//2,event['y']*16+16-sprite.height),sprite)
+                sprite=self.sprite(event['graphics_id'],frame);dx,dy=self.sprite_offset(event['graphics_id'])
+                result.paste(sprite,(event['x']*16+8-sprite.width//2+dx,event['y']*16+16-sprite.height+dy),sprite)
         return result,m
 
 def generate(source, output):

@@ -1,7 +1,7 @@
 """Reproduce coastal overlays against the independently reproduced PR79 source."""
 import argparse,hashlib,importlib,json,os,shutil
 from pathlib import Path
-from prepare_cinnabar_shore_polish import PRIOR,LAYER
+from prepare_navigated_sea_atlas import PRIOR,LAYER
 from package_playable import verify_source
 import package_playable
 p=argparse.ArgumentParser();p.add_argument('--source',type=Path,required=True);p.add_argument('--baseline',type=Path,required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args()

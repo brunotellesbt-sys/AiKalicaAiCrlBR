@@ -4,7 +4,7 @@ import hashlib,json,re
 ROOT=Path(__file__).resolve().parents[2]
 bootstrap=(ROOT/'tools/hoenn/validate_coast_connectivity.py').read_text().split('required={')[0]
 exec(compile(bootstrap,str(ROOT/'tools/hoenn/validate_coast_connectivity.py'),'exec'))
-projection=json.loads((source/('.journey-world-dex-map' if (source/'.journey-world-dex-map').exists() else '.journey-world-map-position')).read_text())
+projection=json.loads((source/('.journey-navigated-sea-atlas' if (source/'.journey-navigated-sea-atlas').exists() else '.journey-complete-marine-atlas' if (source/'.journey-complete-marine-atlas').exists() else '.journey-connected-sea-chart' if (source/'.journey-connected-sea-chart').exists() else '.journey-port-orientation-finish' if (source/'.journey-port-orientation-finish').exists() else '.journey-final-port-alignment' if (source/'.journey-final-port-alignment').exists() else '.journey-port-houses-and-ships' if (source/'.journey-port-houses-and-ships').exists() else '.journey-world-dex-map' if (source/'.journey-world-dex-map').exists() else '.journey-world-map-position')).read_text())
 byname={p['map']:p for p in projection['projections']}
 import subprocess
 symbols=subprocess.check_output([str(ROOT/'.local/arm-binutils/usr/bin/arm-none-eabi-nm'),'-S',str(source/'pokeemerald.elf')],text=True)
