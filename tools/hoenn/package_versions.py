@@ -30,7 +30,22 @@ def package(source,output):
  r=dict(parent_rom_sha256=hashlib.sha256(base).hexdigest(),build_rules_offset=at,
         parent_header_hex=base[0xA0:0xBE].hex(),parent_rules_hex=base[at:at+4].hex(),
         variants=rows,all_other_bytes_identical=True,validated=False)
- if (source/'.journey-pallet-harbor').exists():
+ if (source/'.journey-world-route-chart').exists():
+  from prepare_world_route_chart import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-sevii-arrival-layout').exists():
+  from prepare_sevii_arrival_layout import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-sevii-surf-embarkation').exists():
+  from prepare_sevii_surf_embarkation import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-sevii-coast-camera').exists():
+  from prepare_sevii_coast_camera import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-sevii-surf-connections').exists():
+  from prepare_sevii_surf_connections import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-pallet-harbor').exists():
   from prepare_pallet_harbor import PRIOR,LAYER
   r['integration_layers']=PRIOR+[LAYER]
  elif (source/'.journey-sootopolis-harbor').exists():

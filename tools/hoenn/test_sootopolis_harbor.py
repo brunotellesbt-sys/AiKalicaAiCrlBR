@@ -1,4 +1,4 @@
-"""Bind all four final ROMs to their controller and reproduction evidence."""
+"""Keep the original harbor controller/reproduction evidence bound to its ROM."""
 import hashlib
 import json
 import unittest
@@ -13,20 +13,28 @@ class SootopolisHarbor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.manifest = json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
+        cls.harbor_manifest = cls.manifest
+        if cls.manifest['validation_scope'] == 'sevii-surf-connections' and not cls.manifest.get('sootopolis_harbor_retested'):
+            reference = cls.manifest['previous_sootopolis_validation']
+            raw = (ROOT/reference['manifest']).read_bytes()
+            assert hashlib.sha256(raw).hexdigest() == reference['manifest_sha256']
+            assert reference['retested_on_current_rom'] is False
+            cls.harbor_manifest = json.loads(raw)
         cls.report = json.loads((OUT/'validation/sootopolis-harbor.json').read_text())
 
-    def test_controller_evidence_belongs_to_this_rom(self):
-        self.assertEqual(self.manifest['validation_scope'], 'sootopolis-harbor')
+    def test_controller_evidence_stays_bound_to_the_harbor_rom(self):
+        self.assertIn(self.harbor_manifest['validation_scope'], ('sootopolis-harbor','sevii-surf-connections'))
         self.assertTrue(self.manifest['validated'])
         for row in self.manifest['variants']:
             raw = (ROOT/'mods/hoenn/versions'/row['file']).read_bytes()
             self.assertEqual(hashlib.sha256(raw).hexdigest(), row['sha256'])
             edition = row['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba')
             report = json.loads((OUT/edition/'sootopolis-harbor.json').read_text())
-            self.assertEqual(report['rom_sha256'], row['sha256'])
+            historical_row = next(r for r in self.harbor_manifest['variants'] if r['file'] == row['file'])
+            self.assertEqual(report['rom_sha256'], historical_row['sha256'])
             self.assertTrue(report['passed'])
             self.assertEqual(raw[0xBD], (-sum(raw[0xA0:0xBD])-0x19) & 255)
-        self.assertEqual(self.report['rom_sha256'], self.manifest['parent_rom_sha256'])
+        self.assertEqual(self.report['rom_sha256'], self.harbor_manifest['parent_rom_sha256'])
         self.assertTrue(self.report['passed'])
 
     def test_both_layouts_have_real_walkable_access(self):

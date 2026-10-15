@@ -17,7 +17,7 @@ class PalletHarbor(unittest.TestCase):
 
     def test_every_edition_has_fresh_controller_evidence(self):
         self.assertTrue(self.manifest['pallet_harbor_validated'])
-        self.assertEqual(self.manifest['integration_layers'][-1], 'pallet-harbor')
+        self.assertIn('pallet-harbor', self.manifest['integration_layers'])
         for row in self.manifest['variants']:
             edition = row['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba')
             report = json.loads((OUT/edition/'pallet-harbor.json').read_text())
@@ -28,7 +28,8 @@ class PalletHarbor(unittest.TestCase):
                           'ship_hull_blocked_over_water', 'interior_captain_interacted_physically',
                           'outside_captain_removed', 'bridges_joined_and_walked',
                           'complete_trees_checked', 'route21_surf_roundtrip',
-                          'merged_bay_surfed']:
+                          'merged_bay_surfed', 'south_bridge_walked', 'eastern_corridor_walked',
+                          'bridge_crossed_by_surf_below', 'upper_corner_corrected']:
                 self.assertTrue(report[field], (edition, field))
             self.assertEqual(report['ship_sprite_size'], [96, 40])
             self.assertEqual(report['route21_atlas_seam_delta'], 0)
@@ -63,6 +64,12 @@ class PalletHarbor(unittest.TestCase):
         self.assertEqual(set(proof['byte_identical_outputs']), set(self.layout['prepared_sha256']))
         common = json.loads((OUT/'validation/pallet-harbor.json').read_text())
         self.assertEqual(common['rom_sha256'], self.manifest['parent_rom_sha256'])
+
+    def test_south_access_has_visible_wood_matching_the_quay(self):
+        im = Image.open(ROOT/'docs/images/pallet-harbor/PalletTown_Frlg.png').convert('RGB')
+        deck = im.crop((18*48,13*48,19*48,14*48))
+        quay = im.crop((19*48,12*48,20*48,13*48))
+        self.assertEqual(deck.tobytes(), quay.tobytes(), 'South access is invisible or does not match the wooden quay')
 
 
 if __name__ == '__main__':

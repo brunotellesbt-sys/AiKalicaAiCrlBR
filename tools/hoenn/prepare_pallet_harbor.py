@@ -73,7 +73,6 @@ def prepare(source):
     for y in range(19, 25):
         for x in range(11, 15):
             blocks[y*w+x] = before[18*w+11] if x >= 13 else 0x112B
-    blocks[18*w+22] = 0x1124
     blocks[16*w+20] = before[16*w+20]  # Oak's relocated sign.
 
     _, donor, native_house = load('SlateportCity')
@@ -123,6 +122,22 @@ def prepare(source):
         attrs.extend((0).to_bytes(4, 'little'))
     for x in range(15, 23):
         blocks[17*w+x] = 0x3000 | upper_rim[x == 22]
+    # Finish the lower half of the shifted corner before continuing with
+    # the straight eastern bank; repeating the top half created a second lip.
+    corner = primary[0x124*8:0x125*8]
+    side = primary[0x12C*8:0x12D*8]
+    corner_id = 640+len(words)//16
+    words.extend(struct.pack('<8H', corner[2], corner[3], side[2], side[3],
+                             corner[6], corner[7], side[6], side[7]))
+    attrs.extend((0x10).to_bytes(4, 'little'))
+    blocks[18*w+22] = 0x1000 | corner_id
+    # A native multi-level bridge keeps the joined bay open to Surf below
+    # the new foot access. Retain the native opaque deck graphic.
+    bridge_mid = before[18*w+11] & 1023
+    wood = r.tileset(exterior['secondary_tileset'])[2][(bridge_mid-640)*8:(bridge_mid-640+1)*8]
+    south_bridge = 640+len(words)//16
+    words.extend(struct.pack('<8H', *wood))
+    attrs.extend((0x71).to_bytes(4, 'little'))  # MB_BRIDGE_OVER_POND_LOW
     layer.stage(path, words)
     layer.stage(attrs_path, attrs)
     for y in range(6):
@@ -133,6 +148,7 @@ def prepare(source):
     # of the original horizontal bridge or the small boat beneath it.
     for x in range(13, 22):
         blocks[24*w+x] = before[18*w+10] if x == 13 else before[18*w+12] if x == 21 else before[18*w+11]
+    blocks[25*w+18] = south_bridge  # Elevation 0 preserves the walk/Surf level.
     for x, y, value in bridge:
         assert blocks[y*w+x] == value
     current_boat = next(o for o in city['object_events'] if o['graphics_id'] == boat['graphics_id'])
@@ -264,6 +280,8 @@ def prepare(source):
                         original_boat=boat, outside_boat=current_boat, boat_shift=[1, 0],
                         outside_captain_removed=True, bridge_unchanged=True,
                         bridge_join=[[x,y] for y in (17,18) for x in (13,14)],
+                        south_access=[18,25], east_walkway=[[23,y] for y in range(15,27)],
+                        upper_corner_corrected=True,
                         complete_trees=trees, upper_cliff_rim=True,
                         world_port_id=18, captain=list(CAPTAIN), arrival=list(ARRIVAL),
                         ship=[ship['x'], ship['y']], ship_graphics=ship['graphics_id'],

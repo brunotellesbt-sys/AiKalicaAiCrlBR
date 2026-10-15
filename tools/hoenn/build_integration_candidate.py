@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 
 import package_playable
-from prepare_pallet_harbor import PRIOR, LAYER
+from prepare_world_route_chart import PRIOR, LAYER
 
 
 def main():

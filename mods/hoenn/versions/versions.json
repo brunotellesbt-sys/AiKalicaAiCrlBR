@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "bd0dccde16b96f9bb02bba2519fecc7b32200c6283256007dd7c61dfaa79b445",
-  "build_rules_offset": 9089944,
+  "parent_rom_sha256": "442a99f8dc7de2e1dd805b8c783d77e167171b35f963e119abe7f34fdde08058",
+  "build_rules_offset": 9090664,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "e59efd5466cb07cdcdb0e09ca0bbc3f5b998a3976fd19d69ce344b957ac169c8",
+      "sha256": "ff22f02cae561dd3d66189ec11cc4c12ccb302c58b3092f4123ebdb6c05efc72",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        9089944,
-        9089945,
-        9089946
+        9090664,
+        9090665,
+        9090666
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "4f7f74d9b4cb61f1dede178640f6bf6e5d1a93dbab0b863947bcbf71a7c8d2c7",
+      "sha256": "6f7887c8377208f19505beccaa0b3734f4c5bc78d3ec9204480a3382ee50a9c6",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        9089944,
-        9089945
+        9090664,
+        9090665
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "41f4dbe4117ae3233eb778b518e8092a565d5512a2b3300cc98cee3ffcaf8eb8",
+      "sha256": "c6ae655aef4861cd3d361bf20672a4a02255abdda53695aa980f48d61f09af2b",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        9089946
+        9090666
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "3544356d1578914e114aeb4e8131b2b82fdc5998ccd4d8ec6ace2661521d52dd",
+      "sha256": "4698a0b69eaaf0feb83128b94b1320918e0062eca9ce33c30f06d2dfe73abb41",
       "patched_byte_offsets": [
         160,
         162,
@@ -247,10 +247,20 @@
     "complete-marine-atlas",
     "navigated-sea-atlas",
     "sootopolis-harbor",
-    "pallet-harbor"
+    "pallet-harbor",
+    "sevii-surf-connections",
+    "sevii-coast-camera",
+    "sevii-surf-embarkation",
+    "sevii-arrival-layout",
+    "world-route-chart"
   ],
-  "validation_scope": "sootopolis-harbor",
+  "validation_scope": "sevii-surf-connections",
   "full_campaign_playthrough": false,
+  "special_encounters_validated": true,
+  "pallet_harbor_validated": true,
+  "sootopolis_harbor_retested": true,
+  "world_route_chart_validated": true,
+  "compiled_gps_tiles": 414398,
   "previous_validation": {
     "manifest": "mods/hoenn/validation-baselines/pr81/versions.json",
     "manifest_sha256": "d67a4baba3462f9030ac07d5416c815a915737a1d5ea25a3c7dc06f1b0966175",
@@ -268,98 +278,155 @@
     "source": "PR79",
     "notes": "Earlier PWT/mechanics runs remain bound to their original ROM bytes; no tournaments repeated for this coastal update."
   },
-  "special_encounters_validated": true,
+  "previous_sootopolis_validation": {
+    "manifest": "mods/hoenn/sevii-surf-validation/baseline/versions.json",
+    "manifest_sha256": "52acacfb6c5ad9ba0089bd68c957ee38e7c9f6efed5ebe75c6076b022ee5aa40",
+    "retested_on_current_rom": false
+  },
   "proofs": [
     {
-      "file": "evidence/sootopolis-harbor/common/sootopolis-harbor.json",
+      "file": "evidence/sevii-surf/common/sevii-surf-connections.json",
       "target": "common",
-      "kind": "sootopolis-harbor",
-      "sha256": "7003ce910327eab1a7176645188029fbd248756177689200ece7fb8996ad385b"
+      "kind": "sevii-surf-connections",
+      "sha256": "2a9f75842e64e85d9dd81106ac63cccb209ec9e2cd625585d7353dc40d48a303"
     },
     {
-      "file": "evidence/sootopolis-harbor/common/reproduction.json",
+      "file": "evidence/sevii-surf/common/coast-connectivity.json",
+      "target": "common",
+      "kind": "coast-connectivity",
+      "sha256": "ff042fa0d3ce2c0989955c228bf0b20a4ecc11f30d2a54cb31c5e6ec45010c49"
+    },
+    {
+      "file": "evidence/sevii-surf/common/sevii-source-scope.json",
+      "target": "common",
+      "kind": "sevii-source-scope",
+      "sha256": "097ee717f201ac52257e64fbb2ff208221af2c4754c3baf3dd6be2a6c860499b"
+    },
+    {
+      "file": "evidence/sevii-surf/common/reproduction.json",
       "target": "common",
       "kind": "reproduction",
-      "sha256": "a420042e653a22b956b31760dddd854cde18794b38e0b7e04f966ebfa96ee53c"
+      "sha256": "5a223660653ac26cd95cb5bbdd871ecaf76d65c391773cb5cd99a64804a2a57e"
     },
     {
-      "file": "evidence/sootopolis-harbor/common/pallet-harbor.json",
+      "file": "evidence/sevii-surf/common/pallet-harbor.json",
       "target": "common",
       "kind": "pallet-harbor",
-      "sha256": "9739eac9ac4a8355d0aa3283959f744eb3dc1fa8f3af3759bbef4b7a9f67f027"
+      "sha256": "72f1d51c5e2342624fbeb5876b64388ccf36809b8d4978a98bf5a40bf22a5cb3"
     },
     {
-      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-4-Normal/sootopolis-harbor.json",
+      "file": "evidence/sevii-surf/common/pallet-reproduction.json",
+      "target": "common",
+      "kind": "pallet-reproduction",
+      "sha256": "027f510d85a80dcde7070a92c63a5db7ea3d04c9ff5048dd19ab559590df6c37"
+    },
+    {
+      "file": "evidence/sevii-surf/common/sootopolis-harbor.json",
+      "target": "common",
+      "kind": "sootopolis-harbor",
+      "sha256": "22f84852520dbf9a4efe2ae313dd710c34a54abcbc2952a413129725b6f391ef"
+    },
+    {
+      "file": "evidence/sevii-surf/common/world-route-chart.json",
+      "target": "common",
+      "kind": "world-route-chart",
+      "sha256": "5e7ca043e5cd87c628c812c444037d830aadb9c005abfa2287dbe495c5ca2eb3"
+    },
+    {
+      "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-4-Normal/sevii-surf-connections.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "sevii-surf-connections",
+      "sha256": "2a5c929fdd01d04cbde2ee8d62a6d9b942de9ef3de83adcdebd1525957d7b9ec"
+    },
+    {
+      "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-4-Normal/special-encounters.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "special-encounters",
+      "sha256": "a9e0d0c1800c4d72bb4fa1b28686cd96108312f73d53e1451625f986ba5734f1"
+    },
+    {
+      "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-4-Normal/pallet-harbor.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "pallet-harbor",
+      "sha256": "647d1ebd29e2e3e12892f28360990e03d1e4992f542b2c19325a7674a5383e74"
+    },
+    {
+      "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-4-Normal/sootopolis-harbor.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "sootopolis-harbor",
-      "sha256": "3e4334877bbd221573b9371c21d49eb80bc74f4d290995d0aa18922e6c23d7c6"
+      "sha256": "4607170d065f003a8e29ca01770dc3ca14ee023caae1241882de780f5bbf21d0"
     },
     {
-      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-4-Normal/special-encounters.json",
-      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "special-encounters",
-      "sha256": "9279f713ea46cbcfdf4d41d4103654a4f628cfbdf69e33c172b01cc0eaa96f36"
-    },
-    {
-      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-4-Normal/pallet-harbor.json",
-      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "pallet-harbor",
-      "sha256": "b631552f26153aec5abe271e625c1f1cf7673451ce90b589efa1f68bd7fd987d"
-    },
-    {
-      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-4-Hard/sootopolis-harbor.json",
+      "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-4-Hard/sevii-surf-connections.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "sootopolis-harbor",
-      "sha256": "fa0e6d5c5a14796d223a1c97f813c13e2dc2b811d8137ffa53e9bae6cbdd4c4c"
+      "kind": "sevii-surf-connections",
+      "sha256": "5c2d6a0547fbd65713f21da0575e99232c11b2ca810cd27ff9187f81aa34cada"
     },
     {
-      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-4-Hard/special-encounters.json",
+      "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-4-Hard/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "special-encounters",
-      "sha256": "0de3dbe28efa0986a5417e3ce19bcb52eb90ab4b9615fe81969a6a68ad848145"
+      "sha256": "d2388ee21db0a74c0f5fc00898862739f8bf5568a3ca9d883088fca93d647811"
     },
     {
-      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-4-Hard/pallet-harbor.json",
+      "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-4-Hard/pallet-harbor.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "pallet-harbor",
-      "sha256": "3f671082b96fbc5a7875448f377f2b0480381bfcf1e076ffab2f5776b3be08f7"
+      "sha256": "fcd4a434975abf0191dd6ec9788fc4da7f6f0abe7a43f8855ea15cbeef8a64cd"
     },
     {
-      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-9-Normal/sootopolis-harbor.json",
-      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-4-Hard/sootopolis-harbor.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "sootopolis-harbor",
-      "sha256": "f4180b971f3a47f758e0eb0ac14cda3cfacf39b44e2465d7245b940897ce0405"
+      "sha256": "b867085ea694cd7bcd9ca3f8f4a03ec0bbc17262e4d17d45cfa3ec5d9d6b8411"
     },
     {
-      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-9-Normal/special-encounters.json",
+      "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-9-Normal/sevii-surf-connections.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "sevii-surf-connections",
+      "sha256": "5aef312cca4ae17db48bf3213d95b4daba93ce49ad50ed98f6a6cec950370373"
+    },
+    {
+      "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-9-Normal/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "special-encounters",
-      "sha256": "fcf85344f962989b0128369bc18d6ac951b00fa755c8db5c3db29aed67448fdc"
+      "sha256": "2cd789c630ca2b9134053f992826ecf6dfc0b39947f5f69b3f574d534a592892"
     },
     {
-      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-9-Normal/pallet-harbor.json",
+      "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-9-Normal/pallet-harbor.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "pallet-harbor",
-      "sha256": "e13f9975585a6696c917930ccaf0ec30e6a86a3e462f6b7c53efae517f54022f"
+      "sha256": "93e1a747c1bbd9f6caef323801ff8c93a76ef1cd5e89afce1a6aa86a94729d04"
     },
     {
-      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-9-Hard/sootopolis-harbor.json",
-      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-9-Normal/sootopolis-harbor.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "sootopolis-harbor",
-      "sha256": "448645fc1ddfd1d3bc19f369507f4db275c000882bb5d758e0fb920fff205f1c"
+      "sha256": "417b0c4aa8f8a7ab86e22de05f87d51b4d234e9683fb9722e978efd9573f538d"
     },
     {
-      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-9-Hard/special-encounters.json",
+      "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-9-Hard/sevii-surf-connections.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "sevii-surf-connections",
+      "sha256": "4a97eebdb65c8a654ccc9b36110e483bd661b80473330efec2f1621519821a38"
+    },
+    {
+      "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-9-Hard/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "special-encounters",
-      "sha256": "a70a9821bcec33f8fa282237371f4cfc8167f4868cdf75407d0457d51f358f13"
+      "sha256": "28b050c652ac768300c92141b459ca425b60b08f8a527e686bda1a675b146cb6"
     },
     {
-      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-9-Hard/pallet-harbor.json",
+      "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-9-Hard/pallet-harbor.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "pallet-harbor",
-      "sha256": "27a0c00bee059f6678764912e4b2a7a1a1bdc680dd7f135e630a63f1b72c150a"
+      "sha256": "7b351ee54aefad4ba65c196999b40095869c97559aba229aef5163c7239e9718"
+    },
+    {
+      "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-9-Hard/sootopolis-harbor.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "sootopolis-harbor",
+      "sha256": "151259a200c0444d8f403a6f95a9e7285fd5f336ddfd781c522d5af4df34ce48"
     }
-  ],
-  "pallet_harbor_validated": true
+  ]
 }

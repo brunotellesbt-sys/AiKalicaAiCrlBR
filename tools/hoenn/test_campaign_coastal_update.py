@@ -6,6 +6,9 @@ ROOT=Path(__file__).resolve().parents[2]
 class CoastalRelease(unittest.TestCase):
  def test_current_roms_have_fresh_focused_evidence(self):
   r=verify(ROOT/'mods/hoenn/versions');self.assertEqual(len(r['variants']),4)
+  if r['validation_scope']=='sevii-surf-connections':
+   self.assertFalse(r['previous_sootopolis_validation']['retested_on_current_rom'])
+   r=json.loads((ROOT/r['previous_sootopolis_validation']['manifest']).read_text())
   if r['validation_scope']=='sootopolis-harbor':
    self.assertFalse(r['previous_validation']['retested_on_current_rom'])
    r=json.loads((ROOT/r['previous_validation']['manifest']).read_text())

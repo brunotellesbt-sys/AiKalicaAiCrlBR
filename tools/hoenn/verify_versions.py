@@ -45,6 +45,11 @@ def verify(directory,require_seal=True):
         for row in info['variants']:
             assert digest((ROOT/'roms'/row['file']).read_bytes())==row['sha256'], ('Outdated roms/ download',row['file'])
         assert (ROOT/'roms/SHA256SUMS').read_bytes()==(directory/'SHA256SUMS').read_bytes()
+    if info.get('validation_scope')=='sevii-surf-connections':
+        from verify_sevii_update import verify_update
+        verify_update(directory,info)
+        print('Verified four continuous Sevii Surf ROMs and preserved port history')
+        return info
     if info.get('validation_scope')=='sootopolis-harbor':
         from verify_sootopolis_update import verify_update
         verify_update(directory,info)

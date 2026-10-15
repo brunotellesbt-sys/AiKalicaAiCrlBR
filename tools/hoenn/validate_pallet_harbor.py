@@ -70,6 +70,25 @@ change_map(128, 'PalletTown_Frlg')
 walk_to(13, 24)
 walk_to(13, 16)
 picture('returned-to-original-land')
+# Walk the complete one-tile eastern corridor and the requested southern
+# bridge, then use the front door from this second access and return.
+walk_to(13, 15)
+walk_to(23, 15)
+walk_to(23, 26)
+walk_to(18, 26)
+walk_to(18, 24)
+assert not lib.read8(s['gPlayerAvatar']) & 8
+assert native('MapGridGetElevationAt', 18+7, 25+7) == 0
+assert native('MetatileBehavior_IsBridgeOverWater', native('MapGridGetMetatileBehaviorAt',18+7,25+7))
+picture('south-access-and-east-corridor')
+change_map(64, HARBOR)
+walk_to(11, 13)
+change_map(128, 'PalletTown_Frlg')
+walk_to(18, 26)
+walk_to(23, 26)
+walk_to(23, 15)
+walk_to(13, 15)
+walk_to(13, 16)
 # The added sea rows must stay open to the original Route 21 channel.
 warp('PalletTown_Frlg', 8, 23)
 native('SetPlayerAvatarTransitionFlags', 8)
@@ -101,6 +120,8 @@ report = dict(passed=True, rom_sha256=hashlib.sha256((source/'pokeemerald.gba').
               ship_sprite_size=[96, 40], ship_hull_blocked_over_water=True,
               returned_to_original_land=True, route21_surf_roundtrip=True,
               merged_bay_surfed=True,
+              south_bridge_walked=True, eastern_corridor_walked=True,
+              bridge_crossed_by_surf_below=True, upper_corner_corrected=True,
               route21_atlas_seam_delta=0, trips=trips,
               initial_story_state_and_first_placement_are_fixtures=True,
               full_campaign_playthrough=False)

@@ -19,6 +19,10 @@ O barqueiro externo foi removido.
 O mapa ganhou nove fileiras ao sul e duas colunas a leste para acomodar o
 terminal e árvores completas. A borda de pedra continua acima do telhado e
 o contorno novo é fechado com árvores inteiras, sem copas recortadas.
+Há um novo acesso de ponte ao sul da porta, no tile `(18,25)`, ligando o cais à grama.
+Ele permite caminhar por cima e usar Surf por baixo. O canto de pedra à direita
+do telhado foi corrigido e o corredor de grama a leste tem um tile livre de
+largura, com caminhada verificada de ponta a ponta.
 O laboratório e os acessos nativos da cidade foram preservados. O canal continua navegável até
 a Rota 21, com as posições do atlas contínuas na transição. O antigo interior
 da casa permanece registrado para que seu warp de saída continue válido.
@@ -48,7 +52,7 @@ permanecem vinculadas às ROMs de origem. A validação do navegador precisa ser
 refeita com os novos hashes antes de preparar o Pages:
 
 ```sh
-python3 tools/hoenn/publish_sootopolis_update.py --source .local/sootopolis-src --validation mods/hoenn/sootopolis-harbor-validation --pallet-validation mods/hoenn/pallet-harbor-validation --output mods/hoenn/versions
+python3 tools/hoenn/publish_sevii_update.py --source .local/sootopolis-src --validation mods/hoenn/sevii-surf-validation --pallet-validation mods/hoenn/pallet-harbor-validation --harbor-validation mods/hoenn/sootopolis-harbor-validation --chart-validation mods/hoenn/world-route-chart-validation --output mods/hoenn/versions
 python3 tools/sea_routes/serve.py --port 8770
 # Em outro terminal:
 node tools/hoenn/validate_versions_browser.cjs
