@@ -1,30 +1,6 @@
 {
   "passed": true,
-  "original_inputs_verified": true,
-  "byte_identical_outputs": [
-    "data/tilesets/secondary/sootopolis/tiles.png",
-    "data/tilesets/secondary/sootopolis/metatiles.bin",
-    "data/tilesets/secondary/sootopolis/metatile_attributes.bin",
-    "data/tilesets/secondary/sootopolis/palettes/12.pal",
-    "data/tilesets/secondary/sootopolis/palettes/11.pal",
-    "data/layouts/SootopolisCity/map.bin",
-    "data/layouts/SootopolisCity_LegendsBattle/map.bin",
-    "data/maps/SootopolisCity/map.json",
-    "graphics/object_events/pics/journey/submarine.png",
-    "src/data/object_events/object_event_pic_tables.h",
-    "src/data/object_events/object_event_graphics_info.h",
-    "data/layouts/JourneySootopolisHarbor/map.bin",
-    "data/layouts/JourneySootopolisHarbor/border.bin",
-    "data/maps/JourneySootopolisHarbor/map.json",
-    "data/maps/JourneySootopolisHarbor/scripts.inc",
-    "data/layouts/layouts.json",
-    "data/maps/map_groups.json",
-    "data/event_scripts.s",
-    "data/scripts/journey_campaign_gates.inc",
-    "include/journey_birth_arrivals.h",
-    "src/journey_birth.c"
-  ],
-  "idempotent": true,
+  "layer": "pallet-harbor",
   "layers": [
     "hoenn-crossing",
     "worldsea",
@@ -166,6 +142,42 @@
     "offscreen-rival-entrances",
     "complete-marine-atlas",
     "navigated-sea-atlas",
-    "sootopolis-harbor"
-  ]
+    "sootopolis-harbor",
+    "pallet-harbor"
+  ],
+  "original_inputs_verified": true,
+  "idempotent": true,
+  "byte_identical_outputs": [
+    "data/tilesets/secondary/pallet_town_frlg/tiles.png",
+    "data/tilesets/secondary/pallet_town_frlg/metatiles.bin",
+    "data/tilesets/secondary/pallet_town_frlg/metatile_attributes.bin",
+    "data/layouts/PalletTown_Frlg/map.bin",
+    "data/maps/PalletTown_Frlg/map.json",
+    "data/layouts/JourneyPalletHarbor/map.bin",
+    "data/layouts/JourneyPalletHarbor/border.bin",
+    "data/maps/JourneyPalletHarbor/map.json",
+    "data/maps/JourneyPalletHarbor/scripts.inc",
+    "data/layouts/layouts.json",
+    "data/maps/map_groups.json",
+    "data/event_scripts.s",
+    "data/scripts/journey_campaign_gates.inc",
+    "src/data/journey_world_position.h"
+  ],
+  "prepared_sha256": {
+    "data/tilesets/secondary/pallet_town_frlg/tiles.png": "547a5f620a0994d6ac62276962fa83f7c725474cd813a8e35a6127a3591ef3d3",
+    "data/tilesets/secondary/pallet_town_frlg/metatiles.bin": "032438546fb0b0ccc236d0657fb02be2d4bda8c19c53730412c8076a15110b4c",
+    "data/tilesets/secondary/pallet_town_frlg/metatile_attributes.bin": "40f6802176e40007d98af7d6a8b59e0d07e5ea3c5ae0a896833697e644f3f8c7",
+    "data/layouts/PalletTown_Frlg/map.bin": "f3b179a93218e0dd4a713a4a5f6b00ff2ab05b69dc24dfa7c4db2c15918b5452",
+    "data/maps/PalletTown_Frlg/map.json": "152c428b76876b780f5ac47bbd784da6133ab74cf2f540b129454b3caccb96a6",
+    "data/layouts/JourneyPalletHarbor/map.bin": "ec418c60c4f5cac3eb4ee9e2a29e1f48709e552411f67086a5352945001afcbc",
+    "data/layouts/JourneyPalletHarbor/border.bin": "9ff63640fa3b4682056532b7924b03250ccc7a832f64ccec3dea79ea8595a24d",
+    "data/maps/JourneyPalletHarbor/map.json": "95c0d0b1c4904692db889eebc6c4a0ee0041ae785e17c384611425665865b122",
+    "data/maps/JourneyPalletHarbor/scripts.inc": "438d9d3656ddbf6816a0f24c8ca00f6181b775a9a6bc4f648fe5e2f59378be79",
+    "data/layouts/layouts.json": "3c6026de007a7e80fc7d70b2b9fe850f3137760a3ee1cdc850aed952839eb65b",
+    "data/maps/map_groups.json": "20674ed705e83e97f651ce4916f3531ea47335801193ada5fd97dbb930f91e09",
+    "data/event_scripts.s": "86dd0274131aef82a3df50d88e4130c0f087953e22f025d1ec2d053d33a1e034",
+    "data/scripts/journey_campaign_gates.inc": "b2cdd6c72fcd0ced06c2d1e73573dfa53f7525a60af7bc691da53740b0c18154",
+    "src/data/journey_world_position.h": "2346dbe47ce180bedd5f1c549762721c4f36b8b220aab1787f49f322f723dfa9"
+  },
+  "differences": []
 }

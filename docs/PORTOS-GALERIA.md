@@ -6,6 +6,8 @@ Imagens renderizadas dos tiles e sprites utilizados na ROM. Exibem os atores per
 
 ![Pallet](images/port-update/PalletTown_Frlg.png)
 
+[Terminal atualizado e interior com navio](porto-pallet.md).
+
 ## Fuchsia / Route 19
 
 ![Fuchsia / Route 19](images/port-update/Route19_Frlg.png)
