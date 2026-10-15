@@ -21,6 +21,7 @@ jobs:
           python3 -m unittest discover -s tools/hoenn -v
           python3 tools/hoenn/verify_playable.py
           python3 tools/hoenn/verify_versions.py
+          python3 tools/hoenn/stage_pages.py --output /tmp/player-site
       - name: Install mGBA
         run: |
           sudo apt-get update

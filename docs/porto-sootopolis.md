@@ -6,8 +6,11 @@ telhado foi substituído pelo azul-claro do lago. A arquitetura usa o terminal
 nativo de Slateport, com telhado azul.
 
 A ponte tem duas fileiras de madeira, sem a faixa excedente na parte inferior.
-Na cabeceira voltada à terra, o fundo atrás da madeira usa os tiles originais de
-grama da cidade, em vez de água.
+Na cabeceira voltada à terra, a madeira continua no mesmo tile. O fundo e os
+pixels de água/espuma que vinham desenhados na camada da frente foram removidos;
+a textura nativa de grama aparece nos espaços ao redor da madeira.
+
+![Junção ampliada: madeira no tile original, integrada à grama](images/sootopolis-harbor/shore-junction.png)
 
 ![Exterior e interior renderizados dos arquivos usados na compilação](images/sootopolis-harbor/preview.png)
 
@@ -80,3 +83,23 @@ python3 -m unittest discover -s tools/hoenn -p test_sootopolis_harbor.py -v
 
 As imagens da prévia são composições dos tiles e atores permanentes da fonte
 compilada. As imagens em `validation/` são capturas do emulador.
+
+## Validação do player e preparação do Pages
+
+O relatório do navegador precisa corresponder aos hashes das quatro ROMs atuais.
+Com Playwright disponível no Node e Chromium instalado, inicie o servidor local:
+
+```sh
+python3 tools/sea_routes/serve.py --port 8770
+```
+
+Em outro terminal, na raiz do checkout:
+
+```sh
+node tools/hoenn/validate_versions_browser.cjs
+python3 tools/hoenn/stage_pages.py --output /tmp/player-site
+```
+
+O teste abre as quatro edições no mGBA do player e confere o hash dos bytes
+baixados. O comando de preparação do Pages também roda nos PRs; relatórios de
+uma ROM anterior bloqueiam a checagem antes da integração.

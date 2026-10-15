@@ -37,7 +37,8 @@ def verify_update(directory, info):
             for field in ['bridge_walked_without_surf', 'controller_entry_and_exit',
                           'crisis_layout_controller_access', 'captain_interacted_physically',
                           'submarine_hull_blocked_over_water', 'returned_to_original_land',
-                          'shore_end_uses_native_grass', 'extra_bottom_bridge_row_removed']:
+                          'shore_end_uses_native_grass', 'extra_bottom_bridge_row_removed',
+                          'bridge_end_stays_in_original_tile']:
                 assert report[field] is True, field
             assert report['submarine_sprite_size'] == [64, 64]
             assert [t['destination'] for t in report['trips']] == ['SlateportCity_Harbor', 'JourneySootopolisHarbor']
