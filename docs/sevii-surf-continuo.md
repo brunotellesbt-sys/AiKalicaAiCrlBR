@@ -12,22 +12,45 @@ O evento da primeira chegada de barco em One Island não interrompe quem chega
 por Surf. A posição no mapa-múndi acompanha as novas conexões, inclusive após
 salvar e continuar.
 
-Esta atualização parte de `e89729b` (main após os PRs #82 e #83). Não cria casas,
-pontes, barcos ou barqueiros. Preserva as construções, os NPCs, os IDs de chegada
-dos barcos e a terra nativa das ilhas, assim como os arquivos de Sootopolis e
-Pallet dessa base.
-O PR #84 de Pallet segue separado; suas alterações não fazem parte deste PR.
+A integração inclui o porto de Pallet já incorporado à `main`, com as novas
+correções de acesso ao sul, do canto da borda e do corredor leste. Sootopolis
+foi novamente testada. Os IDs de mapas e destinos anteriores são preservados.
+
+## Atlas e passagens costeiras
+
+O atlas usa linhas horizontais e verticais. Os trechos marcados em verde na
+revisão foram unidos em linhas ou retângulos, com o mesmo traçado no zoom.
+O desenho não tem nomes impressos: nomes e definições ficam na seleção do MAP
+ou no [índice de rotas](rotas-maritimas.md).
+
+Foram acrescentadas três passagens diretas que faltavam nas áreas vermelhas:
+
+- **North Hoenn Strait:** canal de Kanto até a costa norte da Rota 124.
+- **Two-Three Passage:** costa sul de Two Island até o mar de Three Island.
+- **Tanoby Dawn Sea:** ligação de Tanoby e do mar de Seven Island até Birth Island.
+
+As rotas são mapas jogáveis, com água de Surf, bordas fechadas onde não há
+vizinho, bancos de areia e conexões recíprocas. Os novos IDs são acrescentados
+ao fim do grupo existente. A terra, os eventos e as entradas nativas das ilhas
+são mantidos. A antiga ligação Kanto Eastern Channel → Sea02 cede apenas sua
+boca de quatro tiles para o novo canal; Sea01 ↔ Sea02 continua disponível.
+
+![Atlas sem rótulos](images/navigation/world-map-current.png)
 
 ## Verificação
 
-- Percurso contínuo com controle no mGBA: sete ilhas, desembarque e retorno,
-  1.746 tiles, 14 travessias entre as áreas de chegada e as costas nativas.
-- Nenhum fade nas 9.194 observações de frames próximas às novas travessias.
-- Salvamento e Continue preservam localização e modo Surf.
-- GPS compilado: 408.618 tiles, sem salto nas bordas conectadas e no máximo
-  dois pixels por movimento de tile.
-- Comparação de 31.006 arquivos de entrada que ficam fora da alteração.
-- Reprodução independente dos 36 arquivos de saída das quatro camadas de Sevii.
+As provas atuais incluem caminhada por controle nas sete costas de Sevii,
+desembarque, retorno e Save/Continue; travessias de ida e volta nas três novas
+passagens; e abertura do MAP em vários pontos percorridos de cada passagem.
+O cursor deve mudar dentro da própria rota, coincidir com o tile atual,
+manter a posição nas bordas e voltar ao jogador com SELECT, inclusive no zoom.
+O GPS compilado é auditado em todas as conexões, sem salto entre as bordas
+compartilhadas e com no máximo dois pixels por tile.
+
+Pallet e Sootopolis têm novos testes de acesso e de viagem pela rede nas quatro
+edições. Os hashes das provas nativas e das inicializações no navegador devem
+corresponder às ROMs publicadas. A cadeia de 147 camadas é reproduzida a partir
+das entradas verificadas; as provas históricas retêm os hashes de suas ROMs.
 
 O início do teste, a equipe no nível 100, as flags de treinadores derrotados e
 Repel são fixtures. A navegação posterior usa os controles do emulador. Isso

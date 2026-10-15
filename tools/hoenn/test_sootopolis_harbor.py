@@ -14,7 +14,7 @@ class SootopolisHarbor(unittest.TestCase):
     def setUpClass(cls):
         cls.manifest = json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
         cls.harbor_manifest = cls.manifest
-        if cls.manifest['validation_scope'] == 'sevii-surf-connections':
+        if cls.manifest['validation_scope'] == 'sevii-surf-connections' and not cls.manifest.get('sootopolis_harbor_retested'):
             reference = cls.manifest['previous_sootopolis_validation']
             raw = (ROOT/reference['manifest']).read_bytes()
             assert hashlib.sha256(raw).hexdigest() == reference['manifest_sha256']
@@ -23,7 +23,7 @@ class SootopolisHarbor(unittest.TestCase):
         cls.report = json.loads((OUT/'validation/sootopolis-harbor.json').read_text())
 
     def test_controller_evidence_stays_bound_to_the_harbor_rom(self):
-        self.assertEqual(self.harbor_manifest['validation_scope'], 'sootopolis-harbor')
+        self.assertIn(self.harbor_manifest['validation_scope'], ('sootopolis-harbor','sevii-surf-connections'))
         self.assertTrue(self.manifest['validated'])
         for row in self.manifest['variants']:
             raw = (ROOT/'mods/hoenn/versions'/row['file']).read_bytes()

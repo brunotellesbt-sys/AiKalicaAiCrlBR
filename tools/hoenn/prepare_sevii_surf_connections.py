@@ -5,7 +5,7 @@ No port buildings, boats, captains, town land, or non-Sevii terrain are edited.
 import argparse,copy,json,struct
 from pathlib import Path
 from candidate_layer import Layer
-from prepare_sootopolis_harbor import PRIOR,LAYER as PREVIOUS
+from prepare_pallet_harbor import PRIOR,LAYER as PREVIOUS
 from sevii_navigation_grid import reconcile
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -71,7 +71,7 @@ void JourneySeviiSurfEntry(void)
         if m!=before[n]:
             assert m['object_events']==before[n]['object_events'] and m['warp_events']==before[n]['warp_events'],n
             layer.stage(f'data/maps/{n}/map.json',json.dumps(m,indent=2)+'\n')
-    geometry=json.loads((s/'.journey-navigated-sea-atlas').read_text())
+    geometry=json.loads((s/'.journey-pallet-harbor').read_text())
     header,gps=reconcile((s/'src/data/journey_world_position.h').read_text(),geometry['projections'],maps)
     layer.stage('src/data/journey_world_position.h',header)
     return layer.finish(seamless_connections=seams,redirected_redundant_edges=redirected,terrain=terrain,gps=gps,

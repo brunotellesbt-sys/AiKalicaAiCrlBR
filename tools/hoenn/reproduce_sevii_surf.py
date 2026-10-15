@@ -1,10 +1,11 @@
-"""Replay the Sevii overlays independently from their verified inputs."""
+"""Replay the coastal and atlas overlays independently from their verified inputs."""
 import argparse,hashlib,importlib,json,tempfile
 from pathlib import Path
-from prepare_sevii_arrival_layout import PRIOR,LAYER
+from prepare_world_route_chart import PRIOR,LAYER
+from prepare_sevii_surf_connections import PRIOR as BASE
 
 def reproduce(source,inputs,output):
-    source=Path(source).resolve();inputs=[Path(p) for p in inputs];layers=PRIOR+[LAYER];delta=layers[141:];assert len(inputs)==len(delta)
+    source=Path(source).resolve();inputs=[Path(p) for p in inputs];layers=PRIOR+[LAYER];delta=layers[len(BASE):];assert len(inputs)==len(delta)
     reports=[json.loads((source/('.journey-'+n)).read_text()) for n in delta];final={};originals={}
     for r,snapshot in zip(reports,inputs):
         for p,h in r['original_sha256'].items():
@@ -35,4 +36,4 @@ def reproduce(source,inputs,output):
     return proof
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--source',type=Path,required=True);p.add_argument('--original-inputs',type=Path,nargs=4,required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args();reproduce(a.source,a.original_inputs,a.output)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--source',type=Path,required=True);p.add_argument('--original-inputs',type=Path,nargs="+",required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args();reproduce(a.source,a.original_inputs,a.output)

@@ -2,13 +2,14 @@
 import argparse,hashlib,json,re,struct,subprocess
 from pathlib import Path
 import numpy as np
-from prepare_sevii_arrival_layout import PRIOR,LAYER
+from prepare_world_route_chart import PRIOR,LAYER
+from prepare_sevii_surf_connections import PRIOR as BASE
 
 ROOT=Path(__file__).resolve().parents[2]
 
 def audit(source,output):
     source,output=Path(source),Path(output);output.mkdir(parents=True,exist_ok=True)
-    layers=PRIOR+[LAYER];base=layers[:141];delta=layers[141:];expected=json.loads((source/'.source-acquired.json').read_text())['sha256'].copy()
+    layers=PRIOR+[LAYER];base=layers[:len(BASE)];delta=layers[len(BASE):];expected=json.loads((source/'.source-acquired.json').read_text())['sha256'].copy()
     for n in base:expected.update(json.loads((source/('.journey-'+n)).read_text())['prepared_sha256'])
     final={};reports=[]
     for n in delta:
@@ -25,8 +26,8 @@ def audit(source,output):
     nm=subprocess.check_output([str(ROOT/'.local/arm-binutils/usr/bin/arm-none-eabi-nm'),'-S',str(source/'pokeemerald.elf')],text=True)
     symbols={n:(int(a,16)-0x08000000,int(z,16)) for a,z,_,n in re.findall(r'^(\w+) (\w+) (\w) (\S+)$',nm,re.M)};rom=(source/'pokeemerald.gba').read_bytes()
     at,z=symbols['sWorldNavigationPixels'];packed=np.frombuffer(rom[at:at+z],dtype='<u2');values=np.stack([packed&255,packed>>8],axis=1).astype(int)
-    assert len(values)==reports[0]['gps']['compiled_gps_tiles']
-    projections=json.loads((source/'.journey-navigated-sea-atlas').read_text())['projections'];grids={};at,z=symbols['sWorldTileGrids'];stride=z//len(projections);maximum=0
+    assert len(values)==reports[-1]['gps']['compiled_gps_tiles']
+    projections=json.loads((source/'.journey-world-route-chart').read_text())['projections'];grids={};at,z=symbols['sWorldTileGrids'];stride=z//len(projections);maximum=0
     for i,p in enumerate(projections):
         first,ident,w,h=struct.unpack_from('<IHHH',rom,at+i*stride);assert [w,h]==[p['width'],p['height']]
         grid=values[first:first+w*h].reshape(h,w,2);grids[p['map']]=grid
@@ -45,7 +46,7 @@ def audit(source,output):
                 assert np.array_equal(a[y,x],b[yy,xx]),(n,o,x,y,xx,yy)
             seams+=1
     assert maximum<=2
-    proof=dict(passed=True,rom_sha256=hashlib.sha256(rom).hexdigest(),layers=layers,base_layers=141,new_layers=delta,
+    proof=dict(passed=True,rom_sha256=hashlib.sha256(rom).hexdigest(),layers=layers,base_layers=len(BASE),new_layers=delta,
                changed_source_files=sorted(changed),overlay_output_files=sorted(final),unchanged_source_inputs_checked=len(unchanged),
                preserved_port_paths={n:h for n,h in unchanged.items() if 'sootopolis' in n.lower() or 'pallet' in n.lower()},
                port_buildings_boats_captains_and_warps_unchanged=True,native_sevii_land_unchanged=True,

@@ -7,7 +7,7 @@ As imagens de composição abaixo são renderizadas dos arquivos reais de mapa e
 [Galeria com os 21 portos e a sala do Rotom](PORTOS-GALERIA.md). As sete Sevii usam a mesma estrutura nativa; cada ilha possui sua própria casa com entrada e saída correspondentes.
 
 - Mossdeep: casa no estilo da cidade na ilha oeste, areia em volta, ponte vertical e barco ao lado; preservado como aprovado.
-- Pallet: casa na margem direita. Ponte horizontal prolongada dois tiles para a esquerda sobre o mar; barco deslocado um tile para a direita na última revisão. Seu casco fica abaixo da madeira, inteiramente na água.
+- Pallet: a versão costeira descrita aqui usava uma casa na margem direita; o [terminal atual de Slateport em Pallet](porto-pallet.md) substitui essa casa. Ponte horizontal prolongada dois tiles para a esquerda sobre o mar; barco deslocado um tile para a direita na última revisão. Seu casco fica abaixo da madeira, inteiramente na água.
 - Fuchsia / Rota 19: casa acima da parte da ponte em terra, ponte pequena e barco. Mantida como aprovada.
 - Rota 25: ponte a leste de Bill; a água local permanece bloqueada para Surf.
 - Cinnabar: terreno nativo preservado, casa de barqueiro, ponte e barco; sem alteração nesta revisão.

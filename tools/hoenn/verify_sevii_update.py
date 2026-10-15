@@ -1,4 +1,4 @@
-"""Bind the Sevii-only release to current Surf proof and preserved harbor history."""
+"""Bind the integrated release to current Surf/port/atlas proof and harbor history."""
 import hashlib,json
 from pathlib import Path
 
@@ -11,9 +11,15 @@ def verify_update(directory,info):
         path=Path(p['file']);assert not path.is_absolute() and '..' not in path.parts
         raw=(directory/path).read_bytes();assert hashlib.sha256(raw).hexdigest()==p['sha256'];r=json.loads(raw);assert r['passed']
         kind,target=p['kind'],p['target'];expected=info['parent_rom_sha256'] if target=='common' else variants[target]
-        if kind=='reproduction':
+        if kind=='pallet-reproduction':
+            assert target=='common' and r['original_inputs_verified'] and r['idempotent']
+            assert r['layers']==info['integration_layers'][:info['integration_layers'].index('pallet-harbor')+1]
+            layout=json.loads((ROOT/'mods/hoenn/pallet-harbor-validation/layout.json').read_text())
+            assert r['prepared_sha256']==layout['prepared_sha256'] and len(r['byte_identical_outputs'])==14
+        elif kind=='reproduction':
             assert target=='common' and r['layers']==info['integration_layers'] and not r['differences']
-            assert r['original_inputs_verified'] and r['idempotent'] and len(r['reproduced_layers'])==4
+            assert r['original_inputs_verified'] and r['idempotent']
+            assert r['reproduced_layers']==['sevii-surf-connections','sevii-coast-camera','sevii-surf-embarkation','sevii-arrival-layout','world-route-chart']
         else:assert r['rom_sha256']==expected,(kind,target,'Stale evidence')
         if kind=='sevii-surf-connections':
             assert {i['map'] for i in r['islands']}==ISLANDS and len(r['seams'])==14
@@ -25,7 +31,9 @@ def verify_update(directory,info):
             assert r['port_buildings_boats_captains_and_warps_unchanged'] and r['native_sevii_land_unchanged']
             assert r['birth_and_navel_arrival_layout_preserved']
             assert r['unchanged_source_inputs_checked']>30000 and r['preserved_port_paths']
-            assert r['compiled_gps_tiles']==408618 and r['maximum_neighbor_pixel_step']<=2 and r['maximum_seam_delta']==0
+            layout=json.loads((ROOT/'mods/hoenn/world-route-chart-validation/layout.json').read_text())
+            assert r['compiled_gps_tiles']==info['compiled_gps_tiles']==sum(p['width']*p['height'] for p in layout['projections'])
+            assert r['maximum_neighbor_pixel_step']<=2 and r['maximum_seam_delta']==0
             assert not any('sootopolis' in n.lower() or 'pallet' in n.lower() for n in r['changed_source_files'])
         elif kind=='coast-connectivity':
             assert r['all_integrated_surface_seas_reachable'] and r['compiled_collision_and_water_behaviors']
@@ -33,10 +41,43 @@ def verify_update(directory,info):
         elif kind=='special-encounters':
             assert r['actual_tv_capture_and_form_ui'] and len(r['rotom_changes'])==6
             assert len(r['dex_locations'])==r['event_only_families']==21 and r['form_tools_available']==54
-        else:assert kind=='reproduction',kind
+        elif kind=='pallet-harbor':
+            for field in ['original_bridge_preserved','outside_boat_shifted_right','controller_entry_and_exit',
+                          'outside_captain_removed','bridges_joined_and_walked','complete_trees_checked',
+                          'interior_captain_interacted_physically','ship_hull_blocked_over_water',
+                          'route21_surf_roundtrip','merged_bay_surfed','south_bridge_walked',
+                          'eastern_corridor_walked','bridge_crossed_by_surf_below','upper_corner_corrected']:
+                assert r[field] is True,field
+            assert r['ship_sprite_size']==[96,40] and r['route21_atlas_seam_delta']==0
+            assert [t['destination'] for t in r['trips']]==['JourneyRoute12Shipyard','JourneyPalletHarbor']
+        elif kind=='sootopolis-harbor':
+            for field in ['bridge_walked_without_surf','controller_entry_and_exit','crisis_layout_controller_access',
+                          'captain_interacted_physically','submarine_hull_blocked_over_water','returned_to_original_land',
+                          'shore_end_uses_native_grass','extra_bottom_bridge_row_removed','bridge_end_stays_in_original_tile']:
+                assert r[field] is True,field
+            assert r['submarine_sprite_size']==[64,64]
+            assert [t['destination'] for t in r['trips']]==['SlateportCity_Harbor','JourneySootopolisHarbor']
+        elif kind=='world-route-chart':
+            for field in ['all_edges_match_native_map_connections','all_segments_orthogonal',
+                          'compiled_atlas_pixels_match_source','all_route_names_registered',
+                          'native_map_open_zoom_and_return','native_land_and_town_art_preserved',
+                          'compiled_zoom_pixels_match_source','cursor_tracks_controller_movement_on_reopen']:
+                assert r[field] is True,field
+            layout=json.loads((ROOT/'mods/hoenn/world-route-chart-validation/layout.json').read_text())
+            assert r['actual_connection_edges']==len(layout['routes']) and r['named_nodes']==len(layout['nodes'])
+            assert r['new_passage_count']==len(r['new_surf_passages'])==len(layout['passages'])==3
+            for passage in r['new_surf_passages']:
+                assert passage['no_midroute_coordinate_writes']
+                assert all(c['outbound_and_return'] and c['surf_preserved'] for c in passage['controller_crossings'])
+                assert len({tuple(s['marker']) for s in passage['cursor_samples'] if s['map']==passage['map']})>1
+                assert all(s['cursor_matches_compiled_tile_position'] and s['recenter'] and s['zoom'] for s in passage['cursor_samples'])
+        else:assert kind in ('reproduction','pallet-reproduction'),kind
         covered.add((target,kind))
     assert {('common',k) for k in ['sevii-surf-connections','sevii-source-scope','coast-connectivity','reproduction']}<=covered
     assert {(n,k) for n in variants for k in ['sevii-surf-connections','special-encounters']}<=covered
+    assert {(n,k) for n in variants for k in ['pallet-harbor','sootopolis-harbor']}<=covered
+    assert {('common',k) for k in ['pallet-harbor','pallet-reproduction','sootopolis-harbor','world-route-chart']}<=covered
+    assert info['pallet_harbor_validated'] and info['sootopolis_harbor_retested'] and info['world_route_chart_validated']
     reference=info['previous_sootopolis_validation'];assert reference['retested_on_current_rom'] is False
     raw=(ROOT/reference['manifest']).read_bytes();assert hashlib.sha256(raw).hexdigest()==reference['manifest_sha256']
     previous=json.loads(raw)

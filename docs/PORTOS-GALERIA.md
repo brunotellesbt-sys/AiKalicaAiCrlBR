@@ -32,9 +32,7 @@ Imagens renderizadas dos tiles e sprites utilizados na ROM. Exibem os atores per
 
 ## Sootopolis
 
-![Sootopolis: terminal ligado à terra e submarino interno](images/sootopolis-harbor/preview.png)
-
-[Detalhes e capturas no emulador](porto-sootopolis.md).
+![Sootopolis](images/port-update/SootopolisCity.png)
 
 ## Dewford
 
