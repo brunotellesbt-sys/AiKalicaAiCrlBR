@@ -1,5 +1,11 @@
 # Atualização costeira e níveis dinâmicos
 
+Atualização posterior: as quatro edições incluem o [porto de Sootopolis](../../docs/porto-sootopolis.md),
+com ponte prolongada e ligada à terra, terminal, capitão interno da rede geral e submarino 64×64.
+Os testes novos de caminhada, portas e viagens passaram em cada edição e também no layout
+da crise. A camada 141 reproduziu seus 21 arquivos. Os resultados costeiros abaixo pertencem
+à publicação anterior, preservada com seus hashes; não foram repetidos integralmente nesta revisão.
+
 As quatro ROMs atuais incluem as casas de Pallet/Fuchsia/Sevii, pontes e embarcações revisadas, navios maiores de Hoenn, os portos compactos, a sala de Rotom com visual de Lavender, bordas completas de areia, níveis dinâmicos e entradas de Eren/Luffy fora da câmera, com orientação estável e diálogos maiores. O mapa marítimo inclui os corredores originais de Surf e as conexões novas, desenhados em segmentos ortogonais; Seafoam e as 14 cavernas novas usam acessos reais. O zoom detalhado de 448×224 funciona no menu e na AREA, com locais especiais corrigidos. A Diglett’s Cave tem dois combates opcionais Galactic e um grunt de levantamento. As evidências novas ficam em `coastal-update-validation/`: 140 camadas, 1.483 arquivos reproduzidos, 21 portos, 343 mapas auditados estruturalmente e 57 costas geradas. Foram observados dois pontos válidos de entrada dos rivais em cada uma das 12 rotas. A campanha inteira não foi jogada do começo aos créditos nesta entrega.
 
 O atlas agora une os mares contínuos sem desenhar divisões entre arquivos como rotas, usa grandes áreas retangulares e oculta o protótipo desconectado. O GPS compilado cobre 408.618 tiles, com deslocamento máximo de dois pixels entre vizinhos e igualdade nas bordas compartilhadas. Há pontos próprios para 145 andares de cavernas originais. Oito viagens por controles atravessam os 56 mares gerados ativos e os corredores nativos solicitados, totalizando 7.468 tiles e 152 transições. A equipe de nível 100, Rare Candies e repels são recursos do teste. Veja [navegação, imagens e pendências finais](../../docs/navegacao-e-pendencias-finais.md).

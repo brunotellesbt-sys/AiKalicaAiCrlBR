@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "rom_sha256": "beaa5f464c7e0fbb7df91b94feefc8740a72adf06d876ee8db00709ec4d55846",
+  "bridge_walked_without_surf": true,
+  "controller_entry_and_exit": true,
+  "captain_interacted_physically": true,
+  "submarine_hull_blocked_over_water": true,
+  "submarine_sprite_size": [
+    64,
+    64
+  ],
+  "crisis_layout_controller_access": true,
+  "shore_end_uses_native_grass": true,
+  "extra_bottom_bridge_row_removed": true,
+  "trips": [
+    {
+      "destination": "SlateportCity_Harbor",
+      "arrival": [
+        16,
+        14
+      ],
+      "native_animation_observations": 18
+    },
+    {
+      "destination": "JourneySootopolisHarbor",
+      "arrival": [
+        8,
+        12
+      ],
+      "native_animation_observations": 18
+    }
+  ],
+  "returned_to_original_land": true,
+  "initial_story_state_and_first_placement_are_fixtures": true,
+  "full_campaign_playthrough": false
+}
