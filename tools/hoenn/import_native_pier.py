@@ -4,13 +4,14 @@ from pathlib import Path
 from PIL import Image
 from render_sea_maps import MapRenderer
 
-def import_pier(source,target,emerald=False,donor="gTileset_LavenderTown",mids=None,donor_emerald=False,overrides=None):
+def import_pier(source,target,emerald=False,donor="gTileset_LavenderTown",mids=None,donor_emerald=False,overrides=None,donor_palettes=None):
  source=Path(source);r=MapRenderer(source);primary='gTileset_General' if emerald else 'gTileset_General_Frlg';cut=512 if emerald else 640
  donor_cut=512 if donor_emerald else 640
  source_primary=r.tileset('gTileset_General' if donor_emerald else 'gTileset_General_Frlg')
  overrides=overrides or {}
  def read(p):return overrides.get(str(p),(source/p).read_bytes())
  dt,dp,dw=r.tileset(donor);tt,tp,tw=r.tileset(target);pt,pp,pw=r.tileset(primary)
+ def donor_colors(bank):return (donor_palettes or {}).get(bank,source_primary[1][bank] if bank<(6 if donor_emerald else 7) else dp[bank])
  folder=Path(re.search(r'"([^"]+)"',re.search(r'\b'+re.search(r'\.metatiles = (\w+)',re.search(r'const struct Tileset '+target+r'\s*=\s*\{(.*?)\};',r.headers,re.S)[1])[1]+r'\[\].*?;',r.metas,re.S)[0])[1]).parent
  if str(folder/'tiles.png') in overrides:
   tt=Image.open(io.BytesIO(read(folder/'tiles.png')));raw=read(folder/'metatiles.bin');tw=struct.unpack('<'+'H'*(len(raw)//2),raw)
@@ -21,17 +22,17 @@ def import_pier(source,target,emerald=False,donor="gTileset_LavenderTown",mids=N
  def metatile_words(mid):return source_primary[2][mid*8:(mid+1)*8] if mid<donor_cut else dw[(mid-donor_cut)*8:(mid-donor_cut+1)*8]
  # Reuse identical palettes before reserving scarce secondary palette slots.
  for pal in sorted({word>>12 for mid in (mids or [0x2F3,0x2F4,0x2F5]) for word in metatile_words(mid)}):
-  incoming=source_primary[1][pal] if pal<(6 if donor_emerald else 7) else dp[pal]
+  incoming=donor_colors(pal)
   if any(entries==incoming for _,entries in palettes):continue
   free=[bank for bank in range(12,5 if emerald else 6,-1) if bank not in usedbanks]
   if free:
-   bank=free[0];usedbanks.add(bank);colors=source_primary[1][pal] if pal<(6 if donor_emerald else 7) else dp[pal];palettes=[(b,colors if b==bank else entries) for b,entries in palettes];palette_files[str(folder/f'palettes/{bank:02}.pal')]=('JASC-PAL\n0100\n16\n'+'\n'.join(' '.join(map(str,c)) for c in colors)+'\n').encode()
+   bank=free[0];usedbanks.add(bank);colors=incoming;palettes=[(b,colors if b==bank else entries) for b,entries in palettes];palette_files[str(folder/f'palettes/{bank:02}.pal')]=('JASC-PAL\n0100\n16\n'+'\n'.join(' '.join(map(str,c)) for c in colors)+'\n').encode()
  for mid in (mids or [0x2F3,0x2F4,0x2F5]):
   ids[mid]=cut+len(newwords)//8
   for word in metatile_words(mid):
    tile=word&1023;pal=word>>12;key=(tile,pal)
    if key not in mapping:
-    im=source_primary[0] if tile<donor_cut else dt;idx=tile if tile<donor_cut else tile-donor_cut;cols=im.width//8;colors=source_primary[1][pal] if pal<(6 if donor_emerald else 7) else dp[pal];values=[im.getpixel((idx%cols*8+x,idx//cols*8+y)) for y in range(8) for x in range(8)];options=[]
+    im=source_primary[0] if tile<donor_cut else dt;idx=tile if tile<donor_cut else tile-donor_cut;cols=im.width//8;colors=donor_colors(pal);values=[im.getpixel((idx%cols*8+x,idx//cols*8+y)) for y in range(8) for x in range(8)];options=[]
     for bank,entries in palettes:
      conversion=[0]
      for c in colors[1:16]:conversion.append(1+min(range(15),key=lambda i:sum((a-b)**2 for a,b in zip(c,entries[i+1]))))

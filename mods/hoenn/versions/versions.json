@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "233c8d4e8a428c5ca4d2de757750e41b7cdfe2698c6baf8edca381cc8b6c0eee",
-  "build_rules_offset": 9076112,
+  "parent_rom_sha256": "c7bd27ca3476e99b2bf1dede54a44c5eb9d8c25b313958bd8c5f997b8e6d50e1",
+  "build_rules_offset": 9089944,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "3a620916596f97073d69f9d9f030629f395c0a364fa96e9b14068abcd89d29f1",
+      "sha256": "e3dabb6a9757efa2f8e008c824aa7c50452549a672b35269bb4d9419c9038081",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        9076112,
-        9076113,
-        9076114
+        9089944,
+        9089945,
+        9089946
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "793c33db036d6f12ca833e2874013129805893982f930928f3a094e115f7e93c",
+      "sha256": "0cce1cc7ca8c953e910dece3a7bebec15992eaa1437455d5486fe2dbdd9a55e1",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        9076112,
-        9076113
+        9089944,
+        9089945
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "2012c8881f03ac5281bada26072b1e1efd144d08ab4d7a404afaf11e3c3f5599",
+      "sha256": "66ecd17c01d376e6cc0c70b53496b8a47d0ecac6c4b36de93347e57a14c9035f",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        9076114
+        9089946
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "02838983d88de9cc60ec4b12c3d4e97d699b163c9a691c896d91b860017fc9f9",
+      "sha256": "14afdc783c3929e72761888a65088916188561dd528c58a90c446b7d86f3c9f1",
       "patched_byte_offsets": [
         160,
         162,
@@ -245,206 +245,55 @@
     "diglett-scout-battles",
     "offscreen-rival-entrances",
     "complete-marine-atlas",
-    "navigated-sea-atlas"
+    "navigated-sea-atlas",
+    "sootopolis-harbor"
   ],
-  "validation_scope": "campaign-coastal-update",
+  "validation_scope": "sootopolis-harbor",
   "full_campaign_playthrough": false,
-  "special_encounters_validated": true,
+  "previous_validation": {
+    "manifest": "mods/hoenn/validation-baselines/pr81/versions.json",
+    "manifest_sha256": "d67a4baba3462f9030ac07d5416c815a915737a1d5ea25a3c7dc06f1b0966175",
+    "parent_rom": "mods/hoenn/validation-baselines/pr81/parent.gba.gz",
+    "parent_archive_sha256": "632707c8c5fb96f674bd7f3d1770c3870d22434431deccebfe48cbe88b45122a",
+    "evidence_directory": "mods/hoenn/versions",
+    "retested_on_current_rom": false
+  },
   "proofs": [
     {
-      "file": "evidence/common/marine-atlas.json",
+      "file": "evidence/sootopolis-harbor/common/sootopolis-harbor.json",
       "target": "common",
-      "kind": "marine-atlas",
-      "sha256": "ba0f934ed29c456a3d25d26aee538fcd60e1616109acbd5bb4ae51277b2819c2"
+      "kind": "sootopolis-harbor",
+      "sha256": "145325881688eb3b1f48de573982f1a4a3a04c14f8b3872b5deceb6ab1e1c7e3"
     },
     {
-      "file": "evidence/common/coast-connectivity.json",
-      "target": "common",
-      "kind": "coast-connectivity",
-      "sha256": "406d5cab1c75a60fca6ee3c94572356f968657e3850e270b52b6edd4774c69a2"
-    },
-    {
-      "file": "evidence/common/crossover-sites.json",
-      "target": "common",
-      "kind": "crossover-sites",
-      "sha256": "7f6523c0159d82a5f1f4c5a2a9ea0d73df114c9d0d62d2a286f2aed0bfd104ce"
-    },
-    {
-      "file": "evidence/common/eren-approach.json",
-      "target": "common",
-      "kind": "eren-approach",
-      "sha256": "2c4f6817932ee572b3300b2b400e3d12c36e8959f067d1aa0ce62cb691741261"
-    },
-    {
-      "file": "evidence/common/compact-ferry.json",
-      "target": "common",
-      "kind": "compact-ferry",
-      "sha256": "1dd3cb29cfdf4fe30d0c04f06b32e51c1cef64214e12b77f85ad36b3d08ea8aa"
-    },
-    {
-      "file": "evidence/common/coastal-geometry.json",
-      "target": "common",
-      "kind": "coastal-geometry",
-      "sha256": "e0d5d93784dde5f57281d5fc76c15ead5be57b39ce5a2c214272d27959c3a34d"
-    },
-    {
-      "file": "evidence/common/live-levels.json",
-      "target": "common",
-      "kind": "live-levels",
-      "sha256": "ba5216968850b1f8b90ca232e7ad7bd6450dff870da2d6e3b6fe55ceb24cb327"
-    },
-    {
-      "file": "evidence/common/luffy-approach.json",
-      "target": "common",
-      "kind": "luffy-approach",
-      "sha256": "ecb92f649a9fb8dc323426fb98a04f4361d97f4fa49284bda8ae588953a514b2"
-    },
-    {
-      "file": "evidence/common/native-cave-points.json",
-      "target": "common",
-      "kind": "native-cave-points",
-      "sha256": "9b7dbdb5bbb4e503bc194403b157583a062f8792b23b57c6e503ed15a8bf194a"
-    },
-    {
-      "file": "evidence/common/generated-sea-journey-0.json",
-      "target": "common",
-      "kind": "generated-sea-journey-0",
-      "sha256": "9c8b78babacdae37dc18ff46074010c778877b3576976cd194d5f4b08235753c"
-    },
-    {
-      "file": "evidence/common/generated-sea-journey-1.json",
-      "target": "common",
-      "kind": "generated-sea-journey-1",
-      "sha256": "071c6588d7d3c7c8939046de04d9aafcf93ebef150ce0fcd1493bfcf7c65001e"
-    },
-    {
-      "file": "evidence/common/generated-sea-journey-2.json",
-      "target": "common",
-      "kind": "generated-sea-journey-2",
-      "sha256": "f78c50fb317b2f4600e08d86f73f31101ed780e6dc6ac742552eb2e3e4708a9e"
-    },
-    {
-      "file": "evidence/common/generated-sea-journey-3.json",
-      "target": "common",
-      "kind": "generated-sea-journey-3",
-      "sha256": "c3b313b23aa759ad0bc287527f54f1663f33a9b6ff127171d3acf687bee4095f"
-    },
-    {
-      "file": "evidence/common/navigated-sea-atlas.json",
-      "target": "common",
-      "kind": "navigated-sea-atlas",
-      "sha256": "08f915b8241a339d2b14d11ee77a68f497012123ffd7f722965e86c24657c69b"
-    },
-    {
-      "file": "evidence/common/pallet-cinnabar-fuchsia.json",
-      "target": "common",
-      "kind": "pallet-cinnabar-fuchsia",
-      "sha256": "d9c51121779e9330d9c3651714a63f350525a5a40f0d87c39449c671ebdfdc17"
-    },
-    {
-      "file": "evidence/common/petalburg-dewford.json",
-      "target": "common",
-      "kind": "petalburg-dewford",
-      "sha256": "67804bba255591314d98c82d5a00f1a0a1ffed8cfddda71521bcfd5d05a06ada"
-    },
-    {
-      "file": "evidence/common/rustboro-dewford.json",
-      "target": "common",
-      "kind": "rustboro-dewford",
-      "sha256": "ccb9ae8a9b58a5fc317f22e5523a493a1c1c945de49f275d6c3af02281faa8df"
-    },
-    {
-      "file": "evidence/common/western-river-dewford.json",
-      "target": "common",
-      "kind": "western-river-dewford",
-      "sha256": "370ea97f7c07810487d1ed42a7a9851df6c54c3a5f791dc52433e2a4d7f6495c"
-    },
-    {
-      "file": "evidence/common/ports-and-actors.json",
-      "target": "common",
-      "kind": "ports-and-actors",
-      "sha256": "e22d57a5a6a888549fa3e866f49cb8be525d9550818d42fb1e45f9f746ff90dc"
-    },
-    {
-      "file": "evidence/common/world-map-position.json",
-      "target": "common",
-      "kind": "world-map-position",
-      "sha256": "0262fe462dde301d0b737096fa7c8b476fa650286ba3eb599a27c7c9a9dcb664"
-    },
-    {
-      "file": "evidence/common/reproduction.json",
+      "file": "evidence/sootopolis-harbor/common/reproduction.json",
       "target": "common",
       "kind": "reproduction",
-      "sha256": "5530fd9e88390952a2a2ef1a052e3195c3480521410f1eb776b32d52513b62d0"
+      "sha256": "d86b64f1963cfc2fa0c8483d3d72b1d8b51de012c1bcb70f5ec225b71b710d9f"
     },
     {
-      "file": "evidence/common/diglett-scouts.json",
-      "target": "common",
-      "kind": "diglett-scouts",
-      "sha256": "e05811f727a80f6ea0cd18713f8e36251d25e51915523ce011cc1ecfb5dffe6d"
-    },
-    {
-      "file": "evidence/common/sharp-map.json",
-      "target": "common",
-      "kind": "sharp-map",
-      "sha256": "1528e9ec6c8471982c8c9aee8d7758d36253aa7c19e172ea7e92a39db1ef90e2"
-    },
-    {
-      "file": "evidence/Pokemon-Journey-Gen1-4-Normal/gym-teams.json",
+      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-4-Normal/sootopolis-harbor.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "gym-teams",
-      "sha256": "c12069e4fbd5dbf80c450642787c1b9b6b3b9eb6dec280b9a936254c85cb1b5b"
+      "kind": "sootopolis-harbor",
+      "sha256": "fbc5fe79c00c300bc1d526103734a1261207c807ed305aec44f0182a4a4fd5c0"
     },
     {
-      "file": "evidence/Pokemon-Journey-Gen1-4-Normal/special-encounters.json",
-      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "special-encounters",
-      "sha256": "7187522cdb3218572d34733434866d7d76e9e50c81016144e8096b873982111b"
-    },
-    {
-      "file": "evidence/Pokemon-Journey-Gen1-4-Hard/gym-teams.json",
+      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-4-Hard/sootopolis-harbor.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "gym-teams",
-      "sha256": "732ae701606ef1f25cba7b13321378697d71bcff6d3235cb01964bc5f1cfa687"
+      "kind": "sootopolis-harbor",
+      "sha256": "d2be07e93f71948a7f6a71c928bcb2d20a7e72a84d831615fddae40ceb56ce00"
     },
     {
-      "file": "evidence/Pokemon-Journey-Gen1-4-Hard/special-encounters.json",
-      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "special-encounters",
-      "sha256": "fae0170d884da3c142b5f760dc92f2b17b8ab0129ae51111738d5d4ad105a2bc"
-    },
-    {
-      "file": "evidence/Pokemon-Journey-Gen1-9-Normal/gym-teams.json",
+      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-9-Normal/sootopolis-harbor.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "gym-teams",
-      "sha256": "42b7442d4869f9fe29ca4d5210e91f16a5040ad1f6f241ada615c67ded16f8c2"
+      "kind": "sootopolis-harbor",
+      "sha256": "a15a64cad89ba6254545e097aba839bce5ce6e38224f984eb7eda1484db1f5b7"
     },
     {
-      "file": "evidence/Pokemon-Journey-Gen1-9-Normal/special-encounters.json",
-      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "special-encounters",
-      "sha256": "ec458534e31bacb3c93219c8f912f8a27a3e8eb37af5f04c81b6eb448a2a4e4d"
-    },
-    {
-      "file": "evidence/Pokemon-Journey-Gen1-9-Hard/gym-teams.json",
+      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-9-Hard/sootopolis-harbor.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "gym-teams",
-      "sha256": "15a800854c22ae4c17b9cdb49f55ae068d8f35abbe9915e55bde4486df614367"
-    },
-    {
-      "file": "evidence/Pokemon-Journey-Gen1-9-Hard/special-encounters.json",
-      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "special-encounters",
-      "sha256": "759f8cb613e8c546cce7735891f48320e4ef11ac85bc6f8eb3138def2595eafb"
+      "kind": "sootopolis-harbor",
+      "sha256": "0f432c4ec094783e25b62926f96a0436da4e8d9b46020d47e4a7c6273b6d3321"
     }
-  ],
-  "historical_validation": {
-    "manifest": "mods/hoenn/validation-baselines/pr79/versions.json",
-    "manifest_sha256": "aef1de99346ea209c848483e112f96bb342b45bc4837a0cbbed208dd0e0bf077",
-    "parent_rom_sha256": "6be718b3917eb6b6f639384ee99563280e272417beec5e22b6722c4cad033462",
-    "compressed_parent_sha256": "e535f4c1d775f07a872b9d4998baf985638afbf68fffdf6df2e8490184cc58bc",
-    "retested_on_current_rom": false,
-    "source": "PR79",
-    "notes": "Earlier PWT/mechanics runs remain bound to their original ROM bytes; no tournaments repeated for this coastal update."
-  }
+  ]
 }

@@ -1,5 +1,8 @@
 # Pokémon Journey — quatro edições GBA
 
+[Novo porto de Sootopolis](../../../docs/porto-sootopolis.md): ponte ligada à terra,
+terminal com capitão da rede mundial e submarino ampliado. Validado nas quatro edições.
+
 Escolha uma edição e comece um save novo. A Bag ampliada muda o formato do save; saves antigos não são compatíveis com esta entrega. Todas as edições possuem Kanto, Hoenn, Sevii e o capítulo Galactic.
 
 No repositório, as quatro ROMs atuais também ficam em [`roms/`](../../../roms/README.md), atualizadas automaticamente pelo empacotamento e conferidas pela CI.

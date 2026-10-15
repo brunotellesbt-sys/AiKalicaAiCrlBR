@@ -15,7 +15,7 @@ As imagens de composição abaixo são renderizadas dos arquivos reais de mapa e
 - Dewford: barco horizontal junto à ponte nativa.
 - Costa de Petalburg: barco vertical aproximado um tile da extremidade da ponte; objeto e percurso originais de Briney preservados separadamente.
 - Pacifidlog: plataformas nativas preservadas, barco horizontal.
-- Sootopolis: submarino mais próximo, na primeira posição onde os seis tiles do casco ficam exclusivamente sobre a água.
+- Sootopolis: [terminal ligado à terra por ponte, capitão interno da rede geral e submarino ampliado](porto-sootopolis.md).
 - Battle Frontier: pequena ponte vertical e um único S.S. Tidal ao lado, sem sobreposição de embarcações.
 - Slateport e Lilycove: S.S. Tidal nativo dentro da água dos portos, com os cascos bloqueados para Surf. Um serviço mundial por porto; os atendentes dão orientação, sem menu duplicado.
 - Vermilion: barco horizontal sobre o vão com água no trecho leste da ponte; passarela oeste e suas saídas preservadas.

@@ -1,11 +1,15 @@
-"""Check the new release's exact ROMs and separate historical tournament proof."""
+"""Check the current release and preserve the earlier coastal/tournament proof."""
 import hashlib,json,unittest
 from pathlib import Path
 from verify_versions import verify
 ROOT=Path(__file__).resolve().parents[2]
 class CoastalRelease(unittest.TestCase):
  def test_current_roms_have_fresh_focused_evidence(self):
-  r=verify(ROOT/'mods/hoenn/versions');self.assertEqual(r['validation_scope'],'campaign-coastal-update');self.assertEqual(len(r['variants']),4)
+  r=verify(ROOT/'mods/hoenn/versions');self.assertEqual(len(r['variants']),4)
+  if r['validation_scope']=='sootopolis-harbor':
+   self.assertFalse(r['previous_validation']['retested_on_current_rom'])
+   r=json.loads((ROOT/r['previous_validation']['manifest']).read_text())
+  self.assertEqual(r['validation_scope'],'campaign-coastal-update')
   self.assertFalse(r['full_campaign_playthrough']);self.assertFalse(r['historical_validation']['retested_on_current_rom'])
   self.assertNotEqual(r['parent_rom_sha256'],r['historical_validation']['parent_rom_sha256'])
  def test_live_levels_follow_mean_inside_both_regions(self):

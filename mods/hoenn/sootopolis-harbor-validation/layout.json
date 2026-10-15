@@ -1,0 +1,256 @@
+{
+  "layer": "sootopolis-harbor",
+  "exterior": "SootopolisCity",
+  "interior": "JourneySootopolisHarbor",
+  "door": [
+    23,
+    44
+  ],
+  "bridge": [
+    [
+      16,
+      45
+    ],
+    [
+      17,
+      45
+    ],
+    [
+      18,
+      45
+    ],
+    [
+      19,
+      45
+    ],
+    [
+      20,
+      45
+    ],
+    [
+      21,
+      45
+    ],
+    [
+      22,
+      45
+    ],
+    [
+      23,
+      45
+    ],
+    [
+      24,
+      45
+    ],
+    [
+      25,
+      45
+    ],
+    [
+      26,
+      45
+    ],
+    [
+      16,
+      46
+    ],
+    [
+      17,
+      46
+    ],
+    [
+      18,
+      46
+    ],
+    [
+      19,
+      46
+    ],
+    [
+      20,
+      46
+    ],
+    [
+      21,
+      46
+    ],
+    [
+      22,
+      46
+    ],
+    [
+      23,
+      46
+    ],
+    [
+      24,
+      46
+    ],
+    [
+      25,
+      46
+    ],
+    [
+      26,
+      46
+    ]
+  ],
+  "shore": [
+    16,
+    45
+  ],
+  "terminal": [
+    20,
+    39,
+    7,
+    6
+  ],
+  "captain": [
+    8,
+    11
+  ],
+  "arrival": [
+    8,
+    12
+  ],
+  "submarine": [
+    8,
+    9
+  ],
+  "hull": [
+    [
+      6,
+      6
+    ],
+    [
+      7,
+      6
+    ],
+    [
+      8,
+      6
+    ],
+    [
+      9,
+      6
+    ],
+    [
+      10,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      7
+    ],
+    [
+      8,
+      7
+    ],
+    [
+      9,
+      7
+    ],
+    [
+      10,
+      7
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      9,
+      8
+    ],
+    [
+      10,
+      8
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      7,
+      9
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      9
+    ],
+    [
+      10,
+      9
+    ]
+  ],
+  "submarine_sprite_size": [
+    64,
+    64
+  ],
+  "submarine_scale": 2,
+  "world_port_id": 17,
+  "native_story_objects_preserved": true,
+  "crisis_layout_supported": true,
+  "bridge_extended_left_tiles": 1,
+  "outside_captain_removed": true,
+  "private_interior_layout": true,
+  "original_sha256": {
+    "data/tilesets/secondary/sootopolis/tiles.png": "171e251331a1b7217bfd4f54ff5a9f32b09e04ae11246928be55af2120af3146",
+    "data/tilesets/secondary/sootopolis/metatiles.bin": "5d0dc0306fd154d8359fe88ac5add512f289bb9bfd0c5a57e800ebd13bf799ee",
+    "data/tilesets/secondary/sootopolis/metatile_attributes.bin": "730c1bc475039536acab2ee31ec2d434e47798d0b6d2376a8839ef00ec78c7be",
+    "data/tilesets/secondary/sootopolis/palettes/12.pal": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675",
+    "data/tilesets/secondary/sootopolis/palettes/11.pal": "8e3975eed978407af4404fd06902700ce4450788ea704072d17e482ba21ffdf5",
+    "data/layouts/SootopolisCity/map.bin": "08094b464fd62cea2b4906f5f5f98b64bb4bb00f90075fbce0ba437779dceddc",
+    "data/layouts/SootopolisCity_LegendsBattle/map.bin": "a46095c6047903c2549b15c4f5f9551412291fc8cd825997ae5b7c5c4f8b3017",
+    "data/maps/SootopolisCity/map.json": "2e3622a2a73a809a964f0b06a1dc87607ead71c40956e23545d519b311c48b04",
+    "graphics/object_events/pics/journey/submarine.png": "3f9b6a6a8ec1c85a001d061be5864fa63dcfba56d6b5359d30090bfdcc47828c",
+    "src/data/object_events/object_event_pic_tables.h": "55c224be31d7757ff668073b34172851fef68f61681d7b804f90840b79a6ff8c",
+    "src/data/object_events/object_event_graphics_info.h": "3cb5884df7fcb6cc7895e1e4891d481ca167eb5736967d2f7b6de1cbfdd4b2c0",
+    "data/layouts/layouts.json": "fa79982d94e99477d268816ec2cfefe9a2fe2dede7ed3fb11442d9bec6a6bcff",
+    "data/maps/map_groups.json": "b046b29f8449ba05976ae4ff01a4efc97f3459690916b40fcd0d97395702382f",
+    "data/event_scripts.s": "fd361430e295b5a26bfd08f365e4d5a63f2583a14325d85e94f3d53a9f0e9c8a",
+    "data/scripts/journey_campaign_gates.inc": "a979d4b7c271e83c8c2a27c11c7a930a7d3e10fd9ca7b0f4c386f2af1b9bc123",
+    "include/journey_birth_arrivals.h": "7ccda660279f5a67a3353dfd756d42238750b8e95e6b6068e8001369e942bdf8",
+    "src/journey_birth.c": "e76d0b588dee865200af321802b0e959b8f3b653f2b776d8cab6a86f48c629e0"
+  },
+  "prepared_sha256": {
+    "data/tilesets/secondary/sootopolis/tiles.png": "7bc80ef11ff121be002c4c069b0c9d02e51830c63b4cd81516692706eed77ab9",
+    "data/tilesets/secondary/sootopolis/metatiles.bin": "f3bd59d308e401260e147da7159fc12397bbab1fc193b076f6eefdee5b5a19ba",
+    "data/tilesets/secondary/sootopolis/metatile_attributes.bin": "938de109baa9bfb181e0896161cf888da158b5a0dd958348fecde3356556ce01",
+    "data/tilesets/secondary/sootopolis/palettes/12.pal": "fe75074797a9b56c7313c575c62ca6bf427f0f5d52a3e5a79d1fcd3fc53fca96",
+    "data/tilesets/secondary/sootopolis/palettes/11.pal": "3b0dd0ef073238a7728d42d3ae33314897b3c1534b0c65b5dd5aeb46c633a0d6",
+    "data/layouts/SootopolisCity/map.bin": "fad2beeb945ec298c718db4762149c38f4e1234abd8a4cfa26144c07530afe8f",
+    "data/layouts/SootopolisCity_LegendsBattle/map.bin": "b8d3e5a18301f2cfd55bbea2cd7c500e7cd32aef497a2f751e09c083fcadfc19",
+    "data/maps/SootopolisCity/map.json": "57e87a4778883be4033a39849356f335f6b4531d09790809487bc08e0c91dc99",
+    "graphics/object_events/pics/journey/submarine.png": "5bd7c26eec440aa4b66ae56d4392d6374bbd865cfea2ff11c6f86c4bf80b834c",
+    "src/data/object_events/object_event_pic_tables.h": "91b9c442cb96fac54e0d7d3fa06991c11c3eb0abbb60957ef0d8c7d781fc23dd",
+    "src/data/object_events/object_event_graphics_info.h": "001fb9189e5d1e62c832f184722a2aefc2cf71c09126f1d9ad1714b51736f0bb",
+    "data/layouts/JourneySootopolisHarbor/map.bin": "6821a9b584f092762280104b0616b5acb9f471ddc406cd29ce3768a8d65862e3",
+    "data/layouts/JourneySootopolisHarbor/border.bin": "9ff63640fa3b4682056532b7924b03250ccc7a832f64ccec3dea79ea8595a24d",
+    "data/maps/JourneySootopolisHarbor/map.json": "0202d52cefa9734d66bc165270cbab5c5473b3d21eb14cd0661ece18e0ce6bc6",
+    "data/maps/JourneySootopolisHarbor/scripts.inc": "d49c5dfb3edd8f7ff94216c9a1e38563aea9211d30343a93efff4ea068a90dc4",
+    "data/layouts/layouts.json": "515c707a625ee026a7d222b9dbedbfbeea808bc9bdf032b5fc666b771eeed7ed",
+    "data/maps/map_groups.json": "64fed948198321c4d22c0e75a552f67b275a634cdd5b1f2bc39e3ff6f160cfd2",
+    "data/event_scripts.s": "29b76e5b4e4da5e69c02f7950227ee03f423aa1ca3ca0b27fc331d559f786c83",
+    "data/scripts/journey_campaign_gates.inc": "80b7352e403e3ad95a77194d28cec3b6075de866c38a3807df48f2ee591c2422",
+    "include/journey_birth_arrivals.h": "b2eb962d6f4c6e4f1a82308f34bb32124e6b4c337434786fabf61899f7a27b43",
+    "src/journey_birth.c": "118ba56fc461783d3c32d82a7e9a66844f7421cd1d3554725af356a224af8e98"
+  }
+}
