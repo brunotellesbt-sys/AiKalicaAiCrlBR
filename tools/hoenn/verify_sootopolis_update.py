@@ -22,7 +22,28 @@ def verify_update(directory, info):
             assert proof['target'] == 'common'
             assert report['original_inputs_verified'] and report['idempotent']
             assert report['layers'] == info['integration_layers']
-            assert len(report['byte_identical_outputs']) == 21
+            if info.get('pallet_harbor_validated'):
+                assert report['layer'] == 'pallet-harbor'
+                assert len(report['byte_identical_outputs']) == 14
+                assert set(report['byte_identical_outputs']) == set(report['prepared_sha256'])
+            else:
+                assert len(report['byte_identical_outputs']) == 21
+        elif proof['kind'] == 'pallet-harbor':
+            sha = info['parent_rom_sha256'] if proof['target'] == 'common' else expected[proof['target']]
+            assert report['rom_sha256'] == sha, 'Stale Pallet evidence'
+            for field in ['original_bridge_preserved', 'outside_boat_shifted_right',
+                          'bridge_walked_without_surf', 'controller_entry_and_exit',
+                          'interior_captain_interacted_physically', 'outside_captain_removed',
+                          'bridges_joined_and_walked', 'complete_trees_checked', 'upper_cliff_rim',
+                          'ship_hull_blocked_over_water', 'returned_to_original_land',
+                          'route21_surf_roundtrip', 'merged_bay_surfed']:
+                assert report[field] is True, field
+            assert report['ship_sprite_size'] == [96, 40]
+            assert report['route21_atlas_seam_delta'] == 0
+            assert [t['destination'] for t in report['trips']] == [
+                'JourneyRoute12Shipyard', 'JourneyPalletHarbor']
+            assert all(t['native_animation_observations'] >= 5 for t in report['trips'])
+            assert report['full_campaign_playthrough'] is False
         elif proof['kind'] == 'special-encounters':
             assert proof['target'] in expected
             assert report['rom_sha256'] == expected[proof['target']], 'Stale workshop evidence'
@@ -49,6 +70,10 @@ def verify_update(directory, info):
     assert {(name, 'special-encounters') for name in expected} <= covered
     assert info['special_encounters_validated'] is True
     assert {('common', 'sootopolis-harbor'), ('common', 'reproduction')} <= covered
+    if info['integration_layers'][-1] == 'pallet-harbor':
+        assert info['pallet_harbor_validated'] is True
+        assert {(name, 'pallet-harbor') for name in expected} <= covered
+        assert ('common', 'pallet-harbor') in covered
     assert info['full_campaign_playthrough'] is False
 
     # Preserve the previously published coastal proof instead of claiming its

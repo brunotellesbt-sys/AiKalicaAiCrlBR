@@ -4,7 +4,7 @@ from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
 from render_sea_maps import MapRenderer
 BOXES={
- 'PalletTown_Frlg':('Pallet',(5,12,23,21)), 'Route19_Frlg':('Fuchsia / Route 19',(4,7,17,20)),
+ 'PalletTown_Frlg':('Pallet',(0,12,26,30)), 'Route19_Frlg':('Fuchsia / Route 19',(4,7,17,20)),
  'VermilionCity_Frlg':('Vermilion',(29,23,40,36)),
  'MossdeepCity':('Mossdeep - ilha oeste',(0,23,12,36)), 'CinnabarIsland_Frlg':('Cinnabar',(6,9,16,20)),
  'Route25_Frlg':('Route 25',(58,7,71,18)), 'JourneyRoute12Shipyard':('Lavender',(16,32,40,46)),
