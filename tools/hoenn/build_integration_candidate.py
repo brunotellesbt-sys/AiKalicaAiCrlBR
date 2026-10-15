@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 
 import package_playable
-from prepare_sootopolis_harbor import PRIOR, LAYER
+from prepare_sevii_arrival_layout import PRIOR, LAYER
 
 
 def main():
