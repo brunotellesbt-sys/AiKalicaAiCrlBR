@@ -23,13 +23,21 @@ def verify_update(directory, info):
             assert report['original_inputs_verified'] and report['idempotent']
             assert report['layers'] == info['integration_layers']
             assert len(report['byte_identical_outputs']) == 21
+        elif proof['kind'] == 'special-encounters':
+            assert proof['target'] in expected
+            assert report['rom_sha256'] == expected[proof['target']], 'Stale workshop evidence'
+            assert report['actual_tv_capture_and_form_ui'] is True
+            assert len(report['rotom_changes']) == 6
+            assert len(report['dex_locations']) == report['event_only_families'] == 21
+            assert report['form_tools_available'] == 54
         else:
             assert proof['kind'] == 'sootopolis-harbor'
             sha = info['parent_rom_sha256'] if proof['target'] == 'common' else expected[proof['target']]
             assert report['rom_sha256'] == sha, 'Stale harbor evidence'
             for field in ['bridge_walked_without_surf', 'controller_entry_and_exit',
                           'crisis_layout_controller_access', 'captain_interacted_physically',
-                          'submarine_hull_blocked_over_water', 'returned_to_original_land']:
+                          'submarine_hull_blocked_over_water', 'returned_to_original_land',
+                          'shore_end_uses_native_grass', 'extra_bottom_bridge_row_removed']:
                 assert report[field] is True, field
             assert report['submarine_sprite_size'] == [64, 64]
             assert [t['destination'] for t in report['trips']] == ['SlateportCity_Harbor', 'JourneySootopolisHarbor']
@@ -37,6 +45,8 @@ def verify_update(directory, info):
             assert report['full_campaign_playthrough'] is False
         covered.add((proof['target'], proof['kind']))
     assert {(name, 'sootopolis-harbor') for name in expected} <= covered
+    assert {(name, 'special-encounters') for name in expected} <= covered
+    assert info['special_encounters_validated'] is True
     assert {('common', 'sootopolis-harbor'), ('common', 'reproduction')} <= covered
     assert info['full_campaign_playthrough'] is False
 
@@ -50,6 +60,7 @@ def verify_update(directory, info):
     raw = (ROOT/previous['manifest']).read_bytes()
     assert hashlib.sha256(raw).hexdigest() == previous['manifest_sha256']
     old = json.loads(raw)
+    assert info['historical_validation'] == old['historical_validation']
     archive = (ROOT/previous['parent_rom']).read_bytes()
     assert hashlib.sha256(archive).hexdigest() == previous['parent_archive_sha256']
     parent = gzip.decompress(archive)

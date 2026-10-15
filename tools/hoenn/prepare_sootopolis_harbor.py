@@ -73,6 +73,15 @@ def prepare(source):
     for path, raw in files.items():
         layer.stage(path, raw)
 
+    # Only the land-facing end gets grass beneath its wooden foreground.
+    # Reuse the native grass metatile's background words, including its texture;
+    # changing a shared palette would also recolor water beside the terminal.
+    path = 'data/tilesets/secondary/sootopolis/metatiles.bin'
+    raw = bytearray(layer.outputs[path])
+    grass = renderer.tileset('gTileset_General')[2][8:12]
+    struct.pack_into('<4H', raw, (pier[0x220]-512)*16, *grass)
+    layer.stage(path, raw)
+
     # Remove the old ferry objects only; native story NPCs and their local IDs
     # remain intact. Restore the blocked water under the old submarine.
     old_boats = [o for o in city['object_events']
@@ -101,8 +110,8 @@ def prepare(source):
             mid = 0x220 if x == 16 else 0x224 if x == 26 else 0x221
             blocks[y*width+x] = 0x3000 | pier[mid]
             bridge.append([x, y])
-    for x in range(19, 27):
-        blocks[47*width+x] = 0x1400 | pier[0x22C if x == 26 else 0x229]
+    # Keep the native lake immediately below the two-row bridge. The old
+    # third row was an unwanted strip protruding beyond the wooden deck.
     assert baseline[45*width+16] >> 12 == 3
     door_index = len(city['warp_events'])
     city['warp_events'].append(dict(x=DOOR[0], y=DOOR[1], elevation=3,
@@ -221,6 +230,7 @@ def prepare(source):
                         submarine_sprite_size=[64, 64], submarine_scale=2,
                         world_port_id=17, native_story_objects_preserved=True,
                         crisis_layout_supported=True, bridge_extended_left_tiles=1,
+                        shore_end_background='native_grass', extra_bottom_row_removed=True,
                         outside_captain_removed=True, private_interior_layout=True)
 
 

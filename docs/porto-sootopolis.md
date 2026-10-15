@@ -5,6 +5,10 @@ O terminal ocupa a água junto à margem oeste do lago. A ponte de madeira chega
 telhado foi substituído pelo azul-claro do lago. A arquitetura usa o terminal
 nativo de Slateport, com telhado azul.
 
+A ponte tem duas fileiras de madeira, sem a faixa excedente na parte inferior.
+Na cabeceira voltada à terra, o fundo atrás da madeira usa os tiles originais de
+grama da cidade, em vez de água.
+
 ![Exterior e interior renderizados dos arquivos usados na compilação](images/sootopolis-harbor/preview.png)
 
 O capitão atende dentro do porto, junto ao submarino ampliado em 2×. O sprite
@@ -33,6 +37,10 @@ registram testes reais no motor mGBA em cada uma das quatro ROMs:
 - Conversa com os capitães físicos e viagem Sootopolis → Slateport → Sootopolis,
   com menus, animação e desembarque em terra.
 - Entrada e saída a pé também no layout da crise.
+- Verificação do fundo de grama compilado na cabeceira e de água livre abaixo
+  da ponte, sem a fileira excedente.
+- Encontros especiais e oficina: captura do Rotom, interface das formas,
+  fósseis e locais da Pokédex nas quatro edições.
 
 ![Retorno da rede geral no emulador](../mods/hoenn/sootopolis-harbor-validation/validation/sootopolis-network-return.png)
 

@@ -1,5 +1,5 @@
 {
-  "parent_rom_sha256": "c7bd27ca3476e99b2bf1dede54a44c5eb9d8c25b313958bd8c5f997b8e6d50e1",
+  "parent_rom_sha256": "0365360805b7071173c456e9f4cc688d5abff9c968156b48c67e980ebed35be9",
   "build_rules_offset": 9089944,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "e3dabb6a9757efa2f8e008c824aa7c50452549a672b35269bb4d9419c9038081",
+      "sha256": "beaa5f464c7e0fbb7df91b94feefc8740a72adf06d876ee8db00709ec4d55846",
       "patched_byte_offsets": [
         160,
         162,
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "0cce1cc7ca8c953e910dece3a7bebec15992eaa1437455d5486fe2dbdd9a55e1",
+      "sha256": "c843b9282d3ba9205e80272baa91b4f530e526304303a4e93125bce5ac2c859a",
       "patched_byte_offsets": [
         160,
         162,
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "66ecd17c01d376e6cc0c70b53496b8a47d0ecac6c4b36de93347e57a14c9035f",
+      "sha256": "002ffbd85a01ed5f5d60adbd5a46d47ab4c1c00a14255cf49a508cb2871efd05",
       "patched_byte_offsets": [
         160,
         162,
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "14afdc783c3929e72761888a65088916188561dd528c58a90c446b7d86f3c9f1",
+      "sha256": "4ba4897718739892782f18be8bf2d10d1d238170b5e7a4bd4942adfc9b9113c8",
       "patched_byte_offsets": [
         160,
         162,
@@ -258,12 +258,22 @@
     "evidence_directory": "mods/hoenn/versions",
     "retested_on_current_rom": false
   },
+  "historical_validation": {
+    "manifest": "mods/hoenn/validation-baselines/pr79/versions.json",
+    "manifest_sha256": "aef1de99346ea209c848483e112f96bb342b45bc4837a0cbbed208dd0e0bf077",
+    "parent_rom_sha256": "6be718b3917eb6b6f639384ee99563280e272417beec5e22b6722c4cad033462",
+    "compressed_parent_sha256": "e535f4c1d775f07a872b9d4998baf985638afbf68fffdf6df2e8490184cc58bc",
+    "retested_on_current_rom": false,
+    "source": "PR79",
+    "notes": "Earlier PWT/mechanics runs remain bound to their original ROM bytes; no tournaments repeated for this coastal update."
+  },
+  "special_encounters_validated": true,
   "proofs": [
     {
       "file": "evidence/sootopolis-harbor/common/sootopolis-harbor.json",
       "target": "common",
       "kind": "sootopolis-harbor",
-      "sha256": "145325881688eb3b1f48de573982f1a4a3a04c14f8b3872b5deceb6ab1e1c7e3"
+      "sha256": "30b3ed1d68ece26f2a8d7cf9474b6ba903da9d8a0f434888351532596a21e9a5"
     },
     {
       "file": "evidence/sootopolis-harbor/common/reproduction.json",
@@ -275,25 +285,49 @@
       "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-4-Normal/sootopolis-harbor.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "sootopolis-harbor",
-      "sha256": "fbc5fe79c00c300bc1d526103734a1261207c807ed305aec44f0182a4a4fd5c0"
+      "sha256": "9e7f4e5a9b6db39c1cec94e364ca9e47a58eece9d54dda6a70b6d4c30c106c1b"
+    },
+    {
+      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-4-Normal/special-encounters.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "special-encounters",
+      "sha256": "3d2a8fef4b2d8d5021c7539f01d85a69fbc24b67ff820cacb34a66c64677b6af"
     },
     {
       "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-4-Hard/sootopolis-harbor.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "sootopolis-harbor",
-      "sha256": "d2be07e93f71948a7f6a71c928bcb2d20a7e72a84d831615fddae40ceb56ce00"
+      "sha256": "e977243891bdd3d94ad0c73f7b7b312a17d35dcdf725af107d1942336e5f7fe9"
+    },
+    {
+      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-4-Hard/special-encounters.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "special-encounters",
+      "sha256": "9f4aaa97b18108b29be3e08311ec180c6b2920a5a9a927f91b552825878c2c49"
     },
     {
       "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-9-Normal/sootopolis-harbor.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "sootopolis-harbor",
-      "sha256": "a15a64cad89ba6254545e097aba839bce5ce6e38224f984eb7eda1484db1f5b7"
+      "sha256": "f7ceebd4c6ccacc7bd13736400c45a4e8c58c5cd56e78b50eb1eb690ee431415"
+    },
+    {
+      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-9-Normal/special-encounters.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "special-encounters",
+      "sha256": "47d5e35de3951b10a1366f87e3e5296ebfad13f088ed3c72add0e7e04cf3e3f0"
     },
     {
       "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-9-Hard/sootopolis-harbor.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "sootopolis-harbor",
-      "sha256": "0f432c4ec094783e25b62926f96a0436da4e8d9b46020d47e4a7c6273b6d3321"
+      "sha256": "63d4cabc372524900d648b579efda6910665a392a7853f2068a59299ba228daf"
+    },
+    {
+      "file": "evidence/sootopolis-harbor/Pokemon-Journey-Gen1-9-Hard/special-encounters.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "special-encounters",
+      "sha256": "e3bd464806be394c7444a291fa094dbe48895f8e06be5b6dfcb36b3881b78c88"
     }
   ]
 }

@@ -16,9 +16,11 @@ def publish(source, validation, output):
     previous = current['previous_validation']
     old = (ROOT/previous['manifest']).read_bytes()
     assert hashlib.sha256(old).hexdigest() == previous['manifest_sha256']
+    historical = json.loads(old)['historical_validation']
     info = package(source, output)
     info.update(validation_scope='sootopolis-harbor', full_campaign_playthrough=False,
-                previous_validation=previous, proofs=[])
+                previous_validation=previous, historical_validation=historical,
+                special_encounters_validated=True, proofs=[])
     reproduction = json.loads((validation/'validation/reproduction.json').read_text())
     reproduction['layers'] = info['integration_layers']
     (validation/'validation/reproduction.json').write_text(json.dumps(reproduction, indent=2)+'\n')
@@ -36,6 +38,7 @@ def publish(source, validation, output):
     for row in info['variants']:
         edition = row['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba')
         add(validation/edition/'sootopolis-harbor.json', row['file'], 'sootopolis-harbor')
+        add(validation/edition/'special-encounters.json', row['file'], 'special-encounters')
     (output/'versions.json').write_text(json.dumps(info, indent=2)+'\n')
     verify(output, require_seal=False)
     info['validated'] = True

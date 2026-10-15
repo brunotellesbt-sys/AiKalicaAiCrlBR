@@ -30,7 +30,8 @@ class SootopolisHarbor(unittest.TestCase):
 
     def test_both_layouts_have_real_walkable_access(self):
         for field in ['bridge_walked_without_surf', 'controller_entry_and_exit',
-                      'crisis_layout_controller_access', 'returned_to_original_land']:
+                      'crisis_layout_controller_access', 'returned_to_original_land',
+                      'shore_end_uses_native_grass', 'extra_bottom_bridge_row_removed']:
             self.assertTrue(self.report[field], field)
         self.assertEqual(self.report['submarine_sprite_size'], [64, 64])
         self.assertTrue(self.report['submarine_hull_blocked_over_water'])
