@@ -69,6 +69,10 @@ def prepare(source):
     records, cache = [], {}
     for pair,link in sorted(edges.items()):
         a,b = pair
+        passage=next((p for p in PASSAGES if p['map'] in pair),None)
+        if passage:
+            records.append(dict(**link,polyline=passage['chart_paths'][0],actual_connection=True,authored_passage=passage['map']))
+            continue
         endpoints = tuple(sorted((chart_coords[a],chart_coords[b])))
         if endpoints not in cache:
             try:
@@ -123,6 +127,18 @@ def prepare(source):
                 segments.append((q,target))
         for a,b in segments:ink(a,b)
         rectifications.append(dict(box=[l,t,rr,bb],shape=kind,contacts=contacts,segments=list(segments)))
+    # Draw the three authored coastal corridors last. Routing these through
+    # the generic shared-trunk A* erased the very additions marked in red.
+    visible_passages=[]
+    for p in PASSAGES:
+        visible=[]
+        for points in p['chart_paths']:
+            for a,b in zip(points,points[1:]):
+                ink(a,b)
+                dx=(b[0]>a[0])-(b[0]<a[0]);dy=(b[1]>a[1])-(b[1]<a[1])
+                visible.extend([a[0]+dx*i,a[1]+dy*i] for i in range(abs(a[0]-b[0])+abs(a[1]-b[1])+1)
+                               if image.getpixel((a[0]+dx*i,a[1]+dy*i))==2)
+        visible_passages.append(dict(map=p['map'],paths=p['chart_paths'],blue_pixels=sorted(set(map(tuple,visible)))))
     def readable(label):
         label = re.sub(r' FRLG$', '', label)
         label = re.sub(r'(SEA|CHANNEL)(\d+)',r'\1 \2',label)
@@ -175,7 +191,7 @@ def prepare(source):
     layer.stage(path,header)
     return layer.finish(routes=records,nodes=[dict(map=n,name=names[n],position=list(coords[n])) for n in nodes],
                         actual_connections_only=True,all_segments_orthogonal=True,
-                        passages=PASSAGES,green_rectifications=rectifications,gps=gps,projections=geometry['projections'],
+                        passages=PASSAGES,visible_passages=visible_passages,green_rectifications=rectifications,gps=gps,projections=geometry['projections'],
                         native_land_and_town_art_preserved=True,route_names_selectable_in_game=True,
                         map_size=[224,112],native_land_and_events_preserved=True,zoom_matches_overview=True)
 

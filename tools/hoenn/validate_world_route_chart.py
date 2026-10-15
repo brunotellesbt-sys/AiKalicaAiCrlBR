@@ -19,6 +19,11 @@ for route in r['routes']:
  assert any(c['map']==other and c['direction']==route['direction'] and c['offset']==route['offset'] for c in m.get('connections') or []),route
  assert all(a[0]==b[0] or a[1]==b[1] for a,b in zip(route['polyline'],route['polyline'][1:])),route
 assert all(n['name'] and ('MAP_GROUP('+maps[n['map']]['id']+')') in header for n in r['nodes'])
+from prepare_world_dex_map import decode
+atlas=decode(header)
+visible_samples=[(101,65),(101,69),(101,73),(175,43),(181,46),(190,50),
+                 (176,101),(176,106),(185,109),(168,105)]
+assert all(atlas.getpixel(p)==2 for p in visible_samples),'Missing route at a red annotation'
 
 def menu_sample(label):
  before=(location(),position());expected=marker();packed=native('JourneyWorldMapPosition')
@@ -51,6 +56,8 @@ for p in r['passages']:
   assert samples[-2]['marker']==after['marker'],('GPS jumps across seam',n,other)
   walk((n,*a));walk(original);crossings.append(dict(destination=other,outbound_and_return=True,surf_preserved=True))
  assert len({tuple(s['marker']) for s in samples if s['map']==n})>1,(n,'GPS did not move along route')
+ l,t,rr,bb=p['chart_bounds']
+ assert all(l<=s['marker'][0]<=rr and t<=s['marker'][1]<=bb for s in samples if s['map']==n),(n,'Cursor left the marked corridor',samples)
  checks.append(dict(map=n,controller_crossings=crossings,cursor_samples=samples,
                     no_midroute_coordinate_writes=True,initial_placement_is_fixture=True))
  print('Surf passage and reopening MAP cursor passed:',n,flush=True)
@@ -63,6 +70,8 @@ proof=dict(passed=True,rom_sha256=hashlib.sha256(rom).hexdigest(),actual_connect
            native_map_open_zoom_and_return=True,native_land_and_town_art_preserved=r['native_land_and_town_art_preserved'],
            new_surf_passages=checks,cursor_tracks_controller_movement_on_reopen=True,
            new_passage_count=len(checks),green_rectifications=len(r['green_rectifications']),
+           authored_corridors_visible=True,visible_route_samples=[list(p) for p in visible_samples],
+           cursor_stays_within_authored_corridors=True,
            full_campaign_playthrough=False)
 lib.stop();(args.output/'world-route-chart.json').write_text(json.dumps(proof,indent=2)+'\n')
 print('Real world routes, Surf passages and moving native MAP cursor passed')

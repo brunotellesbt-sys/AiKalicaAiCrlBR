@@ -61,7 +61,8 @@ def verify_update(directory,info):
             for field in ['all_edges_match_native_map_connections','all_segments_orthogonal',
                           'compiled_atlas_pixels_match_source','all_route_names_registered',
                           'native_map_open_zoom_and_return','native_land_and_town_art_preserved',
-                          'compiled_zoom_pixels_match_source','cursor_tracks_controller_movement_on_reopen']:
+                          'compiled_zoom_pixels_match_source','cursor_tracks_controller_movement_on_reopen',
+                          'authored_corridors_visible','cursor_stays_within_authored_corridors']:
                 assert r[field] is True,field
             layout=json.loads((ROOT/'mods/hoenn/world-route-chart-validation/layout.json').read_text())
             assert r['actual_connection_edges']==len(layout['routes']) and r['named_nodes']==len(layout['nodes'])

@@ -4,6 +4,8 @@
 as áreas consolidadas e a geometria de GPS das três passagens novas.
 `world-route-chart.json` vincula as provas abaixo ao hash da ROM final:
 
+- pixels azuis nas dez amostras das áreas marcadas em vermelho;
+- cursor dentro dos limites geográficos de cada passagem;
 - arrays compilados do atlas e do zoom iguais aos dados preparados;
 - todas as ligações do desenho correspondem a conexões nativas;
 - sete bocas de passagem cruzadas por Surf na ida e na volta;

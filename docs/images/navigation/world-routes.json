@@ -7,19 +7,24 @@
       "offset": 0,
       "polyline": [
         [
-          177,
+          176,
           99
         ],
         [
-          177,
-          107
+          176,
+          109
         ],
         [
-          198,
+          195,
+          109
+        ],
+        [
+          195,
           107
         ]
       ],
-      "actual_connection": true
+      "actual_connection": true,
+      "authored_passage": "JourneyTanobyDawnSea"
     },
     {
       "source": "BirthIsland_Harbor_Frlg",
@@ -1416,22 +1421,11 @@
         ],
         [
           101,
-          60
-        ],
-        [
-          123,
-          60
-        ],
-        [
-          123,
-          71
-        ],
-        [
-          125,
-          71
+          73
         ]
       ],
-      "actual_connection": true
+      "actual_connection": true,
+      "authored_passage": "JourneyNorthHoennStrait"
     },
     {
       "source": "JourneyKantoEasternChannel",
@@ -1904,19 +1898,16 @@
       "offset": -32,
       "polyline": [
         [
-          114,
-          80
+          101,
+          61
         ],
         [
-          114,
-          71
-        ],
-        [
-          125,
-          71
+          101,
+          73
         ]
       ],
-      "actual_connection": true
+      "actual_connection": true,
+      "authored_passage": "JourneyNorthHoennStrait"
     },
     {
       "source": "JourneyOneIslandChannel",
@@ -2011,27 +2002,6 @@
         [
           96,
           37
-        ]
-      ],
-      "actual_connection": true
-    },
-    {
-      "source": "JourneyRoute12OuterSea",
-      "destination": "TwoIsland_Harbor_Frlg",
-      "direction": "up",
-      "offset": 24,
-      "polyline": [
-        [
-          96,
-          37
-        ],
-        [
-          167,
-          37
-        ],
-        [
-          167,
-          42
         ]
       ],
       "actual_connection": true
@@ -2161,44 +2131,50 @@
       "offset": 0,
       "polyline": [
         [
-          177,
+          176,
           99
         ],
         [
-          177,
-          97
+          176,
+          109
         ],
         [
-          180,
-          97
+          195,
+          109
+        ],
+        [
+          195,
+          107
         ]
       ],
-      "actual_connection": true
+      "actual_connection": true,
+      "authored_passage": "JourneyTanobyDawnSea"
     },
     {
       "source": "JourneyTanobyDawnSea",
       "destination": "SevenIsland_TanobyRuins_Frlg",
-      "direction": "up",
-      "offset": 64,
+      "direction": "left",
+      "offset": 0,
       "polyline": [
         [
-          165,
-          107
-        ],
-        [
-          165,
-          109
-        ],
-        [
-          177,
-          109
-        ],
-        [
-          177,
+          176,
           99
+        ],
+        [
+          176,
+          109
+        ],
+        [
+          195,
+          109
+        ],
+        [
+          195,
+          107
         ]
       ],
-      "actual_connection": true
+      "actual_connection": true,
+      "authored_passage": "JourneyTanobyDawnSea"
     },
     {
       "source": "JourneyTwoThreePassage",
@@ -2207,31 +2183,24 @@
       "offset": 0,
       "polyline": [
         [
-          178,
-          45
+          169,
+          43
         ],
         [
-          178,
-          53
+          181,
+          43
         ],
         [
-          197,
-          53
+          181,
+          50
         ],
         [
-          197,
-          56
-        ],
-        [
-          205,
-          56
-        ],
-        [
-          205,
-          53
+          195,
+          50
         ]
       ],
-      "actual_connection": true
+      "actual_connection": true,
+      "authored_passage": "JourneyTwoThreePassage"
     },
     {
       "source": "JourneyTwoThreePassage",
@@ -2240,19 +2209,24 @@
       "offset": 0,
       "polyline": [
         [
-          167,
-          42
+          169,
+          43
         ],
         [
-          178,
-          42
+          181,
+          43
         ],
         [
-          178,
-          45
+          181,
+          50
+        ],
+        [
+          195,
+          50
         ]
       ],
-      "actual_connection": true
+      "actual_connection": true,
+      "authored_passage": "JourneyTwoThreePassage"
     },
     {
       "source": "JourneyWestRiver",
@@ -4806,7 +4780,7 @@
     },
     {
       "name": "LAVENDER OUTER SEA",
-      "definition": "Área de navegação que liga LAVENDER PORT, ROUTE 12, TWO ISLAND.",
+      "definition": "Área de navegação que liga LAVENDER PORT, ROUTE 12.",
       "position": [
         96,
         37
@@ -4814,8 +4788,7 @@
       "map": "JourneyRoute12OuterSea",
       "neighbors": [
         "LAVENDER PORT",
-        "ROUTE 12",
-        "TWO ISLAND"
+        "ROUTE 12"
       ]
     },
     {
@@ -4927,8 +4900,8 @@
       "name": "NORTH HOENN STRAIT",
       "definition": "Canal entre o litoral de Kanto e o norte da Rota 124, em Hoenn.",
       "position": [
-        125,
-        71
+        101,
+        67
       ],
       "map": "JourneyNorthHoennStrait",
       "neighbors": [
@@ -5173,8 +5146,8 @@
       "name": "TANOBY DAWN SEA",
       "definition": "Mar ao sul de Sevii que une Tanoby, o mar de Seven Island e a costa de Birth Island.",
       "position": [
-        177,
-        99
+        182,
+        106
       ],
       "map": "JourneyTanobyDawnSea",
       "neighbors": [
@@ -5221,7 +5194,7 @@
       "name": "TWO-THREE PASSAGE",
       "definition": "Passagem costeira de Surf ao sul de Two Island até a costa oeste de Three Island.",
       "position": [
-        178,
+        176,
         45
       ],
       "map": "JourneyTwoThreePassage",
@@ -5258,6 +5231,38 @@
         32,
         40
       ],
+      "chart_paths": [
+        [
+          [
+            101,
+            61
+          ],
+          [
+            101,
+            73
+          ]
+        ],
+        [
+          [
+            101,
+            73
+          ],
+          [
+            114,
+            73
+          ],
+          [
+            114,
+            80
+          ]
+        ]
+      ],
+      "chart_bounds": [
+        101,
+        61,
+        114,
+        80
+      ],
       "definition": "Canal entre o litoral de Kanto e o norte da Rota 124, em Hoenn.",
       "links": [
         [
@@ -5282,6 +5287,32 @@
       "size": [
         64,
         24
+      ],
+      "chart_paths": [
+        [
+          [
+            169,
+            43
+          ],
+          [
+            181,
+            43
+          ],
+          [
+            181,
+            50
+          ],
+          [
+            195,
+            50
+          ]
+        ]
+      ],
+      "chart_bounds": [
+        169,
+        43,
+        195,
+        50
       ],
       "definition": "Passagem costeira de Surf ao sul de Two Island até a costa oeste de Three Island.",
       "links": [
@@ -5308,6 +5339,52 @@
         112,
         24
       ],
+      "chart_paths": [
+        [
+          [
+            176,
+            99
+          ],
+          [
+            176,
+            109
+          ],
+          [
+            195,
+            109
+          ],
+          [
+            195,
+            107
+          ]
+        ],
+        [
+          [
+            168,
+            104
+          ],
+          [
+            176,
+            104
+          ]
+        ],
+        [
+          [
+            168,
+            104
+          ],
+          [
+            168,
+            106
+          ]
+        ]
+      ],
+      "chart_bounds": [
+        168,
+        99,
+        195,
+        109
+      ],
       "definition": "Mar ao sul de Sevii que une Tanoby, o mar de Seven Island e a costa de Birth Island.",
       "links": [
         [
@@ -5317,8 +5394,8 @@
         ],
         [
           "SevenIsland_TanobyRuins_Frlg",
-          "up",
-          64
+          "left",
+          0
         ],
         [
           "BirthIsland_Exterior_Frlg",

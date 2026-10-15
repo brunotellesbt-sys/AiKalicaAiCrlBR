@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "rom_sha256": "de76f2bbb2a311964524bc39764951d158c5f43a74728fb88882292680e765df",
+  "rom_sha256": "442a99f8dc7de2e1dd805b8c783d77e167171b35f963e119abe7f34fdde08058",
   "layers": [
     "hoenn-crossing",
     "worldsea",
@@ -186,6 +186,7 @@
     "data/maps/JourneyKantoEasternChannel/map.json",
     "data/maps/JourneyNorthHoennStrait/map.json",
     "data/maps/JourneyNorthHoennStrait/scripts.inc",
+    "data/maps/JourneyRoute12OuterSea/map.json",
     "data/maps/JourneyTanobyDawnSea/map.json",
     "data/maps/JourneyTanobyDawnSea/scripts.inc",
     "data/maps/JourneyTwoThreePassage/map.json",
@@ -247,6 +248,7 @@
     "data/maps/JourneyKantoEasternChannel/map.json",
     "data/maps/JourneyNorthHoennStrait/map.json",
     "data/maps/JourneyNorthHoennStrait/scripts.inc",
+    "data/maps/JourneyRoute12OuterSea/map.json",
     "data/maps/JourneyTanobyDawnSea/map.json",
     "data/maps/JourneyTanobyDawnSea/scripts.inc",
     "data/maps/JourneyTwoThreePassage/map.json",
@@ -279,7 +281,7 @@
     "src/journey_sevii_surf.c",
     "src/metatile_behavior.c"
   ],
-  "unchanged_source_inputs_checked": 30999,
+  "unchanged_source_inputs_checked": 30998,
   "preserved_port_paths": {
     "data/layouts/PalletTown_Frlg/border.bin": "bd05db219b1304364f4d1c265db9cece1af50fb2332d9f39357fdc8d721dc449",
     "data/layouts/PalletTown_Frlg/map.bin": "dcd7e9508b346cd5caf31d499a323508f3a738a8b9ab3b6356e7c88ebe0bd9ef",
@@ -470,6 +472,6 @@
   "compiled_gps_tiles": 414398,
   "maximum_neighbor_pixel_step": 2,
   "maximum_seam_delta": 0,
-  "compiled_shared_edges": 588,
+  "compiled_shared_edges": 586,
   "full_campaign_playthrough": false
 }

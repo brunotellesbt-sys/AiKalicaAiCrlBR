@@ -8,14 +8,21 @@ from sevii_navigation_grid import reconcile
 
 PASSAGES = [
     dict(map='JourneyNorthHoennStrait', name='NORTH HOENN STRAIT', center=[109, 68], size=[32, 40],
+         chart_paths=[[[101,61],[101,73]],[[101,73],[114,73],[114,80]]],
+         chart_bounds=[101,61,114,80],
          definition='Canal entre o litoral de Kanto e o norte da Rota 124, em Hoenn.',
          links=[('JourneyKantoEasternChannel', 'up', -23), ('Route124', 'down', -32)]),
     dict(map='JourneyTwoThreePassage', name='TWO-THREE PASSAGE', center=[179, 47], size=[64, 24],
+         chart_paths=[[[169,43],[181,43],[181,50],[195,50]]],
+         chart_bounds=[169,43,195,50],
          definition='Passagem costeira de Surf ao sul de Two Island até a costa oeste de Three Island.',
          links=[('TwoIsland_Frlg', 'up', 0), ('ThreeIsland_Harbor_Frlg', 'right', 0)]),
     dict(map='JourneyTanobyDawnSea', name='TANOBY DAWN SEA', center=[181, 106], size=[112, 24],
+         chart_paths=[[[176,99],[176,109],[195,109],[195,107]],
+                      [[168,104],[176,104]],[[168,104],[168,106]]],
+         chart_bounds=[168,99,195,109],
          definition='Mar ao sul de Sevii que une Tanoby, o mar de Seven Island e a costa de Birth Island.',
-         links=[('JourneyWorldSea07', 'up', 0), ('SevenIsland_TanobyRuins_Frlg', 'up', 64),
+         links=[('JourneyWorldSea07', 'up', 0), ('SevenIsland_TanobyRuins_Frlg', 'left', 0),
                 ('BirthIsland_Exterior_Frlg', 'right', 0)]),
 ]
 OPPOSITE = dict(up='down', down='up', left='right', right='left')
@@ -38,6 +45,13 @@ def prepare_links(layer, maps, geometry, reference):
     assert any(c['map'] == maps[b]['id'] and c['direction'] == 'down' for c in maps[a]['connections'])
     for n, other in [(a, b), (b, a)]:
         maps[n]['connections'] = [c for c in maps[n]['connections'] if c['map'] != maps[other]['id']]
+
+    # Two Island's inherited harbor pointed back to Kanto's Route 12. That
+    # long shortcut also pulled its GPS away from Sevii. Its native town and
+    # the new coastal passage now provide the real connection to the sea.
+    a,b='TwoIsland_Harbor_Frlg','JourneyRoute12OuterSea'
+    for n,other in [(a,b),(b,a)]:
+        maps[n]['connections']=[c for c in maps[n]['connections'] if c['map']!=maps[other]['id']]
 
     for p in PASSAGES:
         n = p['map']; w, h = p['size']
@@ -120,12 +134,9 @@ def prepare_links(layer, maps, geometry, reference):
     path = 'src/data/journey_world_position.h'; header = (s/path).read_text()
     values = list(map(int, re.search(r'sWorldNavigationPixels\[\] = \{([^}]+)', header)[1].split(',')))
     import numpy as np
-    old_grids = {}; cursor = 0
-    for p in geometry['projections'][:-len(PASSAGES)]:
-        w,h = p['width'],p['height']; old_grids[p['map']] = values[cursor:cursor+w*h]; cursor += w*h
     additions = []
     for p in PASSAGES:
-        first = len(values); w,h = p['size']; anchors = []; boundary = []
+        first = len(values); w,h = p['size']
         for other,d,off in p['links']:
             ol = layouts[maps[other]['layout']]; ow,oh = ol['width'],ol['height']
             candidates = []
@@ -135,25 +146,30 @@ def prepare_links(layer, maps, geometry, reference):
             for t in range(max(0,off),min(h if d in ('left','right') else w,off+(oh if d in ('left','right') else ow))):
                 x,y = (0 if d=='left' else w-1,t) if d in ('left','right') else (t,0 if d=='up' else h-1)
                 xx,yy = (ow-1 if d=='left' else 0,t-off) if d in ('left','right') else (t-off,oh-1 if d=='up' else 0)
-                v = old_grids[other][yy*ow+xx]; sample=[x,y,v&255,v>>8]; boundary.append(sample)
                 water=reference['maps'][other]['water'][yy*ow+xx]=='1' or ot[yy*ow+xx]==0x112B
-                if water and not ot[yy*ow+xx]&0xC00 and changed_tiles[p['map']][y*w+x]==0x112B:candidates.append(sample)
+                if water and not ot[yy*ow+xx]&0xC00 and changed_tiles[p['map']][y*w+x]==0x112B:candidates.append((x,y))
             assert candidates,('No marine anchor',p['map'],other)
-            anchors.append(candidates[len(candidates)//2])
-        # Interpolate from the actual shared geographic boundary coordinates.
-        # An arbitrary route-centre anchor can make a northbound trip drift
-        # sideways, even when every tile and seam satisfies the step bound.
-        a = np.array(anchors); yy,xx = np.indices((h,w)); xx=xx.ravel(); yy=yy.ravel()
-        distance = (a[:,0,None]-xx)**2+(a[:,1,None]-yy)**2
-        weights = 1048576//np.maximum(distance,1)
-        projected = ((weights.T@a[:,2:]+weights.sum(axis=0)[:,None]//2)//weights.sum(axis=0)[:,None]).astype(int)
-        for x,y,px,py in boundary:projected[y*w+x] = [px,py]
+        # Keep the passages in the authored chart corridors; reconcile the
+        # adjoining native GPS around these fixed coordinates afterwards.
+        yy,xx=np.indices((h,w));xx=xx.ravel();yy=yy.ravel()
+        if p['map']=='JourneyNorthHoennStrait':
+            projected=np.stack([np.full(w*h,101),61+np.rint(12*yy/(h-1)).astype(int)],axis=1)
+        elif p['map']=='JourneyTwoThreePassage':
+            # Progress is anchored to the two marine mouths and stays in
+            # the coastal area south of Two Island and west of Three Island.
+            start=yy+np.maximum(xx-47,0);end=w-1-xx+np.maximum(yy-12,0)
+            progress=start/(start+end)
+            projected=np.stack([169+np.rint(26*progress).astype(int),43+np.rint(7*progress).astype(int)],axis=1)
+        else:
+            gx=168+np.rint(27*xx/(w-1)).astype(int)
+            gy=np.rint(104+3*xx/(w-1)+(2*yy/(h-1)-1)*3.5*np.sin(np.pi*xx/(w-1))).astype(int)
+            projected=np.stack([gx,gy],axis=1)
         values.extend(int(x)|(int(y)<<8) for x,y in projected)
         additions.append('{'+f'{first}, (MAP_GROUP(MAP_{p["map"].upper()})<<8)|MAP_NUM(MAP_{p["map"].upper()}), {w}, {h}'+'},\n')
     header = re.sub(r'(sWorldNavigationPixels\[\] = \{)[^}]+', lambda m:m[1]+','.join(map(str, values)), header)
     end = header.index('};', header.index('sWorldTileGrids'))
     header = header[:end]+''.join(additions)+header[end:]
-    header, gps = reconcile(header, geometry['projections'], maps)
+    header, gps = reconcile(header, geometry['projections'], maps, fixed_maps=[p['map'] for p in PASSAGES])
     layer.stage(path, header)
     final = list(map(int,re.search(r'sWorldNavigationPixels\[\] = \{([^}]+)',header)[1].split(',')))
     cursor = 0

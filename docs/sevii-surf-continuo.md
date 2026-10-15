@@ -37,6 +37,15 @@ boca de quatro tiles para o novo canal; Sea01 ↔ Sea02 continua disponível.
 
 ![Atlas sem rótulos](images/navigation/world-map-current.png)
 
+![Passagens nas áreas marcadas](images/navigation/coastal-passages-detail.png)
+
+Os três traçados costeiros são definidos explicitamente no atlas e no zoom,
+para que o traçador automático não os substitua pelas linhas antigas. O GPS
+das passagens fica preso às respectivas áreas geográficas; as coordenadas
+dos mapas vizinhos são ajustadas sem saltos. A chegada de Two Island usa
+agora a costa de Sevii, eliminando o antigo atalho de Surf para a Rota 12
+de Kanto. As viagens de barco e seus destinos permanecem disponíveis.
+
 ## Verificação
 
 As provas atuais incluem caminhada por controle nas sete costas de Sevii,

@@ -1,7 +1,7 @@
 """Export an unlabeled atlas and a separate geographic route index."""
 import argparse,html,json
 from pathlib import Path
-from PIL import Image
+from PIL import Image,ImageDraw,ImageFont
 from prepare_world_dex_map import decode
 
 
@@ -10,6 +10,18 @@ def render(source,output):
     r=json.loads((source/'.journey-world-route-chart').read_text())
     im=decode((source/'src/data/journey_world_map.h').read_text()).convert('RGB')
     im.resize((1344,672),Image.Resampling.NEAREST).save(output/'world-map-current.png')
+    im.crop((94,35,212,112)).resize((1416,924),Image.Resampling.NEAREST).save(output/'coastal-passages-detail.png')
+    review=Image.new('RGB',(1440,360),'#12202e');draw=ImageDraw.Draw(review)
+    font=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',20)
+    panels=[('1 · Norte de Lilycove',(94,55,119,82)),
+            ('2 · Two → Three Island',(161,37,207,56)),
+            ('3 · Tanoby → Birth Island',(160,95,201,112))]
+    for index,(title,box) in enumerate(panels):
+        draw.text((index*480+16,12),title,font=font,fill='white')
+        crop=im.crop(box);scale=min(448//crop.width,300//crop.height)
+        crop=crop.resize((crop.width*scale,crop.height*scale),Image.Resampling.NEAREST)
+        review.paste(crop,(index*480+(480-crop.width)//2,50+(300-crop.height)//2))
+    review.save(output/'coastal-passages-review.png')
     # Old review drafts must not leave printed names available as the preview.
     for name in ['world-map-named.png','world-map-named.svg']:(output/name).unlink(missing_ok=True)
     nodes={n['map']:n for n in r['nodes']};definitions={p['map']:p['definition'] for p in r['passages']}

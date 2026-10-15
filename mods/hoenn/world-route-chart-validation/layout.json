@@ -8,19 +8,24 @@
       "offset": 0,
       "polyline": [
         [
-          177,
+          176,
           99
         ],
         [
-          177,
-          107
+          176,
+          109
         ],
         [
-          198,
+          195,
+          109
+        ],
+        [
+          195,
           107
         ]
       ],
-      "actual_connection": true
+      "actual_connection": true,
+      "authored_passage": "JourneyTanobyDawnSea"
     },
     {
       "source": "BirthIsland_Harbor_Frlg",
@@ -1417,22 +1422,11 @@
         ],
         [
           101,
-          60
-        ],
-        [
-          123,
-          60
-        ],
-        [
-          123,
-          71
-        ],
-        [
-          125,
-          71
+          73
         ]
       ],
-      "actual_connection": true
+      "actual_connection": true,
+      "authored_passage": "JourneyNorthHoennStrait"
     },
     {
       "source": "JourneyKantoEasternChannel",
@@ -1905,19 +1899,16 @@
       "offset": -32,
       "polyline": [
         [
-          114,
-          80
+          101,
+          61
         ],
         [
-          114,
-          71
-        ],
-        [
-          125,
-          71
+          101,
+          73
         ]
       ],
-      "actual_connection": true
+      "actual_connection": true,
+      "authored_passage": "JourneyNorthHoennStrait"
     },
     {
       "source": "JourneyOneIslandChannel",
@@ -2012,27 +2003,6 @@
         [
           96,
           37
-        ]
-      ],
-      "actual_connection": true
-    },
-    {
-      "source": "JourneyRoute12OuterSea",
-      "destination": "TwoIsland_Harbor_Frlg",
-      "direction": "up",
-      "offset": 24,
-      "polyline": [
-        [
-          96,
-          37
-        ],
-        [
-          167,
-          37
-        ],
-        [
-          167,
-          42
         ]
       ],
       "actual_connection": true
@@ -2162,44 +2132,50 @@
       "offset": 0,
       "polyline": [
         [
-          177,
+          176,
           99
         ],
         [
-          177,
-          97
+          176,
+          109
         ],
         [
-          180,
-          97
+          195,
+          109
+        ],
+        [
+          195,
+          107
         ]
       ],
-      "actual_connection": true
+      "actual_connection": true,
+      "authored_passage": "JourneyTanobyDawnSea"
     },
     {
       "source": "JourneyTanobyDawnSea",
       "destination": "SevenIsland_TanobyRuins_Frlg",
-      "direction": "up",
-      "offset": 64,
+      "direction": "left",
+      "offset": 0,
       "polyline": [
         [
-          165,
-          107
-        ],
-        [
-          165,
-          109
-        ],
-        [
-          177,
-          109
-        ],
-        [
-          177,
+          176,
           99
+        ],
+        [
+          176,
+          109
+        ],
+        [
+          195,
+          109
+        ],
+        [
+          195,
+          107
         ]
       ],
-      "actual_connection": true
+      "actual_connection": true,
+      "authored_passage": "JourneyTanobyDawnSea"
     },
     {
       "source": "JourneyTwoThreePassage",
@@ -2208,31 +2184,24 @@
       "offset": 0,
       "polyline": [
         [
-          178,
-          45
+          169,
+          43
         ],
         [
-          178,
-          53
+          181,
+          43
         ],
         [
-          197,
-          53
+          181,
+          50
         ],
         [
-          197,
-          56
-        ],
-        [
-          205,
-          56
-        ],
-        [
-          205,
-          53
+          195,
+          50
         ]
       ],
-      "actual_connection": true
+      "actual_connection": true,
+      "authored_passage": "JourneyTwoThreePassage"
     },
     {
       "source": "JourneyTwoThreePassage",
@@ -2241,19 +2210,24 @@
       "offset": 0,
       "polyline": [
         [
-          167,
-          42
+          169,
+          43
         ],
         [
-          178,
-          42
+          181,
+          43
         ],
         [
-          178,
-          45
+          181,
+          50
+        ],
+        [
+          195,
+          50
         ]
       ],
-      "actual_connection": true
+      "actual_connection": true,
+      "authored_passage": "JourneyTwoThreePassage"
     },
     {
       "source": "JourneyWestRiver",
@@ -4570,8 +4544,8 @@
       "map": "JourneyNorthHoennStrait",
       "name": "NORTH HOENN STRAIT",
       "position": [
-        125,
-        71
+        101,
+        67
       ]
     },
     {
@@ -4634,15 +4608,15 @@
       "map": "JourneyTanobyDawnSea",
       "name": "TANOBY DAWN SEA",
       "position": [
-        177,
-        99
+        182,
+        106
       ]
     },
     {
       "map": "JourneyTwoThreePassage",
       "name": "TWO-THREE PASSAGE",
       "position": [
-        178,
+        176,
         45
       ]
     },
@@ -5261,6 +5235,38 @@
         32,
         40
       ],
+      "chart_paths": [
+        [
+          [
+            101,
+            61
+          ],
+          [
+            101,
+            73
+          ]
+        ],
+        [
+          [
+            101,
+            73
+          ],
+          [
+            114,
+            73
+          ],
+          [
+            114,
+            80
+          ]
+        ]
+      ],
+      "chart_bounds": [
+        101,
+        61,
+        114,
+        80
+      ],
       "definition": "Canal entre o litoral de Kanto e o norte da Rota 124, em Hoenn.",
       "links": [
         [
@@ -5285,6 +5291,32 @@
       "size": [
         64,
         24
+      ],
+      "chart_paths": [
+        [
+          [
+            169,
+            43
+          ],
+          [
+            181,
+            43
+          ],
+          [
+            181,
+            50
+          ],
+          [
+            195,
+            50
+          ]
+        ]
+      ],
+      "chart_bounds": [
+        169,
+        43,
+        195,
+        50
       ],
       "definition": "Passagem costeira de Surf ao sul de Two Island at\u00e9 a costa oeste de Three Island.",
       "links": [
@@ -5311,6 +5343,52 @@
         112,
         24
       ],
+      "chart_paths": [
+        [
+          [
+            176,
+            99
+          ],
+          [
+            176,
+            109
+          ],
+          [
+            195,
+            109
+          ],
+          [
+            195,
+            107
+          ]
+        ],
+        [
+          [
+            168,
+            104
+          ],
+          [
+            176,
+            104
+          ]
+        ],
+        [
+          [
+            168,
+            104
+          ],
+          [
+            168,
+            106
+          ]
+        ]
+      ],
+      "chart_bounds": [
+        168,
+        99,
+        195,
+        109
+      ],
       "definition": "Mar ao sul de Sevii que une Tanoby, o mar de Seven Island e a costa de Birth Island.",
       "links": [
         [
@@ -5320,13 +5398,520 @@
         ],
         [
           "SevenIsland_TanobyRuins_Frlg",
-          "up",
-          64
+          "left",
+          0
         ],
         [
           "BirthIsland_Exterior_Frlg",
           "right",
           0
+        ]
+      ]
+    }
+  ],
+  "visible_passages": [
+    {
+      "map": "JourneyNorthHoennStrait",
+      "paths": [
+        [
+          [
+            101,
+            61
+          ],
+          [
+            101,
+            73
+          ]
+        ],
+        [
+          [
+            101,
+            73
+          ],
+          [
+            114,
+            73
+          ],
+          [
+            114,
+            80
+          ]
+        ]
+      ],
+      "blue_pixels": [
+        [
+          101,
+          61
+        ],
+        [
+          101,
+          62
+        ],
+        [
+          101,
+          63
+        ],
+        [
+          101,
+          64
+        ],
+        [
+          101,
+          65
+        ],
+        [
+          101,
+          66
+        ],
+        [
+          101,
+          67
+        ],
+        [
+          101,
+          68
+        ],
+        [
+          101,
+          69
+        ],
+        [
+          101,
+          70
+        ],
+        [
+          101,
+          71
+        ],
+        [
+          101,
+          72
+        ],
+        [
+          101,
+          73
+        ],
+        [
+          102,
+          73
+        ],
+        [
+          103,
+          73
+        ],
+        [
+          104,
+          73
+        ],
+        [
+          105,
+          73
+        ],
+        [
+          106,
+          73
+        ],
+        [
+          107,
+          73
+        ],
+        [
+          108,
+          73
+        ],
+        [
+          109,
+          73
+        ],
+        [
+          110,
+          73
+        ],
+        [
+          111,
+          73
+        ],
+        [
+          112,
+          73
+        ],
+        [
+          113,
+          73
+        ],
+        [
+          114,
+          73
+        ],
+        [
+          114,
+          74
+        ],
+        [
+          114,
+          75
+        ],
+        [
+          114,
+          76
+        ],
+        [
+          114,
+          77
+        ],
+        [
+          114,
+          78
+        ],
+        [
+          114,
+          79
+        ],
+        [
+          114,
+          80
+        ]
+      ]
+    },
+    {
+      "map": "JourneyTwoThreePassage",
+      "paths": [
+        [
+          [
+            169,
+            43
+          ],
+          [
+            181,
+            43
+          ],
+          [
+            181,
+            50
+          ],
+          [
+            195,
+            50
+          ]
+        ]
+      ],
+      "blue_pixels": [
+        [
+          169,
+          43
+        ],
+        [
+          170,
+          43
+        ],
+        [
+          171,
+          43
+        ],
+        [
+          172,
+          43
+        ],
+        [
+          173,
+          43
+        ],
+        [
+          174,
+          43
+        ],
+        [
+          175,
+          43
+        ],
+        [
+          176,
+          43
+        ],
+        [
+          177,
+          43
+        ],
+        [
+          178,
+          43
+        ],
+        [
+          179,
+          43
+        ],
+        [
+          180,
+          43
+        ],
+        [
+          181,
+          43
+        ],
+        [
+          181,
+          44
+        ],
+        [
+          181,
+          45
+        ],
+        [
+          181,
+          46
+        ],
+        [
+          181,
+          47
+        ],
+        [
+          181,
+          48
+        ],
+        [
+          181,
+          49
+        ],
+        [
+          181,
+          50
+        ],
+        [
+          182,
+          50
+        ],
+        [
+          183,
+          50
+        ],
+        [
+          189,
+          50
+        ],
+        [
+          190,
+          50
+        ],
+        [
+          191,
+          50
+        ],
+        [
+          192,
+          50
+        ]
+      ]
+    },
+    {
+      "map": "JourneyTanobyDawnSea",
+      "paths": [
+        [
+          [
+            176,
+            99
+          ],
+          [
+            176,
+            109
+          ],
+          [
+            195,
+            109
+          ],
+          [
+            195,
+            107
+          ]
+        ],
+        [
+          [
+            168,
+            104
+          ],
+          [
+            176,
+            104
+          ]
+        ],
+        [
+          [
+            168,
+            104
+          ],
+          [
+            168,
+            106
+          ]
+        ]
+      ],
+      "blue_pixels": [
+        [
+          168,
+          104
+        ],
+        [
+          168,
+          105
+        ],
+        [
+          168,
+          106
+        ],
+        [
+          169,
+          104
+        ],
+        [
+          170,
+          104
+        ],
+        [
+          171,
+          104
+        ],
+        [
+          172,
+          104
+        ],
+        [
+          173,
+          104
+        ],
+        [
+          174,
+          104
+        ],
+        [
+          175,
+          104
+        ],
+        [
+          176,
+          99
+        ],
+        [
+          176,
+          100
+        ],
+        [
+          176,
+          101
+        ],
+        [
+          176,
+          102
+        ],
+        [
+          176,
+          103
+        ],
+        [
+          176,
+          104
+        ],
+        [
+          176,
+          105
+        ],
+        [
+          176,
+          106
+        ],
+        [
+          176,
+          107
+        ],
+        [
+          176,
+          108
+        ],
+        [
+          176,
+          109
+        ],
+        [
+          177,
+          109
+        ],
+        [
+          178,
+          109
+        ],
+        [
+          179,
+          109
+        ],
+        [
+          180,
+          109
+        ],
+        [
+          181,
+          109
+        ],
+        [
+          182,
+          109
+        ],
+        [
+          183,
+          109
+        ],
+        [
+          184,
+          109
+        ],
+        [
+          185,
+          109
+        ],
+        [
+          186,
+          109
+        ],
+        [
+          187,
+          109
+        ],
+        [
+          188,
+          109
+        ],
+        [
+          189,
+          109
+        ],
+        [
+          190,
+          109
+        ],
+        [
+          191,
+          109
+        ],
+        [
+          192,
+          109
+        ],
+        [
+          193,
+          109
+        ],
+        [
+          194,
+          109
+        ],
+        [
+          195,
+          107
+        ],
+        [
+          195,
+          108
+        ],
+        [
+          195,
+          109
         ]
       ]
     }
@@ -6368,25 +6953,26 @@
   ],
   "gps": {
     "compiled_gps_tiles": 414398,
-    "changed_tiles": 1868,
+    "changed_tiles": 1995,
     "changed_maps": {
-      "BirthIsland_Exterior_Frlg": 138,
-      "JourneyRoute12OuterSea": 276,
-      "JourneyWorldSea06": 10,
-      "JourneyWorldSea07": 113,
-      "JourneyWorldSea09": 39,
-      "Route124": 18,
-      "SevenIsland_TanobyRuins_Frlg": 320,
-      "ThreeIsland_Harbor_Frlg": 3,
-      "TwoIsland_Frlg": 179,
-      "TwoIsland_Harbor_Frlg": 13,
-      "JourneyNorthHoennStrait": 23,
-      "JourneyTwoThreePassage": 356,
-      "JourneyTanobyDawnSea": 380
+      "BirthIsland_Exterior_Frlg": 49,
+      "JourneyKantoEasternChannel": 97,
+      "JourneyLavenderApproachSouth": 137,
+      "JourneyWorldSea01": 237,
+      "JourneyWorldSea02": 522,
+      "JourneyWorldSea03": 16,
+      "JourneyWorldSea06": 15,
+      "JourneyWorldSea07": 294,
+      "JourneyWorldSea09": 15,
+      "Route124": 337,
+      "SevenIsland_TanobyRuins_Frlg": 26,
+      "ThreeIsland_Harbor_Frlg": 65,
+      "TwoIsland_Frlg": 132,
+      "TwoIsland_Harbor_Frlg": 53
     },
     "maximum_neighbor_pixel_step": 2,
     "maximum_seam_delta": 0,
-    "linked_border_tiles": 18280
+    "linked_border_tiles": 18190
   },
   "projections": [
     {
@@ -8927,8 +9513,8 @@
       "width": 32,
       "height": 40,
       "center": [
-        125,
-        71
+        101,
+        67
       ],
       "first": 0,
       "count": 0
@@ -8939,7 +9525,7 @@
       "width": 64,
       "height": 24,
       "center": [
-        178,
+        176,
         45
       ],
       "first": 0,
@@ -8951,8 +9537,8 @@
       "width": 112,
       "height": 24,
       "center": [
-        177,
-        99
+        182,
+        106
       ],
       "first": 0,
       "count": 0
@@ -8973,12 +9559,14 @@
     "data/layouts/JourneySeviiSurfArrival/map.bin": "2f06585cbe00e9f72886309db3e934d6ed882d1ab628f55835d4fecf28806ad5",
     "data/layouts/JourneyWorldSea07/map.bin": "d50307d55eb62e6bea2b9bb273c96af53387d26c8f3c2e5855c2ca12760df852",
     "data/maps/SevenIsland_TanobyRuins_Frlg/map.json": "31adce0a2e472dc2ec1b6f36ebe13455186fda82c21a4491b6de7f6f18b0a7ac",
+    "data/maps/TwoIsland_Harbor_Frlg/map.json": "beab923e66436a722c6700efb56b68d0093e1b13ea5d00a83eb690fb5b822730",
     "data/maps/BirthIsland_Exterior_Frlg/map.json": "b0475a5e48c6c5e5d4b4fcd34be9512ea58751b19ffe86206bc9a2dc799e378f",
     "data/maps/JourneyWorldSea07/map.json": "c1eb42734d02925db220d39d756c484282b9ab0dd22682473fcaff6e6d571f30",
     "data/maps/ThreeIsland_Harbor_Frlg/map.json": "eb07f4d7c424ec4761e94097fb69e6fb914a4c8dd8eeb28eede771813e9d975b",
     "data/maps/JourneyKantoEasternChannel/map.json": "6943acb3e86505515573fbf6faf964b08bfb9eee5eed34c0f9bb4e2bfb802634",
     "data/maps/Route124/map.json": "200780bdca0a4b49fdddc8a6a763bc1fb0c8c182f086e24f7649766c08277313",
     "data/maps/JourneyWorldSea02/map.json": "ed37f60fb08e354c744bd5f735991aa4fb0b3d24b3ff626bee3bd5354ff6dee7",
+    "data/maps/JourneyRoute12OuterSea/map.json": "2fe34934c5de39eea3f26816c7c09de18132b4dbc4e11108d5dd5e411f8a0072",
     "data/maps/TwoIsland_Frlg/map.json": "b13844eba5a498dc95dc91a5b775f97069e9e29f3a58027adc2fed63d3b5248b",
     "data/maps/map_groups.json": "20674ed705e83e97f651ce4916f3531ea47335801193ada5fd97dbb930f91e09",
     "data/layouts/layouts.json": "8f5776bc6da0b32c23956723948bca50cf9ff097069ae0bb543c047fc4be0c01",
@@ -8994,28 +9582,30 @@
     "data/layouts/JourneyTwoThreePassage/map.bin": "15cacc1ede7b7d972567ce2230cb3e9a0a4ead8b892d5a4cac56de7ceb88ae15",
     "data/layouts/JourneyTwoThreePassage/border.bin": "bee0ddda0aa5b3e3672f0e37758dc01fe08d185a3f24f3a911581e89aba26acc",
     "data/maps/JourneyTanobyDawnSea/scripts.inc": "ad765a5e358f2519c54f48d2a1903b30ae255996905dbe72ceea99fe459033b2",
-    "data/layouts/JourneyTanobyDawnSea/map.bin": "e7a2c658da2197e02ecc16cb9f855ee803ec238235b080b481e2ed5e4b7a5096",
+    "data/layouts/JourneyTanobyDawnSea/map.bin": "78674b8daff89da7a89126347f5f8bf44377d10d21f0564dc7f86f6b906b0cdd",
     "data/layouts/JourneyTanobyDawnSea/border.bin": "bee0ddda0aa5b3e3672f0e37758dc01fe08d185a3f24f3a911581e89aba26acc",
     "data/layouts/TwoIsland_Frlg/map.bin": "efe3f401c62edcdf02b54a10a0fe160ce8e3f36580d21ea01af44fbb79311aa1",
     "data/layouts/SevenIsland_TanobyRuins_Frlg/map.bin": "c6cc8f8ee6b650c4691831717034d016b6a6a09975122b47d218b5ae6af39109",
     "data/layouts/BirthIsland_Exterior_Frlg/map.bin": "5dc283923ee55d64482a9c6c69a62e75ad25b37db501a6e473614f4387aa97e3",
     "data/layouts/JourneySeviiSurfArrival/map.bin": "2f06585cbe00e9f72886309db3e934d6ed882d1ab628f55835d4fecf28806ad5",
     "data/layouts/JourneyWorldSea07/map.bin": "c4c66718f6f47b50aaee595219220e3e16636e93754f93ee63c630121e13ad39",
-    "data/maps/SevenIsland_TanobyRuins_Frlg/map.json": "065f700a9de4fb6ebdbce4e20bc37f9eec3b260df22f865b4cae740ee6f1035d",
+    "data/maps/SevenIsland_TanobyRuins_Frlg/map.json": "5c98353d7622b5e7c3a11b823b5c082d2163f65f9a2a834dcc216bb691ec9bea",
+    "data/maps/TwoIsland_Harbor_Frlg/map.json": "2b6fbe8aed75abc52992b33faf3d42985cbc31493a30cdd5890259cc6dd272b6",
     "data/maps/BirthIsland_Exterior_Frlg/map.json": "11e768cd6d411bfc94d7021bd16e83dc278dc9c4b1bcbb9acd4e636fe7cf3ca9",
     "data/maps/JourneyWorldSea07/map.json": "46ac6797528b0528d4c9e9c18b253e64a103132b61393997b672e45f3bd1f336",
     "data/maps/ThreeIsland_Harbor_Frlg/map.json": "12cd2bb868482fbc7ca459e1f1f072649b6e83de720a8a2f7dbfb35ab74129d5",
     "data/maps/JourneyKantoEasternChannel/map.json": "3af92db0597ec08afafe070c46016221e4827ca207168b2f666477144a3c81ef",
     "data/maps/Route124/map.json": "6282a56a8757ab203ac1d19a553b8bc85f5605e23ecc4180ca84b946d0a32d7a",
     "data/maps/JourneyWorldSea02/map.json": "7ac7cad01557b719877335679744f81e5dab507bdeb07ea3b0dc7e3bda188c30",
+    "data/maps/JourneyRoute12OuterSea/map.json": "c5417175bbfbf078de38f359cb5db47cd97d4efc0c4381947de62f501513a1bf",
     "data/maps/TwoIsland_Frlg/map.json": "036d1f58605eeeeee458213412586beaba58cafa0d32e267590814f45915031f",
     "data/maps/JourneyNorthHoennStrait/map.json": "6dafd9a5fcaf79f1f0ee6d1c1e66fe6044fbde3e81f4fd1e68c6587b3e501265",
     "data/maps/JourneyTwoThreePassage/map.json": "e5f51e4ee3922c3788cce95f28e70e37970d774cca823d983c691c27c192983c",
-    "data/maps/JourneyTanobyDawnSea/map.json": "1738c1d957b5e0dc20dabee4c2be5326f238abc75cba5eded6a4eb0ffe2ffb2c",
+    "data/maps/JourneyTanobyDawnSea/map.json": "1a7fba8a8cc03dec98ee8bdd13d181aee691cb51d5ff142365b90f68e97fcad7",
     "data/maps/map_groups.json": "23e9a85d06c1cdb6ca5624a142f815c77a33e03e5334aab309b992e75c01f4e0",
     "data/layouts/layouts.json": "8c078b1901fdb6efd3c032f3e94e9c6b94e5bdfb323d3e1753d7518dcdf68ba2",
     "data/event_scripts.s": "e9b6617f6a48447619b7f7c9b131b1a9e6123906c000657afb50958788d84f71",
-    "src/data/journey_world_position.h": "d7f78a5fb2ed003ab4a4076de2d80db337be7766797a400efdee9942812fbc1f",
-    "src/data/journey_world_map.h": "21fcd623c1ba00324e13d20e3c5653767198cc2b0cf264a2c67b993fbad2ce1c"
+    "src/data/journey_world_position.h": "8fbe69e873a244a1fd05aa825f16c952810ef1346b389288f6e8fed3c291d3b1",
+    "src/data/journey_world_map.h": "eb0c5b13b2de93bf2655cc159f33c049240cc399c848b5cc9cbcd3dbaf115a16"
   }
 }

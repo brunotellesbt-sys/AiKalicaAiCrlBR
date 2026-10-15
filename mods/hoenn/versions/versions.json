@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "de76f2bbb2a311964524bc39764951d158c5f43a74728fb88882292680e765df",
-  "build_rules_offset": 9090672,
+  "parent_rom_sha256": "442a99f8dc7de2e1dd805b8c783d77e167171b35f963e119abe7f34fdde08058",
+  "build_rules_offset": 9090664,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "a226794d4dedd435544100bae2a9d43b829ccae55e4f8869b11798e59a17726f",
+      "sha256": "ff22f02cae561dd3d66189ec11cc4c12ccb302c58b3092f4123ebdb6c05efc72",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        9090672,
-        9090673,
-        9090674
+        9090664,
+        9090665,
+        9090666
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "cc5f7fcf6cc526b9d7fbb72d77e2769006a673c62e06c1c4136771ae981bef53",
+      "sha256": "6f7887c8377208f19505beccaa0b3734f4c5bc78d3ec9204480a3382ee50a9c6",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        9090672,
-        9090673
+        9090664,
+        9090665
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "1834f6aa0334b43c84f88cb102ef38f875def425a72e6f3848feb2e5d5bdec5e",
+      "sha256": "c6ae655aef4861cd3d361bf20672a4a02255abdda53695aa980f48d61f09af2b",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        9090674
+        9090666
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "d2fb4ab3d81e5bf0fbbdb6b488c90cf41cec2f6697e655f649b46aa8bcb134d4",
+      "sha256": "4698a0b69eaaf0feb83128b94b1320918e0062eca9ce33c30f06d2dfe73abb41",
       "patched_byte_offsets": [
         160,
         162,
@@ -288,31 +288,31 @@
       "file": "evidence/sevii-surf/common/sevii-surf-connections.json",
       "target": "common",
       "kind": "sevii-surf-connections",
-      "sha256": "8a0f7835142a8080ad8843555424136f8384eea0e3348d18b5d13cdf0d103ada"
+      "sha256": "2a9f75842e64e85d9dd81106ac63cccb209ec9e2cd625585d7353dc40d48a303"
     },
     {
       "file": "evidence/sevii-surf/common/coast-connectivity.json",
       "target": "common",
       "kind": "coast-connectivity",
-      "sha256": "026e9d3ba2fd06796bf00b8bceddc3e2d237c789e9f6eff8d67daf3385dd9d55"
+      "sha256": "ff042fa0d3ce2c0989955c228bf0b20a4ecc11f30d2a54cb31c5e6ec45010c49"
     },
     {
       "file": "evidence/sevii-surf/common/sevii-source-scope.json",
       "target": "common",
       "kind": "sevii-source-scope",
-      "sha256": "bcac43eb8b4b6ca3fa1592c08b6b735c199e4bdac13ffb44dda3f469d7b04769"
+      "sha256": "097ee717f201ac52257e64fbb2ff208221af2c4754c3baf3dd6be2a6c860499b"
     },
     {
       "file": "evidence/sevii-surf/common/reproduction.json",
       "target": "common",
       "kind": "reproduction",
-      "sha256": "466dd6a0c0f595cee5b231e38e31db684bd97a9e597ba8c845e5490de013b0f0"
+      "sha256": "5a223660653ac26cd95cb5bbdd871ecaf76d65c391773cb5cd99a64804a2a57e"
     },
     {
       "file": "evidence/sevii-surf/common/pallet-harbor.json",
       "target": "common",
       "kind": "pallet-harbor",
-      "sha256": "48c7b4e496ba0eac0c102605b78253a83ec5dd0d2f78123e144295eb64f9b012"
+      "sha256": "72f1d51c5e2342624fbeb5876b64388ccf36809b8d4978a98bf5a40bf22a5cb3"
     },
     {
       "file": "evidence/sevii-surf/common/pallet-reproduction.json",
@@ -324,109 +324,109 @@
       "file": "evidence/sevii-surf/common/sootopolis-harbor.json",
       "target": "common",
       "kind": "sootopolis-harbor",
-      "sha256": "9cb17a2db2bd61e1caaf60e0fea848bdab37f63297947a17128260ec43a90878"
+      "sha256": "22f84852520dbf9a4efe2ae313dd710c34a54abcbc2952a413129725b6f391ef"
     },
     {
       "file": "evidence/sevii-surf/common/world-route-chart.json",
       "target": "common",
       "kind": "world-route-chart",
-      "sha256": "35e7c2f6bf10b224175d925802409943d605ca53ddd4e54c8d1d577a82430a4c"
+      "sha256": "5e7ca043e5cd87c628c812c444037d830aadb9c005abfa2287dbe495c5ca2eb3"
     },
     {
       "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-4-Normal/sevii-surf-connections.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "sevii-surf-connections",
-      "sha256": "435e7b0a11030bd25f4bc1fae01886f3689b4262b041eb41447cc6558f38a873"
+      "sha256": "2a5c929fdd01d04cbde2ee8d62a6d9b942de9ef3de83adcdebd1525957d7b9ec"
     },
     {
       "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-4-Normal/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "special-encounters",
-      "sha256": "61bb43b338d636d9e95c75e6f695fc84d491057f526849a782a6b55f940ffa46"
+      "sha256": "a9e0d0c1800c4d72bb4fa1b28686cd96108312f73d53e1451625f986ba5734f1"
     },
     {
       "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-4-Normal/pallet-harbor.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "pallet-harbor",
-      "sha256": "b2a7e80baaab46e28081e78d79c64c79181bcf71d2768befe75a0395bdec4970"
+      "sha256": "647d1ebd29e2e3e12892f28360990e03d1e4992f542b2c19325a7674a5383e74"
     },
     {
       "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-4-Normal/sootopolis-harbor.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "sootopolis-harbor",
-      "sha256": "ecc238fb6e8d3e0093504daf30e737bef6fc730c61888e9befd59faccfc50b59"
+      "sha256": "4607170d065f003a8e29ca01770dc3ca14ee023caae1241882de780f5bbf21d0"
     },
     {
       "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-4-Hard/sevii-surf-connections.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "sevii-surf-connections",
-      "sha256": "4755aae6b86a7f827f27b74fba978bf25ba40416fa0941f0959750bf608221df"
+      "sha256": "5c2d6a0547fbd65713f21da0575e99232c11b2ca810cd27ff9187f81aa34cada"
     },
     {
       "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-4-Hard/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "special-encounters",
-      "sha256": "5883c4a700efa06a10e0ff27457179ed71824f6c20842490a0ccfb8b56316887"
+      "sha256": "d2388ee21db0a74c0f5fc00898862739f8bf5568a3ca9d883088fca93d647811"
     },
     {
       "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-4-Hard/pallet-harbor.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "pallet-harbor",
-      "sha256": "10765634e0f77438d353dbdb71a97a40081b8e3655f77cc70e87ef284d3d25cd"
+      "sha256": "fcd4a434975abf0191dd6ec9788fc4da7f6f0abe7a43f8855ea15cbeef8a64cd"
     },
     {
       "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-4-Hard/sootopolis-harbor.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "sootopolis-harbor",
-      "sha256": "1681ada98749f61c23590c08a507b9f31c137c36aab60500374f0d4f802ef50a"
+      "sha256": "b867085ea694cd7bcd9ca3f8f4a03ec0bbc17262e4d17d45cfa3ec5d9d6b8411"
     },
     {
       "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-9-Normal/sevii-surf-connections.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "sevii-surf-connections",
-      "sha256": "64e595b2d197503189c02727b04279c28b7e01cddc19dffd1ed7a59ff99951a1"
+      "sha256": "5aef312cca4ae17db48bf3213d95b4daba93ce49ad50ed98f6a6cec950370373"
     },
     {
       "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-9-Normal/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "special-encounters",
-      "sha256": "4bdd20cfecd5f636a7e0daac4449ce407778c30b71f8526a745273a963b6a808"
+      "sha256": "2cd789c630ca2b9134053f992826ecf6dfc0b39947f5f69b3f574d534a592892"
     },
     {
       "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-9-Normal/pallet-harbor.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "pallet-harbor",
-      "sha256": "ab67a7d1c943fe537da95aa0667e98e986519435925c63fda97d9e8b1dc643ee"
+      "sha256": "93e1a747c1bbd9f6caef323801ff8c93a76ef1cd5e89afce1a6aa86a94729d04"
     },
     {
       "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-9-Normal/sootopolis-harbor.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "sootopolis-harbor",
-      "sha256": "8f882ce02cda716bf7222a1eec92a8d92dd21e16361d2db0cd3a296cce03863d"
+      "sha256": "417b0c4aa8f8a7ab86e22de05f87d51b4d234e9683fb9722e978efd9573f538d"
     },
     {
       "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-9-Hard/sevii-surf-connections.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "sevii-surf-connections",
-      "sha256": "d1ae655d4bff42489e6747c6fc8ec2a563c9a2a00bc6d5d81b1e8eff47048adb"
+      "sha256": "4a97eebdb65c8a654ccc9b36110e483bd661b80473330efec2f1621519821a38"
     },
     {
       "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-9-Hard/special-encounters.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "special-encounters",
-      "sha256": "308d5e151590f860fb489c8c0befc1870ddf5d24fa7bebb2b8ceecb28f09b593"
+      "sha256": "28b050c652ac768300c92141b459ca425b60b08f8a527e686bda1a675b146cb6"
     },
     {
       "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-9-Hard/pallet-harbor.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "pallet-harbor",
-      "sha256": "14b5cad3bfbb079830efc831d9c345fc2dc737bffb1256bdbf887021e36faffc"
+      "sha256": "7b351ee54aefad4ba65c196999b40095869c97559aba229aef5163c7239e9718"
     },
     {
       "file": "evidence/sevii-surf/Pokemon-Journey-Gen1-9-Hard/sootopolis-harbor.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "sootopolis-harbor",
-      "sha256": "774ad8b38a3d6da4d9b8c0318d2d2ef768b68970571f24202a8cbbd6543fec79"
+      "sha256": "151259a200c0444d8f403a6f95a9e7285fd5f336ddfd781c522d5af4df34ce48"
     }
   ]
 }

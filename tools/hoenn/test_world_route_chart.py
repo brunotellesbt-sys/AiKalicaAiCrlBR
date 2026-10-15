@@ -2,6 +2,7 @@
 import json
 import unittest
 from pathlib import Path
+from PIL import Image
 
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'mods/hoenn/world-route-chart-validation'
@@ -15,6 +16,7 @@ class WorldRouteChart(unittest.TestCase):
         self.assertEqual(r['rom_sha256'],release['parent_rom_sha256'])
         self.assertTrue(r['compiled_zoom_pixels_match_source'])
         self.assertTrue(r['cursor_tracks_controller_movement_on_reopen'])
+        self.assertTrue(r['cursor_stays_within_authored_corridors'])
         self.assertEqual(r['new_passage_count'],3)
         for p in r['new_surf_passages']:
             self.assertTrue(p['no_midroute_coordinate_writes'])
@@ -39,6 +41,16 @@ class WorldRouteChart(unittest.TestCase):
         for passage in layout['passages']:
             self.assertEqual(definitions[passage['map']]['name'],passage['name'])
             self.assertEqual(definitions[passage['map']]['definition'],passage['definition'])
+
+    def test_routes_are_visibly_drawn_at_the_red_annotations(self):
+        im=Image.open(ROOT/'docs/images/navigation/world-map-current.png').convert('RGB')
+        proof=json.loads((OUT/'world-route-chart.json').read_text())
+        expected=[(101,65),(101,69),(101,73),(175,43),(181,46),(190,50),
+                  (176,101),(176,106),(185,109),(168,105)]
+        self.assertTrue(proof['authored_corridors_visible'])
+        self.assertEqual(proof['visible_route_samples'],[list(p) for p in expected])
+        for x,y in expected:
+            self.assertEqual(im.getpixel((6*x+3,6*y+3)),(48,104,176),(x,y,'Route missing from annotated location'))
 
 
 if __name__=='__main__':unittest.main()

@@ -5,7 +5,7 @@ from scipy.sparse import coo_matrix
 from scipy.sparse.csgraph import dijkstra
 
 
-def reconcile(header, projections, maps):
+def reconcile(header, projections, maps, fixed_maps=()):
     packed=np.array(list(map(int,re.search(r'sWorldNavigationPixels\[\] = \{([^}]+)',header)[1].split(','))),dtype=np.int32)
     old=np.stack([packed&255,packed>>8],axis=1)
     grids={};offset=0;edges=[]
@@ -33,6 +33,21 @@ def reconcile(header, projections, maps):
             bounds.append(dijkstra(matrix,directed=True,indices=n)[:n])
         axes.append(np.floor((bounds[0]+255-bounds[1])/2+0.5).astype(np.int16))
     final=np.stack(axes,axis=1)
+    if fixed_maps:
+        fixed=np.concatenate([grids[name].ravel() for name in fixed_maps])
+        fixed_rows=np.concatenate([e[0],e[1],np.full(len(fixed),n)])
+        fixed_cols=np.concatenate([e[1],e[0],fixed])
+        for axis in [0,1]:
+            bounds=[]
+            for values in [old[fixed,axis],255-old[fixed,axis]]:
+                matrix=coo_matrix((np.concatenate([cost,cost,values]),(fixed_rows,fixed_cols)),shape=(n+1,n+1)).tocsr()
+                bounds.append(dijkstra(matrix,directed=True,indices=n)[:n])
+            lower,upper=255-bounds[1],bounds[0]
+            assert np.all(lower<=upper),('Inconsistent authored route coordinates',axis)
+            # Clipping a Lipschitz field between Lipschitz bounds retains the
+            # step limit while keeping the authored passage coordinates fixed.
+            final[:,axis]=np.clip(final[:,axis],lower,upper).astype(np.int16)
+        assert np.array_equal(final[fixed],old[fixed])
     maximum=int(abs(final[e[0]]-final[e[1]]).max());seam_delta=int(abs(final[e[0,interior:]]-final[e[1,interior:]]).max())
     assert maximum<=2 and seam_delta==0
     result=re.sub(r'(sWorldNavigationPixels\[\] = \{)[^}]+',lambda m:m[1]+','.join(str(int(x)|(int(y)<<8)) for x,y in final),header)
