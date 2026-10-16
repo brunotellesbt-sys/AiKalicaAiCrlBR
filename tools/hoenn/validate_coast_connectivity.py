@@ -6,8 +6,11 @@ prefix=(ROOT/'tools/hoenn/validate_eastern_union.py').read_text().split('exec(co
 replacement="names=[p.parent.name for p in (source/'data/maps').glob('*/map.json') if json.loads(p.read_text()).get('map_type') in ['MAP_TYPE_ROUTE','MAP_TYPE_CITY','MAP_TYPE_TOWN','MAP_TYPE_OCEAN_ROUTE'] or ('Harbor' in p.parent.name and json.loads(p.read_text()).get('connections'))]"
 prefix=prefix.replace("names=[r['map'] for r in report['rectangles']]",replacement)
 exec(compile(prefix,str(ROOT/'tools/hoenn/validate_eastern_union.py'),'exec'))
+walk_surf_under_bridges=True
 exec(compile((ROOT/'tools/hoenn/native_water_walk.py').read_text(),str(ROOT/'tools/hoenn/native_water_walk.py'),'exec'))
-passable={n:{i for i in p if not blocks[n][2][i]&0xC00 and blocks[n][2][i]>>12==1 and water_behaviors[behaviors[n][i]]} for n,p in passable.items()}
+passable={n:{i for i in p if not blocks[n][2][i]&0xC00 and
+    (blocks[n][2][i]>>12==1 or blocks[n][2][i]>>12==0 and bridge_behaviors[behaviors[n][i]])
+    and water_behaviors[behaviors[n][i]]} for n,p in passable.items()}
 from collections import deque
 start=('Route19_Frlg',15,50);queue=deque([start]);reachable={start}
 while queue:

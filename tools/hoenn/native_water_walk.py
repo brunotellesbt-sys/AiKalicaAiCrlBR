@@ -12,6 +12,7 @@ by_location = {map_id(n): n for n in maps}
 blocks = {}
 passable = {}
 water_behaviors = {}
+bridge_behaviors = {}
 behaviors, currents, arrows = {}, {}, {}
 step_warps = {}
 for n, m in maps.items():
@@ -36,6 +37,9 @@ for n, m in maps.items():
         behaviors[n].append(behavior)
         if behavior not in water_behaviors:
             water_behaviors[behavior] = bool(native('MetatileBehavior_IsSurfableWaterOrUnderwater', behavior))
+            if globals().get('walk_surf_under_bridges',False):
+                bridge_behaviors[behavior]=bool(native('MetatileBehavior_IsBridgeOverWater',behavior))
+                if bridge_behaviors[behavior]:water_behaviors[behavior]=True
         if any(w['x'] == i % blocks[n][0] and w['y'] == i // blocks[n][0]
                for w in m['warp_events']) and behavior not in step_warps:
             step_warps[behavior] = any(native('MetatileBehavior_Is' + kind, behavior) for kind in [
