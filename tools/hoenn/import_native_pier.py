@@ -4,7 +4,7 @@ from pathlib import Path
 from PIL import Image
 from render_sea_maps import MapRenderer
 
-def import_pier(source,target,emerald=False,donor="gTileset_LavenderTown",mids=None,donor_emerald=False,overrides=None,donor_palettes=None,transparent_colors=None):
+def import_pier(source,target,emerald=False,donor="gTileset_LavenderTown",mids=None,donor_emerald=False,overrides=None,donor_palettes=None,transparent_colors=None,metatile_slots=None):
  source=Path(source);r=MapRenderer(source);primary='gTileset_General' if emerald else 'gTileset_General_Frlg';cut=512 if emerald else 640
  donor_cut=512 if donor_emerald else 640
  source_primary=r.tileset('gTileset_General' if donor_emerald else 'gTileset_General_Frlg')
@@ -27,8 +27,13 @@ def import_pier(source,target,emerald=False,donor="gTileset_LavenderTown",mids=N
   free=[bank for bank in range(12,5 if emerald else 6,-1) if bank not in usedbanks]
   if free:
    bank=free[0];usedbanks.add(bank);colors=incoming;palettes=[(b,colors if b==bank else entries) for b,entries in palettes];palette_files[str(folder/f'palettes/{bank:02}.pal')]=('JASC-PAL\n0100\n16\n'+'\n'.join(' '.join(map(str,c)) for c in colors)+'\n').encode()
+ # A nearly full bank can reuse cells proven absent from every map sharing it.
+ # Keep all existing words when finding free graphics tiles and palette banks.
+ slots=iter(metatile_slots) if metatile_slots is not None else None
  for mid in (mids or [0x2F3,0x2F4,0x2F5]):
-  ids[mid]=cut+len(newwords)//8
+  word_start=len(newwords);attr_start=len(attrs)
+  ids[mid]=next(slots) if slots is not None else cut+len(newwords)//8
+  if slots is not None:assert cut<=ids[mid]<cut+len(tw)//8 and list(ids.values()).count(ids[mid])==1
   for word in metatile_words(mid):
    tile=word&1023;pal=word>>12;key=(tile,pal)
    if key not in mapping:
@@ -46,6 +51,9 @@ def import_pier(source,target,emerald=False,donor="gTileset_LavenderTown",mids=N
   else:pa=da;idx=mid-donor_cut
   size=2 if donor_emerald else 4;value=int.from_bytes(pa[idx*size:(idx+1)*size],'little');behavior=value&(255 if donor_emerald else 511);kind=(value>>(12 if donor_emerald else 29))&3
   attrs.extend((behavior|(kind<<(12 if emerald else 29))).to_bytes(2 if emerald else 4,'little'))
+  if slots is not None:
+   at=(ids[mid]-cut)*8;newwords[at:at+8]=newwords[word_start:];del newwords[word_start:]
+   size=2 if emerald else 4;at=(ids[mid]-cut)*size;attrs[at:at+size]=attrs[attr_start:];del attrs[attr_start:]
  assert len(newwords)//8+cut<=1024 and len(attrs)==len(newwords)//8*(2 if emerald else 4)
  data=io.BytesIO();canvas.save(data,format='PNG')
  return ids,{str(folder/'tiles.png'):data.getvalue(),str(folder/'metatiles.bin'):struct.pack('<'+'H'*len(newwords),*newwords),str(folder/'metatile_attributes.bin'):attrs,**palette_files}

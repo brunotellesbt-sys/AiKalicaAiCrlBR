@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "rom_sha256": "5fc57647e9869fc67021d0a8f57c8105f3e4343db72d0139392b0549112d4d0e",
+  "door": [
+    5,
+    2
+  ],
+  "stairs_walked": [
+    [
+      5,
+      3
+    ],
+    [
+      6,
+      3
+    ],
+    [
+      5,
+      15
+    ],
+    [
+      6,
+      15
+    ]
+  ],
+  "continuous_straight_two_tile_deck": true,
+  "bridge_walked_above_without_surf": true,
+  "surf_crossed_below_without_dismounting": true,
+  "upper_elevation": 4,
+  "lower_elevation": 1,
+  "exterior_transit_boat_removed": true,
+  "west_house_foot_access": true,
+  "ship_channel_surfed": true,
+  "controller_entry_and_exit": true,
+  "trips": [
+    {
+      "destination": "JourneyPalletHarbor",
+      "arrival": [
+        16,
+        13
+      ],
+      "native_animation_observations": 18
+    },
+    {
+      "destination": "JourneyDewfordHarbor",
+      "arrival": [
+        16,
+        13
+      ],
+      "native_animation_observations": 18
+    }
+  ],
+  "north_island_seamless_controller_connections": true,
+  "initial_story_state_and_position_are_fixtures": true,
+  "full_campaign_playthrough": false
+}

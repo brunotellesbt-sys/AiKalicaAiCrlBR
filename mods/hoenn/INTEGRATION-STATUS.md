@@ -1,6 +1,8 @@
 # Atualização costeira e níveis dinâmicos
 
-Atualização mais recente: a camada 151 inclui os [sete terminais de Sevii](../../docs/portos-sevii.md),
+Atualização mais recente: as camadas 152–153 incluem os [portos de Mossdeep e Dewford](../../docs/portos-mossdeep-dewford.md). Mossdeep usa o terminal e a ponte nas coordenadas indicadas; Dewford tem o terminal original mais nítido, ponte suspensa preservada, quatro tiles de escada baixa na cor dos apoios da ponte, praias contínuas nos dois acessos e 35 árvores completas na mata do norte, sem ampliar a ilha, canal de saída na lateral direita do terminal, e passagem livre entre a casa ao sul e a ponte. As cinco compilações (base e quatro edições) têm caminhada, Surf, portas e viagem de ida e volta conferidos em mGBA. A reprodução independente preserva 31.092 entradas alheias a essas camadas. Evidências em `island-harbors-validation/`; as verificações anteriores continuam históricas.
+
+Atualização anterior: a camada 151 inclui os [sete terminais de Sevii](../../docs/portos-sevii.md),
 com navios e capitães internos, píeres prolongados três tiles e barcos pequeno
 e médio em lados opostos. Uma fileira de água ao sul e duas colunas a oeste
 ficam livres; as conexões e o atlas são preservados. Cinnabar permite Surf sob o cais.

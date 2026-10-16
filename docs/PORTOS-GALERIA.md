@@ -18,7 +18,7 @@ Imagens renderizadas dos tiles e sprites utilizados na ROM. Exibem os atores per
 
 ## Mossdeep - ilha oeste
 
-![Mossdeep - ilha oeste](images/port-update/MossdeepCity.png)
+![Mossdeep - ilha oeste](images/island-harbors/Mossdeep-grid.png)
 
 ## Cinnabar
 
@@ -43,7 +43,9 @@ mesmo prédio de Pallet e atendimento da rede geral dentro do porto.
 
 ## Dewford
 
-![Dewford](images/port-update/DewfordTown.png)
+![Dewford](images/island-harbors/Dewford-island-harbor.png)
+
+[Grade de tiles, interior e detalhes](portos-mossdeep-dewford.md).
 
 ## Petalburg coast
 

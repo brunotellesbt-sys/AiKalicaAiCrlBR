@@ -1,5 +1,7 @@
 # Pokémon Journey — quatro edições GBA
 
+[Portos de Mossdeep e Dewford](../../../docs/portos-mossdeep-dewford.md): terminal original, ponte suspensa com escadas, terreno revisado e imagens com coordenadas.
+
 [Novos terminais de Cinnabar, Cerulean e Petalburg](../../../docs/portos-cinnabar-cerulean-petalburg.md): fachadas nas coordenadas indicadas, navio interno e barco médio junto às pontes.
 
 [Porto de Fuchsia / Rota 19](../../../docs/porto-fuchsia.md): terminal vermelho sobre a água, navio interno, um barqueiro dentro e barco médio junto à ponte.

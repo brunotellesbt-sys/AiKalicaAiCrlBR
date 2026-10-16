@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 
 import package_playable
-from prepare_sevii_harbors import PRIOR, LAYER
+from prepare_dewford_island_harbor import PRIOR, LAYER
 
 
 def main():
