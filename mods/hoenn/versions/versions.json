@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "69ce1934a780c98ad42da43e096a59cf5808152ee71e3040f673e2cf7e27d218",
-  "build_rules_offset": 9096356,
+  "parent_rom_sha256": "0fc6c3726d0b47c8cbb991ed671d1b3c9cf9ac82f8e87e793c56f606bfc54a77",
+  "build_rules_offset": 9097356,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "a4fc723bf8cf9cbfef67902695250dec5432659276675ec3657b49518fda6365",
+      "sha256": "6c55d18142f8b1276ae3f021a0657cbd6140fa8445b7980400ed4c92f8663721",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        9096356,
-        9096357,
-        9096358
+        9097356,
+        9097357,
+        9097358
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "f2978ebc6c830cd689f6e1512ffd51ba6ad5250693f93b17994d503548fe397e",
+      "sha256": "026c01278c9cb520f393a50f44c536ce2f5a158530aa6ed917721dd55a3b27eb",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        9096356,
-        9096357
+        9097356,
+        9097357
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "ac27e39e2bcc6cbef7ef0c6520909cd9f8f3a6c31f729724dbbc0638c3ff7f93",
+      "sha256": "7d24faac7821e525ed5a4f981e09ce09ca249388bc1c74feddffac8b4afc4028",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        9096358
+        9097358
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "1638316fceb490366a2de927b172c23d3b384a0d4d6dcf937ffe73f4a5306fea",
+      "sha256": "4a8b1a1ac38694cf197d65fbf00ba219e5d5779e3a1d3b033f10e9f65bc558a5",
       "patched_byte_offsets": [
         160,
         162,
@@ -262,124 +262,83 @@
     "continuous-ocean",
     "annotated-world-links",
     "surf-cave-coasts",
-    "surf-review"
+    "surf-review",
+    "ever-grande-market"
   ],
-  "validation_scope": "surf-review",
+  "validation_scope": "ever-grande-market",
   "full_campaign_playthrough": false,
   "proofs": [
     {
-      "file": "evidence/surf-review/common/surf-review-source.json",
+      "file": "evidence/ever-grande-market/common/ever-grande-source.json",
       "target": "common",
-      "kind": "surf-review-source",
-      "sha256": "f9cc441f0c7580f512d3483ae559cd807dbbf92eb6460f22e501ea2c6af0e04e"
+      "kind": "ever-grande-source",
+      "sha256": "41ffa5078998e9378efb7f0ff3776452f19ba9ee57563bbeb9bc60cb77c487f8"
     },
     {
-      "file": "evidence/surf-review/common/surf-review.json",
+      "file": "evidence/ever-grande-market/common/ever-grande-market.json",
       "target": "common",
-      "kind": "surf-review",
-      "sha256": "372652b7578f93f99ca13bdc866112eb65513632538552695be6aa8095c9cc30"
+      "kind": "ever-grande-market",
+      "sha256": "880d8d9f4bf7a75301381ef2230077344ec1305a07809016a9d456e86a8d3c23"
     },
     {
-      "file": "evidence/surf-review/common/all-surf-links.json",
-      "target": "common",
-      "kind": "all-surf-links",
-      "sha256": "2a342043d3ba5616c6dd7263b06a683c26132639a56d9494b9b93f47980bfea9"
-    },
-    {
-      "file": "evidence/surf-review/common/coastal-cave-access.json",
-      "target": "common",
-      "kind": "coastal-cave-access",
-      "sha256": "b3e1fb34b8726f7d9b5f2d11b93a31ec08a08cd4dd8097878189024c53c6830a"
-    },
-    {
-      "file": "evidence/surf-review/common/coast-connectivity.json",
-      "target": "common",
-      "kind": "coast-connectivity",
-      "sha256": "7cbaacdf25c8a28eeda499360a570eedb7d26a78fcfbdf6747f849d2c7bcfafc"
-    },
-    {
-      "file": "evidence/surf-review/common/ocean-seams.json",
-      "target": "common",
-      "kind": "ocean-seams",
-      "sha256": "3d8bb951e382c5cd1c54b12c49d910bd26464a83e858981c7b249b38e3ed1663"
-    },
-    {
-      "file": "evidence/surf-review/common/ocean-aprons.json",
-      "target": "common",
-      "kind": "ocean-aprons",
-      "sha256": "63379c657d6a0cc0fc9d08157110a5020586b88ee8a093355cf6eda6eb6c292d"
-    },
-    {
-      "file": "evidence/surf-review/common/sevii-surf-connections.json",
-      "target": "common",
-      "kind": "sevii-surf-connections",
-      "sha256": "1f5bb05e5627ad8c86dcae8f40309d50148a30fc65c0f5038ab024161d7bc45c"
-    },
-    {
-      "file": "evidence/surf-review/common/continuous-ocean.json",
-      "target": "common",
-      "kind": "continuous-ocean",
-      "sha256": "cb07df084b119e6ca17c43f56a8e1d7733e629d28ac269a32da74f5c25d442c3"
-    },
-    {
-      "file": "evidence/surf-review/Pokemon-Journey-Gen1-4-Normal/surf-review.json",
+      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-4-Normal/ever-grande-market.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "surf-review",
-      "sha256": "24fcd91d4d547ed3863df6f59f2896265b156d4b05b32280dfa1a411e56d6596"
+      "kind": "ever-grande-market",
+      "sha256": "c6c11f4d540c66e71586e86a43dac650a277d9c427af5d148862101d646fe296"
     },
     {
-      "file": "evidence/surf-review/Pokemon-Journey-Gen1-4-Normal/review-mode.json",
+      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-4-Normal/review-mode.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "review-mode",
-      "sha256": "455026e31a97693e98a4fb6d42159bbb6086863b0ff65ff973126a912db02422"
+      "sha256": "f3aa25448a125ee316317e4a2ba6497bdb5919d1fdc4c4252648296fac9ccc3f"
     },
     {
-      "file": "evidence/surf-review/Pokemon-Journey-Gen1-4-Hard/surf-review.json",
+      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-4-Hard/ever-grande-market.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "surf-review",
-      "sha256": "99b5494e29d6df4fe831e9b3bd50b356f086044899df9fb7fed53d3e3a38d8d7"
+      "kind": "ever-grande-market",
+      "sha256": "3ea9b2a7a2369c4b52d0c6232f40851290e7401a69f6ea4f63a2e7f89cc49aa0"
     },
     {
-      "file": "evidence/surf-review/Pokemon-Journey-Gen1-4-Hard/review-mode.json",
+      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-4-Hard/review-mode.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "review-mode",
-      "sha256": "bd8ae12b0cb40e37a7187cc0570c18c6a2877ecbd4f66e05ec81ceb9aae6ce81"
+      "sha256": "c09f827a5de56d3b2eb41b0c6c44fa80e4811c0f5be22b650ce77c82832c23bd"
     },
     {
-      "file": "evidence/surf-review/Pokemon-Journey-Gen1-9-Normal/surf-review.json",
+      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-9-Normal/ever-grande-market.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "surf-review",
-      "sha256": "dafc3e1e77cb6d284f86d8974e6660c63ada6ad7cfecb7ffd60e714eb89707db"
+      "kind": "ever-grande-market",
+      "sha256": "d94c4421d5f6b1ce44d24c4c766c43eaf4de7ca71f2bafcf209e1f407326de92"
     },
     {
-      "file": "evidence/surf-review/Pokemon-Journey-Gen1-9-Normal/review-mode.json",
+      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-9-Normal/review-mode.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "review-mode",
-      "sha256": "51996f0986495b5b4967ac299533c5de5f359b6c22754506dac336f7480d0649"
+      "sha256": "13b5d57b0ed5344fbb323d005f735e8efb3798569d630131812d5a7d5a4863a0"
     },
     {
-      "file": "evidence/surf-review/Pokemon-Journey-Gen1-9-Hard/surf-review.json",
+      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-9-Hard/ever-grande-market.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "surf-review",
-      "sha256": "ec3a71eca8d2dd331915249e40d0b3abb34d42fcde07c306a2a3ffa9a4933b5e"
+      "kind": "ever-grande-market",
+      "sha256": "a2ab8c29d884da033ab2d437f9d4eddef3d8af5b755694b5ea6249b893d21304"
     },
     {
-      "file": "evidence/surf-review/Pokemon-Journey-Gen1-9-Hard/review-mode.json",
+      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-9-Hard/review-mode.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "review-mode",
-      "sha256": "135b498502732a1049ddc42ca2d6995674bb7b2123aa59a90a34bf569bc4f5d2"
+      "sha256": "0097becc8e1cb09b05a2e4f46093d17e6aead7313e6988cb6d24a4d4f149be88"
     },
     {
-      "file": "evidence/surf-review/test/surf-review.json",
+      "file": "evidence/ever-grande-market/test/ever-grande-market.json",
       "target": "test",
-      "kind": "surf-review",
-      "sha256": "95b2bf6e5c2eb9845213fca5d16ed1c5d72dab143db7c975949da1f2f241bf16"
+      "kind": "ever-grande-market",
+      "sha256": "d13148fe7acb881f1bf71a0381d8cd43b60da057cd18c22ff79cf20670e2050c"
     },
     {
-      "file": "evidence/surf-review/test/review-mode.json",
+      "file": "evidence/ever-grande-market/test/review-mode.json",
       "target": "test",
       "kind": "review-mode",
-      "sha256": "403b175e478d9d6472e1dc2c7fe8b4ec8b64ba1ff0ab67170cd343a85329db74"
+      "sha256": "0f7b553d132479ed93a352227d5d9e8c5b6435aa367c4a826d8f40e79e5af1af"
     }
   ],
   "historical_validation": {
@@ -400,8 +359,8 @@
     "retested_on_current_rom": false
   },
   "previous_port_validation": {
-    "manifest": "mods/hoenn/surf-review-validation/baseline/versions.json",
-    "manifest_sha256": "09bea5895a7e6c0dd9464cb9203e48fe48ce66545393f75dc7bd77e660e5d0ca",
+    "manifest": "mods/hoenn/ever-grande-market-validation/baseline/versions.json",
+    "manifest_sha256": "399b3f07f32076f2060709b6a4e6ed91e55cbdf001c47b16a2bf367c8a69bc62",
     "retested_on_current_rom": false
   }
 }

@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "rom_sha256": "026c01278c9cb520f393a50f44c536ce2f5a158530aa6ed917721dd55a3b27eb",
+  "gifts": [
+    {
+      "map": "JourneyEverGrandeHouse1",
+      "item": "ITEM_FULL_RESTORE",
+      "bag_full_preserves_gift": true,
+      "exactly_one_item": true,
+      "repeat_talk_no_duplicate": true,
+      "neighbor_talked": true,
+      "controller_entry_and_exit": true
+    },
+    {
+      "map": "JourneyEverGrandeHouse2",
+      "item": "ITEM_MAX_REVIVE",
+      "bag_full_preserves_gift": true,
+      "exactly_one_item": true,
+      "repeat_talk_no_duplicate": true,
+      "neighbor_talked": true,
+      "controller_entry_and_exit": true
+    }
+  ],
+  "controller_center_roundtrip": true,
+  "victory_road_and_stairs_walked": true,
+  "market_actual_purchase": true,
+  "market_price": 200000,
+  "insufficient_money_rejected": true,
+  "stock_specific_price_reset": true,
+  "base_item_price_unchanged": true,
+  "save_continue_preserves_gifts_and_purchase": true,
+  "compiled_atlas_and_zoom_match_source": true,
+  "sootopolis_city_red": true,
+  "initial_placement_money_bag_and_party_are_fixtures": true
+}

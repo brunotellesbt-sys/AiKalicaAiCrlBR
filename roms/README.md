@@ -1,5 +1,7 @@
 # ROMs atuais
 
+Atualização atual: [casas e feira de Mega Stones em Ever Grande](../docs/ever-grande-market.md), presentes únicos (Full Restore e Max Revive) e Sootopolis com marcador vermelho restaurado. As quatro edições e a ROM de teste incluem as mudanças.
+
 Esta pasta contém sempre as quatro edições GBA da entrega atual. Comece um **save novo**; saves anteriores à ampliação da Bag não são compatíveis.
 
 | Edição | Download | IVs dos oponentes importantes |

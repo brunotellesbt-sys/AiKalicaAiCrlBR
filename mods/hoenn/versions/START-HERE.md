@@ -1,5 +1,7 @@
 # Pokémon Journey — quatro edições GBA
 
+Atualização atual: [casas e feira de Mega Stones em Ever Grande](../../../docs/ever-grande-market.md), presentes únicos (Full Restore e Max Revive) e Sootopolis com marcador vermelho restaurado. As quatro edições e a ROM de teste incluem as mudanças.
+
 [Oceano integrado e seis ligações do mapa](../../../docs/oceano-integrado.md): Surf aberto com bordas de pedra, preservando Mossdeep e Dewford do PR #90.
 
 [Portos de Mossdeep e Dewford](../../../docs/portos-mossdeep-dewford.md): terminal original, ponte suspensa com escadas, terreno revisado e imagens com coordenadas.

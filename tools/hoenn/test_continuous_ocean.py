@@ -45,8 +45,8 @@ class ContinuousOcean(unittest.TestCase):
 
     def test_every_shipped_edition_keeps_surf_colors_and_all_seven_islands_accessible(self):
         release = verify(ROOT / 'mods/hoenn/versions')
-        if release['validation_scope']=='surf-review':
-            from verify_fuchsia_update import previous_release
+        from verify_fuchsia_update import previous_release
+        while release['validation_scope'] in ['ever-grande-market','surf-review']:
             release=previous_release(release)
         self.assertEqual(release['validation_scope'], 'annotated-world-links')
         for row in release['variants']:
