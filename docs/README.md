@@ -7,6 +7,7 @@ As quatro edições são Gen 1–4 Normal, Gen 1–4 Hard, Gen 1–9 Normal e Ge
 As quatro ROMs atuais ficam em [`roms/`](../roms/README.md), atualizadas pelo empacotamento. O pacote com guias está em [ZIP](../mods/hoenn/versions/Pokemon-Journey-Four-Editions.zip).
 
 - [Novo porto de Sootopolis: ponte, terminal e submarino](porto-sootopolis.md)
+- [Porto de Lavender: terminal de Pallet, navio e barqueiro interno](porto-lavender.md)
 - [Galeria de todos os portos e sala do Rotom](PORTOS-GALERIA.md)
 - [Atualização costeira: imagens, portos, níveis e validação](atualizacao-costeira.md)
 - [Revisão visual das costas e novo mapa integrado](revisao-das-costas.md)

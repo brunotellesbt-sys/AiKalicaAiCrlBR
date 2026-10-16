@@ -1,5 +1,12 @@
 # Atualização costeira e níveis dinâmicos
 
+Atualização mais recente: a camada 148 troca a casa de [Lavender Port](../../docs/porto-lavender.md)
+pelo terminal de Pallet, dois tiles abaixo e dois à esquerda da primeira posição.
+O fundo do telhado e a faixa lateral usam areia. Há um navio e um único capitão
+interno, e as viagens da rede geral desembarcam dentro do prédio. As evidências
+atuais ficam em `lavender-harbor-validation/` e `versions/evidence/sevii-surf/`.
+O porto de Pallet e o atlas do PR #85 continuam incluídos; o GPS cobre 414.398 tiles.
+
 Atualização posterior: as quatro edições incluem o [porto de Sootopolis](../../docs/porto-sootopolis.md),
 com ponte prolongada e ligada à terra, terminal, capitão interno da rede geral e submarino 64×64.
 Os testes novos de caminhada, portas e viagens passaram em cada edição e também no layout

@@ -19,7 +19,9 @@ def verify_update(directory,info):
         elif kind=='reproduction':
             assert target=='common' and r['layers']==info['integration_layers'] and not r['differences']
             assert r['original_inputs_verified'] and r['idempotent']
-            assert r['reproduced_layers']==['sevii-surf-connections','sevii-coast-camera','sevii-surf-embarkation','sevii-arrival-layout','world-route-chart']
+            layers=['sevii-surf-connections','sevii-coast-camera','sevii-surf-embarkation','sevii-arrival-layout','world-route-chart']
+            if info.get('lavender_harbor_validated'):layers.append('lavender-harbor')
+            assert r['reproduced_layers']==layers
         else:assert r['rom_sha256']==expected,(kind,target,'Stale evidence')
         if kind=='sevii-surf-connections':
             assert {i['map'] for i in r['islands']}==ISLANDS and len(r['seams'])==14
@@ -49,7 +51,16 @@ def verify_update(directory,info):
                           'eastern_corridor_walked','bridge_crossed_by_surf_below','upper_corner_corrected']:
                 assert r[field] is True,field
             assert r['ship_sprite_size']==[96,40] and r['route21_atlas_seam_delta']==0
-            assert [t['destination'] for t in r['trips']]==['JourneyRoute12Shipyard','JourneyPalletHarbor']
+            lavender='JourneyLavenderHarbor' if info.get('lavender_harbor_validated') else 'JourneyRoute12Shipyard'
+            assert [t['destination'] for t in r['trips']]==[lavender,'JourneyPalletHarbor']
+        elif kind=='lavender-harbor':
+            for field in ['controller_entry_and_exit','captain_interacted_physically',
+                          'outside_captain_removed','one_indoor_captain','ship_hull_blocked_over_water',
+                          'network_arrivals_inside_terminal','save_continue_inside_terminal','returned_to_original_pier',
+                          'old_lodge_exit_walked']:
+                assert r[field] is True,field
+            assert r['ship_sprite_size']==[96,40]
+            assert [t['destination'] for t in r['trips']]==['JourneyPalletHarbor','JourneyLavenderHarbor']
         elif kind=='sootopolis-harbor':
             for field in ['bridge_walked_without_surf','controller_entry_and_exit','crisis_layout_controller_access',
                           'captain_interacted_physically','submarine_hull_blocked_over_water','returned_to_original_land',
@@ -79,6 +90,9 @@ def verify_update(directory,info):
     assert {(n,k) for n in variants for k in ['pallet-harbor','sootopolis-harbor']}<=covered
     assert {('common',k) for k in ['pallet-harbor','pallet-reproduction','sootopolis-harbor','world-route-chart']}<=covered
     assert info['pallet_harbor_validated'] and info['sootopolis_harbor_retested'] and info['world_route_chart_validated']
+    if info.get('lavender_harbor_validated'):
+        assert 'lavender-harbor' in info['integration_layers']
+        assert {(n,'lavender-harbor') for n in ['common',*variants]}<=covered
     reference=info['previous_sootopolis_validation'];assert reference['retested_on_current_rom'] is False
     raw=(ROOT/reference['manifest']).read_bytes();assert hashlib.sha256(raw).hexdigest()==reference['manifest_sha256']
     previous=json.loads(raw)

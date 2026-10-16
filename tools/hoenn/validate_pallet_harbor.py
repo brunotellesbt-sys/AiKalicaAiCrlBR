@@ -59,8 +59,13 @@ talk_up()
 picture('interior-world-port-menu')
 choose(0)  # KANTO
 choose(0)  # LAVENDER (Pallet excluded)
-trips = [voyage('JourneyRoute12Shipyard', (24, 39))]
-talk_left()
+if (source/'.journey-lavender-harbor').exists():
+    from prepare_lavender_harbor import HARBOR as LAVENDER, ARRIVAL as LAVENDER_ARRIVAL
+    trips = [voyage(LAVENDER, LAVENDER_ARRIVAL)]
+    talk_up()
+else:
+    trips = [voyage('JourneyRoute12Shipyard', (24, 39))]
+    talk_left()
 choose(0)  # KANTO
 choose(1)  # PALLET (Lavender excluded)
 trips.append(voyage(HARBOR, ARRIVAL))

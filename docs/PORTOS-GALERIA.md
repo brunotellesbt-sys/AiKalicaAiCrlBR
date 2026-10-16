@@ -28,7 +28,12 @@ Imagens renderizadas dos tiles e sprites utilizados na ROM. Exibem os atores per
 
 ## Lavender
 
-![Lavender](images/port-update/JourneyRoute12Shipyard.png)
+O [terminal atual](porto-lavender.md) substitui a casa do estaleiro, com o
+mesmo prédio de Pallet e atendimento da rede geral dentro do porto.
+
+![Lavender](images/lavender-harbor/JourneyRoute12Shipyard.png)
+
+![Interior de Lavender](images/lavender-harbor/JourneyLavenderHarbor.png)
 
 ## Sootopolis
 
