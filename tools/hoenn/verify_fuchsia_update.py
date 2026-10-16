@@ -18,7 +18,9 @@ def previous_release(info):
 
 def harbor_baseline(info):
     """Resolve the release on which unchanged older features were exercised."""
-    return previous_release(info) if info.get('validation_scope')=='fuchsia-harbor' else info
+    while info.get('validation_scope') in ('three-harbor-terminals','fuchsia-harbor'):
+        info=previous_release(info)
+    return info
 
 
 def verify_update(directory,info):

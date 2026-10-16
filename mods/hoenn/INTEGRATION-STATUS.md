@@ -74,3 +74,7 @@ O PWT atual passou por inspeção das 446 equipes elegíveis nas quatro ediçõe
 ## Porto de Fuchsia / Rota 19
 
 Terminal de Slateport sobre a água no oeste, barco médio junto à ponte e um único barqueiro interno com o navio grande. A camada `fuchsia-harbor` sucede `lavender-harbor`. Os outros portos, atlas e treinadores permanecem inalterados. Validação física de portas, menus, viagem a Pallet, colisões e save/continue na base e nas quatro edições; reprodução independente da camada e conferência de 31.051 arquivos não alterados. Evidências anteriores permanecem históricas, com seus hashes originais. [Imagens](../../docs/porto-fuchsia.md).
+
+## Cinnabar, Cerulean e Petalburg
+
+A camada `three-harbor-terminals` sucede `fuchsia-harbor`. Fachadas nos limites pedidos: Cinnabar `(4,11)..(10,14)`, Cerulean `(61,6)..(66,9)` e Petalburg `(15,47)..(19,50)`. Cada porto tem navio grande, um capitão interno e barco médio exterior. Vermilion, Pacifidlog, outros portos e atlas preservados. Os serviços locais do Mr. Briney continuam pela sala nativa. [Imagens, acessos e validação](../../docs/portos-cinnabar-cerulean-petalburg.md).

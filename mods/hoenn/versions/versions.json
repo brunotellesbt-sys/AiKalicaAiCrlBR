@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "42d447c48fdc65a9177b971170a55fb50d565ce2b1f0354dd28f02e4bf6cf22e",
-  "build_rules_offset": 9090664,
+  "parent_rom_sha256": "11e46b88c25810b761e62eab9d12b2f93374fd2e4b5e8848665609c26b0249f1",
+  "build_rules_offset": 9090728,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "996e9b72a631db6417a93fcdfd365499f9cb144886e09a6c4fc31ddd2e68b8ab",
+      "sha256": "735c61110b978d4dd00988a5cf5b9d07786b8f615651a68d2e5332f2306364ee",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        9090664,
-        9090665,
-        9090666
+        9090728,
+        9090729,
+        9090730
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "21b0a2bf1b3e322716c4af77155fda514091d6a34459858f98710a5046ebf391",
+      "sha256": "c5a40f46f46e749ab834a800791844a086708f5a93ce38257152d1a66e79e976",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        9090664,
-        9090665
+        9090728,
+        9090729
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "ab8804eaaf853eccd38a5768722d5872decdeffc6f4420de27bad4d56a5a6395",
+      "sha256": "0cc0b7013ae89adcbb30355889cc8d3507889a94520625b596e59df9e12659e0",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        9090666
+        9090730
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "1afac611d32f863d1c07b4811cfaf51fe0eea808cfb38fb1419123297342dd23",
+      "sha256": "274b9b8ab6dd287e9a027fff0cb2f42ee147532fe7ee9e60dcb1b700d2235eea",
       "patched_byte_offsets": [
         160,
         162,
@@ -254,52 +254,53 @@
     "sevii-arrival-layout",
     "world-route-chart",
     "lavender-harbor",
-    "fuchsia-harbor"
+    "fuchsia-harbor",
+    "three-harbor-terminals"
   ],
-  "validation_scope": "fuchsia-harbor",
-  "fuchsia_harbor_validated": true,
+  "validation_scope": "three-harbor-terminals",
+  "three_harbors_validated": true,
   "full_campaign_playthrough": false,
   "proofs": [
     {
-      "file": "evidence/fuchsia-harbor/common/fuchsia-source.json",
+      "file": "evidence/three-harbors/common/three-harbor-source.json",
       "target": "common",
-      "kind": "fuchsia-source",
-      "sha256": "f5c6e578b8362ea5f5333fc14afa5fcbc6be675639e8bf983dae4d6031894697"
+      "kind": "three-harbor-source",
+      "sha256": "805bc3285606e92e537fc19b2e234b5eb94e16f1bc7251f037db2d358397bcd0"
     },
     {
-      "file": "evidence/fuchsia-harbor/common/fuchsia-harbor.json",
+      "file": "evidence/three-harbors/common/three-harbors.json",
       "target": "common",
-      "kind": "fuchsia-harbor",
-      "sha256": "3d2ec00cebe3a8eb0e63ab57e7ec6fa71bb29cc23b074924b4897ac14617e672"
+      "kind": "three-harbors",
+      "sha256": "5c404f149b01eb13644b1d504bf914b803fc92752abcb1fad6bf45e9ce0b26e0"
     },
     {
-      "file": "evidence/fuchsia-harbor/Pokemon-Journey-Gen1-4-Normal/fuchsia-harbor.json",
+      "file": "evidence/three-harbors/Pokemon-Journey-Gen1-4-Normal/three-harbors.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "fuchsia-harbor",
-      "sha256": "84054d8616b8f9e5138bc1c04ea5ce398df42e318919e5b27231106789bad3d0"
+      "kind": "three-harbors",
+      "sha256": "8db0226b38785e8ab25dafd953007ab704b96ca87282069ad41a47433a59e2fc"
     },
     {
-      "file": "evidence/fuchsia-harbor/Pokemon-Journey-Gen1-4-Hard/fuchsia-harbor.json",
+      "file": "evidence/three-harbors/Pokemon-Journey-Gen1-4-Hard/three-harbors.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "fuchsia-harbor",
-      "sha256": "8cde7a22f4279b7bea2b406eb4bdb33c81c716fc86b989d75da3a2ef8a8eaf3b"
+      "kind": "three-harbors",
+      "sha256": "b97733621a335ce649bdd401f570928106e375cf29cf10a2120013e3b8a1eac3"
     },
     {
-      "file": "evidence/fuchsia-harbor/Pokemon-Journey-Gen1-9-Normal/fuchsia-harbor.json",
+      "file": "evidence/three-harbors/Pokemon-Journey-Gen1-9-Normal/three-harbors.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "fuchsia-harbor",
-      "sha256": "7ef6f87027998a226663a105a93e3eee8e28bd0f0cba43d854695dc349ee8fdd"
+      "kind": "three-harbors",
+      "sha256": "6119a53687c3094fe1df7a982051c2fc7ce9872d403fde86413abe3a2d4b328d"
     },
     {
-      "file": "evidence/fuchsia-harbor/Pokemon-Journey-Gen1-9-Hard/fuchsia-harbor.json",
+      "file": "evidence/three-harbors/Pokemon-Journey-Gen1-9-Hard/three-harbors.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "fuchsia-harbor",
-      "sha256": "dbac4be45151f9c5d97592984ccca51d8a7794a8843aaa5267f08ff4a0b2d25a"
+      "kind": "three-harbors",
+      "sha256": "3e45776533ebb0723e7367fe1d364d2fb250ace718d75ef74adc749b97cb81d7"
     }
   ],
   "previous_port_validation": {
-    "manifest": "mods/hoenn/fuchsia-harbor-validation/baseline/versions.json",
-    "manifest_sha256": "86dd0fc3a00404635a6df9a54a815460b478a1b686504c978383c1c2f57c797a",
+    "manifest": "mods/hoenn/three-harbor-validation/baseline/versions.json",
+    "manifest_sha256": "c5a470ffb842c4f047ed550c9533698021ef9057dba3241ed82a478b2718f752",
     "retested_on_current_rom": false
   },
   "historical_validation": {

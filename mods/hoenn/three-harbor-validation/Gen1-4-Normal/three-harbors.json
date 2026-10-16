@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "rom_sha256": "735c61110b978d4dd00988a5cf5b9d07786b8f615651a68d2e5332f2306364ee",
+  "ports": [
+    {
+      "name": "Cinnabar",
+      "exterior": "CinnabarIsland_Frlg",
+      "interior": "JourneyCinnabarHarbor",
+      "pid": 19,
+      "terminal": [
+        4,
+        11,
+        7,
+        4
+      ],
+      "controller_entry_and_exit": true,
+      "quay_walked_without_surf": true,
+      "one_indoor_captain": true,
+      "medium_boat_hull_blocked_over_water": true,
+      "inside_ship_hull_blocked_over_water": true,
+      "captain_interacted_physically": true,
+      "network_arrival_inside": true,
+      "save_continue_inside": true,
+      "legacy_exit_preserved": true,
+      "briney_local_service_preserved": false,
+      "trips": [
+        {
+          "destination": "JourneyPalletHarbor",
+          "arrival": [
+            16,
+            13
+          ],
+          "native_animation_observations": 18
+        },
+        {
+          "destination": "JourneyCinnabarHarbor",
+          "arrival": [
+            16,
+            13
+          ],
+          "native_animation_observations": 18
+        }
+      ]
+    },
+    {
+      "name": "Cerulean Port",
+      "exterior": "Route25_Frlg",
+      "interior": "JourneyCeruleanHarbor",
+      "pid": 21,
+      "terminal": [
+        61,
+        6,
+        6,
+        4
+      ],
+      "controller_entry_and_exit": true,
+      "quay_walked_without_surf": true,
+      "one_indoor_captain": true,
+      "medium_boat_hull_blocked_over_water": true,
+      "inside_ship_hull_blocked_over_water": true,
+      "captain_interacted_physically": true,
+      "network_arrival_inside": true,
+      "save_continue_inside": true,
+      "legacy_exit_preserved": false,
+      "briney_local_service_preserved": false,
+      "trips": [
+        {
+          "destination": "JourneyPalletHarbor",
+          "arrival": [
+            16,
+            13
+          ],
+          "native_animation_observations": 18
+        },
+        {
+          "destination": "JourneyCeruleanHarbor",
+          "arrival": [
+            16,
+            13
+          ],
+          "native_animation_observations": 18
+        }
+      ]
+    },
+    {
+      "name": "Petalburg Coast",
+      "exterior": "Route104",
+      "interior": "JourneyPetalburgHarbor",
+      "pid": 12,
+      "terminal": [
+        15,
+        47,
+        5,
+        4
+      ],
+      "controller_entry_and_exit": true,
+      "quay_walked_without_surf": true,
+      "one_indoor_captain": true,
+      "medium_boat_hull_blocked_over_water": true,
+      "inside_ship_hull_blocked_over_water": true,
+      "captain_interacted_physically": true,
+      "network_arrival_inside": true,
+      "save_continue_inside": true,
+      "legacy_exit_preserved": false,
+      "briney_local_service_preserved": true,
+      "trips": [
+        {
+          "destination": "JourneyPalletHarbor",
+          "arrival": [
+            16,
+            13
+          ],
+          "native_animation_observations": 18
+        },
+        {
+          "destination": "JourneyPetalburgHarbor",
+          "arrival": [
+            16,
+            13
+          ],
+          "native_animation_observations": 18
+        }
+      ]
+    }
+  ],
+  "initial_story_state_and_position_are_fixtures": true,
+  "full_campaign_playthrough": false
+}

@@ -6,10 +6,10 @@ from render_sea_maps import MapRenderer
 BOXES={
  'PalletTown_Frlg':('Pallet',(0,12,26,30)), 'Route19_Frlg':('Fuchsia / Route 19',(0,7,18,23)),
  'VermilionCity_Frlg':('Vermilion',(29,23,40,36)),
- 'MossdeepCity':('Mossdeep - ilha oeste',(0,23,12,36)), 'CinnabarIsland_Frlg':('Cinnabar',(6,9,16,20)),
- 'Route25_Frlg':('Route 25',(58,7,71,18)), 'JourneyRoute12Shipyard':('Lavender',(16,32,40,46)),
+ 'MossdeepCity':('Mossdeep - ilha oeste',(0,23,12,36)), 'CinnabarIsland_Frlg':('Cinnabar',(0,7,24,20)),
+ 'Route25_Frlg':('Route 25',(50,1,72,20)), 'JourneyRoute12Shipyard':('Lavender',(16,32,40,46)),
  'SootopolisCity':('Sootopolis',(17,33,26,44)), 'DewfordTown':('Dewford',(8,5,19,14)),
- 'Route104':('Petalburg coast',(6,46,21,57)), 'PacifidlogTown':('Pacifidlog',(6,22,18,33)),
+ 'Route104':('Petalburg coast',(3,44,24,59)), 'PacifidlogTown':('Pacifidlog',(6,22,18,33)),
  'BattleFrontier_OutsideWest':('Battle Frontier',(14,64,30,74)),
  'SlateportCity_Harbor':('Slateport',(0,0,24,15)), 'LilycoveCity_Harbor':('Lilycove',(0,0,24,15)),
  **{i+'Island_Harbor_Frlg':(i+' Island',(4,0,17,9)) for i in ['One','Two','Three','Four','Five','Six','Seven']}}
