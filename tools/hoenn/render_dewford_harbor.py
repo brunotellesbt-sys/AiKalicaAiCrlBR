@@ -16,7 +16,7 @@ def render(source,output):
     for name,x,y in rects:
         part,m=r.render(name,npcs=False);im.paste(part,((x-left)*16,(y-top)*16))
         for o in m['object_events']:
-            if str(o['flag'])=='0':actors.append((x,y,o))
+            if str(o['flag'])=='0' or o['script'] in ('JourneyCompetitive_FullRestore','JourneyCompetitive_PlayRough'):actors.append((x,y,o))
     for x,y,o in sorted(actors,key=lambda p:p[1]+p[2]['y']):
         frame=2 if o['graphics_id']=='OBJ_EVENT_GFX_MR_BRINEYS_BOAT' and o['movement_type'] in ('MOVEMENT_TYPE_FACE_LEFT','MOVEMENT_TYPE_FACE_RIGHT') else 0
         sprite=r.sprite(o['graphics_id'],frame);dx,dy=r.sprite_offset(o['graphics_id']);im.paste(sprite,((x+o['x']-left)*16+8-sprite.width//2+dx,(y+o['y']-top)*16+16-sprite.height+dy),sprite)

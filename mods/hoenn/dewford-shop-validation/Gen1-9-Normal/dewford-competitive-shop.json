@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "origin_forms": {
+    "checks": [
+      {
+        "pokemon": "Dialga",
+        "orb": "ADAMANT_ORB",
+        "modern_item": "ADAMANT_CRYSTAL",
+        "origin_species": 1069,
+        "original_orb_equipped_through_bag": true,
+        "summary_screenshot": "origin-dialga.png",
+        "item_taken_through_party_menu": true,
+        "stats_change_and_revert": true,
+        "modern_reward_still_transforms": true,
+        "save_reload_preserves_form_and_item": true
+      },
+      {
+        "pokemon": "Palkia",
+        "orb": "LUSTROUS_ORB",
+        "modern_item": "LUSTROUS_GLOBE",
+        "origin_species": 1070,
+        "original_orb_equipped_through_bag": true,
+        "summary_screenshot": "origin-palkia.png",
+        "item_taken_through_party_menu": true,
+        "stats_change_and_revert": true,
+        "modern_reward_still_transforms": true,
+        "save_reload_preserves_form_and_item": true
+      },
+      {
+        "pokemon": "Giratina",
+        "orb": "GRISEOUS_ORB",
+        "modern_item": "GRISEOUS_CORE",
+        "origin_species": 1071,
+        "original_orb_equipped_through_bag": true,
+        "summary_screenshot": "origin-giratina.png",
+        "item_taken_through_party_menu": true,
+        "stats_change_and_revert": true,
+        "modern_reward_still_transforms": true,
+        "save_reload_preserves_form_and_item": true
+      }
+    ],
+    "wrong_species_orb_rejected": true,
+    "party_items_and_initial_position_are_fixtures": true,
+    "giving_and_taking_original_orbs_use_controller_input": true
+  },
+  "rom_sha256": "ab9f88ffd25e68ed60c3bacc42618b2f443c0d3a3122443291382161c340dc9d",
+  "review_mode": false,
+  "prices_checked": 71,
+  "purchases": [
+    {
+      "item": "CHOICE_SCARF",
+      "price": 100000,
+      "quantity_received": 1
+    },
+    {
+      "item": "BOTTLE_CAP",
+      "price": 100000,
+      "quantity_received": 1
+    },
+    {
+      "item": "GOLD_BOTTLE_CAP",
+      "price": 500000,
+      "quantity_received": 1
+    }
+  ],
+  "insufficient_money_preserves_money_and_bag": true,
+  "two_attendants_interacted": true,
+  "footpath_to_bridge_walked": true,
+  "single_cap_only_one_stat": true,
+  "gold_cap_all_six_stats": true,
+  "original_genetic_ivs_preserved": true,
+  "cancellation_preserves_caps": true,
+  "perfect_stats_preserve_caps": true,
+  "level49_rejected": true,
+  "eggs_rejected": true,
+  "full_restore_picked_up_once": true,
+  "closed_trees_block_walk": true,
+  "play_rough_picked_up_and_native_teachable": true,
+  "lighthouse_back_path_walked": true,
+  "initial_party_money_and_position_are_fixtures": true
+}

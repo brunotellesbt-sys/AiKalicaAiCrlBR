@@ -1,5 +1,9 @@
 # Pokémon Journey — quatro edições GBA
 
+[Formas Origin](../../../docs/formas-origin.md): Adamant Orb, Lustrous Orb e Griseous Orb agora também transformam ao equipar.
+
+[Barraca de Dewford](../../../docs/vendinha-dewford.md): 71 itens competitivos, dois atendentes, Bottle Caps e Hyper Training.
+
 [Oceano integrado e seis ligações do mapa](../../../docs/oceano-integrado.md): Surf aberto com bordas de pedra, preservando Mossdeep e Dewford do PR #90.
 
 [Portos de Mossdeep e Dewford](../../../docs/portos-mossdeep-dewford.md): terminal original, ponte suspensa com escadas, terreno revisado e imagens com coordenadas.

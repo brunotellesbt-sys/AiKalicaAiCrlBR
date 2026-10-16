@@ -3,11 +3,19 @@ import hashlib,json
 from pathlib import Path
 from verify_fuchsia_update import previous_release
 ROOT=Path(__file__).resolve().parents[2]
-def verify_update(directory,info):
+def verify_update(directory,info,*,historical_review=None):
     directory=Path(directory);old=previous_release(info)
     assert old['validated'] and old['integration_layers']+['surf-review']==info['integration_layers']
     from package_review_rom import verify as verify_review
-    test=verify_review(ROOT/'roms/rom-de-teste',directory/'Pokemon-Journey-Gen1-9-Normal.gba')
+    if historical_review is None:
+        test=verify_review(ROOT/'roms/rom-de-teste',directory/'Pokemon-Journey-Gen1-9-Normal.gba')
+    else:
+        # A later release keeps these reports bound to the old ROM hashes.
+        # Its own verifier checks the newly shipped ROM and review derivative.
+        test=historical_review
+        normal=next(r for r in info['variants'] if r['file']==test['base_normal_file'])
+        assert test['base_normal_sha256']==normal['sha256'] and test['bytes']==33554432
+        assert test['separate_save_identity'] and not test['random_wild_encounters']
     expected={'common':info['parent_rom_sha256'],'test':test['sha256'],**{r['file']:r['sha256'] for r in info['variants']}}
     covered=set()
     for p in info['proofs']:
@@ -49,6 +57,7 @@ def verify_update(directory,info):
         else:raise AssertionError(kind)
     assert {('common',k) for k in ['surf-review-source','surf-review','all-surf-links','coastal-cave-access','coast-connectivity','ocean-seams','ocean-aprons','sevii-surf-connections','continuous-ocean']}<=covered
     assert {(t,k) for t in expected if t!='common' for k in ['surf-review','review-mode']}<=covered
-    offset=test['review_mode_offset'];assert all((directory/r['file']).read_bytes()[offset]==0 for r in info['variants'])
+    if historical_review is None:
+        offset=test['review_mode_offset'];assert all((directory/r['file']).read_bytes()[offset]==0 for r in info['variants'])
     from verify_continuous_ocean_update import verify_update as verify_previous
     verify_previous(directory,old)
