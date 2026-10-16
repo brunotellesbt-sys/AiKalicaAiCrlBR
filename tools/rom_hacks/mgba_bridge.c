@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include <mgba/flags.h>
 #include <mgba/core/core.h>
 #include <mgba/core/config.h>
@@ -25,3 +27,14 @@ void write32(unsigned a,unsigned v){core->busWrite32(core,a,v);}
 void *image(void){return pixels;}
 void stop(void){mCoreConfigDeinit(&core->config);core->deinit(core);core=NULL;}
 void raw8(unsigned a,unsigned v){core->rawWrite8(core,a,-1,v);}
+
+// Export native flash after TrySavingData; no emulator-state format involved.
+int export_save(const char *path) {
+ void *data = NULL; size_t size = core->savedataClone(core, &data);
+ if (!size || !data) return 0;
+ FILE *file = fopen(path, "wb");
+ if (!file) { free(data); return 0; }
+ size_t written = fwrite(data, 1, size, file);
+ int ok = fclose(file) == 0 && written == size;
+ free(data); return ok;
+}

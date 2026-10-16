@@ -33,3 +33,5 @@ Leia o [guia completo](../../../docs/README.md), o [DOCX das equipes](../../../d
 [Imagens dos portos e detalhes desta atualização](../../../docs/atualizacao-costeira.md). As validações de PWT/mecânicas do PR #79 foram preservadas como históricas; a campanha inteira não foi jogada novamente nesta entrega.
 
 [Atlas, oito viagens pelos mares e pontos das cavernas](../../../docs/navegacao-e-pendencias-finais.md). O GPS não altera níveis ou equipes; os recursos de nível 100 e repel mostrados nas viagens pertencem exclusivamente aos testes.
+
+[Revisão das rotas e oito cavernas](../../../docs/revisao-surf-cavernas.md). A [ROM de teste separada](../../../roms/rom-de-teste/LEIA-ME.md) inclui um save de inspeção em Mossdeep, sem encontros aleatórios nem abordagem automática de treinadores. As quatro edições normais conservam essas batalhas.

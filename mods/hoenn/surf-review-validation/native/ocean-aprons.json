@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "rom_sha256": "69ce1934a780c98ad42da43e096a59cf5808152ee71e3040f673e2cf7e27d218",
+  "checks": [
+    {
+      "parent": "Route129",
+      "child": "JourneyEspumaApproach",
+      "foreign_rock_rendered_before_map_transition": true,
+      "apron_collision_blocks_rock": true,
+      "rock_graphics_unchanged_over_256_frames_in_both_banks": true,
+      "controller_roundtrip": true
+    },
+    {
+      "parent": "JourneyHoennSouthSea",
+      "child": "JourneyOcasoApproach",
+      "foreign_rock_rendered_before_map_transition": true,
+      "apron_collision_blocks_rock": true,
+      "rock_graphics_unchanged_over_256_frames_in_both_banks": true,
+      "controller_roundtrip": true
+    },
+    {
+      "parent": "Route130",
+      "child": "JourneyArtisanApproach",
+      "foreign_rock_rendered_before_map_transition": true,
+      "apron_collision_blocks_rock": true,
+      "rock_graphics_unchanged_over_256_frames_in_both_banks": true,
+      "controller_roundtrip": true
+    }
+  ],
+  "no_midroute_warps_or_coordinate_writes": true
+}

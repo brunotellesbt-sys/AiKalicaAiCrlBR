@@ -91,3 +91,7 @@ A camada `three-harbor-terminals` sucede `fuchsia-harbor`. Fachadas nos limites 
 ## Oceano integrado e seis ligações anotadas
 
 As camadas `continuous-ocean`, `annotated-world-links` e `surf-cave-coasts` sucedem o PR #90 (`mossdeep-harbor` e `dewford-island-harbor`). Cinco novas passagens de Surf e o acesso existente Seven Island–Tanoby aparecem no atlas e no zoom; duas junções adicionais mantêm o mar conectado. Pedras fecham as bordas sem saída em 65 trechos. As 15 cavernas têm ramais visíveis; a entrada de Dimensões foi corrigida. Nove trechos vazios receberam ilhas de areia com treinadores. Água, animação e iluminação são comuns a Hoenn/Kanto/Sevii. Os eventos e os terminais aprovados são preservados. [Mapa, vídeo, ligações e alcance da validação](../../docs/oceano-integrado.md).
+
+## Cavernas anotadas e ROM de inspeção
+
+A camada `surf-review` sucede o PR #91. Oito cavernas de Surf usam o mesmo modelo externo completo e oito salas distintas; seus lendários vêm das cavernas mais cheias, preservando espécies e flags de captura. Artisan Cave ganha um terceiro acesso, por Surf. Pedras completas e com colisão delimitam 88 rotas e os oito acessos novos, com aberturas nas conexões reais. As quatro ROMs normais e a ROM de teste compartilham geografia. O modo de teste possui identificação própria e desativa encontros aleatórios e abordagem automática por um registro de ROM, separado das regras normais. [Arquivos, imagens e alcance da validação](../../docs/revisao-surf-cavernas.md).

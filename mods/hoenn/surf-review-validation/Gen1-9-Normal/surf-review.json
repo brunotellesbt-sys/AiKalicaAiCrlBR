@@ -1,0 +1,1031 @@
+{
+  "compiled_atlas_pixels_match_source": true,
+  "compiled_zoom_pixels_match_source": true,
+  "passed": true,
+  "rom_sha256": "ac27e39e2bcc6cbef7ef0c6520909cd9f8f3a6c31f729724dbbc0638c3ff7f93",
+  "caves": [
+    {
+      "theme": "Farol",
+      "map": "JourneyCaveFarol",
+      "surface": "JourneyFarolApproach",
+      "parent": "JourneyLavenderApproach",
+      "direction": "right",
+      "offset": 28,
+      "entry": [
+        43,
+        10
+      ],
+      "position": [
+        110,
+        49
+      ],
+      "nearest_existing_ink": [
+        109,
+        49
+      ],
+      "polyline": [
+        [
+          109,
+          49
+        ],
+        [
+          109,
+          50
+        ],
+        [
+          110,
+          50
+        ]
+      ],
+      "species": [
+        "SPECIES_REGIROCK"
+      ],
+      "interior_template": "GraniteCave_StevensRoom",
+      "altar_stand": [
+        10,
+        10
+      ],
+      "donor": "JourneySanctuaryTitans",
+      "donor_before_count": 9,
+      "existing_cave": false,
+      "physical_parent_gps": [
+        107,
+        50
+      ],
+      "closest_available_edge_distance": 4,
+      "initial_fixture": [
+        "JourneyLavenderApproach",
+        62,
+        40
+      ],
+      "walked_tiles": 112,
+      "controller_entry_and_return": true,
+      "surf_restored_on_return": true,
+      "cursor": [
+        110,
+        49
+      ],
+      "relocated_altar_interacted": true,
+      "native_map_open_zoom_return": true,
+      "transitions": [
+        {
+          "source": [
+            "JourneyLavenderApproach",
+            63,
+            40
+          ],
+          "destination": [
+            "JourneyFarolApproach",
+            0,
+            12
+          ]
+        },
+        {
+          "source": [
+            "JourneyFarolApproach",
+            43,
+            11
+          ],
+          "destination": [
+            "JourneyCaveFarol",
+            7,
+            4
+          ]
+        },
+        {
+          "source": [
+            "JourneyCaveFarol",
+            7,
+            4
+          ],
+          "destination": [
+            "JourneyFarolApproach",
+            43,
+            11
+          ]
+        },
+        {
+          "source": [
+            "JourneyFarolApproach",
+            0,
+            11
+          ],
+          "destination": [
+            "JourneyLavenderApproach",
+            63,
+            39
+          ]
+        }
+      ],
+      "no_midroute_warps_or_coordinate_writes": true
+    },
+    {
+      "theme": "Brisa",
+      "map": "JourneyCaveBrisa",
+      "surface": "JourneyBrisaApproach",
+      "parent": "JourneyOneTwoPassage",
+      "direction": "down",
+      "offset": 34,
+      "entry": [
+        12,
+        41
+      ],
+      "position": [
+        170,
+        48
+      ],
+      "nearest_existing_ink": [
+        170,
+        43
+      ],
+      "polyline": [
+        [
+          170,
+          43
+        ],
+        [
+          173,
+          43
+        ],
+        [
+          173,
+          49
+        ],
+        [
+          170,
+          49
+        ]
+      ],
+      "species": [
+        "SPECIES_RAYQUAZA"
+      ],
+      "interior_template": "MeteorFalls_StevensCave",
+      "altar_stand": [
+        19,
+        4
+      ],
+      "donor": "JourneySanctuaryDragoes",
+      "donor_before_count": 9,
+      "existing_cave": false,
+      "physical_parent_gps": [
+        164,
+        43
+      ],
+      "closest_available_edge_distance": 11,
+      "initial_fixture": [
+        "JourneyOneTwoPassage",
+        46,
+        38
+      ],
+      "walked_tiles": 170,
+      "controller_entry_and_return": true,
+      "surf_restored_on_return": true,
+      "cursor": [
+        170,
+        48
+      ],
+      "relocated_altar_interacted": true,
+      "native_map_open_zoom_return": true,
+      "transitions": [
+        {
+          "source": [
+            "JourneyOneTwoPassage",
+            48,
+            39
+          ],
+          "destination": [
+            "JourneyBrisaApproach",
+            14,
+            0
+          ]
+        },
+        {
+          "source": [
+            "JourneyBrisaApproach",
+            12,
+            42
+          ],
+          "destination": [
+            "JourneyCaveBrisa",
+            10,
+            29
+          ]
+        },
+        {
+          "source": [
+            "JourneyCaveBrisa",
+            10,
+            29
+          ],
+          "destination": [
+            "JourneyBrisaApproach",
+            12,
+            42
+          ]
+        },
+        {
+          "source": [
+            "JourneyBrisaApproach",
+            12,
+            0
+          ],
+          "destination": [
+            "JourneyOneTwoPassage",
+            46,
+            39
+          ]
+        }
+      ],
+      "no_midroute_warps_or_coordinate_writes": true
+    },
+    {
+      "theme": "Horizonte",
+      "map": "JourneyCaveHorizonte",
+      "surface": "JourneyHorizonteApproach",
+      "parent": "JourneyWorldFill30Right",
+      "direction": "right",
+      "offset": 0,
+      "entry": [
+        43,
+        10
+      ],
+      "position": [
+        211,
+        65
+      ],
+      "nearest_existing_ink": [
+        210,
+        64
+      ],
+      "polyline": [
+        [
+          210,
+          64
+        ],
+        [
+          210,
+          66
+        ],
+        [
+          211,
+          66
+        ]
+      ],
+      "species": [
+        "SPECIES_ARTICUNO"
+      ],
+      "interior_template": "ShoalCave_LowTideInnerRoom",
+      "altar_stand": [
+        3,
+        26
+      ],
+      "donor": "JourneySanctuaryTempestades",
+      "donor_before_count": 8,
+      "existing_cave": false,
+      "physical_parent_gps": [
+        204,
+        64
+      ],
+      "closest_available_edge_distance": 8,
+      "initial_fixture": [
+        "JourneyWorldFill30Right",
+        21,
+        12
+      ],
+      "walked_tiles": 130,
+      "controller_entry_and_return": true,
+      "surf_restored_on_return": true,
+      "cursor": [
+        211,
+        65
+      ],
+      "relocated_altar_interacted": true,
+      "native_map_open_zoom_return": true,
+      "transitions": [
+        {
+          "source": [
+            "JourneyWorldFill30Right",
+            22,
+            12
+          ],
+          "destination": [
+            "JourneyHorizonteApproach",
+            0,
+            12
+          ]
+        },
+        {
+          "source": [
+            "JourneyHorizonteApproach",
+            43,
+            11
+          ],
+          "destination": [
+            "JourneyCaveHorizonte",
+            14,
+            33
+          ]
+        },
+        {
+          "source": [
+            "JourneyCaveHorizonte",
+            14,
+            33
+          ],
+          "destination": [
+            "JourneyHorizonteApproach",
+            43,
+            11
+          ]
+        },
+        {
+          "source": [
+            "JourneyHorizonteApproach",
+            0,
+            11
+          ],
+          "destination": [
+            "JourneyWorldFill30Right",
+            22,
+            11
+          ]
+        }
+      ],
+      "no_midroute_warps_or_coordinate_writes": true
+    },
+    {
+      "theme": "Coral",
+      "map": "JourneyCaveCoral",
+      "surface": "JourneyWorldSea05",
+      "parent": "JourneyWorldSea05",
+      "direction": "down",
+      "offset": 24,
+      "entry": [
+        14,
+        21
+      ],
+      "position": [
+        173,
+        79
+      ],
+      "nearest_existing_ink": [
+        175,
+        79
+      ],
+      "polyline": [
+        [
+          175,
+          79
+        ],
+        [
+          175,
+          80
+        ],
+        [
+          173,
+          80
+        ]
+      ],
+      "species": [
+        "SPECIES_MEWTWO"
+      ],
+      "interior_template": "CaveOfOrigin_1F",
+      "altar_stand": [
+        16,
+        6
+      ],
+      "donor": "JourneySanctuaryAurora",
+      "donor_before_count": 8,
+      "existing_cave": false,
+      "physical_parent_gps": [
+        173,
+        75
+      ],
+      "closest_available_edge_distance": 0,
+      "initial_fixture": [
+        "JourneyWorldSea05",
+        6,
+        22
+      ],
+      "walked_tiles": 66,
+      "controller_entry_and_return": true,
+      "surf_restored_on_return": true,
+      "cursor": [
+        173,
+        79
+      ],
+      "relocated_altar_interacted": true,
+      "native_map_open_zoom_return": true,
+      "transitions": [
+        {
+          "source": [
+            "JourneyWorldSea05",
+            14,
+            22
+          ],
+          "destination": [
+            "JourneyCaveCoral",
+            11,
+            17
+          ]
+        },
+        {
+          "source": [
+            "JourneyCaveCoral",
+            11,
+            17
+          ],
+          "destination": [
+            "JourneyWorldSea05",
+            14,
+            22
+          ]
+        }
+      ],
+      "no_midroute_warps_or_coordinate_writes": true
+    },
+    {
+      "theme": "Alvorada",
+      "map": "JourneyCaveAlvorada",
+      "surface": "JourneyAlvoradaApproach",
+      "parent": "JourneyWorldSea09",
+      "direction": "right",
+      "offset": 22,
+      "entry": [
+        43,
+        10
+      ],
+      "position": [
+        211,
+        86
+      ],
+      "nearest_existing_ink": [
+        210,
+        86
+      ],
+      "polyline": [
+        [
+          210,
+          86
+        ],
+        [
+          210,
+          87
+        ],
+        [
+          211,
+          87
+        ]
+      ],
+      "species": [
+        "SPECIES_MOLTRES"
+      ],
+      "interior_template": "ScorchedSlab",
+      "altar_stand": [
+        10,
+        5
+      ],
+      "donor": "JourneySanctuaryVulcao",
+      "donor_before_count": 8,
+      "existing_cave": false,
+      "physical_parent_gps": [
+        192,
+        87
+      ],
+      "closest_available_edge_distance": 20,
+      "initial_fixture": [
+        "JourneyWorldSea09",
+        62,
+        34
+      ],
+      "walked_tiles": 122,
+      "controller_entry_and_return": true,
+      "surf_restored_on_return": true,
+      "cursor": [
+        211,
+        86
+      ],
+      "relocated_altar_interacted": true,
+      "native_map_open_zoom_return": true,
+      "transitions": [
+        {
+          "source": [
+            "JourneyWorldSea09",
+            63,
+            34
+          ],
+          "destination": [
+            "JourneyAlvoradaApproach",
+            0,
+            12
+          ]
+        },
+        {
+          "source": [
+            "JourneyAlvoradaApproach",
+            43,
+            11
+          ],
+          "destination": [
+            "JourneyCaveAlvorada",
+            7,
+            16
+          ]
+        },
+        {
+          "source": [
+            "JourneyCaveAlvorada",
+            7,
+            16
+          ],
+          "destination": [
+            "JourneyAlvoradaApproach",
+            43,
+            11
+          ]
+        },
+        {
+          "source": [
+            "JourneyAlvoradaApproach",
+            0,
+            11
+          ],
+          "destination": [
+            "JourneyWorldSea09",
+            63,
+            33
+          ]
+        }
+      ],
+      "no_midroute_warps_or_coordinate_writes": true
+    },
+    {
+      "theme": "Espuma",
+      "map": "JourneyCaveEspuma",
+      "surface": "JourneyEspumaApproach",
+      "parent": "Route129",
+      "direction": "down",
+      "offset": 40,
+      "entry": [
+        12,
+        41
+      ],
+      "position": [
+        129,
+        108
+      ],
+      "nearest_existing_ink": [
+        129,
+        100
+      ],
+      "polyline": [
+        [
+          129,
+          100
+        ],
+        [
+          132,
+          100
+        ],
+        [
+          132,
+          109
+        ],
+        [
+          129,
+          109
+        ]
+      ],
+      "species": [
+        "SPECIES_REGISTEEL"
+      ],
+      "interior_template": "TerraCave_End",
+      "altar_stand": [
+        20,
+        27
+      ],
+      "donor": "JourneySanctuaryTitans",
+      "donor_before_count": 8,
+      "existing_cave": false,
+      "physical_parent_gps": [
+        129,
+        98
+      ],
+      "closest_available_edge_distance": 10,
+      "initial_fixture": [
+        "Route129",
+        52,
+        38
+      ],
+      "walked_tiles": 182,
+      "controller_entry_and_return": true,
+      "surf_restored_on_return": true,
+      "cursor": [
+        129,
+        108
+      ],
+      "relocated_altar_interacted": true,
+      "native_map_open_zoom_return": true,
+      "transitions": [
+        {
+          "source": [
+            "Route129",
+            54,
+            39
+          ],
+          "destination": [
+            "JourneyEspumaApproach",
+            14,
+            0
+          ]
+        },
+        {
+          "source": [
+            "JourneyEspumaApproach",
+            12,
+            42
+          ],
+          "destination": [
+            "JourneyCaveEspuma",
+            5,
+            4
+          ]
+        },
+        {
+          "source": [
+            "JourneyCaveEspuma",
+            5,
+            4
+          ],
+          "destination": [
+            "JourneyEspumaApproach",
+            12,
+            42
+          ]
+        },
+        {
+          "source": [
+            "JourneyEspumaApproach",
+            12,
+            0
+          ],
+          "destination": [
+            "Route129",
+            52,
+            39
+          ]
+        }
+      ],
+      "no_midroute_warps_or_coordinate_writes": true
+    },
+    {
+      "theme": "Ocaso",
+      "map": "JourneyCaveOcaso",
+      "surface": "JourneyOcasoApproach",
+      "parent": "JourneyHoennSouthSea",
+      "direction": "down",
+      "offset": 82,
+      "entry": [
+        12,
+        41
+      ],
+      "position": [
+        140,
+        110
+      ],
+      "nearest_existing_ink": [
+        140,
+        100
+      ],
+      "polyline": [
+        [
+          140,
+          100
+        ],
+        [
+          141,
+          100
+        ],
+        [
+          141,
+          111
+        ]
+      ],
+      "species": [
+        "SPECIES_CELEBI"
+      ],
+      "interior_template": "MarineCave_End",
+      "altar_stand": [
+        5,
+        26
+      ],
+      "donor": "JourneySanctuaryFloresta",
+      "donor_before_count": 8,
+      "existing_cave": false,
+      "physical_parent_gps": [
+        140,
+        99
+      ],
+      "closest_available_edge_distance": 11,
+      "initial_fixture": [
+        "JourneyHoennSouthSea",
+        94,
+        38
+      ],
+      "walked_tiles": 194,
+      "controller_entry_and_return": true,
+      "surf_restored_on_return": true,
+      "cursor": [
+        140,
+        110
+      ],
+      "relocated_altar_interacted": true,
+      "native_map_open_zoom_return": true,
+      "transitions": [
+        {
+          "source": [
+            "JourneyHoennSouthSea",
+            96,
+            39
+          ],
+          "destination": [
+            "JourneyOcasoApproach",
+            14,
+            0
+          ]
+        },
+        {
+          "source": [
+            "JourneyOcasoApproach",
+            12,
+            42
+          ],
+          "destination": [
+            "JourneyCaveOcaso",
+            20,
+            4
+          ]
+        },
+        {
+          "source": [
+            "JourneyCaveOcaso",
+            20,
+            4
+          ],
+          "destination": [
+            "JourneyOcasoApproach",
+            12,
+            42
+          ]
+        },
+        {
+          "source": [
+            "JourneyOcasoApproach",
+            12,
+            0
+          ],
+          "destination": [
+            "JourneyHoennSouthSea",
+            94,
+            39
+          ]
+        }
+      ],
+      "no_midroute_warps_or_coordinate_writes": true
+    },
+    {
+      "theme": "Mare",
+      "map": "JourneyCaveMare",
+      "surface": "JourneyMareApproach",
+      "parent": "JourneyTanobyDawnSea",
+      "direction": "down",
+      "offset": 86,
+      "entry": [
+        12,
+        41
+      ],
+      "position": [
+        199,
+        110
+      ],
+      "nearest_existing_ink": [
+        199,
+        107
+      ],
+      "polyline": [
+        [
+          199,
+          107
+        ],
+        [
+          200,
+          107
+        ],
+        [
+          200,
+          111
+        ],
+        [
+          199,
+          111
+        ]
+      ],
+      "species": [
+        "SPECIES_REGIGIGAS"
+      ],
+      "interior_template": "AlteringCave",
+      "altar_stand": [
+        6,
+        3
+      ],
+      "donor": "JourneySanctuaryEclipse",
+      "donor_before_count": 8,
+      "existing_cave": false,
+      "physical_parent_gps": [
+        192,
+        108
+      ],
+      "closest_available_edge_distance": 9,
+      "initial_fixture": [
+        "JourneyTanobyDawnSea",
+        98,
+        22
+      ],
+      "walked_tiles": 160,
+      "controller_entry_and_return": true,
+      "surf_restored_on_return": true,
+      "cursor": [
+        199,
+        110
+      ],
+      "relocated_altar_interacted": true,
+      "native_map_open_zoom_return": true,
+      "transitions": [
+        {
+          "source": [
+            "JourneyTanobyDawnSea",
+            100,
+            23
+          ],
+          "destination": [
+            "JourneyMareApproach",
+            14,
+            0
+          ]
+        },
+        {
+          "source": [
+            "JourneyMareApproach",
+            12,
+            42
+          ],
+          "destination": [
+            "JourneyCaveMare",
+            18,
+            22
+          ]
+        },
+        {
+          "source": [
+            "JourneyCaveMare",
+            18,
+            22
+          ],
+          "destination": [
+            "JourneyMareApproach",
+            12,
+            42
+          ]
+        },
+        {
+          "source": [
+            "JourneyMareApproach",
+            12,
+            0
+          ],
+          "destination": [
+            "JourneyTanobyDawnSea",
+            98,
+            23
+          ]
+        }
+      ],
+      "no_midroute_warps_or_coordinate_writes": true
+    },
+    {
+      "theme": "Artisan",
+      "map": "ArtisanCave_1F",
+      "surface": "JourneyArtisanApproach",
+      "parent": "Route130",
+      "direction": "up",
+      "offset": 52,
+      "entry": [
+        12,
+        18
+      ],
+      "position": [
+        119,
+        105
+      ],
+      "nearest_existing_ink": [
+        119,
+        98
+      ],
+      "polyline": [
+        [
+          119,
+          98
+        ],
+        [
+          119,
+          106
+        ]
+      ],
+      "species": [],
+      "interior_template": "ArtisanCave_1F",
+      "altar_stand": [
+        11,
+        16
+      ],
+      "donor": null,
+      "donor_before_count": 0,
+      "existing_cave": true,
+      "physical_parent_gps": [
+        123,
+        98
+      ],
+      "closest_available_edge_distance": 11,
+      "initial_fixture": [
+        "Route130",
+        64,
+        1
+      ],
+      "walked_tiles": 96,
+      "controller_entry_and_return": true,
+      "surf_restored_on_return": true,
+      "cursor": [
+        119,
+        105
+      ],
+      "relocated_altar_interacted": false,
+      "native_map_open_zoom_return": true,
+      "transitions": [
+        {
+          "source": [
+            "Route130",
+            64,
+            0
+          ],
+          "destination": [
+            "JourneyArtisanApproach",
+            12,
+            63
+          ]
+        },
+        {
+          "source": [
+            "JourneyArtisanApproach",
+            12,
+            19
+          ],
+          "destination": [
+            "ArtisanCave_1F",
+            11,
+            17
+          ]
+        },
+        {
+          "source": [
+            "ArtisanCave_1F",
+            11,
+            17
+          ],
+          "destination": [
+            "JourneyArtisanApproach",
+            12,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneyArtisanApproach",
+            12,
+            63
+          ],
+          "destination": [
+            "Route130",
+            64,
+            0
+          ]
+        }
+      ],
+      "no_midroute_warps_or_coordinate_writes": true
+    }
+  ],
+  "eight_new_caves": true,
+  "existing_artisan_cave_connected": true,
+  "actual_connection_edges": 221,
+  "all_edges_match_native_map_connections": true,
+  "no_midroute_warps_or_coordinate_writes": true,
+  "initial_party_badges_and_departures_are_fixtures": true
+}

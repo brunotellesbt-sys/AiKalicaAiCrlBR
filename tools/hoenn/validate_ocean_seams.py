@@ -14,7 +14,10 @@ for n,m in maps.items():
         if c['direction'] not in ['left','right','up','down'] or other not in maps:continue
         if layouts[m['layout']]['layout_version']==layouts[maps[other]['layout']]['layout_version']:continue
         pairs.setdefault(tuple(sorted((n,other))),(n,other,c))
-assert len(pairs)==13,len(pairs)
+expected=13
+if (source/'.journey-surf-review').exists():
+ r=json.loads((source/'.journey-surf-review').read_text());expected+=sum(b['surface']!=b['parent'] and layouts[maps[b['surface']]['layout']]['layout_version']!=layouts[maps[b['parent']]['layout']]['layout_version'] for b in r['branches'])
+assert len(pairs)==expected,(len(pairs),expected)
 
 def palette():
     ids=[3,4,5,7]
