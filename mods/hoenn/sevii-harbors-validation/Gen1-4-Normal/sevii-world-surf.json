@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "rom_sha256": "c3a6877ad25403d15c08054912488f06ef37e24337d2fd7c32d106958aa1a3c4",
+  "trips": [
+    {
+      "region": "KANTO",
+      "destination": "JourneyRoute12Shipyard",
+      "controller_roundtrip": true,
+      "surf_preserved": true,
+      "walked_tiles": 460,
+      "transitions": 11,
+      "no_midroute_warps_or_coordinate_writes": true
+    },
+    {
+      "region": "HOENN",
+      "destination": "Route124",
+      "controller_roundtrip": true,
+      "surf_preserved": true,
+      "walked_tiles": 224,
+      "transitions": 8,
+      "no_midroute_warps_or_coordinate_writes": true
+    }
+  ],
+  "one_starting_placement_and_story_state_are_fixtures": true,
+  "full_campaign_playthrough": false
+}

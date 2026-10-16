@@ -3,6 +3,7 @@ import hashlib,json,unittest
 from pathlib import Path
 from verify_versions import verify
 from verify_three_harbor_update import BOXES
+from verify_fuchsia_update import previous_release
 
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'mods/hoenn/three-harbor-validation'
@@ -11,6 +12,7 @@ OUT=ROOT/'mods/hoenn/three-harbor-validation'
 class ThreeHarborTerminals(unittest.TestCase):
     def test_every_edition_enters_and_sails_from_all_three_terminals(self):
         release=verify(ROOT/'mods/hoenn/versions')
+        while release.get('validation_scope')=='sevii-harbors':release=previous_release(release)
         self.assertEqual(release['validation_scope'],'three-harbor-terminals')
         cases=[('validation',release['parent_rom_sha256'])]
         cases += [(r['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba'),r['sha256']) for r in release['variants']]

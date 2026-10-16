@@ -8,6 +8,7 @@ As quatro ROMs atuais ficam em [`roms/`](../roms/README.md), atualizadas pelo em
 
 - [Novo porto de Sootopolis: ponte, terminal e submarino](porto-sootopolis.md)
 - [Porto de Lavender: terminal de Pallet, navio e barqueiro interno](porto-lavender.md)
+- [Sete portos de Sevii e integração por Surf com Kanto e Hoenn](portos-sevii.md)
 - [Galeria de todos os portos e sala do Rotom](PORTOS-GALERIA.md)
 - [Atualização costeira: imagens, portos, níveis e validação](atualizacao-costeira.md)
 - [Revisão visual das costas e novo mapa integrado](revisao-das-costas.md)

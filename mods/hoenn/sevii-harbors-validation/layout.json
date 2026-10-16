@@ -1,0 +1,1974 @@
+{
+  "layer": "sevii-harbors",
+  "ports": [
+    {
+      "island": "One",
+      "exterior": "OneIsland_Harbor_Frlg",
+      "exterior_layout": "LAYOUT_JOURNEY_SEVII_ONE_PORT",
+      "interior": "JourneySeviiOneHarbor",
+      "pid": 2,
+      "terminal": [
+        10,
+        0,
+        7,
+        6
+      ],
+      "door": [
+        13,
+        5
+      ],
+      "arrival": [
+        16,
+        13
+      ],
+      "captain": [
+        16,
+        12
+      ],
+      "original_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_JOURNEYSEVIIBOAT",
+        "x": 9,
+        "y": 6,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "outside_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_JOURNEYSEVIIBOAT",
+        "x": 9,
+        "y": 11,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "medium_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+        "x": 4,
+        "y": 11,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "outside_hulls": [
+        [
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        [
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ]
+        ]
+      ],
+      "pier_x": 7,
+      "bridge_extension": [
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          10
+        ]
+      ],
+      "hull": [
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          13,
+          9
+        ]
+      ]
+    },
+    {
+      "island": "Two",
+      "exterior": "TwoIsland_Harbor_Frlg",
+      "exterior_layout": "LAYOUT_JOURNEY_SEVII_TWO_PORT",
+      "interior": "JourneySeviiTwoHarbor",
+      "pid": 3,
+      "terminal": [
+        10,
+        0,
+        7,
+        6
+      ],
+      "door": [
+        13,
+        5
+      ],
+      "arrival": [
+        16,
+        13
+      ],
+      "captain": [
+        16,
+        12
+      ],
+      "original_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_JOURNEYSEVIIBOAT",
+        "x": 9,
+        "y": 6,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "outside_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_JOURNEYSEVIIBOAT",
+        "x": 8,
+        "y": 11,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "medium_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+        "x": 14,
+        "y": 11,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "outside_hulls": [
+        [
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ]
+        ],
+        [
+          [
+            12,
+            9
+          ],
+          [
+            12,
+            10
+          ],
+          [
+            12,
+            11
+          ],
+          [
+            13,
+            9
+          ],
+          [
+            13,
+            10
+          ],
+          [
+            13,
+            11
+          ],
+          [
+            14,
+            9
+          ],
+          [
+            14,
+            10
+          ],
+          [
+            14,
+            11
+          ],
+          [
+            15,
+            9
+          ],
+          [
+            15,
+            10
+          ],
+          [
+            15,
+            11
+          ],
+          [
+            16,
+            9
+          ],
+          [
+            16,
+            10
+          ],
+          [
+            16,
+            11
+          ]
+        ]
+      ],
+      "pier_x": 10,
+      "bridge_extension": [
+        [
+          10,
+          8
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          10
+        ]
+      ],
+      "hull": [
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          13,
+          9
+        ]
+      ]
+    },
+    {
+      "island": "Three",
+      "exterior": "ThreeIsland_Harbor_Frlg",
+      "exterior_layout": "LAYOUT_JOURNEY_SEVII_THREE_PORT",
+      "interior": "JourneySeviiThreeHarbor",
+      "pid": 4,
+      "terminal": [
+        10,
+        0,
+        7,
+        6
+      ],
+      "door": [
+        13,
+        5
+      ],
+      "arrival": [
+        16,
+        13
+      ],
+      "captain": [
+        16,
+        12
+      ],
+      "original_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_JOURNEYSEVIIBOAT",
+        "x": 9,
+        "y": 6,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "outside_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_JOURNEYSEVIIBOAT",
+        "x": 5,
+        "y": 11,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "medium_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+        "x": 11,
+        "y": 11,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "outside_hulls": [
+        [
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ]
+        ],
+        [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            11,
+            9
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            12,
+            9
+          ],
+          [
+            12,
+            10
+          ],
+          [
+            12,
+            11
+          ],
+          [
+            13,
+            9
+          ],
+          [
+            13,
+            10
+          ],
+          [
+            13,
+            11
+          ]
+        ]
+      ],
+      "pier_x": 7,
+      "bridge_extension": [
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          10
+        ]
+      ],
+      "hull": [
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          13,
+          9
+        ]
+      ]
+    },
+    {
+      "island": "Four",
+      "exterior": "FourIsland_Harbor_Frlg",
+      "exterior_layout": "LAYOUT_JOURNEY_SEVII_FOUR_PORT",
+      "interior": "JourneySeviiFourHarbor",
+      "pid": 5,
+      "terminal": [
+        10,
+        0,
+        7,
+        6
+      ],
+      "door": [
+        13,
+        5
+      ],
+      "arrival": [
+        16,
+        13
+      ],
+      "captain": [
+        16,
+        12
+      ],
+      "original_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_JOURNEYSEVIIBOAT",
+        "x": 9,
+        "y": 6,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "outside_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_JOURNEYSEVIIBOAT",
+        "x": 12,
+        "y": 11,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "medium_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+        "x": 7,
+        "y": 11,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "outside_hulls": [
+        [
+          [
+            12,
+            10
+          ],
+          [
+            12,
+            11
+          ],
+          [
+            13,
+            10
+          ],
+          [
+            13,
+            11
+          ]
+        ],
+        [
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ]
+        ]
+      ],
+      "pier_x": 10,
+      "bridge_extension": [
+        [
+          10,
+          8
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          10
+        ]
+      ],
+      "hull": [
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          13,
+          9
+        ]
+      ]
+    },
+    {
+      "island": "Five",
+      "exterior": "FiveIsland_Harbor_Frlg",
+      "exterior_layout": "LAYOUT_JOURNEY_SEVII_FIVE_PORT",
+      "interior": "JourneySeviiFiveHarbor",
+      "pid": 6,
+      "terminal": [
+        10,
+        0,
+        7,
+        6
+      ],
+      "door": [
+        13,
+        5
+      ],
+      "arrival": [
+        16,
+        13
+      ],
+      "captain": [
+        16,
+        12
+      ],
+      "original_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_JOURNEYSEVIIBOAT",
+        "x": 9,
+        "y": 6,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "outside_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_JOURNEYSEVIIBOAT",
+        "x": 10,
+        "y": 11,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "medium_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+        "x": 5,
+        "y": 11,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "outside_hulls": [
+        [
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            11,
+            11
+          ]
+        ],
+        [
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ]
+        ]
+      ],
+      "pier_x": 8,
+      "bridge_extension": [
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          9,
+          10
+        ]
+      ],
+      "hull": [
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          13,
+          9
+        ]
+      ]
+    },
+    {
+      "island": "Six",
+      "exterior": "SixIsland_Harbor_Frlg",
+      "exterior_layout": "LAYOUT_JOURNEY_SEVII_SIX_PORT",
+      "interior": "JourneySeviiSixHarbor",
+      "pid": 7,
+      "terminal": [
+        10,
+        0,
+        7,
+        6
+      ],
+      "door": [
+        13,
+        5
+      ],
+      "arrival": [
+        16,
+        13
+      ],
+      "captain": [
+        16,
+        12
+      ],
+      "original_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_JOURNEYSEVIIBOAT",
+        "x": 9,
+        "y": 6,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "outside_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_JOURNEYSEVIIBOAT",
+        "x": 7,
+        "y": 11,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "medium_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+        "x": 13,
+        "y": 11,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "outside_hulls": [
+        [
+          [
+            7,
+            10
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ]
+        ],
+        [
+          [
+            11,
+            9
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            12,
+            9
+          ],
+          [
+            12,
+            10
+          ],
+          [
+            12,
+            11
+          ],
+          [
+            13,
+            9
+          ],
+          [
+            13,
+            10
+          ],
+          [
+            13,
+            11
+          ],
+          [
+            14,
+            9
+          ],
+          [
+            14,
+            10
+          ],
+          [
+            14,
+            11
+          ],
+          [
+            15,
+            9
+          ],
+          [
+            15,
+            10
+          ],
+          [
+            15,
+            11
+          ]
+        ]
+      ],
+      "pier_x": 9,
+      "bridge_extension": [
+        [
+          9,
+          8
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          10
+        ]
+      ],
+      "hull": [
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          13,
+          9
+        ]
+      ]
+    },
+    {
+      "island": "Seven",
+      "exterior": "SevenIsland_Harbor_Frlg",
+      "exterior_layout": "LAYOUT_JOURNEY_SEVII_SEVEN_PORT",
+      "interior": "JourneySeviiSevenHarbor",
+      "pid": 8,
+      "terminal": [
+        10,
+        0,
+        7,
+        6
+      ],
+      "door": [
+        13,
+        5
+      ],
+      "arrival": [
+        16,
+        13
+      ],
+      "captain": [
+        16,
+        12
+      ],
+      "original_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_JOURNEYSEVIIBOAT",
+        "x": 9,
+        "y": 6,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "outside_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_JOURNEYSEVIIBOAT",
+        "x": 10,
+        "y": 11,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "medium_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+        "x": 4,
+        "y": 11,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "outside_hulls": [
+        [
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            11,
+            11
+          ]
+        ],
+        [
+          [
+            2,
+            9
+          ],
+          [
+            2,
+            10
+          ],
+          [
+            2,
+            11
+          ],
+          [
+            3,
+            9
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            10
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            6,
+            11
+          ]
+        ]
+      ],
+      "pier_x": 7,
+      "bridge_extension": [
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          10
+        ]
+      ],
+      "hull": [
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          13,
+          9
+        ]
+      ]
+    }
+  ],
+  "surface_connections_unchanged": true,
+  "exterior_dimensions_unchanged": true,
+  "south_water_lane": [
+    0,
+    12,
+    17,
+    1
+  ],
+  "west_water_lane": [
+    0,
+    0,
+    2,
+    13
+  ],
+  "bridge_over_water": [
+    [
+      7,
+      7
+    ],
+    [
+      8,
+      7
+    ],
+    [
+      9,
+      7
+    ],
+    [
+      10,
+      7
+    ],
+    [
+      11,
+      7
+    ],
+    [
+      12,
+      7
+    ],
+    [
+      13,
+      7
+    ],
+    [
+      14,
+      7
+    ],
+    [
+      15,
+      7
+    ],
+    [
+      16,
+      7
+    ]
+  ],
+  "bridge_behavior": 113,
+  "filled_old_boat_gap": [
+    [
+      9,
+      3
+    ],
+    [
+      9,
+      4
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      9,
+      6
+    ]
+  ],
+  "upper_bridge_continuous": [
+    [
+      7,
+      3
+    ],
+    [
+      8,
+      3
+    ],
+    [
+      9,
+      3
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      8,
+      4
+    ],
+    [
+      9,
+      4
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      9,
+      5
+    ],
+    [
+      7,
+      6
+    ],
+    [
+      8,
+      6
+    ],
+    [
+      9,
+      6
+    ]
+  ],
+  "small_boats_repositioned": true,
+  "medium_boats_added": true,
+  "outside_captains_removed": true,
+  "ship_sprite_size": [
+    96,
+    40
+  ],
+  "atlas_unchanged": true,
+  "cinnabar_surf_under_pier": [
+    6,
+    15,
+    6,
+    1
+  ],
+  "original_sha256": {
+    "data/tilesets/secondary/island_harbor_frlg/tiles.png": "cdd58f5c8c519705a0e0e3b2ed6012974e9cb056e9df8fc25faddad900662ce7",
+    "data/tilesets/secondary/island_harbor_frlg/metatiles.bin": "1b718b94a52f2e89e00ca1f844d321ec4344ae53fe3343e709513b7084cbbddd",
+    "data/tilesets/secondary/island_harbor_frlg/metatile_attributes.bin": "29ec907c8071d615065eedaca69bdb959a7f33bc127c8a4ac2743f06bba63ef5",
+    "data/maps/OneIsland_Harbor_Frlg/map.json": "0cfcec5e2fd5f96b9be9ddea96812b6fe031378823ea6587c0e8717ac2e0dcb8",
+    "data/maps/TwoIsland_Harbor_Frlg/map.json": "2b6fbe8aed75abc52992b33faf3d42985cbc31493a30cdd5890259cc6dd272b6",
+    "data/maps/ThreeIsland_Harbor_Frlg/map.json": "12cd2bb868482fbc7ca459e1f1f072649b6e83de720a8a2f7dbfb35ab74129d5",
+    "data/maps/FourIsland_Harbor_Frlg/map.json": "ae36edf971af678fb1cc38e0390d233b67f2a98a8e6c0d2cb03f0e81533be3ac",
+    "data/maps/FiveIsland_Harbor_Frlg/map.json": "5979dc3a155a7eeba67b6e70fc949cdf875783c9e31695ac6f8b75294a240738",
+    "data/maps/SixIsland_Harbor_Frlg/map.json": "a209848e52425cf9594710b57153c5953253349e4e0027631c6c7459ef61ec79",
+    "data/maps/SevenIsland_Harbor_Frlg/map.json": "a1c25878ab7f282bf0b91269102661b2caf30ba4bf685fa31b141fdf3db740de",
+    "data/layouts/layouts.json": "d63db57b6ef72dbc84da8ebb6d332a6bddfc04b218baa58c75ca023b3638caca",
+    "data/maps/map_groups.json": "6a5aa66d64074d07b10b2de3d4148247060eac3caa2bb549c330c0739a7bc1bb",
+    "data/event_scripts.s": "3a6645badd34550bc8bcf78639f628b81104eb3b63ac73d2dbe9badfdd22da46",
+    "data/scripts/journey_campaign_gates.inc": "6636893a328df35fa869750383ca760962cc3e4100f0c79e786d4953bca6e66b",
+    "data/tilesets/secondary/cinnabar_island_frlg/metatiles.bin": "aeb984f214d3ccd24e4a2130bfb8962f5f3a1636a2236d549e3d8f0be4374c35",
+    "data/tilesets/secondary/cinnabar_island_frlg/metatile_attributes.bin": "265fe377e1444d4480eb2f43405b6a8691fa97cc3fa473f3136005bec4f027fa",
+    "data/layouts/CinnabarIsland_Frlg/map.bin": "a8677e384f07ea48e9a563abe39ed5555791689697ecd08a2a3910206cd7d228"
+  },
+  "prepared_sha256": {
+    "data/tilesets/secondary/island_harbor_frlg/tiles.png": "64f942ab43a949c4e92b979b2ec5b3a807937bec38a148350446a81b5c22d8c2",
+    "data/tilesets/secondary/island_harbor_frlg/metatiles.bin": "7fee9e6fe151b9a124e8d0a51a5674b635aacc58177e0cb507eaf0ead8770263",
+    "data/tilesets/secondary/island_harbor_frlg/metatile_attributes.bin": "92c9b723d83c84e0f39180951c63ecc6ac3cb7189e9ea29e676d558a28da6f54",
+    "data/layouts/JourneySeviiOnePort/map.bin": "8ad9ab84b26ca2aa69c7903bec7bf18f26e33d9622e297864688ceb363e45250",
+    "data/maps/OneIsland_Harbor_Frlg/map.json": "d6b36c5f7970bd00bdb07dee07a63ae99614b9e98616ed97d06a6e2614c81999",
+    "data/layouts/JourneySeviiOneHarbor/map.bin": "ec418c60c4f5cac3eb4ee9e2a29e1f48709e552411f67086a5352945001afcbc",
+    "data/layouts/JourneySeviiOneHarbor/border.bin": "9ff63640fa3b4682056532b7924b03250ccc7a832f64ccec3dea79ea8595a24d",
+    "data/maps/JourneySeviiOneHarbor/map.json": "f8b68682770f5342216550804429142bb798a5dc76e17b7955899d67afe2193f",
+    "data/maps/JourneySeviiOneHarbor/scripts.inc": "1106612a155299f2db3aeb7c3a557bef0d36ccdb180610e8ee12e5fb948eb747",
+    "data/layouts/JourneySeviiTwoPort/map.bin": "596f65782af3e76dbca34692423bf7cff6169ed09a9413b7a5a68cd59c2c738d",
+    "data/maps/TwoIsland_Harbor_Frlg/map.json": "3b89efbed100b8ffe6244cf17f70a274aa05cd14cd2c77cab8317bf76af9eaaf",
+    "data/layouts/JourneySeviiTwoHarbor/map.bin": "ec418c60c4f5cac3eb4ee9e2a29e1f48709e552411f67086a5352945001afcbc",
+    "data/layouts/JourneySeviiTwoHarbor/border.bin": "9ff63640fa3b4682056532b7924b03250ccc7a832f64ccec3dea79ea8595a24d",
+    "data/maps/JourneySeviiTwoHarbor/map.json": "746c69ef34262f9f47e2ade23a5d5f4041b3957ffa58fba0f1225f5ac90cb51c",
+    "data/maps/JourneySeviiTwoHarbor/scripts.inc": "28725edc9df72e038f2ffe9ebeb1f5471572828b300527088dbe5716d0dec834",
+    "data/layouts/JourneySeviiThreePort/map.bin": "4fb9fa4160f4068a4db88050aeda5643dabf35e9713f3f86b45fc06b5e22cab9",
+    "data/maps/ThreeIsland_Harbor_Frlg/map.json": "f99237279655d975dde54eacbe4e1ce1c05512f1146b0a97a753142bb8cb9c2d",
+    "data/layouts/JourneySeviiThreeHarbor/map.bin": "ec418c60c4f5cac3eb4ee9e2a29e1f48709e552411f67086a5352945001afcbc",
+    "data/layouts/JourneySeviiThreeHarbor/border.bin": "9ff63640fa3b4682056532b7924b03250ccc7a832f64ccec3dea79ea8595a24d",
+    "data/maps/JourneySeviiThreeHarbor/map.json": "24f6f6327cb57e8581db05b4ecaa7e69a938956f88431ed17cd45a4aa763c6eb",
+    "data/maps/JourneySeviiThreeHarbor/scripts.inc": "3d5c4180d13531358872912b11092d0e75d18acd00cfa466985271010092e364",
+    "data/layouts/JourneySeviiFourPort/map.bin": "5b0b35ba753cd031eaba3c8b213776220ed27790be621412b936b41505114dc6",
+    "data/maps/FourIsland_Harbor_Frlg/map.json": "81ac7a020d3f2385eb73e0089aaa3f6e79c8d7eef44aa35fac90629a422705c8",
+    "data/layouts/JourneySeviiFourHarbor/map.bin": "ec418c60c4f5cac3eb4ee9e2a29e1f48709e552411f67086a5352945001afcbc",
+    "data/layouts/JourneySeviiFourHarbor/border.bin": "9ff63640fa3b4682056532b7924b03250ccc7a832f64ccec3dea79ea8595a24d",
+    "data/maps/JourneySeviiFourHarbor/map.json": "05974b31fed1d590c522da02ab20ac0f36f1dee9ae4beb5cb5b338c373c4083d",
+    "data/maps/JourneySeviiFourHarbor/scripts.inc": "b2c936f179c814d96a6bfca866d9b794ea3407ec136d753eaa526340950eb2cd",
+    "data/layouts/JourneySeviiFivePort/map.bin": "16a1415dba2cd7df2e5345d549c980cb888d908c1259ff2602b61b660176be81",
+    "data/maps/FiveIsland_Harbor_Frlg/map.json": "4ce559edb1d4d57f46c835a27ae9a3621537872bfa9328ed5560bc5818d79b9b",
+    "data/layouts/JourneySeviiFiveHarbor/map.bin": "ec418c60c4f5cac3eb4ee9e2a29e1f48709e552411f67086a5352945001afcbc",
+    "data/layouts/JourneySeviiFiveHarbor/border.bin": "9ff63640fa3b4682056532b7924b03250ccc7a832f64ccec3dea79ea8595a24d",
+    "data/maps/JourneySeviiFiveHarbor/map.json": "8a4fd6ce2069525eade98258ca7eeb4e1c4b9409a47bf6c5282752f324083cb7",
+    "data/maps/JourneySeviiFiveHarbor/scripts.inc": "96a6f0e7b6bde59f406bbb798b82c11dae982c96a1e857c5b81673e629039c20",
+    "data/layouts/JourneySeviiSixPort/map.bin": "74fb4d938abe3d9e13c4fdaf7d11ba591e935f7bbd16c2d6d3601f296d62b1fc",
+    "data/maps/SixIsland_Harbor_Frlg/map.json": "49cfed12efe0ce8210705d6f4d556d1d9115a2c9cfd635cb09c5e893f0b8b21a",
+    "data/layouts/JourneySeviiSixHarbor/map.bin": "ec418c60c4f5cac3eb4ee9e2a29e1f48709e552411f67086a5352945001afcbc",
+    "data/layouts/JourneySeviiSixHarbor/border.bin": "9ff63640fa3b4682056532b7924b03250ccc7a832f64ccec3dea79ea8595a24d",
+    "data/maps/JourneySeviiSixHarbor/map.json": "9efee86f905a86c5cdc823e3a6c7677cac52f3b5b258b173755c37e9cd6308eb",
+    "data/maps/JourneySeviiSixHarbor/scripts.inc": "d36e628c4d17f4c96b992d28ef7b3d3ccff905a945046977b083d35edafabcb5",
+    "data/layouts/JourneySeviiSevenPort/map.bin": "130117977bf3a758f5b294c1f2ff519c818d03c6f4173a958a1e5cc160902271",
+    "data/maps/SevenIsland_Harbor_Frlg/map.json": "7d87bbdc4989f9d8d510a6a0225b999e2782298d974538e896b0433af513107d",
+    "data/layouts/JourneySeviiSevenHarbor/map.bin": "ec418c60c4f5cac3eb4ee9e2a29e1f48709e552411f67086a5352945001afcbc",
+    "data/layouts/JourneySeviiSevenHarbor/border.bin": "9ff63640fa3b4682056532b7924b03250ccc7a832f64ccec3dea79ea8595a24d",
+    "data/maps/JourneySeviiSevenHarbor/map.json": "646e4c58b4846ba66ffb128b2d022ea721fa7c2b62a08617573a922d160aaf64",
+    "data/maps/JourneySeviiSevenHarbor/scripts.inc": "ebede9719e9250eed0f060d832f7fb121a089a42992f93a3678d8076f2448f6a",
+    "data/layouts/layouts.json": "f968db3eac2638655e848ea7128715b8bc07663ad7443e8ac4ae9c913d40f70b",
+    "data/maps/map_groups.json": "584b5253de1a49cc5f35fb1514edb2693f2a447af30899d8c564df7b874c3b31",
+    "data/event_scripts.s": "997f5c9b66a486950570a7653516804d669225b5b7fd98981e666c5f232c1368",
+    "data/scripts/journey_campaign_gates.inc": "8991752de99555b5bf86c00432b3573334c7cb60a76b5fcfd0bf864506d1be18",
+    "data/tilesets/secondary/cinnabar_island_frlg/metatiles.bin": "1b2fc64eb7990d3c920df0ebfd1891d153550aa2bcf3ef80b70e249fe4ffbbbc",
+    "data/tilesets/secondary/cinnabar_island_frlg/metatile_attributes.bin": "b9a4f7c78c59059fc4484902d0b0f5bc26ae6bc182cd2cd86240821799071250",
+    "data/layouts/CinnabarIsland_Frlg/map.bin": "c59fd8a6f9954feebe30601da2c696a64c1dc4f299d06b79465d52afb05e9ce4"
+  }
+}

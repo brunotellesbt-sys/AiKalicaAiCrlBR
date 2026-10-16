@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "675f6da65a538328104a5be2f382e98f45187ef23c0c11c8b965b666ce477478",
-  "build_rules_offset": 9090728,
+  "parent_rom_sha256": "ae1f7435a60d841cd622c9bff379d371d0bf5849b4088d094406eb8e46d4b94a",
+  "build_rules_offset": 9090736,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "5f171e6e36e2acfd635d1d9c336743770b4332b31bca270e48d9e98f85d25071",
+      "sha256": "c3a6877ad25403d15c08054912488f06ef37e24337d2fd7c32d106958aa1a3c4",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        9090728,
-        9090729,
-        9090730
+        9090736,
+        9090737,
+        9090738
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "9df9436f85329826354c44d9840b072b23d28371bf7ef09fd6c9c5c95d3ef8e9",
+      "sha256": "3aebf12d8135ec65efe390011867da813a004a78bb08c9ffd42f7a103e0feb6d",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        9090728,
-        9090729
+        9090736,
+        9090737
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "4a18f80f67c288cd4d4b79fcb01fd443ab0b8a90390b18e981793231a124b873",
+      "sha256": "1f409f959cf97f996d32d27c09cdff1f458f941152fe099bec7ba6708b854a13",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        9090730
+        9090738
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "c0a6528274481d5f3b33e166b1188e4df71a9dc7277ca674e1436f756ba6610f",
+      "sha256": "28e926c26791d1fb0f22f13025808171d84acd78ccc8e7eb95aef27be501c5cd",
       "patched_byte_offsets": [
         160,
         162,
@@ -255,52 +255,125 @@
     "world-route-chart",
     "lavender-harbor",
     "fuchsia-harbor",
-    "three-harbor-terminals"
+    "three-harbor-terminals",
+    "sevii-harbors"
   ],
-  "validation_scope": "three-harbor-terminals",
-  "three_harbors_validated": true,
+  "validation_scope": "sevii-harbors",
+  "sevii_harbors_validated": true,
   "full_campaign_playthrough": false,
   "proofs": [
     {
-      "file": "evidence/three-harbors/common/three-harbor-source.json",
+      "file": "evidence/sevii-harbors/common/sevii-harbor-source.json",
       "target": "common",
-      "kind": "three-harbor-source",
-      "sha256": "b76a5bd689291aeb461db774e245c130accf86398ef492b5cbe6dff9a4a0b878"
+      "kind": "sevii-harbor-source",
+      "sha256": "2d12c2d67623434576f468746158491f25d4f737ac368aa3a9e6959a6ae781b4"
     },
     {
-      "file": "evidence/three-harbors/common/three-harbors.json",
+      "file": "evidence/sevii-harbors/common/coast-connectivity.json",
       "target": "common",
-      "kind": "three-harbors",
-      "sha256": "595ca849875d291ea68349f822f8dd2338b6980b7ec5caa82f20e75a44d4dd9f"
+      "kind": "coast-connectivity",
+      "sha256": "929df4cda6c6c9a8a351e8a454ff197c2877ac89b141b31124418eb0d5ff8e07"
     },
     {
-      "file": "evidence/three-harbors/Pokemon-Journey-Gen1-4-Normal/three-harbors.json",
+      "file": "evidence/sevii-harbors/common/world-route-chart.json",
+      "target": "common",
+      "kind": "world-route-chart",
+      "sha256": "32ebb4abedf3696cb4b71cdd91209c1f3623cca153385d341388fc3957c5b40a"
+    },
+    {
+      "file": "evidence/sevii-harbors/common/sevii-harbors.json",
+      "target": "common",
+      "kind": "sevii-harbors",
+      "sha256": "5c2e87ce02e75f38da86affb177af9fe212a2a16467a0d6c0e201181183ab246"
+    },
+    {
+      "file": "evidence/sevii-harbors/common/sevii-surf-connections.json",
+      "target": "common",
+      "kind": "sevii-surf-connections",
+      "sha256": "3c441f78f8e74555e38de4dd27c00a2720b9b3bcdd8073c91f3366108acba293"
+    },
+    {
+      "file": "evidence/sevii-harbors/common/sevii-world-surf.json",
+      "target": "common",
+      "kind": "sevii-world-surf",
+      "sha256": "3dd7256a018b41c31abf9925c141848e188f3bcc8d0d8dee40d03f63caf0b116"
+    },
+    {
+      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-4-Normal/sevii-harbors.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "three-harbors",
-      "sha256": "471497e3456b8514ae0d8d266db0d79afe021b48b262169a5142780b1de50b6c"
+      "kind": "sevii-harbors",
+      "sha256": "31f0c6d96a7056f1a885cfa5a47fe1672659b5ad88214d4af7722513387ac99d"
     },
     {
-      "file": "evidence/three-harbors/Pokemon-Journey-Gen1-4-Hard/three-harbors.json",
+      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-4-Normal/sevii-surf-connections.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "sevii-surf-connections",
+      "sha256": "8438f8dbc0ed526deacd0f8418b79c0fedde21da8029241557858bcc90b12744"
+    },
+    {
+      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-4-Normal/sevii-world-surf.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "sevii-world-surf",
+      "sha256": "492ae06bcefc1ad314f0f56ac045409e5cfdaeb6949410c0ae92a640a7884b98"
+    },
+    {
+      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-4-Hard/sevii-harbors.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "three-harbors",
-      "sha256": "303759355813fb37e9f9fe93594082f2681a2046c4e3a4e57eb14d1ab76cd8d8"
+      "kind": "sevii-harbors",
+      "sha256": "9f82860e3f0b19f1f1bbc0cfd3f8d5f29a898dc4aeb0f16e9a56d8d59aa1e556"
     },
     {
-      "file": "evidence/three-harbors/Pokemon-Journey-Gen1-9-Normal/three-harbors.json",
+      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-4-Hard/sevii-surf-connections.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "sevii-surf-connections",
+      "sha256": "5f3226daca195575e6d1e40d6a2e1daafaee4f06ee1c6f8b0816c6f51143d0c2"
+    },
+    {
+      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-4-Hard/sevii-world-surf.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "sevii-world-surf",
+      "sha256": "262060b0d98acf8c4dc18e9f684b995cfec8240d152d6bb0e1ddccd422f6ab95"
+    },
+    {
+      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-9-Normal/sevii-harbors.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "three-harbors",
-      "sha256": "cbb26c8b0dfc2ef029cc020e0b4be212b3ca2d04944415d41bff68e5f9f76e0d"
+      "kind": "sevii-harbors",
+      "sha256": "4fefb9c36f55459191b1531948894d732bbc86c69eb53c14a7267f145dd4dd18"
     },
     {
-      "file": "evidence/three-harbors/Pokemon-Journey-Gen1-9-Hard/three-harbors.json",
+      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-9-Normal/sevii-surf-connections.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "sevii-surf-connections",
+      "sha256": "57284abc2f5b85900265fbdb704bebce0e26d14c4652bc0c7417b1bbdb00ab77"
+    },
+    {
+      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-9-Normal/sevii-world-surf.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "sevii-world-surf",
+      "sha256": "6d06ac7d6014e3fd316d6759617ab12b2f4d135f70c6a68bcbab130a7e8b6515"
+    },
+    {
+      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-9-Hard/sevii-harbors.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "three-harbors",
-      "sha256": "363a60fcf780d454765024d27f9b6af541ce0bafdc77c04f7793e422d4f916b6"
+      "kind": "sevii-harbors",
+      "sha256": "24da1b7104e7b3e5baa6644a6898e549bae4be7e12bfcce652e15642dd80f6cd"
+    },
+    {
+      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-9-Hard/sevii-surf-connections.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "sevii-surf-connections",
+      "sha256": "26e0aaa8231a44731ace042b124efee6d714e9c010789b7e205672ec67210d4e"
+    },
+    {
+      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-9-Hard/sevii-world-surf.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "sevii-world-surf",
+      "sha256": "e32a0c7bde876d0d993c0b450a0aa478f1a2ae21fec68e88f89db1adf9aaa435"
     }
   ],
   "previous_port_validation": {
-    "manifest": "mods/hoenn/three-harbor-validation/baseline/versions.json",
-    "manifest_sha256": "c5a470ffb842c4f047ed550c9533698021ef9057dba3241ed82a478b2718f752",
+    "manifest": "mods/hoenn/sevii-harbors-validation/baseline/versions.json",
+    "manifest_sha256": "62a7447850ccc9a0147e2bdaa8898253a6db2e28a9721734fb4164b3a7b0bb38",
     "retested_on_current_rom": false
   },
   "historical_validation": {

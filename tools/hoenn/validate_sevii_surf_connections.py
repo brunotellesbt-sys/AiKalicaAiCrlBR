@@ -14,6 +14,7 @@ report=json.loads((source/'.journey-sevii-surf-connections').read_text())
 allmaps={p.parent.name:json.loads(p.read_text()) for p in (source/'data/maps').glob('*/map.json')}
 names=sorted(n for n,m in allmaps.items() if m['map_type'] in ['MAP_TYPE_ROUTE','MAP_TYPE_CITY','MAP_TYPE_TOWN','MAP_TYPE_OCEAN_ROUTE'] or 'Harbor' in n and m.get('connections'))
 allowed=set();walk_prefix='sevii';walk_cache_paths=True;walk_max_ticks=3000;walk_transition_pictures=False
+walk_surf_under_bridges=True
 native('VarSet',0x40FE,7);rawflag(lib.read16(s['gBadgeFlags'])-7,True)
 for tid in range(1,1589):rawflag(0x500+tid,True)
 native('ScriptSetMonMoveSlot',0,57,1);native('AddBagItem',102,999);native('AddBagItem',116,999)
@@ -70,7 +71,10 @@ def walk_observer(before,after):
 
 for r in report['seamless_connections']:
     town,harbor=r['town'],r['harbor'];hw=blocks[harbor][0]
-    ys=[y for y in r['shared_water_rows'] if wet(harbor,hw-1,y) and wet(town,0,y-r['offset'])]
+    # Select a currently open approach, including the tile beside each map
+    # edge; a docked boat may now occupy an older ocean sample coordinate.
+    ys=[y for y in r['shared_water_rows'] if wet(harbor,hw-1,y) and wet(harbor,hw-2,y)
+        and wet(town,0,y-r['offset']) and wet(town,1,y-r['offset'])]
     assert ys,('Blocked native island seam',town)
     y=ys[len(ys)//2];shore=(town,1,y-r['offset'])
     try:walk(shore)

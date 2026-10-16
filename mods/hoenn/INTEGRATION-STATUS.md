@@ -1,6 +1,13 @@
 # Atualização costeira e níveis dinâmicos
 
-Atualização mais recente: a camada 148 troca a casa de [Lavender Port](../../docs/porto-lavender.md)
+Atualização mais recente: a camada 151 inclui os [sete terminais de Sevii](../../docs/portos-sevii.md),
+com navios e capitães internos, píeres prolongados três tiles e barcos pequeno
+e médio em lados opostos. Uma fileira de água ao sul e duas colunas a oeste
+ficam livres; as conexões e o atlas são preservados. Cinnabar permite Surf sob o cais.
+Os testes atuais ficam em `sevii-harbors-validation/`, separados das evidências
+originais dos demais portos.
+
+Atualização anterior: a camada 148 troca a casa de [Lavender Port](../../docs/porto-lavender.md)
 pelo terminal de Pallet, dois tiles abaixo e dois à esquerda da primeira posição.
 O fundo do telhado e a faixa lateral usam areia. Há um navio e um único capitão
 interno, e as viagens da rede geral desembarcam dentro do prédio. As evidências
