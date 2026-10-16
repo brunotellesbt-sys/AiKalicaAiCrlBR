@@ -18,7 +18,7 @@ def previous_release(info):
 
 def harbor_baseline(info):
     """Resolve the release on which unchanged older features were exercised."""
-    while info.get('validation_scope') in ('island-harbors','sevii-harbors','three-harbor-terminals','fuchsia-harbor'):
+    while info.get('validation_scope') in ('annotated-world-links','island-harbors','sevii-harbors','three-harbor-terminals','fuchsia-harbor'):
         info=previous_release(info)
     return info
 

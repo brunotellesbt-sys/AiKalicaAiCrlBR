@@ -30,7 +30,13 @@ def package(source,output):
  r=dict(parent_rom_sha256=hashlib.sha256(base).hexdigest(),build_rules_offset=at,
         parent_header_hex=base[0xA0:0xBE].hex(),parent_rules_hex=base[at:at+4].hex(),
         variants=rows,all_other_bytes_identical=True,validated=False)
- if (source/'.journey-dewford-island-harbor').exists():
+ if (source/'.journey-surf-cave-coasts').exists():
+  from prepare_surf_cave_coasts import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-annotated-world-links').exists():
+  from prepare_annotated_world_links import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-dewford-island-harbor').exists():
   from prepare_dewford_island_harbor import PRIOR,LAYER
   r['integration_layers']=PRIOR+[LAYER]
  elif (source/'.journey-mossdeep-harbor').exists():

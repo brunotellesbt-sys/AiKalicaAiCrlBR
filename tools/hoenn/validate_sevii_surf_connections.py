@@ -36,7 +36,7 @@ def nearest(n,x,y,water):
     _,yy,xx=min((abs(xx-x)+abs(yy-y),yy,xx) for yy in range(1,h-1) for xx in range(1,w-1) if yy*w+xx in passable[n] and water_behaviors[behaviors[n][yy*w+xx]]==water)
     return n,xx,yy
 
-geometry=json.loads((source/'.journey-world-route-chart').read_text());gps={}
+geometry=json.loads((source/'.journey-surf-cave-coasts').read_text())['chart'] if (source/'.journey-surf-cave-coasts').exists() else json.loads((source/'.journey-annotated-world-links').read_text())['chart'] if (source/'.journey-annotated-world-links').exists() else json.loads((source/'.journey-world-route-chart').read_text());gps={}
 for i,p in enumerate(geometry['projections']):
     at=s['sWorldTileGrids']+12*i;gps[map_id(p['map'])]=(lib.read32(at),lib.read16(at+6),lib.read16(at+8))
 def marker():
@@ -102,8 +102,15 @@ for town,frames in seam_frames.items():
     assert frames,town
     frames[0].save(args.output/(town+'-seamless-surf.gif'),save_all=True,append_images=frames[1:],duration=133,loop=0)
 coast_pairs={frozenset((r['town'],r['harbor'])) for r in report['seamless_connections']}
-coast_seams=[e for e in observed_seams if frozenset((e['source'][0],e['destination'][0])) in coast_pairs]
-extra_seams=[e for e in observed_seams if e not in coast_seams]
+# A shortest path may revisit a coast through one of the new passages.
+# Require all fourteen directed crossings, retaining extra traversals too.
+coast_seams=[];extra_seams=[];directions=set()
+for e in observed_seams:
+    key=(e['source'][0],e['destination'][0])
+    if frozenset(key) in coast_pairs and key not in directions:
+        coast_seams.append(e);directions.add(key)
+    else:extra_seams.append(e)
+assert directions=={edge for r in report['seamless_connections'] for edge in [(r['town'],r['harbor']),(r['harbor'],r['town'])]}
 assert len(coast_seams)==14,coast_seams
 assert all(sum(frozenset((e['source'][0],e['destination'][0]))==pair for e in coast_seams)==2 for pair in coast_pairs)
 lib.stop();(args.output/'sevii-surf-connections.json').write_text(json.dumps(dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),islands=visited,seams=coast_seams,additional_surf_seams=extra_seams,walked_tiles=walked,transitions=transitions,marker_samples=samples,observed_seam_frames=frame_count,active_screen_fade_frames=active_fade_frames,controller_roundtrip=True,native_disembark=True,no_midroute_warps_or_coordinate_writes=True,save_continue_preserves_location=True,first_arrival_surf_does_not_trigger_ferry_cutscene=True,initial_party_flags_and_position_are_fixtures=True,full_campaign_playthrough=False),indent=2)+'\n')

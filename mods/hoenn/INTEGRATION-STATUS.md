@@ -87,3 +87,7 @@ Terminal de Slateport sobre a água no oeste, barco médio junto à ponte e um �
 ## Cinnabar, Cerulean e Petalburg
 
 A camada `three-harbor-terminals` sucede `fuchsia-harbor`. Fachadas nos limites pedidos: Cinnabar `(4,11)..(10,14)`, Cerulean `(61,6)..(67,9)` e Petalburg `(13,47)..(19,50)`. A porta de Petalburg está centralizada em `(16,50)`, com o evento do rival alinhado. A ponte de Cerulean avança quatro tiles para baixo nas duas colunas finais. Cada porto tem navio grande, um capitão interno e barco médio exterior. Vermilion, Pacifidlog, outros portos e atlas preservados. Os serviços locais do Mr. Briney continuam pela sala nativa. [Imagens, acessos e validação](../../docs/portos-cinnabar-cerulean-petalburg.md).
+
+## Oceano integrado e seis ligações anotadas
+
+As camadas `continuous-ocean`, `annotated-world-links` e `surf-cave-coasts` sucedem o PR #90 (`mossdeep-harbor` e `dewford-island-harbor`). Cinco novas passagens de Surf e o acesso existente Seven Island–Tanoby aparecem no atlas e no zoom; duas junções adicionais mantêm o mar conectado. Pedras fecham as bordas sem saída em 65 trechos. As 15 cavernas têm ramais visíveis; a entrada de Dimensões foi corrigida. Nove trechos vazios receberam ilhas de areia com treinadores. Água, animação e iluminação são comuns a Hoenn/Kanto/Sevii. Os eventos e os terminais aprovados são preservados. [Mapa, vídeo, ligações e alcance da validação](../../docs/oceano-integrado.md).

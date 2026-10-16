@@ -1,0 +1,1299 @@
+{
+  "passed": true,
+  "cave_approaches_visible_count": 15,
+  "rom_sha256": "39ae22b39e01919c4dfd0370e67cb74a58aac5bb76095a1843ee6bf69b355e7d",
+  "actual_connection_edges": 213,
+  "named_nodes": 122,
+  "all_edges_match_native_map_connections": true,
+  "all_segments_orthogonal": true,
+  "compiled_atlas_pixels_match_source": true,
+  "compiled_zoom_pixels_match_source": true,
+  "all_route_names_registered": true,
+  "native_map_open_zoom_and_return": true,
+  "native_land_and_town_art_preserved": true,
+  "new_surf_passages": [
+    {
+      "map": "JourneyNorthHoennStrait",
+      "controller_crossings": [
+        {
+          "destination": "JourneyKantoEasternChannel",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        },
+        {
+          "destination": "Route124",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        }
+      ],
+      "cursor_samples": [
+        {
+          "map": "JourneyNorthHoennStrait",
+          "tile": [
+            16,
+            19
+          ],
+          "marker": [
+            101,
+            67
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyNorthHoennStrait",
+          "tile": [
+            16,
+            0
+          ],
+          "marker": [
+            101,
+            61
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyKantoEasternChannel",
+          "tile": [
+            39,
+            27
+          ],
+          "marker": [
+            101,
+            61
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyNorthHoennStrait",
+          "tile": [
+            16,
+            39
+          ],
+          "marker": [
+            101,
+            73
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "Route124",
+          "tile": [
+            48,
+            0
+          ],
+          "marker": [
+            101,
+            73
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        }
+      ],
+      "no_midroute_coordinate_writes": true,
+      "initial_placement_is_fixture": true
+    },
+    {
+      "map": "JourneyTwoThreePassage",
+      "controller_crossings": [
+        {
+          "destination": "TwoIsland_Frlg",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        },
+        {
+          "destination": "ThreeIsland_Harbor_Frlg",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        }
+      ],
+      "cursor_samples": [
+        {
+          "map": "JourneyTwoThreePassage",
+          "tile": [
+            32,
+            12
+          ],
+          "marker": [
+            181,
+            50
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyTwoThreePassage",
+          "tile": [
+            9,
+            0
+          ],
+          "marker": [
+            169,
+            43
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "TwoIsland_Frlg",
+          "tile": [
+            9,
+            19
+          ],
+          "marker": [
+            169,
+            43
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyTwoThreePassage",
+          "tile": [
+            63,
+            7
+          ],
+          "marker": [
+            195,
+            50
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "ThreeIsland_Harbor_Frlg",
+          "tile": [
+            0,
+            7
+          ],
+          "marker": [
+            195,
+            50
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        }
+      ],
+      "no_midroute_coordinate_writes": true,
+      "initial_placement_is_fixture": true
+    },
+    {
+      "map": "JourneyTanobyDawnSea",
+      "controller_crossings": [
+        {
+          "destination": "JourneyWorldSea07",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        },
+        {
+          "destination": "SevenIsland_TanobyRuins_Frlg",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        },
+        {
+          "destination": "BirthIsland_Exterior_Frlg",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        }
+      ],
+      "cursor_samples": [
+        {
+          "map": "JourneyTanobyDawnSea",
+          "tile": [
+            56,
+            12
+          ],
+          "marker": [
+            182,
+            106
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyTanobyDawnSea",
+          "tile": [
+            32,
+            0
+          ],
+          "marker": [
+            176,
+            102
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyWorldSea07",
+          "tile": [
+            32,
+            47
+          ],
+          "marker": [
+            176,
+            102
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyTanobyDawnSea",
+          "tile": [
+            0,
+            10
+          ],
+          "marker": [
+            168,
+            104
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "SevenIsland_TanobyRuins_Frlg",
+          "tile": [
+            143,
+            10
+          ],
+          "marker": [
+            168,
+            104
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyTanobyDawnSea",
+          "tile": [
+            111,
+            12
+          ],
+          "marker": [
+            195,
+            107
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "BirthIsland_Exterior_Frlg",
+          "tile": [
+            0,
+            12
+          ],
+          "marker": [
+            195,
+            107
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        }
+      ],
+      "no_midroute_coordinate_writes": true,
+      "initial_placement_is_fixture": true
+    },
+    {
+      "map": "JourneyLavenderOneSea",
+      "controller_crossings": [
+        {
+          "destination": "JourneyRoute12Shipyard",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        },
+        {
+          "destination": "OneIsland_Harbor_Frlg",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        }
+      ],
+      "cursor_samples": [
+        {
+          "map": "JourneyLavenderOneSea",
+          "tile": [
+            64,
+            10
+          ],
+          "marker": [
+            116,
+            39
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyLavenderOneSea",
+          "tile": [
+            0,
+            12
+          ],
+          "marker": [
+            97,
+            39
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyRoute12Shipyard",
+          "tile": [
+            63,
+            48
+          ],
+          "marker": [
+            97,
+            39
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyLavenderOneSea",
+          "tile": [
+            127,
+            7
+          ],
+          "marker": [
+            134,
+            39
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "OneIsland_Harbor_Frlg",
+          "tile": [
+            0,
+            7
+          ],
+          "marker": [
+            134,
+            39
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        }
+      ],
+      "no_midroute_coordinate_writes": true,
+      "initial_placement_is_fixture": true
+    },
+    {
+      "map": "JourneyOneTwoPassage",
+      "controller_crossings": [
+        {
+          "destination": "JourneyWorldSea01",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        },
+        {
+          "destination": "TwoIsland_Harbor_Frlg",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        }
+      ],
+      "cursor_samples": [
+        {
+          "map": "JourneyOneTwoPassage",
+          "tile": [
+            32,
+            17
+          ],
+          "marker": [
+            162,
+            43
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyOneTwoPassage",
+          "tile": [
+            12,
+            39
+          ],
+          "marker": [
+            159,
+            43
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyWorldSea01",
+          "tile": [
+            53,
+            0
+          ],
+          "marker": [
+            159,
+            43
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyOneTwoPassage",
+          "tile": [
+            63,
+            18
+          ],
+          "marker": [
+            166,
+            43
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "TwoIsland_Harbor_Frlg",
+          "tile": [
+            0,
+            6
+          ],
+          "marker": [
+            166,
+            43
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        }
+      ],
+      "no_midroute_coordinate_writes": true,
+      "initial_placement_is_fixture": true
+    },
+    {
+      "map": "JourneyTwoThreeMouth",
+      "controller_crossings": [
+        {
+          "destination": "JourneyTwoThreePassage",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        },
+        {
+          "destination": "JourneyWorldSea02",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        },
+        {
+          "destination": "JourneyLavenderApproachSouth",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        }
+      ],
+      "cursor_samples": [
+        {
+          "map": "JourneyTwoThreeMouth",
+          "tile": [
+            32,
+            12
+          ],
+          "marker": [
+            181,
+            53
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyTwoThreeMouth",
+          "tile": [
+            32,
+            0
+          ],
+          "marker": [
+            181,
+            50
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyTwoThreePassage",
+          "tile": [
+            32,
+            23
+          ],
+          "marker": [
+            181,
+            50
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyTwoThreeMouth",
+          "tile": [
+            20,
+            23
+          ],
+          "marker": [
+            180,
+            53
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyWorldSea02",
+          "tile": [
+            44,
+            0
+          ],
+          "marker": [
+            180,
+            53
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyTwoThreeMouth",
+          "tile": [
+            0,
+            12
+          ],
+          "marker": [
+            181,
+            53
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyLavenderApproachSouth",
+          "tile": [
+            63,
+            53
+          ],
+          "marker": [
+            181,
+            53
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        }
+      ],
+      "no_midroute_coordinate_writes": true,
+      "initial_placement_is_fixture": true
+    },
+    {
+      "map": "JourneySootopolisSouthChannel",
+      "controller_crossings": [
+        {
+          "destination": "Route126",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        },
+        {
+          "destination": "Route130",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        }
+      ],
+      "cursor_samples": [
+        {
+          "map": "JourneySootopolisSouthChannel",
+          "tile": [
+            12,
+            20
+          ],
+          "marker": [
+            114,
+            95
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneySootopolisSouthChannel",
+          "tile": [
+            12,
+            0
+          ],
+          "marker": [
+            114,
+            91
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "Route126",
+          "tile": [
+            40,
+            79
+          ],
+          "marker": [
+            114,
+            91
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneySootopolisSouthChannel",
+          "tile": [
+            12,
+            39
+          ],
+          "marker": [
+            114,
+            99
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "Route130",
+          "tile": [
+            40,
+            0
+          ],
+          "marker": [
+            114,
+            99
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        }
+      ],
+      "no_midroute_coordinate_writes": true,
+      "initial_placement_is_fixture": true
+    },
+    {
+      "map": "JourneySouthwestSeviiPassage",
+      "controller_crossings": [
+        {
+          "destination": "JourneyWorldSea06",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        },
+        {
+          "destination": "SevenIsland_TanobyRuins_Frlg",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        }
+      ],
+      "cursor_samples": [
+        {
+          "map": "JourneySouthwestSeviiPassage",
+          "tile": [
+            32,
+            12
+          ],
+          "marker": [
+            162,
+            105
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneySouthwestSeviiPassage",
+          "tile": [
+            40,
+            0
+          ],
+          "marker": [
+            162,
+            105
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyWorldSea06",
+          "tile": [
+            24,
+            47
+          ],
+          "marker": [
+            162,
+            105
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneySouthwestSeviiPassage",
+          "tile": [
+            63,
+            10
+          ],
+          "marker": [
+            164,
+            105
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "SevenIsland_TanobyRuins_Frlg",
+          "tile": [
+            0,
+            10
+          ],
+          "marker": [
+            164,
+            105
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        }
+      ],
+      "no_midroute_coordinate_writes": true,
+      "initial_placement_is_fixture": true
+    },
+    {
+      "map": "JourneyKantoSeviiJunction",
+      "controller_crossings": [
+        {
+          "destination": "JourneyKantoEasternChannel",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        }
+      ],
+      "cursor_samples": [
+        {
+          "map": "JourneyKantoSeviiJunction",
+          "tile": [
+            13,
+            7
+          ],
+          "marker": [
+            101,
+            61
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyKantoSeviiJunction",
+          "tile": [
+            12,
+            0
+          ],
+          "marker": [
+            101,
+            61
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyKantoEasternChannel",
+          "tile": [
+            12,
+            27
+          ],
+          "marker": [
+            101,
+            61
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        }
+      ],
+      "no_midroute_coordinate_writes": true,
+      "initial_placement_is_fixture": true
+    },
+    {
+      "map": "JourneyKantoSeviiTransit",
+      "controller_crossings": [
+        {
+          "destination": "JourneyKantoSeviiJunction",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        },
+        {
+          "destination": "JourneyOneTwoPassage",
+          "outbound_and_return": true,
+          "surf_preserved": true
+        }
+      ],
+      "cursor_samples": [
+        {
+          "map": "JourneyKantoSeviiTransit",
+          "tile": [
+            56,
+            10
+          ],
+          "marker": [
+            135,
+            58
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyKantoSeviiTransit",
+          "tile": [
+            0,
+            8
+          ],
+          "marker": [
+            101,
+            61
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyKantoSeviiJunction",
+          "tile": [
+            22,
+            8
+          ],
+          "marker": [
+            101,
+            61
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyKantoSeviiTransit",
+          "tile": [
+            111,
+            12
+          ],
+          "marker": [
+            157,
+            43
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        },
+        {
+          "map": "JourneyOneTwoPassage",
+          "tile": [
+            0,
+            12
+          ],
+          "marker": [
+            157,
+            43
+          ],
+          "cursor_matches_compiled_tile_position": true,
+          "recenter": true,
+          "zoom": true,
+          "return_preserves_position": true
+        }
+      ],
+      "no_midroute_coordinate_writes": true,
+      "initial_placement_is_fixture": true
+    }
+  ],
+  "cursor_tracks_controller_movement_on_reopen": true,
+  "new_passage_count": 10,
+  "green_rectifications": 9,
+  "authored_corridors_visible": true,
+  "visible_route_samples": [
+    [
+      101,
+      65
+    ],
+    [
+      101,
+      69
+    ],
+    [
+      101,
+      73
+    ],
+    [
+      175,
+      43
+    ],
+    [
+      181,
+      46
+    ],
+    [
+      190,
+      50
+    ],
+    [
+      176,
+      101
+    ],
+    [
+      176,
+      106
+    ],
+    [
+      185,
+      109
+    ],
+    [
+      168,
+      105
+    ],
+    [
+      98,
+      39
+    ],
+    [
+      99,
+      39
+    ],
+    [
+      100,
+      39
+    ],
+    [
+      101,
+      39
+    ],
+    [
+      102,
+      39
+    ],
+    [
+      103,
+      39
+    ],
+    [
+      104,
+      39
+    ],
+    [
+      105,
+      39
+    ],
+    [
+      106,
+      39
+    ],
+    [
+      107,
+      39
+    ],
+    [
+      108,
+      39
+    ],
+    [
+      109,
+      39
+    ],
+    [
+      110,
+      39
+    ],
+    [
+      111,
+      39
+    ],
+    [
+      112,
+      39
+    ],
+    [
+      113,
+      39
+    ],
+    [
+      114,
+      39
+    ],
+    [
+      115,
+      39
+    ],
+    [
+      116,
+      39
+    ],
+    [
+      117,
+      39
+    ],
+    [
+      118,
+      39
+    ],
+    [
+      119,
+      39
+    ],
+    [
+      120,
+      39
+    ],
+    [
+      121,
+      39
+    ],
+    [
+      122,
+      39
+    ],
+    [
+      123,
+      39
+    ],
+    [
+      124,
+      39
+    ],
+    [
+      125,
+      39
+    ],
+    [
+      126,
+      39
+    ],
+    [
+      127,
+      39
+    ],
+    [
+      128,
+      39
+    ],
+    [
+      129,
+      39
+    ],
+    [
+      130,
+      39
+    ],
+    [
+      131,
+      39
+    ],
+    [
+      157,
+      43
+    ],
+    [
+      158,
+      43
+    ],
+    [
+      159,
+      43
+    ],
+    [
+      160,
+      43
+    ],
+    [
+      161,
+      43
+    ],
+    [
+      162,
+      43
+    ],
+    [
+      163,
+      43
+    ],
+    [
+      180,
+      53
+    ],
+    [
+      181,
+      50
+    ],
+    [
+      181,
+      51
+    ],
+    [
+      181,
+      52
+    ],
+    [
+      181,
+      53
+    ],
+    [
+      114,
+      92
+    ],
+    [
+      114,
+      93
+    ],
+    [
+      114,
+      94
+    ],
+    [
+      114,
+      95
+    ],
+    [
+      114,
+      96
+    ],
+    [
+      114,
+      97
+    ],
+    [
+      114,
+      98
+    ],
+    [
+      114,
+      99
+    ],
+    [
+      176,
+      100
+    ],
+    [
+      177,
+      100
+    ],
+    [
+      178,
+      97
+    ],
+    [
+      178,
+      98
+    ],
+    [
+      178,
+      99
+    ],
+    [
+      178,
+      100
+    ],
+    [
+      159,
+      105
+    ],
+    [
+      160,
+      105
+    ],
+    [
+      161,
+      105
+    ],
+    [
+      162,
+      105
+    ],
+    [
+      163,
+      105
+    ]
+  ],
+  "cursor_stays_within_authored_corridors": true,
+  "full_campaign_playthrough": false
+}

@@ -30,6 +30,10 @@ class WorldRouteChart(unittest.TestCase):
         layout=json.loads((OUT/'layout.json').read_text())
         index=json.loads((ROOT/'docs/images/navigation/world-routes.json').read_text())
         proof=json.loads((OUT/'world-route-chart.json').read_text())
+        release=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
+        if release.get('validation_scope')=='annotated-world-links':
+            layout=json.loads((ROOT/'mods/hoenn/continuous-ocean-validation/layout/annotated-world-links.json').read_text())['chart']
+            proof=json.loads((ROOT/'mods/hoenn/continuous-ocean-validation/chart/world-route-chart.json').read_text())
         self.assertFalse(index['labels_printed_on_map'])
         self.assertEqual(index['routes'],layout['routes'])
         self.assertEqual(proof['actual_connection_edges'],len(layout['routes']))
@@ -38,7 +42,7 @@ class WorldRouteChart(unittest.TestCase):
         for edge in layout['routes']:
             self.assertTrue(edge['actual_connection'])
             self.assertTrue(all(a[0]==b[0] or a[1]==b[1] for a,b in zip(edge['polyline'],edge['polyline'][1:])))
-        self.assertEqual(len({p['map'] for p in layout['passages']}),3)
+        self.assertEqual(len({p['map'] for p in layout['passages']}),10 if release.get('validation_scope')=='annotated-world-links' else 3)
         definitions={d['map']:d for d in index['definitions']}
         for passage in layout['passages']:
             self.assertEqual(definitions[passage['map']]['name'],passage['name'])

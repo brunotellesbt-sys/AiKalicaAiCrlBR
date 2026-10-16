@@ -1,5 +1,7 @@
 # Pokémon Journey — quatro edições GBA
 
+[Oceano integrado e seis ligações do mapa](../../../docs/oceano-integrado.md): Surf aberto com bordas de pedra, preservando Mossdeep e Dewford do PR #90.
+
 [Portos de Mossdeep e Dewford](../../../docs/portos-mossdeep-dewford.md): terminal original, ponte suspensa com escadas, terreno revisado e imagens com coordenadas.
 
 [Novos terminais de Cinnabar, Cerulean e Petalburg](../../../docs/portos-cinnabar-cerulean-petalburg.md): fachadas nas coordenadas indicadas, navio interno e barco médio junto às pontes.
