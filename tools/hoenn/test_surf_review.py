@@ -6,7 +6,11 @@ from verify_versions import verify
 ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'mods/hoenn/surf-review-validation'
 class SurfReview(unittest.TestCase):
     def test_release_separates_review_behavior_and_normal_battles(self):
-        info=verify(ROOT/'mods/hoenn/versions');self.assertEqual(info['validation_scope'],'surf-review')
+        info=verify(ROOT/'mods/hoenn/versions')
+        if info.get('validation_scope')=='dewford-competitive-shop':
+            from verify_fuchsia_update import previous_release
+            info=previous_release(info)
+        self.assertEqual(info['validation_scope'],'surf-review')
         test=verify_test(ROOT/'roms/rom-de-teste',ROOT/'roms/Pokemon-Journey-Gen1-9-Normal.gba')
         self.assertTrue(test['separate_save_identity']);self.assertFalse(test['automatic_trainer_approaches']);self.assertFalse(test['random_wild_encounters'])
         for edition in ['Gen1-4-Normal','Gen1-4-Hard','Gen1-9-Normal','Gen1-9-Hard','TESTE']:

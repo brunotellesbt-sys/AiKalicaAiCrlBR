@@ -30,7 +30,10 @@ def package(source,output):
  r=dict(parent_rom_sha256=hashlib.sha256(base).hexdigest(),build_rules_offset=at,
         parent_header_hex=base[0xA0:0xBE].hex(),parent_rules_hex=base[at:at+4].hex(),
         variants=rows,all_other_bytes_identical=True,validated=False)
- if (source/'.journey-surf-review').exists():
+ if (source/'.journey-dewford-competitive-shop').exists():
+  from prepare_dewford_competitive_shop import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-surf-review').exists():
   from prepare_surf_review import PRIOR,LAYER
   r['integration_layers']=PRIOR+[LAYER]
  elif (source/'.journey-surf-cave-coasts').exists():

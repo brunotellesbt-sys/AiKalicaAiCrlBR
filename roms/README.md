@@ -1,5 +1,7 @@
 # ROMs atuais
 
+[Barraca de Dewford](../docs/vendinha-dewford.md): itens competitivos e Hyper Training nas quatro edições.
+
 Esta pasta contém sempre as quatro edições GBA da entrega atual. Comece um **save novo**; saves anteriores à ampliação da Bag não são compatíveis.
 
 | Edição | Download | IVs dos oponentes importantes |

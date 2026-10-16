@@ -45,6 +45,9 @@ class ContinuousOcean(unittest.TestCase):
 
     def test_every_shipped_edition_keeps_surf_colors_and_all_seven_islands_accessible(self):
         release = verify(ROOT / 'mods/hoenn/versions')
+        if release['validation_scope']=='dewford-competitive-shop':
+            from verify_fuchsia_update import previous_release
+            release=previous_release(release)
         if release['validation_scope']=='surf-review':
             from verify_fuchsia_update import previous_release
             release=previous_release(release)

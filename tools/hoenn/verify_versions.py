@@ -45,6 +45,11 @@ def verify(directory,require_seal=True):
         for row in info['variants']:
             assert digest((ROOT/'roms'/row['file']).read_bytes())==row['sha256'], ('Outdated roms/ download',row['file'])
         assert (ROOT/'roms/SHA256SUMS').read_bytes()==(directory/'SHA256SUMS').read_bytes()
+    if info.get('validation_scope')=='dewford-competitive-shop':
+        from verify_dewford_shop_update import verify_update
+        verify_update(directory,info)
+        print('Verified four normal editions and test ROM with the Dewford training stall')
+        return info
     if info.get('validation_scope')=='surf-review':
         from verify_surf_review_update import verify_update
         verify_update(directory,info)
