@@ -27,6 +27,14 @@ print('Itinerary:',start,water,port,land,center,flush=True)
 walker=(ROOT/'tools/hoenn/native_water_walk.py').read_text().split('\ndef walk(goal):',1)[1]
 walker='def walk(goal):'+walker
 walker=walker.replace('step(30)','step(2)').replace('step(12)','step(1)')
+# Map ID changes can precede the object-coordinate update by a few frames.
+# Keep recording those frames; plan the next input once local coordinates settle.
+walker=walker.replace('        if tick % 100 == 0:',
+    '        width, height, _ = blocks[now[0]]\n'
+    '        if not (0 <= now[1] < width and 0 <= now[2] < height):\n'
+    '            step(1)\n'
+    '            continue\n'
+    '        if tick % 100 == 0:')
 exec(compile(walker,'continuous-controller-walker','exec'))
 video=args.output/'mossdeep-one-island-surf.mp4'
 log=(args.output/'ffmpeg.log').open('w')

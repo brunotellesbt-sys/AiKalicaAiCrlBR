@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 
 import package_playable
-from prepare_surf_cave_coasts import PRIOR, LAYER
+from prepare_surf_review import PRIOR, LAYER
 
 
 def main():

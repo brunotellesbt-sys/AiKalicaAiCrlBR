@@ -10,10 +10,14 @@ def reproduce(reference,output):
     output.mkdir(parents=True,exist_ok=False)
     acquired=json.loads((reference/'.source-acquired.json').read_text())
     assert acquired['commit']==PIN
+    layers=PRIOR+[LAYER]
+    if (reference/'.journey-surf-review').exists():
+        from prepare_surf_review import PRIOR as review_prior,LAYER as review_layer
+        layers=review_prior+[review_layer]
     missing=set()
     base=reference.parent/'hoenn-multiregion-src'
     affected=set()
-    for name in PRIOR+[LAYER]:
+    for name in layers:
         affected.update(json.loads((reference/('.journey-'+name)).read_text())['prepared_sha256'])
     for name,wanted in acquired['sha256'].items():
         destination=output/name;destination.parent.mkdir(parents=True,exist_ok=True)
@@ -41,7 +45,7 @@ def reproduce(reference,output):
         assert not missing,sorted(missing)
     (output/'.source-acquired.json').write_text(json.dumps(acquired,indent=2)+'\n')
     verified=[]
-    for name in PRIOR+[LAYER]:
+    for name in layers:
         module='prepare_crossing' if name=='hoenn-crossing' else 'prepare_'+name.replace('-','_')
         report=importlib.import_module(module).prepare(output)
         verified.append(name)

@@ -26,6 +26,7 @@ required.update(r['map'] for r in json.loads((source/'.journey-kanto-open-sea').
 required.update(r['map'] for r in report['rectangles'] if r['map'].startswith('Journey'))
 original_required=set(required)
 if (source/'.journey-annotated-world-links').exists():required.update(json.loads((source/'.journey-annotated-world-links').read_text())['new_maps'])
+if (source/'.journey-surf-review').exists():required.update(b['surface'] for b in json.loads((source/'.journey-surf-review').read_text())['branches'])
 assert required<=set(reachable_maps),('Disconnected integrated sea map',sorted(required-set(reachable_maps)))
 native_routes=[]
 if (source/'.journey-complete-marine-atlas').exists():
@@ -36,7 +37,8 @@ if (source/'.journey-complete-marine-atlas').exists():
  assert requested<=set(reachable_maps),('Requested native Surf route missing',sorted(requested-set(reachable_maps)))
  native_routes=sorted(SURF_ROUTES&set(reachable_maps))
 if (source/'.journey-surf-cave-coasts').exists():
- cave_report=json.loads((ROOT/'mods/hoenn/continuous-ocean-validation/validation/coastal-cave-access.json').read_text())
+ cave_path='mods/hoenn/surf-review-validation/native/coastal-cave-access.json' if (source/'.journey-surf-review').exists() else 'mods/hoenn/continuous-ocean-validation/validation/coastal-cave-access.json'
+ cave_report=json.loads((ROOT/cave_path).read_text())
  assert cave_report['rom_sha256']==hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest()
  for cave in cave_report['caves']:
   assert (cave['surface'],*cave['surface_start']) in reachable, ('Cave isolated from the shared ocean',cave['map'])

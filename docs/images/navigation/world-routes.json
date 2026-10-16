@@ -1236,6 +1236,248 @@
         ]
       ],
       "native_entrance_preserved": true
+    },
+    {
+      "map": "JourneyCaveFarol",
+      "surface": "JourneyFarolApproach",
+      "entry": [
+        43,
+        10
+      ],
+      "position": [
+        110,
+        49
+      ],
+      "polyline": [
+        [
+          109,
+          49
+        ],
+        [
+          109,
+          50
+        ],
+        [
+          110,
+          50
+        ]
+      ]
+    },
+    {
+      "map": "JourneyCaveBrisa",
+      "surface": "JourneyBrisaApproach",
+      "entry": [
+        12,
+        41
+      ],
+      "position": [
+        170,
+        48
+      ],
+      "polyline": [
+        [
+          170,
+          43
+        ],
+        [
+          173,
+          43
+        ],
+        [
+          173,
+          49
+        ],
+        [
+          170,
+          49
+        ]
+      ]
+    },
+    {
+      "map": "JourneyCaveHorizonte",
+      "surface": "JourneyHorizonteApproach",
+      "entry": [
+        43,
+        10
+      ],
+      "position": [
+        211,
+        65
+      ],
+      "polyline": [
+        [
+          210,
+          64
+        ],
+        [
+          210,
+          66
+        ],
+        [
+          211,
+          66
+        ]
+      ]
+    },
+    {
+      "map": "JourneyCaveCoral",
+      "surface": "JourneyWorldSea05",
+      "entry": [
+        14,
+        21
+      ],
+      "position": [
+        173,
+        79
+      ],
+      "polyline": [
+        [
+          175,
+          79
+        ],
+        [
+          175,
+          80
+        ],
+        [
+          173,
+          80
+        ]
+      ]
+    },
+    {
+      "map": "JourneyCaveAlvorada",
+      "surface": "JourneyAlvoradaApproach",
+      "entry": [
+        43,
+        10
+      ],
+      "position": [
+        211,
+        86
+      ],
+      "polyline": [
+        [
+          210,
+          86
+        ],
+        [
+          210,
+          87
+        ],
+        [
+          211,
+          87
+        ]
+      ]
+    },
+    {
+      "map": "JourneyCaveEspuma",
+      "surface": "JourneyEspumaApproach",
+      "entry": [
+        12,
+        41
+      ],
+      "position": [
+        129,
+        108
+      ],
+      "polyline": [
+        [
+          129,
+          100
+        ],
+        [
+          132,
+          100
+        ],
+        [
+          132,
+          109
+        ],
+        [
+          129,
+          109
+        ]
+      ]
+    },
+    {
+      "map": "JourneyCaveOcaso",
+      "surface": "JourneyOcasoApproach",
+      "entry": [
+        12,
+        41
+      ],
+      "position": [
+        140,
+        110
+      ],
+      "polyline": [
+        [
+          140,
+          100
+        ],
+        [
+          141,
+          100
+        ],
+        [
+          141,
+          111
+        ]
+      ]
+    },
+    {
+      "map": "JourneyCaveMare",
+      "surface": "JourneyMareApproach",
+      "entry": [
+        12,
+        41
+      ],
+      "position": [
+        199,
+        110
+      ],
+      "polyline": [
+        [
+          199,
+          107
+        ],
+        [
+          200,
+          107
+        ],
+        [
+          200,
+          111
+        ],
+        [
+          199,
+          111
+        ]
+      ]
+    },
+    {
+      "map": "ArtisanCave_1F",
+      "surface": "JourneyArtisanApproach",
+      "entry": [
+        12,
+        18
+      ],
+      "position": [
+        119,
+        105
+      ],
+      "polyline": [
+        [
+          119,
+          98
+        ],
+        [
+          119,
+          106
+        ]
+      ]
     }
   ],
   "routes": [
@@ -5752,12 +5994,212 @@
       ],
       "actual_connection": true,
       "authored_passage": "JourneyKantoSeviiTransit"
+    },
+    {
+      "source": "JourneyLavenderApproach",
+      "destination": "JourneyFarolApproach",
+      "direction": "right",
+      "offset": 28,
+      "polyline": [
+        [
+          109,
+          49
+        ],
+        [
+          109,
+          50
+        ],
+        [
+          110,
+          50
+        ]
+      ],
+      "actual_connection": true
+    },
+    {
+      "source": "JourneyOneTwoPassage",
+      "destination": "JourneyBrisaApproach",
+      "direction": "down",
+      "offset": 34,
+      "polyline": [
+        [
+          170,
+          43
+        ],
+        [
+          173,
+          43
+        ],
+        [
+          173,
+          49
+        ],
+        [
+          170,
+          49
+        ]
+      ],
+      "actual_connection": true
+    },
+    {
+      "source": "JourneyWorldFill30Right",
+      "destination": "JourneyHorizonteApproach",
+      "direction": "right",
+      "offset": 0,
+      "polyline": [
+        [
+          210,
+          64
+        ],
+        [
+          210,
+          66
+        ],
+        [
+          211,
+          66
+        ]
+      ],
+      "actual_connection": true
+    },
+    {
+      "source": "JourneyWorldSea09",
+      "destination": "JourneyAlvoradaApproach",
+      "direction": "right",
+      "offset": 22,
+      "polyline": [
+        [
+          210,
+          86
+        ],
+        [
+          210,
+          87
+        ],
+        [
+          211,
+          87
+        ]
+      ],
+      "actual_connection": true
+    },
+    {
+      "source": "Route129",
+      "destination": "JourneyEspumaApproach",
+      "direction": "down",
+      "offset": 40,
+      "polyline": [
+        [
+          129,
+          100
+        ],
+        [
+          132,
+          100
+        ],
+        [
+          132,
+          109
+        ],
+        [
+          129,
+          109
+        ]
+      ],
+      "actual_connection": true
+    },
+    {
+      "source": "JourneyHoennSouthSea",
+      "destination": "JourneyOcasoApproach",
+      "direction": "down",
+      "offset": 82,
+      "polyline": [
+        [
+          140,
+          100
+        ],
+        [
+          141,
+          100
+        ],
+        [
+          141,
+          111
+        ]
+      ],
+      "actual_connection": true
+    },
+    {
+      "source": "JourneyTanobyDawnSea",
+      "destination": "JourneyMareApproach",
+      "direction": "down",
+      "offset": 86,
+      "polyline": [
+        [
+          199,
+          107
+        ],
+        [
+          200,
+          107
+        ],
+        [
+          200,
+          111
+        ],
+        [
+          199,
+          111
+        ]
+      ],
+      "actual_connection": true
+    },
+    {
+      "source": "Route130",
+      "destination": "JourneyArtisanApproach",
+      "direction": "up",
+      "offset": 52,
+      "polyline": [
+        [
+          119,
+          98
+        ],
+        [
+          119,
+          106
+        ]
+      ],
+      "actual_connection": true
     }
   ],
   "definitions": [
     {
+      "name": "ALVORADA SEA",
+      "definition": "Área de navegação que liga NAVEL ROCK SEA.",
+      "position": [
+        211,
+        86
+      ],
+      "map": "JourneyAlvoradaApproach",
+      "neighbors": [
+        "NAVEL ROCK SEA"
+      ]
+    },
+    {
+      "name": "ARTISAN SEA",
+      "definition": "Área de navegação que liga ROUTE 130.",
+      "position": [
+        119,
+        105
+      ],
+      "map": "JourneyArtisanApproach",
+      "neighbors": [
+        "ROUTE 130"
+      ]
+    },
+    {
       "name": "BIRTH EAST REEF",
-      "definition": "Área de navegação que liga BIRTH ISLAND FRLG, BIRTH ISLAND SEA, BIRTH NORTH REEF, THREE ISLAND SEA.",
+      "definition": "Área de navegação que liga BIRTH ISLAND FRLG, BIRTH ISLAND SEA, BIRTH NORTH REEF, HORIZONTE SEA, THREE ISLAND SEA.",
       "position": [
         210,
         64
@@ -5767,6 +6209,7 @@
         "BIRTH ISLAND FRLG",
         "BIRTH ISLAND SEA",
         "BIRTH NORTH REEF",
+        "HORIZONTE SEA",
         "THREE ISLAND SEA"
       ]
     },
@@ -5820,6 +6263,18 @@
       ]
     },
     {
+      "name": "BRISA SEA",
+      "definition": "Área de navegação que liga ONE-TWO PASSAGE.",
+      "position": [
+        170,
+        48
+      ],
+      "map": "JourneyBrisaApproach",
+      "neighbors": [
+        "ONE-TWO PASSAGE"
+      ]
+    },
+    {
       "name": "CINNABAR SOUTH SEA",
       "definition": "Área de navegação que liga CINNABAR ISLAND, WESTERN RIVER.",
       "position": [
@@ -5859,6 +6314,18 @@
       ]
     },
     {
+      "name": "ESPUMA SEA",
+      "definition": "Área de navegação que liga ROUTE 129.",
+      "position": [
+        129,
+        108
+      ],
+      "map": "JourneyEspumaApproach",
+      "neighbors": [
+        "ROUTE 129"
+      ]
+    },
+    {
       "name": "EVER GRANDE BACK SEA",
       "definition": "Área de navegação que liga EVER GRANDE BACK SOUTH SEA, EVER GRANDE CITY, FOUR ISLAND SEA, HOENN MIDDLE EAST SEA, HOENN MIDDLE SEA, SIX WEST CHANNEL.",
       "position": [
@@ -5890,6 +6357,18 @@
         "HOENN SOUTH SEA",
         "SIX WEST CHANNEL",
         "SOUTHWEST SEVII SEA"
+      ]
+    },
+    {
+      "name": "FAROL SEA",
+      "definition": "Área de navegação que liga LAVENDER APPROACH.",
+      "position": [
+        110,
+        49
+      ],
+      "map": "JourneyFarolApproach",
+      "neighbors": [
+        "LAVENDER APPROACH"
       ]
     },
     {
@@ -6134,7 +6613,7 @@
     },
     {
       "name": "HOENN SOUTH SEA",
-      "definition": "Área de navegação que liga EVER GRANDE BACK SOUTH SEA, EVER GRANDE CITY, HOENN SOUTH EAST SEA, ROUTE 128, ROUTE 129.",
+      "definition": "Área de navegação que liga EVER GRANDE BACK SOUTH SEA, EVER GRANDE CITY, HOENN SOUTH EAST SEA, OCASO SEA, ROUTE 128, ROUTE 129.",
       "position": [
         135,
         100
@@ -6144,8 +6623,21 @@
         "EVER GRANDE BACK SOUTH SEA",
         "EVER GRANDE CITY",
         "HOENN SOUTH EAST SEA",
+        "OCASO SEA",
         "ROUTE 128",
         "ROUTE 129"
+      ]
+    },
+    {
+      "name": "HORIZONTE SEA",
+      "definition": "Área de navegação que liga BIRTH EAST REEF.",
+      "position": [
+        211,
+        65
+      ],
+      "map": "JourneyHorizonteApproach",
+      "neighbors": [
+        "BIRTH EAST REEF"
       ]
     },
     {
@@ -6229,13 +6721,14 @@
     },
     {
       "name": "LAVENDER APPROACH",
-      "definition": "Área de navegação que liga KANTO SOUTH SEA, LAVENDER APPROACH SOUTH, LAVENDER PORT, ROUTE 13, ROUTE 13 COAST.",
+      "definition": "Área de navegação que liga FAROL SEA, KANTO SOUTH SEA, LAVENDER APPROACH SOUTH, LAVENDER PORT, ROUTE 13, ROUTE 13 COAST.",
       "position": [
         109,
         49
       ],
       "map": "JourneyLavenderApproach",
       "neighbors": [
+        "FAROL SEA",
         "KANTO SOUTH SEA",
         "LAVENDER APPROACH SOUTH",
         "LAVENDER PORT",
@@ -6301,6 +6794,18 @@
       ]
     },
     {
+      "name": "MARE SEA",
+      "definition": "Área de navegação que liga TANOBY DAWN SEA.",
+      "position": [
+        199,
+        110
+      ],
+      "map": "JourneyMareApproach",
+      "neighbors": [
+        "TANOBY DAWN SEA"
+      ]
+    },
+    {
       "name": "MOSSDEEP OUTER EAST SEA",
       "definition": "Área de navegação que liga FOUR WEST CHANNEL, HOENN MIDDLE EAST SEA, MOSSDEEP OUTER SEA, NORTH SEVII SEA.",
       "position": [
@@ -6362,13 +6867,14 @@
     },
     {
       "name": "NAVEL ROCK SEA",
-      "definition": "Área de navegação que liga NAVEL EAST REEF, NAVEL ROCK FRLG, NAVEL WEST CHANNEL, SEVEN ISLAND SEA.",
+      "definition": "Área de navegação que liga ALVORADA SEA, NAVEL EAST REEF, NAVEL ROCK FRLG, NAVEL WEST CHANNEL, SEVEN ISLAND SEA.",
       "position": [
         190,
         90
       ],
       "map": "JourneyWorldSea09",
       "neighbors": [
+        "ALVORADA SEA",
         "NAVEL EAST REEF",
         "NAVEL ROCK FRLG",
         "NAVEL WEST CHANNEL",
@@ -6420,6 +6926,18 @@
       ]
     },
     {
+      "name": "OCASO SEA",
+      "definition": "Área de navegação que liga HOENN SOUTH SEA.",
+      "position": [
+        140,
+        110
+      ],
+      "map": "JourneyOcasoApproach",
+      "neighbors": [
+        "HOENN SOUTH SEA"
+      ]
+    },
+    {
       "name": "ONE ISLAND CHANNEL",
       "definition": "Área de navegação que liga KANTO COASTAL CHANNEL, KANTO EASTERN CHANNEL, KANTO SOUTH SEA, ONE ISLAND.",
       "position": [
@@ -6462,6 +6980,7 @@
       ],
       "map": "JourneyOneTwoPassage",
       "neighbors": [
+        "BRISA SEA",
         "KANTO-SEVII OPEN SEA",
         "ONE ISLAND SEA",
         "TWO ISLAND"
@@ -6688,6 +7207,7 @@
       "map": "JourneyTanobyDawnSea",
       "neighbors": [
         "BIRTH ISLAND",
+        "MARE SEA",
         "SEVEN ISLAND SEA",
         "TANOBY RUINS"
       ]

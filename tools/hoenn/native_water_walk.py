@@ -217,7 +217,11 @@ def walk(goal):
         arrow = arrows[behaviors[now[0]][now[2] * blocks[now[0]][0] + now[1]]]
         if arrow == key and (now[1], now[2]) in warps[now[0]]:
             facing = {128: 1, 64: 2, 32: 3, 16: 4}[arrow]
-            if native('GetPlayerFacingDirection') != facing:
+            dx,dy=next((dx,dy) for dx,dy,k in keys if k==arrow)
+            w,h,_=blocks[now[0]]
+            behind=(now[1]-dx,now[2]-dy)
+            can_approach=0<=behind[0]<w and 0<=behind[1]<h and behind[1]*w+behind[0] in passable[now[0]]
+            if native('GetPlayerFacingDirection') != facing and can_approach:
                 # Approach the arrow from behind, so the directional exit
                 # sees the correct facing before the player leaves its tile.
                 key = {16: 32, 32: 16, 64: 128, 128: 64}[arrow]
