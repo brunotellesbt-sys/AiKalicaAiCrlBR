@@ -1,0 +1,3362 @@
+{
+  "passed": true,
+  "rom_sha256": "4adc64b066cd542eb0a0586e6897f467b5d2f378dd6346e8e3b0d8d06f6b517d",
+  "departure": [
+    "MossdeepCity",
+    28,
+    18
+  ],
+  "arrival": [
+    "OneIsland_Frlg",
+    14,
+    7
+  ],
+  "route": [
+    {
+      "frame": 120,
+      "seconds": 2.0,
+      "map": "MossdeepCity",
+      "tile": [
+        28,
+        18
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2048,
+      "seconds": 34.133,
+      "map": "Route124",
+      "tile": [
+        79,
+        65
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2852,
+      "seconds": 47.533,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        39
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3290,
+      "seconds": 54.833,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        25,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3669,
+      "seconds": 61.15,
+      "map": "JourneyOneIslandChannel",
+      "tile": [
+        16,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3768,
+      "seconds": 62.8,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        5,
+        0
+      ],
+      "surf": true
+    },
+    {
+      "frame": 4049,
+      "seconds": 67.483,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        0,
+        18
+      ],
+      "surf": true
+    }
+  ],
+  "transitions": [
+    {
+      "source": [
+        "MossdeepCity",
+        0,
+        25
+      ],
+      "destination": [
+        "Route124",
+        79,
+        65
+      ]
+    },
+    {
+      "source": [
+        "Route124",
+        44,
+        0
+      ],
+      "destination": [
+        "JourneyNorthHoennStrait",
+        12,
+        39
+      ]
+    },
+    {
+      "source": [
+        "JourneyNorthHoennStrait",
+        2,
+        0
+      ],
+      "destination": [
+        "JourneyKantoEasternChannel",
+        25,
+        27
+      ]
+    },
+    {
+      "source": [
+        "JourneyKantoEasternChannel",
+        0,
+        6
+      ],
+      "destination": [
+        "JourneyOneIslandChannel",
+        16,
+        6
+      ]
+    },
+    {
+      "source": [
+        "JourneyOneIslandChannel",
+        5,
+        6
+      ],
+      "destination": [
+        "OneIsland_Harbor_Frlg",
+        5,
+        0
+      ]
+    },
+    {
+      "source": [
+        "OneIsland_Harbor_Frlg",
+        16,
+        11
+      ],
+      "destination": [
+        "OneIsland_Frlg",
+        0,
+        18
+      ]
+    }
+  ],
+  "walked_tiles": 306,
+  "native_frames": 4624,
+  "captured_frames": 2313,
+  "video_fps": 30,
+  "video_seconds": 77.1,
+  "surf_frames": 2496,
+  "surf_prompts": [
+    [
+      "MossdeepCity",
+      16,
+      28
+    ],
+    [
+      "MossdeepCity",
+      0,
+      25
+    ]
+  ],
+  "native_surf_and_disembark": true,
+  "controller_movement_only": true,
+  "no_midroute_warps_or_coordinate_writes": true,
+  "seam_palette_samples": [
+    {
+      "source": "MossdeepCity",
+      "destination": "Route124",
+      "before": [
+        28404,
+        27248,
+        26092,
+        25993
+      ],
+      "after": [
+        28404,
+        27248,
+        26092,
+        25993
+      ],
+      "frame": 1980
+    },
+    {
+      "source": "Route124",
+      "destination": "JourneyNorthHoennStrait",
+      "before": [
+        28404,
+        27248,
+        26092,
+        25993
+      ],
+      "after": [
+        28404,
+        27248,
+        26092,
+        25993
+      ],
+      "frame": 2849
+    },
+    {
+      "source": "JourneyNorthHoennStrait",
+      "destination": "JourneyKantoEasternChannel",
+      "before": [
+        28404,
+        27248,
+        26092,
+        25993
+      ],
+      "after": [
+        28404,
+        27248,
+        26092,
+        25993
+      ],
+      "frame": 3287
+    },
+    {
+      "source": "JourneyKantoEasternChannel",
+      "destination": "JourneyOneIslandChannel",
+      "before": [
+        28404,
+        27248,
+        26092,
+        25993
+      ],
+      "after": [
+        28404,
+        27248,
+        26092,
+        25993
+      ],
+      "frame": 3666
+    },
+    {
+      "source": "JourneyOneIslandChannel",
+      "destination": "OneIsland_Harbor_Frlg",
+      "before": [
+        28404,
+        27248,
+        26092,
+        25993
+      ],
+      "after": [
+        28404,
+        27248,
+        26092,
+        25993
+      ],
+      "frame": 3765
+    },
+    {
+      "source": "OneIsland_Harbor_Frlg",
+      "destination": "OneIsland_Frlg",
+      "before": [
+        28404,
+        27248,
+        26092,
+        25993
+      ],
+      "after": [
+        28404,
+        27248,
+        26092,
+        25993
+      ],
+      "frame": 4046
+    }
+  ],
+  "all_seam_ocean_colors_identical": true,
+  "initial_party_story_and_departure_are_fixtures": true,
+  "continuous_video": true,
+  "audio": false,
+  "samples": [
+    {
+      "frame": 120,
+      "seconds": 2.0,
+      "map": "MossdeepCity",
+      "tile": [
+        28,
+        18
+      ],
+      "surf": false
+    },
+    {
+      "frame": 132,
+      "seconds": 2.2,
+      "map": "MossdeepCity",
+      "tile": [
+        27,
+        18
+      ],
+      "surf": false
+    },
+    {
+      "frame": 148,
+      "seconds": 2.467,
+      "map": "MossdeepCity",
+      "tile": [
+        26,
+        18
+      ],
+      "surf": false
+    },
+    {
+      "frame": 164,
+      "seconds": 2.733,
+      "map": "MossdeepCity",
+      "tile": [
+        25,
+        18
+      ],
+      "surf": false
+    },
+    {
+      "frame": 180,
+      "seconds": 3.0,
+      "map": "MossdeepCity",
+      "tile": [
+        25,
+        19
+      ],
+      "surf": false
+    },
+    {
+      "frame": 196,
+      "seconds": 3.267,
+      "map": "MossdeepCity",
+      "tile": [
+        25,
+        20
+      ],
+      "surf": false
+    },
+    {
+      "frame": 212,
+      "seconds": 3.533,
+      "map": "MossdeepCity",
+      "tile": [
+        25,
+        21
+      ],
+      "surf": false
+    },
+    {
+      "frame": 228,
+      "seconds": 3.8,
+      "map": "MossdeepCity",
+      "tile": [
+        25,
+        22
+      ],
+      "surf": false
+    },
+    {
+      "frame": 244,
+      "seconds": 4.067,
+      "map": "MossdeepCity",
+      "tile": [
+        25,
+        23
+      ],
+      "surf": false
+    },
+    {
+      "frame": 260,
+      "seconds": 4.333,
+      "map": "MossdeepCity",
+      "tile": [
+        25,
+        24
+      ],
+      "surf": false
+    },
+    {
+      "frame": 276,
+      "seconds": 4.6,
+      "map": "MossdeepCity",
+      "tile": [
+        25,
+        25
+      ],
+      "surf": false
+    },
+    {
+      "frame": 292,
+      "seconds": 4.867,
+      "map": "MossdeepCity",
+      "tile": [
+        25,
+        26
+      ],
+      "surf": false
+    },
+    {
+      "frame": 308,
+      "seconds": 5.133,
+      "map": "MossdeepCity",
+      "tile": [
+        24,
+        26
+      ],
+      "surf": false
+    },
+    {
+      "frame": 324,
+      "seconds": 5.4,
+      "map": "MossdeepCity",
+      "tile": [
+        23,
+        26
+      ],
+      "surf": false
+    },
+    {
+      "frame": 340,
+      "seconds": 5.667,
+      "map": "MossdeepCity",
+      "tile": [
+        22,
+        26
+      ],
+      "surf": false
+    },
+    {
+      "frame": 356,
+      "seconds": 5.933,
+      "map": "MossdeepCity",
+      "tile": [
+        21,
+        26
+      ],
+      "surf": false
+    },
+    {
+      "frame": 372,
+      "seconds": 6.2,
+      "map": "MossdeepCity",
+      "tile": [
+        20,
+        26
+      ],
+      "surf": false
+    },
+    {
+      "frame": 388,
+      "seconds": 6.467,
+      "map": "MossdeepCity",
+      "tile": [
+        19,
+        26
+      ],
+      "surf": false
+    },
+    {
+      "frame": 404,
+      "seconds": 6.733,
+      "map": "MossdeepCity",
+      "tile": [
+        18,
+        26
+      ],
+      "surf": false
+    },
+    {
+      "frame": 420,
+      "seconds": 7.0,
+      "map": "MossdeepCity",
+      "tile": [
+        17,
+        26
+      ],
+      "surf": false
+    },
+    {
+      "frame": 436,
+      "seconds": 7.267,
+      "map": "MossdeepCity",
+      "tile": [
+        16,
+        26
+      ],
+      "surf": false
+    },
+    {
+      "frame": 452,
+      "seconds": 7.533,
+      "map": "MossdeepCity",
+      "tile": [
+        16,
+        27
+      ],
+      "surf": false
+    },
+    {
+      "frame": 468,
+      "seconds": 7.8,
+      "map": "MossdeepCity",
+      "tile": [
+        16,
+        28
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1064,
+      "seconds": 17.733,
+      "map": "MossdeepCity",
+      "tile": [
+        16,
+        29
+      ],
+      "surf": true
+    },
+    {
+      "frame": 1121,
+      "seconds": 18.683,
+      "map": "MossdeepCity",
+      "tile": [
+        15,
+        29
+      ],
+      "surf": true
+    },
+    {
+      "frame": 1129,
+      "seconds": 18.817,
+      "map": "MossdeepCity",
+      "tile": [
+        14,
+        29
+      ],
+      "surf": true
+    },
+    {
+      "frame": 1137,
+      "seconds": 18.95,
+      "map": "MossdeepCity",
+      "tile": [
+        13,
+        29
+      ],
+      "surf": true
+    },
+    {
+      "frame": 1145,
+      "seconds": 19.083,
+      "map": "MossdeepCity",
+      "tile": [
+        12,
+        29
+      ],
+      "surf": true
+    },
+    {
+      "frame": 1188,
+      "seconds": 19.8,
+      "map": "MossdeepCity",
+      "tile": [
+        11,
+        29
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1192,
+      "seconds": 19.867,
+      "map": "MossdeepCity",
+      "tile": [
+        10,
+        29
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1208,
+      "seconds": 20.133,
+      "map": "MossdeepCity",
+      "tile": [
+        9,
+        29
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1224,
+      "seconds": 20.4,
+      "map": "MossdeepCity",
+      "tile": [
+        8,
+        29
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1240,
+      "seconds": 20.667,
+      "map": "MossdeepCity",
+      "tile": [
+        8,
+        28
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1256,
+      "seconds": 20.933,
+      "map": "MossdeepCity",
+      "tile": [
+        8,
+        27
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1272,
+      "seconds": 21.2,
+      "map": "MossdeepCity",
+      "tile": [
+        8,
+        26
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1288,
+      "seconds": 21.467,
+      "map": "MossdeepCity",
+      "tile": [
+        8,
+        25
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1304,
+      "seconds": 21.733,
+      "map": "MossdeepCity",
+      "tile": [
+        7,
+        25
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1320,
+      "seconds": 22.0,
+      "map": "MossdeepCity",
+      "tile": [
+        6,
+        25
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1336,
+      "seconds": 22.267,
+      "map": "MossdeepCity",
+      "tile": [
+        5,
+        25
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1352,
+      "seconds": 22.533,
+      "map": "MossdeepCity",
+      "tile": [
+        4,
+        25
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1368,
+      "seconds": 22.8,
+      "map": "MossdeepCity",
+      "tile": [
+        3,
+        25
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1384,
+      "seconds": 23.067,
+      "map": "MossdeepCity",
+      "tile": [
+        2,
+        25
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1400,
+      "seconds": 23.333,
+      "map": "MossdeepCity",
+      "tile": [
+        1,
+        25
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1416,
+      "seconds": 23.6,
+      "map": "MossdeepCity",
+      "tile": [
+        0,
+        25
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2048,
+      "seconds": 34.133,
+      "map": "Route124",
+      "tile": [
+        79,
+        65
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2052,
+      "seconds": 34.2,
+      "map": "Route124",
+      "tile": [
+        78,
+        65
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2060,
+      "seconds": 34.333,
+      "map": "Route124",
+      "tile": [
+        77,
+        65
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2068,
+      "seconds": 34.467,
+      "map": "Route124",
+      "tile": [
+        76,
+        65
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2076,
+      "seconds": 34.6,
+      "map": "Route124",
+      "tile": [
+        75,
+        65
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2084,
+      "seconds": 34.733,
+      "map": "Route124",
+      "tile": [
+        74,
+        65
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2092,
+      "seconds": 34.867,
+      "map": "Route124",
+      "tile": [
+        73,
+        65
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2100,
+      "seconds": 35.0,
+      "map": "Route124",
+      "tile": [
+        72,
+        65
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2108,
+      "seconds": 35.133,
+      "map": "Route124",
+      "tile": [
+        71,
+        65
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2116,
+      "seconds": 35.267,
+      "map": "Route124",
+      "tile": [
+        70,
+        65
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2124,
+      "seconds": 35.4,
+      "map": "Route124",
+      "tile": [
+        69,
+        65
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2132,
+      "seconds": 35.533,
+      "map": "Route124",
+      "tile": [
+        68,
+        65
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2140,
+      "seconds": 35.667,
+      "map": "Route124",
+      "tile": [
+        67,
+        65
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2148,
+      "seconds": 35.8,
+      "map": "Route124",
+      "tile": [
+        66,
+        65
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2156,
+      "seconds": 35.933,
+      "map": "Route124",
+      "tile": [
+        65,
+        65
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2164,
+      "seconds": 36.067,
+      "map": "Route124",
+      "tile": [
+        65,
+        64
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2172,
+      "seconds": 36.2,
+      "map": "Route124",
+      "tile": [
+        65,
+        63
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2180,
+      "seconds": 36.333,
+      "map": "Route124",
+      "tile": [
+        65,
+        62
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2188,
+      "seconds": 36.467,
+      "map": "Route124",
+      "tile": [
+        65,
+        61
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2196,
+      "seconds": 36.6,
+      "map": "Route124",
+      "tile": [
+        65,
+        60
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2204,
+      "seconds": 36.733,
+      "map": "Route124",
+      "tile": [
+        65,
+        59
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2212,
+      "seconds": 36.867,
+      "map": "Route124",
+      "tile": [
+        65,
+        58
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2220,
+      "seconds": 37.0,
+      "map": "Route124",
+      "tile": [
+        65,
+        57
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2228,
+      "seconds": 37.133,
+      "map": "Route124",
+      "tile": [
+        65,
+        56
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2236,
+      "seconds": 37.267,
+      "map": "Route124",
+      "tile": [
+        65,
+        55
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2244,
+      "seconds": 37.4,
+      "map": "Route124",
+      "tile": [
+        65,
+        54
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2252,
+      "seconds": 37.533,
+      "map": "Route124",
+      "tile": [
+        65,
+        53
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2260,
+      "seconds": 37.667,
+      "map": "Route124",
+      "tile": [
+        65,
+        52
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2268,
+      "seconds": 37.8,
+      "map": "Route124",
+      "tile": [
+        65,
+        51
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2276,
+      "seconds": 37.933,
+      "map": "Route124",
+      "tile": [
+        65,
+        50
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2284,
+      "seconds": 38.067,
+      "map": "Route124",
+      "tile": [
+        65,
+        49
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2292,
+      "seconds": 38.2,
+      "map": "Route124",
+      "tile": [
+        65,
+        48
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2300,
+      "seconds": 38.333,
+      "map": "Route124",
+      "tile": [
+        65,
+        47
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2308,
+      "seconds": 38.467,
+      "map": "Route124",
+      "tile": [
+        65,
+        46
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2316,
+      "seconds": 38.6,
+      "map": "Route124",
+      "tile": [
+        65,
+        45
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2324,
+      "seconds": 38.733,
+      "map": "Route124",
+      "tile": [
+        65,
+        44
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2332,
+      "seconds": 38.867,
+      "map": "Route124",
+      "tile": [
+        65,
+        43
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2340,
+      "seconds": 39.0,
+      "map": "Route124",
+      "tile": [
+        65,
+        42
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2348,
+      "seconds": 39.133,
+      "map": "Route124",
+      "tile": [
+        65,
+        41
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2356,
+      "seconds": 39.267,
+      "map": "Route124",
+      "tile": [
+        65,
+        40
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2364,
+      "seconds": 39.4,
+      "map": "Route124",
+      "tile": [
+        65,
+        39
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2372,
+      "seconds": 39.533,
+      "map": "Route124",
+      "tile": [
+        64,
+        39
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2380,
+      "seconds": 39.667,
+      "map": "Route124",
+      "tile": [
+        64,
+        38
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2388,
+      "seconds": 39.8,
+      "map": "Route124",
+      "tile": [
+        64,
+        37
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2396,
+      "seconds": 39.933,
+      "map": "Route124",
+      "tile": [
+        63,
+        37
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2404,
+      "seconds": 40.067,
+      "map": "Route124",
+      "tile": [
+        63,
+        36
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2412,
+      "seconds": 40.2,
+      "map": "Route124",
+      "tile": [
+        62,
+        36
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2420,
+      "seconds": 40.333,
+      "map": "Route124",
+      "tile": [
+        61,
+        36
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2428,
+      "seconds": 40.467,
+      "map": "Route124",
+      "tile": [
+        60,
+        36
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2436,
+      "seconds": 40.6,
+      "map": "Route124",
+      "tile": [
+        59,
+        36
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2444,
+      "seconds": 40.733,
+      "map": "Route124",
+      "tile": [
+        59,
+        35
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2452,
+      "seconds": 40.867,
+      "map": "Route124",
+      "tile": [
+        59,
+        34
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2460,
+      "seconds": 41.0,
+      "map": "Route124",
+      "tile": [
+        59,
+        33
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2468,
+      "seconds": 41.133,
+      "map": "Route124",
+      "tile": [
+        59,
+        32
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2476,
+      "seconds": 41.267,
+      "map": "Route124",
+      "tile": [
+        59,
+        31
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2484,
+      "seconds": 41.4,
+      "map": "Route124",
+      "tile": [
+        59,
+        30
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2492,
+      "seconds": 41.533,
+      "map": "Route124",
+      "tile": [
+        59,
+        29
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2500,
+      "seconds": 41.667,
+      "map": "Route124",
+      "tile": [
+        59,
+        28
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2508,
+      "seconds": 41.8,
+      "map": "Route124",
+      "tile": [
+        59,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2516,
+      "seconds": 41.933,
+      "map": "Route124",
+      "tile": [
+        59,
+        26
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2524,
+      "seconds": 42.067,
+      "map": "Route124",
+      "tile": [
+        59,
+        25
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2532,
+      "seconds": 42.2,
+      "map": "Route124",
+      "tile": [
+        59,
+        24
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2540,
+      "seconds": 42.333,
+      "map": "Route124",
+      "tile": [
+        59,
+        23
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2548,
+      "seconds": 42.467,
+      "map": "Route124",
+      "tile": [
+        59,
+        22
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2556,
+      "seconds": 42.6,
+      "map": "Route124",
+      "tile": [
+        59,
+        21
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2564,
+      "seconds": 42.733,
+      "map": "Route124",
+      "tile": [
+        59,
+        20
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2572,
+      "seconds": 42.867,
+      "map": "Route124",
+      "tile": [
+        59,
+        19
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2580,
+      "seconds": 43.0,
+      "map": "Route124",
+      "tile": [
+        59,
+        18
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2588,
+      "seconds": 43.133,
+      "map": "Route124",
+      "tile": [
+        58,
+        18
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2596,
+      "seconds": 43.267,
+      "map": "Route124",
+      "tile": [
+        57,
+        18
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2604,
+      "seconds": 43.4,
+      "map": "Route124",
+      "tile": [
+        57,
+        17
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2612,
+      "seconds": 43.533,
+      "map": "Route124",
+      "tile": [
+        57,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2620,
+      "seconds": 43.667,
+      "map": "Route124",
+      "tile": [
+        56,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2628,
+      "seconds": 43.8,
+      "map": "Route124",
+      "tile": [
+        55,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2636,
+      "seconds": 43.933,
+      "map": "Route124",
+      "tile": [
+        55,
+        15
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2644,
+      "seconds": 44.067,
+      "map": "Route124",
+      "tile": [
+        54,
+        15
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2652,
+      "seconds": 44.2,
+      "map": "Route124",
+      "tile": [
+        53,
+        15
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2660,
+      "seconds": 44.333,
+      "map": "Route124",
+      "tile": [
+        53,
+        14
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2668,
+      "seconds": 44.467,
+      "map": "Route124",
+      "tile": [
+        52,
+        14
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2676,
+      "seconds": 44.6,
+      "map": "Route124",
+      "tile": [
+        51,
+        14
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2684,
+      "seconds": 44.733,
+      "map": "Route124",
+      "tile": [
+        50,
+        14
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2692,
+      "seconds": 44.867,
+      "map": "Route124",
+      "tile": [
+        49,
+        14
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2700,
+      "seconds": 45.0,
+      "map": "Route124",
+      "tile": [
+        49,
+        13
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2708,
+      "seconds": 45.133,
+      "map": "Route124",
+      "tile": [
+        49,
+        12
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2716,
+      "seconds": 45.267,
+      "map": "Route124",
+      "tile": [
+        48,
+        12
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2724,
+      "seconds": 45.4,
+      "map": "Route124",
+      "tile": [
+        47,
+        12
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2732,
+      "seconds": 45.533,
+      "map": "Route124",
+      "tile": [
+        46,
+        12
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2740,
+      "seconds": 45.667,
+      "map": "Route124",
+      "tile": [
+        46,
+        11
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2748,
+      "seconds": 45.8,
+      "map": "Route124",
+      "tile": [
+        46,
+        10
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2756,
+      "seconds": 45.933,
+      "map": "Route124",
+      "tile": [
+        46,
+        9
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2764,
+      "seconds": 46.067,
+      "map": "Route124",
+      "tile": [
+        46,
+        8
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2772,
+      "seconds": 46.2,
+      "map": "Route124",
+      "tile": [
+        46,
+        7
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2780,
+      "seconds": 46.333,
+      "map": "Route124",
+      "tile": [
+        46,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2788,
+      "seconds": 46.467,
+      "map": "Route124",
+      "tile": [
+        46,
+        5
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2796,
+      "seconds": 46.6,
+      "map": "Route124",
+      "tile": [
+        46,
+        4
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2804,
+      "seconds": 46.733,
+      "map": "Route124",
+      "tile": [
+        46,
+        3
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2812,
+      "seconds": 46.867,
+      "map": "Route124",
+      "tile": [
+        46,
+        2
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2820,
+      "seconds": 47.0,
+      "map": "Route124",
+      "tile": [
+        46,
+        1
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2828,
+      "seconds": 47.133,
+      "map": "Route124",
+      "tile": [
+        45,
+        1
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2836,
+      "seconds": 47.267,
+      "map": "Route124",
+      "tile": [
+        44,
+        1
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2844,
+      "seconds": 47.4,
+      "map": "Route124",
+      "tile": [
+        44,
+        0
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2852,
+      "seconds": 47.533,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        39
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2865,
+      "seconds": 47.75,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        38
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2873,
+      "seconds": 47.883,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        37
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2881,
+      "seconds": 48.017,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        36
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2890,
+      "seconds": 48.167,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        35
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2898,
+      "seconds": 48.3,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        34
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2906,
+      "seconds": 48.433,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        33
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2914,
+      "seconds": 48.567,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        32
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2922,
+      "seconds": 48.7,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        31
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2930,
+      "seconds": 48.833,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        30
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2938,
+      "seconds": 48.967,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        29
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2946,
+      "seconds": 49.1,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        28
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2954,
+      "seconds": 49.233,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2962,
+      "seconds": 49.367,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        26
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2970,
+      "seconds": 49.5,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        25
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2978,
+      "seconds": 49.633,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        24
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2986,
+      "seconds": 49.767,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        23
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2994,
+      "seconds": 49.9,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        22
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3002,
+      "seconds": 50.033,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        21
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3010,
+      "seconds": 50.167,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        13,
+        21
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3018,
+      "seconds": 50.3,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        13,
+        20
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3026,
+      "seconds": 50.433,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        20
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3034,
+      "seconds": 50.567,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        19
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3042,
+      "seconds": 50.7,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        18
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3050,
+      "seconds": 50.833,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        17
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3058,
+      "seconds": 50.967,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3066,
+      "seconds": 51.1,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        15
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3074,
+      "seconds": 51.233,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        14
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3082,
+      "seconds": 51.367,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        13
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3090,
+      "seconds": 51.5,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        12
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3098,
+      "seconds": 51.633,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        11
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3106,
+      "seconds": 51.767,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        10
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3114,
+      "seconds": 51.9,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        9
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3122,
+      "seconds": 52.033,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        8
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3130,
+      "seconds": 52.167,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        7
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3138,
+      "seconds": 52.3,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3146,
+      "seconds": 52.433,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        5
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3154,
+      "seconds": 52.567,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        4
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3162,
+      "seconds": 52.7,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        3
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3170,
+      "seconds": 52.833,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        2
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3178,
+      "seconds": 52.967,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        14,
+        1
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3186,
+      "seconds": 53.1,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        13,
+        1
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3194,
+      "seconds": 53.233,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        12,
+        1
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3202,
+      "seconds": 53.367,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        11,
+        1
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3210,
+      "seconds": 53.5,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        10,
+        1
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3218,
+      "seconds": 53.633,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        9,
+        1
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3226,
+      "seconds": 53.767,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        8,
+        1
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3234,
+      "seconds": 53.9,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        7,
+        1
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3242,
+      "seconds": 54.033,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        6,
+        1
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3250,
+      "seconds": 54.167,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        5,
+        1
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3258,
+      "seconds": 54.3,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        4,
+        1
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3266,
+      "seconds": 54.433,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        3,
+        1
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3274,
+      "seconds": 54.567,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        2,
+        1
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3282,
+      "seconds": 54.7,
+      "map": "JourneyNorthHoennStrait",
+      "tile": [
+        2,
+        0
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3290,
+      "seconds": 54.833,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        25,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3300,
+      "seconds": 55.0,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        24,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3308,
+      "seconds": 55.133,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        23,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3316,
+      "seconds": 55.267,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        22,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3325,
+      "seconds": 55.417,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        21,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3333,
+      "seconds": 55.55,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        20,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3341,
+      "seconds": 55.683,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        19,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3349,
+      "seconds": 55.817,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        18,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3357,
+      "seconds": 55.95,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        17,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3365,
+      "seconds": 56.083,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        16,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3373,
+      "seconds": 56.217,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        15,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3381,
+      "seconds": 56.35,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        14,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3389,
+      "seconds": 56.483,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        13,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3397,
+      "seconds": 56.617,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        12,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3405,
+      "seconds": 56.75,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        11,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3413,
+      "seconds": 56.883,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        10,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3421,
+      "seconds": 57.017,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        9,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3429,
+      "seconds": 57.15,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        8,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3437,
+      "seconds": 57.283,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        7,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3445,
+      "seconds": 57.417,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        6,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3453,
+      "seconds": 57.55,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        5,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3461,
+      "seconds": 57.683,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        4,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3469,
+      "seconds": 57.817,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        3,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3477,
+      "seconds": 57.95,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        27
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3485,
+      "seconds": 58.083,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        26
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3493,
+      "seconds": 58.217,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        25
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3501,
+      "seconds": 58.35,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        24
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3509,
+      "seconds": 58.483,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        23
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3517,
+      "seconds": 58.617,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        22
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3525,
+      "seconds": 58.75,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        21
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3533,
+      "seconds": 58.883,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        20
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3541,
+      "seconds": 59.017,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        19
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3549,
+      "seconds": 59.15,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        18
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3557,
+      "seconds": 59.283,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        17
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3565,
+      "seconds": 59.417,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3573,
+      "seconds": 59.55,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        15
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3581,
+      "seconds": 59.683,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        14
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3589,
+      "seconds": 59.817,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        13
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3597,
+      "seconds": 59.95,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        12
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3605,
+      "seconds": 60.083,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        11
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3613,
+      "seconds": 60.217,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        10
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3621,
+      "seconds": 60.35,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        9
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3629,
+      "seconds": 60.483,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        8
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3637,
+      "seconds": 60.617,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        7
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3645,
+      "seconds": 60.75,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        2,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3653,
+      "seconds": 60.883,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        1,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3661,
+      "seconds": 61.017,
+      "map": "JourneyKantoEasternChannel",
+      "tile": [
+        0,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3669,
+      "seconds": 61.15,
+      "map": "JourneyOneIslandChannel",
+      "tile": [
+        16,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3679,
+      "seconds": 61.317,
+      "map": "JourneyOneIslandChannel",
+      "tile": [
+        15,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3687,
+      "seconds": 61.45,
+      "map": "JourneyOneIslandChannel",
+      "tile": [
+        14,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3695,
+      "seconds": 61.583,
+      "map": "JourneyOneIslandChannel",
+      "tile": [
+        13,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3704,
+      "seconds": 61.733,
+      "map": "JourneyOneIslandChannel",
+      "tile": [
+        12,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3712,
+      "seconds": 61.867,
+      "map": "JourneyOneIslandChannel",
+      "tile": [
+        11,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3720,
+      "seconds": 62.0,
+      "map": "JourneyOneIslandChannel",
+      "tile": [
+        10,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3728,
+      "seconds": 62.133,
+      "map": "JourneyOneIslandChannel",
+      "tile": [
+        9,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3736,
+      "seconds": 62.267,
+      "map": "JourneyOneIslandChannel",
+      "tile": [
+        8,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3744,
+      "seconds": 62.4,
+      "map": "JourneyOneIslandChannel",
+      "tile": [
+        7,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3752,
+      "seconds": 62.533,
+      "map": "JourneyOneIslandChannel",
+      "tile": [
+        6,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3760,
+      "seconds": 62.667,
+      "map": "JourneyOneIslandChannel",
+      "tile": [
+        5,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3768,
+      "seconds": 62.8,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        5,
+        0
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3778,
+      "seconds": 62.967,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        5,
+        1
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3786,
+      "seconds": 63.1,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        5,
+        2
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3794,
+      "seconds": 63.233,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        5,
+        3
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3802,
+      "seconds": 63.367,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        5,
+        4
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3810,
+      "seconds": 63.5,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        6,
+        4
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3818,
+      "seconds": 63.633,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        6,
+        5
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3827,
+      "seconds": 63.783,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        6,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3835,
+      "seconds": 63.917,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        6,
+        7
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3843,
+      "seconds": 64.05,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        7,
+        7
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3851,
+      "seconds": 64.183,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        8,
+        7
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3859,
+      "seconds": 64.317,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        9,
+        7
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3867,
+      "seconds": 64.45,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        10,
+        7
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3875,
+      "seconds": 64.583,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        11,
+        7
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3883,
+      "seconds": 64.717,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        12,
+        7
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3891,
+      "seconds": 64.85,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        13,
+        7
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3899,
+      "seconds": 64.983,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        14,
+        7
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3907,
+      "seconds": 65.117,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        15,
+        7
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3915,
+      "seconds": 65.25,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        15,
+        8
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3923,
+      "seconds": 65.383,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        15,
+        9
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3931,
+      "seconds": 65.517,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        15,
+        10
+      ],
+      "surf": true
+    },
+    {
+      "frame": 3939,
+      "seconds": 65.65,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        15,
+        11
+      ],
+      "surf": true
+    },
+    {
+      "frame": 4041,
+      "seconds": 67.35,
+      "map": "OneIsland_Harbor_Frlg",
+      "tile": [
+        16,
+        11
+      ],
+      "surf": true
+    },
+    {
+      "frame": 4049,
+      "seconds": 67.483,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        0,
+        18
+      ],
+      "surf": true
+    },
+    {
+      "frame": 4060,
+      "seconds": 67.667,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        1,
+        18
+      ],
+      "surf": true
+    },
+    {
+      "frame": 4068,
+      "seconds": 67.8,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        2,
+        18
+      ],
+      "surf": true
+    },
+    {
+      "frame": 4076,
+      "seconds": 67.933,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        3,
+        18
+      ],
+      "surf": true
+    },
+    {
+      "frame": 4085,
+      "seconds": 68.083,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        4,
+        18
+      ],
+      "surf": true
+    },
+    {
+      "frame": 4093,
+      "seconds": 68.217,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        5,
+        18
+      ],
+      "surf": true
+    },
+    {
+      "frame": 4101,
+      "seconds": 68.35,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        6,
+        18
+      ],
+      "surf": true
+    },
+    {
+      "frame": 4109,
+      "seconds": 68.483,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        7,
+        18
+      ],
+      "surf": true
+    },
+    {
+      "frame": 4117,
+      "seconds": 68.617,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        8,
+        18
+      ],
+      "surf": true
+    },
+    {
+      "frame": 4125,
+      "seconds": 68.75,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        9,
+        18
+      ],
+      "surf": true
+    },
+    {
+      "frame": 4133,
+      "seconds": 68.883,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        10,
+        18
+      ],
+      "surf": true
+    },
+    {
+      "frame": 4176,
+      "seconds": 69.6,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        11,
+        18
+      ],
+      "surf": false
+    },
+    {
+      "frame": 4180,
+      "seconds": 69.667,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        12,
+        18
+      ],
+      "surf": false
+    },
+    {
+      "frame": 4196,
+      "seconds": 69.933,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        12,
+        17
+      ],
+      "surf": false
+    },
+    {
+      "frame": 4268,
+      "seconds": 71.133,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        13,
+        17
+      ],
+      "surf": false
+    },
+    {
+      "frame": 4284,
+      "seconds": 71.4,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        13,
+        16
+      ],
+      "surf": false
+    },
+    {
+      "frame": 4300,
+      "seconds": 71.667,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        13,
+        15
+      ],
+      "surf": false
+    },
+    {
+      "frame": 4316,
+      "seconds": 71.933,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        13,
+        14
+      ],
+      "surf": false
+    },
+    {
+      "frame": 4332,
+      "seconds": 72.2,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        13,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 4348,
+      "seconds": 72.467,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        13,
+        12
+      ],
+      "surf": false
+    },
+    {
+      "frame": 4364,
+      "seconds": 72.733,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        14,
+        12
+      ],
+      "surf": false
+    },
+    {
+      "frame": 4380,
+      "seconds": 73.0,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        14,
+        11
+      ],
+      "surf": false
+    },
+    {
+      "frame": 4396,
+      "seconds": 73.267,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        14,
+        10
+      ],
+      "surf": false
+    },
+    {
+      "frame": 4412,
+      "seconds": 73.533,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        14,
+        9
+      ],
+      "surf": false
+    },
+    {
+      "frame": 4428,
+      "seconds": 73.8,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        14,
+        8
+      ],
+      "surf": false
+    },
+    {
+      "frame": 4444,
+      "seconds": 74.067,
+      "map": "OneIsland_Frlg",
+      "tile": [
+        14,
+        7
+      ],
+      "surf": false
+    }
+  ],
+  "video_sha256": "2a7f3f45db88befbac6d144a9243b161d1be3bcb97261e6cd95e0dfb0261746f"
+}

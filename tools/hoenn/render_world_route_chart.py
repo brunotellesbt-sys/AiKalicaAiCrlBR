@@ -7,7 +7,7 @@ from prepare_world_dex_map import decode
 
 def render(source,output):
     source,output=Path(source),Path(output);output.mkdir(parents=True,exist_ok=True)
-    r=json.loads((source/'.journey-world-route-chart').read_text())
+    r=json.loads((source/'.journey-surf-cave-coasts').read_text())['chart'] if (source/'.journey-surf-cave-coasts').exists() else json.loads((source/'.journey-annotated-world-links').read_text())['chart'] if (source/'.journey-annotated-world-links').exists() else json.loads((source/'.journey-world-route-chart').read_text())
     im=decode((source/'src/data/journey_world_map.h').read_text()).convert('RGB')
     im.resize((1344,672),Image.Resampling.NEAREST).save(output/'world-map-current.png')
     im.crop((94,35,212,112)).resize((1416,924),Image.Resampling.NEAREST).save(output/'coastal-passages-detail.png')
@@ -31,7 +31,7 @@ def render(source,output):
         neighbors=sorted({nodes[e['destination' if e['source']==n else 'source']]['name'] for e in r['routes'] if n in (e['source'],e['destination'])})
         definition=definitions.get(n,'Área de navegação que liga '+', '.join(neighbors)+'.')
         rows.append(dict(name=node['name'],definition=definition,position=node['position'],map=n,neighbors=neighbors))
-    data=dict(routes=r['routes'],definitions=rows,labels_printed_on_map=False,passages=r['passages'])
+    data=dict(cave_approaches=r.get('cave_approaches', []), routes=r['routes'],definitions=rows,labels_printed_on_map=False,passages=r['passages'])
     (output/'world-routes.json').write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n')
     items=''.join('<li><strong>'+html.escape(row['name'])+'</strong><p>'+html.escape(row['definition'])+'</p></li>' for row in rows)
     page='''<!doctype html><html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Mapa do mundo e rotas marítimas</title><style>body{margin:0;background:#12202e;color:#eef6ff;font:16px system-ui}main{max-width:1500px;margin:auto;padding:20px}h1{font-size:24px}img{width:100%;image-rendering:pixelated}input{padding:10px;font:inherit;width:min(90%,500px)}ul{padding:0;list-style:none;columns:2;column-gap:30px}li{break-inside:avoid;padding:14px 0;border-bottom:1px solid #39536b}p{line-height:1.5}small{color:#adc3da}@media(max-width:700px){ul{columns:1}}</style><main><h1>Mapa do mundo</h1><img src="world-map-current.png" alt="Contorno do mundo com ligações marítimas em linhas retas, sem nomes sobre o desenho"><p>Linhas azuis mostram as ligações de Surf. Os nomes e as definições ficam na lista abaixo e na seleção do mapa no jogo.</p><h2>Rotas e áreas de navegação</h2><input type="search" id="search" placeholder="Buscar nome ou destino" aria-label="Buscar nome ou destino"><ul>'''+items+'''</ul></main><script>document.querySelector('#search').oninput=e=>{const q=e.target.value.toLocaleLowerCase();document.querySelectorAll('li').forEach(li=>li.hidden=!li.textContent.toLocaleLowerCase().includes(q))}</script></html>'''
