@@ -105,6 +105,12 @@ def prepare(source):
     # Ground at the original market posts is paving; Dewford retains sand.
     for donor in (0x270,0x272,0x278,0x27A,0x263,0x264):
         mid=ids[donor];words[(mid-512)*8:(mid-512)*8+4]=sand
+    # Keep the two right canopy cells over the exact shore at (3,12).
+    shore=grids['Route107'][12*ls[maps['Route107']['layout']]['width']+3]&1023
+    assert shore>=512
+    beach=words[(shore-512)*8+4:(shore-511)*8]
+    for donor in (0x272,0x27A):
+        at=(ids[donor]-512)*8;words[at:at+4]=beach
     files[metapath]=struct.pack('<'+'H'*len(words),*words)
     files[attrpath]=bytes(attrs)
     for p,raw in files.items():layer.stage(p,raw)
@@ -165,13 +171,27 @@ def prepare(source):
     tm_count=len(re.findall(r'F\(\w+\)',tms.split('#define FOREACH_TM(F)',1)[1].split('#define FOREACH_HM',1)[0]))
     old=tms.split('#define FOREACH_HM',1)[0].rstrip().splitlines()[-1]
     tms=tms.replace(old+'\n',old+' \\\n    F(PLAY_ROUGH)\n',1);layer.stage(p,tms)
+    # Keep the modern story rewards and let the original Orbs transform too.
+    p='src/data/pokemon/form_change_tables.h';forms=(s/p).read_text()
+    for species,item,modern in [('DIALGA','ADAMANT_ORB','ADAMANT_CRYSTAL'),
+                                ('PALKIA','LUSTROUS_ORB','LUSTROUS_GLOBE')]:
+        needle='{FORM_CHANGE_ITEM_HOLD, SPECIES_'+species+'_ORIGIN, ITEM_'+modern+'},'
+        assert forms.count(needle)==1
+        forms=forms.replace(needle,needle+'\n    {FORM_CHANGE_ITEM_HOLD, SPECIES_'+species+'_ORIGIN, ITEM_'+item+'},')
+    needle='#if I_GRISEOUS_ORB_FORM_CHANGE < GEN_9\n    {FORM_CHANGE_ITEM_HOLD, SPECIES_GIRATINA_ORIGIN, ITEM_GRISEOUS_ORB},\n#endif'
+    assert forms.count(needle)==1
+    forms=forms.replace(needle,'    {FORM_CHANGE_ITEM_HOLD, SPECIES_GIRATINA_ORIGIN, ITEM_GRISEOUS_ORB},')
+    layer.stage(p,forms)
     groups,prices=inventory(s)
     p='src/data/items.h';text=(s/p).read_text()
     for item,price in prices.items():
         pattern=r'(\[ITEM_'+item+r'\]\s*=\s*\{.*?\.price\s*=\s*)[^,]+,'
         text,count=re.subn(pattern,lambda m:m[1]+str(price)+',',text,count=1,flags=re.S)
         assert count==1,item
-    for item,description in [('BOTTLE_CAP','Trade for one stat of\\nHyper Training at\\nDewford\'s stall.'),
+    for item,description in [('ADAMANT_ORB',"Reveals Dialga's\\nOrigin form. Boosts\\nDragon and Steel."),
+                             ('LUSTROUS_ORB',"Reveals Palkia's\\nOrigin form. Boosts\\nDragon and Water."),
+                             ('GRISEOUS_ORB',"Reveals Giratina's\\nOrigin form. Boosts\\nDragon and Ghost."),
+                             ('BOTTLE_CAP','Trade for one stat of\\nHyper Training at\\nDewford\'s stall.'),
                              ('GOLD_BOTTLE_CAP','Trade for all six stats\\nof Hyper Training at\\nDewford\'s stall.')]:
         pattern=r'(\[ITEM_'+item+r'\]\s*=\s*\{.*?\.description\s*=\s*)COMPOUND_STRING\(.*?\),'
         text,count=re.subn(pattern,lambda m:m[1]+'COMPOUND_STRING("'+description+'"),',text,count=1,flags=re.S);assert count==1
@@ -199,10 +219,12 @@ def prepare(source):
     layer.stage('src/journey_competitive_shop.c',(Path(__file__).parent/'data/dewford-competitive-shop.c').read_bytes())
     p='data/event_scripts.s';layer.stage(p,(s/p).read_text()+'\n\t.include "data/scripts/journey_competitive_shop.inc"\n')
     return layer.finish(stocks=groups,prices=prices,seller=[2,15],hyper_trainer=[1,15],
-                        booth=[0,13,4,3],item=dict(map='Route106',world=[-5,-4],position=[75,16],item='ITEM_FULL_RESTORE',flag=flag),
+                        booth=[0,13,4,3],booth_shore_underlay=dict(cells=[[3,13],[3,14]],reference=[3,12]),item=dict(map='Route106',world=[-5,-4],position=[75,16],item='ITEM_FULL_RESTORE',flag=flag),
                         tm=dict(map='JourneyDewfordPortIsland',world=[7,-6],position=[7,6],item='ITEM_TM_PLAY_ROUGH',number=tm_count+1,flag=flag+1),
                         lighthouse_peak_walkable=[[-2,-6],[-1,-6]],
                         closing_trees=[[8,-6],[9,-6]],hyper_training_minimum_level=50,
+                        origin_orbs={'DIALGA':'ADAMANT_ORB','PALKIA':'LUSTROUS_ORB','GIRATINA':'GRISEOUS_ORB'},
+                        modern_origin_rewards_preserved=True,
                         all_existing_npcs_preserved=True,bridge_and_water_preserved=True)
 
 

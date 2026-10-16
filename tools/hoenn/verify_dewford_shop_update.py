@@ -19,10 +19,14 @@ def verify_update(directory,info):
             assert p['target']=='common' and r['layers']==info['integration_layers']
             assert r['unrelated_inputs_checked']>30000 and r['independent_replay'] and r['idempotent']
             assert r['all_existing_events_preserved'] and r['only_requested_terrain_changed'] and r['mega_stones_unchanged']
-            assert r['unchanged_map_cells_pixel_checked']>3000 and r['existing_tm_hm_numbers_preserved'] and r['animated_flag_graphics_reserved']
+            assert r['unchanged_map_cells_pixel_checked']>3000 and r['existing_tm_hm_numbers_preserved'] and r['animated_flag_graphics_reserved'] and r['booth_shore_matches_3_12'] and r['compiled_booth_shore_matches_source']
         else:
             assert p['kind']=='dewford-competitive-shop' and p['target']!='common'
             assert r['review_mode']==(p['target']=='test') and r['prices_checked']==71
+            origins=r['origin_forms'];assert origins['wrong_species_orb_rejected'] and origins['giving_and_taking_original_orbs_use_controller_input']
+            assert {x['pokemon'] for x in origins['checks']}=={'Dialga','Palkia','Giratina'}
+            for check in origins['checks']:
+                for field in ['original_orb_equipped_through_bag','item_taken_through_party_menu','stats_change_and_revert','modern_reward_still_transforms','save_reload_preserves_form_and_item']:assert check[field],field
             assert len(r['purchases'])==3 and {x['item'] for x in r['purchases']}=={'CHOICE_SCARF','BOTTLE_CAP','GOLD_BOTTLE_CAP'}
             for key in ['insufficient_money_preserves_money_and_bag','two_attendants_interacted',
                         'footpath_to_bridge_walked','single_cap_only_one_stat','gold_cap_all_six_stats',

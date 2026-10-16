@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "rom_sha256": "e61f8021495b3a42e129ce2c3eec335937b4fa5b0a426c303370b10420e03cb9",
+  "rom_sha256": "6720fd8feec72a7679c08884c499f9fe6c037348be5838d74a18b72cdf007118",
   "layers": [
     "hoenn-crossing",
     "worldsea",
@@ -161,7 +161,7 @@
     "surf-review",
     "dewford-competitive-shop"
   ],
-  "unrelated_inputs_checked": 31377,
+  "unrelated_inputs_checked": 31376,
   "independent_replay": true,
   "idempotent": true,
   "all_existing_events_preserved": true,
@@ -170,5 +170,7 @@
   "only_requested_terrain_changed": true,
   "mega_stones_unchanged": true,
   "existing_tm_hm_numbers_preserved": true,
-  "animated_flag_graphics_reserved": true
+  "animated_flag_graphics_reserved": true,
+  "booth_shore_matches_3_12": true,
+  "compiled_booth_shore_matches_source": true
 }

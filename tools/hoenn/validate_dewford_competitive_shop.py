@@ -4,13 +4,15 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 prefix=(ROOT/'tools/hoenn/validate_sootopolis_harbor.py').read_text().split('\n# Disable Sootopolis')[0]
 exec(compile(prefix,__file__,'exec'))
+from origin_form_checks import EXPRESSIONS as ORIGIN_EXPRESSIONS,validate as validate_origins
 report=json.loads((source/'.journey-dewford-competitive-shop').read_text())
 expressions=['offsetof(struct SaveBlock1,money)','sizeof(struct Pokemon)','MON_DATA_HP_IV',
              'MON_DATA_HYPER_TRAINED_HP','MON_DATA_LEVEL','MON_DATA_IS_EGG',
              'ITEM_BOTTLE_CAP','ITEM_GOLD_BOTTLE_CAP','ITEM_FULL_RESTORE','SPECIES_SWAMPERT',
              'ITEM_TM_PLAY_ROUGH','MOVE_PLAY_ROUGH','SPECIES_CLEFAIRY']
+expressions += ORIGIN_EXPRESSIONS
 expressions += ['ITEM_'+item for item in report['prices']]
-code='#include "global.h"\n#include "pokemon.h"\n#include "constants/items.h"\n#include "constants/species.h"\n#include "constants/moves.h"\n#include <stddef.h>\nconst u32 probe[]={'+','.join(expressions)+'};'
+code='#include "global.h"\n#include "pokemon.h"\n#include "constants/items.h"\n#include "constants/species.h"\n#include "constants/moves.h"\n#include "item_menu.h"\n#include "constants/flags.h"\n#include <stddef.h>\nconst u32 probe[]={'+','.join(expressions)+'};'
 with tempfile.TemporaryDirectory(dir='/tmp') as tmp:
     probe=Path(tmp)/'shop.s'
     subprocess.run([str(ROOT/'.local/arm-gcc/usr/bin/arm-none-eabi-gcc'),'-S','-mabi=apcs-gnu','-iquote',str(source/'include'),'-x','c','-','-o',str(probe)],input=code,text=True,check=True)
@@ -129,8 +131,9 @@ assert quantity('TM_PLAY_ROUGH')==before+1 and native('FlagGet',report['tm']['fl
 assert native('ItemIdToBattleMoveId',c['ITEM_TM_PLAY_ROUGH'])==c['MOVE_PLAY_ROUGH']
 assert native('CanLearnTeachableMove',c['SPECIES_CLEFAIRY'],c['MOVE_PLAY_ROUGH'])
 picture('play-rough-collected')
+origins=validate_origins(globals())
 mode=bool(lib.read8(s['gJourneyReviewMode']));lib.stop()
-r=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),review_mode=mode,
+r=dict(passed=True,origin_forms=origins,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),review_mode=mode,
        prices_checked=len(report['prices']),purchases=purchases,insufficient_money_preserves_money_and_bag=True,
        two_attendants_interacted=True,footpath_to_bridge_walked=True,
        single_cap_only_one_stat=True,gold_cap_all_six_stats=True,original_genetic_ivs_preserved=True,

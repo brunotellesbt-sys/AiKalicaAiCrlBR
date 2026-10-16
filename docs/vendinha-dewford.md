@@ -1,6 +1,6 @@
 # Barraca de treinamento de Dewford
 
-Uma barraca coberta do mercado de Slateport foi instalada entre a casa com pedra na frente e a ponte suspensa. São dois atendentes: o da direita vende equipamentos e o da esquerda faz Hyper Training. A passagem a pé pela frente permanece livre.
+Uma barraca coberta do mercado de Slateport foi instalada entre a casa com pedra na frente e a ponte suspensa. São dois atendentes: o da direita vende equipamentos e o da esquerda faz Hyper Training. A passagem a pé pela frente permanece livre. Os tiles (3,13) e (3,14) usam a borda de praia de (3,12) sob a barraca.
 
 ![Dewford atual](images/dewford-shop/Dewford-island-harbor.png)
 
@@ -92,7 +92,7 @@ A barraca vende 71 itens em cinco categorias, com os equipamentos de maior valor
 
 ## Itens Origin e missão Galactic
 
-Adamant Orb e Lustrous Orb aumentam golpes dos tipos associados a Dialga e Palkia; não ativam suas formas Origin. Nesta ROM, equipar **Adamant Crystal**, **Lustrous Globe** e **Griseous Core** transforma Dialga, Palkia e Giratina, respectivamente. O Griseous Orb não muda Giratina nesta configuração de geração 9.
+**Adamant Orb**, **Lustrous Orb** e **Griseous Orb** agora também revelam as formas Origin de Dialga, Palkia e Giratina ao equipar. Eles conservam seus aumentos de poder. **Adamant Crystal**, **Lustrous Globe** e **Griseous Core**, obtidos na missão Galactic, continuam ativando as mesmas formas. Retirar ou substituir o item por um incompatível restaura a forma normal. [Fotos e verificação dos menus](formas-origin.md).
 
 A missão já existe no **Abandoned Ship**, com passagem além da cabine 6 no andar escondido, e exige as 16 insígnias e os seis encontros anteriores com cada um dos dois viajantes. É preciso enfrentar os grunts; Eren ajuda contra Mars e Charon, Luffy ajuda contra Saturn e Jupiter; depois vêm Cyrus e uma batalha contra Giratina sem captura nessa cena. A conclusão entrega Crystal, Globe e Core, com proteção para Bag cheia. Esta atualização preserva essa missão e não vende seus prêmios na barraca.
 
