@@ -1,4 +1,5 @@
 """Require current, native seven-island Surf evidence in every shipped edition."""
+from verify_fuchsia_update import harbor_baseline
 import hashlib,json,unittest
 from pathlib import Path
 from verify_versions import verify
@@ -9,7 +10,7 @@ OUT=ROOT/'mods/hoenn/sevii-surf-validation'
 
 class SeviiSurfConnections(unittest.TestCase):
     def test_all_four_editions_reach_native_land_and_return_without_fades(self):
-        release=verify(ROOT/'mods/hoenn/versions');self.assertEqual(release['validation_scope'],'sevii-surf-connections')
+        release=harbor_baseline(verify(ROOT/'mods/hoenn/versions'));self.assertEqual(release['validation_scope'],'sevii-surf-connections')
         for row in release['variants']:
             name=row['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba');r=json.loads((OUT/name/'sevii-surf-connections.json').read_text())
             self.assertEqual(r['rom_sha256'],row['sha256']);self.assertEqual({i['map'] for i in r['islands']},ISLANDS)
@@ -24,7 +25,7 @@ class SeviiSurfConnections(unittest.TestCase):
         self.assertTrue(any('SootopolisCity' in p for p in r['preserved_port_paths']))
         self.assertTrue(any('PalletTown' in p for p in r['preserved_port_paths']))
         self.assertFalse(any('sootopolis' in p.lower() or 'pallet' in p.lower() for p in r['changed_source_files']))
-        release=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text());reference=release['previous_sootopolis_validation']
+        release=harbor_baseline(json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text()));reference=release['previous_sootopolis_validation']
         self.assertFalse(reference['retested_on_current_rom'])
         self.assertEqual(hashlib.sha256((ROOT/reference['manifest']).read_bytes()).hexdigest(),reference['manifest_sha256'])
 

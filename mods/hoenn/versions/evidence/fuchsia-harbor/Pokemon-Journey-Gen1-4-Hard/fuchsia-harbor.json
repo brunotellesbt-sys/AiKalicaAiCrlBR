@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "rom_sha256": "21b0a2bf1b3e322716c4af77155fda514091d6a34459858f98710a5046ebf391",
+  "controller_entry_and_exit": true,
+  "quay_walked_without_surf": true,
+  "outside_captain_removed": true,
+  "one_indoor_captain": true,
+  "captain_interacted_physically": true,
+  "medium_boat_sprite_size": [
+    64,
+    64
+  ],
+  "medium_boat_hull_blocked_over_water": true,
+  "ship_sprite_size": [
+    96,
+    40
+  ],
+  "ship_hull_blocked_over_water": true,
+  "network_arrivals_inside_terminal": true,
+  "save_continue_inside_terminal": true,
+  "returned_to_original_beach": true,
+  "old_lodge_exit_walked": true,
+  "trips": [
+    {
+      "destination": "JourneyPalletHarbor",
+      "arrival": [
+        16,
+        13
+      ],
+      "native_animation_observations": 18
+    },
+    {
+      "destination": "JourneyFuchsiaHarbor",
+      "arrival": [
+        16,
+        13
+      ],
+      "native_animation_observations": 18
+    }
+  ],
+  "initial_story_state_and_first_placement_are_fixtures": true,
+  "full_campaign_playthrough": false
+}

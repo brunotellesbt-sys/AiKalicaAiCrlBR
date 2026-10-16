@@ -8,7 +8,9 @@ Imagens renderizadas dos tiles e sprites utilizados na ROM. Exibem os atores per
 
 ## Fuchsia / Route 19
 
-![Fuchsia / Route 19](images/port-update/Route19_Frlg.png)
+![Fuchsia / Route 19](images/fuchsia-harbor/Route19_Frlg.png)
+
+[Interior com navio e detalhes](porto-fuchsia.md).
 
 ## Vermilion
 

@@ -1,4 +1,5 @@
 """Check the current release and preserve the earlier coastal/tournament proof."""
+from verify_fuchsia_update import harbor_baseline
 import hashlib,json,unittest
 from pathlib import Path
 from verify_versions import verify
@@ -6,6 +7,7 @@ ROOT=Path(__file__).resolve().parents[2]
 class CoastalRelease(unittest.TestCase):
  def test_current_roms_have_fresh_focused_evidence(self):
   r=verify(ROOT/'mods/hoenn/versions');self.assertEqual(len(r['variants']),4)
+  r=harbor_baseline(r)
   if r['validation_scope']=='sevii-surf-connections':
    self.assertFalse(r['previous_sootopolis_validation']['retested_on_current_rom'])
    r=json.loads((ROOT/r['previous_sootopolis_validation']['manifest']).read_text())

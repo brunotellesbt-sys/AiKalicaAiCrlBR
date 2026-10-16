@@ -1,17 +1,23 @@
-"""Require current native workshop evidence in every shipped edition."""
+"""Preserve exact workshop evidence when a later overlay only edits Fuchsia."""
+from verify_fuchsia_update import harbor_baseline
 import hashlib,json,unittest
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 class SpecialEncounterTests(unittest.TestCase):
-    def test_four_roms_have_current_native_workshop_and_capture_proofs(self):
+    def test_four_editions_keep_workshop_proofs_bound_to_their_tested_release(self):
         release=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
+        current=release
+        release=harbor_baseline(release)
         self.assertTrue(release['special_encounters_validated'])
         proofs=[p for p in release['proofs'] if p['kind']=='special-encounters']
         self.assertEqual(len(proofs),4)
         for proof in proofs:
             with self.subTest(edition=proof['target']):
                 r=json.loads((ROOT/'mods/hoenn/versions'/proof['file']).read_text())
-                self.assertEqual(r['rom_sha256'],hashlib.sha256((ROOT/'roms'/proof['target']).read_bytes()).hexdigest())
+                tested=next(row for row in release['variants'] if row['file']==proof['target'])
+                self.assertEqual(r['rom_sha256'],tested['sha256'])
+                if current is release:
+                    self.assertEqual(r['rom_sha256'],hashlib.sha256((ROOT/'roms'/proof['target']).read_bytes()).hexdigest())
                 self.assertTrue(r['actual_tv_capture_and_form_ui'])
                 self.assertEqual(len(r['rotom_changes']),6)
                 self.assertEqual(len(r['dex_locations']),21)

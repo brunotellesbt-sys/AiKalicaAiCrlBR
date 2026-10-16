@@ -70,3 +70,7 @@ Saves antigos não são compatíveis com a Bag ampliada. A ROM mantém o formato
 A alpha anterior de 64 camadas permanece preservada em `playable/`, com suas próprias evidências. Seus relatórios não são apresentados como testes das novas ROMs.
 
 O PWT atual passou por inspeção das 446 equipes elegíveis nas quatro edições, instanciação das 162 identidades na arena e oito torneios Gen 1–4 completos (57 batalhas) e torneios completos nas gerações 6 e 9. Foram aprovados 65 cenários de histórico, restrições e PP, mais cinco de Encore; a auditoria de atributos atual conferiu as 91 Megas da referência, incluindo Mega Dimension. A apresentação é adaptada à GBA. A auditoria de todos os times canônicos de personagens modernos ainda está pendente; veja o documento do PWT.
+
+## Porto de Fuchsia / Rota 19
+
+Terminal de Slateport sobre a água no oeste, barco médio junto à ponte e um único barqueiro interno com o navio grande. A camada `fuchsia-harbor` sucede `lavender-harbor`. Os outros portos, atlas e treinadores permanecem inalterados. Validação física de portas, menus, viagem a Pallet, colisões e save/continue na base e nas quatro edições; reprodução independente da camada e conferência de 31.051 arquivos não alterados. Evidências anteriores permanecem históricas, com seus hashes originais. [Imagens](../../docs/porto-fuchsia.md).

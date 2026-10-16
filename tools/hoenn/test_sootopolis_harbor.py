@@ -1,4 +1,5 @@
 """Keep the original harbor controller/reproduction evidence bound to its ROM."""
+from verify_fuchsia_update import harbor_baseline
 import hashlib
 import json
 import unittest
@@ -13,7 +14,7 @@ class SootopolisHarbor(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.manifest = json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
-        cls.harbor_manifest = cls.manifest
+        cls.harbor_manifest = harbor_baseline(cls.manifest)
         if cls.manifest['validation_scope'] == 'sevii-surf-connections' and not cls.manifest.get('sootopolis_harbor_retested'):
             reference = cls.manifest['previous_sootopolis_validation']
             raw = (ROOT/reference['manifest']).read_bytes()

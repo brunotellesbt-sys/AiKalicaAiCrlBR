@@ -1,5 +1,7 @@
 # Pokémon Journey — quatro edições GBA
 
+[Porto de Fuchsia / Rota 19](../../../docs/porto-fuchsia.md): terminal vermelho sobre a água, navio interno, um barqueiro dentro e barco médio junto à ponte.
+
 [Novo porto de Sootopolis](../../../docs/porto-sootopolis.md): ponte ligada à terra,
 terminal com capitão da rede mundial e submarino ampliado. Validado nas quatro edições.
 

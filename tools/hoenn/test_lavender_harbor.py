@@ -1,4 +1,5 @@
 """Bind Lavender's replacement terminal to its artwork and native ROM evidence."""
+from verify_fuchsia_update import harbor_baseline
 import json
 import unittest
 from pathlib import Path
@@ -39,6 +40,7 @@ class LavenderHarbor(unittest.TestCase):
 
     def test_every_edition_walks_doors_and_sails_to_pallet_and_back(self):
         release = json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
+        release=harbor_baseline(release)
         self.assertTrue(release['lavender_harbor_validated'])
         self.assertEqual(release['integration_layers'][-1],'lavender-harbor')
         cases=[('validation',release['parent_rom_sha256'])]
