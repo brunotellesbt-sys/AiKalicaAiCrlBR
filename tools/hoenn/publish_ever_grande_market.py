@@ -15,7 +15,8 @@ def publish(source,validation,output):
     info=package(source,output)
     info.update(validation_scope='ever-grande-market',validated=False,full_campaign_playthrough=False,proofs=[],
         historical_validation=old['historical_validation'],previous_validation=old['previous_validation'],
-        previous_port_validation=dict(manifest=(validation/'baseline/versions.json').relative_to(ROOT).as_posix(),manifest_sha256=hashlib.sha256(raw).hexdigest(),retested_on_current_rom=False))
+        previous_port_validation=dict(manifest=(validation/'baseline/versions.json').relative_to(ROOT).as_posix(),manifest_sha256=hashlib.sha256(raw).hexdigest(),retested_on_current_rom=False),
+        previous_review_validation=dict(file=(validation/'baseline/review.json').relative_to(ROOT).as_posix(),sha256=hashlib.sha256((validation/'baseline/review.json').read_bytes()).hexdigest()))
     def add(file,target,kind):
         rel=Path('evidence/ever-grande-market')/target.removesuffix('.gba')/(kind+'.json')
         dest=output/rel;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(file,dest)
@@ -23,7 +24,7 @@ def publish(source,validation,output):
     add(validation/'source.json','common','ever-grande-source')
     add(validation/'native/ever-grande-market.json','common','ever-grande-market')
     for target,folder in [(r['file'],r['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba')) for r in info['variants']]+[('test','TESTE')]:
-        for k in ['ever-grande-market','review-mode']:add(validation/folder/(k+'.json'),target,k)
+        for k in ['ever-grande-market','dewford-competitive-shop','review-mode']:add(validation/folder/(k+'.json'),target,k)
     (output/'versions.json').write_text(json.dumps(info,indent=2)+'\n');verify(output,require_seal=False)
     info['validated']=True;(output/'versions.json').write_text(json.dumps(info,indent=2)+'\n');verify(output)
     with zipfile.ZipFile(output/'Pokemon-Journey-Four-Editions.zip','w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:

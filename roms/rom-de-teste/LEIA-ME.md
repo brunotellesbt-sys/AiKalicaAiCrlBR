@@ -9,3 +9,5 @@ Para revisar rapidamente, use também `Pokemon-Journey-TESTE.sav` com o mesmo no
 Esta ROM possui nome e código próprios e fica separada das quatro edições normais. Mantenha seu save de campanha na edição original. As ROMs normais conservam encontros e abordagens de treinadores.
 
 Os lendários dos oito locais novos foram redistribuídos das cavernas mais cheias. Não há duplicação: as 105 espécies especiais, os registros de captura e a exigência das 16 insígnias foram preservados.
+
+A barraca de Dewford e suas mecânicas acompanham as quatro edições normais. [Local, preços e serviços](../../docs/vendinha-dewford.md).

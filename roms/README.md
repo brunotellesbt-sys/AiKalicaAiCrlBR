@@ -1,6 +1,8 @@
 # ROMs atuais
 
-Atualização atual: [casas e feira de Mega Stones em Ever Grande](../docs/ever-grande-market.md), presentes únicos (Full Restore e Max Revive) e Sootopolis com marcador vermelho restaurado. As quatro edições e a ROM de teste incluem as mudanças.
+Atualização atual: [casas e feira de Mega Stones em Ever Grande](../docs/ever-grande-market.md), dois presentes únicos e Sootopolis com marcador vermelho. Inclui a feira competitiva de Dewford e as formas Origin do PR #93.
+
+[Barraca de Dewford](../docs/vendinha-dewford.md): itens competitivos e Hyper Training nas quatro edições.
 
 Esta pasta contém sempre as quatro edições GBA da entrega atual. Comece um **save novo**; saves anteriores à ampliação da Bag não são compatíveis.
 

@@ -3,11 +3,19 @@ import hashlib,json
 from pathlib import Path
 from verify_fuchsia_update import previous_release
 ROOT=Path(__file__).resolve().parents[2]
-def verify_update(directory,info):
+def verify_update(directory,info,*,historical_review=None):
     directory=Path(directory);old=previous_release(info)
     assert old['validated'] and old['integration_layers']+['surf-review']==info['integration_layers']
     from package_review_rom import verify as verify_review
-    test=verify_review(ROOT/'roms/rom-de-teste',directory/'Pokemon-Journey-Gen1-9-Normal.gba')
+    if historical_review is None:
+        test=verify_review(ROOT/'roms/rom-de-teste',directory/'Pokemon-Journey-Gen1-9-Normal.gba')
+    else:
+        # A later release keeps these reports bound to the old ROM hashes.
+        # Its own verifier checks the newly shipped ROM and review derivative.
+        test=historical_review
+        normal=next(r for r in info['variants'] if r['file']==test['base_normal_file'])
+        assert test['base_normal_sha256']==normal['sha256'] and test['bytes']==33554432
+        assert test['separate_save_identity'] and not test['random_wild_encounters']
     expected={'common':info['parent_rom_sha256'],'test':test['sha256'],**{r['file']:r['sha256'] for r in info['variants']}}
     covered=set()
     for p in info['proofs']:
@@ -33,7 +41,9 @@ def verify_update(directory,info):
             assert bool(r['checks']['trainer_approach_result'])==(p['target']!='test')
             if p['target']=='test':
                 c=r['checks'];assert c['random_wild_attempts']>=200 and c['no_automatic_approach_after_600_frames'] and c['no_random_encounters'] and c['no_fishing_encounters'] and c['no_sweet_scent_encounters'] and c['no_rock_smash_encounters']
-                assert c['native_flash_save_exported'] and hashlib.sha256((ROOT/'roms/rom-de-teste/Pokemon-Journey-TESTE.sav').read_bytes()).hexdigest()==c['save_sha256']
+                assert c['native_flash_save_exported']
+                if historical_review is None:
+                    assert hashlib.sha256((ROOT/'roms/rom-de-teste/Pokemon-Journey-TESTE.sav').read_bytes()).hexdigest()==c['save_sha256']
         elif kind=='all-surf-links':
             assert r['all_usable_outdoor_surf_connections_covered'] and len(r['links'])>=235 and r['crossings']==2*len(r['links'])+len(r['native_current_links'])
         elif kind=='ocean-aprons':
@@ -49,6 +59,7 @@ def verify_update(directory,info):
         else:raise AssertionError(kind)
     assert {('common',k) for k in ['surf-review-source','surf-review','all-surf-links','coastal-cave-access','coast-connectivity','ocean-seams','ocean-aprons','sevii-surf-connections','continuous-ocean']}<=covered
     assert {(t,k) for t in expected if t!='common' for k in ['surf-review','review-mode']}<=covered
-    offset=test['review_mode_offset'];assert all((directory/r['file']).read_bytes()[offset]==0 for r in info['variants'])
+    if historical_review is None:
+        offset=test['review_mode_offset'];assert all((directory/r['file']).read_bytes()[offset]==0 for r in info['variants'])
     from verify_continuous_ocean_update import verify_update as verify_previous
     verify_previous(directory,old)

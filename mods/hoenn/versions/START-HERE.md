@@ -1,6 +1,10 @@
 # Pokémon Journey — quatro edições GBA
 
-Atualização atual: [casas e feira de Mega Stones em Ever Grande](../../../docs/ever-grande-market.md), presentes únicos (Full Restore e Max Revive) e Sootopolis com marcador vermelho restaurado. As quatro edições e a ROM de teste incluem as mudanças.
+Atualização atual: [casas e feira de Mega Stones em Ever Grande](../../../docs/ever-grande-market.md), dois presentes únicos e Sootopolis com marcador vermelho. Inclui a feira competitiva de Dewford e as formas Origin do PR #93.
+
+[Formas Origin](../../../docs/formas-origin.md): Adamant Orb, Lustrous Orb e Griseous Orb agora também transformam ao equipar.
+
+[Barraca de Dewford](../../../docs/vendinha-dewford.md): 71 itens competitivos, dois atendentes, Bottle Caps e Hyper Training.
 
 [Oceano integrado e seis ligações do mapa](../../../docs/oceano-integrado.md): Surf aberto com bordas de pedra, preservando Mossdeep e Dewford do PR #90.
 

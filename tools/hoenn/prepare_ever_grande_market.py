@@ -1,7 +1,6 @@
 """Add two furnished Ever Grande homes, a native market stall and city emblem."""
 import argparse
 import copy
-import io
 import json
 import re
 import struct
@@ -10,15 +9,15 @@ from pathlib import Path
 from PIL import Image
 from candidate_layer import Layer
 from import_native_pier import import_pier
-from prepare_surf_review import PRIOR, LAYER as PREVIOUS
+from prepare_dewford_competitive_shop import PRIOR, LAYER as PREVIOUS
 from prepare_world_dex_map import COLORS, decode, encode
 from render_sea_maps import MapRenderer
 
 LAYER = 'ever-grande-market'
 PRIOR = PRIOR + [PREVIOUS]
 ROOT = Path(__file__).resolve().parents[2]
-HOUSES = [('JourneyEverGrandeHouse1', 13, 45, 'ITEM_FULL_RESTORE', 'FLAG_JOURNEY_EVER_FULL_RESTORE', 0x1B3C),
-          ('JourneyEverGrandeHouse2', 20, 45, 'ITEM_MAX_REVIVE', 'FLAG_JOURNEY_EVER_MAX_REVIVE', 0x1B3D)]
+HOUSES = [('JourneyEverGrandeHouse1', 13, 45, 'ITEM_FULL_RESTORE', 'FLAG_JOURNEY_EVER_FULL_RESTORE', 0x1B3E),
+          ('JourneyEverGrandeHouse2', 20, 45, 'ITEM_MAX_REVIVE', 'FLAG_JOURNEY_EVER_MAX_REVIVE', 0x1B3F)]
 PRICE = 200000
 
 
@@ -73,7 +72,8 @@ def prepare(source):
     scripts = []
     flags = (s/'include/constants/flags.h').read_text()
     for index,(name,x,y,item,flag,number) in enumerate(HOUSES):
-        assert not re.search(r'^#define\s+\w+\s+0x'+f'{number:X}'+r'\b',flags,re.M|re.I)
+        assert not re.search(r'^#define\s+FLAG_\w+\s+0x'+f'{number:X}'+r'\b',flags,re.M|re.I)
+        assert number<=int(re.search(r'^#define JOURNEY_FLAGS_END\s+(0x\w+)',flags,re.M)[1],16)
         flags += f'\n#define {flag} 0x{number:X}\n'
         place(house,x,y,4,house_ids)
         exterior_warp = len(city['warp_events'])

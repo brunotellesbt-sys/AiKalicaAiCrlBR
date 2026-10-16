@@ -48,7 +48,12 @@ def verify(directory,require_seal=True):
     if info.get('validation_scope')=='ever-grande-market':
         from verify_ever_grande_update import verify_update
         verify_update(directory,info)
-        print('Verified Ever Grande homes, Mega market, gifts and red Sootopolis in four editions and test ROM')
+        print('Verified Ever Grande homes, Mega market, gifts and red Sootopolis with PR93 preserved')
+        return info
+    if info.get('validation_scope')=='dewford-competitive-shop':
+        from verify_dewford_shop_update import verify_update
+        verify_update(directory,info)
+        print('Verified four normal editions and test ROM with the Dewford training stall')
         return info
     if info.get('validation_scope')=='surf-review':
         from verify_surf_review_update import verify_update

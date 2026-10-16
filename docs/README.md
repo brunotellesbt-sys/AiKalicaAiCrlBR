@@ -6,6 +6,8 @@ As quatro edições são Gen 1–4 Normal, Gen 1–4 Hard, Gen 1–9 Normal e Ge
 
 As quatro ROMs atuais ficam em [`roms/`](../roms/README.md), atualizadas pelo empacotamento. O pacote com guias está em [ZIP](../mods/hoenn/versions/Pokemon-Journey-Four-Editions.zip).
 
+- [Formas Origin de Dialga, Palkia e Giratina: Orbs, itens da missão e fotos](formas-origin.md)
+- [Barraca de Dewford: itens competitivos, Bottle Caps e Hyper Training](vendinha-dewford.md)
 - [Mossdeep e Dewford: terminais, ponte suspensa, escadas e imagens com tiles](portos-mossdeep-dewford.md)
 - [Novo porto de Sootopolis: ponte, terminal e submarino](porto-sootopolis.md)
 - [Porto de Lavender: terminal de Pallet, navio e barqueiro interno](porto-lavender.md)

@@ -31,7 +31,7 @@ class WorldRouteChart(unittest.TestCase):
         index=json.loads((ROOT/'docs/images/navigation/world-routes.json').read_text())
         proof=json.loads((OUT/'world-route-chart.json').read_text())
         release=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
-        if release.get('validation_scope')=='ever-grande-market':
+        while release.get('validation_scope') in ['ever-grande-market','dewford-competitive-shop']:
             from verify_fuchsia_update import previous_release
             release=previous_release(release)
         if release.get('validation_scope')=='annotated-world-links':

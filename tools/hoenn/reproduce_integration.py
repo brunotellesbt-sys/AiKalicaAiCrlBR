@@ -14,6 +14,9 @@ def reproduce(reference,output):
     if (reference/'.journey-ever-grande-market').exists():
         from prepare_ever_grande_market import PRIOR as review_prior,LAYER as review_layer
         layers=review_prior+[review_layer]
+    elif (reference/'.journey-dewford-competitive-shop').exists():
+        from prepare_dewford_competitive_shop import PRIOR as shop_prior,LAYER as shop_layer
+        layers=shop_prior+[shop_layer]
     elif (reference/'.journey-surf-review').exists():
         from prepare_surf_review import PRIOR as review_prior,LAYER as review_layer
         layers=review_prior+[review_layer]

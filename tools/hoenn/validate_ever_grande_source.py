@@ -1,4 +1,4 @@
-"""Replay the market overlay and verify unrelated 157-layer inputs stay intact."""
+"""Replay the market overlay and preserve the Surf and Dewford release inputs."""
 import argparse
 import hashlib
 import json
@@ -31,10 +31,16 @@ def validate(source, baseline, output):
     assert city['warp_events'][:len(old['warp_events'])]==old['warp_events']
     assert city['connections']==old['connections'] and city['coord_events']==old['coord_events']
     assert all(not p.startswith(('data/maps/Route','data/layouts/Route','data/layouts/Journey')) for p in outputs)
+    dewford=json.loads((baseline/'.journey-dewford-competitive-shop').read_text())
+    for name in dewford['prepared_sha256']:
+        if name in outputs:
+            assert name in ['include/constants/flags.h','data/event_scripts.s']
+            assert (source/name).read_bytes().startswith((baseline/name).read_bytes())
+    assert {h['flag_id'] for h in report['houses']}.isdisjoint({dewford['item']['flag'],dewford['tm']['flag']})
     r=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),
         layers=PRIOR+[LAYER],independent_replay=True,idempotent=True,source_hashes_checked=len(expected|outputs),
         unrelated_files_preserved=len(expected.keys()-outputs.keys()),original_city_events_and_connections_preserved=True,
-        all_surf_maps_unchanged=True,houses=report['houses'],stall=report['stall'],city_pixels=report['city_pixels'])
+        all_surf_maps_unchanged=True,dewford_and_origin_features_preserved=True,houses=report['houses'],stall=report['stall'],city_pixels=report['city_pixels'])
     output.parent.mkdir(parents=True,exist_ok=True);output.write_text(json.dumps(r,indent=2)+'\n')
     return r
 

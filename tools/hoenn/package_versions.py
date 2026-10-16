@@ -33,6 +33,9 @@ def package(source,output):
  if (source/'.journey-ever-grande-market').exists():
   from prepare_ever_grande_market import PRIOR,LAYER
   r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-dewford-competitive-shop').exists():
+  from prepare_dewford_competitive_shop import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
  elif (source/'.journey-surf-review').exists():
   from prepare_surf_review import PRIOR,LAYER
   r['integration_layers']=PRIOR+[LAYER]
