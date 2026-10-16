@@ -48,3 +48,5 @@ Veja os [resultados e limites dos testes](../mods/hoenn/INTEGRATION-STATUS.md). 
 - [Balanceamento e correções do PWT](pwt-balanceamento.md).
 
 [Porto de Fuchsia: terminal de Slateport e barco médio](porto-fuchsia.md).
+
+[Portos de Cinnabar, Cerulean e Petalburg nas posições indicadas](portos-cinnabar-cerulean-petalburg.md).

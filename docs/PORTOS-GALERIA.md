@@ -22,11 +22,11 @@ Imagens renderizadas dos tiles e sprites utilizados na ROM. Exibem os atores per
 
 ## Cinnabar
 
-![Cinnabar](images/port-update/CinnabarIsland_Frlg.png)
+![Cinnabar](images/three-harbors/CinnabarIsland_Frlg.png)
 
 ## Route 25
 
-![Route 25](images/port-update/Route25_Frlg.png)
+![Route 25](images/three-harbors/Route25_Frlg.png)
 
 ## Lavender
 
@@ -47,7 +47,7 @@ mesmo prédio de Pallet e atendimento da rede geral dentro do porto.
 
 ## Petalburg coast
 
-![Petalburg coast](images/port-update/Route104.png)
+![Petalburg coast](images/three-harbors/Route104.png)
 
 ## Pacifidlog
 

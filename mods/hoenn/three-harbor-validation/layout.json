@@ -1,0 +1,1290 @@
+{
+  "layer": "three-harbor-terminals",
+  "ports": [
+    {
+      "name": "Cinnabar",
+      "exterior": "CinnabarIsland_Frlg",
+      "interior": "JourneyCinnabarHarbor",
+      "map_id": "MAP_JOURNEY_CINNABAR_HARBOR",
+      "pid": 19,
+      "terminal": [
+        4,
+        11,
+        7,
+        4
+      ],
+      "door": [
+        7,
+        14
+      ],
+      "boat": [
+        13,
+        18
+      ],
+      "start": [
+        13,
+        13
+      ],
+      "walk": [
+        [
+          11,
+          13
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          7,
+          15
+        ]
+      ],
+      "return_walk": [
+        [
+          11,
+          15
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          13,
+          13
+        ]
+      ],
+      "crop": [
+        0,
+        7,
+        24,
+        20
+      ],
+      "legacy": "JourneyCinnabarSailorsLodge",
+      "pier_extension": [
+        [
+          6,
+          15
+        ]
+      ],
+      "captain": [
+        16,
+        12
+      ],
+      "arrival": [
+        16,
+        13
+      ],
+      "door_warp": 5,
+      "outside_hull": [
+        [
+          11,
+          16
+        ],
+        [
+          11,
+          17
+        ],
+        [
+          11,
+          18
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          17
+        ],
+        [
+          12,
+          18
+        ],
+        [
+          13,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          18
+        ],
+        [
+          14,
+          16
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          15,
+          18
+        ]
+      ],
+      "inside_hull": [
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          13,
+          9
+        ]
+      ],
+      "removed_whole_rocks": [],
+      "changed_terrain": [
+        [
+          4,
+          11
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          5,
+          12
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          12
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          5,
+          13
+        ],
+        [
+          6,
+          13
+        ],
+        [
+          7,
+          13
+        ],
+        [
+          8,
+          13
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          4,
+          14
+        ],
+        [
+          5,
+          14
+        ],
+        [
+          6,
+          14
+        ],
+        [
+          7,
+          14
+        ],
+        [
+          8,
+          14
+        ],
+        [
+          9,
+          14
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          9,
+          15
+        ],
+        [
+          10,
+          15
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          14,
+          16
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          11,
+          18
+        ],
+        [
+          12,
+          18
+        ],
+        [
+          13,
+          18
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          18
+        ]
+      ],
+      "original_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
+        "x": 12,
+        "y": 17,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "medium_boat_sprite_size": [
+        64,
+        64
+      ],
+      "inside_ship_sprite_size": [
+        96,
+        40
+      ]
+    },
+    {
+      "name": "Cerulean Port",
+      "exterior": "Route25_Frlg",
+      "interior": "JourneyCeruleanHarbor",
+      "map_id": "MAP_JOURNEY_CERULEAN_HARBOR",
+      "pid": 21,
+      "terminal": [
+        61,
+        6,
+        7,
+        4
+      ],
+      "door": [
+        64,
+        9
+      ],
+      "boat": [
+        68,
+        12
+      ],
+      "start": [
+        60,
+        10
+      ],
+      "walk": [
+        [
+          64,
+          10
+        ]
+      ],
+      "return_walk": [
+        [
+          60,
+          10
+        ]
+      ],
+      "crop": [
+        50,
+        1,
+        72,
+        20
+      ],
+      "pier_extension": [
+        [
+          64,
+          12
+        ],
+        [
+          65,
+          12
+        ],
+        [
+          64,
+          13
+        ],
+        [
+          65,
+          13
+        ],
+        [
+          64,
+          14
+        ],
+        [
+          65,
+          14
+        ],
+        [
+          64,
+          15
+        ],
+        [
+          65,
+          15
+        ]
+      ],
+      "captain": [
+        16,
+        12
+      ],
+      "arrival": [
+        16,
+        13
+      ],
+      "door_warp": 1,
+      "outside_hull": [
+        [
+          66,
+          10
+        ],
+        [
+          66,
+          11
+        ],
+        [
+          66,
+          12
+        ],
+        [
+          67,
+          10
+        ],
+        [
+          67,
+          11
+        ],
+        [
+          67,
+          12
+        ],
+        [
+          68,
+          10
+        ],
+        [
+          68,
+          11
+        ],
+        [
+          68,
+          12
+        ],
+        [
+          69,
+          10
+        ],
+        [
+          69,
+          11
+        ],
+        [
+          69,
+          12
+        ],
+        [
+          70,
+          10
+        ],
+        [
+          70,
+          11
+        ],
+        [
+          70,
+          12
+        ]
+      ],
+      "inside_hull": [
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          13,
+          9
+        ]
+      ],
+      "removed_whole_rocks": [],
+      "changed_terrain": [
+        [
+          61,
+          6
+        ],
+        [
+          62,
+          6
+        ],
+        [
+          63,
+          6
+        ],
+        [
+          64,
+          6
+        ],
+        [
+          65,
+          6
+        ],
+        [
+          66,
+          6
+        ],
+        [
+          67,
+          6
+        ],
+        [
+          61,
+          7
+        ],
+        [
+          62,
+          7
+        ],
+        [
+          63,
+          7
+        ],
+        [
+          64,
+          7
+        ],
+        [
+          65,
+          7
+        ],
+        [
+          66,
+          7
+        ],
+        [
+          67,
+          7
+        ],
+        [
+          61,
+          8
+        ],
+        [
+          62,
+          8
+        ],
+        [
+          63,
+          8
+        ],
+        [
+          64,
+          8
+        ],
+        [
+          65,
+          8
+        ],
+        [
+          66,
+          8
+        ],
+        [
+          67,
+          8
+        ],
+        [
+          61,
+          9
+        ],
+        [
+          62,
+          9
+        ],
+        [
+          63,
+          9
+        ],
+        [
+          64,
+          9
+        ],
+        [
+          65,
+          9
+        ],
+        [
+          66,
+          9
+        ],
+        [
+          67,
+          9
+        ],
+        [
+          70,
+          10
+        ],
+        [
+          70,
+          11
+        ],
+        [
+          64,
+          12
+        ],
+        [
+          65,
+          12
+        ],
+        [
+          70,
+          12
+        ],
+        [
+          64,
+          13
+        ],
+        [
+          65,
+          13
+        ],
+        [
+          66,
+          13
+        ],
+        [
+          64,
+          14
+        ],
+        [
+          65,
+          14
+        ],
+        [
+          64,
+          15
+        ],
+        [
+          65,
+          15
+        ]
+      ],
+      "original_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_MR_BRINEYS_BOAT",
+        "x": 65,
+        "y": 13,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "medium_boat_sprite_size": [
+        64,
+        64
+      ],
+      "inside_ship_sprite_size": [
+        96,
+        40
+      ]
+    },
+    {
+      "name": "Petalburg Coast",
+      "exterior": "Route104",
+      "interior": "JourneyPetalburgHarbor",
+      "map_id": "MAP_JOURNEY_PETALBURG_HARBOR",
+      "pid": 12,
+      "terminal": [
+        13,
+        47,
+        7,
+        4
+      ],
+      "door": [
+        16,
+        50
+      ],
+      "boat": [
+        8,
+        51
+      ],
+      "start": [
+        18,
+        52
+      ],
+      "walk": [
+        [
+          16,
+          52
+        ],
+        [
+          16,
+          51
+        ]
+      ],
+      "return_walk": [
+        [
+          16,
+          52
+        ],
+        [
+          18,
+          52
+        ]
+      ],
+      "crop": [
+        3,
+        44,
+        24,
+        59
+      ],
+      "pier_extension": [],
+      "captain": [
+        16,
+        12
+      ],
+      "arrival": [
+        16,
+        13
+      ],
+      "door_warp": 0,
+      "outside_hull": [
+        [
+          6,
+          49
+        ],
+        [
+          6,
+          50
+        ],
+        [
+          6,
+          51
+        ],
+        [
+          7,
+          49
+        ],
+        [
+          7,
+          50
+        ],
+        [
+          7,
+          51
+        ],
+        [
+          8,
+          49
+        ],
+        [
+          8,
+          50
+        ],
+        [
+          8,
+          51
+        ],
+        [
+          9,
+          49
+        ],
+        [
+          9,
+          50
+        ],
+        [
+          9,
+          51
+        ],
+        [
+          10,
+          49
+        ],
+        [
+          10,
+          50
+        ],
+        [
+          10,
+          51
+        ]
+      ],
+      "inside_hull": [
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          13,
+          9
+        ]
+      ],
+      "removed_whole_rocks": [],
+      "changed_terrain": [
+        [
+          13,
+          47
+        ],
+        [
+          14,
+          47
+        ],
+        [
+          15,
+          47
+        ],
+        [
+          16,
+          47
+        ],
+        [
+          17,
+          47
+        ],
+        [
+          18,
+          47
+        ],
+        [
+          19,
+          47
+        ],
+        [
+          13,
+          48
+        ],
+        [
+          14,
+          48
+        ],
+        [
+          15,
+          48
+        ],
+        [
+          16,
+          48
+        ],
+        [
+          17,
+          48
+        ],
+        [
+          18,
+          48
+        ],
+        [
+          19,
+          48
+        ],
+        [
+          6,
+          49
+        ],
+        [
+          7,
+          49
+        ],
+        [
+          8,
+          49
+        ],
+        [
+          13,
+          49
+        ],
+        [
+          14,
+          49
+        ],
+        [
+          15,
+          49
+        ],
+        [
+          16,
+          49
+        ],
+        [
+          17,
+          49
+        ],
+        [
+          18,
+          49
+        ],
+        [
+          19,
+          49
+        ],
+        [
+          6,
+          50
+        ],
+        [
+          7,
+          50
+        ],
+        [
+          9,
+          50
+        ],
+        [
+          10,
+          50
+        ],
+        [
+          13,
+          50
+        ],
+        [
+          14,
+          50
+        ],
+        [
+          15,
+          50
+        ],
+        [
+          16,
+          50
+        ],
+        [
+          17,
+          50
+        ],
+        [
+          18,
+          50
+        ],
+        [
+          19,
+          50
+        ],
+        [
+          6,
+          51
+        ],
+        [
+          7,
+          51
+        ],
+        [
+          8,
+          51
+        ],
+        [
+          9,
+          52
+        ],
+        [
+          10,
+          52
+        ]
+      ],
+      "original_boat": {
+        "graphics_id": "OBJ_EVENT_GFX_JOURNEYPETALBURGBOAT",
+        "x": 10,
+        "y": 52,
+        "elevation": 1,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "JourneyCompactPort_Boat",
+        "flag": "0"
+      },
+      "medium_boat_sprite_size": [
+        64,
+        64
+      ],
+      "inside_ship_sprite_size": [
+        96,
+        40
+      ]
+    }
+  ],
+  "existing_npcs_preserved": true,
+  "other_ports_preserved": true,
+  "mr_briney_interior_boat_and_story_preserved": true,
+  "atlas_unchanged": true,
+  "one_indoor_captain_per_port": true,
+  "original_sha256": {
+    "data/tilesets/secondary/cinnabar_island_frlg/tiles.png": "d984fdf6c251c2eb947e7fa50e181ce3566b3b88294fd259c759d126a1b6e022",
+    "data/tilesets/secondary/cinnabar_island_frlg/metatiles.bin": "62d4a5dd91b82ca963a74cd40bedc5e8b3dba53f40d74ac932d02f5c36058a30",
+    "data/tilesets/secondary/cinnabar_island_frlg/metatile_attributes.bin": "62a249b339cee2e6a1cd395e3a2111d75daa1e1ff8e615c03afa30293dcc5018",
+    "data/maps/JourneyCinnabarSailorsLodge/map.json": "4ddc1359eebd29a90f2c7e3eeb00ad65c992cce597bb34d1df1f85fad642bede",
+    "data/layouts/CinnabarIsland_Frlg/map.bin": "026a040acc5e45dfe4083f898ddba70cc745f08ffdc481a6538a10d5a6320de5",
+    "data/maps/CinnabarIsland_Frlg/map.json": "c8b339c1433d526c259d4bef201dfa3eeff7764af3362c090a0099a866c9fb12",
+    "data/tilesets/secondary/cerulean_city_frlg/tiles.png": "e78af18786fc86400ef595e625fc98e8cf5e5f154c1c2f77490cb009ea793a7e",
+    "data/tilesets/secondary/cerulean_city_frlg/metatiles.bin": "cea3fdd128ecba063061f359c83fc6637a365fbd70d766b27ef104548c65318f",
+    "data/tilesets/secondary/cerulean_city_frlg/metatile_attributes.bin": "72e6fde26597b38279585670a0ebd1a11fcd1c74ddc81444c4f56c75592fe560",
+    "data/layouts/Route25_Frlg/map.bin": "08d9f99d9bde51cbe0f270f4edd1eb27cf7296574458f76ae260cab4c200463e",
+    "data/maps/Route25_Frlg/map.json": "1c1f76e364b5bc0e0e6fa1c77719fe1a9506078d6f5f112a7f97f07fac2fa7e1",
+    "data/tilesets/secondary/rustboro/tiles.png": "87b3ce4e15674b3ef02b1793df0bc8633b7c49bf4443cb50708293615b048d24",
+    "data/tilesets/secondary/rustboro/metatiles.bin": "2e5daf7451ac4a3a003ce569e2132dccefe00b618f3e5763d45b2cef480b3274",
+    "data/tilesets/secondary/rustboro/metatile_attributes.bin": "1c3c55c0f4643722502a895997545c6b2a9186863eaf13ff1f522e8077f73a4f",
+    "data/maps/Route104/scripts.inc": "66a308b973b9c39331f141fd8eff010f9162dd018d6d6babbbf692f8c7c7bf88",
+    "data/layouts/Route104/map.bin": "ddfc3d781ce387a10e5f2485126cd6495656acf3e5b3abf016d4e6708c13f970",
+    "data/maps/Route104/map.json": "d7b7524ebea6a04030b5b6a56f2a211344fececbcc99374719417079668ee3b1",
+    "data/layouts/layouts.json": "85329e66ccc0af56a3439def3b83870c8045d486014dea2ff7f99103305a547a",
+    "data/maps/map_groups.json": "ba436f678feab69113f0081684c088cf0865f0d23a57d9da1fa46f651b9ee0df",
+    "data/event_scripts.s": "b9fe29ade2c67ee37a3b773d87b86e698653ecb5b9bec4bb161aea1aad423ec6",
+    "data/scripts/journey_campaign_gates.inc": "399646fcb9ae731e195f025e953a4b7adb354a5e960d7732e1ce5e5a5886c5f6"
+  },
+  "prepared_sha256": {
+    "data/tilesets/secondary/cinnabar_island_frlg/tiles.png": "56d70a534fb8fa979c785b9151a15c1a6f4593dc3674527af7869b3ffd8d31b8",
+    "data/tilesets/secondary/cinnabar_island_frlg/metatiles.bin": "aeb984f214d3ccd24e4a2130bfb8962f5f3a1636a2236d549e3d8f0be4374c35",
+    "data/tilesets/secondary/cinnabar_island_frlg/metatile_attributes.bin": "265fe377e1444d4480eb2f43405b6a8691fa97cc3fa473f3136005bec4f027fa",
+    "data/maps/JourneyCinnabarSailorsLodge/map.json": "2d67eec74a1558ad3c5f60ad098f3cb8fedb46279d865e49662d3d7daf019ee0",
+    "data/layouts/CinnabarIsland_Frlg/map.bin": "a8677e384f07ea48e9a563abe39ed5555791689697ecd08a2a3910206cd7d228",
+    "data/maps/CinnabarIsland_Frlg/map.json": "a784bcf2d0f70dfc0087dddfe2500703f0fd8b1c49656608fc273f5f0f30e444",
+    "data/layouts/JourneyCinnabarHarbor/map.bin": "ec418c60c4f5cac3eb4ee9e2a29e1f48709e552411f67086a5352945001afcbc",
+    "data/layouts/JourneyCinnabarHarbor/border.bin": "9ff63640fa3b4682056532b7924b03250ccc7a832f64ccec3dea79ea8595a24d",
+    "data/maps/JourneyCinnabarHarbor/map.json": "0c585501e1925090c4a137fefc61be59c1ac4549ae8709765398104cf549b6a0",
+    "data/maps/JourneyCinnabarHarbor/scripts.inc": "d045580b5ff7c52a0e63bb8753d3b02caf9c04d3a52d3d12dc1d0784bc96c10c",
+    "data/tilesets/secondary/cerulean_city_frlg/tiles.png": "4039052bdc5210d638d13539a7bbfb29a043a13848cb4ddc6a0a15a279854be3",
+    "data/tilesets/secondary/cerulean_city_frlg/metatiles.bin": "8b812837b0befda933a11c1a7920f85989fbb5c7c85a0553a66577239722f2fd",
+    "data/tilesets/secondary/cerulean_city_frlg/metatile_attributes.bin": "0758daf8df9d67394ba7d019ee65e76afa77068b308b985d5fda0303f4bea02c",
+    "data/layouts/Route25_Frlg/map.bin": "1ee4ff9c25f5460573ecff9e31ecbcc3739db7c421e0a47153cb8a748f798e80",
+    "data/maps/Route25_Frlg/map.json": "5629b367a34ab70ebd2a90792f4d965f59762e58f803defcfd1637e614d8488e",
+    "data/layouts/JourneyCeruleanHarbor/map.bin": "ec418c60c4f5cac3eb4ee9e2a29e1f48709e552411f67086a5352945001afcbc",
+    "data/layouts/JourneyCeruleanHarbor/border.bin": "9ff63640fa3b4682056532b7924b03250ccc7a832f64ccec3dea79ea8595a24d",
+    "data/maps/JourneyCeruleanHarbor/map.json": "b11fb9e2ffbb117c1514a31c39b007cbe126381de1a036411b606c4d5e7c806b",
+    "data/maps/JourneyCeruleanHarbor/scripts.inc": "511c1d56ba640ea6f7af7c298708ee78ae6d2c65551437140f7d47d0dd49a53a",
+    "data/tilesets/secondary/rustboro/tiles.png": "60e82c98acc319a0d592169a62f48715de6655f23328e85c60082d4747d8e20e",
+    "data/tilesets/secondary/rustboro/metatiles.bin": "013e69b312631021c310d37154b9cf2e443cbe6225a8b927745cabe1c95e7730",
+    "data/tilesets/secondary/rustboro/metatile_attributes.bin": "edaf1e34a08eba9012a755bb5dd2c7befd90e5d2bc94fede070b3dcbf6cb9e0e",
+    "data/maps/Route104/scripts.inc": "e9c7ac0903d75d3fa4c10007afa8b0e2b1b07b4bd4488b0b55806509e5cccfd3",
+    "data/layouts/Route104/map.bin": "0a5bb8777f24a94f83a147a4d4c030e914d08f341d274eb6c9e1a096ef92daad",
+    "data/maps/Route104/map.json": "46a3ea1edb08d2f826401cbdac3f0dd97436af8eeaa2fcb3aaa6d2dac0c57d7b",
+    "data/layouts/JourneyPetalburgHarbor/map.bin": "ec418c60c4f5cac3eb4ee9e2a29e1f48709e552411f67086a5352945001afcbc",
+    "data/layouts/JourneyPetalburgHarbor/border.bin": "9ff63640fa3b4682056532b7924b03250ccc7a832f64ccec3dea79ea8595a24d",
+    "data/maps/JourneyPetalburgHarbor/map.json": "57c23f8ac54ac61a99d4ee814fdede159085447d62133c639dfb1f6d25d2af90",
+    "data/maps/JourneyPetalburgHarbor/scripts.inc": "5da037f8cc6ac4c8089f83b4cecd38b4b59b8aebe380699a4d16f3f4f40565b1",
+    "data/layouts/layouts.json": "d63db57b6ef72dbc84da8ebb6d332a6bddfc04b218baa58c75ca023b3638caca",
+    "data/maps/map_groups.json": "6a5aa66d64074d07b10b2de3d4148247060eac3caa2bb549c330c0739a7bc1bb",
+    "data/event_scripts.s": "3a6645badd34550bc8bcf78639f628b81104eb3b63ac73d2dbe9badfdd22da46",
+    "data/scripts/journey_campaign_gates.inc": "6636893a328df35fa869750383ca760962cc3e4100f0c79e786d4953bca6e66b"
+  }
+}

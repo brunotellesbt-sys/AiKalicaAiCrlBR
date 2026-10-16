@@ -1,5 +1,7 @@
 # Pokémon Journey — quatro edições GBA
 
+[Novos terminais de Cinnabar, Cerulean e Petalburg](../../../docs/portos-cinnabar-cerulean-petalburg.md): fachadas nas coordenadas indicadas, navio interno e barco médio junto às pontes.
+
 [Porto de Fuchsia / Rota 19](../../../docs/porto-fuchsia.md): terminal vermelho sobre a água, navio interno, um barqueiro dentro e barco médio junto à ponte.
 
 [Novo porto de Sootopolis](../../../docs/porto-sootopolis.md): ponte ligada à terra,

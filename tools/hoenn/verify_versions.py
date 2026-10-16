@@ -45,6 +45,11 @@ def verify(directory,require_seal=True):
         for row in info['variants']:
             assert digest((ROOT/'roms'/row['file']).read_bytes())==row['sha256'], ('Outdated roms/ download',row['file'])
         assert (ROOT/'roms/SHA256SUMS').read_bytes()==(directory/'SHA256SUMS').read_bytes()
+    if info.get('validation_scope')=='three-harbor-terminals':
+        from verify_three_harbor_update import verify_update
+        verify_update(directory,info)
+        print('Verified four editions with the three positioned harbor terminals')
+        return info
     if info.get('validation_scope')=='fuchsia-harbor':
         from verify_fuchsia_update import verify_update
         verify_update(directory,info)

@@ -1,0 +1,181 @@
+{
+  "passed": true,
+  "rom_sha256": "c0a6528274481d5f3b33e166b1188e4df71a9dc7277ca674e1436f756ba6610f",
+  "ports": [
+    {
+      "name": "Cinnabar",
+      "exterior": "CinnabarIsland_Frlg",
+      "interior": "JourneyCinnabarHarbor",
+      "pid": 19,
+      "terminal": [
+        4,
+        11,
+        7,
+        4
+      ],
+      "door": [
+        7,
+        14
+      ],
+      "pier_extension": [
+        [
+          6,
+          15
+        ]
+      ],
+      "controller_entry_and_exit": true,
+      "quay_walked_without_surf": true,
+      "one_indoor_captain": true,
+      "medium_boat_hull_blocked_over_water": true,
+      "inside_ship_hull_blocked_over_water": true,
+      "captain_interacted_physically": true,
+      "network_arrival_inside": true,
+      "save_continue_inside": true,
+      "legacy_exit_preserved": true,
+      "briney_local_service_preserved": false,
+      "trips": [
+        {
+          "destination": "JourneyPalletHarbor",
+          "arrival": [
+            16,
+            13
+          ],
+          "native_animation_observations": 18
+        },
+        {
+          "destination": "JourneyCinnabarHarbor",
+          "arrival": [
+            16,
+            13
+          ],
+          "native_animation_observations": 18
+        }
+      ]
+    },
+    {
+      "name": "Cerulean Port",
+      "exterior": "Route25_Frlg",
+      "interior": "JourneyCeruleanHarbor",
+      "pid": 21,
+      "terminal": [
+        61,
+        6,
+        7,
+        4
+      ],
+      "door": [
+        64,
+        9
+      ],
+      "pier_extension": [
+        [
+          64,
+          12
+        ],
+        [
+          65,
+          12
+        ],
+        [
+          64,
+          13
+        ],
+        [
+          65,
+          13
+        ],
+        [
+          64,
+          14
+        ],
+        [
+          65,
+          14
+        ],
+        [
+          64,
+          15
+        ],
+        [
+          65,
+          15
+        ]
+      ],
+      "controller_entry_and_exit": true,
+      "quay_walked_without_surf": true,
+      "one_indoor_captain": true,
+      "medium_boat_hull_blocked_over_water": true,
+      "inside_ship_hull_blocked_over_water": true,
+      "captain_interacted_physically": true,
+      "network_arrival_inside": true,
+      "save_continue_inside": true,
+      "legacy_exit_preserved": false,
+      "briney_local_service_preserved": false,
+      "trips": [
+        {
+          "destination": "JourneyPalletHarbor",
+          "arrival": [
+            16,
+            13
+          ],
+          "native_animation_observations": 18
+        },
+        {
+          "destination": "JourneyCeruleanHarbor",
+          "arrival": [
+            16,
+            13
+          ],
+          "native_animation_observations": 18
+        }
+      ]
+    },
+    {
+      "name": "Petalburg Coast",
+      "exterior": "Route104",
+      "interior": "JourneyPetalburgHarbor",
+      "pid": 12,
+      "terminal": [
+        13,
+        47,
+        7,
+        4
+      ],
+      "door": [
+        16,
+        50
+      ],
+      "pier_extension": [],
+      "controller_entry_and_exit": true,
+      "quay_walked_without_surf": true,
+      "one_indoor_captain": true,
+      "medium_boat_hull_blocked_over_water": true,
+      "inside_ship_hull_blocked_over_water": true,
+      "captain_interacted_physically": true,
+      "network_arrival_inside": true,
+      "save_continue_inside": true,
+      "legacy_exit_preserved": false,
+      "briney_local_service_preserved": true,
+      "trips": [
+        {
+          "destination": "JourneyPalletHarbor",
+          "arrival": [
+            16,
+            13
+          ],
+          "native_animation_observations": 18
+        },
+        {
+          "destination": "JourneyPetalburgHarbor",
+          "arrival": [
+            16,
+            13
+          ],
+          "native_animation_observations": 18
+        }
+      ]
+    }
+  ],
+  "initial_story_state_and_position_are_fixtures": true,
+  "full_campaign_playthrough": false
+}
