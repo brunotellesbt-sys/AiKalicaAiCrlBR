@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "ae1f7435a60d841cd622c9bff379d371d0bf5849b4088d094406eb8e46d4b94a",
-  "build_rules_offset": 9090736,
+  "parent_rom_sha256": "e5987408e82e230a73eef40c758307ba0cf678ddabffeaca053ad0cb5d9dcd36",
+  "build_rules_offset": 9090888,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "c3a6877ad25403d15c08054912488f06ef37e24337d2fd7c32d106958aa1a3c4",
+      "sha256": "a28ac2993e6c86a14cadf3774bb4f0d0ee6df8e7186d7450992ba3c9efa978a1",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        9090736,
-        9090737,
-        9090738
+        9090888,
+        9090889,
+        9090890
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "3aebf12d8135ec65efe390011867da813a004a78bb08c9ffd42f7a103e0feb6d",
+      "sha256": "80dbd1615facbbd7861227ad67a115084228a530a661c0b9f37395ddc729f745",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        9090736,
-        9090737
+        9090888,
+        9090889
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "1f409f959cf97f996d32d27c09cdff1f458f941152fe099bec7ba6708b854a13",
+      "sha256": "e3a8eaaeaff067c9ebadb1c9de203473720fc9888dcaa2fa0c52b63ddebc888d",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        9090738
+        9090890
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "28e926c26791d1fb0f22f13025808171d84acd78ccc8e7eb95aef27be501c5cd",
+      "sha256": "cc565d7b3b1db060017ef6508d43fe418e979e72a8fae0e38011f6f119c6d949",
       "patched_byte_offsets": [
         160,
         162,
@@ -256,124 +256,84 @@
     "lavender-harbor",
     "fuchsia-harbor",
     "three-harbor-terminals",
-    "sevii-harbors"
+    "sevii-harbors",
+    "mossdeep-harbor",
+    "dewford-island-harbor"
   ],
-  "validation_scope": "sevii-harbors",
-  "sevii_harbors_validated": true,
+  "validation_scope": "island-harbors",
+  "island_harbors_validated": true,
   "full_campaign_playthrough": false,
   "proofs": [
     {
-      "file": "evidence/sevii-harbors/common/sevii-harbor-source.json",
+      "file": "evidence/island-harbors/common/island-harbor-source.json",
       "target": "common",
-      "kind": "sevii-harbor-source",
-      "sha256": "2d12c2d67623434576f468746158491f25d4f737ac368aa3a9e6959a6ae781b4"
+      "kind": "island-harbor-source",
+      "sha256": "89b65a37209c3059db292e4b582034c58e2209c815523467c687a68e7931bdf1"
     },
     {
-      "file": "evidence/sevii-harbors/common/coast-connectivity.json",
+      "file": "evidence/island-harbors/common/mossdeep-harbor.json",
       "target": "common",
-      "kind": "coast-connectivity",
-      "sha256": "929df4cda6c6c9a8a351e8a454ff197c2877ac89b141b31124418eb0d5ff8e07"
+      "kind": "mossdeep-harbor",
+      "sha256": "f774f73dccf33c80d1164478fae7e301c542736e9cbbdff414e6eed16df11fec"
     },
     {
-      "file": "evidence/sevii-harbors/common/world-route-chart.json",
+      "file": "evidence/island-harbors/common/dewford-island-harbor.json",
       "target": "common",
-      "kind": "world-route-chart",
-      "sha256": "32ebb4abedf3696cb4b71cdd91209c1f3623cca153385d341388fc3957c5b40a"
+      "kind": "dewford-island-harbor",
+      "sha256": "7150705d28e8b69020df5bc38b084c335cc949ab4a41c7e4640c1982669c286a"
     },
     {
-      "file": "evidence/sevii-harbors/common/sevii-harbors.json",
-      "target": "common",
-      "kind": "sevii-harbors",
-      "sha256": "5c2e87ce02e75f38da86affb177af9fe212a2a16467a0d6c0e201181183ab246"
-    },
-    {
-      "file": "evidence/sevii-harbors/common/sevii-surf-connections.json",
-      "target": "common",
-      "kind": "sevii-surf-connections",
-      "sha256": "3c441f78f8e74555e38de4dd27c00a2720b9b3bcdd8073c91f3366108acba293"
-    },
-    {
-      "file": "evidence/sevii-harbors/common/sevii-world-surf.json",
-      "target": "common",
-      "kind": "sevii-world-surf",
-      "sha256": "3dd7256a018b41c31abf9925c141848e188f3bcc8d0d8dee40d03f63caf0b116"
-    },
-    {
-      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-4-Normal/sevii-harbors.json",
+      "file": "evidence/island-harbors/Pokemon-Journey-Gen1-4-Normal/mossdeep-harbor.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "sevii-harbors",
-      "sha256": "31f0c6d96a7056f1a885cfa5a47fe1672659b5ad88214d4af7722513387ac99d"
+      "kind": "mossdeep-harbor",
+      "sha256": "bcc391b3794b7f9b1d35d99b0da4178d54075e0bd68e05452f42b6730e6204b9"
     },
     {
-      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-4-Normal/sevii-surf-connections.json",
+      "file": "evidence/island-harbors/Pokemon-Journey-Gen1-4-Normal/dewford-island-harbor.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "sevii-surf-connections",
-      "sha256": "8438f8dbc0ed526deacd0f8418b79c0fedde21da8029241557858bcc90b12744"
+      "kind": "dewford-island-harbor",
+      "sha256": "59954d5c278dee102540437d09ff9ab75e4aed1d9df14cdf2830445b4cb710fc"
     },
     {
-      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-4-Normal/sevii-world-surf.json",
-      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "sevii-world-surf",
-      "sha256": "492ae06bcefc1ad314f0f56ac045409e5cfdaeb6949410c0ae92a640a7884b98"
-    },
-    {
-      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-4-Hard/sevii-harbors.json",
+      "file": "evidence/island-harbors/Pokemon-Journey-Gen1-4-Hard/mossdeep-harbor.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "sevii-harbors",
-      "sha256": "9f82860e3f0b19f1f1bbc0cfd3f8d5f29a898dc4aeb0f16e9a56d8d59aa1e556"
+      "kind": "mossdeep-harbor",
+      "sha256": "23158cd7e93af0c3bf07909c10f15a88309938b0c067cb2776689b85a7154be8"
     },
     {
-      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-4-Hard/sevii-surf-connections.json",
+      "file": "evidence/island-harbors/Pokemon-Journey-Gen1-4-Hard/dewford-island-harbor.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "sevii-surf-connections",
-      "sha256": "5f3226daca195575e6d1e40d6a2e1daafaee4f06ee1c6f8b0816c6f51143d0c2"
+      "kind": "dewford-island-harbor",
+      "sha256": "198fd4978b2b09afea21ca3547625d89fb70e190e28a0ca70badfd8963027d3c"
     },
     {
-      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-4-Hard/sevii-world-surf.json",
-      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "sevii-world-surf",
-      "sha256": "262060b0d98acf8c4dc18e9f684b995cfec8240d152d6bb0e1ddccd422f6ab95"
-    },
-    {
-      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-9-Normal/sevii-harbors.json",
+      "file": "evidence/island-harbors/Pokemon-Journey-Gen1-9-Normal/mossdeep-harbor.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "sevii-harbors",
-      "sha256": "4fefb9c36f55459191b1531948894d732bbc86c69eb53c14a7267f145dd4dd18"
+      "kind": "mossdeep-harbor",
+      "sha256": "59bd0034320039695c40e9603a3b03ff59e7cbefb944a235a7bed50061113561"
     },
     {
-      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-9-Normal/sevii-surf-connections.json",
+      "file": "evidence/island-harbors/Pokemon-Journey-Gen1-9-Normal/dewford-island-harbor.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "sevii-surf-connections",
-      "sha256": "57284abc2f5b85900265fbdb704bebce0e26d14c4652bc0c7417b1bbdb00ab77"
+      "kind": "dewford-island-harbor",
+      "sha256": "d5d57293b29291b36a5ccf612f3a3e3acd01fbd01700edf4816b16d0a262fc58"
     },
     {
-      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-9-Normal/sevii-world-surf.json",
-      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "sevii-world-surf",
-      "sha256": "6d06ac7d6014e3fd316d6759617ab12b2f4d135f70c6a68bcbab130a7e8b6515"
-    },
-    {
-      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-9-Hard/sevii-harbors.json",
+      "file": "evidence/island-harbors/Pokemon-Journey-Gen1-9-Hard/mossdeep-harbor.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "sevii-harbors",
-      "sha256": "24da1b7104e7b3e5baa6644a6898e549bae4be7e12bfcce652e15642dd80f6cd"
+      "kind": "mossdeep-harbor",
+      "sha256": "520a991490e27c1c831545ba505ebfe2277c979642522192a0c3281c2b0e58e4"
     },
     {
-      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-9-Hard/sevii-surf-connections.json",
+      "file": "evidence/island-harbors/Pokemon-Journey-Gen1-9-Hard/dewford-island-harbor.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "sevii-surf-connections",
-      "sha256": "26e0aaa8231a44731ace042b124efee6d714e9c010789b7e205672ec67210d4e"
-    },
-    {
-      "file": "evidence/sevii-harbors/Pokemon-Journey-Gen1-9-Hard/sevii-world-surf.json",
-      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "sevii-world-surf",
-      "sha256": "e32a0c7bde876d0d993c0b450a0aa478f1a2ae21fec68e88f89db1adf9aaa435"
+      "kind": "dewford-island-harbor",
+      "sha256": "6f306f5aee776d76a04607954736fd059c0ca0c57f19f64439351e37c0c09a87"
     }
   ],
   "previous_port_validation": {
-    "manifest": "mods/hoenn/sevii-harbors-validation/baseline/versions.json",
-    "manifest_sha256": "62a7447850ccc9a0147e2bdaa8898253a6db2e28a9721734fb4164b3a7b0bb38",
+    "manifest": "mods/hoenn/island-harbors-validation/baseline/versions.json",
+    "manifest_sha256": "06810d4f1e5c4fc66bfb73a63a5951430a7919531de5dce3d12e1c6a56ca1ca8",
     "retested_on_current_rom": false
   },
   "historical_validation": {

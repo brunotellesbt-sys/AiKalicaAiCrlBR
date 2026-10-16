@@ -1,6 +1,6 @@
-# Prévia dos portos de Mossdeep e Dewford
+# Portos de Mossdeep e Dewford
 
-Esta revisão foi integrada à ROM base local e conferida em mGBA. O pacote publicado das quatro edições ainda corresponde ao PR #88.
+Esta atualização inclui os dois portos nas quatro edições e preserva os terminais de Sevii do PR #89. As verificações são focadas nos portos e na travessia; a campanha inteira não foi jogada novamente.
 
 ## Mossdeep
 
@@ -16,9 +16,13 @@ A ponte é reta no trajeto, com piso contínuo e uma única base em cada extremi
 
 Os tiles `(4,10)`, `(5,10)` e `(5,11)` são água no nível inferior, sob a ponte preservada. As bordas retas e as curvas externas usam as peças inteiras de praia nativas, tomando como referência Rota 107 `(2,10)` e Dewford `(14,10)`. Os cantos internos mantêm os quadrantes nativos, no estilo da curva de Rota 107 `(8,18)`. A praia acompanha todo o contorno da areia exposta.
 
-Foram acrescentadas 24 árvores completas no norte e no leste, deixando o prédio e os acessos livres. A conferência das pedras encontrou 52 grupos nativos completos: 48 preservados e quatro retirados por inteiro onde o porto ou a ponte ocupam seu espaço. O rochedo grande a sudeste da ponte foi preservado.
+Foram acrescentadas 31 árvores completas nas bordas, incluindo a árvore em `(-5,-9)` e a fileira norte um tile acima, deixando o prédio e os acessos livres. A conferência das pedras encontrou 52 grupos nativos completos: 48 preservados e quatro retirados por inteiro onde o porto ou a ponte ocupam seu espaço. O rochedo grande a sudeste da ponte foi preservado.
 
 As árvores de `(3,13)..(7,16)` foram retiradas por unidades completas; as copas junto à borda da clareira foram fechadas. O novo trecho ao norte está conectado à Rota 107 e à Rota 106 por conexões normais de mapa.
+
+As escadas ocupam `(5,3)`, `(6,3)`, `(5,15)` e `(6,15)`. A arte da ponte permanece a mesma. As 17 cópias de tiles solicitadas foram aplicadas; nas células da ponte, muda a praia sob o piso, mantendo os cabos e a passagem superior. Em `(6,15)`, a areia copiada fica sob a nova escada. As cópias de `(9,1)` para `(3,4)` e `(3,5)` mantêm literalmente o pedaço da fachada indicado na grade.
+
+O terminal agora usa a resolução nativa de 208×144 pixels, preservando a definição dos detalhes do telhado e das janelas. A entrada continua no tile `(5,2)`.
 
 ![Porto de Dewford](images/island-harbors/Dewford-island-harbor.png)
 
@@ -26,4 +30,8 @@ As árvores de `(3,13)..(7,16)` foram retiradas por unidades completas; as copas
 
 [Imagem com coordenadas relativas à Rota 107](images/island-harbors/Dewford-island-harbor-grid.png).
 
-A conferência usou caminhada no piso superior, Surf no inferior, entrada e saída pela porta, viagem para Pallet e retorno, e navegação pelas conexões ao norte. As primeiras posições e o estado inicial da história são fixtures. A reprodução independente confirmou a mesma preparação e os 31.067 arquivos não alterados; a arte dos outros mapas que continuam usando a paleta nativa ficou idêntica. Battle Frontier preservada.
+A conferência usou caminhada no piso superior, Surf no inferior, entrada e saída pela porta, viagem para Pallet e retorno, e navegação pelas conexões ao norte. As primeiras posições e o estado inicial da história são fixtures. A reprodução independente confirmou as duas preparações e os 31.092 arquivos não alterados; a arte dos outros mapas que continuam usando a paleta nativa ficou idêntica. Battle Frontier preservada.
+
+Evidências atuais: [controles e viagens nas cinco compilações](../mods/hoenn/island-harbors-validation/), [reprodução e cópias de tiles](../mods/hoenn/island-harbors-validation/source.json). Os resultados anteriores de Sevii e dos demais portos permanecem vinculados aos hashes das ROMs nas quais foram executados.
+
+A inicialização no player web não foi conferida nesta revisão: o Chromium falhou ao criar threads no ambiente. A tentativa fora do sandbox foi cancelada. A evidência de navegador anterior não foi alterada nem apresentada como teste das ROMs atuais.

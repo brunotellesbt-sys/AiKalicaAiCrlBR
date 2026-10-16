@@ -365,71 +365,71 @@
   "planted_whole_trees": [
     [
       -4,
-      -10
+      -11
     ],
     [
       -3,
-      -10
+      -11
     ],
     [
       -2,
-      -10
+      -11
     ],
     [
       -1,
-      -10
+      -11
     ],
     [
       0,
-      -10
+      -11
     ],
     [
       1,
-      -10
+      -11
     ],
     [
       2,
-      -10
+      -11
     ],
     [
       3,
-      -10
+      -11
     ],
     [
       4,
-      -10
+      -11
     ],
     [
       5,
-      -10
+      -11
     ],
     [
       6,
-      -10
+      -11
     ],
     [
       7,
-      -10
+      -11
     ],
     [
       8,
-      -10
+      -11
     ],
     [
       9,
-      -10
+      -11
     ],
     [
       10,
-      -10
+      -11
     ],
     [
       11,
-      -10
+      -11
     ],
     [
       12,
-      -10
+      -11
     ],
     [
       12,
@@ -458,6 +458,34 @@
     [
       12,
       4
+    ],
+    [
+      -6,
+      -7
+    ],
+    [
+      -6,
+      -5
+    ],
+    [
+      -6,
+      -3
+    ],
+    [
+      -6,
+      -1
+    ],
+    [
+      -6,
+      1
+    ],
+    [
+      -6,
+      3
+    ],
+    [
+      -5,
+      -9
     ]
   ],
   "whole_rock_audit": [
@@ -958,10 +986,6 @@
       -10
     ],
     [
-      -5,
-      -9
-    ],
-    [
       3,
       10
     ],
@@ -982,7 +1006,218 @@
       16
     ]
   ],
-  "custom_graphics": 437,
+  "requested_tile_copies": [
+    {
+      "destination": [
+        6,
+        16
+      ],
+      "reference": [
+        2,
+        10
+      ],
+      "under_bridge": false
+    },
+    {
+      "destination": [
+        6,
+        15
+      ],
+      "reference": [
+        5,
+        15
+      ],
+      "under_bridge": false
+    },
+    {
+      "destination": [
+        7,
+        15
+      ],
+      "reference": [
+        7,
+        16
+      ],
+      "under_bridge": false
+    },
+    {
+      "destination": [
+        4,
+        12
+      ],
+      "reference": [
+        -9,
+        -2
+      ],
+      "under_bridge": true
+    },
+    {
+      "destination": [
+        4,
+        11
+      ],
+      "reference": [
+        -9,
+        -1
+      ],
+      "under_bridge": true
+    },
+    {
+      "destination": [
+        4,
+        13
+      ],
+      "reference": [
+        -9,
+        -1
+      ],
+      "under_bridge": true
+    },
+    {
+      "destination": [
+        4,
+        4
+      ],
+      "reference": [
+        2,
+        6
+      ],
+      "under_bridge": true
+    },
+    {
+      "destination": [
+        5,
+        4
+      ],
+      "reference": [
+        2,
+        6
+      ],
+      "under_bridge": true
+    },
+    {
+      "destination": [
+        6,
+        4
+      ],
+      "reference": [
+        2,
+        6
+      ],
+      "under_bridge": true
+    },
+    {
+      "destination": [
+        7,
+        4
+      ],
+      "reference": [
+        2,
+        6
+      ],
+      "under_bridge": true
+    },
+    {
+      "destination": [
+        3,
+        4
+      ],
+      "reference": [
+        9,
+        1
+      ],
+      "under_bridge": false
+    },
+    {
+      "destination": [
+        3,
+        5
+      ],
+      "reference": [
+        9,
+        1
+      ],
+      "under_bridge": false
+    },
+    {
+      "destination": [
+        3,
+        6
+      ],
+      "reference": [
+        13,
+        6
+      ],
+      "under_bridge": false
+    },
+    {
+      "destination": [
+        3,
+        11
+      ],
+      "reference": [
+        13,
+        5
+      ],
+      "under_bridge": false
+    },
+    {
+      "destination": [
+        3,
+        10
+      ],
+      "reference": [
+        13,
+        -11
+      ],
+      "under_bridge": false
+    },
+    {
+      "destination": [
+        7,
+        5
+      ],
+      "reference": [
+        -7,
+        4
+      ],
+      "under_bridge": true
+    },
+    {
+      "destination": [
+        7,
+        6
+      ],
+      "reference": [
+        -7,
+        -6
+      ],
+      "under_bridge": true
+    }
+  ],
+  "stairs": [
+    [
+      5,
+      3
+    ],
+    [
+      6,
+      3
+    ],
+    [
+      5,
+      15
+    ],
+    [
+      6,
+      15
+    ]
+  ],
+  "terminal_logical_pixels": [
+    208,
+    144
+  ],
+  "custom_graphics": 439,
   "arrival": [
     16,
     13
@@ -1215,6 +1450,26 @@
       ]
     ],
     "Route106": [
+      [
+        75,
+        8
+      ],
+      [
+        76,
+        8
+      ],
+      [
+        77,
+        8
+      ],
+      [
+        78,
+        8
+      ],
+      [
+        79,
+        8
+      ],
       [
         75,
         9
@@ -2118,14 +2373,14 @@
     "data/maps/Route106/map.json": "531d5e3dca08c9cf385500086a360ffded1b34dbdd0c3380919686c1866a46b3",
     "data/layouts/Route107/map.bin": "50f901266013b229e3fabfc85d87a8dde2fb1b6d7abfbff63ed7e6b1fbdc17bd",
     "data/maps/Route107/map.json": "1838b650ea57ac2f9fae5f5a9cc0602d3859503ba3ad3f9877fccc11a59899b3",
-    "data/maps/map_groups.json": "5335cb1b51d6c6fd4bb3bcd794c6e217e8de7d1ddf94bcea4f3c01471f32c3b5",
-    "data/layouts/layouts.json": "c2beb1c7da4582374d957feb27848ed47141d82e39861dad432fd63b444d0ba6",
-    "data/event_scripts.s": "70ee0cf4aae5284c56330897aba8f1013e78b76620fba85c679475dc00e51797",
-    "data/scripts/journey_campaign_gates.inc": "5691c1bc84d117ccdeab6a982f3e29a7f032353574cd208dc9c64d1c684a1f2b"
+    "data/maps/map_groups.json": "a9e39cb954ca55a3089d4de4816626a41fc159e7911c9b08c4f5ac04b3cf9be2",
+    "data/layouts/layouts.json": "14d407642a87155e64d3c9f643942e8f619719dd3c5026936b5864c5065f7044",
+    "data/event_scripts.s": "6b813501b02e5dc3024afbc08d76958e344908a85669d9253cf59681256e0a0b",
+    "data/scripts/journey_campaign_gates.inc": "68e837ba9d5c3c5139e36527d8771c0b56f608cd01da2c8c6c4e201cf42763b2"
   },
   "prepared_sha256": {
-    "data/tilesets/secondary/journey_dewford_harbor/tiles.png": "bf6f1f4f097c094d47e4e9919c131fb8b37c585e9fa3a10911fc877bf7d37546",
-    "data/tilesets/secondary/journey_dewford_harbor/metatiles.bin": "26b9b34bca11684b91af542ab6184fe5056d2b6a0e53d8c643fc422678ff6523",
+    "data/tilesets/secondary/journey_dewford_harbor/tiles.png": "b62966b2de96af7095d6c6f9666d961d070722759f3873ed51e275e1860d7dbb",
+    "data/tilesets/secondary/journey_dewford_harbor/metatiles.bin": "1e070f8d16580f471b1fed525c1c316350fd856706d2f6b994fbaf0984f0b57c",
     "data/tilesets/secondary/journey_dewford_harbor/metatile_attributes.bin": "63b9522240810ddb46427d9b057ce862f33d6aab154ea10b9bf7510e7eab6167",
     "data/tilesets/secondary/journey_dewford_harbor/palettes/00.pal": "13f8977e61df1e7ee8f8e3abcf9525256bbf32834b521360418659133df2d2fa",
     "data/tilesets/secondary/journey_dewford_harbor/palettes/01.pal": "9b9d01878137cef9ea6006c3025a3ada5cdf37d9c251b25bc95f71963bd9a447",
@@ -2133,10 +2388,10 @@
     "data/tilesets/secondary/journey_dewford_harbor/palettes/03.pal": "40d2c14ba666d5ae8f46ae3c7486acd216805d6f16c7dcb87881d7d30833e13c",
     "data/tilesets/secondary/journey_dewford_harbor/palettes/04.pal": "57274f87862513432500d0b28023cfe13a083019bd4fba2600fa5eae9a1d87fb",
     "data/tilesets/secondary/journey_dewford_harbor/palettes/05.pal": "53b599be1554c4e1a0684f2339409ee4032ac8507696dae1836a10152f925177",
-    "data/tilesets/secondary/journey_dewford_harbor/palettes/06.pal": "59a441649deba2e62830cc2625d684bffc40c368dc889b46ba9aacfbfd41371b",
+    "data/tilesets/secondary/journey_dewford_harbor/palettes/06.pal": "8e1f055b362edf07087941e1bed0cd1cc9941ab952cd3f54143b36983630c1f6",
     "data/tilesets/secondary/journey_dewford_harbor/palettes/07.pal": "5885bddcd17f3ba24f3f8805d48c8b7d3fdf4cfc13f1d24f13ba55c4248afe0f",
     "data/tilesets/secondary/journey_dewford_harbor/palettes/08.pal": "a5f8b678d2c636ff2eeb829dd737390db02668e2957e0e33bad940411edafefd",
-    "data/tilesets/secondary/journey_dewford_harbor/palettes/09.pal": "cb3686b54a95b136f13a44c9ceeab4d8d31a35178adcb9013a36a8f132cc34ac",
+    "data/tilesets/secondary/journey_dewford_harbor/palettes/09.pal": "8f997d5e99970bca1b8791d5703d34b35c5ad8a58f0de3a3d2cca341fcb7bc35",
     "data/tilesets/secondary/journey_dewford_harbor/palettes/10.pal": "c74c963520e209315679b5f807863c4e600108c434a2f95164cbf20c6fe3ff32",
     "data/tilesets/secondary/journey_dewford_harbor/palettes/11.pal": "3984cfbbbb15a1df824dae002e462c8fb68c06397a0df0cc5cf5ee8a160a531e",
     "data/tilesets/secondary/journey_dewford_harbor/palettes/12.pal": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675",
@@ -2152,19 +2407,19 @@
     "data/layouts/JourneyDewfordHarbor/border.bin": "9ff63640fa3b4682056532b7924b03250ccc7a832f64ccec3dea79ea8595a24d",
     "data/maps/JourneyDewfordHarbor/map.json": "8a81d67cf48001eb5fca6cda2b9621e8e2633d33197d4b6d09c766fa3134e3f5",
     "data/layouts/JourneyDewfordPortIsland/border.bin": "09e6b43c8549e711f19a59dea03683b6c42176bdc528bf60fc0b9a0629720fbb",
-    "data/layouts/DewfordTown/map.bin": "ebb708068c278d89516cf1f089be0cfe607e8c9f44e59c5af920c1f1e7508305",
+    "data/layouts/DewfordTown/map.bin": "aeee3a958034756463c2eca0c8263e92b545f33c1968f0eafb4470056281b015",
     "data/maps/DewfordTown/map.json": "70afc225c272f52090e637bc91e687ed3caae1ac840232499ea76a0034b6a6e7",
-    "data/layouts/Route106/map.bin": "565ad5afcd2aaf3a48df9c5a41c8f7f37c64ffbcf85a9908e8ac0ff0c4e2a3d2",
-    "data/maps/Route106/map.json": "9681a943b4c59dd9e2c10ebc66fafd8bfe0100554683e107079b0a973dc1ed3f",
-    "data/layouts/Route107/map.bin": "6c0816338fb85aceaffcf3cd1d40f7893c0efa163c2d41b768ec974509c17556",
+    "data/layouts/Route106/map.bin": "45c6721e395e4cc6066588c7ad3186b538cc890177f03b42beb2582f7a724d1b",
+    "data/maps/Route106/map.json": "99049fc54a9d2c853752e9bd9b208479896c0438ba655f8eebd50af9e89ffa36",
+    "data/layouts/Route107/map.bin": "3ea89eeb716b7404b7155ca09a2f85780acb63c79bd8f3bba0b47ee9cfb4b726",
     "data/maps/Route107/map.json": "e808008f62024d2213dcd6a3e5a976a4b4c440279c486afa8ce320963b3364f9",
-    "data/layouts/JourneyDewfordPortIsland/map.bin": "d21758e6b5211f12b8b1d1424ce631514ad52970332ca30205de0db0d0380161",
-    "data/maps/JourneyDewfordPortIsland/map.json": "2fd76054dab39eb2a9c6f80d0f39514771e81e2c741fe681e2f7f506829a7302",
-    "data/maps/map_groups.json": "6152f1301aa582290c6158b7c90d76734eb0bdd25512e379032ff2417f17f78f",
-    "data/layouts/layouts.json": "ee712eab6e46470ad9d555d230e8cc8ea874f1a2365da500c622166576338001",
+    "data/layouts/JourneyDewfordPortIsland/map.bin": "72e04768dd13ce7522a903c4215bdfee55f2ce975dfb0364758193be9d5ddf03",
+    "data/maps/JourneyDewfordPortIsland/map.json": "f0eed2e5a73b90e0fa85080c22be4b887c4e521ad32655463f0efabf495416ff",
+    "data/maps/map_groups.json": "e0a61b36b3981112996e3e4a624b3114d92e5ed54c2613f1caedd13704571ca1",
+    "data/layouts/layouts.json": "904ec18c347a8b242df560c73fdbd1daaf4413db99f9c498f28d27b23ef583f7",
     "data/maps/JourneyDewfordPortIsland/scripts.inc": "8da4fd1e376cb14a7361bca71e7a4e4127ab36d02e4f6745291064577d6419f2",
     "data/maps/JourneyDewfordHarbor/scripts.inc": "be00ec328128748b6ed160858225ff52f3d3fbdae018a1d01e4db0d4c777fa6d",
-    "data/event_scripts.s": "65e3996a5e5a64d8dddf4b5c90118be0d1097902c111fbdacb6a996272607df0",
-    "data/scripts/journey_campaign_gates.inc": "b63c69b48caaf0748240e30d6012e3dc56b2dbee2fda502542e537167f1cc87a"
+    "data/event_scripts.s": "23dd86a9d0f8a165c34f2a9b43b2922f1b46d2894b8570fdccf8ed1520f980c5",
+    "data/scripts/journey_campaign_gates.inc": "587046ec136c00faf1b3a27e2536cfa5d55b5be4aeec5aa085f83566af986175"
   }
 }

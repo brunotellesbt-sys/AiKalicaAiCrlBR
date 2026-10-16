@@ -4,7 +4,7 @@ from pathlib import Path
 from candidate_layer import Layer
 from import_native_pier import import_pier
 from render_sea_maps import MapRenderer
-from prepare_three_harbor_terminals import PRIOR,LAYER as PREVIOUS
+from prepare_sevii_harbors import PRIOR,LAYER as PREVIOUS
 LAYER='mossdeep-harbor';PRIOR=PRIOR+[PREVIOUS]
 EXTERIOR='MossdeepCity';HARBOR='JourneyMossdeepHarbor';MAP='MAP_JOURNEY_MOSSDEEP_HARBOR'
 TERMINAL=(3,26,5,5);DOOR=(5,30);ARRIVAL=(16,13)

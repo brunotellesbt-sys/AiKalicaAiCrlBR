@@ -4,12 +4,13 @@ from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
 from render_sea_maps import MapRenderer
 from compile_dewford_harbor_art import quantized
+from prepare_dewford_island_harbor import NORTH_Y
 
 
 def render(source,output):
     source,output=Path(source),Path(output);output.mkdir(parents=True,exist_ok=True);r=MapRenderer(source)
-    rects=[('Route106',-80,-20),('DewfordTown',-20,0),('Route107',0,0),('JourneyDewfordPortIsland',0,-12)]
-    left,top,right,bottom=-12,-12,18,20
+    rects=[('Route106',-80,-20),('DewfordTown',-20,0),('Route107',0,0),('JourneyDewfordPortIsland',0,NORTH_Y)]
+    left,top,right,bottom=-12,NORTH_Y,18,20
     im=Image.new('RGB',((right-left)*16,(bottom-top)*16),(40,50,60))
     actors=[]
     for name,x,y in rects:

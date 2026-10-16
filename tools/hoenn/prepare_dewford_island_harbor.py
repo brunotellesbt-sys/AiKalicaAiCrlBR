@@ -2,13 +2,22 @@
 import argparse,copy,json,re,struct
 from pathlib import Path
 from candidate_layer import Layer
-from compile_dewford_harbor_art import compile_art
+from compile_dewford_harbor_art import compile_art,BRIDGE_GROUND
 from render_sea_maps import MapRenderer
 from prepare_mossdeep_harbor import PRIOR,LAYER as PREVIOUS
 LAYER='dewford-island-harbor';PRIOR=PRIOR+[PREVIOUS]
 HARBOR='JourneyDewfordHarbor';MAP='MAP_JOURNEY_DEWFORD_HARBOR'
 NORTH='JourneyDewfordPortIsland';NORTH_MAP='MAP_JOURNEY_DEWFORD_PORT_ISLAND'
+NORTH_Y=-13
 BANK='gTileset_JourneyDewfordHarbor';ARRIVAL=(16,13)
+TILE_COPIES=[((6,16),(2,10),0x11C),((6,15),(5,15),0x124),
+             ((7,15),(7,16),0x11D),((4,12),(-9,-2),0x11D),
+             ((4,11),(-9,-1),0x125),((4,13),(-9,-1),0x125),
+             *((((x,4),(2,6),0x12C) for x in range(4,8))),
+             ((3,4),(9,1),None),((3,5),(9,1),None),
+             ((3,6),(13,6),0x12D),((3,11),(13,5),0x125),
+             ((3,10),(13,-11),0x11D),((7,5),(-7,4),0x123),
+             ((7,6),(-7,-6),0x123)]
 
 
 def prepare(source):
@@ -38,26 +47,29 @@ def prepare(source):
         # Preserve Dewford's native flag callback and reserve its animated graphics.
         chunk=chunk.replace('InitTilesetAnim_JourneyDewfordHarbor','InitTilesetAnim_Dewford')
         layer.stage(path,text+'\n'+chunk+'\n')
-    north_l=copy.deepcopy(layouts[maps['Route107']['layout']]);north_l.update(id='LAYOUT_JOURNEY_DEWFORD_PORT_ISLAND',name=NORTH+'_Layout',width=16,height=12,border_width=2,border_height=2,blockdata_filepath=f'data/layouts/{NORTH}/map.bin',border_filepath=f'data/layouts/{NORTH}/border.bin',secondary_tileset=BANK)
-    data['layouts'].append(north_l);grids[NORTH]=[0x1170]*192
-    north=copy.deepcopy(maps['Route107']);north.update(id=NORTH_MAP,name=NORTH,layout=north_l['id'],show_map_name=False,object_events=[],warp_events=[],coord_events=[],bg_events=[],connections=[dict(map='MAP_ROUTE107',direction='down',offset=0),dict(map='MAP_ROUTE106',direction='left',offset=-8)])
+    north_l=copy.deepcopy(layouts[maps['Route107']['layout']]);north_l.update(id='LAYOUT_JOURNEY_DEWFORD_PORT_ISLAND',name=NORTH+'_Layout',width=16,height=-NORTH_Y,border_width=2,border_height=2,blockdata_filepath=f'data/layouts/{NORTH}/map.bin',border_filepath=f'data/layouts/{NORTH}/border.bin',secondary_tileset=BANK)
+    data['layouts'].append(north_l);grids[NORTH]=[0x1170]*(16*-NORTH_Y)
+    north=copy.deepcopy(maps['Route107']);north.update(id=NORTH_MAP,name=NORTH,layout=north_l['id'],show_map_name=False,object_events=[],warp_events=[],coord_events=[],bg_events=[],connections=[dict(map='MAP_ROUTE107',direction='down',offset=0),dict(map='MAP_ROUTE106',direction='left',offset=-20-NORTH_Y)])
     maps[NORTH]=north
-    maps['Route107']['connections'].append(dict(map=NORTH_MAP,direction='up',offset=0));maps['Route106']['connections'].append(dict(map=NORTH_MAP,direction='right',offset=8))
+    maps['Route107']['connections'].append(dict(map=NORTH_MAP,direction='up',offset=0));maps['Route106']['connections'].append(dict(map=NORTH_MAP,direction='right',offset=20+NORTH_Y))
     def locate(x,y):
         if y<0:
             if x<0:return 'Route106',x+80,y+20
-            return NORTH,x,y+12
+            return NORTH,x,y-NORTH_Y
         if x<0:return 'DewfordTown',x+20,y
         return 'Route107',x,y
     def put(x,y,b):
         name,xx,yy=locate(x,y);l=north_l if name==NORTH else layouts[maps[name]['layout']]
         assert 0<=xx<l['width'] and 0<=yy<l['height'],(name,xx,yy)
         grids[name][yy*l['width']+xx]=b
+    def get(x,y):
+        name,xx,yy=locate(x,y);l=north_l if name==NORTH else layouts[maps[name]['layout']]
+        return grids[name][yy*l['width']+xx]
     # A stepped northern extension closes the forest without touching the complete
     # native NW boulder. The eastern margin leaves a water corridor beyond the trees.
     shore=[0x11B,0x11C,0x11D,0x123,0x124,0x125,0x12B,0x12C,0x12D]
-    land={(x,y) for y in range(-8,7) for x in range(-7,14)}|{(x,y) for y in range(-11,-8) for x in range(-5,14)}
-    for y in range(-11,8):
+    land={(x,y) for y in range(-8,7) for x in range(-7,14)}|{(x,y) for y in range(-12,-8) for x in range(-5,14)}
+    for y in range(-12,8):
         for x in range(-7,14):
             if (x,y) not in land:
                 if y>=-8 or x>=-5:put(x,y,0x1170)
@@ -66,7 +78,7 @@ def prepare(source):
             col=0 if (x-1,y) not in land else 2 if (x+1,y) not in land else 1
             put(x,y,(0x4000 if row==col==1 else 0x3000)|shore[row*3+col])
     planted_trees=[]
-    for x,y in [(x,-10) for x in range(-4,13)]+[(12,y) for y in range(-8,5,2)]:
+    for x,y in [(x,-11) for x in range(-4,13)]+[(12,y) for y in range(-8,5,2)]+[(-6,y) for y in range(-7,5,2)]+[(-5,-9)]:
         assert (x,y) in land and (x,y+1) in land
         put(x,y,0x4639);put(x,y+1,0x463A);planted_trees.append([x,y])
     # Place the generated 13x9 terminal. The graphic's arched entrance falls at (5,2).
@@ -112,7 +124,7 @@ def prepare(source):
             return before_beach[name][yy*ll['width']+xx]&1023==0x170
         except KeyError:return False
     meta_path=folder+'/metatiles.bin';beach_words=list(struct.unpack('<'+'H'*(len(layer.outputs[meta_path])//2),layer.outputs[meta_path]));beach_attrs=bytearray(layer.outputs[attr_path])
-    referenced={b&1023 for vv in grids.values() for b in vv}|used
+    referenced={b&1023 for vv in grids.values() for b in vv}|used|{mid for _,_,mid in art['stairs']['cells']}
     spare=iter(mid for mid in range(512,512+len(beach_words)//8) if mid not in referenced)
     patterns={tuple(primary[mid*8:mid*8+8]):mid for mid in shore};beach_edits=[]
     cells=land|{(x,y) for y in range(10,19) for x in range(0,10)}
@@ -141,6 +153,18 @@ def prepare(source):
         value=(old&~1023)|patterns[pattern]
         if value!=old:grids[name][at]=value;beach_edits.append([x,y])
     layer.stage(meta_path,struct.pack('<'+'H'*len(beach_words),*beach_words));layer.stage(attr_path,bytes(beach_attrs))
+    # The requested visual copies refer to the previous coordinate image.
+    # Bridge cells retain their deck/cables; compile_art copies the beach below.
+    facade_reference=get(9,1)&1023
+    for (x,y),reference,mid in TILE_COPIES:
+        if (x,y) not in BRIDGE_GROUND:
+            put(x,y,(get(x,y)&~1023)|(facade_reference if mid is None else mid))
+    stair_cells=[]
+    for y in (3,15):
+        for x,_,mid in art['stairs']['cells']:
+            put(x+5,y,0x4000|mid);stair_cells.append([x+5,y])
+    # Both sand approaches can change to the bridge's walking elevation.
+    for x in (5,6):put(x,16,get(x,16)&0xFFF)
     rock_audit=[]
     for name in originals:
         ll=layouts[maps[name]['layout']];w=ll['width'];old=originals[name];new=grids[name]
@@ -204,7 +228,7 @@ static bool8 JourneyDewfordBridgeRailBlocks(const struct ObjectEvent *object, s1
     for var,value in [('0x8009',16),('0x800A',13)]:
         chunk,count=re.subn(r'(setvar VAR_'+var+r', )\d+',lambda m:m[1]+str(value),chunk);assert count==1
     layer.stage(path,text[:a]+chunk+text[b:])
-    return layer.finish(interior=HARBOR,door=[5,2],terminal=[-3,-6,13,9],port_island=NORTH,bridge=bridge,bridge_walk=[[x+4,y+4] for x,y in art['arched-bridge']['walk']],bridge_rail_metatiles=rail_ids,cleared_tree_tiles=cleared,planted_whole_trees=planted_trees,whole_rock_audit=rock_audit,requested_water_tiles=requested_water,beach_edges_finished=beach_edits,custom_graphics=graphics_count,arrival=list(ARRIVAL),captain=[16,12],upper_elevation=4,lower_elevation=1,original_trainers_and_local_briney_preserved=True,other_ports_preserved=True,changed_terrain={n:[[i%layouts[maps[n]['layout']]['width'],i//layouts[maps[n]['layout']]['width']] for i,(a,b) in enumerate(zip(originals[n],grids[n])) if a!=b] for n in originals})
+    return layer.finish(interior=HARBOR,door=[5,2],terminal=[-3,-6,13,9],port_island=NORTH,bridge=bridge,bridge_walk=[[x+4,y+4] for x,y in art['arched-bridge']['walk']],bridge_rail_metatiles=rail_ids,cleared_tree_tiles=cleared,planted_whole_trees=planted_trees,whole_rock_audit=rock_audit,requested_water_tiles=requested_water,beach_edges_finished=beach_edits,requested_tile_copies=[dict(destination=list(dst),reference=list(ref),under_bridge=dst in BRIDGE_GROUND) for dst,ref,_ in TILE_COPIES],stairs=stair_cells,terminal_logical_pixels=[208,144],custom_graphics=graphics_count,arrival=list(ARRIVAL),captain=[16,12],upper_elevation=4,lower_elevation=1,original_trainers_and_local_briney_preserved=True,other_ports_preserved=True,changed_terrain={n:[[i%layouts[maps[n]['layout']]['width'],i//layouts[maps[n]['layout']]['width']] for i,(a,b) in enumerate(zip(originals[n],grids[n])) if a!=b] for n in originals})
 
 
 if __name__=='__main__':

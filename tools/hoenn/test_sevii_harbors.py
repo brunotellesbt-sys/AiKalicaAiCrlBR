@@ -4,6 +4,7 @@ from pathlib import Path
 from PIL import Image
 from verify_versions import verify
 from verify_sevii_harbor_update import ISLANDS
+from verify_fuchsia_update import previous_release
 
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'mods/hoenn/sevii-harbors-validation'
@@ -12,6 +13,7 @@ OUT=ROOT/'mods/hoenn/sevii-harbors-validation'
 class SeviiHarbors(unittest.TestCase):
     def test_all_seven_terminals_and_surf_roundtrips_are_current_in_every_edition(self):
         release=verify(ROOT/'mods/hoenn/versions')
+        while release.get('validation_scope')=='island-harbors':release=previous_release(release)
         self.assertEqual(release['validation_scope'],'sevii-harbors')
         cases=[('validation',release['parent_rom_sha256'])]
         cases += [(r['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba'),r['sha256']) for r in release['variants']]
