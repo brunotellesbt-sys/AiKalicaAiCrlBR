@@ -1,5 +1,5 @@
 """Use real controls above and below Dewford's bridge, then enter and sail."""
-import hashlib,json
+import hashlib,json,struct
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 bootstrap=(ROOT/'tools/hoenn/validate_sootopolis_harbor.py').read_text().split('\n# Disable Sootopolis')[0]
@@ -7,6 +7,9 @@ exec(compile(bootstrap,str(ROOT/'tools/hoenn/validate_sootopolis_harbor.py'),'ex
 from prepare_dewford_island_harbor import HARBOR,ARRIVAL,NORTH,NORTH_Y
 layout=json.loads((source/'.journey-dewford-island-harbor').read_text());assert layout['door']==[5,2]
 warp('Route107',6,16);native('SetPlayerAvatarTransitionFlags',1);step(30)
+blocks=(source/'data/layouts/Route107/map.bin').read_bytes()
+for xx,yy in [(5,3),(6,3),(5,15),(6,15),(0,15),(1,15),(2,15),(3,5),(3,6),(7,15)]:
+    assert native('MapGridGetMetatileIdAt',xx+7,yy+7)==struct.unpack_from('<H',blocks,2*(yy*60+xx))[0]&1023
 walk_to(6,15);assert native('PlayerGetElevation')==4
 walk_to(6,9);assert not lib.read8(s['gPlayerAvatar'])&8 and native('PlayerGetElevation')==4
 walk_to(5,9);walk_to(5,15);walk_to(5,16);walk_to(6,16);walk_to(6,15);walk_to(6,9)
@@ -21,6 +24,12 @@ picture('terminal-network-return')
 walk_to(11,13);change_map(128,'Route107');assert position()==(5,3)
 walk_to(5,14);walk_to(6,14);walk_to(6,16)
 assert not lib.read8(s['gPlayerAvatar'])&8
+walk_to(4,16);walk_to(4,15);walk_to(0,15);change_map(32,'DewfordTown');assert position()==(19,15)
+walk_to(19,16);walk_to(17,16);walk_to(17,15);picture('existing-house-front-access')
+walk_to(17,16);walk_to(19,16);change_map(16,'Route107');assert position()==(0,16)
+walk_to(4,16);walk_to(4,15);walk_to(5,15);walk_to(6,15);walk_to(6,16)
+assert not lib.read8(s['gPlayerAvatar'])&8
+picture('house-footpath-to-bridge')
 picture('returned-to-clearing')
 # Same crossing at water level; the player stays in Surf and below the deck.
 warp('Route107',3,8);native('SetPlayerAvatarTransitionFlags',8);step(30)
@@ -29,12 +38,17 @@ picture('surf-below-bridge');walk_to(10,8);walk_to(3,8)
 walk_to(8,8);walk_to(8,10);walk_to(4,10);walk_to(5,10);walk_to(5,11);walk_to(8,11)
 assert lib.read8(s['gPlayerAvatar'])&8 and native('PlayerGetElevation')==1
 picture('requested-water-cells-below-deck')
+# The port's full east side opens onto the navigable sea, on both connected maps.
+warp('Route107',15,1);native('SetPlayerAvatarTransitionFlags',8);step(30)
+walk_to(10,1);walk_to(10,0);change_map(64,NORTH);assert position()==(10,-NORTH_Y-1)
+walk_to(10,7);walk_to(15,7);assert lib.read8(s['gPlayerAvatar'])&8
+picture('ship-channel-along-terminal')
 # Walk only across true connected map edges, without scripted warps between them.
 warp('Route107',15,1);native('SetPlayerAvatarTransitionFlags',8);step(30)
 change_map(64,NORTH);assert position()==(15,-NORTH_Y-1)
 walk_to(15,0);walk_to(0,0);change_map(32,'Route106');assert position()==(79,20+NORTH_Y)
 picture('north-island-connected-to-route106')
 lib.stop()
-proof=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),door=[5,2],stairs_walked=[[5,3],[6,3],[5,15],[6,15]],continuous_straight_two_tile_deck=True,bridge_walked_above_without_surf=True,surf_crossed_below_without_dismounting=True,upper_elevation=4,lower_elevation=1,exterior_transit_boat_removed=True,controller_entry_and_exit=True,trips=trips,north_island_seamless_controller_connections=True,initial_story_state_and_position_are_fixtures=True,full_campaign_playthrough=False)
+proof=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),door=[5,2],stairs_walked=[[5,3],[6,3],[5,15],[6,15]],continuous_straight_two_tile_deck=True,bridge_walked_above_without_surf=True,surf_crossed_below_without_dismounting=True,upper_elevation=4,lower_elevation=1,exterior_transit_boat_removed=True,west_house_foot_access=True,ship_channel_surfed=True,controller_entry_and_exit=True,trips=trips,north_island_seamless_controller_connections=True,initial_story_state_and_position_are_fixtures=True,full_campaign_playthrough=False)
 (args.output/'dewford-island-harbor.json').write_text(json.dumps(proof,indent=2)+'\n')
 print('Dewford: upper walk, lower Surf, doors, ferry and connected island passed.')

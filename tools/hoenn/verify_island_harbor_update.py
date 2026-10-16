@@ -19,13 +19,13 @@ def verify_update(directory,info):
             assert [t['destination'] for t in r['trips']]==['JourneyPalletHarbor','JourneyMossdeepHarbor']
         elif p['kind']=='dewford-island-harbor':
             assert r['door']==[5,2] and r['stairs_walked']==[[5,3],[6,3],[5,15],[6,15]]
-            for field in ['continuous_straight_two_tile_deck','bridge_walked_above_without_surf','surf_crossed_below_without_dismounting','exterior_transit_boat_removed','controller_entry_and_exit','north_island_seamless_controller_connections']:assert r[field] is True,field
+            for field in ['continuous_straight_two_tile_deck','bridge_walked_above_without_surf','surf_crossed_below_without_dismounting','exterior_transit_boat_removed','controller_entry_and_exit','north_island_seamless_controller_connections','west_house_foot_access','ship_channel_surfed']:assert r[field] is True,field
             assert [t['destination'] for t in r['trips']]==['JourneyPalletHarbor','JourneyDewfordHarbor']
         elif p['kind']=='island-harbor-source':
             assert p['target']=='common' and r['layers']==info['integration_layers']
-            assert r['requested_tile_copies_verified']==17 and r['stairs']==[[5,3],[6,3],[5,15],[6,15]]
-            assert r['whole_trees']==31 and r['complete_rock_groups']==52
-            for field in ['original_inputs_verified','idempotent','independent_replay_passed','battle_frontier_preserved','other_port_inputs_preserved','bridge_foreground_retained']:assert r[field] is True,field
+            assert r['stairs']==[[5,3],[6,3],[5,15],[6,15]]
+            assert r['stair_height_pixels']==8 and r['stair_palette_matches_bridge_footing'] and r['whole_trees']==35 and r['complete_rock_groups']==52
+            for field in ['original_inputs_verified','idempotent','independent_replay_passed','battle_frontier_preserved','other_port_inputs_preserved','bridge_foreground_retained','beach_accesses_finished','island_outer_extent_preserved','retained_tree_positions_preserved','extra_trees_adjacent_to_existing_rows','west_house_foot_access_cleared','ship_channel_connected']:assert r[field] is True,field
             assert not r['differences'] and r['unrelated_source_inputs_checked']>30000
         else:raise AssertionError(p['kind'])
         covered.add((p['target'],p['kind']))

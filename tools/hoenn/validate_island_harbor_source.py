@@ -3,8 +3,9 @@ import argparse,hashlib,json,struct,tempfile
 from pathlib import Path
 from PIL import Image
 from prepare_mossdeep_harbor import prepare as mossdeep,PRIOR as BASE
-from prepare_dewford_island_harbor import prepare as dewford,PRIOR,LAYER,TILE_COPIES,BRIDGE_GROUND,NORTH,NORTH_Y
+from prepare_dewford_island_harbor import prepare as dewford,PRIOR,LAYER,BRIDGE_GROUND,NORTH,NORTH_Y
 from render_sea_maps import MapRenderer
+from compile_dewford_harbor_art import inner_beaches,quantized,finish_beach
 
 
 def validate(source,mossdeep_inputs,dewford_inputs,output):
@@ -56,30 +57,62 @@ def validate(source,mossdeep_inputs,dewford_inputs,output):
         m=json.loads((source/f'data/maps/{name}/map.json').read_text());l=renderer.layouts[m['layout']]
         return struct.unpack_from('<H',(source/l['blockdata_filepath']).read_bytes(),2*(yy*l['width']+xx))[0]
     words=renderer.tileset('gTileset_JourneyDewfordHarbor')[2]
-    for dst,ref,mid in TILE_COPIES:
-        if dst in BRIDGE_GROUND:
-            # Hide only the foreground in a verification view: the lower layer
-            # must exactly match the requested beach while the bridge remains.
-            bridge_mid=block(*dst)&1023;lower=words[(bridge_mid-512)*8:(bridge_mid-512)*8+4]
-            p=renderer.tileset('gTileset_General');q=renderer.tileset('gTileset_JourneyDewfordHarbor')
-            actual=Image.new('RGB',(16,16))
-            for quadrant,entry in enumerate(lower):
-                tile_id=entry&1023;bank=entry>>12;tiles=(p if tile_id<512 else q)[0];tid=tile_id if tile_id<512 else tile_id-512
-                colors=(p if bank<6 else q)[1][bank]
-                for y in range(8):
-                    for x in range(8):
-                        xx=7-x if entry&0x400 else x;yy=7-y if entry&0x800 else y
-                        actual.putpixel((quadrant%2*8+x,quadrant//2*8+y),colors[tiles.getpixel((tid%16*8+xx,tid//16*8+yy))])
-            wanted,_=renderer.render('Route107',values=[mid],dimensions=(1,1),npcs=False)
-            assert actual.tobytes()==wanted.tobytes(),dst
-        elif dst==(6,15):
-            # Its copied sand is below the staircase requested on the same cell.
-            assert words[((block(*dst)&1023)-512)*8:((block(*dst)&1023)-512)*8+4]==renderer.tileset('gTileset_General')[2][0x124*8:0x124*8+4]
-        else:assert block(*dst)&1023==(block(*ref)&1023 if mid is None else mid),dst
+    def pixels(entries,foreground=False):
+        p=renderer.tileset('gTileset_General');q=renderer.tileset('gTileset_JourneyDewfordHarbor')
+        actual=Image.new('RGBA' if foreground else 'RGB',(16,16))
+        for quadrant,entry in enumerate(entries):
+            tile_id=entry&1023;bank=entry>>12;tiles=(p if tile_id<512 else q)[0];tid=tile_id if tile_id<512 else tile_id-512
+            colors=(p if bank<6 else q)[1][bank]
+            for y in range(8):
+                for x in range(8):
+                    xx=7-x if entry&0x400 else x;yy=7-y if entry&0x800 else y
+                    index=tiles.getpixel((tid%16*8+xx,tid//16*8+yy));color=colors[index]
+                    if foreground:color=(*color,255) if index else (0,0,0,0)
+                    actual.putpixel((quadrant%2*8+x,quadrant//2*8+y),color)
+        return actual
+    for dst,mid in BRIDGE_GROUND.items():
+        at=((block(*dst)&1023)-512)*8;actual=pixels(words[at:at+4])
+        wanted=inner_beaches(renderer)[mid] if isinstance(mid,str) else finish_beach(renderer.render('Route107',values=[mid],dimensions=(1,1),npcs=False)[0])
+        assert actual.tobytes()==wanted.tobytes(),dst
+    art,_=quantized(Path(__file__).parent/'data/dewford-harbor/arched-bridge.png',(64,176));rgba=art.convert('RGBA');rgba.putalpha(art.point(lambda v:255 if v else 0,mode='L'))
+    for x,y in reports[1]['bridge']:
+        at=((block(x,y)&1023)-512)*8
+        assert pixels(words[at+4:at+8],foreground=True).tobytes()==rgba.crop(((x-4)*16,(y-4)*16,(x-3)*16,(y-3)*16)).tobytes(),(x,y)
+    original_trees={(x,-10) for x in range(-4,13)}
+    planted=set(map(tuple,reports[1]['planted_whole_trees']));assert original_trees<=planted
+    assert all((x,y) in original_trees or y==-8 and -4<=x<=12 or x==11 and -6<=y<=4 or (x,y)==(-5,-9) for x,y in planted)
+    assert len(planted)==35
+    assert all(block(x,y)&1023==0x170 for x,y in reports[1]['ship_channel'])
+    channel=set(map(tuple,reports[1]['ship_channel']))
+    assert all((x,y) not in channel and (x,y+1) not in channel for x,y in planted)
+    assert {(x,-8) for x in range(-4,13)}<=planted
+    actual=renderer.render('Route107',values=[block(3,15)],dimensions=(1,1),npcs=False)[0]
+    wanted=inner_beaches(renderer)['inner-ne']
+    assert actual.tobytes()==wanted.tobytes()
+    at=((block(9,1)&1023)-512)*8
+    water=renderer.render('Route107',values=[0x170],dimensions=(1,1),npcs=False)[0]
+    assert pixels(words[at:at+4]).tobytes()==water.tobytes()
+    assert reports[1]['marked_shore_tile']==[3,15]
+    assert all(block(x,-12)&1023==0x170 for x in range(-5,14))
+    assert all(block(-8,y)&1023==0x170 for y in range(-8,7))
+    for xy,mid in { (3,5):0x125,(3,6):0x12D,(4,15):0x11C,(7,15):0x11D }.items():
+        actual=renderer.render('Route107',values=[block(*xy)],dimensions=(1,1),npcs=False)[0]
+        wanted=finish_beach(renderer.render('Route107',values=[mid],dimensions=(1,1),npcs=False)[0])
+        assert actual.tobytes()==wanted.tobytes(),xy
+    assert all(block(x,y)&1023==0x170 for y in range(10,14) for x in range(4,8) if [x,y] not in reports[1]['bridge'])
     for x,y in reports[1]['planted_whole_trees']:assert block(x,y)&1023==0x239 and block(x,y+1)&1023==0x23A
+    assert all(block(x,y)&1023 not in (0x239,0x23A,0x243) for y in range(13,17) for x in range(3))
+    assert all(block(-1,y)&1023 not in (0x239,0x23A,0x243) for y in range(15,18))
+    assert block(1,17)&1023==0x239 and block(2,18)&1023==0x239
+    assert reports[1]['stair_height_pixels']==8 and reports[1]['stair_palette_matches_bridge_footing']
+    for x,y in reports[1]['stairs']:
+        at=((block(x,y)&1023)-512)*8;foreground=words[at+4:at+8]
+        assert all(e>>12==7 for e in foreground)
+        visible=pixels(foreground,foreground=True).getbbox();assert visible and visible[3]-visible[1]==8
+        assert visible[1]==(8 if y==3 else 0)
     assert reports[1]['stairs']==[[5,3],[6,3],[5,15],[6,15]]
-    report=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),layers=PRIOR+[LAYER],original_inputs_verified=True,idempotent=True,differences=[],unrelated_source_inputs_checked=checked,independent_replay_passed=True,shared_art_maps_pixel_identical=compared,battle_frontier_preserved=True,other_port_inputs_preserved=True,requested_tile_copies_verified=17,bridge_foreground_retained=True,stairs=reports[1]['stairs'],whole_trees=len(reports[1]['planted_whole_trees']),complete_rock_groups=len(reports[1]['whole_rock_audit']))
-    output=Path(output);output.parent.mkdir(parents=True,exist_ok=True);output.write_text(json.dumps(report,indent=2)+'\n');print('Replayed both harbors; verified 17 terrain copies, stairs and whole trees;',checked,'unrelated inputs intact.')
+    report=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),layers=PRIOR+[LAYER],original_inputs_verified=True,idempotent=True,differences=[],unrelated_source_inputs_checked=checked,independent_replay_passed=True,shared_art_maps_pixel_identical=compared,battle_frontier_preserved=True,other_port_inputs_preserved=True,beach_accesses_finished=True,ship_channel_connected=True,marked_shore_tile=[3,15],west_house_foot_access_cleared=True,stair_height_pixels=8,stair_palette_matches_bridge_footing=True,island_outer_extent_preserved=True,retained_tree_positions_preserved=True,extra_trees_adjacent_to_existing_rows=True,bridge_foreground_retained=True,stairs=reports[1]['stairs'],whole_trees=len(reports[1]['planted_whole_trees']),complete_rock_groups=len(reports[1]['whole_rock_audit']))
+    output=Path(output);output.parent.mkdir(parents=True,exist_ok=True);output.write_text(json.dumps(report,indent=2)+'\n');print('Replayed both harbors; verified continuous beaches, original island extent, stairs and whole trees;',checked,'unrelated inputs intact.')
 
 
 if __name__=='__main__':

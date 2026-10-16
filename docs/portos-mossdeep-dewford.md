@@ -14,13 +14,17 @@ Terminal original com telhado azul e torre náutica, construído com arte gerada
 
 A ponte é reta no trajeto, com piso contínuo e uma única base em cada extremidade. Sua representação tem o trecho central elevado. O piso ocupa as colunas `5..6`, linhas `4..14`; o Surf passa pelo nível inferior. Os cabos e os apoios laterais bloqueiam somente quem está no nível superior. O barco acrescentado sob a ponte foi retirado.
 
-Os tiles `(4,10)`, `(5,10)` e `(5,11)` são água no nível inferior, sob a ponte preservada. As bordas retas e as curvas externas usam as peças inteiras de praia nativas, tomando como referência Rota 107 `(2,10)` e Dewford `(14,10)`. Os cantos internos mantêm os quadrantes nativos, no estilo da curva de Rota 107 `(8,18)`. A praia acompanha todo o contorno da areia exposta.
+Os tiles `(4,10)`, `(5,10)` e `(5,11)` são água no nível inferior, sob a ponte preservada. As bordas retas e as curvas externas mantêm o contorno das peças inteiras de praia nativas, tomando como referência Rota 107 `(2,10)` e Dewford `(14,10)`. O acabamento tem uma faixa clara contínua de areia molhada, baseada na referência gerada abaixo. Os cantos internos são peças completas; o tile marcado em `(3,15)` une a praia ao acesso sul sem recortes soltos de quadrantes. A praia acompanha todo o contorno da areia exposta.
 
-Foram acrescentadas 31 árvores completas nas bordas, incluindo a árvore em `(-5,-9)` e a fileira norte um tile acima, deixando o prédio e os acessos livres. A conferência das pedras encontrou 52 grupos nativos completos: 48 preservados e quatro retirados por inteiro onde o porto ou a ponte ocupam seu espaço. O rochedo grande a sudeste da ponte foi preservado.
+[Referência gerada para o acabamento da praia](images/island-harbors/Dewford-shore-reference.png). A imagem do porto mais abaixo é renderizada a partir dos tiles efetivos do jogo.
+
+As árvores da fileira norte permanecem nas posições aprovadas; uma segunda fileira completa reforça a mata dentro da ilha, com a árvore em `(-5,-9)`, totalizando 35 unidades completas. As árvores na lateral direita foram retiradas para abrir o canal de saída do navio, ligado diretamente ao mar. A conferência das pedras encontrou 52 grupos nativos completos: 48 preservados e quatro retirados por inteiro onde o porto ou a ponte ocupam seu espaço. O rochedo grande a sudeste da ponte foi preservado.
 
 As árvores de `(3,13)..(7,16)` foram retiradas por unidades completas; as copas junto à borda da clareira foram fechadas. O novo trecho ao norte está conectado à Rota 107 e à Rota 106 por conexões normais de mapa.
 
-As escadas ocupam `(5,3)`, `(6,3)`, `(5,15)` e `(6,15)`. A arte da ponte permanece a mesma. As 17 cópias de tiles solicitadas foram aplicadas; nas células da ponte, muda a praia sob o piso, mantendo os cabos e a passagem superior. Em `(6,15)`, a areia copiada fica sob a nova escada. As cópias de `(9,1)` para `(3,4)` e `(3,5)` mantêm literalmente o pedaço da fachada indicado na grade.
+As escadas ocupam `(5,3)`, `(6,3)`, `(5,15)` e `(6,15)`. Os dois degraus de cada acesso têm 8 pixels de altura e usam os mesmos tons dos apoios da ponte, com os espelhos sombreados dos degraus nativos de GBA. As árvores entre a casa ao sul e a ponte foram retiradas por inteiro, deixando uma passagem a pé; a borda da mata restante começa com copas completas.
+
+A praia contorna os dois acessos com bordas completas e curvas internas. O acesso norte tem um pequeno recuo de água sob a ponte; o acesso sul termina numa praia contínua dos dois lados dos degraus. A faixa de água junto ao lado oeste da ponte permanece aberta. Não há partes de fachada soltas no terreno. A ilha não foi ampliada. O lado direito do prédio fica diretamente sobre a água do canal; não há árvores cobrindo a fachada ou a passagem marítima. O acabamento marcado em `(3,15)` fecha a curva do acesso sul.
 
 O terminal agora usa a resolução nativa de 208×144 pixels, preservando a definição dos detalhes do telhado e das janelas. A entrada continua no tile `(5,2)`.
 

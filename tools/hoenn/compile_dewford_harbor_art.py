@@ -1,12 +1,42 @@
 """Compile the original generated harbor art into indexed GBA map graphics."""
 import io,struct
 from pathlib import Path
-from PIL import Image,ImageDraw
+from PIL import Image
 
 # Copy the beach underlay without replacing the suspension bridge above it.
-BRIDGE_GROUND={(4,4):0x12C,(5,4):0x12C,(6,4):0x12C,(7,4):0x12C,
-               (4,11):0x125,(4,12):0x11D,(4,13):0x125,
-               (7,5):0x123,(7,6):0x123}
+BRIDGE_GROUND={(4,4):0x12C,(5,4):0x12C,(6,4):0x12C,(7,4):'inner-sw',
+               (7,5):0x123,(7,6):0x12B}
+SHORE=(0x11B,0x11C,0x11D,0x123,0x124,0x125,0x12B,0x12C,0x12D)
+
+
+def finish_beach(image):
+    """Keep native shoreline silhouettes, with a continuous two-pixel wet rim."""
+    result=image.copy()
+    water={(x,y) for y in range(16) for x in range(16)
+           if image.getpixel((x,y))[2]>180}
+    for y in range(16):
+        for x in range(16):
+            if (x,y) in water:continue
+            distance=min((max(abs(x-xx),abs(y-yy)) for xx,yy in water),default=99)
+            if distance==1:result.putpixel((x,y),(248,240,192))
+            elif distance==2:result.putpixel((x,y),(238,230,164))
+    return result
+
+
+def inner_beaches(renderer):
+    """Round inward shore corners with the same native sand and blue water."""
+    sand=renderer.render('Route107',values=[0x124],dimensions=(1,1),npcs=False)[0]
+    sea=renderer.render('Route107',values=[0x170],dimensions=(1,1),npcs=False)[0]
+    sw=sand.copy()
+    for y in range(16):
+        for x in range(16):
+            distance=(x+1)**2+(16-y)**2
+            if distance<=64:sw.putpixel((x,y),sea.getpixel((x,y)))
+            elif distance<=90:sw.putpixel((x,y),(213,180,106))
+    sw=finish_beach(sw)
+    return {'inner-sw':sw,'inner-se':sw.transpose(Image.Transpose.FLIP_LEFT_RIGHT),
+            'inner-nw':sw.transpose(Image.Transpose.FLIP_TOP_BOTTOM),
+            'inner-ne':sw.transpose(Image.Transpose.FLIP_LEFT_RIGHT).transpose(Image.Transpose.FLIP_TOP_BOTTOM)}
 
 
 def quantized(path,size):
@@ -53,20 +83,25 @@ def compile_art(renderer,used_mids):
         struct.pack_into('<H',attrs,(mid-512)*2,behavior)
         return mid
     primary=renderer.tileset('gTileset_General')[2]
-    beach_images={}
-    for mid in sorted(set(BRIDGE_GROUND.values())):
-        beach_images[mid]=renderer.render('Route107',values=[mid],dimensions=(1,1),npcs=False)[0]
+    beach_images=inner_beaches(renderer)
+    beach_images[0x170]=renderer.render('Route107',values=[0x170],dimensions=(1,1),npcs=False)[0]
+    for mid in SHORE:
+        beach_images[mid]=finish_beach(renderer.render('Route107',values=[mid],dimensions=(1,1),npcs=False)[0])
     shore_colors=sorted({c for im in beach_images.values() for c in im.getdata()})
-    assert len(shore_colors)<=16
+    assert len(shore_colors)<=15
     # Bank 9 is unused by the retained Dewford graphics. It keeps both the sea
     # and sand colors when their native two-layer tiles become bridge underlays.
     native_banks={v>>12 for mid in used_mids if mid>=512 for v in old_words[(mid-512)*8:(mid-511)*8]}
     assert 9 not in native_banks
-    art_palettes[9]=shore_colors+[(0,0,0)]*(16-len(shore_colors))
+    art_palettes[9]=[(0,0,0)]+shore_colors+[(0,0,0)]*(15-len(shore_colors))
     ground_words={}
+    allocations['beach-inner']={}
+    allocations['beach-outer']={}
     for mid,im in beach_images.items():
-        indexed=Image.new('P',(16,16));indexed.putdata([shore_colors.index(c) for c in im.getdata()])
+        indexed=Image.new('P',(16,16));indexed.putdata([shore_colors.index(c)+1 for c in im.getdata()])
         ground_words[mid]=[graphic(indexed.crop((x,y,x+8,y+8)),9) for y in (0,8) for x in (0,8)]
+        if isinstance(mid,str):allocations['beach-inner'][mid]=metatile(indexed,0,0,9,primary[0x170*8:0x170*8+4])
+        elif mid in SHORE and mid!=0x124:allocations['beach-outer'][mid]=metatile(indexed,0,0,9,primary[0x170*8:0x170*8+4])
     for name,size,bank in [('terminal',(208,144),6),('arched-bridge',(64,176),7)]:
         art,colors=quantized(root/(name+'.png'),size);art_palettes[bank]=colors
         cells=[]
@@ -75,21 +110,22 @@ def compile_art(renderer,used_mids):
                 tile=art.crop((x*16,y*16,x*16+16,y*16+16))
                 if not any(tile.getdata()):continue
                 ground=0x124 if name=='terminal' else 0x170
-                base=ground_words[BRIDGE_GROUND[(x+4,y+4)]] if name=='arched-bridge' and (x+4,y+4) in BRIDGE_GROUND else primary[ground*8:ground*8+4]
+                if name=='terminal' and x==12:ground=0x170
+                base=ground_words[BRIDGE_GROUND[(x+4,y+4)]] if name=='arched-bridge' and (x+4,y+4) in BRIDGE_GROUND else ground_words[0x170] if name=='terminal' and x==12 else primary[ground*8:ground*8+4]
                 mid=metatile(art,x*16,y*16,bank,base,0x70 if name=='arched-bridge' else 0)
                 cells.append((x,y,mid))
         allocations[name]=dict(cells=cells,image=art)
     # The plan is straight and two tiles wide. The curve is in its elevation.
     allocations['arched-bridge']['walk']=[(x,y) for y in range(11) for x in (1,2)]
-    # A short wooden staircase joins each end to the unchanged bridge floor.
-    colors=art_palettes[7]
-    def ink(rgb):return min(range(1,16),key=lambda i:sum((colors[i][j]-rgb[j])**2 for j in range(3)))
-    stairs=Image.new('P',(32,16),0);d=ImageDraw.Draw(stairs)
-    rail,shadow,tread,light=[ink(c) for c in [(70,51,28),(103,68,28),(178,123,55),(222,180,103)]]
-    d.rectangle((0,0,31,15),fill=rail)
-    for y in range(0,16,4):
-        d.rectangle((2,y,29,y+2),fill=tread);d.line((2,y,29,y),fill=light);d.line((2,y+3,29,y+3),fill=shadow)
-    allocations['stairs']=dict(cells=[(x,0,metatile(stairs,x*16,0,7,primary[0x124*8:0x124*8+4])) for x in (0,1)])
+    # Two short native risers, recolored to the bridge footing's wood palette.
+    native_stairs=renderer.render('MossdeepCity',values=[0x330,0x331],dimensions=(2,1),npcs=False)[0]
+    short=native_stairs.crop((0,8,32,16));colored=Image.new('P',(32,8))
+    colored.putdata([0 if max(c)-min(c)>55 else 11 if sum(c)//3<90 else 9 if sum(c)//3<135 else 7 if sum(c)//3<165 else 2 if sum(c)//3<190 else 1 for c in short.getdata()])
+    north_stairs=Image.new('P',(32,16));north_stairs.paste(colored,(0,8))
+    south_stairs=Image.new('P',(32,16));south_stairs.paste(colored,(0,0))
+    allocations['stairs']=dict(cells=[(x,0,metatile(north_stairs,x*16,0,7,primary[0x124*8:0x124*8+4])) for x in (0,1)],south_cells=[(x,0,metatile(south_stairs,x*16,0,7,ground_words[0x11C])) for x in (0,1)])
+    # A complete inward NE beach bend joins both adjacent shores at the landing.
+    allocations['marked-shore']=allocations['beach-inner']['inner-ne']
     out=io.BytesIO();canvas.save(out,format='PNG')
     files={'tiles.png':out.getvalue(),'metatiles.bin':struct.pack('<'+'H'*len(words),*words),'metatile_attributes.bin':bytes(attrs)}
     for bank in range(16):
