@@ -2,7 +2,7 @@
 import argparse,hashlib,json,re,struct,subprocess
 from pathlib import Path
 import numpy as np
-from prepare_world_route_chart import PRIOR,LAYER
+from prepare_lavender_harbor import PRIOR,LAYER
 from prepare_sevii_surf_connections import PRIOR as BASE
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -26,7 +26,7 @@ def audit(source,output):
     nm=subprocess.check_output([str(ROOT/'.local/arm-binutils/usr/bin/arm-none-eabi-nm'),'-S',str(source/'pokeemerald.elf')],text=True)
     symbols={n:(int(a,16)-0x08000000,int(z,16)) for a,z,_,n in re.findall(r'^(\w+) (\w+) (\w) (\S+)$',nm,re.M)};rom=(source/'pokeemerald.gba').read_bytes()
     at,z=symbols['sWorldNavigationPixels'];packed=np.frombuffer(rom[at:at+z],dtype='<u2');values=np.stack([packed&255,packed>>8],axis=1).astype(int)
-    assert len(values)==reports[-1]['gps']['compiled_gps_tiles']
+    assert len(values)==next(r['gps']['compiled_gps_tiles'] for r in reversed(reports) if 'gps' in r)
     projections=json.loads((source/'.journey-world-route-chart').read_text())['projections'];grids={};at,z=symbols['sWorldTileGrids'];stride=z//len(projections);maximum=0
     for i,p in enumerate(projections):
         first,ident,w,h=struct.unpack_from('<IHHH',rom,at+i*stride);assert [w,h]==[p['width'],p['height']]
@@ -52,6 +52,7 @@ def audit(source,output):
                port_buildings_boats_captains_and_warps_unchanged=True,native_sevii_land_unchanged=True,
                birth_and_navel_arrival_layout_preserved=True,
                compiled_gps_tiles=len(values),maximum_neighbor_pixel_step=maximum,maximum_seam_delta=0,compiled_shared_edges=seams,
+               lavender_terminal_replaced_by_separate_layer=True,
                full_campaign_playthrough=False)
     (output/'sevii-source-scope.json').write_text(json.dumps(proof,indent=2)+'\n');print('Sevii scope/GPS passed:',len(unchanged),'unchanged inputs;',len(changed),'changed files;',len(values),'GPS tiles')
     return proof

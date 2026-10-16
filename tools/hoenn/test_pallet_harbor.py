@@ -34,7 +34,7 @@ class PalletHarbor(unittest.TestCase):
             self.assertEqual(report['ship_sprite_size'], [96, 40])
             self.assertEqual(report['route21_atlas_seam_delta'], 0)
             self.assertEqual([t['destination'] for t in report['trips']],
-                             ['JourneyRoute12Shipyard', 'JourneyPalletHarbor'])
+                             ['JourneyLavenderHarbor', 'JourneyPalletHarbor'])
 
     def test_bridge_connection_boat_shift_and_network_id(self):
         self.assertEqual([[x,y] for x,y,_ in self.layout['preserved_bridge']],

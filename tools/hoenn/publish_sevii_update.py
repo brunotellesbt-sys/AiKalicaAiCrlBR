@@ -24,11 +24,17 @@ def publish(source,validation,output,pallet_validation,harbor_validation,chart_v
     add(pallet_validation/'validation/reproduction.json','common','pallet-reproduction')
     add(harbor_validation/'validation/sootopolis-harbor.json','common','sootopolis-harbor')
     add(chart_validation/'world-route-chart.json','common','world-route-chart')
+    if 'lavender-harbor' in info['integration_layers']:
+        lavender=ROOT/'mods/hoenn/lavender-harbor-validation'
+        info['lavender_harbor_validated']=True
+        add(lavender/'validation/lavender-harbor.json','common','lavender-harbor')
     for row in info['variants']:
         name=row['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba')
         for kind in ['sevii-surf-connections','special-encounters']:add(validation/name/(kind+'.json'),row['file'],kind)
         add(pallet_validation/name/'pallet-harbor.json',row['file'],'pallet-harbor')
         add(harbor_validation/name/'sootopolis-harbor.json',row['file'],'sootopolis-harbor')
+        if info.get('lavender_harbor_validated'):
+            add(lavender/name/'lavender-harbor.json',row['file'],'lavender-harbor')
     (output/'versions.json').write_text(json.dumps(info,indent=2)+'\n');verify(output,require_seal=False)
     info['validated']=True;(output/'versions.json').write_text(json.dumps(info,indent=2)+'\n');verify(output)
     archive=output/'Pokemon-Journey-Four-Editions.zip'

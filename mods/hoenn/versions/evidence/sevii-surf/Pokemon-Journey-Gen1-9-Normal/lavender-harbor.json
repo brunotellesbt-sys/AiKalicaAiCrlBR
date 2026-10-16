@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "rom_sha256": "db9135f804d84195daebca12cf1b1209f6e15e3046adcfe7051145ecdd4d6d6e",
+  "controller_entry_and_exit": true,
+  "captain_interacted_physically": true,
+  "outside_captain_removed": true,
+  "one_indoor_captain": true,
+  "ship_sprite_size": [
+    96,
+    40
+  ],
+  "ship_hull_blocked_over_water": true,
+  "network_arrivals_inside_terminal": true,
+  "save_continue_inside_terminal": true,
+  "returned_to_original_pier": true,
+  "old_lodge_exit_walked": true,
+  "trips": [
+    {
+      "destination": "JourneyPalletHarbor",
+      "arrival": [
+        16,
+        13
+      ],
+      "native_animation_observations": 18
+    },
+    {
+      "destination": "JourneyLavenderHarbor",
+      "arrival": [
+        16,
+        13
+      ],
+      "native_animation_observations": 18
+    }
+  ],
+  "initial_story_state_and_first_placement_are_fixtures": true,
+  "full_campaign_playthrough": false
+}
