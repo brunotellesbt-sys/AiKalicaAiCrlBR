@@ -67,31 +67,31 @@ mesmo prédio de Pallet e atendimento da rede geral dentro do porto.
 
 ## One Island
 
-![One Island](images/port-update/OneIsland_Harbor_Frlg.png)
+![One Island](images/sevii-harbors/OneIsland_Harbor_Frlg.png)
 
 ## Two Island
 
-![Two Island](images/port-update/TwoIsland_Harbor_Frlg.png)
+![Two Island](images/sevii-harbors/TwoIsland_Harbor_Frlg.png)
 
 ## Three Island
 
-![Three Island](images/port-update/ThreeIsland_Harbor_Frlg.png)
+![Three Island](images/sevii-harbors/ThreeIsland_Harbor_Frlg.png)
 
 ## Four Island
 
-![Four Island](images/port-update/FourIsland_Harbor_Frlg.png)
+![Four Island](images/sevii-harbors/FourIsland_Harbor_Frlg.png)
 
 ## Five Island
 
-![Five Island](images/port-update/FiveIsland_Harbor_Frlg.png)
+![Five Island](images/sevii-harbors/FiveIsland_Harbor_Frlg.png)
 
 ## Six Island
 
-![Six Island](images/port-update/SixIsland_Harbor_Frlg.png)
+![Six Island](images/sevii-harbors/SixIsland_Harbor_Frlg.png)
 
 ## Seven Island
 
-![Seven Island](images/port-update/SevenIsland_Harbor_Frlg.png)
+![Seven Island](images/sevii-harbors/SevenIsland_Harbor_Frlg.png)
 
 ## Sala do Rotom
 

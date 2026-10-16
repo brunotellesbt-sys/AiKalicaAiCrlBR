@@ -36,6 +36,9 @@ def package(source,output):
  elif (source/'.journey-mossdeep-harbor').exists():
   from prepare_mossdeep_harbor import PRIOR,LAYER
   r['integration_layers']=PRIOR+[LAYER]
+ elif (source/'.journey-sevii-harbors').exists():
+  from prepare_sevii_harbors import PRIOR,LAYER
+  r['integration_layers']=PRIOR+[LAYER]
  elif (source/'.journey-three-harbor-terminals').exists():
   from prepare_three_harbor_terminals import PRIOR,LAYER
   r['integration_layers']=PRIOR+[LAYER]
