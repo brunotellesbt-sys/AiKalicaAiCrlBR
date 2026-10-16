@@ -4,7 +4,7 @@ from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
 from render_sea_maps import MapRenderer
 BOXES={
- 'PalletTown_Frlg':('Pallet',(0,12,26,30)), 'Route19_Frlg':('Fuchsia / Route 19',(4,7,17,20)),
+ 'PalletTown_Frlg':('Pallet',(0,12,26,30)), 'Route19_Frlg':('Fuchsia / Route 19',(0,7,18,23)),
  'VermilionCity_Frlg':('Vermilion',(29,23,40,36)),
  'MossdeepCity':('Mossdeep - ilha oeste',(0,23,12,36)), 'CinnabarIsland_Frlg':('Cinnabar',(6,9,16,20)),
  'Route25_Frlg':('Route 25',(58,7,71,18)), 'JourneyRoute12Shipyard':('Lavender',(16,32,40,46)),
@@ -16,7 +16,7 @@ BOXES={
 
 def gallery(source,output):
  source=Path(source);output=Path(output);output.mkdir(parents=True,exist_ok=True);r=MapRenderer(source);records=[]
- boats={'OBJ_EVENT_GFX_MR_BRINEYS_BOAT','OBJ_EVENT_GFX_SS_TIDAL','OBJ_EVENT_GFX_SEAGALLOP','OBJ_EVENT_GFX_JOURNEY_SUBMARINE','OBJ_EVENT_GFX_JOURNEYSEVIIBOAT','OBJ_EVENT_GFX_JOURNEYPETALBURGBOAT'}
+ boats={'OBJ_EVENT_GFX_SEAGALLOP','OBJ_EVENT_GFX_MR_BRINEYS_BOAT','OBJ_EVENT_GFX_SS_TIDAL','OBJ_EVENT_GFX_SEAGALLOP','OBJ_EVENT_GFX_JOURNEY_SUBMARINE','OBJ_EVENT_GFX_JOURNEYSEVIIBOAT','OBJ_EVENT_GFX_JOURNEYPETALBURGBOAT'}
  for n,(title,box) in BOXES.items():
   im,m=r.render(n,npcs=False)
   for o in sorted(m['object_events'],key=lambda o:o['y']):

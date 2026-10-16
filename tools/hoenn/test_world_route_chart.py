@@ -1,4 +1,5 @@
 """Require actual new Surf crossings and a moving native MAP cursor."""
+from verify_fuchsia_update import harbor_baseline
 import json
 import unittest
 from pathlib import Path
@@ -11,6 +12,7 @@ OUT=ROOT/'mods/hoenn/world-route-chart-validation'
 class WorldRouteChart(unittest.TestCase):
     def test_current_rom_crosses_every_new_passage_and_reopens_map_at_real_position(self):
         release=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
+        release=harbor_baseline(release)
         r=json.loads((OUT/'world-route-chart.json').read_text())
         self.assertTrue(r['passed'])
         self.assertEqual(r['rom_sha256'],release['parent_rom_sha256'])

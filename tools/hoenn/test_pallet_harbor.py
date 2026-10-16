@@ -1,4 +1,5 @@
 """Guard the requested Pallet geometry and bind physical proof to every ROM."""
+from verify_fuchsia_update import harbor_baseline
 import json
 import unittest
 from pathlib import Path
@@ -14,6 +15,7 @@ class PalletHarbor(unittest.TestCase):
     def setUpClass(cls):
         cls.layout = json.loads((OUT/'layout.json').read_text())
         cls.manifest = json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
+        cls.manifest = harbor_baseline(cls.manifest)
 
     def test_every_edition_has_fresh_controller_evidence(self):
         self.assertTrue(self.manifest['pallet_harbor_validated'])

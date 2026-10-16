@@ -1,0 +1,596 @@
+{
+  "layer": "fuchsia-harbor",
+  "exterior": "Route19_Frlg",
+  "interior": "JourneyFuchsiaHarbor",
+  "terminal": [
+    1,
+    10,
+    7,
+    6
+  ],
+  "door": [
+    4,
+    15
+  ],
+  "quay": [
+    [
+      1,
+      16
+    ],
+    [
+      2,
+      16
+    ],
+    [
+      3,
+      16
+    ],
+    [
+      4,
+      16
+    ],
+    [
+      5,
+      16
+    ],
+    [
+      6,
+      16
+    ],
+    [
+      7,
+      16
+    ],
+    [
+      8,
+      16
+    ],
+    [
+      7,
+      18
+    ],
+    [
+      8,
+      18
+    ]
+  ],
+  "world_port_id": 20,
+  "captain": [
+    16,
+    12
+  ],
+  "arrival": [
+    16,
+    13
+  ],
+  "outside_boat": {
+    "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP",
+    "x": 4,
+    "y": 19,
+    "elevation": 1,
+    "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+    "movement_range_x": 0,
+    "movement_range_y": 0,
+    "trainer_type": "TRAINER_TYPE_NONE",
+    "trainer_sight_or_berry_tree_id": "0",
+    "script": "JourneyCompactPort_Boat",
+    "flag": "0"
+  },
+  "outside_boat_sprite_size": [
+    64,
+    64
+  ],
+  "outside_hull": [
+    [
+      2,
+      17
+    ],
+    [
+      2,
+      18
+    ],
+    [
+      2,
+      19
+    ],
+    [
+      3,
+      17
+    ],
+    [
+      3,
+      18
+    ],
+    [
+      3,
+      19
+    ],
+    [
+      4,
+      17
+    ],
+    [
+      4,
+      18
+    ],
+    [
+      4,
+      19
+    ],
+    [
+      5,
+      17
+    ],
+    [
+      5,
+      18
+    ],
+    [
+      5,
+      19
+    ],
+    [
+      6,
+      17
+    ],
+    [
+      6,
+      18
+    ],
+    [
+      6,
+      19
+    ]
+  ],
+  "inside_ship_sprite_size": [
+    96,
+    40
+  ],
+  "hull": [
+    [
+      7,
+      8
+    ],
+    [
+      7,
+      9
+    ],
+    [
+      8,
+      7
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      7
+    ],
+    [
+      9,
+      8
+    ],
+    [
+      9,
+      9
+    ],
+    [
+      10,
+      7
+    ],
+    [
+      10,
+      8
+    ],
+    [
+      10,
+      9
+    ],
+    [
+      11,
+      7
+    ],
+    [
+      11,
+      8
+    ],
+    [
+      11,
+      9
+    ],
+    [
+      12,
+      7
+    ],
+    [
+      12,
+      8
+    ],
+    [
+      12,
+      9
+    ],
+    [
+      13,
+      8
+    ],
+    [
+      13,
+      9
+    ]
+  ],
+  "removed_clipped_rock": [
+    [
+      5,
+      9,
+      1288
+    ],
+    [
+      6,
+      9,
+      1289
+    ]
+  ],
+  "changed_terrain": [
+    [
+      5,
+      9
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      9,
+      9
+    ],
+    [
+      10,
+      9
+    ],
+    [
+      11,
+      9
+    ],
+    [
+      12,
+      9
+    ],
+    [
+      13,
+      9
+    ],
+    [
+      1,
+      10
+    ],
+    [
+      2,
+      10
+    ],
+    [
+      3,
+      10
+    ],
+    [
+      4,
+      10
+    ],
+    [
+      5,
+      10
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      7,
+      10
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      10,
+      10
+    ],
+    [
+      11,
+      10
+    ],
+    [
+      12,
+      10
+    ],
+    [
+      13,
+      10
+    ],
+    [
+      1,
+      11
+    ],
+    [
+      2,
+      11
+    ],
+    [
+      3,
+      11
+    ],
+    [
+      4,
+      11
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      6,
+      11
+    ],
+    [
+      7,
+      11
+    ],
+    [
+      9,
+      11
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      11,
+      11
+    ],
+    [
+      12,
+      11
+    ],
+    [
+      13,
+      11
+    ],
+    [
+      1,
+      12
+    ],
+    [
+      2,
+      12
+    ],
+    [
+      3,
+      12
+    ],
+    [
+      4,
+      12
+    ],
+    [
+      5,
+      12
+    ],
+    [
+      6,
+      12
+    ],
+    [
+      7,
+      12
+    ],
+    [
+      1,
+      13
+    ],
+    [
+      2,
+      13
+    ],
+    [
+      3,
+      13
+    ],
+    [
+      4,
+      13
+    ],
+    [
+      5,
+      13
+    ],
+    [
+      6,
+      13
+    ],
+    [
+      7,
+      13
+    ],
+    [
+      1,
+      14
+    ],
+    [
+      2,
+      14
+    ],
+    [
+      3,
+      14
+    ],
+    [
+      4,
+      14
+    ],
+    [
+      5,
+      14
+    ],
+    [
+      6,
+      14
+    ],
+    [
+      7,
+      14
+    ],
+    [
+      1,
+      15
+    ],
+    [
+      2,
+      15
+    ],
+    [
+      3,
+      15
+    ],
+    [
+      4,
+      15
+    ],
+    [
+      5,
+      15
+    ],
+    [
+      6,
+      15
+    ],
+    [
+      7,
+      15
+    ],
+    [
+      1,
+      16
+    ],
+    [
+      2,
+      16
+    ],
+    [
+      3,
+      16
+    ],
+    [
+      4,
+      16
+    ],
+    [
+      5,
+      16
+    ],
+    [
+      6,
+      16
+    ],
+    [
+      7,
+      16
+    ],
+    [
+      2,
+      17
+    ],
+    [
+      3,
+      17
+    ],
+    [
+      2,
+      18
+    ],
+    [
+      3,
+      18
+    ],
+    [
+      4,
+      18
+    ],
+    [
+      5,
+      18
+    ],
+    [
+      6,
+      18
+    ],
+    [
+      7,
+      18
+    ],
+    [
+      8,
+      18
+    ],
+    [
+      2,
+      19
+    ],
+    [
+      3,
+      19
+    ],
+    [
+      4,
+      19
+    ],
+    [
+      5,
+      19
+    ],
+    [
+      6,
+      19
+    ]
+  ],
+  "one_indoor_captain": true,
+  "outside_captain_removed": true,
+  "existing_trainers_preserved": true,
+  "shore_and_mountains_preserved": true,
+  "old_lodge_exit_preserved": true,
+  "copied_from": "PalletTown_Frlg / JourneyPalletHarbor",
+  "surface_connections_preserved": true,
+  "original_sha256": {
+    "data/tilesets/secondary/fuchsia_city_frlg/tiles.png": "cc6e18d600d4d90d91ed44e0293ab2f118d3b882fc7111d5a091b42af2902bff",
+    "data/tilesets/secondary/fuchsia_city_frlg/metatiles.bin": "5b89b30171a4d83f154def00ce05007fbb30b731b3e566f752c807962590ada6",
+    "data/tilesets/secondary/fuchsia_city_frlg/metatile_attributes.bin": "42aa02237596ac43bcaeede2311cff740d8a4550ae2565b65d8ac357c328b0e4",
+    "data/layouts/Route19_Frlg/map.bin": "a60f0f8c7d491966748df1efd1922a29a4268ccdbe9492477391901ed11b5fc6",
+    "data/maps/Route19_Frlg/map.json": "aa26e8e5b6537fdf1f5e8c652bbc5305b514c2ac9f55dc1f280ab2bbda753a8d",
+    "data/maps/JourneyRoute19PortLodge/map.json": "30dcb9332a3f85a6734e86d60d8a58c829e617945a3f362aa98a0720ed3112b7",
+    "data/layouts/layouts.json": "1d9a067200a20591cc62d7c705b13b910e7ed4d19ea9875ba7ff59994358cd34",
+    "data/maps/map_groups.json": "935740bf28903583d4e2d060c040b17bf348b2518c17d99ffa65f244b7c8ceb8",
+    "data/event_scripts.s": "e956df70543bf5cfb3b860b3d932020e2ff0f66c914bd280bce34e44698e5525",
+    "data/scripts/journey_campaign_gates.inc": "55cd2faa52e12efd2eb84708be7ceac4535bfcf6d24b415b0f303777d74db8a0"
+  },
+  "prepared_sha256": {
+    "data/tilesets/secondary/fuchsia_city_frlg/tiles.png": "8d0f9e89bbd828eff6f62c3bd0f93df46340a2af20ab4e369f9341550c17b0f3",
+    "data/tilesets/secondary/fuchsia_city_frlg/metatiles.bin": "e49f054272764b297dda8658c2cb22e3472d8aae7db04485ddaeda1f9c154cb9",
+    "data/tilesets/secondary/fuchsia_city_frlg/metatile_attributes.bin": "2d4e1a6cfb8ad209491e4fe57a736d302c8cfbcb57cceda4ca181a2812176729",
+    "data/layouts/Route19_Frlg/map.bin": "c7cc839c80bded49968e968a8a7e81544e9ca8980c67f24bdcb6c87a6ce5a9be",
+    "data/maps/Route19_Frlg/map.json": "d26f9afe018e9a46d10f117f103a30c1981c5691a4451a6934ac5e28e1dc603c",
+    "data/layouts/JourneyFuchsiaHarbor/map.bin": "ec418c60c4f5cac3eb4ee9e2a29e1f48709e552411f67086a5352945001afcbc",
+    "data/layouts/JourneyFuchsiaHarbor/border.bin": "9ff63640fa3b4682056532b7924b03250ccc7a832f64ccec3dea79ea8595a24d",
+    "data/maps/JourneyFuchsiaHarbor/map.json": "ba8db0de84e5b5dffff97145805875d7bb8b0b3b5188211b59a7bd90a31176ba",
+    "data/maps/JourneyFuchsiaHarbor/scripts.inc": "7cdf22066cfc0c755ee193b041d4cd1d911b0488e3e86163450786d74f1ee73f",
+    "data/maps/JourneyRoute19PortLodge/map.json": "42bc27868e63d799e25dc567b96fcd5ec46a940a2f275c330f9a0dd7ba1dc80e",
+    "data/layouts/layouts.json": "85329e66ccc0af56a3439def3b83870c8045d486014dea2ff7f99103305a547a",
+    "data/maps/map_groups.json": "ba436f678feab69113f0081684c088cf0865f0d23a57d9da1fa46f651b9ee0df",
+    "data/event_scripts.s": "b9fe29ade2c67ee37a3b773d87b86e698653ecb5b9bec4bb161aea1aad423ec6",
+    "data/scripts/journey_campaign_gates.inc": "399646fcb9ae731e195f025e953a4b7adb354a5e960d7732e1ce5e5a5886c5f6"
+  }
+}

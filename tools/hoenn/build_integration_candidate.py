@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 
 import package_playable
-from prepare_lavender_harbor import PRIOR, LAYER
+from prepare_fuchsia_harbor import PRIOR, LAYER
 
 
 def main():

@@ -46,3 +46,5 @@ As imagens da sala mostram os objetos cadastrados no mapa. No jogo, os personage
 Veja os [resultados e limites dos testes](../mods/hoenn/INTEGRATION-STATUS.md). Os atributos extremos vistos em algumas capturas de testes são preparados apenas na memória do emulador, não nos base stats da ROM. A auditoria dos atributos abrange 1.571 espécies/formas e as Megas da referência; os registros incluem 318 habilidades e 870 itens.
 
 - [Balanceamento e correções do PWT](pwt-balanceamento.md).
+
+[Porto de Fuchsia: terminal de Slateport e barco médio](porto-fuchsia.md).
