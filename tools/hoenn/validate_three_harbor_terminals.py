@@ -16,6 +16,10 @@ for p in layout['ports']:
     assert len(room['object_events'])==2
     warp(name,*p['start']);native('SetPlayerAvatarTransitionFlags',1);step(30)
     for xy in p['walk']:walk_to(*xy)
+    if p['pid']==19:
+        walk_to(6,15);walk_to(*p['walk'][-1])
+    if p['pid']==21:
+        walk_to(64,15);walk_to(*p['walk'][-1])
     assert not lib.read8(s['gPlayerAvatar']) & 8
     picture(tag+'-front')
     for x,y in p['outside_hull']:
@@ -60,9 +64,9 @@ for p in layout['ports']:
         assert location()==map_id('Route104_MrBrineysHouse') and idle()
         picture('Petalburg-Briney-local-room')
         change_map(128,name)
-        assert position()==(17,51)
+        assert position()==(16,51)
         picture('Petalburg-Briney-exit')
-    records.append(dict(name=p['name'],exterior=name,interior=inside,pid=p['pid'],terminal=p['terminal'],
+    records.append(dict(name=p['name'],exterior=name,interior=inside,pid=p['pid'],terminal=p['terminal'],door=p['door'],pier_extension=p['pier_extension'],
         controller_entry_and_exit=True,quay_walked_without_surf=True,one_indoor_captain=True,
         medium_boat_hull_blocked_over_water=True,inside_ship_hull_blocked_over_water=True,
         captain_interacted_physically=True,network_arrival_inside=True,save_continue_inside=True,

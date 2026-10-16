@@ -21,12 +21,12 @@ PORTS=[
          start=[13,13],walk=[[11,13],[11,15],[7,15]],return_walk=[[11,15],[11,13],[13,13]],
          crop=[0,7,24,20],legacy='JourneyCinnabarSailorsLodge'),
     dict(name='Cerulean Port',exterior='Route25_Frlg',interior='JourneyCeruleanHarbor',
-         map_id='MAP_JOURNEY_CERULEAN_HARBOR',pid=21,terminal=[61,6,6,4],door=[64,9],boat=[68,12],
+         map_id='MAP_JOURNEY_CERULEAN_HARBOR',pid=21,terminal=[61,6,7,4],door=[64,9],boat=[68,12],
          start=[60,10],walk=[[64,10]],return_walk=[[60,10]],
          crop=[50,1,72,20]),
     dict(name='Petalburg Coast',exterior='Route104',interior='JourneyPetalburgHarbor',
-         map_id='MAP_JOURNEY_PETALBURG_HARBOR',pid=12,terminal=[15,47,5,4],door=[17,50],boat=[8,51],
-         start=[18,52],walk=[[17,52],[17,51]],return_walk=[[17,52],[18,52]],
+         map_id='MAP_JOURNEY_PETALBURG_HARBOR',pid=12,terminal=[13,47,7,4],door=[16,50],boat=[8,51],
+         start=[18,52],walk=[[16,52],[16,51]],return_walk=[[16,52],[18,52]],
          crop=[3,44,24,59]),
 ]
 
@@ -123,7 +123,9 @@ def prepare(source):
                 value=facade[y*tw+x]
                 put(tx+x,ty+y,custom_wall[x] if y==2 and x in custom_wall else (value&~1023)|ids[value&1023])
         if name=='CinnabarIsland_Frlg':
-            deck(7,11,15)
+            deck(6,11,15)
+        elif name=='Route25_Frlg':
+            for y in range(12,16):deck(64,65,y)
         # Cerulean uses its existing pier, and Petalburg keeps Briney's
         # original deck, boat and the entire rival arrival corridor.
         captain=next(o for o in m['object_events'] if o['script']=='Journey_FerryPort'+str(config['pid']))
@@ -139,9 +141,16 @@ def prepare(source):
             put(x,y,v[y*w+x]|0x400)
         if name=='Route104':
             rival=next(o for o in m['object_events'] if o['script']=='Route104_EventScript_Rival')
-            rival.update(x=17,y=52)  # Same waiting tile selected by the native transition script.
+            rival.update(x=16,y=50)  # Hidden native actor exits through the centered door.
+            for event in m['coord_events']:
+                if event['script']=='Route104_EventScript_RivalTrigger':event['x']=16
+            path='data/maps/Route104/scripts.inc'
+            native_script=(s/path).read_text()
+            old_pos='setobjectxyperm LOCALID_ROUTE104_RIVAL, 17, 52'
+            assert native_script.count(old_pos)==1
+            layer.stage(path,native_script.replace(old_pos,'setobjectxyperm LOCALID_ROUTE104_RIVAL, 16, 52'))
         occupied={(x,y) for y in range(ty,ty+th) for x in range(tx,tx+tw)}|set(hull)
-        assert all((o['x'],o['y']) not in occupied for o in m['object_events'] if o is not boat),(name,'Existing NPC covered')
+        assert all((o['x'],o['y']) not in occupied for o in m['object_events'] if o is not boat and not (o['script']=='Route104_EventScript_Rival' and o['flag']=='FLAG_HIDE_ROUTE_104_RIVAL')),(name,'Existing NPC covered')
         if config.get('legacy'):
             warp=next(w for w in m['warp_events'] if w['dest_map']=='MAP_JOURNEYCINNABARSAILORSLODGE')
             index=m['warp_events'].index(warp)
@@ -150,7 +159,7 @@ def prepare(source):
             layer.stage(f'data/maps/{config["legacy"]}/map.json',json.dumps(old,indent=2)+'\n')
         elif name=='Route104':
             index=0
-            m['warp_events'][index].update(dest_map=config['map_id'],dest_warp_id='0')
+            m['warp_events'][index].update(x=config['door'][0],y=config['door'][1],dest_map=config['map_id'],dest_warp_id='0')
         else:
             index=len(m['warp_events'])
             m['warp_events'].append(dict(x=config['door'][0],y=config['door'][1],elevation=0,dest_map=config['map_id'],dest_warp_id='0'))
@@ -176,7 +185,7 @@ def prepare(source):
         for var,value in [('0x8009',ARRIVAL[0]),('0x800A',ARRIVAL[1])]:
             chunk,count=re.subn(r'(setvar VAR_'+var+r', )\d+',lambda m:m[1]+str(value),chunk);assert count==1
         scripts=scripts[:a]+chunk+scripts[b:]
-        config.update(captain=list(CAPTAIN),arrival=list(ARRIVAL),door_warp=index,
+        config.update(pier_extension=([[x,y] for y in range(12,16) for x in (64,65)] if name=='Route25_Frlg' else [[6,15]] if name=='CinnabarIsland_Frlg' else []),captain=list(CAPTAIN),arrival=list(ARRIVAL),door_warp=index,
             outside_hull=[list(p) for p in hull],inside_hull=json.loads((s/'.journey-pallet-harbor').read_text())['hull'],
             removed_whole_rocks=removed_rocks,changed_terrain=[[i%w,i//w] for i,(a,b) in enumerate(zip(before,v)) if a!=b],
             original_boat=old_boat,medium_boat_sprite_size=[64,64],inside_ship_sprite_size=[96,40])

@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "rom_sha256": "c5a40f46f46e749ab834a800791844a086708f5a93ce38257152d1a66e79e976",
+  "rom_sha256": "9df9436f85329826354c44d9840b072b23d28371bf7ef09fd6c9c5c95d3ef8e9",
   "ports": [
     {
       "name": "Cinnabar",
@@ -12,6 +12,16 @@
         11,
         7,
         4
+      ],
+      "door": [
+        7,
+        14
+      ],
+      "pier_extension": [
+        [
+          6,
+          15
+        ]
       ],
       "controller_entry_and_exit": true,
       "quay_walked_without_surf": true,
@@ -50,8 +60,46 @@
       "terminal": [
         61,
         6,
-        6,
+        7,
         4
+      ],
+      "door": [
+        64,
+        9
+      ],
+      "pier_extension": [
+        [
+          64,
+          12
+        ],
+        [
+          65,
+          12
+        ],
+        [
+          64,
+          13
+        ],
+        [
+          65,
+          13
+        ],
+        [
+          64,
+          14
+        ],
+        [
+          65,
+          14
+        ],
+        [
+          64,
+          15
+        ],
+        [
+          65,
+          15
+        ]
       ],
       "controller_entry_and_exit": true,
       "quay_walked_without_surf": true,
@@ -88,11 +136,16 @@
       "interior": "JourneyPetalburgHarbor",
       "pid": 12,
       "terminal": [
-        15,
+        13,
         47,
-        5,
+        7,
         4
       ],
+      "door": [
+        16,
+        50
+      ],
+      "pier_extension": [],
       "controller_entry_and_exit": true,
       "quay_walked_without_surf": true,
       "one_indoor_captain": true,

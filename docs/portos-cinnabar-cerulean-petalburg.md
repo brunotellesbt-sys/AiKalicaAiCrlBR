@@ -5,8 +5,8 @@ As fachadas vermelhas de Slateport ocupam os limites indicados pelo jogador:
 | Porto | Canto superior esquerdo | Canto inferior direito |
 |---|---|---|
 | Cinnabar | `(4,11)` | `(10,14)` |
-| Cerulean Port / Rota 25 | `(61,6)` | `(66,9)` |
-| Petalburg Coast / Rota 104 | `(15,47)` | `(19,50)` |
+| Cerulean Port / Rota 25 | `(61,6)` | `(67,9)` |
+| Petalburg Coast / Rota 104 | `(13,47)` | `(19,50)` |
 
 As fachadas têm quatro tiles de altura, com telhado, porta e janelas completas.
 Cada terminal possui um interior com o S.S. Tidal grande, um barqueiro da rede
@@ -16,7 +16,7 @@ mundial e um barco médio Seagallop junto à ponte externa.
 
 ![Cinnabar](images/three-harbors/CinnabarIsland_Frlg.png)
 
-A porta está em `(7,14)`, ligada à ponte existente por uma faixa de madeira.
+A porta está em `(7,14)`, ligada à ponte existente por uma faixa de madeira que avança um tile à esquerda da porta.
 O terreno da antiga casa foi restaurado onde ficou descoberto, e o acesso
 ao laboratório, Centro Pokémon e Mart permanece livre. As pedras do mar
 continuam completas. Saves na antiga casa ainda saem pelo acesso do porto.
@@ -26,6 +26,7 @@ continuam completas. Saves na antiga casa ainda saem pelo acesso do porto.
 ![Cerulean Port](images/three-harbors/Route25_Frlg.png)
 
 O terminal fica acima da ponte existente, com a porta em `(64,9)`.
+As duas colunas finais da ponte, em `x=64..65`, avançam quatro tiles para baixo, de `y=12` a `y=15`.
 O barco médio está na água à direita da ponte. A casa de Bill e os
 personagens da rota mantêm seus acessos.
 
@@ -34,10 +35,10 @@ personagens da rota mantêm seus acessos.
 ![Petalburg Coast](images/three-harbors/Route104.png)
 
 O terminal ocupa o lugar indicado para a casa do Mr. Briney, com a porta
-original em `(17,50)`. A ponte, o barco local, Peeko e os eventos nativos
+centralizada em `(16,50)`; a ampliação ocupa dois tiles a mais à esquerda. A ponte, o barco local, Peeko e os eventos nativos
 continuam disponíveis. O capitão do terminal oferece os portos mundiais e
 `LOCAL SERVICES`, que dá acesso à sala original do Mr. Briney. O rival
-aguarda em `(17,52)`, o mesmo ponto definido pelo script nativo de chegada.
+aguarda em `(16,52)`, alinhado à nova porta pelo script de chegada e seu gatilho.
 O barco médio da rede fica na água a oeste da ponte existente.
 
 ## Interior dos três terminais

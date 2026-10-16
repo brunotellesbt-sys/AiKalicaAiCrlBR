@@ -77,4 +77,4 @@ Terminal de Slateport sobre a água no oeste, barco médio junto à ponte e um �
 
 ## Cinnabar, Cerulean e Petalburg
 
-A camada `three-harbor-terminals` sucede `fuchsia-harbor`. Fachadas nos limites pedidos: Cinnabar `(4,11)..(10,14)`, Cerulean `(61,6)..(66,9)` e Petalburg `(15,47)..(19,50)`. Cada porto tem navio grande, um capitão interno e barco médio exterior. Vermilion, Pacifidlog, outros portos e atlas preservados. Os serviços locais do Mr. Briney continuam pela sala nativa. [Imagens, acessos e validação](../../docs/portos-cinnabar-cerulean-petalburg.md).
+A camada `three-harbor-terminals` sucede `fuchsia-harbor`. Fachadas nos limites pedidos: Cinnabar `(4,11)..(10,14)`, Cerulean `(61,6)..(67,9)` e Petalburg `(13,47)..(19,50)`. A porta de Petalburg está centralizada em `(16,50)`, com o evento do rival alinhado. A ponte de Cerulean avança quatro tiles para baixo nas duas colunas finais. Cada porto tem navio grande, um capitão interno e barco médio exterior. Vermilion, Pacifidlog, outros portos e atlas preservados. Os serviços locais do Mr. Briney continuam pela sala nativa. [Imagens, acessos e validação](../../docs/portos-cinnabar-cerulean-petalburg.md).

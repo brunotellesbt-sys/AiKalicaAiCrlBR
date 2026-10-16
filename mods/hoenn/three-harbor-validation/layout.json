@@ -60,6 +60,12 @@
         20
       ],
       "legacy": "JourneyCinnabarSailorsLodge",
+      "pier_extension": [
+        [
+          6,
+          15
+        ]
+      ],
       "captain": [
         16,
         12
@@ -340,6 +346,10 @@
           14
         ],
         [
+          6,
+          15
+        ],
+        [
           7,
           15
         ],
@@ -427,7 +437,7 @@
       "terminal": [
         61,
         6,
-        6,
+        7,
         4
       ],
       "door": [
@@ -459,6 +469,40 @@
         1,
         72,
         20
+      ],
+      "pier_extension": [
+        [
+          64,
+          12
+        ],
+        [
+          65,
+          12
+        ],
+        [
+          64,
+          13
+        ],
+        [
+          65,
+          13
+        ],
+        [
+          64,
+          14
+        ],
+        [
+          65,
+          14
+        ],
+        [
+          64,
+          15
+        ],
+        [
+          65,
+          15
+        ]
       ],
       "captain": [
         16,
@@ -636,6 +680,10 @@
           6
         ],
         [
+          67,
+          6
+        ],
+        [
           61,
           7
         ],
@@ -660,6 +708,10 @@
           7
         ],
         [
+          67,
+          7
+        ],
+        [
           61,
           8
         ],
@@ -684,6 +736,10 @@
           8
         ],
         [
+          67,
+          8
+        ],
+        [
           61,
           9
         ],
@@ -705,6 +761,10 @@
         ],
         [
           66,
+          9
+        ],
+        [
+          67,
           9
         ],
         [
@@ -738,6 +798,22 @@
         [
           66,
           13
+        ],
+        [
+          64,
+          14
+        ],
+        [
+          65,
+          14
+        ],
+        [
+          64,
+          15
+        ],
+        [
+          65,
+          15
         ]
       ],
       "original_boat": {
@@ -769,13 +845,13 @@
       "map_id": "MAP_JOURNEY_PETALBURG_HARBOR",
       "pid": 12,
       "terminal": [
-        15,
+        13,
         47,
-        5,
+        7,
         4
       ],
       "door": [
-        17,
+        16,
         50
       ],
       "boat": [
@@ -788,17 +864,17 @@
       ],
       "walk": [
         [
-          17,
+          16,
           52
         ],
         [
-          17,
+          16,
           51
         ]
       ],
       "return_walk": [
         [
-          17,
+          16,
           52
         ],
         [
@@ -812,6 +888,7 @@
         24,
         59
       ],
+      "pier_extension": [],
       "captain": [
         16,
         12
@@ -964,6 +1041,14 @@
       "removed_whole_rocks": [],
       "changed_terrain": [
         [
+          13,
+          47
+        ],
+        [
+          14,
+          47
+        ],
+        [
           15,
           47
         ],
@@ -982,6 +1067,14 @@
         [
           19,
           47
+        ],
+        [
+          13,
+          48
+        ],
+        [
+          14,
+          48
         ],
         [
           15,
@@ -1013,6 +1106,14 @@
         ],
         [
           8,
+          49
+        ],
+        [
+          13,
+          49
+        ],
+        [
+          14,
           49
         ],
         [
@@ -1049,6 +1150,14 @@
         ],
         [
           10,
+          50
+        ],
+        [
+          13,
+          50
+        ],
+        [
+          14,
           50
         ],
         [
@@ -1135,6 +1244,7 @@
     "data/tilesets/secondary/rustboro/tiles.png": "87b3ce4e15674b3ef02b1793df0bc8633b7c49bf4443cb50708293615b048d24",
     "data/tilesets/secondary/rustboro/metatiles.bin": "2e5daf7451ac4a3a003ce569e2132dccefe00b618f3e5763d45b2cef480b3274",
     "data/tilesets/secondary/rustboro/metatile_attributes.bin": "1c3c55c0f4643722502a895997545c6b2a9186863eaf13ff1f522e8077f73a4f",
+    "data/maps/Route104/scripts.inc": "66a308b973b9c39331f141fd8eff010f9162dd018d6d6babbbf692f8c7c7bf88",
     "data/layouts/Route104/map.bin": "ddfc3d781ce387a10e5f2485126cd6495656acf3e5b3abf016d4e6708c13f970",
     "data/maps/Route104/map.json": "d7b7524ebea6a04030b5b6a56f2a211344fececbcc99374719417079668ee3b1",
     "data/layouts/layouts.json": "85329e66ccc0af56a3439def3b83870c8045d486014dea2ff7f99103305a547a",
@@ -1147,26 +1257,27 @@
     "data/tilesets/secondary/cinnabar_island_frlg/metatiles.bin": "aeb984f214d3ccd24e4a2130bfb8962f5f3a1636a2236d549e3d8f0be4374c35",
     "data/tilesets/secondary/cinnabar_island_frlg/metatile_attributes.bin": "265fe377e1444d4480eb2f43405b6a8691fa97cc3fa473f3136005bec4f027fa",
     "data/maps/JourneyCinnabarSailorsLodge/map.json": "2d67eec74a1558ad3c5f60ad098f3cb8fedb46279d865e49662d3d7daf019ee0",
-    "data/layouts/CinnabarIsland_Frlg/map.bin": "5d7055015687e1d3d4fe5d517cb211fb64fc52197a496d2b20d1b6da0dc08a34",
+    "data/layouts/CinnabarIsland_Frlg/map.bin": "a8677e384f07ea48e9a563abe39ed5555791689697ecd08a2a3910206cd7d228",
     "data/maps/CinnabarIsland_Frlg/map.json": "a784bcf2d0f70dfc0087dddfe2500703f0fd8b1c49656608fc273f5f0f30e444",
     "data/layouts/JourneyCinnabarHarbor/map.bin": "ec418c60c4f5cac3eb4ee9e2a29e1f48709e552411f67086a5352945001afcbc",
     "data/layouts/JourneyCinnabarHarbor/border.bin": "9ff63640fa3b4682056532b7924b03250ccc7a832f64ccec3dea79ea8595a24d",
     "data/maps/JourneyCinnabarHarbor/map.json": "0c585501e1925090c4a137fefc61be59c1ac4549ae8709765398104cf549b6a0",
     "data/maps/JourneyCinnabarHarbor/scripts.inc": "d045580b5ff7c52a0e63bb8753d3b02caf9c04d3a52d3d12dc1d0784bc96c10c",
     "data/tilesets/secondary/cerulean_city_frlg/tiles.png": "4039052bdc5210d638d13539a7bbfb29a043a13848cb4ddc6a0a15a279854be3",
-    "data/tilesets/secondary/cerulean_city_frlg/metatiles.bin": "3143507b47ef74264a31e09fe3317d40adb2b58b07b4aa889bf9c3023a6af1d3",
-    "data/tilesets/secondary/cerulean_city_frlg/metatile_attributes.bin": "211b2e1f19c2721e7da602d7583568cdf77b8c19001a8bc1ef2366ab5935416c",
-    "data/layouts/Route25_Frlg/map.bin": "32bb73192b44fafe1653dc412425f451330a12ec5faab3229439a7c75ffa8ac4",
+    "data/tilesets/secondary/cerulean_city_frlg/metatiles.bin": "8b812837b0befda933a11c1a7920f85989fbb5c7c85a0553a66577239722f2fd",
+    "data/tilesets/secondary/cerulean_city_frlg/metatile_attributes.bin": "0758daf8df9d67394ba7d019ee65e76afa77068b308b985d5fda0303f4bea02c",
+    "data/layouts/Route25_Frlg/map.bin": "1ee4ff9c25f5460573ecff9e31ecbcc3739db7c421e0a47153cb8a748f798e80",
     "data/maps/Route25_Frlg/map.json": "5629b367a34ab70ebd2a90792f4d965f59762e58f803defcfd1637e614d8488e",
     "data/layouts/JourneyCeruleanHarbor/map.bin": "ec418c60c4f5cac3eb4ee9e2a29e1f48709e552411f67086a5352945001afcbc",
     "data/layouts/JourneyCeruleanHarbor/border.bin": "9ff63640fa3b4682056532b7924b03250ccc7a832f64ccec3dea79ea8595a24d",
     "data/maps/JourneyCeruleanHarbor/map.json": "b11fb9e2ffbb117c1514a31c39b007cbe126381de1a036411b606c4d5e7c806b",
     "data/maps/JourneyCeruleanHarbor/scripts.inc": "511c1d56ba640ea6f7af7c298708ee78ae6d2c65551437140f7d47d0dd49a53a",
     "data/tilesets/secondary/rustboro/tiles.png": "60e82c98acc319a0d592169a62f48715de6655f23328e85c60082d4747d8e20e",
-    "data/tilesets/secondary/rustboro/metatiles.bin": "3e5a8ddd9b85752d6b4c3c072b1943316dd2d53ca3716635b7933e60fd5652ba",
-    "data/tilesets/secondary/rustboro/metatile_attributes.bin": "100246ecff69e530596dd3df90b93f5e50fa01e2ea89d0d4c960c6cfd87f9bc9",
-    "data/layouts/Route104/map.bin": "7eec61ea128b567c37047bb6e898b0980f390fdb4d4162da87ad8cacfebcb366",
-    "data/maps/Route104/map.json": "4d24e1244ffbaaf44ded2b0d9bff84408f895adde89ed29ee5a17f7562cbc36a",
+    "data/tilesets/secondary/rustboro/metatiles.bin": "013e69b312631021c310d37154b9cf2e443cbe6225a8b927745cabe1c95e7730",
+    "data/tilesets/secondary/rustboro/metatile_attributes.bin": "edaf1e34a08eba9012a755bb5dd2c7befd90e5d2bc94fede070b3dcbf6cb9e0e",
+    "data/maps/Route104/scripts.inc": "e9c7ac0903d75d3fa4c10007afa8b0e2b1b07b4bd4488b0b55806509e5cccfd3",
+    "data/layouts/Route104/map.bin": "0a5bb8777f24a94f83a147a4d4c030e914d08f341d274eb6c9e1a096ef92daad",
+    "data/maps/Route104/map.json": "46a3ea1edb08d2f826401cbdac3f0dd97436af8eeaa2fcb3aaa6d2dac0c57d7b",
     "data/layouts/JourneyPetalburgHarbor/map.bin": "ec418c60c4f5cac3eb4ee9e2a29e1f48709e552411f67086a5352945001afcbc",
     "data/layouts/JourneyPetalburgHarbor/border.bin": "9ff63640fa3b4682056532b7924b03250ccc7a832f64ccec3dea79ea8595a24d",
     "data/maps/JourneyPetalburgHarbor/map.json": "57c23f8ac54ac61a99d4ee814fdede159085447d62133c639dfb1f6d25d2af90",

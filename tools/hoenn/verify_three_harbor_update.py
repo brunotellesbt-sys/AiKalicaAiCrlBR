@@ -3,7 +3,7 @@ import hashlib,json
 from pathlib import Path
 from verify_fuchsia_update import previous_release
 
-BOXES={19:[4,11,7,4],21:[61,6,6,4],12:[15,47,5,4]}
+BOXES={19:[4,11,7,4],21:[61,6,7,4],12:[13,47,7,4]}
 
 
 def verify_update(directory,info):
@@ -25,7 +25,8 @@ def verify_update(directory,info):
                     'captain_interacted_physically','network_arrival_inside','save_continue_inside']:
                     assert c[field] is True,(c['name'],field)
                 assert [t['destination'] for t in c['trips']]==['JourneyPalletHarbor',c['interior']]
-                if c['pid']==12:assert c['briney_local_service_preserved']
+                if c['pid']==12:assert c['briney_local_service_preserved'] and c['door']==[16,50]
+                if c['pid']==21:assert c['pier_extension']==[[x,y] for y in range(12,16) for x in (64,65)]
                 if c['pid']==19:assert c['legacy_exit_preserved']
         elif p['kind']=='three-harbor-source':
             assert p['target']=='common' and r['original_inputs_verified'] and r['idempotent'] and not r['differences']

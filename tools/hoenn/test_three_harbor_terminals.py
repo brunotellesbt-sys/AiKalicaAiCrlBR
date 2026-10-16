@@ -30,6 +30,8 @@ class ThreeHarborTerminals(unittest.TestCase):
         cases={p['pid']:p for p in r['ports']}
         self.assertTrue(cases[19]['legacy_exit_preserved'])
         self.assertTrue(cases[12]['briney_local_service_preserved'])
+        self.assertEqual(cases[12]['door'],[16,50])
+        self.assertEqual(cases[21]['pier_extension'],[[x,y] for y in range(12,16) for x in (64,65)])
         self.assertTrue((OUT/'validation/Petalburg-Briney-exit.png').exists())
 
     def test_independent_replay_preserves_other_ports_and_shared_art(self):

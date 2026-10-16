@@ -26,10 +26,14 @@ def validate(source,inputs,output):
         for o in old['object_events']:
             if o['script'] in ('JourneyCompactPort_Boat','Journey_FerryPort'+str(p['pid'])):continue
             expected_o=dict(o)
-            if o['script']=='Route104_EventScript_Rival':expected_o.update(x=17,y=52)
+            if o['script']=='Route104_EventScript_Rival':expected_o.update(x=16,y=50)
             assert expected_o in new['object_events'],(n,o['script'])
-        expected_boxes={19:[4,11,7,4],21:[61,6,6,4],12:[15,47,5,4]}
+        expected_boxes={19:[4,11,7,4],21:[61,6,7,4],12:[13,47,7,4]}
         assert p['terminal']==expected_boxes[p['pid']]
+        if p['pid']==12:
+            assert p['door']==[16,50] and new['warp_events'][0]['x']==16
+            assert [c for c in new['coord_events'] if c['script']=='Route104_EventScript_RivalTrigger'][0]['x']==16
+            assert 'setobjectxyperm LOCALID_ROUTE104_RIVAL, 16, 52' in (source/'data/maps/Route104/scripts.inc').read_text()
     for n in report['original_sha256']:
         if n.endswith(('/metatiles.bin','/metatile_attributes.bin')):assert (source/n).read_bytes().startswith((inputs/n).read_bytes())
     with tempfile.TemporaryDirectory(prefix='three-port-replay-',dir=source.parent) as directory:
