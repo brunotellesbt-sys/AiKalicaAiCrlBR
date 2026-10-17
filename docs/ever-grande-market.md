@@ -1,5 +1,7 @@
 # Casas e feira de Ever Grande
 
+A feira de Mega Stones permanece em Ever Grande. A loja de itens competitivos fica separadamente no [exterior da Battle Frontier](vendinha-dewford.md); o Hyper Training permanece em Dewford.
+
 ![Casas e barraca junto ao Centro Pokémon](images/ever-grande/plaza.png)
 
 Duas casas ficam nos antigos canteiros em frente ao Centro Pokémon de Ever Grande. Cada uma tem dois moradores e um interior mobiliado diferente. O caminho central, as duas escadas e os acessos ao Centro Pokémon e à Victory Road continuam livres.

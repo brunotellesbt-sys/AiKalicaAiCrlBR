@@ -59,7 +59,7 @@ def leave_shop():
     picture('shop-exit-failure');raise AssertionError('Could not leave the shop')
 def buy(category,index,item):
     before=quantity(item);money_before=native('GetMoney',save()+c['offsetof(struct SaveBlock1,money)'])
-    warp('Route107',2,16);talk_vendor();choose(category)
+    warp(report['seller_map'],*report['frontier_market']['approach']);talk_vendor();choose(category)
     advance_to('Task_ShopMenu');press(1)
     wait_for(lambda:task('Task_BuyMenu'),'buy-list')
     for _ in range(index):press(128)
@@ -73,13 +73,19 @@ def buy(category,index,item):
 native('SetPlayerAvatarTransitionFlags',1)
 warp('Route107',0,16);walk_to(5,16);walk_to(5,15);walk_to(5,16);walk_to(0,16)
 picture('stall-and-footpath')
+warp(report['seller_map'],35,44);walk_to(38,44);walk_to(*report['frontier_market']['approach'])
+picture('frontier-stall-and-footpath')
+frontier=json.loads((source/f'data/maps/{report["seller_map"]}/map.json').read_text())
+dewford=json.loads((source/'data/maps/Route107/map.json').read_text())
+assert sum(o.get('script')=='JourneyCompetitive_Seller' for o in frontier['object_events'])==1
+assert not any(o.get('script')=='JourneyCompetitive_Seller' for o in dewford['object_events'])
 for name,price in report['prices'].items():assert native('GetItemPrice',c['ITEM_'+name])==price,name
 native('SetMoney',save()+c['offsetof(struct SaveBlock1,money)'],999999)
 purchases=[buy(0,report['stocks'][0].index('CHOICE_SCARF'),'CHOICE_SCARF'),buy(4,0,'BOTTLE_CAP'),buy(4,1,'GOLD_BOTTLE_CAP')]
 # A real purchase with insufficient money must not add an item or change funds.
 native('SetMoney',save()+c['offsetof(struct SaveBlock1,money)'],0)
 before=quantity('BOTTLE_CAP')
-warp('Route107',2,16);talk_vendor();choose(4);advance_to('Task_ShopMenu');press(1);wait_for(lambda:task('Task_BuyMenu'),'poor-buy-list')
+warp(report['seller_map'],*report['frontier_market']['approach']);talk_vendor();choose(4);advance_to('Task_ShopMenu');press(1);wait_for(lambda:task('Task_BuyMenu'),'poor-buy-list')
 press(1);step(120);picture('insufficient-money');press(1);step(60)
 leave_shop()
 assert quantity('BOTTLE_CAP')==before and native('GetMoney',save()+c['offsetof(struct SaveBlock1,money)'])==0
@@ -132,10 +138,13 @@ assert native('ItemIdToBattleMoveId',c['ITEM_TM_PLAY_ROUGH'])==c['MOVE_PLAY_ROUG
 assert native('CanLearnTeachableMove',c['SPECIES_CLEFAIRY'],c['MOVE_PLAY_ROUGH'])
 picture('play-rough-collected')
 origins=validate_origins(globals())
+from legendary_cave_checks import validate as validate_caves
+caves=validate_caves(globals())
 mode=bool(lib.read8(s['gJourneyReviewMode']));lib.stop()
-r=dict(passed=True,origin_forms=origins,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),review_mode=mode,
+r=dict(passed=True,origin_forms=origins,legendary_caves=caves,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),review_mode=mode,
        prices_checked=len(report['prices']),purchases=purchases,insufficient_money_preserves_money_and_bag=True,
        two_attendants_interacted=True,footpath_to_bridge_walked=True,
+       frontier_single_seller=True,shop_removed_from_dewford=True,frontier_approach_walked=True,
        single_cap_only_one_stat=True,gold_cap_all_six_stats=True,original_genetic_ivs_preserved=True,
        cancellation_preserves_caps=True,perfect_stats_preserve_caps=True,level49_rejected=True,eggs_rejected=True,
        full_restore_picked_up_once=True,closed_trees_block_walk=True,play_rough_picked_up_and_native_teachable=True,lighthouse_back_path_walked=True,initial_party_money_and_position_are_fixtures=True)

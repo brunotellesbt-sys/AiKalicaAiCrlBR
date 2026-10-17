@@ -80,7 +80,7 @@ JourneyCompetitive_PlayRough::
 	end
 
 JourneyCompetitive_Welcome:
-	.string "Welcome to Dewford's training stall!\nWe import premium battle supplies.\pThe finest equipment costs more.\nOur other attendant offers\nHyper Training for Bottle Caps.$"
+	.string "Welcome to the Frontier market!\nWe import premium battle supplies.\pThe finest equipment costs more.\nFor Hyper Training, visit the\ntrainer at Dewford's stall.$"
 JourneyCompetitive_HyperIntro:
 	.string "I offer Hyper Training for Pokemon\nat level 50 or above.\pOne Bottle Cap improves one stat.\nA Gold Bottle Cap improves all six.\pTraining does not change the IVs\npassed down through breeding.\nChoose a Pokemon to train.$"
 JourneyCompetitive_Confirm:
@@ -94,4 +94,4 @@ JourneyCompetitive_PerfectText:
 JourneyCompetitive_InvalidText:
 	.string "I cannot train an Egg.\nPlease choose another Pokemon.$"
 JourneyCompetitive_NoCapText:
-	.string "You do not have the required cap.\nOur seller stocks both types.$"
+	.string "You do not have the required cap.\nThe Frontier market stocks\nboth types of Bottle Cap.$"

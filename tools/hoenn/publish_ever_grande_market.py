@@ -6,6 +6,7 @@ import shutil
 import zipfile
 from pathlib import Path
 from package_versions import ROOT,package
+from package_review_rom import package as package_review
 from verify_versions import verify
 from verify_fuchsia_update import previous_release
 
@@ -13,6 +14,7 @@ def publish(source,validation,output):
     source,validation,output=map(Path,[source,validation,output])
     raw=(validation/'baseline/versions.json').read_bytes();old=json.loads(raw)
     info=package(source,output)
+    package_review(source,output/'Pokemon-Journey-Gen1-9-Normal.gba',ROOT/'roms/rom-de-teste')
     info.update(validation_scope='ever-grande-market',validated=False,full_campaign_playthrough=False,proofs=[],
         historical_validation=old['historical_validation'],previous_validation=old['previous_validation'],
         previous_port_validation=dict(manifest=(validation/'baseline/versions.json').relative_to(ROOT).as_posix(),manifest_sha256=hashlib.sha256(raw).hexdigest(),retested_on_current_rom=False),

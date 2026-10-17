@@ -1,9 +1,9 @@
 # ROMs atuais
 
-Atualização atual: [casas e feira de Mega Stones em Ever Grande](../docs/ever-grande-market.md), dois presentes únicos e Sootopolis com marcador vermelho. Inclui a feira competitiva de Dewford e as formas Origin do PR #93.
+Atualização atual: [casas e feira de Mega Stones em Ever Grande](../docs/ever-grande-market.md), dois presentes únicos e Sootopolis com marcador vermelho. Inclui as formas Origin do PR #93, o mercado competitivo no exterior da Battle Frontier e o Hyper Training em Dewford.
 
 Inclui a [correção do rio de Fallarbor](../docs/fallarbor-river.md): praia caminhável, margens completas e desembarque para a cidade.
-[Barraca de Dewford](../docs/vendinha-dewford.md): itens competitivos e Hyper Training nas quatro edições.
+[Mercado da Battle Frontier e Hyper Training de Dewford](../docs/vendinha-dewford.md): um vendedor de itens na praça externa da Frontier e treinamento em Dewford.
 
 Esta pasta contém sempre as quatro edições GBA da entrega atual. Comece um **save novo**; saves anteriores à ampliação da Bag não são compatíveis.
 
@@ -18,7 +18,7 @@ As quatro edições incluem Kanto, Hoenn e Sevii. Megas e formas regionais de es
 
 [ZIP com as quatro ROMs e documentação](../mods/hoenn/versions/Pokemon-Journey-Four-Editions.zip) · [Documentação](../docs/README.md) · [Limites da validação](../mods/hoenn/INTEGRATION-STATUS.md) · [SHA-256](SHA256SUMS)
 
-A entrega atual inclui a revisão de Surf, oito cavernas com lendários redistribuídos e acesso à Artisan Cave. [Mapa e imagens](../docs/revisao-surf-cavernas.md). A [ROM de teste e o save de inspeção](rom-de-teste/LEIA-ME.md) ficam em pasta separada, sem encontros aleatórios ou abordagem automática. O manifesto atual usa `validation_scope: ever-grande-market`; as evidências de campanha e recursos anteriores continuam associadas às suas ROMs históricas.
+A entrega atual inclui a revisão de Surf, [105 espécies especiais em 48 câmaras nomeadas](../docs/cavernas-lendarias.md) e acesso à Artisan Cave. [Mapa e imagens](../docs/revisao-surf-cavernas.md). A [ROM de teste e o save de inspeção](rom-de-teste/LEIA-ME.md) ficam em pasta separada, sem encontros aleatórios ou abordagem automática. O manifesto atual usa `validation_scope: ever-grande-market`; as evidências de campanha e recursos anteriores continuam associadas às suas ROMs históricas.
 
 ## Atualizar a entrega
 
