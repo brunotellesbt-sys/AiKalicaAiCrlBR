@@ -41,7 +41,9 @@ def verify_update(directory,info,*,historical_review=None):
             assert bool(r['checks']['trainer_approach_result'])==(p['target']!='test')
             if p['target']=='test':
                 c=r['checks'];assert c['random_wild_attempts']>=200 and c['no_automatic_approach_after_600_frames'] and c['no_random_encounters'] and c['no_fishing_encounters'] and c['no_sweet_scent_encounters'] and c['no_rock_smash_encounters']
-                assert c['native_flash_save_exported'] and hashlib.sha256((ROOT/'roms/rom-de-teste/Pokemon-Journey-TESTE.sav').read_bytes()).hexdigest()==c['save_sha256']
+                assert c['native_flash_save_exported']
+                if historical_review is None:
+                    assert hashlib.sha256((ROOT/'roms/rom-de-teste/Pokemon-Journey-TESTE.sav').read_bytes()).hexdigest()==c['save_sha256']
         elif kind=='all-surf-links':
             assert r['all_usable_outdoor_surf_connections_covered'] and len(r['links'])>=235 and r['crossings']==2*len(r['links'])+len(r['native_current_links'])
         elif kind=='ocean-aprons':

@@ -1,5 +1,8 @@
 # ROMs atuais
 
+Atualização atual: [casas e feira de Mega Stones em Ever Grande](../docs/ever-grande-market.md), dois presentes únicos e Sootopolis com marcador vermelho. Inclui a feira competitiva de Dewford e as formas Origin do PR #93.
+
+Inclui a [correção do rio de Fallarbor](../docs/fallarbor-river.md): praia caminhável, margens completas e desembarque para a cidade.
 [Barraca de Dewford](../docs/vendinha-dewford.md): itens competitivos e Hyper Training nas quatro edições.
 
 Esta pasta contém sempre as quatro edições GBA da entrega atual. Comece um **save novo**; saves anteriores à ampliação da Bag não são compatíveis.
@@ -15,11 +18,11 @@ As quatro edições incluem Kanto, Hoenn e Sevii. Megas e formas regionais de es
 
 [ZIP com as quatro ROMs e documentação](../mods/hoenn/versions/Pokemon-Journey-Four-Editions.zip) · [Documentação](../docs/README.md) · [Limites da validação](../mods/hoenn/INTEGRATION-STATUS.md) · [SHA-256](SHA256SUMS)
 
-A entrega atual inclui a revisão de Surf, oito cavernas com lendários redistribuídos e acesso à Artisan Cave. [Mapa e imagens](../docs/revisao-surf-cavernas.md). A [ROM de teste e o save de inspeção](rom-de-teste/LEIA-ME.md) ficam em pasta separada, sem encontros aleatórios ou abordagem automática. O manifesto usa `validation_scope: surf-review`; as evidências de campanha e recursos anteriores continuam associadas às suas ROMs históricas.
+A entrega atual inclui a revisão de Surf, oito cavernas com lendários redistribuídos e acesso à Artisan Cave. [Mapa e imagens](../docs/revisao-surf-cavernas.md). A [ROM de teste e o save de inspeção](rom-de-teste/LEIA-ME.md) ficam em pasta separada, sem encontros aleatórios ou abordagem automática. O manifesto atual usa `validation_scope: ever-grande-market`; as evidências de campanha e recursos anteriores continuam associadas às suas ROMs históricas.
 
 ## Atualizar a entrega
 
-Para esta revisão, gere as evidências com os validadores `validate_surf_review*`, `validate_review_mode.py` e os validadores nativos de Surf, e publique com `tools/hoenn/publish_surf_review.py`. Os binários normais continuam sendo quatro; o arquivo de inspeção fica apenas na subpasta.
+Para a entrega atual, gere as evidências por edição com `validate_ever_grande_market.py`, `validate_dewford_competitive_shop.py`, `validate_review_mode.py` e `validate_fallarbor_river.py`; grave o percurso com `record_fallarbor_river.py` na edição Gen 1–9 Normal e publique com `tools/hoenn/publish_ever_grande_market.py`. A fonte é reproduzida por `validate_ever_grande_source.py`, usando o snapshot anterior à camada 159. Os binários normais continuam sendo quatro; o arquivo de inspeção fica apenas na subpasta.
 
 Para outras entregas, execute `tools/hoenn/seal_versions.py` com `--output mods/hoenn/versions` depois de compilar e produzir as evidências do novo build. Para uma atualização limitada ao PWT, use `--validation-scope pwt-update`, que exige as quatro inspeções de equipes, dois torneios completos, os sprites da arena, a desistência e a reprodução do código. O empacotamento atualiza automaticamente as quatro ROMs e os hashes nesta pasta. `tools/hoenn/verify_versions.py` e a CI recusam arquivos divergentes ou edições extras. O GitHub Pages utiliza as ROMs desta pasta após conferir seus hashes contra o manifesto validado.
 

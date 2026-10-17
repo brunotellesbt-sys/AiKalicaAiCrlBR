@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "rom_sha256": "75d91fce2f2b59a8cb49cbd443041747531076102d96b3494a1d499dff90fb82",
+  "beach_walk_targets": [
+    [
+      12,
+      9
+    ],
+    [
+      9,
+      6
+    ],
+    [
+      12,
+      3
+    ],
+    [
+      16,
+      6
+    ],
+    [
+      12,
+      8
+    ]
+  ],
+  "beach_walkable_on_foot": true,
+  "native_surf_prompt": true,
+  "native_disembark_before_city": true,
+  "city_reachable_on_foot": true,
+  "return_to_beach_on_foot": true,
+  "rock_limit_blocks_controller": true,
+  "complete_tree_overhang_blocks_surf": true,
+  "northern_southern_and_river_connections_bidirectional": true,
+  "seams": [
+    {
+      "source": "JourneyWestRiver",
+      "destination": "JourneyCinnabarSouthSea",
+      "surf": true
+    },
+    {
+      "source": "JourneyCinnabarSouthSea",
+      "destination": "JourneyWestRiver",
+      "surf": true
+    },
+    {
+      "source": "JourneyWestRiver",
+      "destination": "JourneyRustboroCoast",
+      "surf": true
+    },
+    {
+      "source": "JourneyRustboroCoast",
+      "destination": "JourneyWestRiver",
+      "surf": true
+    },
+    {
+      "source": "JourneyWestRiver",
+      "destination": "Route114",
+      "surf": true
+    },
+    {
+      "source": "Route114",
+      "destination": "FallarborTown",
+      "surf": false
+    },
+    {
+      "source": "FallarborTown",
+      "destination": "Route114",
+      "surf": false
+    },
+    {
+      "source": "Route114",
+      "destination": "JourneyWestRiver",
+      "surf": true
+    }
+  ],
+  "surfing_observed_only_on_water": true,
+  "native_save_continue_preserves_land_and_foot_state": true,
+  "no_midroute_warps_or_coordinate_writes": true,
+  "initial_party_story_and_departure_are_fixtures": true
+}

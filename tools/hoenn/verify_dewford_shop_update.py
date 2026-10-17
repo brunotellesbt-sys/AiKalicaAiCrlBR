@@ -5,10 +5,16 @@ from verify_fuchsia_update import ROOT,previous_release
 from package_review_rom import verify as verify_review
 
 
-def verify_update(directory,info):
+def verify_update(directory,info,*,historical_review=None):
     directory=Path(directory);old=previous_release(info)
     assert old['validated'] and old['integration_layers']+['dewford-competitive-shop']==info['integration_layers']
-    test=verify_review(ROOT/'roms/rom-de-teste',directory/'Pokemon-Journey-Gen1-9-Normal.gba')
+    if historical_review is None:
+        test=verify_review(ROOT/'roms/rom-de-teste',directory/'Pokemon-Journey-Gen1-9-Normal.gba')
+    else:
+        test=historical_review
+        normal=next(r for r in info['variants'] if r['file']==test['base_normal_file'])
+        assert test['base_normal_sha256']==normal['sha256'] and test['bytes']==33554432
+        assert test['separate_save_identity'] and not test['random_wild_encounters']
     expected={'common':info['parent_rom_sha256'],'test':test['sha256'],**{r['file']:r['sha256'] for r in info['variants']}}
     covered=set()
     for p in info['proofs']:
@@ -34,7 +40,8 @@ def verify_update(directory,info):
                         'play_rough_picked_up_and_native_teachable','lighthouse_back_path_walked','level49_rejected','eggs_rejected','full_restore_picked_up_once','closed_trees_block_walk']:assert r[key],key
         covered.add((p['target'],p['kind']))
     assert {('common','dewford-shop-source')}|{(t,'dewford-competitive-shop') for t in expected if t!='common'}<=covered
-    assert all((directory/r['file']).read_bytes()[test['review_mode_offset']]==0 for r in info['variants'])
+    if historical_review is None:
+        assert all((directory/r['file']).read_bytes()[test['review_mode_offset']]==0 for r in info['variants'])
     prior=info['previous_review_validation'];path=Path(prior['file'])
     assert not path.is_absolute() and '..' not in path.parts
     raw=(ROOT/path).read_bytes();assert hashlib.sha256(raw).hexdigest()==prior['sha256']

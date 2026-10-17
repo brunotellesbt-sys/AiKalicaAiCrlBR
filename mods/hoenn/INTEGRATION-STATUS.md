@@ -1,5 +1,7 @@
 # Atualização costeira e níveis dinâmicos
 
+Atualização atual: camada 159, [casas e feira de Ever Grande](../../docs/ever-grande-market.md), com Mega Stones por ₽200.000, dois presentes únicos e o marcador vermelho de Sootopolis. Inclui a [correção do rio de Fallarbor](../../docs/fallarbor-river.md), com praia caminhável, contorno nativo restaurado e desembarque conferido até a cidade. Evidências atuais em `ever-grande-market-validation/`; as rotas e os portos preservam a feira competitiva, o Hyper Training e as formas Origin da camada 158 (PR #93). A validação ampla de Surf continua histórica, vinculada ao seu próprio hash.
+
 Atualização mais recente: as camadas 152–153 incluem os [portos de Mossdeep e Dewford](../../docs/portos-mossdeep-dewford.md). Mossdeep usa o terminal e a ponte nas coordenadas indicadas; Dewford tem o terminal original mais nítido, ponte suspensa preservada, quatro tiles de escada baixa na cor dos apoios da ponte, praias contínuas nos dois acessos e 35 árvores completas na mata do norte, sem ampliar a ilha, canal de saída na lateral direita do terminal, e passagem livre entre a casa ao sul e a ponte. As cinco compilações (base e quatro edições) têm caminhada, Surf, portas e viagem de ida e volta conferidos em mGBA. A reprodução independente preserva 31.092 entradas alheias a essas camadas. Evidências em `island-harbors-validation/`; as verificações anteriores continuam históricas.
 
 Atualização anterior: a camada 151 inclui os [sete terminais de Sevii](../../docs/portos-sevii.md),

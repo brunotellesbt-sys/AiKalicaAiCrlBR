@@ -3,6 +3,7 @@ Plans map tiles; movement, collisions, Surf prompts and warps run in mGBA.
 """
 from collections import deque
 import json
+import re
 import struct
 
 walk_prefix = globals().get('walk_prefix', 'seafloor')
@@ -13,6 +14,7 @@ blocks = {}
 passable = {}
 water_behaviors = {}
 bridge_behaviors = {}
+tileset_headers = (source/'src/data/tilesets/headers.h').read_text()
 behaviors, currents, arrows = {}, {}, {}
 step_warps = {}
 for n, m in maps.items():
@@ -26,7 +28,9 @@ for n, m in maps.items():
     primary = lib.read32(s[layout['primary_tileset']] + 0x10)
     secondary = lib.read32(s[layout['secondary_tileset']] + 0x10)
     for tileset, address in [(layout['primary_tileset'], primary), (layout['secondary_tileset'], secondary)]:
-        known = s.get(tileset.replace('gTileset_', 'gMetatileAttributes_'))
+        declaration = re.search(r'const struct Tileset '+tileset+r'\s*=\s*\{(.*?)\};', tileset_headers, re.S)[1]
+        attribute_symbol = re.search(r'\.metatileAttributes\s*=\s*(\w+)', declaration)[1]
+        known = s.get(attribute_symbol)
         if known is not None: assert address == known, (tileset, address, known)
     valid = set()
     behaviors[n] = []

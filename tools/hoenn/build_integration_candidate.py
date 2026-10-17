@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 
 import package_playable
-from prepare_dewford_competitive_shop import PRIOR, LAYER
+from prepare_ever_grande_market import PRIOR, LAYER
 
 
 def main():
