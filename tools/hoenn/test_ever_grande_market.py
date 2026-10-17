@@ -27,12 +27,18 @@ class EverGrandeMarket(unittest.TestCase):
                 self.assertEqual(dewford['rom_sha256'],sha)
                 self.assertTrue(dewford['single_cap_only_one_stat'] and dewford['gold_cap_all_six_stats'])
                 self.assertEqual({c['pokemon'] for c in dewford['origin_forms']['checks']},{'Dialga','Palkia','Giratina'})
+                river=json.loads((OUT/edition/'fallarbor-physics.json').read_text())
+                self.assertEqual(river['rom_sha256'],sha)
+                self.assertTrue(river['beach_walkable_on_foot'] and river['native_disembark_before_city'])
+                self.assertTrue(river['northern_southern_and_river_connections_bidirectional'])
+                self.assertTrue(river['rock_limit_blocks_controller'] and river['complete_tree_overhang_blocks_surf'])
 
     def test_unrelated_terrain_is_preserved_and_overlay_replays(self):
         r=json.loads((OUT/'source.json').read_text())
         self.assertTrue(r['independent_replay'] and r['idempotent'])
         self.assertGreater(r['unrelated_files_preserved'],30000)
-        self.assertTrue(r['all_surf_maps_unchanged'] and r['original_city_events_and_connections_preserved'])
+        self.assertTrue(r['unrelated_surf_maps_unchanged'] and r['original_city_events_and_connections_preserved'])
+        self.assertTrue(r['fallarbor_river']['whole_native_trees_restored'])
         self.assertTrue(r['dewford_and_origin_features_preserved'])
 
 if __name__=='__main__':unittest.main()

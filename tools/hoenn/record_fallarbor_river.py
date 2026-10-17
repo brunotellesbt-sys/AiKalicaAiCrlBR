@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 bootstrap=(ROOT/'tools/hoenn/validate_sevii_surf_connections.py').read_text().split('\ntowns=')[0]
 exec(compile(bootstrap,__file__,'exec'))
-permitted={'JourneyWestRiver','Route114','FallarborTown'}
+permitted={'JourneyWestRiver','Route114','FallarborTown','JourneyCinnabarSouthSea','JourneyRustboroCoast'}
 for n in passable:
     if n not in permitted:passable[n]=set()
     else:
@@ -23,9 +23,10 @@ x=sorted(x for x,y in falls)[len(falls)//2]
 bottom=max(y for xx,y in falls if xx==x);top=min(y for xx,y in falls if xx==x)
 front=('Route114',x,bottom+1)
 for xx,yy in falls:passable['Route114'].discard(yy*blocks['Route114'][0]+xx)
-start=('JourneyWestRiver',34,6)
-assert water_behaviors[behaviors[start[0]][start[2]*blocks[start[0]][0]+start[1]]]
-warp(*start);native('SetPlayerAvatarTransitionFlags',8);step(90);assert idle()
+start=('JourneyWestRiver',12,8)
+assert not water_behaviors[behaviors[start[0]][start[2]*blocks[start[0]][0]+start[1]]]
+native('RtcInitLocalTimeOffset',12,0)  # Daylight is a presentation fixture.
+warp(*start);native('SetPlayerAvatarTransitionFlags',1);step(90);assert idle()
 
 walker=(ROOT/'tools/hoenn/native_water_walk.py').read_text().split('\ndef walk(goal):',1)[1]
 walker='def walk(goal):'+walker
@@ -58,11 +59,17 @@ def step(n,keys=0):
 def walk_observer(before,after):
     sample=dict(frame=frames,map=by_location[location()],tile=list(position()),surf=bool(lib.read8(s['gPlayerAvatar'])&8))
     samples.append(sample)
+    if sample['surf']:
+        w,h,tiles=blocks[sample['map']];i=sample['tile'][1]*w+sample['tile'][0]
+        if 0<=sample['tile'][0]<w and 0<=sample['tile'][1]<h:
+            assert water_behaviors[behaviors[sample['map']][i]], ('Surf over dry land',sample)
     if not route or route[-1]['map']!=sample['map']:route.append(sample);print('River arrival:',sample,flush=True)
 
 capture();step(90);picture('river-departure');walk_observer(start,start)
 failed=True
 try:
+    walk(('JourneyWestRiver',25,7));step(90)
+    assert surf_prompts and lib.read8(s['gPlayerAvatar'])&8
     walk((front[0],front[1],front[2]+1));walk(front)
     assert lib.read8(s['gPlayerAvatar'])&8;picture('waterfall-below');step(90)
     below=position()
@@ -81,16 +88,23 @@ try:
         step(2,128)
     else:raise AssertionError(('Waterfall descent did not complete',position()))
     step(60);picture('waterfall-returned')
+    walk(('Route114',20,13));step(120);picture('route114-disembarked')
+    assert not lib.read8(s['gPlayerAvatar'])&8
+    for n in ['Route114','FallarborTown']:
+        passable[n]={i for i in passable[n] if not water_behaviors[behaviors[n][i]]}
     walk(('FallarborTown',14,8));step(180);picture('fallarbor-arrival')
     assert idle() and location()==map_id('FallarborTown') and not lib.read8(s['gPlayerAvatar'])&8
     assert any(t['source'][0]=='JourneyWestRiver' and t['destination'][0]=='Route114' for t in transitions)
     proof=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),
         departure=list(start),arrival=['FallarborTown',*position()],route=route,transitions=transitions,
         waterfall_front=list(front),waterfall_below=list(below),waterfall_above=list(above),
-        departure_already_surfing=True,native_waterfall_climb_and_descent=True,continuous_video=True,
+        departure_on_walkable_beach=True,native_surf_prompt=True,native_disembark_before_city=True,
+        native_waterfall_climb_and_descent=True,continuous_video=True,
+        all_observed_surf_tiles_are_water=True,city_walk_excludes_water_tiles=True,
         river_seam_enters_below_waterfall=True,upper_pool_is_side_visit=True,
         controller_movement_only=True,no_midroute_warps_or_coordinate_writes=True,
         initial_party_badges_story_and_departure_are_fixtures=True,native_frames=frames,
+        daylight_clock_fixture=True,
         captured_frames=captured,video_fps=30,video_seconds=captured/30,samples=samples)
     failed=False
 finally:

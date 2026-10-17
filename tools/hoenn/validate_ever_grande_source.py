@@ -30,7 +30,14 @@ def validate(source, baseline, output):
     old=json.loads((baseline/'data/maps/EverGrandeCity/map.json').read_text())
     assert city['warp_events'][:len(old['warp_events'])]==old['warp_events']
     assert city['connections']==old['connections'] and city['coord_events']==old['coord_events']
-    assert all(not p.startswith(('data/maps/Route','data/layouts/Route','data/layouts/Journey')) for p in outputs)
+    river=report['fallarbor_river']
+    changed_routes={p for p in outputs if p.startswith(('data/maps/Route','data/layouts/Route','data/layouts/Journey'))}
+    assert changed_routes==set(river['source_paths'])
+    for name in ['JourneyWestRiver','Route114','FallarborTown']:
+        p=f'data/maps/{name}/map.json'
+        assert (source/p).read_bytes()==(baseline/p).read_bytes()
+    assert river['beach_elevation']==3 and river['whole_native_trees_restored']
+    assert river['all_events_connections_and_city_buildings_preserved']
     dewford=json.loads((baseline/'.journey-dewford-competitive-shop').read_text())
     for name in dewford['prepared_sha256']:
         if name in outputs:
@@ -40,7 +47,8 @@ def validate(source, baseline, output):
     r=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),
         layers=PRIOR+[LAYER],independent_replay=True,idempotent=True,source_hashes_checked=len(expected|outputs),
         unrelated_files_preserved=len(expected.keys()-outputs.keys()),original_city_events_and_connections_preserved=True,
-        all_surf_maps_unchanged=True,dewford_and_origin_features_preserved=True,houses=report['houses'],stall=report['stall'],city_pixels=report['city_pixels'])
+        unrelated_surf_maps_unchanged=True,fallarbor_river=river,
+        dewford_and_origin_features_preserved=True,houses=report['houses'],stall=report['stall'],city_pixels=report['city_pixels'])
     output.parent.mkdir(parents=True,exist_ok=True);output.write_text(json.dumps(r,indent=2)+'\n')
     return r
 

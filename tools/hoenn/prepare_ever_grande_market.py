@@ -1,4 +1,4 @@
-"""Add two furnished Ever Grande homes, a native market stall and city emblem."""
+"""Add Ever Grande homes/market and finish the Fallarbor river landscape."""
 import argparse
 import copy
 import json
@@ -202,10 +202,13 @@ u32 JourneyEverGrandeShopPrice(u16 itemId)
     assert any(c==13 for x,y,c in city_pixels)
     header=encode(header,atlas);header=re.sub(r'(sWorldDetailPixels\[\] = \{)[^}]+',lambda m:m[1]+','.join(map(str,detail)),header)
     layer.stage('src/data/journey_world_map.h',header)
+    from fallarbor_river_landscape import repair
+    river = repair(layer)
     return layer.finish(houses=[dict(map=n,door=[x+1,y+3],item=item,flag=flag,flag_id=f) for n,x,y,item,flag,f in HOUSES],
         stall=dict(position=[25,50],seller=[26,52],interaction=[26,53],price=PRICE,stock=stones),
         imported_house_metatiles=house_ids,imported_stall_metatiles=stall_ids,city_pixels=city_pixels,
-        original_center_victory_road_warps_preserved=True,all_surf_maps_unchanged=True)
+        original_center_victory_road_warps_preserved=True,fallarbor_river=river,
+        unrelated_surf_maps_unchanged=True)
 
 
 if __name__=='__main__':

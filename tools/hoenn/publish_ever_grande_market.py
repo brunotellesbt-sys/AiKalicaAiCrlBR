@@ -23,8 +23,9 @@ def publish(source,validation,output):
         info['proofs'].append(dict(file=rel.as_posix(),target=target,kind=kind,sha256=hashlib.sha256(dest.read_bytes()).hexdigest()))
     add(validation/'source.json','common','ever-grande-source')
     add(validation/'native/ever-grande-market.json','common','ever-grande-market')
+    add(validation/'river-native/fallarbor-physics.json','common','fallarbor-physics')
     for target,folder in [(r['file'],r['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba')) for r in info['variants']]+[('test','TESTE')]:
-        for k in ['ever-grande-market','dewford-competitive-shop','review-mode']:add(validation/folder/(k+'.json'),target,k)
+        for k in ['ever-grande-market','dewford-competitive-shop','review-mode','fallarbor-physics']:add(validation/folder/(k+'.json'),target,k)
     add(validation/'river/fallarbor-river.json','Pokemon-Journey-Gen1-9-Normal.gba','fallarbor-river')
     (output/'versions.json').write_text(json.dumps(info,indent=2)+'\n');verify(output,require_seal=False)
     info['validated']=True;(output/'versions.json').write_text(json.dumps(info,indent=2)+'\n');verify(output)

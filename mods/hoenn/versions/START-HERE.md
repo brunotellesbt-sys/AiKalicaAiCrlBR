@@ -2,6 +2,7 @@
 
 Atualização atual: [casas e feira de Mega Stones em Ever Grande](../../../docs/ever-grande-market.md), dois presentes únicos e Sootopolis com marcador vermelho. Inclui a feira competitiva de Dewford e as formas Origin do PR #93.
 
+Inclui a [correção do rio de Fallarbor](../../../docs/fallarbor-river.md): praia caminhável, margens completas e desembarque para a cidade.
 [Formas Origin](../../../docs/formas-origin.md): Adamant Orb, Lustrous Orb e Griseous Orb agora também transformam ao equipar.
 
 [Barraca de Dewford](../../../docs/vendinha-dewford.md): 71 itens competitivos, dois atendentes, Bottle Caps e Hyper Training.
