@@ -8,7 +8,7 @@ Equipar o item correto transforma o Pokémon imediatamente. Retirar o item ou tr
 | Palkia | Lustrous Orb | Lustrous Globe |
 | Giratina | Griseous Orb | Griseous Core |
 
-Os Orbs mantêm seus efeitos de aumento de poder. A missão Galactic, com Eren, Luffy, os administradores e Cyrus no navio abandonado, e seus prêmios foram preservados. As formas estão disponíveis nas quatro edições normais e na ROM de teste, inclusive nas edições até a geração 4 porque as três espécies pertencem a essa geração.
+Os Orbs mantêm seus efeitos de aumento de poder. A missão Galactic, com Eren, Luffy, os administradores e Cyrus no navio abandonado, e seus prêmios foram preservados. A luta contra Giratina continua sem captura no navio. Após concluir o evento, o trio fica na Creation Cave. [Distribuição das 105 espécies em 48 câmaras](cavernas-lendarias.md). As formas estão disponíveis nas quatro edições normais e na ROM de teste, inclusive nas edições até a geração 4 porque as três espécies pertencem a essa geração.
 
 As imagens abaixo foram capturadas na ROM, após equipar os Orbs pelo menu GIVE da Bag.
 

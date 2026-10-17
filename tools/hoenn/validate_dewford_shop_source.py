@@ -35,6 +35,14 @@ def validate(source,preimages,output):
         before=MapRenderer(replay);after=MapRenderer(source)
         allowed={'Route107':{(x,y) for x in range(4) for y in (13,14)}|{(0,15),(1,15),(2,15),(3,15)},
                  'Route106':{(78,14),(79,14)},'JourneyDewfordPortIsland':{(8,6),(8,7),(9,6),(9,7)}}
+        market=report['frontier_market'];left,top,w,h=market['booth']
+        allowed[market['map']]={(x,y) for x in range(left,left+w) for y in range(top,top+h)}
+        assert market['seller_count']==1 and market['hyper_training_stays_in_dewford']
+        vendors=[]
+        for p in (source/'data/maps').glob('*/map.json'):
+            for o in json.loads(p.read_text()).get('object_events',[]):
+                if o.get('script')=='JourneyCompetitive_Seller':vendors.append((p.parent.name,[o['x'],o['y']]))
+        assert vendors==[(market['map'],market['seller'])]
         ta=before.tileset('gTileset_JourneyDewfordHarbor')[0];tb=after.tileset('gTileset_JourneyDewfordHarbor')[0]
         for tile in range(682,688):
             i=tile-512;box=(i%16*8,i//16*8,i%16*8+8,i//16*8+8)
@@ -54,7 +62,7 @@ def validate(source,preimages,output):
         cells=0;events=0
         for p in (source/'data/maps').glob('*/map.json'):
             m=json.loads(p.read_text());n=p.parent.name;l=after.layouts[m['layout']]
-            if l['secondary_tileset']!='gTileset_JourneyDewfordHarbor':continue
+            if l['secondary_tileset'] not in ('gTileset_JourneyDewfordHarbor','gTileset_BattleFrontierOutsideWest'):continue
             old=json.loads((replay/p.relative_to(source)).read_text())
             assert all(o in m['object_events'] for o in old['object_events']),n
             events+=len(old['object_events'])
@@ -84,13 +92,32 @@ def validate(source,preimages,output):
             updated_forms=updated_forms.replace('\n    {FORM_CHANGE_ITEM_HOLD, SPECIES_'+species+'_ORIGIN, ITEM_'+item+'},','')
         updated_forms=updated_forms.replace('    {FORM_CHANGE_ITEM_HOLD, SPECIES_GIRATINA_ORIGIN, ITEM_GRISEOUS_ORB},','#if I_GRISEOUS_ORB_FORM_CHANGE < GEN_9\n    {FORM_CHANGE_ITEM_HOLD, SPECIES_GIRATINA_ORIGIN, ITEM_GRISEOUS_ORB},\n#endif')
         assert updated_forms==original_forms
+        groups=report['legendary_caves'];assert groups['total']==105 and groups['cave_count']==48
+        old_special={};new_special={}
+        for root,dest in [(replay,old_special),(source,new_special)]:
+            for p in (root/'data/maps').glob('*/map.json'):
+                for obj in json.loads(p.read_text()).get('object_events',[]):
+                    if re.fullmatch(r'JourneySanctuary_\d+',obj.get('script','')):
+                        assert obj['script'] not in dest;dest[obj['script']]=(p.parent.name,obj)
+        assert len(old_special)==len(new_special)==105 and set(old_special)==set(new_special)
+        for key,(name,obj) in new_special.items():
+            old=old_special[key][1]
+            for field in set(old)-{'x','y','elevation'}:assert obj[field]==old[field],(key,field)
+        for g in groups['groups']:
+            p='data/maps/'+g['map']+'/map.json';a=json.loads((replay/p).read_text());b=json.loads((source/p).read_text())
+            assert a['warp_events']==b['warp_events'] and b['show_map_name']
+            assert all(o in b['object_events'] for o in a['object_events'] if not re.fullmatch(r'JourneySanctuary_\d+',o.get('script','')))
+            assert {int(o['script'].split('_')[-1]) for o in b['object_events'] if re.fullmatch(r'JourneySanctuary_\d+',o.get('script',''))}==set(g['national_dex'])
+        battle=(source/'data/scripts/journey_galactic.inc').read_text()
+        assert '\tsetwildbattle SPECIES_GIRATINA, 70\n\tdowildbattle' in battle
+        assert 'JourneyGalacticNoCatch(void)' in (source/'src/journey_galactic.c').read_text()
         result=prepare(replay);assert result==report
         assert prepare(replay)==report
         for name,sha in report['prepared_sha256'].items():assert digest((replay/name).read_bytes())==sha,name
     proof=dict(passed=True,rom_sha256=digest((source/'pokeemerald.gba').read_bytes()),layers=PRIOR+[LAYER],
                unrelated_inputs_checked=unrelated,independent_replay=True,idempotent=True,
                all_existing_events_preserved=True,existing_events_checked=events,unchanged_map_cells_pixel_checked=cells,
-               only_requested_terrain_changed=True,mega_stones_unchanged=True,existing_tm_hm_numbers_preserved=True,animated_flag_graphics_reserved=True,booth_shore_matches_3_12=True,compiled_booth_shore_matches_source=True)
+               only_requested_terrain_changed=True,mega_stones_unchanged=True,existing_tm_hm_numbers_preserved=True,animated_flag_graphics_reserved=True,booth_shore_matches_3_12=True,compiled_booth_shore_matches_source=True,all_105_legendaries_grouped_once=True,cave_groups=48,all_cave_entrances_and_native_events_preserved=True,galactic_giratina_battle_preserved=True)
     output.parent.mkdir(parents=True,exist_ok=True);output.write_text(json.dumps(proof,indent=2)+'\n')
     print(json.dumps(proof,indent=2))
 if __name__=='__main__':

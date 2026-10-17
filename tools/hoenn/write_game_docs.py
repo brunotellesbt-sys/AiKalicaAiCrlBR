@@ -12,6 +12,33 @@ def label(name,prefix='SPECIES_'):
     return name.removeprefix(prefix).replace('_',' ').title()
 
 
+def special_encounter_index(source):
+    source=Path(source)
+    special=json.loads((source/'.journey-sanctuaries').read_text())
+    captures=special['captures']+json.loads((source/'.journey-paradox-caves').read_text())['paradox_captures']
+    body='# Lendários, míticos e Paradoxos\n\nAs capturas novas exigem as 16 insígnias, antes de qualquer Liga. Dialga, Palkia e Giratina exigem também concluir a missão Galactic no navio. A luta de Giratina nessa missão é obrigatória e não permite captura; a captura opcional ocorre posteriormente na caverna. Nas edições até a geração 4, espécies com número nacional acima de 493 ficam indisponíveis.\n\n'
+    sites={x['map']:x for x in special['sites']}
+    names={}
+    marker=source/'.journey-dewford-competitive-shop'
+    grouped=json.loads(marker.read_text()).get('legendary_caves') if marker.exists() else None
+    if grouped:
+        placements={p['national_dex']:p for p in grouped['placements']}
+        for c in captures:
+            if c['national_dex'] in placements:c['map']=placements[c['national_dex']]['map']
+        names={g['map']:g['name'] for g in grouped['groups']}
+        body+='[Distribuição atual em 48 câmaras por famílias e grupos relacionados](cavernas-lendarias.md).\n\n'
+    body+='| Pokémon | Número nacional | Caverna | Acesso/ilha de origem |\n|---|---|---|---|\n'
+    for c in sorted(captures,key=lambda c:c['national_dex']):
+        site=sites.get(c['map'],{})
+        if c['map'] in names and not site:
+            m=json.loads((source/f'data/maps/{c["map"]}/map.json').read_text())
+            site=dict(surface=m['warp_events'][0]['dest_map'].removeprefix('MAP_'),access='acesso existente')
+        body+='| '+label(c['species'])+' | '+str(c['national_dex'])+' | '+names.get(c['map'],c['map'])+' | '+str(site.get('surface',c.get('parent','')))+'; '+str(site.get('access',''))+' |\n'
+    if grouped:body+='\nA localização atual das capturas especiais também consta na AREA da Pokédex.\n'
+    body+='\nOs encontros originais ligados à história são preservados. Este índice enumera os novos santuários; não substitui as localizações originais mostradas pela AREA da Pokédex.\n'
+    return body
+
+
 def generate(source,output,reports):
     source=Path(source);output=Path(output);reports=Path(reports);output.mkdir(parents=True,exist_ok=True)
     catalog=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_text())['species']
@@ -50,16 +77,7 @@ def generate(source,output,reports):
                 body+='| '+label(family['name'])+' | '+', '.join(label(s['name']) for s in family['species'])+' | '+str(family['rarity'])+' |\n'
             body+='\n'
         (output/f'encontros-gen1-{cap}.md').write_text(body.rstrip()+'\n')
-    special=json.loads((source/'.journey-sanctuaries').read_text())
-    captures=special['captures']+json.loads((source/'.journey-paradox-caves').read_text())['paradox_captures']
-    body='# Lendários, míticos e Paradoxos\n\nAs capturas novas exigem as 16 insígnias, antes de qualquer Liga. Dialga, Palkia e Giratina exigem também concluir a missão Galactic no navio. A luta de Giratina nessa missão é obrigatória e não permite captura; a captura opcional ocorre posteriormente na caverna. Nas edições até a geração 4, espécies com número nacional acima de 493 ficam indisponíveis.\n\n'
-    body+='| Pokémon | Número nacional | Caverna | Acesso/ilha de origem |\n|---|---|---|---|\n'
-    sites={x['map']:x for x in special['sites']}
-    for c in sorted(captures,key=lambda c:c['national_dex']):
-        site=sites.get(c['map'],{})
-        body+='| '+label(c['species'])+' | '+str(c['national_dex'])+' | '+c['map']+' | '+str(site.get('surface',c.get('parent','')))+'; '+str(site.get('access',''))+' |\n'
-    body+='\nOs encontros originais ligados à história são preservados. Este índice enumera os novos santuários; não substitui as localizações originais mostradas pela AREA da Pokédex.\n'
-    (output/'lendarios-miticos-paradoxos.md').write_text(body)
+    (output/'lendarios-miticos-paradoxos.md').write_text(special_encounter_index(source))
     supplies=json.loads((source/'.journey-evolution-supplies').read_text())
     body='# Itens de evolução e Mega Stones\n\nO fornecedor de cada Centro Pokémon abaixo vende as pedras obtidas em suas expedições. Mega Stones custam 25.000; itens de evolução mantêm o preço original, ou 6.000 quando originalmente não tinham preço de venda. A Mega Ring é entregue ao visitar um fornecedor depois de duas insígnias somadas entre as regiões.\n\n'
     body+='As evoluções por pedra do jogador continuam normais. Troca foi substituída por nível 36; troca com item, por nível 30 segurando o item. Os níveis mínimos 30/35/40 por força da evolução são uma regra adicional dos treinadores, não do jogador.\n\n'

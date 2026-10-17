@@ -1,10 +1,14 @@
-# Barraca de treinamento de Dewford
+# Mercado da Battle Frontier e Hyper Training
 
-Uma barraca coberta do mercado de Slateport foi instalada entre a casa com pedra na frente e a ponte suspensa. São dois atendentes: o da direita vende equipamentos e o da esquerda faz Hyper Training. A passagem a pé pela frente permanece livre. Os tiles (3,13) e (3,14) usam a borda de praia de (3,12) sob a barraca.
+A barraca de itens de batalha fica na praça externa oeste da **Battle Frontier**, à esquerda da loja existente, nos tiles (37,40) a (40,42). Há **um único vendedor**, no tile (38,42), com acesso livre pela frente. A barraca usa o modelo coberto do mercado de Slateport. Os 71 itens e seus preços foram mantidos; o vendedor de itens saiu de Dewford.
 
-![Dewford atual](images/dewford-shop/Dewford-island-harbor.png)
+![Barraca externa com um vendedor](images/frontier-market/barraca.png)
 
-![Uma barraca, dois atendentes](images/dewford-shop/barraca.png)
+![Captura da ROM em mGBA](images/frontier-market/emulador.png)
+
+O **Hyper Training permanece em Dewford**, com um treinador na barraca anterior. A passagem a pé pela frente permanece livre. Os tiles (3,13) e (3,14) usam a borda de praia de (3,12) sob a barraca.
+
+![Dewford com o treinador de Hyper Training](images/dewford-shop/Dewford-island-harbor.png)
 
 O Bottle Cap comum melhora um atributo; o Gold Bottle Cap melhora os seis. O serviço exige nível 50, confirma antes de gastar e não altera os IVs herdados na reprodução. Atributos já perfeitos e Eggs não consomem tampinhas. Mints alteram o efeito da natureza nos atributos; Ability Capsule troca habilidades comuns e Ability Patch permite a habilidade oculta conforme as regras da espécie.
 
@@ -14,7 +18,7 @@ O Full Restore fica em uma Poké Ball à esquerda do porto. O TM55 Play Rough fi
 
 ## Preços
 
-A barraca vende 71 itens em cinco categorias, com os equipamentos de maior valor mais caros.
+A barraca externa da Battle Frontier vende 71 itens em cinco categorias, com os equipamentos de maior valor mais caros.
 
 | Item | Preço |
 |---|---:|
@@ -98,4 +102,4 @@ A missão já existe no **Abandoned Ship**, com passagem além da cabine 6 no an
 
 ## Validação desta entrega
 
-As evidências em `mods/hoenn/dewford-shop-validation/` registram compras reais por menu, consumo de dinheiro e tampinhas, Hyper Training, coleta dos dois itens e passagem atrás do farol nas quatro edições e na ROM de teste. Posições iniciais, dinheiro e Pokémon dos validadores são fixtures. As verificações anteriores de navegação permanecem vinculadas aos hashes originais; a campanha completa não foi repetida.
+As evidências em `mods/hoenn/ever-grande-market-validation/` registram compras reais por menu no exterior da Battle Frontier, o acesso à barraca com um vendedor, consumo de dinheiro e tampinhas, Hyper Training, coleta dos dois itens e passagem atrás do farol nas quatro edições e na ROM de teste. Posições iniciais, dinheiro e Pokémon dos validadores são fixtures. As verificações anteriores de navegação permanecem vinculadas aos hashes originais; a campanha completa não foi repetida.

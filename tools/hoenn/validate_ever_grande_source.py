@@ -2,9 +2,11 @@
 import argparse
 import hashlib
 import json
+import re
 import shutil
 import tempfile
 from pathlib import Path
+from candidate_layer import Layer
 from prepare_ever_grande_market import prepare, PRIOR, LAYER
 
 def validate(source, baseline, output):
@@ -18,14 +20,33 @@ def validate(source, baseline, output):
         assert hashlib.sha256((source/name).read_bytes()).hexdigest()==digest,name
     with tempfile.TemporaryDirectory(prefix='ever-replay-',dir='/tmp') as directory:
         replay=Path(directory)
-        for name in expected:
-            dest=replay/name;dest.parent.mkdir(parents=True,exist_ok=True)
-            shutil.copyfile(baseline/name,dest)
-        for name in ['.source-acquired.json',*['.journey-'+n for n in PRIOR]]:
-            shutil.copyfile(baseline/name,replay/name)
-        fresh=json.loads(json.dumps(prepare(replay)))
-        assert fresh==report
-        assert prepare(replay)==fresh
+        for p in baseline.iterdir():
+            (replay/p.name).symlink_to(p.resolve(),target_is_directory=p.is_dir())
+        def materialize(folder):
+            if folder==replay:return
+            materialize(folder.parent)
+            if folder.is_symlink():
+                target=folder.resolve();folder.unlink();folder.mkdir()
+                for p in target.iterdir():(folder/p.name).symlink_to(p,target_is_directory=p.is_dir())
+        # Copy the writable outputs and only read the remaining linked inputs.
+        # This keeps an independent replay practical on inode-limited CI.
+        for name in outputs:
+            dest=replay/name;materialize(dest.parent);dest.unlink(missing_ok=True)
+            if name in expected:shutil.copyfile(baseline/name,dest)
+        finish=Layer.finish
+        def isolated_finish(layer,**metadata):
+            # Also isolate any newly introduced output before Layer writes it.
+            for name in layer.outputs:
+                dest=replay/name;materialize(dest.parent)
+                if dest.is_symlink():
+                    raw=dest.read_bytes();dest.unlink();dest.write_bytes(raw)
+            return finish(layer,**metadata)
+        Layer.finish=isolated_finish
+        try:
+            fresh=json.loads(json.dumps(prepare(replay)))
+            assert fresh==report
+            assert prepare(replay)==fresh
+        finally:Layer.finish=finish
     city=json.loads((source/'data/maps/EverGrandeCity/map.json').read_text())
     old=json.loads((baseline/'data/maps/EverGrandeCity/map.json').read_text())
     assert city['warp_events'][:len(old['warp_events'])]==old['warp_events']
@@ -41,8 +62,14 @@ def validate(source, baseline, output):
     dewford=json.loads((baseline/'.journey-dewford-competitive-shop').read_text())
     for name in dewford['prepared_sha256']:
         if name in outputs:
-            assert name in ['include/constants/flags.h','data/event_scripts.s']
-            assert (source/name).read_bytes().startswith((baseline/name).read_bytes())
+            if name=='src/data/journey_world_map.h':
+                from prepare_world_dex_map import PAT
+                assert re.findall(PAT,(source/name).read_text())==re.findall(PAT,(baseline/name).read_text())
+            else:
+                assert name in ['include/constants/flags.h','data/event_scripts.s']
+                assert (source/name).read_bytes().startswith((baseline/name).read_bytes())
+    caves=dewford['legendary_caves'];market=dewford['frontier_market']
+    assert caves['total']==105 and caves['cave_count']==48 and market['seller_count']==1
     assert {h['flag_id'] for h in report['houses']}.isdisjoint({dewford['item']['flag'],dewford['tm']['flag']})
     r=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),
         layers=PRIOR+[LAYER],independent_replay=True,idempotent=True,source_hashes_checked=len(expected|outputs),

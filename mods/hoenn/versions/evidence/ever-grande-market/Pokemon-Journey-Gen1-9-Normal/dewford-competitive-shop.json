@@ -43,7 +43,410 @@
     "party_items_and_initial_position_are_fixtures": true,
     "giving_and_taking_original_orbs_use_controller_input": true
   },
-  "rom_sha256": "95ca98144c9d469d897b17a6d2794e63300bbd0e9e50af2d94331a502349f4d1",
+  "legendary_caves": {
+    "groups": [
+      {
+        "map": "JourneySanctuaryTempestades",
+        "name": "STORMBIRD CAVE",
+        "species": [
+          144,
+          145,
+          146
+        ]
+      },
+      {
+        "map": "JourneySanctuaryAurora",
+        "name": "RAINBOW CAVE",
+        "species": [
+          249,
+          250
+        ]
+      },
+      {
+        "map": "JourneySanctuaryVulcao",
+        "name": "PRIMAL CAVE",
+        "species": [
+          382,
+          383,
+          384
+        ]
+      },
+      {
+        "map": "JourneySanctuaryTitans",
+        "name": "TITAN CAVE",
+        "species": [
+          377,
+          378,
+          379,
+          486,
+          894,
+          895
+        ]
+      },
+      {
+        "map": "JourneySanctuaryFloresta",
+        "name": "TIMEGROVE CAVE",
+        "species": [
+          251
+        ]
+      },
+      {
+        "map": "JourneySanctuaryEclipse",
+        "name": "MOON-DREAM CAVE",
+        "species": [
+          488,
+          491
+        ]
+      },
+      {
+        "map": "JourneySanctuaryDragoes",
+        "name": "TAO CAVE",
+        "species": [
+          643,
+          644,
+          646
+        ]
+      },
+      {
+        "map": "JourneySanctuaryEstrelas",
+        "name": "EON CAVE",
+        "species": [
+          380,
+          381
+        ]
+      },
+      {
+        "map": "JourneySanctuaryCristais",
+        "name": "LAKE SPIRIT CAVE",
+        "species": [
+          480,
+          481,
+          482
+        ]
+      },
+      {
+        "map": "JourneySanctuaryMares",
+        "name": "SEA CROWN CAVE",
+        "species": [
+          489,
+          490
+        ]
+      },
+      {
+        "map": "JourneySanctuaryOrigens",
+        "name": "CREATION CAVE",
+        "species": [
+          483,
+          484,
+          487,
+          493
+        ]
+      },
+      {
+        "map": "JourneySanctuaryProfundezas",
+        "name": "NATURE FORCE CAVE",
+        "species": [
+          641,
+          642,
+          645,
+          905
+        ]
+      },
+      {
+        "map": "JourneySanctuaryDimensoes",
+        "name": "COSMIC LIGHT CAVE",
+        "species": [
+          789,
+          790,
+          791,
+          792,
+          800
+        ]
+      },
+      {
+        "map": "JourneySanctuaryAbismo",
+        "name": "GLASS TIDE CAVE",
+        "species": [
+          793
+        ]
+      },
+      {
+        "map": "JourneyCaveFarol",
+        "name": "THUNDERBEAST CAVE",
+        "species": [
+          243,
+          244,
+          245
+        ]
+      },
+      {
+        "map": "JourneyCaveBrisa",
+        "name": "JUSTICE CAVE",
+        "species": [
+          638,
+          639,
+          640,
+          647
+        ]
+      },
+      {
+        "map": "JourneyCaveHorizonte",
+        "name": "AURA BALANCE CAVE",
+        "species": [
+          716,
+          717,
+          718
+        ]
+      },
+      {
+        "map": "JourneyCaveCoral",
+        "name": "GENESIS CAVE",
+        "species": [
+          150,
+          151
+        ]
+      },
+      {
+        "map": "JourneyCaveAlvorada",
+        "name": "ISLAND GUARD CAVE",
+        "species": [
+          785,
+          786,
+          787,
+          788
+        ]
+      },
+      {
+        "map": "JourneyCaveEspuma",
+        "name": "HERO CAVE",
+        "species": [
+          888,
+          889,
+          890
+        ]
+      },
+      {
+        "map": "JourneyCaveOcaso",
+        "name": "CROWNED TUNDRA",
+        "species": [
+          896,
+          897,
+          898
+        ]
+      },
+      {
+        "map": "JourneyCaveMare",
+        "name": "MASKBOUND CAVE",
+        "species": [
+          1014,
+          1015,
+          1016,
+          1017,
+          1025
+        ]
+      },
+      {
+        "map": "GraniteCave_1F",
+        "name": "LIVEWIRE CHAMBER",
+        "species": [
+          796
+        ]
+      },
+      {
+        "map": "GraniteCave_B1F",
+        "name": "INSECT RIFT",
+        "species": [
+          794,
+          795
+        ]
+      },
+      {
+        "map": "GraniteCave_B2F",
+        "name": "BLADE-ROCKET RIFT",
+        "species": [
+          797,
+          798
+        ]
+      },
+      {
+        "map": "GraniteCave_StevensRoom",
+        "name": "ABYSSAL HUNGER",
+        "species": [
+          799
+        ]
+      },
+      {
+        "map": "MeteorFalls_1F_1R",
+        "name": "VENOM DRAGON DEN",
+        "species": [
+          803,
+          804
+        ]
+      },
+      {
+        "map": "MeteorFalls_1F_2R",
+        "name": "BURST-ASSEMBLY DEN",
+        "species": [
+          805,
+          806
+        ]
+      },
+      {
+        "map": "MeteorFalls_B1F_1R",
+        "name": "CHIMERA CHAMBER",
+        "species": [
+          772,
+          773
+        ]
+      },
+      {
+        "map": "MeteorFalls_B1F_2R",
+        "name": "QUICKSILVER CAVE",
+        "species": [
+          808,
+          809
+        ]
+      },
+      {
+        "map": "MeteorFalls_StevensCave",
+        "name": "TWIN-FIST CAVE",
+        "species": [
+          891,
+          892
+        ]
+      },
+      {
+        "map": "ShoalCave_LowTideInnerRoom",
+        "name": "SEALED RUIN CAVE",
+        "species": [
+          1001,
+          1002,
+          1003,
+          1004
+        ]
+      },
+      {
+        "map": "ShoalCave_LowTideLowerRoom",
+        "name": "PARADOX DRAGON DEN",
+        "species": [
+          1007,
+          1008
+        ]
+      },
+      {
+        "map": "ShoalCave_LowTideIceRoom",
+        "name": "TERASTAL CHAMBER",
+        "species": [
+          1024
+        ]
+      },
+      {
+        "map": "FieryPath",
+        "name": "WISHSTAR CHAMBER",
+        "species": [
+          385
+        ]
+      },
+      {
+        "map": "RusturfTunnel",
+        "name": "METEOR HEART",
+        "species": [
+          386
+        ]
+      },
+      {
+        "map": "VictoryRoad_1F",
+        "name": "MAGMA HEART",
+        "species": [
+          485
+        ]
+      },
+      {
+        "map": "VictoryRoad_B1F",
+        "name": "VICTORY FLAME",
+        "species": [
+          494
+        ]
+      },
+      {
+        "map": "VictoryRoad_B2F",
+        "name": "MELODY CHAMBER",
+        "species": [
+          648
+        ]
+      },
+      {
+        "map": "VictoryRoad_1F_Frlg",
+        "name": "PALEO ARMORY",
+        "species": [
+          649
+        ]
+      },
+      {
+        "map": "VictoryRoad_2F_Frlg",
+        "name": "DIAMOND CHAMBER",
+        "species": [
+          719
+        ]
+      },
+      {
+        "map": "VictoryRoad_3F_Frlg",
+        "name": "RINGBOUND CHAMBER",
+        "species": [
+          720
+        ]
+      },
+      {
+        "map": "RockTunnel_1F_Frlg",
+        "name": "STEAMBOUND CAVE",
+        "species": [
+          721
+        ]
+      },
+      {
+        "map": "RockTunnel_B1F_Frlg",
+        "name": "SOUL HEART CHAMBER",
+        "species": [
+          801
+        ]
+      },
+      {
+        "map": "MtMoon_1F_Frlg",
+        "name": "SHADOWSTEP CAVE",
+        "species": [
+          802
+        ]
+      },
+      {
+        "map": "MtMoon_B1F_Frlg",
+        "name": "THUNDERCLAW CAVE",
+        "species": [
+          807
+        ]
+      },
+      {
+        "map": "MtMoon_B2F_Frlg",
+        "name": "VINEGUARD CAVE",
+        "species": [
+          893
+        ]
+      },
+      {
+        "map": "CeruleanCave_1F_Frlg",
+        "name": "GRATITUDE GROTTO",
+        "species": [
+          492
+        ]
+      }
+    ],
+    "total_species": 105,
+    "all_48_names_checked_in_rom": true,
+    "all_altars_on_compiled_walkable_tiles": true,
+    "giratina_ship_capture_blocked": true,
+    "galactic_trio_unlocks_after_event": true,
+    "initial_story_position_and_encounter_suppression_are_fixtures": true
+  },
+  "rom_sha256": "646b6ee2bb6fbd70ae5a01f6d8c492433a18f5f71757117551b86fa9195fe578",
   "review_mode": false,
   "prices_checked": 71,
   "purchases": [
@@ -66,6 +469,9 @@
   "insufficient_money_preserves_money_and_bag": true,
   "two_attendants_interacted": true,
   "footpath_to_bridge_walked": true,
+  "frontier_single_seller": true,
+  "shop_removed_from_dewford": true,
+  "frontier_approach_walked": true,
   "single_cap_only_one_stat": true,
   "gold_cap_all_six_stats": true,
   "original_genetic_ivs_preserved": true,

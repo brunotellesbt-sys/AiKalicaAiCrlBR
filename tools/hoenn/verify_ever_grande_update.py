@@ -35,6 +35,10 @@ def verify_update(directory,info):
             for k in ['controller_center_roundtrip','victory_road_and_stairs_walked','market_actual_purchase','insufficient_money_rejected','stock_specific_price_reset','base_item_price_unchanged','save_continue_preserves_gifts_and_purchase','compiled_atlas_and_zoom_match_source','sootopolis_city_red']:assert r[k],k
         elif p['kind']=='dewford-competitive-shop':
             assert r['review_mode']==(p['target']=='test') and r['prices_checked']==71
+            assert r['frontier_single_seller'] and r['shop_removed_from_dewford'] and r['frontier_approach_walked']
+            caves=r['legendary_caves'];assert caves['total_species']==105 and len(caves['groups'])==48
+            assert caves['all_48_names_checked_in_rom'] and caves['all_altars_on_compiled_walkable_tiles']
+            assert caves['giratina_ship_capture_blocked'] and caves['galactic_trio_unlocks_after_event']
             assert len(r['purchases'])==3 and r['single_cap_only_one_stat'] and r['gold_cap_all_six_stats']
             assert r['original_genetic_ivs_preserved']
             for k in ['two_attendants_interacted','footpath_to_bridge_walked','full_restore_picked_up_once','play_rough_picked_up_and_native_teachable','closed_trees_block_walk']:assert r[k],k

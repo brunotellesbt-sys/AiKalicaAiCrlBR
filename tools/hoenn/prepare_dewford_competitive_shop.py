@@ -1,4 +1,4 @@
-"""Add Dewford's two-person training stall without changing the sea network."""
+"""Add Dewford Hyper Training and the outdoor Frontier battle-item market."""
 import argparse
 import io
 import json
@@ -218,7 +218,11 @@ def prepare(source):
     layer.stage('data/scripts/journey_competitive_shop.inc',script)
     layer.stage('src/journey_competitive_shop.c',(Path(__file__).parent/'data/dewford-competitive-shop.c').read_bytes())
     p='data/event_scripts.s';layer.stage(p,(s/p).read_text()+'\n\t.include "data/scripts/journey_competitive_shop.inc"\n')
-    return layer.finish(stocks=groups,prices=prices,seller=[2,15],hyper_trainer=[1,15],
+    from prepare_legendary_cave_groups import prepare_groups
+    legendary_caves=prepare_groups(layer)
+    from prepare_battle_frontier_market import prepare_market
+    frontier_market=prepare_market(layer)
+    return layer.finish(legendary_caves=legendary_caves,frontier_market=frontier_market,stocks=groups,prices=prices,seller=frontier_market['seller'],seller_map=frontier_market['map'],hyper_trainer=[1,15],
                         booth=[0,13,4,3],booth_shore_underlay=dict(cells=[[3,13],[3,14]],reference=[3,12]),item=dict(map='Route106',world=[-5,-4],position=[75,16],item='ITEM_FULL_RESTORE',flag=flag),
                         tm=dict(map='JourneyDewfordPortIsland',world=[7,-6],position=[7,6],item='ITEM_TM_PLAY_ROUGH',number=tm_count+1,flag=flag+1),
                         lighthouse_peak_walkable=[[-2,-6],[-1,-6]],

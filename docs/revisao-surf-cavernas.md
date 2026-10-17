@@ -1,5 +1,7 @@
 # Revisão de Surf e cavernas
 
+Este guia registra a revisão de Surf do PR #92. Os acessos permanecem; os nomes e a distribuição atual dos encontros estão no [guia das 48 cavernas e câmaras](cavernas-lendarias.md).
+
 A edição de inspeção está em [roms/rom-de-teste](../roms/rom-de-teste/LEIA-ME.md). As quatro edições normais recebem a mesma geografia e conservam encontros e abordagens automáticas.
 
 ![Mapa atual](images/navigation/world-map-current.png)

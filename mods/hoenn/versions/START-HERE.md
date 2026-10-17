@@ -1,11 +1,13 @@
 # Pokémon Journey — quatro edições GBA
 
-Atualização atual: [casas e feira de Mega Stones em Ever Grande](../../../docs/ever-grande-market.md), dois presentes únicos e Sootopolis com marcador vermelho. Inclui a feira competitiva de Dewford e as formas Origin do PR #93.
+Atualização atual: [casas e feira de Mega Stones em Ever Grande](../../../docs/ever-grande-market.md), dois presentes únicos e Sootopolis com marcador vermelho. Inclui as formas Origin do PR #93, o mercado competitivo no exterior da Battle Frontier e o Hyper Training em Dewford.
 
 Inclui a [correção do rio de Fallarbor](../../../docs/fallarbor-river.md): praia caminhável, margens completas e desembarque para a cidade.
 [Formas Origin](../../../docs/formas-origin.md): Adamant Orb, Lustrous Orb e Griseous Orb agora também transformam ao equipar.
 
-[Barraca de Dewford](../../../docs/vendinha-dewford.md): 71 itens competitivos, dois atendentes, Bottle Caps e Hyper Training.
+[Mercado externo da Battle Frontier](../../../docs/vendinha-dewford.md): 71 itens competitivos e Bottle Caps com um vendedor. O Hyper Training permanece em Dewford.
+
+[48 câmaras nomeadas](../../../docs/cavernas-lendarias.md): todos os 105 lendários e especiais distribuídos por grupos relacionados.
 
 [Oceano integrado e seis ligações do mapa](../../../docs/oceano-integrado.md): Surf aberto com bordas de pedra, preservando Mossdeep e Dewford do PR #90.
 

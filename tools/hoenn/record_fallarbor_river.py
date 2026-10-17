@@ -44,9 +44,9 @@ filters=("scale=960:640:flags=neighbor,pad=960:736:0:48:color=0x111827,"
     f"drawtext=fontfile={font}:text='Western River → Rota 114 → Fallarbor':fontcolor=white:fontsize=23:x=(w-tw)/2:y=12,"
     f"drawtext=fontfile={font}:text='Surf e Waterfall | Captura real em mGBA':fontcolor=0xcbd5e1:fontsize=20:x=(w-tw)/2:y=690")
 log=(args.output/'ffmpeg.log').open('w')
-encoder=subprocess.Popen(['ffmpeg','-y','-hide_banner','-loglevel','warning','-f','rawvideo','-pixel_format','rgba',
+encoder=subprocess.Popen(['ffmpeg','-y','-hide_banner','-loglevel','warning','-filter_threads','1','-f','rawvideo','-pixel_format','rgba',
     '-video_size','240x160','-framerate','30','-i','pipe:0','-an','-vf',filters,'-c:v','libx264','-preset','fast',
-    '-crf','18','-pix_fmt','yuv420p','-movflags','+faststart',str(video)],stdin=subprocess.PIPE,stderr=log)
+    '-threads','1','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart',str(video)],stdin=subprocess.PIPE,stderr=log)
 base_step=step;frames=captured=pending_capture=0;recording=True;samples=[];route=[]
 def capture():
     global captured
