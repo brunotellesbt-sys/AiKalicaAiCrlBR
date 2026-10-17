@@ -23,11 +23,16 @@ class EverGrandeMarket(unittest.TestCase):
                 self.assertEqual(r['market_price'],200000)
                 self.assertTrue(r['stock_specific_price_reset'] and r['save_continue_preserves_gifts_and_purchase'])
                 self.assertTrue(r['compiled_atlas_and_zoom_match_source'] and r['sootopolis_city_red'])
+                dewford=json.loads((OUT/edition/'dewford-competitive-shop.json').read_text())
+                self.assertEqual(dewford['rom_sha256'],sha)
+                self.assertTrue(dewford['single_cap_only_one_stat'] and dewford['gold_cap_all_six_stats'])
+                self.assertEqual({c['pokemon'] for c in dewford['origin_forms']['checks']},{'Dialga','Palkia','Giratina'})
 
     def test_unrelated_terrain_is_preserved_and_overlay_replays(self):
         r=json.loads((OUT/'source.json').read_text())
         self.assertTrue(r['independent_replay'] and r['idempotent'])
         self.assertGreater(r['unrelated_files_preserved'],30000)
         self.assertTrue(r['all_surf_maps_unchanged'] and r['original_city_events_and_connections_preserved'])
+        self.assertTrue(r['dewford_and_origin_features_preserved'])
 
 if __name__=='__main__':unittest.main()

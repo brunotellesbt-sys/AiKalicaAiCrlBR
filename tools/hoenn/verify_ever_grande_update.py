@@ -34,11 +34,21 @@ def verify_update(directory,info):
         elif p['kind']=='dewford-competitive-shop':
             assert r['review_mode']==(p['target']=='test') and r['prices_checked']==71
             assert len(r['purchases'])==3 and r['single_cap_only_one_stat'] and r['gold_cap_all_six_stats']
-            assert r['original_genetic_ivs_preserved'] and r['booth_shore_matches_source'] if 'booth_shore_matches_source' in r else r['original_genetic_ivs_preserved']
+            assert r['original_genetic_ivs_preserved']
             for k in ['two_attendants_interacted','footpath_to_bridge_walked','full_restore_picked_up_once','play_rough_picked_up_and_native_teachable','closed_trees_block_walk']:assert r[k],k
             origins=r['origin_forms'];assert origins['wrong_species_orb_rejected'] and origins['giving_and_taking_original_orbs_use_controller_input']
             assert {c['pokemon'] for c in origins['checks']}=={'Dialga','Palkia','Giratina'}
             assert all(c['original_orb_equipped_through_bag'] and c['item_taken_through_party_menu'] and c['stats_change_and_revert'] and c['save_reload_preserves_form_and_item'] and c['modern_reward_still_transforms'] for c in origins['checks'])
+        elif p['kind']=='fallarbor-river':
+            assert p['target']=='Pokemon-Journey-Gen1-9-Normal.gba'
+            assert r['departure'][0]=='JourneyWestRiver' and r['arrival']==['FallarborTown',14,8]
+            for k in ['departure_already_surfing','native_waterfall_climb_and_descent','continuous_video',
+                      'river_seam_enters_below_waterfall','upper_pool_is_side_visit',
+                      'controller_movement_only','no_midroute_warps_or_coordinate_writes']:
+                assert r[k],k
+            assert r['waterfall_above'][1]<r['waterfall_below'][1] and r['video_seconds']>20
+            assert any(t['source'][0]=='JourneyWestRiver' and t['destination'][0]=='Route114' for t in r['transitions'])
+            assert hashlib.sha256((ROOT/'docs/videos/western-river-fallarbor.mp4').read_bytes()).hexdigest()==r['video_sha256']
         elif p['kind']=='review-mode':
             assert r['review_mode']==(p['target']=='test') and r['fixture_wild_encounters_disabled'] is False
             assert bool(r['checks']['trainer_approach_result'])==(p['target']!='test')
@@ -48,10 +58,11 @@ def verify_update(directory,info):
                 assert hashlib.sha256((ROOT/'roms/rom-de-teste/Pokemon-Journey-TESTE.sav').read_bytes()).hexdigest()==c['save_sha256']
         else:raise AssertionError(p['kind'])
     assert {('common','ever-grande-source'),('common','ever-grande-market')}<=covered
+    assert ('Pokemon-Journey-Gen1-9-Normal.gba','fallarbor-river') in covered
     assert {(t,k) for t in expected if t!='common' for k in ['ever-grande-market','dewford-competitive-shop','review-mode']}<=covered
     assert all((directory/r['file']).read_bytes()[test['review_mode_offset']]==0 for r in info['variants'])
-    # The old Surf reports keep their original ROM identities. Their terrain,
-    # connections, scripts and compiled-water code are preserved by source audit.
+    # Prior Dewford and Surf reports keep their original ROM identities.
+    # Current Dewford checks above accompany the exact source preservation audit.
     ref=info['previous_review_validation'];path=Path(ref['file']);assert not path.is_absolute() and '..' not in path.parts
     raw=(ROOT/path).read_bytes();assert hashlib.sha256(raw).hexdigest()==ref['sha256'];previous_test=json.loads(raw)
     from verify_dewford_shop_update import verify_update as verify_earlier

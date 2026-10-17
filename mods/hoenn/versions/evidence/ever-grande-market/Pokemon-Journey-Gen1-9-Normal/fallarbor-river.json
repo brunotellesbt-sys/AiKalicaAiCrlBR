@@ -1,0 +1,790 @@
+{
+  "passed": true,
+  "rom_sha256": "6ca85d29f51b1c93c98d084feb0d56d1d6e3adeff24ebd8430fc78e58e343cac",
+  "departure": [
+    "JourneyWestRiver",
+    34,
+    6
+  ],
+  "arrival": [
+    "FallarborTown",
+    14,
+    8
+  ],
+  "route": [
+    {
+      "frame": 90,
+      "map": "JourneyWestRiver",
+      "tile": [
+        34,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 206,
+      "map": "Route114",
+      "tile": [
+        0,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 2247,
+      "map": "FallarborTown",
+      "tile": [
+        0,
+        13
+      ],
+      "surf": false
+    }
+  ],
+  "transitions": [
+    {
+      "source": [
+        "JourneyWestRiver",
+        47,
+        6
+      ],
+      "destination": [
+        "Route114",
+        0,
+        16
+      ]
+    },
+    {
+      "source": [
+        "Route114",
+        39,
+        13
+      ],
+      "destination": [
+        "FallarborTown",
+        0,
+        13
+      ]
+    }
+  ],
+  "waterfall_front": [
+    "Route114",
+    11,
+    13
+  ],
+  "waterfall_below": [
+    11,
+    13
+  ],
+  "waterfall_above": [
+    11,
+    9
+  ],
+  "departure_already_surfing": true,
+  "native_waterfall_climb_and_descent": true,
+  "continuous_video": true,
+  "river_seam_enters_below_waterfall": true,
+  "upper_pool_is_side_visit": true,
+  "controller_movement_only": true,
+  "no_midroute_warps_or_coordinate_writes": true,
+  "initial_party_badges_story_and_departure_are_fixtures": true,
+  "native_frames": 2733,
+  "captured_frames": 1367,
+  "video_fps": 30,
+  "video_seconds": 45.56666666666667,
+  "samples": [
+    {
+      "frame": 90,
+      "map": "JourneyWestRiver",
+      "tile": [
+        34,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 102,
+      "map": "JourneyWestRiver",
+      "tile": [
+        35,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 110,
+      "map": "JourneyWestRiver",
+      "tile": [
+        36,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 118,
+      "map": "JourneyWestRiver",
+      "tile": [
+        37,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 126,
+      "map": "JourneyWestRiver",
+      "tile": [
+        38,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 134,
+      "map": "JourneyWestRiver",
+      "tile": [
+        39,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 142,
+      "map": "JourneyWestRiver",
+      "tile": [
+        40,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 150,
+      "map": "JourneyWestRiver",
+      "tile": [
+        41,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 158,
+      "map": "JourneyWestRiver",
+      "tile": [
+        42,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 166,
+      "map": "JourneyWestRiver",
+      "tile": [
+        43,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 174,
+      "map": "JourneyWestRiver",
+      "tile": [
+        44,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 182,
+      "map": "JourneyWestRiver",
+      "tile": [
+        45,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 190,
+      "map": "JourneyWestRiver",
+      "tile": [
+        46,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 198,
+      "map": "JourneyWestRiver",
+      "tile": [
+        47,
+        6
+      ],
+      "surf": true
+    },
+    {
+      "frame": 206,
+      "map": "Route114",
+      "tile": [
+        0,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 216,
+      "map": "Route114",
+      "tile": [
+        1,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 224,
+      "map": "Route114",
+      "tile": [
+        2,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 232,
+      "map": "Route114",
+      "tile": [
+        3,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 241,
+      "map": "Route114",
+      "tile": [
+        4,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 249,
+      "map": "Route114",
+      "tile": [
+        5,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 257,
+      "map": "Route114",
+      "tile": [
+        6,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 265,
+      "map": "Route114",
+      "tile": [
+        7,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 273,
+      "map": "Route114",
+      "tile": [
+        8,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 281,
+      "map": "Route114",
+      "tile": [
+        9,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 289,
+      "map": "Route114",
+      "tile": [
+        10,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 297,
+      "map": "Route114",
+      "tile": [
+        11,
+        16
+      ],
+      "surf": true
+    },
+    {
+      "frame": 305,
+      "map": "Route114",
+      "tile": [
+        11,
+        15
+      ],
+      "surf": true
+    },
+    {
+      "frame": 313,
+      "map": "Route114",
+      "tile": [
+        11,
+        14
+      ],
+      "surf": true
+    },
+    {
+      "frame": 321,
+      "map": "Route114",
+      "tile": [
+        11,
+        13
+      ],
+      "surf": true
+    },
+    {
+      "frame": 1209,
+      "map": "Route114",
+      "tile": [
+        12,
+        13
+      ],
+      "surf": true
+    },
+    {
+      "frame": 1252,
+      "map": "Route114",
+      "tile": [
+        13,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1256,
+      "map": "Route114",
+      "tile": [
+        14,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1272,
+      "map": "Route114",
+      "tile": [
+        15,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1288,
+      "map": "Route114",
+      "tile": [
+        16,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1884,
+      "map": "Route114",
+      "tile": [
+        17,
+        13
+      ],
+      "surf": true
+    },
+    {
+      "frame": 1888,
+      "map": "Route114",
+      "tile": [
+        18,
+        13
+      ],
+      "surf": true
+    },
+    {
+      "frame": 1896,
+      "map": "Route114",
+      "tile": [
+        19,
+        13
+      ],
+      "surf": true
+    },
+    {
+      "frame": 1939,
+      "map": "Route114",
+      "tile": [
+        20,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1943,
+      "map": "Route114",
+      "tile": [
+        21,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1959,
+      "map": "Route114",
+      "tile": [
+        22,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1975,
+      "map": "Route114",
+      "tile": [
+        23,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 1991,
+      "map": "Route114",
+      "tile": [
+        24,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2007,
+      "map": "Route114",
+      "tile": [
+        25,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2023,
+      "map": "Route114",
+      "tile": [
+        26,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2039,
+      "map": "Route114",
+      "tile": [
+        27,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2055,
+      "map": "Route114",
+      "tile": [
+        28,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2071,
+      "map": "Route114",
+      "tile": [
+        29,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2087,
+      "map": "Route114",
+      "tile": [
+        30,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2103,
+      "map": "Route114",
+      "tile": [
+        31,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2119,
+      "map": "Route114",
+      "tile": [
+        32,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2135,
+      "map": "Route114",
+      "tile": [
+        33,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2151,
+      "map": "Route114",
+      "tile": [
+        34,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2167,
+      "map": "Route114",
+      "tile": [
+        35,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2183,
+      "map": "Route114",
+      "tile": [
+        36,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2199,
+      "map": "Route114",
+      "tile": [
+        37,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2215,
+      "map": "Route114",
+      "tile": [
+        38,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2231,
+      "map": "Route114",
+      "tile": [
+        39,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2247,
+      "map": "FallarborTown",
+      "tile": [
+        0,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2264,
+      "map": "FallarborTown",
+      "tile": [
+        1,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2281,
+      "map": "FallarborTown",
+      "tile": [
+        2,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2297,
+      "map": "FallarborTown",
+      "tile": [
+        3,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2313,
+      "map": "FallarborTown",
+      "tile": [
+        4,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2329,
+      "map": "FallarborTown",
+      "tile": [
+        5,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2345,
+      "map": "FallarborTown",
+      "tile": [
+        6,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2361,
+      "map": "FallarborTown",
+      "tile": [
+        7,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2377,
+      "map": "FallarborTown",
+      "tile": [
+        8,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2393,
+      "map": "FallarborTown",
+      "tile": [
+        9,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2409,
+      "map": "FallarborTown",
+      "tile": [
+        10,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2425,
+      "map": "FallarborTown",
+      "tile": [
+        11,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2441,
+      "map": "FallarborTown",
+      "tile": [
+        12,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2457,
+      "map": "FallarborTown",
+      "tile": [
+        13,
+        13
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2473,
+      "map": "FallarborTown",
+      "tile": [
+        13,
+        12
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2489,
+      "map": "FallarborTown",
+      "tile": [
+        14,
+        12
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2505,
+      "map": "FallarborTown",
+      "tile": [
+        14,
+        11
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2521,
+      "map": "FallarborTown",
+      "tile": [
+        14,
+        10
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2537,
+      "map": "FallarborTown",
+      "tile": [
+        14,
+        9
+      ],
+      "surf": false
+    },
+    {
+      "frame": 2553,
+      "map": "FallarborTown",
+      "tile": [
+        14,
+        8
+      ],
+      "surf": false
+    }
+  ],
+  "video_sha256": "baf3d13afc90c5d55d1e761ceec09458c92b4689e307d61b411f2805ba675003"
+}

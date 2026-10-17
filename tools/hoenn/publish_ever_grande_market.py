@@ -25,21 +25,24 @@ def publish(source,validation,output):
     add(validation/'native/ever-grande-market.json','common','ever-grande-market')
     for target,folder in [(r['file'],r['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba')) for r in info['variants']]+[('test','TESTE')]:
         for k in ['ever-grande-market','dewford-competitive-shop','review-mode']:add(validation/folder/(k+'.json'),target,k)
+    add(validation/'river/fallarbor-river.json','Pokemon-Journey-Gen1-9-Normal.gba','fallarbor-river')
     (output/'versions.json').write_text(json.dumps(info,indent=2)+'\n');verify(output,require_seal=False)
     info['validated']=True;(output/'versions.json').write_text(json.dumps(info,indent=2)+'\n');verify(output)
     with zipfile.ZipFile(output/'Pokemon-Journey-Four-Editions.zip','w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:
         for n in [r['file'] for r in info['variants']]+['versions.json','SHA256SUMS','START-HERE.md']:z.write(output/n,n)
         for p in (output/'evidence').rglob('*.json'):z.write(p,p.relative_to(output).as_posix())
-        for p in validation.rglob('*.json'):z.write(p,p.relative_to(ROOT).as_posix())
+        for p in validation.rglob('*'):
+            if p.is_file() and p.suffix in ['.json','.png']:z.write(p,p.relative_to(ROOT).as_posix())
         for p in (ROOT/'docs').rglob('*'):
             if p.is_file():z.write(p,p.relative_to(ROOT).as_posix())
-        for folder in [validation/'native',ROOT/'mods/hoenn/surf-review-validation/native']:
+        for folder in [ROOT/'mods/hoenn/surf-review-validation/native']:
             for p in folder.glob('*.png'):z.write(p,p.relative_to(ROOT).as_posix())
         archived=set(z.namelist());history=old
         while 'previous_port_validation' in history:
             n=history['previous_port_validation']['manifest']
             if n not in archived:z.write(ROOT/n,n);archived.add(n)
             history=previous_release(history)
+    assert (output/'Pokemon-Journey-Four-Editions.zip').stat().st_size<100*1024*1024
     return info
 
 if __name__=='__main__':
