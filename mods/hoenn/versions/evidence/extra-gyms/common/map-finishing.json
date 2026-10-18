@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "rom_sha256": "f772b1d1c66aa5d09940264b54db92ea51ca5dea7de6bc70378d6595a4a72f15",
+  "rom_sha256": "ae5da9ae24d315cd2a987afc48d42673a4d11b4fa9b411afcf5214d936759a2b",
   "ports": [
     {
       "map": "OneIsland_Harbor_Frlg",
@@ -78,6 +78,328 @@
   "center_door_roundtrip": true,
   "six_obsolete_roof_removed": true,
   "six_ramp_main_terminal_controller_roundtrip": true,
+  "all_seven_obsolete_roofs_removed": true,
+  "all_seven_ramp_main_terminal_controller_roundtrips": true,
+  "ramp_roundtrips": [
+    {
+      "island": "One",
+      "town": "OneIsland_Frlg",
+      "harbor": "OneIsland_Harbor_Frlg",
+      "departure": [
+        12,
+        17
+      ],
+      "roof_footprint": [
+        10,
+        19,
+        5,
+        1
+      ],
+      "cleared_footprint": [
+        9,
+        19,
+        7,
+        1
+      ],
+      "replacement_water_metatile": 4395,
+      "town_ramp": [
+        12,
+        18
+      ],
+      "town_ramp_warp_id": 3,
+      "harbor_return": [
+        8,
+        2
+      ],
+      "harbor_return_warp_id": 0,
+      "obsolete_roof_absent": true,
+      "local_ocean_texture_preserved": true,
+      "cleared_tiles_native_water_height_one": true,
+      "native_ramp_tiles_and_warp_ids_preserved": true,
+      "native_north_arrow_return": true,
+      "connected_remnants_removed": [
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "footprint": [
+            9,
+            0,
+            7,
+            4
+          ],
+          "water": 4395
+        }
+      ],
+      "controller_outbound_to_main_terminal": true,
+      "controller_return_to_town": true,
+      "foot_state_preserved": true,
+      "center_terminal_roundtrip": false,
+      "native_ramp_side_coast_collision_checked": false
+    },
+    {
+      "island": "Two",
+      "town": "TwoIsland_Frlg",
+      "harbor": "TwoIsland_Harbor_Frlg",
+      "departure": [
+        21,
+        8
+      ],
+      "roof_footprint": [
+        8,
+        9,
+        5,
+        3
+      ],
+      "cleared_footprint": [
+        8,
+        9,
+        5,
+        3
+      ],
+      "replacement_water_metatile": 4395,
+      "town_ramp": [
+        10,
+        8
+      ],
+      "town_ramp_warp_id": 3,
+      "harbor_return": [
+        8,
+        2
+      ],
+      "harbor_return_warp_id": 0,
+      "obsolete_roof_absent": true,
+      "local_ocean_texture_preserved": true,
+      "cleared_tiles_native_water_height_one": true,
+      "native_ramp_tiles_and_warp_ids_preserved": true,
+      "native_north_arrow_return": true,
+      "connected_remnants_removed": [],
+      "controller_outbound_to_main_terminal": true,
+      "controller_return_to_town": true,
+      "foot_state_preserved": true,
+      "center_terminal_roundtrip": true,
+      "native_ramp_side_coast_collision_checked": true
+    },
+    {
+      "island": "Three",
+      "town": "ThreeIsland_Port_Frlg",
+      "harbor": "ThreeIsland_Harbor_Frlg",
+      "departure": [
+        12,
+        12
+      ],
+      "roof_footprint": [
+        10,
+        14,
+        5,
+        3
+      ],
+      "cleared_footprint": [
+        9,
+        14,
+        7,
+        5
+      ],
+      "replacement_water_metatile": 4723,
+      "town_ramp": [
+        12,
+        13
+      ],
+      "town_ramp_warp_id": 2,
+      "harbor_return": [
+        8,
+        2
+      ],
+      "harbor_return_warp_id": 0,
+      "obsolete_roof_absent": true,
+      "local_ocean_texture_preserved": true,
+      "cleared_tiles_native_water_height_one": true,
+      "native_ramp_tiles_and_warp_ids_preserved": true,
+      "native_north_arrow_return": true,
+      "connected_remnants_removed": [],
+      "controller_outbound_to_main_terminal": true,
+      "controller_return_to_town": true,
+      "foot_state_preserved": true,
+      "center_terminal_roundtrip": false,
+      "native_ramp_side_coast_collision_checked": false
+    },
+    {
+      "island": "Four",
+      "town": "FourIsland_Frlg",
+      "harbor": "FourIsland_Harbor_Frlg",
+      "departure": [
+        10,
+        27
+      ],
+      "roof_footprint": [
+        8,
+        29,
+        5,
+        3
+      ],
+      "cleared_footprint": [
+        7,
+        29,
+        7,
+        5
+      ],
+      "replacement_water_metatile": 4723,
+      "town_ramp": [
+        10,
+        28
+      ],
+      "town_ramp_warp_id": 6,
+      "harbor_return": [
+        8,
+        2
+      ],
+      "harbor_return_warp_id": 0,
+      "obsolete_roof_absent": true,
+      "local_ocean_texture_preserved": true,
+      "cleared_tiles_native_water_height_one": true,
+      "native_ramp_tiles_and_warp_ids_preserved": true,
+      "native_north_arrow_return": true,
+      "connected_remnants_removed": [],
+      "controller_outbound_to_main_terminal": true,
+      "controller_return_to_town": true,
+      "foot_state_preserved": true,
+      "center_terminal_roundtrip": false,
+      "native_ramp_side_coast_collision_checked": false
+    },
+    {
+      "island": "Five",
+      "town": "FiveIsland_Frlg",
+      "harbor": "FiveIsland_Harbor_Frlg",
+      "departure": [
+        12,
+        13
+      ],
+      "roof_footprint": [
+        10,
+        15,
+        5,
+        3
+      ],
+      "cleared_footprint": [
+        10,
+        15,
+        5,
+        3
+      ],
+      "replacement_water_metatile": 4395,
+      "town_ramp": [
+        12,
+        14
+      ],
+      "town_ramp_warp_id": 0,
+      "harbor_return": [
+        8,
+        2
+      ],
+      "harbor_return_warp_id": 0,
+      "obsolete_roof_absent": true,
+      "local_ocean_texture_preserved": true,
+      "cleared_tiles_native_water_height_one": true,
+      "native_ramp_tiles_and_warp_ids_preserved": true,
+      "native_north_arrow_return": true,
+      "connected_remnants_removed": [],
+      "controller_outbound_to_main_terminal": true,
+      "controller_return_to_town": true,
+      "foot_state_preserved": true,
+      "center_terminal_roundtrip": false,
+      "native_ramp_side_coast_collision_checked": false
+    },
+    {
+      "island": "Six",
+      "town": "SixIsland_Frlg",
+      "harbor": "SixIsland_Harbor_Frlg",
+      "departure": [
+        11,
+        22
+      ],
+      "roof_footprint": [
+        9,
+        24,
+        5,
+        3
+      ],
+      "cleared_footprint": [
+        8,
+        24,
+        7,
+        5
+      ],
+      "replacement_water_metatile": 4723,
+      "town_ramp": [
+        11,
+        23
+      ],
+      "town_ramp_warp_id": 0,
+      "harbor_return": [
+        8,
+        2
+      ],
+      "harbor_return_warp_id": 0,
+      "obsolete_roof_absent": true,
+      "local_ocean_texture_preserved": true,
+      "cleared_tiles_native_water_height_one": true,
+      "native_ramp_tiles_and_warp_ids_preserved": true,
+      "native_north_arrow_return": true,
+      "connected_remnants_removed": [],
+      "controller_outbound_to_main_terminal": true,
+      "controller_return_to_town": true,
+      "foot_state_preserved": true,
+      "center_terminal_roundtrip": false,
+      "native_ramp_side_coast_collision_checked": false
+    },
+    {
+      "island": "Seven",
+      "town": "SevenIsland_Frlg",
+      "harbor": "SevenIsland_Harbor_Frlg",
+      "departure": [
+        16,
+        12
+      ],
+      "roof_footprint": [
+        14,
+        14,
+        5,
+        3
+      ],
+      "cleared_footprint": [
+        13,
+        14,
+        7,
+        5
+      ],
+      "replacement_water_metatile": 4723,
+      "town_ramp": [
+        16,
+        13
+      ],
+      "town_ramp_warp_id": 3,
+      "harbor_return": [
+        8,
+        2
+      ],
+      "harbor_return_warp_id": 0,
+      "obsolete_roof_absent": true,
+      "local_ocean_texture_preserved": true,
+      "cleared_tiles_native_water_height_one": true,
+      "native_ramp_tiles_and_warp_ids_preserved": true,
+      "native_north_arrow_return": true,
+      "connected_remnants_removed": [],
+      "controller_outbound_to_main_terminal": true,
+      "controller_return_to_town": true,
+      "foot_state_preserved": true,
+      "center_terminal_roundtrip": false,
+      "native_ramp_side_coast_collision_checked": false
+    }
+  ],
+  "two_ramp_coast_finished": true,
+  "two_center_terminal_controller_roundtrip": true,
+  "two_ramp_coast_blocks_foot_and_surf": true,
+  "two_western_surf_preserved": true,
+  "one_treasure_beach_obsolete_terminal_completely_removed": true,
+  "one_treasure_beach_surf_controller_roundtrip": true,
   "fixture_initial_placements_and_progress": true,
   "full_campaign_playthrough": false
 }

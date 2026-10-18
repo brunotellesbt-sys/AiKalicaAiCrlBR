@@ -1,5 +1,5 @@
 """Buy at restored Dewford seller and inspect actual directional Luffy frames."""
-import hashlib,json,re,subprocess
+import hashlib,json,re,struct,subprocess
 from pathlib import Path
 from PIL import Image
 ROOT=Path(__file__).resolve().parents[2]
@@ -48,30 +48,47 @@ def finish(limit=500):
     raise AssertionError('Shore Surf prompt did not settle')
 exec(compile((ROOT/'tools/hoenn/native_water_walk.py').read_text(),'dewford-shore-native-walker','exec'))
 shores=[]
+restorations={row['map']:row for row in coasts['dewford_coast']}
 for name in names:
-    w,h,tiles=blocks[name]
-    if name=='DewfordTown':
-        choices=[x for x in range(1,w-1) if tiles[20*w+x]==0x112c and tiles[21*w+x]==0x1170 and tiles[19*w+x]>>12==3 and not tiles[19*w+x]&0xc00 and not water_behaviors[behaviors[name][19*w+x]]]
-        assert choices,name
-        x=choices[len(choices)//2];start=(x,21);land=(x,19);water=(x,21);reef=(x,21)
-    else:
-        # Route 107's southern tree bank is intentionally closed. Its intact
-        # southeast sand corner is the landing, with the new reef below it.
-        start=(8,18);land=(7,18);water=(8,18);reef=(8,21)
-        assert not tiles[land[1]*w+land[0]]&0xc00
-        assert not water_behaviors[behaviors[name][land[1]*w+land[0]]]
-    warp(name,*start);native('SetPlayerAvatarTransitionFlags',8);step(90)
+    w,h,tiles=blocks[name];restored=restorations[name]
+    assert h==20 and restored['native_southern_terrain_restored'] and restored['original_border_retained']
+    assert hashlib.sha256(struct.pack('<'+'H'*(4*w),*[t&~0xc00 for t in tiles[-4*w:]])).hexdigest()==restored['southern_art_and_elevations_sha256']
+    choices=[]
+    for yy in range(1,h-1):
+        for xx in range(1,w-1):
+            at=yy*w+xx
+            # The original Route107 shore meets the sea at its dry native
+            # corner (7,16), not at an interior plain-sand tile. The isolated
+            # sand fragment (7,18) has a closed reef to its east.
+            if tiles[at] not in ([0x3124,0x3241] if name=='Route107' else [0x3124]):continue
+            if tiles[at]&0xc00 or tiles[at]>>12!=3 or water_behaviors[behaviors[name][at]]:continue
+            for dx,dy,key in keys:
+                nx,ny=xx+dx,yy+dy
+                ni=ny*w+nx
+                if 0<nx<w-1 and 0<ny<h-1 and ni in passable[name] and tiles[ni]>>12==1 and water_behaviors[behaviors[name][ni]]:
+                    choices.append(((xx,yy),(nx,ny)))
+    assert choices,(name,'No native sand landing')
+    land,water=(((7,16),(8,16)) if name=='Route107' else choices[len(choices)//2])
+    assert (land,water) in choices,(name,'Original southeast shore landing is blocked',land,water)
+    warp(name,*water);native('SetPlayerAvatarTransitionFlags',8);step(90)
     walk((name,*land));step(90)
     assert lib.read8(s['gPlayerAvatar'])&25==1 and position()==land
-    picture(name+'-south-shore-foot')
+    picture(name+'-native-coast-foot')
     prompts=len(surf_prompts);walk((name,*water));step(90)
     assert lib.read8(s['gPlayerAvatar'])&8 and len(surf_prompts)>prompts
-    if name=='Route107':
-        walk((name,7,19));step(90);before=position();step(90,32);step(60);assert position()==before
-    walk((name,*reef));step(90);before=position();step(90,128);step(60);assert position()==before
-    assert lib.read8(s['gPlayerAvatar'])&8
-    picture(name+'-south-reef-surf')
-    shores.append(dict(map=name,shore=list(land),native_disembark=True,native_surf_prompt=True,closed_reef_blocks_controller=True,closed_forest_blocks_controller=name=='Route107'))
+    picture(name+'-native-coast-surf')
+    if name=='DewfordTown':
+        warp(name,10,18);native('SetPlayerAvatarTransitionFlags',1);step(90)
+        walk((name,10,19));step(60);before=position()
+        step(90,128);step(60)
+        assert position()==before and lib.read8(s['gPlayerAvatar'])&25==1,('Native southern forest border did not block walking',before,position())
+        picture(name+'-native-south-original')
+    else:
+        walk((name,*land));step(90)
+        assert lib.read8(s['gPlayerAvatar'])&25==1 and position()==land
+        picture(name+'-native-south-original')
+    shores.append(dict(map=name,shore=list(land),shore_metatile=tiles[land[1]*w+land[0]],native_disembark=True,native_surf_prompt=True,
+        native_southern_terrain_restored=True,original_south_art_and_elevations_match_compiled_rom=True,original_border_retained=True))
 
 lib.stop()
 (args.output/'coastal-details.json').write_text(json.dumps(dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),

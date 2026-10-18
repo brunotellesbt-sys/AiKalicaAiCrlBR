@@ -20,6 +20,7 @@ def publish(source,validation,output):
         dest.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(file,dest)
         info['proofs'].append(dict(file=rel.as_posix(),target=target,kind=kind,sha256=hashlib.sha256(dest.read_bytes()).hexdigest()))
     add(validation/'source.json','common','extra-gym-source')
+    add(validation/'all-surf/all-surf-links.json','common','all-surf-links')
     for kind in ['surf-repairs','coastal-details','marine-network','luffy-approach','coastal-landings','map-finishing']:add(validation/'native'/(kind+'.json'),'common',kind)
     for target,folder in [(r['file'],r['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba')) for r in info['variants']]+[('test','TESTE')]:
         for kind in ['extra-gyms','review-mode','ever-grande-market','dewford-competitive-shop','fallarbor-physics']:add(validation/folder/(kind+'.json'),target,kind)

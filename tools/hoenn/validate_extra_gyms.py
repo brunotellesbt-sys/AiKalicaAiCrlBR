@@ -172,6 +172,10 @@ for index,g in enumerate(gyms):
         for trainer in g['students']:rawflag(0x1000+trainer-1760,False)
     start={'MORTY':(10,12),'WHITNEY':(40,25),'STEVEN':(27,49),'BUGSY':(14,8),'CANDICE':(19,20),'CLAIR':(11,12),'KAREN':(14,28),'OAK':(5,10)}[g['key']]
     warp(g['city'],*start);step(100)
+    gx,gy=g['room']['guide']
+    walk((g['name'],gx-1,gy));step(30);picture(g['key'].lower()+'-guide-at-entrance')
+    talk(16);finish()
+    assert location()==map_id(g['name']) and position()==(gx-1,gy)
     walk((g['name'],*g['room']['leader_approach']));step(60);picture(g['key'].lower()+'-inside')
     for student in g['room']['students']:
         xx,yy=student['position'];dx,dy={'RIGHT':(1,0),'LEFT':(-1,0),'DOWN':(0,1),'UP':(0,-1)}[student['facing']]
@@ -224,7 +228,7 @@ for index,g in enumerate(gyms):
             win=fight(trainer,approach=dict(local_id=j+3,original=[xx,yy],facing=student['facing'],controller_entered_sightline_at_distance=3,sight_range=student['sight']))
         student_wins.append(win)
     walk((g['city'],g['entry'][0],g['entry'][1]+1));step(60);picture(g['key'].lower()+'-outside')
-    results.append(dict(leader=g['key'],trainer=trainer_id,controller_entry_and_exit=True,leader_win=leader_win,
+    results.append(dict(leader=g['key'],trainer=trainer_id,controller_entry_and_exit=True,guide_talked_near_entrance=True,leader_win=leader_win,
         students=student_wins,all_four_battled_separately_on_mandatory_walk=not review_mode,
         badge_once=True,tm_once=True,bag_full_retry=index==0,tm_move_matches=True))
     checkpoint.write_text(json.dumps(dict(rom_sha256=initial_sha,max_national=cap,perfect_ivs=perfect,gyms=results),indent=2)+'\n')
