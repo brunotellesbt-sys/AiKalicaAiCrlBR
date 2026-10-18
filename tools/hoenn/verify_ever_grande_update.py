@@ -5,11 +5,17 @@ from pathlib import Path
 from package_review_rom import verify as verify_review
 from verify_fuchsia_update import ROOT, previous_release
 
-def verify_update(directory,info):
+def verify_update(directory,info,*,historical_review=None):
     directory=Path(directory);old=previous_release(info)
     assert old['validated'] and old['validation_scope']=='dewford-competitive-shop'
     assert old['integration_layers']+['ever-grande-market']==info['integration_layers']
-    test=verify_review(ROOT/'roms/rom-de-teste',directory/'Pokemon-Journey-Gen1-9-Normal.gba')
+    if historical_review is None:
+        test=verify_review(ROOT/'roms/rom-de-teste',directory/'Pokemon-Journey-Gen1-9-Normal.gba')
+    else:
+        test=historical_review
+        normal=next(r for r in info['variants'] if r['file']==test['base_normal_file'])
+        assert test['base_normal_sha256']==normal['sha256'] and test['bytes']==33554432
+        assert test['separate_save_identity'] and not test['random_wild_encounters']
     expected={'common':info['parent_rom_sha256'],'test':test['sha256'],**{r['file']:r['sha256'] for r in info['variants']}}
     covered=set()
     for p in info['proofs']:
@@ -64,19 +70,20 @@ def verify_update(directory,info):
             assert r['waterfall_above'][1]<r['waterfall_below'][1] and r['video_seconds']>20
             assert r['all_observed_surf_tiles_are_water'] and r['city_walk_excludes_water_tiles']
             assert any(t['source'][0]=='JourneyWestRiver' and t['destination'][0]=='Route114' for t in r['transitions'])
-            assert hashlib.sha256((ROOT/'docs/videos/western-river-fallarbor.mp4').read_bytes()).hexdigest()==r['video_sha256']
+            video=ROOT/('mods/hoenn/extra-gyms-validation/baseline/western-river-fallarbor.mp4' if historical_review is not None else 'docs/videos/western-river-fallarbor.mp4')
+            assert hashlib.sha256(video.read_bytes()).hexdigest()==r['video_sha256']
         elif p['kind']=='review-mode':
             assert r['review_mode']==(p['target']=='test') and r['fixture_wild_encounters_disabled'] is False
             assert bool(r['checks']['trainer_approach_result'])==(p['target']!='test')
             if p['target']=='test':
                 c=r['checks'];assert c['random_wild_attempts']>=200 and c['no_automatic_approach_after_600_frames'] and c['native_flash_save_exported']
                 assert all(c[k] for k in ['no_random_encounters','no_fishing_encounters','no_sweet_scent_encounters','no_rock_smash_encounters'])
-                assert hashlib.sha256((ROOT/'roms/rom-de-teste/Pokemon-Journey-TESTE.sav').read_bytes()).hexdigest()==c['save_sha256']
+                if historical_review is None:assert hashlib.sha256((ROOT/'roms/rom-de-teste/Pokemon-Journey-TESTE.sav').read_bytes()).hexdigest()==c['save_sha256']
         else:raise AssertionError(p['kind'])
     assert {('common','ever-grande-source'),('common','ever-grande-market'),('common','fallarbor-physics')}<=covered
     assert ('Pokemon-Journey-Gen1-9-Normal.gba','fallarbor-river') in covered
     assert {(t,k) for t in expected if t!='common' for k in ['ever-grande-market','dewford-competitive-shop','review-mode','fallarbor-physics']}<=covered
-    assert all((directory/r['file']).read_bytes()[test['review_mode_offset']]==0 for r in info['variants'])
+    if historical_review is None:assert all((directory/r['file']).read_bytes()[test['review_mode_offset']]==0 for r in info['variants'])
     # Prior Dewford and Surf reports keep their original ROM identities.
     # Current Dewford checks above accompany the exact source preservation audit.
     ref=info['previous_review_validation'];path=Path(ref['file']);assert not path.is_absolute() and '..' not in path.parts

@@ -18,10 +18,25 @@ const editionsReady = fetch('games/versions.json', {cache: 'no-store'}).then(asy
   }
   for (const row of info.variants) validateRelease(row);
   const names = new Set(info.variants.map(row => row.file));
-  if (names.size !== 4 || [...edition.options].some(option => !names.has(option.value))) {
+  if (names.size !== 4 || [...edition.options].filter(option => !option.disabled).some(option => !names.has(option.value))) {
     throw new Error('The edition list is invalid.');
   }
-  editions = info.variants;
+  editions = [...info.variants];
+  if (info.validation_scope === 'extra-gyms') {
+    const response = await fetch('games/review.json', {cache: 'no-store'});
+    if (!response.ok) throw new Error('The test edition could not load. Please retry.');
+    const review = validateRelease(await response.json());
+    const normal = editions.find(row => row.file === review.base_normal_file);
+    if (review.file !== 'Pokemon-Journey-TESTE.gba' || !normal ||
+        review.base_normal_sha256 !== normal.sha256 || review.automatic_trainer_approaches !== false ||
+        review.random_wild_encounters !== false || review.separate_save_identity !== true) {
+      throw new Error('The test edition does not match the current game.');
+    }
+    editions.push(review);
+    const option = edition.querySelector('[value="Pokemon-Journey-TESTE.gba"]');
+    option.disabled = false;
+    option.hidden = false;
+  }
   document.querySelector('#edition-label').hidden = false;
   document.querySelector('#edition-description').hidden = false;
   updateDownload();

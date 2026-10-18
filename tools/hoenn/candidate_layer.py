@@ -35,7 +35,13 @@ class Layer:
         for name, content in self.outputs.items():
             path = self.source / name
             path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_bytes(content)
+            # Graphics can be shared with immutable source snapshots through
+            # hard links. Replace the inode so an overlay never edits a baseline.
+            mode = path.stat().st_mode & 0o777 if path.exists() else 0o644
+            pending = path.with_name(path.name + '.journey-tmp')
+            pending.write_bytes(content)
+            pending.chmod(mode)
+            pending.replace(path)
         result = dict(layer=self.name, **metadata, original_sha256=self.originals,
                       prepared_sha256={name: hashlib.sha256(content).hexdigest()
                                        for name, content in self.outputs.items()})

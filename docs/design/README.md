@@ -1,0 +1,25 @@
+# Desenho e revisão dos mapas GBA
+
+O usuário determinou que toda edição de terreno ou construção comece por uma imagem inspirada em GBA e termine com revisão do mapa inteiro e testes no jogo. A regra está em [AGENTS.md](../../AGENTS.md) e na [habilidade gba-map-review](../../.agents/skills/gba-map-review/SKILL.md).
+
+A [proposta visual](proposta-gba-portos-ginasios.png) orientou o acabamento dos ginásios e portos. É uma imagem gerada, não uma captura da ROM. As decisões aplicadas foram: preservar fachadas e acessos dos Centros, terminar árvores nas clareiras, manter telhados completos e usar contornos nativos contínuos no pátio de Steven. A proposta não altera o atlas do mundo.
+
+A [proposta de acabamento das ilhas, Lilycove e Dewford](proposta-acabamento-ilhas-lilycove-dewford.png) orientou a revisão final: árvores FRLG inteiras de 2 × 2 tiles, sem usar metatiles de sobreposição como troncos; lateral leste e canto inferior completos junto ao ginásio de Lilycove; costa sul de Dewford fechada e acesso à feira preservado. Também foi removida a fileira invertida de meias pedras sob os barcos da Ilha 2. As propostas orientam o acabamento; as fachadas e posições exatas são as nativas, vistas nas imagens abaixo.
+
+A revisão posterior usa renderizações dos próprios tiles: [cidades](revisao-gba/cidades.png), [interiores](revisao-gba/interiores.png), [ilhas](revisao-gba/ilhas.png) e [portos](revisao-gba/portos.png), além de [Dewford e a feira da Rota 107](revisao-gba/dewford.png). As imagens individuais e o [registro dos arquivos e fachadas preservadas](revisao-gba/review.json) incluem mapas inteiros. Gráficos dinâmicos não resolvidos são identificados como terreno; capturas nativas complementam a revisão.
+
+Correções físicas: areia importada do mar passou da altura 1 para terra 3; pontes sobre água passaram da transição 0 para o nível múltiplo 15; estruturas ornamentais secas acessíveis a quem surfa passaram a bloquear movimento. As duas camadas da ponte continuam separadas: pedestres conservam seu nível, e o Surf usa a água por baixo. Isso não autoriza atravessar areia, prédios ou montanhas.
+
+As provas do emulador ficam em [extra-gyms-validation/native](../../mods/hoenn/extra-gyms-validation/native/). `coastal-landings.json` verifica desembarque e reembarque nas praias corrigidas; `map-finishing.json` verifica os sete terminais, as pontas de píer e o Centro da Ilha 6; `surf-repairs.json` percorre as ligações corrigidas nos dois sentidos. Todas as provas são vinculadas ao SHA da ROM testada. As posições iniciais e o progresso são preparados; os deslocamentos e colisões usam controles e o motor do jogo.
+
+A revisão visual é humana: os testes de integridade não são uma certificação automática de beleza nem substituem observar as imagens e percorrer as emendas.
+
+A [proposta da montanha de Lavender](proposta-montanha-lavender.png) orienta a correção final dessa cidade. O relevo junto à Tower foi restaurado e prolongado até a nova borda leste, com frente e cantos completos; o ginásio desceu dois tiles para conservar uma faixa de grama entre telhado e rocha. A fachada original da Tower foi preservada.
+
+A [proposta dos oito interiores](proposta-interiores-diversificados.png) orientou plantas diferentes com corredores livres: pedra, estufa, metal, viveiro, neve, dragões, salão violeta e laboratório. A [proposta de acabamento de Three, Six e Fallarbor](proposta-acabamento-three-six-fallarbor.png) orientou a preservação do caminho amarelo, a árvore inteira junto ao Mart e o solo marrom integrado à base do ginásio. Ambas são imagens geradas de referência; os resultados reais são os mapas completos e as capturas nativas vinculadas acima.
+
+As propostas da [rampa livre da Ilha 6](proposta-ilha6-rampa-e-acesso-gym.png) e de [Surf e visão dos treinadores](proposta-sevii-surf-e-visao-treinadores.png) orientam a remoção do telhado antigo, mantendo o terminal principal e as conexões existentes, e a colocação dos aprendizes em direções variadas, com linhas de visão desobstruídas. O guia fica ao norte, e a entrada permanece livre. As setas amarelas são explicações da proposta; não aparecem no piso do jogo.
+
+A proposta preliminar de [quatro batalhas](proposta-gym-quatro-batalhas-obrigatorias.png) foi rejeitada como planta: seus corredores laterais permitiam evitar os treinadores. A implementação utiliza as divisórias e campos de visão dos mapas nativos revisados acima. Cada um dos quatro campos de visão deve cortar todos os caminhos da entrada ao líder; o teste nativo exige quatro batalhas separadas ao percorrer a sala. A aparência gerada não serve como prova dessa propriedade.
+
+A [proposta com a frente dos treinadores livre](proposta-frente-livre-treinadores.png) orientou a retirada dos recuos estreitos. As salas foram ampliadas: cada treinador fica na borda de uma galeria aberta, com uma faixa livre de três tiles de largura por seis de alcance, inclusive ao lado do próprio NPC. Paredes e móveis ficam fora dessa faixa. A imagem gerada é referência de ambientação; as quatro passagens obrigatórias são verificadas na planta implementada e por batalhas reais no emulador.

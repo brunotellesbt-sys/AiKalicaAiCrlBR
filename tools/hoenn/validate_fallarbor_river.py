@@ -67,6 +67,14 @@ assert by_location[location()]=='JourneyWestRiver' and position()==(12,8)
 assert_ground();picture('beach-saved-and-continued')
 expected={('JourneyWestRiver',n) for n in ['JourneyCinnabarSouthSea','JourneyRustboroCoast','Route114']}
 expected|={(b,a) for a,b in list(expected)}
+if (source/'.journey-extra-gyms').exists():
+    coasts=json.loads((source/'.journey-extra-gyms').read_text())['coastal_fixes']['geography']['repaired_links']
+    for link in coasts:
+        pair=link['source'],link['destination']
+        if pair not in expected:continue
+        expected.discard(pair);expected.discard(pair[::-1])
+        chain=[pair[0],*link['segments'],pair[1]]
+        for a,b in zip(chain,chain[1:]):expected.add((a,b));expected.add((b,a))
 assert expected<={(r['source'],r['destination']) for r in observed if r['surf']},observed
 result=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),
     beach_walk_targets=beach_checks,beach_walkable_on_foot=True,native_surf_prompt=True,

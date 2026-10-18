@@ -78,7 +78,11 @@ picture('frontier-stall-and-footpath')
 frontier=json.loads((source/f'data/maps/{report["seller_map"]}/map.json').read_text())
 dewford=json.loads((source/'data/maps/Route107/map.json').read_text())
 assert sum(o.get('script')=='JourneyCompetitive_Seller' for o in frontier['object_events'])==1
-assert not any(o.get('script')=='JourneyCompetitive_Seller' for o in dewford['object_events'])
+restored=(source/'.journey-extra-gyms').exists()
+assert sum(o.get('script')=='JourneyCompetitive_Seller' for o in dewford['object_events'])==int(restored)
+if restored:
+    warp('Route107',2,16);talk_vendor();choose(4);advance_to('Task_ShopMenu');leave_shop()
+    picture('dewford-restored-seller')
 for name,price in report['prices'].items():assert native('GetItemPrice',c['ITEM_'+name])==price,name
 native('SetMoney',save()+c['offsetof(struct SaveBlock1,money)'],999999)
 purchases=[buy(0,report['stocks'][0].index('CHOICE_SCARF'),'CHOICE_SCARF'),buy(4,0,'BOTTLE_CAP'),buy(4,1,'GOLD_BOTTLE_CAP')]
@@ -144,7 +148,7 @@ mode=bool(lib.read8(s['gJourneyReviewMode']));lib.stop()
 r=dict(passed=True,origin_forms=origins,legendary_caves=caves,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),review_mode=mode,
        prices_checked=len(report['prices']),purchases=purchases,insufficient_money_preserves_money_and_bag=True,
        two_attendants_interacted=True,footpath_to_bridge_walked=True,
-       frontier_single_seller=True,shop_removed_from_dewford=True,frontier_approach_walked=True,
+       frontier_single_seller=True,shop_removed_from_dewford=not restored,dewford_second_seller_restored=restored,frontier_approach_walked=True,
        single_cap_only_one_stat=True,gold_cap_all_six_stats=True,original_genetic_ivs_preserved=True,
        cancellation_preserves_caps=True,perfect_stats_preserve_caps=True,level49_rejected=True,eggs_rejected=True,
        full_restore_picked_up_once=True,closed_trees_block_walk=True,play_rough_picked_up_and_native_teachable=True,lighthouse_back_path_walked=True,initial_party_money_and_position_are_fixtures=True)

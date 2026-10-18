@@ -1,5 +1,7 @@
 # Pokémon Journey — documentação do jogo
 
+[Entrega atual: oito ginásios e travessias corrigidas](ginasios-extras-e-travessias.md)
+
 Kanto, Hoenn e Sevii formam um mundo conectado por rotas marítimas. O jogo e seus diálogos estão em inglês; este guia está em português.
 
 As quatro edições são Gen 1–4 Normal, Gen 1–4 Hard, Gen 1–9 Normal e Gen 1–9 Hard. As edições até a geração 4 permitem Megas e formas regionais das espécies com número nacional até 493, mas não suas evoluções de gerações posteriores.

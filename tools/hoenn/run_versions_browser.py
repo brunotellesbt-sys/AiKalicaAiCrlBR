@@ -22,6 +22,10 @@ def run():
         shutil.copyfile(versions / 'versions.json', games / 'versions.json')
         for row in release['variants']:
             (games / row['file']).symlink_to(versions / row['file'])
+        if release.get('validation_scope')=='extra-gyms':
+            review=ROOT/'roms/rom-de-teste'
+            for name in ['Pokemon-Journey-TESTE.gba','review.json']:
+                (games/name).symlink_to(review/name)
         handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(site))
         server = http.server.ThreadingHTTPServer(('127.0.0.1', 0), handler)
         worker = threading.Thread(target=server.serve_forever, daemon=True)
