@@ -184,7 +184,7 @@ def prepare(source):
         gfx='OBJ_EVENT_GFX_PROF_OAK' if g['key']=='OAK' else 'OBJ_EVENT_GFX_JOURNEY_PWT_'+g['key']
         if g['key']=='WHITNEY':gfx='OBJ_EVENT_GFX_VAR_0'
         def obj(graphic,x,y,script,trainer=False,facing='DOWN'):return dict(graphics_id=graphic,x=x,y=y,elevation=3,movement_type='MOVEMENT_TYPE_FACE_'+facing,movement_range_x=0,movement_range_y=0,trainer_type='TRAINER_TYPE_NORMAL' if trainer else 'TRAINER_TYPE_NONE',trainer_sight_or_berry_tree_id='6' if trainer else '0',script=script,flag='0')
-        inside['object_events']=[obj(gfx,*room['leader'],n+'_Leader'),obj('OBJ_EVENT_GFX_MAN_2',*room['guide'],n+'_Guide')]
+        inside['object_events']=[obj(gfx,*room['leader'],n+'_Leader'),obj('OBJ_EVENT_GFX_MAN_2',*room['guide'],n+'_Guide',facing=room['guide_facing'])]
         for j,student in enumerate(room['students']):
             xx,yy=student['position'];assert not values[yy*room['width']+xx]&0xc00
             inside['object_events'].append(obj('OBJ_EVENT_GFX_'+STUDENT_PROFILES[g['key']][j][2],xx,yy,n+f'_Student{j}',True,student['facing']))

@@ -5,10 +5,14 @@ ROOT = Path(__file__).resolve().parents[2]
 bootstrap = (ROOT / 'tools/hoenn/validate_sevii_surf_connections.py').read_text().split('\nstart=nearest(')[0]
 # Route 131 always loads its Sky Pillar variant in the native transition script.
 bootstrap=bootstrap.replace("exec(compile((ROOT/'tools/hoenn/native_water_walk.py')","walk_layout_overrides={'Route131':'LAYOUT_ROUTE131_SKY_PILLAR'}\nexec(compile((ROOT/'tools/hoenn/native_water_walk.py')")
+# Bridges must be classified as water before the native walker builds its
+# passability tables. Their multi-level elevation preserves Surf underneath.
+walk_surf_under_bridges = True
 exec(compile(bootstrap, __file__, 'exec'))
 for n, valid in passable.items():
     passable[n] = {i for i in valid if water_behaviors[behaviors[n][i]] and not blocks[n][2][i] & 0xC00
-                   and (blocks[n][2][i] >> 12 == 1 or blocks[n][2][i] >> 12 == 0 and bridge_behaviors[behaviors[n][i]])}
+                   and (blocks[n][2][i] >> 12 == 1
+                        or blocks[n][2][i] >> 12 in [0, 15] and bridge_behaviors.get(behaviors[n][i], False))}
 # The native first visit to Four Island moves the player one tile during
 # the rival scene. This seam test uses the post-introduction story fixture.
 scene_four=int(re.search(r'#define\s+VAR_MAP_SCENE_FOUR_ISLAND\s+(0x\w+)',(source/'include/constants/vars.h').read_text())[1],16)
@@ -104,8 +108,9 @@ for row in json.loads((source / '.journey-surf-cave-coasts').read_text())['bound
     assert position() == before, (n, 'Visible outer rock did not block Surf')
     boundaries.append(dict(map=n, visible_rock_blocks_controller=True))
 lib.stop()
+assert hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest()==rom_sha,'ROM changed during Surf validation'
 (args.output / 'all-surf-links.json').write_text(json.dumps(dict(passed=True,
-    rom_sha256=hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest(),
+    rom_sha256=rom_sha,
     links=checks, usable_reciprocal_water_links=len(pairs), crossings=2 * len(checks)+len(current_checks), native_current_links=current_checks,
     all_usable_outdoor_surf_connections_covered=True, visible_outer_rock_checks=boundaries, routes_without_exposed_water_edges=no_exposed_edges,
     no_midcrossing_warps_or_coordinate_writes=True, initial_positions_and_defeated_trainers_are_fixtures=True,

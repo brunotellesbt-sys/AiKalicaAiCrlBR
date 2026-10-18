@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "rom_sha256": "f772b1d1c66aa5d09940264b54db92ea51ca5dea7de6bc70378d6595a4a72f15",
+  "rom_sha256": "ae5da9ae24d315cd2a987afc48d42673a4d11b4fa9b411afcf5214d936759a2b",
   "layers": [
     "hoenn-crossing",
     "worldsea",
@@ -165,8 +165,8 @@
   ],
   "independent_replay": true,
   "idempotent": true,
-  "source_hashes_checked": 32166,
-  "unrelated_files_preserved": 31207,
+  "source_hashes_checked": 32164,
+  "unrelated_files_preserved": 31202,
   "original_city_events_preserved": 228,
   "flag_macros_compiled": 2441,
   "allocated_flags_disjoint": true,
@@ -347,16 +347,20 @@
       {
         "map": "DewfordTown",
         "old_height": 20,
-        "new_height": 23,
-        "complete_tree_bases": true,
-        "beach_and_closed_reef": true
+        "new_height": 20,
+        "native_southern_terrain_restored": true,
+        "original_border_retained": true,
+        "southern_art_and_elevations_sha256": "bfe62e043b07b269147414da9e3d148786c231b13c99fa7e87dc037dd1aa1217",
+        "border_sha256": "558c2fc1783459a6a4687e1fea767e8d4e30bc4ece5f37a0433fd5f7f58e5e9c"
       },
       {
         "map": "Route107",
         "old_height": 20,
-        "new_height": 23,
-        "complete_tree_bases": true,
-        "beach_and_closed_reef": true
+        "new_height": 20,
+        "native_southern_terrain_restored": true,
+        "original_border_retained": true,
+        "southern_art_and_elevations_sha256": "14fc4153309289046cc640d95eb7ca0b6c05018453e9690aa2d342a470c7e4a3",
+        "border_sha256": "a92715f9980b3889fa45537df0801cbea6346d0f35416a5ac3ba05b2311d79e4"
       }
     ],
     "geography": {
@@ -9255,20 +9259,6 @@
           "graphics_unchanged": true
         },
         {
-          "map": "OneIsland_Frlg",
-          "blocked_decorative_tiles": [
-            [
-              10,
-              19
-            ],
-            [
-              14,
-              19
-            ]
-          ],
-          "graphics_unchanged": true
-        },
-        {
           "map": "EverGrandeCity",
           "blocked_decorative_tiles": [
             [
@@ -9406,7 +9396,7 @@
       "native_ports_caves_events_and_land_preserved": true,
       "foreign_bank_changes_happen_in_open_water": true,
       "gps": {
-        "compiled_gps_tiles": 524168,
+        "compiled_gps_tiles": 523928,
         "changed_tiles": 23442,
         "changed_maps": {
           "BirthIsland_Exterior_Frlg": 20,
@@ -9682,7 +9672,7 @@
         },
         "maximum_neighbor_pixel_step": 2,
         "maximum_seam_delta": 0,
-        "linked_border_tiles": 24386
+        "linked_border_tiles": 24380
       }
     }
   },
@@ -9750,46 +9740,47 @@
         1772
       ],
       "room": {
-        "width": 25,
-        "height": 34,
-        "theme": "stone hall",
+        "width": 41,
+        "height": 53,
+        "theme": "stone staircase",
         "leader": [
-          12,
+          20,
           3
         ],
         "leader_approach": [
-          12,
+          20,
           4
         ],
         "guide": [
-          1,
-          3
+          23,
+          50
         ],
+        "guide_facing": "LEFT",
         "entry": [
-          12,
-          33
+          20,
+          52
         ],
         "safe": [
-          12,
-          31
+          20,
+          50
         ],
         "capture": [
-          12,
+          20,
           6
         ],
         "students": [
           {
             "position": [
-              10,
-              24
+              14,
+              36
             ],
             "facing": "DOWN",
             "sight": 6
           },
           {
             "position": [
-              1,
-              22
+              5,
+              30
             ],
             "facing": "RIGHT",
             "sight": 6
@@ -9797,23 +9788,61 @@
           {
             "position": [
               17,
-              24
+              26
             ],
             "facing": "UP",
             "sight": 6
           },
           {
             "position": [
-              23,
-              9
+              28,
+              14
             ],
             "facing": "LEFT",
             "sight": 6
           }
         ],
+        "marked_route": [
+          [
+            20,
+            52
+          ],
+          [
+            20,
+            39
+          ],
+          [
+            8,
+            39
+          ],
+          [
+            8,
+            23
+          ],
+          [
+            25,
+            23
+          ],
+          [
+            25,
+            9
+          ],
+          [
+            20,
+            9
+          ],
+          [
+            20,
+            4
+          ]
+        ],
+        "distinct_floor_plan": "MORTY",
         "no_puzzles": true,
         "complete_native_props": true,
-        "ordinary_walking_floor": true
+        "ordinary_walking_floor": true,
+        "guide_near_entrance": true,
+        "thematic_entrance_display": true,
+        "dragon_statues": 0
       },
       "original_events_preserved": true
     },
@@ -9880,70 +9909,109 @@
         1776
       ],
       "room": {
-        "width": 27,
-        "height": 31,
-        "theme": "conservatory",
+        "width": 43,
+        "height": 53,
+        "theme": "horseshoe conservatory",
         "leader": [
-          13,
-          3
+          29,
+          32
         ],
         "leader_approach": [
-          13,
-          4
+          29,
+          33
         ],
         "guide": [
-          1,
-          3
+          24,
+          50
         ],
+        "guide_facing": "LEFT",
         "entry": [
-          13,
-          30
+          21,
+          52
         ],
         "safe": [
-          13,
-          28
+          21,
+          50
         ],
         "capture": [
-          13,
-          6
+          29,
+          35
         ],
         "students": [
           {
             "position": [
-              11,
-              21
+              14,
+              37
             ],
             "facing": "DOWN",
             "sight": 6
           },
           {
             "position": [
-              1,
-              19
+              4,
+              27
             ],
             "facing": "RIGHT",
             "sight": 6
           },
           {
             "position": [
-              19,
-              21
+              21,
+              15
             ],
             "facing": "UP",
             "sight": 6
           },
           {
             "position": [
-              25,
-              9
+              38,
+              23
             ],
             "facing": "LEFT",
             "sight": 6
           }
         ],
+        "marked_route": [
+          [
+            21,
+            52
+          ],
+          [
+            21,
+            40
+          ],
+          [
+            7,
+            40
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            35,
+            12
+          ],
+          [
+            35,
+            39
+          ],
+          [
+            29,
+            39
+          ],
+          [
+            29,
+            33
+          ]
+        ],
+        "distinct_floor_plan": "WHITNEY",
         "no_puzzles": true,
         "complete_native_props": true,
-        "ordinary_walking_floor": true
+        "ordinary_walking_floor": true,
+        "guide_near_entrance": true,
+        "thematic_entrance_display": true,
+        "dragon_statues": 0
       },
       "original_events_preserved": true
     },
@@ -10012,70 +10080,117 @@
         1780
       ],
       "room": {
-        "width": 28,
-        "height": 35,
-        "theme": "metal gallery",
+        "width": 39,
+        "height": 65,
+        "theme": "offset metal galleries",
         "leader": [
-          14,
+          19,
           3
         ],
         "leader_approach": [
-          14,
+          19,
           4
         ],
         "guide": [
-          1,
-          3
+          22,
+          62
         ],
+        "guide_facing": "LEFT",
         "entry": [
-          14,
-          34
+          19,
+          64
         ],
         "safe": [
-          14,
-          32
+          19,
+          62
         ],
         "capture": [
-          14,
+          19,
           6
         ],
         "students": [
           {
             "position": [
-              12,
-              25
+              14,
+              49
             ],
             "facing": "DOWN",
             "sight": 6
           },
           {
             "position": [
-              1,
-              23
+              5,
+              45
             ],
             "facing": "RIGHT",
             "sight": 6
           },
           {
             "position": [
-              20,
-              25
+              24,
+              31
             ],
             "facing": "UP",
             "sight": 6
           },
           {
             "position": [
-              26,
-              9
+              32,
+              21
             ],
             "facing": "LEFT",
             "sight": 6
           }
         ],
+        "marked_route": [
+          [
+            19,
+            64
+          ],
+          [
+            19,
+            52
+          ],
+          [
+            8,
+            52
+          ],
+          [
+            8,
+            40
+          ],
+          [
+            19,
+            40
+          ],
+          [
+            19,
+            28
+          ],
+          [
+            29,
+            28
+          ],
+          [
+            29,
+            16
+          ],
+          [
+            19,
+            16
+          ],
+          [
+            19,
+            4
+          ]
+        ],
+        "distinct_floor_plan": "STEVEN",
         "no_puzzles": true,
         "complete_native_props": true,
-        "ordinary_walking_floor": true
+        "ordinary_walking_floor": true,
+        "guide_near_entrance": true,
+        "thematic_entrance_display": true,
+        "dragon_statues": 0
       },
       "original_events_preserved": true
     },
@@ -10140,70 +10255,109 @@
         1784
       ],
       "room": {
-        "width": 25,
-        "height": 33,
-        "theme": "woodland nursery",
+        "width": 55,
+        "height": 57,
+        "theme": "stepped woodland nursery",
         "leader": [
-          12,
+          43,
           3
         ],
         "leader_approach": [
-          12,
+          43,
           4
         ],
         "guide": [
-          1,
-          3
+          30,
+          54
         ],
+        "guide_facing": "LEFT",
         "entry": [
-          12,
-          32
+          27,
+          56
         ],
         "safe": [
-          12,
-          30
+          27,
+          54
         ],
         "capture": [
-          12,
+          43,
           6
         ],
         "students": [
           {
             "position": [
-              10,
-              23
+              18,
+              40
             ],
             "facing": "DOWN",
             "sight": 6
           },
           {
             "position": [
-              1,
-              21
+              6,
+              35
             ],
             "facing": "RIGHT",
             "sight": 6
           },
           {
             "position": [
-              17,
-              23
+              28,
+              24
             ],
-            "facing": "UP",
+            "facing": "LEFT",
             "sight": 6
           },
           {
             "position": [
-              23,
-              9
+              35,
+              20
             ],
-            "facing": "LEFT",
+            "facing": "UP",
             "sight": 6
           }
         ],
+        "marked_route": [
+          [
+            27,
+            56
+          ],
+          [
+            27,
+            43
+          ],
+          [
+            9,
+            43
+          ],
+          [
+            9,
+            30
+          ],
+          [
+            25,
+            30
+          ],
+          [
+            25,
+            17
+          ],
+          [
+            43,
+            17
+          ],
+          [
+            43,
+            4
+          ]
+        ],
+        "distinct_floor_plan": "BUGSY",
         "no_puzzles": true,
         "complete_native_props": true,
-        "ordinary_walking_floor": true
+        "ordinary_walking_floor": true,
+        "guide_near_entrance": true,
+        "thematic_entrance_display": true,
+        "dragon_statues": 0
       },
       "original_events_preserved": true
     },
@@ -10270,70 +10424,117 @@
         1788
       ],
       "room": {
-        "width": 25,
-        "height": 35,
-        "theme": "snow room",
+        "width": 47,
+        "height": 65,
+        "theme": "snow switchbacks",
         "leader": [
-          12,
+          23,
           3
         ],
         "leader_approach": [
-          12,
+          23,
           4
         ],
         "guide": [
-          1,
-          3
+          26,
+          62
         ],
+        "guide_facing": "LEFT",
         "entry": [
-          12,
-          34
+          23,
+          64
         ],
         "safe": [
-          12,
-          32
+          23,
+          62
         ],
         "capture": [
-          12,
+          23,
           6
         ],
         "students": [
           {
             "position": [
-              10,
-              25
+              15,
+              48
             ],
             "facing": "DOWN",
             "sight": 6
           },
           {
             "position": [
-              1,
-              23
+              40,
+              31
             ],
-            "facing": "RIGHT",
+            "facing": "LEFT",
             "sight": 6
           },
           {
             "position": [
-              17,
-              25
+              23,
+              26
             ],
             "facing": "UP",
             "sight": 6
           },
           {
             "position": [
-              23,
-              9
+              7,
+              14
             ],
-            "facing": "LEFT",
+            "facing": "RIGHT",
             "sight": 6
           }
         ],
+        "marked_route": [
+          [
+            23,
+            64
+          ],
+          [
+            23,
+            51
+          ],
+          [
+            8,
+            51
+          ],
+          [
+            8,
+            37
+          ],
+          [
+            37,
+            37
+          ],
+          [
+            37,
+            23
+          ],
+          [
+            10,
+            23
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            23,
+            9
+          ],
+          [
+            23,
+            4
+          ]
+        ],
+        "distinct_floor_plan": "CANDICE",
         "no_puzzles": true,
         "complete_native_props": true,
-        "ordinary_walking_floor": true
+        "ordinary_walking_floor": true,
+        "guide_near_entrance": true,
+        "thematic_entrance_display": true,
+        "dragon_statues": 0
       },
       "original_events_preserved": true
     },
@@ -10398,70 +10599,101 @@
         1792
       ],
       "room": {
-        "width": 27,
-        "height": 37,
-        "theme": "dragon shrine",
+        "width": 41,
+        "height": 63,
+        "theme": "dragon side wing",
         "leader": [
-          13,
+          20,
           3
         ],
         "leader_approach": [
-          13,
+          20,
           4
         ],
         "guide": [
-          1,
-          3
+          23,
+          60
         ],
+        "guide_facing": "LEFT",
         "entry": [
-          13,
-          36
+          20,
+          62
         ],
         "safe": [
-          13,
-          34
+          20,
+          60
         ],
         "capture": [
-          13,
+          20,
           6
         ],
         "students": [
           {
             "position": [
-              11,
-              27
-            ],
-            "facing": "DOWN",
-            "sight": 6
-          },
-          {
-            "position": [
-              1,
-              25
+              17,
+              54
             ],
             "facing": "RIGHT",
             "sight": 6
           },
           {
             "position": [
-              19,
-              27
+              27,
+              46
             ],
-            "facing": "UP",
+            "facing": "DOWN",
             "sight": 6
           },
           {
             "position": [
-              25,
-              9
+              36,
+              35
             ],
             "facing": "LEFT",
             "sight": 6
+          },
+          {
+            "position": [
+              26,
+              26
+            ],
+            "facing": "UP",
+            "sight": 6
           }
         ],
+        "marked_route": [
+          [
+            20,
+            62
+          ],
+          [
+            20,
+            49
+          ],
+          [
+            33,
+            49
+          ],
+          [
+            33,
+            23
+          ],
+          [
+            20,
+            23
+          ],
+          [
+            20,
+            4
+          ]
+        ],
+        "distinct_floor_plan": "CLAIR",
         "no_puzzles": true,
         "complete_native_props": true,
-        "ordinary_walking_floor": true
+        "ordinary_walking_floor": true,
+        "guide_near_entrance": true,
+        "thematic_entrance_display": true,
+        "dragon_statues": 4
       },
       "original_events_preserved": true
     },
@@ -10520,70 +10752,117 @@
         1796
       ],
       "room": {
-        "width": 29,
-        "height": 33,
-        "theme": "violet salon",
+        "width": 51,
+        "height": 61,
+        "theme": "spiral violet salon",
         "leader": [
-          14,
-          3
+          25,
+          25
         ],
         "leader_approach": [
-          14,
-          4
+          25,
+          26
         ],
         "guide": [
-          1,
-          3
+          28,
+          58
         ],
+        "guide_facing": "LEFT",
         "entry": [
-          14,
-          32
+          25,
+          60
         ],
         "safe": [
-          14,
-          30
+          25,
+          58
         ],
         "capture": [
-          14,
-          6
+          25,
+          28
         ],
         "students": [
           {
             "position": [
-              12,
-              23
+              15,
+              45
             ],
             "facing": "DOWN",
             "sight": 6
           },
           {
             "position": [
-              1,
-              21
+              4,
+              27
             ],
             "facing": "RIGHT",
             "sight": 6
           },
           {
             "position": [
-              21,
-              23
+              25,
+              13
             ],
             "facing": "UP",
             "sight": 6
           },
           {
             "position": [
-              27,
-              9
+              46,
+              27
             ],
             "facing": "LEFT",
             "sight": 6
           }
         ],
+        "marked_route": [
+          [
+            25,
+            60
+          ],
+          [
+            25,
+            48
+          ],
+          [
+            7,
+            48
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            43,
+            10
+          ],
+          [
+            43,
+            40
+          ],
+          [
+            18,
+            40
+          ],
+          [
+            18,
+            33
+          ],
+          [
+            25,
+            33
+          ],
+          [
+            25,
+            26
+          ]
+        ],
+        "distinct_floor_plan": "KAREN",
         "no_puzzles": true,
         "complete_native_props": true,
-        "ordinary_walking_floor": true
+        "ordinary_walking_floor": true,
+        "guide_near_entrance": true,
+        "thematic_entrance_display": true,
+        "dragon_statues": 0
       },
       "original_events_preserved": true
     },
@@ -10649,70 +10928,117 @@
         1800
       ],
       "room": {
-        "width": 31,
-        "height": 36,
-        "theme": "research laboratory",
+        "width": 51,
+        "height": 59,
+        "theme": "angular research laboratory",
         "leader": [
-          15,
+          11,
           3
         ],
         "leader_approach": [
-          15,
+          11,
           4
         ],
         "guide": [
-          1,
-          3
+          28,
+          56
         ],
+        "guide_facing": "LEFT",
         "entry": [
-          15,
-          35
+          25,
+          58
         ],
         "safe": [
-          15,
-          33
+          25,
+          56
         ],
         "capture": [
-          15,
+          11,
           6
         ],
         "students": [
           {
             "position": [
-              13,
-              26
+              32,
+              43
             ],
             "facing": "DOWN",
             "sight": 6
           },
           {
             "position": [
-              1,
-              24
+              42,
+              38
+            ],
+            "facing": "LEFT",
+            "sight": 6
+          },
+          {
+            "position": [
+              14,
+              25
             ],
             "facing": "RIGHT",
             "sight": 6
           },
           {
             "position": [
-              23,
-              26
+              22,
+              13
             ],
             "facing": "UP",
             "sight": 6
-          },
-          {
-            "position": [
-              29,
-              9
-            ],
-            "facing": "LEFT",
-            "sight": 6
           }
         ],
+        "marked_route": [
+          [
+            25,
+            58
+          ],
+          [
+            25,
+            46
+          ],
+          [
+            39,
+            46
+          ],
+          [
+            39,
+            32
+          ],
+          [
+            17,
+            32
+          ],
+          [
+            17,
+            20
+          ],
+          [
+            31,
+            20
+          ],
+          [
+            31,
+            10
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            11,
+            4
+          ]
+        ],
+        "distinct_floor_plan": "OAK",
         "no_puzzles": true,
         "complete_native_props": true,
-        "ordinary_walking_floor": true
+        "ordinary_walking_floor": true,
+        "guide_near_entrance": true,
+        "thematic_entrance_display": true,
+        "dragon_statues": 0
       },
       "original_events_preserved": true
     }
@@ -10720,28 +11046,63 @@
   "room_checks": [
     {
       "map": "JourneyLavenderGym",
-      "theme": "stone hall",
+      "theme": "stone staircase",
       "size": [
-        25,
-        34
+        41,
+        53
       ],
       "connected_floor": true,
       "no_puzzle_floor_behaviors": true,
       "long_clear_sightlines": true,
       "three_wide_clear_trainer_approaches": true,
+      "guide_at_entrance": true,
+      "marked_path_crossed_by_each_trainer": true,
+      "thematic_entrance_display": true,
+      "complete_dragon_sculptures": 0,
+      "distinct_floor_plan": "MORTY",
+      "route_directions": [
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
       "mandatory_checkpoints": [
         {
           "position": [
-            10,
-            24
+            14,
+            36
           ],
           "facing": "DOWN",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            1,
-            22
+            5,
+            30
           ],
           "facing": "RIGHT",
           "removing_sightline_disconnects_leader": true
@@ -10749,15 +11110,15 @@
         {
           "position": [
             17,
-            24
+            26
           ],
           "facing": "UP",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            23,
-            9
+            28,
+            14
           ],
           "facing": "LEFT",
           "removing_sightline_disconnects_leader": true
@@ -10766,44 +11127,79 @@
     },
     {
       "map": "JourneyLilycoveGym",
-      "theme": "conservatory",
+      "theme": "horseshoe conservatory",
       "size": [
-        27,
-        31
+        43,
+        53
       ],
       "connected_floor": true,
       "no_puzzle_floor_behaviors": true,
       "long_clear_sightlines": true,
       "three_wide_clear_trainer_approaches": true,
+      "guide_at_entrance": true,
+      "marked_path_crossed_by_each_trainer": true,
+      "thematic_entrance_display": true,
+      "complete_dragon_sculptures": 0,
+      "distinct_floor_plan": "WHITNEY",
+      "route_directions": [
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
       "mandatory_checkpoints": [
         {
           "position": [
-            11,
-            21
+            14,
+            37
           ],
           "facing": "DOWN",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            1,
-            19
+            4,
+            27
           ],
           "facing": "RIGHT",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            19,
-            21
+            21,
+            15
           ],
           "facing": "UP",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            25,
-            9
+            38,
+            23
           ],
           "facing": "LEFT",
           "removing_sightline_disconnects_leader": true
@@ -10812,44 +11208,87 @@
     },
     {
       "map": "JourneyEverGrandeGym",
-      "theme": "metal gallery",
+      "theme": "offset metal galleries",
       "size": [
-        28,
-        35
+        39,
+        65
       ],
       "connected_floor": true,
       "no_puzzle_floor_behaviors": true,
       "long_clear_sightlines": true,
       "three_wide_clear_trainer_approaches": true,
+      "guide_at_entrance": true,
+      "marked_path_crossed_by_each_trainer": true,
+      "thematic_entrance_display": true,
+      "complete_dragon_sculptures": 0,
+      "distinct_floor_plan": "STEVEN",
+      "route_directions": [
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
       "mandatory_checkpoints": [
         {
           "position": [
-            12,
-            25
+            14,
+            49
           ],
           "facing": "DOWN",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            1,
-            23
+            5,
+            45
           ],
           "facing": "RIGHT",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            20,
-            25
+            24,
+            31
           ],
           "facing": "UP",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            26,
-            9
+            32,
+            21
           ],
           "facing": "LEFT",
           "removing_sightline_disconnects_leader": true
@@ -10858,182 +11297,330 @@
     },
     {
       "map": "JourneyFallarborGym",
-      "theme": "woodland nursery",
+      "theme": "stepped woodland nursery",
       "size": [
-        25,
-        33
+        55,
+        57
       ],
       "connected_floor": true,
       "no_puzzle_floor_behaviors": true,
       "long_clear_sightlines": true,
       "three_wide_clear_trainer_approaches": true,
+      "guide_at_entrance": true,
+      "marked_path_crossed_by_each_trainer": true,
+      "thematic_entrance_display": true,
+      "complete_dragon_sculptures": 0,
+      "distinct_floor_plan": "BUGSY",
+      "route_directions": [
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
       "mandatory_checkpoints": [
         {
           "position": [
-            10,
-            23
+            18,
+            40
           ],
           "facing": "DOWN",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            1,
-            21
+            6,
+            35
           ],
           "facing": "RIGHT",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            17,
-            23
+            28,
+            24
           ],
-          "facing": "UP",
+          "facing": "LEFT",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            23,
-            9
+            35,
+            20
           ],
-          "facing": "LEFT",
+          "facing": "UP",
           "removing_sightline_disconnects_leader": true
         }
       ]
     },
     {
       "map": "JourneySlateportGym",
-      "theme": "snow room",
+      "theme": "snow switchbacks",
       "size": [
-        25,
-        35
+        47,
+        65
       ],
       "connected_floor": true,
       "no_puzzle_floor_behaviors": true,
       "long_clear_sightlines": true,
       "three_wide_clear_trainer_approaches": true,
+      "guide_at_entrance": true,
+      "marked_path_crossed_by_each_trainer": true,
+      "thematic_entrance_display": true,
+      "complete_dragon_sculptures": 0,
+      "distinct_floor_plan": "CANDICE",
+      "route_directions": [
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
       "mandatory_checkpoints": [
         {
           "position": [
-            10,
-            25
+            15,
+            48
           ],
           "facing": "DOWN",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            1,
-            23
+            40,
+            31
           ],
-          "facing": "RIGHT",
+          "facing": "LEFT",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            17,
-            25
+            23,
+            26
           ],
           "facing": "UP",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            23,
-            9
+            7,
+            14
           ],
-          "facing": "LEFT",
+          "facing": "RIGHT",
           "removing_sightline_disconnects_leader": true
         }
       ]
     },
     {
       "map": "JourneySixIslandGym",
-      "theme": "dragon shrine",
+      "theme": "dragon side wing",
       "size": [
-        27,
-        37
+        41,
+        63
       ],
       "connected_floor": true,
       "no_puzzle_floor_behaviors": true,
       "long_clear_sightlines": true,
       "three_wide_clear_trainer_approaches": true,
+      "guide_at_entrance": true,
+      "marked_path_crossed_by_each_trainer": true,
+      "thematic_entrance_display": true,
+      "complete_dragon_sculptures": 4,
+      "distinct_floor_plan": "CLAIR",
+      "route_directions": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
       "mandatory_checkpoints": [
         {
           "position": [
-            11,
-            27
-          ],
-          "facing": "DOWN",
-          "removing_sightline_disconnects_leader": true
-        },
-        {
-          "position": [
-            1,
-            25
+            17,
+            54
           ],
           "facing": "RIGHT",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            19,
-            27
+            27,
+            46
           ],
-          "facing": "UP",
+          "facing": "DOWN",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            25,
-            9
+            36,
+            35
           ],
           "facing": "LEFT",
+          "removing_sightline_disconnects_leader": true
+        },
+        {
+          "position": [
+            26,
+            26
+          ],
+          "facing": "UP",
           "removing_sightline_disconnects_leader": true
         }
       ]
     },
     {
       "map": "JourneyThreeIslandGym",
-      "theme": "violet salon",
+      "theme": "spiral violet salon",
       "size": [
-        29,
-        33
+        51,
+        61
       ],
       "connected_floor": true,
       "no_puzzle_floor_behaviors": true,
       "long_clear_sightlines": true,
       "three_wide_clear_trainer_approaches": true,
+      "guide_at_entrance": true,
+      "marked_path_crossed_by_each_trainer": true,
+      "thematic_entrance_display": true,
+      "complete_dragon_sculptures": 0,
+      "distinct_floor_plan": "KAREN",
+      "route_directions": [
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
       "mandatory_checkpoints": [
         {
           "position": [
-            12,
-            23
+            15,
+            45
           ],
           "facing": "DOWN",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            1,
-            21
+            4,
+            27
           ],
           "facing": "RIGHT",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            21,
-            23
+            25,
+            13
           ],
           "facing": "UP",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            27,
-            9
+            46,
+            27
           ],
           "facing": "LEFT",
           "removing_sightline_disconnects_leader": true
@@ -11042,46 +11629,89 @@
     },
     {
       "map": "JourneyOakBasementGym",
-      "theme": "research laboratory",
+      "theme": "angular research laboratory",
       "size": [
-        31,
-        36
+        51,
+        59
       ],
       "connected_floor": true,
       "no_puzzle_floor_behaviors": true,
       "long_clear_sightlines": true,
       "three_wide_clear_trainer_approaches": true,
+      "guide_at_entrance": true,
+      "marked_path_crossed_by_each_trainer": true,
+      "thematic_entrance_display": true,
+      "complete_dragon_sculptures": 0,
+      "distinct_floor_plan": "OAK",
+      "route_directions": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ]
+      ],
       "mandatory_checkpoints": [
         {
           "position": [
-            13,
-            26
+            32,
+            43
           ],
           "facing": "DOWN",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            1,
-            24
+            42,
+            38
+          ],
+          "facing": "LEFT",
+          "removing_sightline_disconnects_leader": true
+        },
+        {
+          "position": [
+            14,
+            25
           ],
           "facing": "RIGHT",
           "removing_sightline_disconnects_leader": true
         },
         {
           "position": [
-            23,
-            26
+            22,
+            13
           ],
           "facing": "UP",
-          "removing_sightline_disconnects_leader": true
-        },
-        {
-          "position": [
-            29,
-            9
-          ],
-          "facing": "LEFT",
           "removing_sightline_disconnects_leader": true
         }
       ]

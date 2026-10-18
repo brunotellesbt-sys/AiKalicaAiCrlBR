@@ -11,6 +11,9 @@ def render(native,rom,output,captures=None):
     if captures!=native:
         presentation=json.loads((captures/'presentation-captures.json').read_text())
         assert presentation['rom_sha256']==r['rom_sha256'] and presentation['native_emulator_frames']
+        captured=presentation['captures']
+        assert len(captured)==len(GYMS)==8
+        assert {(row['map'],row['inside']) for row in captured}=={(g['city'],g['name']) for g in GYMS},'Presentation captures must cover all eight gyms'
     canvas=Image.new('RGB',(980,792),'#202d35');draw=ImageDraw.Draw(canvas);frames=[]
     for i,g in enumerate(GYMS):
         x=i%2*490;y=i//2*198;leader='Valerie' if g['key']=='WHITNEY' and r['max_national']>493 else g['leader']
@@ -34,5 +37,13 @@ def render(native,rom,output,captures=None):
     p=output.parent/'quatro-treinadores-ginasios.png';checkpoints.save(p)
     p.with_suffix('.json').write_text(json.dumps(dict(rom_sha256=r['rom_sha256'],native_emulator_frames=True,unaltered_emulator_frames=True,
         defeated_flags_are_presentation_fixtures=True,approach_tests_are_separate=True,frames=frames),indent=2)+'\n')
+    entries=Image.new('RGB',(960,380),'#202d35');labels=ImageDraw.Draw(entries);frames=[]
+    for i,g in enumerate(GYMS):
+        p=captures/(g['key'].lower()+'-entry.png');im=Image.open(p);assert im.size==(240,160)
+        x,y=i%4*240,i//4*190;labels.text((x+4,y+5),g['key']+' - ENTRADA',fill='white');entries.paste(im,(x,y+25))
+        frames.append(dict(file=p.as_posix(),sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
+    p=output.parent/'guia-e-entrada-ginasios.png';entries.save(p)
+    p.with_suffix('.json').write_text(json.dumps(dict(rom_sha256=r['rom_sha256'],unaltered_emulator_frames=True,
+        defeated_flags_are_presentation_fixtures=True,frames=frames),indent=2)+'\n')
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--native',required=True);p.add_argument('--rom',required=True);p.add_argument('--output',required=True);p.add_argument('--captures');a=p.parse_args();render(a.native,a.rom,a.output,a.captures)

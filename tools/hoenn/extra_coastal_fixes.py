@@ -116,26 +116,19 @@ void JourneySolrockTrainerMoves(struct Pokemon *mon)
             if above+2*w>=len(v) or v[above+2*w]&1023!=0xA9:continue
             v[above]=0x471;v[above+w]=0x471;changed.append([above%w,above//w])
         if changed:layer.stage(p,struct.pack('<'+'H'*len(v),*v));caves.append(dict(map=name,repaired_crowns=changed))
-    # The native Dewford map ended on a row of tree canopies. Surf made that
-    # cropped map edge visible. Finish complete trees and a real southern beach
-    # before the closed offshore reef; retain all original objects and doors.
+    # Restore the native southern terrain requested by the author. Keep the
+    # original twenty-row town/route and their native border tiles; do not
+    # expose the forest edge by adding ocean underneath it. The two sellers
+    # above remain independent of this terrain restoration.
+    import hashlib
     dewford_edges=[]
     for name in ['DewfordTown','Route107']:
         m=js(f'data/maps/{name}/map.json');l=ls[m['layout']];w,h=l['width'],l['height'];assert h==20
-        b=raw(l['blockdata_filepath']);v=list(struct.unpack('<'+'H'*(w*h),b))
-        for x in range(w):
-            i=19*w+x
-            if v[i]&1023==0x239:v[i]=0x3124
-            if name=='Route107':
-                for yy in [18,19]:
-                    if v[yy*w+x]&1023==0x1F9:v[yy*w+x]=0x1170
-        bottom=[0x112C if (v[19*w+x]>>12)>=3 else 0x1170 for x in range(w)]
-        v+=bottom+[0x1170]*w+[0x15F9]*w
-        v[21*w]=0x15F9;v[21*w+w-1]=0x15F9
-        l['height']=23;l['border_filepath']=f'data/layouts/{name}/finished-coast-border.bin'
-        layer.stage(l['blockdata_filepath'],struct.pack('<'+'H'*len(v),*v))
-        layer.stage(l['border_filepath'],struct.pack('<4H',*([0x15F9]*4)))
-        dewford_edges.append(dict(map=name,old_height=20,new_height=23,complete_tree_bases=True,beach_and_closed_reef=True))
+        terrain=raw(l['blockdata_filepath'])
+        south=struct.unpack('<'+'H'*(4*w),terrain[-4*w*2:])
+        dewford_edges.append(dict(map=name,old_height=20,new_height=20,native_southern_terrain_restored=True,
+            original_border_retained=True,southern_art_and_elevations_sha256=hashlib.sha256(struct.pack('<'+'H'*(4*w),*[t&~0xc00 for t in south])).hexdigest(),
+            border_sha256=hashlib.sha256(raw(l['border_filepath'])).hexdigest()))
     put('data/layouts/layouts.json',ld)
     from repair_surf_geometry import repair as repair_geometry
     geography=repair_geometry(layer)

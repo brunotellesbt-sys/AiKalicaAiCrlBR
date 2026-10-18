@@ -43,9 +43,11 @@ class IndoorBank:
         for word in bank[2][at*8:(at+1)*8]:
             tile, pal = word & 1023, word >> 12
             colors = (primary if pal < palcut else secondary)[1][pal]
-            if effect:
+            tint_effect=effect.removeprefix('trail_') if effect else None
+            if tint_effect:
                 def tint(c):
                     rr,gg,bb=c;light=(rr*3+gg*6+bb)//10
+                    effect=tint_effect
                     if effect.startswith('wallfill_'):
                         base={'MORTY':(40,36,56),'WHITNEY':(152,116,64),'STEVEN':(56,68,80),'BUGSY':(88,60,36),
                               'CANDICE':(64,120,168),'CLAIR':(32,52,72),'KAREN':(64,32,80),'OAK':(88,104,120)}[effect[9:]]
@@ -67,6 +69,15 @@ class IndoorBank:
             index = tile if tile < cut else tile-cut
             cols = graphics.width//8
             im = graphics.crop((index%cols*8, index//cols*8, index%cols*8+8, index//cols*8+8))
+            if effect and effect.startswith('trail_'):
+                # Highlight within the exact existing floor palette; this
+                # does not consume an extra palette or recolor blank layers.
+                shift=-24 if tint_effect=='snow' else 24
+                remap=[0]
+                for color in colors[1:]:
+                    target=tuple(max(0,min(248,v+shift)) for v in color)
+                    remap.append(min(range(1,16),key=lambda j:sum((a-b)**2 for a,b in zip(colors[j],target))))
+                im=im.point(remap+[0]*240)
             pixels = im.tobytes()
             if pixels not in self.graphics:
                 number = len(self.graphics)

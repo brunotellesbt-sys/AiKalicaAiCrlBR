@@ -44,7 +44,17 @@ def validate(source,baseline,output):
     assert not used.intersection(report['allocated_flags'])
     assert max(report['allocated_flags'])<872*8
     layouts={l['id']:l for l in json.loads((source/'data/layouts/layouts.json').read_text())['layouts']}
-    preserved=0;room_checks=[]
+    original_layouts={l['id']:l for l in json.loads((baseline/'data/layouts/layouts.json').read_text())['layouts']}
+    for town in ['DewfordTown','Route107']:
+        m=json.loads((source/f'data/maps/{town}/map.json').read_text());l=layouts[m['layout']];old=original_layouts[m['layout']]
+        assert l['width']==old['width'] and l['height']==old['height']==20
+        current=struct.unpack('<'+'H'*(4*l['width']),(source/l['blockdata_filepath']).read_bytes()[-8*l['width']:])
+        original=struct.unpack('<'+'H'*(4*l['width']),(baseline/old['blockdata_filepath']).read_bytes()[-8*old['width']:])
+        for i,(before,after) in enumerate(zip(original,current)):
+            if before!=after:
+                assert town=='Route107' and (i%l['width'],16+i//l['width'])==(7,17) and before==0x1241 and after==0x1641,(town,'Original south terrain was changed',i,before,after)
+        assert (source/l['border_filepath']).read_bytes()==(baseline/old['border_filepath']).read_bytes(),(town,'Original native border was changed')
+    preserved=0;room_checks=[];floor_shapes=set();route_shapes=set()
     for g in report['gyms']:
         path=f'data/maps/{g["city"]}/map.json';new=json.loads((source/path).read_text());old=json.loads((baseline/path).read_text())
         assert new['object_events']==old['object_events']
@@ -67,7 +77,10 @@ def validate(source,baseline,output):
         assert room['no_puzzles'] and room['ordinary_walking_floor'] and room['complete_native_props']
         # Arrival and the three-tile central entrance corridor stay empty.
         assert all(not(abs(o['x']-room['entry'][0])<=1 and o['y']>=room['height']-4) for o in m['object_events'])
-        assert room['guide']==[1,3]
+        assert room['guide']==[l['width']//2+3,l['height']-3]
+        assert m['object_events'][1]['movement_type']=='MOVEMENT_TYPE_FACE_LEFT'
+        assert room['guide_near_entrance'] and room['thematic_entrance_display']
+        assert room['dragon_statues']==(4 if g['key']=='CLAIR' else 0)
         from extra_gyms import STUDENT_PROFILES
         trainer_data=(source/'src/data/journey_extra_gym_trainers.h').read_text()
         for j,profile in enumerate(STUDENT_PROFILES[g['key']]):
@@ -76,6 +89,10 @@ def validate(source,baseline,output):
             record=re.search(r'\[TRAINER_JOURNEY_GYM_STUDENT_'+str(number)+r'\]=(.*?)(?:\n|$)',trainer_data)[1]
             assert '.trainerClass=TRAINER_CLASS_'+profile[0]+',' in record and '.trainerPic=TRAINER_PIC_'+profile[1]+',' in record
         walkable={i for i,t in enumerate(v) if not t&0xc00};start=room['entry'][1]*l['width']+room['entry'][0]
+        # A different size or palette does not make a distinct floor plan.
+        # Require eight different ordered sequences of corridor directions.
+        turns=tuple((0 if ax==bx else (1 if bx>ax else -1),0 if ay==by else (1 if by>ay else -1)) for (ax,ay),(bx,by) in zip(room['marked_route'],room['marked_route'][1:]))
+        route_shapes.add(turns);floor_shapes.add(tuple(sorted((i%l['width'],i//l['width']) for i in walkable)))
         seen={start};todo=[start]
         while todo:
             i=todo.pop();xx,yy=i%l['width'],i//l['width']
@@ -83,6 +100,11 @@ def validate(source,baseline,output):
                 j=y*l['width']+x
                 if 0<=x<l['width'] and 0<=y<l['height'] and j in walkable and j not in seen:seen.add(j);todo.append(j)
         assert seen==walkable,(g['key'],'disconnected floor')
+        marked=set()
+        for (ax,ay),(bx,by) in zip(room['marked_route'],room['marked_route'][1:]):
+            assert ax==bx or ay==by
+            marked.update((xx,yy) for xx in range(min(ax,bx),max(ax,bx)+1) for yy in range(min(ay,by),max(ay,by)+1))
+        assert all(yy*l['width']+xx in walkable for xx,yy in marked),(g['key'],'display blocks marked route')
         folder=source/'data/tilesets/secondary'/g['key'].lower()
         attrs=struct.unpack('<'+'H'*((folder/'metatile_attributes.bin').stat().st_size//2),(folder/'metatile_attributes.bin').read_bytes())
         exits={(q['x'],q['y']) for q in m['warp_events']}
@@ -92,6 +114,7 @@ def validate(source,baseline,output):
             actor=m['object_events'][j+2];x,y=student['position'];assert int(actor['trainer_sight_or_berry_tree_id'])>=5
             assert actor['movement_type']=='MOVEMENT_TYPE_FACE_'+student['facing']
             dx,dy={'RIGHT':(1,0),'LEFT':(-1,0),'DOWN':(0,1),'UP':(0,-1)}[student['facing']]
+            assert any((x+dx*d,y+dy*d) in marked for d in range(1,7)),(g['key'],'trainer does not face the marked path')
             for distance in range(7):
                 xx,yy=x+dx*distance,y+dy*distance;assert yy*l['width']+xx in walkable
                 assert all([xx,yy]!=other['position'] for other in room['students'] if other is not student)
@@ -113,8 +136,10 @@ def validate(source,baseline,output):
             target=room['leader_approach'][1]*l['width']+room['leader_approach'][0]
             assert target not in reached,(g['key'],'trainer can be bypassed',student)
             mandatory.append(dict(position=student['position'],facing=student['facing'],removing_sightline_disconnects_leader=True))
-        room_checks.append(dict(map=g['name'],theme=room['theme'],size=[l['width'],l['height']],connected_floor=True,no_puzzle_floor_behaviors=True,long_clear_sightlines=True,three_wide_clear_trainer_approaches=True,mandatory_checkpoints=mandatory))
+        room_checks.append(dict(map=g['name'],theme=room['theme'],size=[l['width'],l['height']],connected_floor=True,no_puzzle_floor_behaviors=True,long_clear_sightlines=True,three_wide_clear_trainer_approaches=True,
+            guide_at_entrance=True,marked_path_crossed_by_each_trainer=True,thematic_entrance_display=True,complete_dragon_sculptures=room['dragon_statues'],distinct_floor_plan=room['distinct_floor_plan'],route_directions=turns,mandatory_checkpoints=mandatory))
     assert len({tuple(q['size']) for q in room_checks})>=7 and len({q['theme'] for q in room_checks})==8
+    assert len(floor_shapes)==len(route_shapes)==8,'Scaled copies of a shared floor plan are not eight different rooms'
     from PIL import Image
     sprites=[]
     info=(source/'src/data/object_events/object_event_graphics_info.h').read_text()

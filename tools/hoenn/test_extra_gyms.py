@@ -41,7 +41,10 @@ class ExtraGyms(unittest.TestCase):
         d=json.loads((OUT/'native/coastal-details.json').read_text())
         self.assertEqual(d['rom_sha256'],r['rom_sha256'])
         self.assertEqual({c['map'] for c in d['dewford_shores']},{'DewfordTown','Route107'})
-        self.assertTrue(all(c['native_disembark'] and c['native_surf_prompt'] and c['closed_reef_blocks_controller'] for c in d['dewford_shores']))
+        for c in d['dewford_shores']:
+            with self.subTest(map=c['map']):
+                for check in ['native_disembark','native_surf_prompt','native_southern_terrain_restored','original_south_art_and_elevations_match_compiled_rom','original_border_retained']:
+                    self.assertTrue(c[check],check)
     def test_atlas_and_prior_campaign_remain_and_pending_chapters_are_explicit(self):
         r=json.loads((OUT/'source.json').read_text());self.assertEqual(r['rom_sha256'],self.release['parent_rom_sha256'])
         self.assertTrue(r['atlas_graphics_unchanged'] and r['old_campaign_and_pwt_preserved'])
