@@ -17,6 +17,10 @@ bridge_behaviors = {}
 tileset_headers = (source/'src/data/tilesets/headers.h').read_text()
 behaviors, currents, arrows = {}, {}, {}
 step_warps = {}
+def _stair_arrow(behavior):
+    if not native('MetatileBehavior_IsDirectionalStairWarp',behavior):return None
+    return next((key for direction,key in [(3,32),(4,16)] if native('IsDirectionalStairWarpMetatileBehavior',behavior,direction)),None)
+
 for n, m in maps.items():
     layout = layouts[globals().get('walk_layout_overrides', {}).get(n, m['layout'])]
     blocks[n] = (layout['width'], layout['height'], struct.unpack('<' + 'H' * (layout['width'] * layout['height']), (source / layout['blockdata_filepath']).read_bytes()))
@@ -53,7 +57,7 @@ for n, m in maps.items():
             currents[behavior] = next(((dx, dy) for direction, dx, dy in [('East', 1, 0), ('West', -1, 0), ('North', 0, -1), ('South', 0, 1)]
                                       if native('MetatileBehavior_Is' + direction + 'wardCurrent', behavior)), None)
             arrows[behavior] = next((key for direction, key in [('East', 16), ('West', 32), ('North', 64), ('South', 128)]
-                                     if native('MetatileBehavior_Is' + direction + 'ArrowWarp', behavior)), None)
+                                     if native('MetatileBehavior_Is' + direction + 'ArrowWarp', behavior)), None) or _stair_arrow(behavior)
         if not tile & 0xC00: valid.add(i); continue
         if tile & 0xC00 != 0x400: continue
         if any(w['x'] == i % blocks[n][0] and w['y'] == i // blocks[n][0]
@@ -80,7 +84,7 @@ def refresh_loaded_warp_tiles():
             if native('MetatileBehavior_Is' + direction + 'wardCurrent', behavior)), None)
         arrows[behavior] = next((key for direction, key in [
             ('East', 16), ('West', 32), ('North', 64), ('South', 128)]
-            if native('MetatileBehavior_Is' + direction + 'ArrowWarp', behavior)), None)
+            if native('MetatileBehavior_Is' + direction + 'ArrowWarp', behavior)), None) or _stair_arrow(behavior)
         step_warps[behavior] = any(native('MetatileBehavior_Is' + kind, behavior) for kind in [
             'WarpDoor', 'Ladder', 'Escalator', 'NonAnimDoor', 'LavaridgeB1FWarp',
             'Lavaridge1FWarp', 'AquaHideoutWarp', 'MtPyreHole', 'MossdeepGymWarp', 'UnionRoomWarp'])

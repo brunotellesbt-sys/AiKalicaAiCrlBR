@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "rom_sha256": "f772b1d1c66aa5d09940264b54db92ea51ca5dea7de6bc70378d6595a4a72f15",
+  "two_dewford_vendors_interacted": true,
+  "dewford_purchase": {
+    "item": "CHOICE_SCARF",
+    "price": 100000,
+    "quantity_received": 1
+  },
+  "luffy_native_directional_frames": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "dewford_shores": [
+    {
+      "map": "DewfordTown",
+      "shore": [
+        9,
+        19
+      ],
+      "native_disembark": true,
+      "native_surf_prompt": true,
+      "closed_reef_blocks_controller": true,
+      "closed_forest_blocks_controller": false
+    },
+    {
+      "map": "Route107",
+      "shore": [
+        7,
+        18
+      ],
+      "native_disembark": true,
+      "native_surf_prompt": true,
+      "closed_reef_blocks_controller": true,
+      "closed_forest_blocks_controller": true
+    }
+  ],
+  "visible_luffy_height": 28,
+  "full_cave_crowns": 17,
+  "art_object_position_is_fixture": true
+}

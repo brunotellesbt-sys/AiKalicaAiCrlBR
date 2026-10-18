@@ -9,6 +9,7 @@ from PIL import Image
 ROOT=Path(__file__).resolve().parents[2]
 bootstrap=(ROOT/'tools/hoenn/validate_trainer_levels.py').read_text().split('\nchecks=[]')[0]
 exec(compile(bootstrap,str(ROOT/'tools/hoenn/validate_trainer_levels.py'),'exec'))
+standard=(source/'.journey-extra-gyms').exists() and 'luffy' in args.output.name.lower()
 hero='Luffy' if 'luffy' in args.output.name.lower() else 'Eren'
 route,x,y=('Route6_Frlg',12,20) if hero=='Luffy' else ('Route4_Frlg',30,8)
 team([25,26,27]);rawflag(lib.read16(s['gBadgeFlags'])-7,True)
@@ -53,9 +54,11 @@ for tick in range(1600):
     address=lib.read32(lib.read32(sprite+8)+anim*4)+cmd*4;image=lib.read16(address);flip=bool(lib.read16(sprite+2)&0x1000)
     if image<9:
      assert image in [2,7,8],(hero,'Non-lateral pose used in side walk',image)
-     data=lib.read32(lib.read32(sprite+12)+image*8);physical=(data-s['gObjectEventPic_Journey'+hero.upper()])//256
-     assert physical in [7,8],(hero,'Front/back pose in side walk',physical)
-     left=(physical==7)!=flip;assert left==(anim%4==2),(hero,'Side walking rotated',anim,cmd,image,physical,flip)
+     images=lib.read32(sprite+12)
+     data=lib.read32(images)+256*image if standard else lib.read32(images+image*8)
+     physical=(data-s['gObjectEventPic_Journey'+hero.upper()])//256
+     assert physical in ([2,7,8] if standard else [7,8]),(hero,'Front/back pose in side walk',physical)
+     left=(not flip) if standard else (physical==7)!=flip;assert left==(anim%4==2),(hero,'Side walking rotated',anim,cmd,image,physical,flip)
      row=dict(animation=anim,image=image,physical_frame=physical,hflip=flip,facing='left' if left else 'right')
      if row not in trace:trace.append(row)
    settled=settled+1 if distance==1 and not lib.read8(obj)&2 else 0
@@ -69,14 +72,16 @@ assert len(movement)==len(samples)-1,(hero,'Path not completely walked',movement
 # even when a particular route's shortest entrance is entirely vertical.
 for avatar in [hero.upper(),'PWT'+hero.upper()]:
  images=s['sPicTable_Journey'+avatar];basepic=s['gObjectEventPic_Journey'+avatar]
- assert lib.read32(images+2*8)==basepic+7*256
+ if standard:
+  assert lib.read32(images)==basepic and lib.read16(images+4)==256 and lib.read8(images+6)
+ else:assert lib.read32(images+2*8)==basepic+7*256
  for direction in ['West','East']:
   for speed in ['','Fast','Faster','Fastest']:
-   commands=s['sAnim_Go'+speed+direction+'_JourneyRivals']
+   commands=s['sAnim_Go'+speed+direction+('' if standard else '_JourneyRivals')]
    for k in range(4):
     image=lib.read16(commands+k*4);flip=bool(lib.read8(commands+k*4+2)&64)
-    physical=(lib.read32(images+image*8)-basepic)//256
-    assert ((physical==7)!=flip)==(direction=='West'),(avatar,direction,speed,image,physical,flip)
+    physical=image if standard else (lib.read32(images+image*8)-basepic)//256
+    assert ((not flip) if standard else (physical==7)!=flip)==(direction=='West'),(avatar,direction,speed,image,physical,flip)
 frame().save(args.output/(hero.lower()+'-dialogue.png'))
 frames[0].save(args.output/(hero.lower()+'-approach.gif'),save_all=True,append_images=frames[1:]+[frames[-1]]*22,duration=67,loop=0,optimize=False)
 strip=Image.new('RGB',(720*4,480))
@@ -91,5 +96,5 @@ else:raise AssertionError((hero,'Rival battle did not start'))
 step(150);picture(hero.lower()+'-battle-entry')
 assert lib.read32(s['gBattleTypeFlags'])&abi[10],(hero,'Not a trainer battle')
 lib.stop()
-(args.output/(hero.lower()+'-approach.json')).write_text(json.dumps(dict(passed=True,hero=hero,route=route,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),player=player,initial=origin,initial_screen_box=spawn_box,spawn_entirely_outside_camera=True,first_visible_native_frame=first_visible,movement_actions=movement,movement_samples=samples,lateral_animation_trace=trace,lateral_facing_preserved=True,visible=True,actual_native_movement=True,controller_dialogue_and_battle_entry=True,initial_route_party_and_flags_are_fixtures=True,actor_coordinates_not_written=True),indent=2)+'\n')
+(args.output/(hero.lower()+'-approach.json')).write_text(json.dumps(dict(passed=True,hero=hero,route=route,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest(),player=player,initial=origin,initial_screen_box=spawn_box,spawn_entirely_outside_camera=True,first_visible_native_frame=first_visible,movement_actions=movement,movement_samples=samples,lateral_animation_trace=trace,lateral_facing_preserved=True,standard_directional_frames=standard,visible=True,actual_native_movement=True,controller_dialogue_and_battle_entry=True,initial_route_party_and_flags_are_fixtures=True,actor_coordinates_not_written=True),indent=2)+'\n')
 print(hero,route,'born outside camera',spawn_box,'walked',len(movement),'steps; facing stable; native battle entered',flush=True)

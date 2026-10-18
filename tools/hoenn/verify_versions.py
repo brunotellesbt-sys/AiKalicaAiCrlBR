@@ -14,13 +14,18 @@ def verify_browser(release):
     assert report['passed'] is True and report['bundled_mgba'] is True
     assert report['invalid_manifest_rejected'] and report['incomplete_rom_rejected']
     expected={r['file']:r['sha256'] for r in release['variants']}
-    checks=report['checks'];assert len(checks)==4 and {c['file'] for c in checks}==set(expected)
+    if release.get('validation_scope')=='extra-gyms':
+        assert report['stale_test_edition_rejected']
+        from package_review_rom import verify as verify_review
+        review=verify_review(ROOT/'roms/rom-de-teste',ROOT/'mods/hoenn/versions/Pokemon-Journey-Gen1-9-Normal.gba')
+        expected[review['file']]=review['sha256']
+    checks=report['checks'];assert len(checks)==len(expected) and {c['file'] for c in checks}==set(expected)
     for row in checks:
         assert row['rom_sha256']==expected[row['file']] and row['actual_game_name']==row['file'], ('Stale browser evidence; rerun validate_versions_browser.cjs', row['file'])
         assert row['native_frames']>360 and row['exported_native_state_bytes']>1000
     sources=report['player_sources_sha256'];assert set(sources)=={'index.html','player.js','style.css'}
     for name,sha in sources.items():assert digest((ROOT/'web'/name).read_bytes())==sha,('Untested player source',name)
-    print('Verified browser boot evidence and player sources for all four editions')
+    print('Verified browser boot evidence and player sources for',len(expected),'editions')
 
 def verify(directory,require_seal=True):
     directory=Path(directory);info=json.loads((directory/'versions.json').read_text())
@@ -45,6 +50,11 @@ def verify(directory,require_seal=True):
         for row in info['variants']:
             assert digest((ROOT/'roms'/row['file']).read_bytes())==row['sha256'], ('Outdated roms/ download',row['file'])
         assert (ROOT/'roms/SHA256SUMS').read_bytes()==(directory/'SHA256SUMS').read_bytes()
+    if info.get('validation_scope')=='extra-gyms':
+        from verify_extra_gyms_update import verify_update
+        verify_update(directory,info)
+        print('Verified 24-badge circuit, native Surf repairs and isolated test ROM')
+        return info
     if info.get('validation_scope')=='ever-grande-market':
         from verify_ever_grande_update import verify_update
         verify_update(directory,info)

@@ -5,13 +5,27 @@ const path = require('path');
 const crypto = require('crypto');
 const ROOT = path.resolve(__dirname, '../..');
 const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'mods/hoenn/versions/versions.json')));
-const OUT = path.join(ROOT, 'mods/hoenn/versions-validation/browser');
+const releases = [...manifest.variants];
+if (manifest.validation_scope === 'extra-gyms') releases.push(JSON.parse(fs.readFileSync(path.join(ROOT,'roms/rom-de-teste/review.json'))));
+const OUT = process.env.BROWSER_VALIDATION_OUTPUT || path.join(ROOT, 'mods/hoenn/versions-validation/browser');
 const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
 (async () => {
   const browser = await chromium.launch({executablePath:process.env.CHROMIUM_PATH || (fs.existsSync('/usr/bin/chromium') ? '/usr/bin/chromium' : undefined),headless:true,
     args:['--no-sandbox','--disable-dev-shm-usage','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
   fs.mkdirSync(OUT,{recursive:true});
   try {
+    const assets = await browser.newContext();
+    const playerSources = {};
+    try {
+      for (const name of ['index.html','player.js','style.css']) {
+        const response = await assets.request.get(new URL(name,url).href);
+        if (!response.ok()) throw new Error('Published player asset unavailable: '+name);
+        const hash = crypto.createHash('sha256').update(await response.body()).digest('hex');
+        const expected = crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT,'web',name))).digest('hex');
+        if (hash !== expected) throw new Error('Published player asset is stale: '+name);
+        playerSources[name] = hash;
+      }
+    } finally { await assets.close(); }
     const invalid = await browser.newPage();
     await invalid.route('**/games/versions.json',route=>route.fulfill({contentType:'application/json',body:JSON.stringify({...manifest,validated:false})}));
     await invalid.goto(url);await invalid.locator('#play').click();
@@ -19,6 +33,14 @@ const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
     if(await invalid.evaluate(()=>!!window.EJS_emulator))throw new Error('Unvalidated manifest booted');
     if(await invalid.locator('#play').isDisabled())throw new Error('Manifest rejection prevented retry');
     await invalid.close();
+    if (manifest.validation_scope === 'extra-gyms') {
+      const stale = await browser.newPage();
+      await stale.route('**/games/review.json', route=>route.fulfill({contentType:'application/json',body:JSON.stringify({...releases.at(-1),base_normal_sha256:'0'.repeat(64)})}));
+      await stale.goto(url);await stale.locator('#play').click();
+      await stale.waitForFunction(()=>document.querySelector('#status').textContent.includes('does not match'));
+      if(await stale.evaluate(()=>!!window.EJS_emulator))throw new Error('Stale test edition booted');
+      await stale.close();
+    }
     const incomplete = await browser.newPage();
     await incomplete.route('**/games/*.gba?*',route=>route.fulfill({body:Buffer.alloc(192)}));
     await incomplete.goto(url);await incomplete.locator('#play').click();
@@ -26,7 +48,7 @@ const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
     if(await incomplete.evaluate(()=>!!window.EJS_emulator))throw new Error('Corrupt ROM booted');
     await incomplete.close();
     const checks=[];
-    for(const row of manifest.variants){
+    for(const row of releases){
       const page=await browser.newPage({viewport:{width:row.max_national===493?1280:390,height:844}});
       await page.goto(url);
       await page.locator('#edition-label').waitFor({state:'visible'});
@@ -40,7 +62,7 @@ const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
         bytes = await response.body();
         await route.fulfill({response, body:bytes});
       });
-      const downloaded = page.waitForResponse(response => new URL(response.url()).pathname === '/games/' + row.file && response.ok());
+      const downloaded = page.waitForResponse(response => new URL(response.url()).pathname.endsWith('/games/' + row.file) && response.ok());
       await page.locator('#play').click();
       await downloaded;
       const observedHash = crypto.createHash('sha256').update(bytes).digest('hex');
@@ -57,10 +79,11 @@ const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
       console.log('Bundled mGBA boot passed:',row.file);
       await page.close();
     }
-    if(new Set(checks.map(c=>c.actual_game_name)).size!==4)throw new Error('Save identities collide');
+    if(new Set(checks.map(c=>c.actual_game_name)).size!==releases.length)throw new Error('Save identities collide');
     fs.writeFileSync(path.join(OUT,'browser-versions.json'),JSON.stringify({passed:true,checks,
       invalid_manifest_rejected:true,incomplete_rom_rejected:true,bundled_mgba:true,
-      player_sources_sha256:Object.fromEntries(['index.html','player.js','style.css'].map(name=>[name,crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT,'web',name))).digest('hex')])),
+      stale_test_edition_rejected:manifest.validation_scope === 'extra-gyms',
+      player_sources_sha256:playerSources,
       desktop_and_mobile_viewports:true,full_campaign_playthrough:false},null,2)+'\n');
   }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exit(1);});

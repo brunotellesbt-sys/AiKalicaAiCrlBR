@@ -3,6 +3,7 @@ import json
 import unittest
 from pathlib import Path
 from verify_versions import verify
+from verify_fuchsia_update import previous_release
 
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'mods/hoenn/ever-grande-market-validation'
@@ -10,9 +11,10 @@ OUT=ROOT/'mods/hoenn/ever-grande-market-validation'
 class EverGrandeMarket(unittest.TestCase):
     def test_each_edition_walks_homes_and_buys_at_the_stall(self):
         release=verify(ROOT/'mods/hoenn/versions')
+        if release['validation_scope']=='extra-gyms':release=previous_release(release)
         self.assertEqual(release['validation_scope'],'ever-grande-market')
         expected={r['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba'):r['sha256'] for r in release['variants']}
-        expected['TESTE']=json.loads((ROOT/'roms/rom-de-teste/review.json').read_text())['sha256']
+        expected['TESTE']=json.loads((ROOT/'mods/hoenn/extra-gyms-validation/baseline/review.json').read_text())['sha256']
         for edition,sha in expected.items():
             with self.subTest(edition=edition):
                 r=json.loads((OUT/edition/'ever-grande-market.json').read_text())

@@ -1,6 +1,10 @@
 # ROM de teste das rotas de Surf
 
+Esta ROM inclui o circuito de 24 insígnias e as travessias corrigidas da camada 160. [Detalhes](../../docs/ginasios-extras-e-travessias.md).
+
 Abra `Pokemon-Journey-TESTE.gba` no emulador. Esta edição deriva de Gen1–9 Normal e contém as mesmas rotas, portos e cavernas das quatro ROMs normais.
+
+No player do GitHub Pages, selecione **TESTE · Explore without encounters**. O navegador confere o arquivo atual e mantém um save separado das quatro edições normais.
 
 Os treinadores não abordam o personagem. Não há encontros aleatórios na grama, no Surf ou nas cavernas, nem por pesca, Sweet Scent ou Rock Smash. Conversar com treinadores e confirmar desafios nos altares continua funcionando.
 

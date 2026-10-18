@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "2193d8a02cd690ffe2f9fd3464e87bc3766cfd7cee5b6446d151ed305b0975f9",
-  "build_rules_offset": 9100076,
+  "parent_rom_sha256": "f772b1d1c66aa5d09940264b54db92ea51ca5dea7de6bc70378d6595a4a72f15",
+  "build_rules_offset": 9118916,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "5c02265902411570ac91d62ee4fb826ba9be064fd39aa86f857003f854989cf1",
+      "sha256": "2242855b17be4e523634644a2f15587dc76c836d69968ed97ef086315da72235",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        9100076,
-        9100077,
-        9100078
+        9118916,
+        9118917,
+        9118918
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "5c378d08136c53d2ce908c04056f86f94639d1e1f74094c6c6d7bc0a72793ca4",
+      "sha256": "0e3075dc0f36abe0b17c1fe9fcb1e8046359ff8d878dc15d82124ee713aef2b5",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        9100076,
-        9100077
+        9118916,
+        9118917
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "646b6ee2bb6fbd70ae5a01f6d8c492433a18f5f71757117551b86fa9195fe578",
+      "sha256": "74a573d285e15662c5feacee04ee11ed477d9aeceb8d5538ff15704de129e043",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        9100078
+        9118918
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "620b609dd3b8593ac528dc5a9444bbe5cbbd501b2ec2d36a4bd9df73019d0c84",
+      "sha256": "9fa59fd01661694f00e379246212568ef5e197b861933d64a43299d8eb009e34",
       "patched_byte_offsets": [
         160,
         162,
@@ -264,154 +264,203 @@
     "surf-cave-coasts",
     "surf-review",
     "dewford-competitive-shop",
-    "ever-grande-market"
+    "ever-grande-market",
+    "extra-gyms"
   ],
-  "validation_scope": "ever-grande-market",
+  "validation_scope": "extra-gyms",
   "full_campaign_playthrough": false,
   "proofs": [
     {
-      "file": "evidence/ever-grande-market/common/ever-grande-source.json",
+      "file": "evidence/extra-gyms/common/extra-gym-source.json",
       "target": "common",
-      "kind": "ever-grande-source",
-      "sha256": "c483f584117b501c77cfd926dbe490d571904c7e7cc616d4e9c390489cb6bd56"
+      "kind": "extra-gym-source",
+      "sha256": "52d49eeac911da30c2fed3c98be8a675c3535bc3bb8c8d93d0b67f6f3b566050"
     },
     {
-      "file": "evidence/ever-grande-market/common/ever-grande-market.json",
+      "file": "evidence/extra-gyms/common/surf-repairs.json",
       "target": "common",
-      "kind": "ever-grande-market",
-      "sha256": "90361019383c180132352059251d9ec5442e2d04f66075245ffb5623b965296d"
+      "kind": "surf-repairs",
+      "sha256": "f325d018be90dc5072e1d704c637c8b421a3a01a6be5fb28346ec1d1f3d58d07"
     },
     {
-      "file": "evidence/ever-grande-market/common/fallarbor-physics.json",
+      "file": "evidence/extra-gyms/common/coastal-details.json",
       "target": "common",
-      "kind": "fallarbor-physics",
-      "sha256": "7b529d52e707de17d406d3efbf4f365ec5e43ad19d87eabdd96ddcbbc9d9abe2"
+      "kind": "coastal-details",
+      "sha256": "40b78a0f8487e49b86f99a8d2ff218904ec87ca29634fa61e7ede3ab0cd09af2"
     },
     {
-      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-4-Normal/ever-grande-market.json",
+      "file": "evidence/extra-gyms/common/marine-network.json",
+      "target": "common",
+      "kind": "marine-network",
+      "sha256": "77da54a6a7d15e737f33710dd86534586021f8d0d118b6834ba4337d0bc37e0f"
+    },
+    {
+      "file": "evidence/extra-gyms/common/luffy-approach.json",
+      "target": "common",
+      "kind": "luffy-approach",
+      "sha256": "e81cd7938442d146c1a73edc1461d832eff3078320c09f022d787f7071214cdc"
+    },
+    {
+      "file": "evidence/extra-gyms/common/coastal-landings.json",
+      "target": "common",
+      "kind": "coastal-landings",
+      "sha256": "31d13905737cf70b1846f7e852aec3bac63ad8fb065188bcb341c95d23d98695"
+    },
+    {
+      "file": "evidence/extra-gyms/common/map-finishing.json",
+      "target": "common",
+      "kind": "map-finishing",
+      "sha256": "0bfc2ba9b0ae2b891b38446f27bdff3ab5bb421daf8243d47e4286f29aaf399f"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Normal/extra-gyms.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "extra-gyms",
+      "sha256": "e8e71243913187bdc94f8daddf4a8f766b08395e79bcfbce66fa6eb0cadddb76"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Normal/review-mode.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "review-mode",
+      "sha256": "e318cb1c5e68989730a73893ea7b9086165d9999ca3303a59c199e845859d53d"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Normal/ever-grande-market.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "ever-grande-market",
-      "sha256": "2404f4ca213f48f09cdcfb1d551cd29e99823e1864af44fe6cf8cbe4f4ac395c"
+      "sha256": "772f7dfb0f747c8e4460cfff2d22b9bc699795498bcf807b89bd90e5ab348785"
     },
     {
-      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-4-Normal/dewford-competitive-shop.json",
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Normal/dewford-competitive-shop.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "dewford-competitive-shop",
-      "sha256": "f02c0950793a17d697889b775bdaae6020b5ff7e97854b23850a2d004169e519"
+      "sha256": "c2922b1e08ab338fafb9218c356933baf5446a3a68c7abe187f78a402e07f8d6"
     },
     {
-      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-4-Normal/review-mode.json",
-      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "review-mode",
-      "sha256": "88c99fa050793459f7029a59c409103cd0bdb4abe59a08ead6a3c2a096adae0c"
-    },
-    {
-      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-4-Normal/fallarbor-physics.json",
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Normal/fallarbor-physics.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "fallarbor-physics",
-      "sha256": "08e8b13483768d231a5aaac27a4a377034bf0f67aceba733c4208d9ed91cc8a8"
+      "sha256": "d2ed33bb0905dbc87817b776366aaaed28269c6a576942defa0c1d76954dcc6e"
     },
     {
-      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-4-Hard/ever-grande-market.json",
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Hard/extra-gyms.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "ever-grande-market",
-      "sha256": "c2110892c4b1bc7074ed8461fed3d584dbc700e4bff8c858c49e5a321148fda0"
+      "kind": "extra-gyms",
+      "sha256": "59e5bae1bba0fccfb09ccff9f67b7c555e40541a53a6a245038f20b9dafb6c86"
     },
     {
-      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-4-Hard/dewford-competitive-shop.json",
-      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "dewford-competitive-shop",
-      "sha256": "3e0a0b1f161ffaaad0239d2809fe25e49a00f705ef5d5383982af78fb0df18fb"
-    },
-    {
-      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-4-Hard/review-mode.json",
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Hard/review-mode.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "review-mode",
-      "sha256": "652e1d37f6a20a05bb267e2410b0bc0f006eaa3d6c47e77ff7211e1842fe0271"
+      "sha256": "1d4fa8cc415f9fc995d06ec63851c0dc8fcab9f8c66fedfc472185cac26fade5"
     },
     {
-      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-4-Hard/fallarbor-physics.json",
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Hard/ever-grande-market.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "ever-grande-market",
+      "sha256": "f6c1e931feb759b2f6e21b5a9bfade65cb95885e891febe57bab74f2d6ae4163"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Hard/dewford-competitive-shop.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "dewford-competitive-shop",
+      "sha256": "539880fde8687709b363167029fb629872be587278b4dca81d7fea8e99dd2ca2"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Hard/fallarbor-physics.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "fallarbor-physics",
-      "sha256": "c5bb1f8a689fa04160e3bfc4daf2cefcad22f7aa77e284d0d0a4e9b5e94a2c69"
+      "sha256": "0923fec23f4c32fa6309c46ed544e5b64eb8a716ce472a5bd2c98346acd99dc8"
     },
     {
-      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-9-Normal/ever-grande-market.json",
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Normal/extra-gyms.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "ever-grande-market",
-      "sha256": "b1005baefe9e92f8164083df3d18c63d16e1e9e4136ef88cac24fc21f7080de0"
+      "kind": "extra-gyms",
+      "sha256": "333590ae10af32da3d1190666d488b442feaa77d89238f9abaeb60bff6f22cb3"
     },
     {
-      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-9-Normal/dewford-competitive-shop.json",
-      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "dewford-competitive-shop",
-      "sha256": "fdf837920200cccc1336f3d3603779d055487244d1ed6d983d9d4c6f02f81abd"
-    },
-    {
-      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-9-Normal/review-mode.json",
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Normal/review-mode.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "review-mode",
-      "sha256": "d719026e0da80bbc05bc60a8cdc50a4031c724ff6428bff43fd3ac9c6ab01ba3"
+      "sha256": "12e2d523eb623064e5e3c9266c72d5be8e55fb3a713b190d7f0f991978ac73ce"
     },
     {
-      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-9-Normal/fallarbor-physics.json",
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Normal/ever-grande-market.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "ever-grande-market",
+      "sha256": "57350a63adef9fdc67542106f70c0080d9842144b29945af7867324b014f818f"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Normal/dewford-competitive-shop.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "dewford-competitive-shop",
+      "sha256": "09332980d99f90fc772138d1e6985b59f9af8a623f7b55640fc92f61183a4a2f"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Normal/fallarbor-physics.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "fallarbor-physics",
-      "sha256": "d80b32bc2cf615437b30c9c1b86ab1883d4a8914303b5980c303bb091f324911"
+      "sha256": "c2a6c874dd451e06fa784460a374318cbaf53b02632f54cf0639b7e078f9bdcc"
     },
     {
-      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-9-Hard/ever-grande-market.json",
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Hard/extra-gyms.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "ever-grande-market",
-      "sha256": "b0451f8aa416b956fe394fc21294e55d08b32bb49d1f6a4dbb6036dd45dffc03"
+      "kind": "extra-gyms",
+      "sha256": "7ce95890207aea348899f1a69844c6a2f3a21b8a28879121e5e53fa92fb72056"
     },
     {
-      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-9-Hard/dewford-competitive-shop.json",
-      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "dewford-competitive-shop",
-      "sha256": "5a4a808650999998e39d0855558d6316f18ff4eb2d694fe62349b14305adfd37"
-    },
-    {
-      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-9-Hard/review-mode.json",
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Hard/review-mode.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "review-mode",
-      "sha256": "283912767e6240ebeb09fe1af3e08ffb89cb1bc539a041e464f5397c1d74665b"
+      "sha256": "b5b50277828f53b393f12b3d3eacbfbd59dd919923d970559899128b01e50bc1"
     },
     {
-      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-9-Hard/fallarbor-physics.json",
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Hard/ever-grande-market.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "ever-grande-market",
+      "sha256": "deef733168924ad1e10eeb643b6d7d5c4fc47c399772db5fe37aa3166f0fca4f"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Hard/dewford-competitive-shop.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "dewford-competitive-shop",
+      "sha256": "f74eebca19e71286080f6639cc2c115f42b170f16be85aa8794ff4cbdf8df6bf"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Hard/fallarbor-physics.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "fallarbor-physics",
-      "sha256": "bdc4b4990fc532cd356e91a441ca60f402743a2203bfb36c1334d5efbc4d2a49"
+      "sha256": "607a659128a125dbd744eaf62cbe9ded2fe3d4680dc3dcc032f758865f948460"
     },
     {
-      "file": "evidence/ever-grande-market/test/ever-grande-market.json",
+      "file": "evidence/extra-gyms/test/extra-gyms.json",
       "target": "test",
-      "kind": "ever-grande-market",
-      "sha256": "c4218fc7315a5eb7101ea6d538e9593ffebab7dcd3447d6e134c3418554c75c2"
+      "kind": "extra-gyms",
+      "sha256": "70df7e7488197c6f5d68c569bbf7bb6ed4a8b0a7780d3034f3b32d55b9e4fd2b"
     },
     {
-      "file": "evidence/ever-grande-market/test/dewford-competitive-shop.json",
-      "target": "test",
-      "kind": "dewford-competitive-shop",
-      "sha256": "c4ec9470f3af7e4ccedfb1c3671e5b35f158d2f24bcb05d15ca5e6de97668978"
-    },
-    {
-      "file": "evidence/ever-grande-market/test/review-mode.json",
+      "file": "evidence/extra-gyms/test/review-mode.json",
       "target": "test",
       "kind": "review-mode",
-      "sha256": "8db715919233ec3069c98db174b01b94bc61a626df9db0ae76caf1ef8130449f"
+      "sha256": "aacc8d9e5fbc7e8589752e4fd1eb1a3b3cb91b9e92437b1b93ada21376f31e3e"
     },
     {
-      "file": "evidence/ever-grande-market/test/fallarbor-physics.json",
+      "file": "evidence/extra-gyms/test/ever-grande-market.json",
+      "target": "test",
+      "kind": "ever-grande-market",
+      "sha256": "c297ce64e630f89a8151e3c83ca1e01ad8136e63cd09b336fa3c9dde6757f44c"
+    },
+    {
+      "file": "evidence/extra-gyms/test/dewford-competitive-shop.json",
+      "target": "test",
+      "kind": "dewford-competitive-shop",
+      "sha256": "bcd28ea490e2c2bee2546cbf3cbc19e3a523f8ecd58f1438fd480f811104f473"
+    },
+    {
+      "file": "evidence/extra-gyms/test/fallarbor-physics.json",
       "target": "test",
       "kind": "fallarbor-physics",
-      "sha256": "358d77903fd48318359e95c13453be851596c974e8486b270781fc6b835cc20e"
-    },
-    {
-      "file": "evidence/ever-grande-market/Pokemon-Journey-Gen1-9-Normal/fallarbor-river.json",
-      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "fallarbor-river",
-      "sha256": "4c9826525012b9297577b11d36ef57c3b0dc3e74c46b1114b870c182b5d79100"
+      "sha256": "8758b1e6d0fc253f3bf1f64ac8ac6bdf56bdaee464f6de00f0f03db627bdab4b"
     }
   ],
   "historical_validation": {
@@ -432,12 +481,12 @@
     "retested_on_current_rom": false
   },
   "previous_port_validation": {
-    "manifest": "mods/hoenn/ever-grande-market-validation/baseline/versions.json",
-    "manifest_sha256": "3c7d92e94f2b9e640c33abe175ef74312ee93d29d9a3c8817716085ead3e799d",
+    "manifest": "mods/hoenn/extra-gyms-validation/baseline/versions.json",
+    "manifest_sha256": "1dc870480835c9b5068565b80a1108e36480004b612d828b0f40fe904d5ed297",
     "retested_on_current_rom": false
   },
   "previous_review_validation": {
-    "file": "mods/hoenn/ever-grande-market-validation/baseline/review.json",
-    "sha256": "bff375fe6804bd290ade893d43bf7df39b5629e3a5e20ebeed54564bb5554fae"
+    "file": "mods/hoenn/extra-gyms-validation/baseline/review.json",
+    "sha256": "654d5474954838e66db1b592322d11caffb71d2583f3d5a859a3e349f0be1570"
   }
 }

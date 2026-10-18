@@ -3,16 +3,16 @@
   "checks": [
     {
       "file": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "rom_sha256": "75d91fce2f2b59a8cb49cbd443041747531076102d96b3494a1d499dff90fb82",
+      "rom_sha256": "2242855b17be4e523634644a2f15587dc76c836d69968ed97ef086315da72235",
       "downloaded_bytes": 33554432,
       "actual_game_name": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "native_frames": 364,
+      "native_frames": 362,
       "exported_native_state_bytes": 528472,
       "distinct_save_identity": true
     },
     {
       "file": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "rom_sha256": "f74e43139b1574b7d7aa5611d50caf2cb0d2e8b0e769b3d21547594d5f3f77e6",
+      "rom_sha256": "0e3075dc0f36abe0b17c1fe9fcb1e8046359ff8d878dc15d82124ee713aef2b5",
       "downloaded_bytes": 33554432,
       "actual_game_name": "Pokemon-Journey-Gen1-4-Hard.gba",
       "native_frames": 362,
@@ -21,7 +21,7 @@
     },
     {
       "file": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "rom_sha256": "95ca98144c9d469d897b17a6d2794e63300bbd0e9e50af2d94331a502349f4d1",
+      "rom_sha256": "74a573d285e15662c5feacee04ee11ed477d9aeceb8d5538ff15704de129e043",
       "downloaded_bytes": 33554432,
       "actual_game_name": "Pokemon-Journey-Gen1-9-Normal.gba",
       "native_frames": 362,
@@ -30,10 +30,19 @@
     },
     {
       "file": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "rom_sha256": "769c9a9741eb7e1b54d88ce6353fd479061c9c123fc1cd9d675b44ad2d379e06",
+      "rom_sha256": "9fa59fd01661694f00e379246212568ef5e197b861933d64a43299d8eb009e34",
       "downloaded_bytes": 33554432,
       "actual_game_name": "Pokemon-Journey-Gen1-9-Hard.gba",
       "native_frames": 363,
+      "exported_native_state_bytes": 528472,
+      "distinct_save_identity": true
+    },
+    {
+      "file": "Pokemon-Journey-TESTE.gba",
+      "rom_sha256": "4c5b4c52c3526d187737dc7e43825c5f5520647f0545285b60e64641902d7539",
+      "downloaded_bytes": 33554432,
+      "actual_game_name": "Pokemon-Journey-TESTE.gba",
+      "native_frames": 362,
       "exported_native_state_bytes": 528472,
       "distinct_save_identity": true
     }
@@ -41,9 +50,10 @@
   "invalid_manifest_rejected": true,
   "incomplete_rom_rejected": true,
   "bundled_mgba": true,
+  "stale_test_edition_rejected": true,
   "player_sources_sha256": {
-    "index.html": "664d84cec3a061cfd0d6ecd4ad5a6fdda7339c81b0d10fa4abd4a14e51b69bf6",
-    "player.js": "ca0fcd03b9525d07b00c0daf31561ef0e5da81bedd9ce0af5b7dba60995b8419",
+    "index.html": "3a86b72c48931cf10463b898854120ec40e001d26e97bd6a686edbe16399e2fa",
+    "player.js": "8d596c6cc3c99f489f771190cfa2a4cbee24a7bc1f410384f7392abc581c31e5",
     "style.css": "1e704b57ec26af12c314d5c7aea5f8b6e12849b5eb0bd7338abbff5ccaf478dd"
   },
   "desktop_and_mobile_viewports": true,

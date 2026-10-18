@@ -1,6 +1,8 @@
 # Pokémon Journey — quatro edições GBA
 
-Atualização atual: [casas e feira de Mega Stones em Ever Grande](../../../docs/ever-grande-market.md), dois presentes únicos e Sootopolis com marcador vermelho. Inclui as formas Origin do PR #93, o mercado competitivo no exterior da Battle Frontier e o Hyper Training em Dewford.
+Atualização atual: [oito ginásios extras e travessias de Surf corrigidas](../../../docs/ginasios-extras-e-travessias.md). Circuito de 24 insígnias, caminhos físicos ampliados, Dewford com dois atendentes e novo sprite do Luffy.
+
+Inclui [casas e feira de Mega Stones em Ever Grande](../../../docs/ever-grande-market.md), dois presentes únicos e Sootopolis com marcador vermelho. Inclui as formas Origin do PR #93, o mercado competitivo no exterior da Battle Frontier e o Hyper Training em Dewford.
 
 Inclui a [correção do rio de Fallarbor](../../../docs/fallarbor-river.md): praia caminhável, margens completas e desembarque para a cidade.
 [Formas Origin](../../../docs/formas-origin.md): Adamant Orb, Lustrous Orb e Griseous Orb agora também transformam ao equipar.
@@ -34,6 +36,8 @@ No repositório, as quatro ROMs atuais também ficam em [`roms/`](../../../roms/
 [Baixar as quatro edições em ZIP](Pokemon-Journey-Four-Editions.zip). [SHA-256](SHA256SUMS). [Manifesto e evidências](versions.json).
 
 Rivais, líderes, Elite Four, campeões, chefes e administradores recebem builds competitivas, 510 EVs e IA avançada nas duas dificuldades. Treinadores comuns preservam o tratamento comum. Treinadores comuns usam a média atual −5/+2, inclusive dentro dos ginásios. Líderes usam −1/+5 e o principal fica obrigatoriamente em +5; quantidades continuam por ordem regional. Evoluções e golpes respeitam o nível final.
+
+Os 16 ginásios originais conservam a ordem regional. Os oito extras consideram o total de insígnias, têm quatro treinadores em passagens obrigatórias e completam o requisito de 24 para as Ligas. No player, a opção **TESTE** acompanha esta atualização, com save separado e sem encontros selvagens nem abordagens automáticas; conversar para desafiar continua possível.
 
 Red, Leaf, Brendan e May podem começar em qualquer região. Surf, Dive e Waterfall são entregues pela família; Fly é o quarto HM. Os demais antigos HMs são TMs reutilizáveis, sem barreiras terrestres. As cavernas são iluminadas.
 

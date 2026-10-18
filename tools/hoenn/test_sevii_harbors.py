@@ -13,7 +13,7 @@ OUT=ROOT/'mods/hoenn/sevii-harbors-validation'
 class SeviiHarbors(unittest.TestCase):
     def test_all_seven_terminals_and_surf_roundtrips_are_current_in_every_edition(self):
         release=verify(ROOT/'mods/hoenn/versions')
-        while release.get('validation_scope') in ('ever-grande-market','dewford-competitive-shop','surf-review','annotated-world-links','island-harbors'):release=previous_release(release)
+        while release.get('validation_scope') in ('extra-gyms','ever-grande-market','dewford-competitive-shop','surf-review','annotated-world-links','island-harbors'):release=previous_release(release)
         self.assertEqual(release['validation_scope'],'sevii-harbors')
         cases=[('validation',release['parent_rom_sha256'])]
         cases += [(r['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba'),r['sha256']) for r in release['variants']]

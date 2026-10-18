@@ -9,6 +9,9 @@ ROOT=Path(__file__).resolve().parents[2]
 bootstrap=(ROOT/'tools/hoenn/validate_sevii_surf_connections.py').read_text().split('\ntowns=')[0]
 exec(compile(bootstrap,__file__,'exec'))
 permitted={'JourneyWestRiver','Route114','FallarborTown','JourneyCinnabarSouthSea','JourneyRustboroCoast'}
+if (source/'.journey-extra-gyms').exists():
+    coasts=json.loads((source/'.journey-extra-gyms').read_text())['coastal_fixes']['geography']['repaired_links']
+    permitted.update(n for link in coasts if link['source'] in permitted and link['destination'] in permitted for n in link['segments'])
 for n in passable:
     if n not in permitted:passable[n]=set()
     else:

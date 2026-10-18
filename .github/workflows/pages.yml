@@ -36,3 +36,15 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+      - name: Verify five published editions
+        env:
+          PLAYWRIGHT_MODULE: ${{ runner.temp }}/browser-validation/node_modules/playwright
+          PLAYABLE_SITE_URL: ${{ steps.deployment.outputs.page_url }}
+          BROWSER_VALIDATION_OUTPUT: ${{ runner.temp }}/pages-live-validation
+        run: node tools/hoenn/validate_versions_browser.cjs
+      - name: Upload published player evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: published-player-validation
+          path: ${{ runner.temp }}/pages-live-validation/
