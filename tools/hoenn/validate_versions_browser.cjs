@@ -6,7 +6,8 @@ const crypto = require('crypto');
 const ROOT = path.resolve(__dirname, '../..');
 const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'mods/hoenn/versions/versions.json')));
 const releases = [...manifest.variants];
-if (manifest.validation_scope === 'extra-gyms') releases.push(JSON.parse(fs.readFileSync(path.join(ROOT,'roms/rom-de-teste/review.json'))));
+const includesTestEdition = ['extra-gyms','dewford-coast-safety'].includes(manifest.validation_scope);
+if (includesTestEdition) releases.push(JSON.parse(fs.readFileSync(path.join(ROOT,'roms/rom-de-teste/review.json'))));
 const OUT = process.env.BROWSER_VALIDATION_OUTPUT || path.join(ROOT, 'mods/hoenn/versions-validation/browser');
 const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
 (async () => {
@@ -33,7 +34,7 @@ const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
     if(await invalid.evaluate(()=>!!window.EJS_emulator))throw new Error('Unvalidated manifest booted');
     if(await invalid.locator('#play').isDisabled())throw new Error('Manifest rejection prevented retry');
     await invalid.close();
-    if (manifest.validation_scope === 'extra-gyms') {
+    if (includesTestEdition) {
       const stale = await browser.newPage();
       await stale.route('**/games/review.json', route=>route.fulfill({contentType:'application/json',body:JSON.stringify({...releases.at(-1),base_normal_sha256:'0'.repeat(64)})}));
       await stale.goto(url);await stale.locator('#play').click();
@@ -82,7 +83,7 @@ const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
     if(new Set(checks.map(c=>c.actual_game_name)).size!==releases.length)throw new Error('Save identities collide');
     fs.writeFileSync(path.join(OUT,'browser-versions.json'),JSON.stringify({passed:true,checks,
       invalid_manifest_rejected:true,incomplete_rom_rejected:true,bundled_mgba:true,
-      stale_test_edition_rejected:manifest.validation_scope === 'extra-gyms',
+      stale_test_edition_rejected:includesTestEdition,
       player_sources_sha256:playerSources,
       desktop_and_mobile_viewports:true,full_campaign_playthrough:false},null,2)+'\n');
   }finally{await browser.close();}

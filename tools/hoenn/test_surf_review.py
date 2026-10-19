@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'mods/hoenn/surf-review-valida
 class SurfReview(unittest.TestCase):
     def test_release_separates_review_behavior_and_normal_battles(self):
         info=verify(ROOT/'mods/hoenn/versions')
-        while info.get('validation_scope') in ['extra-gyms','ever-grande-market','dewford-competitive-shop']:
+        while info.get('validation_scope') in ['dewford-coast-safety','extra-gyms','ever-grande-market','dewford-competitive-shop']:
             from verify_fuchsia_update import previous_release
             info=previous_release(info)
         self.assertEqual(info['validation_scope'],'surf-review')

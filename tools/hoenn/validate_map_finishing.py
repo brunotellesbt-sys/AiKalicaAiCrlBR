@@ -8,6 +8,12 @@ exec(compile(bootstrap,__file__,'exec'))
 ports=json.loads((source/'.journey-sevii-harbors').read_text())['ports']
 landscape=json.loads((source/'.journey-extra-gyms').read_text())['landscape_review']
 removals={r['island']:r for r in landscape if r.get('obsolete_ferry_roof_removed')}
+coast_marker=source/'.journey-dewford-coast-safety'
+piers=json.loads(coast_marker.read_text()).get('piers',{}) if coast_marker.exists() else {}
+extended_bridges={r['island']:r for r in piers.get('town_bridges',[])}
+deck_cells={(seg['map'],x,y) for r in extended_bridges.values() for seg in r['deck_segments']
+            for x in range(seg['footprint'][0],seg['footprint'][0]+seg['footprint'][2])
+            for y in range(seg['footprint'][1],seg['footprint'][1]+seg['footprint'][3])}
 assert set(removals)=={f['island'] for f in OBSOLETE_FERRIES} and len(removals)==7
 names=list(dict.fromkeys([p['exterior'] for p in ports]+[p['interior'] for p in ports]
                        +[f['town'] for f in OBSOLETE_FERRIES]
@@ -68,11 +74,18 @@ for p in ports:
     picture(n+'-outside')
     passable={n:valid.copy() for n,valid in full_passable.items()}
     warp(*water);native('SetPlayerAvatarTransitionFlags',8);step(90)
-    walk(bridge);step(60)
-    assert lib.read8(s['gPlayerAvatar'])&8 and player_priority()==2,('Surf drawn above pier',n,player_priority())
-    walk(water);step(60);assert lib.read8(s['gPlayerAvatar'])&8
+    if piers:
+        before=position();step(90,{16:32,32:16,64:128,128:64}[key]);step(60)
+        assert position()==before and lib.read8(s['gPlayerAvatar'])&8,('Surf entered low pier',n,before,position())
+        assert player_priority()==2
+        picture(n+'-low-pier-surf-blocked')
+    else:
+        walk(bridge);step(60)
+        assert lib.read8(s['gPlayerAvatar'])&8 and player_priority()==2,('Surf drawn above pier',n,player_priority())
+        walk(water);step(60);assert lib.read8(s['gPlayerAvatar'])&8
     checks.append(dict(map=n,terminal=inside,controller_door_roundtrip=True,foot_blocks_at_pier_end=True,foot_state_on_dry_terminal=True,
-        foot_drawn_above_bridge=True,surf_drawn_below_bridge=True,under_pier_surf_roundtrip=True))
+        foot_drawn_above_bridge=True,surf_drawn_below_bridge=True,under_pier_surf_roundtrip=not bool(piers),
+        low_pier_surf_entry_blocked=bool(piers)))
     print('Native terminal finishing passed',n,flush=True)
 passable={n:valid.copy() for n,valid in dry_passable.items()}
 warp('SixIsland_Frlg',9,12);native('SetPlayerAvatarTransitionFlags',1);step(90)
@@ -89,6 +102,9 @@ def assert_cleared_water(name,footprint,water,loaded=False):
     if loaded:assert location()==map_id(name)
     for yy in range(y,y+h):
         for xx in range(x,x+w):
+            if (name,xx,yy) in deck_cells:
+                assert tiles[yy*width+xx]>>12==3 and not tiles[yy*width+xx]&0xc00
+                continue
             assert tiles[yy*width+xx]==water,(name,xx,yy,'Obsolete terminal or water pad remains')
             assert water_behaviors[behaviors[name][yy*width+xx]]
             if loaded:
@@ -108,14 +124,18 @@ for ferry in OBSOLETE_FERRIES:
     assert removal['connected_remnants']==ferry.get('connected_remnants',[])
     assert removal['ramp']==ferry['ramp'] and removal['ramp_warp_id']==ferry['ramp_warp']
     assert removal['ramp_warp_unchanged'] and removal['harbor']==harbor
-    outward=maps[town]['warp_events'][ferry['ramp_warp']];back=maps[harbor]['warp_events'][0]
-    assert [outward['x'],outward['y']]==[rx,ry] and outward['elevation']==3
+    extension_bridge=extended_bridges.get(ferry['island'])
+    endpoint_map,ex,ey=extension_bridge['end'] if extension_bridge else (town,rx,ry)
+    endpoint_id=extension_bridge['endpoint_warp_id'] if extension_bridge else ferry['ramp_warp']
+    outward=maps[endpoint_map]['warp_events'][endpoint_id];back=maps[harbor]['warp_events'][0]
+    assert [outward['x'],outward['y']]==[ex,ey] and outward['elevation']==3
     assert outward['dest_map']==maps[harbor]['id'] and outward['dest_warp_id']=='0'
     assert [back['x'],back['y']]==[8,2] and back['elevation']==3
-    assert back['dest_map']==maps[town]['id'] and back['dest_warp_id']==str(ferry['ramp_warp'])
+    assert back['dest_map']==maps[endpoint_map]['id'] and back['dest_warp_id']==str(endpoint_id)
     width,height,tiles=blocks[town]
-    assert list(tiles[ry*width+rx-1:ry*width+rx+2])==removal['ramp_metatiles']
-    assert arrows[behaviors[town][ry*width+rx]]==128
+    ew,eh,et=blocks[endpoint_map]
+    assert list(et[ey*ew+ex-1:ey*ew+ex+2])==removal['ramp_metatiles']
+    assert arrows[behaviors[endpoint_map][ey*ew+ex]]==128
     hw,hh,ht=blocks[harbor];assert ht[2*hw+8]==0x33fa and arrows[behaviors[harbor][2*hw+8]]==64
     start=(town,21,8) if ferry['island']=='Two' else (town,rx,ry-1)
     warp(*start);native('SetPlayerAvatarTransitionFlags',1);step(90)
@@ -126,7 +146,7 @@ for ferry in OBSOLETE_FERRIES:
     picture(ferry['island'].lower()+'-ramp-main-terminal')
     walk(start);step(300)
     assert location()==map_id(town) and position()==start[1:] and lib.read8(s['gPlayerAvatar'])&25==1
-    assert native('MapGridGetMetatileBehaviorAt',rx+7,ry+7)==0x65
+    if not extension_bridge:assert native('MapGridGetMetatileBehaviorAt',rx+7,ry+7)==0x65
     assert_cleared_water(town,ferry['clear'],ferry['water'],loaded=True)
     if ferry['island']=='Two':
         assert lib.read8(s['gPlayerAvatar'])&25==1
@@ -154,7 +174,9 @@ for ferry in OBSOLETE_FERRIES:
         connected_remnants_removed=ferry.get('connected_remnants',[]),
         controller_outbound_to_main_terminal=True,controller_return_to_town=True,foot_state_preserved=True,
         center_terminal_roundtrip=ferry['island']=='Two',
-        native_ramp_side_coast_collision_checked=ferry['island']=='Two'))
+        native_ramp_side_coast_collision_checked=ferry['island']=='Two',
+        extended_bridge_endpoint=[endpoint_map,ex,ey],extended_bridge_warp_id=endpoint_id,
+        one_ferry_warp_transferred=bool(extension_bridge and ferry['island']=='One')))
     print('Native town ramp and obsolete roof removal passed',town,flush=True)
 # Surf remains west of the complete cliff outline and cannot enter the new
 # blocking margin. The remaining west/south ocean is checked by the full

@@ -28,6 +28,10 @@ void *image(void){return pixels;}
 void stop(void){mCoreConfigDeinit(&core->config);core->deinit(core);core=NULL;}
 void raw8(unsigned a,unsigned v){core->rawWrite8(core,a,-1,v);}
 
+// Load a battery save explicitly; start() deliberately creates a clean core.
+// Merely placing a .sav beside the temporary ROM does not load it in mCore.
+int load_save(const char *path) { return mCoreLoadSaveFile(core, path, true); }
+
 // Export native flash after TrySavingData; no emulator-state format involved.
 int export_save(const char *path) {
  void *data = NULL; size_t size = core->savedataClone(core, &data);

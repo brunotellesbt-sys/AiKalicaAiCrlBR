@@ -1,0 +1,6807 @@
+{
+  "passed": true,
+  "rom_sha256": "8f0ddccd7a3e4a9c3b7430a6b5c631143449b65b8a3543e449c76167846f3db9",
+  "parent_rom_sha256": "ae5da9ae24d315cd2a987afc48d42673a4d11b4fa9b411afcf5214d936759a2b",
+  "layers": [
+    "hoenn-crossing",
+    "worldsea",
+    "westsea",
+    "region-state",
+    "east-coast",
+    "gym-scaling",
+    "campaign-gates",
+    "team-stories",
+    "free-access",
+    "blue-gym",
+    "road-access",
+    "mach-bike",
+    "yellow-stairs",
+    "story-access",
+    "story-completion",
+    "water-hms",
+    "ferry",
+    "rival",
+    "family",
+    "travel-rules",
+    "birth",
+    "wild",
+    "habitats",
+    "sanctuaries",
+    "ecology",
+    "abilities",
+    "mega-art",
+    "story-aftermath",
+    "league-access",
+    "league-completion",
+    "league-history",
+    "league-display",
+    "family-postgame",
+    "pwt",
+    "frontier-travel",
+    "story-puzzles",
+    "aqua-episodes",
+    "seafloor-access",
+    "water-continue",
+    "cave-access",
+    "sky-pillar-access",
+    "english-text",
+    "special-ball",
+    "route131-sea-access",
+    "lostelle-habitats",
+    "tower-habitats",
+    "early-story-tools",
+    "mandatory-native-missions",
+    "sixteen-badge-leagues",
+    "rusturf-reunion",
+    "sea-landscapes",
+    "eastern-sea-union",
+    "ever-grande-entrance",
+    "route12-port",
+    "lavender-network",
+    "world-map",
+    "kanto-open-sea",
+    "coastal-world-map",
+    "remote-islands",
+    "surf-passages",
+    "battle-database",
+    "five-island-habitat",
+    "adaptive-gym-teams",
+    "world-map-position",
+    "world-dex-map",
+    "competitive-bosses",
+    "campaign-variants",
+    "version-play",
+    "small-ports",
+    "arrival-continuity",
+    "story-continuity",
+    "intro-region",
+    "paradox-caves",
+    "preferred-mossdeep-port",
+    "birth-confirmation",
+    "crossover-opponents",
+    "crossover-encounters",
+    "trainer-level-coherence",
+    "evolution-coherence",
+    "crossover-partners",
+    "galactic-chapter",
+    "trainer-item-evolutions",
+    "galactic-continuity",
+    "mega-origin-reversion",
+    "sharp-world-map",
+    "battle-rule-coherence",
+    "final-ecology",
+    "final-story",
+    "evolution-supplies",
+    "badge-case",
+    "variant-dex",
+    "water-habitat-recovery",
+    "reproducible-water",
+    "galactic-prison",
+    "final-balance",
+    "prison-visibility",
+    "named-character-presence",
+    "player-choice",
+    "modern-bag",
+    "modern-field-moves",
+    "pwt-world-cup",
+    "pwt-entrances",
+    "pwt-builds",
+    "pwt-stadium",
+    "pwt-stadium-camera",
+    "pwt-entrance-wait",
+    "pwt-encore-guard",
+    "move-history-rules",
+    "battle-interactions",
+    "nonlevel-moves",
+    "form-move-legality",
+    "special-encounter-workshop",
+    "special-encounter-field-rules",
+    "pwt-score-retention",
+    "workshop-graphics-rules",
+    "pwt-obedience",
+    "visible-crossover",
+    "compact-ports",
+    "lavender-rotom-room",
+    "briney-mossdeep",
+    "port-finish",
+    "live-gym-levels",
+    "coast-finish",
+    "atlas-route-tracking",
+    "final-moorings",
+    "continuous-atlas-marker",
+    "cinnabar-shore-polish",
+    "port-houses-and-ships",
+    "final-port-alignment",
+    "port-orientation-finish",
+    "close-vertical-boats",
+    "rival-walk-and-coast-audit",
+    "connected-sea-chart",
+    "diglett-galactic-scouts",
+    "native-coastal-fragments",
+    "complete-beach-edges",
+    "diglett-scout-battles",
+    "offscreen-rival-entrances",
+    "complete-marine-atlas",
+    "navigated-sea-atlas",
+    "sootopolis-harbor",
+    "pallet-harbor",
+    "sevii-surf-connections",
+    "sevii-coast-camera",
+    "sevii-surf-embarkation",
+    "sevii-arrival-layout",
+    "world-route-chart",
+    "lavender-harbor",
+    "fuchsia-harbor",
+    "three-harbor-terminals",
+    "sevii-harbors",
+    "mossdeep-harbor",
+    "dewford-island-harbor",
+    "continuous-ocean",
+    "annotated-world-links",
+    "surf-cave-coasts",
+    "surf-review",
+    "dewford-competitive-shop",
+    "ever-grande-market",
+    "extra-gyms",
+    "dewford-coast-safety"
+  ],
+  "independent_replay": true,
+  "idempotent": true,
+  "compiled_rom": true,
+  "preflight": false,
+  "source_hashes_checked": 32167,
+  "baseline_source_hashes_checked": 32164,
+  "changed_files": [
+    "data/layouts/FiveIsland_Frlg/map.bin",
+    "data/layouts/FourIsland_Frlg/map.bin",
+    "data/layouts/JourneyWorldSea00/map.bin",
+    "data/layouts/JourneyWorldSea01/map.bin",
+    "data/layouts/JourneyWorldSea02/map.bin",
+    "data/layouts/JourneyWorldSea03/map.bin",
+    "data/layouts/JourneyWorldSea04/map.bin",
+    "data/layouts/JourneyWorldSea05/map.bin",
+    "data/layouts/JourneyWorldSea06/map.bin",
+    "data/layouts/JourneyWorldSea07/map.bin",
+    "data/layouts/JourneyWorldSea08/map.bin",
+    "data/layouts/OneIsland_Frlg/map.bin",
+    "data/layouts/OneIsland_TreasureBeach_Frlg/map.bin",
+    "data/layouts/Route107/map.bin",
+    "data/layouts/SevenIsland_Frlg/map.bin",
+    "data/layouts/SixIsland_Frlg/map.bin",
+    "data/layouts/ThreeIsland_Port_Frlg/map.bin",
+    "data/layouts/TwoIsland_Frlg/map.bin",
+    "data/maps/FiveIsland_Frlg/map.json",
+    "data/maps/FourIsland_Frlg/map.json",
+    "data/maps/OneIsland_Frlg/map.json",
+    "data/maps/OneIsland_Harbor_Frlg/map.json",
+    "data/maps/OneIsland_TreasureBeach_Frlg/map.json",
+    "data/maps/SevenIsland_Frlg/map.json",
+    "data/maps/SixIsland_Frlg/map.json",
+    "data/maps/ThreeIsland_Port_Frlg/map.json",
+    "data/maps/TwoIsland_Frlg/map.json",
+    "include/journey_coastal_piers.h",
+    "include/journey_dewford_bridge.h",
+    "include/journey_dewford_coast.h",
+    "include/journey_dewford_coast_view.h",
+    "src/event_object_movement.c",
+    "src/fieldmap.c"
+  ],
+  "allowed_changed_files": [
+    "data/layouts/FiveIsland_Frlg/map.bin",
+    "data/layouts/FourIsland_Frlg/map.bin",
+    "data/layouts/JourneyWorldSea00/map.bin",
+    "data/layouts/JourneyWorldSea01/map.bin",
+    "data/layouts/JourneyWorldSea02/map.bin",
+    "data/layouts/JourneyWorldSea03/map.bin",
+    "data/layouts/JourneyWorldSea04/map.bin",
+    "data/layouts/JourneyWorldSea05/map.bin",
+    "data/layouts/JourneyWorldSea06/map.bin",
+    "data/layouts/JourneyWorldSea07/map.bin",
+    "data/layouts/JourneyWorldSea08/map.bin",
+    "data/layouts/OneIsland_Frlg/map.bin",
+    "data/layouts/OneIsland_TreasureBeach_Frlg/map.bin",
+    "data/layouts/Route107/map.bin",
+    "data/layouts/SevenIsland_Frlg/map.bin",
+    "data/layouts/SixIsland_Frlg/map.bin",
+    "data/layouts/ThreeIsland_Port_Frlg/map.bin",
+    "data/layouts/TwoIsland_Frlg/map.bin",
+    "data/maps/FiveIsland_Frlg/map.json",
+    "data/maps/FourIsland_Frlg/map.json",
+    "data/maps/OneIsland_Frlg/map.json",
+    "data/maps/OneIsland_Harbor_Frlg/map.json",
+    "data/maps/OneIsland_TreasureBeach_Frlg/map.json",
+    "data/maps/SevenIsland_Frlg/map.json",
+    "data/maps/SixIsland_Frlg/map.json",
+    "data/maps/ThreeIsland_Port_Frlg/map.json",
+    "data/maps/TwoIsland_Frlg/map.json",
+    "include/journey_coastal_piers.h",
+    "include/journey_dewford_bridge.h",
+    "include/journey_dewford_coast.h",
+    "include/journey_dewford_coast_view.h",
+    "src/event_object_movement.c",
+    "src/fieldmap.c"
+  ],
+  "unrelated_source_files_unchanged": true,
+  "other_maps_events_and_gyms_unchanged": true,
+  "atlas_graphics_unchanged": true,
+  "save_and_link_abi_unchanged": true,
+  "original_tm_hm_and_item_numbers_preserved": true,
+  "map_dimensions_connections_and_npcs_unchanged": true,
+  "authorized_port_warp_changes_only": true,
+  "cave_events_and_warps_unchanged": true,
+  "cave_mountains_rebuilt_from_exact_native_donor": true,
+  "both_dewford_vendors_preserved": true,
+  "maps_preserved": 1338,
+  "events_preserved": 10084,
+  "extra_gyms_preserved": 8,
+  "compiled_abi": {
+    "sizeof(struct SaveBlock1)": 19620,
+    "sizeof(struct SaveBlock2)": 3892,
+    "sizeof(struct ObjectEvent)": 36,
+    "sizeof(struct LinkPlayer)": 28,
+    "sizeof(struct LinkPlayerBlock)": 60,
+    "FLAGS_COUNT": 6976
+  },
+  "generated_map_and_layout_ids_preserved": true,
+  "compiled_item_constants_preserved": 67,
+  "route107_changed_cells": [
+    {
+      "tile": [
+        4,
+        15
+      ],
+      "before": 554,
+      "after": 12842
+    },
+    {
+      "tile": [
+        5,
+        16
+      ],
+      "before": 292,
+      "after": 12580
+    },
+    {
+      "tile": [
+        6,
+        16
+      ],
+      "before": 292,
+      "after": 12580
+    },
+    {
+      "tile": [
+        7,
+        19
+      ],
+      "before": 5625,
+      "after": 1593
+    },
+    {
+      "tile": [
+        8,
+        18
+      ],
+      "before": 5625,
+      "after": 4381
+    },
+    {
+      "tile": [
+        8,
+        19
+      ],
+      "before": 5625,
+      "after": 5413
+    }
+  ],
+  "upstream_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+  "upstream_route107_sha256": "af88a3d526aa59d8f263514364c2ae76f333d3e0dc9222c3b1786f10f025e097",
+  "bridge": {
+    "transition_sand_normalized": [
+      {
+        "position": [
+          4,
+          15
+        ],
+        "before": 554,
+        "after": 12842
+      },
+      {
+        "position": [
+          5,
+          16
+        ],
+        "before": 292,
+        "after": 12580
+      },
+      {
+        "position": [
+          6,
+          16
+        ],
+        "before": 292,
+        "after": 12580
+      }
+    ],
+    "southern_stair_edges": [
+      [
+        [
+          5,
+          16
+        ],
+        [
+          5,
+          15
+        ]
+      ],
+      [
+        [
+          6,
+          16
+        ],
+        [
+          6,
+          15
+        ]
+      ]
+    ],
+    "southern_stair_foot_elevation": 3,
+    "upper_elevation": 4,
+    "lower_elevation": 1,
+    "rail_metatiles": [
+      690,
+      693,
+      694,
+      697,
+      698,
+      701,
+      702,
+      705,
+      706,
+      709,
+      710,
+      713,
+      714,
+      717,
+      718,
+      721,
+      722,
+      725,
+      726,
+      729,
+      730,
+      733
+    ],
+    "bridge_metatiles": [
+      690,
+      691,
+      692,
+      693,
+      694,
+      695,
+      696,
+      697,
+      698,
+      699,
+      700,
+      701,
+      702,
+      703,
+      704,
+      705,
+      706,
+      707,
+      708,
+      709,
+      710,
+      711,
+      712,
+      713,
+      714,
+      715,
+      716,
+      717,
+      718,
+      719,
+      720,
+      721,
+      722,
+      723,
+      724,
+      725,
+      726,
+      727,
+      728,
+      729,
+      730,
+      731,
+      732,
+      733
+    ],
+    "rails_block_every_non_surf_level": true,
+    "npc_collision_flags_match_player_collision": true,
+    "saved_bridge_level_restored_from_player_state": true,
+    "native_surf_and_disembark_mismatch_preserved": true,
+    "rule_limited_to_route107_custom_bridge": true,
+    "north_stairs_and_island_elevation_4_preserved": true
+  },
+  "landscape": {
+    "maps": [
+      "DewfordTown",
+      "Route107"
+    ],
+    "map_dimensions_unchanged": true,
+    "native_forest_and_dry_ground_preserved": true,
+    "native_coast_corner_and_missing_crown_restored": true,
+    "original_dry_corner_retained": [
+      7,
+      18,
+      12606
+    ],
+    "upstream_repository": "eonlynx/pokecrossroads",
+    "upstream_commit": "e05c82865d38a6638173fd30b2c830d1250aa50d",
+    "upstream_route107_sha256": "af88a3d526aa59d8f263514364c2ae76f333d3e0dc9222c3b1786f10f025e097",
+    "upstream_native_cells": [
+      {
+        "tile": [
+          8,
+          18
+        ],
+        "native": 4381,
+        "restored": 4381,
+        "picture_and_elevation_unchanged": true,
+        "boundary_collision_added": false
+      },
+      {
+        "tile": [
+          7,
+          19
+        ],
+        "native": 569,
+        "restored": 1593,
+        "picture_and_elevation_unchanged": true,
+        "boundary_collision_added": true
+      },
+      {
+        "tile": [
+          8,
+          19
+        ],
+        "native": 4389,
+        "restored": 5413,
+        "picture_and_elevation_unchanged": true,
+        "boundary_collision_added": true
+      }
+    ],
+    "original_town_border_unchanged": true,
+    "regional_border_restores_forest_continuation": true,
+    "regional_border_forest_max_x": 7,
+    "regional_border_coast_x": 8,
+    "regional_border_reef_min_x": 9,
+    "regional_border_first_y": 20,
+    "regional_border_blocks": [
+      1603,
+      5413,
+      5625
+    ],
+    "regional_border_always_impassable": true,
+    "border_rule_matches_across_town_route_seam": true,
+    "coast_changed_cells": [
+      [
+        8,
+        18,
+        5625,
+        4381
+      ],
+      [
+        7,
+        19,
+        5625,
+        1593
+      ],
+      [
+        8,
+        19,
+        5625,
+        5413
+      ]
+    ],
+    "buildings_events_connections_and_vendors_unchanged": true
+  },
+  "view": {
+    "world_origins": {
+      "DewfordTown": [
+        -20,
+        0
+      ],
+      "Route106": [
+        -80,
+        -20
+      ],
+      "Route107": [
+        0,
+        0
+      ],
+      "JourneyDewfordPortIsland": [
+        0,
+        -12
+      ]
+    },
+    "only_undefined_view_cells_filled": true,
+    "actual_neighbor_blocks_preserve_art_elevation_and_collision": true,
+    "same_tileset_required": true,
+    "connections_unchanged": true,
+    "old_saved_coast_view_discarded_on_continue": true,
+    "fresh_view_on_every_local_transition": true
+  },
+  "caves": {
+    "donor_map": "Route20_Frlg",
+    "donor_entrance": [
+      72,
+      14
+    ],
+    "donor_bounds": [
+      67,
+      6,
+      78,
+      15
+    ],
+    "native_mountain_cells": [
+      [
+        -2,
+        -8,
+        1176
+      ],
+      [
+        -1,
+        -8,
+        1177
+      ],
+      [
+        0,
+        -8,
+        1177
+      ],
+      [
+        1,
+        -8,
+        1177
+      ],
+      [
+        2,
+        -8,
+        1178
+      ],
+      [
+        -3,
+        -7,
+        1176
+      ],
+      [
+        -2,
+        -7,
+        1211
+      ],
+      [
+        -1,
+        -7,
+        1131
+      ],
+      [
+        0,
+        -7,
+        1132
+      ],
+      [
+        1,
+        -7,
+        1133
+      ],
+      [
+        2,
+        -7,
+        1210
+      ],
+      [
+        3,
+        -7,
+        1178
+      ],
+      [
+        -4,
+        -6,
+        1176
+      ],
+      [
+        -3,
+        -6,
+        1211
+      ],
+      [
+        -2,
+        -6,
+        1131
+      ],
+      [
+        -1,
+        -6,
+        1211
+      ],
+      [
+        0,
+        -6,
+        1137
+      ],
+      [
+        1,
+        -6,
+        1210
+      ],
+      [
+        2,
+        -6,
+        1133
+      ],
+      [
+        3,
+        -6,
+        1210
+      ],
+      [
+        4,
+        -6,
+        1178
+      ],
+      [
+        -5,
+        -5,
+        1176
+      ],
+      [
+        -4,
+        -5,
+        1139
+      ],
+      [
+        -3,
+        -5,
+        1137
+      ],
+      [
+        -2,
+        -5,
+        1139
+      ],
+      [
+        -1,
+        -5,
+        1137
+      ],
+      [
+        0,
+        -5,
+        1137
+      ],
+      [
+        1,
+        -5,
+        1137
+      ],
+      [
+        2,
+        -5,
+        1141
+      ],
+      [
+        3,
+        -5,
+        1137
+      ],
+      [
+        4,
+        -5,
+        1141
+      ],
+      [
+        5,
+        -5,
+        1178
+      ],
+      [
+        -5,
+        -4,
+        1184
+      ],
+      [
+        -4,
+        -4,
+        1139
+      ],
+      [
+        -3,
+        -4,
+        1137
+      ],
+      [
+        -2,
+        -4,
+        1147
+      ],
+      [
+        -1,
+        -4,
+        1203
+      ],
+      [
+        0,
+        -4,
+        1137
+      ],
+      [
+        1,
+        -4,
+        1202
+      ],
+      [
+        2,
+        -4,
+        1149
+      ],
+      [
+        3,
+        -4,
+        1137
+      ],
+      [
+        4,
+        -4,
+        1141
+      ],
+      [
+        5,
+        -4,
+        1141
+      ],
+      [
+        -5,
+        -3,
+        1184
+      ],
+      [
+        -4,
+        -3,
+        1147
+      ],
+      [
+        -3,
+        -3,
+        1203
+      ],
+      [
+        -2,
+        -3,
+        1137
+      ],
+      [
+        -1,
+        -3,
+        1147
+      ],
+      [
+        0,
+        -3,
+        1148
+      ],
+      [
+        1,
+        -3,
+        1149
+      ],
+      [
+        2,
+        -3,
+        1137
+      ],
+      [
+        3,
+        -3,
+        1202
+      ],
+      [
+        4,
+        -3,
+        1149
+      ],
+      [
+        5,
+        -3,
+        1141
+      ],
+      [
+        -5,
+        -2,
+        1192
+      ],
+      [
+        -4,
+        -2,
+        1203
+      ],
+      [
+        -3,
+        -2,
+        1147
+      ],
+      [
+        -2,
+        -2,
+        1203
+      ],
+      [
+        -1,
+        -2,
+        1137
+      ],
+      [
+        0,
+        -2,
+        1137
+      ],
+      [
+        1,
+        -2,
+        1137
+      ],
+      [
+        2,
+        -2,
+        1202
+      ],
+      [
+        3,
+        -2,
+        1149
+      ],
+      [
+        4,
+        -2,
+        1202
+      ],
+      [
+        5,
+        -2,
+        1149
+      ],
+      [
+        -4,
+        -1,
+        1192
+      ],
+      [
+        -3,
+        -1,
+        1203
+      ],
+      [
+        -2,
+        -1,
+        1147
+      ],
+      [
+        -1,
+        -1,
+        1148
+      ],
+      [
+        0,
+        -1,
+        1148
+      ],
+      [
+        1,
+        -1,
+        1148
+      ],
+      [
+        2,
+        -1,
+        1149
+      ],
+      [
+        3,
+        -1,
+        1202
+      ],
+      [
+        4,
+        -1,
+        1149
+      ],
+      [
+        -3,
+        0,
+        1192
+      ],
+      [
+        -2,
+        0,
+        1145
+      ],
+      [
+        -1,
+        0,
+        1145
+      ],
+      [
+        0,
+        0,
+        12457
+      ],
+      [
+        1,
+        0,
+        1145
+      ],
+      [
+        2,
+        0,
+        1145
+      ],
+      [
+        3,
+        0,
+        1149
+      ]
+    ],
+    "photographed_surface": "JourneyWorldSea08",
+    "photographed_sanctuary": "Cristais",
+    "shared_defect_repaired_on_all_nine_surfaces": true,
+    "atlas_events_warps_and_map_dimensions_unchanged": true,
+    "maps": [
+      {
+        "map": "JourneyWorldSea00",
+        "sanctuary": "Tempestades",
+        "entrance": [
+          44,
+          10
+        ],
+        "changed_cells": [
+          [
+            41,
+            8,
+            12565,
+            1147
+          ],
+          [
+            42,
+            8,
+            12565,
+            1203
+          ],
+          [
+            43,
+            8,
+            1176,
+            1137
+          ],
+          [
+            45,
+            8,
+            1178,
+            1137
+          ],
+          [
+            46,
+            8,
+            12565,
+            1202
+          ],
+          [
+            47,
+            8,
+            12565,
+            1149
+          ],
+          [
+            41,
+            9,
+            12565,
+            1203
+          ],
+          [
+            42,
+            9,
+            12565,
+            1147
+          ],
+          [
+            43,
+            9,
+            1184,
+            1148
+          ],
+          [
+            44,
+            9,
+            1137,
+            1148
+          ],
+          [
+            45,
+            9,
+            1186,
+            1148
+          ],
+          [
+            46,
+            9,
+            12565,
+            1149
+          ],
+          [
+            47,
+            9,
+            12565,
+            1202
+          ],
+          [
+            41,
+            10,
+            12565,
+            1192
+          ],
+          [
+            42,
+            10,
+            12565,
+            1145
+          ],
+          [
+            43,
+            10,
+            1192,
+            1145
+          ],
+          [
+            45,
+            10,
+            1194,
+            1145
+          ],
+          [
+            46,
+            10,
+            12565,
+            1145
+          ],
+          [
+            47,
+            10,
+            12565,
+            1149
+          ]
+        ],
+        "complete_native_mountain_cells": 81,
+        "native_mountain_restored_exactly": true,
+        "doorway_and_warp_unchanged": true,
+        "map_events_sha256": "542ed7e98a041afd6ae2635a273231b1dc041316e49163672959450d635aa7ba",
+        "coastline_and_all_tiles_outside_object_unchanged": true,
+        "useful_dry_tiles_still_connected_to_door": 193,
+        "false_sand_window_removed": true
+      },
+      {
+        "map": "JourneyWorldSea01",
+        "sanctuary": "Aurora",
+        "entrance": [
+          44,
+          10
+        ],
+        "changed_cells": [
+          [
+            41,
+            8,
+            12565,
+            1147
+          ],
+          [
+            42,
+            8,
+            12565,
+            1203
+          ],
+          [
+            43,
+            8,
+            1176,
+            1137
+          ],
+          [
+            45,
+            8,
+            1178,
+            1137
+          ],
+          [
+            46,
+            8,
+            12565,
+            1202
+          ],
+          [
+            47,
+            8,
+            12565,
+            1149
+          ],
+          [
+            41,
+            9,
+            12565,
+            1203
+          ],
+          [
+            42,
+            9,
+            12565,
+            1147
+          ],
+          [
+            43,
+            9,
+            1184,
+            1148
+          ],
+          [
+            44,
+            9,
+            1137,
+            1148
+          ],
+          [
+            45,
+            9,
+            1186,
+            1148
+          ],
+          [
+            46,
+            9,
+            12565,
+            1149
+          ],
+          [
+            47,
+            9,
+            12565,
+            1202
+          ],
+          [
+            41,
+            10,
+            12565,
+            1192
+          ],
+          [
+            42,
+            10,
+            12565,
+            1145
+          ],
+          [
+            43,
+            10,
+            1192,
+            1145
+          ],
+          [
+            45,
+            10,
+            1194,
+            1145
+          ],
+          [
+            46,
+            10,
+            12565,
+            1145
+          ],
+          [
+            47,
+            10,
+            12565,
+            1149
+          ]
+        ],
+        "complete_native_mountain_cells": 81,
+        "native_mountain_restored_exactly": true,
+        "doorway_and_warp_unchanged": true,
+        "map_events_sha256": "b0bd1eaad2eca423ec681861394e42855fd898215477ee6ab4c4dade7880e09a",
+        "coastline_and_all_tiles_outside_object_unchanged": true,
+        "useful_dry_tiles_still_connected_to_door": 207,
+        "false_sand_window_removed": true
+      },
+      {
+        "map": "JourneyWorldSea02",
+        "sanctuary": "Vulcao",
+        "entrance": [
+          44,
+          10
+        ],
+        "changed_cells": [
+          [
+            41,
+            8,
+            12565,
+            1147
+          ],
+          [
+            42,
+            8,
+            12565,
+            1203
+          ],
+          [
+            43,
+            8,
+            1176,
+            1137
+          ],
+          [
+            45,
+            8,
+            1178,
+            1137
+          ],
+          [
+            46,
+            8,
+            12565,
+            1202
+          ],
+          [
+            47,
+            8,
+            12565,
+            1149
+          ],
+          [
+            41,
+            9,
+            12565,
+            1203
+          ],
+          [
+            42,
+            9,
+            12565,
+            1147
+          ],
+          [
+            43,
+            9,
+            1184,
+            1148
+          ],
+          [
+            44,
+            9,
+            1137,
+            1148
+          ],
+          [
+            45,
+            9,
+            1186,
+            1148
+          ],
+          [
+            46,
+            9,
+            12565,
+            1149
+          ],
+          [
+            47,
+            9,
+            12565,
+            1202
+          ],
+          [
+            41,
+            10,
+            12565,
+            1192
+          ],
+          [
+            42,
+            10,
+            12565,
+            1145
+          ],
+          [
+            43,
+            10,
+            1192,
+            1145
+          ],
+          [
+            45,
+            10,
+            1194,
+            1145
+          ],
+          [
+            46,
+            10,
+            12565,
+            1145
+          ],
+          [
+            47,
+            10,
+            12565,
+            1149
+          ]
+        ],
+        "complete_native_mountain_cells": 81,
+        "native_mountain_restored_exactly": true,
+        "doorway_and_warp_unchanged": true,
+        "map_events_sha256": "7234ce6f1de2fcfed1850b072f380e6e24d2c16213b8589d067b3ca06aeb87c1",
+        "coastline_and_all_tiles_outside_object_unchanged": true,
+        "useful_dry_tiles_still_connected_to_door": 165,
+        "false_sand_window_removed": true
+      },
+      {
+        "map": "JourneyWorldSea03",
+        "sanctuary": "Titans",
+        "entrance": [
+          44,
+          10
+        ],
+        "changed_cells": [
+          [
+            41,
+            8,
+            12565,
+            1147
+          ],
+          [
+            42,
+            8,
+            12565,
+            1203
+          ],
+          [
+            43,
+            8,
+            1176,
+            1137
+          ],
+          [
+            45,
+            8,
+            1178,
+            1137
+          ],
+          [
+            46,
+            8,
+            12565,
+            1202
+          ],
+          [
+            47,
+            8,
+            12565,
+            1149
+          ],
+          [
+            41,
+            9,
+            12565,
+            1203
+          ],
+          [
+            42,
+            9,
+            12565,
+            1147
+          ],
+          [
+            43,
+            9,
+            1184,
+            1148
+          ],
+          [
+            44,
+            9,
+            1137,
+            1148
+          ],
+          [
+            45,
+            9,
+            1186,
+            1148
+          ],
+          [
+            46,
+            9,
+            12565,
+            1149
+          ],
+          [
+            47,
+            9,
+            12565,
+            1202
+          ],
+          [
+            41,
+            10,
+            12565,
+            1192
+          ],
+          [
+            42,
+            10,
+            12565,
+            1145
+          ],
+          [
+            43,
+            10,
+            1192,
+            1145
+          ],
+          [
+            45,
+            10,
+            1194,
+            1145
+          ],
+          [
+            46,
+            10,
+            12565,
+            1145
+          ],
+          [
+            47,
+            10,
+            12565,
+            1149
+          ]
+        ],
+        "complete_native_mountain_cells": 81,
+        "native_mountain_restored_exactly": true,
+        "doorway_and_warp_unchanged": true,
+        "map_events_sha256": "7b1ced20c2b666397c4408fffbdfa85acd30cf9c16a4066bb61f78af4ef03f3f",
+        "coastline_and_all_tiles_outside_object_unchanged": true,
+        "useful_dry_tiles_still_connected_to_door": 222,
+        "false_sand_window_removed": true
+      },
+      {
+        "map": "JourneyWorldSea04",
+        "sanctuary": "Floresta",
+        "entrance": [
+          44,
+          10
+        ],
+        "changed_cells": [
+          [
+            41,
+            8,
+            12565,
+            1147
+          ],
+          [
+            42,
+            8,
+            12565,
+            1203
+          ],
+          [
+            43,
+            8,
+            1176,
+            1137
+          ],
+          [
+            45,
+            8,
+            1178,
+            1137
+          ],
+          [
+            46,
+            8,
+            12565,
+            1202
+          ],
+          [
+            47,
+            8,
+            12565,
+            1149
+          ],
+          [
+            41,
+            9,
+            12565,
+            1203
+          ],
+          [
+            42,
+            9,
+            12565,
+            1147
+          ],
+          [
+            43,
+            9,
+            1184,
+            1148
+          ],
+          [
+            44,
+            9,
+            1137,
+            1148
+          ],
+          [
+            45,
+            9,
+            1186,
+            1148
+          ],
+          [
+            46,
+            9,
+            12565,
+            1149
+          ],
+          [
+            47,
+            9,
+            12565,
+            1202
+          ],
+          [
+            41,
+            10,
+            12565,
+            1192
+          ],
+          [
+            42,
+            10,
+            12565,
+            1145
+          ],
+          [
+            43,
+            10,
+            1192,
+            1145
+          ],
+          [
+            45,
+            10,
+            1194,
+            1145
+          ],
+          [
+            46,
+            10,
+            12565,
+            1145
+          ],
+          [
+            47,
+            10,
+            12565,
+            1149
+          ]
+        ],
+        "complete_native_mountain_cells": 81,
+        "native_mountain_restored_exactly": true,
+        "doorway_and_warp_unchanged": true,
+        "map_events_sha256": "c3578b0b7269abbd9a5f8fb2bb8c0f177de345551b6948b2a3b58f95293cfca7",
+        "coastline_and_all_tiles_outside_object_unchanged": true,
+        "useful_dry_tiles_still_connected_to_door": 202,
+        "false_sand_window_removed": true
+      },
+      {
+        "map": "JourneyWorldSea05",
+        "sanctuary": "Eclipse",
+        "entrance": [
+          44,
+          10
+        ],
+        "changed_cells": [
+          [
+            41,
+            8,
+            12565,
+            1147
+          ],
+          [
+            42,
+            8,
+            12565,
+            1203
+          ],
+          [
+            43,
+            8,
+            1176,
+            1137
+          ],
+          [
+            45,
+            8,
+            1178,
+            1137
+          ],
+          [
+            46,
+            8,
+            12565,
+            1202
+          ],
+          [
+            47,
+            8,
+            12565,
+            1149
+          ],
+          [
+            41,
+            9,
+            12565,
+            1203
+          ],
+          [
+            42,
+            9,
+            12565,
+            1147
+          ],
+          [
+            43,
+            9,
+            1184,
+            1148
+          ],
+          [
+            44,
+            9,
+            1137,
+            1148
+          ],
+          [
+            45,
+            9,
+            1186,
+            1148
+          ],
+          [
+            46,
+            9,
+            12565,
+            1149
+          ],
+          [
+            47,
+            9,
+            12565,
+            1202
+          ],
+          [
+            41,
+            10,
+            12565,
+            1192
+          ],
+          [
+            42,
+            10,
+            12565,
+            1145
+          ],
+          [
+            43,
+            10,
+            1192,
+            1145
+          ],
+          [
+            45,
+            10,
+            1194,
+            1145
+          ],
+          [
+            46,
+            10,
+            12565,
+            1145
+          ],
+          [
+            47,
+            10,
+            12565,
+            1149
+          ]
+        ],
+        "complete_native_mountain_cells": 81,
+        "native_mountain_restored_exactly": true,
+        "doorway_and_warp_unchanged": true,
+        "map_events_sha256": "3d16f6ba69e6a484678194ed075287070a40394a01f62329aa64333e36458763",
+        "coastline_and_all_tiles_outside_object_unchanged": true,
+        "useful_dry_tiles_still_connected_to_door": 187,
+        "false_sand_window_removed": true
+      },
+      {
+        "map": "JourneyWorldSea06",
+        "sanctuary": "Dragoes",
+        "entrance": [
+          44,
+          10
+        ],
+        "changed_cells": [
+          [
+            41,
+            8,
+            12565,
+            1147
+          ],
+          [
+            42,
+            8,
+            12565,
+            1203
+          ],
+          [
+            43,
+            8,
+            1176,
+            1137
+          ],
+          [
+            45,
+            8,
+            1178,
+            1137
+          ],
+          [
+            46,
+            8,
+            12565,
+            1202
+          ],
+          [
+            47,
+            8,
+            12565,
+            1149
+          ],
+          [
+            41,
+            9,
+            12565,
+            1203
+          ],
+          [
+            42,
+            9,
+            12565,
+            1147
+          ],
+          [
+            43,
+            9,
+            1184,
+            1148
+          ],
+          [
+            44,
+            9,
+            1137,
+            1148
+          ],
+          [
+            45,
+            9,
+            1186,
+            1148
+          ],
+          [
+            46,
+            9,
+            12565,
+            1149
+          ],
+          [
+            47,
+            9,
+            12565,
+            1202
+          ],
+          [
+            41,
+            10,
+            12565,
+            1192
+          ],
+          [
+            42,
+            10,
+            12565,
+            1145
+          ],
+          [
+            43,
+            10,
+            1192,
+            1145
+          ],
+          [
+            45,
+            10,
+            1194,
+            1145
+          ],
+          [
+            46,
+            10,
+            12565,
+            1145
+          ],
+          [
+            47,
+            10,
+            12565,
+            1149
+          ]
+        ],
+        "complete_native_mountain_cells": 81,
+        "native_mountain_restored_exactly": true,
+        "doorway_and_warp_unchanged": true,
+        "map_events_sha256": "267bc5d48bfd75af328ee63ee7c5da16a65a51f120e6bdfedbcf45c2f4aabd4c",
+        "coastline_and_all_tiles_outside_object_unchanged": true,
+        "useful_dry_tiles_still_connected_to_door": 212,
+        "false_sand_window_removed": true
+      },
+      {
+        "map": "JourneyWorldSea07",
+        "sanctuary": "Estrelas",
+        "entrance": [
+          44,
+          10
+        ],
+        "changed_cells": [
+          [
+            41,
+            8,
+            12565,
+            1147
+          ],
+          [
+            42,
+            8,
+            12565,
+            1203
+          ],
+          [
+            43,
+            8,
+            1176,
+            1137
+          ],
+          [
+            45,
+            8,
+            1178,
+            1137
+          ],
+          [
+            46,
+            8,
+            12565,
+            1202
+          ],
+          [
+            47,
+            8,
+            12565,
+            1149
+          ],
+          [
+            41,
+            9,
+            12565,
+            1203
+          ],
+          [
+            42,
+            9,
+            12565,
+            1147
+          ],
+          [
+            43,
+            9,
+            1184,
+            1148
+          ],
+          [
+            44,
+            9,
+            1137,
+            1148
+          ],
+          [
+            45,
+            9,
+            1186,
+            1148
+          ],
+          [
+            46,
+            9,
+            12565,
+            1149
+          ],
+          [
+            47,
+            9,
+            12565,
+            1202
+          ],
+          [
+            41,
+            10,
+            12565,
+            1192
+          ],
+          [
+            42,
+            10,
+            12565,
+            1145
+          ],
+          [
+            43,
+            10,
+            1192,
+            1145
+          ],
+          [
+            45,
+            10,
+            1194,
+            1145
+          ],
+          [
+            46,
+            10,
+            12565,
+            1145
+          ],
+          [
+            47,
+            10,
+            12565,
+            1149
+          ]
+        ],
+        "complete_native_mountain_cells": 81,
+        "native_mountain_restored_exactly": true,
+        "doorway_and_warp_unchanged": true,
+        "map_events_sha256": "6f2c01c1bce5a1aa435b4b397d0bedf1af663c9620d7981c8a6c64c92ca077d4",
+        "coastline_and_all_tiles_outside_object_unchanged": true,
+        "useful_dry_tiles_still_connected_to_door": 297,
+        "false_sand_window_removed": true
+      },
+      {
+        "map": "JourneyWorldSea08",
+        "sanctuary": "Cristais",
+        "entrance": [
+          44,
+          10
+        ],
+        "changed_cells": [
+          [
+            41,
+            8,
+            12565,
+            1147
+          ],
+          [
+            42,
+            8,
+            12565,
+            1203
+          ],
+          [
+            43,
+            8,
+            1176,
+            1137
+          ],
+          [
+            45,
+            8,
+            1178,
+            1137
+          ],
+          [
+            46,
+            8,
+            12565,
+            1202
+          ],
+          [
+            47,
+            8,
+            12565,
+            1149
+          ],
+          [
+            41,
+            9,
+            12565,
+            1203
+          ],
+          [
+            42,
+            9,
+            12565,
+            1147
+          ],
+          [
+            43,
+            9,
+            1184,
+            1148
+          ],
+          [
+            44,
+            9,
+            1137,
+            1148
+          ],
+          [
+            45,
+            9,
+            1186,
+            1148
+          ],
+          [
+            46,
+            9,
+            12565,
+            1149
+          ],
+          [
+            47,
+            9,
+            12565,
+            1202
+          ],
+          [
+            41,
+            10,
+            12565,
+            1192
+          ],
+          [
+            42,
+            10,
+            12565,
+            1145
+          ],
+          [
+            43,
+            10,
+            1192,
+            1145
+          ],
+          [
+            45,
+            10,
+            1194,
+            1145
+          ],
+          [
+            46,
+            10,
+            12565,
+            1145
+          ],
+          [
+            47,
+            10,
+            12565,
+            1149
+          ]
+        ],
+        "complete_native_mountain_cells": 81,
+        "native_mountain_restored_exactly": true,
+        "doorway_and_warp_unchanged": true,
+        "map_events_sha256": "7f42b481e9a2e1c6aaefb1d2663af209cc7a8bd96641f7cc2d885e4afd4cf7b4",
+        "coastline_and_all_tiles_outside_object_unchanged": true,
+        "useful_dry_tiles_still_connected_to_door": 209,
+        "false_sand_window_removed": true
+      }
+    ]
+  },
+  "cave_audit": [
+    {
+      "map": "JourneyWorldSea00",
+      "native_mountain_cells": 81,
+      "changed_tiles": 19,
+      "native_donor_exact": true,
+      "useful_dry_paths_to_door_preserved": true,
+      "events_warps_and_surrounding_terrain_unchanged": true
+    },
+    {
+      "map": "JourneyWorldSea01",
+      "native_mountain_cells": 81,
+      "changed_tiles": 19,
+      "native_donor_exact": true,
+      "useful_dry_paths_to_door_preserved": true,
+      "events_warps_and_surrounding_terrain_unchanged": true
+    },
+    {
+      "map": "JourneyWorldSea02",
+      "native_mountain_cells": 81,
+      "changed_tiles": 19,
+      "native_donor_exact": true,
+      "useful_dry_paths_to_door_preserved": true,
+      "events_warps_and_surrounding_terrain_unchanged": true
+    },
+    {
+      "map": "JourneyWorldSea03",
+      "native_mountain_cells": 81,
+      "changed_tiles": 19,
+      "native_donor_exact": true,
+      "useful_dry_paths_to_door_preserved": true,
+      "events_warps_and_surrounding_terrain_unchanged": true
+    },
+    {
+      "map": "JourneyWorldSea04",
+      "native_mountain_cells": 81,
+      "changed_tiles": 19,
+      "native_donor_exact": true,
+      "useful_dry_paths_to_door_preserved": true,
+      "events_warps_and_surrounding_terrain_unchanged": true
+    },
+    {
+      "map": "JourneyWorldSea05",
+      "native_mountain_cells": 81,
+      "changed_tiles": 19,
+      "native_donor_exact": true,
+      "useful_dry_paths_to_door_preserved": true,
+      "events_warps_and_surrounding_terrain_unchanged": true
+    },
+    {
+      "map": "JourneyWorldSea06",
+      "native_mountain_cells": 81,
+      "changed_tiles": 19,
+      "native_donor_exact": true,
+      "useful_dry_paths_to_door_preserved": true,
+      "events_warps_and_surrounding_terrain_unchanged": true
+    },
+    {
+      "map": "JourneyWorldSea07",
+      "native_mountain_cells": 81,
+      "changed_tiles": 19,
+      "native_donor_exact": true,
+      "useful_dry_paths_to_door_preserved": true,
+      "events_warps_and_surrounding_terrain_unchanged": true
+    },
+    {
+      "map": "JourneyWorldSea08",
+      "native_mountain_cells": 81,
+      "changed_tiles": 19,
+      "native_donor_exact": true,
+      "useful_dry_paths_to_door_preserved": true,
+      "events_warps_and_surrounding_terrain_unchanged": true
+    }
+  ],
+  "piers": {
+    "town_bridges": [
+      {
+        "island": "One",
+        "town": "OneIsland_Frlg",
+        "harbor": "OneIsland_Harbor_Frlg",
+        "start": [
+          "OneIsland_Frlg",
+          12,
+          17
+        ],
+        "old_ramp": [
+          12,
+          18
+        ],
+        "end": [
+          "OneIsland_TreasureBeach_Frlg",
+          12,
+          3
+        ],
+        "endpoint_warp_id": 0,
+        "deck_segments": [
+          {
+            "map": "OneIsland_Frlg",
+            "footprint": [
+              11,
+              18,
+              3,
+              2
+            ]
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "footprint": [
+              11,
+              0,
+              3,
+              4
+            ]
+          }
+        ],
+        "changed_cells": [
+          {
+            "map": "OneIsland_Frlg",
+            "position": [
+              11,
+              18
+            ],
+            "before": 12980,
+            "after": 12741
+          },
+          {
+            "map": "OneIsland_Frlg",
+            "position": [
+              12,
+              18
+            ],
+            "before": 12981,
+            "after": 12742
+          },
+          {
+            "map": "OneIsland_Frlg",
+            "position": [
+              13,
+              18
+            ],
+            "before": 12982,
+            "after": 12743
+          },
+          {
+            "map": "OneIsland_Frlg",
+            "position": [
+              11,
+              19
+            ],
+            "before": 4395,
+            "after": 12741
+          },
+          {
+            "map": "OneIsland_Frlg",
+            "position": [
+              12,
+              19
+            ],
+            "before": 4395,
+            "after": 12742
+          },
+          {
+            "map": "OneIsland_Frlg",
+            "position": [
+              13,
+              19
+            ],
+            "before": 4395,
+            "after": 12743
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              11,
+              0
+            ],
+            "before": 4395,
+            "after": 12741
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              12,
+              0
+            ],
+            "before": 4395,
+            "after": 12742
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              13,
+              0
+            ],
+            "before": 4395,
+            "after": 12743
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              11,
+              1
+            ],
+            "before": 4395,
+            "after": 12741
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              12,
+              1
+            ],
+            "before": 4395,
+            "after": 12742
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              13,
+              1
+            ],
+            "before": 4395,
+            "after": 12743
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              11,
+              2
+            ],
+            "before": 4395,
+            "after": 12741
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              12,
+              2
+            ],
+            "before": 4395,
+            "after": 12742
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              13,
+              2
+            ],
+            "before": 4395,
+            "after": 12743
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              11,
+              3
+            ],
+            "before": 4395,
+            "after": 12980
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              12,
+              3
+            ],
+            "before": 4395,
+            "after": 12981
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              13,
+              3
+            ],
+            "before": 4395,
+            "after": 12982
+          }
+        ],
+        "width": 3,
+        "foot_elevation": 3,
+        "native_board_metatiles": [
+          12741,
+          12742,
+          12743
+        ],
+        "endpoint_metatiles": [
+          12980,
+          12981,
+          12982
+        ],
+        "warp_before": {
+          "x": 12,
+          "y": 18,
+          "elevation": 3,
+          "dest_map": "MAP_ONE_ISLAND_HARBOR",
+          "dest_warp_id": "0"
+        },
+        "warp_after": {
+          "x": 12,
+          "y": 3,
+          "elevation": 3,
+          "dest_map": "MAP_ONE_ISLAND_HARBOR",
+          "dest_warp_id": "0"
+        },
+        "return_warp_before": {
+          "x": 8,
+          "y": 2,
+          "elevation": 3,
+          "dest_map": "MAP_ONE_ISLAND",
+          "dest_warp_id": "3"
+        },
+        "return_warp_after": {
+          "x": 8,
+          "y": 2,
+          "elevation": 3,
+          "dest_map": "MAP_ONE_ISLAND_TREASURE_BEACH",
+          "dest_warp_id": "0"
+        },
+        "objects_and_surface_connections_preserved": true,
+        "old_roof_not_reintroduced": true,
+        "one_beach_ferry_transfer": true,
+        "removed_last_town_warp_id": 3,
+        "new_beach_warp_id": 0,
+        "beach_before_warps": [],
+        "beach_after_warps": [
+          {
+            "x": 12,
+            "y": 3,
+            "elevation": 3,
+            "dest_map": "MAP_ONE_ISLAND_HARBOR",
+            "dest_warp_id": "0"
+          }
+        ]
+      },
+      {
+        "island": "Two",
+        "town": "TwoIsland_Frlg",
+        "harbor": "TwoIsland_Harbor_Frlg",
+        "start": [
+          "TwoIsland_Frlg",
+          10,
+          7
+        ],
+        "old_ramp": [
+          10,
+          8
+        ],
+        "end": [
+          "TwoIsland_Frlg",
+          10,
+          11
+        ],
+        "endpoint_warp_id": 3,
+        "deck_segments": [
+          {
+            "map": "TwoIsland_Frlg",
+            "footprint": [
+              9,
+              8,
+              3,
+              4
+            ]
+          }
+        ],
+        "changed_cells": [
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              9,
+              8
+            ],
+            "before": 12980,
+            "after": 12741
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              10,
+              8
+            ],
+            "before": 12981,
+            "after": 12742
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              11,
+              8
+            ],
+            "before": 12982,
+            "after": 12743
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              9,
+              9
+            ],
+            "before": 4395,
+            "after": 12741
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              10,
+              9
+            ],
+            "before": 4395,
+            "after": 12742
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              11,
+              9
+            ],
+            "before": 4395,
+            "after": 12743
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              9,
+              10
+            ],
+            "before": 4395,
+            "after": 12741
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              10,
+              10
+            ],
+            "before": 4395,
+            "after": 12742
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              11,
+              10
+            ],
+            "before": 4395,
+            "after": 12743
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              9,
+              11
+            ],
+            "before": 4395,
+            "after": 12980
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              10,
+              11
+            ],
+            "before": 4395,
+            "after": 12981
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              11,
+              11
+            ],
+            "before": 4395,
+            "after": 12982
+          }
+        ],
+        "width": 3,
+        "foot_elevation": 3,
+        "native_board_metatiles": [
+          12741,
+          12742,
+          12743
+        ],
+        "endpoint_metatiles": [
+          12980,
+          12981,
+          12982
+        ],
+        "warp_before": {
+          "x": 10,
+          "y": 8,
+          "elevation": 3,
+          "dest_map": "MAP_TWO_ISLAND_HARBOR",
+          "dest_warp_id": "0"
+        },
+        "warp_after": {
+          "x": 10,
+          "y": 11,
+          "elevation": 3,
+          "dest_map": "MAP_TWO_ISLAND_HARBOR",
+          "dest_warp_id": "0"
+        },
+        "return_warp_before": {
+          "x": 8,
+          "y": 2,
+          "elevation": 3,
+          "dest_map": "MAP_TWO_ISLAND",
+          "dest_warp_id": "3"
+        },
+        "return_warp_after": {
+          "x": 8,
+          "y": 2,
+          "elevation": 3,
+          "dest_map": "MAP_TWO_ISLAND",
+          "dest_warp_id": "3"
+        },
+        "objects_and_surface_connections_preserved": true,
+        "old_roof_not_reintroduced": true,
+        "one_beach_ferry_transfer": false
+      },
+      {
+        "island": "Three",
+        "town": "ThreeIsland_Port_Frlg",
+        "harbor": "ThreeIsland_Harbor_Frlg",
+        "start": [
+          "ThreeIsland_Port_Frlg",
+          12,
+          12
+        ],
+        "old_ramp": [
+          12,
+          13
+        ],
+        "end": [
+          "ThreeIsland_Port_Frlg",
+          12,
+          16
+        ],
+        "endpoint_warp_id": 2,
+        "deck_segments": [
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "footprint": [
+              11,
+              13,
+              3,
+              4
+            ]
+          }
+        ],
+        "changed_cells": [
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              11,
+              13
+            ],
+            "before": 12980,
+            "after": 12741
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              12,
+              13
+            ],
+            "before": 12981,
+            "after": 12742
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              13,
+              13
+            ],
+            "before": 12982,
+            "after": 12743
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              11,
+              14
+            ],
+            "before": 4723,
+            "after": 12741
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              12,
+              14
+            ],
+            "before": 4723,
+            "after": 12742
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              13,
+              14
+            ],
+            "before": 4723,
+            "after": 12743
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              11,
+              15
+            ],
+            "before": 4723,
+            "after": 12741
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              12,
+              15
+            ],
+            "before": 4723,
+            "after": 12742
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              13,
+              15
+            ],
+            "before": 4723,
+            "after": 12743
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              11,
+              16
+            ],
+            "before": 4723,
+            "after": 12980
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              12,
+              16
+            ],
+            "before": 4723,
+            "after": 12981
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              13,
+              16
+            ],
+            "before": 4723,
+            "after": 12982
+          }
+        ],
+        "width": 3,
+        "foot_elevation": 3,
+        "native_board_metatiles": [
+          12741,
+          12742,
+          12743
+        ],
+        "endpoint_metatiles": [
+          12980,
+          12981,
+          12982
+        ],
+        "warp_before": {
+          "x": 12,
+          "y": 13,
+          "elevation": 3,
+          "dest_map": "MAP_THREE_ISLAND_HARBOR",
+          "dest_warp_id": "0"
+        },
+        "warp_after": {
+          "x": 12,
+          "y": 16,
+          "elevation": 3,
+          "dest_map": "MAP_THREE_ISLAND_HARBOR",
+          "dest_warp_id": "0"
+        },
+        "return_warp_before": {
+          "x": 8,
+          "y": 2,
+          "elevation": 3,
+          "dest_map": "MAP_THREE_ISLAND_PORT",
+          "dest_warp_id": "2"
+        },
+        "return_warp_after": {
+          "x": 8,
+          "y": 2,
+          "elevation": 3,
+          "dest_map": "MAP_THREE_ISLAND_PORT",
+          "dest_warp_id": "2"
+        },
+        "objects_and_surface_connections_preserved": true,
+        "old_roof_not_reintroduced": true,
+        "one_beach_ferry_transfer": false
+      },
+      {
+        "island": "Four",
+        "town": "FourIsland_Frlg",
+        "harbor": "FourIsland_Harbor_Frlg",
+        "start": [
+          "FourIsland_Frlg",
+          10,
+          27
+        ],
+        "old_ramp": [
+          10,
+          28
+        ],
+        "end": [
+          "FourIsland_Frlg",
+          10,
+          31
+        ],
+        "endpoint_warp_id": 6,
+        "deck_segments": [
+          {
+            "map": "FourIsland_Frlg",
+            "footprint": [
+              9,
+              28,
+              3,
+              4
+            ]
+          }
+        ],
+        "changed_cells": [
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              9,
+              28
+            ],
+            "before": 13048,
+            "after": 12741
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              10,
+              28
+            ],
+            "before": 13049,
+            "after": 12742
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              11,
+              28
+            ],
+            "before": 13050,
+            "after": 12743
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              9,
+              29
+            ],
+            "before": 4723,
+            "after": 12741
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              10,
+              29
+            ],
+            "before": 4723,
+            "after": 12742
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              11,
+              29
+            ],
+            "before": 4723,
+            "after": 12743
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              9,
+              30
+            ],
+            "before": 4723,
+            "after": 12741
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              10,
+              30
+            ],
+            "before": 4723,
+            "after": 12742
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              11,
+              30
+            ],
+            "before": 4723,
+            "after": 12743
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              9,
+              31
+            ],
+            "before": 4723,
+            "after": 13048
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              10,
+              31
+            ],
+            "before": 4723,
+            "after": 13049
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              11,
+              31
+            ],
+            "before": 4723,
+            "after": 13050
+          }
+        ],
+        "width": 3,
+        "foot_elevation": 3,
+        "native_board_metatiles": [
+          12741,
+          12742,
+          12743
+        ],
+        "endpoint_metatiles": [
+          13048,
+          13049,
+          13050
+        ],
+        "warp_before": {
+          "x": 10,
+          "y": 28,
+          "elevation": 3,
+          "dest_map": "MAP_FOUR_ISLAND_HARBOR",
+          "dest_warp_id": "0"
+        },
+        "warp_after": {
+          "x": 10,
+          "y": 31,
+          "elevation": 3,
+          "dest_map": "MAP_FOUR_ISLAND_HARBOR",
+          "dest_warp_id": "0"
+        },
+        "return_warp_before": {
+          "x": 8,
+          "y": 2,
+          "elevation": 3,
+          "dest_map": "MAP_FOUR_ISLAND",
+          "dest_warp_id": "6"
+        },
+        "return_warp_after": {
+          "x": 8,
+          "y": 2,
+          "elevation": 3,
+          "dest_map": "MAP_FOUR_ISLAND",
+          "dest_warp_id": "6"
+        },
+        "objects_and_surface_connections_preserved": true,
+        "old_roof_not_reintroduced": true,
+        "one_beach_ferry_transfer": false
+      },
+      {
+        "island": "Five",
+        "town": "FiveIsland_Frlg",
+        "harbor": "FiveIsland_Harbor_Frlg",
+        "start": [
+          "FiveIsland_Frlg",
+          12,
+          13
+        ],
+        "old_ramp": [
+          12,
+          14
+        ],
+        "end": [
+          "FiveIsland_Frlg",
+          12,
+          17
+        ],
+        "endpoint_warp_id": 0,
+        "deck_segments": [
+          {
+            "map": "FiveIsland_Frlg",
+            "footprint": [
+              11,
+              14,
+              3,
+              4
+            ]
+          }
+        ],
+        "changed_cells": [
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              11,
+              14
+            ],
+            "before": 13048,
+            "after": 12741
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              12,
+              14
+            ],
+            "before": 13049,
+            "after": 12742
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              13,
+              14
+            ],
+            "before": 13050,
+            "after": 12743
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              11,
+              15
+            ],
+            "before": 4395,
+            "after": 12741
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              12,
+              15
+            ],
+            "before": 4395,
+            "after": 12742
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              13,
+              15
+            ],
+            "before": 4395,
+            "after": 12743
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              11,
+              16
+            ],
+            "before": 4395,
+            "after": 12741
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              12,
+              16
+            ],
+            "before": 4395,
+            "after": 12742
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              13,
+              16
+            ],
+            "before": 4395,
+            "after": 12743
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              11,
+              17
+            ],
+            "before": 4395,
+            "after": 13048
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              12,
+              17
+            ],
+            "before": 4395,
+            "after": 13049
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              13,
+              17
+            ],
+            "before": 4395,
+            "after": 13050
+          }
+        ],
+        "width": 3,
+        "foot_elevation": 3,
+        "native_board_metatiles": [
+          12741,
+          12742,
+          12743
+        ],
+        "endpoint_metatiles": [
+          13048,
+          13049,
+          13050
+        ],
+        "warp_before": {
+          "x": 12,
+          "y": 14,
+          "elevation": 3,
+          "dest_map": "MAP_FIVE_ISLAND_HARBOR",
+          "dest_warp_id": "0"
+        },
+        "warp_after": {
+          "x": 12,
+          "y": 17,
+          "elevation": 3,
+          "dest_map": "MAP_FIVE_ISLAND_HARBOR",
+          "dest_warp_id": "0"
+        },
+        "return_warp_before": {
+          "x": 8,
+          "y": 2,
+          "elevation": 3,
+          "dest_map": "MAP_FIVE_ISLAND",
+          "dest_warp_id": "0"
+        },
+        "return_warp_after": {
+          "x": 8,
+          "y": 2,
+          "elevation": 3,
+          "dest_map": "MAP_FIVE_ISLAND",
+          "dest_warp_id": "0"
+        },
+        "objects_and_surface_connections_preserved": true,
+        "old_roof_not_reintroduced": true,
+        "one_beach_ferry_transfer": false
+      },
+      {
+        "island": "Six",
+        "town": "SixIsland_Frlg",
+        "harbor": "SixIsland_Harbor_Frlg",
+        "start": [
+          "SixIsland_Frlg",
+          11,
+          22
+        ],
+        "old_ramp": [
+          11,
+          23
+        ],
+        "end": [
+          "SixIsland_Frlg",
+          11,
+          26
+        ],
+        "endpoint_warp_id": 0,
+        "deck_segments": [
+          {
+            "map": "SixIsland_Frlg",
+            "footprint": [
+              10,
+              23,
+              3,
+              4
+            ]
+          }
+        ],
+        "changed_cells": [
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              10,
+              23
+            ],
+            "before": 13027,
+            "after": 12741
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              11,
+              23
+            ],
+            "before": 13028,
+            "after": 12742
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              12,
+              23
+            ],
+            "before": 13029,
+            "after": 12743
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              10,
+              24
+            ],
+            "before": 4723,
+            "after": 12741
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              11,
+              24
+            ],
+            "before": 4723,
+            "after": 12742
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              12,
+              24
+            ],
+            "before": 4723,
+            "after": 12743
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              10,
+              25
+            ],
+            "before": 4723,
+            "after": 12741
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              11,
+              25
+            ],
+            "before": 4723,
+            "after": 12742
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              12,
+              25
+            ],
+            "before": 4723,
+            "after": 12743
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              10,
+              26
+            ],
+            "before": 4723,
+            "after": 13027
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              11,
+              26
+            ],
+            "before": 4723,
+            "after": 13028
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              12,
+              26
+            ],
+            "before": 4723,
+            "after": 13029
+          }
+        ],
+        "width": 3,
+        "foot_elevation": 3,
+        "native_board_metatiles": [
+          12741,
+          12742,
+          12743
+        ],
+        "endpoint_metatiles": [
+          13027,
+          13028,
+          13029
+        ],
+        "warp_before": {
+          "x": 11,
+          "y": 23,
+          "elevation": 3,
+          "dest_map": "MAP_SIX_ISLAND_HARBOR",
+          "dest_warp_id": "0"
+        },
+        "warp_after": {
+          "x": 11,
+          "y": 26,
+          "elevation": 3,
+          "dest_map": "MAP_SIX_ISLAND_HARBOR",
+          "dest_warp_id": "0"
+        },
+        "return_warp_before": {
+          "x": 8,
+          "y": 2,
+          "elevation": 3,
+          "dest_map": "MAP_SIX_ISLAND",
+          "dest_warp_id": "0"
+        },
+        "return_warp_after": {
+          "x": 8,
+          "y": 2,
+          "elevation": 3,
+          "dest_map": "MAP_SIX_ISLAND",
+          "dest_warp_id": "0"
+        },
+        "objects_and_surface_connections_preserved": true,
+        "old_roof_not_reintroduced": true,
+        "one_beach_ferry_transfer": false
+      },
+      {
+        "island": "Seven",
+        "town": "SevenIsland_Frlg",
+        "harbor": "SevenIsland_Harbor_Frlg",
+        "start": [
+          "SevenIsland_Frlg",
+          16,
+          12
+        ],
+        "old_ramp": [
+          16,
+          13
+        ],
+        "end": [
+          "SevenIsland_Frlg",
+          16,
+          16
+        ],
+        "endpoint_warp_id": 3,
+        "deck_segments": [
+          {
+            "map": "SevenIsland_Frlg",
+            "footprint": [
+              15,
+              13,
+              3,
+              4
+            ]
+          }
+        ],
+        "changed_cells": [
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              15,
+              13
+            ],
+            "before": 13027,
+            "after": 12741
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              16,
+              13
+            ],
+            "before": 13028,
+            "after": 12742
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              17,
+              13
+            ],
+            "before": 13029,
+            "after": 12743
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              15,
+              14
+            ],
+            "before": 4723,
+            "after": 12741
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              16,
+              14
+            ],
+            "before": 4723,
+            "after": 12742
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              17,
+              14
+            ],
+            "before": 4723,
+            "after": 12743
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              15,
+              15
+            ],
+            "before": 4723,
+            "after": 12741
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              16,
+              15
+            ],
+            "before": 4723,
+            "after": 12742
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              17,
+              15
+            ],
+            "before": 4723,
+            "after": 12743
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              15,
+              16
+            ],
+            "before": 4723,
+            "after": 13027
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              16,
+              16
+            ],
+            "before": 4723,
+            "after": 13028
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              17,
+              16
+            ],
+            "before": 4723,
+            "after": 13029
+          }
+        ],
+        "width": 3,
+        "foot_elevation": 3,
+        "native_board_metatiles": [
+          12741,
+          12742,
+          12743
+        ],
+        "endpoint_metatiles": [
+          13027,
+          13028,
+          13029
+        ],
+        "warp_before": {
+          "x": 16,
+          "y": 13,
+          "elevation": 3,
+          "dest_map": "MAP_SEVEN_ISLAND_HARBOR",
+          "dest_warp_id": "0"
+        },
+        "warp_after": {
+          "x": 16,
+          "y": 16,
+          "elevation": 3,
+          "dest_map": "MAP_SEVEN_ISLAND_HARBOR",
+          "dest_warp_id": "0"
+        },
+        "return_warp_before": {
+          "x": 8,
+          "y": 2,
+          "elevation": 3,
+          "dest_map": "MAP_SEVEN_ISLAND",
+          "dest_warp_id": "3"
+        },
+        "return_warp_after": {
+          "x": 8,
+          "y": 2,
+          "elevation": 3,
+          "dest_map": "MAP_SEVEN_ISLAND",
+          "dest_warp_id": "3"
+        },
+        "objects_and_surface_connections_preserved": true,
+        "old_roof_not_reintroduced": true,
+        "one_beach_ferry_transfer": false
+      }
+    ],
+    "low_piers": [
+      {
+        "island": "One",
+        "map": "OneIsland_Harbor_Frlg",
+        "map_id": "MAP_ONE_ISLAND_HARBOR",
+        "pier_x": 7,
+        "rectangles": [
+          [
+            7,
+            3,
+            9,
+            6
+          ],
+          [
+            10,
+            6,
+            16,
+            6
+          ],
+          [
+            7,
+            7,
+            16,
+            7
+          ],
+          [
+            7,
+            8,
+            8,
+            10
+          ]
+        ],
+        "blocked_cells": [
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ],
+          [
+            14,
+            6
+          ],
+          [
+            14,
+            7
+          ],
+          [
+            15,
+            6
+          ],
+          [
+            15,
+            7
+          ],
+          [
+            16,
+            6
+          ],
+          [
+            16,
+            7
+          ]
+        ],
+        "low_wood_only": true,
+        "original_tiles_and_events_preserved": true,
+        "surface_connections": [
+          {
+            "map": "MAP_JOURNEYLAVENDERONESEA",
+            "direction": "left",
+            "offset": 0
+          },
+          {
+            "map": "MAP_JOURNEYSURFLINK03505",
+            "direction": "up",
+            "offset": 0
+          },
+          {
+            "map": "MAP_JOURNEYSURFLINK04703",
+            "direction": "down",
+            "offset": 0
+          },
+          {
+            "map": "MAP_JOURNEYSURFLINK05001",
+            "direction": "right",
+            "offset": 0
+          }
+        ]
+      },
+      {
+        "island": "Two",
+        "map": "TwoIsland_Harbor_Frlg",
+        "map_id": "MAP_TWO_ISLAND_HARBOR",
+        "pier_x": 10,
+        "rectangles": [
+          [
+            7,
+            3,
+            9,
+            6
+          ],
+          [
+            10,
+            6,
+            16,
+            6
+          ],
+          [
+            7,
+            7,
+            16,
+            7
+          ],
+          [
+            10,
+            8,
+            11,
+            10
+          ]
+        ],
+        "blocked_cells": [
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            11,
+            9
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ],
+          [
+            14,
+            6
+          ],
+          [
+            14,
+            7
+          ],
+          [
+            15,
+            6
+          ],
+          [
+            15,
+            7
+          ],
+          [
+            16,
+            6
+          ],
+          [
+            16,
+            7
+          ]
+        ],
+        "low_wood_only": true,
+        "original_tiles_and_events_preserved": true,
+        "surface_connections": [
+          {
+            "map": "MAP_JOURNEYONETWOPASSAGE",
+            "direction": "left",
+            "offset": -12
+          },
+          {
+            "map": "MAP_JOURNEYSURFLINK05401",
+            "direction": "right",
+            "offset": 0
+          }
+        ]
+      },
+      {
+        "island": "Three",
+        "map": "ThreeIsland_Harbor_Frlg",
+        "map_id": "MAP_THREE_ISLAND_HARBOR",
+        "pier_x": 7,
+        "rectangles": [
+          [
+            7,
+            3,
+            9,
+            6
+          ],
+          [
+            10,
+            6,
+            16,
+            6
+          ],
+          [
+            7,
+            7,
+            16,
+            7
+          ],
+          [
+            7,
+            8,
+            8,
+            10
+          ]
+        ],
+        "blocked_cells": [
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ],
+          [
+            14,
+            6
+          ],
+          [
+            14,
+            7
+          ],
+          [
+            15,
+            6
+          ],
+          [
+            15,
+            7
+          ],
+          [
+            16,
+            6
+          ],
+          [
+            16,
+            7
+          ]
+        ],
+        "low_wood_only": true,
+        "original_tiles_and_events_preserved": true,
+        "surface_connections": [
+          {
+            "map": "MAP_JOURNEYWORLDSEA03",
+            "direction": "down",
+            "offset": -24
+          },
+          {
+            "map": "MAP_JOURNEYSURFLINK03703",
+            "direction": "left",
+            "offset": 0
+          },
+          {
+            "map": "MAP_JOURNEYSURFLINK05300",
+            "direction": "right",
+            "offset": 0
+          }
+        ]
+      },
+      {
+        "island": "Four",
+        "map": "FourIsland_Harbor_Frlg",
+        "map_id": "MAP_FOUR_ISLAND_HARBOR",
+        "pier_x": 10,
+        "rectangles": [
+          [
+            7,
+            3,
+            9,
+            6
+          ],
+          [
+            10,
+            6,
+            16,
+            6
+          ],
+          [
+            7,
+            7,
+            16,
+            7
+          ],
+          [
+            10,
+            8,
+            11,
+            10
+          ]
+        ],
+        "blocked_cells": [
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            11,
+            9
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ],
+          [
+            14,
+            6
+          ],
+          [
+            14,
+            7
+          ],
+          [
+            15,
+            6
+          ],
+          [
+            15,
+            7
+          ],
+          [
+            16,
+            6
+          ],
+          [
+            16,
+            7
+          ]
+        ],
+        "low_wood_only": true,
+        "original_tiles_and_events_preserved": true,
+        "surface_connections": [
+          {
+            "map": "MAP_JOURNEYWORLDSEA04",
+            "direction": "down",
+            "offset": -24
+          },
+          {
+            "map": "MAP_JOURNEYWORLDLANE10",
+            "direction": "left",
+            "offset": -35
+          },
+          {
+            "map": "MAP_JOURNEYWORLDFILL10CAP",
+            "direction": "up",
+            "offset": 0
+          },
+          {
+            "map": "MAP_JOURNEYSURFLINK01001",
+            "direction": "right",
+            "offset": 0
+          }
+        ]
+      },
+      {
+        "island": "Five",
+        "map": "FiveIsland_Harbor_Frlg",
+        "map_id": "MAP_FIVE_ISLAND_HARBOR",
+        "pier_x": 8,
+        "rectangles": [
+          [
+            7,
+            3,
+            9,
+            6
+          ],
+          [
+            10,
+            6,
+            16,
+            6
+          ],
+          [
+            7,
+            7,
+            16,
+            7
+          ],
+          [
+            8,
+            8,
+            9,
+            10
+          ]
+        ],
+        "blocked_cells": [
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ],
+          [
+            14,
+            6
+          ],
+          [
+            14,
+            7
+          ],
+          [
+            15,
+            6
+          ],
+          [
+            15,
+            7
+          ],
+          [
+            16,
+            6
+          ],
+          [
+            16,
+            7
+          ]
+        ],
+        "low_wood_only": true,
+        "original_tiles_and_events_preserved": true,
+        "surface_connections": [
+          {
+            "map": "MAP_JOURNEYSURFLINK00601",
+            "direction": "right",
+            "offset": 0
+          },
+          {
+            "map": "MAP_JOURNEYSURFLINK00700",
+            "direction": "down",
+            "offset": 0
+          },
+          {
+            "map": "MAP_JOURNEYSURFLINK00800",
+            "direction": "left",
+            "offset": 0
+          },
+          {
+            "map": "MAP_JOURNEYSURFLINK00900",
+            "direction": "up",
+            "offset": 0
+          }
+        ]
+      },
+      {
+        "island": "Six",
+        "map": "SixIsland_Harbor_Frlg",
+        "map_id": "MAP_SIX_ISLAND_HARBOR",
+        "pier_x": 9,
+        "rectangles": [
+          [
+            7,
+            3,
+            9,
+            6
+          ],
+          [
+            10,
+            6,
+            16,
+            6
+          ],
+          [
+            7,
+            7,
+            16,
+            7
+          ],
+          [
+            9,
+            8,
+            10,
+            10
+          ]
+        ],
+        "blocked_cells": [
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ],
+          [
+            14,
+            6
+          ],
+          [
+            14,
+            7
+          ],
+          [
+            15,
+            6
+          ],
+          [
+            15,
+            7
+          ],
+          [
+            16,
+            6
+          ],
+          [
+            16,
+            7
+          ]
+        ],
+        "low_wood_only": true,
+        "original_tiles_and_events_preserved": true,
+        "surface_connections": [
+          {
+            "map": "MAP_JOURNEYSURFLINK03804",
+            "direction": "up",
+            "offset": 0
+          },
+          {
+            "map": "MAP_JOURNEYSURFLINK04404",
+            "direction": "left",
+            "offset": 0
+          },
+          {
+            "map": "MAP_JOURNEYSURFLINK04802",
+            "direction": "down",
+            "offset": 0
+          },
+          {
+            "map": "MAP_JOURNEYSURFLINK05201",
+            "direction": "right",
+            "offset": 0
+          }
+        ]
+      },
+      {
+        "island": "Seven",
+        "map": "SevenIsland_Harbor_Frlg",
+        "map_id": "MAP_SEVEN_ISLAND_HARBOR",
+        "pier_x": 7,
+        "rectangles": [
+          [
+            7,
+            3,
+            9,
+            6
+          ],
+          [
+            10,
+            6,
+            16,
+            6
+          ],
+          [
+            7,
+            7,
+            16,
+            7
+          ],
+          [
+            7,
+            8,
+            8,
+            10
+          ]
+        ],
+        "blocked_cells": [
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            10
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            12,
+            6
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ],
+          [
+            14,
+            6
+          ],
+          [
+            14,
+            7
+          ],
+          [
+            15,
+            6
+          ],
+          [
+            15,
+            7
+          ],
+          [
+            16,
+            6
+          ],
+          [
+            16,
+            7
+          ]
+        ],
+        "low_wood_only": true,
+        "original_tiles_and_events_preserved": true,
+        "surface_connections": [
+          {
+            "map": "MAP_JOURNEYWORLDSEA07",
+            "direction": "down",
+            "offset": -24
+          },
+          {
+            "map": "MAP_JOURNEYSURFLINK03903",
+            "direction": "up",
+            "offset": 0
+          },
+          {
+            "map": "MAP_JOURNEYSURFLINK04504",
+            "direction": "left",
+            "offset": 0
+          },
+          {
+            "map": "MAP_JOURNEYSURFLINK05101",
+            "direction": "right",
+            "offset": 0
+          }
+        ]
+      }
+    ],
+    "collision_rectangles": [
+      {
+        "map": "OneIsland_Frlg",
+        "map_id": "MAP_ONE_ISLAND",
+        "bounds": [
+          11,
+          18,
+          13,
+          19
+        ],
+        "kind": "town_bridge"
+      },
+      {
+        "map": "OneIsland_TreasureBeach_Frlg",
+        "map_id": "MAP_ONE_ISLAND_TREASURE_BEACH",
+        "bounds": [
+          11,
+          0,
+          13,
+          3
+        ],
+        "kind": "town_bridge"
+      },
+      {
+        "map": "TwoIsland_Frlg",
+        "map_id": "MAP_TWO_ISLAND",
+        "bounds": [
+          9,
+          8,
+          11,
+          11
+        ],
+        "kind": "town_bridge"
+      },
+      {
+        "map": "ThreeIsland_Port_Frlg",
+        "map_id": "MAP_THREE_ISLAND_PORT",
+        "bounds": [
+          11,
+          13,
+          13,
+          16
+        ],
+        "kind": "town_bridge"
+      },
+      {
+        "map": "FourIsland_Frlg",
+        "map_id": "MAP_FOUR_ISLAND",
+        "bounds": [
+          9,
+          28,
+          11,
+          31
+        ],
+        "kind": "town_bridge"
+      },
+      {
+        "map": "FiveIsland_Frlg",
+        "map_id": "MAP_FIVE_ISLAND",
+        "bounds": [
+          11,
+          14,
+          13,
+          17
+        ],
+        "kind": "town_bridge"
+      },
+      {
+        "map": "SixIsland_Frlg",
+        "map_id": "MAP_SIX_ISLAND",
+        "bounds": [
+          10,
+          23,
+          12,
+          26
+        ],
+        "kind": "town_bridge"
+      },
+      {
+        "map": "SevenIsland_Frlg",
+        "map_id": "MAP_SEVEN_ISLAND",
+        "bounds": [
+          15,
+          13,
+          17,
+          16
+        ],
+        "kind": "town_bridge"
+      },
+      {
+        "map": "OneIsland_Harbor_Frlg",
+        "map_id": "MAP_ONE_ISLAND_HARBOR",
+        "bounds": [
+          7,
+          3,
+          9,
+          6
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "OneIsland_Harbor_Frlg",
+        "map_id": "MAP_ONE_ISLAND_HARBOR",
+        "bounds": [
+          10,
+          6,
+          16,
+          6
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "OneIsland_Harbor_Frlg",
+        "map_id": "MAP_ONE_ISLAND_HARBOR",
+        "bounds": [
+          7,
+          7,
+          16,
+          7
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "OneIsland_Harbor_Frlg",
+        "map_id": "MAP_ONE_ISLAND_HARBOR",
+        "bounds": [
+          7,
+          8,
+          8,
+          10
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "TwoIsland_Harbor_Frlg",
+        "map_id": "MAP_TWO_ISLAND_HARBOR",
+        "bounds": [
+          7,
+          3,
+          9,
+          6
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "TwoIsland_Harbor_Frlg",
+        "map_id": "MAP_TWO_ISLAND_HARBOR",
+        "bounds": [
+          10,
+          6,
+          16,
+          6
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "TwoIsland_Harbor_Frlg",
+        "map_id": "MAP_TWO_ISLAND_HARBOR",
+        "bounds": [
+          7,
+          7,
+          16,
+          7
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "TwoIsland_Harbor_Frlg",
+        "map_id": "MAP_TWO_ISLAND_HARBOR",
+        "bounds": [
+          10,
+          8,
+          11,
+          10
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "ThreeIsland_Harbor_Frlg",
+        "map_id": "MAP_THREE_ISLAND_HARBOR",
+        "bounds": [
+          7,
+          3,
+          9,
+          6
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "ThreeIsland_Harbor_Frlg",
+        "map_id": "MAP_THREE_ISLAND_HARBOR",
+        "bounds": [
+          10,
+          6,
+          16,
+          6
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "ThreeIsland_Harbor_Frlg",
+        "map_id": "MAP_THREE_ISLAND_HARBOR",
+        "bounds": [
+          7,
+          7,
+          16,
+          7
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "ThreeIsland_Harbor_Frlg",
+        "map_id": "MAP_THREE_ISLAND_HARBOR",
+        "bounds": [
+          7,
+          8,
+          8,
+          10
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "FourIsland_Harbor_Frlg",
+        "map_id": "MAP_FOUR_ISLAND_HARBOR",
+        "bounds": [
+          7,
+          3,
+          9,
+          6
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "FourIsland_Harbor_Frlg",
+        "map_id": "MAP_FOUR_ISLAND_HARBOR",
+        "bounds": [
+          10,
+          6,
+          16,
+          6
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "FourIsland_Harbor_Frlg",
+        "map_id": "MAP_FOUR_ISLAND_HARBOR",
+        "bounds": [
+          7,
+          7,
+          16,
+          7
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "FourIsland_Harbor_Frlg",
+        "map_id": "MAP_FOUR_ISLAND_HARBOR",
+        "bounds": [
+          10,
+          8,
+          11,
+          10
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "FiveIsland_Harbor_Frlg",
+        "map_id": "MAP_FIVE_ISLAND_HARBOR",
+        "bounds": [
+          7,
+          3,
+          9,
+          6
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "FiveIsland_Harbor_Frlg",
+        "map_id": "MAP_FIVE_ISLAND_HARBOR",
+        "bounds": [
+          10,
+          6,
+          16,
+          6
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "FiveIsland_Harbor_Frlg",
+        "map_id": "MAP_FIVE_ISLAND_HARBOR",
+        "bounds": [
+          7,
+          7,
+          16,
+          7
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "FiveIsland_Harbor_Frlg",
+        "map_id": "MAP_FIVE_ISLAND_HARBOR",
+        "bounds": [
+          8,
+          8,
+          9,
+          10
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "SixIsland_Harbor_Frlg",
+        "map_id": "MAP_SIX_ISLAND_HARBOR",
+        "bounds": [
+          7,
+          3,
+          9,
+          6
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "SixIsland_Harbor_Frlg",
+        "map_id": "MAP_SIX_ISLAND_HARBOR",
+        "bounds": [
+          10,
+          6,
+          16,
+          6
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "SixIsland_Harbor_Frlg",
+        "map_id": "MAP_SIX_ISLAND_HARBOR",
+        "bounds": [
+          7,
+          7,
+          16,
+          7
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "SixIsland_Harbor_Frlg",
+        "map_id": "MAP_SIX_ISLAND_HARBOR",
+        "bounds": [
+          9,
+          8,
+          10,
+          10
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "SevenIsland_Harbor_Frlg",
+        "map_id": "MAP_SEVEN_ISLAND_HARBOR",
+        "bounds": [
+          7,
+          3,
+          9,
+          6
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "SevenIsland_Harbor_Frlg",
+        "map_id": "MAP_SEVEN_ISLAND_HARBOR",
+        "bounds": [
+          10,
+          6,
+          16,
+          6
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "SevenIsland_Harbor_Frlg",
+        "map_id": "MAP_SEVEN_ISLAND_HARBOR",
+        "bounds": [
+          7,
+          7,
+          16,
+          7
+        ],
+        "kind": "main_harbor_low_pier"
+      },
+      {
+        "map": "SevenIsland_Harbor_Frlg",
+        "map_id": "MAP_SEVEN_ISLAND_HARBOR",
+        "bounds": [
+          7,
+          8,
+          8,
+          10
+        ],
+        "kind": "main_harbor_low_pier"
+      }
+    ],
+    "source_edits": [
+      {
+        "map": "OneIsland_Frlg",
+        "map_path": "data/maps/OneIsland_Frlg/map.json",
+        "block_path": "data/layouts/OneIsland_Frlg/map.bin",
+        "map_changed": true,
+        "blocks_changed": true,
+        "changed_cells": [
+          {
+            "map": "OneIsland_Frlg",
+            "position": [
+              11,
+              18
+            ],
+            "before": 12980,
+            "after": 12741
+          },
+          {
+            "map": "OneIsland_Frlg",
+            "position": [
+              12,
+              18
+            ],
+            "before": 12981,
+            "after": 12742
+          },
+          {
+            "map": "OneIsland_Frlg",
+            "position": [
+              13,
+              18
+            ],
+            "before": 12982,
+            "after": 12743
+          },
+          {
+            "map": "OneIsland_Frlg",
+            "position": [
+              11,
+              19
+            ],
+            "before": 4395,
+            "after": 12741
+          },
+          {
+            "map": "OneIsland_Frlg",
+            "position": [
+              12,
+              19
+            ],
+            "before": 4395,
+            "after": 12742
+          },
+          {
+            "map": "OneIsland_Frlg",
+            "position": [
+              13,
+              19
+            ],
+            "before": 4395,
+            "after": 12743
+          }
+        ],
+        "warps_before": [
+          {
+            "x": 14,
+            "y": 5,
+            "elevation": 0,
+            "dest_map": "MAP_ONE_ISLAND_POKEMON_CENTER_1F",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 19,
+            "y": 9,
+            "elevation": 0,
+            "dest_map": "MAP_ONE_ISLAND_HOUSE1",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 8,
+            "y": 11,
+            "elevation": 0,
+            "dest_map": "MAP_ONE_ISLAND_HOUSE2",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 12,
+            "y": 18,
+            "elevation": 3,
+            "dest_map": "MAP_ONE_ISLAND_HARBOR",
+            "dest_warp_id": "0"
+          }
+        ],
+        "warps_after": [
+          {
+            "x": 14,
+            "y": 5,
+            "elevation": 0,
+            "dest_map": "MAP_ONE_ISLAND_POKEMON_CENTER_1F",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 19,
+            "y": 9,
+            "elevation": 0,
+            "dest_map": "MAP_ONE_ISLAND_HOUSE1",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 8,
+            "y": 11,
+            "elevation": 0,
+            "dest_map": "MAP_ONE_ISLAND_HOUSE2",
+            "dest_warp_id": "0"
+          }
+        ]
+      },
+      {
+        "map": "OneIsland_Harbor_Frlg",
+        "map_path": "data/maps/OneIsland_Harbor_Frlg/map.json",
+        "block_path": "data/layouts/JourneySeviiOnePort/map.bin",
+        "map_changed": true,
+        "blocks_changed": false,
+        "changed_cells": [],
+        "warps_before": [
+          {
+            "x": 8,
+            "y": 2,
+            "elevation": 3,
+            "dest_map": "MAP_ONE_ISLAND",
+            "dest_warp_id": "3"
+          },
+          {
+            "x": 13,
+            "y": 5,
+            "elevation": 3,
+            "dest_map": "MAP_JOURNEY_SEVII_ONE_HARBOR",
+            "dest_warp_id": "0"
+          }
+        ],
+        "warps_after": [
+          {
+            "x": 8,
+            "y": 2,
+            "elevation": 3,
+            "dest_map": "MAP_ONE_ISLAND_TREASURE_BEACH",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 13,
+            "y": 5,
+            "elevation": 3,
+            "dest_map": "MAP_JOURNEY_SEVII_ONE_HARBOR",
+            "dest_warp_id": "0"
+          }
+        ]
+      },
+      {
+        "map": "OneIsland_TreasureBeach_Frlg",
+        "map_path": "data/maps/OneIsland_TreasureBeach_Frlg/map.json",
+        "block_path": "data/layouts/OneIsland_TreasureBeach_Frlg/map.bin",
+        "map_changed": true,
+        "blocks_changed": true,
+        "changed_cells": [
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              11,
+              0
+            ],
+            "before": 4395,
+            "after": 12741
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              12,
+              0
+            ],
+            "before": 4395,
+            "after": 12742
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              13,
+              0
+            ],
+            "before": 4395,
+            "after": 12743
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              11,
+              1
+            ],
+            "before": 4395,
+            "after": 12741
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              12,
+              1
+            ],
+            "before": 4395,
+            "after": 12742
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              13,
+              1
+            ],
+            "before": 4395,
+            "after": 12743
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              11,
+              2
+            ],
+            "before": 4395,
+            "after": 12741
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              12,
+              2
+            ],
+            "before": 4395,
+            "after": 12742
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              13,
+              2
+            ],
+            "before": 4395,
+            "after": 12743
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              11,
+              3
+            ],
+            "before": 4395,
+            "after": 12980
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              12,
+              3
+            ],
+            "before": 4395,
+            "after": 12981
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "position": [
+              13,
+              3
+            ],
+            "before": 4395,
+            "after": 12982
+          }
+        ],
+        "warps_before": [],
+        "warps_after": [
+          {
+            "x": 12,
+            "y": 3,
+            "elevation": 3,
+            "dest_map": "MAP_ONE_ISLAND_HARBOR",
+            "dest_warp_id": "0"
+          }
+        ]
+      },
+      {
+        "map": "TwoIsland_Frlg",
+        "map_path": "data/maps/TwoIsland_Frlg/map.json",
+        "block_path": "data/layouts/TwoIsland_Frlg/map.bin",
+        "map_changed": true,
+        "blocks_changed": true,
+        "changed_cells": [
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              9,
+              8
+            ],
+            "before": 12980,
+            "after": 12741
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              10,
+              8
+            ],
+            "before": 12981,
+            "after": 12742
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              11,
+              8
+            ],
+            "before": 12982,
+            "after": 12743
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              9,
+              9
+            ],
+            "before": 4395,
+            "after": 12741
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              10,
+              9
+            ],
+            "before": 4395,
+            "after": 12742
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              11,
+              9
+            ],
+            "before": 4395,
+            "after": 12743
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              9,
+              10
+            ],
+            "before": 4395,
+            "after": 12741
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              10,
+              10
+            ],
+            "before": 4395,
+            "after": 12742
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              11,
+              10
+            ],
+            "before": 4395,
+            "after": 12743
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              9,
+              11
+            ],
+            "before": 4395,
+            "after": 12980
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              10,
+              11
+            ],
+            "before": 4395,
+            "after": 12981
+          },
+          {
+            "map": "TwoIsland_Frlg",
+            "position": [
+              11,
+              11
+            ],
+            "before": 4395,
+            "after": 12982
+          }
+        ],
+        "warps_before": [
+          {
+            "x": 39,
+            "y": 9,
+            "elevation": 0,
+            "dest_map": "MAP_TWO_ISLAND_JOYFUL_GAME_CORNER",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 33,
+            "y": 9,
+            "elevation": 0,
+            "dest_map": "MAP_TWO_ISLAND_HOUSE",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 21,
+            "y": 7,
+            "elevation": 0,
+            "dest_map": "MAP_TWO_ISLAND_POKEMON_CENTER_1F",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 10,
+            "y": 8,
+            "elevation": 3,
+            "dest_map": "MAP_TWO_ISLAND_HARBOR",
+            "dest_warp_id": "0"
+          }
+        ],
+        "warps_after": [
+          {
+            "x": 39,
+            "y": 9,
+            "elevation": 0,
+            "dest_map": "MAP_TWO_ISLAND_JOYFUL_GAME_CORNER",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 33,
+            "y": 9,
+            "elevation": 0,
+            "dest_map": "MAP_TWO_ISLAND_HOUSE",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 21,
+            "y": 7,
+            "elevation": 0,
+            "dest_map": "MAP_TWO_ISLAND_POKEMON_CENTER_1F",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 10,
+            "y": 11,
+            "elevation": 3,
+            "dest_map": "MAP_TWO_ISLAND_HARBOR",
+            "dest_warp_id": "0"
+          }
+        ]
+      },
+      {
+        "map": "ThreeIsland_Port_Frlg",
+        "map_path": "data/maps/ThreeIsland_Port_Frlg/map.json",
+        "block_path": "data/layouts/ThreeIsland_Port_Frlg/map.bin",
+        "map_changed": true,
+        "blocks_changed": true,
+        "changed_cells": [
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              11,
+              13
+            ],
+            "before": 12980,
+            "after": 12741
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              12,
+              13
+            ],
+            "before": 12981,
+            "after": 12742
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              13,
+              13
+            ],
+            "before": 12982,
+            "after": 12743
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              11,
+              14
+            ],
+            "before": 4723,
+            "after": 12741
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              12,
+              14
+            ],
+            "before": 4723,
+            "after": 12742
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              13,
+              14
+            ],
+            "before": 4723,
+            "after": 12743
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              11,
+              15
+            ],
+            "before": 4723,
+            "after": 12741
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              12,
+              15
+            ],
+            "before": 4723,
+            "after": 12742
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              13,
+              15
+            ],
+            "before": 4723,
+            "after": 12743
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              11,
+              16
+            ],
+            "before": 4723,
+            "after": 12980
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              12,
+              16
+            ],
+            "before": 4723,
+            "after": 12981
+          },
+          {
+            "map": "ThreeIsland_Port_Frlg",
+            "position": [
+              13,
+              16
+            ],
+            "before": 4723,
+            "after": 12982
+          }
+        ],
+        "warps_before": [
+          {
+            "x": 16,
+            "y": 4,
+            "elevation": 0,
+            "dest_map": "MAP_THREE_ISLAND_DUNSPARCE_TUNNEL",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 38,
+            "y": 5,
+            "elevation": 3,
+            "dest_map": "MAP_THREE_ISLAND_DUNSPARCE_TUNNEL",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 12,
+            "y": 13,
+            "elevation": 3,
+            "dest_map": "MAP_THREE_ISLAND_HARBOR",
+            "dest_warp_id": "0"
+          }
+        ],
+        "warps_after": [
+          {
+            "x": 16,
+            "y": 4,
+            "elevation": 0,
+            "dest_map": "MAP_THREE_ISLAND_DUNSPARCE_TUNNEL",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 38,
+            "y": 5,
+            "elevation": 3,
+            "dest_map": "MAP_THREE_ISLAND_DUNSPARCE_TUNNEL",
+            "dest_warp_id": "1"
+          },
+          {
+            "x": 12,
+            "y": 16,
+            "elevation": 3,
+            "dest_map": "MAP_THREE_ISLAND_HARBOR",
+            "dest_warp_id": "0"
+          }
+        ]
+      },
+      {
+        "map": "FourIsland_Frlg",
+        "map_path": "data/maps/FourIsland_Frlg/map.json",
+        "block_path": "data/layouts/FourIsland_Frlg/map.bin",
+        "map_changed": true,
+        "blocks_changed": true,
+        "changed_cells": [
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              9,
+              28
+            ],
+            "before": 13048,
+            "after": 12741
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              10,
+              28
+            ],
+            "before": 13049,
+            "after": 12742
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              11,
+              28
+            ],
+            "before": 13050,
+            "after": 12743
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              9,
+              29
+            ],
+            "before": 4723,
+            "after": 12741
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              10,
+              29
+            ],
+            "before": 4723,
+            "after": 12742
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              11,
+              29
+            ],
+            "before": 4723,
+            "after": 12743
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              9,
+              30
+            ],
+            "before": 4723,
+            "after": 12741
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              10,
+              30
+            ],
+            "before": 4723,
+            "after": 12742
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              11,
+              30
+            ],
+            "before": 4723,
+            "after": 12743
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              9,
+              31
+            ],
+            "before": 4723,
+            "after": 13048
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              10,
+              31
+            ],
+            "before": 4723,
+            "after": 13049
+          },
+          {
+            "map": "FourIsland_Frlg",
+            "position": [
+              11,
+              31
+            ],
+            "before": 4723,
+            "after": 13050
+          }
+        ],
+        "warps_before": [
+          {
+            "x": 18,
+            "y": 20,
+            "elevation": 0,
+            "dest_map": "MAP_FOUR_ISLAND_POKEMON_CENTER_1F",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 12,
+            "y": 13,
+            "elevation": 0,
+            "dest_map": "MAP_FOUR_ISLAND_POKEMON_DAY_CARE",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 25,
+            "y": 14,
+            "elevation": 0,
+            "dest_map": "MAP_FOUR_ISLAND_HOUSE1",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 38,
+            "y": 12,
+            "elevation": 0,
+            "dest_map": "MAP_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 33,
+            "y": 23,
+            "elevation": 0,
+            "dest_map": "MAP_FOUR_ISLAND_LORELEIS_HOUSE",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 25,
+            "y": 26,
+            "elevation": 0,
+            "dest_map": "MAP_FOUR_ISLAND_HOUSE2",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 10,
+            "y": 28,
+            "elevation": 3,
+            "dest_map": "MAP_FOUR_ISLAND_HARBOR",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 22,
+            "y": 26,
+            "elevation": 0,
+            "dest_map": "MAP_FOUR_ISLAND_MART",
+            "dest_warp_id": "0"
+          }
+        ],
+        "warps_after": [
+          {
+            "x": 18,
+            "y": 20,
+            "elevation": 0,
+            "dest_map": "MAP_FOUR_ISLAND_POKEMON_CENTER_1F",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 12,
+            "y": 13,
+            "elevation": 0,
+            "dest_map": "MAP_FOUR_ISLAND_POKEMON_DAY_CARE",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 25,
+            "y": 14,
+            "elevation": 0,
+            "dest_map": "MAP_FOUR_ISLAND_HOUSE1",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 38,
+            "y": 12,
+            "elevation": 0,
+            "dest_map": "MAP_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 33,
+            "y": 23,
+            "elevation": 0,
+            "dest_map": "MAP_FOUR_ISLAND_LORELEIS_HOUSE",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 25,
+            "y": 26,
+            "elevation": 0,
+            "dest_map": "MAP_FOUR_ISLAND_HOUSE2",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 10,
+            "y": 31,
+            "elevation": 3,
+            "dest_map": "MAP_FOUR_ISLAND_HARBOR",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 22,
+            "y": 26,
+            "elevation": 0,
+            "dest_map": "MAP_FOUR_ISLAND_MART",
+            "dest_warp_id": "0"
+          }
+        ]
+      },
+      {
+        "map": "FiveIsland_Frlg",
+        "map_path": "data/maps/FiveIsland_Frlg/map.json",
+        "block_path": "data/layouts/FiveIsland_Frlg/map.bin",
+        "map_changed": true,
+        "blocks_changed": true,
+        "changed_cells": [
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              11,
+              14
+            ],
+            "before": 13048,
+            "after": 12741
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              12,
+              14
+            ],
+            "before": 13049,
+            "after": 12742
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              13,
+              14
+            ],
+            "before": 13050,
+            "after": 12743
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              11,
+              15
+            ],
+            "before": 4395,
+            "after": 12741
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              12,
+              15
+            ],
+            "before": 4395,
+            "after": 12742
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              13,
+              15
+            ],
+            "before": 4395,
+            "after": 12743
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              11,
+              16
+            ],
+            "before": 4395,
+            "after": 12741
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              12,
+              16
+            ],
+            "before": 4395,
+            "after": 12742
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              13,
+              16
+            ],
+            "before": 4395,
+            "after": 12743
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              11,
+              17
+            ],
+            "before": 4395,
+            "after": 13048
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              12,
+              17
+            ],
+            "before": 4395,
+            "after": 13049
+          },
+          {
+            "map": "FiveIsland_Frlg",
+            "position": [
+              13,
+              17
+            ],
+            "before": 4395,
+            "after": 13050
+          }
+        ],
+        "warps_before": [
+          {
+            "x": 12,
+            "y": 14,
+            "elevation": 3,
+            "dest_map": "MAP_FIVE_ISLAND_HARBOR",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 18,
+            "y": 6,
+            "elevation": 0,
+            "dest_map": "MAP_FIVE_ISLAND_POKEMON_CENTER_1F",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 12,
+            "y": 6,
+            "elevation": 0,
+            "dest_map": "MAP_FIVE_ISLAND_HOUSE1",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 22,
+            "y": 9,
+            "elevation": 0,
+            "dest_map": "MAP_FIVE_ISLAND_HOUSE2",
+            "dest_warp_id": "0"
+          }
+        ],
+        "warps_after": [
+          {
+            "x": 12,
+            "y": 17,
+            "elevation": 3,
+            "dest_map": "MAP_FIVE_ISLAND_HARBOR",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 18,
+            "y": 6,
+            "elevation": 0,
+            "dest_map": "MAP_FIVE_ISLAND_POKEMON_CENTER_1F",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 12,
+            "y": 6,
+            "elevation": 0,
+            "dest_map": "MAP_FIVE_ISLAND_HOUSE1",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 22,
+            "y": 9,
+            "elevation": 0,
+            "dest_map": "MAP_FIVE_ISLAND_HOUSE2",
+            "dest_warp_id": "0"
+          }
+        ]
+      },
+      {
+        "map": "SixIsland_Frlg",
+        "map_path": "data/maps/SixIsland_Frlg/map.json",
+        "block_path": "data/layouts/SixIsland_Frlg/map.bin",
+        "map_changed": true,
+        "blocks_changed": true,
+        "changed_cells": [
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              10,
+              23
+            ],
+            "before": 13027,
+            "after": 12741
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              11,
+              23
+            ],
+            "before": 13028,
+            "after": 12742
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              12,
+              23
+            ],
+            "before": 13029,
+            "after": 12743
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              10,
+              24
+            ],
+            "before": 4723,
+            "after": 12741
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              11,
+              24
+            ],
+            "before": 4723,
+            "after": 12742
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              12,
+              24
+            ],
+            "before": 4723,
+            "after": 12743
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              10,
+              25
+            ],
+            "before": 4723,
+            "after": 12741
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              11,
+              25
+            ],
+            "before": 4723,
+            "after": 12742
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              12,
+              25
+            ],
+            "before": 4723,
+            "after": 12743
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              10,
+              26
+            ],
+            "before": 4723,
+            "after": 13027
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              11,
+              26
+            ],
+            "before": 4723,
+            "after": 13028
+          },
+          {
+            "map": "SixIsland_Frlg",
+            "position": [
+              12,
+              26
+            ],
+            "before": 4723,
+            "after": 13029
+          }
+        ],
+        "warps_before": [
+          {
+            "x": 11,
+            "y": 23,
+            "elevation": 3,
+            "dest_map": "MAP_SIX_ISLAND_HARBOR",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 11,
+            "y": 11,
+            "elevation": 0,
+            "dest_map": "MAP_SIX_ISLAND_POKEMON_CENTER_1F",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 16,
+            "y": 17,
+            "elevation": 0,
+            "dest_map": "MAP_SIX_ISLAND_HOUSE",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 20,
+            "y": 11,
+            "elevation": 0,
+            "dest_map": "MAP_SIX_ISLAND_MART",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 5,
+            "y": 17,
+            "elevation": 0,
+            "dest_map": "MAP_JOURNEYSIXISLANDGYM",
+            "dest_warp_id": "0"
+          }
+        ],
+        "warps_after": [
+          {
+            "x": 11,
+            "y": 26,
+            "elevation": 3,
+            "dest_map": "MAP_SIX_ISLAND_HARBOR",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 11,
+            "y": 11,
+            "elevation": 0,
+            "dest_map": "MAP_SIX_ISLAND_POKEMON_CENTER_1F",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 16,
+            "y": 17,
+            "elevation": 0,
+            "dest_map": "MAP_SIX_ISLAND_HOUSE",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 20,
+            "y": 11,
+            "elevation": 0,
+            "dest_map": "MAP_SIX_ISLAND_MART",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 5,
+            "y": 17,
+            "elevation": 0,
+            "dest_map": "MAP_JOURNEYSIXISLANDGYM",
+            "dest_warp_id": "0"
+          }
+        ]
+      },
+      {
+        "map": "SevenIsland_Frlg",
+        "map_path": "data/maps/SevenIsland_Frlg/map.json",
+        "block_path": "data/layouts/SevenIsland_Frlg/map.bin",
+        "map_changed": true,
+        "blocks_changed": true,
+        "changed_cells": [
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              15,
+              13
+            ],
+            "before": 13027,
+            "after": 12741
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              16,
+              13
+            ],
+            "before": 13028,
+            "after": 12742
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              17,
+              13
+            ],
+            "before": 13029,
+            "after": 12743
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              15,
+              14
+            ],
+            "before": 4723,
+            "after": 12741
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              16,
+              14
+            ],
+            "before": 4723,
+            "after": 12742
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              17,
+              14
+            ],
+            "before": 4723,
+            "after": 12743
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              15,
+              15
+            ],
+            "before": 4723,
+            "after": 12741
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              16,
+              15
+            ],
+            "before": 4723,
+            "after": 12742
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              17,
+              15
+            ],
+            "before": 4723,
+            "after": 12743
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              15,
+              16
+            ],
+            "before": 4723,
+            "after": 13027
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              16,
+              16
+            ],
+            "before": 4723,
+            "after": 13028
+          },
+          {
+            "map": "SevenIsland_Frlg",
+            "position": [
+              17,
+              16
+            ],
+            "before": 4723,
+            "after": 13029
+          }
+        ],
+        "warps_before": [
+          {
+            "x": 11,
+            "y": 9,
+            "elevation": 0,
+            "dest_map": "MAP_SEVEN_ISLAND_HOUSE_ROOM1",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 5,
+            "y": 9,
+            "elevation": 0,
+            "dest_map": "MAP_SEVEN_ISLAND_MART",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 12,
+            "y": 3,
+            "elevation": 0,
+            "dest_map": "MAP_SEVEN_ISLAND_POKEMON_CENTER_1F",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 16,
+            "y": 13,
+            "elevation": 3,
+            "dest_map": "MAP_SEVEN_ISLAND_HARBOR",
+            "dest_warp_id": "0"
+          }
+        ],
+        "warps_after": [
+          {
+            "x": 11,
+            "y": 9,
+            "elevation": 0,
+            "dest_map": "MAP_SEVEN_ISLAND_HOUSE_ROOM1",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 5,
+            "y": 9,
+            "elevation": 0,
+            "dest_map": "MAP_SEVEN_ISLAND_MART",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 12,
+            "y": 3,
+            "elevation": 0,
+            "dest_map": "MAP_SEVEN_ISLAND_POKEMON_CENTER_1F",
+            "dest_warp_id": "0"
+          },
+          {
+            "x": 16,
+            "y": 16,
+            "elevation": 3,
+            "dest_map": "MAP_SEVEN_ISLAND_HARBOR",
+            "dest_warp_id": "0"
+          }
+        ]
+      }
+    ],
+    "changed_paths": [
+      "data/layouts/FiveIsland_Frlg/map.bin",
+      "data/layouts/FourIsland_Frlg/map.bin",
+      "data/layouts/OneIsland_Frlg/map.bin",
+      "data/layouts/OneIsland_TreasureBeach_Frlg/map.bin",
+      "data/layouts/SevenIsland_Frlg/map.bin",
+      "data/layouts/SixIsland_Frlg/map.bin",
+      "data/layouts/ThreeIsland_Port_Frlg/map.bin",
+      "data/layouts/TwoIsland_Frlg/map.bin",
+      "data/maps/FiveIsland_Frlg/map.json",
+      "data/maps/FourIsland_Frlg/map.json",
+      "data/maps/OneIsland_Frlg/map.json",
+      "data/maps/OneIsland_Harbor_Frlg/map.json",
+      "data/maps/OneIsland_TreasureBeach_Frlg/map.json",
+      "data/maps/SevenIsland_Frlg/map.json",
+      "data/maps/SixIsland_Frlg/map.json",
+      "data/maps/ThreeIsland_Port_Frlg/map.json",
+      "data/maps/TwoIsland_Frlg/map.json",
+      "include/journey_coastal_piers.h",
+      "src/event_object_movement.c"
+    ],
+    "collision_header": "include/journey_coastal_piers.h",
+    "low_piers_block_surf_entry": true,
+    "saved_surfer_can_leave_old_underpass": true,
+    "connection_destination_resolved_before_crossing": true,
+    "npc_and_player_collision_interfaces_match": true,
+    "no_player_coordinate_or_elevation_writes": true,
+    "route107_high_bridge_unchanged": true,
+    "all_seven_surface_seams_preserved": true,
+    "native_tilesets_and_palettes_unchanged": true
+  }
+}

@@ -4,11 +4,23 @@ from pathlib import Path
 from package_review_rom import verify as verify_review
 from verify_fuchsia_update import ROOT,previous_release
 
-def verify_update(directory,info):
+def verify_update(directory,info,*,historical_review=None,historical_save=None):
     directory=Path(directory);old=previous_release(info)
     assert old['validated'] and old['validation_scope']=='ever-grande-market'
     assert old['integration_layers']+['extra-gyms']==info['integration_layers']
-    test=verify_review(ROOT/'roms/rom-de-teste',directory/'Pokemon-Journey-Gen1-9-Normal.gba')
+    if historical_review is None:
+        assert historical_save is None
+        test=verify_review(ROOT/'roms/rom-de-teste',directory/'Pokemon-Journey-Gen1-9-Normal.gba')
+    else:
+        # A later focused release keeps the original evidence attached to
+        # its own ROM identities. Never compare it to the current test ROM,
+        # its relocated review byte or its newly exported save.
+        test=historical_review
+        assert historical_save is not None, 'Historical TESTE evidence requires its pinned battery save'
+        normal=next(r for r in info['variants'] if r['file']==test['base_normal_file'])
+        assert test['base_normal_sha256']==normal['sha256'] and test['bytes']==33554432
+        assert test['file']=='Pokemon-Journey-TESTE.gba' and test['separate_save_identity']
+        assert not test['random_wild_encounters'] and not test['automatic_trainer_approaches']
     expected={'common':info['parent_rom_sha256'],'test':test['sha256'],**{r['file']:r['sha256'] for r in info['variants']}}
     covered=set()
     for p in info['proofs']:
@@ -78,7 +90,8 @@ def verify_update(directory,info):
             if p['target']=='test':
                 c=r['checks'];assert c['random_wild_attempts']>=200 and c['native_flash_save_exported']
                 for k in ['no_random_encounters','no_fishing_encounters','no_sweet_scent_encounters','no_rock_smash_encounters','no_automatic_approach_after_600_frames']:assert c[k],k
-                assert hashlib.sha256((ROOT/'roms/rom-de-teste/Pokemon-Journey-TESTE.sav').read_bytes()).hexdigest()==c['save_sha256']
+                save=ROOT/'roms/rom-de-teste/Pokemon-Journey-TESTE.sav' if historical_review is None else historical_save
+                assert hashlib.sha256(Path(save).read_bytes()).hexdigest()==c['save_sha256']
         elif kind in ['ever-grande-market','dewford-competitive-shop','fallarbor-physics','coastal-details','marine-network']:
             # These reports have feature-specific invariants checked below by
             # their source validators and exact current binary identities here.
@@ -100,12 +113,14 @@ def verify_update(directory,info):
             if kind=='marine-network':
                 assert r['all_seven_islands_reached_from_mossdeep'] and r['kanto_to_one_island_and_back'] and r['returned_to_mossdeep']
                 assert r['controller_movement_only'] and r['no_midtrip_warps_or_coordinate_writes'] and r['all_surf_samples_on_water']
-                assert len(r['towns'])==7 and hashlib.sha256((ROOT/'docs/videos/surf-connections-repaired.mp4').read_bytes()).hexdigest()==r['video_sha256']
+                assert len(r['towns'])==7
+                assert hashlib.sha256((ROOT/'docs/videos/surf-connections-repaired.mp4').read_bytes()).hexdigest()==r['video_sha256']
         else:raise AssertionError(kind)
     required={('common','extra-gym-source'),('common','all-surf-links'),('common','surf-repairs'),('common','coastal-details'),('common','marine-network'),('common','luffy-approach'),('common','coastal-landings'),('common','map-finishing')}
     required|={(t,k) for t in expected if t!='common' for k in ['extra-gyms','review-mode','ever-grande-market','dewford-competitive-shop','fallarbor-physics']}
     assert required<=covered,required-covered
-    assert all((directory/r['file']).read_bytes()[test['review_mode_offset']]==0 for r in info['variants'])
+    if historical_review is None:
+        assert all((directory/r['file']).read_bytes()[test['review_mode_offset']]==0 for r in info['variants'])
     ref=info['previous_review_validation'];p=Path(ref['file']);assert not p.is_absolute() and '..' not in p.parts
     raw=(ROOT/p).read_bytes();assert hashlib.sha256(raw).hexdigest()==ref['sha256']
     from verify_ever_grande_update import verify_update as verify_previous
