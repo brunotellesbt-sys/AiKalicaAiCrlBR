@@ -13,7 +13,11 @@ def main():
     args = parser.parse_args()
     # The release packager keeps its published 64-layer contract. This separate
     # entry point builds all candidate layers and checks their source hashes.
-    package_playable.LAYERS = PRIOR + [LAYER]
+    if (args.source / '.journey-dewford-coast-safety').exists():
+        from prepare_dewford_coast_safety import PRIOR as current_prior, LAYER as current_layer
+        package_playable.LAYERS = current_prior + [current_layer]
+    else:
+        package_playable.LAYERS = PRIOR + [LAYER]
     package_playable.build(args.source, args.jobs)
     print('Integration candidate built; final release validation is still required.')
 

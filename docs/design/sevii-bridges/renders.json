@@ -1,0 +1,128 @@
+{
+  "kind": "full native source renders, including all NPCs; not emulator screenshots",
+  "baseline_rom_sha256": "ae5da9ae24d315cd2a987afc48d42673a4d11b4fa9b411afcf5214d936759a2b",
+  "rom_sha256": "5e0cecc8d2143334795a752e9bb1f70343671f34a29dbd2af3a78e3bff05ef50",
+  "all_seven_endpoints_use_native_wood": true,
+  "no_metal_endcaps": true,
+  "private_wooden_metatiles": [
+    552,
+    553,
+    554
+  ],
+  "wooden_endcap_contact": "seven-wooden-ends.png",
+  "maps": [
+    {
+      "island": "One",
+      "maps": [
+        "OneIsland_Frlg",
+        "OneIsland_TreasureBeach_Frlg",
+        "OneIsland_Harbor_Frlg"
+      ],
+      "before_png": "One-before.png",
+      "after_png": "One-after.png",
+      "comparison_png": "One-comparison.png",
+      "endpoint_detail_png": "One-wooden-end.png",
+      "wooden_endpoint": [
+        "OneIsland_TreasureBeach_Frlg",
+        12,
+        3
+      ]
+    },
+    {
+      "island": "Two",
+      "maps": [
+        "TwoIsland_Frlg",
+        "TwoIsland_Harbor_Frlg"
+      ],
+      "before_png": "Two-before.png",
+      "after_png": "Two-after.png",
+      "comparison_png": "Two-comparison.png",
+      "endpoint_detail_png": "Two-wooden-end.png",
+      "wooden_endpoint": [
+        "TwoIsland_Frlg",
+        10,
+        11
+      ]
+    },
+    {
+      "island": "Three",
+      "maps": [
+        "ThreeIsland_Port_Frlg",
+        "ThreeIsland_Harbor_Frlg"
+      ],
+      "before_png": "Three-before.png",
+      "after_png": "Three-after.png",
+      "comparison_png": "Three-comparison.png",
+      "endpoint_detail_png": "Three-wooden-end.png",
+      "wooden_endpoint": [
+        "ThreeIsland_Port_Frlg",
+        12,
+        16
+      ]
+    },
+    {
+      "island": "Four",
+      "maps": [
+        "FourIsland_Frlg",
+        "FourIsland_Harbor_Frlg"
+      ],
+      "before_png": "Four-before.png",
+      "after_png": "Four-after.png",
+      "comparison_png": "Four-comparison.png",
+      "endpoint_detail_png": "Four-wooden-end.png",
+      "wooden_endpoint": [
+        "FourIsland_Frlg",
+        10,
+        31
+      ]
+    },
+    {
+      "island": "Five",
+      "maps": [
+        "FiveIsland_Frlg",
+        "FiveIsland_Harbor_Frlg"
+      ],
+      "before_png": "Five-before.png",
+      "after_png": "Five-after.png",
+      "comparison_png": "Five-comparison.png",
+      "endpoint_detail_png": "Five-wooden-end.png",
+      "wooden_endpoint": [
+        "FiveIsland_Frlg",
+        12,
+        17
+      ]
+    },
+    {
+      "island": "Six",
+      "maps": [
+        "SixIsland_Frlg",
+        "SixIsland_Harbor_Frlg"
+      ],
+      "before_png": "Six-before.png",
+      "after_png": "Six-after.png",
+      "comparison_png": "Six-comparison.png",
+      "endpoint_detail_png": "Six-wooden-end.png",
+      "wooden_endpoint": [
+        "SixIsland_Frlg",
+        11,
+        26
+      ]
+    },
+    {
+      "island": "Seven",
+      "maps": [
+        "SevenIsland_Frlg",
+        "SevenIsland_Harbor_Frlg"
+      ],
+      "before_png": "Seven-before.png",
+      "after_png": "Seven-after.png",
+      "comparison_png": "Seven-comparison.png",
+      "endpoint_detail_png": "Seven-wooden-end.png",
+      "wooden_endpoint": [
+        "SevenIsland_Frlg",
+        16,
+        16
+      ]
+    }
+  ]
+}

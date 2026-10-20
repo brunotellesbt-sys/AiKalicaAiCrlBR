@@ -1,0 +1,52 @@
+{
+  "passed": false,
+  "expected_broken_baseline": true,
+  "bug_reproduced": true,
+  "rom_sha256": "ae5da9ae24d315cd2a987afc48d42673a4d11b4fa9b411afcf5214d936759a2b",
+  "departure": {
+    "map": "Route107",
+    "tile": [
+      4,
+      16
+    ],
+    "surf": false,
+    "elevation": 3,
+    "map_elevation": 3,
+    "priority": 2
+  },
+  "transition": {
+    "map": "Route107",
+    "tile": [
+      4,
+      15
+    ],
+    "surf": false,
+    "elevation": 3,
+    "map_elevation": 0,
+    "priority": 2
+  },
+  "rail": {
+    "map": "Route107",
+    "tile": [
+      4,
+      14
+    ],
+    "surf": false,
+    "elevation": 3,
+    "map_elevation": 15,
+    "priority": 1
+  },
+  "ocean": {
+    "map": "Route107",
+    "tile": [
+      8,
+      14
+    ],
+    "surf": false,
+    "elevation": 1,
+    "map_elevation": 1,
+    "priority": 2
+  },
+  "first_placement_only_is_fixture": true,
+  "no_elevation_or_coordinate_writes_after_departure": true
+}

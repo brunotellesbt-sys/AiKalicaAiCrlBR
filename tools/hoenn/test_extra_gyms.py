@@ -1,16 +1,24 @@
-"""Published current-ROM evidence must cover all eight gyms and physical seas."""
+"""Check the original gym proofs on their explicitly pinned release identity."""
 import hashlib,json,unittest
 from pathlib import Path
 from verify_versions import verify
+from verify_fuchsia_update import previous_release
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'mods/hoenn/extra-gyms-validation'
 class ExtraGyms(unittest.TestCase):
     @classmethod
-    def setUpClass(cls):cls.release=verify(ROOT/'mods/hoenn/versions')
-    def test_current_edition_uses_correct_fairy_leader_and_all_badges(self):
+    def setUpClass(cls):
+        cls.release=verify(ROOT/'mods/hoenn/versions')
+        cls.historical=cls.release['validation_scope']=='dewford-coast-safety'
+        if cls.historical:
+            cls.review=json.loads((ROOT/cls.release['previous_review_validation']['file']).read_text())
+            cls.release=previous_release(cls.release)
+        else:
+            cls.review=json.loads((ROOT/'roms/rom-de-teste/review.json').read_text())
+    def test_validated_gym_release_uses_correct_fairy_leader_and_all_badges(self):
         self.assertEqual(self.release['validation_scope'],'extra-gyms')
         expected={r['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba'):r['sha256'] for r in self.release['variants']}
-        expected['TESTE']=json.loads((ROOT/'roms/rom-de-teste/review.json').read_text())['sha256']
+        expected['TESTE']=self.review['sha256']
         for edition,sha in expected.items():
             with self.subTest(edition=edition):
                 r=json.loads((OUT/edition/'extra-gyms.json').read_text());self.assertEqual(r['rom_sha256'],sha)
@@ -20,7 +28,7 @@ class ExtraGyms(unittest.TestCase):
                 self.assertEqual(len(r['league']['missing_badge_cases']),24)
                 self.assertTrue(r['league']['both_leagues_require_24'])
                 self.assertTrue(r['all_24_badges_saved_and_continued'] and r['actual_three_page_trainer_card'])
-    def test_physical_routes_have_current_native_roundtrips(self):
+    def test_gym_release_physical_routes_keep_their_native_roundtrips(self):
         r=json.loads((OUT/'native/surf-repairs.json').read_text())
         self.assertEqual(r['rom_sha256'],self.release['parent_rom_sha256'])
         self.assertEqual((r['links'],r['crossings']),(55,110))

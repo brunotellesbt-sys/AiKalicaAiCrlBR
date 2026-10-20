@@ -1,6 +1,6 @@
 # ROMs atuais
 
-Atualização atual: [oito ginásios extras e travessias de Surf corrigidas](../docs/ginasios-extras-e-travessias.md). Circuito de 24 insígnias, caminhos físicos ampliados, Dewford com dois atendentes e novo sprite do Luffy.
+Atualização atual: [Dewford, pontes das sete Sevii e acessos de cavernas](../docs/dewford-sevii-coast-safety.md), incluindo a abertura da TESTE com e sem o save de inspeção. Mantém o [circuito de 24 insígnias](../docs/ginasios-extras-e-travessias.md), Dewford com dois atendentes e o novo sprite do Luffy.
 
 Inclui [casas e feira de Mega Stones em Ever Grande](../docs/ever-grande-market.md), dois presentes únicos e Sootopolis com marcador vermelho. Inclui as formas Origin do PR #93, o mercado competitivo no exterior da Battle Frontier e o Hyper Training em Dewford.
 
@@ -20,11 +20,11 @@ As quatro edições incluem Kanto, Hoenn e Sevii. Megas e formas regionais de es
 
 [ZIP com as quatro ROMs e documentação](../mods/hoenn/versions/Pokemon-Journey-Four-Editions.zip) · [Documentação](../docs/README.md) · [Limites da validação](../mods/hoenn/INTEGRATION-STATUS.md) · [SHA-256](SHA256SUMS)
 
-A entrega atual inclui a revisão de Surf, [105 espécies especiais em 48 câmaras nomeadas](../docs/cavernas-lendarias.md) e acesso à Artisan Cave. [Mapa e imagens](../docs/revisao-surf-cavernas.md). A [ROM de teste e o save de inspeção](rom-de-teste/LEIA-ME.md) ficam em pasta separada, sem encontros aleatórios ou abordagem automática. O manifesto atual usa `validation_scope: extra-gyms`; as evidências de campanha e recursos anteriores continuam associadas às suas ROMs históricas.
+A entrega atual inclui a revisão de Surf, [105 espécies especiais em 48 câmaras nomeadas](../docs/cavernas-lendarias.md) e acesso à Artisan Cave. [Mapa e imagens](../docs/revisao-surf-cavernas.md). A [ROM de teste e o save de inspeção](rom-de-teste/LEIA-ME.md) ficam em pasta separada, sem encontros aleatórios ou abordagem automática. O manifesto atual usa `validation_scope: dewford-coast-safety`; as evidências de campanha e recursos anteriores continuam associadas às suas ROMs históricas.
 
 ## Atualizar a entrega
 
-Para esta entrega, siga os validadores e a publicação descritos em [ginásios e travessias](../docs/ginasios-extras-e-travessias.md). O manifesto exige as cinco ROMs atuais e conserva a validação anterior com seus hashes originais.
+Para esta entrega, siga os validadores e a publicação descritos na [revisão costeira](../docs/dewford-sevii-coast-safety.md). O manifesto exige as cinco ROMs atuais e conserva a validação anterior com seus hashes originais.
 
 Para outras entregas, execute `tools/hoenn/seal_versions.py` com `--output mods/hoenn/versions` depois de compilar e produzir as evidências do novo build. Para uma atualização limitada ao PWT, use `--validation-scope pwt-update`, que exige as quatro inspeções de equipes, dois torneios completos, os sprites da arena, a desistência e a reprodução do código. O empacotamento atualiza automaticamente as quatro ROMs e os hashes nesta pasta. `tools/hoenn/verify_versions.py` e a CI recusam arquivos divergentes ou edições extras. O GitHub Pages utiliza as ROMs desta pasta após conferir seus hashes contra o manifesto validado.
 

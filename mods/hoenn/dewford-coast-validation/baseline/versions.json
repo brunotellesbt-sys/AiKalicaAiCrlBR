@@ -1,0 +1,498 @@
+{
+  "parent_rom_sha256": "ae5da9ae24d315cd2a987afc48d42673a4d11b4fa9b411afcf5214d936759a2b",
+  "build_rules_offset": 9118916,
+  "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
+  "parent_rules_hex": "01040100",
+  "variants": [
+    {
+      "file": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "max_national": 493,
+      "perfect_trainer_ivs": false,
+      "important_opponents_only": true,
+      "evs": 510,
+      "bytes": 33554432,
+      "sha256": "4962f88d94c4fa9cab38a103503d4e8ccc97439a937c2dc1cdc54a93ffe27077",
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189,
+        9118916,
+        9118917,
+        9118918
+      ],
+      "requires_new_save": true
+    },
+    {
+      "file": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "max_national": 493,
+      "perfect_trainer_ivs": true,
+      "important_opponents_only": true,
+      "evs": 510,
+      "bytes": 33554432,
+      "sha256": "ad2e0fc604532e9a31913994cd9a8777872bc6fdc79ac1fc57d26e0f4ba54dd5",
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189,
+        9118916,
+        9118917
+      ],
+      "requires_new_save": true
+    },
+    {
+      "file": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "max_national": 1025,
+      "perfect_trainer_ivs": false,
+      "important_opponents_only": true,
+      "evs": 510,
+      "bytes": 33554432,
+      "sha256": "061fad5cf50b95952f368fd03d0379f8d5156e756eba6bb887b6ef77251807d4",
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189,
+        9118918
+      ],
+      "requires_new_save": true
+    },
+    {
+      "file": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "max_national": 1025,
+      "perfect_trainer_ivs": true,
+      "important_opponents_only": true,
+      "evs": 510,
+      "bytes": 33554432,
+      "sha256": "d55db4ec368e2718bad6b1743dbace603dba568155d715e0ce40f52d46fac3b0",
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189
+      ],
+      "requires_new_save": true
+    }
+  ],
+  "all_other_bytes_identical": true,
+  "validated": true,
+  "integration_layers": [
+    "hoenn-crossing",
+    "worldsea",
+    "westsea",
+    "region-state",
+    "east-coast",
+    "gym-scaling",
+    "campaign-gates",
+    "team-stories",
+    "free-access",
+    "blue-gym",
+    "road-access",
+    "mach-bike",
+    "yellow-stairs",
+    "story-access",
+    "story-completion",
+    "water-hms",
+    "ferry",
+    "rival",
+    "family",
+    "travel-rules",
+    "birth",
+    "wild",
+    "habitats",
+    "sanctuaries",
+    "ecology",
+    "abilities",
+    "mega-art",
+    "story-aftermath",
+    "league-access",
+    "league-completion",
+    "league-history",
+    "league-display",
+    "family-postgame",
+    "pwt",
+    "frontier-travel",
+    "story-puzzles",
+    "aqua-episodes",
+    "seafloor-access",
+    "water-continue",
+    "cave-access",
+    "sky-pillar-access",
+    "english-text",
+    "special-ball",
+    "route131-sea-access",
+    "lostelle-habitats",
+    "tower-habitats",
+    "early-story-tools",
+    "mandatory-native-missions",
+    "sixteen-badge-leagues",
+    "rusturf-reunion",
+    "sea-landscapes",
+    "eastern-sea-union",
+    "ever-grande-entrance",
+    "route12-port",
+    "lavender-network",
+    "world-map",
+    "kanto-open-sea",
+    "coastal-world-map",
+    "remote-islands",
+    "surf-passages",
+    "battle-database",
+    "five-island-habitat",
+    "adaptive-gym-teams",
+    "world-map-position",
+    "world-dex-map",
+    "competitive-bosses",
+    "campaign-variants",
+    "version-play",
+    "small-ports",
+    "arrival-continuity",
+    "story-continuity",
+    "intro-region",
+    "paradox-caves",
+    "preferred-mossdeep-port",
+    "birth-confirmation",
+    "crossover-opponents",
+    "crossover-encounters",
+    "trainer-level-coherence",
+    "evolution-coherence",
+    "crossover-partners",
+    "galactic-chapter",
+    "trainer-item-evolutions",
+    "galactic-continuity",
+    "mega-origin-reversion",
+    "sharp-world-map",
+    "battle-rule-coherence",
+    "final-ecology",
+    "final-story",
+    "evolution-supplies",
+    "badge-case",
+    "variant-dex",
+    "water-habitat-recovery",
+    "reproducible-water",
+    "galactic-prison",
+    "final-balance",
+    "prison-visibility",
+    "named-character-presence",
+    "player-choice",
+    "modern-bag",
+    "modern-field-moves",
+    "pwt-world-cup",
+    "pwt-entrances",
+    "pwt-builds",
+    "pwt-stadium",
+    "pwt-stadium-camera",
+    "pwt-entrance-wait",
+    "pwt-encore-guard",
+    "move-history-rules",
+    "battle-interactions",
+    "nonlevel-moves",
+    "form-move-legality",
+    "special-encounter-workshop",
+    "special-encounter-field-rules",
+    "pwt-score-retention",
+    "workshop-graphics-rules",
+    "pwt-obedience",
+    "visible-crossover",
+    "compact-ports",
+    "lavender-rotom-room",
+    "briney-mossdeep",
+    "port-finish",
+    "live-gym-levels",
+    "coast-finish",
+    "atlas-route-tracking",
+    "final-moorings",
+    "continuous-atlas-marker",
+    "cinnabar-shore-polish",
+    "port-houses-and-ships",
+    "final-port-alignment",
+    "port-orientation-finish",
+    "close-vertical-boats",
+    "rival-walk-and-coast-audit",
+    "connected-sea-chart",
+    "diglett-galactic-scouts",
+    "native-coastal-fragments",
+    "complete-beach-edges",
+    "diglett-scout-battles",
+    "offscreen-rival-entrances",
+    "complete-marine-atlas",
+    "navigated-sea-atlas",
+    "sootopolis-harbor",
+    "pallet-harbor",
+    "sevii-surf-connections",
+    "sevii-coast-camera",
+    "sevii-surf-embarkation",
+    "sevii-arrival-layout",
+    "world-route-chart",
+    "lavender-harbor",
+    "fuchsia-harbor",
+    "three-harbor-terminals",
+    "sevii-harbors",
+    "mossdeep-harbor",
+    "dewford-island-harbor",
+    "continuous-ocean",
+    "annotated-world-links",
+    "surf-cave-coasts",
+    "surf-review",
+    "dewford-competitive-shop",
+    "ever-grande-market",
+    "extra-gyms"
+  ],
+  "validation_scope": "extra-gyms",
+  "full_campaign_playthrough": false,
+  "proofs": [
+    {
+      "file": "evidence/extra-gyms/common/extra-gym-source.json",
+      "target": "common",
+      "kind": "extra-gym-source",
+      "sha256": "880f4b8208b74138818408be1ad25501ce23024b5a2a242a29ccf6e3f069cfe4"
+    },
+    {
+      "file": "evidence/extra-gyms/common/all-surf-links.json",
+      "target": "common",
+      "kind": "all-surf-links",
+      "sha256": "bf1a2cd7c42fad2ea1e4965b059826f417a16b8c3f7cdaa129e7471b236a172a"
+    },
+    {
+      "file": "evidence/extra-gyms/common/surf-repairs.json",
+      "target": "common",
+      "kind": "surf-repairs",
+      "sha256": "ab8ef117afbc560d2a6c09cddd07dadf776e565e899b864681534feeee7727f4"
+    },
+    {
+      "file": "evidence/extra-gyms/common/coastal-details.json",
+      "target": "common",
+      "kind": "coastal-details",
+      "sha256": "7365646550d365f77352145687c3806ff92a38478749dbedfa87f72067ab0c3a"
+    },
+    {
+      "file": "evidence/extra-gyms/common/marine-network.json",
+      "target": "common",
+      "kind": "marine-network",
+      "sha256": "34e1703f3a3fb9a6ec9c7588e53ecffd49093cf26503c11bd3c66dbeb42b48c3"
+    },
+    {
+      "file": "evidence/extra-gyms/common/luffy-approach.json",
+      "target": "common",
+      "kind": "luffy-approach",
+      "sha256": "efa7ff66771f568ab772f7a338f80e069488fca590571304ddfc58dff1155d66"
+    },
+    {
+      "file": "evidence/extra-gyms/common/coastal-landings.json",
+      "target": "common",
+      "kind": "coastal-landings",
+      "sha256": "6aa872fd2e1f0f05d49b86a64f38cf437e515ff8036a8829010034b1fd03694c"
+    },
+    {
+      "file": "evidence/extra-gyms/common/map-finishing.json",
+      "target": "common",
+      "kind": "map-finishing",
+      "sha256": "c35d9accc828790b2e700cccae70af2299561a14beaa31b66ec21e9764bef925"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Normal/extra-gyms.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "extra-gyms",
+      "sha256": "2acb14aee2d989a9b6d269b3499f4a049d5d9331930eee58d2d77029eb0b6707"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Normal/review-mode.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "review-mode",
+      "sha256": "1df161bd8aeabef26e0d24691f8702fe1b4cc21ae176f1a4bb249d45ea84e20c"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Normal/ever-grande-market.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "ever-grande-market",
+      "sha256": "1e14d36a0f6a868ea0b3c5ae7a54909c098d91e5a2999d5fead72ad703123a0e"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Normal/dewford-competitive-shop.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "dewford-competitive-shop",
+      "sha256": "79f33bc418f63f4d61fbfe396d6a5cc9ed78e2d2778257b86fc4636065d3f4a5"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Normal/fallarbor-physics.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "fallarbor-physics",
+      "sha256": "2fa2717c49b593651ba4c070faf25fabf3939d5d5921c12db600124f93d0057f"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Hard/extra-gyms.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "extra-gyms",
+      "sha256": "6e23a479d102ebc726f26597af347ee9fb2679b49371683970453e696c5bd4fb"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Hard/review-mode.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "review-mode",
+      "sha256": "f8aa953912d0b889365b32919e8029e4ec21c012ba65dda03f3af7e83b4ff705"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Hard/ever-grande-market.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "ever-grande-market",
+      "sha256": "2afd6dcd9c1a7f4f9f596db60d63d3eb464fcdca72da7284800843856705b1f5"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Hard/dewford-competitive-shop.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "dewford-competitive-shop",
+      "sha256": "e799cee85c8a8f2541aa550d1f7c2cfe22818ad82a348c163442d9ba7a68bb91"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-4-Hard/fallarbor-physics.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "fallarbor-physics",
+      "sha256": "c918166cae36b4d433dda1add98c885b387c9d377aa3166ad1306a223d815069"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Normal/extra-gyms.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "extra-gyms",
+      "sha256": "35cdfbaef0b8c2fe04b3119ccc9487faef5162726afb5afa0ae4922e24031bbe"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Normal/review-mode.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "review-mode",
+      "sha256": "c54830dc31a34bcb0c229f0007e57082a856782e6787380cb0027232f54bd55c"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Normal/ever-grande-market.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "ever-grande-market",
+      "sha256": "b81a77015d58bc0e87334f6774f38a367f6118cd728481c0313696c340b12511"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Normal/dewford-competitive-shop.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "dewford-competitive-shop",
+      "sha256": "4745d3fd14b06591403f41fbb1555989acccbc159136f88fd24b7630019a7363"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Normal/fallarbor-physics.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "fallarbor-physics",
+      "sha256": "e307553174da528f8de3b4a66e3295830de5dd0ca5b643734aafb5fa04681d79"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Hard/extra-gyms.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "extra-gyms",
+      "sha256": "2cd182f8581bd07e09b6fcce28411bf6319d6af4a53b431b8165f6c78a74469a"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Hard/review-mode.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "review-mode",
+      "sha256": "8d97ba10ff01fb040e49cded105fd58f7caea286745c1284acb3c5f06e2e10b0"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Hard/ever-grande-market.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "ever-grande-market",
+      "sha256": "db0928b7f4656fce1737872da2cd3b7dd7301f8bb9f2691d4a1e243b7c48f174"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Hard/dewford-competitive-shop.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "dewford-competitive-shop",
+      "sha256": "0aa7e93daaf37455a94cf4bf4f909b37f60037042ba6e064352f3c1e3916ef87"
+    },
+    {
+      "file": "evidence/extra-gyms/Pokemon-Journey-Gen1-9-Hard/fallarbor-physics.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "fallarbor-physics",
+      "sha256": "9ba6c57230af181d26bde44650bc3c96d7dacd074ce6894542974d30139bac79"
+    },
+    {
+      "file": "evidence/extra-gyms/test/extra-gyms.json",
+      "target": "test",
+      "kind": "extra-gyms",
+      "sha256": "637206a0a8cfe7535976fb72a21ecd16e24f2fb827c9044001145ecdbe2a454d"
+    },
+    {
+      "file": "evidence/extra-gyms/test/review-mode.json",
+      "target": "test",
+      "kind": "review-mode",
+      "sha256": "879107435f5bf44cb8bbd5d92c760cc092053dfffebb77f4ed506c783b6a37c7"
+    },
+    {
+      "file": "evidence/extra-gyms/test/ever-grande-market.json",
+      "target": "test",
+      "kind": "ever-grande-market",
+      "sha256": "9955e593623ba49e9028f35a03ad044e60ad2b3b39a3eeae216cd66c577796ae"
+    },
+    {
+      "file": "evidence/extra-gyms/test/dewford-competitive-shop.json",
+      "target": "test",
+      "kind": "dewford-competitive-shop",
+      "sha256": "faa92276488c661a448e0988be0c35550f8b7b5cf57a2c0b791ebfe884864e42"
+    },
+    {
+      "file": "evidence/extra-gyms/test/fallarbor-physics.json",
+      "target": "test",
+      "kind": "fallarbor-physics",
+      "sha256": "923199ab37f444bee058eb927ef9a7e5ddba9b49ffa8ebfe7edcd238849ff785"
+    }
+  ],
+  "historical_validation": {
+    "manifest": "mods/hoenn/validation-baselines/pr79/versions.json",
+    "manifest_sha256": "aef1de99346ea209c848483e112f96bb342b45bc4837a0cbbed208dd0e0bf077",
+    "parent_rom_sha256": "6be718b3917eb6b6f639384ee99563280e272417beec5e22b6722c4cad033462",
+    "compressed_parent_sha256": "e535f4c1d775f07a872b9d4998baf985638afbf68fffdf6df2e8490184cc58bc",
+    "retested_on_current_rom": false,
+    "source": "PR79",
+    "notes": "Earlier PWT/mechanics runs remain bound to their original ROM bytes; no tournaments repeated for this coastal update."
+  },
+  "previous_validation": {
+    "manifest": "mods/hoenn/validation-baselines/pr81/versions.json",
+    "manifest_sha256": "d67a4baba3462f9030ac07d5416c815a915737a1d5ea25a3c7dc06f1b0966175",
+    "parent_rom": "mods/hoenn/validation-baselines/pr81/parent.gba.gz",
+    "parent_archive_sha256": "632707c8c5fb96f674bd7f3d1770c3870d22434431deccebfe48cbe88b45122a",
+    "evidence_directory": "mods/hoenn/versions",
+    "retested_on_current_rom": false
+  },
+  "previous_port_validation": {
+    "manifest": "mods/hoenn/extra-gyms-validation/baseline/versions.json",
+    "manifest_sha256": "1dc870480835c9b5068565b80a1108e36480004b612d828b0f40fe904d5ed297",
+    "retested_on_current_rom": false
+  },
+  "previous_review_validation": {
+    "file": "mods/hoenn/extra-gyms-validation/baseline/review.json",
+    "sha256": "654d5474954838e66db1b592322d11caffb71d2583f3d5a859a3e349f0be1570"
+  }
+}

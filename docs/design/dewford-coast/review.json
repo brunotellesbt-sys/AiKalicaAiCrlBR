@@ -1,0 +1,70 @@
+{
+  "rom_sha256": "5e0cecc8d2143334795a752e9bb1f70343671f34a29dbd2af3a78e3bff05ef50",
+  "source_map_renders_not_emulator_captures": true,
+  "native_tiles_and_complete_maps": true,
+  "real_neighbor_maps_include_diagonals": true,
+  "regional_southern_border_included": true,
+  "border_rule": "dewford_coast_landscape.south_border_block",
+  "conditional_items_shown_as_unclaimed_fixture": true,
+  "maps": {
+    "DewfordTown": {
+      "origin": [
+        -20,
+        0
+      ],
+      "width": 20,
+      "height": 20,
+      "blockdata_sha256": "be0a4791c9d9e804ad797f4537aa97740b7211fefbb312274e3d8534a4ba4820",
+      "border_sha256": "558c2fc1783459a6a4687e1fea767e8d4e30bc4ece5f37a0433fd5f7f58e5e9c",
+      "image": "DewfordTown-whole-with-neighbors.png",
+      "review_width": 35,
+      "review_height": 34,
+      "image_sha256": "3ccabcaa0681a4a07d6f71fc183327a1f125f3f5a1f0e9eea301ca0b9beb9791"
+    },
+    "Route106": {
+      "origin": [
+        -80,
+        -20
+      ],
+      "width": 80,
+      "height": 20,
+      "blockdata_sha256": "9c61f471df094a19f2b2de173e92e175d9fd13f0096c60a65b41a46f332c2f0e",
+      "border_sha256": "a92715f9980b3889fa45537df0801cbea6346d0f35416a5ac3ba05b2311d79e4",
+      "image": "Route106-whole-with-neighbors.png",
+      "review_width": 95,
+      "review_height": 34,
+      "image_sha256": "3fbeab2dc5d12eb4ce1aac2cf4f2a12055fe3449fa4d11c38cc2998b5fbf106e"
+    },
+    "Route107": {
+      "origin": [
+        0,
+        0
+      ],
+      "width": 60,
+      "height": 20,
+      "blockdata_sha256": "283eae353f4c7e773a3898f96687d3b21d83252e1f6fcda8b4f81e186cdb71d3",
+      "border_sha256": "a92715f9980b3889fa45537df0801cbea6346d0f35416a5ac3ba05b2311d79e4",
+      "image": "Route107-whole-with-neighbors.png",
+      "review_width": 75,
+      "review_height": 34,
+      "image_sha256": "7d0f99505afe8f393d1ebe571f7ecd1639e09762ca9d104165e5fd0bf0ecbfe1"
+    },
+    "JourneyDewfordPortIsland": {
+      "origin": [
+        0,
+        -12
+      ],
+      "width": 16,
+      "height": 12,
+      "blockdata_sha256": "223a48f176bc92d90f061f3b47a4c59b4b995b37a4656aaf26fc0c04b0c2f3e4",
+      "border_sha256": "09e6b43c8549e711f19a59dea03683b6c42176bdc528bf60fc0b9a0629720fbb",
+      "image": "JourneyDewfordPortIsland-whole-with-neighbors.png",
+      "review_width": 31,
+      "review_height": 26,
+      "image_sha256": "17129e0456856e6745351e1c8b76a9651a294728d10dedc8874a769c33ddda50"
+    }
+  },
+  "connected_whole_maps": "Dewford-connected-whole-maps.png",
+  "port_bridge_south_focus": "Dewford-port-bridge-and-south-coast.png",
+  "functional_evidence": "mods/hoenn/dewford-coast-validation"
+}
