@@ -15,6 +15,8 @@ ALLOWED_SOURCE_FILES = {
     'include/journey_coastal_piers.h',
     'src/event_object_movement.c',
     'src/fieldmap.c',
+    'data/tilesets/primary/general_frlg/metatiles.bin',
+    'data/tilesets/primary/general_frlg/metatile_attributes.bin',
 }
 SEVII_TOWNS = ['OneIsland_Frlg', 'TwoIsland_Frlg', 'ThreeIsland_Port_Frlg',
                'FourIsland_Frlg', 'FiveIsland_Frlg', 'SixIsland_Frlg',
@@ -138,6 +140,8 @@ def verify_update(directory, info):
                           'foot_blocks_water', 'surf_entry_blocked_on_low_deck',
                           'open_sea_bypass_bidirectional',
                           'all_seven_surface_seams_preserved',
+                          'wooden_endcaps_compiled', 'wooden_endcaps_loaded',
+                          'no_metal_endcaps', 'native_endpoint_behaviors_preserved',
                           'no_midtrip_coordinate_or_elevation_writes',
                           'placements_progress_party_are_fixtures']:
                 assert report[field] is True, field
@@ -145,17 +149,33 @@ def verify_update(directory, info):
                 for field in ['controller_terminal_return', 'all_deck_rows_walked',
                               'foot_elevation_3', 'foot_above_boards',
                               'foot_blocks_water',
+                              'wooden_endcaps_loaded', 'no_metal_endcaps',
                               'no_midtrip_coordinate_or_elevation_writes']:
                     assert bridge[field] is True, (bridge['island'], field)
                 assert bridge['one_beach_seam_crossed'] is (bridge['island'] == 'One')
+                assert bridge['native_endpoint']['metatile_ids'] == [0x228, 0x229, 0x22A]
+                assert bridge['native_endpoint']['behaviors'] == [0, 0x65, 0]
+                assert bridge['native_endpoint']['elevations'] == [3, 3, 3]
+            compiled = report['compiled_wooden_endcaps']
+            assert len(compiled) == 3
+            for cap, tile, donor, attribute in zip(compiled, [0x228, 0x229, 0x22A],
+                                                  [0x1C5, 0x1C6, 0x1C7], [0, 0x65, 0]):
+                assert cap['metatile'] == tile and cap['native_donor'] == donor
+                assert cap['compiled_attribute'] == attribute
+                assert len(cap['compiled_art']) == 8
+                assert cap['exact_native_wood_art'] is True
+                assert cap['native_warp_behavior_preserved'] is True
             for pier in report['low_piers']:
                 for field in ['surf_entry_blocked', 'connected_map_entry_blocked',
                               'open_sea_bypass_bidirectional',
-                              'four_surface_seams_controller_roundtrip',
+                              'all_surface_seams_controller_roundtrip',
                               'no_midtrip_coordinate_or_elevation_writes']:
                     assert pier[field] is True, (pier['island'], field)
-                assert len(pier['seams']) == 4
+                expected_seams = {'One': 4, 'Two': 2, 'Three': 3, 'Four': 4,
+                                  'Five': 4, 'Six': 4, 'Seven': 4}[pier['island']]
+                assert pier['surface_seams_checked'] == len(pier['seams']) == expected_seams
                 assert all(seam['controller_roundtrip'] is True for seam in pier['seams'])
+            assert sum(pier['surface_seams_checked'] for pier in report['low_piers']) == 25
         elif kind == 'coastal-cave-finishing':
             assert len(report['caves']) == 9
             assert {cave['surface'] for cave in report['caves']} == {

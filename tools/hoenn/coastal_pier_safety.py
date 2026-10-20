@@ -6,9 +6,15 @@ and a surfer entering beneath them is hidden by the foreground planks.
 """
 import copy
 import json
+import re
 import struct
 
 from extra_gym_landscape import OBSOLETE_FERRIES
+
+PRIMARY_METATILES = 'data/tilesets/primary/general_frlg/metatiles.bin'
+PRIMARY_ATTRIBUTES = 'data/tilesets/primary/general_frlg/metatile_attributes.bin'
+WOODEN_ENDCAP_IDS = (0x228, 0x229, 0x22A)
+WOODEN_BOARD_IDS = (0x1C5, 0x1C6, 0x1C7)
 
 
 def repair(layer):
@@ -30,6 +36,36 @@ def repair(layer):
         stage(path, json.dumps(value, indent=2) + '\n')
 
     layouts = {row['id']: row for row in read_json('data/layouts/layouts.json')['layouts']}
+    # Reuse three genuinely blank, unreferenced primary slots. Their art is
+    # exactly the native wooden deck; only the middle slot retains the south
+    # arrow warp behavior. Do not repaint the original metal ramps globally.
+    primary_metas = bytearray(raw(PRIMARY_METATILES))
+    primary_attrs = bytearray(raw(PRIMARY_ATTRIBUTES))
+    assert len(primary_metas) == 640 * 16 and len(primary_attrs) == 640 * 4
+    reviewed_layouts = []
+    for layout in layouts.values():
+        if layout['primary_tileset'] != 'gTileset_General_Frlg':
+            continue
+        reviewed_layouts.append(layout['id'])
+        for path in (layout['blockdata_filepath'], layout['border_filepath']):
+            blob = raw(path)
+            values = struct.unpack('<' + 'H' * (len(blob) // 2), blob)
+            assert not {value & 1023 for value in values} & set(WOODEN_ENDCAP_IDS), path
+    assert reviewed_layouts
+    for mid, donor, behavior in zip(WOODEN_ENDCAP_IDS, WOODEN_BOARD_IDS, (0, 0x65, 0)):
+        assert primary_metas[mid * 16:(mid + 1) * 16] == bytes(16), mid
+        assert primary_attrs[mid * 4:(mid + 1) * 4] == bytes(4), mid
+        primary_metas[mid * 16:(mid + 1) * 16] = primary_metas[donor * 16:(donor + 1) * 16]
+        struct.pack_into('<I', primary_attrs, mid * 4, behavior)
+    stage(PRIMARY_METATILES, primary_metas)
+    stage(PRIMARY_ATTRIBUTES, primary_attrs)
+    wooden_endcaps = dict(metatiles_path=PRIMARY_METATILES, attributes_path=PRIMARY_ATTRIBUTES,
+                          private_metatile_ids=list(WOODEN_ENDCAP_IDS),
+                          native_wooden_donors=list(WOODEN_BOARD_IDS), attributes=[0, 0x65, 0],
+                          previously_blank_and_unreferenced=True,
+                          reviewed_layouts=sorted(reviewed_layouts),
+                          all_other_metatiles_and_attributes_unchanged=True,
+                          original_metal_ramps_unchanged=True)
     map_data, original_maps, grids = {}, {}, {}
 
     def load(name):
@@ -58,7 +94,7 @@ def repair(layer):
 
     town_bridges, rectangles = [], []
     # Native GeneralFRLG boards have coherent left/middle/right edges. The
-    # actual ferry arrow triplet appears once, at the new end of each deck.
+    # endpoint looks continuous too, while retaining its native warp behavior.
     boards = [0x31C5, 0x31C6, 0x31C7]
     for ferry in OBSOLETE_FERRIES:
         island, town = ferry['island'], ferry['town']
@@ -66,8 +102,19 @@ def repair(layer):
         before_town, before_harbor = copy.deepcopy(load(town)), copy.deepcopy(load(harbor))
         rx, ry = ferry['ramp']
         layout, values = grids[town]
-        endpoint = list(values[ry * layout['width'] + rx - 1:ry * layout['width'] + rx + 2])
-        assert all(value >> 12 == 3 and not value & 0xC00 for value in endpoint), (town, endpoint)
+        old_endpoint = list(values[ry * layout['width'] + rx - 1:ry * layout['width'] + rx + 2])
+        assert all(value >> 12 == 3 and not value & 0xC00 for value in old_endpoint), (town, old_endpoint)
+        headers = raw('src/data/tilesets/headers.h').decode()
+        definitions = raw('src/data/tilesets/metatiles.h').decode()
+        header = re.search(r'const struct Tileset ' + layout['secondary_tileset'] + r'\s*=\s*\{(.*?)\};', headers, re.S)[1]
+        symbol = re.search(r'\.metatiles\s*=\s*(\w+)', header)[1]
+        metatiles_path = re.search(r'\b' + symbol + r'\[\].*?"([^"]+)"', definitions)[1]
+        attributes_path = metatiles_path.replace('metatiles.bin', 'metatile_attributes.bin')
+        secondary_attrs = raw(attributes_path)
+        endpoint_attrs = [struct.unpack_from('<I', secondary_attrs, ((value & 1023) - 640) * 4)[0]
+                          for value in old_endpoint]
+        assert endpoint_attrs == [0, 0x65, 0], (town, endpoint_attrs)
+        endpoint = [0x3000 | mid for mid in WOODEN_ENDCAP_IDS]
         assert before_town['warp_events'][ferry['ramp_warp']]['elevation'] == 3
         segments, changes = [], []
         if island == 'One':
@@ -115,7 +162,9 @@ def repair(layer):
                    old_ramp=[rx, ry], end=[end_map, ex, ey], endpoint_warp_id=outward_id,
                    deck_segments=[dict(map=n, footprint=[x, y, w, h]) for n, x, y, w, h in segments],
                    changed_cells=changes, width=3, foot_elevation=3, native_board_metatiles=boards,
-                   endpoint_metatiles=endpoint, warp_before=before_town['warp_events'][ferry['ramp_warp']],
+                   endpoint_metatiles=endpoint, old_endpoint_metatiles=old_endpoint,
+                   endpoint_attributes=endpoint_attrs, metal_endpoint_art_removed=True,
+                   warp_before=before_town['warp_events'][ferry['ramp_warp']],
                    warp_after=copy.deepcopy(map_data[end_map]['warp_events'][outward_id]),
                    return_warp_before=before_harbor['warp_events'][0],
                    return_warp_after=copy.deepcopy(map_data[harbor]['warp_events'][0]),
@@ -247,6 +296,7 @@ static bool8 JourneyLowPierBlocks(const struct ObjectEvent *object, s16 x, s16 y
                                  warps_before=original_maps[name]['warp_events'],
                                  warps_after=copy.deepcopy(data['warp_events'])))
     return dict(town_bridges=town_bridges, low_piers=low_piers, collision_rectangles=rectangles,
+                wooden_endcaps=wooden_endcaps,
                 source_edits=source_edits,
                 changed_paths=sorted(touched), collision_header='include/journey_coastal_piers.h',
                 low_piers_block_surf_entry=True, saved_surfer_can_leave_old_underpass=True,
@@ -254,4 +304,5 @@ static bool8 JourneyLowPierBlocks(const struct ObjectEvent *object, s16 x, s16 y
                 npc_and_player_collision_interfaces_match=True,
                 no_player_coordinate_or_elevation_writes=True,
                 route107_high_bridge_unchanged=True, all_seven_surface_seams_preserved=True,
-                native_tilesets_and_palettes_unchanged=True)
+                native_pixels_and_palettes_unchanged=True,
+                only_unused_primary_slots_changed=True)

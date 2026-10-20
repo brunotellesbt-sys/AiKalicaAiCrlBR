@@ -38,6 +38,7 @@ Atualização explícita do usuário: “esquece essa parte de desenhar”. A ge
 - Una pontes sem frestas; barcos precisam de água livre ao redor e não podem ficar presos entre ponte e areia.
 - Nas sete Sevii, as antigas coberturas vermelhas abaixo das rampas são restos do porto anterior, não terminais completos. Remova a cobertura e o retângulo de água de outro padrão juntos, conserve a rampa e teste ida e volta até o terminal completo. Não resolva só Six Island deixando o mesmo defeito nas outras seis. Os retornos em areia precisam do comportamento de warp norte, preservando a arte e os IDs de destino.
 - O usuário pediu prolongar as sete rampas sobre a área dos telhados retirados. A ponte precisa cruzar a conexão One Island/Treasure Beach inteira; revise as referências de warp ao mover a extremidade para o mapa vizinho.
+- As sete pontas prolongadas terminam em madeira, sem a faixa metálica. Ao substituir a arte de um tile que aciona uma passagem, preserve seu comportamento, altura e evento. Use definições privadas realmente vazias e sem referências, confira a arte compilada e percorra o warp nos dois sentidos; não repinte um tile compartilhado por outras estruturas.
 - Bloqueie áreas externas com pedras inteiras sem fechar passagens existentes. Não permita caminhar sobre água nem surfar em terra ou estruturas.
 - Verifique transições nos dois sentidos. Distância e direção percorridas devem corresponder às conexões físicas do mundo.
 

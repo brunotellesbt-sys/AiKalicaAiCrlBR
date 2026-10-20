@@ -2,6 +2,7 @@
 import hashlib
 import json
 import re
+import struct
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -9,6 +10,25 @@ bootstrap = (ROOT / 'tools/hoenn/validate_trainer_levels.py').read_text().split(
 exec(compile(bootstrap, __file__, 'exec'))
 initial_sha = hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest()
 piers = json.loads((source / '.journey-dewford-coast-safety').read_text())['piers']
+wood = piers['wooden_endcaps']
+assert wood['private_metatile_ids'] == [0x228, 0x229, 0x22A]
+assert wood['native_wooden_donors'] == [0x1C5, 0x1C6, 0x1C7]
+assert wood['attributes'] == [0, 0x65, 0]
+metatile_data = (source / wood['metatiles_path']).read_bytes()
+attribute_data = (source / wood['attributes_path']).read_bytes()
+compiled_endcaps = []
+for tile, donor, attribute in zip(wood['private_metatile_ids'],
+                                  wood['native_wooden_donors'], wood['attributes']):
+    expected = struct.unpack_from('<8H', metatile_data, donor * 16)
+    assert struct.unpack_from('<8H', metatile_data, tile * 16) == expected
+    assert struct.unpack_from('<I', attribute_data, tile * 4)[0] == attribute
+    loaded = [lib.read16(s['gMetatiles_General_Frlg'] + tile * 16 + i * 2)
+              for i in range(8)]
+    loaded_attribute = lib.read32(s['gMetatileAttributes_General_Frlg'] + tile * 4)
+    assert loaded == list(expected) and loaded_attribute == attribute, (tile, loaded, loaded_attribute)
+    compiled_endcaps.append(dict(metatile=tile, native_donor=donor,
+                                 compiled_art=list(loaded), compiled_attribute=loaded_attribute,
+                                 exact_native_wood_art=True, native_warp_behavior_preserved=True))
 ports = json.loads((source / '.journey-sevii-harbors').read_text())['ports']
 all_maps = {p.parent.name: json.loads(p.read_text()) for p in (source / 'data/maps').glob('*/map.json')}
 all_by_id = {m['id']: n for n, m in all_maps.items()}
@@ -59,7 +79,12 @@ def state():
 
 def assert_foot():
     value = state()
-    assert not value['surfing'] and value['elevation'] == 3 and value['priority'] == 1, value
+    # Native ordinary elevation-3 floors use OAM priority 2. Only the
+    # multi-level main-pier planks need priority 1 to draw above the deck.
+    x, y = value['position']
+    tile_elevation = native('MapGridGetElevationAt', x + 7, y + 7)
+    expected_priority = 1 if tile_elevation == 15 else 2
+    assert not value['surfing'] and value['elevation'] == 3 and value['priority'] == expected_priority, (value, tile_elevation)
     assert value['sprite_visible'], value
     return value
 
@@ -90,6 +115,8 @@ for row in piers['town_bridges']:
     assert_foot()
     first = len(visited)
     walked_rows = []
+    end_map, ex, ey = row['end']
+    loaded_endcap = None
     for segment in row['deck_segments']:
         n = segment['map']
         x, y, width, height = segment['footprint']
@@ -99,7 +126,21 @@ for row in piers['town_bridges']:
             step(15)
             assert_foot()
             walked_rows.append(list(goal))
-    end_map, ex, ey = row['end']
+            if n == end_map and yy == ey - 1:
+                assert by_location[location()] == end_map
+                ids = [native('MapGridGetMetatileIdAt', ex - 1 + dx + 7, ey + 7)
+                       for dx in range(3)]
+                behaviors_at_end = [native('MapGridGetMetatileBehaviorAt', ex - 1 + dx + 7, ey + 7)
+                                    for dx in range(3)]
+                elevations = [native('MapGridGetElevationAt', ex - 1 + dx + 7, ey + 7)
+                              for dx in range(3)]
+                assert ids == wood['private_metatile_ids'], (row['island'], ids)
+                assert behaviors_at_end == [0, 0x65, 0], (row['island'], behaviors_at_end)
+                assert elevations == [3, 3, 3], (row['island'], elevations)
+                loaded_endcap = dict(metatile_ids=ids, behaviors=behaviors_at_end,
+                                     elevations=elevations)
+                picture(row['island'].lower() + '-wooden-endcap-visible')
+    assert loaded_endcap is not None, row['island']
     picture(row['island'].lower() + '-extended-town-deck')
     # Keep the same trip: the native south-arrow warp reaches the real main
     # terminal, then the north-arrow returns to the new endpoint.
@@ -133,6 +174,8 @@ for row in piers['town_bridges']:
                             start=list(start), endpoint=row['end'], walked_rows=walked_rows,
                             controller_terminal_return=True, all_deck_rows_walked=True,
                             foot_elevation_3=True, foot_above_boards=True,
+                            wooden_endcaps_loaded=True, no_metal_endcaps=True,
+                            native_endpoint=loaded_endcap,
                             foot_blocks_water=True, one_beach_seam_crossed=row['island'] == 'One',
                             no_midtrip_coordinate_or_elevation_writes=True))
     print('Native extended Sevii town deck passed:', row['island'], flush=True)
@@ -168,9 +211,13 @@ for row in piers['low_piers']:
         probes.append(dict(source=[n, sx, sy], target=[n, tx, ty], blocked=True))
     # Open west water is a navigable bypass in both directions. No low deck,
     # boat or hull is used as a shortcut in this route planner.
-    start = (n, 1, 1)
-    end = (n, 1, h - 2)
-    assert start[2] * w + start[1] in wet[n] and end[2] * w + end[1] in wet[n]
+    # Two's native southern reef occupies the last inner row; choose the
+    # full open western span from real water cells rather than spawning
+    # onto that blocked reef.
+    west_rows = [y for y in range(1, h - 1) if y * w + 1 in wet[n]]
+    assert west_rows and max(west_rows) - min(west_rows) >= 7, (n, west_rows)
+    start = (n, 1, min(west_rows))
+    end = (n, 1, max(west_rows))
     warp(*start)
     native('SetPlayerAvatarTransitionFlags', 8)
     step(90)
@@ -219,7 +266,8 @@ for row in piers['low_piers']:
         assert len(trip) == 2 and trip[0]['destination'][0] == dest and trip[1]['destination'][0] == n, trip
         seam_checks.append(dict(direction=direction, destination=dest, controller_roundtrip=True,
                                 transitions=trip, source=list(departure), target=list(arrival)))
-    assert len(seam_checks) == 4
+    assert len(seam_checks) == len(row['surface_connections'])
+    assert {c['direction'] for c in seam_checks} == {c['direction'] for c in row['surface_connections']}
     # The east border intersects the front low plank: explicitly try to
     # enter from the connected sea before CameraMove switches map headers.
     east = next(c for c in row['surface_connections'] if c['direction'] == 'right')
@@ -241,9 +289,9 @@ for row in piers['low_piers']:
     low_checks.append(dict(island=row['island'], map=n, blocked_probes=probes,
                           seam_blocked_probes=probes_from_seam, surf_entry_blocked=True,
                           connected_map_entry_blocked=True, open_sea_bypass_bidirectional=True,
-                          four_surface_seams_controller_roundtrip=True, seams=seam_checks,
+                          all_surface_seams_controller_roundtrip=True, surface_seams_checked=len(seam_checks), seams=seam_checks,
                           no_midtrip_coordinate_or_elevation_writes=True))
-    print('Native low pier and four surface seams passed:', row['island'], flush=True)
+    print('Native low pier and all surface seams passed:', row['island'], flush=True)
 
 assert len(town_checks) == len(low_checks) == 7
 assert hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest() == initial_sha
@@ -257,4 +305,7 @@ result = dict(passed=True, rom_sha256=initial_sha, review_mode=review,
               open_sea_bypass_bidirectional=True, all_seven_surface_seams_preserved=True,
               no_midtrip_coordinate_or_elevation_writes=True,
               placements_progress_party_are_fixtures=True, full_campaign_playthrough=False)
+result.update(wooden_endcaps_compiled=True, wooden_endcaps_loaded=True,
+              no_metal_endcaps=True, native_endpoint_behaviors_preserved=True,
+              compiled_wooden_endcaps=compiled_endcaps)
 (args.output / 'coastal-pier-safety.json').write_text(json.dumps(result, indent=2) + '\n')

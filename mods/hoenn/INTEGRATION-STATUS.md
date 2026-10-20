@@ -1,6 +1,10 @@
 # Atualização costeira e níveis dinâmicos
 
-Camada atual: **160 — extra-gyms**. Consulte [ginásios, travessias e limites das evidências](../../docs/ginasios-extras-e-travessias.md). Eventos após 18/22 insígnias aguardam especificação do autor.
+Camada atual: **161 — dewford-coast-safety**. Consulte [Dewford, pontes das Sevii e acessos de cavernas](../../docs/dewford-sevii-coast-safety.md). Corrige o bloqueio e a visibilidade da ponte de Dewford, a praia e a floresta da Rota 107, os recortes do terminal na câmera, as sete pontes das Sevii com pontas de madeira e as nove montanhas das cavernas. O mapa-múndi e os oito ginásios permanecem preservados.
+
+A entrega exige 27 provas associadas aos hashes finais: auditoria de 35 arquivos de origem, todas as 427 conexões externas de Surf e cinco conjuntos de verificações nativas. As provas de ginásios e campanha anteriores conservam seus próprios hashes históricos; a campanha completa não foi refeita. A tela azul enviada da TESTE não foi reproduzida no mGBA, abrindo desde o início com e sem o save distribuído. Não há causa específica confirmada no My Boy. O player é preparado e testado; o GitHub Pages é atualizado após o merge em `main`.
+
+Histórico anterior — **160 — extra-gyms**. Consulte [ginásios, travessias e limites das evidências](../../docs/ginasios-extras-e-travessias.md). Eventos após 18/22 insígnias aguardam especificação do autor.
 
 Os oito ginásios extras têm interiores temáticos, quatro treinadores em passagens obrigatórias e entradas sem NPCs. A Ilha 6 mantém somente o terminal completo: o telhado antigo foi removido e a rampa tem retorno nativo ativado. As quatro ROMs normais e a TESTE acompanham o player; na TESTE, não há encontros selvagens nem aproximações automáticas.
 

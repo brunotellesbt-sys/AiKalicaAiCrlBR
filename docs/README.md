@@ -1,6 +1,6 @@
 # Pokémon Journey — documentação do jogo
 
-[Entrega atual: oito ginásios e travessias corrigidas](ginasios-extras-e-travessias.md)
+[Entrega atual: Dewford, pontes das Sevii e montanhas completas das cavernas](dewford-sevii-coast-safety.md). Mantém o [circuito de 24 insígnias](ginasios-extras-e-travessias.md).
 
 Kanto, Hoenn e Sevii formam um mundo conectado por rotas marítimas. O jogo e seus diálogos estão em inglês; este guia está em português.
 

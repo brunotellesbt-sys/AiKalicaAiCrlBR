@@ -113,6 +113,47 @@ def audit_completed_caves(source, baseline, layouts, metadata):
     return paths, checks
 
 
+def audit_wooden_endcaps(source, baseline, layouts, metadata):
+    """Only three unused primary definitions gain native wood and warp behavior."""
+    meta_path = 'data/tilesets/primary/general_frlg/metatiles.bin'
+    attrs_path = 'data/tilesets/primary/general_frlg/metatile_attributes.bin'
+    ids, donors, attributes = [0x228, 0x229, 0x22A], [0x1C5, 0x1C6, 0x1C7], [0, 0x65, 0]
+    assert metadata['metatiles_path'] == meta_path and metadata['attributes_path'] == attrs_path
+    assert metadata['private_metatile_ids'] == ids
+    assert metadata['native_wooden_donors'] == donors
+    assert metadata['attributes'] == attributes
+    assert metadata['previously_blank_and_unreferenced']
+    assert metadata['all_other_metatiles_and_attributes_unchanged']
+    assert metadata['original_metal_ramps_unchanged']
+    before_metas = (baseline/meta_path).read_bytes()
+    before_attrs = (baseline/attrs_path).read_bytes()
+    expected_metas, expected_attrs = bytearray(before_metas), bytearray(before_attrs)
+    assert len(before_metas) == 640 * 16 and len(before_attrs) == 640 * 4
+    reviewed = []
+    for layout in layouts.values():
+        if layout['primary_tileset'] != 'gTileset_General_Frlg':
+            continue
+        reviewed.append(layout['id'])
+        for path in [layout['blockdata_filepath'], layout['border_filepath']]:
+            raw = (baseline/path).read_bytes()
+            values = struct.unpack('<'+'H'*(len(raw)//2), raw)
+            assert not {value & 1023 for value in values} & set(ids), path
+    assert reviewed and metadata['reviewed_layouts'] == sorted(reviewed)
+    for mid, donor, attr in zip(ids, donors, attributes):
+        assert before_metas[mid*16:(mid+1)*16] == bytes(16)
+        assert before_attrs[mid*4:(mid+1)*4] == bytes(4)
+        expected_metas[mid*16:(mid+1)*16] = before_metas[donor*16:(donor+1)*16]
+        struct.pack_into('<I', expected_attrs, mid*4, attr)
+    assert (source/meta_path).read_bytes() == expected_metas
+    assert (source/attrs_path).read_bytes() == expected_attrs
+    # Tile pixels and every palette remain untouched; this swaps definitions,
+    # not shared graphics or the original metal ferry ramps.
+    folder = baseline/Path(meta_path).parent
+    for path in [folder/'tiles.png', *sorted((folder/'palettes').glob('*.pal'))]:
+        assert path.read_bytes() == (source/path.relative_to(baseline)).read_bytes()
+    return {meta_path, attrs_path}
+
+
 def audit_coastal_piers(source, baseline, layouts, metadata):
     """Reconstruct the seven authorized decks and their exact ferry changes."""
     towns = {
@@ -139,6 +180,8 @@ def audit_coastal_piers(source, baseline, layouts, metadata):
         return maps[name]
     expected_rectangles = []
     boards = [0x31C5, 0x31C6, 0x31C7]
+    wooden_paths = audit_wooden_endcaps(source, baseline, layouts, metadata['wooden_endcaps'])
+    wooden_endpoint = [0x3228, 0x3229, 0x322A]
     for island, town in towns.items():
         row = records[island]
         assert row['town'] == town
@@ -150,12 +193,30 @@ def audit_coastal_piers(source, baseline, layouts, metadata):
         wid = ferry['ramp_warp_id']
         layout = layouts[data['layout']]
         width = layout['width']
-        endpoint = old_grids[town][ry*width+rx-1:ry*width+rx+2]
+        old_endpoint = old_grids[town][ry*width+rx-1:ry*width+rx+2]
+        endpoint = wooden_endpoint
         assert row['old_ramp'] == [rx, ry]
         assert row['start'] == [town, rx, ry-1]
         assert row['width'] == 3 and row['foot_elevation'] == 3
         assert row['native_board_metatiles'] == boards
         assert row['endpoint_metatiles'] == endpoint
+        assert row['old_endpoint_metatiles'] == old_endpoint
+        assert row['endpoint_attributes'] == [0, 0x65, 0]
+        assert row['metal_endpoint_art_removed']
+        bank, old_ids = {
+            'One': ('sevii_islands_123_frlg', [0x2B4, 0x2B5, 0x2B6]),
+            'Two': ('sevii_islands_123_frlg', [0x2B4, 0x2B5, 0x2B6]),
+            'Three': ('sevii_islands_123_frlg', [0x2B4, 0x2B5, 0x2B6]),
+            'Four': ('sevii_islands_45_frlg', [0x2F8, 0x2F9, 0x2FA]),
+            'Five': ('sevii_islands_45_frlg', [0x2F8, 0x2F9, 0x2FA]),
+            'Six': ('sevii_islands_67_frlg', [0x2E3, 0x2E4, 0x2E5]),
+            'Seven': ('sevii_islands_67_frlg', [0x2E3, 0x2E4, 0x2E5]),
+        }[island]
+        assert old_endpoint == [0x3000 | mid for mid in old_ids]
+        attr_path = f'data/tilesets/secondary/{bank}/metatile_attributes.bin'
+        native_attrs = (baseline/attr_path).read_bytes()
+        assert [struct.unpack_from('<I', native_attrs, (mid-640)*4)[0]
+                for mid in old_ids] == [0, 0x65, 0]
         assert row['warp_before'] == old_maps[town]['warp_events'][wid]
         assert row['return_warp_before'] == old_maps[harbor]['warp_events'][0]
         if island == 'One':
@@ -213,14 +274,15 @@ def audit_coastal_piers(source, baseline, layouts, metadata):
     assert metadata['collision_rectangles'] == expected_rectangles
     assert metadata['route107_high_bridge_unchanged']
     assert metadata['all_seven_surface_seams_preserved']
-    assert metadata['native_tilesets_and_palettes_unchanged']
+    assert metadata['native_pixels_and_palettes_unchanged']
+    assert metadata['only_unused_primary_slots_changed']
     assert metadata['low_piers_block_surf_entry'] and metadata['saved_surfer_can_leave_old_underpass']
     assert metadata['connection_destination_resolved_before_crossing']
     assert metadata['npc_and_player_collision_interfaces_match']
     assert metadata['no_player_coordinate_or_elevation_writes']
     edits = {row['map']: row for row in metadata['source_edits']}
     assert len(metadata['source_edits']) == 9 and set(edits) == allowed_maps
-    paths = {'include/journey_coastal_piers.h', 'src/event_object_movement.c'}
+    paths = {'include/journey_coastal_piers.h', 'src/event_object_movement.c'} | wooden_paths
     changed_maps = set()
     for name in allowed_maps:
         row = edits[name]
@@ -241,7 +303,25 @@ def audit_coastal_piers(source, baseline, layouts, metadata):
             paths.add(block_path)
             assert len(actual) > 0
         assert (source/block_path).read_bytes() == struct.pack('<'+'H'*len(grids[name]), *grids[name])
-    assert set(metadata['changed_paths']) == paths and len(paths) == 19
+    assert set(metadata['changed_paths']) == paths and len(paths) == 21
+    # These new IDs are absent from every other GeneralFRLG map, including
+    # borders and shared layouts. Exactly the seven three-tile endpoints use
+    # them after the overlay, with no new art leaking into unrelated maps.
+    actual_endpoint_cells, expected_endpoint_cells = set(), set()
+    for row in records.values():
+        name, x, y = row['end']
+        expected_endpoint_cells.update((name, x+dx, y, mid)
+                                       for dx, mid in zip((-1, 0, 1), (0x228, 0x229, 0x22A)))
+    for name, data in ((path.parent.name, json.loads(path.read_text()))
+                       for path in (source/'data/maps').glob('*/map.json')):
+        layout = layouts[data['layout']]
+        if layout['primary_tileset'] != 'gTileset_General_Frlg':
+            continue
+        blob = (source/layout['blockdata_filepath']).read_bytes()
+        values = struct.unpack('<'+'H'*(len(blob)//2), blob)
+        actual_endpoint_cells.update((name, i % layout['width'], i // layout['width'], value & 1023)
+                                     for i, value in enumerate(values) if value & 1023 in (0x228, 0x229, 0x22A))
+    assert actual_endpoint_cells == expected_endpoint_cells and len(actual_endpoint_cells) == 21
     assert metadata['collision_header'] == 'include/journey_coastal_piers.h'
     header = (source/metadata['collision_header']).read_text()
     header_rects = re.findall(r'\{MAP_GROUP\((\w+)\), MAP_NUM\((\w+)\), (-?\d+), (-?\d+), (-?\d+), (-?\d+)\}', header)
@@ -294,7 +374,7 @@ def validate(source, baseline, output, preflight=False):
     cave_paths, cave_audit = audit_completed_caves(source, baseline, layouts, report['caves'])
     pier_paths, port_map_changes = audit_coastal_piers(source, baseline, layouts, report['piers'])
     allowed_changed_files = sorted(set(DEWFORD_CHANGED_FILES) | cave_paths | pier_paths)
-    assert len(allowed_changed_files) == 33
+    assert len(allowed_changed_files) == 35
     outputs = report['prepared_sha256']
     assert sorted(outputs) == allowed_changed_files
     changed = sorted(path for path, sha256 in outputs.items() if expected.get(path) != sha256)

@@ -20,4 +20,8 @@ As imagens são **renderizações dos tiles de origem**, não capturas de emulad
 | WorldSea07 | Estrelas | [Mapa](cavernas-costeiras/JourneyWorldSea07-before.png) | [Mapa](cavernas-costeiras/JourneyWorldSea07-after.png) |
 | WorldSea08 | Cristais | [Mapa](cavernas-costeiras/JourneyWorldSea08-before.png) | [Mapa](cavernas-costeiras/JourneyWorldSea08-after.png) |
 
-A revisão de origem verifica o recorte inteiro contra o mapa doador, preservação dos acessos e reaplicação sem mudanças adicionais. A prova funcional fica separada em `coastal-cave-finishing.json` de cada edição: o validador carrega os 81 tiles na ROM e percorre duas entradas e saídas por caverna, com desembarque e retorno ao Surf por comandos normais. A execução final depende da compilação do conjunto de correções.
+A revisão de origem verifica o recorte inteiro contra o mapa doador, preservação dos acessos e reaplicação sem mudanças adicionais. A validação nativa final passou nas quatro ROMs normais e na TESTE: nove cavernas por edição, duas idas e voltas por caverna, totalizando 90 idas e voltas e 180 trocas de mapa. Cada execução confere os 81 tiles da montanha carregados na ROM, o desembarque, a caminhada até a porta, a entrada, a saída e o retorno ao Surf.
+
+As provas com o SHA de cada ROM estão em `mods/hoenn/dewford-coast-validation/<edição>/coastal-cave-finishing.json`. Apenas o ponto inicial de Surf, a equipe e as insígnias são preparados pelo teste; os percursos seguintes usam os controles, sem alterar posição ou altura. Essa prova cobre os acessos das cavernas; não representa uma campanha completa nem o teste de abertura da TESTE, registrado separadamente.
+
+![Captura nativa final da entrada de Cristais](../../mods/hoenn/dewford-coast-validation/Gen1-4-Normal/Cristais-complete-mountain-front.png)

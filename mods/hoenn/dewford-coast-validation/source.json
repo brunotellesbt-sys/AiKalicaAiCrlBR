@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "rom_sha256": "8f0ddccd7a3e4a9c3b7430a6b5c631143449b65b8a3543e449c76167846f3db9",
+  "rom_sha256": "5e0cecc8d2143334795a752e9bb1f70343671f34a29dbd2af3a78e3bff05ef50",
   "parent_rom_sha256": "ae5da9ae24d315cd2a987afc48d42673a4d11b4fa9b411afcf5214d936759a2b",
   "layers": [
     "hoenn-crossing",
@@ -199,6 +199,8 @@
     "data/maps/SixIsland_Frlg/map.json",
     "data/maps/ThreeIsland_Port_Frlg/map.json",
     "data/maps/TwoIsland_Frlg/map.json",
+    "data/tilesets/primary/general_frlg/metatile_attributes.bin",
+    "data/tilesets/primary/general_frlg/metatiles.bin",
     "include/journey_coastal_piers.h",
     "include/journey_dewford_bridge.h",
     "include/journey_dewford_coast.h",
@@ -234,6 +236,8 @@
     "data/maps/SixIsland_Frlg/map.json",
     "data/maps/ThreeIsland_Port_Frlg/map.json",
     "data/maps/TwoIsland_Frlg/map.json",
+    "data/tilesets/primary/general_frlg/metatile_attributes.bin",
+    "data/tilesets/primary/general_frlg/metatiles.bin",
     "include/journey_coastal_piers.h",
     "include/journey_dewford_bridge.h",
     "include/journey_dewford_coast.h",
@@ -2417,7 +2421,7 @@
               3
             ],
             "before": 4395,
-            "after": 12980
+            "after": 12840
           },
           {
             "map": "OneIsland_TreasureBeach_Frlg",
@@ -2426,7 +2430,7 @@
               3
             ],
             "before": 4395,
-            "after": 12981
+            "after": 12841
           },
           {
             "map": "OneIsland_TreasureBeach_Frlg",
@@ -2435,7 +2439,7 @@
               3
             ],
             "before": 4395,
-            "after": 12982
+            "after": 12842
           }
         ],
         "width": 3,
@@ -2446,10 +2450,21 @@
           12743
         ],
         "endpoint_metatiles": [
+          12840,
+          12841,
+          12842
+        ],
+        "old_endpoint_metatiles": [
           12980,
           12981,
           12982
         ],
+        "endpoint_attributes": [
+          0,
+          101,
+          0
+        ],
+        "metal_endpoint_art_removed": true,
         "warp_before": {
           "x": 12,
           "y": 18,
@@ -2613,7 +2628,7 @@
               11
             ],
             "before": 4395,
-            "after": 12980
+            "after": 12840
           },
           {
             "map": "TwoIsland_Frlg",
@@ -2622,7 +2637,7 @@
               11
             ],
             "before": 4395,
-            "after": 12981
+            "after": 12841
           },
           {
             "map": "TwoIsland_Frlg",
@@ -2631,7 +2646,7 @@
               11
             ],
             "before": 4395,
-            "after": 12982
+            "after": 12842
           }
         ],
         "width": 3,
@@ -2642,10 +2657,21 @@
           12743
         ],
         "endpoint_metatiles": [
+          12840,
+          12841,
+          12842
+        ],
+        "old_endpoint_metatiles": [
           12980,
           12981,
           12982
         ],
+        "endpoint_attributes": [
+          0,
+          101,
+          0
+        ],
+        "metal_endpoint_art_removed": true,
         "warp_before": {
           "x": 10,
           "y": 8,
@@ -2797,7 +2823,7 @@
               16
             ],
             "before": 4723,
-            "after": 12980
+            "after": 12840
           },
           {
             "map": "ThreeIsland_Port_Frlg",
@@ -2806,7 +2832,7 @@
               16
             ],
             "before": 4723,
-            "after": 12981
+            "after": 12841
           },
           {
             "map": "ThreeIsland_Port_Frlg",
@@ -2815,7 +2841,7 @@
               16
             ],
             "before": 4723,
-            "after": 12982
+            "after": 12842
           }
         ],
         "width": 3,
@@ -2826,10 +2852,21 @@
           12743
         ],
         "endpoint_metatiles": [
+          12840,
+          12841,
+          12842
+        ],
+        "old_endpoint_metatiles": [
           12980,
           12981,
           12982
         ],
+        "endpoint_attributes": [
+          0,
+          101,
+          0
+        ],
+        "metal_endpoint_art_removed": true,
         "warp_before": {
           "x": 12,
           "y": 13,
@@ -2981,7 +3018,7 @@
               31
             ],
             "before": 4723,
-            "after": 13048
+            "after": 12840
           },
           {
             "map": "FourIsland_Frlg",
@@ -2990,7 +3027,7 @@
               31
             ],
             "before": 4723,
-            "after": 13049
+            "after": 12841
           },
           {
             "map": "FourIsland_Frlg",
@@ -2999,7 +3036,7 @@
               31
             ],
             "before": 4723,
-            "after": 13050
+            "after": 12842
           }
         ],
         "width": 3,
@@ -3010,10 +3047,21 @@
           12743
         ],
         "endpoint_metatiles": [
+          12840,
+          12841,
+          12842
+        ],
+        "old_endpoint_metatiles": [
           13048,
           13049,
           13050
         ],
+        "endpoint_attributes": [
+          0,
+          101,
+          0
+        ],
+        "metal_endpoint_art_removed": true,
         "warp_before": {
           "x": 10,
           "y": 28,
@@ -3165,7 +3213,7 @@
               17
             ],
             "before": 4395,
-            "after": 13048
+            "after": 12840
           },
           {
             "map": "FiveIsland_Frlg",
@@ -3174,7 +3222,7 @@
               17
             ],
             "before": 4395,
-            "after": 13049
+            "after": 12841
           },
           {
             "map": "FiveIsland_Frlg",
@@ -3183,7 +3231,7 @@
               17
             ],
             "before": 4395,
-            "after": 13050
+            "after": 12842
           }
         ],
         "width": 3,
@@ -3194,10 +3242,21 @@
           12743
         ],
         "endpoint_metatiles": [
+          12840,
+          12841,
+          12842
+        ],
+        "old_endpoint_metatiles": [
           13048,
           13049,
           13050
         ],
+        "endpoint_attributes": [
+          0,
+          101,
+          0
+        ],
+        "metal_endpoint_art_removed": true,
         "warp_before": {
           "x": 12,
           "y": 14,
@@ -3349,7 +3408,7 @@
               26
             ],
             "before": 4723,
-            "after": 13027
+            "after": 12840
           },
           {
             "map": "SixIsland_Frlg",
@@ -3358,7 +3417,7 @@
               26
             ],
             "before": 4723,
-            "after": 13028
+            "after": 12841
           },
           {
             "map": "SixIsland_Frlg",
@@ -3367,7 +3426,7 @@
               26
             ],
             "before": 4723,
-            "after": 13029
+            "after": 12842
           }
         ],
         "width": 3,
@@ -3378,10 +3437,21 @@
           12743
         ],
         "endpoint_metatiles": [
+          12840,
+          12841,
+          12842
+        ],
+        "old_endpoint_metatiles": [
           13027,
           13028,
           13029
         ],
+        "endpoint_attributes": [
+          0,
+          101,
+          0
+        ],
+        "metal_endpoint_art_removed": true,
         "warp_before": {
           "x": 11,
           "y": 23,
@@ -3533,7 +3603,7 @@
               16
             ],
             "before": 4723,
-            "after": 13027
+            "after": 12840
           },
           {
             "map": "SevenIsland_Frlg",
@@ -3542,7 +3612,7 @@
               16
             ],
             "before": 4723,
-            "after": 13028
+            "after": 12841
           },
           {
             "map": "SevenIsland_Frlg",
@@ -3551,7 +3621,7 @@
               16
             ],
             "before": 4723,
-            "after": 13029
+            "after": 12842
           }
         ],
         "width": 3,
@@ -3562,10 +3632,21 @@
           12743
         ],
         "endpoint_metatiles": [
+          12840,
+          12841,
+          12842
+        ],
+        "old_endpoint_metatiles": [
           13027,
           13028,
           13029
         ],
+        "endpoint_attributes": [
+          0,
+          101,
+          0
+        ],
+        "metal_endpoint_art_removed": true,
         "warp_before": {
           "x": 16,
           "y": 13,
@@ -5370,6 +5451,440 @@
         "kind": "main_harbor_low_pier"
       }
     ],
+    "wooden_endcaps": {
+      "metatiles_path": "data/tilesets/primary/general_frlg/metatiles.bin",
+      "attributes_path": "data/tilesets/primary/general_frlg/metatile_attributes.bin",
+      "private_metatile_ids": [
+        552,
+        553,
+        554
+      ],
+      "native_wooden_donors": [
+        453,
+        454,
+        455
+      ],
+      "attributes": [
+        0,
+        101,
+        0
+      ],
+      "previously_blank_and_unreferenced": true,
+      "reviewed_layouts": [
+        "LAYOUT_BIRTH_ISLAND_EXTERIOR_FRLG",
+        "LAYOUT_CELADON_CITY",
+        "LAYOUT_CERULEAN_CAVE_1F",
+        "LAYOUT_CERULEAN_CAVE_2F",
+        "LAYOUT_CERULEAN_CAVE_B1F",
+        "LAYOUT_CERULEAN_CITY",
+        "LAYOUT_CINNABAR_ISLAND",
+        "LAYOUT_DIGLETTS_CAVE_B1F",
+        "LAYOUT_DIGLETTS_CAVE_NORTH_ENTRANCE",
+        "LAYOUT_DIGLETTS_CAVE_SOUTH_ENTRANCE",
+        "LAYOUT_FIVE_ISLAND",
+        "LAYOUT_FIVE_ISLAND_LOST_CAVE_ENTRANCE",
+        "LAYOUT_FIVE_ISLAND_LOST_CAVE_ROOM1",
+        "LAYOUT_FIVE_ISLAND_LOST_CAVE_ROOM10",
+        "LAYOUT_FIVE_ISLAND_LOST_CAVE_ROOM11",
+        "LAYOUT_FIVE_ISLAND_LOST_CAVE_ROOM12",
+        "LAYOUT_FIVE_ISLAND_LOST_CAVE_ROOM13",
+        "LAYOUT_FIVE_ISLAND_LOST_CAVE_ROOM14",
+        "LAYOUT_FIVE_ISLAND_LOST_CAVE_ROOM2",
+        "LAYOUT_FIVE_ISLAND_LOST_CAVE_ROOM3",
+        "LAYOUT_FIVE_ISLAND_LOST_CAVE_ROOM4",
+        "LAYOUT_FIVE_ISLAND_LOST_CAVE_ROOM5",
+        "LAYOUT_FIVE_ISLAND_LOST_CAVE_ROOM6",
+        "LAYOUT_FIVE_ISLAND_LOST_CAVE_ROOM7",
+        "LAYOUT_FIVE_ISLAND_LOST_CAVE_ROOM8",
+        "LAYOUT_FIVE_ISLAND_LOST_CAVE_ROOM9",
+        "LAYOUT_FIVE_ISLAND_MEADOW",
+        "LAYOUT_FIVE_ISLAND_MEMORIAL_PILLAR",
+        "LAYOUT_FIVE_ISLAND_RESORT_GORGEOUS",
+        "LAYOUT_FIVE_ISLAND_WATER_LABYRINTH",
+        "LAYOUT_FOUR_ISLAND",
+        "LAYOUT_FOUR_ISLAND_ICEFALL_CAVE_1F",
+        "LAYOUT_FOUR_ISLAND_ICEFALL_CAVE_B1F",
+        "LAYOUT_FOUR_ISLAND_ICEFALL_CAVE_BACK",
+        "LAYOUT_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE",
+        "LAYOUT_FUCHSIA_CITY",
+        "LAYOUT_INDIGO_PLATEAU_EXTERIOR",
+        "LAYOUT_ISLAND_HARBOR_FRLG",
+        "LAYOUT_JOURNEYALVORADAAPPROACH",
+        "LAYOUT_JOURNEYARTISANAPPROACH",
+        "LAYOUT_JOURNEYBRISAAPPROACH",
+        "LAYOUT_JOURNEYCINNABARSOUTHSEA",
+        "LAYOUT_JOURNEYESPUMAAPPROACH",
+        "LAYOUT_JOURNEYFAROLAPPROACH",
+        "LAYOUT_JOURNEYFUCHSIAINLET",
+        "LAYOUT_JOURNEYFUCHSIASEA",
+        "LAYOUT_JOURNEYHORIZONTEAPPROACH",
+        "LAYOUT_JOURNEYKANTOCOASTALBAND",
+        "LAYOUT_JOURNEYKANTOEASTERNCHANNEL",
+        "LAYOUT_JOURNEYKANTOSEVIIJUNCTION",
+        "LAYOUT_JOURNEYKANTOSEVIITRANSIT",
+        "LAYOUT_JOURNEYKANTOSOUTHSEA",
+        "LAYOUT_JOURNEYKANTOSOUTHWESTSEA",
+        "LAYOUT_JOURNEYLAVENDERAPPROACH",
+        "LAYOUT_JOURNEYLAVENDERAPPROACHSOUTH",
+        "LAYOUT_JOURNEYLAVENDERONESEA",
+        "LAYOUT_JOURNEYMAREAPPROACH",
+        "LAYOUT_JOURNEYNORTHHOENNSTRAIT",
+        "LAYOUT_JOURNEYOCASOAPPROACH",
+        "LAYOUT_JOURNEYONEISLANDCHANNEL",
+        "LAYOUT_JOURNEYONETWOPASSAGE",
+        "LAYOUT_JOURNEYROUTE12OUTERSEA",
+        "LAYOUT_JOURNEYROUTE12SHIPYARD",
+        "LAYOUT_JOURNEYROUTE13COAST",
+        "LAYOUT_JOURNEYSOUTHWESTSEVIIPASSAGE",
+        "LAYOUT_JOURNEYSURFLINK00000",
+        "LAYOUT_JOURNEYSURFLINK00001",
+        "LAYOUT_JOURNEYSURFLINK00100",
+        "LAYOUT_JOURNEYSURFLINK00101",
+        "LAYOUT_JOURNEYSURFLINK00102",
+        "LAYOUT_JOURNEYSURFLINK00103",
+        "LAYOUT_JOURNEYSURFLINK00104",
+        "LAYOUT_JOURNEYSURFLINK00200",
+        "LAYOUT_JOURNEYSURFLINK00201",
+        "LAYOUT_JOURNEYSURFLINK00202",
+        "LAYOUT_JOURNEYSURFLINK00203",
+        "LAYOUT_JOURNEYSURFLINK00204",
+        "LAYOUT_JOURNEYSURFLINK00205",
+        "LAYOUT_JOURNEYSURFLINK00206",
+        "LAYOUT_JOURNEYSURFLINK00300",
+        "LAYOUT_JOURNEYSURFLINK00301",
+        "LAYOUT_JOURNEYSURFLINK00302",
+        "LAYOUT_JOURNEYSURFLINK00303",
+        "LAYOUT_JOURNEYSURFLINK00304",
+        "LAYOUT_JOURNEYSURFLINK00305",
+        "LAYOUT_JOURNEYSURFLINK00400",
+        "LAYOUT_JOURNEYSURFLINK00401",
+        "LAYOUT_JOURNEYSURFLINK00402",
+        "LAYOUT_JOURNEYSURFLINK00403",
+        "LAYOUT_JOURNEYSURFLINK00404",
+        "LAYOUT_JOURNEYSURFLINK00600",
+        "LAYOUT_JOURNEYSURFLINK00601",
+        "LAYOUT_JOURNEYSURFLINK00700",
+        "LAYOUT_JOURNEYSURFLINK00701",
+        "LAYOUT_JOURNEYSURFLINK00702",
+        "LAYOUT_JOURNEYSURFLINK00703",
+        "LAYOUT_JOURNEYSURFLINK00704",
+        "LAYOUT_JOURNEYSURFLINK00800",
+        "LAYOUT_JOURNEYSURFLINK00801",
+        "LAYOUT_JOURNEYSURFLINK00802",
+        "LAYOUT_JOURNEYSURFLINK00803",
+        "LAYOUT_JOURNEYSURFLINK00900",
+        "LAYOUT_JOURNEYSURFLINK00901",
+        "LAYOUT_JOURNEYSURFLINK00902",
+        "LAYOUT_JOURNEYSURFLINK00903",
+        "LAYOUT_JOURNEYSURFLINK01000",
+        "LAYOUT_JOURNEYSURFLINK01001",
+        "LAYOUT_JOURNEYSURFLINK01100",
+        "LAYOUT_JOURNEYSURFLINK01200",
+        "LAYOUT_JOURNEYSURFLINK01201",
+        "LAYOUT_JOURNEYSURFLINK01400",
+        "LAYOUT_JOURNEYSURFLINK01501",
+        "LAYOUT_JOURNEYSURFLINK01601",
+        "LAYOUT_JOURNEYSURFLINK01701",
+        "LAYOUT_JOURNEYSURFLINK01801",
+        "LAYOUT_JOURNEYSURFLINK01900",
+        "LAYOUT_JOURNEYSURFLINK01901",
+        "LAYOUT_JOURNEYSURFLINK02000",
+        "LAYOUT_JOURNEYSURFLINK02001",
+        "LAYOUT_JOURNEYSURFLINK02102",
+        "LAYOUT_JOURNEYSURFLINK02103",
+        "LAYOUT_JOURNEYSURFLINK02201",
+        "LAYOUT_JOURNEYSURFLINK02301",
+        "LAYOUT_JOURNEYSURFLINK02401",
+        "LAYOUT_JOURNEYSURFLINK02501",
+        "LAYOUT_JOURNEYSURFLINK02600",
+        "LAYOUT_JOURNEYSURFLINK02601",
+        "LAYOUT_JOURNEYSURFLINK02602",
+        "LAYOUT_JOURNEYSURFLINK02603",
+        "LAYOUT_JOURNEYSURFLINK02604",
+        "LAYOUT_JOURNEYSURFLINK02605",
+        "LAYOUT_JOURNEYSURFLINK02700",
+        "LAYOUT_JOURNEYSURFLINK02701",
+        "LAYOUT_JOURNEYSURFLINK02702",
+        "LAYOUT_JOURNEYSURFLINK02703",
+        "LAYOUT_JOURNEYSURFLINK02704",
+        "LAYOUT_JOURNEYSURFLINK02705",
+        "LAYOUT_JOURNEYSURFLINK02800",
+        "LAYOUT_JOURNEYSURFLINK02801",
+        "LAYOUT_JOURNEYSURFLINK02802",
+        "LAYOUT_JOURNEYSURFLINK02803",
+        "LAYOUT_JOURNEYSURFLINK02900",
+        "LAYOUT_JOURNEYSURFLINK02901",
+        "LAYOUT_JOURNEYSURFLINK03000",
+        "LAYOUT_JOURNEYSURFLINK03001",
+        "LAYOUT_JOURNEYSURFLINK03002",
+        "LAYOUT_JOURNEYSURFLINK03003",
+        "LAYOUT_JOURNEYSURFLINK03004",
+        "LAYOUT_JOURNEYSURFLINK03005",
+        "LAYOUT_JOURNEYSURFLINK03006",
+        "LAYOUT_JOURNEYSURFLINK03100",
+        "LAYOUT_JOURNEYSURFLINK03101",
+        "LAYOUT_JOURNEYSURFLINK03102",
+        "LAYOUT_JOURNEYSURFLINK03103",
+        "LAYOUT_JOURNEYSURFLINK03104",
+        "LAYOUT_JOURNEYSURFLINK03202",
+        "LAYOUT_JOURNEYSURFLINK03203",
+        "LAYOUT_JOURNEYSURFLINK03301",
+        "LAYOUT_JOURNEYSURFLINK03400",
+        "LAYOUT_JOURNEYSURFLINK03500",
+        "LAYOUT_JOURNEYSURFLINK03501",
+        "LAYOUT_JOURNEYSURFLINK03502",
+        "LAYOUT_JOURNEYSURFLINK03503",
+        "LAYOUT_JOURNEYSURFLINK03504",
+        "LAYOUT_JOURNEYSURFLINK03505",
+        "LAYOUT_JOURNEYSURFLINK03700",
+        "LAYOUT_JOURNEYSURFLINK03701",
+        "LAYOUT_JOURNEYSURFLINK03702",
+        "LAYOUT_JOURNEYSURFLINK03703",
+        "LAYOUT_JOURNEYSURFLINK03800",
+        "LAYOUT_JOURNEYSURFLINK03801",
+        "LAYOUT_JOURNEYSURFLINK03802",
+        "LAYOUT_JOURNEYSURFLINK03803",
+        "LAYOUT_JOURNEYSURFLINK03804",
+        "LAYOUT_JOURNEYSURFLINK03900",
+        "LAYOUT_JOURNEYSURFLINK03901",
+        "LAYOUT_JOURNEYSURFLINK03902",
+        "LAYOUT_JOURNEYSURFLINK03903",
+        "LAYOUT_JOURNEYSURFLINK04000",
+        "LAYOUT_JOURNEYSURFLINK04001",
+        "LAYOUT_JOURNEYSURFLINK04002",
+        "LAYOUT_JOURNEYSURFLINK04003",
+        "LAYOUT_JOURNEYSURFLINK04100",
+        "LAYOUT_JOURNEYSURFLINK04101",
+        "LAYOUT_JOURNEYSURFLINK04102",
+        "LAYOUT_JOURNEYSURFLINK04103",
+        "LAYOUT_JOURNEYSURFLINK04104",
+        "LAYOUT_JOURNEYSURFLINK04200",
+        "LAYOUT_JOURNEYSURFLINK04201",
+        "LAYOUT_JOURNEYSURFLINK04202",
+        "LAYOUT_JOURNEYSURFLINK04203",
+        "LAYOUT_JOURNEYSURFLINK04300",
+        "LAYOUT_JOURNEYSURFLINK04301",
+        "LAYOUT_JOURNEYSURFLINK04302",
+        "LAYOUT_JOURNEYSURFLINK04303",
+        "LAYOUT_JOURNEYSURFLINK04400",
+        "LAYOUT_JOURNEYSURFLINK04401",
+        "LAYOUT_JOURNEYSURFLINK04402",
+        "LAYOUT_JOURNEYSURFLINK04403",
+        "LAYOUT_JOURNEYSURFLINK04404",
+        "LAYOUT_JOURNEYSURFLINK04500",
+        "LAYOUT_JOURNEYSURFLINK04501",
+        "LAYOUT_JOURNEYSURFLINK04502",
+        "LAYOUT_JOURNEYSURFLINK04503",
+        "LAYOUT_JOURNEYSURFLINK04504",
+        "LAYOUT_JOURNEYSURFLINK04600",
+        "LAYOUT_JOURNEYSURFLINK04601",
+        "LAYOUT_JOURNEYSURFLINK04602",
+        "LAYOUT_JOURNEYSURFLINK04603",
+        "LAYOUT_JOURNEYSURFLINK04604",
+        "LAYOUT_JOURNEYSURFLINK04700",
+        "LAYOUT_JOURNEYSURFLINK04701",
+        "LAYOUT_JOURNEYSURFLINK04702",
+        "LAYOUT_JOURNEYSURFLINK04703",
+        "LAYOUT_JOURNEYSURFLINK04800",
+        "LAYOUT_JOURNEYSURFLINK04801",
+        "LAYOUT_JOURNEYSURFLINK04802",
+        "LAYOUT_JOURNEYSURFLINK04900",
+        "LAYOUT_JOURNEYSURFLINK04901",
+        "LAYOUT_JOURNEYSURFLINK04902",
+        "LAYOUT_JOURNEYSURFLINK04903",
+        "LAYOUT_JOURNEYSURFLINK05000",
+        "LAYOUT_JOURNEYSURFLINK05001",
+        "LAYOUT_JOURNEYSURFLINK05100",
+        "LAYOUT_JOURNEYSURFLINK05101",
+        "LAYOUT_JOURNEYSURFLINK05200",
+        "LAYOUT_JOURNEYSURFLINK05201",
+        "LAYOUT_JOURNEYSURFLINK05300",
+        "LAYOUT_JOURNEYSURFLINK05301",
+        "LAYOUT_JOURNEYSURFLINK05400",
+        "LAYOUT_JOURNEYSURFLINK05401",
+        "LAYOUT_JOURNEYTANOBYDAWNSEA",
+        "LAYOUT_JOURNEYTWOTHREEMOUTH",
+        "LAYOUT_JOURNEYTWOTHREEPASSAGE",
+        "LAYOUT_JOURNEYWORLDFILL10CAP",
+        "LAYOUT_JOURNEYWORLDFILL10RIGHT",
+        "LAYOUT_JOURNEYWORLDFILL11CAP",
+        "LAYOUT_JOURNEYWORLDFILL11RIGHT",
+        "LAYOUT_JOURNEYWORLDFILL20CAP",
+        "LAYOUT_JOURNEYWORLDFILL20RIGHT",
+        "LAYOUT_JOURNEYWORLDFILL21CAP",
+        "LAYOUT_JOURNEYWORLDFILL21RIGHT",
+        "LAYOUT_JOURNEYWORLDFILL30CAP",
+        "LAYOUT_JOURNEYWORLDFILL30RIGHT",
+        "LAYOUT_JOURNEYWORLDFILL31CAP",
+        "LAYOUT_JOURNEYWORLDFILL31RIGHT",
+        "LAYOUT_JOURNEYWORLDLANE10",
+        "LAYOUT_JOURNEYWORLDLANE11",
+        "LAYOUT_JOURNEYWORLDLANE20",
+        "LAYOUT_JOURNEYWORLDLANE21",
+        "LAYOUT_JOURNEYWORLDLANE30",
+        "LAYOUT_JOURNEYWORLDLANE31",
+        "LAYOUT_JOURNEYWORLDSEA00",
+        "LAYOUT_JOURNEYWORLDSEA01",
+        "LAYOUT_JOURNEYWORLDSEA02",
+        "LAYOUT_JOURNEYWORLDSEA03",
+        "LAYOUT_JOURNEYWORLDSEA04",
+        "LAYOUT_JOURNEYWORLDSEA05",
+        "LAYOUT_JOURNEYWORLDSEA06",
+        "LAYOUT_JOURNEYWORLDSEA07",
+        "LAYOUT_JOURNEYWORLDSEA08",
+        "LAYOUT_JOURNEYWORLDSEA09",
+        "LAYOUT_JOURNEY_SEVII_FIVE_PORT",
+        "LAYOUT_JOURNEY_SEVII_FOUR_PORT",
+        "LAYOUT_JOURNEY_SEVII_ONE_PORT",
+        "LAYOUT_JOURNEY_SEVII_SEVEN_PORT",
+        "LAYOUT_JOURNEY_SEVII_SIX_PORT",
+        "LAYOUT_JOURNEY_SEVII_SURF_ARRIVAL",
+        "LAYOUT_JOURNEY_SEVII_THREE_PORT",
+        "LAYOUT_JOURNEY_SEVII_TWO_PORT",
+        "LAYOUT_LAVENDER_TOWN",
+        "LAYOUT_MT_EMBER_EXTERIOR",
+        "LAYOUT_MT_EMBER_RUBY_PATH_1F",
+        "LAYOUT_MT_EMBER_RUBY_PATH_B1F",
+        "LAYOUT_MT_EMBER_RUBY_PATH_B1F_STAIRS",
+        "LAYOUT_MT_EMBER_RUBY_PATH_B2F",
+        "LAYOUT_MT_EMBER_RUBY_PATH_B2F_STAIRS",
+        "LAYOUT_MT_EMBER_RUBY_PATH_B3F",
+        "LAYOUT_MT_EMBER_RUBY_PATH_B4F",
+        "LAYOUT_MT_EMBER_RUBY_PATH_B5F",
+        "LAYOUT_MT_EMBER_SUMMIT",
+        "LAYOUT_MT_EMBER_SUMMIT_PATH_1F",
+        "LAYOUT_MT_EMBER_SUMMIT_PATH_2F",
+        "LAYOUT_MT_EMBER_SUMMIT_PATH_3F",
+        "LAYOUT_MT_MOON_1F",
+        "LAYOUT_MT_MOON_B1F",
+        "LAYOUT_MT_MOON_B2F",
+        "LAYOUT_NAVEL_ROCK_1F",
+        "LAYOUT_NAVEL_ROCK_B1F_FRLG",
+        "LAYOUT_NAVEL_ROCK_BASE_FRLG",
+        "LAYOUT_NAVEL_ROCK_BASE_PATH_B10F",
+        "LAYOUT_NAVEL_ROCK_BASE_PATH_B11F",
+        "LAYOUT_NAVEL_ROCK_BASE_PATH_B1F",
+        "LAYOUT_NAVEL_ROCK_BASE_PATH_B2F",
+        "LAYOUT_NAVEL_ROCK_BASE_PATH_B3F",
+        "LAYOUT_NAVEL_ROCK_BASE_PATH_B4F",
+        "LAYOUT_NAVEL_ROCK_BASE_PATH_B5F",
+        "LAYOUT_NAVEL_ROCK_BASE_PATH_B6F",
+        "LAYOUT_NAVEL_ROCK_BASE_PATH_B7F",
+        "LAYOUT_NAVEL_ROCK_BASE_PATH_B8F",
+        "LAYOUT_NAVEL_ROCK_BASE_PATH_B9F",
+        "LAYOUT_NAVEL_ROCK_EXTERIOR_FRLG",
+        "LAYOUT_NAVEL_ROCK_FORK_FRLG",
+        "LAYOUT_NAVEL_ROCK_SUMMIT",
+        "LAYOUT_NAVEL_ROCK_SUMMIT_PATH_2F",
+        "LAYOUT_NAVEL_ROCK_SUMMIT_PATH_3F",
+        "LAYOUT_NAVEL_ROCK_SUMMIT_PATH_4F",
+        "LAYOUT_NAVEL_ROCK_SUMMIT_PATH_5F",
+        "LAYOUT_ONE_ISLAND",
+        "LAYOUT_ONE_ISLAND_KINDLE_ROAD",
+        "LAYOUT_ONE_ISLAND_KINDLE_ROAD_EMBER_SPA",
+        "LAYOUT_ONE_ISLAND_TREASURE_BEACH",
+        "LAYOUT_PALLET_TOWN",
+        "LAYOUT_PEWTER_CITY",
+        "LAYOUT_PROTOTYPE_SEVII_ISLE_22",
+        "LAYOUT_PROTOTYPE_SEVII_ISLE_23_EAST",
+        "LAYOUT_PROTOTYPE_SEVII_ISLE_23_WEST",
+        "LAYOUT_PROTOTYPE_SEVII_ISLE_24",
+        "LAYOUT_PROTOTYPE_SEVII_ISLE_6",
+        "LAYOUT_PROTOTYPE_SEVII_ISLE_7",
+        "LAYOUT_PROTOTYPE_SEVII_ISLE_8",
+        "LAYOUT_PROTOTYPE_SEVII_ISLE_9",
+        "LAYOUT_ROCK_TUNNEL_1F",
+        "LAYOUT_ROCK_TUNNEL_B1F",
+        "LAYOUT_ROUTE1",
+        "LAYOUT_ROUTE10",
+        "LAYOUT_ROUTE11",
+        "LAYOUT_ROUTE12",
+        "LAYOUT_ROUTE13",
+        "LAYOUT_ROUTE14",
+        "LAYOUT_ROUTE15",
+        "LAYOUT_ROUTE16",
+        "LAYOUT_ROUTE17",
+        "LAYOUT_ROUTE18",
+        "LAYOUT_ROUTE19",
+        "LAYOUT_ROUTE2",
+        "LAYOUT_ROUTE20",
+        "LAYOUT_ROUTE21_NORTH",
+        "LAYOUT_ROUTE21_SOUTH",
+        "LAYOUT_ROUTE22",
+        "LAYOUT_ROUTE23",
+        "LAYOUT_ROUTE24",
+        "LAYOUT_ROUTE25",
+        "LAYOUT_ROUTE3",
+        "LAYOUT_ROUTE4",
+        "LAYOUT_ROUTE5",
+        "LAYOUT_ROUTE6",
+        "LAYOUT_ROUTE7",
+        "LAYOUT_ROUTE8",
+        "LAYOUT_ROUTE9",
+        "LAYOUT_RS_BATTLE_TOWER",
+        "LAYOUT_RS_SAFARI_ZONE_NORTHEAST",
+        "LAYOUT_RS_SAFARI_ZONE_SOUTHEAST",
+        "LAYOUT_RS_SAFARI_ZONE_SOUTHWEST",
+        "LAYOUT_SAFARI_ZONE_CENTER",
+        "LAYOUT_SAFARI_ZONE_EAST",
+        "LAYOUT_SAFARI_ZONE_NORTH_FRLG",
+        "LAYOUT_SAFARI_ZONE_WEST",
+        "LAYOUT_SAFFRON_CITY",
+        "LAYOUT_SAFFRON_CITY_CONNECTION",
+        "LAYOUT_SEAFOAM_ISLANDS_1F",
+        "LAYOUT_SEAFOAM_ISLANDS_B1F",
+        "LAYOUT_SEAFOAM_ISLANDS_B2F",
+        "LAYOUT_SEAFOAM_ISLANDS_B3F",
+        "LAYOUT_SEAFOAM_ISLANDS_B3F_CURRENT_STOPPED",
+        "LAYOUT_SEAFOAM_ISLANDS_B4F",
+        "LAYOUT_SEAFOAM_ISLANDS_B4F_CURRENT_STOPPED",
+        "LAYOUT_SEVEN_ISLAND",
+        "LAYOUT_SEVEN_ISLAND_SEVAULT_CANYON",
+        "LAYOUT_SEVEN_ISLAND_SEVAULT_CANYON_ENTRANCE",
+        "LAYOUT_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY",
+        "LAYOUT_SEVEN_ISLAND_TANOBY_RUINS",
+        "LAYOUT_SEVEN_ISLAND_TRAINER_TOWER",
+        "LAYOUT_SIX_ISLAND",
+        "LAYOUT_SIX_ISLAND_ALTERING_CAVE",
+        "LAYOUT_SIX_ISLAND_DOTTED_HOLE_1F",
+        "LAYOUT_SIX_ISLAND_DOTTED_HOLE_B1F",
+        "LAYOUT_SIX_ISLAND_DOTTED_HOLE_B2F",
+        "LAYOUT_SIX_ISLAND_DOTTED_HOLE_B3F",
+        "LAYOUT_SIX_ISLAND_DOTTED_HOLE_B4F",
+        "LAYOUT_SIX_ISLAND_DOTTED_HOLE_SAPPHIRE_ROOM",
+        "LAYOUT_SIX_ISLAND_GREEN_PATH",
+        "LAYOUT_SIX_ISLAND_OUTCAST_ISLAND",
+        "LAYOUT_SIX_ISLAND_PATTERN_BUSH",
+        "LAYOUT_SIX_ISLAND_RUIN_VALLEY",
+        "LAYOUT_SIX_ISLAND_WATER_PATH",
+        "LAYOUT_SSANNE_1F_CORRIDOR",
+        "LAYOUT_SSANNE_2F_CORRIDOR",
+        "LAYOUT_SSANNE_3F_CORRIDOR",
+        "LAYOUT_SSANNE_B1F_CORRIDOR",
+        "LAYOUT_SSANNE_CAPTAINS_OFFICE",
+        "LAYOUT_SSANNE_DECK",
+        "LAYOUT_SSANNE_EXTERIOR",
+        "LAYOUT_SSANNE_KITCHEN",
+        "LAYOUT_SSANNE_ROOM1",
+        "LAYOUT_SSANNE_ROOM2",
+        "LAYOUT_THREE_ISLAND",
+        "LAYOUT_THREE_ISLAND_BERRY_FOREST",
+        "LAYOUT_THREE_ISLAND_BOND_BRIDGE",
+        "LAYOUT_THREE_ISLAND_DUNSPARCE_TUNNEL",
+        "LAYOUT_THREE_ISLAND_DUNSPARCE_TUNNEL_DUG_OUT",
+        "LAYOUT_THREE_ISLAND_PORT",
+        "LAYOUT_TWO_ISLAND",
+        "LAYOUT_TWO_ISLAND_CAPE_BRINK",
+        "LAYOUT_VERMILION_CITY",
+        "LAYOUT_VICTORY_ROAD_1F_FRLG",
+        "LAYOUT_VICTORY_ROAD_2F",
+        "LAYOUT_VICTORY_ROAD_3F",
+        "LAYOUT_VIRIDIAN_CITY",
+        "LAYOUT_VIRIDIAN_FOREST"
+      ],
+      "all_other_metatiles_and_attributes_unchanged": true,
+      "original_metal_ramps_unchanged": true
+    },
     "source_edits": [
       {
         "map": "OneIsland_Frlg",
@@ -5622,7 +6137,7 @@
               3
             ],
             "before": 4395,
-            "after": 12980
+            "after": 12840
           },
           {
             "map": "OneIsland_TreasureBeach_Frlg",
@@ -5631,7 +6146,7 @@
               3
             ],
             "before": 4395,
-            "after": 12981
+            "after": 12841
           },
           {
             "map": "OneIsland_TreasureBeach_Frlg",
@@ -5640,7 +6155,7 @@
               3
             ],
             "before": 4395,
-            "after": 12982
+            "after": 12842
           }
         ],
         "warps_before": [],
@@ -5749,7 +6264,7 @@
               11
             ],
             "before": 4395,
-            "after": 12980
+            "after": 12840
           },
           {
             "map": "TwoIsland_Frlg",
@@ -5758,7 +6273,7 @@
               11
             ],
             "before": 4395,
-            "after": 12981
+            "after": 12841
           },
           {
             "map": "TwoIsland_Frlg",
@@ -5767,7 +6282,7 @@
               11
             ],
             "before": 4395,
-            "after": 12982
+            "after": 12842
           }
         ],
         "warps_before": [
@@ -5926,7 +6441,7 @@
               16
             ],
             "before": 4723,
-            "after": 12980
+            "after": 12840
           },
           {
             "map": "ThreeIsland_Port_Frlg",
@@ -5935,7 +6450,7 @@
               16
             ],
             "before": 4723,
-            "after": 12981
+            "after": 12841
           },
           {
             "map": "ThreeIsland_Port_Frlg",
@@ -5944,7 +6459,7 @@
               16
             ],
             "before": 4723,
-            "after": 12982
+            "after": 12842
           }
         ],
         "warps_before": [
@@ -6089,7 +6604,7 @@
               31
             ],
             "before": 4723,
-            "after": 13048
+            "after": 12840
           },
           {
             "map": "FourIsland_Frlg",
@@ -6098,7 +6613,7 @@
               31
             ],
             "before": 4723,
-            "after": 13049
+            "after": 12841
           },
           {
             "map": "FourIsland_Frlg",
@@ -6107,7 +6622,7 @@
               31
             ],
             "before": 4723,
-            "after": 13050
+            "after": 12842
           }
         ],
         "warps_before": [
@@ -6322,7 +6837,7 @@
               17
             ],
             "before": 4395,
-            "after": 13048
+            "after": 12840
           },
           {
             "map": "FiveIsland_Frlg",
@@ -6331,7 +6846,7 @@
               17
             ],
             "before": 4395,
-            "after": 13049
+            "after": 12841
           },
           {
             "map": "FiveIsland_Frlg",
@@ -6340,7 +6855,7 @@
               17
             ],
             "before": 4395,
-            "after": 13050
+            "after": 12842
           }
         ],
         "warps_before": [
@@ -6499,7 +7014,7 @@
               26
             ],
             "before": 4723,
-            "after": 13027
+            "after": 12840
           },
           {
             "map": "SixIsland_Frlg",
@@ -6508,7 +7023,7 @@
               26
             ],
             "before": 4723,
-            "after": 13028
+            "after": 12841
           },
           {
             "map": "SixIsland_Frlg",
@@ -6517,7 +7032,7 @@
               26
             ],
             "before": 4723,
-            "after": 13029
+            "after": 12842
           }
         ],
         "warps_before": [
@@ -6690,7 +7205,7 @@
               16
             ],
             "before": 4723,
-            "after": 13027
+            "after": 12840
           },
           {
             "map": "SevenIsland_Frlg",
@@ -6699,7 +7214,7 @@
               16
             ],
             "before": 4723,
-            "after": 13028
+            "after": 12841
           },
           {
             "map": "SevenIsland_Frlg",
@@ -6708,7 +7223,7 @@
               16
             ],
             "before": 4723,
-            "after": 13029
+            "after": 12842
           }
         ],
         "warps_before": [
@@ -6791,6 +7306,8 @@
       "data/maps/SixIsland_Frlg/map.json",
       "data/maps/ThreeIsland_Port_Frlg/map.json",
       "data/maps/TwoIsland_Frlg/map.json",
+      "data/tilesets/primary/general_frlg/metatile_attributes.bin",
+      "data/tilesets/primary/general_frlg/metatiles.bin",
       "include/journey_coastal_piers.h",
       "src/event_object_movement.c"
     ],
@@ -6802,6 +7319,7 @@
     "no_player_coordinate_or_elevation_writes": true,
     "route107_high_bridge_unchanged": true,
     "all_seven_surface_seams_preserved": true,
-    "native_tilesets_and_palettes_unchanged": true
+    "native_pixels_and_palettes_unchanged": true,
+    "only_unused_primary_slots_changed": true
   }
 }

@@ -1,8 +1,10 @@
 # ROM de teste das rotas de Surf
 
-Esta ROM inclui o circuito de 24 insígnias e as travessias corrigidas da camada 160. [Detalhes](../../docs/ginasios-extras-e-travessias.md).
+Esta ROM inclui o circuito de 24 insígnias e a [revisão costeira da camada 161](../../docs/dewford-sevii-coast-safety.md): Dewford/Rota 107, pontes das sete Sevii com pontas de madeira e montanhas completas nas entradas das cavernas. A abertura é testada desde o início, sem save, e com o arquivo de bateria de inspeção desta pasta.
 
 Abra `Pokemon-Journey-TESTE.gba` no emulador. Esta edição deriva de Gen1–9 Normal e contém as mesmas rotas, portos e cavernas das quatro ROMs normais.
+
+A tela azul relatada não foi reproduzida no mGBA com os arquivos desta entrega, abrindo sem save e usando Continue com o save abaixo. A causa específica no My Boy permanece sem confirmação; [relatórios e capturas](../../mods/hoenn/dewford-coast-validation/TESTE/cold-boot.json).
 
 No player do GitHub Pages, selecione **TESTE · Explore without encounters**. O navegador confere o arquivo atual e mantém um save separado das quatro edições normais.
 

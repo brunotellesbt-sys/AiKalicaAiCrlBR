@@ -1,6 +1,6 @@
 # Pokémon Journey — quatro edições GBA
 
-Atualização atual: [oito ginásios extras e travessias de Surf corrigidas](../../../docs/ginasios-extras-e-travessias.md). Circuito de 24 insígnias, caminhos físicos ampliados, Dewford com dois atendentes e novo sprite do Luffy.
+Atualização atual: [Dewford, pontes das sete Sevii e montanhas completas das cavernas](../../../docs/dewford-sevii-coast-safety.md). Conserva o [circuito de 24 insígnias](../../../docs/ginasios-extras-e-travessias.md), os dois atendentes de Dewford e o sprite do Luffy. As quatro edições e a TESTE recebem a mesma correção costeira, sem alterar o mapa-múndi.
 
 Inclui [casas e feira de Mega Stones em Ever Grande](../../../docs/ever-grande-market.md), dois presentes únicos e Sootopolis com marcador vermelho. Inclui as formas Origin do PR #93, o mercado competitivo no exterior da Battle Frontier e o Hyper Training em Dewford.
 

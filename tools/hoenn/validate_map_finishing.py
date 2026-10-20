@@ -84,7 +84,8 @@ for p in ports:
         assert lib.read8(s['gPlayerAvatar'])&8 and player_priority()==2,('Surf drawn above pier',n,player_priority())
         walk(water);step(60);assert lib.read8(s['gPlayerAvatar'])&8
     checks.append(dict(map=n,terminal=inside,controller_door_roundtrip=True,foot_blocks_at_pier_end=True,foot_state_on_dry_terminal=True,
-        foot_drawn_above_bridge=True,surf_drawn_below_bridge=True,under_pier_surf_roundtrip=not bool(piers),
+        foot_drawn_above_bridge=True,surf_drawn_below_bridge=not bool(piers),under_pier_surf_roundtrip=not bool(piers),
+        surf_entry_blocked_on_low_deck=bool(piers),
         low_pier_surf_entry_blocked=bool(piers)))
     print('Native terminal finishing passed',n,flush=True)
 passable={n:valid.copy() for n,valid in dry_passable.items()}
@@ -94,9 +95,9 @@ walk(('SixIsland_Frlg',11,13));step(60)
 walk(('SixIsland_PokemonCenter_1F_Frlg',7,7));step(60);picture('six-center-inside')
 walk(('SixIsland_Frlg',11,13));step(60);assert lib.read8(s['gPlayerAvatar'])&25==1
 walk(('SixIsland_Frlg',11,12));step(300);picture('six-center-restored')
-# Every town keeps its original complete ramp and public warp IDs. Its old
-# roof is entirely gone, and the main terminal's native north-arrow pad
-# returns to the same ramp. Placements occur before each roundtrip only.
+# Every town keeps the native ramp behavior and a matching return. Layer
+# 161 extends the ramps and can use private wooden art at their endpoints.
+# Placements occur before each roundtrip only.
 def assert_cleared_water(name,footprint,water,loaded=False):
     width,height,tiles=blocks[name];x,y,w,h=footprint
     if loaded:assert location()==map_id(name)
@@ -134,7 +135,9 @@ for ferry in OBSOLETE_FERRIES:
     assert back['dest_map']==maps[endpoint_map]['id'] and back['dest_warp_id']==str(endpoint_id)
     width,height,tiles=blocks[town]
     ew,eh,et=blocks[endpoint_map]
-    assert list(et[ey*ew+ex-1:ey*ew+ex+2])==removal['ramp_metatiles']
+    expected_endpoint=(extension_bridge['endpoint_metatiles'] if extension_bridge
+                       else removal['ramp_metatiles'])
+    assert list(et[ey*ew+ex-1:ey*ew+ex+2])==expected_endpoint
     assert arrows[behaviors[endpoint_map][ey*ew+ex]]==128
     hw,hh,ht=blocks[harbor];assert ht[2*hw+8]==0x33fa and arrows[behaviors[harbor][2*hw+8]]==64
     start=(town,21,8) if ferry['island']=='Two' else (town,rx,ry-1)
@@ -170,7 +173,10 @@ for ferry in OBSOLETE_FERRIES:
         roof_footprint=ferry['roof'],cleared_footprint=ferry['clear'],replacement_water_metatile=ferry['water'],
         town_ramp=[rx,ry],town_ramp_warp_id=ferry['ramp_warp'],harbor_return=[8,2],harbor_return_warp_id=0,
         obsolete_roof_absent=True,local_ocean_texture_preserved=True,cleared_tiles_native_water_height_one=True,
-        native_ramp_tiles_and_warp_ids_preserved=True,native_north_arrow_return=True,
+        native_ramp_tiles_and_warp_ids_preserved=(expected_endpoint==removal['ramp_metatiles']
+            and endpoint_map==town and endpoint_id==ferry['ramp_warp']),
+        native_ramp_behaviors_and_roundtrip_preserved=True,
+        wooden_endcap_without_metal=bool(piers.get('wooden_endcaps')),native_north_arrow_return=True,
         connected_remnants_removed=ferry.get('connected_remnants',[]),
         controller_outbound_to_main_terminal=True,controller_return_to_town=True,foot_state_preserved=True,
         center_terminal_roundtrip=ferry['island']=='Two',
@@ -208,6 +214,7 @@ lib.stop()
     ports=checks,native_save_continue_on_pier=pier_save_continue,restored_center_wall_blocks_controller=True,center_door_roundtrip=True,
     six_obsolete_roof_removed=True,six_ramp_main_terminal_controller_roundtrip=True,
     all_seven_obsolete_roofs_removed=True,all_seven_ramp_main_terminal_controller_roundtrips=True,ramp_roundtrips=ramp_checks,
+    wooden_town_endcaps=bool(piers.get('wooden_endcaps')),
     two_ramp_coast_finished=True,two_center_terminal_controller_roundtrip=True,
     two_ramp_coast_blocks_foot_and_surf=True,two_western_surf_preserved=True,
     one_treasure_beach_obsolete_terminal_completely_removed=True,one_treasure_beach_surf_controller_roundtrip=True,
