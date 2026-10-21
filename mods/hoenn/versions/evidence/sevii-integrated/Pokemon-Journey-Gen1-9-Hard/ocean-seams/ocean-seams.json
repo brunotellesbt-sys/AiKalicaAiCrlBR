@@ -1,0 +1,5518 @@
+{
+  "passed": true,
+  "kind": "sevii-integrated-ocean-seams",
+  "rom_sha256": "12af950dcc3859bba9a6d55815f19f82179a6da5603e5edd386c5e425612f98e",
+  "review_mode": false,
+  "preflight": false,
+  "compiled_rom": true,
+  "target_maps": [
+    "FiveIsland_Frlg",
+    "FourIsland_Frlg",
+    "JourneySurfLink01000",
+    "JourneySurfLink05100",
+    "JourneySurfLink05200",
+    "JourneySurfLink05301",
+    "OneIsland_Frlg",
+    "OneIsland_TreasureBeach_Frlg",
+    "SevenIsland_Frlg",
+    "SevenIsland_SevaultCanyon_Entrance_Frlg",
+    "SevenIsland_SevaultCanyon_Frlg",
+    "SevenIsland_TrainerTower_Frlg",
+    "SixIsland_Frlg",
+    "SixIsland_WaterPath_Frlg",
+    "ThreeIsland_Frlg",
+    "ThreeIsland_Port_Frlg",
+    "TwoIsland_CapeBrink_Frlg",
+    "TwoIsland_Frlg"
+  ],
+  "compiled_art": {
+    "compiled_metatile_tables": [
+      {
+        "tileset": "gTileset_JourneySeviiSea",
+        "compiled_words": 5120,
+        "canonical_water_words": 172,
+        "metatiles_sha256": "9f6f99dde6c6c3e0adaf9cf5b44afae838abd89686a15d202fa6e7b44bf34739",
+        "attributes_sha256": "f5e8a01e42b4370fa8a198924e88ec4a08e78e5fa9cbaacb76fa9363e4e4652f",
+        "compiled_attribute_bytes": 2560,
+        "attributes_pointer_preserved": true
+      },
+      {
+        "tileset": "gTileset_JourneySeviiSea123",
+        "compiled_words": 3072,
+        "canonical_water_words": 76,
+        "metatiles_sha256": "4f5a206cb7dc99f95e69304022bbbccae9af89a4bfd70ab8877dadfc4f0e98ff",
+        "attributes_sha256": "8aa5707949327e649d389f8ee5320f3111b4aac1ed62c0a2ede0289c71dce9a0",
+        "compiled_attribute_bytes": 1536,
+        "attributes_pointer_preserved": true
+      },
+      {
+        "tileset": "gTileset_JourneySeviiIntegrated123",
+        "compiled_words": 3072,
+        "canonical_water_words": 76,
+        "metatiles_sha256": "e32a8d45bb36d70e83941185b629b68c74cb975259cfc7c3afb35d184dfa81ac",
+        "attributes_sha256": "9383cbad4f26f622bb2428b3dc0cdfc3d30eca310d23ab44aee6b4ef58fc774e",
+        "compiled_attribute_bytes": 1536,
+        "attributes_pointer_preserved": true
+      },
+      {
+        "tileset": "gTileset_JourneySeviiSea45",
+        "compiled_words": 1216,
+        "canonical_water_words": 50,
+        "metatiles_sha256": "b812855e2a70e60c18d6d3953cea113bfed2c067399812df24bd6af57c3615a7",
+        "attributes_sha256": "48d45d5519086a1cd0a79d008c13439faf2a2062cc2614927ff17a60c9ec2fd0",
+        "compiled_attribute_bytes": 608,
+        "attributes_pointer_preserved": true
+      },
+      {
+        "tileset": "gTileset_JourneySeviiIntegrated45",
+        "compiled_words": 1392,
+        "canonical_water_words": 50,
+        "metatiles_sha256": "62c2ba55bc7d7f9b3f946cbde4b06cee0c12557fe38d48f9afb8c31a2daa1961",
+        "attributes_sha256": "a3d7c26fb293f541189dbfa4d88c3a53b927d86c178b1c7969a4e6bab1090e39",
+        "compiled_attribute_bytes": 696,
+        "attributes_pointer_preserved": true
+      },
+      {
+        "tileset": "gTileset_JourneySeviiSea67",
+        "compiled_words": 3072,
+        "canonical_water_words": 80,
+        "metatiles_sha256": "15ac820ce9f1ce79f402fd6841fc04efba6afd9444ddad6171022db28f901f24",
+        "attributes_sha256": "adeea489cff4912946c2a437aff524b79cdf88529315ecf3786edb5fa2db5694",
+        "compiled_attribute_bytes": 1536,
+        "attributes_pointer_preserved": true
+      },
+      {
+        "tileset": "gTileset_JourneySeviiIntegrated67",
+        "compiled_words": 3072,
+        "canonical_water_words": 80,
+        "metatiles_sha256": "0dd945979edc0390521339ed0d1c482970f375e0bfbaae516117381090d8f861",
+        "attributes_sha256": "b8daffaa4bbd2d210cf9b9acca3409d43b920e93218148847a6dba94629cd8ef",
+        "compiled_attribute_bytes": 1536,
+        "attributes_pointer_preserved": true
+      }
+    ],
+    "compiled_tables_match_source": true,
+    "compiled_attributes_shared": true,
+    "native_body_words_unchanged": true,
+    "graphics_palettes_and_callbacks_identical": true,
+    "ocean_fast_water_surf_dive_encounter_attributes_preserved": true
+  },
+  "seams": [
+    {
+      "maps": [
+        "FiveIsland_Frlg",
+        "FiveIsland_Meadow_Frlg"
+      ],
+      "source": [
+        "FiveIsland_Frlg",
+        22,
+        16
+      ],
+      "destination": [
+        "FiveIsland_Meadow_Frlg",
+        1,
+        16
+      ],
+      "direction": "right",
+      "offset": 0,
+      "mode": "surf",
+      "available_reciprocal_passages": 8,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "FiveIsland_Frlg",
+            23,
+            16
+          ],
+          "destination": [
+            "FiveIsland_Meadow_Frlg",
+            0,
+            16
+          ]
+        },
+        {
+          "source": [
+            "FiveIsland_Meadow_Frlg",
+            0,
+            16
+          ],
+          "destination": [
+            "FiveIsland_Frlg",
+            23,
+            16
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-01-FiveIsland_Frlg-to-FiveIsland_Meadow_Frlg-before",
+        "seam-01-FiveIsland_Frlg-to-FiveIsland_Meadow_Frlg-after",
+        "seam-01-FiveIsland_Frlg-to-FiveIsland_Meadow_Frlg-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "FiveIsland_Frlg",
+        "FiveIsland_WaterLabyrinth_Frlg"
+      ],
+      "source": [
+        "FiveIsland_Frlg",
+        13,
+        1
+      ],
+      "destination": [
+        "FiveIsland_WaterLabyrinth_Frlg",
+        61,
+        18
+      ],
+      "direction": "up",
+      "offset": -48,
+      "mode": "surf",
+      "available_reciprocal_passages": 22,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "FiveIsland_Frlg",
+            13,
+            0
+          ],
+          "destination": [
+            "FiveIsland_WaterLabyrinth_Frlg",
+            61,
+            19
+          ]
+        },
+        {
+          "source": [
+            "FiveIsland_WaterLabyrinth_Frlg",
+            61,
+            19
+          ],
+          "destination": [
+            "FiveIsland_Frlg",
+            13,
+            0
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-02-FiveIsland_Frlg-to-FiveIsland_WaterLabyrinth_Frlg-before",
+        "seam-02-FiveIsland_Frlg-to-FiveIsland_WaterLabyrinth_Frlg-after",
+        "seam-02-FiveIsland_Frlg-to-FiveIsland_WaterLabyrinth_Frlg-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "FiveIsland_Frlg",
+        "JourneySurfLink00600"
+      ],
+      "source": [
+        "FiveIsland_Frlg",
+        1,
+        13
+      ],
+      "destination": [
+        "JourneySurfLink00600",
+        14,
+        6
+      ],
+      "direction": "left",
+      "offset": 7,
+      "mode": "surf",
+      "available_reciprocal_passages": 11,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "FiveIsland_Frlg",
+            0,
+            13
+          ],
+          "destination": [
+            "JourneySurfLink00600",
+            15,
+            6
+          ]
+        },
+        {
+          "source": [
+            "JourneySurfLink00600",
+            15,
+            6
+          ],
+          "destination": [
+            "FiveIsland_Frlg",
+            0,
+            13
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-03-FiveIsland_Frlg-to-JourneySurfLink00600-before",
+        "seam-03-FiveIsland_Frlg-to-JourneySurfLink00600-after",
+        "seam-03-FiveIsland_Frlg-to-JourneySurfLink00600-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "FourIsland_Frlg",
+        "JourneySurfLink01000"
+      ],
+      "source": [
+        "FourIsland_Frlg",
+        1,
+        33
+      ],
+      "destination": [
+        "JourneySurfLink01000",
+        14,
+        6
+      ],
+      "direction": "left",
+      "offset": 27,
+      "mode": "surf",
+      "available_reciprocal_passages": 11,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "FourIsland_Frlg",
+            0,
+            33
+          ],
+          "destination": [
+            "JourneySurfLink01000",
+            15,
+            6
+          ]
+        },
+        {
+          "source": [
+            "JourneySurfLink01000",
+            15,
+            6
+          ],
+          "destination": [
+            "FourIsland_Frlg",
+            0,
+            33
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-04-FourIsland_Frlg-to-JourneySurfLink01000-before",
+        "seam-04-FourIsland_Frlg-to-JourneySurfLink01000-after",
+        "seam-04-FourIsland_Frlg-to-JourneySurfLink01000-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "JourneySurfLink01000",
+        "JourneySurfLink01001"
+      ],
+      "source": [
+        "JourneySurfLink01000",
+        1,
+        6
+      ],
+      "destination": [
+        "JourneySurfLink01001",
+        14,
+        6
+      ],
+      "direction": "left",
+      "offset": 0,
+      "mode": "surf",
+      "available_reciprocal_passages": 11,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "JourneySurfLink01000",
+            0,
+            6
+          ],
+          "destination": [
+            "JourneySurfLink01001",
+            15,
+            6
+          ]
+        },
+        {
+          "source": [
+            "JourneySurfLink01001",
+            15,
+            6
+          ],
+          "destination": [
+            "JourneySurfLink01000",
+            0,
+            6
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-05-JourneySurfLink01000-to-JourneySurfLink01001-before",
+        "seam-05-JourneySurfLink01000-to-JourneySurfLink01001-after",
+        "seam-05-JourneySurfLink01000-to-JourneySurfLink01001-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "JourneySurfLink05000",
+        "OneIsland_Frlg"
+      ],
+      "source": [
+        "OneIsland_Frlg",
+        1,
+        18
+      ],
+      "destination": [
+        "JourneySurfLink05000",
+        14,
+        11
+      ],
+      "direction": "left",
+      "offset": 7,
+      "mode": "surf",
+      "available_reciprocal_passages": 1,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "OneIsland_Frlg",
+            0,
+            18
+          ],
+          "destination": [
+            "JourneySurfLink05000",
+            15,
+            11
+          ]
+        },
+        {
+          "source": [
+            "JourneySurfLink05000",
+            15,
+            11
+          ],
+          "destination": [
+            "OneIsland_Frlg",
+            0,
+            18
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-06-OneIsland_Frlg-to-JourneySurfLink05000-before",
+        "seam-06-OneIsland_Frlg-to-JourneySurfLink05000-after",
+        "seam-06-OneIsland_Frlg-to-JourneySurfLink05000-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "JourneySurfLink05100",
+        "JourneySurfLink05101"
+      ],
+      "source": [
+        "JourneySurfLink05100",
+        1,
+        6
+      ],
+      "destination": [
+        "JourneySurfLink05101",
+        14,
+        6
+      ],
+      "direction": "left",
+      "offset": 0,
+      "mode": "surf",
+      "available_reciprocal_passages": 11,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "JourneySurfLink05100",
+            0,
+            6
+          ],
+          "destination": [
+            "JourneySurfLink05101",
+            15,
+            6
+          ]
+        },
+        {
+          "source": [
+            "JourneySurfLink05101",
+            15,
+            6
+          ],
+          "destination": [
+            "JourneySurfLink05100",
+            0,
+            6
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-07-JourneySurfLink05100-to-JourneySurfLink05101-before",
+        "seam-07-JourneySurfLink05100-to-JourneySurfLink05101-after",
+        "seam-07-JourneySurfLink05100-to-JourneySurfLink05101-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "JourneySurfLink05100",
+        "SevenIsland_Frlg"
+      ],
+      "source": [
+        "JourneySurfLink05100",
+        14,
+        6
+      ],
+      "destination": [
+        "SevenIsland_Frlg",
+        1,
+        13
+      ],
+      "direction": "right",
+      "offset": -7,
+      "mode": "surf",
+      "available_reciprocal_passages": 11,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "JourneySurfLink05100",
+            15,
+            6
+          ],
+          "destination": [
+            "SevenIsland_Frlg",
+            0,
+            13
+          ]
+        },
+        {
+          "source": [
+            "SevenIsland_Frlg",
+            0,
+            13
+          ],
+          "destination": [
+            "JourneySurfLink05100",
+            15,
+            6
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-08-JourneySurfLink05100-to-SevenIsland_Frlg-before",
+        "seam-08-JourneySurfLink05100-to-SevenIsland_Frlg-after",
+        "seam-08-JourneySurfLink05100-to-SevenIsland_Frlg-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "JourneySurfLink05200",
+        "JourneySurfLink05201"
+      ],
+      "source": [
+        "JourneySurfLink05200",
+        1,
+        6
+      ],
+      "destination": [
+        "JourneySurfLink05201",
+        14,
+        6
+      ],
+      "direction": "left",
+      "offset": 0,
+      "mode": "surf",
+      "available_reciprocal_passages": 11,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "JourneySurfLink05200",
+            0,
+            6
+          ],
+          "destination": [
+            "JourneySurfLink05201",
+            15,
+            6
+          ]
+        },
+        {
+          "source": [
+            "JourneySurfLink05201",
+            15,
+            6
+          ],
+          "destination": [
+            "JourneySurfLink05200",
+            0,
+            6
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-09-JourneySurfLink05200-to-JourneySurfLink05201-before",
+        "seam-09-JourneySurfLink05200-to-JourneySurfLink05201-after",
+        "seam-09-JourneySurfLink05200-to-JourneySurfLink05201-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "JourneySurfLink05200",
+        "SixIsland_Frlg"
+      ],
+      "source": [
+        "JourneySurfLink05200",
+        14,
+        9
+      ],
+      "destination": [
+        "SixIsland_Frlg",
+        1,
+        26
+      ],
+      "direction": "right",
+      "offset": -17,
+      "mode": "surf",
+      "available_reciprocal_passages": 6,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "JourneySurfLink05200",
+            15,
+            9
+          ],
+          "destination": [
+            "SixIsland_Frlg",
+            0,
+            26
+          ]
+        },
+        {
+          "source": [
+            "SixIsland_Frlg",
+            0,
+            26
+          ],
+          "destination": [
+            "JourneySurfLink05200",
+            15,
+            9
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-10-JourneySurfLink05200-to-SixIsland_Frlg-before",
+        "seam-10-JourneySurfLink05200-to-SixIsland_Frlg-after",
+        "seam-10-JourneySurfLink05200-to-SixIsland_Frlg-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "JourneySurfLink05300",
+        "JourneySurfLink05301"
+      ],
+      "source": [
+        "JourneySurfLink05301",
+        1,
+        6
+      ],
+      "destination": [
+        "JourneySurfLink05300",
+        14,
+        6
+      ],
+      "direction": "left",
+      "offset": 0,
+      "mode": "surf",
+      "available_reciprocal_passages": 11,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "JourneySurfLink05301",
+            0,
+            6
+          ],
+          "destination": [
+            "JourneySurfLink05300",
+            15,
+            6
+          ]
+        },
+        {
+          "source": [
+            "JourneySurfLink05300",
+            15,
+            6
+          ],
+          "destination": [
+            "JourneySurfLink05301",
+            0,
+            6
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-11-JourneySurfLink05301-to-JourneySurfLink05300-before",
+        "seam-11-JourneySurfLink05301-to-JourneySurfLink05300-after",
+        "seam-11-JourneySurfLink05301-to-JourneySurfLink05300-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "JourneySurfLink05301",
+        "ThreeIsland_Port_Frlg"
+      ],
+      "source": [
+        "JourneySurfLink05301",
+        14,
+        7
+      ],
+      "destination": [
+        "ThreeIsland_Port_Frlg",
+        1,
+        14
+      ],
+      "direction": "right",
+      "offset": -7,
+      "mode": "surf",
+      "available_reciprocal_passages": 10,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "JourneySurfLink05301",
+            15,
+            7
+          ],
+          "destination": [
+            "ThreeIsland_Port_Frlg",
+            0,
+            14
+          ]
+        },
+        {
+          "source": [
+            "ThreeIsland_Port_Frlg",
+            0,
+            14
+          ],
+          "destination": [
+            "JourneySurfLink05301",
+            15,
+            7
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-12-JourneySurfLink05301-to-ThreeIsland_Port_Frlg-before",
+        "seam-12-JourneySurfLink05301-to-ThreeIsland_Port_Frlg-after",
+        "seam-12-JourneySurfLink05301-to-ThreeIsland_Port_Frlg-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "JourneySurfLink05400",
+        "TwoIsland_Frlg"
+      ],
+      "source": [
+        "TwoIsland_Frlg",
+        1,
+        13
+      ],
+      "destination": [
+        "JourneySurfLink05400",
+        14,
+        6
+      ],
+      "direction": "left",
+      "offset": 7,
+      "mode": "surf",
+      "available_reciprocal_passages": 11,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "TwoIsland_Frlg",
+            0,
+            13
+          ],
+          "destination": [
+            "JourneySurfLink05400",
+            15,
+            6
+          ]
+        },
+        {
+          "source": [
+            "JourneySurfLink05400",
+            15,
+            6
+          ],
+          "destination": [
+            "TwoIsland_Frlg",
+            0,
+            13
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-13-TwoIsland_Frlg-to-JourneySurfLink05400-before",
+        "seam-13-TwoIsland_Frlg-to-JourneySurfLink05400-after",
+        "seam-13-TwoIsland_Frlg-to-JourneySurfLink05400-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "JourneyTwoThreePassage",
+        "TwoIsland_Frlg"
+      ],
+      "source": [
+        "TwoIsland_Frlg",
+        10,
+        18
+      ],
+      "destination": [
+        "JourneyTwoThreePassage",
+        10,
+        1
+      ],
+      "direction": "down",
+      "offset": 0,
+      "mode": "surf",
+      "available_reciprocal_passages": 7,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "TwoIsland_Frlg",
+            10,
+            19
+          ],
+          "destination": [
+            "JourneyTwoThreePassage",
+            10,
+            0
+          ]
+        },
+        {
+          "source": [
+            "JourneyTwoThreePassage",
+            10,
+            0
+          ],
+          "destination": [
+            "TwoIsland_Frlg",
+            10,
+            19
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-14-TwoIsland_Frlg-to-JourneyTwoThreePassage-before",
+        "seam-14-TwoIsland_Frlg-to-JourneyTwoThreePassage-after",
+        "seam-14-TwoIsland_Frlg-to-JourneyTwoThreePassage-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "OneIsland_Frlg",
+        "OneIsland_KindleRoad_Frlg"
+      ],
+      "source": [
+        "OneIsland_Frlg",
+        22,
+        5
+      ],
+      "destination": [
+        "OneIsland_KindleRoad_Frlg",
+        1,
+        125
+      ],
+      "direction": "right",
+      "offset": -120,
+      "mode": "surf",
+      "available_reciprocal_passages": 2,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "OneIsland_Frlg",
+            23,
+            5
+          ],
+          "destination": [
+            "OneIsland_KindleRoad_Frlg",
+            0,
+            125
+          ]
+        },
+        {
+          "source": [
+            "OneIsland_KindleRoad_Frlg",
+            0,
+            125
+          ],
+          "destination": [
+            "OneIsland_Frlg",
+            23,
+            5
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-15-OneIsland_Frlg-to-OneIsland_KindleRoad_Frlg-before",
+        "seam-15-OneIsland_Frlg-to-OneIsland_KindleRoad_Frlg-after",
+        "seam-15-OneIsland_Frlg-to-OneIsland_KindleRoad_Frlg-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "OneIsland_Frlg",
+        "OneIsland_TreasureBeach_Frlg"
+      ],
+      "source": [
+        "OneIsland_Frlg",
+        8,
+        18
+      ],
+      "destination": [
+        "OneIsland_TreasureBeach_Frlg",
+        8,
+        1
+      ],
+      "direction": "down",
+      "offset": 0,
+      "mode": "surf",
+      "available_reciprocal_passages": 9,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "OneIsland_Frlg",
+            8,
+            19
+          ],
+          "destination": [
+            "OneIsland_TreasureBeach_Frlg",
+            8,
+            0
+          ]
+        },
+        {
+          "source": [
+            "OneIsland_TreasureBeach_Frlg",
+            8,
+            0
+          ],
+          "destination": [
+            "OneIsland_Frlg",
+            8,
+            19
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-16-OneIsland_Frlg-to-OneIsland_TreasureBeach_Frlg-before",
+        "seam-16-OneIsland_Frlg-to-OneIsland_TreasureBeach_Frlg-after",
+        "seam-16-OneIsland_Frlg-to-OneIsland_TreasureBeach_Frlg-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "SevenIsland_Frlg",
+        "SevenIsland_SevaultCanyon_Entrance_Frlg"
+      ],
+      "source": [
+        "SevenIsland_Frlg",
+        12,
+        18
+      ],
+      "destination": [
+        "SevenIsland_SevaultCanyon_Entrance_Frlg",
+        12,
+        1
+      ],
+      "direction": "down",
+      "offset": 0,
+      "mode": "surf",
+      "available_reciprocal_passages": 3,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "SevenIsland_Frlg",
+            12,
+            19
+          ],
+          "destination": [
+            "SevenIsland_SevaultCanyon_Entrance_Frlg",
+            12,
+            0
+          ]
+        },
+        {
+          "source": [
+            "SevenIsland_SevaultCanyon_Entrance_Frlg",
+            12,
+            0
+          ],
+          "destination": [
+            "SevenIsland_Frlg",
+            12,
+            19
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-17-SevenIsland_Frlg-to-SevenIsland_SevaultCanyon_Entrance_Frlg-before",
+        "seam-17-SevenIsland_Frlg-to-SevenIsland_SevaultCanyon_Entrance_Frlg-after",
+        "seam-17-SevenIsland_Frlg-to-SevenIsland_SevaultCanyon_Entrance_Frlg-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "SevenIsland_Frlg",
+        "SevenIsland_TrainerTower_Frlg"
+      ],
+      "source": [
+        "SevenIsland_Frlg",
+        8,
+        1
+      ],
+      "destination": [
+        "SevenIsland_TrainerTower_Frlg",
+        56,
+        38
+      ],
+      "direction": "up",
+      "offset": -48,
+      "mode": "foot",
+      "available_reciprocal_passages": 3,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": false,
+      "native_foot_mode_preserved": true,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "SevenIsland_Frlg",
+            8,
+            0
+          ],
+          "destination": [
+            "SevenIsland_TrainerTower_Frlg",
+            56,
+            39
+          ]
+        },
+        {
+          "source": [
+            "SevenIsland_TrainerTower_Frlg",
+            56,
+            39
+          ],
+          "destination": [
+            "SevenIsland_Frlg",
+            8,
+            0
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-18-SevenIsland_Frlg-to-SevenIsland_TrainerTower_Frlg-before",
+        "seam-18-SevenIsland_Frlg-to-SevenIsland_TrainerTower_Frlg-after",
+        "seam-18-SevenIsland_Frlg-to-SevenIsland_TrainerTower_Frlg-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "SevenIsland_SevaultCanyon_Entrance_Frlg",
+        "SevenIsland_SevaultCanyon_Frlg"
+      ],
+      "source": [
+        "SevenIsland_SevaultCanyon_Entrance_Frlg",
+        22,
+        29
+      ],
+      "destination": [
+        "SevenIsland_SevaultCanyon_Frlg",
+        1,
+        9
+      ],
+      "direction": "right",
+      "offset": 20,
+      "mode": "foot",
+      "available_reciprocal_passages": 2,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": false,
+      "native_foot_mode_preserved": true,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "SevenIsland_SevaultCanyon_Entrance_Frlg",
+            23,
+            29
+          ],
+          "destination": [
+            "SevenIsland_SevaultCanyon_Frlg",
+            0,
+            9
+          ]
+        },
+        {
+          "source": [
+            "SevenIsland_SevaultCanyon_Frlg",
+            0,
+            9
+          ],
+          "destination": [
+            "SevenIsland_SevaultCanyon_Entrance_Frlg",
+            23,
+            29
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-19-SevenIsland_SevaultCanyon_Entrance_Frlg-to-SevenIsland_SevaultCanyon_Frlg-before",
+        "seam-19-SevenIsland_SevaultCanyon_Entrance_Frlg-to-SevenIsland_SevaultCanyon_Frlg-after",
+        "seam-19-SevenIsland_SevaultCanyon_Entrance_Frlg-to-SevenIsland_SevaultCanyon_Frlg-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "SevenIsland_SevaultCanyon_Frlg",
+        "SevenIsland_TanobyRuins_Frlg"
+      ],
+      "source": [
+        "SevenIsland_SevaultCanyon_Frlg",
+        6,
+        78
+      ],
+      "destination": [
+        "SevenIsland_TanobyRuins_Frlg",
+        54,
+        1
+      ],
+      "direction": "down",
+      "offset": -48,
+      "mode": "surf",
+      "available_reciprocal_passages": 8,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "SevenIsland_SevaultCanyon_Frlg",
+            6,
+            79
+          ],
+          "destination": [
+            "SevenIsland_TanobyRuins_Frlg",
+            54,
+            0
+          ]
+        },
+        {
+          "source": [
+            "SevenIsland_TanobyRuins_Frlg",
+            54,
+            0
+          ],
+          "destination": [
+            "SevenIsland_SevaultCanyon_Frlg",
+            6,
+            79
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-20-SevenIsland_SevaultCanyon_Frlg-to-SevenIsland_TanobyRuins_Frlg-before",
+        "seam-20-SevenIsland_SevaultCanyon_Frlg-to-SevenIsland_TanobyRuins_Frlg-after",
+        "seam-20-SevenIsland_SevaultCanyon_Frlg-to-SevenIsland_TanobyRuins_Frlg-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "SixIsland_Frlg",
+        "SixIsland_WaterPath_Frlg"
+      ],
+      "source": [
+        "SixIsland_Frlg",
+        22,
+        12
+      ],
+      "destination": [
+        "SixIsland_WaterPath_Frlg",
+        1,
+        52
+      ],
+      "direction": "right",
+      "offset": -40,
+      "mode": "foot",
+      "available_reciprocal_passages": 3,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": false,
+      "native_foot_mode_preserved": true,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "SixIsland_Frlg",
+            23,
+            12
+          ],
+          "destination": [
+            "SixIsland_WaterPath_Frlg",
+            0,
+            52
+          ]
+        },
+        {
+          "source": [
+            "SixIsland_WaterPath_Frlg",
+            0,
+            52
+          ],
+          "destination": [
+            "SixIsland_Frlg",
+            23,
+            12
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-21-SixIsland_Frlg-to-SixIsland_WaterPath_Frlg-before",
+        "seam-21-SixIsland_Frlg-to-SixIsland_WaterPath_Frlg-after",
+        "seam-21-SixIsland_Frlg-to-SixIsland_WaterPath_Frlg-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "SixIsland_GreenPath_Frlg",
+        "SixIsland_WaterPath_Frlg"
+      ],
+      "source": [
+        "SixIsland_WaterPath_Frlg",
+        1,
+        18
+      ],
+      "destination": [
+        "SixIsland_GreenPath_Frlg",
+        70,
+        18
+      ],
+      "direction": "left",
+      "offset": 0,
+      "mode": "surf",
+      "available_reciprocal_passages": 3,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": true,
+      "native_foot_mode_preserved": false,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "SixIsland_WaterPath_Frlg",
+            0,
+            18
+          ],
+          "destination": [
+            "SixIsland_GreenPath_Frlg",
+            71,
+            18
+          ]
+        },
+        {
+          "source": [
+            "SixIsland_GreenPath_Frlg",
+            71,
+            18
+          ],
+          "destination": [
+            "SixIsland_WaterPath_Frlg",
+            0,
+            18
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-22-SixIsland_WaterPath_Frlg-to-SixIsland_GreenPath_Frlg-before",
+        "seam-22-SixIsland_WaterPath_Frlg-to-SixIsland_GreenPath_Frlg-after",
+        "seam-22-SixIsland_WaterPath_Frlg-to-SixIsland_GreenPath_Frlg-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "SixIsland_RuinValley_Frlg",
+        "SixIsland_WaterPath_Frlg"
+      ],
+      "source": [
+        "SixIsland_WaterPath_Frlg",
+        1,
+        90
+      ],
+      "destination": [
+        "SixIsland_RuinValley_Frlg",
+        46,
+        10
+      ],
+      "direction": "left",
+      "offset": 80,
+      "mode": "foot",
+      "available_reciprocal_passages": 3,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": false,
+      "native_foot_mode_preserved": true,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "SixIsland_WaterPath_Frlg",
+            0,
+            90
+          ],
+          "destination": [
+            "SixIsland_RuinValley_Frlg",
+            47,
+            10
+          ]
+        },
+        {
+          "source": [
+            "SixIsland_RuinValley_Frlg",
+            47,
+            10
+          ],
+          "destination": [
+            "SixIsland_WaterPath_Frlg",
+            0,
+            90
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-23-SixIsland_WaterPath_Frlg-to-SixIsland_RuinValley_Frlg-before",
+        "seam-23-SixIsland_WaterPath_Frlg-to-SixIsland_RuinValley_Frlg-after",
+        "seam-23-SixIsland_WaterPath_Frlg-to-SixIsland_RuinValley_Frlg-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "ThreeIsland_BondBridge_Frlg",
+        "ThreeIsland_Frlg"
+      ],
+      "source": [
+        "ThreeIsland_Frlg",
+        1,
+        10
+      ],
+      "destination": [
+        "ThreeIsland_BondBridge_Frlg",
+        94,
+        10
+      ],
+      "direction": "left",
+      "offset": 0,
+      "mode": "foot",
+      "available_reciprocal_passages": 6,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": false,
+      "native_foot_mode_preserved": true,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "ThreeIsland_Frlg",
+            0,
+            10
+          ],
+          "destination": [
+            "ThreeIsland_BondBridge_Frlg",
+            95,
+            10
+          ]
+        },
+        {
+          "source": [
+            "ThreeIsland_BondBridge_Frlg",
+            95,
+            10
+          ],
+          "destination": [
+            "ThreeIsland_Frlg",
+            0,
+            10
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-24-ThreeIsland_Frlg-to-ThreeIsland_BondBridge_Frlg-before",
+        "seam-24-ThreeIsland_Frlg-to-ThreeIsland_BondBridge_Frlg-after",
+        "seam-24-ThreeIsland_Frlg-to-ThreeIsland_BondBridge_Frlg-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "ThreeIsland_Frlg",
+        "ThreeIsland_Port_Frlg"
+      ],
+      "source": [
+        "ThreeIsland_Frlg",
+        11,
+        38
+      ],
+      "destination": [
+        "ThreeIsland_Port_Frlg",
+        11,
+        1
+      ],
+      "direction": "down",
+      "offset": 0,
+      "mode": "foot",
+      "available_reciprocal_passages": 3,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": false,
+      "native_foot_mode_preserved": true,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "ThreeIsland_Frlg",
+            11,
+            39
+          ],
+          "destination": [
+            "ThreeIsland_Port_Frlg",
+            11,
+            0
+          ]
+        },
+        {
+          "source": [
+            "ThreeIsland_Port_Frlg",
+            11,
+            0
+          ],
+          "destination": [
+            "ThreeIsland_Frlg",
+            11,
+            39
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-25-ThreeIsland_Frlg-to-ThreeIsland_Port_Frlg-before",
+        "seam-25-ThreeIsland_Frlg-to-ThreeIsland_Port_Frlg-after",
+        "seam-25-ThreeIsland_Frlg-to-ThreeIsland_Port_Frlg-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    },
+    {
+      "maps": [
+        "TwoIsland_CapeBrink_Frlg",
+        "TwoIsland_Frlg"
+      ],
+      "source": [
+        "TwoIsland_CapeBrink_Frlg",
+        13,
+        38
+      ],
+      "destination": [
+        "TwoIsland_Frlg",
+        37,
+        1
+      ],
+      "direction": "down",
+      "offset": -24,
+      "mode": "foot",
+      "available_reciprocal_passages": 2,
+      "outbound_and_return": true,
+      "native_controller_crossings": 2,
+      "surf_preserved": false,
+      "native_foot_mode_preserved": true,
+      "ocean_palette_identical": true,
+      "transitions": [
+        {
+          "source": [
+            "TwoIsland_CapeBrink_Frlg",
+            13,
+            39
+          ],
+          "destination": [
+            "TwoIsland_Frlg",
+            37,
+            0
+          ]
+        },
+        {
+          "source": [
+            "TwoIsland_Frlg",
+            37,
+            0
+          ],
+          "destination": [
+            "TwoIsland_CapeBrink_Frlg",
+            13,
+            39
+          ]
+        }
+      ],
+      "loaded_checks": [
+        "seam-26-TwoIsland_CapeBrink_Frlg-to-TwoIsland_Frlg-before",
+        "seam-26-TwoIsland_CapeBrink_Frlg-to-TwoIsland_Frlg-after",
+        "seam-26-TwoIsland_CapeBrink_Frlg-to-TwoIsland_Frlg-returned"
+      ],
+      "no_midcrossing_warps_or_coordinate_writes": true
+    }
+  ],
+  "loaded_checks": [
+    {
+      "label": "seam-01-FiveIsland_Frlg-to-FiveIsland_Meadow_Frlg-before",
+      "map": "FiveIsland_Frlg",
+      "tile": [
+        22,
+        16
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "FiveIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated45",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "30dc20e64713c0678da24905d2b0e22f09b481c39854685fb7b52cb624bdd9ad",
+        "valid_animation_phases": [
+          0
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-01-FiveIsland_Frlg-to-FiveIsland_Meadow_Frlg-before.png",
+        "sha256": "2ec8d98d5d6825b0b1a96df2d000351369b4d6153ab1da78d3d7fdc712d617f9"
+      }
+    },
+    {
+      "label": "seam-01-FiveIsland_Frlg-to-FiveIsland_Meadow_Frlg-after",
+      "map": "FiveIsland_Meadow_Frlg",
+      "tile": [
+        1,
+        16
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "FiveIsland_Meadow_Frlg",
+        "primary": "gTileset_General_Frlg",
+        "secondary": "gTileset_SeviiIslands45",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "bbd65f9a5b4aae60548f8a3c896e5ad461f46b494a1008bcb1651dc1eeb205b3",
+        "valid_animation_phases": [
+          1
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-01-FiveIsland_Frlg-to-FiveIsland_Meadow_Frlg-after.png",
+        "sha256": "1f23afa07d34c6a891122030f3ae29924e646033605efde882c6145e25c1ac22"
+      }
+    },
+    {
+      "label": "seam-01-FiveIsland_Frlg-to-FiveIsland_Meadow_Frlg-returned",
+      "map": "FiveIsland_Frlg",
+      "tile": [
+        22,
+        16
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "FiveIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated45",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "242e20da237aa44413a51a2df537770a969d6c776790f3c908cf76384812e813",
+        "valid_animation_phases": [
+          2
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-01-FiveIsland_Frlg-to-FiveIsland_Meadow_Frlg-returned.png",
+        "sha256": "29cd1c20f48b92df644cee761396801e119c288137a2debb28e1efed0bbae0fc"
+      }
+    },
+    {
+      "label": "seam-02-FiveIsland_Frlg-to-FiveIsland_WaterLabyrinth_Frlg-before",
+      "map": "FiveIsland_Frlg",
+      "tile": [
+        13,
+        1
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "FiveIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated45",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "1426a3c55fd83c48df8f99f11fbe5839ef0dc22048ed3f59987c3a0cef9c0dc8",
+        "valid_animation_phases": [
+          3
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-02-FiveIsland_Frlg-to-FiveIsland_WaterLabyrinth_Frlg-before.png",
+        "sha256": "1a60c94ae3ef732837fb0a0be0f89d202ec4b04813c524432292bf02ab3b4144"
+      }
+    },
+    {
+      "label": "seam-02-FiveIsland_Frlg-to-FiveIsland_WaterLabyrinth_Frlg-after",
+      "map": "FiveIsland_WaterLabyrinth_Frlg",
+      "tile": [
+        61,
+        18
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "FiveIsland_WaterLabyrinth_Frlg",
+        "primary": "gTileset_General_Frlg",
+        "secondary": "gTileset_SeviiIslands45",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "446b9663199d82261fb7119c87e30510d992531fde7d3ad8102c1a05e2c6b70c",
+        "valid_animation_phases": [
+          4
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-02-FiveIsland_Frlg-to-FiveIsland_WaterLabyrinth_Frlg-after.png",
+        "sha256": "b8eb0d1f1300c2120ee1fb5fba9cb6f63e40ca57bc4fa78bcd52782cfd477482"
+      }
+    },
+    {
+      "label": "seam-02-FiveIsland_Frlg-to-FiveIsland_WaterLabyrinth_Frlg-returned",
+      "map": "FiveIsland_Frlg",
+      "tile": [
+        13,
+        1
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "FiveIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated45",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "0ae1badbbb8a5e80643cbfdd8a9c01ec39c3fea0d611fb16b90a373f53939c8e",
+        "valid_animation_phases": [
+          5
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-02-FiveIsland_Frlg-to-FiveIsland_WaterLabyrinth_Frlg-returned.png",
+        "sha256": "c1d8e4ceee0694a563e51d6e824f059e4bc91eb117b204a2150fd2637b058867"
+      }
+    },
+    {
+      "label": "seam-03-FiveIsland_Frlg-to-JourneySurfLink00600-before",
+      "map": "FiveIsland_Frlg",
+      "tile": [
+        1,
+        13
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "FiveIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated45",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "170f38377dea9faaa6ab76201dd268e2eb7cee66606569b648e589ff362383d1",
+        "valid_animation_phases": [
+          6
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-03-FiveIsland_Frlg-to-JourneySurfLink00600-before.png",
+        "sha256": "bd1cea55c08acf48d9406d2ccc10840994f2a7e0fe84f22002f0deccded97d23"
+      }
+    },
+    {
+      "label": "seam-03-FiveIsland_Frlg-to-JourneySurfLink00600-after",
+      "map": "JourneySurfLink00600",
+      "tile": [
+        14,
+        6
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink00600",
+        "primary": "gTileset_General_Frlg",
+        "secondary": "gTileset_SeviiIslands45",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "14ba2623e90453cb5416a385615442849fd3f0d0624b7a699f686fb349764598",
+        "valid_animation_phases": [
+          7
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-03-FiveIsland_Frlg-to-JourneySurfLink00600-after.png",
+        "sha256": "c46e38f46defe11ecec832637d204eeb9f2b63a2f40a2eff275b689940c17333"
+      }
+    },
+    {
+      "label": "seam-03-FiveIsland_Frlg-to-JourneySurfLink00600-returned",
+      "map": "FiveIsland_Frlg",
+      "tile": [
+        1,
+        13
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "FiveIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated45",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "30dc20e64713c0678da24905d2b0e22f09b481c39854685fb7b52cb624bdd9ad",
+        "valid_animation_phases": [
+          0
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-03-FiveIsland_Frlg-to-JourneySurfLink00600-returned.png",
+        "sha256": "2c472bb22a0670261a00e6d6b7c964e82f7e01c66ac2a1998929081d7b8f7d48"
+      }
+    },
+    {
+      "label": "seam-04-FourIsland_Frlg-to-JourneySurfLink01000-before",
+      "map": "FourIsland_Frlg",
+      "tile": [
+        1,
+        33
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "FourIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated45",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 336,
+        "loaded_underlay_cells_sha256": "173582ac59841b9d900bdd3869172e06213f1de31674578a16b4f61d66c8e529",
+        "vram_water_sha256": "bbd65f9a5b4aae60548f8a3c896e5ad461f46b494a1008bcb1651dc1eeb205b3",
+        "valid_animation_phases": [
+          1
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-04-FourIsland_Frlg-to-JourneySurfLink01000-before.png",
+        "sha256": "495648e000076826353c583f214a7452ec06c3591095bcf1b86283dc8d5acc27"
+      }
+    },
+    {
+      "label": "seam-04-FourIsland_Frlg-to-JourneySurfLink01000-after",
+      "map": "JourneySurfLink01000",
+      "tile": [
+        14,
+        6
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink01000",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea45",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "242e20da237aa44413a51a2df537770a969d6c776790f3c908cf76384812e813",
+        "valid_animation_phases": [
+          2
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-04-FourIsland_Frlg-to-JourneySurfLink01000-after.png",
+        "sha256": "2f8ab97db249e0df5f622e4ca5ddf41ba3909e6c34fee92ae46304929329d615"
+      }
+    },
+    {
+      "label": "seam-04-FourIsland_Frlg-to-JourneySurfLink01000-returned",
+      "map": "FourIsland_Frlg",
+      "tile": [
+        1,
+        33
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "FourIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated45",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 336,
+        "loaded_underlay_cells_sha256": "173582ac59841b9d900bdd3869172e06213f1de31674578a16b4f61d66c8e529",
+        "vram_water_sha256": "1426a3c55fd83c48df8f99f11fbe5839ef0dc22048ed3f59987c3a0cef9c0dc8",
+        "valid_animation_phases": [
+          3
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-04-FourIsland_Frlg-to-JourneySurfLink01000-returned.png",
+        "sha256": "2f274754fbaa394fd5e47a728ed3b0a3d79facf21603f231e2192912621e1c21"
+      }
+    },
+    {
+      "label": "seam-05-JourneySurfLink01000-to-JourneySurfLink01001-before",
+      "map": "JourneySurfLink01000",
+      "tile": [
+        1,
+        6
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink01000",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea45",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "446b9663199d82261fb7119c87e30510d992531fde7d3ad8102c1a05e2c6b70c",
+        "valid_animation_phases": [
+          4
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-05-JourneySurfLink01000-to-JourneySurfLink01001-before.png",
+        "sha256": "14a2ab2d86e664e8b1decd73f6a9944586f89d0a635b9e4854549091e6ca5eb6"
+      }
+    },
+    {
+      "label": "seam-05-JourneySurfLink01000-to-JourneySurfLink01001-after",
+      "map": "JourneySurfLink01001",
+      "tile": [
+        14,
+        6
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink01001",
+        "primary": "gTileset_General_Frlg",
+        "secondary": "gTileset_IslandHarbor_Frlg",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "170f38377dea9faaa6ab76201dd268e2eb7cee66606569b648e589ff362383d1",
+        "valid_animation_phases": [
+          6
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-05-JourneySurfLink01000-to-JourneySurfLink01001-after.png",
+        "sha256": "95b2637d94ccc27a99ee665526a097e3e96397491228f125323ae2275aed36a8"
+      }
+    },
+    {
+      "label": "seam-05-JourneySurfLink01000-to-JourneySurfLink01001-returned",
+      "map": "JourneySurfLink01000",
+      "tile": [
+        1,
+        6
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink01000",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea45",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "170f38377dea9faaa6ab76201dd268e2eb7cee66606569b648e589ff362383d1",
+        "valid_animation_phases": [
+          6
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-05-JourneySurfLink01000-to-JourneySurfLink01001-returned.png",
+        "sha256": "e59f141d669f1ec9f98030bc075a58933c4f298f4fb4461055b8426bdcf71e74"
+      }
+    },
+    {
+      "label": "seam-06-OneIsland_Frlg-to-JourneySurfLink05000-before",
+      "map": "OneIsland_Frlg",
+      "tile": [
+        1,
+        18
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "OneIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "14ba2623e90453cb5416a385615442849fd3f0d0624b7a699f686fb349764598",
+        "valid_animation_phases": [
+          7
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-06-OneIsland_Frlg-to-JourneySurfLink05000-before.png",
+        "sha256": "3bf84eddf008125c2f182c9a220225d53402152ad1496457d545747c8fac0ae9"
+      }
+    },
+    {
+      "label": "seam-06-OneIsland_Frlg-to-JourneySurfLink05000-after",
+      "map": "JourneySurfLink05000",
+      "tile": [
+        14,
+        11
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink05000",
+        "primary": "gTileset_General_Frlg",
+        "secondary": "gTileset_SeviiIslands123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "bbd65f9a5b4aae60548f8a3c896e5ad461f46b494a1008bcb1651dc1eeb205b3",
+        "valid_animation_phases": [
+          1
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-06-OneIsland_Frlg-to-JourneySurfLink05000-after.png",
+        "sha256": "a3ed9cfe68f0740cadcdf60684f13956ca6b290912e1e642403318b7b237aa36"
+      }
+    },
+    {
+      "label": "seam-06-OneIsland_Frlg-to-JourneySurfLink05000-returned",
+      "map": "OneIsland_Frlg",
+      "tile": [
+        1,
+        18
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "OneIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "242e20da237aa44413a51a2df537770a969d6c776790f3c908cf76384812e813",
+        "valid_animation_phases": [
+          2
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-06-OneIsland_Frlg-to-JourneySurfLink05000-returned.png",
+        "sha256": "c3cf9cb5d7ec04a83a1d1fb5e01c556510ffccdb43fb2474c76e986f612ec661"
+      }
+    },
+    {
+      "label": "seam-07-JourneySurfLink05100-to-JourneySurfLink05101-before",
+      "map": "JourneySurfLink05100",
+      "tile": [
+        1,
+        6
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink05100",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "1426a3c55fd83c48df8f99f11fbe5839ef0dc22048ed3f59987c3a0cef9c0dc8",
+        "valid_animation_phases": [
+          3
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-07-JourneySurfLink05100-to-JourneySurfLink05101-before.png",
+        "sha256": "32d9dca94d589380ee2b6d8a774e722ad2e3ea6e599d0664cffee613a2b97825"
+      }
+    },
+    {
+      "label": "seam-07-JourneySurfLink05100-to-JourneySurfLink05101-after",
+      "map": "JourneySurfLink05101",
+      "tile": [
+        14,
+        6
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink05101",
+        "primary": "gTileset_General_Frlg",
+        "secondary": "gTileset_IslandHarbor_Frlg",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "446b9663199d82261fb7119c87e30510d992531fde7d3ad8102c1a05e2c6b70c",
+        "valid_animation_phases": [
+          4
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-07-JourneySurfLink05100-to-JourneySurfLink05101-after.png",
+        "sha256": "715f70dffef0e02e3126d172fc74a0cf3c2167a2f1da10a94432541947ce99d2"
+      }
+    },
+    {
+      "label": "seam-07-JourneySurfLink05100-to-JourneySurfLink05101-returned",
+      "map": "JourneySurfLink05100",
+      "tile": [
+        1,
+        6
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink05100",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "0ae1badbbb8a5e80643cbfdd8a9c01ec39c3fea0d611fb16b90a373f53939c8e",
+        "valid_animation_phases": [
+          5
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-07-JourneySurfLink05100-to-JourneySurfLink05101-returned.png",
+        "sha256": "e5b352506cd4d8dfef50f1114190ebdcf96359374a4a3a4483493f90026cba3e"
+      }
+    },
+    {
+      "label": "seam-08-JourneySurfLink05100-to-SevenIsland_Frlg-before",
+      "map": "JourneySurfLink05100",
+      "tile": [
+        14,
+        6
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink05100",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "170f38377dea9faaa6ab76201dd268e2eb7cee66606569b648e589ff362383d1",
+        "valid_animation_phases": [
+          6
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-08-JourneySurfLink05100-to-SevenIsland_Frlg-before.png",
+        "sha256": "db37a4b591f3e625dacd8faf3f67c83c4c5489982243212c43ddf9c31b0e9a93"
+      }
+    },
+    {
+      "label": "seam-08-JourneySurfLink05100-to-SevenIsland_Frlg-after",
+      "map": "SevenIsland_Frlg",
+      "tile": [
+        1,
+        13
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SevenIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 115,
+        "loaded_underlay_cells_sha256": "2ae36663f83305b6d91092af42a4c18e0ca0987883c3576bd0dbf4b9259059bb",
+        "vram_water_sha256": "14ba2623e90453cb5416a385615442849fd3f0d0624b7a699f686fb349764598",
+        "valid_animation_phases": [
+          7
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-08-JourneySurfLink05100-to-SevenIsland_Frlg-after.png",
+        "sha256": "ef86274e12f3ef7c4f1e72f4f8f73f968304407ae640830bf8d12f7a309de03f"
+      }
+    },
+    {
+      "label": "seam-08-JourneySurfLink05100-to-SevenIsland_Frlg-returned",
+      "map": "JourneySurfLink05100",
+      "tile": [
+        14,
+        6
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink05100",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "14ba2623e90453cb5416a385615442849fd3f0d0624b7a699f686fb349764598",
+        "valid_animation_phases": [
+          7
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-08-JourneySurfLink05100-to-SevenIsland_Frlg-returned.png",
+        "sha256": "e8d77428516f272e2faef43c5f7a493b51c14a50596ec551f41438a51f67c6a9"
+      }
+    },
+    {
+      "label": "seam-09-JourneySurfLink05200-to-JourneySurfLink05201-before",
+      "map": "JourneySurfLink05200",
+      "tile": [
+        1,
+        6
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink05200",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "bbd65f9a5b4aae60548f8a3c896e5ad461f46b494a1008bcb1651dc1eeb205b3",
+        "valid_animation_phases": [
+          1
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-09-JourneySurfLink05200-to-JourneySurfLink05201-before.png",
+        "sha256": "f4859eacc889884209a7acce9df7f0bf59874eb55c87748cf643b726376deef6"
+      }
+    },
+    {
+      "label": "seam-09-JourneySurfLink05200-to-JourneySurfLink05201-after",
+      "map": "JourneySurfLink05201",
+      "tile": [
+        14,
+        6
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink05201",
+        "primary": "gTileset_General_Frlg",
+        "secondary": "gTileset_IslandHarbor_Frlg",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "242e20da237aa44413a51a2df537770a969d6c776790f3c908cf76384812e813",
+        "valid_animation_phases": [
+          2
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-09-JourneySurfLink05200-to-JourneySurfLink05201-after.png",
+        "sha256": "9d94dfbc415bef506aa37760f50a5daabd569f853a0e0f209d1b1820430abd67"
+      }
+    },
+    {
+      "label": "seam-09-JourneySurfLink05200-to-JourneySurfLink05201-returned",
+      "map": "JourneySurfLink05200",
+      "tile": [
+        1,
+        6
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink05200",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "1426a3c55fd83c48df8f99f11fbe5839ef0dc22048ed3f59987c3a0cef9c0dc8",
+        "valid_animation_phases": [
+          3
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-09-JourneySurfLink05200-to-JourneySurfLink05201-returned.png",
+        "sha256": "985ae8498891a7749a534e26938e8f6eec5d51ad86c6c543f0fddd59a0e22a95"
+      }
+    },
+    {
+      "label": "seam-10-JourneySurfLink05200-to-SixIsland_Frlg-before",
+      "map": "JourneySurfLink05200",
+      "tile": [
+        14,
+        9
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink05200",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "446b9663199d82261fb7119c87e30510d992531fde7d3ad8102c1a05e2c6b70c",
+        "valid_animation_phases": [
+          4
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-10-JourneySurfLink05200-to-SixIsland_Frlg-before.png",
+        "sha256": "a199e8853f3d083ed15dbec4a0ff5e797833f35fa0bfc148c6dc4c0db2ce4853"
+      }
+    },
+    {
+      "label": "seam-10-JourneySurfLink05200-to-SixIsland_Frlg-after",
+      "map": "SixIsland_Frlg",
+      "tile": [
+        1,
+        26
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SixIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 98,
+        "loaded_underlay_cells_sha256": "e31fdef98af84e6afc49b5af6ee94030587acd83762f543bf744dfeb32e8f5b4",
+        "vram_water_sha256": "170f38377dea9faaa6ab76201dd268e2eb7cee66606569b648e589ff362383d1",
+        "valid_animation_phases": [
+          6
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-10-JourneySurfLink05200-to-SixIsland_Frlg-after.png",
+        "sha256": "dd34673d60dc791f68d5de3caec1a880b62c41813f2772057124f287a8b21e9f"
+      }
+    },
+    {
+      "label": "seam-10-JourneySurfLink05200-to-SixIsland_Frlg-returned",
+      "map": "JourneySurfLink05200",
+      "tile": [
+        14,
+        9
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink05200",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "170f38377dea9faaa6ab76201dd268e2eb7cee66606569b648e589ff362383d1",
+        "valid_animation_phases": [
+          6
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-10-JourneySurfLink05200-to-SixIsland_Frlg-returned.png",
+        "sha256": "84886713e8fdb32133e57c6c2add57a93f509aae6b0787bf96ac0ad402dcfea5"
+      }
+    },
+    {
+      "label": "seam-11-JourneySurfLink05301-to-JourneySurfLink05300-before",
+      "map": "JourneySurfLink05301",
+      "tile": [
+        1,
+        6
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink05301",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "14ba2623e90453cb5416a385615442849fd3f0d0624b7a699f686fb349764598",
+        "valid_animation_phases": [
+          7
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-11-JourneySurfLink05301-to-JourneySurfLink05300-before.png",
+        "sha256": "2247d2ed9a9558ec46f4da21cb1c59a91445a87e9c27d3699cd7e0b91be63d76"
+      }
+    },
+    {
+      "label": "seam-11-JourneySurfLink05301-to-JourneySurfLink05300-after",
+      "map": "JourneySurfLink05300",
+      "tile": [
+        14,
+        6
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink05300",
+        "primary": "gTileset_General_Frlg",
+        "secondary": "gTileset_IslandHarbor_Frlg",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "bbd65f9a5b4aae60548f8a3c896e5ad461f46b494a1008bcb1651dc1eeb205b3",
+        "valid_animation_phases": [
+          1
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-11-JourneySurfLink05301-to-JourneySurfLink05300-after.png",
+        "sha256": "5fe4c3fb01b5e83fa40e37a85e7a9f408a7ee5f1085cf82e28ea8d955cc6812b"
+      }
+    },
+    {
+      "label": "seam-11-JourneySurfLink05301-to-JourneySurfLink05300-returned",
+      "map": "JourneySurfLink05301",
+      "tile": [
+        1,
+        6
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink05301",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "bbd65f9a5b4aae60548f8a3c896e5ad461f46b494a1008bcb1651dc1eeb205b3",
+        "valid_animation_phases": [
+          1
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-11-JourneySurfLink05301-to-JourneySurfLink05300-returned.png",
+        "sha256": "ba488fc5cd08d05d1571a4f59dafe409c388d3f3bff7ae4c32b873fb5ef06366"
+      }
+    },
+    {
+      "label": "seam-12-JourneySurfLink05301-to-ThreeIsland_Port_Frlg-before",
+      "map": "JourneySurfLink05301",
+      "tile": [
+        14,
+        7
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink05301",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "1426a3c55fd83c48df8f99f11fbe5839ef0dc22048ed3f59987c3a0cef9c0dc8",
+        "valid_animation_phases": [
+          3
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-12-JourneySurfLink05301-to-ThreeIsland_Port_Frlg-before.png",
+        "sha256": "12aa0e55f59d14a7a4886a597f814eb505cb9bd41e6cc88cd0743d3a0883176b"
+      }
+    },
+    {
+      "label": "seam-12-JourneySurfLink05301-to-ThreeIsland_Port_Frlg-after",
+      "map": "ThreeIsland_Port_Frlg",
+      "tile": [
+        1,
+        14
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "ThreeIsland_Port_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 471,
+        "loaded_underlay_cells_sha256": "b95c6a0ab76763bcee3b70a5048fbd93e7c33947177a2f1672870b206d6ad8f4",
+        "vram_water_sha256": "446b9663199d82261fb7119c87e30510d992531fde7d3ad8102c1a05e2c6b70c",
+        "valid_animation_phases": [
+          4
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-12-JourneySurfLink05301-to-ThreeIsland_Port_Frlg-after.png",
+        "sha256": "70f6e14d5c5c69abff3d476fef252e61f10de6249645d1d8359e5da72e375ac2"
+      }
+    },
+    {
+      "label": "seam-12-JourneySurfLink05301-to-ThreeIsland_Port_Frlg-returned",
+      "map": "JourneySurfLink05301",
+      "tile": [
+        14,
+        7
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink05301",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "446b9663199d82261fb7119c87e30510d992531fde7d3ad8102c1a05e2c6b70c",
+        "valid_animation_phases": [
+          4
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-12-JourneySurfLink05301-to-ThreeIsland_Port_Frlg-returned.png",
+        "sha256": "b4d80e024a5b7fbea2abc2aa65ea36de9dc5b6450ead49042ddcd8a5304352f5"
+      }
+    },
+    {
+      "label": "seam-13-TwoIsland_Frlg-to-JourneySurfLink05400-before",
+      "map": "TwoIsland_Frlg",
+      "tile": [
+        1,
+        13
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "TwoIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "170f38377dea9faaa6ab76201dd268e2eb7cee66606569b648e589ff362383d1",
+        "valid_animation_phases": [
+          6
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-13-TwoIsland_Frlg-to-JourneySurfLink05400-before.png",
+        "sha256": "3240ffc8d984373185db6a08d586f87f909db93727a75b7ed38c648c92324b20"
+      }
+    },
+    {
+      "label": "seam-13-TwoIsland_Frlg-to-JourneySurfLink05400-after",
+      "map": "JourneySurfLink05400",
+      "tile": [
+        14,
+        6
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneySurfLink05400",
+        "primary": "gTileset_General_Frlg",
+        "secondary": "gTileset_SeviiIslands123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "14ba2623e90453cb5416a385615442849fd3f0d0624b7a699f686fb349764598",
+        "valid_animation_phases": [
+          7
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-13-TwoIsland_Frlg-to-JourneySurfLink05400-after.png",
+        "sha256": "7f23247915c6647c2dcb61dff561deda7055bf3b14b0a850520f3dac89ed6422"
+      }
+    },
+    {
+      "label": "seam-13-TwoIsland_Frlg-to-JourneySurfLink05400-returned",
+      "map": "TwoIsland_Frlg",
+      "tile": [
+        1,
+        13
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "TwoIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "30dc20e64713c0678da24905d2b0e22f09b481c39854685fb7b52cb624bdd9ad",
+        "valid_animation_phases": [
+          0
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-13-TwoIsland_Frlg-to-JourneySurfLink05400-returned.png",
+        "sha256": "6e648c8315b992c12640b84dc8cc6ad4dc269cee4516e003be70ceecaa4a0ce6"
+      }
+    },
+    {
+      "label": "seam-14-TwoIsland_Frlg-to-JourneyTwoThreePassage-before",
+      "map": "TwoIsland_Frlg",
+      "tile": [
+        10,
+        18
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "TwoIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "bbd65f9a5b4aae60548f8a3c896e5ad461f46b494a1008bcb1651dc1eeb205b3",
+        "valid_animation_phases": [
+          1
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-14-TwoIsland_Frlg-to-JourneyTwoThreePassage-before.png",
+        "sha256": "ea6b25e21fa77c45ea7296b6f5ba2c2bea60a2519fd63af4121f0d5a5dc994f3"
+      }
+    },
+    {
+      "label": "seam-14-TwoIsland_Frlg-to-JourneyTwoThreePassage-after",
+      "map": "JourneyTwoThreePassage",
+      "tile": [
+        10,
+        1
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "JourneyTwoThreePassage",
+        "primary": "gTileset_General_Frlg",
+        "secondary": "gTileset_IslandHarbor_Frlg",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "242e20da237aa44413a51a2df537770a969d6c776790f3c908cf76384812e813",
+        "valid_animation_phases": [
+          2
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-14-TwoIsland_Frlg-to-JourneyTwoThreePassage-after.png",
+        "sha256": "ebf8066f319f58d3cec5e70464248e5cee133e572ba2475dabeda54f7f2fc046"
+      }
+    },
+    {
+      "label": "seam-14-TwoIsland_Frlg-to-JourneyTwoThreePassage-returned",
+      "map": "TwoIsland_Frlg",
+      "tile": [
+        10,
+        18
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "TwoIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "1426a3c55fd83c48df8f99f11fbe5839ef0dc22048ed3f59987c3a0cef9c0dc8",
+        "valid_animation_phases": [
+          3
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-14-TwoIsland_Frlg-to-JourneyTwoThreePassage-returned.png",
+        "sha256": "5f2482d80ec77bc718642f56bb616bbc9f8e99166582e704b748509bf38fe4fb"
+      }
+    },
+    {
+      "label": "seam-15-OneIsland_Frlg-to-OneIsland_KindleRoad_Frlg-before",
+      "map": "OneIsland_Frlg",
+      "tile": [
+        22,
+        5
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "OneIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "446b9663199d82261fb7119c87e30510d992531fde7d3ad8102c1a05e2c6b70c",
+        "valid_animation_phases": [
+          4
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-15-OneIsland_Frlg-to-OneIsland_KindleRoad_Frlg-before.png",
+        "sha256": "f9f6621e7ef6b0184d67c18650a2baefeda8bb226d8aa1239086a37d53198441"
+      }
+    },
+    {
+      "label": "seam-15-OneIsland_Frlg-to-OneIsland_KindleRoad_Frlg-after",
+      "map": "OneIsland_KindleRoad_Frlg",
+      "tile": [
+        1,
+        125
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "OneIsland_KindleRoad_Frlg",
+        "primary": "gTileset_General_Frlg",
+        "secondary": "gTileset_SeviiIslands123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "0ae1badbbb8a5e80643cbfdd8a9c01ec39c3fea0d611fb16b90a373f53939c8e",
+        "valid_animation_phases": [
+          5
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-15-OneIsland_Frlg-to-OneIsland_KindleRoad_Frlg-after.png",
+        "sha256": "d09eb9337e38409a51c7a4f0670c537d5133d0fc733df42155b5fae359348db2"
+      }
+    },
+    {
+      "label": "seam-15-OneIsland_Frlg-to-OneIsland_KindleRoad_Frlg-returned",
+      "map": "OneIsland_Frlg",
+      "tile": [
+        22,
+        5
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "OneIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "170f38377dea9faaa6ab76201dd268e2eb7cee66606569b648e589ff362383d1",
+        "valid_animation_phases": [
+          6
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-15-OneIsland_Frlg-to-OneIsland_KindleRoad_Frlg-returned.png",
+        "sha256": "38bb66abae90f672196e5a48a79adbcc57270d7bcb7fe4d7a15d83b834823cd1"
+      }
+    },
+    {
+      "label": "seam-16-OneIsland_Frlg-to-OneIsland_TreasureBeach_Frlg-before",
+      "map": "OneIsland_Frlg",
+      "tile": [
+        8,
+        18
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "OneIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "14ba2623e90453cb5416a385615442849fd3f0d0624b7a699f686fb349764598",
+        "valid_animation_phases": [
+          7
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-16-OneIsland_Frlg-to-OneIsland_TreasureBeach_Frlg-before.png",
+        "sha256": "fad8491b31cb728a89b6f338dc541eccf16a19e8feeb1e764583305121c661c6"
+      }
+    },
+    {
+      "label": "seam-16-OneIsland_Frlg-to-OneIsland_TreasureBeach_Frlg-after",
+      "map": "OneIsland_TreasureBeach_Frlg",
+      "tile": [
+        8,
+        1
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "OneIsland_TreasureBeach_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "14ba2623e90453cb5416a385615442849fd3f0d0624b7a699f686fb349764598",
+        "valid_animation_phases": [
+          7
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-16-OneIsland_Frlg-to-OneIsland_TreasureBeach_Frlg-after.png",
+        "sha256": "25b43ac6efe38181de7b0225569b27fc09d256c157cb804a818050cb4d68b5b6"
+      }
+    },
+    {
+      "label": "seam-16-OneIsland_Frlg-to-OneIsland_TreasureBeach_Frlg-returned",
+      "map": "OneIsland_Frlg",
+      "tile": [
+        8,
+        18
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "OneIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "30dc20e64713c0678da24905d2b0e22f09b481c39854685fb7b52cb624bdd9ad",
+        "valid_animation_phases": [
+          0
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-16-OneIsland_Frlg-to-OneIsland_TreasureBeach_Frlg-returned.png",
+        "sha256": "7a164719142b8af2cabe5a7f6eda6ed1259775ae8d59dc39b551d14121c49391"
+      }
+    },
+    {
+      "label": "seam-17-SevenIsland_Frlg-to-SevenIsland_SevaultCanyon_Entrance_Frlg-before",
+      "map": "SevenIsland_Frlg",
+      "tile": [
+        12,
+        18
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SevenIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 115,
+        "loaded_underlay_cells_sha256": "2ae36663f83305b6d91092af42a4c18e0ca0987883c3576bd0dbf4b9259059bb",
+        "vram_water_sha256": "242e20da237aa44413a51a2df537770a969d6c776790f3c908cf76384812e813",
+        "valid_animation_phases": [
+          2
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-17-SevenIsland_Frlg-to-SevenIsland_SevaultCanyon_Entrance_Frlg-before.png",
+        "sha256": "21a0557bc45e5d516ea013e6cb2a74bdae9ccf60114ed64178b539d1cd6d0a79"
+      }
+    },
+    {
+      "label": "seam-17-SevenIsland_Frlg-to-SevenIsland_SevaultCanyon_Entrance_Frlg-after",
+      "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+      "tile": [
+        12,
+        1
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 288,
+        "loaded_underlay_cells_sha256": "a1483aaeca7125e49f37f74fe538b1e6738a07225e1cb4eb4950c8198707692b",
+        "vram_water_sha256": "242e20da237aa44413a51a2df537770a969d6c776790f3c908cf76384812e813",
+        "valid_animation_phases": [
+          2
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-17-SevenIsland_Frlg-to-SevenIsland_SevaultCanyon_Entrance_Frlg-after.png",
+        "sha256": "d6dd2cfd2f630b7b656f1e81e24becc03f092ec9c240faec5bd6a4c8c5063fbe"
+      }
+    },
+    {
+      "label": "seam-17-SevenIsland_Frlg-to-SevenIsland_SevaultCanyon_Entrance_Frlg-returned",
+      "map": "SevenIsland_Frlg",
+      "tile": [
+        12,
+        18
+      ],
+      "surfing": true,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SevenIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 115,
+        "loaded_underlay_cells_sha256": "2ae36663f83305b6d91092af42a4c18e0ca0987883c3576bd0dbf4b9259059bb",
+        "vram_water_sha256": "1426a3c55fd83c48df8f99f11fbe5839ef0dc22048ed3f59987c3a0cef9c0dc8",
+        "valid_animation_phases": [
+          3
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-17-SevenIsland_Frlg-to-SevenIsland_SevaultCanyon_Entrance_Frlg-returned.png",
+        "sha256": "fdabada0908ef536036b478cd9e6456453e6a139f7e3b86ca0569c8dd6a35168"
+      }
+    },
+    {
+      "label": "seam-18-SevenIsland_Frlg-to-SevenIsland_TrainerTower_Frlg-before",
+      "map": "SevenIsland_Frlg",
+      "tile": [
+        8,
+        1
+      ],
+      "surfing": false,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SevenIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 115,
+        "loaded_underlay_cells_sha256": "2ae36663f83305b6d91092af42a4c18e0ca0987883c3576bd0dbf4b9259059bb",
+        "vram_water_sha256": "446b9663199d82261fb7119c87e30510d992531fde7d3ad8102c1a05e2c6b70c",
+        "valid_animation_phases": [
+          4
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-18-SevenIsland_Frlg-to-SevenIsland_TrainerTower_Frlg-before.png",
+        "sha256": "0a59e9d94d3f507c7f64d63fc12f9815a31378ab0d9a1b453d4c2c057df07162"
+      }
+    },
+    {
+      "label": "seam-18-SevenIsland_Frlg-to-SevenIsland_TrainerTower_Frlg-after",
+      "map": "SevenIsland_TrainerTower_Frlg",
+      "tile": [
+        56,
+        38
+      ],
+      "surfing": false,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SevenIsland_TrainerTower_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "0ae1badbbb8a5e80643cbfdd8a9c01ec39c3fea0d611fb16b90a373f53939c8e",
+        "valid_animation_phases": [
+          5
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-18-SevenIsland_Frlg-to-SevenIsland_TrainerTower_Frlg-after.png",
+        "sha256": "e92eec78ad0517740a645326941c2ccdc86fa891b195514787e6c1628679955f"
+      }
+    },
+    {
+      "label": "seam-18-SevenIsland_Frlg-to-SevenIsland_TrainerTower_Frlg-returned",
+      "map": "SevenIsland_Frlg",
+      "tile": [
+        8,
+        1
+      ],
+      "surfing": false,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SevenIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 115,
+        "loaded_underlay_cells_sha256": "2ae36663f83305b6d91092af42a4c18e0ca0987883c3576bd0dbf4b9259059bb",
+        "vram_water_sha256": "170f38377dea9faaa6ab76201dd268e2eb7cee66606569b648e589ff362383d1",
+        "valid_animation_phases": [
+          6
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-18-SevenIsland_Frlg-to-SevenIsland_TrainerTower_Frlg-returned.png",
+        "sha256": "7971983df9eb6eeeba8bd120b4e867482cfbe24963f43148115e40a53088399c"
+      }
+    },
+    {
+      "label": "seam-19-SevenIsland_SevaultCanyon_Entrance_Frlg-to-SevenIsland_SevaultCanyon_Frlg-before",
+      "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+      "tile": [
+        22,
+        29
+      ],
+      "surfing": false,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 288,
+        "loaded_underlay_cells_sha256": "a1483aaeca7125e49f37f74fe538b1e6738a07225e1cb4eb4950c8198707692b",
+        "vram_water_sha256": "30dc20e64713c0678da24905d2b0e22f09b481c39854685fb7b52cb624bdd9ad",
+        "valid_animation_phases": [
+          0
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-19-SevenIsland_SevaultCanyon_Entrance_Frlg-to-SevenIsland_SevaultCanyon_Frlg-before.png",
+        "sha256": "abc4cf3c261db20f84fc5f121ee55b92e334561ce238ee704aeb5c2c34f6a160"
+      }
+    },
+    {
+      "label": "seam-19-SevenIsland_SevaultCanyon_Entrance_Frlg-to-SevenIsland_SevaultCanyon_Frlg-after",
+      "map": "SevenIsland_SevaultCanyon_Frlg",
+      "tile": [
+        1,
+        9
+      ],
+      "surfing": false,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SevenIsland_SevaultCanyon_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "30dc20e64713c0678da24905d2b0e22f09b481c39854685fb7b52cb624bdd9ad",
+        "valid_animation_phases": [
+          0
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-19-SevenIsland_SevaultCanyon_Entrance_Frlg-to-SevenIsland_SevaultCanyon_Frlg-after.png",
+        "sha256": "6b03833f84ef5847c10c1fc245af52513ea5b4e4d22abda4e426203000c7f523"
+      }
+    },
+    {
+      "label": "seam-19-SevenIsland_SevaultCanyon_Entrance_Frlg-to-SevenIsland_SevaultCanyon_Frlg-returned",
+      "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+      "tile": [
+        22,
+        29
+      ],
+      "surfing": false,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 288,
+        "loaded_underlay_cells_sha256": "a1483aaeca7125e49f37f74fe538b1e6738a07225e1cb4eb4950c8198707692b",
+        "vram_water_sha256": "bbd65f9a5b4aae60548f8a3c896e5ad461f46b494a1008bcb1651dc1eeb205b3",
+        "valid_animation_phases": [
+          1
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-19-SevenIsland_SevaultCanyon_Entrance_Frlg-to-SevenIsland_SevaultCanyon_Frlg-returned.png",
+        "sha256": "9dd8a3b1b3ef95cc380469be3db2d6fbae59b0ba0df929c9273f855e0f289220"
+      }
+    },
+    {
+      "label": "seam-20-SevenIsland_SevaultCanyon_Frlg-to-SevenIsland_TanobyRuins_Frlg-before",
+      "map": "SevenIsland_SevaultCanyon_Frlg",
+      "tile": [
+        6,
+        78
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SevenIsland_SevaultCanyon_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "1426a3c55fd83c48df8f99f11fbe5839ef0dc22048ed3f59987c3a0cef9c0dc8",
+        "valid_animation_phases": [
+          3
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-20-SevenIsland_SevaultCanyon_Frlg-to-SevenIsland_TanobyRuins_Frlg-before.png",
+        "sha256": "506454e712e92b29769f29e96cb2d4b24b65609d423aa77b98525a5fe4e13b26"
+      }
+    },
+    {
+      "label": "seam-20-SevenIsland_SevaultCanyon_Frlg-to-SevenIsland_TanobyRuins_Frlg-after",
+      "map": "SevenIsland_TanobyRuins_Frlg",
+      "tile": [
+        54,
+        1
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SevenIsland_TanobyRuins_Frlg",
+        "primary": "gTileset_General_Frlg",
+        "secondary": "gTileset_SeviiIslands67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "1426a3c55fd83c48df8f99f11fbe5839ef0dc22048ed3f59987c3a0cef9c0dc8",
+        "valid_animation_phases": [
+          3
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-20-SevenIsland_SevaultCanyon_Frlg-to-SevenIsland_TanobyRuins_Frlg-after.png",
+        "sha256": "8bcfc4d312d801a7d3cfeffdd8c2025039801d7d3e44f1389afc4a3574f9b27e"
+      }
+    },
+    {
+      "label": "seam-20-SevenIsland_SevaultCanyon_Frlg-to-SevenIsland_TanobyRuins_Frlg-returned",
+      "map": "SevenIsland_SevaultCanyon_Frlg",
+      "tile": [
+        6,
+        78
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SevenIsland_SevaultCanyon_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "446b9663199d82261fb7119c87e30510d992531fde7d3ad8102c1a05e2c6b70c",
+        "valid_animation_phases": [
+          4
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-20-SevenIsland_SevaultCanyon_Frlg-to-SevenIsland_TanobyRuins_Frlg-returned.png",
+        "sha256": "95cadac80e914da0d5e8ee528534d59635bfbf41ea6d3c79900621d342136cd7"
+      }
+    },
+    {
+      "label": "seam-21-SixIsland_Frlg-to-SixIsland_WaterPath_Frlg-before",
+      "map": "SixIsland_Frlg",
+      "tile": [
+        22,
+        12
+      ],
+      "surfing": false,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SixIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 98,
+        "loaded_underlay_cells_sha256": "e31fdef98af84e6afc49b5af6ee94030587acd83762f543bf744dfeb32e8f5b4",
+        "vram_water_sha256": "0ae1badbbb8a5e80643cbfdd8a9c01ec39c3fea0d611fb16b90a373f53939c8e",
+        "valid_animation_phases": [
+          5
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-21-SixIsland_Frlg-to-SixIsland_WaterPath_Frlg-before.png",
+        "sha256": "a5f80462337c7cacffd330a892e2468ae861b5cb825071dfbd224f42daa20963"
+      }
+    },
+    {
+      "label": "seam-21-SixIsland_Frlg-to-SixIsland_WaterPath_Frlg-after",
+      "map": "SixIsland_WaterPath_Frlg",
+      "tile": [
+        1,
+        52
+      ],
+      "surfing": false,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SixIsland_WaterPath_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "14ba2623e90453cb5416a385615442849fd3f0d0624b7a699f686fb349764598",
+        "valid_animation_phases": [
+          7
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-21-SixIsland_Frlg-to-SixIsland_WaterPath_Frlg-after.png",
+        "sha256": "2b1018a84d717d2375f2e9f8ec0c93849ef45b748cf567e7c732728f35b141f3"
+      }
+    },
+    {
+      "label": "seam-21-SixIsland_Frlg-to-SixIsland_WaterPath_Frlg-returned",
+      "map": "SixIsland_Frlg",
+      "tile": [
+        22,
+        12
+      ],
+      "surfing": false,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SixIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 98,
+        "loaded_underlay_cells_sha256": "e31fdef98af84e6afc49b5af6ee94030587acd83762f543bf744dfeb32e8f5b4",
+        "vram_water_sha256": "14ba2623e90453cb5416a385615442849fd3f0d0624b7a699f686fb349764598",
+        "valid_animation_phases": [
+          7
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-21-SixIsland_Frlg-to-SixIsland_WaterPath_Frlg-returned.png",
+        "sha256": "0f354c858b8a9bf34bb7fb93f80af301fea3c44f43783009001f03fc9f9d04cb"
+      }
+    },
+    {
+      "label": "seam-22-SixIsland_WaterPath_Frlg-to-SixIsland_GreenPath_Frlg-before",
+      "map": "SixIsland_WaterPath_Frlg",
+      "tile": [
+        1,
+        18
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SixIsland_WaterPath_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "bbd65f9a5b4aae60548f8a3c896e5ad461f46b494a1008bcb1651dc1eeb205b3",
+        "valid_animation_phases": [
+          1
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-22-SixIsland_WaterPath_Frlg-to-SixIsland_GreenPath_Frlg-before.png",
+        "sha256": "870d632fe5f4792552e7c4b997d7db5e4ac5e4c11438fff3c517b018a060708a"
+      }
+    },
+    {
+      "label": "seam-22-SixIsland_WaterPath_Frlg-to-SixIsland_GreenPath_Frlg-after",
+      "map": "SixIsland_GreenPath_Frlg",
+      "tile": [
+        70,
+        18
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SixIsland_GreenPath_Frlg",
+        "primary": "gTileset_General_Frlg",
+        "secondary": "gTileset_SeviiIslands67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "242e20da237aa44413a51a2df537770a969d6c776790f3c908cf76384812e813",
+        "valid_animation_phases": [
+          2
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-22-SixIsland_WaterPath_Frlg-to-SixIsland_GreenPath_Frlg-after.png",
+        "sha256": "90f2df00dbf8122f7e44aef2d317b632bf068ad5ab0e7d177beb1d2086e20c0f"
+      }
+    },
+    {
+      "label": "seam-22-SixIsland_WaterPath_Frlg-to-SixIsland_GreenPath_Frlg-returned",
+      "map": "SixIsland_WaterPath_Frlg",
+      "tile": [
+        1,
+        18
+      ],
+      "surfing": true,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SixIsland_WaterPath_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "1426a3c55fd83c48df8f99f11fbe5839ef0dc22048ed3f59987c3a0cef9c0dc8",
+        "valid_animation_phases": [
+          3
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-22-SixIsland_WaterPath_Frlg-to-SixIsland_GreenPath_Frlg-returned.png",
+        "sha256": "669191074f5495d78d63158b3ed83988420525d0499f63549c560acf7285a7d9"
+      }
+    },
+    {
+      "label": "seam-23-SixIsland_WaterPath_Frlg-to-SixIsland_RuinValley_Frlg-before",
+      "map": "SixIsland_WaterPath_Frlg",
+      "tile": [
+        1,
+        90
+      ],
+      "surfing": false,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SixIsland_WaterPath_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "446b9663199d82261fb7119c87e30510d992531fde7d3ad8102c1a05e2c6b70c",
+        "valid_animation_phases": [
+          4
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-23-SixIsland_WaterPath_Frlg-to-SixIsland_RuinValley_Frlg-before.png",
+        "sha256": "c650638ee1602b9a8546ce1a9862aec58e5cf19765d0237f4d6f8d4fe53420a0"
+      }
+    },
+    {
+      "label": "seam-23-SixIsland_WaterPath_Frlg-to-SixIsland_RuinValley_Frlg-after",
+      "map": "SixIsland_RuinValley_Frlg",
+      "tile": [
+        46,
+        10
+      ],
+      "surfing": false,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SixIsland_RuinValley_Frlg",
+        "primary": "gTileset_General_Frlg",
+        "secondary": "gTileset_SeviiIslands67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "0ae1badbbb8a5e80643cbfdd8a9c01ec39c3fea0d611fb16b90a373f53939c8e",
+        "valid_animation_phases": [
+          5
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-23-SixIsland_WaterPath_Frlg-to-SixIsland_RuinValley_Frlg-after.png",
+        "sha256": "ae236e3525db852a908953aeecb3ec6b03bbcc58eeda31e9e55115095f471b46"
+      }
+    },
+    {
+      "label": "seam-23-SixIsland_WaterPath_Frlg-to-SixIsland_RuinValley_Frlg-returned",
+      "map": "SixIsland_WaterPath_Frlg",
+      "tile": [
+        1,
+        90
+      ],
+      "surfing": false,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "SixIsland_WaterPath_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea67",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "170f38377dea9faaa6ab76201dd268e2eb7cee66606569b648e589ff362383d1",
+        "valid_animation_phases": [
+          6
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-23-SixIsland_WaterPath_Frlg-to-SixIsland_RuinValley_Frlg-returned.png",
+        "sha256": "30f7206f64376e2d3dcc3c60a5bd220cefdadbf3eb51b6ffe388ad58d17b21ca"
+      }
+    },
+    {
+      "label": "seam-24-ThreeIsland_Frlg-to-ThreeIsland_BondBridge_Frlg-before",
+      "map": "ThreeIsland_Frlg",
+      "tile": [
+        1,
+        10
+      ],
+      "surfing": false,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "ThreeIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "14ba2623e90453cb5416a385615442849fd3f0d0624b7a699f686fb349764598",
+        "valid_animation_phases": [
+          7
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-24-ThreeIsland_Frlg-to-ThreeIsland_BondBridge_Frlg-before.png",
+        "sha256": "e62f7057c6b93e77159ffc4ac92d83d8ce4fd1c085d780ea1ccd67c019a88e5c"
+      }
+    },
+    {
+      "label": "seam-24-ThreeIsland_Frlg-to-ThreeIsland_BondBridge_Frlg-after",
+      "map": "ThreeIsland_BondBridge_Frlg",
+      "tile": [
+        94,
+        10
+      ],
+      "surfing": false,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "ThreeIsland_BondBridge_Frlg",
+        "primary": "gTileset_General_Frlg",
+        "secondary": "gTileset_SeviiIslands123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "30dc20e64713c0678da24905d2b0e22f09b481c39854685fb7b52cb624bdd9ad",
+        "valid_animation_phases": [
+          0
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-24-ThreeIsland_Frlg-to-ThreeIsland_BondBridge_Frlg-after.png",
+        "sha256": "edacd34ebcfb09122ce6bc4857088534af92db3bdf92f78a59d31db282969423"
+      }
+    },
+    {
+      "label": "seam-24-ThreeIsland_Frlg-to-ThreeIsland_BondBridge_Frlg-returned",
+      "map": "ThreeIsland_Frlg",
+      "tile": [
+        1,
+        10
+      ],
+      "surfing": false,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "ThreeIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "bbd65f9a5b4aae60548f8a3c896e5ad461f46b494a1008bcb1651dc1eeb205b3",
+        "valid_animation_phases": [
+          1
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-24-ThreeIsland_Frlg-to-ThreeIsland_BondBridge_Frlg-returned.png",
+        "sha256": "69729453a9871b291ffb67715aadaf9a1d41c90b52d476a547556c64a0bd9036"
+      }
+    },
+    {
+      "label": "seam-25-ThreeIsland_Frlg-to-ThreeIsland_Port_Frlg-before",
+      "map": "ThreeIsland_Frlg",
+      "tile": [
+        11,
+        38
+      ],
+      "surfing": false,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "ThreeIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "242e20da237aa44413a51a2df537770a969d6c776790f3c908cf76384812e813",
+        "valid_animation_phases": [
+          2
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-25-ThreeIsland_Frlg-to-ThreeIsland_Port_Frlg-before.png",
+        "sha256": "8366d815d09965481a340d3844a7220c37454d4d40e177289b628723581a861f"
+      }
+    },
+    {
+      "label": "seam-25-ThreeIsland_Frlg-to-ThreeIsland_Port_Frlg-after",
+      "map": "ThreeIsland_Port_Frlg",
+      "tile": [
+        11,
+        1
+      ],
+      "surfing": false,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "ThreeIsland_Port_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 471,
+        "loaded_underlay_cells_sha256": "b95c6a0ab76763bcee3b70a5048fbd93e7c33947177a2f1672870b206d6ad8f4",
+        "vram_water_sha256": "242e20da237aa44413a51a2df537770a969d6c776790f3c908cf76384812e813",
+        "valid_animation_phases": [
+          2
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-25-ThreeIsland_Frlg-to-ThreeIsland_Port_Frlg-after.png",
+        "sha256": "0f0d2c3570099b1979427f351403b910e4d57328ca5a12b0eb1e6f7b2f4d0979"
+      }
+    },
+    {
+      "label": "seam-25-ThreeIsland_Frlg-to-ThreeIsland_Port_Frlg-returned",
+      "map": "ThreeIsland_Frlg",
+      "tile": [
+        11,
+        38
+      ],
+      "surfing": false,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "ThreeIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "446b9663199d82261fb7119c87e30510d992531fde7d3ad8102c1a05e2c6b70c",
+        "valid_animation_phases": [
+          4
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-25-ThreeIsland_Frlg-to-ThreeIsland_Port_Frlg-returned.png",
+        "sha256": "66791a5c1a83b205423b37c1047cac34105595831bd6db1ba6505f630e6e814e"
+      }
+    },
+    {
+      "label": "seam-26-TwoIsland_CapeBrink_Frlg-to-TwoIsland_Frlg-before",
+      "map": "TwoIsland_CapeBrink_Frlg",
+      "tile": [
+        13,
+        38
+      ],
+      "surfing": false,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "TwoIsland_CapeBrink_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 377,
+        "loaded_underlay_cells_sha256": "5014789aaab65c2a4d74a3c32c099c26e0d0402634a2149658ce2cd7e775797e",
+        "vram_water_sha256": "0ae1badbbb8a5e80643cbfdd8a9c01ec39c3fea0d611fb16b90a373f53939c8e",
+        "valid_animation_phases": [
+          5
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-26-TwoIsland_CapeBrink_Frlg-to-TwoIsland_Frlg-before.png",
+        "sha256": "a7f4ccf485776b30ae9a86413678b141220e5151d933b5b35b32e8b0d1656963"
+      }
+    },
+    {
+      "label": "seam-26-TwoIsland_CapeBrink_Frlg-to-TwoIsland_Frlg-after",
+      "map": "TwoIsland_Frlg",
+      "tile": [
+        37,
+        1
+      ],
+      "surfing": false,
+      "native_open_coast": true,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "TwoIsland_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiIntegrated123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 0,
+        "loaded_underlay_cells_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "vram_water_sha256": "0ae1badbbb8a5e80643cbfdd8a9c01ec39c3fea0d611fb16b90a373f53939c8e",
+        "valid_animation_phases": [
+          5
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-26-TwoIsland_CapeBrink_Frlg-to-TwoIsland_Frlg-after.png",
+        "sha256": "d84f7b03c44295c9a485ebf8b241924cc40c8834f14a08d047434908094f2d64"
+      }
+    },
+    {
+      "label": "seam-26-TwoIsland_CapeBrink_Frlg-to-TwoIsland_Frlg-returned",
+      "map": "TwoIsland_CapeBrink_Frlg",
+      "tile": [
+        13,
+        38
+      ],
+      "surfing": false,
+      "native_open_coast": false,
+      "ocean_palette": [
+        29461,
+        28305,
+        27149,
+        27050
+      ],
+      "loaded_art": {
+        "map": "TwoIsland_CapeBrink_Frlg",
+        "primary": "gTileset_JourneySeviiSea",
+        "secondary": "gTileset_JourneySeviiSea123",
+        "canonical_lower_words": [
+          16838,
+          16839,
+          16839,
+          16838
+        ],
+        "loaded_underlay_cells_checked": 377,
+        "loaded_underlay_cells_sha256": "5014789aaab65c2a4d74a3c32c099c26e0d0402634a2149658ce2cd7e775797e",
+        "vram_water_sha256": "170f38377dea9faaa6ab76201dd268e2eb7cee66606569b648e589ff362383d1",
+        "valid_animation_phases": [
+          6
+        ],
+        "native_ocean_palette": [
+          29461,
+          28305,
+          27149,
+          27050
+        ],
+        "loaded_graphics_and_palette_verified": true,
+        "native_map_buffer_unchanged": true,
+        "native_body_words_unchanged": true
+      },
+      "capture": {
+        "file": "seam-26-TwoIsland_CapeBrink_Frlg-to-TwoIsland_Frlg-returned.png",
+        "sha256": "f30cf63321d576d5925ff6131d9067f02109d1524fe4c18e9c54f3ab240e51ce"
+      }
+    }
+  ],
+  "surface_seams": 26,
+  "native_controller_crossings": 52,
+  "surf_seams": 19,
+  "land_seams": 7,
+  "loaded_metatiles_palettes_and_vram_checked": true,
+  "attributes_and_native_object_body_words_preserved": true,
+  "ocean_palette_identical_at_all_checked_seams": true,
+  "all_affected_surface_connections_covered": true,
+  "no_midcrossing_warps_or_coordinate_writes": true,
+  "initial_positions_avatar_modes_party_and_progress_are_fixtures": true,
+  "full_campaign_playthrough": false,
+  "walked_tiles": 156,
+  "native_fast_water_coast_whitelist": [
+    "FiveIsland_Frlg",
+    "FiveIsland_Harbor_Frlg",
+    "FourIsland_Frlg",
+    "FourIsland_Harbor_Frlg",
+    "OneIsland_Frlg",
+    "OneIsland_Harbor_Frlg",
+    "SevenIsland_Frlg",
+    "SevenIsland_Harbor_Frlg",
+    "SevenIsland_SevaultCanyon_Entrance_Frlg",
+    "SixIsland_Frlg",
+    "SixIsland_Harbor_Frlg",
+    "ThreeIsland_Harbor_Frlg",
+    "ThreeIsland_Port_Frlg",
+    "TwoIsland_Frlg",
+    "TwoIsland_Harbor_Frlg"
+  ],
+  "fast_water_semantics_checked_per_map": true,
+  "captures": [
+    {
+      "file": "seam-01-FiveIsland_Frlg-to-FiveIsland_Meadow_Frlg-before.png",
+      "sha256": "2ec8d98d5d6825b0b1a96df2d000351369b4d6153ab1da78d3d7fdc712d617f9"
+    },
+    {
+      "file": "seam-01-FiveIsland_Frlg-to-FiveIsland_Meadow_Frlg-after.png",
+      "sha256": "1f23afa07d34c6a891122030f3ae29924e646033605efde882c6145e25c1ac22"
+    },
+    {
+      "file": "seam-01-FiveIsland_Frlg-to-FiveIsland_Meadow_Frlg-returned.png",
+      "sha256": "29cd1c20f48b92df644cee761396801e119c288137a2debb28e1efed0bbae0fc"
+    },
+    {
+      "file": "seam-02-FiveIsland_Frlg-to-FiveIsland_WaterLabyrinth_Frlg-before.png",
+      "sha256": "1a60c94ae3ef732837fb0a0be0f89d202ec4b04813c524432292bf02ab3b4144"
+    },
+    {
+      "file": "seam-02-FiveIsland_Frlg-to-FiveIsland_WaterLabyrinth_Frlg-after.png",
+      "sha256": "b8eb0d1f1300c2120ee1fb5fba9cb6f63e40ca57bc4fa78bcd52782cfd477482"
+    },
+    {
+      "file": "seam-02-FiveIsland_Frlg-to-FiveIsland_WaterLabyrinth_Frlg-returned.png",
+      "sha256": "c1d8e4ceee0694a563e51d6e824f059e4bc91eb117b204a2150fd2637b058867"
+    },
+    {
+      "file": "seam-03-FiveIsland_Frlg-to-JourneySurfLink00600-before.png",
+      "sha256": "bd1cea55c08acf48d9406d2ccc10840994f2a7e0fe84f22002f0deccded97d23"
+    },
+    {
+      "file": "seam-03-FiveIsland_Frlg-to-JourneySurfLink00600-after.png",
+      "sha256": "c46e38f46defe11ecec832637d204eeb9f2b63a2f40a2eff275b689940c17333"
+    },
+    {
+      "file": "seam-03-FiveIsland_Frlg-to-JourneySurfLink00600-returned.png",
+      "sha256": "2c472bb22a0670261a00e6d6b7c964e82f7e01c66ac2a1998929081d7b8f7d48"
+    },
+    {
+      "file": "seam-04-FourIsland_Frlg-to-JourneySurfLink01000-before.png",
+      "sha256": "495648e000076826353c583f214a7452ec06c3591095bcf1b86283dc8d5acc27"
+    },
+    {
+      "file": "seam-04-FourIsland_Frlg-to-JourneySurfLink01000-after.png",
+      "sha256": "2f8ab97db249e0df5f622e4ca5ddf41ba3909e6c34fee92ae46304929329d615"
+    },
+    {
+      "file": "seam-04-FourIsland_Frlg-to-JourneySurfLink01000-returned.png",
+      "sha256": "2f274754fbaa394fd5e47a728ed3b0a3d79facf21603f231e2192912621e1c21"
+    },
+    {
+      "file": "seam-05-JourneySurfLink01000-to-JourneySurfLink01001-before.png",
+      "sha256": "14a2ab2d86e664e8b1decd73f6a9944586f89d0a635b9e4854549091e6ca5eb6"
+    },
+    {
+      "file": "seam-05-JourneySurfLink01000-to-JourneySurfLink01001-after.png",
+      "sha256": "95b2637d94ccc27a99ee665526a097e3e96397491228f125323ae2275aed36a8"
+    },
+    {
+      "file": "seam-05-JourneySurfLink01000-to-JourneySurfLink01001-returned.png",
+      "sha256": "e59f141d669f1ec9f98030bc075a58933c4f298f4fb4461055b8426bdcf71e74"
+    },
+    {
+      "file": "seam-06-OneIsland_Frlg-to-JourneySurfLink05000-before.png",
+      "sha256": "3bf84eddf008125c2f182c9a220225d53402152ad1496457d545747c8fac0ae9"
+    },
+    {
+      "file": "seam-06-OneIsland_Frlg-to-JourneySurfLink05000-after.png",
+      "sha256": "a3ed9cfe68f0740cadcdf60684f13956ca6b290912e1e642403318b7b237aa36"
+    },
+    {
+      "file": "seam-06-OneIsland_Frlg-to-JourneySurfLink05000-returned.png",
+      "sha256": "c3cf9cb5d7ec04a83a1d1fb5e01c556510ffccdb43fb2474c76e986f612ec661"
+    },
+    {
+      "file": "seam-07-JourneySurfLink05100-to-JourneySurfLink05101-before.png",
+      "sha256": "32d9dca94d589380ee2b6d8a774e722ad2e3ea6e599d0664cffee613a2b97825"
+    },
+    {
+      "file": "seam-07-JourneySurfLink05100-to-JourneySurfLink05101-after.png",
+      "sha256": "715f70dffef0e02e3126d172fc74a0cf3c2167a2f1da10a94432541947ce99d2"
+    },
+    {
+      "file": "seam-07-JourneySurfLink05100-to-JourneySurfLink05101-returned.png",
+      "sha256": "e5b352506cd4d8dfef50f1114190ebdcf96359374a4a3a4483493f90026cba3e"
+    },
+    {
+      "file": "seam-08-JourneySurfLink05100-to-SevenIsland_Frlg-before.png",
+      "sha256": "db37a4b591f3e625dacd8faf3f67c83c4c5489982243212c43ddf9c31b0e9a93"
+    },
+    {
+      "file": "seam-08-JourneySurfLink05100-to-SevenIsland_Frlg-after.png",
+      "sha256": "ef86274e12f3ef7c4f1e72f4f8f73f968304407ae640830bf8d12f7a309de03f"
+    },
+    {
+      "file": "seam-08-JourneySurfLink05100-to-SevenIsland_Frlg-returned.png",
+      "sha256": "e8d77428516f272e2faef43c5f7a493b51c14a50596ec551f41438a51f67c6a9"
+    },
+    {
+      "file": "seam-09-JourneySurfLink05200-to-JourneySurfLink05201-before.png",
+      "sha256": "f4859eacc889884209a7acce9df7f0bf59874eb55c87748cf643b726376deef6"
+    },
+    {
+      "file": "seam-09-JourneySurfLink05200-to-JourneySurfLink05201-after.png",
+      "sha256": "9d94dfbc415bef506aa37760f50a5daabd569f853a0e0f209d1b1820430abd67"
+    },
+    {
+      "file": "seam-09-JourneySurfLink05200-to-JourneySurfLink05201-returned.png",
+      "sha256": "985ae8498891a7749a534e26938e8f6eec5d51ad86c6c543f0fddd59a0e22a95"
+    },
+    {
+      "file": "seam-10-JourneySurfLink05200-to-SixIsland_Frlg-before.png",
+      "sha256": "a199e8853f3d083ed15dbec4a0ff5e797833f35fa0bfc148c6dc4c0db2ce4853"
+    },
+    {
+      "file": "seam-10-JourneySurfLink05200-to-SixIsland_Frlg-after.png",
+      "sha256": "dd34673d60dc791f68d5de3caec1a880b62c41813f2772057124f287a8b21e9f"
+    },
+    {
+      "file": "seam-10-JourneySurfLink05200-to-SixIsland_Frlg-returned.png",
+      "sha256": "84886713e8fdb32133e57c6c2add57a93f509aae6b0787bf96ac0ad402dcfea5"
+    },
+    {
+      "file": "seam-11-JourneySurfLink05301-to-JourneySurfLink05300-before.png",
+      "sha256": "2247d2ed9a9558ec46f4da21cb1c59a91445a87e9c27d3699cd7e0b91be63d76"
+    },
+    {
+      "file": "seam-11-JourneySurfLink05301-to-JourneySurfLink05300-after.png",
+      "sha256": "5fe4c3fb01b5e83fa40e37a85e7a9f408a7ee5f1085cf82e28ea8d955cc6812b"
+    },
+    {
+      "file": "seam-11-JourneySurfLink05301-to-JourneySurfLink05300-returned.png",
+      "sha256": "ba488fc5cd08d05d1571a4f59dafe409c388d3f3bff7ae4c32b873fb5ef06366"
+    },
+    {
+      "file": "seam-12-JourneySurfLink05301-to-ThreeIsland_Port_Frlg-before.png",
+      "sha256": "12aa0e55f59d14a7a4886a597f814eb505cb9bd41e6cc88cd0743d3a0883176b"
+    },
+    {
+      "file": "seam-12-JourneySurfLink05301-to-ThreeIsland_Port_Frlg-after.png",
+      "sha256": "70f6e14d5c5c69abff3d476fef252e61f10de6249645d1d8359e5da72e375ac2"
+    },
+    {
+      "file": "seam-12-JourneySurfLink05301-to-ThreeIsland_Port_Frlg-returned.png",
+      "sha256": "b4d80e024a5b7fbea2abc2aa65ea36de9dc5b6450ead49042ddcd8a5304352f5"
+    },
+    {
+      "file": "seam-13-TwoIsland_Frlg-to-JourneySurfLink05400-before.png",
+      "sha256": "3240ffc8d984373185db6a08d586f87f909db93727a75b7ed38c648c92324b20"
+    },
+    {
+      "file": "seam-13-TwoIsland_Frlg-to-JourneySurfLink05400-after.png",
+      "sha256": "7f23247915c6647c2dcb61dff561deda7055bf3b14b0a850520f3dac89ed6422"
+    },
+    {
+      "file": "seam-13-TwoIsland_Frlg-to-JourneySurfLink05400-returned.png",
+      "sha256": "6e648c8315b992c12640b84dc8cc6ad4dc269cee4516e003be70ceecaa4a0ce6"
+    },
+    {
+      "file": "seam-14-TwoIsland_Frlg-to-JourneyTwoThreePassage-before.png",
+      "sha256": "ea6b25e21fa77c45ea7296b6f5ba2c2bea60a2519fd63af4121f0d5a5dc994f3"
+    },
+    {
+      "file": "seam-14-TwoIsland_Frlg-to-JourneyTwoThreePassage-after.png",
+      "sha256": "ebf8066f319f58d3cec5e70464248e5cee133e572ba2475dabeda54f7f2fc046"
+    },
+    {
+      "file": "seam-14-TwoIsland_Frlg-to-JourneyTwoThreePassage-returned.png",
+      "sha256": "5f2482d80ec77bc718642f56bb616bbc9f8e99166582e704b748509bf38fe4fb"
+    },
+    {
+      "file": "seam-15-OneIsland_Frlg-to-OneIsland_KindleRoad_Frlg-before.png",
+      "sha256": "f9f6621e7ef6b0184d67c18650a2baefeda8bb226d8aa1239086a37d53198441"
+    },
+    {
+      "file": "seam-15-OneIsland_Frlg-to-OneIsland_KindleRoad_Frlg-after.png",
+      "sha256": "d09eb9337e38409a51c7a4f0670c537d5133d0fc733df42155b5fae359348db2"
+    },
+    {
+      "file": "seam-15-OneIsland_Frlg-to-OneIsland_KindleRoad_Frlg-returned.png",
+      "sha256": "38bb66abae90f672196e5a48a79adbcc57270d7bcb7fe4d7a15d83b834823cd1"
+    },
+    {
+      "file": "seam-16-OneIsland_Frlg-to-OneIsland_TreasureBeach_Frlg-before.png",
+      "sha256": "fad8491b31cb728a89b6f338dc541eccf16a19e8feeb1e764583305121c661c6"
+    },
+    {
+      "file": "seam-16-OneIsland_Frlg-to-OneIsland_TreasureBeach_Frlg-after.png",
+      "sha256": "25b43ac6efe38181de7b0225569b27fc09d256c157cb804a818050cb4d68b5b6"
+    },
+    {
+      "file": "seam-16-OneIsland_Frlg-to-OneIsland_TreasureBeach_Frlg-returned.png",
+      "sha256": "7a164719142b8af2cabe5a7f6eda6ed1259775ae8d59dc39b551d14121c49391"
+    },
+    {
+      "file": "seam-17-SevenIsland_Frlg-to-SevenIsland_SevaultCanyon_Entrance_Frlg-before.png",
+      "sha256": "21a0557bc45e5d516ea013e6cb2a74bdae9ccf60114ed64178b539d1cd6d0a79"
+    },
+    {
+      "file": "seam-17-SevenIsland_Frlg-to-SevenIsland_SevaultCanyon_Entrance_Frlg-after.png",
+      "sha256": "d6dd2cfd2f630b7b656f1e81e24becc03f092ec9c240faec5bd6a4c8c5063fbe"
+    },
+    {
+      "file": "seam-17-SevenIsland_Frlg-to-SevenIsland_SevaultCanyon_Entrance_Frlg-returned.png",
+      "sha256": "fdabada0908ef536036b478cd9e6456453e6a139f7e3b86ca0569c8dd6a35168"
+    },
+    {
+      "file": "seam-18-SevenIsland_Frlg-to-SevenIsland_TrainerTower_Frlg-before.png",
+      "sha256": "0a59e9d94d3f507c7f64d63fc12f9815a31378ab0d9a1b453d4c2c057df07162"
+    },
+    {
+      "file": "seam-18-SevenIsland_Frlg-to-SevenIsland_TrainerTower_Frlg-after.png",
+      "sha256": "e92eec78ad0517740a645326941c2ccdc86fa891b195514787e6c1628679955f"
+    },
+    {
+      "file": "seam-18-SevenIsland_Frlg-to-SevenIsland_TrainerTower_Frlg-returned.png",
+      "sha256": "7971983df9eb6eeeba8bd120b4e867482cfbe24963f43148115e40a53088399c"
+    },
+    {
+      "file": "seam-19-SevenIsland_SevaultCanyon_Entrance_Frlg-to-SevenIsland_SevaultCanyon_Frlg-before.png",
+      "sha256": "abc4cf3c261db20f84fc5f121ee55b92e334561ce238ee704aeb5c2c34f6a160"
+    },
+    {
+      "file": "seam-19-SevenIsland_SevaultCanyon_Entrance_Frlg-to-SevenIsland_SevaultCanyon_Frlg-after.png",
+      "sha256": "6b03833f84ef5847c10c1fc245af52513ea5b4e4d22abda4e426203000c7f523"
+    },
+    {
+      "file": "seam-19-SevenIsland_SevaultCanyon_Entrance_Frlg-to-SevenIsland_SevaultCanyon_Frlg-returned.png",
+      "sha256": "9dd8a3b1b3ef95cc380469be3db2d6fbae59b0ba0df929c9273f855e0f289220"
+    },
+    {
+      "file": "seam-20-SevenIsland_SevaultCanyon_Frlg-to-SevenIsland_TanobyRuins_Frlg-before.png",
+      "sha256": "506454e712e92b29769f29e96cb2d4b24b65609d423aa77b98525a5fe4e13b26"
+    },
+    {
+      "file": "seam-20-SevenIsland_SevaultCanyon_Frlg-to-SevenIsland_TanobyRuins_Frlg-after.png",
+      "sha256": "8bcfc4d312d801a7d3cfeffdd8c2025039801d7d3e44f1389afc4a3574f9b27e"
+    },
+    {
+      "file": "seam-20-SevenIsland_SevaultCanyon_Frlg-to-SevenIsland_TanobyRuins_Frlg-returned.png",
+      "sha256": "95cadac80e914da0d5e8ee528534d59635bfbf41ea6d3c79900621d342136cd7"
+    },
+    {
+      "file": "seam-21-SixIsland_Frlg-to-SixIsland_WaterPath_Frlg-before.png",
+      "sha256": "a5f80462337c7cacffd330a892e2468ae861b5cb825071dfbd224f42daa20963"
+    },
+    {
+      "file": "seam-21-SixIsland_Frlg-to-SixIsland_WaterPath_Frlg-after.png",
+      "sha256": "2b1018a84d717d2375f2e9f8ec0c93849ef45b748cf567e7c732728f35b141f3"
+    },
+    {
+      "file": "seam-21-SixIsland_Frlg-to-SixIsland_WaterPath_Frlg-returned.png",
+      "sha256": "0f354c858b8a9bf34bb7fb93f80af301fea3c44f43783009001f03fc9f9d04cb"
+    },
+    {
+      "file": "seam-22-SixIsland_WaterPath_Frlg-to-SixIsland_GreenPath_Frlg-before.png",
+      "sha256": "870d632fe5f4792552e7c4b997d7db5e4ac5e4c11438fff3c517b018a060708a"
+    },
+    {
+      "file": "seam-22-SixIsland_WaterPath_Frlg-to-SixIsland_GreenPath_Frlg-after.png",
+      "sha256": "90f2df00dbf8122f7e44aef2d317b632bf068ad5ab0e7d177beb1d2086e20c0f"
+    },
+    {
+      "file": "seam-22-SixIsland_WaterPath_Frlg-to-SixIsland_GreenPath_Frlg-returned.png",
+      "sha256": "669191074f5495d78d63158b3ed83988420525d0499f63549c560acf7285a7d9"
+    },
+    {
+      "file": "seam-23-SixIsland_WaterPath_Frlg-to-SixIsland_RuinValley_Frlg-before.png",
+      "sha256": "c650638ee1602b9a8546ce1a9862aec58e5cf19765d0237f4d6f8d4fe53420a0"
+    },
+    {
+      "file": "seam-23-SixIsland_WaterPath_Frlg-to-SixIsland_RuinValley_Frlg-after.png",
+      "sha256": "ae236e3525db852a908953aeecb3ec6b03bbcc58eeda31e9e55115095f471b46"
+    },
+    {
+      "file": "seam-23-SixIsland_WaterPath_Frlg-to-SixIsland_RuinValley_Frlg-returned.png",
+      "sha256": "30f7206f64376e2d3dcc3c60a5bd220cefdadbf3eb51b6ffe388ad58d17b21ca"
+    },
+    {
+      "file": "seam-24-ThreeIsland_Frlg-to-ThreeIsland_BondBridge_Frlg-before.png",
+      "sha256": "e62f7057c6b93e77159ffc4ac92d83d8ce4fd1c085d780ea1ccd67c019a88e5c"
+    },
+    {
+      "file": "seam-24-ThreeIsland_Frlg-to-ThreeIsland_BondBridge_Frlg-after.png",
+      "sha256": "edacd34ebcfb09122ce6bc4857088534af92db3bdf92f78a59d31db282969423"
+    },
+    {
+      "file": "seam-24-ThreeIsland_Frlg-to-ThreeIsland_BondBridge_Frlg-returned.png",
+      "sha256": "69729453a9871b291ffb67715aadaf9a1d41c90b52d476a547556c64a0bd9036"
+    },
+    {
+      "file": "seam-25-ThreeIsland_Frlg-to-ThreeIsland_Port_Frlg-before.png",
+      "sha256": "8366d815d09965481a340d3844a7220c37454d4d40e177289b628723581a861f"
+    },
+    {
+      "file": "seam-25-ThreeIsland_Frlg-to-ThreeIsland_Port_Frlg-after.png",
+      "sha256": "0f0d2c3570099b1979427f351403b910e4d57328ca5a12b0eb1e6f7b2f4d0979"
+    },
+    {
+      "file": "seam-25-ThreeIsland_Frlg-to-ThreeIsland_Port_Frlg-returned.png",
+      "sha256": "66791a5c1a83b205423b37c1047cac34105595831bd6db1ba6505f630e6e814e"
+    },
+    {
+      "file": "seam-26-TwoIsland_CapeBrink_Frlg-to-TwoIsland_Frlg-before.png",
+      "sha256": "a7f4ccf485776b30ae9a86413678b141220e5151d933b5b35b32e8b0d1656963"
+    },
+    {
+      "file": "seam-26-TwoIsland_CapeBrink_Frlg-to-TwoIsland_Frlg-after.png",
+      "sha256": "d84f7b03c44295c9a485ebf8b241924cc40c8834f14a08d047434908094f2d64"
+    },
+    {
+      "file": "seam-26-TwoIsland_CapeBrink_Frlg-to-TwoIsland_Frlg-returned.png",
+      "sha256": "f30cf63321d576d5925ff6131d9067f02109d1524fe4c18e9c54f3ab240e51ce"
+    }
+  ]
+}

@@ -1,0 +1,852 @@
+{
+  "passed": true,
+  "rom_sha256": "12af950dcc3859bba9a6d55815f19f82179a6da5603e5edd386c5e425612f98e",
+  "caves": [
+    {
+      "surface": "JourneyWorldSea00",
+      "chamber": "JourneySanctuaryTempestades",
+      "sanctuary": "Tempestades",
+      "entrance": [
+        44,
+        10
+      ],
+      "surface_start": [
+        45,
+        18
+      ],
+      "complete_native_mountain_loaded": true,
+      "native_mountain_cells_checked": 81,
+      "controller_door_roundtrip": true,
+      "native_surf_landing_and_reembarkation": true,
+      "foot_state_inside": true,
+      "cycles": [
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        },
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        }
+      ],
+      "native_controller_transitions": [
+        {
+          "source": [
+            "JourneyWorldSea00",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryTempestades",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryTempestades",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea00",
+            44,
+            11
+          ]
+        },
+        {
+          "source": [
+            "JourneyWorldSea00",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryTempestades",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryTempestades",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea00",
+            44,
+            11
+          ]
+        }
+      ],
+      "native_surf_prompts": [
+        [
+          "JourneyWorldSea00",
+          45,
+          17
+        ],
+        [
+          "JourneyWorldSea00",
+          45,
+          17
+        ]
+      ],
+      "walked_tiles": 58
+    },
+    {
+      "surface": "JourneyWorldSea01",
+      "chamber": "JourneySanctuaryAurora",
+      "sanctuary": "Aurora",
+      "entrance": [
+        44,
+        10
+      ],
+      "surface_start": [
+        45,
+        19
+      ],
+      "complete_native_mountain_loaded": true,
+      "native_mountain_cells_checked": 81,
+      "controller_door_roundtrip": true,
+      "native_surf_landing_and_reembarkation": true,
+      "foot_state_inside": true,
+      "cycles": [
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        },
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        }
+      ],
+      "native_controller_transitions": [
+        {
+          "source": [
+            "JourneyWorldSea01",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryAurora",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryAurora",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea01",
+            44,
+            11
+          ]
+        },
+        {
+          "source": [
+            "JourneyWorldSea01",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryAurora",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryAurora",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea01",
+            44,
+            11
+          ]
+        }
+      ],
+      "native_surf_prompts": [
+        [
+          "JourneyWorldSea01",
+          45,
+          18
+        ],
+        [
+          "JourneyWorldSea01",
+          45,
+          18
+        ]
+      ],
+      "walked_tiles": 62
+    },
+    {
+      "surface": "JourneyWorldSea02",
+      "chamber": "JourneySanctuaryVulcao",
+      "sanctuary": "Vulcao",
+      "entrance": [
+        44,
+        10
+      ],
+      "surface_start": [
+        44,
+        17
+      ],
+      "complete_native_mountain_loaded": true,
+      "native_mountain_cells_checked": 81,
+      "controller_door_roundtrip": true,
+      "native_surf_landing_and_reembarkation": true,
+      "foot_state_inside": true,
+      "cycles": [
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        },
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        }
+      ],
+      "native_controller_transitions": [
+        {
+          "source": [
+            "JourneyWorldSea02",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryVulcao",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryVulcao",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea02",
+            44,
+            11
+          ]
+        },
+        {
+          "source": [
+            "JourneyWorldSea02",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryVulcao",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryVulcao",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea02",
+            44,
+            11
+          ]
+        }
+      ],
+      "native_surf_prompts": [
+        [
+          "JourneyWorldSea02",
+          44,
+          16
+        ],
+        [
+          "JourneyWorldSea02",
+          44,
+          16
+        ]
+      ],
+      "walked_tiles": 50
+    },
+    {
+      "surface": "JourneyWorldSea03",
+      "chamber": "JourneySanctuaryTitans",
+      "sanctuary": "Titans",
+      "entrance": [
+        44,
+        10
+      ],
+      "surface_start": [
+        44,
+        17
+      ],
+      "complete_native_mountain_loaded": true,
+      "native_mountain_cells_checked": 81,
+      "controller_door_roundtrip": true,
+      "native_surf_landing_and_reembarkation": true,
+      "foot_state_inside": true,
+      "cycles": [
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        },
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        }
+      ],
+      "native_controller_transitions": [
+        {
+          "source": [
+            "JourneyWorldSea03",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryTitans",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryTitans",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea03",
+            44,
+            11
+          ]
+        },
+        {
+          "source": [
+            "JourneyWorldSea03",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryTitans",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryTitans",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea03",
+            44,
+            11
+          ]
+        }
+      ],
+      "native_surf_prompts": [
+        [
+          "JourneyWorldSea03",
+          44,
+          16
+        ],
+        [
+          "JourneyWorldSea03",
+          44,
+          16
+        ]
+      ],
+      "walked_tiles": 50
+    },
+    {
+      "surface": "JourneyWorldSea04",
+      "chamber": "JourneySanctuaryFloresta",
+      "sanctuary": "Floresta",
+      "entrance": [
+        44,
+        10
+      ],
+      "surface_start": [
+        37,
+        12
+      ],
+      "complete_native_mountain_loaded": true,
+      "native_mountain_cells_checked": 81,
+      "controller_door_roundtrip": true,
+      "native_surf_landing_and_reembarkation": true,
+      "foot_state_inside": true,
+      "cycles": [
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        },
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        }
+      ],
+      "native_controller_transitions": [
+        {
+          "source": [
+            "JourneyWorldSea04",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryFloresta",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryFloresta",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea04",
+            44,
+            11
+          ]
+        },
+        {
+          "source": [
+            "JourneyWorldSea04",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryFloresta",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryFloresta",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea04",
+            44,
+            11
+          ]
+        }
+      ],
+      "native_surf_prompts": [
+        [
+          "JourneyWorldSea04",
+          37,
+          11
+        ],
+        [
+          "JourneyWorldSea04",
+          37,
+          11
+        ]
+      ],
+      "walked_tiles": 58
+    },
+    {
+      "surface": "JourneyWorldSea05",
+      "chamber": "JourneySanctuaryEclipse",
+      "sanctuary": "Eclipse",
+      "entrance": [
+        44,
+        10
+      ],
+      "surface_start": [
+        39,
+        15
+      ],
+      "complete_native_mountain_loaded": true,
+      "native_mountain_cells_checked": 81,
+      "controller_door_roundtrip": true,
+      "native_surf_landing_and_reembarkation": true,
+      "foot_state_inside": true,
+      "cycles": [
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        },
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        }
+      ],
+      "native_controller_transitions": [
+        {
+          "source": [
+            "JourneyWorldSea05",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryEclipse",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryEclipse",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea05",
+            44,
+            11
+          ]
+        },
+        {
+          "source": [
+            "JourneyWorldSea05",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryEclipse",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryEclipse",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea05",
+            44,
+            11
+          ]
+        }
+      ],
+      "native_surf_prompts": [
+        [
+          "JourneyWorldSea05",
+          39,
+          14
+        ],
+        [
+          "JourneyWorldSea05",
+          39,
+          14
+        ]
+      ],
+      "walked_tiles": 62
+    },
+    {
+      "surface": "JourneyWorldSea06",
+      "chamber": "JourneySanctuaryDragoes",
+      "sanctuary": "Dragoes",
+      "entrance": [
+        44,
+        10
+      ],
+      "surface_start": [
+        44,
+        19
+      ],
+      "complete_native_mountain_loaded": true,
+      "native_mountain_cells_checked": 81,
+      "controller_door_roundtrip": true,
+      "native_surf_landing_and_reembarkation": true,
+      "foot_state_inside": true,
+      "cycles": [
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        },
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        }
+      ],
+      "native_controller_transitions": [
+        {
+          "source": [
+            "JourneyWorldSea06",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryDragoes",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryDragoes",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea06",
+            44,
+            11
+          ]
+        },
+        {
+          "source": [
+            "JourneyWorldSea06",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryDragoes",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryDragoes",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea06",
+            44,
+            11
+          ]
+        }
+      ],
+      "native_surf_prompts": [
+        [
+          "JourneyWorldSea06",
+          44,
+          18
+        ],
+        [
+          "JourneyWorldSea06",
+          44,
+          18
+        ]
+      ],
+      "walked_tiles": 58
+    },
+    {
+      "surface": "JourneyWorldSea07",
+      "chamber": "JourneySanctuaryEstrelas",
+      "sanctuary": "Estrelas",
+      "entrance": [
+        44,
+        10
+      ],
+      "surface_start": [
+        46,
+        17
+      ],
+      "complete_native_mountain_loaded": true,
+      "native_mountain_cells_checked": 81,
+      "controller_door_roundtrip": true,
+      "native_surf_landing_and_reembarkation": true,
+      "foot_state_inside": true,
+      "cycles": [
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        },
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        }
+      ],
+      "native_controller_transitions": [
+        {
+          "source": [
+            "JourneyWorldSea07",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryEstrelas",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryEstrelas",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea07",
+            44,
+            11
+          ]
+        },
+        {
+          "source": [
+            "JourneyWorldSea07",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryEstrelas",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryEstrelas",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea07",
+            44,
+            11
+          ]
+        }
+      ],
+      "native_surf_prompts": [
+        [
+          "JourneyWorldSea07",
+          46,
+          16
+        ],
+        [
+          "JourneyWorldSea07",
+          46,
+          16
+        ]
+      ],
+      "walked_tiles": 58
+    },
+    {
+      "surface": "JourneyWorldSea08",
+      "chamber": "JourneySanctuaryCristais",
+      "sanctuary": "Cristais",
+      "entrance": [
+        44,
+        10
+      ],
+      "surface_start": [
+        44,
+        21
+      ],
+      "complete_native_mountain_loaded": true,
+      "native_mountain_cells_checked": 81,
+      "controller_door_roundtrip": true,
+      "native_surf_landing_and_reembarkation": true,
+      "foot_state_inside": true,
+      "cycles": [
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        },
+        {
+          "controller_entry_and_return": true,
+          "foot_inside": true,
+          "native_landing_and_reembarkation": true
+        }
+      ],
+      "native_controller_transitions": [
+        {
+          "source": [
+            "JourneyWorldSea08",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryCristais",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryCristais",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea08",
+            44,
+            11
+          ]
+        },
+        {
+          "source": [
+            "JourneyWorldSea08",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryCristais",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryCristais",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea08",
+            44,
+            11
+          ]
+        }
+      ],
+      "native_surf_prompts": [
+        [
+          "JourneyWorldSea08",
+          44,
+          20
+        ],
+        [
+          "JourneyWorldSea08",
+          44,
+          20
+        ]
+      ],
+      "walked_tiles": 66
+    }
+  ],
+  "all_nine_native_mountains_complete": true,
+  "all_nine_controller_entries_and_returns": true,
+  "all_nine_native_surf_landings_and_reembarkations": true,
+  "two_roundtrips_per_cave": true,
+  "atlas_events_and_warps_unchanged": true,
+  "no_internal_warps_or_coordinate_writes": true,
+  "initial_positions_and_party_are_fixtures": true,
+  "initial_badges_are_fixtures": true,
+  "full_campaign_playthrough": false
+}

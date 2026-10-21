@@ -1,5 +1,8 @@
 # Dewford, pontes das Sevii e acessos das cavernas
 
+Esta revisão registra a camada 161. A [camada 162](sevii-integrated-piers.md) substitui a passagem para os portos separados e o bloqueio de desembarque nos píeres de Sevii; os relatórios abaixo conservam seus hashes históricos.
+
+
 A camada 161 corrige as travessias e o acabamento costeiro sobre o circuito de 24 insígnias. O mapa-múndi e os oito ginásios continuam preservados pela auditoria do código de origem. As quatro edições normais e a TESTE recebem a mesma geografia.
 
 Em Dewford/Rota 107, a lateral da ponte bloqueia a saída de pedestres para o oceano; as duas escadas mudam corretamente entre a altura da areia e a do tabuleiro. O personagem fica visível sobre a ponte, e o Surf continua passando por baixo da ponte alta. A costa sul conserva as dimensões originais, com a floresta continuando na borda nativa e o canto de praia completo. A câmera carrega também os tiles diagonais do terminal, evitando o retângulo de água ou pedras sobre o telhado. Os dois atendentes de Dewford permanecem acessíveis.

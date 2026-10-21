@@ -1,0 +1,182 @@
+{
+  "passed": false,
+  "expected_broken_baseline": true,
+  "bug_reproduced": true,
+  "rom_sha256": "5e0cecc8d2143334795a752e9bb1f70343671f34a29dbd2af3a78e3bff05ef50",
+  "review_mode": false,
+  "samples": [
+    {
+      "label": "ordinary-sand-visible-reference",
+      "tile": [
+        6,
+        16
+      ],
+      "elevation": 3,
+      "surf": false,
+      "priority": 2,
+      "sprite_enabled": true,
+      "object_enabled": true,
+      "red_hat_pixels": 62,
+      "lower_body_pixels": 24,
+      "ground_metatile": 292,
+      "ground_layer": 1
+    },
+    {
+      "label": "east-beach-corner-avatar",
+      "tile": [
+        7,
+        16
+      ],
+      "elevation": 3,
+      "surf": false,
+      "priority": 2,
+      "sprite_enabled": true,
+      "object_enabled": true,
+      "red_hat_pixels": 0,
+      "lower_body_pixels": 0,
+      "ground_metatile": 577,
+      "ground_layer": 0
+    },
+    {
+      "label": "east-side-of-bridge-footing",
+      "tile": [
+        7,
+        15
+      ],
+      "elevation": 3,
+      "surf": false,
+      "priority": 2,
+      "sprite_enabled": true,
+      "object_enabled": true,
+      "red_hat_pixels": 19,
+      "lower_body_pixels": 0,
+      "ground_metatile": 568,
+      "ground_layer": 0
+    },
+    {
+      "label": "west-side-of-bridge-footing",
+      "tile": [
+        4,
+        15
+      ],
+      "elevation": 3,
+      "surf": false,
+      "priority": 2,
+      "sprite_enabled": true,
+      "object_enabled": true,
+      "red_hat_pixels": 19,
+      "lower_body_pixels": 0,
+      "ground_metatile": 554,
+      "ground_layer": 0
+    },
+    {
+      "label": "west-beach-curve",
+      "tile": [
+        3,
+        16
+      ],
+      "elevation": 3,
+      "surf": false,
+      "priority": 2,
+      "sprite_enabled": true,
+      "object_enabled": true,
+      "red_hat_pixels": 54,
+      "lower_body_pixels": 24,
+      "ground_metatile": 292,
+      "ground_layer": 1
+    },
+    {
+      "label": "returned-to-original-beach",
+      "tile": [
+        4,
+        16
+      ],
+      "elevation": 3,
+      "surf": false,
+      "priority": 2,
+      "sprite_enabled": true,
+      "object_enabled": true,
+      "red_hat_pixels": 36,
+      "lower_body_pixels": 24,
+      "ground_metatile": 292,
+      "ground_layer": 1
+    }
+  ],
+  "compiled_ground_attributes": [
+    {
+      "metatile": 513,
+      "attribute": 0
+    },
+    {
+      "metatile": 514,
+      "attribute": 0
+    },
+    {
+      "metatile": 519,
+      "attribute": 0
+    },
+    {
+      "metatile": 545,
+      "attribute": 0
+    },
+    {
+      "metatile": 554,
+      "attribute": 0
+    },
+    {
+      "metatile": 568,
+      "attribute": 0
+    },
+    {
+      "metatile": 576,
+      "attribute": 0
+    },
+    {
+      "metatile": 577,
+      "attribute": 0
+    },
+    {
+      "metatile": 580,
+      "attribute": 0
+    },
+    {
+      "metatile": 581,
+      "attribute": 0
+    },
+    {
+      "metatile": 582,
+      "attribute": 0
+    }
+  ],
+  "native_avatar_pixels_checked": true,
+  "sprite_flags_alone_not_sufficient": true,
+  "player_movement_uses_controller_input": true,
+  "no_coordinates_or_elevation_writes_after_initial_placement": true,
+  "source_map_dimensions_terrain_and_vendors_unchanged": true,
+  "captures": [
+    {
+      "file": "dewford-beach/ordinary-sand-visible-reference.png",
+      "sha256": "dd4e9f80e2418a0ab6bbf0670cfcf9ab0138e84d9af48560ed89ab5ee85f410a"
+    },
+    {
+      "file": "dewford-beach/east-beach-corner-avatar.png",
+      "sha256": "9a7a6711da901fa8c5de5493fd43952db7d37475258882d0bf7d5383a4904fa3"
+    },
+    {
+      "file": "dewford-beach/east-side-of-bridge-footing.png",
+      "sha256": "49178b0e0e364643d8188263f2053fd2fc4836812379de57a602c29da38aecd1"
+    },
+    {
+      "file": "dewford-beach/west-side-of-bridge-footing.png",
+      "sha256": "5582edfb8fe601fa004a35b6d389567f7ef005d4b44919f5b79f9efa72852f06"
+    },
+    {
+      "file": "dewford-beach/west-beach-curve.png",
+      "sha256": "b7373d89c1e5f5d7d71ebdb4dc2682eeb564a46125280b475e8be2f5f83cf2dd"
+    },
+    {
+      "file": "dewford-beach/returned-to-original-beach.png",
+      "sha256": "f7b10dbebce8138c0fc5c5512efd2d60536f12680bc84f6f2287c34ff4f830a1"
+    }
+  ]
+}

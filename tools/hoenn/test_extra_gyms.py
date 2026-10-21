@@ -9,12 +9,10 @@ class ExtraGyms(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.release=verify(ROOT/'mods/hoenn/versions')
-        cls.historical=cls.release['validation_scope']=='dewford-coast-safety'
-        if cls.historical:
+        cls.review=json.loads((ROOT/'roms/rom-de-teste/review.json').read_text())
+        while cls.release['validation_scope'] in ('sevii-integrated-piers','dewford-coast-safety'):
             cls.review=json.loads((ROOT/cls.release['previous_review_validation']['file']).read_text())
             cls.release=previous_release(cls.release)
-        else:
-            cls.review=json.loads((ROOT/'roms/rom-de-teste/review.json').read_text())
     def test_validated_gym_release_uses_correct_fairy_leader_and_all_badges(self):
         self.assertEqual(self.release['validation_scope'],'extra-gyms')
         expected={r['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba'):r['sha256'] for r in self.release['variants']}

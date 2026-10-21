@@ -1,0 +1,182 @@
+{
+  "passed": true,
+  "expected_broken_baseline": false,
+  "bug_reproduced": false,
+  "rom_sha256": "12af950dcc3859bba9a6d55815f19f82179a6da5603e5edd386c5e425612f98e",
+  "review_mode": false,
+  "samples": [
+    {
+      "label": "ordinary-sand-visible-reference",
+      "tile": [
+        6,
+        16
+      ],
+      "elevation": 3,
+      "surf": false,
+      "priority": 2,
+      "sprite_enabled": true,
+      "object_enabled": true,
+      "red_hat_pixels": 62,
+      "lower_body_pixels": 24,
+      "ground_metatile": 292,
+      "ground_layer": 1
+    },
+    {
+      "label": "east-beach-corner-avatar",
+      "tile": [
+        7,
+        16
+      ],
+      "elevation": 3,
+      "surf": false,
+      "priority": 2,
+      "sprite_enabled": true,
+      "object_enabled": true,
+      "red_hat_pixels": 62,
+      "lower_body_pixels": 24,
+      "ground_metatile": 577,
+      "ground_layer": 1
+    },
+    {
+      "label": "east-side-of-bridge-footing",
+      "tile": [
+        7,
+        15
+      ],
+      "elevation": 3,
+      "surf": false,
+      "priority": 2,
+      "sprite_enabled": true,
+      "object_enabled": true,
+      "red_hat_pixels": 59,
+      "lower_body_pixels": 31,
+      "ground_metatile": 568,
+      "ground_layer": 1
+    },
+    {
+      "label": "west-side-of-bridge-footing",
+      "tile": [
+        4,
+        15
+      ],
+      "elevation": 3,
+      "surf": false,
+      "priority": 2,
+      "sprite_enabled": true,
+      "object_enabled": true,
+      "red_hat_pixels": 59,
+      "lower_body_pixels": 31,
+      "ground_metatile": 554,
+      "ground_layer": 1
+    },
+    {
+      "label": "west-beach-curve",
+      "tile": [
+        3,
+        16
+      ],
+      "elevation": 3,
+      "surf": false,
+      "priority": 2,
+      "sprite_enabled": true,
+      "object_enabled": true,
+      "red_hat_pixels": 54,
+      "lower_body_pixels": 24,
+      "ground_metatile": 292,
+      "ground_layer": 1
+    },
+    {
+      "label": "returned-to-original-beach",
+      "tile": [
+        4,
+        16
+      ],
+      "elevation": 3,
+      "surf": false,
+      "priority": 2,
+      "sprite_enabled": true,
+      "object_enabled": true,
+      "red_hat_pixels": 62,
+      "lower_body_pixels": 24,
+      "ground_metatile": 292,
+      "ground_layer": 1
+    }
+  ],
+  "compiled_ground_attributes": [
+    {
+      "metatile": 513,
+      "attribute": 4096
+    },
+    {
+      "metatile": 514,
+      "attribute": 4096
+    },
+    {
+      "metatile": 519,
+      "attribute": 4096
+    },
+    {
+      "metatile": 545,
+      "attribute": 4096
+    },
+    {
+      "metatile": 554,
+      "attribute": 4096
+    },
+    {
+      "metatile": 568,
+      "attribute": 4096
+    },
+    {
+      "metatile": 576,
+      "attribute": 4096
+    },
+    {
+      "metatile": 577,
+      "attribute": 4096
+    },
+    {
+      "metatile": 580,
+      "attribute": 4096
+    },
+    {
+      "metatile": 581,
+      "attribute": 4096
+    },
+    {
+      "metatile": 582,
+      "attribute": 4096
+    }
+  ],
+  "native_avatar_pixels_checked": true,
+  "sprite_flags_alone_not_sufficient": true,
+  "player_movement_uses_controller_input": true,
+  "no_coordinates_or_elevation_writes_after_initial_placement": true,
+  "source_map_dimensions_terrain_and_vendors_unchanged": true,
+  "captures": [
+    {
+      "file": "ordinary-sand-visible-reference.png",
+      "sha256": "dd4e9f80e2418a0ab6bbf0670cfcf9ab0138e84d9af48560ed89ab5ee85f410a"
+    },
+    {
+      "file": "east-beach-corner-avatar.png",
+      "sha256": "8886995a35841a2703ed102c1e84971eebd43c7b3bfbbab604468e278c9ba5b7"
+    },
+    {
+      "file": "east-side-of-bridge-footing.png",
+      "sha256": "9ba8d4a0551e567a86f0050a2fa1072f772d7098a67e234aeb068d0bf43f738c"
+    },
+    {
+      "file": "west-side-of-bridge-footing.png",
+      "sha256": "f42c04c3841fc22997daa5aaffa8daca56edf3cfe1fbcaa03d728ddc6ca68410"
+    },
+    {
+      "file": "west-beach-curve.png",
+      "sha256": "b7373d89c1e5f5d7d71ebdb4dc2682eeb564a46125280b475e8be2f5f83cf2dd"
+    },
+    {
+      "file": "returned-to-original-beach.png",
+      "sha256": "baf8d7669d36086fd3307114f49a18b4bbd387f78961ed2afd231dde60950f7b"
+    }
+  ]
+}
