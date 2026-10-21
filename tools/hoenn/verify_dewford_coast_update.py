@@ -36,7 +36,7 @@ def pinned_file(reference):
     return ROOT / path, raw
 
 
-def verify_update(directory, info):
+def verify_update(directory, info, *, historical_review=None, historical_save=None):
     directory = Path(directory)
     old = previous_release(info)
     assert old['validated'] and old['validation_scope'] == 'extra-gyms'
@@ -49,8 +49,17 @@ def verify_update(directory, info):
     _, previous_review = pinned_file(info['previous_review_validation'])
     previous_save, save_bytes = pinned_file(info['previous_review_save_validation'])
     assert len(save_bytes) == 131072
-    test = verify_review(ROOT / 'roms/rom-de-teste',
-                         directory / 'Pokemon-Journey-Gen1-9-Normal.gba')
+    if historical_review is None:
+        assert historical_save is None
+        test = verify_review(ROOT / 'roms/rom-de-teste',
+                             directory / 'Pokemon-Journey-Gen1-9-Normal.gba')
+    else:
+        test = historical_review
+        assert historical_save is not None
+        normal = next(row for row in info['variants'] if row['file'] == test['base_normal_file'])
+        assert test['base_normal_sha256'] == normal['sha256'] and test['bytes'] == 33554432
+        assert test['file'] == 'Pokemon-Journey-TESTE.gba' and test['separate_save_identity']
+        assert not test['random_wild_encounters'] and not test['automatic_trainer_approaches']
     expected = {'common': info['parent_rom_sha256'], 'test': test['sha256'],
                 **{row['file']: row['sha256'] for row in info['variants']}}
     required = {('common', 'dewford-coast-source'), ('common', 'all-surf-links')}
@@ -205,7 +214,8 @@ def verify_update(directory, info):
                 assert report[field] is True, field
             if proof['target'] == 'test':
                 assert report['bundled_save_continue_to_field'] is True
-                current_save = ROOT / 'roms/rom-de-teste/Pokemon-Journey-TESTE.sav'
+                current_save = (ROOT / 'roms/rom-de-teste/Pokemon-Journey-TESTE.sav'
+                                if historical_review is None else Path(historical_save))
                 assert hashlib.sha256(current_save.read_bytes()).hexdigest() == report['bundled_save_sha256']
         elif kind == 'review-mode':
             assert report['review_mode'] is (proof['target'] == 'test')
@@ -219,11 +229,13 @@ def verify_update(directory, info):
                               'no_rock_smash_encounters',
                               'no_automatic_approach_after_600_frames']:
                     assert checks[field] is True, field
-                current_save = ROOT / 'roms/rom-de-teste/Pokemon-Journey-TESTE.sav'
+                current_save = (ROOT / 'roms/rom-de-teste/Pokemon-Journey-TESTE.sav'
+                                if historical_review is None else Path(historical_save))
                 assert hashlib.sha256(current_save.read_bytes()).hexdigest() == checks['save_sha256']
     assert covered == required
-    assert all((directory / row['file']).read_bytes()[test['review_mode_offset']] == 0
-               for row in info['variants'])
+    if historical_review is None:
+        assert all((directory / row['file']).read_bytes()[test['review_mode_offset']] == 0
+                   for row in info['variants'])
 
     # These 33 reports retain their layer-160 hashes. The new source audit
     # proves preservation, rather than claiming another 200 gym battles.

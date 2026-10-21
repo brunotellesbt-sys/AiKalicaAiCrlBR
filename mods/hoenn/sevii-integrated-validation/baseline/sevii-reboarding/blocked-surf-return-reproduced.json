@@ -1,0 +1,130 @@
+{
+  "passed": false,
+  "expected_broken_baseline": true,
+  "bug_reproduced": true,
+  "rom_sha256": "5e0cecc8d2143334795a752e9bb1f70343671f34a29dbd2af3a78e3bff05ef50",
+  "all_seven_town_pier_returns_blocked": true,
+  "ports": [
+    {
+      "island": "One",
+      "water": [
+        "OneIsland_TreasureBeach_Frlg",
+        14,
+        1
+      ],
+      "dry_pier": [
+        "OneIsland_TreasureBeach_Frlg",
+        13,
+        1
+      ],
+      "inward_key": 32,
+      "surfing_before_and_after": true,
+      "controller_return_blocked": true,
+      "no_coordinates_or_elevation_writes_during_approach": true
+    },
+    {
+      "island": "Two",
+      "water": [
+        "TwoIsland_Frlg",
+        12,
+        10
+      ],
+      "dry_pier": [
+        "TwoIsland_Frlg",
+        11,
+        10
+      ],
+      "inward_key": 32,
+      "surfing_before_and_after": true,
+      "controller_return_blocked": true,
+      "no_coordinates_or_elevation_writes_during_approach": true
+    },
+    {
+      "island": "Three",
+      "water": [
+        "ThreeIsland_Port_Frlg",
+        14,
+        15
+      ],
+      "dry_pier": [
+        "ThreeIsland_Port_Frlg",
+        13,
+        15
+      ],
+      "inward_key": 32,
+      "surfing_before_and_after": true,
+      "controller_return_blocked": true,
+      "no_coordinates_or_elevation_writes_during_approach": true
+    },
+    {
+      "island": "Four",
+      "water": [
+        "FourIsland_Frlg",
+        12,
+        30
+      ],
+      "dry_pier": [
+        "FourIsland_Frlg",
+        11,
+        30
+      ],
+      "inward_key": 32,
+      "surfing_before_and_after": true,
+      "controller_return_blocked": true,
+      "no_coordinates_or_elevation_writes_during_approach": true
+    },
+    {
+      "island": "Five",
+      "water": [
+        "FiveIsland_Frlg",
+        14,
+        16
+      ],
+      "dry_pier": [
+        "FiveIsland_Frlg",
+        13,
+        16
+      ],
+      "inward_key": 32,
+      "surfing_before_and_after": true,
+      "controller_return_blocked": true,
+      "no_coordinates_or_elevation_writes_during_approach": true
+    },
+    {
+      "island": "Six",
+      "water": [
+        "SixIsland_Frlg",
+        13,
+        25
+      ],
+      "dry_pier": [
+        "SixIsland_Frlg",
+        12,
+        25
+      ],
+      "inward_key": 32,
+      "surfing_before_and_after": true,
+      "controller_return_blocked": true,
+      "no_coordinates_or_elevation_writes_during_approach": true
+    },
+    {
+      "island": "Seven",
+      "water": [
+        "SevenIsland_Frlg",
+        18,
+        15
+      ],
+      "dry_pier": [
+        "SevenIsland_Frlg",
+        17,
+        15
+      ],
+      "inward_key": 32,
+      "surfing_before_and_after": true,
+      "controller_return_blocked": true,
+      "no_coordinates_or_elevation_writes_during_approach": true
+    }
+  ],
+  "water_placements_and_initial_surf_mode_are_fixtures": true,
+  "no_midapproach_warps_or_coordinate_or_elevation_writes": true
+}

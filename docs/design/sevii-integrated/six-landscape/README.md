@@ -1,0 +1,7 @@
+As imagens desta pasta são renders dos mapas nativos completos, com NPCs e bordas dos mapas ligados. Não são capturas do emulador. A revisão usa uma cópia privada do source; a evidência funcional final fica nos relatórios `six-landscape.json` de cada edição.
+
+O defeito das árvores vinha de tratar os metatiles `01e/01f` como copas. O objeto FRLG inteiro ocupa duas colunas e três linhas: `00e/00f`, `01e/01f` e `026/027`. O doador intacto ao lado da casa de Six, em `(13,14)`, também conserva a altura e a colisão nativas de cada parte. As 14 árvores do oeste foram replantadas completas; as quatro árvores originais continuam inteiras. A copa solta em `(9,12)` e os dois restos de árvores sob a falésia foram retirados por inteiro.
+
+A costa norte copia o lábio rochoso e o cotovelo nativos de Water Path (`133/134`), unidos ao conjunto completo de topo e lateral da falésia de Six. No sudoeste, a lateral antiga duplicada foi retirada e os tiles de falésia com folhas passaram a usar a face rochosa simples. Nenhum prédio, NPC, evento, conexão, dimensão ou borda regional foi alterado por esta correção.
+
+`repair-metadata.json` registra os 111 tiles alterados, seus valores anteriores e finais e os doadores. `source-preflight.json` verifica as 18 árvores completas, identifica cada uma das suas 108 partes e confere os contornos e as fachadas preservadas. O preflight tem `passed: false`, pois a validação de movimento e colisão depende da ROM final.
