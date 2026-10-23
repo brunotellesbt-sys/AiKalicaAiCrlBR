@@ -1,0 +1,597 @@
+{
+  "parent_rom_sha256": "08fc8a08b95e8e3a923e3342b4f1a31bbaccd1582cbc67ea010021191c43fd6e",
+  "build_rules_offset": 9120212,
+  "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
+  "parent_rules_hex": "01040100",
+  "variants": [
+    {
+      "file": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "max_national": 493,
+      "perfect_trainer_ivs": false,
+      "important_opponents_only": true,
+      "evs": 510,
+      "bytes": 33554432,
+      "sha256": "adb78f851ae13ae08ef49a07707ef14ae46106808cea347a327a883ad7089961",
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189,
+        9120212,
+        9120213,
+        9120214
+      ],
+      "requires_new_save": true
+    },
+    {
+      "file": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "max_national": 493,
+      "perfect_trainer_ivs": true,
+      "important_opponents_only": true,
+      "evs": 510,
+      "bytes": 33554432,
+      "sha256": "265aa9e3b932ddb5e8385dc623d993c324150870a80560d8e8f09719554a4510",
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189,
+        9120212,
+        9120213
+      ],
+      "requires_new_save": true
+    },
+    {
+      "file": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "max_national": 1025,
+      "perfect_trainer_ivs": false,
+      "important_opponents_only": true,
+      "evs": 510,
+      "bytes": 33554432,
+      "sha256": "c8784853578817fe1b1667aec28bd30f44f64d31d1634bff545a05b3ba4c2c06",
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189,
+        9120214
+      ],
+      "requires_new_save": true
+    },
+    {
+      "file": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "max_national": 1025,
+      "perfect_trainer_ivs": true,
+      "important_opponents_only": true,
+      "evs": 510,
+      "bytes": 33554432,
+      "sha256": "12af950dcc3859bba9a6d55815f19f82179a6da5603e5edd386c5e425612f98e",
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189
+      ],
+      "requires_new_save": true
+    }
+  ],
+  "all_other_bytes_identical": true,
+  "validated": true,
+  "integration_layers": [
+    "hoenn-crossing",
+    "worldsea",
+    "westsea",
+    "region-state",
+    "east-coast",
+    "gym-scaling",
+    "campaign-gates",
+    "team-stories",
+    "free-access",
+    "blue-gym",
+    "road-access",
+    "mach-bike",
+    "yellow-stairs",
+    "story-access",
+    "story-completion",
+    "water-hms",
+    "ferry",
+    "rival",
+    "family",
+    "travel-rules",
+    "birth",
+    "wild",
+    "habitats",
+    "sanctuaries",
+    "ecology",
+    "abilities",
+    "mega-art",
+    "story-aftermath",
+    "league-access",
+    "league-completion",
+    "league-history",
+    "league-display",
+    "family-postgame",
+    "pwt",
+    "frontier-travel",
+    "story-puzzles",
+    "aqua-episodes",
+    "seafloor-access",
+    "water-continue",
+    "cave-access",
+    "sky-pillar-access",
+    "english-text",
+    "special-ball",
+    "route131-sea-access",
+    "lostelle-habitats",
+    "tower-habitats",
+    "early-story-tools",
+    "mandatory-native-missions",
+    "sixteen-badge-leagues",
+    "rusturf-reunion",
+    "sea-landscapes",
+    "eastern-sea-union",
+    "ever-grande-entrance",
+    "route12-port",
+    "lavender-network",
+    "world-map",
+    "kanto-open-sea",
+    "coastal-world-map",
+    "remote-islands",
+    "surf-passages",
+    "battle-database",
+    "five-island-habitat",
+    "adaptive-gym-teams",
+    "world-map-position",
+    "world-dex-map",
+    "competitive-bosses",
+    "campaign-variants",
+    "version-play",
+    "small-ports",
+    "arrival-continuity",
+    "story-continuity",
+    "intro-region",
+    "paradox-caves",
+    "preferred-mossdeep-port",
+    "birth-confirmation",
+    "crossover-opponents",
+    "crossover-encounters",
+    "trainer-level-coherence",
+    "evolution-coherence",
+    "crossover-partners",
+    "galactic-chapter",
+    "trainer-item-evolutions",
+    "galactic-continuity",
+    "mega-origin-reversion",
+    "sharp-world-map",
+    "battle-rule-coherence",
+    "final-ecology",
+    "final-story",
+    "evolution-supplies",
+    "badge-case",
+    "variant-dex",
+    "water-habitat-recovery",
+    "reproducible-water",
+    "galactic-prison",
+    "final-balance",
+    "prison-visibility",
+    "named-character-presence",
+    "player-choice",
+    "modern-bag",
+    "modern-field-moves",
+    "pwt-world-cup",
+    "pwt-entrances",
+    "pwt-builds",
+    "pwt-stadium",
+    "pwt-stadium-camera",
+    "pwt-entrance-wait",
+    "pwt-encore-guard",
+    "move-history-rules",
+    "battle-interactions",
+    "nonlevel-moves",
+    "form-move-legality",
+    "special-encounter-workshop",
+    "special-encounter-field-rules",
+    "pwt-score-retention",
+    "workshop-graphics-rules",
+    "pwt-obedience",
+    "visible-crossover",
+    "compact-ports",
+    "lavender-rotom-room",
+    "briney-mossdeep",
+    "port-finish",
+    "live-gym-levels",
+    "coast-finish",
+    "atlas-route-tracking",
+    "final-moorings",
+    "continuous-atlas-marker",
+    "cinnabar-shore-polish",
+    "port-houses-and-ships",
+    "final-port-alignment",
+    "port-orientation-finish",
+    "close-vertical-boats",
+    "rival-walk-and-coast-audit",
+    "connected-sea-chart",
+    "diglett-galactic-scouts",
+    "native-coastal-fragments",
+    "complete-beach-edges",
+    "diglett-scout-battles",
+    "offscreen-rival-entrances",
+    "complete-marine-atlas",
+    "navigated-sea-atlas",
+    "sootopolis-harbor",
+    "pallet-harbor",
+    "sevii-surf-connections",
+    "sevii-coast-camera",
+    "sevii-surf-embarkation",
+    "sevii-arrival-layout",
+    "world-route-chart",
+    "lavender-harbor",
+    "fuchsia-harbor",
+    "three-harbor-terminals",
+    "sevii-harbors",
+    "mossdeep-harbor",
+    "dewford-island-harbor",
+    "continuous-ocean",
+    "annotated-world-links",
+    "surf-cave-coasts",
+    "surf-review",
+    "dewford-competitive-shop",
+    "ever-grande-market",
+    "extra-gyms",
+    "dewford-coast-safety",
+    "sevii-integrated-piers"
+  ],
+  "validation_scope": "sevii-integrated-piers",
+  "full_campaign_playthrough": false,
+  "proofs": [
+    {
+      "file": "evidence/sevii-integrated/common/sevii-integrated-source/sevii-integrated-source.json",
+      "target": "common",
+      "kind": "sevii-integrated-source",
+      "sha256": "af411770dd4fd7ebdcc6cc792f7a924749e2d853547b1be55fecb1ddff6f6b5f"
+    },
+    {
+      "file": "evidence/sevii-integrated/common/all-surf-links/all-surf-links.json",
+      "target": "common",
+      "kind": "all-surf-links",
+      "sha256": "b8b6d567e16991cb6e66de49747ab2219d3e093d0eeb1580962613137b8f06a6"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-4-Normal/coastal-cave-finishing/coastal-cave-finishing.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "coastal-cave-finishing",
+      "sha256": "6ee497c21b8761d0ff4a64ab115699bd6ed7983e549a04fde9392d66fb03e1fc"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-4-Normal/cold-boot/cold-boot.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "cold-boot",
+      "sha256": "880fc59c43ab653e03f74ce6d83518619f535ad1ab284bccd832c119adf5ebf4"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-4-Normal/dewford-beach-visibility/dewford-beach-visibility.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "dewford-beach-visibility",
+      "sha256": "c86f3109b3cb787a9a44004a4cf85c9ed6f12423292b908db7e3bc0ff2a24f04"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-4-Normal/dewford-coast/dewford-coast.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "dewford-coast",
+      "sha256": "3087b6d5285048b5469043d9c3ff736b6b893e889e42e71469ca6eaa2b8deda4"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-4-Normal/integrated-piers/integrated-piers.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "integrated-piers",
+      "sha256": "a4d699666aafe75710474516bb5f6ab60823129251695a24bc3c0890ff0799ee"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-4-Normal/ocean-seams/ocean-seams.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "ocean-seams",
+      "sha256": "67e587eecb0802e4737e3d1a631f8a0b2039749d49ad374bc2587aaebba92074"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-4-Normal/review-mode/review-mode.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "review-mode",
+      "sha256": "79e62b1c7bbc83c895690ef3fb284f982f6e626cd76d80c0f35b0596d73d966c"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-4-Normal/six-landscape/six-landscape.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "six-landscape",
+      "sha256": "5a181415da1f4af372e300109ff721c8d163114f2cac21503cfb735c855ca8a8"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-4-Hard/coastal-cave-finishing/coastal-cave-finishing.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "coastal-cave-finishing",
+      "sha256": "6f96bbd3d2e94ef149990b6f41e71506331f80ab629a885a9d871bfc804ac212"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-4-Hard/cold-boot/cold-boot.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "cold-boot",
+      "sha256": "b39ef47980631a355397405f9a36fa89139a8e95d7ef3ec128988b1aa9bd6259"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-4-Hard/dewford-beach-visibility/dewford-beach-visibility.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "dewford-beach-visibility",
+      "sha256": "3bb92785b70b6848a78d51ab8e6a72665619f3146569d0c258cf9738df425a78"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-4-Hard/dewford-coast/dewford-coast.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "dewford-coast",
+      "sha256": "ebf9699d04d797350a479bf1b8962a9a29a3989e82e7fd9491286835fa843978"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-4-Hard/integrated-piers/integrated-piers.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "integrated-piers",
+      "sha256": "f7fc83155fd42dc74de68a667bb746ea45a370079fb17fe054b3ef9e00667980"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-4-Hard/ocean-seams/ocean-seams.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "ocean-seams",
+      "sha256": "e1a33b5318d9ab8ed2bc9a5f41c228dbb5613cc400a04c98459fff18e94dfb3e"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-4-Hard/review-mode/review-mode.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "review-mode",
+      "sha256": "8a2f8b7aca07a43aa565ab6d02fb8c15157235aacf4b273d6f75d10ffe9ad615"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-4-Hard/six-landscape/six-landscape.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "six-landscape",
+      "sha256": "c1bd5a5dc512655133d1bd575264c896eb31e108a0485cc171de989d19dde5d5"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-9-Normal/coastal-cave-finishing/coastal-cave-finishing.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "coastal-cave-finishing",
+      "sha256": "3a242e9aa2d192a4a409705f4532742dbe8069c80e2877217b61415c67bc482a"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-9-Normal/cold-boot/cold-boot.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "cold-boot",
+      "sha256": "426162fcb2871aeef2aac2e0cb20feb9fbee44b51f145689f23330d2690611df"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-9-Normal/dewford-beach-visibility/dewford-beach-visibility.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "dewford-beach-visibility",
+      "sha256": "e3d81536d7aa8bbf24230c1ff823f25a2a8f218d29e157feacfb4d004b415912"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-9-Normal/dewford-coast/dewford-coast.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "dewford-coast",
+      "sha256": "38373089dca74e1ecf879840fe6fa89219c188c9873dbcfb5848be9b3c378a6c"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-9-Normal/integrated-piers/integrated-piers.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "integrated-piers",
+      "sha256": "77f332a6371c5baebd4069cec4a2163735cb2d09a1b1cdefcca9fbae2dd0b098"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-9-Normal/ocean-seams/ocean-seams.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "ocean-seams",
+      "sha256": "b1e4a92ec131e8dc2f3f3e8692462a901a37dc97ee1700ff4db7c538386581a2"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-9-Normal/review-mode/review-mode.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "review-mode",
+      "sha256": "d25d01d3e767cf8ffe304981e3878ddd5bf966f13f3a01931ddd90166b826f7b"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-9-Normal/six-landscape/six-landscape.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "six-landscape",
+      "sha256": "9ff9e14805bf6a14a0be7673e7b888a9182b35d2630a451aa4d98a8bef751c1d"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-9-Hard/coastal-cave-finishing/coastal-cave-finishing.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "coastal-cave-finishing",
+      "sha256": "8021ab4791e526c34b6d931c606ce5c413a1fb54beeba0a2f2664419d7b89ef5"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-9-Hard/cold-boot/cold-boot.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "cold-boot",
+      "sha256": "37457d7d86dea73bda1e01ea6c1a288d447e33ba89622a1d882946ec0b4f1a41"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-9-Hard/dewford-beach-visibility/dewford-beach-visibility.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "dewford-beach-visibility",
+      "sha256": "725702bfee981909339e3af9a2fb127918002d515dbfa5daeaee0a70c7849db5"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-9-Hard/dewford-coast/dewford-coast.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "dewford-coast",
+      "sha256": "2c85c4cf6894a931949bbaafedb727a88f843d665d9d975ba604371685def5eb"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-9-Hard/integrated-piers/integrated-piers.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "integrated-piers",
+      "sha256": "e347f5197eaa486c843220e4d5eb68389c0be4fe039dbb491f63831a757909f4"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-9-Hard/ocean-seams/ocean-seams.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "ocean-seams",
+      "sha256": "03e652824655c7601b2b696f3c956d4a1758091676a763e8670a37174970ba43"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-9-Hard/review-mode/review-mode.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "review-mode",
+      "sha256": "d2aaa699badaa3742f274b95c9ee8445ff2ff272a8fec0cf432f13a2a08681e6"
+    },
+    {
+      "file": "evidence/sevii-integrated/Pokemon-Journey-Gen1-9-Hard/six-landscape/six-landscape.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "six-landscape",
+      "sha256": "919675b8fef3968d7727c499bb1c5be5622c73c4dcd585ae53e3f7f3caeb34fc"
+    },
+    {
+      "file": "evidence/sevii-integrated/test/coastal-cave-finishing/coastal-cave-finishing.json",
+      "target": "test",
+      "kind": "coastal-cave-finishing",
+      "sha256": "37056a16a7c77e9a855dc4a8458cc48a50a631bfdd4e91581cdf1c55a89dccfb"
+    },
+    {
+      "file": "evidence/sevii-integrated/test/cold-boot/cold-boot.json",
+      "target": "test",
+      "kind": "cold-boot",
+      "sha256": "926563a699f1d8220ad33ed99358f5f840d00870c8d907e39262a2c43b807b93"
+    },
+    {
+      "file": "evidence/sevii-integrated/test/dewford-beach-visibility/dewford-beach-visibility.json",
+      "target": "test",
+      "kind": "dewford-beach-visibility",
+      "sha256": "e781f6d55de39ef067587768f15bd478daeb41801f060e9dcb1ced6c44ed3e0e"
+    },
+    {
+      "file": "evidence/sevii-integrated/test/dewford-coast/dewford-coast.json",
+      "target": "test",
+      "kind": "dewford-coast",
+      "sha256": "8866c671b7e4d7882766176b10e300007e26a24de4f035a8966a914091991de2"
+    },
+    {
+      "file": "evidence/sevii-integrated/test/integrated-piers/integrated-piers.json",
+      "target": "test",
+      "kind": "integrated-piers",
+      "sha256": "9a03dd1079d63aa02c8cb5de279db5a2079c9a977e3d541168425d58a75268c6"
+    },
+    {
+      "file": "evidence/sevii-integrated/test/ocean-seams/ocean-seams.json",
+      "target": "test",
+      "kind": "ocean-seams",
+      "sha256": "d9ca855d289c930e2f20c7660726e58e883b3db10bc628564e3b2c86f780b985"
+    },
+    {
+      "file": "evidence/sevii-integrated/test/review-mode/review-mode.json",
+      "target": "test",
+      "kind": "review-mode",
+      "sha256": "04acdc93cdf8f6912a39bdb830e3c697dacef482a77a22ba8e48cf7d35c07773"
+    },
+    {
+      "file": "evidence/sevii-integrated/test/six-landscape/six-landscape.json",
+      "target": "test",
+      "kind": "six-landscape",
+      "sha256": "c6854257982e9367e7ada4a5d7cc8bbd6e6e66784bc81cbe72dfe9796cd82e6e"
+    }
+  ],
+  "historical_validation": {
+    "manifest": "mods/hoenn/validation-baselines/pr79/versions.json",
+    "manifest_sha256": "aef1de99346ea209c848483e112f96bb342b45bc4837a0cbbed208dd0e0bf077",
+    "parent_rom_sha256": "6be718b3917eb6b6f639384ee99563280e272417beec5e22b6722c4cad033462",
+    "compressed_parent_sha256": "e535f4c1d775f07a872b9d4998baf985638afbf68fffdf6df2e8490184cc58bc",
+    "retested_on_current_rom": false,
+    "source": "PR79",
+    "notes": "Earlier PWT/mechanics runs remain bound to their original ROM bytes; no tournaments repeated for this coastal update."
+  },
+  "previous_validation": {
+    "manifest": "mods/hoenn/validation-baselines/pr81/versions.json",
+    "manifest_sha256": "d67a4baba3462f9030ac07d5416c815a915737a1d5ea25a3c7dc06f1b0966175",
+    "parent_rom": "mods/hoenn/validation-baselines/pr81/parent.gba.gz",
+    "parent_archive_sha256": "632707c8c5fb96f674bd7f3d1770c3870d22434431deccebfe48cbe88b45122a",
+    "evidence_directory": "mods/hoenn/versions",
+    "retested_on_current_rom": false
+  },
+  "previous_port_validation": {
+    "manifest": "mods/hoenn/sevii-integrated-validation/baseline/versions.json",
+    "manifest_sha256": "8ec01be8de9ffd4b5e4535f112755d43043e076498be5dfd74eb50bf1cd90f9c",
+    "retested_on_current_rom": false
+  },
+  "previous_review_validation": {
+    "file": "mods/hoenn/sevii-integrated-validation/baseline/review.json",
+    "sha256": "937e59382db06afa17f6c06a99f9e5e02821435f1e5ed5a1558c16dbc57230d3"
+  },
+  "previous_review_save_validation": {
+    "file": "mods/hoenn/sevii-integrated-validation/baseline/test.sav",
+    "sha256": "b82da03cc274617da9f55e80b02ff99c6704e86f505b489b15051ed3c01e9899"
+  },
+  "baseline_dewford_visibility": {
+    "file": "mods/hoenn/sevii-integrated-validation/baseline/dewford-beach-visibility.json",
+    "sha256": "bac129b53c4efc6acb582f0f39a84d02e7e79e967a77c67fe772dbf9597b8302"
+  },
+  "baseline_sevii_reboarding": {
+    "file": "mods/hoenn/sevii-integrated-validation/baseline/sevii-reboarding/blocked-surf-return-reproduced.json",
+    "sha256": "59ff93961ac4d1d63f5b635f1a5576fff68ca8b6f222c3b422ac230bf50424b4",
+    "captures": [
+      {
+        "file": "mods/hoenn/sevii-integrated-validation/baseline/sevii-reboarding/five-blocked-surf-return.png",
+        "sha256": "0612f7868289629ced2af7a8e884357ea6d29ce42cb7ced7f085f9b1f8a8cb2c"
+      },
+      {
+        "file": "mods/hoenn/sevii-integrated-validation/baseline/sevii-reboarding/four-blocked-surf-return.png",
+        "sha256": "0d34547c912837f4a45aa938565aa4622c174bb1bff2d2183a200c1bb391ecb6"
+      },
+      {
+        "file": "mods/hoenn/sevii-integrated-validation/baseline/sevii-reboarding/one-blocked-surf-return.png",
+        "sha256": "094d2facb57cbd7f823e1c7adb3004df93e04c16518e7e99b7d1e4f4f3fa3632"
+      },
+      {
+        "file": "mods/hoenn/sevii-integrated-validation/baseline/sevii-reboarding/seven-blocked-surf-return.png",
+        "sha256": "b263aeb15b59905cf6419d27b89f10180ba1ed9e83ea1de5eba42f4c97aa0297"
+      },
+      {
+        "file": "mods/hoenn/sevii-integrated-validation/baseline/sevii-reboarding/six-blocked-surf-return.png",
+        "sha256": "2561e1449d089c55fe00e6687dc360239656a9fc42c95aba21e39e1b2739ca12"
+      },
+      {
+        "file": "mods/hoenn/sevii-integrated-validation/baseline/sevii-reboarding/three-blocked-surf-return.png",
+        "sha256": "7cddebe28b0f9beeab58e802c69a6516c985cc89e0ee3b1f9824d1d5a158b6d9"
+      },
+      {
+        "file": "mods/hoenn/sevii-integrated-validation/baseline/sevii-reboarding/two-blocked-surf-return.png",
+        "sha256": "98c5e20f9cd8b46473889649743aa0bc298062ee8dcf0f6d310178edfd276ea3"
+      }
+    ]
+  },
+  "previous_features_retested_on_current_rom": false
+}

@@ -1,10 +1,10 @@
 # ROM de teste das rotas de Surf
 
-Esta ROM inclui o circuito de 24 insígnias e a [revisão da camada 162](../../docs/sevii-integrated-piers.md): terminais no fim das pontes das sete Sevii, desembarque do Surf para os tablados, Six Island com árvores e encostas completas e Dewford com o personagem visível na praia. A abertura é testada desde o início, sem save, e com o arquivo de bateria de inspeção desta pasta.
+Esta ROM inclui o circuito de 24 insígnias e a [revisão da camada 163](../../docs/coastal-closures.md): encostas completas em Six, areia caminhável e praias animadas em Dewford, sete rotas costeiras nomeadas e posição do marcador corrigida. Conserva os terminais no fim das pontes e o retorno do Surf aos tablados. A abertura é testada desde o início, sem save, e com o arquivo de bateria de inspeção desta pasta.
 
 Abra `Pokemon-Journey-TESTE.gba` no emulador. Esta edição deriva de Gen1–9 Normal e contém as mesmas rotas, portos e cavernas das quatro ROMs normais.
 
-A tela azul relatada não foi reproduzida no mGBA com os arquivos desta entrega, abrindo sem save e usando Continue com o save abaixo. A causa específica no My Boy permanece sem confirmação; [relatórios e capturas](../../mods/hoenn/sevii-integrated-validation/TESTE/cold-boot.json).
+A tela azul relatada não foi reproduzida no mGBA com os arquivos desta entrega, abrindo sem save e usando Continue com o save abaixo. A causa específica no My Boy permanece sem confirmação; [relatórios e capturas](../../mods/hoenn/coastal-closures-validation/TESTE/cold-boot.json).
 
 No player do GitHub Pages, selecione **TESTE · Explore without encounters**. O navegador confere o arquivo atual e mantém um save separado das quatro edições normais.
 

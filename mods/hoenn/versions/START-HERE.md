@@ -1,6 +1,8 @@
 # Pokémon Journey — quatro edições GBA
 
-Atualização atual: [Dewford, pontes das sete Sevii e montanhas completas das cavernas](../../../docs/dewford-sevii-coast-safety.md). Conserva o [circuito de 24 insígnias](../../../docs/ginasios-extras-e-travessias.md), os dois atendentes de Dewford e o sprite do Luffy. As quatro edições e a TESTE recebem a mesma correção costeira, sem alterar o mapa-múndi.
+Atualização atual: [encostas completas de Six, circulação de Dewford e praias animadas](../../../docs/coastal-closures.md). Corrige os níveis invisíveis entre a areia e o piso de Dewford, mantém a ponte alta e seus dois acessos, completa as encostas de Six e conserva a fase da água e da espuma ao atravessar mapas. As sete rotas de costa têm nomes próprios e o marcador acompanha as travessias. O desenho do mapa-múndi foi preservado.
+
+Conserva o [circuito de 24 insígnias](../../../docs/ginasios-extras-e-travessias.md), os dois atendentes de Dewford, o sprite do Luffy e os sete terminais integrados às pontes das Sevii. As quatro edições e a TESTE recebem os mesmos mapas.
 
 Inclui [casas e feira de Mega Stones em Ever Grande](../../../docs/ever-grande-market.md), dois presentes únicos e Sootopolis com marcador vermelho. Inclui as formas Origin do PR #93, o mercado competitivo no exterior da Battle Frontier e o Hyper Training em Dewford.
 
@@ -34,6 +36,8 @@ No repositório, as quatro ROMs atuais também ficam em [`roms/`](../../../roms/
 | [Gen 1–9 Hard](Pokemon-Journey-Gen1-9-Hard.gba) | Até #1025 | 31 |
 
 [Baixar as quatro edições em ZIP](Pokemon-Journey-Four-Editions.zip). [SHA-256](SHA256SUMS). [Manifesto e evidências](versions.json).
+
+O ZIP contém exatamente as quatro ROMs normais. A [TESTE atual é um download separado](../../../roms/rom-de-teste/LEIA-ME.md), também disponível no player. Dentro do ZIP, `TESTE-DOWNLOAD.md` informa seu link e SHA-256; os metadados, a lista de checksum e o save de bateria da TESTE acompanham o pacote. As provas atuais e os anexos originais da camada 162 também estão incluídos. Os vídeos históricos mais antigos mantêm hashes e links de commit em `HISTORICAL-MEDIA.json`.
 
 Rivais, líderes, Elite Four, campeões, chefes e administradores recebem builds competitivas, 510 EVs e IA avançada nas duas dificuldades. Treinadores comuns preservam o tratamento comum. Treinadores comuns usam a média atual −5/+2, inclusive dentro dos ginásios. Líderes usam −1/+5 e o principal fica obrigatoriamente em +5; quantidades continuam por ordem regional. Evoluções e golpes respeitam o nível final.
 

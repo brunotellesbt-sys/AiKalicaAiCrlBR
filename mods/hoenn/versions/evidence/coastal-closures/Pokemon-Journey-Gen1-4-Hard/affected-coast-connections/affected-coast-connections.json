@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "kind": "affected-coast-connections",
+  "rom_sha256": "1964ba55bae2e13e6a4d9cb8945a2eb2fa6668959d6a9d5bd819ee70db67c6c0",
+  "review_mode": false,
+  "components_bound_to_current_rom": true,
+  "player_movement_uses_controller_input": true,
+  "no_midcrossing_warps_or_coordinate_or_elevation_writes": true,
+  "components": [
+    {
+      "kind": "integrated-piers",
+      "file": "connections/ports/integrated-piers.json",
+      "sha256": "fbd749c3ccd89abb223d6d913d755ccb65f43687e54bd89239877ebb072d7dce"
+    },
+    {
+      "kind": "ocean-seams",
+      "file": "connections/ocean/ocean-seams.json",
+      "sha256": "a7212dedf9f3580f94b980d5360f494a467f0fec1da9f79b615d43be3103d203"
+    },
+    {
+      "kind": "coastal-route-identity",
+      "file": "route/route-identity.json",
+      "sha256": "3eb0aa6111b24d629df08b3c7db50c34c514a3fb01c41752a550decaf71734e8"
+    }
+  ]
+}

@@ -577,7 +577,7 @@ def verify_ocean_seams(report, directory):
     assert surf == report['surf_seams']
 
 
-def verify_update(directory, info):
+def verify_update(directory, info, *, historical_review=None, historical_save=None):
     directory = Path(directory)
     old = previous_release(info)
     assert old['validated'] and old['validation_scope'] == 'dewford-coast-safety'
@@ -601,8 +601,17 @@ def verify_update(directory, info):
                                      'no_coordinates_or_elevation_writes_after_initial_placement'])
     verify_visibility_captures(visibility_baseline, visibility_path.parent)
     verify_reboarding_baseline(info['baseline_sevii_reboarding'], old['parent_rom_sha256'])
-    test = verify_review(ROOT / 'roms/rom-de-teste',
-                         directory / 'Pokemon-Journey-Gen1-9-Normal.gba')
+    if historical_review is None:
+        assert historical_save is None
+        test = verify_review(ROOT / 'roms/rom-de-teste',
+                             directory / 'Pokemon-Journey-Gen1-9-Normal.gba')
+    else:
+        test = historical_review
+        assert historical_save is not None, 'Historical TESTE evidence requires its pinned save'
+        normal = next(row for row in info['variants'] if row['file'] == test['base_normal_file'])
+        assert test['base_normal_sha256'] == normal['sha256'] and test['bytes'] == 33554432
+        assert test['file'] == 'Pokemon-Journey-TESTE.gba' and test['separate_save_identity'] is True
+        assert test['random_wild_encounters'] is False and test['automatic_trainer_approaches'] is False
     expected = {'common': info['parent_rom_sha256'], 'test': test['sha256'],
                 **{row['file']: row['sha256'] for row in info['variants']}}
     required = {('common', 'sevii-integrated-source'), ('common', 'all-surf-links')}
@@ -647,7 +656,8 @@ def verify_update(directory, info):
                                   'no_game_memory_writes'])
             if proof['target'] == 'test':
                 assert report['bundled_save_continue_to_field'] is True
-                current_save = ROOT / 'roms/rom-de-teste/Pokemon-Journey-TESTE.sav'
+                current_save = (ROOT / 'roms/rom-de-teste/Pokemon-Journey-TESTE.sav'
+                                if historical_review is None else Path(historical_save))
                 assert hashlib.sha256(current_save.read_bytes()).hexdigest() == report['bundled_save_sha256']
         elif kind == 'review-mode':
             assert report['fixture_wild_encounters_disabled'] is False
@@ -659,13 +669,15 @@ def verify_update(directory, info):
                                       'no_fishing_encounters', 'no_sweet_scent_encounters',
                                       'no_rock_smash_encounters',
                                       'no_automatic_approach_after_600_frames'])
-                current_save = ROOT / 'roms/rom-de-teste/Pokemon-Journey-TESTE.sav'
+                current_save = (ROOT / 'roms/rom-de-teste/Pokemon-Journey-TESTE.sav'
+                                if historical_review is None else Path(historical_save))
                 assert hashlib.sha256(current_save.read_bytes()).hexdigest() == checks['save_sha256']
         else:
             raise AssertionError(('Unsupported proof contract', kind))
     assert covered == required
-    assert all((directory / row['file']).read_bytes()[test['review_mode_offset']] == 0
-               for row in info['variants'])
+    if historical_review is None:
+        assert all((directory / row['file']).read_bytes()[test['review_mode_offset']] == 0
+                   for row in info['variants'])
     from verify_dewford_coast_update import verify_update as verify_previous
     verify_previous(directory, old, historical_review=json.loads(previous_review),
                     historical_save=previous_save)

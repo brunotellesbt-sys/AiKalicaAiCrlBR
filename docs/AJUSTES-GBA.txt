@@ -1,0 +1,166 @@
+AJUSTES PRECISOS DE MAPAS GBA — GUIA PRÁTICO DO PROJETO
+Leia primeiro RESUMO. Consulte só a seção necessária durante o ajuste.
+Este arquivo descreve o método; um exemplo não autoriza alterar outros mapas.
+
+[RESUMO]
+1. Conferir branch, PRs recentes e SHA da ROM que apresentou o erro.
+2. Identificar mapa + coordenadas + direção + estado (a pé/Surf/ponte).
+3. Inspecionar o tile e vizinhos com inspect_map_tile.py. Não adivinhar pelo RGB.
+4. Ver o mapa inteiro COM os vizinhos. Identificar o objeto nativo completo.
+5. Alterar só os arquivos e células necessários em uma nova camada reversível.
+6. Testar primeiro o caminho que reproduzia o erro; depois os acessos afetados.
+7. Congelar source/ELF/ROM. Só então executar as provas das cinco edições.
+8. Atualizar normais, TESTE/save/ZIP/player, hashes e provas correspondentes.
+9. Executar testes, navegador e stage_pages. Abrir PR normal ao concluir tudo.
+Não redesenhar o mapa-múndi nem mexer em prédios/NPCs/rotas fora do pedido.
+
+[DIAGNÓSTICO RÁPIDO]
+Comandos a partir da raiz do repositório. Substituir SOURCE pelo snapshot atual.
+python3 tools/hoenn/inspect_map_tile.py --source SOURCE --map Route107 --x 2 --y 5 --radius 1 --output /tmp/tile-dewford
+python3 tools/hoenn/inspect_map_tile.py --source SOURCE --map SixIsland_Frlg --x 9 --y 2 --radius 2 --output /tmp/tile-six
+Saída: tile.json, mapa inteiro e recorte com grade e coordenadas.
+O JSON mostra bloco, metatile, altura, colisão, comportamento, camada, paleta,
+flips e referências gráficas. É inspeção de source, não prova do emulador.
+Na investigação, ler só as células relevantes desse JSON e a imagem completa;
+evitar despejar milhares de hashes, tabelas, frames ou arquivos em contexto.
+Pesquisar arquivos primeiro com rg/rg --files e depois ler o trecho pertinente.
+
+[FORMATO DOS TILES]
+Bloco de mapa, 16 bits:
+  bits 0–9 = ID do metatile; bits 10–11 = colisão; bits 12–15 = altura.
+Uma aparência de areia não prova que o comportamento é de terra.
+Uma altura correta não prova que a camada desenha o personagem por cima.
+Metatile = 16x16 pixels, formado por oito referências de gráficos 8x8:
+  quatro da primeira camada + quatro da segunda.
+Cada referência tem ID gráfico, flips X/Y e banco de paleta próprios.
+Emerald: divisão principal/secundário em 512; atributos de 2 bytes.
+FRLG: divisão em 640; atributos de 4 bytes. Não interpretar como Emerald.
+Em Emerald, camada COVERED usa 0x1000; em FRLG, campo começa no bit 29.
+Nunca aplicar uma máscara de atributo de um formato ao outro.
+
+[EXEMPLOS REAIS]
+Dewford/Rota107, revisão 162:
+  (2,5) = 0x4124: areia seca, altura 4.
+  (2,6) = 0x3245: borda de areia, altura 3.
+  Sem escada/transição, o jogador ficava preso nessa diferença invisível.
+  Corrigir a superfície seca inteira e provar os dois sentidos; não liberar
+  colisão indiscriminadamente nem aumentar a altura da água para contornar.
+Ponte alta de Dewford:
+  altura 15 conserva o nível do viajante: pedestre 4 e Surf 1 nesta ponte.
+  Escadas e transições norte/sul precisam ser explícitas e simétricas.
+  Não copiar a regra de um píer baixo para uma ponte alta.
+Píeres baixos de Sevii:
+  piso seco 3, água 1, desembarque nativo e novo embarque por Surf.
+  Testar sair E voltar pelo mesmo tablado; caminhar direto na água deve falhar.
+Árvore isolada de Six:
+  2x3 metatiles, e não 2x2. Doador nativo:
+  300E 300F / 041E 041F / 0426 0427.
+  Reposicionar ou remover as seis peças juntas. Não deixar só copa ou tronco.
+Encosta oeste de Six:
+  lado de água 0x1274 + corpo sólido 0x0473, com topo e canto nativos próprios.
+  Não repetir o corpo vertical embaixo sem fechar o pé e a água do canto.
+Escada nativa de Mossdeep:
+  0x330 = ponta esquerda, 0x331 = meio, 0x332 = ponta direita.
+  Para duas peças de largura, usar as duas pontas; esquerda+meio fica cortado.
+IDs são locais ao tileset. Confirmar mapa, banco e source antes de reutilizar.
+
+[HARMONIZAÇÃO VISUAL]
+Revisar objeto completo: largura, altura, fundo, base, sombra e colisão.
+Encostas: topo, face, lado da água, canto externo e canto interno coerentes.
+O pé da montanha não pode terminar em textura de topo diretamente no mar.
+Se a massa continua no mapa vizinho, fechar o contorno nos dois mapas juntos.
+Praias: mesma areia, mesma água, espuma nas retas e nos cantos côncavos/convexos.
+Construções: preservar fachada, base e porta; grama não cobre paredes nem acesso.
+Árvores: reservar o objeto inteiro antes de encaixar costa, prédio ou caminho.
+Barcos: casco completo e água livre em volta; não prender entre areia e ponte.
+Cercas/rochas: terminar com a peça de ponta, sem pedaços órfãos ou metade cortada.
+Comparar mapa inteiro antes/depois e a câmera real nos quatro lados da alteração.
+Render de source deve ser identificado como tal; nunca chamá-lo de captura nativa.
+
+[ANIMAÇÃO DE PRAIA E MAR]
+Não transformar água e espuma animadas em uma imagem opaca estática.
+Copiar os pixels para outro slot gráfico não copia a animação: o callback
+atualiza endereços de VRAM específicos, não reconhece o desenho por aparência.
+No banco General de Emerald, água usa gráficos 432–461; areia/molhado 464–473.
+No General FRLG, água/corrente/margem usa 416–463; areia/molhado 464–481.
+Para gráficos privados, preservar referências nativas ou fornecer os frames,
+o carregamento inicial e a atualização dos slots privados realmente usados.
+Revisar também a água visível debaixo de pontes, laterais e cantos compostos.
+Usar uma fase global consistente ao atravessar mapas; inicializar a fase atual
+quando o banco carrega, sem mostrar primeiro um frame estático de outra fase.
+Provar em frames diferentes que água E espuma mudam. Pixels de terra, prédio,
+personagem e ponte não devem mudar por acidente. Conferir o ciclo completo.
+Um PNG só não demonstra animação nem continuidade temporal.
+Ao carregar só o banco secundário, conferir também InitSecondaryTilesetAnimation:
+o contador principal pode continuar rodando. Recarregar o PNG privado sem
+repor a fase corrente deixa um quadro antigo até a próxima atualização.
+Os registradores BGxHOFS/BGxVOFS do GBA são de escrita; para projetar pixels
+da câmera nos testes, ler o espelho nativo sGpuRegBuffer, não o open-bus.
+
+[POSIÇÃO DO JOGADOR NO MAPA]
+Testar o interior da rota, não apenas a transição entre mapas. Uma tabela pode
+ter emendas perfeitas e passos de dois pixels, mas fazer o marcador voltar
+para trás quando o jogador segue reto. Percorrer travessias completas com
+controles, observar JourneyWorldMapPosition e abrir a UI no lugar real.
+Preservar os pixels compartilhados das fronteiras e os outros mapas ao
+suavizar uma projeção local. Uma curva real do atlas pode curvar o marcador;
+não confundir essa curva com as voltas artificiais causadas por âncoras ruins.
+Nome de rota fica no banner e na UI; não desenhar nomes em cima do atlas.
+Conferir também que antigas cidades/portos virados mar não viram alvo de Fly.
+
+[TESTES PRÁTICOS]
+Durante desenvolvimento: uma reprodução pequena no mapa/células do vídeo.
+Depois da correção: caminhada nos dois sentidos de cada antiga trava;
+terra/Surf, embarque/desembarque, escadas, rails, portas e mapas vizinhos.
+Conferir estado real (mapa, x/y, altura, a pé/Surf), colisão E pixels do corpo.
+Flags de visibilidade não bastam: pés podem estar cobertos mesmo com sprite ativo.
+Menus podem reutilizar gSprites; comparar o avatar antes/depois do menu e
+validar a task/callback da UI durante o menu, sem tratar um ícone como o jogador.
+Fixtures podem preparar posição/progresso ANTES do percurso e devem ser declaradas.
+Depois, usar controles; não consertar coordenada/altura em RAM para fazer passar.
+Salvar/Continue em terra e água; abrir TESTE com e sem a bateria distribuída.
+Usar bridge com API load_save para testar a bateria; carregar ROM não carrega .sav.
+Não recompilar nem regenerar arquivos que um validador estiver lendo.
+Cada prova final deve identificar SHA da ROM, arquivos/capturas e limitações.
+Prova de ROM anterior continua histórica. Não trocar só o SHA do relatório.
+TESTE: mapas iguais, sem encontros aleatórios nem abordagem automática de trainers.
+python3 -m unittest discover -s tools/hoenn -v
+python3 -m unittest discover -s tools/sea_routes -v
+python3 tools/hoenn/run_versions_browser.py
+python3 tools/hoenn/stage_pages.py --output /tmp/player-site
+Executar após atualizar os arquivos; não reaproveitar browser evidence antigo.
+
+[PROMPT COMPLETO — DEFEITO LOCAL]
+“Na ROM [edição e SHA/versão], em [mapa], perto de [prédio/coordenadas], vindo
+de [direção], a pé/Surf, acontece [comportamento observado]. No vídeo, veja
+[segundos]. Quero [resultado concreto]. Preserve [prédios, NPCs, atlas e rotas].
+Inspecione o tile e os vizinhos, corrija o objeto/contorno inteiro, teste os
+dois sentidos na ROM e mostre antes/depois com o contexto do mapa inteiro.”
+
+[PROMPT COMPLETO — PRAIA]
+“Em Dewford e nas rotas conectadas [nomes], feche as bordas secas e faça a
+espuma acompanhar a animação do mar, incluindo cantos e a água sob a ponte.
+Não altere vendedores, prédios, dimensões nem ligações do mundo. Corrija as
+diferenças invisíveis de altura, prove caminhada/Surf/retorno e compare frames
+do ciclo antes e depois de cruzar as emendas. Atualize as cinco ROMs e o player.”
+
+[PROMPT COMPLETO — ENCOSTA]
+“Em Six Island, feche toda a costa oeste e o pé da montanha a leste do porto.
+Recue o conjunto do canto superior indicado, sem deixar um cap solto. Preserve
+os acessos, a fachada dos prédios e a continuidade com Water Path. Remova ou
+mova árvores inteiras se faltarem dois tiles para a encosta. Valide o contorno
+com vizinhos e a colisão vindo da terra e do mar. Não redesenhe o mapa-múndi.”
+
+[PROMPT CURTO PARA CONTINUAR SEM REPETIR HISTÓRICO]
+“Continue a correção [branch/PR]. Leia o RESUMO deste TXT e o relatório atual.
+Defeito restante: [mapa, posição/direção, vídeo/segundo]. Preserve o escopo já
+validado. Corrija, execute só os testes afetados e depois as verificações finais
+das cinco ROMs. Registre SHA/evidências e abra PR normal somente ao concluir.”
+
+[ENTREGA E LIMITES]
+Relatar o que foi observado e o que o teste realmente cobre, sem prometer tudo.
+Uma falha não reproduzida em mGBA não explica sua causa em My Boy.
+GitHub Pages recebe a atualização depois do merge autorizado; não confundir
+staging local com publicação. Não publicar nem fazer merge por conta própria.
+Registrar novas descobertas neste TXT com mapa, tileset, exemplos e comando
+curto reproduzível, evitando recontar toda a conversa a cada ajuste.
