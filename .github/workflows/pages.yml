@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['web/**', 'docs/**', 'roms/**', 'mods/hoenn/playable/**', 'mods/hoenn/versions/**', 'tools/hoenn/stage_pages.py', 'tools/hoenn/verify_versions.py', 'tools/hoenn/run_versions_browser.py', 'tools/hoenn/validate_versions_browser.cjs', '.github/workflows/pages.yml']
+    paths: ['web/**', 'docs/**', 'roms/**', 'mods/hoenn/playable/**', 'mods/hoenn/versions/**', 'tools/hoenn/stage_pages.py', 'tools/hoenn/verify_versions.py', 'tools/hoenn/run_versions_browser.py', 'tools/hoenn/validate_versions_browser.cjs', 'tools/ci/**', '.github/workflows/pages.yml']
 permissions:
   contents: read
   pages: write
@@ -22,6 +22,10 @@ jobs:
       - uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - name: Install native screenshot validation dependency
         run: python3 -m pip install Pillow==11.3.0
+      - name: Configure Ubuntu package downloads
+        run: |
+          python3 -m unittest discover -s tools/ci -v
+          sudo python3 tools/ci/configure_ubuntu_apt.py
       - name: Install browser validation runtime
         run: |
           npm install --prefix "$RUNNER_TEMP/browser-validation" --no-save --package-lock=false playwright@1.62.1
