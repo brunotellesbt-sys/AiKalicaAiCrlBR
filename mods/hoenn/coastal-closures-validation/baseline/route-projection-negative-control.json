@@ -1,0 +1,151 @@
+{
+  "kind": "coastal-route-projection-negative-control",
+  "reproduced": true,
+  "validator_failed_as_expected": true,
+  "compiled_rom": true,
+  "rom_sha256": "329bc38872a020300166668c80cc13be663068f07640cf7ec9f99e706c5fc11b",
+  "source_snapshot": ".local/coastal-closures-final-src",
+  "phase": "obsolete-layer-163-names-only-prototype-before-GPS-repair",
+  "position_header_sha256": "db01a9ddb1d51f7f632ee4a271a51687a3c722cfaf8b263a644eae80bd0f3e4b",
+  "same_GPS_as_immutable_layer_162": true,
+  "map": "OneIsland_Harbor_Frlg",
+  "direction": "east",
+  "actual_controller_gps_samples": [
+    {
+      "tile": [
+        2,
+        6
+      ],
+      "actual_projection": [
+        130,
+        43
+      ]
+    },
+    {
+      "tile": [
+        3,
+        6
+      ],
+      "actual_projection": [
+        128,
+        45
+      ]
+    },
+    {
+      "tile": [
+        4,
+        6
+      ],
+      "actual_projection": [
+        126,
+        47
+      ]
+    },
+    {
+      "tile": [
+        5,
+        6
+      ],
+      "actual_projection": [
+        124,
+        49
+      ]
+    },
+    {
+      "tile": [
+        6,
+        6
+      ],
+      "actual_projection": [
+        124,
+        47
+      ]
+    },
+    {
+      "tile": [
+        7,
+        6
+      ],
+      "actual_projection": [
+        125,
+        45
+      ]
+    },
+    {
+      "tile": [
+        8,
+        6
+      ],
+      "actual_projection": [
+        127,
+        43
+      ]
+    },
+    {
+      "tile": [
+        9,
+        6
+      ],
+      "actual_projection": [
+        129,
+        45
+      ]
+    },
+    {
+      "tile": [
+        10,
+        6
+      ],
+      "actual_projection": [
+        131,
+        47
+      ]
+    },
+    {
+      "tile": [
+        11,
+        6
+      ],
+      "actual_projection": [
+        133,
+        49
+      ]
+    },
+    {
+      "tile": [
+        12,
+        6
+      ],
+      "actual_projection": [
+        135,
+        48
+      ]
+    },
+    {
+      "tile": [
+        13,
+        6
+      ],
+      "actual_projection": [
+        137,
+        47
+      ]
+    },
+    {
+      "tile": [
+        14,
+        6
+      ],
+      "actual_projection": [
+        139,
+        46
+      ]
+    }
+  ],
+  "backward_primary_axis_pixels": 6,
+  "expected_failure": "eastward native Surf moves the atlas cursor backward in X",
+  "native_banner_name": "ONE ISLAND COAST",
+  "fixture_scope": "Initial party/progress/location/Surf state and banner display; measured path uses controller input only",
+  "full_campaign_playthrough": false,
+  "log": "route-projection-negative-control.log"
+}

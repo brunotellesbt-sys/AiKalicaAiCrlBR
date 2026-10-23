@@ -13,7 +13,10 @@ def main():
     args = parser.parse_args()
     # The release packager keeps its published 64-layer contract. This separate
     # entry point builds all candidate layers and checks their source hashes.
-    if (args.source / '.journey-sevii-integrated-piers').exists():
+    if (args.source / '.journey-coastal-closures').exists():
+        from prepare_coastal_closures import PRIOR as current_prior, LAYER as current_layer
+        package_playable.LAYERS = current_prior + [current_layer]
+    elif (args.source / '.journey-sevii-integrated-piers').exists():
         from prepare_sevii_integrated_piers import PRIOR as current_prior, LAYER as current_layer
         package_playable.LAYERS = current_prior + [current_layer]
     elif (args.source / '.journey-dewford-coast-safety').exists():

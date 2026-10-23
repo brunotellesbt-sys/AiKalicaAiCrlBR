@@ -1,6 +1,6 @@
 # Pokémon Journey — documentação do jogo
 
-[Entrega atual: portos integrados, retorno do Surf, Six Island e Dewford](sevii-integrated-piers.md). Mantém o [circuito de 24 insígnias](ginasios-extras-e-travessias.md).
+[Entrega atual: encostas completas, praias animadas e rotas costeiras](coastal-closures.md). Mantém os portos integrados e o [circuito de 24 insígnias](ginasios-extras-e-travessias.md). [Guia prático em TXT](AJUSTES-GBA.txt) · [Pasta local de tiles](../assets/tiles/README.md).
 
 Kanto, Hoenn e Sevii formam um mundo conectado por rotas marítimas. O jogo e seus diálogos estão em inglês; este guia está em português.
 

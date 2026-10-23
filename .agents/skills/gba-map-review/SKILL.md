@@ -7,6 +7,8 @@ description: Planejar e revisar mapas GBA completos antes de alterar cidades, po
 
 Use esta habilidade em toda alteração de terreno ou construção deste jogo. É uma preferência permanente do usuário.
 
+Consulta prática: `docs/AJUSTES-GBA.txt` reúne o roteiro curto, diagnósticos, exemplos e prompts. `tools/hoenn/inspect_map_tile.py` reduz a investigação às células relevantes, incluindo altura, comportamento, colisão, camada e slots de animação. O catálogo local `assets/tiles/` identifica exemplos completos por mapa e tileset. Confirme esses dados antes de reutilizar a arte; uma cópia estática de pixels não conserva a animação original.
+
 Atualização explícita do usuário: “esquece essa parte de desenhar”. A geração de novas propostas está dispensada; prossiga com os mapas nativos e a revisão funcional. As propostas já salvas são referências históricas. Os oito interiores precisam de formatos realmente distintos e quatro orientações diferentes de treinadores, cada qual atravessando um trecho obrigatório livre do percurso.
 
 ## Antes de editar

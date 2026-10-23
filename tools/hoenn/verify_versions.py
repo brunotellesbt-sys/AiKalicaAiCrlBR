@@ -14,7 +14,7 @@ def verify_browser(release):
     assert report['passed'] is True and report['bundled_mgba'] is True
     assert report['invalid_manifest_rejected'] and report['incomplete_rom_rejected']
     expected={r['file']:r['sha256'] for r in release['variants']}
-    if release.get('validation_scope') in ('extra-gyms','dewford-coast-safety','sevii-integrated-piers'):
+    if release.get('validation_scope') in ('extra-gyms','dewford-coast-safety','coastal-closures','sevii-integrated-piers'):
         assert report['stale_test_edition_rejected']
         from package_review_rom import verify as verify_review
         review=verify_review(ROOT/'roms/rom-de-teste',ROOT/'mods/hoenn/versions/Pokemon-Journey-Gen1-9-Normal.gba')
@@ -50,6 +50,11 @@ def verify(directory,require_seal=True):
         for row in info['variants']:
             assert digest((ROOT/'roms'/row['file']).read_bytes())==row['sha256'], ('Outdated roms/ download',row['file'])
         assert (ROOT/'roms/SHA256SUMS').read_bytes()==(directory/'SHA256SUMS').read_bytes()
+    if info.get('validation_scope')=='coastal-closures':
+        from verify_coastal_closures_update import verify_update
+        verify_update(directory,info)
+        print('Verified current coastal closures, movement and animated shoreline proofs; layer 162 remains historical')
+        return info
     if info.get('validation_scope')=='sevii-integrated-piers':
         from verify_sevii_integrated_piers_update import verify_update
         verify_update(directory,info)

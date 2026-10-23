@@ -1,0 +1,17 @@
+Native route progress: 0 ('OneIsland_Harbor_Frlg', 2, 6)
+Native route progress: 0 ('OneIsland_Harbor_Frlg', 3, 6)
+Native route progress: 0 ('OneIsland_Harbor_Frlg', 4, 6)
+Native route progress: 0 ('OneIsland_Harbor_Frlg', 5, 6)
+Native route progress: 0 ('OneIsland_Harbor_Frlg', 6, 6)
+Native route progress: 0 ('OneIsland_Harbor_Frlg', 7, 6)
+Native route progress: 0 ('OneIsland_Harbor_Frlg', 8, 6)
+Native route progress: 0 ('OneIsland_Harbor_Frlg', 9, 6)
+Native route progress: 0 ('OneIsland_Harbor_Frlg', 10, 6)
+Native route progress: 0 ('OneIsland_Harbor_Frlg', 11, 6)
+Native route progress: 0 ('OneIsland_Harbor_Frlg', 12, 6)
+Native route progress: 0 ('OneIsland_Harbor_Frlg', 13, 6)
+Traceback (most recent call last):
+  File "/workspace/AiKalicaAiCrlBR/tools/hoenn/validate_coastal_route_identity.py", line 183, in <module>
+    assert all(value >= 0 for value in increments), (name, direction, actual)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('OneIsland_Harbor_Frlg', 'east', [[130, 43], [128, 45], [126, 47], [124, 49], [124, 47], [125, 45], [127, 43], [129, 45], [131, 47], [133, 49], [135, 48], [137, 47], [139, 46]])

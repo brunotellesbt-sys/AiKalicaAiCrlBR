@@ -20,7 +20,7 @@ def stage(output):
         for name in [row['file'] for row in release['variants']]+['versions.json']:
             download=ROOT/'roms'/name if name.endswith('.gba') else versions/name
             shutil.copyfile(download,games/name)
-        if release.get('validation_scope') in ('extra-gyms','dewford-coast-safety','sevii-integrated-piers'):
+        if release.get('validation_scope') in ('extra-gyms','dewford-coast-safety','coastal-closures','sevii-integrated-piers'):
             from package_review_rom import verify as verify_review
             review_dir=ROOT/'roms/rom-de-teste'
             review=verify_review(review_dir,versions/'Pokemon-Journey-Gen1-9-Normal.gba')

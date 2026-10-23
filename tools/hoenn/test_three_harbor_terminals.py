@@ -12,7 +12,7 @@ OUT=ROOT/'mods/hoenn/three-harbor-validation'
 class ThreeHarborTerminals(unittest.TestCase):
     def test_every_edition_enters_and_sails_from_all_three_terminals(self):
         release=verify(ROOT/'mods/hoenn/versions')
-        while release.get('validation_scope') in ('sevii-integrated-piers','dewford-coast-safety','extra-gyms','ever-grande-market','dewford-competitive-shop','surf-review','annotated-world-links','island-harbors','sevii-harbors'):release=previous_release(release)
+        while release.get('validation_scope') in ('coastal-closures','sevii-integrated-piers','dewford-coast-safety','extra-gyms','ever-grande-market','dewford-competitive-shop','surf-review','annotated-world-links','island-harbors','sevii-harbors'):release=previous_release(release)
         self.assertEqual(release['validation_scope'],'three-harbor-terminals')
         cases=[('validation',release['parent_rom_sha256'])]
         cases += [(r['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba'),r['sha256']) for r in release['variants']]
