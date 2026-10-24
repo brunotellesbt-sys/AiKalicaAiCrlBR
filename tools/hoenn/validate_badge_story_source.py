@@ -11,10 +11,6 @@ import tempfile
 
 from PIL import Image
 
-from prepare_badge_story import LAYER, PRIOR, prepare
-from validate_dewford_coast_source import compiled_values
-
-
 ROOT = Path(__file__).resolve().parents[2]
 PARENT_ROM_SHA256 = 'cd5187f43d33b80e5ba2130c9e4e31a4d5a9a0e2504d8b71517da7d13814d9c6'
 # Reviewed independently of the generated layer marker. In particular, no
@@ -143,6 +139,11 @@ def audit_field(source, baseline):
 
 
 def validate(source, baseline, output, preflight=False):
+    # Release verification imports the literal scope without needing the ROM
+    # generation toolchain or its optional numerical/image dependencies.
+    from prepare_badge_story import LAYER, PRIOR, prepare
+    from validate_dewford_coast_source import compiled_values
+
     source, baseline, output = map(Path, (source, baseline, output))
     assert source.resolve() != baseline.resolve()
     assert digest(baseline/'pokeemerald.gba') == PARENT_ROM_SHA256
