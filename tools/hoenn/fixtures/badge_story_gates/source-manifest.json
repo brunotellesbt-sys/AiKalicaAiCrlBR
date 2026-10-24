@@ -1,0 +1,17 @@
+{
+  "description": "Layer-163 source inputs for host regression fixtures, not native proof. Two scripts omit one redundant final blank line; parent_sha256 preserves their exact native inputs.",
+  "compiled_parent_rom_sha256": "cd5187f43d33b80e5ba2130c9e4e31a4d5a9a0e2504d8b71517da7d13814d9c6",
+  "sha256": {
+    "src/journey_galactic.c": "50ff3a112bed2a72c0b4e45da8655c27eff55311bc45c944c1905e4d8926f93b",
+    "src/journey_extra_gyms.c": "fa98d705f67300b6eccb2348c118b56624556ec51bd8e16765c1ac525814cb1d",
+    "data/scripts/journey_galactic.inc": "7571f1ecf1c2574af7f0661e7e6c0e39b84f451cf6e615faa081c6066610c50f",
+    "data/scripts/route23.inc": "a992c5f10e14ed2e0f12fe728bbb817d9e6d742e8b6f2a7fad844a941de2a3f8",
+    "data/maps/IndigoPlateau_PokemonCenter_1F_Frlg/scripts.inc": "e33ceb067de29afa6c76bb29b3cbdbd511dc41f0eb19c47454d64d0a6d212efd",
+    "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc": "486b3b325eaf8c47b9036a91fc0d6edf339d552efe9dacc324b071808ddf31c4",
+    "data/maps/JourneyExtraGyms.inc": "c2dc5c659b599103ad3f1f5efaf1d49da06cafbc2d14ea00abbb316551b983c2"
+  },
+  "parent_sha256": {
+    "data/maps/IndigoPlateau_PokemonCenter_1F_Frlg/scripts.inc": "b5c3d2311c7e7649cdb29201eb4cae71ee1b5a05423e373e09617ed3b9dbb7ab",
+    "data/scripts/route23.inc": "1766e126903d471cdb46d91e013056405c1db8f25b17928dd41c6c4f6336a641"
+  }
+}

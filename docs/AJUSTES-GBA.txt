@@ -164,3 +164,28 @@ GitHub Pages recebe a atualização depois do merge autorizado; não confundir
 staging local com publicação. Não publicar nem fazer merge por conta própria.
 Registrar novas descobertas neste TXT com mapa, tileset, exemplos e comando
 curto reproduzível, evitando recontar toda a conversa a cada ajuste.
+
+[AVATARES E EVENTOS — CAMADA 164]
+Rivais e competição: docs/badge-story.md. Sprites indexados de referência:
+tools/hoenn/data/badge-story/sprites/, com origem e hashes em sources.json.
+Eren/Luffy usam canvas 16x32, nove quadros e corpo visível 14x20; os outros
+rivais têm 19–21 pixels de altura. Conferir os pixels opacos, não só o canvas.
+Conferir também ordem dos quadros, direção, espelhamento, paleta e pés.
+
+Uma troca de mapa abandona a continuação do script. Para reunir personagens,
+gravar o estado antes do warp e retomar no MAP_SCRIPT_ON_FRAME_TABLE do destino.
+Exemplo: estado 4 do classificador retoma JourneyQualifier_Gathered na praça
+da Battle Frontier; o novo handler trava controles e consome o estado antes
+da apresentação. Não depender de mensagens após waitstate do warp anterior.
+
+Capturas de batalha: esperar o controlador real de escolha de ação, depois
+do fade. BattleMainCB2 sozinho ainda pode mostrar uma tela preta. Esperar a
+impressão da primeira página de diálogo antes de capturar uma fala. Conferir
+as imagens, além de seus hashes. Uma batalha comum já iniciada tem flags 12
+(TRAINER | IS_MASTER), sem flags de instalação ou normalização do PWT.
+
+Comandos de diagnóstico a partir da raiz, com SOURCE congelado:
+python3 tools/hoenn/validate_badge_qualifier.py --source SOURCE --library .local/mgba-review.so --output /tmp/qualifier-review
+python3 tools/hoenn/validate_story_rival_identities.py --source SOURCE --library .local/mgba-review.so --output /tmp/rival-review
+Sem biblioteca, o preflight não certifica execução na ROM. Não escrever o
+resultado de uma batalha nem a vitória do evento para simular uma prova.

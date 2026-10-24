@@ -1,0 +1,5747 @@
+{
+  "kind": "qualifier-event",
+  "passed": true,
+  "preflight": false,
+  "compiled_rom": true,
+  "native_validation_performed": true,
+  "rom_sha256": "c3d922e19ea7f07b906469d212159113006c89cc9df3d42c94eed727048a5eac",
+  "elf_sha256": "fb183bfeafd693fd64d2942ebbed16929ef23ceb8a5cee1f6d1bf544b4f360be",
+  "review_mode": false,
+  "max_national": 1025,
+  "perfect_trainer_ivs": false,
+  "fixtures": {
+    "player_hero": 1,
+    "start_region": 0,
+    "family_home": 17,
+    "qualifying_badges": 18,
+    "random_encounters_disabled": true,
+    "initial_map_placement": true,
+    "birth_identity": true,
+    "player_battle_stats_boosted": true,
+    "defeat_trials_player_stats_weakened_enemy_stats_boosted": true,
+    "controlled_five_x_attacks_and_initial_bag_cursor": true,
+    "player_hp_status_for_berry_test": true,
+    "native_flash_negative_control_after_actual_victory": true,
+    "continuation_callback_is_fixture": true,
+    "actual_battle_outcomes_and_qualifier_flag_not_written": true
+  },
+  "attempts": [
+    {
+      "scenario": "group_elimination",
+      "draw_seed": 8833,
+      "initial_draw": {
+        "hero": [
+          0,
+          4,
+          2,
+          3,
+          5,
+          6
+        ],
+        "groups": [
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            2,
+            1,
+            5
+          ]
+        ],
+        "tie_order": [
+          1,
+          2,
+          5,
+          4,
+          3,
+          0
+        ]
+      },
+      "initial_party": [
+        {
+          "slot": 0,
+          "personality": 2243442969,
+          "ot_id": 23199744,
+          "species": 260,
+          "national_dex": 260,
+          "item": 523,
+          "experience": 789030,
+          "moves": [
+            127,
+            57,
+            58,
+            89
+          ],
+          "pp": [
+            15,
+            15,
+            10,
+            10
+          ],
+          "max_pp": [
+            15,
+            15,
+            10,
+            10
+          ],
+          "level": 91,
+          "hp": 300,
+          "max_hp": 300,
+          "status": 0,
+          "ivs": 256764339,
+          "evs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "final_core": {
+        "hero": [
+          0,
+          4,
+          2,
+          3,
+          5,
+          6
+        ],
+        "wins": [
+          0,
+          2,
+          1,
+          1,
+          2,
+          0
+        ],
+        "survivors": [
+          0,
+          9,
+          4,
+          1,
+          7,
+          0
+        ],
+        "tie_order": [
+          1,
+          2,
+          5,
+          4,
+          3,
+          0
+        ],
+        "played_mask": [
+          24,
+          36,
+          34,
+          17,
+          9,
+          6
+        ],
+        "balance": [
+          -2,
+          9,
+          -1,
+          -5,
+          7,
+          -8
+        ],
+        "groups": [
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            2,
+            1,
+            5
+          ]
+        ],
+        "cursor": 6,
+        "stage": 3,
+        "opponent": 255,
+        "final_winner": 255,
+        "finalists": [
+          4,
+          1
+        ],
+        "prepared": false,
+        "final_played": false,
+        "immediate_group_loss": false,
+        "ledger": [
+          {
+            "a": 0,
+            "b": 3,
+            "left_a": 0,
+            "left_b": 1,
+            "resolved": true
+          },
+          {
+            "a": 2,
+            "b": 1,
+            "left_a": 0,
+            "left_b": 5,
+            "resolved": true
+          },
+          {
+            "a": 3,
+            "b": 4,
+            "left_a": 0,
+            "left_b": 6,
+            "resolved": true
+          },
+          {
+            "a": 2,
+            "b": 5,
+            "left_a": 4,
+            "left_b": 0,
+            "resolved": true
+          },
+          {
+            "a": 0,
+            "b": 4,
+            "left_a": 0,
+            "left_b": 1,
+            "resolved": true
+          },
+          {
+            "a": 1,
+            "b": 5,
+            "left_a": 4,
+            "left_b": 0,
+            "resolved": true
+          }
+        ]
+      },
+      "independent_ledger_audit": {
+        "recomputed_from_six_unique_matches": true,
+        "wins": [
+          0,
+          2,
+          1,
+          1,
+          2,
+          0
+        ],
+        "balance": [
+          -2,
+          9,
+          -1,
+          -5,
+          7,
+          -8
+        ],
+        "survivors": [
+          0,
+          9,
+          4,
+          1,
+          7,
+          0
+        ],
+        "finalists": [
+          4,
+          1
+        ],
+        "exactly_two_real_player_group_battles": true
+      },
+      "player_battles": [
+        {
+          "trainer": 1803,
+          "hero": 3,
+          "stage": 0,
+          "battle_flags": 12,
+          "entry_party": [
+            {
+              "slot": 0,
+              "personality": 2243442969,
+              "ot_id": 23199744,
+              "species": 260,
+              "national_dex": 260,
+              "item": 523,
+              "experience": 789030,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 91,
+              "hp": 300,
+              "max_hp": 300,
+              "status": 0,
+              "ivs": 256764339,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "enemy_party": [
+            {
+              "slot": 0,
+              "personality": 1460637588,
+              "ot_id": 279740827,
+              "species": 260,
+              "national_dex": 260,
+              "item": 472,
+              "experience": 873420,
+              "moves": [
+                127,
+                89,
+                740,
+                446
+              ],
+              "pp": [
+                15,
+                10,
+                20,
+                20
+              ],
+              "max_pp": [
+                15,
+                10,
+                20,
+                20
+              ],
+              "level": 94,
+              "hp": 292,
+              "max_hp": 292,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                0,
+                252,
+                0,
+                252,
+                0,
+                6
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 3012273435,
+              "ot_id": 2954481684,
+              "species": 254,
+              "national_dex": 254,
+              "item": 472,
+              "experience": 873420,
+              "moves": [
+                437,
+                406,
+                411,
+                182
+              ],
+              "pp": [
+                5,
+                10,
+                5,
+                10
+              ],
+              "max_pp": [
+                5,
+                10,
+                5,
+                10
+              ],
+              "level": 94,
+              "hp": 235,
+              "max_hp": 235,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                0,
+                0,
+                0,
+                252,
+                252,
+                6
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 3871302653,
+              "ot_id": 1906486171,
+              "species": 376,
+              "national_dex": 376,
+              "item": 442,
+              "experience": 973360,
+              "moves": [
+                484,
+                89,
+                282,
+                418
+              ],
+              "pp": [
+                10,
+                10,
+                20,
+                30
+              ],
+              "max_pp": [
+                10,
+                10,
+                20,
+                30
+              ],
+              "level": 92,
+              "hp": 249,
+              "max_hp": 249,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                0,
+                252,
+                0,
+                252,
+                0,
+                6
+              ]
+            },
+            {
+              "slot": 3,
+              "personality": 153575360,
+              "ot_id": 2159101459,
+              "species": 373,
+              "national_dex": 373,
+              "item": 510,
+              "experience": 973360,
+              "moves": [
+                434,
+                542,
+                89,
+                355
+              ],
+              "pp": [
+                5,
+                10,
+                10,
+                5
+              ],
+              "max_pp": [
+                5,
+                10,
+                10,
+                5
+              ],
+              "level": 92,
+              "hp": 276,
+              "max_hp": 276,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                0,
+                0,
+                6,
+                252,
+                252,
+                0
+              ]
+            },
+            {
+              "slot": 4,
+              "personality": 2098096435,
+              "ot_id": 2123641069,
+              "species": 310,
+              "national_dex": 310,
+              "item": 472,
+              "experience": 1071718,
+              "moves": [
+                521,
+                85,
+                315,
+                92
+              ],
+              "pp": [
+                20,
+                15,
+                5,
+                10
+              ],
+              "max_pp": [
+                20,
+                15,
+                5,
+                10
+              ],
+              "level": 95,
+              "hp": 238,
+              "max_hp": 238,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                0,
+                0,
+                0,
+                252,
+                252,
+                6
+              ]
+            },
+            {
+              "slot": 5,
+              "personality": 2869492878,
+              "ot_id": 3312302086,
+              "species": 257,
+              "national_dex": 257,
+              "item": 479,
+              "experience": 932903,
+              "moves": [
+                14,
+                370,
+                394,
+                444
+              ],
+              "pp": [
+                20,
+                5,
+                15,
+                5
+              ],
+              "max_pp": [
+                20,
+                5,
+                15,
+                5
+              ],
+              "level": 96,
+              "hp": 259,
+              "max_hp": 259,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                0,
+                252,
+                6,
+                252,
+                0,
+                0
+              ]
+            }
+          ],
+          "actions": 1,
+          "outcome": 2,
+          "berry_consumed_natively": false,
+          "active_party_indices": [
+            0
+          ],
+          "command_menu_capture": true
+        },
+        {
+          "trainer": 1805,
+          "hero": 5,
+          "stage": 0,
+          "battle_flags": 12,
+          "entry_party": [
+            {
+              "slot": 0,
+              "personality": 2243442969,
+              "ot_id": 23199744,
+              "species": 260,
+              "national_dex": 260,
+              "item": 523,
+              "experience": 789030,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 91,
+              "hp": 300,
+              "max_hp": 300,
+              "status": 0,
+              "ivs": 256764339,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "enemy_party": [
+            {
+              "slot": 0,
+              "personality": 2678984578,
+              "ot_id": 3824081771,
+              "species": 338,
+              "national_dex": 338,
+              "item": 472,
+              "experience": 664467,
+              "moves": [
+                428,
+                444,
+                38,
+                94
+              ],
+              "pp": [
+                15,
+                5,
+                15,
+                10
+              ],
+              "max_pp": [
+                15,
+                5,
+                15,
+                10
+              ],
+              "level": 94,
+              "hp": 332,
+              "max_hp": 332,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                252,
+                252,
+                6,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 1992725815,
+              "ot_id": 3203614989,
+              "species": 272,
+              "national_dex": 272,
+              "item": 479,
+              "experience": 873420,
+              "moves": [
+                311,
+                202,
+                58,
+                411
+              ],
+              "pp": [
+                10,
+                10,
+                10,
+                5
+              ],
+              "max_pp": [
+                10,
+                10,
+                10,
+                5
+              ],
+              "level": 94,
+              "hp": 255,
+              "max_hp": 255,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                6,
+                0,
+                0,
+                252,
+                252,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 117056010,
+              "ot_id": 385868572,
+              "species": 468,
+              "national_dex": 468,
+              "item": 510,
+              "experience": 664467,
+              "moves": [
+                417,
+                403,
+                355,
+                215
+              ],
+              "pp": [
+                20,
+                15,
+                5,
+                5
+              ],
+              "max_pp": [
+                20,
+                15,
+                5,
+                5
+              ],
+              "level": 94,
+              "hp": 323,
+              "max_hp": 323,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                252,
+                0,
+                120,
+                138,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "personality": 2183709978,
+              "ot_id": 3044392581,
+              "species": 68,
+              "national_dex": 68,
+              "item": 472,
+              "experience": 816525,
+              "moves": [
+                264,
+                38,
+                276,
+                370
+              ],
+              "pp": [
+                20,
+                15,
+                5,
+                5
+              ],
+              "max_pp": [
+                20,
+                15,
+                5,
+                5
+              ],
+              "level": 92,
+              "hp": 325,
+              "max_hp": 325,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                252,
+                252,
+                6,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 4,
+              "personality": 410208273,
+              "ot_id": 4192929349,
+              "species": 143,
+              "national_dex": 143,
+              "item": 472,
+              "experience": 911250,
+              "moves": [
+                174,
+                34,
+                242,
+                156
+              ],
+              "pp": [
+                10,
+                15,
+                15,
+                5
+              ],
+              "max_pp": [
+                10,
+                15,
+                15,
+                5
+              ],
+              "level": 90,
+              "hp": 390,
+              "max_hp": 390,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                12,
+                0,
+                246,
+                0,
+                0,
+                252
+              ]
+            },
+            {
+              "slot": 5,
+              "personality": 3848217740,
+              "ot_id": 2351768567,
+              "species": 395,
+              "national_dex": 395,
+              "item": 472,
+              "experience": 932903,
+              "moves": [
+                57,
+                58,
+                447,
+                355
+              ],
+              "pp": [
+                15,
+                10,
+                20,
+                5
+              ],
+              "max_pp": [
+                15,
+                10,
+                20,
+                5
+              ],
+              "level": 96,
+              "hp": 284,
+              "max_hp": 284,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                72,
+                0,
+                72,
+                218,
+                148,
+                0
+              ]
+            }
+          ],
+          "actions": 1,
+          "outcome": 2,
+          "berry_consumed_natively": false,
+          "active_party_indices": [
+            0
+          ],
+          "command_menu_capture": true
+        }
+      ],
+      "healed_intermission_observations": [
+        {
+          "after_battles": 0,
+          "identity": [
+            [
+              2243442969,
+              523,
+              789030
+            ]
+          ],
+          "party": [
+            {
+              "slot": 0,
+              "personality": 2243442969,
+              "ot_id": 23199744,
+              "species": 260,
+              "national_dex": 260,
+              "item": 523,
+              "experience": 789030,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 91,
+              "hp": 300,
+              "max_hp": 300,
+              "status": 0,
+              "ivs": 256764339,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "after": {
+        "map": "BattleFrontier_PokemonCenter_1F",
+        "position": [
+          7,
+          4
+        ],
+        "state": 0,
+        "won": false,
+        "money_before": 3000,
+        "money_after": 0,
+        "battle_points": 0,
+        "party": [
+          {
+            "slot": 0,
+            "personality": 2243442969,
+            "ot_id": 23199744,
+            "species": 260,
+            "national_dex": 260,
+            "item": 523,
+            "experience": 789030,
+            "moves": [
+              127,
+              57,
+              58,
+              89
+            ],
+            "pp": [
+              15,
+              15,
+              10,
+              10
+            ],
+            "max_pp": [
+              15,
+              15,
+              10,
+              10
+            ],
+            "level": 91,
+            "hp": 300,
+            "max_hp": 300,
+            "status": 0,
+            "ivs": 256764339,
+            "evs": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "x_attack_before": 5,
+        "x_attack_after": 5,
+        "bag_ui_opened": false,
+        "bag_item_consumed_natively": false,
+        "native_party_switch": false,
+        "post_battle_party_orders": [
+          [
+            2243442969
+          ],
+          [
+            2243442969
+          ]
+        ],
+        "total_experience_gain": 0
+      },
+      "outdoor_intro": {
+        "map": "BattleFrontier_OutsideWest",
+        "player": [
+          26,
+          67
+        ],
+        "objects": [
+          {
+            "local_id": 255,
+            "object_index": 0,
+            "sprite_id": 0,
+            "position": [
+              26,
+              67
+            ],
+            "graphics_id": 243,
+            "native_obj_pixels": {
+              "hardware_oam_index": 16,
+              "frame": [
+                16,
+                32
+              ],
+              "screen_rectangle": [
+                112,
+                56,
+                16,
+                32
+              ],
+              "opaque_bbox": [
+                1,
+                12,
+                14,
+                19
+              ],
+              "opaque_pixels": 210,
+              "matching_scanout_pixels": 210,
+              "exact_vram_obj_palette_and_current_frame": true
+            }
+          },
+          {
+            "local_id": 26,
+            "object_index": 3,
+            "sprite_id": 3,
+            "position": [
+              22,
+              66
+            ],
+            "graphics_id": 89,
+            "native_obj_pixels": {
+              "hardware_oam_index": 19,
+              "frame": [
+                16,
+                32
+              ],
+              "screen_rectangle": [
+                48,
+                40,
+                16,
+                32
+              ],
+              "opaque_bbox": [
+                1,
+                11,
+                14,
+                20
+              ],
+              "opaque_pixels": 214,
+              "matching_scanout_pixels": 214,
+              "exact_vram_obj_palette_and_current_frame": true
+            }
+          },
+          {
+            "local_id": 27,
+            "object_index": 4,
+            "sprite_id": 4,
+            "position": [
+              24,
+              66
+            ],
+            "graphics_id": 251,
+            "native_obj_pixels": {
+              "hardware_oam_index": 20,
+              "frame": [
+                16,
+                32
+              ],
+              "screen_rectangle": [
+                80,
+                40,
+                16,
+                32
+              ],
+              "opaque_bbox": [
+                1,
+                12,
+                14,
+                19
+              ],
+              "opaque_pixels": 220,
+              "matching_scanout_pixels": 220,
+              "exact_vram_obj_palette_and_current_frame": true
+            }
+          },
+          {
+            "local_id": 28,
+            "object_index": 5,
+            "sprite_id": 5,
+            "position": [
+              28,
+              66
+            ],
+            "graphics_id": 0,
+            "native_obj_pixels": {
+              "hardware_oam_index": 21,
+              "frame": [
+                16,
+                32
+              ],
+              "screen_rectangle": [
+                144,
+                40,
+                16,
+                32
+              ],
+              "opaque_bbox": [
+                1,
+                10,
+                14,
+                21
+              ],
+              "opaque_pixels": 214,
+              "matching_scanout_pixels": 214,
+              "exact_vram_obj_palette_and_current_frame": true
+            }
+          },
+          {
+            "local_id": 29,
+            "object_index": 6,
+            "sprite_id": 6,
+            "position": [
+              21,
+              67
+            ],
+            "graphics_id": 391,
+            "native_obj_pixels": {
+              "hardware_oam_index": 17,
+              "frame": [
+                16,
+                32
+              ],
+              "screen_rectangle": [
+                32,
+                56,
+                16,
+                32
+              ],
+              "opaque_bbox": [
+                1,
+                11,
+                14,
+                20
+              ],
+              "opaque_pixels": 156,
+              "matching_scanout_pixels": 156,
+              "exact_vram_obj_palette_and_current_frame": true
+            }
+          },
+          {
+            "local_id": 30,
+            "object_index": 7,
+            "sprite_id": 7,
+            "position": [
+              29,
+              67
+            ],
+            "graphics_id": 390,
+            "native_obj_pixels": {
+              "hardware_oam_index": 18,
+              "frame": [
+                16,
+                32
+              ],
+              "screen_rectangle": [
+                160,
+                56,
+                16,
+                32
+              ],
+              "opaque_bbox": [
+                1,
+                11,
+                14,
+                20
+              ],
+              "opaque_pixels": 200,
+              "matching_scanout_pixels": 200,
+              "exact_vram_obj_palette_and_current_frame": true
+            }
+          }
+        ],
+        "native_source_frames_compared_with_scanout": true,
+        "capture": {
+          "file": "qualifier-outdoor-six-participants.png",
+          "sha256": "772367dfca39e219c920bf06f7af21bb4401fae31d4c67270b9cb0dbb6d8700d"
+        }
+      },
+      "capture": {
+        "file": "group_elimination-finished.png",
+        "sha256": "0fe658ea8e44c517448082ad7d488598359f3a7f340784aeddb1416d9de5d53f"
+      }
+    },
+    {
+      "scenario": "final_defeat",
+      "draw_seed": 8834,
+      "initial_draw": {
+        "hero": [
+          0,
+          4,
+          2,
+          3,
+          5,
+          6
+        ],
+        "groups": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            4,
+            5,
+            3
+          ]
+        ],
+        "tie_order": [
+          0,
+          2,
+          1,
+          3,
+          4,
+          5
+        ]
+      },
+      "initial_party": [
+        {
+          "slot": 0,
+          "personality": 1978158661,
+          "ot_id": 23199744,
+          "species": 260,
+          "national_dex": 260,
+          "item": 523,
+          "experience": 789030,
+          "moves": [
+            127,
+            57,
+            58,
+            89
+          ],
+          "pp": [
+            15,
+            15,
+            10,
+            10
+          ],
+          "max_pp": [
+            15,
+            15,
+            10,
+            10
+          ],
+          "level": 91,
+          "hp": 304,
+          "max_hp": 304,
+          "status": 0,
+          "ivs": 693845208,
+          "evs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "slot": 1,
+          "personality": 736797800,
+          "ot_id": 23199744,
+          "species": 149,
+          "national_dex": 149,
+          "item": 472,
+          "experience": 973360,
+          "moves": [
+            127,
+            57,
+            58,
+            89
+          ],
+          "pp": [
+            15,
+            15,
+            10,
+            10
+          ],
+          "max_pp": [
+            15,
+            15,
+            10,
+            10
+          ],
+          "level": 92,
+          "hp": 280,
+          "max_hp": 280,
+          "status": 0,
+          "ivs": 120962732,
+          "evs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "slot": 2,
+          "personality": 1790591300,
+          "ot_id": 23199744,
+          "species": 376,
+          "national_dex": 376,
+          "item": 472,
+          "experience": 1005446,
+          "moves": [
+            127,
+            57,
+            58,
+            89
+          ],
+          "pp": [
+            15,
+            15,
+            10,
+            10
+          ],
+          "max_pp": [
+            15,
+            15,
+            10,
+            10
+          ],
+          "level": 93,
+          "hp": 262,
+          "max_hp": 262,
+          "status": 0,
+          "ivs": 80873772,
+          "evs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "final_core": {
+        "hero": [
+          0,
+          4,
+          2,
+          3,
+          5,
+          6
+        ],
+        "wins": [
+          2,
+          0,
+          1,
+          0,
+          1,
+          2
+        ],
+        "survivors": [
+          6,
+          0,
+          5,
+          0,
+          5,
+          5
+        ],
+        "tie_order": [
+          0,
+          2,
+          1,
+          3,
+          4,
+          5
+        ],
+        "played_mask": [
+          6,
+          5,
+          3,
+          48,
+          40,
+          24
+        ],
+        "balance": [
+          6,
+          -8,
+          2,
+          -9,
+          4,
+          5
+        ],
+        "groups": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            4,
+            5,
+            3
+          ]
+        ],
+        "cursor": 6,
+        "stage": 3,
+        "opponent": 255,
+        "final_winner": 5,
+        "finalists": [
+          0,
+          5
+        ],
+        "prepared": false,
+        "final_played": true,
+        "immediate_group_loss": false,
+        "ledger": [
+          {
+            "a": 0,
+            "b": 1,
+            "left_a": 3,
+            "left_b": 0,
+            "resolved": true
+          },
+          {
+            "a": 4,
+            "b": 5,
+            "left_a": 0,
+            "left_b": 1,
+            "resolved": true
+          },
+          {
+            "a": 1,
+            "b": 2,
+            "left_a": 0,
+            "left_b": 5,
+            "resolved": true
+          },
+          {
+            "a": 4,
+            "b": 3,
+            "left_a": 5,
+            "left_b": 0,
+            "resolved": true
+          },
+          {
+            "a": 0,
+            "b": 2,
+            "left_a": 3,
+            "left_b": 0,
+            "resolved": true
+          },
+          {
+            "a": 5,
+            "b": 3,
+            "left_a": 4,
+            "left_b": 0,
+            "resolved": true
+          }
+        ]
+      },
+      "independent_ledger_audit": {
+        "recomputed_from_six_unique_matches": true,
+        "wins": [
+          2,
+          0,
+          1,
+          0,
+          1,
+          2
+        ],
+        "balance": [
+          6,
+          -8,
+          2,
+          -9,
+          4,
+          5
+        ],
+        "survivors": [
+          6,
+          0,
+          5,
+          0,
+          5,
+          5
+        ],
+        "finalists": [
+          0,
+          5
+        ],
+        "exactly_two_real_player_group_battles": true
+      },
+      "player_battles": [
+        {
+          "trainer": 1804,
+          "hero": 4,
+          "stage": 0,
+          "battle_flags": 12,
+          "entry_party": [
+            {
+              "slot": 0,
+              "personality": 1978158661,
+              "ot_id": 23199744,
+              "species": 260,
+              "national_dex": 260,
+              "item": 523,
+              "experience": 789030,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 91,
+              "hp": 304,
+              "max_hp": 304,
+              "status": 0,
+              "ivs": 693845208,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 736797800,
+              "ot_id": 23199744,
+              "species": 149,
+              "national_dex": 149,
+              "item": 472,
+              "experience": 973360,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 280,
+              "max_hp": 280,
+              "status": 0,
+              "ivs": 120962732,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 1790591300,
+              "ot_id": 23199744,
+              "species": 376,
+              "national_dex": 376,
+              "item": 472,
+              "experience": 1005446,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 93,
+              "hp": 262,
+              "max_hp": 262,
+              "status": 0,
+              "ivs": 80873772,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "enemy_party": [
+            {
+              "slot": 0,
+              "personality": 1098749515,
+              "ot_id": 130073144,
+              "species": 272,
+              "national_dex": 272,
+              "item": 479,
+              "experience": 902835,
+              "moves": [
+                311,
+                202,
+                58,
+                411
+              ],
+              "pp": [
+                10,
+                10,
+                10,
+                5
+              ],
+              "max_pp": [
+                10,
+                10,
+                10,
+                5
+              ],
+              "level": 95,
+              "hp": 257,
+              "max_hp": 257,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                6,
+                0,
+                0,
+                252,
+                252,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 2918734533,
+              "ot_id": 2897665758,
+              "species": 334,
+              "national_dex": 334,
+              "item": 510,
+              "experience": 526049,
+              "moves": [
+                432,
+                355,
+                413,
+                261
+              ],
+              "pp": [
+                15,
+                5,
+                15,
+                15
+              ],
+              "max_pp": [
+                15,
+                5,
+                15,
+                15
+              ],
+              "level": 93,
+              "hp": 301,
+              "max_hp": 301,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                252,
+                0,
+                242,
+                16,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 1219361480,
+              "ot_id": 2587604724,
+              "species": 350,
+              "national_dex": 350,
+              "item": 510,
+              "experience": 548720,
+              "moves": [
+                503,
+                105,
+                92,
+                740
+              ],
+              "pp": [
+                15,
+                5,
+                10,
+                20
+              ],
+              "max_pp": [
+                15,
+                5,
+                10,
+                20
+              ],
+              "level": 95,
+              "hp": 345,
+              "max_hp": 345,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                252,
+                0,
+                252,
+                0,
+                0,
+                6
+              ]
+            },
+            {
+              "slot": 3,
+              "personality": 2731401785,
+              "ot_id": 1079220861,
+              "species": 282,
+              "national_dex": 282,
+              "item": 472,
+              "experience": 1005446,
+              "moves": [
+                304,
+                473,
+                595,
+                269
+              ],
+              "pp": [
+                10,
+                10,
+                10,
+                20
+              ],
+              "max_pp": [
+                10,
+                10,
+                10,
+                20
+              ],
+              "level": 93,
+              "hp": 229,
+              "max_hp": 229,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                0,
+                0,
+                0,
+                252,
+                252,
+                6
+              ]
+            },
+            {
+              "slot": 4,
+              "personality": 374456335,
+              "ot_id": 593115034,
+              "species": 254,
+              "national_dex": 254,
+              "item": 472,
+              "experience": 789030,
+              "moves": [
+                437,
+                406,
+                411,
+                182
+              ],
+              "pp": [
+                5,
+                10,
+                5,
+                10
+              ],
+              "max_pp": [
+                5,
+                10,
+                5,
+                10
+              ],
+              "level": 91,
+              "hp": 228,
+              "max_hp": 228,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                0,
+                0,
+                0,
+                252,
+                252,
+                6
+              ]
+            },
+            {
+              "slot": 5,
+              "personality": 2869492878,
+              "ot_id": 2882183508,
+              "species": 257,
+              "national_dex": 257,
+              "item": 479,
+              "experience": 963632,
+              "moves": [
+                14,
+                370,
+                394,
+                444
+              ],
+              "pp": [
+                20,
+                5,
+                15,
+                5
+              ],
+              "max_pp": [
+                20,
+                5,
+                15,
+                5
+              ],
+              "level": 97,
+              "hp": 262,
+              "max_hp": 262,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                0,
+                252,
+                6,
+                252,
+                0,
+                0
+              ]
+            }
+          ],
+          "actions": 6,
+          "outcome": 1,
+          "berry_consumed_natively": false,
+          "active_party_indices": [
+            0,
+            2
+          ],
+          "command_menu_capture": true
+        },
+        {
+          "trainer": 1802,
+          "hero": 2,
+          "stage": 0,
+          "battle_flags": 12,
+          "entry_party": [
+            {
+              "slot": 0,
+              "personality": 1978158661,
+              "ot_id": 23199744,
+              "species": 260,
+              "national_dex": 260,
+              "item": 523,
+              "experience": 816195,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 91,
+              "hp": 304,
+              "max_hp": 304,
+              "status": 0,
+              "ivs": 693845208,
+              "evs": [
+                0,
+                3,
+                0,
+                3,
+                3,
+                7
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 736797800,
+              "ot_id": 23199744,
+              "species": 149,
+              "national_dex": 149,
+              "item": 472,
+              "experience": 973360,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 280,
+              "max_hp": 280,
+              "status": 0,
+              "ivs": 120962732,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 1790591300,
+              "ot_id": 23199744,
+              "species": 376,
+              "national_dex": 376,
+              "item": 472,
+              "experience": 1005446,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 93,
+              "hp": 262,
+              "max_hp": 262,
+              "status": 0,
+              "ivs": 80873772,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "enemy_party": [
+            {
+              "slot": 0,
+              "personality": 2477726305,
+              "ot_id": 1327827192,
+              "species": 36,
+              "national_dex": 36,
+              "item": 472,
+              "experience": 622950,
+              "moves": [
+                446,
+                585,
+                236,
+                86
+              ],
+              "pp": [
+                20,
+                15,
+                5,
+                20
+              ],
+              "max_pp": [
+                20,
+                15,
+                5,
+                20
+              ],
+              "level": 92,
+              "hp": 334,
+              "max_hp": 334,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                252,
+                0,
+                252,
+                0,
+                0,
+                6
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 1736066935,
+              "ot_id": 1465769515,
+              "species": 31,
+              "national_dex": 31,
+              "item": 479,
+              "experience": 844653,
+              "moves": [
+                446,
+                414,
+                482,
+                58
+              ],
+              "pp": [
+                20,
+                10,
+                10,
+                10
+              ],
+              "max_pp": [
+                20,
+                10,
+                10,
+                10
+              ],
+              "level": 93,
+              "hp": 281,
+              "max_hp": 281,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                48,
+                0,
+                0,
+                210,
+                252,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 2871428003,
+              "ot_id": 2325883596,
+              "species": 59,
+              "national_dex": 59,
+              "item": 472,
+              "experience": 1038230,
+              "moves": [
+                174,
+                245,
+                394,
+                234
+              ],
+              "pp": [
+                10,
+                5,
+                15,
+                5
+              ],
+              "max_pp": [
+                10,
+                5,
+                15,
+                5
+              ],
+              "level": 94,
+              "hp": 310,
+              "max_hp": 310,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                162,
+                252,
+                0,
+                96,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "personality": 1978092090,
+              "ot_id": 2056803653,
+              "species": 103,
+              "national_dex": 103,
+              "item": 443,
+              "experience": 1005446,
+              "moves": [
+                437,
+                473,
+                246,
+                202
+              ],
+              "pp": [
+                5,
+                10,
+                5,
+                10
+              ],
+              "max_pp": [
+                5,
+                10,
+                5,
+                10
+              ],
+              "level": 93,
+              "hp": 279,
+              "max_hp": 279,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                0,
+                0,
+                6,
+                252,
+                252,
+                0
+              ]
+            },
+            {
+              "slot": 4,
+              "personality": 1962366990,
+              "ot_id": 3751093751,
+              "species": 9,
+              "national_dex": 9,
+              "item": 460,
+              "experience": 902835,
+              "moves": [
+                504,
+                57,
+                58,
+                779
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 95,
+              "hp": 255,
+              "max_hp": 255,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                0,
+                0,
+                0,
+                252,
+                252,
+                6
+              ]
+            },
+            {
+              "slot": 5,
+              "personality": 4042684185,
+              "ot_id": 2378249506,
+              "species": 3,
+              "national_dex": 3,
+              "item": 479,
+              "experience": 963632,
+              "moves": [
+                74,
+                202,
+                311,
+                188
+              ],
+              "pp": [
+                20,
+                10,
+                10,
+                10
+              ],
+              "max_pp": [
+                20,
+                10,
+                10,
+                10
+              ],
+              "level": 97,
+              "hp": 262,
+              "max_hp": 262,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                0,
+                0,
+                6,
+                252,
+                252,
+                0
+              ]
+            }
+          ],
+          "actions": 6,
+          "outcome": 1,
+          "berry_consumed_natively": false,
+          "active_party_indices": [
+            0
+          ],
+          "command_menu_capture": true
+        },
+        {
+          "trainer": 1806,
+          "hero": 6,
+          "stage": 1,
+          "battle_flags": 12,
+          "entry_party": [
+            {
+              "slot": 0,
+              "personality": 1978158661,
+              "ot_id": 23199744,
+              "species": 260,
+              "national_dex": 260,
+              "item": 523,
+              "experience": 843374,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 309,
+              "max_hp": 309,
+              "status": 0,
+              "ivs": 693845208,
+              "evs": [
+                6,
+                5,
+                0,
+                3,
+                7,
+                11
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 736797800,
+              "ot_id": 23199744,
+              "species": 149,
+              "national_dex": 149,
+              "item": 472,
+              "experience": 973360,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 280,
+              "max_hp": 280,
+              "status": 0,
+              "ivs": 120962732,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 1790591300,
+              "ot_id": 23199744,
+              "species": 376,
+              "national_dex": 376,
+              "item": 472,
+              "experience": 1005446,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 93,
+              "hp": 262,
+              "max_hp": 262,
+              "status": 0,
+              "ivs": 80873772,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "enemy_party": [
+            {
+              "slot": 0,
+              "personality": 150075328,
+              "ot_id": 1126394872,
+              "species": 212,
+              "national_dex": 212,
+              "item": 442,
+              "experience": 753571,
+              "moves": [
+                418,
+                369,
+                282,
+                370
+              ],
+              "pp": [
+                30,
+                20,
+                20,
+                5
+              ],
+              "max_pp": [
+                30,
+                20,
+                20,
+                5
+              ],
+              "level": 91,
+              "hp": 255,
+              "max_hp": 255,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                120,
+                252,
+                0,
+                138,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 585253178,
+              "ot_id": 3490653634,
+              "species": 248,
+              "national_dex": 248,
+              "item": 442,
+              "experience": 941963,
+              "moves": [
+                282,
+                444,
+                67,
+                8
+              ],
+              "pp": [
+                20,
+                5,
+                20,
+                15
+              ],
+              "max_pp": [
+                20,
+                5,
+                20,
+                15
+              ],
+              "level": 91,
+              "hp": 283,
+              "max_hp": 283,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                0,
+                252,
+                0,
+                252,
+                0,
+                6
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 2113207353,
+              "ot_id": 4266801922,
+              "species": 477,
+              "national_dex": 477,
+              "item": 502,
+              "experience": 664467,
+              "moves": [
+                737,
+                141,
+                425,
+                220
+              ],
+              "pp": [
+                5,
+                10,
+                30,
+                20
+              ],
+              "max_pp": [
+                5,
+                10,
+                30,
+                20
+              ],
+              "level": 94,
+              "hp": 247,
+              "max_hp": 247,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                252,
+                252,
+                0,
+                0,
+                0,
+                6
+              ]
+            },
+            {
+              "slot": 3,
+              "personality": 2577604283,
+              "ot_id": 1417848316,
+              "species": 445,
+              "national_dex": 445,
+              "item": 496,
+              "experience": 941963,
+              "moves": [
+                89,
+                525,
+                446,
+                191
+              ],
+              "pp": [
+                10,
+                10,
+                20,
+                20
+              ],
+              "max_pp": [
+                10,
+                10,
+                20,
+                20
+              ],
+              "level": 91,
+              "hp": 354,
+              "max_hp": 354,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                252,
+                0,
+                218,
+                40,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 4,
+              "personality": 1279454923,
+              "ot_id": 1453355797,
+              "species": 306,
+              "national_dex": 306,
+              "item": 472,
+              "experience": 1071718,
+              "moves": [
+                446,
+                484,
+                704,
+                92
+              ],
+              "pp": [
+                20,
+                10,
+                10,
+                10
+              ],
+              "max_pp": [
+                20,
+                10,
+                10,
+                10
+              ],
+              "level": 95,
+              "hp": 297,
+              "max_hp": 297,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                252,
+                0,
+                6,
+                0,
+                0,
+                252
+              ]
+            },
+            {
+              "slot": 5,
+              "personality": 4002478713,
+              "ot_id": 1601000931,
+              "species": 486,
+              "national_dex": 486,
+              "item": 472,
+              "experience": 1140841,
+              "moves": [
+                38,
+                264,
+                462,
+                89
+              ],
+              "pp": [
+                15,
+                20,
+                5,
+                10
+              ],
+              "max_pp": [
+                15,
+                20,
+                5,
+                10
+              ],
+              "level": 97,
+              "hp": 321,
+              "max_hp": 321,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                6,
+                252,
+                0,
+                252,
+                0,
+                0
+              ]
+            }
+          ],
+          "actions": 3,
+          "outcome": 2,
+          "berry_consumed_natively": false,
+          "active_party_indices": [
+            0,
+            1,
+            2
+          ],
+          "command_menu_capture": true
+        }
+      ],
+      "healed_intermission_observations": [
+        {
+          "after_battles": 0,
+          "identity": [
+            [
+              1978158661,
+              523,
+              789030
+            ],
+            [
+              736797800,
+              472,
+              973360
+            ],
+            [
+              1790591300,
+              472,
+              1005446
+            ]
+          ],
+          "party": [
+            {
+              "slot": 0,
+              "personality": 1978158661,
+              "ot_id": 23199744,
+              "species": 260,
+              "national_dex": 260,
+              "item": 523,
+              "experience": 789030,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 91,
+              "hp": 304,
+              "max_hp": 304,
+              "status": 0,
+              "ivs": 693845208,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 736797800,
+              "ot_id": 23199744,
+              "species": 149,
+              "national_dex": 149,
+              "item": 472,
+              "experience": 973360,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 280,
+              "max_hp": 280,
+              "status": 0,
+              "ivs": 120962732,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 1790591300,
+              "ot_id": 23199744,
+              "species": 376,
+              "national_dex": 376,
+              "item": 472,
+              "experience": 1005446,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 93,
+              "hp": 262,
+              "max_hp": 262,
+              "status": 0,
+              "ivs": 80873772,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "after_battles": 1,
+          "identity": [
+            [
+              1978158661,
+              523,
+              816195
+            ],
+            [
+              736797800,
+              472,
+              973360
+            ],
+            [
+              1790591300,
+              472,
+              1005446
+            ]
+          ],
+          "party": [
+            {
+              "slot": 0,
+              "personality": 1978158661,
+              "ot_id": 23199744,
+              "species": 260,
+              "national_dex": 260,
+              "item": 523,
+              "experience": 816195,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 91,
+              "hp": 304,
+              "max_hp": 304,
+              "status": 0,
+              "ivs": 693845208,
+              "evs": [
+                0,
+                3,
+                0,
+                3,
+                3,
+                7
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 736797800,
+              "ot_id": 23199744,
+              "species": 149,
+              "national_dex": 149,
+              "item": 472,
+              "experience": 973360,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 280,
+              "max_hp": 280,
+              "status": 0,
+              "ivs": 120962732,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 1790591300,
+              "ot_id": 23199744,
+              "species": 376,
+              "national_dex": 376,
+              "item": 472,
+              "experience": 1005446,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 93,
+              "hp": 262,
+              "max_hp": 262,
+              "status": 0,
+              "ivs": 80873772,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "after_battles": 2,
+          "identity": [
+            [
+              1978158661,
+              523,
+              843374
+            ],
+            [
+              736797800,
+              472,
+              973360
+            ],
+            [
+              1790591300,
+              472,
+              1005446
+            ]
+          ],
+          "party": [
+            {
+              "slot": 0,
+              "personality": 1978158661,
+              "ot_id": 23199744,
+              "species": 260,
+              "national_dex": 260,
+              "item": 523,
+              "experience": 843374,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 309,
+              "max_hp": 309,
+              "status": 0,
+              "ivs": 693845208,
+              "evs": [
+                6,
+                5,
+                0,
+                3,
+                7,
+                11
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 736797800,
+              "ot_id": 23199744,
+              "species": 149,
+              "national_dex": 149,
+              "item": 472,
+              "experience": 973360,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 280,
+              "max_hp": 280,
+              "status": 0,
+              "ivs": 120962732,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 1790591300,
+              "ot_id": 23199744,
+              "species": 376,
+              "national_dex": 376,
+              "item": 472,
+              "experience": 1005446,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 93,
+              "hp": 262,
+              "max_hp": 262,
+              "status": 0,
+              "ivs": 80873772,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "after": {
+        "map": "BattleFrontier_PokemonCenter_1F",
+        "position": [
+          7,
+          4
+        ],
+        "state": 0,
+        "won": false,
+        "money_before": 0,
+        "money_after": 0,
+        "battle_points": 0,
+        "party": [
+          {
+            "slot": 0,
+            "personality": 1978158661,
+            "ot_id": 23199744,
+            "species": 260,
+            "national_dex": 260,
+            "item": 523,
+            "experience": 843374,
+            "moves": [
+              127,
+              57,
+              58,
+              89
+            ],
+            "pp": [
+              15,
+              15,
+              10,
+              10
+            ],
+            "max_pp": [
+              15,
+              15,
+              10,
+              10
+            ],
+            "level": 92,
+            "hp": 309,
+            "max_hp": 309,
+            "status": 0,
+            "ivs": 693845208,
+            "evs": [
+              6,
+              5,
+              0,
+              3,
+              7,
+              11
+            ]
+          },
+          {
+            "slot": 1,
+            "personality": 736797800,
+            "ot_id": 23199744,
+            "species": 149,
+            "national_dex": 149,
+            "item": 472,
+            "experience": 973360,
+            "moves": [
+              127,
+              57,
+              58,
+              89
+            ],
+            "pp": [
+              15,
+              15,
+              10,
+              10
+            ],
+            "max_pp": [
+              15,
+              15,
+              10,
+              10
+            ],
+            "level": 92,
+            "hp": 280,
+            "max_hp": 280,
+            "status": 0,
+            "ivs": 120962732,
+            "evs": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "slot": 2,
+            "personality": 1790591300,
+            "ot_id": 23199744,
+            "species": 376,
+            "national_dex": 376,
+            "item": 472,
+            "experience": 1005446,
+            "moves": [
+              127,
+              57,
+              58,
+              89
+            ],
+            "pp": [
+              15,
+              15,
+              10,
+              10
+            ],
+            "max_pp": [
+              15,
+              15,
+              10,
+              10
+            ],
+            "level": 93,
+            "hp": 262,
+            "max_hp": 262,
+            "status": 0,
+            "ivs": 80873772,
+            "evs": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "x_attack_before": 5,
+        "x_attack_after": 5,
+        "bag_ui_opened": false,
+        "bag_item_consumed_natively": false,
+        "native_party_switch": false,
+        "post_battle_party_orders": [
+          [
+            1978158661,
+            736797800,
+            1790591300
+          ],
+          [
+            1978158661,
+            736797800,
+            1790591300
+          ],
+          [
+            1978158661,
+            736797800,
+            1790591300
+          ]
+        ],
+        "total_experience_gain": 54344
+      },
+      "outdoor_intro": null,
+      "capture": {
+        "file": "final_defeat-finished.png",
+        "sha256": "0fe658ea8e44c517448082ad7d488598359f3a7f340784aeddb1416d9de5d53f"
+      }
+    },
+    {
+      "scenario": "championship",
+      "draw_seed": 8835,
+      "initial_draw": {
+        "hero": [
+          0,
+          4,
+          2,
+          3,
+          5,
+          6
+        ],
+        "groups": [
+          [
+            0,
+            4,
+            1
+          ],
+          [
+            5,
+            2,
+            3
+          ]
+        ],
+        "tie_order": [
+          2,
+          5,
+          1,
+          3,
+          0,
+          4
+        ]
+      },
+      "initial_party": [
+        {
+          "slot": 0,
+          "personality": 544098085,
+          "ot_id": 23199744,
+          "species": 260,
+          "national_dex": 260,
+          "item": 523,
+          "experience": 789030,
+          "moves": [
+            127,
+            57,
+            58,
+            89
+          ],
+          "pp": [
+            15,
+            15,
+            10,
+            10
+          ],
+          "max_pp": [
+            15,
+            15,
+            10,
+            10
+          ],
+          "level": 91,
+          "hp": 293,
+          "max_hp": 293,
+          "status": 0,
+          "ivs": 441596779,
+          "evs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "slot": 1,
+          "personality": 1416078279,
+          "ot_id": 23199744,
+          "species": 149,
+          "national_dex": 149,
+          "item": 472,
+          "experience": 973360,
+          "moves": [
+            127,
+            57,
+            58,
+            89
+          ],
+          "pp": [
+            15,
+            15,
+            10,
+            10
+          ],
+          "max_pp": [
+            15,
+            15,
+            10,
+            10
+          ],
+          "level": 92,
+          "hp": 286,
+          "max_hp": 286,
+          "status": 0,
+          "ivs": 962617235,
+          "evs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "slot": 2,
+          "personality": 1156291391,
+          "ot_id": 23199744,
+          "species": 376,
+          "national_dex": 376,
+          "item": 472,
+          "experience": 1005446,
+          "moves": [
+            127,
+            57,
+            58,
+            89
+          ],
+          "pp": [
+            15,
+            15,
+            10,
+            10
+          ],
+          "max_pp": [
+            15,
+            15,
+            10,
+            10
+          ],
+          "level": 93,
+          "hp": 261,
+          "max_hp": 261,
+          "status": 0,
+          "ivs": 871441034,
+          "evs": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "final_core": {
+        "hero": [
+          0,
+          4,
+          2,
+          3,
+          5,
+          6
+        ],
+        "wins": [
+          2,
+          1,
+          0,
+          1,
+          0,
+          2
+        ],
+        "survivors": [
+          6,
+          5,
+          0,
+          2,
+          0,
+          7
+        ],
+        "tie_order": [
+          2,
+          5,
+          1,
+          3,
+          0,
+          4
+        ],
+        "played_mask": [
+          18,
+          17,
+          40,
+          36,
+          3,
+          12
+        ],
+        "balance": [
+          6,
+          2,
+          -5,
+          -2,
+          -8,
+          7
+        ],
+        "groups": [
+          [
+            0,
+            4,
+            1
+          ],
+          [
+            5,
+            2,
+            3
+          ]
+        ],
+        "cursor": 6,
+        "stage": 2,
+        "opponent": 255,
+        "final_winner": 0,
+        "finalists": [
+          0,
+          5
+        ],
+        "prepared": false,
+        "final_played": true,
+        "immediate_group_loss": false,
+        "ledger": [
+          {
+            "a": 0,
+            "b": 4,
+            "left_a": 3,
+            "left_b": 0,
+            "resolved": true
+          },
+          {
+            "a": 5,
+            "b": 2,
+            "left_a": 3,
+            "left_b": 0,
+            "resolved": true
+          },
+          {
+            "a": 4,
+            "b": 1,
+            "left_a": 0,
+            "left_b": 5,
+            "resolved": true
+          },
+          {
+            "a": 5,
+            "b": 3,
+            "left_a": 4,
+            "left_b": 0,
+            "resolved": true
+          },
+          {
+            "a": 0,
+            "b": 1,
+            "left_a": 3,
+            "left_b": 0,
+            "resolved": true
+          },
+          {
+            "a": 2,
+            "b": 3,
+            "left_a": 0,
+            "left_b": 2,
+            "resolved": true
+          }
+        ]
+      },
+      "independent_ledger_audit": {
+        "recomputed_from_six_unique_matches": true,
+        "wins": [
+          2,
+          1,
+          0,
+          1,
+          0,
+          2
+        ],
+        "balance": [
+          6,
+          2,
+          -5,
+          -2,
+          -8,
+          7
+        ],
+        "survivors": [
+          6,
+          5,
+          0,
+          2,
+          0,
+          7
+        ],
+        "finalists": [
+          0,
+          5
+        ],
+        "exactly_two_real_player_group_battles": true
+      },
+      "player_battles": [
+        {
+          "trainer": 1805,
+          "hero": 5,
+          "stage": 0,
+          "battle_flags": 12,
+          "entry_party": [
+            {
+              "slot": 0,
+              "personality": 544098085,
+              "ot_id": 23199744,
+              "species": 260,
+              "national_dex": 260,
+              "item": 523,
+              "experience": 789030,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 91,
+              "hp": 293,
+              "max_hp": 293,
+              "status": 0,
+              "ivs": 441596779,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 1416078279,
+              "ot_id": 23199744,
+              "species": 149,
+              "national_dex": 149,
+              "item": 472,
+              "experience": 973360,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 286,
+              "max_hp": 286,
+              "status": 0,
+              "ivs": 962617235,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 1156291391,
+              "ot_id": 23199744,
+              "species": 376,
+              "national_dex": 376,
+              "item": 472,
+              "experience": 1005446,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 93,
+              "hp": 261,
+              "max_hp": 261,
+              "status": 0,
+              "ivs": 871441034,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "enemy_party": [
+            {
+              "slot": 0,
+              "personality": 2678984578,
+              "ot_id": 1738155364,
+              "species": 338,
+              "national_dex": 338,
+              "item": 472,
+              "experience": 622950,
+              "moves": [
+                428,
+                444,
+                38,
+                94
+              ],
+              "pp": [
+                15,
+                5,
+                15,
+                10
+              ],
+              "max_pp": [
+                15,
+                5,
+                15,
+                10
+              ],
+              "level": 92,
+              "hp": 325,
+              "max_hp": 325,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                252,
+                252,
+                6,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 1992725940,
+              "ot_id": 1028766229,
+              "species": 272,
+              "national_dex": 272,
+              "item": 479,
+              "experience": 789030,
+              "moves": [
+                311,
+                202,
+                58,
+                411
+              ],
+              "pp": [
+                10,
+                10,
+                10,
+                5
+              ],
+              "max_pp": [
+                10,
+                10,
+                10,
+                5
+              ],
+              "level": 91,
+              "hp": 247,
+              "max_hp": 247,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                6,
+                0,
+                0,
+                252,
+                252,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 117056010,
+              "ot_id": 276746823,
+              "species": 468,
+              "national_dex": 468,
+              "item": 510,
+              "experience": 664467,
+              "moves": [
+                417,
+                403,
+                355,
+                215
+              ],
+              "pp": [
+                20,
+                15,
+                5,
+                5
+              ],
+              "max_pp": [
+                20,
+                15,
+                5,
+                5
+              ],
+              "level": 94,
+              "hp": 323,
+              "max_hp": 323,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                252,
+                0,
+                120,
+                138,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 3,
+              "personality": 2183709978,
+              "ot_id": 245620664,
+              "species": 68,
+              "national_dex": 68,
+              "item": 472,
+              "experience": 873420,
+              "moves": [
+                264,
+                38,
+                276,
+                370
+              ],
+              "pp": [
+                20,
+                15,
+                5,
+                5
+              ],
+              "max_pp": [
+                20,
+                15,
+                5,
+                5
+              ],
+              "level": 94,
+              "hp": 332,
+              "max_hp": 332,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                252,
+                252,
+                6,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 4,
+              "personality": 410208273,
+              "ot_id": 881995604,
+              "species": 143,
+              "national_dex": 143,
+              "item": 472,
+              "experience": 941963,
+              "moves": [
+                174,
+                34,
+                242,
+                156
+              ],
+              "pp": [
+                10,
+                15,
+                15,
+                5
+              ],
+              "max_pp": [
+                10,
+                15,
+                15,
+                5
+              ],
+              "level": 91,
+              "hp": 394,
+              "max_hp": 394,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                12,
+                0,
+                246,
+                0,
+                0,
+                252
+              ]
+            },
+            {
+              "slot": 5,
+              "personality": 3848217615,
+              "ot_id": 3713498907,
+              "species": 395,
+              "national_dex": 395,
+              "item": 472,
+              "experience": 963632,
+              "moves": [
+                57,
+                58,
+                447,
+                355
+              ],
+              "pp": [
+                15,
+                10,
+                20,
+                5
+              ],
+              "max_pp": [
+                15,
+                10,
+                20,
+                5
+              ],
+              "level": 97,
+              "hp": 287,
+              "max_hp": 287,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                72,
+                0,
+                72,
+                218,
+                148,
+                0
+              ]
+            }
+          ],
+          "actions": 6,
+          "outcome": 1,
+          "berry_consumed_natively": true,
+          "active_party_indices": [
+            0,
+            1
+          ],
+          "command_menu_capture": true
+        },
+        {
+          "trainer": 1804,
+          "hero": 4,
+          "stage": 0,
+          "battle_flags": 12,
+          "entry_party": [
+            {
+              "slot": 0,
+              "personality": 544098085,
+              "ot_id": 23199744,
+              "species": 260,
+              "national_dex": 260,
+              "item": 523,
+              "experience": 792031,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 91,
+              "hp": 293,
+              "max_hp": 293,
+              "status": 0,
+              "ivs": 441596779,
+              "evs": [
+                0,
+                2,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 1416078279,
+              "ot_id": 23199744,
+              "species": 149,
+              "national_dex": 149,
+              "item": 472,
+              "experience": 999644,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 286,
+              "max_hp": 286,
+              "status": 0,
+              "ivs": 962617235,
+              "evs": [
+                2,
+                5,
+                0,
+                0,
+                5,
+                4
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 1156291391,
+              "ot_id": 23199744,
+              "species": 376,
+              "national_dex": 376,
+              "item": 472,
+              "experience": 1005446,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 93,
+              "hp": 261,
+              "max_hp": 261,
+              "status": 0,
+              "ivs": 871441034,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "enemy_party": [
+            {
+              "slot": 0,
+              "personality": 1098749640,
+              "ot_id": 1997187920,
+              "species": 272,
+              "national_dex": 272,
+              "item": 479,
+              "experience": 816525,
+              "moves": [
+                311,
+                202,
+                58,
+                411
+              ],
+              "pp": [
+                10,
+                10,
+                10,
+                5
+              ],
+              "max_pp": [
+                10,
+                10,
+                10,
+                5
+              ],
+              "level": 92,
+              "hp": 250,
+              "max_hp": 250,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                6,
+                0,
+                0,
+                252,
+                252,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 2918734533,
+              "ot_id": 263369513,
+              "species": 334,
+              "national_dex": 334,
+              "item": 510,
+              "experience": 548720,
+              "moves": [
+                432,
+                355,
+                413,
+                261
+              ],
+              "pp": [
+                15,
+                5,
+                15,
+                15
+              ],
+              "max_pp": [
+                15,
+                5,
+                15,
+                15
+              ],
+              "level": 95,
+              "hp": 307,
+              "max_hp": 307,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                252,
+                0,
+                242,
+                16,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 1219361480,
+              "ot_id": 2192158493,
+              "species": 350,
+              "national_dex": 350,
+              "item": 510,
+              "experience": 548720,
+              "moves": [
+                503,
+                105,
+                92,
+                740
+              ],
+              "pp": [
+                15,
+                5,
+                10,
+                20
+              ],
+              "max_pp": [
+                15,
+                5,
+                10,
+                20
+              ],
+              "level": 95,
+              "hp": 345,
+              "max_hp": 345,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                252,
+                0,
+                252,
+                0,
+                0,
+                6
+              ]
+            },
+            {
+              "slot": 3,
+              "personality": 2731401910,
+              "ot_id": 3350868389,
+              "species": 282,
+              "national_dex": 282,
+              "item": 472,
+              "experience": 1005446,
+              "moves": [
+                304,
+                473,
+                595,
+                269
+              ],
+              "pp": [
+                10,
+                10,
+                10,
+                20
+              ],
+              "max_pp": [
+                10,
+                10,
+                10,
+                20
+              ],
+              "level": 93,
+              "hp": 229,
+              "max_hp": 229,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                0,
+                0,
+                0,
+                252,
+                252,
+                6
+              ]
+            },
+            {
+              "slot": 4,
+              "personality": 374456335,
+              "ot_id": 4198384624,
+              "species": 254,
+              "national_dex": 254,
+              "item": 472,
+              "experience": 932903,
+              "moves": [
+                437,
+                406,
+                411,
+                182
+              ],
+              "pp": [
+                5,
+                10,
+                5,
+                10
+              ],
+              "max_pp": [
+                5,
+                10,
+                5,
+                10
+              ],
+              "level": 96,
+              "hp": 240,
+              "max_hp": 240,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                0,
+                0,
+                0,
+                252,
+                252,
+                6
+              ]
+            },
+            {
+              "slot": 5,
+              "personality": 2869492753,
+              "ot_id": 1634305979,
+              "species": 257,
+              "national_dex": 257,
+              "item": 479,
+              "experience": 963632,
+              "moves": [
+                14,
+                370,
+                394,
+                444
+              ],
+              "pp": [
+                20,
+                5,
+                15,
+                5
+              ],
+              "max_pp": [
+                20,
+                5,
+                15,
+                5
+              ],
+              "level": 97,
+              "hp": 262,
+              "max_hp": 262,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                0,
+                252,
+                6,
+                252,
+                0,
+                0
+              ]
+            }
+          ],
+          "actions": 6,
+          "outcome": 1,
+          "berry_consumed_natively": false,
+          "active_party_indices": [
+            0,
+            2
+          ],
+          "command_menu_capture": true
+        },
+        {
+          "trainer": 1806,
+          "hero": 6,
+          "stage": 1,
+          "battle_flags": 12,
+          "entry_party": [
+            {
+              "slot": 0,
+              "personality": 544098085,
+              "ot_id": 23199744,
+              "species": 260,
+              "national_dex": 260,
+              "item": 523,
+              "experience": 819622,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 296,
+              "max_hp": 296,
+              "status": 0,
+              "ivs": 441596779,
+              "evs": [
+                0,
+                5,
+                0,
+                3,
+                3,
+                7
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 1416078279,
+              "ot_id": 23199744,
+              "species": 149,
+              "national_dex": 149,
+              "item": 472,
+              "experience": 999644,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 286,
+              "max_hp": 286,
+              "status": 0,
+              "ivs": 962617235,
+              "evs": [
+                2,
+                5,
+                0,
+                0,
+                5,
+                4
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 1156291391,
+              "ot_id": 23199744,
+              "species": 376,
+              "national_dex": 376,
+              "item": 472,
+              "experience": 1005446,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 93,
+              "hp": 261,
+              "max_hp": 261,
+              "status": 0,
+              "ivs": 871441034,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "enemy_party": [
+            {
+              "slot": 0,
+              "personality": 150075328,
+              "ot_id": 2295831940,
+              "species": 212,
+              "national_dex": 212,
+              "item": 442,
+              "experience": 830584,
+              "moves": [
+                418,
+                369,
+                282,
+                370
+              ],
+              "pp": [
+                30,
+                20,
+                20,
+                5
+              ],
+              "max_pp": [
+                30,
+                20,
+                20,
+                5
+              ],
+              "level": 94,
+              "hp": 263,
+              "max_hp": 263,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                120,
+                252,
+                0,
+                138,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 585253303,
+              "ot_id": 513381337,
+              "species": 248,
+              "national_dex": 248,
+              "item": 442,
+              "experience": 1105920,
+              "moves": [
+                282,
+                444,
+                67,
+                8
+              ],
+              "pp": [
+                20,
+                5,
+                20,
+                15
+              ],
+              "max_pp": [
+                20,
+                5,
+                20,
+                15
+              ],
+              "level": 96,
+              "hp": 298,
+              "max_hp": 298,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                0,
+                252,
+                0,
+                252,
+                0,
+                6
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 2113207478,
+              "ot_id": 2879107304,
+              "species": 477,
+              "national_dex": 477,
+              "item": 502,
+              "experience": 707788,
+              "moves": [
+                737,
+                141,
+                425,
+                220
+              ],
+              "pp": [
+                5,
+                10,
+                30,
+                20
+              ],
+              "max_pp": [
+                5,
+                10,
+                30,
+                20
+              ],
+              "level": 96,
+              "hp": 252,
+              "max_hp": 252,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                252,
+                252,
+                0,
+                0,
+                0,
+                6
+              ]
+            },
+            {
+              "slot": 3,
+              "personality": 2577604158,
+              "ot_id": 3762502780,
+              "species": 445,
+              "national_dex": 445,
+              "item": 496,
+              "experience": 1005446,
+              "moves": [
+                89,
+                525,
+                446,
+                191
+              ],
+              "pp": [
+                10,
+                10,
+                20,
+                20
+              ],
+              "max_pp": [
+                10,
+                10,
+                20,
+                20
+              ],
+              "level": 93,
+              "hp": 362,
+              "max_hp": 362,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                252,
+                0,
+                218,
+                40,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 4,
+              "personality": 1279454773,
+              "ot_id": 2710196834,
+              "species": 306,
+              "national_dex": 306,
+              "item": 472,
+              "experience": 941963,
+              "moves": [
+                446,
+                484,
+                704,
+                92
+              ],
+              "pp": [
+                20,
+                10,
+                10,
+                10
+              ],
+              "max_pp": [
+                20,
+                10,
+                10,
+                10
+              ],
+              "level": 91,
+              "hp": 285,
+              "max_hp": 285,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                252,
+                0,
+                6,
+                0,
+                0,
+                252
+              ]
+            },
+            {
+              "slot": 5,
+              "personality": 4002478838,
+              "ot_id": 1322741968,
+              "species": 486,
+              "national_dex": 486,
+              "item": 472,
+              "experience": 1140841,
+              "moves": [
+                38,
+                264,
+                462,
+                89
+              ],
+              "pp": [
+                15,
+                20,
+                5,
+                10
+              ],
+              "max_pp": [
+                15,
+                20,
+                5,
+                10
+              ],
+              "level": 97,
+              "hp": 321,
+              "max_hp": 321,
+              "status": 0,
+              "ivs": 0,
+              "evs": [
+                6,
+                252,
+                0,
+                252,
+                0,
+                0
+              ]
+            }
+          ],
+          "actions": 7,
+          "outcome": 1,
+          "berry_consumed_natively": false,
+          "active_party_indices": [
+            0
+          ],
+          "command_menu_capture": true
+        }
+      ],
+      "healed_intermission_observations": [
+        {
+          "after_battles": 0,
+          "identity": [
+            [
+              544098085,
+              523,
+              789030
+            ],
+            [
+              1416078279,
+              472,
+              973360
+            ],
+            [
+              1156291391,
+              472,
+              1005446
+            ]
+          ],
+          "party": [
+            {
+              "slot": 0,
+              "personality": 544098085,
+              "ot_id": 23199744,
+              "species": 260,
+              "national_dex": 260,
+              "item": 523,
+              "experience": 789030,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 91,
+              "hp": 293,
+              "max_hp": 293,
+              "status": 0,
+              "ivs": 441596779,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 1416078279,
+              "ot_id": 23199744,
+              "species": 149,
+              "national_dex": 149,
+              "item": 472,
+              "experience": 973360,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 286,
+              "max_hp": 286,
+              "status": 0,
+              "ivs": 962617235,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 1156291391,
+              "ot_id": 23199744,
+              "species": 376,
+              "national_dex": 376,
+              "item": 472,
+              "experience": 1005446,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 93,
+              "hp": 261,
+              "max_hp": 261,
+              "status": 0,
+              "ivs": 871441034,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "after_battles": 0,
+          "identity": [
+            [
+              544098085,
+              0,
+              789030
+            ],
+            [
+              1416078279,
+              472,
+              973360
+            ],
+            [
+              1156291391,
+              472,
+              1005446
+            ]
+          ],
+          "party": [
+            {
+              "slot": 0,
+              "personality": 544098085,
+              "ot_id": 23199744,
+              "species": 260,
+              "national_dex": 260,
+              "item": 0,
+              "experience": 789030,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 91,
+              "hp": 293,
+              "max_hp": 293,
+              "status": 0,
+              "ivs": 441596779,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 1416078279,
+              "ot_id": 23199744,
+              "species": 149,
+              "national_dex": 149,
+              "item": 472,
+              "experience": 973360,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 286,
+              "max_hp": 286,
+              "status": 0,
+              "ivs": 962617235,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 1156291391,
+              "ot_id": 23199744,
+              "species": 376,
+              "national_dex": 376,
+              "item": 472,
+              "experience": 1005446,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 93,
+              "hp": 261,
+              "max_hp": 261,
+              "status": 0,
+              "ivs": 871441034,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "after_battles": 1,
+          "identity": [
+            [
+              544098085,
+              523,
+              792031
+            ],
+            [
+              1416078279,
+              472,
+              999644
+            ],
+            [
+              1156291391,
+              472,
+              1005446
+            ]
+          ],
+          "party": [
+            {
+              "slot": 0,
+              "personality": 544098085,
+              "ot_id": 23199744,
+              "species": 260,
+              "national_dex": 260,
+              "item": 523,
+              "experience": 792031,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 91,
+              "hp": 293,
+              "max_hp": 293,
+              "status": 0,
+              "ivs": 441596779,
+              "evs": [
+                0,
+                2,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 1416078279,
+              "ot_id": 23199744,
+              "species": 149,
+              "national_dex": 149,
+              "item": 472,
+              "experience": 999644,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 286,
+              "max_hp": 286,
+              "status": 0,
+              "ivs": 962617235,
+              "evs": [
+                2,
+                5,
+                0,
+                0,
+                5,
+                4
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 1156291391,
+              "ot_id": 23199744,
+              "species": 376,
+              "national_dex": 376,
+              "item": 472,
+              "experience": 1005446,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 93,
+              "hp": 261,
+              "max_hp": 261,
+              "status": 0,
+              "ivs": 871441034,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "after_battles": 2,
+          "identity": [
+            [
+              544098085,
+              523,
+              819622
+            ],
+            [
+              1416078279,
+              472,
+              999644
+            ],
+            [
+              1156291391,
+              472,
+              1005446
+            ]
+          ],
+          "party": [
+            {
+              "slot": 0,
+              "personality": 544098085,
+              "ot_id": 23199744,
+              "species": 260,
+              "national_dex": 260,
+              "item": 523,
+              "experience": 819622,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 296,
+              "max_hp": 296,
+              "status": 0,
+              "ivs": 441596779,
+              "evs": [
+                0,
+                5,
+                0,
+                3,
+                3,
+                7
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 1416078279,
+              "ot_id": 23199744,
+              "species": 149,
+              "national_dex": 149,
+              "item": 472,
+              "experience": 999644,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 286,
+              "max_hp": 286,
+              "status": 0,
+              "ivs": 962617235,
+              "evs": [
+                2,
+                5,
+                0,
+                0,
+                5,
+                4
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 1156291391,
+              "ot_id": 23199744,
+              "species": 376,
+              "national_dex": 376,
+              "item": 472,
+              "experience": 1005446,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 93,
+              "hp": 261,
+              "max_hp": 261,
+              "status": 0,
+              "ivs": 871441034,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "after_battles": 3,
+          "identity": [
+            [
+              544098085,
+              523,
+              851613
+            ],
+            [
+              1416078279,
+              472,
+              999644
+            ],
+            [
+              1156291391,
+              472,
+              1005446
+            ]
+          ],
+          "party": [
+            {
+              "slot": 0,
+              "personality": 544098085,
+              "ot_id": 23199744,
+              "species": 260,
+              "national_dex": 260,
+              "item": 523,
+              "experience": 851613,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 93,
+              "hp": 299,
+              "max_hp": 299,
+              "status": 0,
+              "ivs": 441596779,
+              "evs": [
+                0,
+                16,
+                4,
+                3,
+                3,
+                9
+              ]
+            },
+            {
+              "slot": 1,
+              "personality": 1416078279,
+              "ot_id": 23199744,
+              "species": 149,
+              "national_dex": 149,
+              "item": 472,
+              "experience": 999644,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 92,
+              "hp": 286,
+              "max_hp": 286,
+              "status": 0,
+              "ivs": 962617235,
+              "evs": [
+                2,
+                5,
+                0,
+                0,
+                5,
+                4
+              ]
+            },
+            {
+              "slot": 2,
+              "personality": 1156291391,
+              "ot_id": 23199744,
+              "species": 376,
+              "national_dex": 376,
+              "item": 472,
+              "experience": 1005446,
+              "moves": [
+                127,
+                57,
+                58,
+                89
+              ],
+              "pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "max_pp": [
+                15,
+                15,
+                10,
+                10
+              ],
+              "level": 93,
+              "hp": 261,
+              "max_hp": 261,
+              "status": 0,
+              "ivs": 871441034,
+              "evs": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "after": {
+        "map": "BattleFrontier_OutsideWest",
+        "position": [
+          26,
+          67
+        ],
+        "state": 3,
+        "won": true,
+        "money_before": 0,
+        "money_after": 9000,
+        "battle_points": 0,
+        "party": [
+          {
+            "slot": 0,
+            "personality": 544098085,
+            "ot_id": 23199744,
+            "species": 260,
+            "national_dex": 260,
+            "item": 523,
+            "experience": 851613,
+            "moves": [
+              127,
+              57,
+              58,
+              89
+            ],
+            "pp": [
+              15,
+              15,
+              10,
+              10
+            ],
+            "max_pp": [
+              15,
+              15,
+              10,
+              10
+            ],
+            "level": 93,
+            "hp": 299,
+            "max_hp": 299,
+            "status": 0,
+            "ivs": 441596779,
+            "evs": [
+              0,
+              16,
+              4,
+              3,
+              3,
+              9
+            ]
+          },
+          {
+            "slot": 1,
+            "personality": 1416078279,
+            "ot_id": 23199744,
+            "species": 149,
+            "national_dex": 149,
+            "item": 472,
+            "experience": 999644,
+            "moves": [
+              127,
+              57,
+              58,
+              89
+            ],
+            "pp": [
+              15,
+              15,
+              10,
+              10
+            ],
+            "max_pp": [
+              15,
+              15,
+              10,
+              10
+            ],
+            "level": 92,
+            "hp": 286,
+            "max_hp": 286,
+            "status": 0,
+            "ivs": 962617235,
+            "evs": [
+              2,
+              5,
+              0,
+              0,
+              5,
+              4
+            ]
+          },
+          {
+            "slot": 2,
+            "personality": 1156291391,
+            "ot_id": 23199744,
+            "species": 376,
+            "national_dex": 376,
+            "item": 472,
+            "experience": 1005446,
+            "moves": [
+              127,
+              57,
+              58,
+              89
+            ],
+            "pp": [
+              15,
+              15,
+              10,
+              10
+            ],
+            "max_pp": [
+              15,
+              15,
+              10,
+              10
+            ],
+            "level": 93,
+            "hp": 261,
+            "max_hp": 261,
+            "status": 0,
+            "ivs": 871441034,
+            "evs": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "x_attack_before": 5,
+        "x_attack_after": 4,
+        "bag_ui_opened": true,
+        "bag_item_consumed_natively": true,
+        "native_party_switch": true,
+        "post_battle_party_orders": [
+          [
+            544098085,
+            1416078279,
+            1156291391
+          ],
+          [
+            544098085,
+            1416078279,
+            1156291391
+          ],
+          [
+            544098085,
+            1416078279,
+            1156291391
+          ]
+        ],
+        "total_experience_gain": 88867
+      },
+      "outdoor_intro": null,
+      "capture": {
+        "file": "championship-finished.png",
+        "sha256": "6706d8f68c3616db5f0e4c81cc6847d65ec37bb6027f5bd79fb82a29db4aad5d"
+      }
+    }
+  ],
+  "celebrations": [
+    {
+      "slot": 0,
+      "map": "BattleFrontier_OutsideWest",
+      "player": [
+        26,
+        67
+      ],
+      "speaker": "MAY",
+      "text": "MAY: You did it!\nYou trusted every POKeMON.\nThat bond carried you through.\nTake it to both LEAGUES!",
+      "native_script_pointer": 137911539,
+      "printer_accelerated_with_held_b": true,
+      "capture": {
+        "file": "qualifier-congratulations-0.png",
+        "sha256": "36f97861b484706fec71273d5ce225f3326d9ce63cb011aadda35eade0510d41"
+      }
+    },
+    {
+      "slot": 1,
+      "map": "BattleFrontier_OutsideWest",
+      "player": [
+        26,
+        67
+      ],
+      "speaker": "LEAF",
+      "text": "LEAF: Congratulations!\nYou kept reading our next move.\nKeep that clear head when the\nLEAGUE puts you under pressure.",
+      "native_script_pointer": 137911539,
+      "printer_accelerated_with_held_b": true,
+      "capture": {
+        "file": "qualifier-congratulations-1.png",
+        "sha256": "787e2a3575bb9404e807a376ac6499e48451f5e6cbb4e3b3878d4f23241f86b7"
+      }
+    },
+    {
+      "slot": 2,
+      "map": "BattleFrontier_OutsideWest",
+      "player": [
+        26,
+        67
+      ],
+      "speaker": "BRENDAN",
+      "text": "BRENDAN: What a finish!\nEvery journey made us stronger.\nWe have more trails to explore,\nbut your next stop is the LEAGUE!",
+      "native_script_pointer": 137911539,
+      "printer_accelerated_with_held_b": true,
+      "capture": {
+        "file": "qualifier-congratulations-2.png",
+        "sha256": "bccf5598a21f57ec80a3b2f6cacd6ceb776973d9b1baa9a76eaaf9cabebe0b7f"
+      }
+    },
+    {
+      "slot": 3,
+      "map": "BattleFrontier_OutsideWest",
+      "player": [
+        26,
+        67
+      ],
+      "speaker": "Luffy",
+      "text": "Luffy: That was awesome!\nYou never gave up on your crew!\nI am chasing my own big dream.\nGo chase those LEAGUE titles!",
+      "native_script_pointer": 137911539,
+      "printer_accelerated_with_held_b": true,
+      "capture": {
+        "file": "qualifier-congratulations-3.png",
+        "sha256": "949a53f38d15a36b3370402e1c0617e125fd4f15169b9d940f1cb7b3e15932d1"
+      }
+    },
+    {
+      "slot": 4,
+      "map": "BattleFrontier_OutsideWest",
+      "player": [
+        26,
+        67
+      ],
+      "speaker": "Eren",
+      "text": "Eren: Congratulations.\nYou chose your path and held on.\nThe next challenge is your choice.\nKeep moving forward, freely.",
+      "native_script_pointer": 137911539,
+      "printer_accelerated_with_held_b": true,
+      "capture": {
+        "file": "qualifier-congratulations-4.png",
+        "sha256": "14a568035327d04465fc2314e0721a38dda94615260dd821bb96ba9777b9be7b"
+      }
+    }
+  ],
+  "saved_win": {
+    "native_flash_roundtrip": true,
+    "qualifier_won": true,
+    "celebrated": true,
+    "state": 3,
+    "temporary_clear_is_negative_control": true,
+    "continuation_callback_is_fixture": true,
+    "capture": {
+      "file": "qualifier-champion-save-continue.png",
+      "sha256": "a3a9300784e603deabfe0b55f0094908e2d0f207278590fce73e13906100389c"
+    }
+  },
+  "interrupted_arena": {
+    "inactive_volatile_controller_and_arena_state_are_fixtures": true,
+    "recovered_map": "BattleFrontier_PokemonCenter_1F",
+    "state": 0,
+    "qualifier_won": false,
+    "capture": {
+      "file": "qualifier-interrupted-arena-recovery.png",
+      "sha256": "0fe658ea8e44c517448082ad7d488598359f3a7f340784aeddb1416d9de5d53f"
+    }
+  },
+  "pwt_isolation": {
+    "state_sha256": "ccf45a76e6f254f68ab738c87c219b85d55371476c58b63ed2bafef905db644a",
+    "initial_state_sha256": "ccf45a76e6f254f68ab738c87c219b85d55371476c58b63ed2bafef905db644a",
+    "state_bytes": 10760,
+    "battle_points": 0,
+    "initial_battle_points": 0
+  },
+  "native_mon_decoder_checked_against_GetMonData": true,
+  "captures": [
+    {
+      "file": "qualifier-outdoor-six-participants.png",
+      "sha256": "772367dfca39e219c920bf06f7af21bb4401fae31d4c67270b9cb0dbb6d8700d"
+    },
+    {
+      "file": "group_elimination-progress-100.png",
+      "sha256": "cfe76a9d5f01cdc7988026262850de1dca5d063b3eb21d4a9582f840d277cd86"
+    },
+    {
+      "file": "group_elimination-battle-1.png",
+      "sha256": "a4aef8349cd7fe25c3693b9736d1ff33448d2d479fea4183fda5b45cbb8f1518"
+    },
+    {
+      "file": "group_elimination-progress-300.png",
+      "sha256": "8c35fb095b52288ad3999788d71a5ccfe67603451ef5d5fb8809a8d6e8beed4d"
+    },
+    {
+      "file": "group_elimination-battle-2.png",
+      "sha256": "7bf0ac40c1e98243cb476724471790a08a9e9539a2e7158474d3d9bdb6e3d696"
+    },
+    {
+      "file": "group_elimination-finished.png",
+      "sha256": "0fe658ea8e44c517448082ad7d488598359f3a7f340784aeddb1416d9de5d53f"
+    },
+    {
+      "file": "final_defeat-progress-100.png",
+      "sha256": "a276809b8f0149ce7e0dbddec3b141b0ef15e9695875e17736e52c742b8a91a7"
+    },
+    {
+      "file": "final_defeat-battle-1.png",
+      "sha256": "6f8daf6df90198f1aee49eb6e7cd327a25c09b0523f9fa90f7a38c82a62de285"
+    },
+    {
+      "file": "final_defeat-progress-300.png",
+      "sha256": "3c540ba142d2dbb53f14f6cbb397c6e831d9a134d53ccfc92a76d4e51a7cdd2f"
+    },
+    {
+      "file": "final_defeat-battle-2.png",
+      "sha256": "4b6354df9c28a226c971e9b1a1d89fb93f430a13391c7fc294344f101c0a1752"
+    },
+    {
+      "file": "final_defeat-battle-3.png",
+      "sha256": "9e923ce2cfe596668bd26070cb147bdcc7e900065054742e1d52104b647c659c"
+    },
+    {
+      "file": "final_defeat-finished.png",
+      "sha256": "0fe658ea8e44c517448082ad7d488598359f3a7f340784aeddb1416d9de5d53f"
+    },
+    {
+      "file": "championship-progress-100.png",
+      "sha256": "7aa1ed270707efbf6951f2293ad7b4ccbf6636343aaeca731683d68fa7a21d92"
+    },
+    {
+      "file": "championship-battle-1.png",
+      "sha256": "e68811affe5e4790c22e061ba2e9dac975cd3ed0efc6ce8fe9086dc15ea3ad8d"
+    },
+    {
+      "file": "qualifier-normal-bag-ui.png",
+      "sha256": "a7991c1d02fc5ced7dbebd1b5c82202e9d927c3d69b1d996abc88f44d699ed24"
+    },
+    {
+      "file": "championship-progress-300.png",
+      "sha256": "5f81afa39ba5415a038d14097af37ec6dc4d32e79d41c84c8da479964d7f4548"
+    },
+    {
+      "file": "championship-battle-2.png",
+      "sha256": "fa19d80aafbc79a9a140f2037c9ba85340888056d72aea3cbf35a4d1686b1d6a"
+    },
+    {
+      "file": "championship-battle-3.png",
+      "sha256": "1ccca747bc0f5419f7ff28860fbc56df62a4335ff72dcad1eaab0d31ed3eef09"
+    },
+    {
+      "file": "qualifier-congratulations-0.png",
+      "sha256": "36f97861b484706fec71273d5ce225f3326d9ce63cb011aadda35eade0510d41"
+    },
+    {
+      "file": "qualifier-congratulations-1.png",
+      "sha256": "787e2a3575bb9404e807a376ac6499e48451f5e6cbb4e3b3878d4f23241f86b7"
+    },
+    {
+      "file": "qualifier-congratulations-2.png",
+      "sha256": "bccf5598a21f57ec80a3b2f6cacd6ceb776973d9b1baa9a76eaaf9cabebe0b7f"
+    },
+    {
+      "file": "qualifier-congratulations-3.png",
+      "sha256": "949a53f38d15a36b3370402e1c0617e125fd4f15169b9d940f1cb7b3e15932d1"
+    },
+    {
+      "file": "qualifier-congratulations-4.png",
+      "sha256": "14a568035327d04465fc2314e0721a38dda94615260dd821bb96ba9777b9be7b"
+    },
+    {
+      "file": "championship-finished.png",
+      "sha256": "6706d8f68c3616db5f0e4c81cc6847d65ec37bb6027f5bd79fb82a29db4aad5d"
+    },
+    {
+      "file": "qualifier-champion-save-continue.png",
+      "sha256": "a3a9300784e603deabfe0b55f0094908e2d0f207278590fce73e13906100389c"
+    },
+    {
+      "file": "qualifier-interrupted-arena-recovery.png",
+      "sha256": "0fe658ea8e44c517448082ad7d488598359f3a7f340784aeddb1416d9de5d53f"
+    }
+  ],
+  "full_campaign_playthrough": false
+}

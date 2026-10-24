@@ -1,0 +1,507 @@
+{
+  "parent_rom_sha256": "cd5187f43d33b80e5ba2130c9e4e31a4d5a9a0e2504d8b71517da7d13814d9c6",
+  "build_rules_offset": 9121196,
+  "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
+  "parent_rules_hex": "01040100",
+  "variants": [
+    {
+      "file": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "max_national": 493,
+      "perfect_trainer_ivs": false,
+      "important_opponents_only": true,
+      "evs": 510,
+      "bytes": 33554432,
+      "sha256": "9e26bdf97d1a621ec16dffc40f9f2c6257aad6a5ce24acdb94388a0d2c7971bb",
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189,
+        9121196,
+        9121197,
+        9121198
+      ],
+      "requires_new_save": true
+    },
+    {
+      "file": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "max_national": 493,
+      "perfect_trainer_ivs": true,
+      "important_opponents_only": true,
+      "evs": 510,
+      "bytes": 33554432,
+      "sha256": "1964ba55bae2e13e6a4d9cb8945a2eb2fa6668959d6a9d5bd819ee70db67c6c0",
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189,
+        9121196,
+        9121197
+      ],
+      "requires_new_save": true
+    },
+    {
+      "file": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "max_national": 1025,
+      "perfect_trainer_ivs": false,
+      "important_opponents_only": true,
+      "evs": 510,
+      "bytes": 33554432,
+      "sha256": "34db0771f86b8c491830c80e4afbbac84eda72e1e765049e3529234d1af6ead1",
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189,
+        9121198
+      ],
+      "requires_new_save": true
+    },
+    {
+      "file": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "max_national": 1025,
+      "perfect_trainer_ivs": true,
+      "important_opponents_only": true,
+      "evs": 510,
+      "bytes": 33554432,
+      "sha256": "0049a8e941053d56f29e59a12fb0f6428809f29913484f73bc1f02aececd35a5",
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189
+      ],
+      "requires_new_save": true
+    }
+  ],
+  "all_other_bytes_identical": true,
+  "validated": true,
+  "integration_layers": [
+    "hoenn-crossing",
+    "worldsea",
+    "westsea",
+    "region-state",
+    "east-coast",
+    "gym-scaling",
+    "campaign-gates",
+    "team-stories",
+    "free-access",
+    "blue-gym",
+    "road-access",
+    "mach-bike",
+    "yellow-stairs",
+    "story-access",
+    "story-completion",
+    "water-hms",
+    "ferry",
+    "rival",
+    "family",
+    "travel-rules",
+    "birth",
+    "wild",
+    "habitats",
+    "sanctuaries",
+    "ecology",
+    "abilities",
+    "mega-art",
+    "story-aftermath",
+    "league-access",
+    "league-completion",
+    "league-history",
+    "league-display",
+    "family-postgame",
+    "pwt",
+    "frontier-travel",
+    "story-puzzles",
+    "aqua-episodes",
+    "seafloor-access",
+    "water-continue",
+    "cave-access",
+    "sky-pillar-access",
+    "english-text",
+    "special-ball",
+    "route131-sea-access",
+    "lostelle-habitats",
+    "tower-habitats",
+    "early-story-tools",
+    "mandatory-native-missions",
+    "sixteen-badge-leagues",
+    "rusturf-reunion",
+    "sea-landscapes",
+    "eastern-sea-union",
+    "ever-grande-entrance",
+    "route12-port",
+    "lavender-network",
+    "world-map",
+    "kanto-open-sea",
+    "coastal-world-map",
+    "remote-islands",
+    "surf-passages",
+    "battle-database",
+    "five-island-habitat",
+    "adaptive-gym-teams",
+    "world-map-position",
+    "world-dex-map",
+    "competitive-bosses",
+    "campaign-variants",
+    "version-play",
+    "small-ports",
+    "arrival-continuity",
+    "story-continuity",
+    "intro-region",
+    "paradox-caves",
+    "preferred-mossdeep-port",
+    "birth-confirmation",
+    "crossover-opponents",
+    "crossover-encounters",
+    "trainer-level-coherence",
+    "evolution-coherence",
+    "crossover-partners",
+    "galactic-chapter",
+    "trainer-item-evolutions",
+    "galactic-continuity",
+    "mega-origin-reversion",
+    "sharp-world-map",
+    "battle-rule-coherence",
+    "final-ecology",
+    "final-story",
+    "evolution-supplies",
+    "badge-case",
+    "variant-dex",
+    "water-habitat-recovery",
+    "reproducible-water",
+    "galactic-prison",
+    "final-balance",
+    "prison-visibility",
+    "named-character-presence",
+    "player-choice",
+    "modern-bag",
+    "modern-field-moves",
+    "pwt-world-cup",
+    "pwt-entrances",
+    "pwt-builds",
+    "pwt-stadium",
+    "pwt-stadium-camera",
+    "pwt-entrance-wait",
+    "pwt-encore-guard",
+    "move-history-rules",
+    "battle-interactions",
+    "nonlevel-moves",
+    "form-move-legality",
+    "special-encounter-workshop",
+    "special-encounter-field-rules",
+    "pwt-score-retention",
+    "workshop-graphics-rules",
+    "pwt-obedience",
+    "visible-crossover",
+    "compact-ports",
+    "lavender-rotom-room",
+    "briney-mossdeep",
+    "port-finish",
+    "live-gym-levels",
+    "coast-finish",
+    "atlas-route-tracking",
+    "final-moorings",
+    "continuous-atlas-marker",
+    "cinnabar-shore-polish",
+    "port-houses-and-ships",
+    "final-port-alignment",
+    "port-orientation-finish",
+    "close-vertical-boats",
+    "rival-walk-and-coast-audit",
+    "connected-sea-chart",
+    "diglett-galactic-scouts",
+    "native-coastal-fragments",
+    "complete-beach-edges",
+    "diglett-scout-battles",
+    "offscreen-rival-entrances",
+    "complete-marine-atlas",
+    "navigated-sea-atlas",
+    "sootopolis-harbor",
+    "pallet-harbor",
+    "sevii-surf-connections",
+    "sevii-coast-camera",
+    "sevii-surf-embarkation",
+    "sevii-arrival-layout",
+    "world-route-chart",
+    "lavender-harbor",
+    "fuchsia-harbor",
+    "three-harbor-terminals",
+    "sevii-harbors",
+    "mossdeep-harbor",
+    "dewford-island-harbor",
+    "continuous-ocean",
+    "annotated-world-links",
+    "surf-cave-coasts",
+    "surf-review",
+    "dewford-competitive-shop",
+    "ever-grande-market",
+    "extra-gyms",
+    "dewford-coast-safety",
+    "sevii-integrated-piers",
+    "coastal-closures"
+  ],
+  "validation_scope": "coastal-closures",
+  "full_campaign_playthrough": false,
+  "proofs": [
+    {
+      "file": "evidence/coastal-closures/common/coastal-closures-source/coastal-closures-source.json",
+      "target": "common",
+      "kind": "coastal-closures-source",
+      "sha256": "a7db8c053055898a179f487141e6a9c5c9e49850c96e4591562f0810409da6f0"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Normal/affected-coast-connections/affected-coast-connections.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "affected-coast-connections",
+      "sha256": "6107439c87e3807cb37be5dadb2fb76f9d264fcafb0eb3408948d5b5d0a779bd"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Normal/cold-boot/cold-boot.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "cold-boot",
+      "sha256": "61ab4dd13b3bfef666e0547c992991a773990453873a5b58a1379ea1148df01e"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Normal/dewford-movement/dewford-movement.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "dewford-movement",
+      "sha256": "767a47257467daeb3c1e8b1055eb7839d06beb04b3e0c02641e07dce0658467a"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Normal/review-mode/review-mode.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "review-mode",
+      "sha256": "eb42fa4c9d7281f232a491c0b5c12442dfd9c4d312e8d24a96cca54fca650d0b"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Normal/shore-animation/shore-animation.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "shore-animation",
+      "sha256": "53f62e0f0a42305a5da7c0e83d2778ba7f97c8573a140da966b936c2bff25bbc"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Normal/six-coastal-closures/six-coastal-closures.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "six-coastal-closures",
+      "sha256": "93edba4b27959045b736199e518d80968f81d35eac321d9017506f6dbc7c3680"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Hard/affected-coast-connections/affected-coast-connections.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "affected-coast-connections",
+      "sha256": "8b1ccb139f21582313ab67e8d9e60821ce9aa4ffae0aac6ed35342a3ffd8247a"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Hard/cold-boot/cold-boot.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "cold-boot",
+      "sha256": "a50e6e67a8ddf670e7435578c87bdba618404d1e5c4f1323aa3a7f3e4c16fce8"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Hard/dewford-movement/dewford-movement.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "dewford-movement",
+      "sha256": "629146f6e4bfb4d39d366fca87bd641bad60f9027fb5a50f63c7e2b048e83afe"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Hard/review-mode/review-mode.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "review-mode",
+      "sha256": "4751bf0e0217297cf1611ec298fc7cf6ab33d6c1d17edfa413ad845d04dfd876"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Hard/shore-animation/shore-animation.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "shore-animation",
+      "sha256": "3a7c2fccad99bd872eb73c71ed0084b832c169193972d7f01a05665c5663ea56"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Hard/six-coastal-closures/six-coastal-closures.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "six-coastal-closures",
+      "sha256": "2c3c528f08a9455ff98a284adba923b5888db10bc1236f08b92ed062658cced0"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Normal/affected-coast-connections/affected-coast-connections.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "affected-coast-connections",
+      "sha256": "c37f5d0e77328629928340a5f485247573125346ecacbf81d9926687aea83e51"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Normal/cold-boot/cold-boot.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "cold-boot",
+      "sha256": "ddd1a784421ea2404514686f417ea448599667b13360b88557406295db67b13e"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Normal/dewford-movement/dewford-movement.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "dewford-movement",
+      "sha256": "eb93379cafe5b8b7087b93a85eed907f23568d920415f6a99f3958c76847212e"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Normal/review-mode/review-mode.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "review-mode",
+      "sha256": "f349fd0a1c80edc38b2cfc26b04f9a09813d25e00c75f607957db946f8389337"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Normal/shore-animation/shore-animation.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "shore-animation",
+      "sha256": "532d9915fb2d59517592856ea701101f7e5ac14087868019f44c4e7f1710b060"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Normal/six-coastal-closures/six-coastal-closures.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "six-coastal-closures",
+      "sha256": "3a93c2ef849d08c3a1c6e78189f12878a4390ad91683f426c131f6088217d9c1"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Hard/affected-coast-connections/affected-coast-connections.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "affected-coast-connections",
+      "sha256": "d39e35b78b22325f125cca0c3729aa5bb5a103d8add8fd8caf4e53b1cb723cbd"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Hard/cold-boot/cold-boot.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "cold-boot",
+      "sha256": "974337f29cecc4ae70ceb6f12e57532417560528c425999d9299c35cf6b18980"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Hard/dewford-movement/dewford-movement.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "dewford-movement",
+      "sha256": "13b67472701c525976f3d377a4aa587680c445af8f1035839668e15d6cd989aa"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Hard/review-mode/review-mode.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "review-mode",
+      "sha256": "e8c23cb1eee0c6e710e0516ddc3161fa5f47912b0cf6bcbacb4ce99b7e7bdcd8"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Hard/shore-animation/shore-animation.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "shore-animation",
+      "sha256": "c91946a55ff2b192f591ee7b5e03ffa01af08561da2cd52b4f56a2e25a9d2a6c"
+    },
+    {
+      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Hard/six-coastal-closures/six-coastal-closures.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "six-coastal-closures",
+      "sha256": "bee492cbff0ff42011611bd6b99c454cabd704303bbb2432d11b0debd5a14147"
+    },
+    {
+      "file": "evidence/coastal-closures/test/affected-coast-connections/affected-coast-connections.json",
+      "target": "test",
+      "kind": "affected-coast-connections",
+      "sha256": "86d5bd8c2ca1209dbadb46addf9a68549911a7171a9210d217e0c3310ee57d00"
+    },
+    {
+      "file": "evidence/coastal-closures/test/cold-boot/cold-boot.json",
+      "target": "test",
+      "kind": "cold-boot",
+      "sha256": "8b30bb7546c9f0d7d884e1adbca63a3660a0a4ebd9e6985e826bae9e3118db1c"
+    },
+    {
+      "file": "evidence/coastal-closures/test/dewford-movement/dewford-movement.json",
+      "target": "test",
+      "kind": "dewford-movement",
+      "sha256": "cef4e093ac5effcba25e297a41fa592807db90ce9defb80ee45ede33011e9769"
+    },
+    {
+      "file": "evidence/coastal-closures/test/review-mode/review-mode.json",
+      "target": "test",
+      "kind": "review-mode",
+      "sha256": "8678f29a43eae53a47ba150f6dfbbf73f725d8e0ae863167568034d2ef8a040d"
+    },
+    {
+      "file": "evidence/coastal-closures/test/shore-animation/shore-animation.json",
+      "target": "test",
+      "kind": "shore-animation",
+      "sha256": "c07e3ea5a13e48cfff2fb46bad87c6713a460f9af9fb58fd915c437374233f68"
+    },
+    {
+      "file": "evidence/coastal-closures/test/six-coastal-closures/six-coastal-closures.json",
+      "target": "test",
+      "kind": "six-coastal-closures",
+      "sha256": "f22b434dc81e9cef5e9a5450ac52bc86d0026ca1966a6225ad4ee73d98894182"
+    }
+  ],
+  "historical_validation": {
+    "manifest": "mods/hoenn/validation-baselines/pr79/versions.json",
+    "manifest_sha256": "aef1de99346ea209c848483e112f96bb342b45bc4837a0cbbed208dd0e0bf077",
+    "parent_rom_sha256": "6be718b3917eb6b6f639384ee99563280e272417beec5e22b6722c4cad033462",
+    "compressed_parent_sha256": "e535f4c1d775f07a872b9d4998baf985638afbf68fffdf6df2e8490184cc58bc",
+    "retested_on_current_rom": false,
+    "source": "PR79",
+    "notes": "Earlier PWT/mechanics runs remain bound to their original ROM bytes; no tournaments repeated for this coastal update."
+  },
+  "previous_validation": {
+    "manifest": "mods/hoenn/validation-baselines/pr81/versions.json",
+    "manifest_sha256": "d67a4baba3462f9030ac07d5416c815a915737a1d5ea25a3c7dc06f1b0966175",
+    "parent_rom": "mods/hoenn/validation-baselines/pr81/parent.gba.gz",
+    "parent_archive_sha256": "632707c8c5fb96f674bd7f3d1770c3870d22434431deccebfe48cbe88b45122a",
+    "evidence_directory": "mods/hoenn/versions",
+    "retested_on_current_rom": false
+  },
+  "previous_port_validation": {
+    "manifest": "mods/hoenn/coastal-closures-validation/baseline/versions.json",
+    "manifest_sha256": "d484518546094cf6562cbf314d08fb47e291f5e3f6c66acdbcc198c59eefbd9f",
+    "retested_on_current_rom": false
+  },
+  "previous_review_validation": {
+    "file": "mods/hoenn/coastal-closures-validation/baseline/review.json",
+    "sha256": "b589c0663551eda74294f3a53ebbf6262337a7c204830d3d75c06d5bf03ee53b"
+  },
+  "previous_review_save_validation": {
+    "file": "mods/hoenn/coastal-closures-validation/baseline/test.sav",
+    "sha256": "eed564f4bc42657c7f529939a43ab9c8ec0ba18828f3894b40c7b79a0e0a14b8"
+  },
+  "previous_features_retested_on_current_rom": false,
+  "historical_release": {
+    "scope": "sevii-integrated-piers",
+    "parent_rom_sha256": "08fc8a08b95e8e3a923e3342b4f1a31bbaccd1582cbc67ea010021191c43fd6e",
+    "variants": {
+      "Pokemon-Journey-Gen1-4-Normal.gba": "adb78f851ae13ae08ef49a07707ef14ae46106808cea347a327a883ad7089961",
+      "Pokemon-Journey-Gen1-4-Hard.gba": "265aa9e3b932ddb5e8385dc623d993c324150870a80560d8e8f09719554a4510",
+      "Pokemon-Journey-Gen1-9-Normal.gba": "c8784853578817fe1b1667aec28bd30f44f64d31d1634bff545a05b3ba4c2c06",
+      "Pokemon-Journey-Gen1-9-Hard.gba": "12af950dcc3859bba9a6d55815f19f82179a6da5603e5edd386c5e425612f98e"
+    },
+    "test_rom_sha256": "064e11fa5b4693089f96b1682526d11e52a970ebd84f67a94b35435a7108117d",
+    "proof_count": 42,
+    "retested_on_current_rom": false
+  }
+}

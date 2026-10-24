@@ -1,8 +1,8 @@
 # Pokémon Journey — quatro edições GBA
 
-Atualização atual: [encostas completas de Six, circulação de Dewford e praias animadas](../../../docs/coastal-closures.md). Corrige os níveis invisíveis entre a areia e o piso de Dewford, mantém a ponte alta e seus dois acessos, completa as encostas de Six e conserva a fase da água e da espuma ao atravessar mapas. As sete rotas de costa têm nomes próprios e o marcador acompanha as travessias. O desenho do mapa-múndi foi preservado.
+Atualização atual: [competição da 18ª insígnia, rivais e capítulo Galactic na 22ª](../../../docs/badge-story.md). A vitória na competição da Battle Frontier libera as duas Ligas com 18 insígnias; o capítulo Galactic passa para 22. Os rivais seguem o personagem e a região inicial, e os sprites de Eren e Luffy usam a escala dos outros rivais.
 
-Conserva o [circuito de 24 insígnias](../../../docs/ginasios-extras-e-travessias.md), os dois atendentes de Dewford, o sprite do Luffy e os sete terminais integrados às pontes das Sevii. As quatro edições e a TESTE recebem os mesmos mapas.
+Conserva os [24 ginásios](../../../docs/ginasios-extras-e-travessias.md), os dois atendentes de Dewford e os sete terminais integrados às pontes das Sevii. Mantém as [encostas completas e praias animadas](../../../docs/coastal-closures.md). As quatro edições e a TESTE recebem a mesma campanha e os mesmos mapas.
 
 Inclui [casas e feira de Mega Stones em Ever Grande](../../../docs/ever-grande-market.md), dois presentes únicos e Sootopolis com marcador vermelho. Inclui as formas Origin do PR #93, o mercado competitivo no exterior da Battle Frontier e o Hyper Training em Dewford.
 
@@ -37,11 +37,11 @@ No repositório, as quatro ROMs atuais também ficam em [`roms/`](../../../roms/
 
 [Baixar as quatro edições em ZIP](Pokemon-Journey-Four-Editions.zip). [SHA-256](SHA256SUMS). [Manifesto e evidências](versions.json).
 
-O ZIP contém exatamente as quatro ROMs normais. A [TESTE atual é um download separado](../../../roms/rom-de-teste/LEIA-ME.md), também disponível no player. Dentro do ZIP, `TESTE-DOWNLOAD.md` informa seu link e SHA-256; os metadados, a lista de checksum e o save de bateria da TESTE acompanham o pacote. As provas atuais e os anexos originais da camada 162 também estão incluídos. Os vídeos históricos mais antigos mantêm hashes e links de commit em `HISTORICAL-MEDIA.json`.
+O ZIP contém exatamente as quatro ROMs normais. A [TESTE atual é um download separado](../../../roms/rom-de-teste/LEIA-ME.md), também disponível no player. Dentro do ZIP, `TESTE-DOWNLOAD.md` informa seu link e SHA-256; os metadados, a lista de checksum e o save de bateria da TESTE acompanham o pacote. As provas e capturas atuais estão incluídas. Os relatórios históricos preservam seus hashes; suas capturas continuam no repositório, com hashes e links do commit anterior em `HISTORICAL-MEDIA.json`. O ZIP não representa uma reprodução offline de todo o histórico.
 
 Rivais, líderes, Elite Four, campeões, chefes e administradores recebem builds competitivas, 510 EVs e IA avançada nas duas dificuldades. Treinadores comuns preservam o tratamento comum. Treinadores comuns usam a média atual −5/+2, inclusive dentro dos ginásios. Líderes usam −1/+5 e o principal fica obrigatoriamente em +5; quantidades continuam por ordem regional. Evoluções e golpes respeitam o nível final.
 
-Os 16 ginásios originais conservam a ordem regional. Os oito extras consideram o total de insígnias, têm quatro treinadores em passagens obrigatórias e completam o requisito de 24 para as Ligas. No player, a opção **TESTE** acompanha esta atualização, com save separado e sem encontros selvagens nem abordagens automáticas; conversar para desafiar continua possível.
+Os 16 ginásios originais conservam a ordem regional. Os oito extras consideram o total de insígnias e têm quatro treinadores em passagens obrigatórias. As duas Ligas exigem 18 insígnias e vitória na competição da Frontier; o circuito de 24 continua disponível. No player, a opção **TESTE** acompanha esta atualização, com save separado e sem encontros selvagens nem abordagens automáticas; conversar para desafiar continua possível.
 
 Red, Leaf, Brendan e May podem começar em qualquer região. Surf, Dive e Waterfall são entregues pela família; Fly é o quarto HM. Os demais antigos HMs são TMs reutilizáveis, sem barreiras terrestres. As cavernas são iluminadas.
 

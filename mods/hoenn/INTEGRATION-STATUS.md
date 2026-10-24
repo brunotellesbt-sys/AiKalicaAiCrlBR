@@ -1,6 +1,10 @@
-# Atualização costeira e níveis dinâmicos
+# Progressão da campanha e atualizações costeiras
 
-Camada atual: **163 — coastal-closures**. Consulte [encostas completas, praias animadas e rotas costeiras](../../docs/coastal-closures.md). Six recebe a lateral oeste e o pé da montanha junto ao porto completos, preservando doze árvores inteiras. Dewford tem areia seca no mesmo nível, escada completa e espuma animada com a água; uma atualização privada após o DMA evita que a recarga do banco reponha um quadro estático. Os sete antigos portos separados se chamam COAST, com a projeção interna do marcador corrigida. Os gráficos do mapa-múndi, os oito ginásios, a campanha e as conexões permanecem.
+Camada atual: **164 — badge-story**. Consulte [competição da 18ª, rivais e Galactic na 22ª](../../docs/badge-story.md). A vitória na competição libera as duas Ligas com 18 insígnias; Galactic fica disponível com 22. O evento usa o estádio do PWT com controlador independente, dois grupos de três e final entre seus vencedores. Rivais seguem o personagem e a região inicial; Eren e Luffy recebem a escala dos demais rivais. O circuito de 24 ginásios e as geometrias costeiras são preservados.
+
+As 26 provas atuais passaram vinculadas às cinco ROMs finais: auditoria de 50 arquivos e 32.240 hashes de source e, por edição, competição, identidades dos rivais, permissões, modo normal/TESTE e boot. Foram executadas 40 batalhas da competição e 20 de encontros existentes, com 295 capturas nativas verificadas; as cenas inteiras também receberam revisão separada de source. Os 53 testes do contrato de publicação incluem controles negativos para resultados, itens, gates, identidades, pixels e histórico. As 31 provas da camada 163 e as anteriores permanecem históricas, sem relabelar seus hashes. Não representa uma nova campanha completa jogada.
+
+Histórico anterior — **163 — coastal-closures**. Consulte [encostas completas, praias animadas e rotas costeiras](../../docs/coastal-closures.md). Six recebe a lateral oeste e o pé da montanha junto ao porto completos, preservando doze árvores inteiras. Dewford tem areia seca no mesmo nível, escada completa e espuma animada com a água; uma atualização privada após o DMA evita que a recarga do banco reponha um quadro estático. Os sete antigos portos separados se chamam COAST, com a projeção interna do marcador corrigida. Os gráficos do mapa-múndi, os oito ginásios, a campanha e as conexões permanecem.
 
 A entrega exige 31 provas atuais ligadas aos hashes finais: auditoria independente de 24 arquivos e seis verificações em cada edição, incluindo componentes nativos dos sete portos, 26 emendas de água e 25 ligações das rotas costeiras. Os relatórios distinguem fixtures, percursos por controles, pixels reais e limitações. A TESTE permanece sem encontros e abordagens automáticas e sua abertura usa o save distribuído. Não representa uma nova campanha completa jogada.
 
@@ -10,7 +14,7 @@ As 42 provas da camada 162 conservam seus hashes originais: auditoria de 108 arq
 
 Histórico anterior — **161 — dewford-coast-safety**. A [revisão costeira anterior](../../docs/dewford-sevii-coast-safety.md) conserva as 27 provas originais e seus hashes. As provas antigas de ginásios e campanha também permanecem históricas; esta revisão não refez toda a campanha.
 
-Histórico anterior — **160 — extra-gyms**. Consulte [ginásios, travessias e limites das evidências](../../docs/ginasios-extras-e-travessias.md). Eventos após 18/22 insígnias aguardam especificação do autor.
+Histórico anterior — **160 — extra-gyms**. Consulte [ginásios, travessias e limites das evidências](../../docs/ginasios-extras-e-travessias.md). Os marcos de 18/22 receberam especificação e são implementados na camada 164; as provas desta seção continuam históricas.
 
 Os oito ginásios extras têm interiores temáticos, quatro treinadores em passagens obrigatórias e entradas sem NPCs. A Ilha 6 mantém somente o terminal completo: o telhado antigo foi removido e a rampa tem retorno nativo ativado. As quatro ROMs normais e a TESTE acompanham o player; na TESTE, não há encontros selvagens nem aproximações automáticas.
 
