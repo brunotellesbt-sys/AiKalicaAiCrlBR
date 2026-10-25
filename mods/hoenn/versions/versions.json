@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "cd5187f43d33b80e5ba2130c9e4e31a4d5a9a0e2504d8b71517da7d13814d9c6",
-  "build_rules_offset": 9121196,
+  "parent_rom_sha256": "3111ff0e2f5f1caa94b808c8fecf62f7b313d6b241014f416de31eff80105771",
+  "build_rules_offset": 9132476,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "9e26bdf97d1a621ec16dffc40f9f2c6257aad6a5ce24acdb94388a0d2c7971bb",
+      "sha256": "08df49acf299e1e46508f6d55d8e4b78c68d755585ccd92ca4f8d665b52fa6ba",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        9121196,
-        9121197,
-        9121198
+        9132476,
+        9132477,
+        9132478
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "1964ba55bae2e13e6a4d9cb8945a2eb2fa6668959d6a9d5bd819ee70db67c6c0",
+      "sha256": "53900d0ed0af1c3500c512cf42df97cd70ec46f55681346e758cd105ab8644fa",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        9121196,
-        9121197
+        9132476,
+        9132477
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "34db0771f86b8c491830c80e4afbbac84eda72e1e765049e3529234d1af6ead1",
+      "sha256": "c3d922e19ea7f07b906469d212159113006c89cc9df3d42c94eed727048a5eac",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        9121198
+        9132478
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "0049a8e941053d56f29e59a12fb0f6428809f29913484f73bc1f02aececd35a5",
+      "sha256": "d429ffd91f94b5719b6823acd82dd18bbb419562395c97839623e12c75856ad7",
       "patched_byte_offsets": [
         160,
         162,
@@ -268,196 +268,167 @@
     "extra-gyms",
     "dewford-coast-safety",
     "sevii-integrated-piers",
-    "coastal-closures"
+    "coastal-closures",
+    "badge-story"
   ],
-  "validation_scope": "coastal-closures",
+  "validation_scope": "badge-story",
   "full_campaign_playthrough": false,
   "proofs": [
     {
-      "file": "evidence/coastal-closures/common/coastal-closures-source/coastal-closures-source.json",
+      "file": "evidence/badge-story/common/badge-story-source/badge-story-source.json",
       "target": "common",
-      "kind": "coastal-closures-source",
-      "sha256": "a7db8c053055898a179f487141e6a9c5c9e49850c96e4591562f0810409da6f0"
+      "kind": "badge-story-source",
+      "sha256": "6d471ad673045ed5960584e259e5ff3bf445573575940e4a54491472dc3e9215"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Normal/affected-coast-connections/affected-coast-connections.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Normal/badge-gates/badge-gates.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "affected-coast-connections",
-      "sha256": "6107439c87e3807cb37be5dadb2fb76f9d264fcafb0eb3408948d5b5d0a779bd"
+      "kind": "badge-gates",
+      "sha256": "38efd784342b7706fcb42e34eb7634ef1dd4fa7ab462c031af8f1e9441b853d0"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Normal/cold-boot/cold-boot.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Normal/cold-boot/cold-boot.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "cold-boot",
-      "sha256": "61ab4dd13b3bfef666e0547c992991a773990453873a5b58a1379ea1148df01e"
+      "sha256": "f244c70e78d502e49c32ca0a03ce009d55f8f993391b39050d04678e2b340aba"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Normal/dewford-movement/dewford-movement.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Normal/qualifier-event/qualifier-event.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "dewford-movement",
-      "sha256": "767a47257467daeb3c1e8b1055eb7839d06beb04b3e0c02641e07dce0658467a"
+      "kind": "qualifier-event",
+      "sha256": "9f9224653c912a79bfb525ce2a530f3644defc7fc3bac8e2d5b392fc902d2a15"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Normal/review-mode/review-mode.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Normal/review-mode/review-mode.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "review-mode",
-      "sha256": "eb42fa4c9d7281f232a491c0b5c12442dfd9c4d312e8d24a96cca54fca650d0b"
+      "sha256": "cf0ea86223b33cff1e0158039ae85cb19efb55457a5eefb848623d5e2d336fe8"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Normal/shore-animation/shore-animation.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Normal/rival-identities/rival-identities.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "shore-animation",
-      "sha256": "53f62e0f0a42305a5da7c0e83d2778ba7f97c8573a140da966b936c2bff25bbc"
+      "kind": "rival-identities",
+      "sha256": "316aed5ea1eea3b76e481a6c2a3dfed1e6592403a3ae2409cc0d4687432fb90c"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Normal/six-coastal-closures/six-coastal-closures.json",
-      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "six-coastal-closures",
-      "sha256": "93edba4b27959045b736199e518d80968f81d35eac321d9017506f6dbc7c3680"
-    },
-    {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Hard/affected-coast-connections/affected-coast-connections.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Hard/badge-gates/badge-gates.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "affected-coast-connections",
-      "sha256": "8b1ccb139f21582313ab67e8d9e60821ce9aa4ffae0aac6ed35342a3ffd8247a"
+      "kind": "badge-gates",
+      "sha256": "0e2d08aa08165ac90be27f631cdf9f692e95a76c11f071ca38d4395f7f216912"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Hard/cold-boot/cold-boot.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Hard/cold-boot/cold-boot.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "cold-boot",
-      "sha256": "a50e6e67a8ddf670e7435578c87bdba618404d1e5c4f1323aa3a7f3e4c16fce8"
+      "sha256": "eab274595bd3842740775ca97e8a7018a627e90d809f9a9fd4a7f8970d39a4c4"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Hard/dewford-movement/dewford-movement.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Hard/qualifier-event/qualifier-event.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "dewford-movement",
-      "sha256": "629146f6e4bfb4d39d366fca87bd641bad60f9027fb5a50f63c7e2b048e83afe"
+      "kind": "qualifier-event",
+      "sha256": "ef42a4803b3fe79a2123046f879af10075ecdf85e068ced1189553a63601b604"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Hard/review-mode/review-mode.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Hard/review-mode/review-mode.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "review-mode",
-      "sha256": "4751bf0e0217297cf1611ec298fc7cf6ab33d6c1d17edfa413ad845d04dfd876"
+      "sha256": "32dc24ab08b30b84869f595367a63baf53c4a82d46f2f7e0463c8c6244ed29ea"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Hard/shore-animation/shore-animation.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Hard/rival-identities/rival-identities.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "shore-animation",
-      "sha256": "3a7c2fccad99bd872eb73c71ed0084b832c169193972d7f01a05665c5663ea56"
+      "kind": "rival-identities",
+      "sha256": "5cd327cd5e65bf25fbb6851f45dbff8cae7cbe570aa9c782444512c36b7c7695"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-4-Hard/six-coastal-closures/six-coastal-closures.json",
-      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "six-coastal-closures",
-      "sha256": "2c3c528f08a9455ff98a284adba923b5888db10bc1236f08b92ed062658cced0"
-    },
-    {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Normal/affected-coast-connections/affected-coast-connections.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Normal/badge-gates/badge-gates.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "affected-coast-connections",
-      "sha256": "c37f5d0e77328629928340a5f485247573125346ecacbf81d9926687aea83e51"
+      "kind": "badge-gates",
+      "sha256": "09230c6aa4a88f23647683effa1825fcc6b28e7f4d1c6215ae728ecc7fc4504e"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Normal/cold-boot/cold-boot.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Normal/cold-boot/cold-boot.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "cold-boot",
-      "sha256": "ddd1a784421ea2404514686f417ea448599667b13360b88557406295db67b13e"
+      "sha256": "17fdc9b396864868a6d5b4c8682fd2f662cb97158112d20ef29bcc9b03c4a207"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Normal/dewford-movement/dewford-movement.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Normal/qualifier-event/qualifier-event.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "dewford-movement",
-      "sha256": "eb93379cafe5b8b7087b93a85eed907f23568d920415f6a99f3958c76847212e"
+      "kind": "qualifier-event",
+      "sha256": "3f1897908df5fbbfb05a199389d4e3fe07c5720ab2fb81add2891348fec9443f"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Normal/review-mode/review-mode.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Normal/review-mode/review-mode.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "review-mode",
-      "sha256": "f349fd0a1c80edc38b2cfc26b04f9a09813d25e00c75f607957db946f8389337"
+      "sha256": "f1846486c3a90c9b88b3649700ffb4db386e1689d4afaca72af8fbd0b9829c8b"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Normal/shore-animation/shore-animation.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Normal/rival-identities/rival-identities.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "shore-animation",
-      "sha256": "532d9915fb2d59517592856ea701101f7e5ac14087868019f44c4e7f1710b060"
+      "kind": "rival-identities",
+      "sha256": "53ab10ef3333a13f22481cfaa0cd0b62f58e6d8e636b03d806636032ec8669d8"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Normal/six-coastal-closures/six-coastal-closures.json",
-      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "six-coastal-closures",
-      "sha256": "3a93c2ef849d08c3a1c6e78189f12878a4390ad91683f426c131f6088217d9c1"
-    },
-    {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Hard/affected-coast-connections/affected-coast-connections.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Hard/badge-gates/badge-gates.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "affected-coast-connections",
-      "sha256": "d39e35b78b22325f125cca0c3729aa5bb5a103d8add8fd8caf4e53b1cb723cbd"
+      "kind": "badge-gates",
+      "sha256": "78ace965297d132f4b9f096c5391dfb395664c47dd7437f544be73df59598e51"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Hard/cold-boot/cold-boot.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Hard/cold-boot/cold-boot.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "cold-boot",
-      "sha256": "974337f29cecc4ae70ceb6f12e57532417560528c425999d9299c35cf6b18980"
+      "sha256": "d42f1d36b17eda29e42ed8fb77aed7e95e39a62b4e5cba2582a7e3c2cbba5ce3"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Hard/dewford-movement/dewford-movement.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Hard/qualifier-event/qualifier-event.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "dewford-movement",
-      "sha256": "13b67472701c525976f3d377a4aa587680c445af8f1035839668e15d6cd989aa"
+      "kind": "qualifier-event",
+      "sha256": "b0e103682b0aed5d194d245cced951e3555d9e98c85d67104415565cb7183061"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Hard/review-mode/review-mode.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Hard/review-mode/review-mode.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "review-mode",
-      "sha256": "e8c23cb1eee0c6e710e0516ddc3161fa5f47912b0cf6bcbacb4ce99b7e7bdcd8"
+      "sha256": "4b660bb716e5d97566821c41471f91967a2e34dbd6241afee1489bc304510ccb"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Hard/shore-animation/shore-animation.json",
+      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Hard/rival-identities/rival-identities.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "shore-animation",
-      "sha256": "c91946a55ff2b192f591ee7b5e03ffa01af08561da2cd52b4f56a2e25a9d2a6c"
+      "kind": "rival-identities",
+      "sha256": "ea8db33eb509ce39dcdf93b5b3e7033ee8aec0800ef0caa193f3472689333cfa"
     },
     {
-      "file": "evidence/coastal-closures/Pokemon-Journey-Gen1-9-Hard/six-coastal-closures/six-coastal-closures.json",
-      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "six-coastal-closures",
-      "sha256": "bee492cbff0ff42011611bd6b99c454cabd704303bbb2432d11b0debd5a14147"
-    },
-    {
-      "file": "evidence/coastal-closures/test/affected-coast-connections/affected-coast-connections.json",
+      "file": "evidence/badge-story/test/badge-gates/badge-gates.json",
       "target": "test",
-      "kind": "affected-coast-connections",
-      "sha256": "86d5bd8c2ca1209dbadb46addf9a68549911a7171a9210d217e0c3310ee57d00"
+      "kind": "badge-gates",
+      "sha256": "b517921418f120cfc5a998b9c993b6408d315ef61622f4f2fbbf904b388dded6"
     },
     {
-      "file": "evidence/coastal-closures/test/cold-boot/cold-boot.json",
+      "file": "evidence/badge-story/test/cold-boot/cold-boot.json",
       "target": "test",
       "kind": "cold-boot",
-      "sha256": "8b30bb7546c9f0d7d884e1adbca63a3660a0a4ebd9e6985e826bae9e3118db1c"
+      "sha256": "a6419b4a47f2c5b0bc39267811f3e87d2e83d8931795573a14ce7fa9f178a9bf"
     },
     {
-      "file": "evidence/coastal-closures/test/dewford-movement/dewford-movement.json",
+      "file": "evidence/badge-story/test/qualifier-event/qualifier-event.json",
       "target": "test",
-      "kind": "dewford-movement",
-      "sha256": "cef4e093ac5effcba25e297a41fa592807db90ce9defb80ee45ede33011e9769"
+      "kind": "qualifier-event",
+      "sha256": "3b1198d2f453282a9aecc5a38f987395e3343d365ecfa1d9a696effed3fba2dc"
     },
     {
-      "file": "evidence/coastal-closures/test/review-mode/review-mode.json",
+      "file": "evidence/badge-story/test/review-mode/review-mode.json",
       "target": "test",
       "kind": "review-mode",
-      "sha256": "8678f29a43eae53a47ba150f6dfbbf73f725d8e0ae863167568034d2ef8a040d"
+      "sha256": "0d7d209e7a114bc10bdc59701c959e147c7c7abb417ec19ca371b96e40261ccd"
     },
     {
-      "file": "evidence/coastal-closures/test/shore-animation/shore-animation.json",
+      "file": "evidence/badge-story/test/rival-identities/rival-identities.json",
       "target": "test",
-      "kind": "shore-animation",
-      "sha256": "c07e3ea5a13e48cfff2fb46bad87c6713a460f9af9fb58fd915c437374233f68"
-    },
-    {
-      "file": "evidence/coastal-closures/test/six-coastal-closures/six-coastal-closures.json",
-      "target": "test",
-      "kind": "six-coastal-closures",
-      "sha256": "f22b434dc81e9cef5e9a5450ac52bc86d0026ca1966a6225ad4ee73d98894182"
+      "kind": "rival-identities",
+      "sha256": "caedff911df4b60228a7ba2ee801ffc34134f94621a6a9b4ccf2f3acbaaad09f"
     }
   ],
   "historical_validation": {
@@ -478,30 +449,30 @@
     "retested_on_current_rom": false
   },
   "previous_port_validation": {
-    "manifest": "mods/hoenn/coastal-closures-validation/baseline/versions.json",
-    "manifest_sha256": "d484518546094cf6562cbf314d08fb47e291f5e3f6c66acdbcc198c59eefbd9f",
+    "manifest": "mods/hoenn/badge-story-validation/baseline/versions.json",
+    "manifest_sha256": "23f5603eb385e8f34816c82f84fa22c8c632fa3dae9738c2a3cf7fe39b33bcd8",
     "retested_on_current_rom": false
   },
   "previous_review_validation": {
-    "file": "mods/hoenn/coastal-closures-validation/baseline/review.json",
-    "sha256": "b589c0663551eda74294f3a53ebbf6262337a7c204830d3d75c06d5bf03ee53b"
+    "file": "mods/hoenn/badge-story-validation/baseline/review.json",
+    "sha256": "82b6129993a7e4769dad5be7b3e5a99fe77a5338f2e6d0ea4cb47edd022b92ed"
   },
   "previous_review_save_validation": {
-    "file": "mods/hoenn/coastal-closures-validation/baseline/test.sav",
-    "sha256": "eed564f4bc42657c7f529939a43ab9c8ec0ba18828f3894b40c7b79a0e0a14b8"
+    "file": "mods/hoenn/badge-story-validation/baseline/test.sav",
+    "sha256": "33b8e45a444a5d84684b907ef2c90fffc785f6c54514bb5b934172f7e557bf37"
   },
   "previous_features_retested_on_current_rom": false,
   "historical_release": {
-    "scope": "sevii-integrated-piers",
-    "parent_rom_sha256": "08fc8a08b95e8e3a923e3342b4f1a31bbaccd1582cbc67ea010021191c43fd6e",
+    "scope": "coastal-closures",
+    "parent_rom_sha256": "cd5187f43d33b80e5ba2130c9e4e31a4d5a9a0e2504d8b71517da7d13814d9c6",
     "variants": {
-      "Pokemon-Journey-Gen1-4-Normal.gba": "adb78f851ae13ae08ef49a07707ef14ae46106808cea347a327a883ad7089961",
-      "Pokemon-Journey-Gen1-4-Hard.gba": "265aa9e3b932ddb5e8385dc623d993c324150870a80560d8e8f09719554a4510",
-      "Pokemon-Journey-Gen1-9-Normal.gba": "c8784853578817fe1b1667aec28bd30f44f64d31d1634bff545a05b3ba4c2c06",
-      "Pokemon-Journey-Gen1-9-Hard.gba": "12af950dcc3859bba9a6d55815f19f82179a6da5603e5edd386c5e425612f98e"
+      "Pokemon-Journey-Gen1-4-Normal.gba": "9e26bdf97d1a621ec16dffc40f9f2c6257aad6a5ce24acdb94388a0d2c7971bb",
+      "Pokemon-Journey-Gen1-4-Hard.gba": "1964ba55bae2e13e6a4d9cb8945a2eb2fa6668959d6a9d5bd819ee70db67c6c0",
+      "Pokemon-Journey-Gen1-9-Normal.gba": "34db0771f86b8c491830c80e4afbbac84eda72e1e765049e3529234d1af6ead1",
+      "Pokemon-Journey-Gen1-9-Hard.gba": "0049a8e941053d56f29e59a12fb0f6428809f29913484f73bc1f02aececd35a5"
     },
-    "test_rom_sha256": "064e11fa5b4693089f96b1682526d11e52a970ebd84f67a94b35435a7108117d",
-    "proof_count": 42,
+    "test_rom_sha256": "678906d4fe351826a93aa4c2153a63ca8761e8b7f5e596395d5987df53eccae6",
+    "proof_count": 31,
     "retested_on_current_rom": false
   }
 }

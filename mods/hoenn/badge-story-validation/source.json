@@ -1,0 +1,783 @@
+{
+  "passed": true,
+  "kind": "badge-story-source",
+  "compiled_rom": true,
+  "preflight": false,
+  "rom_sha256": "3111ff0e2f5f1caa94b808c8fecf62f7b313d6b241014f416de31eff80105771",
+  "elf_sha256": "fb183bfeafd693fd64d2942ebbed16929ef23ceb8a5cee1f6d1bf544b4f360be",
+  "parent_rom_sha256": "cd5187f43d33b80e5ba2130c9e4e31a4d5a9a0e2504d8b71517da7d13814d9c6",
+  "layers": [
+    "hoenn-crossing",
+    "worldsea",
+    "westsea",
+    "region-state",
+    "east-coast",
+    "gym-scaling",
+    "campaign-gates",
+    "team-stories",
+    "free-access",
+    "blue-gym",
+    "road-access",
+    "mach-bike",
+    "yellow-stairs",
+    "story-access",
+    "story-completion",
+    "water-hms",
+    "ferry",
+    "rival",
+    "family",
+    "travel-rules",
+    "birth",
+    "wild",
+    "habitats",
+    "sanctuaries",
+    "ecology",
+    "abilities",
+    "mega-art",
+    "story-aftermath",
+    "league-access",
+    "league-completion",
+    "league-history",
+    "league-display",
+    "family-postgame",
+    "pwt",
+    "frontier-travel",
+    "story-puzzles",
+    "aqua-episodes",
+    "seafloor-access",
+    "water-continue",
+    "cave-access",
+    "sky-pillar-access",
+    "english-text",
+    "special-ball",
+    "route131-sea-access",
+    "lostelle-habitats",
+    "tower-habitats",
+    "early-story-tools",
+    "mandatory-native-missions",
+    "sixteen-badge-leagues",
+    "rusturf-reunion",
+    "sea-landscapes",
+    "eastern-sea-union",
+    "ever-grande-entrance",
+    "route12-port",
+    "lavender-network",
+    "world-map",
+    "kanto-open-sea",
+    "coastal-world-map",
+    "remote-islands",
+    "surf-passages",
+    "battle-database",
+    "five-island-habitat",
+    "adaptive-gym-teams",
+    "world-map-position",
+    "world-dex-map",
+    "competitive-bosses",
+    "campaign-variants",
+    "version-play",
+    "small-ports",
+    "arrival-continuity",
+    "story-continuity",
+    "intro-region",
+    "paradox-caves",
+    "preferred-mossdeep-port",
+    "birth-confirmation",
+    "crossover-opponents",
+    "crossover-encounters",
+    "trainer-level-coherence",
+    "evolution-coherence",
+    "crossover-partners",
+    "galactic-chapter",
+    "trainer-item-evolutions",
+    "galactic-continuity",
+    "mega-origin-reversion",
+    "sharp-world-map",
+    "battle-rule-coherence",
+    "final-ecology",
+    "final-story",
+    "evolution-supplies",
+    "badge-case",
+    "variant-dex",
+    "water-habitat-recovery",
+    "reproducible-water",
+    "galactic-prison",
+    "final-balance",
+    "prison-visibility",
+    "named-character-presence",
+    "player-choice",
+    "modern-bag",
+    "modern-field-moves",
+    "pwt-world-cup",
+    "pwt-entrances",
+    "pwt-builds",
+    "pwt-stadium",
+    "pwt-stadium-camera",
+    "pwt-entrance-wait",
+    "pwt-encore-guard",
+    "move-history-rules",
+    "battle-interactions",
+    "nonlevel-moves",
+    "form-move-legality",
+    "special-encounter-workshop",
+    "special-encounter-field-rules",
+    "pwt-score-retention",
+    "workshop-graphics-rules",
+    "pwt-obedience",
+    "visible-crossover",
+    "compact-ports",
+    "lavender-rotom-room",
+    "briney-mossdeep",
+    "port-finish",
+    "live-gym-levels",
+    "coast-finish",
+    "atlas-route-tracking",
+    "final-moorings",
+    "continuous-atlas-marker",
+    "cinnabar-shore-polish",
+    "port-houses-and-ships",
+    "final-port-alignment",
+    "port-orientation-finish",
+    "close-vertical-boats",
+    "rival-walk-and-coast-audit",
+    "connected-sea-chart",
+    "diglett-galactic-scouts",
+    "native-coastal-fragments",
+    "complete-beach-edges",
+    "diglett-scout-battles",
+    "offscreen-rival-entrances",
+    "complete-marine-atlas",
+    "navigated-sea-atlas",
+    "sootopolis-harbor",
+    "pallet-harbor",
+    "sevii-surf-connections",
+    "sevii-coast-camera",
+    "sevii-surf-embarkation",
+    "sevii-arrival-layout",
+    "world-route-chart",
+    "lavender-harbor",
+    "fuchsia-harbor",
+    "three-harbor-terminals",
+    "sevii-harbors",
+    "mossdeep-harbor",
+    "dewford-island-harbor",
+    "continuous-ocean",
+    "annotated-world-links",
+    "surf-cave-coasts",
+    "surf-review",
+    "dewford-competitive-shop",
+    "ever-grande-market",
+    "extra-gyms",
+    "dewford-coast-safety",
+    "sevii-integrated-piers",
+    "coastal-closures",
+    "badge-story"
+  ],
+  "changed_files": [
+    "data/event_scripts.s",
+    "data/maps/BattleFrontier_OutsideWest/map.json",
+    "data/maps/BattleFrontier_OutsideWest/scripts.inc",
+    "data/maps/EverGrandeCity_ChampionsRoom/scripts.inc",
+    "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc",
+    "data/maps/IndigoPlateau_PokemonCenter_1F_Frlg/scripts.inc",
+    "data/maps/JourneyExtraGyms.inc",
+    "data/maps/JourneyPWTArena/scripts.inc",
+    "data/maps/LavaridgeTown/scripts.inc",
+    "data/maps/LilycoveCity/scripts.inc",
+    "data/maps/LittlerootTown_MaysHouse_2F/scripts.inc",
+    "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.inc",
+    "data/maps/OldaleTown/scripts.inc",
+    "data/maps/Route103/scripts.inc",
+    "data/maps/Route104/scripts.inc",
+    "data/maps/Route110/scripts.inc",
+    "data/maps/Route119/scripts.inc",
+    "data/maps/RustboroCity/scripts.inc",
+    "data/scripts/journey_badge_qualifier.inc",
+    "data/scripts/journey_campaign_gates.inc",
+    "data/scripts/journey_galactic.inc",
+    "data/scripts/route23.inc",
+    "graphics/object_events/pics/people/journey_eren.png",
+    "graphics/object_events/pics/people/journey_luffy.png",
+    "graphics/object_events/pics/people/journey_pwt_eren.png",
+    "graphics/object_events/pics/people/journey_pwt_luffy.png",
+    "include/constants/flags.h",
+    "include/constants/opponents.h",
+    "include/constants/vars.h",
+    "include/data.h",
+    "include/journey_badge_qualifier.h",
+    "include/journey_qualifier_core.h",
+    "include/journey_qualifier_field.h",
+    "include/journey_story_rivals.h",
+    "src/battle_message.c",
+    "src/battle_setup.c",
+    "src/data.c",
+    "src/data/journey_qualifier_trainers.h",
+    "src/data/object_events/object_event_graphics_info.h",
+    "src/data/object_events/object_event_pic_tables.h",
+    "src/event_object_movement.c",
+    "src/journey_badge_qualifier.c",
+    "src/journey_extra_gyms.c",
+    "src/journey_galactic.c",
+    "src/journey_gym_scaling.c",
+    "src/journey_qualifier_core.c",
+    "src/journey_qualifier_field.c",
+    "src/journey_rival.c",
+    "src/journey_story_rivals.c",
+    "src/string_util.c"
+  ],
+  "allowed_changed_files": [
+    "data/event_scripts.s",
+    "data/maps/BattleFrontier_OutsideWest/map.json",
+    "data/maps/BattleFrontier_OutsideWest/scripts.inc",
+    "data/maps/EverGrandeCity_ChampionsRoom/scripts.inc",
+    "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc",
+    "data/maps/IndigoPlateau_PokemonCenter_1F_Frlg/scripts.inc",
+    "data/maps/JourneyExtraGyms.inc",
+    "data/maps/JourneyPWTArena/scripts.inc",
+    "data/maps/LavaridgeTown/scripts.inc",
+    "data/maps/LilycoveCity/scripts.inc",
+    "data/maps/LittlerootTown_MaysHouse_2F/scripts.inc",
+    "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.inc",
+    "data/maps/OldaleTown/scripts.inc",
+    "data/maps/Route103/scripts.inc",
+    "data/maps/Route104/scripts.inc",
+    "data/maps/Route110/scripts.inc",
+    "data/maps/Route119/scripts.inc",
+    "data/maps/RustboroCity/scripts.inc",
+    "data/scripts/journey_badge_qualifier.inc",
+    "data/scripts/journey_campaign_gates.inc",
+    "data/scripts/journey_galactic.inc",
+    "data/scripts/route23.inc",
+    "graphics/object_events/pics/people/journey_eren.png",
+    "graphics/object_events/pics/people/journey_luffy.png",
+    "graphics/object_events/pics/people/journey_pwt_eren.png",
+    "graphics/object_events/pics/people/journey_pwt_luffy.png",
+    "include/constants/flags.h",
+    "include/constants/opponents.h",
+    "include/constants/vars.h",
+    "include/data.h",
+    "include/journey_badge_qualifier.h",
+    "include/journey_qualifier_core.h",
+    "include/journey_qualifier_field.h",
+    "include/journey_story_rivals.h",
+    "src/battle_message.c",
+    "src/battle_setup.c",
+    "src/data.c",
+    "src/data/journey_qualifier_trainers.h",
+    "src/data/object_events/object_event_graphics_info.h",
+    "src/data/object_events/object_event_pic_tables.h",
+    "src/event_object_movement.c",
+    "src/journey_badge_qualifier.c",
+    "src/journey_extra_gyms.c",
+    "src/journey_galactic.c",
+    "src/journey_gym_scaling.c",
+    "src/journey_qualifier_core.c",
+    "src/journey_qualifier_field.c",
+    "src/journey_rival.c",
+    "src/journey_story_rivals.c",
+    "src/string_util.c"
+  ],
+  "prepared_sha256": {
+    "include/constants/flags.h": "ebb2d3ad03878fa0d319cc81de352d1edf631648c6f30d138837c1b9ffa05a09",
+    "include/constants/vars.h": "0f7d1dc99e9dc4def02e6ab558ccabd86d350edf924d0b50b04adbb14e3f32f1",
+    "include/journey_story_rivals.h": "c74b1f40f48cf401e8d0fdc34b8ad8afe251d511ee8943ad8c9454d42cd82086",
+    "src/journey_story_rivals.c": "5ff3cd3c80400ae4c8833dabc8b92a634d1cf75b80d873cdf4983d90086098f1",
+    "src/journey_rival.c": "68c5435a29cfc0969c06ef96b07e2386965683f9ce15d186fefa870fcc4c2455",
+    "include/data.h": "6a92a65ea406e4eb4417e182c4d6cbc67b3f28fff0dbe9a402a3aed7be3b7f95",
+    "src/event_object_movement.c": "4ad21b92cf034804ead4f3b6dc1e9d82528fe2c55768f6ac94132a404edf92da",
+    "src/string_util.c": "7462a359e0ab00aff9d99ef7b90d42b3a1ef2812e9bbfb0322d3a8c029693802",
+    "src/battle_message.c": "776d5ee780357628e225bc0263d379cfd0814fd7d8182c77eb480fbe9dc055ad",
+    "data/maps/EverGrandeCity_ChampionsRoom/scripts.inc": "e2fb9506cc63bbbe2ee2dc34390a7b6f6c6273356defc06a15080f30f44faa0b",
+    "data/maps/LavaridgeTown/scripts.inc": "81fa4e3c588ab0745e53f0ab67666078995690cc18eb6c8300249b6b20a159dd",
+    "data/maps/LilycoveCity/scripts.inc": "7cc18c7e3b8191563ce785e7c9b34dda83aef693da9149085c1a77725cc7c998",
+    "data/maps/LittlerootTown_MaysHouse_2F/scripts.inc": "99bf4c944cdf915c3ae0cd47394f517891f0403e38c8819472cae7fc102f02db",
+    "data/maps/LittlerootTown_ProfessorBirchsLab/scripts.inc": "fb9bbf7e762b7b421b8e3062e4f01b7f8790ce010db54101a529498b54acac9e",
+    "data/maps/OldaleTown/scripts.inc": "1b5bc5fa568ddbedb721a97a26daa6006ce445d4cd6170a2203d3ac08c4b5f51",
+    "data/maps/Route103/scripts.inc": "d4a6e63abd0992609ceee0c4619c40c977def1738a7fadaf0866eb4229a260e7",
+    "data/maps/Route104/scripts.inc": "a4cf09d8bfdde19faf35a2d568096610bcc39366069d12f02da9d54328b353b3",
+    "data/maps/Route110/scripts.inc": "67d3aed5990871ff5cc29659c18fb4be44eafa98151f9c54912411dfc4aff5f4",
+    "data/maps/Route119/scripts.inc": "039fd9eed4190927ea7e59567d85ca6521ee4ebd9a85e74b9ecdd5be6ae1c822",
+    "data/maps/RustboroCity/scripts.inc": "df0d5ff74051564b281866710ebd5dbc0184cc6a0cc824966102b1a69cd2fd7e",
+    "src/journey_badge_qualifier.c": "9a4ecd5bcbc5adaccda0a75e6214c42bfe6b19d6e801dd56d6617bb2b6496f6e",
+    "include/journey_badge_qualifier.h": "0bb8446a67a8ff8fbf012bd08b0fe6f32e78516c4f49535a8ca6e0003e617c4f",
+    "src/journey_qualifier_core.c": "14254c112be8055b9fe28c6b6242665fe5be29d9a5b3e032dcfc9f4f03f8b5f7",
+    "include/journey_qualifier_core.h": "27334b490723b07c685a4318f5b6177a53375bfcbef0daf4ba6a8fcc396d0d8b",
+    "include/constants/opponents.h": "949f566419eabd2f79914e01002f6fafde871fc0999cd3d550fdcf9c99866b45",
+    "src/data/journey_qualifier_trainers.h": "922f68c2d6fe16e29d2b9bb46c4c99e7300fc9686ae2d8c3aa3307fa274b04e2",
+    "src/data.c": "b9a224b4310028e7a7c0a8b80baadc978cd6a9d1920f7708a666f211848825fc",
+    "src/battle_setup.c": "06cb4b960713ee43a2b26dafdfd650f0a40ebccd1546e76b3be230ec6e9f8588",
+    "src/journey_gym_scaling.c": "ca29d0f8b0ce752ce216018a98ddeeced959a283e9ac37a42fb7d2da15136bfd",
+    "src/journey_galactic.c": "610140499d5eaa7658e07c844311a2ac132bb02c886dc987f0b9073189dca636",
+    "src/journey_extra_gyms.c": "1bc296b8098bf27411fbe8b1138a90993c067bef9c889589d2893356ab260bb8",
+    "data/scripts/journey_galactic.inc": "fb2b554d16f56a877f0fb01b03c9c5a256a528cd0a1aa8c8acc131adf6732cd1",
+    "data/scripts/route23.inc": "c7e4f99c337607dc1d667d3bcd4415049d12ab9d06acb5af253e6e2b87a86ead",
+    "data/maps/IndigoPlateau_PokemonCenter_1F_Frlg/scripts.inc": "1ecc695bc5d2d602c609ef09c0460de2b05badeae67f3dd01f8cedcfa7c023d0",
+    "data/maps/EverGrandeCity_PokemonLeague_1F/scripts.inc": "4d5b3f66a37e822912cf816faeb06a80a774c1ce1a98da9dda36b2112e1681fc",
+    "data/maps/JourneyExtraGyms.inc": "51adb04d92b546c8248782ae1206bd821db55816b24e0bc79cf9b697b0572cfa",
+    "data/maps/BattleFrontier_OutsideWest/map.json": "8016b06ee2d623030482e228d2ee873994135af382f3a20ca2883537aa6d5ca0",
+    "data/maps/BattleFrontier_OutsideWest/scripts.inc": "d05ef9cf99c6480e0f4d26a76ddccd7de27692b2e146feeafbd8ef490311bbbd",
+    "data/maps/JourneyPWTArena/scripts.inc": "91a9756f16ec4abc839efd3baac5d733d2f62b3e7b1cb99051716ce4cb3d1bab",
+    "data/scripts/journey_campaign_gates.inc": "e154413a2ae0a9295bbd851dc01adaeef5f8a8fdf2bd284ad63777a4b35fde89",
+    "data/event_scripts.s": "899783d3f5308ce8f2df4f55bac1d7c91401556f64657a9597966e5631b08b72",
+    "src/journey_qualifier_field.c": "2d5105194bae31d0efd56fd4bcae7368ba05c1583a2a853cf76c6442547e6962",
+    "include/journey_qualifier_field.h": "2a5ca9f851a34d3c1ffd5d83b2c4928319861fd184693e8733f672651cc3e2cc",
+    "data/scripts/journey_badge_qualifier.inc": "4507045ebf13228005622c18851f6ced384c1ee6dd6a442d1d354d0994627c9d",
+    "graphics/object_events/pics/people/journey_eren.png": "6fa89f4ec92b46f0917d0649393421f28ced48688bc133b36ceae6b6447168ab",
+    "graphics/object_events/pics/people/journey_pwt_eren.png": "6fa89f4ec92b46f0917d0649393421f28ced48688bc133b36ceae6b6447168ab",
+    "graphics/object_events/pics/people/journey_luffy.png": "f6691467cbc4beb4022bd9d3bcd9cf2334c3cf70976c0d10b3792e6fff555de9",
+    "graphics/object_events/pics/people/journey_pwt_luffy.png": "f6691467cbc4beb4022bd9d3bcd9cf2334c3cf70976c0d10b3792e6fff555de9",
+    "src/data/object_events/object_event_pic_tables.h": "c7e13b91f6af6e4a7418afec4785506aa5bdfaae7d6d79f80b9ab16e23e8ca9e",
+    "src/data/object_events/object_event_graphics_info.h": "7b79a203414491b2d5f01c0ad5150c76159a9b7b1f13e6bd4825377a511dca59"
+  },
+  "source_hashes_checked": 32240,
+  "independent_replay": true,
+  "idempotent": true,
+  "unrelated_source_files_unchanged": true,
+  "save_and_link_abi_unchanged": true,
+  "compiled_abi": {
+    "sizeof(struct SaveBlock1)": 19620,
+    "sizeof(struct SaveBlock2)": 3892,
+    "sizeof(struct ObjectEvent)": 36,
+    "sizeof(struct LinkPlayer)": 28,
+    "sizeof(struct LinkPlayerBlock)": 60,
+    "FLAGS_COUNT": 6976,
+    "VARS_COUNT": 396
+  },
+  "atlas_graphics_unchanged": true,
+  "coastlines_and_gym_geometry_unchanged": true,
+  "native_trainer_parties_unchanged": true,
+  "field_event": {
+    "original_outdoor_npcs_preserved": 25,
+    "added_outdoor_actors": 5,
+    "original_events_warps_and_connections_unchanged": true,
+    "native_pwt_implementation_unchanged": true,
+    "native_trainer_parties_unchanged": true
+  },
+  "avatars": {
+    "reference_rivals": [
+      {
+        "name": "red",
+        "visible_height": 19
+      },
+      {
+        "name": "leaf",
+        "visible_height": 19
+      },
+      {
+        "name": "brendan",
+        "visible_height": 21
+      },
+      {
+        "name": "may",
+        "visible_height": 20
+      }
+    ],
+    "avatars": [
+      {
+        "path": "graphics/object_events/pics/people/journey_eren.png",
+        "palette_unchanged": true,
+        "frames": [
+          {
+            "frame": 0,
+            "bounds": [
+              1,
+              11,
+              15,
+              31
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 1,
+            "bounds": [
+              1,
+              11,
+              15,
+              31
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 2,
+            "bounds": [
+              1,
+              11,
+              15,
+              31
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 3,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 4,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 5,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 6,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 7,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 8,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          }
+        ],
+        "compiled": {
+          "address": 140566836,
+          "bytes": 2304,
+          "sha256": "93e58771b7c5a0a9121081b0020291cb33717831f41802d431880eb80207b2e2"
+        }
+      },
+      {
+        "path": "graphics/object_events/pics/people/journey_luffy.png",
+        "palette_unchanged": true,
+        "frames": [
+          {
+            "frame": 0,
+            "bounds": [
+              1,
+              11,
+              15,
+              31
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 1,
+            "bounds": [
+              1,
+              11,
+              15,
+              31
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 2,
+            "bounds": [
+              1,
+              11,
+              15,
+              31
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 3,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 4,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 5,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 6,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 7,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 8,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          }
+        ],
+        "compiled": {
+          "address": 140564020,
+          "bytes": 2304,
+          "sha256": "ae30bb48d7f463d66f49b2febd62bcf86049fa527a2f80466a624606a119ffcd"
+        }
+      },
+      {
+        "path": "graphics/object_events/pics/people/journey_pwt_eren.png",
+        "palette_unchanged": true,
+        "frames": [
+          {
+            "frame": 0,
+            "bounds": [
+              1,
+              11,
+              15,
+              31
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 1,
+            "bounds": [
+              1,
+              11,
+              15,
+              31
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 2,
+            "bounds": [
+              1,
+              11,
+              15,
+              31
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 3,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 4,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 5,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 6,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 7,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 8,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          }
+        ],
+        "compiled": {
+          "address": 140320684,
+          "bytes": 2304,
+          "sha256": "93e58771b7c5a0a9121081b0020291cb33717831f41802d431880eb80207b2e2"
+        }
+      },
+      {
+        "path": "graphics/object_events/pics/people/journey_pwt_luffy.png",
+        "palette_unchanged": true,
+        "frames": [
+          {
+            "frame": 0,
+            "bounds": [
+              1,
+              11,
+              15,
+              31
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 1,
+            "bounds": [
+              1,
+              11,
+              15,
+              31
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 2,
+            "bounds": [
+              1,
+              11,
+              15,
+              31
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 3,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 4,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 5,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 6,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 7,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          },
+          {
+            "frame": 8,
+            "bounds": [
+              1,
+              12,
+              15,
+              32
+            ],
+            "visible_height": 20
+          }
+        ],
+        "compiled": {
+          "address": 140317868,
+          "bytes": 2304,
+          "sha256": "ae30bb48d7f463d66f49b2febd62bcf86049fa527a2f80466a624606a119ffcd"
+        }
+      }
+    ],
+    "all_frames_whole_and_same_native_scale": true
+  },
+  "full_campaign_playthrough": false
+}

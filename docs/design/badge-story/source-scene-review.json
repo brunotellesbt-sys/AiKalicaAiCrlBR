@@ -1,0 +1,49 @@
+{
+  "kind": "source-scene-review",
+  "emulator_capture": false,
+  "fixture": "Red, Hoenn birth; May home-opposite, Leaf away-opposite, Brendan away-same",
+  "maps": {
+    "BattleFrontier_OutsideWest": {
+      "before": {
+        "image": "BattleFrontier_OutsideWest-before-source.png",
+        "image_sha256": "114e8679e4fc53b49156f89a7869f21db6137db2b0326bd3cfa43a1bf563e510",
+        "terrain_pixels_sha256": "6c9156ecd08858b9e86498d6fa8eb43a2c3f273fab5e2df2a733041bfdf9ce13",
+        "blockdata_sha256": "4facdb0f28839d41a06e664f0b8ad747048422280d300cea0543a03100747d5d",
+        "width": 56,
+        "height": 74,
+        "object_events": 25
+      },
+      "after": {
+        "image": "BattleFrontier_OutsideWest-after-source.png",
+        "image_sha256": "c8b7c81eb2cff7104a7ce1dcbe98c21c81979013531623b1cdeca89024a4f732",
+        "terrain_pixels_sha256": "6c9156ecd08858b9e86498d6fa8eb43a2c3f273fab5e2df2a733041bfdf9ce13",
+        "blockdata_sha256": "4facdb0f28839d41a06e664f0b8ad747048422280d300cea0543a03100747d5d",
+        "width": 56,
+        "height": 74,
+        "object_events": 30
+      },
+      "terrain_pixels_identical": true
+    },
+    "JourneyPWTArena": {
+      "before": {
+        "image": "JourneyPWTArena-before-source.png",
+        "image_sha256": "01b07bdd9eb6de949772632f16d0709771dd7d69204ecaf90345f9c9cbcb6412",
+        "terrain_pixels_sha256": "7a0f8e6ff5089166f62efaddad8a8ef30ead49c90f1c04ca0996c4eca352b0b8",
+        "blockdata_sha256": "a4b46c3c9c19df7f48978deef259c2672402468ebc8ceda9cee25671cee862bb",
+        "width": 20,
+        "height": 10,
+        "object_events": 13
+      },
+      "after": {
+        "image": "JourneyPWTArena-after-source.png",
+        "image_sha256": "a23833e5c2c7b78b9704c4ce784129452caeecfc7b4fb6e6909c24b04ffae03f",
+        "terrain_pixels_sha256": "7a0f8e6ff5089166f62efaddad8a8ef30ead49c90f1c04ca0996c4eca352b0b8",
+        "blockdata_sha256": "a4b46c3c9c19df7f48978deef259c2672402468ebc8ceda9cee25671cee862bb",
+        "width": 20,
+        "height": 10,
+        "object_events": 13
+      },
+      "terrain_pixels_identical": true
+    }
+  }
+}

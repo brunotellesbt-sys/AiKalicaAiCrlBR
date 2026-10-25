@@ -1,6 +1,6 @@
 # Pokémon Journey — documentação do jogo
 
-[Entrega atual: encostas completas, praias animadas e rotas costeiras](coastal-closures.md). Mantém os portos integrados e o [circuito de 24 insígnias](ginasios-extras-e-travessias.md). [Guia prático em TXT](AJUSTES-GBA.txt) · [Pasta local de tiles](../assets/tiles/README.md).
+[Entrega atual: competição da 18ª insígnia, rivais e Galactic na 22ª](badge-story.md). Mantém os portos integrados, as [correções costeiras](coastal-closures.md) e os [24 ginásios](ginasios-extras-e-travessias.md). [Guia prático em TXT](AJUSTES-GBA.txt) · [Pasta local de tiles](../assets/tiles/README.md).
 
 Kanto, Hoenn e Sevii formam um mundo conectado por rotas marítimas. O jogo e seus diálogos estão em inglês; este guia está em português.
 

@@ -10,7 +10,7 @@ class ExtraGyms(unittest.TestCase):
     def setUpClass(cls):
         cls.release=verify(ROOT/'mods/hoenn/versions')
         cls.review=json.loads((ROOT/'roms/rom-de-teste/review.json').read_text())
-        while cls.release['validation_scope'] in ('coastal-closures','sevii-integrated-piers','dewford-coast-safety'):
+        while cls.release['validation_scope'] in ('badge-story','coastal-closures','sevii-integrated-piers','dewford-coast-safety'):
             cls.review=json.loads((ROOT/cls.release['previous_review_validation']['file']).read_text())
             cls.release=previous_release(cls.release)
     def test_validated_gym_release_uses_correct_fairy_leader_and_all_badges(self):

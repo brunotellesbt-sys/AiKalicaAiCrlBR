@@ -1,6 +1,6 @@
 # Circuito de 24 insígnias e revisão das travessias
 
-O circuito mantém os 16 ginásios originais e acrescenta oito. As duas Ligas exigem as **24 insígnias**, além das missões, encontros com rivais e capítulo Galactic que já eram obrigatórios.
+O circuito mantém os 16 ginásios originais e acrescenta oito. A [camada 164](badge-story.md) muda a admissão das duas Ligas: são necessárias **18 insígnias e a vitória na competição da Battle Frontier**. Os 24 ginásios continuam disponíveis; o capítulo Galactic passa para a 22ª insígnia.
 
 | Local | Tipo | Líder |
 |---|---|---|
@@ -27,7 +27,7 @@ O guia fica numa lateral próxima à entrada, olhando para o jogador, com a port
 
 ![Guias na lateral da entrada, fora da passagem central](images/guia-e-entrada-ginasios.png)
 
-O Trainer Card alterna entre Hoenn, Kanto e o circuito extra com **L/R/Select** e mostra o total de 24. O acesso ao porão de Oak fica na escada dentro do laboratório. Os eventos especiais após a 18ª e a 22ª insígnias aguardam os detalhes que o autor decidiu fornecer depois; não foram inventados capítulos nem criadas barreiras vazias.
+O Trainer Card alterna entre Hoenn, Kanto e o circuito extra com **L/R/Select** e mostra o total de 24. O acesso ao porão de Oak fica na escada dentro do laboratório. A [competição da 18ª insígnia e o capítulo Galactic da 22ª](badge-story.md) usam os detalhes fornecidos pelo autor. A competição usa somente o espaço do estádio do PWT, com estado e regras próprios.
 
 ## Travessias e litoral
 

@@ -1,0 +1,261 @@
+{
+  "parent_commit": "4f7e33cd49004cde4dfb668d76deb95803981cf9",
+  "parent_rom_sha256": "cd5187f43d33b80e5ba2130c9e4e31a4d5a9a0e2504d8b71517da7d13814d9c6",
+  "native_canvas": [
+    16,
+    32
+  ],
+  "visible_body": [
+    14,
+    20
+  ],
+  "zero_palette_index_transparent": true,
+  "source_files": {
+    "eren": {
+      "original_sha256": "48a9a36acdfc66c66f319c90b47faf0af84240410c30557370938bd050e61523",
+      "normalized_sha256": "6fa89f4ec92b46f0917d0649393421f28ced48688bc133b36ceae6b6447168ab",
+      "frames": [
+        {
+          "frame": 0,
+          "source_frame": 0,
+          "source_bounds": [
+            2,
+            15,
+            14,
+            32
+          ],
+          "mirror": false,
+          "bottom": 31
+        },
+        {
+          "frame": 1,
+          "source_frame": 1,
+          "source_bounds": [
+            2,
+            17,
+            14,
+            32
+          ],
+          "mirror": false,
+          "bottom": 31
+        },
+        {
+          "frame": 2,
+          "source_frame": 7,
+          "source_bounds": [
+            2,
+            17,
+            13,
+            31
+          ],
+          "mirror": false,
+          "bottom": 31
+        },
+        {
+          "frame": 3,
+          "source_frame": 3,
+          "source_bounds": [
+            2,
+            14,
+            14,
+            32
+          ],
+          "mirror": false,
+          "bottom": 32
+        },
+        {
+          "frame": 4,
+          "source_frame": 4,
+          "source_bounds": [
+            2,
+            13,
+            14,
+            32
+          ],
+          "mirror": false,
+          "bottom": 32
+        },
+        {
+          "frame": 5,
+          "source_frame": 5,
+          "source_bounds": [
+            4,
+            19,
+            14,
+            32
+          ],
+          "mirror": false,
+          "bottom": 32
+        },
+        {
+          "frame": 6,
+          "source_frame": 6,
+          "source_bounds": [
+            2,
+            16,
+            14,
+            32
+          ],
+          "mirror": false,
+          "bottom": 32
+        },
+        {
+          "frame": 7,
+          "source_frame": 7,
+          "source_bounds": [
+            2,
+            17,
+            13,
+            31
+          ],
+          "mirror": false,
+          "bottom": 32
+        },
+        {
+          "frame": 8,
+          "source_frame": 8,
+          "source_bounds": [
+            2,
+            15,
+            14,
+            31
+          ],
+          "mirror": true,
+          "bottom": 32
+        }
+      ]
+    },
+    "luffy": {
+      "original_sha256": "b2532753fd29e90ff8146c10b437413421019bc9b78819fc2088edb8f9860378",
+      "normalized_sha256": "f6691467cbc4beb4022bd9d3bcd9cf2334c3cf70976c0d10b3792e6fff555de9",
+      "frames": [
+        {
+          "frame": 0,
+          "source_frame": 0,
+          "source_bounds": [
+            0,
+            4,
+            16,
+            32
+          ],
+          "mirror": false,
+          "bottom": 31
+        },
+        {
+          "frame": 1,
+          "source_frame": 1,
+          "source_bounds": [
+            0,
+            4,
+            16,
+            32
+          ],
+          "mirror": false,
+          "bottom": 31
+        },
+        {
+          "frame": 2,
+          "source_frame": 2,
+          "source_bounds": [
+            0,
+            4,
+            16,
+            32
+          ],
+          "mirror": false,
+          "bottom": 31
+        },
+        {
+          "frame": 3,
+          "source_frame": 3,
+          "source_bounds": [
+            0,
+            4,
+            16,
+            32
+          ],
+          "mirror": false,
+          "bottom": 32
+        },
+        {
+          "frame": 4,
+          "source_frame": 4,
+          "source_bounds": [
+            0,
+            4,
+            16,
+            32
+          ],
+          "mirror": false,
+          "bottom": 32
+        },
+        {
+          "frame": 5,
+          "source_frame": 5,
+          "source_bounds": [
+            0,
+            4,
+            16,
+            32
+          ],
+          "mirror": false,
+          "bottom": 32
+        },
+        {
+          "frame": 6,
+          "source_frame": 6,
+          "source_bounds": [
+            0,
+            4,
+            16,
+            32
+          ],
+          "mirror": false,
+          "bottom": 32
+        },
+        {
+          "frame": 7,
+          "source_frame": 7,
+          "source_bounds": [
+            0,
+            4,
+            16,
+            32
+          ],
+          "mirror": false,
+          "bottom": 32
+        },
+        {
+          "frame": 8,
+          "source_frame": 8,
+          "source_bounds": [
+            1,
+            4,
+            16,
+            32
+          ],
+          "mirror": false,
+          "bottom": 32
+        }
+      ]
+    }
+  },
+  "rival_references": {
+    "red": {
+      "source": "graphics/object_events/pics/people/red/red_normal.png",
+      "sha256": "94eb37499a8bd663f47a0767c34b93569cf0c222a9906852943016e3a771054d"
+    },
+    "leaf": {
+      "source": "graphics/object_events/pics/people/leaf/green_normal.png",
+      "sha256": "1229935843ebeb349176fe0c0dad579fdb855c5b89ecad8a22cbb9096581e1df"
+    },
+    "brendan": {
+      "source": "graphics/object_events/pics/people/brendan/walking.png",
+      "sha256": "f33ec07a5fd17f4422455f8bc55cd3d3522fa65c3bf740ecbdc00da705eaa0d1"
+    },
+    "may": {
+      "source": "graphics/object_events/pics/people/may/walking.png",
+      "sha256": "7f185cda9854f7812545c306795b454dc750be440e582974518ba8a63c9b7e87"
+    }
+  }
+}

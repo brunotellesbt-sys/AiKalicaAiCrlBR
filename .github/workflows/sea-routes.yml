@@ -13,6 +13,10 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Fetch immutable evidence baseline
+        # A shallow PR checkout does not contain the pinned historical media.
+        # Fetch its one commit so the tests can verify the original bytes.
+        run: git fetch --no-tags --depth=1 origin 4f7e33cd49004cde4dfb668d76deb95803981cf9
       - name: Install indexed sprite validation dependency
         run: python3 -m pip install Pillow==11.3.0
       - name: Verify catalog, water elevations, NPCs and connections

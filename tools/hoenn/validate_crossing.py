@@ -43,6 +43,13 @@ lib.image.restype = ctypes.c_void_p; lib.read32.restype = ctypes.c_uint32
 emulator_workspace=tempfile.TemporaryDirectory(prefix='journey-emulator-',dir='/tmp')
 emulator_rom=Path(emulator_workspace.name)/'pokeemerald.gba'
 shutil.copy2(source/'pokeemerald.gba',emulator_rom)
+# Native-call and script-entry fixtures must never overwrite compiled game
+# data. Layer 164 approaches the former 31 MiB scratch address; reserve only
+# the verified final padding page in this emulator's private ROM copy.
+FIXTURE_ROM_BASE = 0x09FFF000
+with emulator_rom.open('rb') as fixture_file:
+    fixture_file.seek(FIXTURE_ROM_BASE - 0x08000000)
+    assert fixture_file.read(4096) == b'\xff' * 4096, 'Native fixture ROM page is occupied'
 assert lib.start(str(emulator_rom).encode())
 FLAG_OFFSET=4720
 if (source/'.journey-modern-bag').exists():
@@ -79,10 +86,11 @@ def picture(name):
     (args.output / (name + '.png')).write_bytes(b'\x89PNG\r\n\x1a\n' + chunk(b'IHDR', struct.pack('>IIBBBBB', 240, 160, 8, 2, 0, 0, 0)) + chunk(b'IDAT', zlib.compress(rgb)) + chunk(b'IEND', b''))
 
 def script(code, frames=900):
-    for i, byte in enumerate(code): lib.raw8(0x09f00000 + i, byte)
+    assert len(code) <= 0x200, 'Script fixture overlaps the native trampoline'
+    for i, byte in enumerate(code): lib.raw8(FIXTURE_ROM_BASE + i, byte)
     context = s['sGlobalScriptContext']
     for i in range(116): lib.write8(context + i, 0)
-    lib.write8(context + 1, 1); lib.write32(context + 8, 0x09f00000)
+    lib.write8(context + 1, 1); lib.write32(context + 8, FIXTURE_ROM_BASE)
     lib.write32(context + 92, s['gScriptCmdTable']); lib.write32(context + 96, s['gScriptCmdTableEnd'])
     lib.write8(s['sGlobalScriptContextStatus'], 0); lib.write8(s['sLockFieldControls'], 1)
     step(frames)
@@ -104,8 +112,9 @@ def native(name, *values, max_frames=200):
         sentinels += [0x66666666]; params = [*values, s[name] | 1, scratch]
     for sentinel, value in zip(sentinels, params):
         struct.pack_into('<I', code, code.index(struct.pack('<I', sentinel)), value)
-    for i, b in enumerate(code): lib.raw8(0x09f00200 + i, b)
-    hook = s['gSpecials']; original = lib.read32(hook); raw32(hook, 0x09f00201)
+    assert len(code) <= 0xE00, 'Native fixture exceeds the reserved padding page'
+    for i, b in enumerate(code): lib.raw8(FIXTURE_ROM_BASE + 0x200 + i, b)
+    hook = s['gSpecials']; original = lib.read32(hook); raw32(hook, FIXTURE_ROM_BASE + 0x201)
     lib.write32(scratch, 0xdeadc0de)
     try:
         script(b'\x25\0\0\x6b\x02', 3)

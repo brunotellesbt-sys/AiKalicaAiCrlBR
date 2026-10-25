@@ -11,7 +11,10 @@ def reproduce(reference,output):
     acquired=json.loads((reference/'.source-acquired.json').read_text())
     assert acquired['commit']==PIN
     layers=PRIOR+[LAYER]
-    if (reference/'.journey-coastal-closures').exists():
+    if (reference/'.journey-badge-story').exists():
+        from prepare_badge_story import PRIOR as review_prior,LAYER as review_layer
+        layers=review_prior+[review_layer]
+    elif (reference/'.journey-coastal-closures').exists():
         from prepare_coastal_closures import PRIOR as review_prior,LAYER as review_layer
         layers=review_prior+[review_layer]
     elif (reference/'.journey-sevii-integrated-piers').exists():

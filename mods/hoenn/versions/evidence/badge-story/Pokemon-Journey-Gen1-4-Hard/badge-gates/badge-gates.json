@@ -1,0 +1,1571 @@
+{
+  "kind": "badge-gates",
+  "passed": true,
+  "preflight": false,
+  "compiled_rom": true,
+  "native_validation_performed": true,
+  "captures": [
+    {
+      "file": "badge-gates-galactic-21-badges.png",
+      "sha256": "e5a2ca9a07e97244992f244aa6944b7b922cd9d5a75e4dd206534bb533897f1d"
+    },
+    {
+      "file": "badge-gates-galactic-22-badges.png",
+      "sha256": "f0c870f2f99a366ed8f234c56227a46ab1ae0fe8c061f6cd7acfa4335db26bd0"
+    },
+    {
+      "file": "badge-gates-checkpoint-1.png",
+      "sha256": "782938b8924bd4b2196402d0fb447fc57633229231bcff92d75ccd47370fa0c9"
+    },
+    {
+      "file": "badge-gates-checkpoint-2.png",
+      "sha256": "d99ff0d4762b822f9accd82a8eb1a8f64f7854a5b84fdd5dce012eeb4e2461c9"
+    },
+    {
+      "file": "badge-gates-checkpoint-3.png",
+      "sha256": "eea997467bb5dc53ffdf74270f6c43e5adba2b8adc58311bcae3c3a0d5f05b75"
+    },
+    {
+      "file": "badge-gates-checkpoint-4.png",
+      "sha256": "d6b728192b0cc65407381d5231df7099801828e48a50d089769b5007be5b1207"
+    },
+    {
+      "file": "badge-gates-checkpoint-5.png",
+      "sha256": "eada989fd5bc0ef85c1889cd413508c3666599d34552c216416abdd9838d642d"
+    },
+    {
+      "file": "badge-gates-checkpoint-6.png",
+      "sha256": "e424ba2b4f78762fe5a522a9d0bdf8c036c0e19c54b226a5e726c8c37314d05e"
+    },
+    {
+      "file": "badge-gates-checkpoint-7.png",
+      "sha256": "bef30a6172d2c56d2f5f567a49d6339067a442a1a57ee2fa53c078f7632e0d50"
+    },
+    {
+      "file": "badge-gates-checkpoint-8.png",
+      "sha256": "f45adfeda62fa254a600159d1f1dd737bebceac5a55e9de4edf39440b1984622"
+    },
+    {
+      "file": "badge-gates-checkpoint-denied-17.png",
+      "sha256": "fc863487f0a65a82d5bfca1e01b5d88ed3d53a68f1387552baf9fc4bf108d709"
+    },
+    {
+      "file": "badge-gates-checkpoint-denied-18.png",
+      "sha256": "fc863487f0a65a82d5bfca1e01b5d88ed3d53a68f1387552baf9fc4bf108d709"
+    },
+    {
+      "file": "badge-gates-kanto-denied-17-0.png",
+      "sha256": "aed3f457972f1276cb53b5238ac2371c38a59f70f5b88c67f8be5299181c22e4"
+    },
+    {
+      "file": "badge-gates-kanto-denied-18-0.png",
+      "sha256": "aed3f457972f1276cb53b5238ac2371c38a59f70f5b88c67f8be5299181c22e4"
+    },
+    {
+      "file": "badge-gates-kanto-denied-18-1.png",
+      "sha256": "aed3f457972f1276cb53b5238ac2371c38a59f70f5b88c67f8be5299181c22e4"
+    },
+    {
+      "file": "badge-gates-kanto-admitted.png",
+      "sha256": "3abe6f4b87d6a2f6fed78fc40a651fbcf6b611998ae73773f54a67b6890dfd8b"
+    },
+    {
+      "file": "badge-gates-hoenn-denied-17-0.png",
+      "sha256": "c154b7e765a59fe30703c0bae85565b9216e48351f3375da5a50d89631ed6a0d"
+    },
+    {
+      "file": "badge-gates-hoenn-denied-18-0.png",
+      "sha256": "c154b7e765a59fe30703c0bae85565b9216e48351f3375da5a50d89631ed6a0d"
+    },
+    {
+      "file": "badge-gates-hoenn-denied-18-1.png",
+      "sha256": "c154b7e765a59fe30703c0bae85565b9216e48351f3375da5a50d89631ed6a0d"
+    },
+    {
+      "file": "badge-gates-hoenn-admitted.png",
+      "sha256": "e075d559c9e0a9fa89f5d8250711ef866d007ecf66cefdfa6ee1c5fc3baf4e7b"
+    },
+    {
+      "file": "badge-gates-galactic-entry-21-4095.png",
+      "sha256": "187b3ce76fab12b8d8f40a101e8b090a490b2835fb75f16fb57bceabb4edb923"
+    },
+    {
+      "file": "badge-gates-galactic-entry-22-0.png",
+      "sha256": "187b3ce76fab12b8d8f40a101e8b090a490b2835fb75f16fb57bceabb4edb923"
+    },
+    {
+      "file": "badge-gates-galactic-22-entry-prompt.png",
+      "sha256": "adde39281e724c038ff9b4fa3f8b5265ad88cf265b595d982a4f3aee5230ca83"
+    },
+    {
+      "file": "badge-gates-galactic-entry-22-4095.png",
+      "sha256": "cae93f6b452cb401b04934869960acee837f21c9155d498fc3c01b0394255a5c"
+    },
+    {
+      "file": "badge-gates-native-save-qualification.png",
+      "sha256": "1506f69c26c15695f9145efe2018bb8cc29f0d859a757fe37c121333555f2e8a"
+    }
+  ],
+  "source_gate_contract_checked": true,
+  "physical_gate_event_locations_and_warps_unchanged": true,
+  "galactic_crossover_and_capture_requirements_preserved": true,
+  "baseline_rom_sha256": "cd5187f43d33b80e5ba2130c9e4e31a4d5a9a0e2504d8b71517da7d13814d9c6",
+  "rom_sha256": "53900d0ed0af1c3500c512cf42df97cd70ec46f55681346e758cd105ab8644fa",
+  "review_mode": false,
+  "permission_cases": [
+    {
+      "kanto": 0,
+      "hoenn": 0,
+      "extras": 0,
+      "total": 0,
+      "qualifier_won": false,
+      "galactic_state": 0,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 0,
+      "hoenn": 0,
+      "extras": 0,
+      "total": 0,
+      "qualifier_won": false,
+      "galactic_state": 7,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 0,
+      "hoenn": 0,
+      "extras": 0,
+      "total": 0,
+      "qualifier_won": true,
+      "galactic_state": 0,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 0,
+      "hoenn": 0,
+      "extras": 0,
+      "total": 0,
+      "qualifier_won": true,
+      "galactic_state": 7,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 8,
+      "hoenn": 8,
+      "extras": 0,
+      "total": 16,
+      "qualifier_won": false,
+      "galactic_state": 0,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 8,
+      "hoenn": 8,
+      "extras": 0,
+      "total": 16,
+      "qualifier_won": false,
+      "galactic_state": 7,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 8,
+      "hoenn": 8,
+      "extras": 0,
+      "total": 16,
+      "qualifier_won": true,
+      "galactic_state": 0,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 8,
+      "hoenn": 8,
+      "extras": 0,
+      "total": 16,
+      "qualifier_won": true,
+      "galactic_state": 7,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 8,
+      "hoenn": 8,
+      "extras": 1,
+      "total": 17,
+      "qualifier_won": false,
+      "galactic_state": 0,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 8,
+      "hoenn": 8,
+      "extras": 1,
+      "total": 17,
+      "qualifier_won": false,
+      "galactic_state": 7,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 8,
+      "hoenn": 8,
+      "extras": 1,
+      "total": 17,
+      "qualifier_won": true,
+      "galactic_state": 0,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 8,
+      "hoenn": 8,
+      "extras": 1,
+      "total": 17,
+      "qualifier_won": true,
+      "galactic_state": 7,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 8,
+      "hoenn": 8,
+      "extras": 2,
+      "total": 18,
+      "qualifier_won": false,
+      "galactic_state": 0,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 8,
+      "hoenn": 8,
+      "extras": 2,
+      "total": 18,
+      "qualifier_won": false,
+      "galactic_state": 7,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 8,
+      "hoenn": 8,
+      "extras": 2,
+      "total": 18,
+      "qualifier_won": true,
+      "galactic_state": 0,
+      "league_permissions": [
+        1,
+        1,
+        1
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 8,
+      "hoenn": 8,
+      "extras": 2,
+      "total": 18,
+      "qualifier_won": true,
+      "galactic_state": 7,
+      "league_permissions": [
+        1,
+        1,
+        1
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 7,
+      "hoenn": 3,
+      "extras": 8,
+      "total": 18,
+      "qualifier_won": false,
+      "galactic_state": 0,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 7,
+      "hoenn": 3,
+      "extras": 8,
+      "total": 18,
+      "qualifier_won": false,
+      "galactic_state": 7,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 7,
+      "hoenn": 3,
+      "extras": 8,
+      "total": 18,
+      "qualifier_won": true,
+      "galactic_state": 0,
+      "league_permissions": [
+        1,
+        1,
+        1
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 7,
+      "hoenn": 3,
+      "extras": 8,
+      "total": 18,
+      "qualifier_won": true,
+      "galactic_state": 7,
+      "league_permissions": [
+        1,
+        1,
+        1
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 3,
+      "hoenn": 8,
+      "extras": 7,
+      "total": 18,
+      "qualifier_won": false,
+      "galactic_state": 0,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 3,
+      "hoenn": 8,
+      "extras": 7,
+      "total": 18,
+      "qualifier_won": false,
+      "galactic_state": 7,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 3,
+      "hoenn": 8,
+      "extras": 7,
+      "total": 18,
+      "qualifier_won": true,
+      "galactic_state": 0,
+      "league_permissions": [
+        1,
+        1,
+        1
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 3,
+      "hoenn": 8,
+      "extras": 7,
+      "total": 18,
+      "qualifier_won": true,
+      "galactic_state": 7,
+      "league_permissions": [
+        1,
+        1,
+        1
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 8,
+      "hoenn": 5,
+      "extras": 8,
+      "total": 21,
+      "qualifier_won": false,
+      "galactic_state": 0,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 8,
+      "hoenn": 5,
+      "extras": 8,
+      "total": 21,
+      "qualifier_won": false,
+      "galactic_state": 7,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 8,
+      "hoenn": 5,
+      "extras": 8,
+      "total": 21,
+      "qualifier_won": true,
+      "galactic_state": 0,
+      "league_permissions": [
+        1,
+        1,
+        1
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 8,
+      "hoenn": 5,
+      "extras": 8,
+      "total": 21,
+      "qualifier_won": true,
+      "galactic_state": 7,
+      "league_permissions": [
+        1,
+        1,
+        1
+      ],
+      "galactic_available": 0
+    },
+    {
+      "kanto": 8,
+      "hoenn": 6,
+      "extras": 8,
+      "total": 22,
+      "qualifier_won": false,
+      "galactic_state": 0,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 1
+    },
+    {
+      "kanto": 8,
+      "hoenn": 6,
+      "extras": 8,
+      "total": 22,
+      "qualifier_won": false,
+      "galactic_state": 7,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 1
+    },
+    {
+      "kanto": 8,
+      "hoenn": 6,
+      "extras": 8,
+      "total": 22,
+      "qualifier_won": true,
+      "galactic_state": 0,
+      "league_permissions": [
+        1,
+        1,
+        1
+      ],
+      "galactic_available": 1
+    },
+    {
+      "kanto": 8,
+      "hoenn": 6,
+      "extras": 8,
+      "total": 22,
+      "qualifier_won": true,
+      "galactic_state": 7,
+      "league_permissions": [
+        1,
+        1,
+        1
+      ],
+      "galactic_available": 1
+    },
+    {
+      "kanto": 6,
+      "hoenn": 8,
+      "extras": 8,
+      "total": 22,
+      "qualifier_won": false,
+      "galactic_state": 0,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 1
+    },
+    {
+      "kanto": 6,
+      "hoenn": 8,
+      "extras": 8,
+      "total": 22,
+      "qualifier_won": false,
+      "galactic_state": 7,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 1
+    },
+    {
+      "kanto": 6,
+      "hoenn": 8,
+      "extras": 8,
+      "total": 22,
+      "qualifier_won": true,
+      "galactic_state": 0,
+      "league_permissions": [
+        1,
+        1,
+        1
+      ],
+      "galactic_available": 1
+    },
+    {
+      "kanto": 6,
+      "hoenn": 8,
+      "extras": 8,
+      "total": 22,
+      "qualifier_won": true,
+      "galactic_state": 7,
+      "league_permissions": [
+        1,
+        1,
+        1
+      ],
+      "galactic_available": 1
+    },
+    {
+      "kanto": 8,
+      "hoenn": 8,
+      "extras": 8,
+      "total": 24,
+      "qualifier_won": false,
+      "galactic_state": 0,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 1
+    },
+    {
+      "kanto": 8,
+      "hoenn": 8,
+      "extras": 8,
+      "total": 24,
+      "qualifier_won": false,
+      "galactic_state": 7,
+      "league_permissions": [
+        0,
+        0,
+        0
+      ],
+      "galactic_available": 1
+    },
+    {
+      "kanto": 8,
+      "hoenn": 8,
+      "extras": 8,
+      "total": 24,
+      "qualifier_won": true,
+      "galactic_state": 0,
+      "league_permissions": [
+        1,
+        1,
+        1
+      ],
+      "galactic_available": 1
+    },
+    {
+      "kanto": 8,
+      "hoenn": 8,
+      "extras": 8,
+      "total": 24,
+      "qualifier_won": true,
+      "galactic_state": 7,
+      "league_permissions": [
+        1,
+        1,
+        1
+      ],
+      "galactic_available": 1
+    }
+  ],
+  "grunt_visibility_cases": [
+    {
+      "key": "GALACTIC_GRUNT_0",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_1",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_2",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_3",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_4",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_5",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_6",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_7",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_8",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_9",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_10",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_11",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_12",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_13",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_14",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_15",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_16",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_17",
+      "total": 21,
+      "galactic_state": 0,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_0",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_1",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_2",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_3",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_4",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_5",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_6",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_7",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_8",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_9",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_10",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_11",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_12",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_13",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_14",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_15",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_16",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_17",
+      "total": 21,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_0",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_1",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_2",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_3",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_4",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_5",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_6",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_7",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_8",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_9",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_10",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_11",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_12",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_13",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_14",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_15",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_16",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_17",
+      "total": 22,
+      "galactic_state": 0,
+      "visible": true
+    },
+    {
+      "key": "GALACTIC_GRUNT_0",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_1",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_2",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_3",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_4",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_5",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_6",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_7",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_8",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_9",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_10",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_11",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_12",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_13",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_14",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_15",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_16",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    },
+    {
+      "key": "GALACTIC_GRUNT_17",
+      "total": 22,
+      "galactic_state": 7,
+      "visible": false
+    }
+  ],
+  "loaded_grunt_visibility": [
+    {
+      "total": 21,
+      "map": "AbandonedShip_CaptainsOffice",
+      "local_id": 1,
+      "object_loaded": false
+    },
+    {
+      "total": 22,
+      "map": "AbandonedShip_CaptainsOffice",
+      "local_id": 1,
+      "object_loaded": true
+    }
+  ],
+  "physical_checkpoints": [
+    {
+      "checkpoint": 1,
+      "map": "Route22_NorthEntrance_Frlg",
+      "trigger": [
+        7,
+        2
+      ],
+      "fixture_start": [
+        7,
+        3
+      ],
+      "initial_surf_fixture": false,
+      "recognition_state": 8,
+      "controller_crossing": true,
+      "after_map": [
+        37,
+        42
+      ],
+      "after_position": [
+        8,
+        153
+      ]
+    },
+    {
+      "checkpoint": 2,
+      "map": "Route23_Frlg",
+      "trigger": [
+        13,
+        149
+      ],
+      "fixture_start": [
+        13,
+        150
+      ],
+      "initial_surf_fixture": false,
+      "recognition_state": 8,
+      "controller_crossing": true,
+      "after_map": [
+        37,
+        42
+      ],
+      "after_position": [
+        13,
+        148
+      ]
+    },
+    {
+      "checkpoint": 3,
+      "map": "Route23_Frlg",
+      "trigger": [
+        7,
+        140
+      ],
+      "fixture_start": [
+        7,
+        141
+      ],
+      "initial_surf_fixture": false,
+      "recognition_state": 8,
+      "controller_crossing": true,
+      "after_map": [
+        37,
+        42
+      ],
+      "after_position": [
+        7,
+        139
+      ]
+    },
+    {
+      "checkpoint": 4,
+      "map": "Route23_Frlg",
+      "trigger": [
+        12,
+        123
+      ],
+      "fixture_start": [
+        12,
+        124
+      ],
+      "initial_surf_fixture": false,
+      "recognition_state": 8,
+      "controller_crossing": true,
+      "after_map": [
+        37,
+        42
+      ],
+      "after_position": [
+        12,
+        122
+      ]
+    },
+    {
+      "checkpoint": 5,
+      "map": "Route23_Frlg",
+      "trigger": [
+        14,
+        112
+      ],
+      "fixture_start": [
+        14,
+        113
+      ],
+      "initial_surf_fixture": true,
+      "recognition_state": 8,
+      "controller_crossing": true,
+      "after_map": [
+        37,
+        42
+      ],
+      "after_position": [
+        14,
+        111
+      ]
+    },
+    {
+      "checkpoint": 6,
+      "map": "Route23_Frlg",
+      "trigger": [
+        9,
+        94
+      ],
+      "fixture_start": [
+        9,
+        95
+      ],
+      "initial_surf_fixture": true,
+      "recognition_state": 8,
+      "controller_crossing": true,
+      "after_map": [
+        37,
+        42
+      ],
+      "after_position": [
+        9,
+        93
+      ]
+    },
+    {
+      "checkpoint": 7,
+      "map": "Route23_Frlg",
+      "trigger": [
+        12,
+        61
+      ],
+      "fixture_start": [
+        12,
+        62
+      ],
+      "initial_surf_fixture": false,
+      "recognition_state": 8,
+      "controller_crossing": true,
+      "after_map": [
+        37,
+        42
+      ],
+      "after_position": [
+        12,
+        60
+      ]
+    },
+    {
+      "checkpoint": 8,
+      "map": "Route23_Frlg",
+      "trigger": [
+        5,
+        35
+      ],
+      "fixture_start": [
+        5,
+        36
+      ],
+      "initial_surf_fixture": false,
+      "recognition_state": 8,
+      "controller_crossing": true,
+      "after_map": [
+        37,
+        42
+      ],
+      "after_position": [
+        5,
+        34
+      ]
+    }
+  ],
+  "physical_checkpoint_denials": [
+    {
+      "total": 17,
+      "qualifier_won": true,
+      "pushed_back": true,
+      "after_position": [
+        5,
+        36
+      ],
+      "recognition_state": 7
+    },
+    {
+      "total": 18,
+      "qualifier_won": false,
+      "pushed_back": true,
+      "after_position": [
+        5,
+        36
+      ],
+      "recognition_state": 7
+    }
+  ],
+  "physical_leagues": [
+    {
+      "region": "Kanto",
+      "fixture_start_map": "IndigoPlateau_PokemonCenter_1F_Frlg",
+      "kanto_badges": 8,
+      "hoenn_badges": 8,
+      "extras": 1,
+      "total": 17,
+      "qualifier_won": true,
+      "prior_elite_entry": false,
+      "galactic_state": 0,
+      "crossover_visits": 0,
+      "allowed": false,
+      "physical_controller_entry": false,
+      "physical_controller_denial": true,
+      "after_map": [
+        47,
+        0
+      ],
+      "after_position": [
+        4,
+        3
+      ]
+    },
+    {
+      "region": "Kanto",
+      "fixture_start_map": "IndigoPlateau_PokemonCenter_1F_Frlg",
+      "kanto_badges": 6,
+      "hoenn_badges": 4,
+      "extras": 8,
+      "total": 18,
+      "qualifier_won": false,
+      "prior_elite_entry": false,
+      "galactic_state": 0,
+      "crossover_visits": 0,
+      "allowed": false,
+      "physical_controller_entry": false,
+      "physical_controller_denial": true,
+      "after_map": [
+        47,
+        0
+      ],
+      "after_position": [
+        4,
+        3
+      ]
+    },
+    {
+      "region": "Kanto",
+      "fixture_start_map": "IndigoPlateau_PokemonCenter_1F_Frlg",
+      "kanto_badges": 6,
+      "hoenn_badges": 4,
+      "extras": 8,
+      "total": 18,
+      "qualifier_won": false,
+      "prior_elite_entry": true,
+      "galactic_state": 0,
+      "crossover_visits": 0,
+      "allowed": false,
+      "physical_controller_entry": false,
+      "physical_controller_denial": true,
+      "after_map": [
+        47,
+        0
+      ],
+      "after_position": [
+        4,
+        3
+      ]
+    },
+    {
+      "region": "Kanto",
+      "fixture_start_map": "IndigoPlateau_PokemonCenter_1F_Frlg",
+      "kanto_badges": 6,
+      "hoenn_badges": 4,
+      "extras": 8,
+      "total": 18,
+      "qualifier_won": true,
+      "prior_elite_entry": false,
+      "galactic_state": 0,
+      "crossover_visits": 0,
+      "allowed": true,
+      "physical_controller_entry": true,
+      "physical_controller_denial": false,
+      "after_map": [
+        35,
+        75
+      ],
+      "after_position": [
+        6,
+        10
+      ]
+    },
+    {
+      "region": "Hoenn",
+      "fixture_start_map": "EverGrandeCity_PokemonLeague_1F",
+      "kanto_badges": 8,
+      "hoenn_badges": 8,
+      "extras": 1,
+      "total": 17,
+      "qualifier_won": true,
+      "prior_elite_entry": false,
+      "galactic_state": 0,
+      "crossover_visits": 0,
+      "allowed": false,
+      "physical_controller_entry": false,
+      "physical_controller_denial": true,
+      "after_map": [
+        16,
+        10
+      ],
+      "after_position": [
+        9,
+        3
+      ]
+    },
+    {
+      "region": "Hoenn",
+      "fixture_start_map": "EverGrandeCity_PokemonLeague_1F",
+      "kanto_badges": 6,
+      "hoenn_badges": 4,
+      "extras": 8,
+      "total": 18,
+      "qualifier_won": false,
+      "prior_elite_entry": false,
+      "galactic_state": 0,
+      "crossover_visits": 0,
+      "allowed": false,
+      "physical_controller_entry": false,
+      "physical_controller_denial": true,
+      "after_map": [
+        16,
+        10
+      ],
+      "after_position": [
+        9,
+        3
+      ]
+    },
+    {
+      "region": "Hoenn",
+      "fixture_start_map": "EverGrandeCity_PokemonLeague_1F",
+      "kanto_badges": 6,
+      "hoenn_badges": 4,
+      "extras": 8,
+      "total": 18,
+      "qualifier_won": false,
+      "prior_elite_entry": true,
+      "galactic_state": 0,
+      "crossover_visits": 0,
+      "allowed": false,
+      "physical_controller_entry": false,
+      "physical_controller_denial": true,
+      "after_map": [
+        16,
+        10
+      ],
+      "after_position": [
+        9,
+        3
+      ]
+    },
+    {
+      "region": "Hoenn",
+      "fixture_start_map": "EverGrandeCity_PokemonLeague_1F",
+      "kanto_badges": 6,
+      "hoenn_badges": 4,
+      "extras": 8,
+      "total": 18,
+      "qualifier_won": true,
+      "prior_elite_entry": false,
+      "galactic_state": 0,
+      "crossover_visits": 0,
+      "allowed": true,
+      "physical_controller_entry": true,
+      "physical_controller_denial": false,
+      "after_map": [
+        16,
+        9
+      ],
+      "after_position": [
+        5,
+        12
+      ]
+    }
+  ],
+  "physical_galactic_entry": [
+    {
+      "total": 21,
+      "kanto": 8,
+      "hoenn": 5,
+      "extras": 8,
+      "crossover_visits": 4095,
+      "bulkhead_previously_defeated_fixture": true,
+      "physical_interaction": true,
+      "admitted": false,
+      "after_map": [
+        24,
+        66
+      ]
+    },
+    {
+      "total": 22,
+      "kanto": 8,
+      "hoenn": 6,
+      "extras": 8,
+      "crossover_visits": 0,
+      "bulkhead_previously_defeated_fixture": true,
+      "physical_interaction": true,
+      "admitted": false,
+      "after_map": [
+        24,
+        66
+      ]
+    },
+    {
+      "total": 22,
+      "kanto": 8,
+      "hoenn": 6,
+      "extras": 8,
+      "crossover_visits": 4095,
+      "bulkhead_previously_defeated_fixture": true,
+      "physical_interaction": true,
+      "admitted": true,
+      "after_map": [
+        83,
+        21
+      ]
+    }
+  ],
+  "native_qualification_save_roundtrip": true,
+  "qualifier_victory_flag_is_initial_fixture": true,
+  "initial_badges_quests_party_surf_and_travel_are_fixtures": true,
+  "high_coordinate_initial_travel_uses_restored_private_emulator_warp_fixture": true,
+  "no_qualification_victory_or_galactic_battle_claimed": true,
+  "controller_input_drives_all_crossings_and_interactions": true,
+  "prior_missions_and_crossover_are_not_league_prerequisites": true,
+  "full_campaign_playthrough": false
+}

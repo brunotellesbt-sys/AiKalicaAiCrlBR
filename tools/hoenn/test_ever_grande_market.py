@@ -11,7 +11,7 @@ OUT=ROOT/'mods/hoenn/ever-grande-market-validation'
 class EverGrandeMarket(unittest.TestCase):
     def test_each_edition_walks_homes_and_buys_at_the_stall(self):
         release=verify(ROOT/'mods/hoenn/versions')
-        while release['validation_scope'] in ('coastal-closures','sevii-integrated-piers','dewford-coast-safety','extra-gyms'):release=previous_release(release)
+        while release['validation_scope'] in ('badge-story','coastal-closures','sevii-integrated-piers','dewford-coast-safety','extra-gyms'):release=previous_release(release)
         self.assertEqual(release['validation_scope'],'ever-grande-market')
         expected={r['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba'):r['sha256'] for r in release['variants']}
         expected['TESTE']=json.loads((ROOT/'mods/hoenn/extra-gyms-validation/baseline/review.json').read_text())['sha256']
