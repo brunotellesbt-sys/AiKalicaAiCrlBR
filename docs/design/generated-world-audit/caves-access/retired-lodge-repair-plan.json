@@ -1,0 +1,512 @@
+{
+  "retired_lodges": {
+    "kind": "retired-sevii-lodge-save-compatibility",
+    "maps": [
+      {
+        "map": "JourneyOneIslandHarborPortLodge",
+        "old_destination": [
+          "MAP_ONE_ISLAND_HARBOR",
+          "1"
+        ],
+        "destination": [
+          "MAP_ONE_ISLAND_TREASURE_BEACH",
+          0
+        ],
+        "landing": [
+          17,
+          5
+        ],
+        "current_terminal": "MAP_JOURNEY_SEVII_ONE_HARBOR",
+        "before_sha256": "934d0fce3b98c3eb9775185425bd71cc83bf83cf419a2befcc5086dce6bd1a5b",
+        "after_sha256": "f68b9d14560c31f4fa0afd6e238c66925a9ba573032641ef7fe6614fe9544393",
+        "terrain_events_and_map_ids_preserved": true
+      },
+      {
+        "map": "JourneyTwoIslandHarborPortLodge",
+        "old_destination": [
+          "MAP_TWO_ISLAND_HARBOR",
+          "1"
+        ],
+        "destination": [
+          "MAP_TWO_ISLAND",
+          3
+        ],
+        "landing": [
+          5,
+          13
+        ],
+        "current_terminal": "MAP_JOURNEY_SEVII_TWO_HARBOR",
+        "before_sha256": "7b8369dcbce2754ba6b2fd6682765bcc93f9e7efc49148229eef440f5dc9cfd1",
+        "after_sha256": "57a8727177fdaf45876e17bd566244f3890e7ca669461368017edb8411fe8e5d",
+        "terrain_events_and_map_ids_preserved": true
+      },
+      {
+        "map": "JourneyThreeIslandHarborPortLodge",
+        "old_destination": [
+          "MAP_THREE_ISLAND_HARBOR",
+          "1"
+        ],
+        "destination": [
+          "MAP_THREE_ISLAND_PORT",
+          2
+        ],
+        "landing": [
+          7,
+          18
+        ],
+        "current_terminal": "MAP_JOURNEY_SEVII_THREE_HARBOR",
+        "before_sha256": "f64843211503218117f56bc87419eb084ff9fea21582734de2478485e6e8bef5",
+        "after_sha256": "5bfaae8b3376370a175435e49cf9c5b7289911fa5e6991913b78c380e0beb4b6",
+        "terrain_events_and_map_ids_preserved": true
+      },
+      {
+        "map": "JourneyFourIslandHarborPortLodge",
+        "old_destination": [
+          "MAP_FOUR_ISLAND_HARBOR",
+          "1"
+        ],
+        "destination": [
+          "MAP_FOUR_ISLAND",
+          6
+        ],
+        "landing": [
+          5,
+          33
+        ],
+        "current_terminal": "MAP_JOURNEY_SEVII_FOUR_HARBOR",
+        "before_sha256": "bf45bad761d2ef09322df436e23bbb63677397304700dce2eb9a9aa006971118",
+        "after_sha256": "1616535db095505f7190197741e1ec5fca58d272d08d77e8463d19ab5d76cac2",
+        "terrain_events_and_map_ids_preserved": true
+      },
+      {
+        "map": "JourneyFiveIslandHarborPortLodge",
+        "old_destination": [
+          "MAP_FIVE_ISLAND_HARBOR",
+          "1"
+        ],
+        "destination": [
+          "MAP_FIVE_ISLAND",
+          0
+        ],
+        "landing": [
+          17,
+          18
+        ],
+        "current_terminal": "MAP_JOURNEY_SEVII_FIVE_HARBOR",
+        "before_sha256": "1e088b499ab33ce30e1d9f73fe81b7157cc0d73b3bca417d73e34eac9cd2af6e",
+        "after_sha256": "431e78199178cf9f79c2af311e7de4248aae69e53d135341632bcf6d33a4977b",
+        "terrain_events_and_map_ids_preserved": true
+      },
+      {
+        "map": "JourneySixIslandHarborPortLodge",
+        "old_destination": [
+          "MAP_SIX_ISLAND_HARBOR",
+          "1"
+        ],
+        "destination": [
+          "MAP_SIX_ISLAND",
+          0
+        ],
+        "landing": [
+          6,
+          28
+        ],
+        "current_terminal": "MAP_JOURNEY_SEVII_SIX_HARBOR",
+        "before_sha256": "cdff9619cfc018a23f7c9d34ec4084553a76bb389fe85fa09855a006f81ba416",
+        "after_sha256": "d0f240e44de6506e7592b2f40717c053db761feb1c4c6a977d99c8dd077ded81",
+        "terrain_events_and_map_ids_preserved": true
+      },
+      {
+        "map": "JourneySevenIslandHarborPortLodge",
+        "old_destination": [
+          "MAP_SEVEN_ISLAND_HARBOR",
+          "1"
+        ],
+        "destination": [
+          "MAP_SEVEN_ISLAND",
+          3
+        ],
+        "landing": [
+          20,
+          18
+        ],
+        "current_terminal": "MAP_JOURNEY_SEVII_SEVEN_HARBOR",
+        "before_sha256": "8853065eed443ea9e002564cd835a14c43f7342f8ac8040db86212284ba72a0d",
+        "after_sha256": "e17b6044fd509200676686fc019fd9a7fc4c6ebc5564c4c9538a9b8775b3f819",
+        "terrain_events_and_map_ids_preserved": true
+      }
+    ],
+    "atlas_and_all_blockdata_unchanged": true
+  },
+  "rocket_objects": {
+    "kind": "complete-native-rocket-desks",
+    "maps": [
+      {
+        "map": "JourneyRocketBaseB1F",
+        "donor_map": "SlateportCity_SternsShipyard_1F",
+        "donor_bounds": [
+          0,
+          4,
+          2,
+          6
+        ],
+        "complete_desks": 3,
+        "former_stray_corner_cells": 7,
+        "changed_cells": [
+          [
+            10,
+            4,
+            12840,
+            12865
+          ],
+          [
+            11,
+            4,
+            12840,
+            12866
+          ],
+          [
+            10,
+            5,
+            1610,
+            1609
+          ],
+          [
+            11,
+            5,
+            12840,
+            1610
+          ],
+          [
+            10,
+            6,
+            1610,
+            12840
+          ],
+          [
+            10,
+            7,
+            1610,
+            12840
+          ],
+          [
+            10,
+            10,
+            1610,
+            12865
+          ],
+          [
+            11,
+            10,
+            12840,
+            12866
+          ],
+          [
+            10,
+            11,
+            1610,
+            1609
+          ],
+          [
+            11,
+            11,
+            12840,
+            1610
+          ],
+          [
+            10,
+            13,
+            1610,
+            12865
+          ],
+          [
+            11,
+            13,
+            12840,
+            12866
+          ],
+          [
+            10,
+            14,
+            1610,
+            1609
+          ],
+          [
+            11,
+            14,
+            12840,
+            1610
+          ]
+        ],
+        "doors_and_npc_positions_preserved": true,
+        "useful_floor_and_all_npc_approaches_remain_connected": true
+      },
+      {
+        "map": "JourneyRocketBaseB2F",
+        "donor_map": "SlateportCity_SternsShipyard_1F",
+        "donor_bounds": [
+          0,
+          4,
+          2,
+          6
+        ],
+        "complete_desks": 3,
+        "former_stray_corner_cells": 7,
+        "changed_cells": [
+          [
+            10,
+            4,
+            12840,
+            12865
+          ],
+          [
+            11,
+            4,
+            12840,
+            12866
+          ],
+          [
+            10,
+            5,
+            1610,
+            1609
+          ],
+          [
+            11,
+            5,
+            12840,
+            1610
+          ],
+          [
+            10,
+            6,
+            1610,
+            12840
+          ],
+          [
+            10,
+            7,
+            1610,
+            12840
+          ],
+          [
+            10,
+            10,
+            1610,
+            12865
+          ],
+          [
+            11,
+            10,
+            12840,
+            12866
+          ],
+          [
+            10,
+            11,
+            1610,
+            1609
+          ],
+          [
+            11,
+            11,
+            12840,
+            1610
+          ],
+          [
+            10,
+            13,
+            1610,
+            12865
+          ],
+          [
+            11,
+            13,
+            12840,
+            12866
+          ],
+          [
+            10,
+            14,
+            1610,
+            1609
+          ],
+          [
+            11,
+            14,
+            12840,
+            1610
+          ]
+        ],
+        "doors_and_npc_positions_preserved": true,
+        "useful_floor_and_all_npc_approaches_remain_connected": true
+      }
+    ],
+    "donor_words": [
+      [
+        12865,
+        12866
+      ],
+      [
+        1609,
+        1610
+      ]
+    ]
+  },
+  "paradox_entrances": {
+    "map": "JourneySanctuaryDimensoes",
+    "portals": [
+      {
+        "warp_id": 1,
+        "old_position": [
+          4,
+          19
+        ],
+        "position": [
+          7,
+          15
+        ],
+        "destination": "MAP_JOURNEYPARADOXPAST"
+      },
+      {
+        "warp_id": 2,
+        "old_position": [
+          18,
+          19
+        ],
+        "position": [
+          15,
+          15
+        ],
+        "destination": "MAP_JOURNEYPARADOXFUTURE"
+      }
+    ],
+    "changed_cells": [
+      [
+        7,
+        15,
+        868,
+        12863
+      ],
+      [
+        15,
+        15,
+        868,
+        12863
+      ],
+      [
+        4,
+        18,
+        1923,
+        1954
+      ],
+      [
+        5,
+        18,
+        1923,
+        1978
+      ],
+      [
+        6,
+        18,
+        1923,
+        1893
+      ],
+      [
+        7,
+        18,
+        1923,
+        1907
+      ],
+      [
+        8,
+        18,
+        1923,
+        1900
+      ],
+      [
+        9,
+        18,
+        1923,
+        1901
+      ],
+      [
+        10,
+        18,
+        1923,
+        868
+      ],
+      [
+        11,
+        18,
+        1923,
+        868
+      ],
+      [
+        12,
+        18,
+        1923,
+        868
+      ],
+      [
+        13,
+        18,
+        1923,
+        1899
+      ],
+      [
+        14,
+        18,
+        868,
+        1923
+      ],
+      [
+        15,
+        18,
+        1923,
+        1908
+      ],
+      [
+        16,
+        18,
+        1923,
+        1976
+      ],
+      [
+        17,
+        18,
+        1923,
+        1952
+      ],
+      [
+        18,
+        18,
+        1923,
+        1952
+      ],
+      [
+        4,
+        19,
+        907,
+        1954
+      ],
+      [
+        18,
+        19,
+        907,
+        1952
+      ]
+    ],
+    "south_cliff_and_original_exit_restored_from": "NavelRock_Bottom",
+    "complete_single_cell_ladder_donor": {
+      "map": "NavelRock_Down09",
+      "position": [
+        5,
+        5
+      ],
+      "block": 12863
+    },
+    "original_exit_and_all_npc_approaches_connected": true,
+    "original_warp_ids_and_other_maps_preserved": true
+  }
+}

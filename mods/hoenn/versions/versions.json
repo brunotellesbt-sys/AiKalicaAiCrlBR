@@ -1,5 +1,5 @@
 {
-  "parent_rom_sha256": "3111ff0e2f5f1caa94b808c8fecf62f7b313d6b241014f416de31eff80105771",
+  "parent_rom_sha256": "b04918724939a54bbe3321d274953a9311ab8c7b4eebc3cbeb844ffcd3604386",
   "build_rules_offset": 9132476,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "08df49acf299e1e46508f6d55d8e4b78c68d755585ccd92ca4f8d665b52fa6ba",
+      "sha256": "2e7e7a234b16638ee3c997b1001f2006f21b39b7ecbecc08536d28485728f760",
       "patched_byte_offsets": [
         160,
         162,
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "53900d0ed0af1c3500c512cf42df97cd70ec46f55681346e758cd105ab8644fa",
+      "sha256": "ca9233a26ae8659ea4aa1222d45074e4d4968eac6563a89c90e4e64be0c0e86e",
       "patched_byte_offsets": [
         160,
         162,
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "c3d922e19ea7f07b906469d212159113006c89cc9df3d42c94eed727048a5eac",
+      "sha256": "fe5be134b17757534a917a68a9da098e9987bf157de34ca8a75b7c2ac712d46b",
       "patched_byte_offsets": [
         160,
         162,
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "d429ffd91f94b5719b6823acd82dd18bbb419562395c97839623e12c75856ad7",
+      "sha256": "b69daf45ebb815c798d71e8531b5f4ec1c8cc55411ffc9ebed88b9e82b3330f4",
       "patched_byte_offsets": [
         160,
         162,
@@ -269,166 +269,167 @@
     "dewford-coast-safety",
     "sevii-integrated-piers",
     "coastal-closures",
-    "badge-story"
+    "badge-story",
+    "generated-world-audit"
   ],
-  "validation_scope": "badge-story",
+  "validation_scope": "generated-world-audit",
   "full_campaign_playthrough": false,
   "proofs": [
     {
-      "file": "evidence/badge-story/common/badge-story-source/badge-story-source.json",
+      "file": "evidence/generated-world-audit/Pokemon-Journey-Gen1-4-Hard/cold-boot/cold-boot.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "cold-boot",
+      "sha256": "7db32cab42e1b3438675f07c9616a1a2f1a0d38842691d14d1b5d08a9a1f7ec6"
+    },
+    {
+      "file": "evidence/generated-world-audit/Pokemon-Journey-Gen1-4-Hard/review-mode/review-mode.json",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "kind": "review-mode",
+      "sha256": "db25c15ba341cc720e6dd724cf6c0cb1584554dc6042c583567f76dedd7dc17a"
+    },
+    {
+      "file": "evidence/generated-world-audit/Pokemon-Journey-Gen1-4-Normal/cold-boot/cold-boot.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "cold-boot",
+      "sha256": "29d5954b04a8df8c2d1464916db5ea289d32350ff883d7087dc868e84d137df3"
+    },
+    {
+      "file": "evidence/generated-world-audit/Pokemon-Journey-Gen1-4-Normal/review-mode/review-mode.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "review-mode",
+      "sha256": "911174925b75244401ee09bad4130daed4e018ec9b4311c0d27cd4b5a8d8e8b9"
+    },
+    {
+      "file": "evidence/generated-world-audit/Pokemon-Journey-Gen1-9-Hard/cold-boot/cold-boot.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "cold-boot",
+      "sha256": "e26878bbe4c6f40d7fbae911eba47bdd0046540a05784462896e78c2bd18e43a"
+    },
+    {
+      "file": "evidence/generated-world-audit/Pokemon-Journey-Gen1-9-Hard/review-mode/review-mode.json",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "kind": "review-mode",
+      "sha256": "3876996077a50cd60d17785f9b9c6e35b5bdaccb74ba19c92a4b355609964d8b"
+    },
+    {
+      "file": "evidence/generated-world-audit/Pokemon-Journey-Gen1-9-Normal/cold-boot/cold-boot.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "cold-boot",
+      "sha256": "0fe6b31b96f93f7d2726e5d74add4fcccb1f9f8cb868a2d39d80426d75e78798"
+    },
+    {
+      "file": "evidence/generated-world-audit/Pokemon-Journey-Gen1-9-Normal/review-mode/review-mode.json",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "kind": "review-mode",
+      "sha256": "c90d6ba5d44e862cd81e8dc92cdbbf5364d586f7cda73d9790ac18c1a013636b"
+    },
+    {
+      "file": "evidence/generated-world-audit/common/badge-gates/badge-gates.json",
       "target": "common",
-      "kind": "badge-story-source",
-      "sha256": "6d471ad673045ed5960584e259e5ff3bf445573575940e4a54491472dc3e9215"
-    },
-    {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Normal/badge-gates/badge-gates.json",
-      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "badge-gates",
-      "sha256": "38efd784342b7706fcb42e34eb7634ef1dd4fa7ab462c031af8f1e9441b853d0"
+      "sha256": "d13bb4d6042863535fb942bd191938cb251f922122106c562a2164d03184e1aa"
     },
     {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Normal/cold-boot/cold-boot.json",
-      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "cold-boot",
-      "sha256": "f244c70e78d502e49c32ca0a03ce009d55f8f993391b39050d04678e2b340aba"
+      "file": "evidence/generated-world-audit/common/coastal-cave-access/coastal-cave-access.json",
+      "target": "common",
+      "kind": "coastal-cave-access",
+      "sha256": "12c64dbe9bf5726127c5281922f78014fa296e2626194e0d42550eed914bc193"
     },
     {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Normal/qualifier-event/qualifier-event.json",
-      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "file": "evidence/generated-world-audit/common/dewford-movement/dewford-movement.json",
+      "target": "common",
+      "kind": "dewford-movement",
+      "sha256": "4347cd652afa056abf4e6e901a0d9cc6b175e2df1d8e8c7f8ef2774e081dbc50"
+    },
+    {
+      "file": "evidence/generated-world-audit/common/generated-cave-routes/generated-cave-routes.json",
+      "target": "common",
+      "kind": "generated-cave-routes",
+      "sha256": "c4de842fd64b2ea5bc8e1293f83f75cd06b022b28468d847cecaf72880d51767"
+    },
+    {
+      "file": "evidence/generated-world-audit/common/generated-ever-grande/generated-ever-grande.json",
+      "target": "common",
+      "kind": "generated-ever-grande",
+      "sha256": "6b28f9cd4327445a66ac688f3f705788c8d0904835f9f0e616eb28cdfb452544"
+    },
+    {
+      "file": "evidence/generated-world-audit/common/generated-gym-native-walk/generated-gym-native-walk.json",
+      "target": "common",
+      "kind": "generated-gym-native-walk",
+      "sha256": "3fb0c58dd22ab1379ca1f2062536d5b77ef2c3cc0c474aceb6ae66c75b82d78c"
+    },
+    {
+      "file": "evidence/generated-world-audit/common/generated-navigation/generated-navigation.json",
+      "target": "common",
+      "kind": "generated-navigation",
+      "sha256": "f87374b94456aa8b1314ec4379ac6e50d79d2c613e0e7104b499d6f8813b1a40"
+    },
+    {
+      "file": "evidence/generated-world-audit/common/generated-pwt-access/generated-pwt-access.json",
+      "target": "common",
+      "kind": "generated-pwt-access",
+      "sha256": "e3a6dba4b61ca14091eeb1f3448c5c136ef6002c9d09b0ac18d478b7118cc02d"
+    },
+    {
+      "file": "evidence/generated-world-audit/common/generated-shore-animation-native-banks/generated-shore-animation-native-banks.json",
+      "target": "common",
+      "kind": "generated-shore-animation-native-banks",
+      "sha256": "d27b870ceb696de9b5d5ee2fede706ee9acd3599777be89d1bd1ee764986e5a4"
+    },
+    {
+      "file": "evidence/generated-world-audit/common/generated-shore-animation-source-census/generated-shore-animation-source-census.json",
+      "target": "common",
+      "kind": "generated-shore-animation-source-census",
+      "sha256": "077162189cc3da2211f72982816bf12a186d9754b3e41d43834225505f3e26a4"
+    },
+    {
+      "file": "evidence/generated-world-audit/common/generated-world-source/generated-world-source.json",
+      "target": "common",
+      "kind": "generated-world-source",
+      "sha256": "e3ac39c11e86cff81ebb1af938109d9013a2e66c26dca71e89878aaf02bed1c0"
+    },
+    {
+      "file": "evidence/generated-world-audit/common/integrated-piers/integrated-piers.json",
+      "target": "common",
+      "kind": "integrated-piers",
+      "sha256": "bb92723410dc51e7c1874bb534a105a817d80539c40e095fcf7ab2510fad67e7"
+    },
+    {
+      "file": "evidence/generated-world-audit/common/qualifier-event/qualifier-event.json",
+      "target": "common",
       "kind": "qualifier-event",
-      "sha256": "9f9224653c912a79bfb525ce2a530f3644defc7fc3bac8e2d5b392fc902d2a15"
+      "sha256": "5f29fd2f0f363e523bcb00bd6a7037cec1da4229de7809c6330e5249cc448055"
     },
     {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Normal/review-mode/review-mode.json",
-      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "review-mode",
-      "sha256": "cf0ea86223b33cff1e0158039ae85cb19efb55457a5eefb848623d5e2d336fe8"
+      "file": "evidence/generated-world-audit/common/shore-animation/shore-animation.json",
+      "target": "common",
+      "kind": "shore-animation",
+      "sha256": "734a6d0cde3fd6ee9d4472edf2d636ba710ad5b3d474d53f42f42face8638d38"
     },
     {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Normal/rival-identities/rival-identities.json",
-      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "rival-identities",
-      "sha256": "316aed5ea1eea3b76e481a6c2a3dfed1e6592403a3ae2409cc0d4687432fb90c"
+      "file": "evidence/generated-world-audit/common/surf-repairs/surf-repairs.json",
+      "target": "common",
+      "kind": "surf-repairs",
+      "sha256": "5c47cc1f5770e384487a915de13f78efc87ed45390d8f2a9e38494b51aee8c62"
     },
     {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Hard/badge-gates/badge-gates.json",
-      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "badge-gates",
-      "sha256": "0e2d08aa08165ac90be27f631cdf9f692e95a76c11f071ca38d4395f7f216912"
-    },
-    {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Hard/cold-boot/cold-boot.json",
-      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "cold-boot",
-      "sha256": "eab274595bd3842740775ca97e8a7018a627e90d809f9a9fd4a7f8970d39a4c4"
-    },
-    {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Hard/qualifier-event/qualifier-event.json",
-      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "qualifier-event",
-      "sha256": "ef42a4803b3fe79a2123046f879af10075ecdf85e068ced1189553a63601b604"
-    },
-    {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Hard/review-mode/review-mode.json",
-      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "review-mode",
-      "sha256": "32dc24ab08b30b84869f595367a63baf53c4a82d46f2f7e0463c8c6244ed29ea"
-    },
-    {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-4-Hard/rival-identities/rival-identities.json",
-      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "rival-identities",
-      "sha256": "5cd327cd5e65bf25fbb6851f45dbff8cae7cbe570aa9c782444512c36b7c7695"
-    },
-    {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Normal/badge-gates/badge-gates.json",
-      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "badge-gates",
-      "sha256": "09230c6aa4a88f23647683effa1825fcc6b28e7f4d1c6215ae728ecc7fc4504e"
-    },
-    {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Normal/cold-boot/cold-boot.json",
-      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "cold-boot",
-      "sha256": "17fdc9b396864868a6d5b4c8682fd2f662cb97158112d20ef29bcc9b03c4a207"
-    },
-    {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Normal/qualifier-event/qualifier-event.json",
-      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "qualifier-event",
-      "sha256": "3f1897908df5fbbfb05a199389d4e3fe07c5720ab2fb81add2891348fec9443f"
-    },
-    {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Normal/review-mode/review-mode.json",
-      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "review-mode",
-      "sha256": "f1846486c3a90c9b88b3649700ffb4db386e1689d4afaca72af8fbd0b9829c8b"
-    },
-    {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Normal/rival-identities/rival-identities.json",
-      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "rival-identities",
-      "sha256": "53ab10ef3333a13f22481cfaa0cd0b62f58e6d8e636b03d806636032ec8669d8"
-    },
-    {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Hard/badge-gates/badge-gates.json",
-      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "badge-gates",
-      "sha256": "78ace965297d132f4b9f096c5391dfb395664c47dd7437f544be73df59598e51"
-    },
-    {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Hard/cold-boot/cold-boot.json",
-      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "cold-boot",
-      "sha256": "d42f1d36b17eda29e42ed8fb77aed7e95e39a62b4e5cba2582a7e3c2cbba5ce3"
-    },
-    {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Hard/qualifier-event/qualifier-event.json",
-      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "qualifier-event",
-      "sha256": "b0e103682b0aed5d194d245cced951e3555d9e98c85d67104415565cb7183061"
-    },
-    {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Hard/review-mode/review-mode.json",
-      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "review-mode",
-      "sha256": "4b660bb716e5d97566821c41471f91967a2e34dbd6241afee1489bc304510ccb"
-    },
-    {
-      "file": "evidence/badge-story/Pokemon-Journey-Gen1-9-Hard/rival-identities/rival-identities.json",
-      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "rival-identities",
-      "sha256": "ea8db33eb509ce39dcdf93b5b3e7033ee8aec0800ef0caa193f3472689333cfa"
-    },
-    {
-      "file": "evidence/badge-story/test/badge-gates/badge-gates.json",
-      "target": "test",
-      "kind": "badge-gates",
-      "sha256": "b517921418f120cfc5a998b9c993b6408d315ef61622f4f2fbbf904b388dded6"
-    },
-    {
-      "file": "evidence/badge-story/test/cold-boot/cold-boot.json",
+      "file": "evidence/generated-world-audit/test/cold-boot/cold-boot.json",
       "target": "test",
       "kind": "cold-boot",
-      "sha256": "a6419b4a47f2c5b0bc39267811f3e87d2e83d8931795573a14ce7fa9f178a9bf"
+      "sha256": "0e846b9bae88afb7225356f943e26efbde68845d441ce5bdc87d27a5fbf5c8b2"
     },
     {
-      "file": "evidence/badge-story/test/qualifier-event/qualifier-event.json",
+      "file": "evidence/generated-world-audit/test/generated-gym-native-walk/generated-gym-native-walk.json",
       "target": "test",
-      "kind": "qualifier-event",
-      "sha256": "3b1198d2f453282a9aecc5a38f987395e3343d365ecfa1d9a696effed3fba2dc"
+      "kind": "generated-gym-native-walk",
+      "sha256": "1473d83ed30177ea648e616a0998c5817dee99f79d101de88232455d03388010"
     },
     {
-      "file": "evidence/badge-story/test/review-mode/review-mode.json",
+      "file": "evidence/generated-world-audit/test/review-mode/review-mode.json",
       "target": "test",
       "kind": "review-mode",
-      "sha256": "0d7d209e7a114bc10bdc59701c959e147c7c7abb417ec19ca371b96e40261ccd"
-    },
-    {
-      "file": "evidence/badge-story/test/rival-identities/rival-identities.json",
-      "target": "test",
-      "kind": "rival-identities",
-      "sha256": "caedff911df4b60228a7ba2ee801ffc34134f94621a6a9b4ccf2f3acbaaad09f"
+      "sha256": "3de53fcfcecf091e5fce8af6ff303d7233435d28bb45eb196a983c7602dd9171"
     }
   ],
   "historical_validation": {
@@ -449,30 +450,30 @@
     "retested_on_current_rom": false
   },
   "previous_port_validation": {
-    "manifest": "mods/hoenn/badge-story-validation/baseline/versions.json",
-    "manifest_sha256": "23f5603eb385e8f34816c82f84fa22c8c632fa3dae9738c2a3cf7fe39b33bcd8",
+    "manifest": "mods/hoenn/generated-world-audit-validation/baseline/versions.json",
+    "manifest_sha256": "256ff6d42c9907d9e320ef621495e979d7cfcc8cc170ed3f04a86941ecf90143",
     "retested_on_current_rom": false
   },
   "previous_review_validation": {
-    "file": "mods/hoenn/badge-story-validation/baseline/review.json",
-    "sha256": "82b6129993a7e4769dad5be7b3e5a99fe77a5338f2e6d0ea4cb47edd022b92ed"
+    "file": "mods/hoenn/generated-world-audit-validation/baseline/review.json",
+    "sha256": "c48de52608bdd397bd328ad62a02b26e39d701f664c533ca59cb6e61604c5a3e"
   },
   "previous_review_save_validation": {
-    "file": "mods/hoenn/badge-story-validation/baseline/test.sav",
-    "sha256": "33b8e45a444a5d84684b907ef2c90fffc785f6c54514bb5b934172f7e557bf37"
+    "file": "mods/hoenn/generated-world-audit-validation/baseline/test.sav",
+    "sha256": "c420ff2fa5022cddd49b86c8efae62ab043f5e16bfb3b9977aa6e475bfe4ce27"
   },
   "previous_features_retested_on_current_rom": false,
   "historical_release": {
-    "scope": "coastal-closures",
-    "parent_rom_sha256": "cd5187f43d33b80e5ba2130c9e4e31a4d5a9a0e2504d8b71517da7d13814d9c6",
+    "scope": "badge-story",
+    "parent_rom_sha256": "3111ff0e2f5f1caa94b808c8fecf62f7b313d6b241014f416de31eff80105771",
     "variants": {
-      "Pokemon-Journey-Gen1-4-Normal.gba": "9e26bdf97d1a621ec16dffc40f9f2c6257aad6a5ce24acdb94388a0d2c7971bb",
-      "Pokemon-Journey-Gen1-4-Hard.gba": "1964ba55bae2e13e6a4d9cb8945a2eb2fa6668959d6a9d5bd819ee70db67c6c0",
-      "Pokemon-Journey-Gen1-9-Normal.gba": "34db0771f86b8c491830c80e4afbbac84eda72e1e765049e3529234d1af6ead1",
-      "Pokemon-Journey-Gen1-9-Hard.gba": "0049a8e941053d56f29e59a12fb0f6428809f29913484f73bc1f02aececd35a5"
+      "Pokemon-Journey-Gen1-4-Normal.gba": "08df49acf299e1e46508f6d55d8e4b78c68d755585ccd92ca4f8d665b52fa6ba",
+      "Pokemon-Journey-Gen1-4-Hard.gba": "53900d0ed0af1c3500c512cf42df97cd70ec46f55681346e758cd105ab8644fa",
+      "Pokemon-Journey-Gen1-9-Normal.gba": "c3d922e19ea7f07b906469d212159113006c89cc9df3d42c94eed727048a5eac",
+      "Pokemon-Journey-Gen1-9-Hard.gba": "d429ffd91f94b5719b6823acd82dd18bbb419562395c97839623e12c75856ad7"
     },
-    "test_rom_sha256": "678906d4fe351826a93aa4c2153a63ca8761e8b7f5e596395d5987df53eccae6",
-    "proof_count": 31,
+    "test_rom_sha256": "be58ddd252c7ee58d7093b5620279b14c3fb1dd0fe241da23de35e35eb83fc61",
+    "proof_count": 26,
     "retested_on_current_rom": false
   }
 }

@@ -46,10 +46,12 @@ assert position() == (5, 14), position()
 walk(64, 1, 11)
 assert position() == (5, 11), position()
 press(1)
-until(lambda: task('Task_HandleYesNoInput')); step(12)
+# The current receptionist opens a dynamic generation list, followed by the
+# party selector. It no longer asks an intermediate yes/no question. Stop at
+# the selector instead of blindly pressing A past it into a party submenu.
+until(lambda: task('Task_HandleChooseMonInput')); step(12)
 picture('pwt-physical-counter')
-press(1)
-until(lambda: task('Task_HandleChooseMonInput')); step(120)
+step(120)
 press(2)
 until(lambda: task('Task_HandleCancelChooseMonYesNoInput'))
 press(64); press(1); until(idle)
@@ -63,7 +65,11 @@ else: raise AssertionError(('PWT exit not connected to Dome', location(), positi
 step(900)
 picture('pwt-exit-to-dome')
 lib.stop()
-result = dict(passed=True, rom_sha256=hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest(),
+captures = [dict(file=p.name, sha256=hashlib.sha256(p.read_bytes()).hexdigest())
+            for p in sorted(args.output.glob('*.png'))]
+result = dict(passed=True, kind='generated-pwt-access',
+              compiled_rom=True, native_validation_performed=True, captures=captures,
+              rom_sha256=hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest(),
               native_guide_interaction=True, physical_counter_walk=True, native_selection_cancel=True,
               physical_exit_door_returns_to_dome=True, initial_dome_warp_is_fixture=True,
               full_frontier_journey_validated=False)

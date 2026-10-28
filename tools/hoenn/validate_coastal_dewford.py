@@ -51,10 +51,23 @@ def world_grid(directory):
 
 old_world, _ = world_grid(baseline)
 new_world, warp_points = world_grid(source)
-changed = []
+changed, complete_rock_changes = [], []
+approved_rocks = {}
+audit_marker = source / '.journey-generated-world-audit'
+if audit_marker.exists():
+    for rock in json.loads(audit_marker.read_text())['marine']['rocks']:
+        for cell, before, after in zip(rock['cells'], rock['before'], rock['after']):
+            assert before & ~0x3FF == after & ~0x3FF
+            if before != after:
+                approved_rocks[tuple(cell)] = (before, after)
 for point, row in old_world.items():
     after = new_world[point]['block']
     if after != row['block']:
+        cell = (row['map'], *row['tile'])
+        if approved_rocks.get(cell) == (row['block'], after):
+            complete_rock_changes.append(dict(map=row['map'], tile=row['tile'],
+                                             before=row['block'], after=after))
+            continue
         assert row['block'] >> 12 == 4 and after == (row['block'] & 0xFFF) | 0x3000
         changed.append(dict(map=row['map'], tile=row['tile'], before=row['block'], after=after))
 assert len(changed) == 76
@@ -364,6 +377,7 @@ lib.stop()
 assert hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest() == initial_sha
 result = dict(passed=True, kind='dewford-movement', rom_sha256=initial_sha, baseline_rom_sha256=baseline_sha,
               review_mode=review_mode, changed_floor_blocks=changed,
+              separately_reviewed_complete_rock_cells=complete_rock_changes,
               former_invisible_boundary_count=29, boundary_checks=boundary_checks,
               all_former_dry_boundaries_controller_roundtrip=True,
               ground_and_shore_level3=True, stair_checks=stair_checks,

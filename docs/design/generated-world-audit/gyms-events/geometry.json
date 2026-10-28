@@ -1,0 +1,1552 @@
+{
+  "kind": "generated-gym-geometry",
+  "source_analysis_only": true,
+  "native_validation_performed": false,
+  "rom_sha256": "3111ff0e2f5f1caa94b808c8fecf62f7b313d6b241014f416de31eff80105771",
+  "rooms": [
+    {
+      "map": "JourneyLavenderGym",
+      "dimensions": [
+        41,
+        53
+      ],
+      "blockdata_sha256": "64efd1570de9524b0c99b130ecea81a3e1bc735eddfa14167824af24840a8583",
+      "actor_positions": [
+        {
+          "local_id": 1,
+          "position": [
+            20,
+            3
+          ],
+          "graphics": "OBJ_EVENT_GFX_JOURNEY_PWT_MORTY"
+        },
+        {
+          "local_id": 2,
+          "position": [
+            23,
+            50
+          ],
+          "graphics": "OBJ_EVENT_GFX_MAN_2"
+        },
+        {
+          "local_id": 3,
+          "position": [
+            14,
+            36
+          ],
+          "graphics": "OBJ_EVENT_GFX_CHANNELER"
+        },
+        {
+          "local_id": 4,
+          "position": [
+            5,
+            30
+          ],
+          "graphics": "OBJ_EVENT_GFX_PSYCHIC_M"
+        },
+        {
+          "local_id": 5,
+          "position": [
+            17,
+            26
+          ],
+          "graphics": "OBJ_EVENT_GFX_HEX_MANIAC"
+        },
+        {
+          "local_id": 6,
+          "position": [
+            28,
+            14
+          ],
+          "graphics": "OBJ_EVENT_GFX_HEX_MANIAC"
+        }
+      ],
+      "walkable_cells": 472,
+      "checks": {
+        "all_floor_one_component": true,
+        "leader_approach_reachable": true,
+        "all_floor_elevation_three": true,
+        "all_actor_feet_on_clear_floor": true,
+        "unique_actor_positions": true,
+        "guide_off_three_wide_entry": true,
+        "four_students": true,
+        "exit_warps_on_clear_floor": true,
+        "ordinary_walk_behaviors_outside_exits": true,
+        "four_different_facings": true
+      },
+      "students": [
+        {
+          "local_id": 3,
+          "position": [
+            14,
+            36
+          ],
+          "facing": "DOWN",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 4,
+          "position": [
+            5,
+            30
+          ],
+          "facing": "RIGHT",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 5,
+          "position": [
+            17,
+            26
+          ],
+          "facing": "UP",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 6,
+          "position": [
+            28,
+            14
+          ],
+          "facing": "LEFT",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        }
+      ]
+    },
+    {
+      "map": "JourneyLilycoveGym",
+      "dimensions": [
+        43,
+        53
+      ],
+      "blockdata_sha256": "4a02dffdf868fdc23d1322334c5383db612b54c42effb26556ce554b08a02ee5",
+      "actor_positions": [
+        {
+          "local_id": 1,
+          "position": [
+            29,
+            32
+          ],
+          "graphics": "OBJ_EVENT_GFX_VAR_0"
+        },
+        {
+          "local_id": 2,
+          "position": [
+            24,
+            50
+          ],
+          "graphics": "OBJ_EVENT_GFX_MAN_2"
+        },
+        {
+          "local_id": 3,
+          "position": [
+            14,
+            37
+          ],
+          "graphics": "OBJ_EVENT_GFX_WOMAN_4"
+        },
+        {
+          "local_id": 4,
+          "position": [
+            4,
+            27
+          ],
+          "graphics": "OBJ_EVENT_GFX_BEAUTY"
+        },
+        {
+          "local_id": 5,
+          "position": [
+            21,
+            15
+          ],
+          "graphics": "OBJ_EVENT_GFX_WOMAN_2"
+        },
+        {
+          "local_id": 6,
+          "position": [
+            38,
+            23
+          ],
+          "graphics": "OBJ_EVENT_GFX_LASS"
+        }
+      ],
+      "walkable_cells": 563,
+      "checks": {
+        "all_floor_one_component": true,
+        "leader_approach_reachable": true,
+        "all_floor_elevation_three": true,
+        "all_actor_feet_on_clear_floor": true,
+        "unique_actor_positions": true,
+        "guide_off_three_wide_entry": true,
+        "four_students": true,
+        "exit_warps_on_clear_floor": true,
+        "ordinary_walk_behaviors_outside_exits": true,
+        "four_different_facings": true
+      },
+      "students": [
+        {
+          "local_id": 3,
+          "position": [
+            14,
+            37
+          ],
+          "facing": "DOWN",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 4,
+          "position": [
+            4,
+            27
+          ],
+          "facing": "RIGHT",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 5,
+          "position": [
+            21,
+            15
+          ],
+          "facing": "UP",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 6,
+          "position": [
+            38,
+            23
+          ],
+          "facing": "LEFT",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        }
+      ]
+    },
+    {
+      "map": "JourneyEverGrandeGym",
+      "dimensions": [
+        39,
+        65
+      ],
+      "blockdata_sha256": "0dc35e209f0d192ba03f441f9504b797271b6ac973a1ddab92f7e989ffe75076",
+      "actor_positions": [
+        {
+          "local_id": 1,
+          "position": [
+            19,
+            3
+          ],
+          "graphics": "OBJ_EVENT_GFX_JOURNEY_PWT_STEVEN"
+        },
+        {
+          "local_id": 2,
+          "position": [
+            22,
+            62
+          ],
+          "graphics": "OBJ_EVENT_GFX_MAN_2"
+        },
+        {
+          "local_id": 3,
+          "position": [
+            14,
+            49
+          ],
+          "graphics": "OBJ_EVENT_GFX_SCIENTIST_1"
+        },
+        {
+          "local_id": 4,
+          "position": [
+            5,
+            45
+          ],
+          "graphics": "OBJ_EVENT_GFX_HIKER"
+        },
+        {
+          "local_id": 5,
+          "position": [
+            24,
+            31
+          ],
+          "graphics": "OBJ_EVENT_GFX_SCIENTIST_2"
+        },
+        {
+          "local_id": 6,
+          "position": [
+            32,
+            21
+          ],
+          "graphics": "OBJ_EVENT_GFX_MANIAC"
+        }
+      ],
+      "walkable_cells": 527,
+      "checks": {
+        "all_floor_one_component": true,
+        "leader_approach_reachable": true,
+        "all_floor_elevation_three": true,
+        "all_actor_feet_on_clear_floor": true,
+        "unique_actor_positions": true,
+        "guide_off_three_wide_entry": true,
+        "four_students": true,
+        "exit_warps_on_clear_floor": true,
+        "ordinary_walk_behaviors_outside_exits": true,
+        "four_different_facings": true
+      },
+      "students": [
+        {
+          "local_id": 3,
+          "position": [
+            14,
+            49
+          ],
+          "facing": "DOWN",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 4,
+          "position": [
+            5,
+            45
+          ],
+          "facing": "RIGHT",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 5,
+          "position": [
+            24,
+            31
+          ],
+          "facing": "UP",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 6,
+          "position": [
+            32,
+            21
+          ],
+          "facing": "LEFT",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        }
+      ]
+    },
+    {
+      "map": "JourneyFallarborGym",
+      "dimensions": [
+        55,
+        57
+      ],
+      "blockdata_sha256": "816dc1b4820e5f487957004fd09b90eb23b43c77cf8199932c73f383914eb67c",
+      "actor_positions": [
+        {
+          "local_id": 1,
+          "position": [
+            43,
+            3
+          ],
+          "graphics": "OBJ_EVENT_GFX_JOURNEY_PWT_BUGSY"
+        },
+        {
+          "local_id": 2,
+          "position": [
+            30,
+            54
+          ],
+          "graphics": "OBJ_EVENT_GFX_MAN_2"
+        },
+        {
+          "local_id": 3,
+          "position": [
+            18,
+            40
+          ],
+          "graphics": "OBJ_EVENT_GFX_BUG_CATCHER"
+        },
+        {
+          "local_id": 4,
+          "position": [
+            6,
+            35
+          ],
+          "graphics": "OBJ_EVENT_GFX_MANIAC"
+        },
+        {
+          "local_id": 5,
+          "position": [
+            28,
+            24
+          ],
+          "graphics": "OBJ_EVENT_GFX_CAMPER"
+        },
+        {
+          "local_id": 6,
+          "position": [
+            35,
+            20
+          ],
+          "graphics": "OBJ_EVENT_GFX_PICNICKER"
+        }
+      ],
+      "walkable_cells": 525,
+      "checks": {
+        "all_floor_one_component": true,
+        "leader_approach_reachable": true,
+        "all_floor_elevation_three": true,
+        "all_actor_feet_on_clear_floor": true,
+        "unique_actor_positions": true,
+        "guide_off_three_wide_entry": true,
+        "four_students": true,
+        "exit_warps_on_clear_floor": true,
+        "ordinary_walk_behaviors_outside_exits": true,
+        "four_different_facings": true
+      },
+      "students": [
+        {
+          "local_id": 3,
+          "position": [
+            18,
+            40
+          ],
+          "facing": "DOWN",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 4,
+          "position": [
+            6,
+            35
+          ],
+          "facing": "RIGHT",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 5,
+          "position": [
+            28,
+            24
+          ],
+          "facing": "LEFT",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 6,
+          "position": [
+            35,
+            20
+          ],
+          "facing": "UP",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        }
+      ]
+    },
+    {
+      "map": "JourneySlateportGym",
+      "dimensions": [
+        47,
+        65
+      ],
+      "blockdata_sha256": "608f4413c24232ab0b7079b133bf95fa9970cd589d9b425cd1d428ba36383d0a",
+      "actor_positions": [
+        {
+          "local_id": 1,
+          "position": [
+            23,
+            3
+          ],
+          "graphics": "OBJ_EVENT_GFX_JOURNEY_PWT_CANDICE"
+        },
+        {
+          "local_id": 2,
+          "position": [
+            26,
+            62
+          ],
+          "graphics": "OBJ_EVENT_GFX_MAN_2"
+        },
+        {
+          "local_id": 3,
+          "position": [
+            15,
+            48
+          ],
+          "graphics": "OBJ_EVENT_GFX_EXPERT_M"
+        },
+        {
+          "local_id": 4,
+          "position": [
+            40,
+            31
+          ],
+          "graphics": "OBJ_EVENT_GFX_EXPERT_F"
+        },
+        {
+          "local_id": 5,
+          "position": [
+            23,
+            26
+          ],
+          "graphics": "OBJ_EVENT_GFX_COOLTRAINER_M"
+        },
+        {
+          "local_id": 6,
+          "position": [
+            7,
+            14
+          ],
+          "graphics": "OBJ_EVENT_GFX_COOLTRAINER_F"
+        }
+      ],
+      "walkable_cells": 658,
+      "checks": {
+        "all_floor_one_component": true,
+        "leader_approach_reachable": true,
+        "all_floor_elevation_three": true,
+        "all_actor_feet_on_clear_floor": true,
+        "unique_actor_positions": true,
+        "guide_off_three_wide_entry": true,
+        "four_students": true,
+        "exit_warps_on_clear_floor": true,
+        "ordinary_walk_behaviors_outside_exits": true,
+        "four_different_facings": true
+      },
+      "students": [
+        {
+          "local_id": 3,
+          "position": [
+            15,
+            48
+          ],
+          "facing": "DOWN",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 4,
+          "position": [
+            40,
+            31
+          ],
+          "facing": "LEFT",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 5,
+          "position": [
+            23,
+            26
+          ],
+          "facing": "UP",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 6,
+          "position": [
+            7,
+            14
+          ],
+          "facing": "RIGHT",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        }
+      ]
+    },
+    {
+      "map": "JourneySixIslandGym",
+      "dimensions": [
+        41,
+        63
+      ],
+      "blockdata_sha256": "afc5411f4eb698cef3cd8195438100c0782c7822fd9ebae6e3c6b273f300a086",
+      "actor_positions": [
+        {
+          "local_id": 1,
+          "position": [
+            20,
+            3
+          ],
+          "graphics": "OBJ_EVENT_GFX_JOURNEY_PWT_CLAIR"
+        },
+        {
+          "local_id": 2,
+          "position": [
+            23,
+            60
+          ],
+          "graphics": "OBJ_EVENT_GFX_MAN_2"
+        },
+        {
+          "local_id": 3,
+          "position": [
+            17,
+            54
+          ],
+          "graphics": "OBJ_EVENT_GFX_EXPERT_M"
+        },
+        {
+          "local_id": 4,
+          "position": [
+            27,
+            46
+          ],
+          "graphics": "OBJ_EVENT_GFX_COOLTRAINER_F"
+        },
+        {
+          "local_id": 5,
+          "position": [
+            36,
+            35
+          ],
+          "graphics": "OBJ_EVENT_GFX_EXPERT_M"
+        },
+        {
+          "local_id": 6,
+          "position": [
+            26,
+            26
+          ],
+          "graphics": "OBJ_EVENT_GFX_EXPERT_F"
+        }
+      ],
+      "walkable_cells": 457,
+      "checks": {
+        "all_floor_one_component": true,
+        "leader_approach_reachable": true,
+        "all_floor_elevation_three": true,
+        "all_actor_feet_on_clear_floor": true,
+        "unique_actor_positions": true,
+        "guide_off_three_wide_entry": true,
+        "four_students": true,
+        "exit_warps_on_clear_floor": true,
+        "ordinary_walk_behaviors_outside_exits": true,
+        "four_different_facings": true
+      },
+      "students": [
+        {
+          "local_id": 3,
+          "position": [
+            17,
+            54
+          ],
+          "facing": "RIGHT",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 4,
+          "position": [
+            27,
+            46
+          ],
+          "facing": "DOWN",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 5,
+          "position": [
+            36,
+            35
+          ],
+          "facing": "LEFT",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 6,
+          "position": [
+            26,
+            26
+          ],
+          "facing": "UP",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        }
+      ]
+    },
+    {
+      "map": "JourneyThreeIslandGym",
+      "dimensions": [
+        51,
+        61
+      ],
+      "blockdata_sha256": "1794f72418419cc0556eafcd0f945af2cf16d3b2a23c9e274018b09ae067085b",
+      "actor_positions": [
+        {
+          "local_id": 1,
+          "position": [
+            25,
+            25
+          ],
+          "graphics": "OBJ_EVENT_GFX_JOURNEY_PWT_KAREN"
+        },
+        {
+          "local_id": 2,
+          "position": [
+            28,
+            58
+          ],
+          "graphics": "OBJ_EVENT_GFX_MAN_2"
+        },
+        {
+          "local_id": 3,
+          "position": [
+            15,
+            45
+          ],
+          "graphics": "OBJ_EVENT_GFX_BARD"
+        },
+        {
+          "local_id": 4,
+          "position": [
+            4,
+            27
+          ],
+          "graphics": "OBJ_EVENT_GFX_MANIAC"
+        },
+        {
+          "local_id": 5,
+          "position": [
+            25,
+            13
+          ],
+          "graphics": "OBJ_EVENT_GFX_GENTLEMAN"
+        },
+        {
+          "local_id": 6,
+          "position": [
+            46,
+            27
+          ],
+          "graphics": "OBJ_EVENT_GFX_COOLTRAINER_F"
+        }
+      ],
+      "walkable_cells": 761,
+      "checks": {
+        "all_floor_one_component": true,
+        "leader_approach_reachable": true,
+        "all_floor_elevation_three": true,
+        "all_actor_feet_on_clear_floor": true,
+        "unique_actor_positions": true,
+        "guide_off_three_wide_entry": true,
+        "four_students": true,
+        "exit_warps_on_clear_floor": true,
+        "ordinary_walk_behaviors_outside_exits": true,
+        "four_different_facings": true
+      },
+      "students": [
+        {
+          "local_id": 3,
+          "position": [
+            15,
+            45
+          ],
+          "facing": "DOWN",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 4,
+          "position": [
+            4,
+            27
+          ],
+          "facing": "RIGHT",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 5,
+          "position": [
+            25,
+            13
+          ],
+          "facing": "UP",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 6,
+          "position": [
+            46,
+            27
+          ],
+          "facing": "LEFT",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        }
+      ]
+    },
+    {
+      "map": "JourneyOakBasementGym",
+      "dimensions": [
+        51,
+        59
+      ],
+      "blockdata_sha256": "5fa0583a1ee28edc9a258b0f71092123f7994b302a5c7e6de9456c82c0f7c3b1",
+      "actor_positions": [
+        {
+          "local_id": 1,
+          "position": [
+            11,
+            3
+          ],
+          "graphics": "OBJ_EVENT_GFX_PROF_OAK"
+        },
+        {
+          "local_id": 2,
+          "position": [
+            28,
+            56
+          ],
+          "graphics": "OBJ_EVENT_GFX_MAN_2"
+        },
+        {
+          "local_id": 3,
+          "position": [
+            32,
+            43
+          ],
+          "graphics": "OBJ_EVENT_GFX_SCIENTIST_1"
+        },
+        {
+          "local_id": 4,
+          "position": [
+            42,
+            38
+          ],
+          "graphics": "OBJ_EVENT_GFX_SCIENTIST_2"
+        },
+        {
+          "local_id": 5,
+          "position": [
+            14,
+            25
+          ],
+          "graphics": "OBJ_EVENT_GFX_BOY_2"
+        },
+        {
+          "local_id": 6,
+          "position": [
+            22,
+            13
+          ],
+          "graphics": "OBJ_EVENT_GFX_GIRL_2"
+        }
+      ],
+      "walkable_cells": 575,
+      "checks": {
+        "all_floor_one_component": true,
+        "leader_approach_reachable": true,
+        "all_floor_elevation_three": true,
+        "all_actor_feet_on_clear_floor": true,
+        "unique_actor_positions": true,
+        "guide_off_three_wide_entry": true,
+        "four_students": true,
+        "exit_warps_on_clear_floor": true,
+        "ordinary_walk_behaviors_outside_exits": true,
+        "four_different_facings": true
+      },
+      "students": [
+        {
+          "local_id": 3,
+          "position": [
+            32,
+            43
+          ],
+          "facing": "DOWN",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 4,
+          "position": [
+            42,
+            38
+          ],
+          "facing": "LEFT",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 5,
+          "position": [
+            14,
+            25
+          ],
+          "facing": "RIGHT",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        },
+        {
+          "local_id": 6,
+          "position": [
+            22,
+            13
+          ],
+          "facing": "UP",
+          "sight": 6,
+          "clear_sightline": true,
+          "three_wide_approach": true,
+          "sightline_is_mandatory": true,
+          "can_reach_every_sight_cell": true
+        }
+      ]
+    }
+  ],
+  "sprites": [
+    {
+      "name": "morty",
+      "source": "graphics/object_events/pics/people/journey_pwt_morty.png",
+      "dimensions": [
+        16,
+        288
+      ],
+      "sha256": "1ba9b4a72c788cfe2c86ec0dac38e5a45194dc6d8ba43dd6ea806ca1a82b8d84",
+      "all_nine_frames_have_visible_pixels": true,
+      "index_zero_corners": true,
+      "visible_bounds": [
+        [
+          0,
+          9,
+          16,
+          31
+        ],
+        [
+          0,
+          9,
+          16,
+          31
+        ],
+        [
+          0,
+          7,
+          16,
+          31
+        ],
+        [
+          0,
+          10,
+          16,
+          31
+        ],
+        [
+          0,
+          9,
+          16,
+          31
+        ],
+        [
+          0,
+          9,
+          16,
+          31
+        ],
+        [
+          0,
+          9,
+          16,
+          31
+        ],
+        [
+          0,
+          8,
+          16,
+          31
+        ],
+        [
+          0,
+          8,
+          16,
+          31
+        ]
+      ]
+    },
+    {
+      "name": "whitney",
+      "source": "graphics/object_events/pics/people/journey_pwt_whitney.png",
+      "dimensions": [
+        16,
+        288
+      ],
+      "sha256": "0f3f052e2cceba0bc3cb95e623a9767ecd5925177623135008ef5aaf2a0c3d9d",
+      "all_nine_frames_have_visible_pixels": true,
+      "index_zero_corners": true,
+      "visible_bounds": [
+        [
+          0,
+          12,
+          16,
+          31
+        ],
+        [
+          0,
+          12,
+          16,
+          31
+        ],
+        [
+          0,
+          11,
+          16,
+          31
+        ],
+        [
+          0,
+          12,
+          16,
+          31
+        ],
+        [
+          0,
+          12,
+          16,
+          31
+        ],
+        [
+          0,
+          12,
+          16,
+          31
+        ],
+        [
+          0,
+          12,
+          16,
+          31
+        ],
+        [
+          0,
+          12,
+          16,
+          31
+        ],
+        [
+          0,
+          12,
+          16,
+          31
+        ]
+      ]
+    },
+    {
+      "name": "valerie",
+      "source": "graphics/object_events/pics/people/journey_pwt_valerie.png",
+      "dimensions": [
+        32,
+        288
+      ],
+      "sha256": "4883b2d4ab277cae0faa36f25e7863ecf45c0003dd87aa3a779adf8cbbd147ba",
+      "all_nine_frames_have_visible_pixels": true,
+      "index_zero_corners": true,
+      "visible_bounds": [
+        [
+          2,
+          2,
+          30,
+          31
+        ],
+        [
+          2,
+          2,
+          30,
+          31
+        ],
+        [
+          7,
+          2,
+          25,
+          31
+        ],
+        [
+          3,
+          1,
+          29,
+          31
+        ],
+        [
+          2,
+          1,
+          29,
+          31
+        ],
+        [
+          2,
+          1,
+          30,
+          31
+        ],
+        [
+          2,
+          1,
+          30,
+          31
+        ],
+        [
+          6,
+          2,
+          26,
+          31
+        ],
+        [
+          5,
+          2,
+          26,
+          31
+        ]
+      ]
+    },
+    {
+      "name": "steven",
+      "source": "graphics/object_events/pics/people/journey_pwt_steven.png",
+      "dimensions": [
+        16,
+        288
+      ],
+      "sha256": "c802d957b12dae1e368a6b281e65eb4e98d1f7cbf905a9409c57cd1edf73e159",
+      "all_nine_frames_have_visible_pixels": true,
+      "index_zero_corners": true,
+      "visible_bounds": [
+        [
+          0,
+          9,
+          16,
+          31
+        ],
+        [
+          0,
+          9,
+          16,
+          31
+        ],
+        [
+          0,
+          9,
+          16,
+          31
+        ],
+        [
+          0,
+          9,
+          16,
+          31
+        ],
+        [
+          0,
+          9,
+          16,
+          31
+        ],
+        [
+          0,
+          9,
+          16,
+          31
+        ],
+        [
+          0,
+          9,
+          16,
+          31
+        ],
+        [
+          0,
+          10,
+          16,
+          31
+        ],
+        [
+          0,
+          10,
+          16,
+          31
+        ]
+      ]
+    },
+    {
+      "name": "bugsy",
+      "source": "graphics/object_events/pics/people/journey_pwt_bugsy.png",
+      "dimensions": [
+        16,
+        288
+      ],
+      "sha256": "218c678a35245dc82840dd48c573d8158607926b65d60a8bdb34d99d5ee830bf",
+      "all_nine_frames_have_visible_pixels": true,
+      "index_zero_corners": true,
+      "visible_bounds": [
+        [
+          0,
+          11,
+          16,
+          31
+        ],
+        [
+          0,
+          12,
+          16,
+          31
+        ],
+        [
+          0,
+          9,
+          16,
+          31
+        ],
+        [
+          0,
+          11,
+          16,
+          31
+        ],
+        [
+          0,
+          12,
+          16,
+          31
+        ],
+        [
+          0,
+          11,
+          16,
+          31
+        ],
+        [
+          0,
+          11,
+          16,
+          31
+        ],
+        [
+          0,
+          10,
+          16,
+          31
+        ],
+        [
+          0,
+          10,
+          16,
+          31
+        ]
+      ]
+    },
+    {
+      "name": "candice",
+      "source": "graphics/object_events/pics/people/journey_pwt_candice.png",
+      "dimensions": [
+        32,
+        288
+      ],
+      "sha256": "118afdce5db8ab8db21c08718c373c07bf05e3c28c7c5b1cb1c0b07c2c3da607",
+      "all_nine_frames_have_visible_pixels": true,
+      "index_zero_corners": true,
+      "visible_bounds": [
+        [
+          4,
+          9,
+          28,
+          31
+        ],
+        [
+          4,
+          9,
+          28,
+          31
+        ],
+        [
+          4,
+          3,
+          27,
+          31
+        ],
+        [
+          4,
+          7,
+          28,
+          31
+        ],
+        [
+          4,
+          7,
+          28,
+          31
+        ],
+        [
+          4,
+          7,
+          28,
+          31
+        ],
+        [
+          4,
+          7,
+          28,
+          31
+        ],
+        [
+          5,
+          3,
+          27,
+          31
+        ],
+        [
+          5,
+          3,
+          27,
+          31
+        ]
+      ]
+    },
+    {
+      "name": "clair",
+      "source": "graphics/object_events/pics/people/journey_pwt_clair.png",
+      "dimensions": [
+        16,
+        288
+      ],
+      "sha256": "219bea26c07e77a1cb2c48324c47be1cf2066c332432bf4c37075083d75359b3",
+      "all_nine_frames_have_visible_pixels": true,
+      "index_zero_corners": true,
+      "visible_bounds": [
+        [
+          0,
+          10,
+          16,
+          31
+        ],
+        [
+          0,
+          10,
+          16,
+          31
+        ],
+        [
+          0,
+          10,
+          16,
+          31
+        ],
+        [
+          0,
+          10,
+          16,
+          31
+        ],
+        [
+          0,
+          10,
+          16,
+          31
+        ],
+        [
+          0,
+          10,
+          16,
+          31
+        ],
+        [
+          0,
+          10,
+          16,
+          31
+        ],
+        [
+          0,
+          11,
+          16,
+          31
+        ],
+        [
+          0,
+          11,
+          16,
+          31
+        ]
+      ]
+    },
+    {
+      "name": "karen",
+      "source": "graphics/object_events/pics/people/journey_pwt_karen.png",
+      "dimensions": [
+        16,
+        288
+      ],
+      "sha256": "297733ec0bfd3e19eec7e3797dc39a5060ac21a5c9d48bf220c6133977ee84fa",
+      "all_nine_frames_have_visible_pixels": true,
+      "index_zero_corners": true,
+      "visible_bounds": [
+        [
+          0,
+          9,
+          16,
+          31
+        ],
+        [
+          0,
+          10,
+          16,
+          31
+        ],
+        [
+          0,
+          6,
+          16,
+          31
+        ],
+        [
+          0,
+          9,
+          16,
+          31
+        ],
+        [
+          0,
+          9,
+          16,
+          31
+        ],
+        [
+          0,
+          10,
+          16,
+          31
+        ],
+        [
+          0,
+          10,
+          16,
+          31
+        ],
+        [
+          0,
+          6,
+          16,
+          31
+        ],
+        [
+          0,
+          6,
+          16,
+          31
+        ]
+      ]
+    }
+  ],
+  "failures": [],
+  "geometry_checks_passed": true,
+  "limitations": [
+    "Graph checks do not certify native movement, battle approach, draw priority or animation.",
+    "Corner transparency does not replace whole-sprite visual review."
+  ]
+}

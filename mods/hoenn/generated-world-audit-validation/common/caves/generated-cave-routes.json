@@ -1,0 +1,2700 @@
+{
+  "passed": true,
+  "kind": "generated-cave-routes",
+  "rom_sha256": "b04918724939a54bbe3321d274953a9311ab8c7b4eebc3cbeb844ffcd3604386",
+  "caves": [
+    {
+      "map": "JourneyCaveAlvorada",
+      "exterior": "JourneyAlvoradaApproach",
+      "initial_position": [
+        43,
+        11
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            5,
+            3
+          ],
+          "player_position": [
+            6,
+            3
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            10,
+            7
+          ],
+          "player_position": [
+            9,
+            7
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            4,
+            7
+          ],
+          "player_position": [
+            5,
+            7
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 4,
+          "object_position": [
+            9,
+            3
+          ],
+          "player_position": [
+            8,
+            3
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 48,
+      "transitions": [
+        {
+          "source": [
+            "JourneyAlvoradaApproach",
+            43,
+            11
+          ],
+          "destination": [
+            "JourneyCaveAlvorada",
+            7,
+            16
+          ]
+        },
+        {
+          "source": [
+            "JourneyCaveAlvorada",
+            7,
+            16
+          ],
+          "destination": [
+            "JourneyAlvoradaApproach",
+            43,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneyCaveBrisa",
+      "exterior": "JourneyBrisaApproach",
+      "initial_position": [
+        12,
+        42
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            19,
+            3
+          ],
+          "player_position": [
+            19,
+            4
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            6,
+            24
+          ],
+          "player_position": [
+            6,
+            25
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            23,
+            19
+          ],
+          "player_position": [
+            22,
+            19
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 4,
+          "object_position": [
+            10,
+            10
+          ],
+          "player_position": [
+            11,
+            10
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 156,
+      "transitions": [
+        {
+          "source": [
+            "JourneyBrisaApproach",
+            12,
+            42
+          ],
+          "destination": [
+            "JourneyCaveBrisa",
+            10,
+            29
+          ]
+        },
+        {
+          "source": [
+            "JourneyCaveBrisa",
+            10,
+            29
+          ],
+          "destination": [
+            "JourneyBrisaApproach",
+            12,
+            42
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneyCaveCoral",
+      "exterior": "JourneyWorldSea05",
+      "initial_position": [
+        14,
+        22
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            16,
+            5
+          ],
+          "player_position": [
+            15,
+            5
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            5,
+            14
+          ],
+          "player_position": [
+            6,
+            14
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 52,
+      "transitions": [
+        {
+          "source": [
+            "JourneyWorldSea05",
+            14,
+            22
+          ],
+          "destination": [
+            "JourneyCaveCoral",
+            11,
+            17
+          ]
+        },
+        {
+          "source": [
+            "JourneyCaveCoral",
+            11,
+            17
+          ],
+          "destination": [
+            "JourneyWorldSea05",
+            14,
+            22
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneyCaveEspuma",
+      "exterior": "JourneyEspumaApproach",
+      "initial_position": [
+        12,
+        42
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            13,
+            26
+          ],
+          "player_position": [
+            12,
+            26
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            10,
+            2
+          ],
+          "player_position": [
+            11,
+            2
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            5,
+            16
+          ],
+          "player_position": [
+            6,
+            16
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 108,
+      "transitions": [
+        {
+          "source": [
+            "JourneyEspumaApproach",
+            12,
+            42
+          ],
+          "destination": [
+            "JourneyCaveEspuma",
+            5,
+            4
+          ]
+        },
+        {
+          "source": [
+            "JourneyCaveEspuma",
+            5,
+            4
+          ],
+          "destination": [
+            "JourneyEspumaApproach",
+            12,
+            42
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneyCaveFarol",
+      "exterior": "JourneyFarolApproach",
+      "initial_position": [
+        43,
+        11
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            10,
+            9
+          ],
+          "player_position": [
+            9,
+            9
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            4,
+            6
+          ],
+          "player_position": [
+            5,
+            6
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            8,
+            5
+          ],
+          "player_position": [
+            7,
+            5
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 20,
+      "transitions": [
+        {
+          "source": [
+            "JourneyFarolApproach",
+            43,
+            11
+          ],
+          "destination": [
+            "JourneyCaveFarol",
+            7,
+            4
+          ]
+        },
+        {
+          "source": [
+            "JourneyCaveFarol",
+            7,
+            4
+          ],
+          "destination": [
+            "JourneyFarolApproach",
+            43,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneyCaveHorizonte",
+      "exterior": "JourneyHorizonteApproach",
+      "initial_position": [
+        43,
+        11
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            3,
+            26
+          ],
+          "player_position": [
+            4,
+            26
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            17,
+            32
+          ],
+          "player_position": [
+            16,
+            32
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            10,
+            29
+          ],
+          "player_position": [
+            11,
+            29
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 92,
+      "transitions": [
+        {
+          "source": [
+            "JourneyHorizonteApproach",
+            43,
+            11
+          ],
+          "destination": [
+            "JourneyCaveHorizonte",
+            14,
+            33
+          ]
+        },
+        {
+          "source": [
+            "JourneyCaveHorizonte",
+            14,
+            33
+          ],
+          "destination": [
+            "JourneyHorizonteApproach",
+            43,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneyCaveMare",
+      "exterior": "JourneyMareApproach",
+      "initial_position": [
+        12,
+        42
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            6,
+            2
+          ],
+          "player_position": [
+            7,
+            2
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            30,
+            16
+          ],
+          "player_position": [
+            29,
+            16
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            11,
+            17
+          ],
+          "player_position": [
+            12,
+            17
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 4,
+          "object_position": [
+            18,
+            7
+          ],
+          "player_position": [
+            17,
+            7
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 5,
+          "object_position": [
+            1,
+            12
+          ],
+          "player_position": [
+            2,
+            12
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 164,
+      "transitions": [
+        {
+          "source": [
+            "JourneyMareApproach",
+            12,
+            42
+          ],
+          "destination": [
+            "JourneyCaveMare",
+            18,
+            22
+          ]
+        },
+        {
+          "source": [
+            "JourneyCaveMare",
+            18,
+            22
+          ],
+          "destination": [
+            "JourneyMareApproach",
+            12,
+            42
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneyCaveOcaso",
+      "exterior": "JourneyOcasoApproach",
+      "initial_position": [
+        12,
+        42
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            13,
+            26
+          ],
+          "player_position": [
+            14,
+            26
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            22,
+            2
+          ],
+          "player_position": [
+            21,
+            2
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            8,
+            11
+          ],
+          "player_position": [
+            9,
+            11
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 124,
+      "transitions": [
+        {
+          "source": [
+            "JourneyOcasoApproach",
+            12,
+            42
+          ],
+          "destination": [
+            "JourneyCaveOcaso",
+            20,
+            4
+          ]
+        },
+        {
+          "source": [
+            "JourneyCaveOcaso",
+            20,
+            4
+          ],
+          "destination": [
+            "JourneyOcasoApproach",
+            12,
+            42
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneyParadoxFuture",
+      "exterior": "JourneySanctuaryDimensoes",
+      "initial_position": [
+        15,
+        16
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            4,
+            5
+          ],
+          "player_position": [
+            5,
+            5
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            10,
+            5
+          ],
+          "player_position": [
+            9,
+            5
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            16,
+            5
+          ],
+          "player_position": [
+            15,
+            5
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 4,
+          "object_position": [
+            4,
+            9
+          ],
+          "player_position": [
+            5,
+            9
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 5,
+          "object_position": [
+            10,
+            9
+          ],
+          "player_position": [
+            9,
+            9
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 6,
+          "object_position": [
+            16,
+            9
+          ],
+          "player_position": [
+            15,
+            9
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 7,
+          "object_position": [
+            4,
+            13
+          ],
+          "player_position": [
+            5,
+            13
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 8,
+          "object_position": [
+            10,
+            13
+          ],
+          "player_position": [
+            9,
+            13
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 9,
+          "object_position": [
+            16,
+            13
+          ],
+          "player_position": [
+            15,
+            13
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 10,
+          "object_position": [
+            4,
+            17
+          ],
+          "player_position": [
+            5,
+            17
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 118,
+      "transitions": [
+        {
+          "source": [
+            "JourneySanctuaryDimensoes",
+            15,
+            16
+          ],
+          "destination": [
+            "JourneyParadoxFuture",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneyParadoxFuture",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneySanctuaryDimensoes",
+            15,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneyParadoxPast",
+      "exterior": "JourneySanctuaryDimensoes",
+      "initial_position": [
+        7,
+        16
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            4,
+            5
+          ],
+          "player_position": [
+            5,
+            5
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            10,
+            5
+          ],
+          "player_position": [
+            9,
+            5
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            16,
+            5
+          ],
+          "player_position": [
+            15,
+            5
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 4,
+          "object_position": [
+            4,
+            9
+          ],
+          "player_position": [
+            5,
+            9
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 5,
+          "object_position": [
+            10,
+            9
+          ],
+          "player_position": [
+            9,
+            9
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 6,
+          "object_position": [
+            16,
+            9
+          ],
+          "player_position": [
+            15,
+            9
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 7,
+          "object_position": [
+            4,
+            13
+          ],
+          "player_position": [
+            5,
+            13
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 8,
+          "object_position": [
+            10,
+            13
+          ],
+          "player_position": [
+            9,
+            13
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 9,
+          "object_position": [
+            16,
+            13
+          ],
+          "player_position": [
+            15,
+            13
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 10,
+          "object_position": [
+            4,
+            17
+          ],
+          "player_position": [
+            5,
+            17
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 118,
+      "transitions": [
+        {
+          "source": [
+            "JourneySanctuaryDimensoes",
+            7,
+            16
+          ],
+          "destination": [
+            "JourneyParadoxPast",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneyParadoxPast",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneySanctuaryDimensoes",
+            7,
+            15
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneyRocketBaseB1F",
+      "exterior": "MauvilleCity_GameCorner",
+      "initial_position": [
+        19,
+        9
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            8,
+            9
+          ],
+          "player_position": [
+            7,
+            9
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            8,
+            7
+          ],
+          "player_position": [
+            7,
+            7
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            7,
+            8
+          ],
+          "player_position": [
+            7,
+            7
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 4,
+          "object_position": [
+            9,
+            8
+          ],
+          "player_position": [
+            9,
+            7
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 40,
+      "transitions": [
+        {
+          "source": [
+            "MauvilleCity_GameCorner",
+            19,
+            7
+          ],
+          "destination": [
+            "JourneyRocketBaseB1F",
+            3,
+            4
+          ]
+        },
+        {
+          "source": [
+            "JourneyRocketBaseB1F",
+            3,
+            4
+          ],
+          "destination": [
+            "MauvilleCity_GameCorner",
+            19,
+            7
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneyRocketBaseB2F",
+      "exterior": "JourneyRocketBaseB1F",
+      "initial_position": [
+        18,
+        17
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            8,
+            9
+          ],
+          "player_position": [
+            7,
+            9
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            8,
+            7
+          ],
+          "player_position": [
+            7,
+            7
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            7,
+            8
+          ],
+          "player_position": [
+            7,
+            7
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 4,
+          "object_position": [
+            9,
+            8
+          ],
+          "player_position": [
+            9,
+            7
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 5,
+          "object_position": [
+            6,
+            9
+          ],
+          "player_position": [
+            7,
+            9
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 44,
+      "transitions": [
+        {
+          "source": [
+            "JourneyRocketBaseB1F",
+            18,
+            17
+          ],
+          "destination": [
+            "JourneyRocketBaseB2F",
+            3,
+            4
+          ]
+        },
+        {
+          "source": [
+            "JourneyRocketBaseB2F",
+            3,
+            4
+          ],
+          "destination": [
+            "JourneyRocketBaseB1F",
+            18,
+            17
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneySanctuaryAbismo",
+      "exterior": "JourneyDepthAbismo",
+      "initial_position": [
+        30,
+        65
+      ],
+      "initial_mode_fixture": 16,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            4,
+            4
+          ],
+          "player_position": [
+            5,
+            4
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 53,
+      "transitions": [
+        {
+          "source": [
+            "JourneyDepthAbismo",
+            30,
+            65
+          ],
+          "destination": [
+            "JourneySanctuaryAbismo",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryAbismo",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyDepthAbismo",
+            30,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneySanctuaryAurora",
+      "exterior": "JourneyWorldSea01",
+      "initial_position": [
+        44,
+        11
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            4,
+            4
+          ],
+          "player_position": [
+            5,
+            4
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            17,
+            16
+          ],
+          "player_position": [
+            16,
+            16
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 61,
+      "transitions": [
+        {
+          "source": [
+            "JourneyWorldSea01",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryAurora",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryAurora",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea01",
+            44,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneySanctuaryCristais",
+      "exterior": "JourneyWorldSea08",
+      "initial_position": [
+        44,
+        11
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            4,
+            4
+          ],
+          "player_position": [
+            5,
+            4
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            17,
+            16
+          ],
+          "player_position": [
+            16,
+            16
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            17,
+            4
+          ],
+          "player_position": [
+            16,
+            4
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 85,
+      "transitions": [
+        {
+          "source": [
+            "JourneyWorldSea08",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryCristais",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryCristais",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea08",
+            44,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneySanctuaryDimensoes",
+      "exterior": "JourneyDepthDimensoes",
+      "initial_position": [
+        30,
+        65
+      ],
+      "initial_mode_fixture": 16,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            4,
+            4
+          ],
+          "player_position": [
+            5,
+            4
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            17,
+            16
+          ],
+          "player_position": [
+            16,
+            16
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            17,
+            4
+          ],
+          "player_position": [
+            16,
+            4
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 4,
+          "object_position": [
+            10,
+            10
+          ],
+          "player_position": [
+            11,
+            10
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 5,
+          "object_position": [
+            4,
+            16
+          ],
+          "player_position": [
+            5,
+            16
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 99,
+      "transitions": [
+        {
+          "source": [
+            "JourneyDepthDimensoes",
+            30,
+            65
+          ],
+          "destination": [
+            "JourneySanctuaryDimensoes",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryDimensoes",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyDepthDimensoes",
+            30,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneySanctuaryDragoes",
+      "exterior": "JourneyWorldSea06",
+      "initial_position": [
+        44,
+        11
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            4,
+            4
+          ],
+          "player_position": [
+            5,
+            4
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            17,
+            16
+          ],
+          "player_position": [
+            16,
+            16
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            17,
+            4
+          ],
+          "player_position": [
+            16,
+            4
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 85,
+      "transitions": [
+        {
+          "source": [
+            "JourneyWorldSea06",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryDragoes",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryDragoes",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea06",
+            44,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneySanctuaryEclipse",
+      "exterior": "JourneyWorldSea05",
+      "initial_position": [
+        44,
+        11
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            4,
+            4
+          ],
+          "player_position": [
+            5,
+            4
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            17,
+            16
+          ],
+          "player_position": [
+            16,
+            16
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 61,
+      "transitions": [
+        {
+          "source": [
+            "JourneyWorldSea05",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryEclipse",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryEclipse",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea05",
+            44,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneySanctuaryEstrelas",
+      "exterior": "JourneyWorldSea07",
+      "initial_position": [
+        44,
+        11
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            4,
+            4
+          ],
+          "player_position": [
+            5,
+            4
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            17,
+            16
+          ],
+          "player_position": [
+            16,
+            16
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 61,
+      "transitions": [
+        {
+          "source": [
+            "JourneyWorldSea07",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryEstrelas",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryEstrelas",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea07",
+            44,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneySanctuaryFloresta",
+      "exterior": "JourneyWorldSea04",
+      "initial_position": [
+        44,
+        11
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            4,
+            4
+          ],
+          "player_position": [
+            5,
+            4
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 53,
+      "transitions": [
+        {
+          "source": [
+            "JourneyWorldSea04",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryFloresta",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryFloresta",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea04",
+            44,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneySanctuaryMares",
+      "exterior": "JourneyDepthMares",
+      "initial_position": [
+        38,
+        11
+      ],
+      "initial_mode_fixture": 16,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            4,
+            4
+          ],
+          "player_position": [
+            5,
+            4
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            17,
+            16
+          ],
+          "player_position": [
+            16,
+            16
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 61,
+      "transitions": [
+        {
+          "source": [
+            "JourneyDepthMares",
+            38,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryMares",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryMares",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyDepthMares",
+            38,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneySanctuaryOrigens",
+      "exterior": "JourneyDepthOrigens",
+      "initial_position": [
+        38,
+        11
+      ],
+      "initial_mode_fixture": 16,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            4,
+            4
+          ],
+          "player_position": [
+            5,
+            4
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            17,
+            16
+          ],
+          "player_position": [
+            16,
+            16
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            17,
+            4
+          ],
+          "player_position": [
+            16,
+            4
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 4,
+          "object_position": [
+            10,
+            10
+          ],
+          "player_position": [
+            11,
+            10
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 87,
+      "transitions": [
+        {
+          "source": [
+            "JourneyDepthOrigens",
+            38,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryOrigens",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryOrigens",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyDepthOrigens",
+            38,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneySanctuaryProfundezas",
+      "exterior": "JourneyDepthProfundezas",
+      "initial_position": [
+        38,
+        11
+      ],
+      "initial_mode_fixture": 16,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            4,
+            4
+          ],
+          "player_position": [
+            5,
+            4
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            17,
+            16
+          ],
+          "player_position": [
+            16,
+            16
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            17,
+            4
+          ],
+          "player_position": [
+            16,
+            4
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 4,
+          "object_position": [
+            10,
+            10
+          ],
+          "player_position": [
+            11,
+            10
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 87,
+      "transitions": [
+        {
+          "source": [
+            "JourneyDepthProfundezas",
+            38,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryProfundezas",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryProfundezas",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyDepthProfundezas",
+            38,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneySanctuaryTempestades",
+      "exterior": "JourneyWorldSea00",
+      "initial_position": [
+        44,
+        11
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            4,
+            4
+          ],
+          "player_position": [
+            5,
+            4
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            17,
+            16
+          ],
+          "player_position": [
+            16,
+            16
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            17,
+            4
+          ],
+          "player_position": [
+            16,
+            4
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 85,
+      "transitions": [
+        {
+          "source": [
+            "JourneyWorldSea00",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryTempestades",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryTempestades",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea00",
+            44,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneySanctuaryTitans",
+      "exterior": "JourneyWorldSea03",
+      "initial_position": [
+        44,
+        11
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            4,
+            4
+          ],
+          "player_position": [
+            5,
+            4
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            17,
+            16
+          ],
+          "player_position": [
+            16,
+            16
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            17,
+            4
+          ],
+          "player_position": [
+            16,
+            4
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 4,
+          "object_position": [
+            10,
+            10
+          ],
+          "player_position": [
+            11,
+            10
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 5,
+          "object_position": [
+            4,
+            16
+          ],
+          "player_position": [
+            5,
+            16
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 6,
+          "object_position": [
+            10,
+            19
+          ],
+          "player_position": [
+            10,
+            18
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 99,
+      "transitions": [
+        {
+          "source": [
+            "JourneyWorldSea03",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryTitans",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryTitans",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea03",
+            44,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "map": "JourneySanctuaryVulcao",
+      "exterior": "JourneyWorldSea02",
+      "initial_position": [
+        44,
+        11
+      ],
+      "initial_mode_fixture": 1,
+      "controller_entry_and_return": true,
+      "npc_approaches": [
+        {
+          "local_index": 1,
+          "object_position": [
+            4,
+            4
+          ],
+          "player_position": [
+            5,
+            4
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 2,
+          "object_position": [
+            17,
+            16
+          ],
+          "player_position": [
+            16,
+            16
+          ],
+          "mode": 1
+        },
+        {
+          "local_index": 3,
+          "object_position": [
+            17,
+            4
+          ],
+          "player_position": [
+            16,
+            4
+          ],
+          "mode": 1
+        }
+      ],
+      "walked_tiles": 85,
+      "transitions": [
+        {
+          "source": [
+            "JourneyWorldSea02",
+            44,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryVulcao",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryVulcao",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyWorldSea02",
+            44,
+            11
+          ]
+        }
+      ]
+    }
+  ],
+  "retired_lodge_save_continue": [
+    {
+      "map": "JourneyOneIslandHarborPortLodge",
+      "native_save_continue": true,
+      "controller_exit": true,
+      "destination": "OneIsland_TreasureBeach_Frlg",
+      "landing": [
+        17,
+        6
+      ],
+      "mode": 1
+    },
+    {
+      "map": "JourneyTwoIslandHarborPortLodge",
+      "native_save_continue": true,
+      "controller_exit": true,
+      "destination": "TwoIsland_Frlg",
+      "landing": [
+        5,
+        14
+      ],
+      "mode": 1
+    },
+    {
+      "map": "JourneyThreeIslandHarborPortLodge",
+      "native_save_continue": true,
+      "controller_exit": true,
+      "destination": "ThreeIsland_Port_Frlg",
+      "landing": [
+        7,
+        19
+      ],
+      "mode": 1
+    },
+    {
+      "map": "JourneyFourIslandHarborPortLodge",
+      "native_save_continue": true,
+      "controller_exit": true,
+      "destination": "FourIsland_Frlg",
+      "landing": [
+        5,
+        34
+      ],
+      "mode": 1
+    },
+    {
+      "map": "JourneyFiveIslandHarborPortLodge",
+      "native_save_continue": true,
+      "controller_exit": true,
+      "destination": "FiveIsland_Frlg",
+      "landing": [
+        17,
+        19
+      ],
+      "mode": 1
+    },
+    {
+      "map": "JourneySixIslandHarborPortLodge",
+      "native_save_continue": true,
+      "controller_exit": true,
+      "destination": "SixIsland_Frlg",
+      "landing": [
+        6,
+        29
+      ],
+      "mode": 1
+    },
+    {
+      "map": "JourneySevenIslandHarborPortLodge",
+      "native_save_continue": true,
+      "controller_exit": true,
+      "destination": "SevenIsland_Frlg",
+      "landing": [
+        20,
+        19
+      ],
+      "mode": 1
+    }
+  ],
+  "dive_roundtrips": [
+    {
+      "surface": "JourneyHoennNorthSea",
+      "depth": "JourneyDepthMares",
+      "cave": "JourneySanctuaryMares",
+      "initial_position": [
+        39,
+        11
+      ],
+      "returned_position": [
+        39,
+        11
+      ],
+      "native_dive_and_emerge_prompts": true,
+      "controller_cave_entry_and_return": true,
+      "native_underwater_surf_and_walking_modes": true,
+      "walked_tiles": 15,
+      "transitions": [
+        {
+          "source": [
+            "JourneyDepthMares",
+            38,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryMares",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryMares",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyDepthMares",
+            38,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "surface": "JourneyHoennMiddleSea",
+      "depth": "JourneyDepthOrigens",
+      "cave": "JourneySanctuaryOrigens",
+      "initial_position": [
+        39,
+        11
+      ],
+      "returned_position": [
+        39,
+        11
+      ],
+      "native_dive_and_emerge_prompts": true,
+      "controller_cave_entry_and_return": true,
+      "native_underwater_surf_and_walking_modes": true,
+      "walked_tiles": 15,
+      "transitions": [
+        {
+          "source": [
+            "JourneyDepthOrigens",
+            38,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryOrigens",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryOrigens",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyDepthOrigens",
+            38,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "surface": "JourneyHoennSouthSea",
+      "depth": "JourneyDepthProfundezas",
+      "cave": "JourneySanctuaryProfundezas",
+      "initial_position": [
+        39,
+        11
+      ],
+      "returned_position": [
+        39,
+        11
+      ],
+      "native_dive_and_emerge_prompts": true,
+      "controller_cave_entry_and_return": true,
+      "native_underwater_surf_and_walking_modes": true,
+      "walked_tiles": 15,
+      "transitions": [
+        {
+          "source": [
+            "JourneyDepthProfundezas",
+            38,
+            11
+          ],
+          "destination": [
+            "JourneySanctuaryProfundezas",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryProfundezas",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyDepthProfundezas",
+            38,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "surface": "JourneyRustboroCoast",
+      "depth": "JourneyDepthDimensoes",
+      "cave": "JourneySanctuaryDimensoes",
+      "initial_position": [
+        31,
+        65
+      ],
+      "returned_position": [
+        31,
+        65
+      ],
+      "native_dive_and_emerge_prompts": true,
+      "controller_cave_entry_and_return": true,
+      "native_underwater_surf_and_walking_modes": true,
+      "walked_tiles": 15,
+      "transitions": [
+        {
+          "source": [
+            "JourneyDepthDimensoes",
+            30,
+            65
+          ],
+          "destination": [
+            "JourneySanctuaryDimensoes",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryDimensoes",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyDepthDimensoes",
+            30,
+            65
+          ]
+        }
+      ]
+    },
+    {
+      "surface": "JourneyDewfordCoast",
+      "depth": "JourneyDepthAbismo",
+      "cave": "JourneySanctuaryAbismo",
+      "initial_position": [
+        31,
+        65
+      ],
+      "returned_position": [
+        31,
+        65
+      ],
+      "native_dive_and_emerge_prompts": true,
+      "controller_cave_entry_and_return": true,
+      "native_underwater_surf_and_walking_modes": true,
+      "walked_tiles": 15,
+      "transitions": [
+        {
+          "source": [
+            "JourneyDepthAbismo",
+            30,
+            65
+          ],
+          "destination": [
+            "JourneySanctuaryAbismo",
+            14,
+            19
+          ]
+        },
+        {
+          "source": [
+            "JourneySanctuaryAbismo",
+            13,
+            19
+          ],
+          "destination": [
+            "JourneyDepthAbismo",
+            30,
+            65
+          ]
+        }
+      ]
+    }
+  ],
+  "all_cases_executed": true,
+  "navel_rock_roundtrip": [
+    {
+      "harbor": "NavelRock_Harbor_Frlg",
+      "cave": "NavelRock_1F_Frlg",
+      "initial_position": [
+        8,
+        4
+      ],
+      "final_position": [
+        7,
+        5
+      ],
+      "controller_cave_entry_and_return": true,
+      "controller_surf_departure_and_dry_pier_return": true,
+      "walked_tiles": 30
+    }
+  ],
+  "retired_lodge_exits_fixed_in_selected_source": true,
+  "npc_approaches": 97,
+  "initial_party_positions_modes_and_defeated_rocket_trainers_are_fixtures": true,
+  "no_coordinate_writes_or_internal_warps_during_routes": true,
+  "wild_encounters_disabled": true,
+  "battles_and_capture_rules_validated": false,
+  "galactic_story_barriers_have_separate_validator": true,
+  "captures": [
+    {
+      "file": "JourneyCaveAlvorada-native-approaches.png",
+      "sha256": "e606c3a308db4722ba5ff83c165d0afc6c9ddb16c0cf746f970eb7c5cdff890f"
+    },
+    {
+      "file": "JourneyCaveBrisa-native-approaches.png",
+      "sha256": "63304d68db6d77c10774958cfa32b0ad70633509b97d204377c9a643c22cc429"
+    },
+    {
+      "file": "JourneyCaveCoral-native-approaches.png",
+      "sha256": "e321078ba3f378ed149f8556815f96c9f229b51681b94b36de55f724c774365e"
+    },
+    {
+      "file": "JourneyCaveEspuma-native-approaches.png",
+      "sha256": "536277fe4a0a6be9d9692031f75647d12a7001dff29e96b490b973f63cf3bd9f"
+    },
+    {
+      "file": "JourneyCaveFarol-native-approaches.png",
+      "sha256": "1eec9231767b709a7af4116f5990a32e627a54cde882cbfafb9363a72c717bb9"
+    },
+    {
+      "file": "JourneyCaveHorizonte-native-approaches.png",
+      "sha256": "16ad6940e9ade49ae4a249a1d565923587446a4dd979ee63663fc06e0cc970c5"
+    },
+    {
+      "file": "JourneyCaveMare-native-approaches.png",
+      "sha256": "e1e247e16c0345c283f05cc2dd941db6d420e65e824d51836baaf80bd2f39b93"
+    },
+    {
+      "file": "JourneyCaveOcaso-native-approaches.png",
+      "sha256": "ca4358d6e7ffba9aed8ed6168722afa494ec6f9bd56597ef057031d058bec3a5"
+    },
+    {
+      "file": "JourneyParadoxFuture-native-approaches.png",
+      "sha256": "498f9c7c01e347fb3d65bd8159a90ffefad84f02a6680060c53bb64b6663e40f"
+    },
+    {
+      "file": "JourneyParadoxPast-native-approaches.png",
+      "sha256": "98a5a62b5f9866a119eddfd595238b771affee659669a1452ad7e88b32d7d01d"
+    },
+    {
+      "file": "JourneyRocketBaseB1F-native-approaches.png",
+      "sha256": "a8cc81ee338145d4bf44e067d622132b808513b349b8e9df72e25ecb1b157fc1"
+    },
+    {
+      "file": "JourneyRocketBaseB2F-native-approaches.png",
+      "sha256": "65d28479bb01ed29a10a77a2bf791948bdb51751e5a8532772a73bb2c7e544e5"
+    },
+    {
+      "file": "JourneySanctuaryAbismo-native-approaches.png",
+      "sha256": "1e6fc7607e3678aff3e50c3a9f4d84e3e5dc51d01e3c43c090d0a350a6584e86"
+    },
+    {
+      "file": "JourneySanctuaryAurora-native-approaches.png",
+      "sha256": "033bed810708e0d712e8cf13f80b5280ee69726b6d9ee90dc5f125967d1bb62e"
+    },
+    {
+      "file": "JourneySanctuaryCristais-native-approaches.png",
+      "sha256": "4128e60c4920e7ab16be76429339996e82610b021b6d44d03bde7a1051b7eb14"
+    },
+    {
+      "file": "JourneySanctuaryDimensoes-native-approaches.png",
+      "sha256": "91c27c76d1b7aee79c3f0de6ad805d8d7e33d5f68ee18e5f4b6555eb76b92575"
+    },
+    {
+      "file": "JourneySanctuaryDragoes-native-approaches.png",
+      "sha256": "fb43b7f8eb94a69973df3201e9c52ab2eb41dd96ec45eb611207e874c6a6f0a8"
+    },
+    {
+      "file": "JourneySanctuaryEclipse-native-approaches.png",
+      "sha256": "cd63dd951b32e0d8bf371306e0c2b241aabaa702da3819961c164156234c6404"
+    },
+    {
+      "file": "JourneySanctuaryEstrelas-native-approaches.png",
+      "sha256": "b51428e8af266de6a1d805eb14e46ce7c5d0b1c1090ddd5290c84e1cdf50c687"
+    },
+    {
+      "file": "JourneySanctuaryFloresta-native-approaches.png",
+      "sha256": "301c8fba2b0b559f765ccb34978a4c8e3b2837c00035ec48bceefc0de378b4a6"
+    },
+    {
+      "file": "JourneySanctuaryMares-native-approaches.png",
+      "sha256": "0b363436d337e326dd56e2108765a139ddbdedb77515945cc6b71e2c9e6b3fc4"
+    },
+    {
+      "file": "JourneySanctuaryOrigens-native-approaches.png",
+      "sha256": "580a3fa557ebe8379f7a87a9a1441e92a326bf5adf4a5fcd87c1eff790a25145"
+    },
+    {
+      "file": "JourneySanctuaryProfundezas-native-approaches.png",
+      "sha256": "08f3c0cd9079dac77004cf1dc5ab3c886507af13fb6bf98c4d6d11fac9018eda"
+    },
+    {
+      "file": "JourneySanctuaryTempestades-native-approaches.png",
+      "sha256": "320e9abb9f25ce72d663df95f3967f271c5289e4e194e241676779e4c47389eb"
+    },
+    {
+      "file": "generated-cave-path-failure.png",
+      "sha256": "bfe125e2dd38bf843306ad2707a5588c0a88da6cfbfa80b656b26d4d1d4134e0"
+    },
+    {
+      "file": "JourneySanctuaryTitans-native-approaches.png",
+      "sha256": "4403c7f2818037e31609ba403571203d20bda79bf54135154a3560a11f88f95b"
+    },
+    {
+      "file": "JourneySanctuaryVulcao-native-approaches.png",
+      "sha256": "5a439dcf3d1734882e27aefe557eaefa3632decb26e2137995ab587c3802fc85"
+    },
+    {
+      "file": "JourneyOneIslandHarborPortLodge-saved-room-exit.png",
+      "sha256": "3f732c3145ddd0b1f2997cabb445fcc9325eb5d083247a5b88724dbf00ebd369"
+    },
+    {
+      "file": "JourneyTwoIslandHarborPortLodge-saved-room-exit.png",
+      "sha256": "f81da4d906666560f1ea778247a1d3d2954646d09f50dbab9287c933ac59900a"
+    },
+    {
+      "file": "JourneyThreeIslandHarborPortLodge-saved-room-exit.png",
+      "sha256": "8eea2a3bf99d1909413a19c5b98ce5e95e1aca88457b9cd0e5739a56b24205d7"
+    },
+    {
+      "file": "JourneyFourIslandHarborPortLodge-saved-room-exit.png",
+      "sha256": "fceb11026a796ae6d01a0328daf88e5c6a64e1c19de17494f8c0defa2ff603eb"
+    },
+    {
+      "file": "JourneyFiveIslandHarborPortLodge-saved-room-exit.png",
+      "sha256": "b70ff1c4e11dec57bc5f0feb9c59c3ce89d69e8c75f4f3201b61ac6b63544487"
+    },
+    {
+      "file": "JourneySixIslandHarborPortLodge-saved-room-exit.png",
+      "sha256": "b53f07073a3dc466ff65e3fed5e975bb82c97e533adb10582ad9ec278cac05b5"
+    },
+    {
+      "file": "JourneySevenIslandHarborPortLodge-saved-room-exit.png",
+      "sha256": "a0bb219d4c4c2c09aecbacfe5636f4d56a0e261785d36e5568599d961958c97e"
+    },
+    {
+      "file": "JourneyDepthMares-native-dive-arrival.png",
+      "sha256": "4a0fdf7dd8832f78d1709e3c2b751c9f4599d18956cf1cf4b62c5b3a1ac052ce"
+    },
+    {
+      "file": "JourneyDepthMares-native-cave-return.png",
+      "sha256": "67491c51f527784db60601be38e3476ef42aaf723fe6d359c6795561fbada34a"
+    },
+    {
+      "file": "JourneyDepthOrigens-native-dive-arrival.png",
+      "sha256": "4a0fdf7dd8832f78d1709e3c2b751c9f4599d18956cf1cf4b62c5b3a1ac052ce"
+    },
+    {
+      "file": "JourneyDepthOrigens-native-cave-return.png",
+      "sha256": "67491c51f527784db60601be38e3476ef42aaf723fe6d359c6795561fbada34a"
+    },
+    {
+      "file": "JourneyDepthProfundezas-native-dive-arrival.png",
+      "sha256": "4a0fdf7dd8832f78d1709e3c2b751c9f4599d18956cf1cf4b62c5b3a1ac052ce"
+    },
+    {
+      "file": "JourneyDepthProfundezas-native-cave-return.png",
+      "sha256": "67491c51f527784db60601be38e3476ef42aaf723fe6d359c6795561fbada34a"
+    },
+    {
+      "file": "JourneyDepthDimensoes-native-dive-arrival.png",
+      "sha256": "4a0fdf7dd8832f78d1709e3c2b751c9f4599d18956cf1cf4b62c5b3a1ac052ce"
+    },
+    {
+      "file": "JourneyDepthDimensoes-native-cave-return.png",
+      "sha256": "67491c51f527784db60601be38e3476ef42aaf723fe6d359c6795561fbada34a"
+    },
+    {
+      "file": "JourneyDepthAbismo-native-dive-arrival.png",
+      "sha256": "4a0fdf7dd8832f78d1709e3c2b751c9f4599d18956cf1cf4b62c5b3a1ac052ce"
+    },
+    {
+      "file": "JourneyDepthAbismo-native-cave-return.png",
+      "sha256": "67491c51f527784db60601be38e3476ef42aaf723fe6d359c6795561fbada34a"
+    },
+    {
+      "file": "navel-cave-native-entry.png",
+      "sha256": "bb1094bf3c81903a53b3d86a2f45d695f2953093f012e1a7f0833f104ab0dffa"
+    },
+    {
+      "file": "navel-harbor-native-return.png",
+      "sha256": "359a5019963221ba6973f135e740cc75f23bd094e52df800cb1b5248d611509d"
+    },
+    {
+      "file": "navel-pier-native-surf-departure.png",
+      "sha256": "72ab0ef052f0506125263cb12443cec19792593dc7ea7c9dd4641a7afdffe955"
+    },
+    {
+      "file": "navel-pier-native-surf-return.png",
+      "sha256": "558ae3d5af4f05e56ad062f0ef916d43f9a7771467632abe8787866678c7a614"
+    }
+  ]
+}

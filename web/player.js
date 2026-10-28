@@ -22,7 +22,7 @@ const editionsReady = fetch('games/versions.json', {cache: 'no-store'}).then(asy
     throw new Error('The edition list is invalid.');
   }
   editions = [...info.variants];
-  if (['extra-gyms','dewford-coast-safety','badge-story','coastal-closures','sevii-integrated-piers'].includes(info.validation_scope)) {
+  if (['extra-gyms','dewford-coast-safety','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers'].includes(info.validation_scope)) {
     const response = await fetch('games/review.json', {cache: 'no-store'});
     if (!response.ok) throw new Error('The test edition could not load. Please retry.');
     const review = validateRelease(await response.json());

@@ -22,7 +22,7 @@ def run():
         shutil.copyfile(versions / 'versions.json', games / 'versions.json')
         for row in release['variants']:
             (games / row['file']).symlink_to(versions / row['file'])
-        if release.get('validation_scope') in ('extra-gyms','dewford-coast-safety','badge-story','coastal-closures','sevii-integrated-piers'):
+        if release.get('validation_scope') in ('extra-gyms','dewford-coast-safety','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers'):
             review=ROOT/'roms/rom-de-teste'
             for name in ['Pokemon-Journey-TESTE.gba','review.json']:
                 (games/name).symlink_to(review/name)
