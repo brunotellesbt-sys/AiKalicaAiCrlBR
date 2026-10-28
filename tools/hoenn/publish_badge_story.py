@@ -70,7 +70,7 @@ def preserve_history(old, output):
         shutil.copyfile(current / 'START-HERE.md', output / 'START-HERE.md')
 
 
-def archive_plan(info, output, *, include_roms=True):
+def archive_plan(info, output, *, include_roms=True, current_scope=SCOPE, extra_paths=()):
     """Hash every input; separate historical media from included current files."""
     output = Path(output)
     entries, media, visited_manifests = {}, {}, set()
@@ -137,11 +137,11 @@ def archive_plan(info, output, *, include_roms=True):
     for name in ['AGENTS.md', '.agents/skills/gba-map-review/SKILL.md']:
         add(ROOT / name, name)
     for release in releases(info):
-        historical_scope = None if release['validation_scope'] == SCOPE else release['validation_scope']
+        historical_scope = None if release['validation_scope'] == current_scope else release['validation_scope']
         for proof in release['proofs']:
             name = relative_name(proof['file'])
             add(output / name, name, proof['sha256'])
-            if release['validation_scope'] in ATTACHMENT_SCOPES:
+            if release['validation_scope'] in ATTACHMENT_SCOPES or release['validation_scope'] == current_scope:
                 dependencies = report_dependencies(output / name, expected_sha=proof['sha256'])
                 for relative, (path, sha) in dependencies.items():
                     target = Path(name) if relative == Path('.') else Path(name).parent / relative
@@ -159,6 +159,14 @@ def archive_plan(info, output, *, include_roms=True):
     for path in (ROOT / 'assets/tiles').rglob('*'):
         if path.is_file():
             add(path)
+    for extra in extra_paths:
+        extra = Path(extra)
+        if extra.is_dir():
+            for path in extra.rglob('*'):
+                if path.is_file():
+                    add(path)
+        else:
+            add(extra)
     assert not (set(entries) & set(media)), 'Current and historical media must not conflict'
     return entries, media
 
@@ -167,23 +175,24 @@ def archive_entries(info, output, *, include_roms=True):
     return archive_plan(info, output, include_roms=include_roms)[0]
 
 
-def historical_media(rows):
+def historical_media(rows, *, commit=HISTORICAL_COMMIT):
     result = []
     for name, row in sorted(rows.items()):
         # These bytes must already exist in the immutable merged parent. New
         # current evidence can never be disguised as historical media.
         repository_file = relative_name(row['repository_file'])
-        raw = subprocess.check_output(['git', 'show', HISTORICAL_COMMIT + ':' + repository_file], cwd=ROOT)
+        raw = subprocess.check_output(['git', 'show', commit + ':' + repository_file], cwd=ROOT)
         assert hashlib.sha256(raw).hexdigest() == row['sha256'], name
         result.append(dict(row, url='https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/blob/'
-                           + HISTORICAL_COMMIT + '/' + repository_file))
+                           + commit + '/' + repository_file))
     return result
 
 
-def build_archive(info, output):
+def build_archive(info, output, *, current_scope=SCOPE, historical_commit=HISTORICAL_COMMIT,
+                  extra_paths=()):
     output = Path(output)
-    entries, media = archive_plan(info, output)
-    media_rows = historical_media(media)
+    entries, media = archive_plan(info, output, current_scope=current_scope, extra_paths=extra_paths)
+    media_rows = historical_media(media, commit=historical_commit)
     archive = output / 'Pokemon-Journey-Four-Editions.zip'
     pending = archive.with_suffix('.zip.tmp')
     branch = subprocess.check_output(['git', 'branch', '--show-current'], cwd=ROOT, text=True).strip()
@@ -195,7 +204,7 @@ def build_archive(info, output):
         bundle.writestr('HISTORICAL-MEDIA.json', json.dumps(dict(
             full_historical_verification_available_offline=False,
             notes='Current evidence is included. Historical capture bytes remain in the repository at the pinned parent commit; original report JSONs and hashes are preserved.',
-            commit=HISTORICAL_COMMIT, files=media_rows), indent=2) + '\n')
+            commit=historical_commit, files=media_rows), indent=2) + '\n')
         review = json.loads((ROOT / 'roms/rom-de-teste/review.json').read_bytes())
         bundle.writestr('TESTE-DOWNLOAD.md',
                         '# Separate exploration edition\n\n'

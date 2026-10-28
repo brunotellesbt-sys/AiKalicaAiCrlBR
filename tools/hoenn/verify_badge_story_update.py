@@ -567,7 +567,7 @@ def verify_proof(report, directory, kind, is_test, save, info, old):
         raise AssertionError(('Unsupported current proof', kind))
 
 
-def verify_update(directory, info):
+def verify_update(directory, info, *, historical_review=None, historical_save=None):
     require_final_contract()
     directory = Path(directory)
     old = previous_release(info)
@@ -591,7 +591,16 @@ def verify_update(directory, info):
         variants={row['file']: row['sha256'] for row in old['variants']},
         test_rom_sha256=previous_review['sha256'], proof_count=31,
         retested_on_current_rom=False)
-    test = verify_review(ROOT / 'roms/rom-de-teste', directory / 'Pokemon-Journey-Gen1-9-Normal.gba')
+    if historical_review is None:
+        assert historical_save is None
+        test = verify_review(ROOT / 'roms/rom-de-teste', directory / 'Pokemon-Journey-Gen1-9-Normal.gba')
+    else:
+        test = historical_review
+        assert historical_save is not None, 'Historical TESTE evidence requires its pinned save'
+        normal = next(row for row in info['variants'] if row['file'] == test['base_normal_file'])
+        assert test['base_normal_sha256'] == normal['sha256'] and test['bytes'] == 33554432
+        assert test['file'] == 'Pokemon-Journey-TESTE.gba' and test['separate_save_identity'] is True
+        assert test['random_wild_encounters'] is False and test['automatic_trainer_approaches'] is False
     expected = {'common': info['parent_rom_sha256'], 'test': test['sha256'],
                 **{row['file']: row['sha256'] for row in info['variants']}}
     required = {('common', kind) for kind in COMMON_KINDS}
@@ -600,7 +609,8 @@ def verify_update(directory, info):
     assert len(required) == len(info['proofs']) == 26
     covered = set()
     source_elf, observed_elf = None, set()
-    save = ROOT / 'roms/rom-de-teste/Pokemon-Journey-TESTE.sav'
+    save = (ROOT / 'roms/rom-de-teste/Pokemon-Journey-TESTE.sav'
+            if historical_review is None else Path(historical_save))
     from publish_coastal_closures import report_dependencies
     for proof in info['proofs']:
         key = proof['target'], proof['kind']
@@ -618,7 +628,8 @@ def verify_update(directory, info):
             observed_elf.add(report['elf_sha256'])
     assert covered == required
     assert observed_elf == {source_elf}, 'Native reports used an ELF outside the audited source build'
-    assert all((directory / row['file']).read_bytes()[test['review_mode_offset']] == 0
-               for row in info['variants'])
+    if historical_review is None:
+        assert all((directory / row['file']).read_bytes()[test['review_mode_offset']] == 0
+                   for row in info['variants'])
     from verify_coastal_closures_update import verify_update as verify_previous
     verify_previous(directory, old, historical_review=previous_review, historical_save=previous_save)

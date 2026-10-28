@@ -14,6 +14,24 @@ Este arquivo descreve o método; um exemplo não autoriza alterar outros mapas.
 9. Executar testes, navegador e stage_pages. Abrir PR normal ao concluir tudo.
 Não redesenhar o mapa-múndi nem mexer em prédios/NPCs/rotas fora do pedido.
 
+[REVISÃO DO MUNDO GERADO — CAMADA 165]
+Inventário: audit_generated_world_inventory.py compara os hashes das camadas
+com upstream, incluindo mudanças apenas no layout e consumidores indiretos.
+Proveniência: audit_generated_visual_provenance.py vincula cada render aos
+inputs atuais. Rejeitar PNG antigo mesmo que o nome e a legenda pareçam certos.
+Rochas: comparar bloco & 0x3FF; preservar os bits de altura/colisão quando
+apenas os quartos gráficos estavam misturados com pedras pequenas inteiras.
+Escada: conferir topo E base; 0x0783 no banco NavelRock não é chão comum.
+Underwater: 0x254 é parede, 0x216 é piso. Entrada usa todas as seis peças
+0x265..0x267 / 0x26D..0x26F, com encosta completa e aproximação livre.
+Conexões: run_generated_surface_navigation.py divide as travessias nativas;
+o merge rejeita planos, SHA ou cobertura diferentes. Coordenadas de fixture
+acima de 127 precisam de WarpEvent nativo de 16 bits, pois SetWarpDestination
+recebe x/y de 8 bits com sinal. Nunca corrigir isso escrevendo o avatar.
+Na observação de uma emenda, esperar a câmera nativa terminar: o ID do mapa
+pode mudar antes das coordenadas, inclusive quando elas cabem no novo mapa.
+Consultar docs/generated-world-audit.md para geração, provas e publicação.
+
 [DIAGNÓSTICO RÁPIDO]
 Comandos a partir da raiz do repositório. Substituir SOURCE pelo snapshot atual.
 python3 tools/hoenn/inspect_map_tile.py --source SOURCE --map Route107 --x 2 --y 5 --radius 1 --output /tmp/tile-dewford

@@ -203,13 +203,35 @@ def field():
     if not idle(): press(1); return True
     return False
 
+def settled_position(limit=60):
+    """Wait for local coordinates to catch up with a newly published map ID.
+
+    The native camera seam updates these in separate frames. Never index the
+    new layout with the outgoing map's coordinates, or alter the avatar to
+    make the observation valid. A persistent invalid position still fails.
+    """
+    for _ in range(limit + 1):
+        name = by_location[location()]
+        x, y = position()
+        width, height, _ = blocks[name]
+        if 0 <= x < width and 0 <= y < height:
+            return name, x, y
+        step(1)
+    raise AssertionError(('Native local coordinates did not settle', name, x, y))
+
 def walk(goal):
     global walked
     blocked.clear()
     last = (by_location[location()], *position())
     for tick in range(globals().get('walk_max_ticks', 600)):
         if field(): continue
-        now = (by_location[location()], *position())
+        now = settled_position()
+        if now[0] != last[0]:
+            # Outgoing coordinates can also be in range in the new map.
+            # Finish the native camera seam before observing the destination;
+            # a bounds check alone cannot distinguish that transient state.
+            step(globals().get('walk_seam_settle_frames', 30))
+            now = settled_position()
         if now != last:
             walked += 1
             observer = globals().get('walk_observer')
@@ -240,8 +262,7 @@ def walk(goal):
         if field(): continue
         step(12)
         for _ in range(500):
-            current_name = by_location[location()]
-            x, y = position()
+            current_name, x, y = settled_position()
             width = blocks[current_name][0]
             if currents[behaviors[current_name][y * width + x]] is None: break
             step(4)

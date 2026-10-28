@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "kind": "generated-ever-grande",
+  "rom_sha256": "b04918724939a54bbe3321d274953a9311ab8c7b4eebc3cbeb844ffcd3604386",
+  "native_validation_performed": true,
+  "compiled_rom": true,
+  "gifts": [
+    {
+      "map": "JourneyEverGrandeHouse1",
+      "item": 32,
+      "before": 0,
+      "after": 1,
+      "physical_door_entry_and_exit": true,
+      "native_gift_once": true,
+      "repeat_conversation_does_not_duplicate": true
+    },
+    {
+      "map": "JourneyEverGrandeHouse2",
+      "item": 34,
+      "before": 0,
+      "after": 1,
+      "physical_door_entry_and_exit": true,
+      "native_gift_once": true,
+      "repeat_conversation_does_not_duplicate": true
+    }
+  ],
+  "physical_market_access_and_native_shop": true,
+  "shop_closed_without_purchase": true,
+  "captures": [
+    {
+      "file": "ever-grande-house-1-gift.png",
+      "sha256": "b4aa4a2e4a797b195086d7120d7527a6e19c458026d288f5f2e5df5eb5c3a9af"
+    },
+    {
+      "file": "ever-grande-house-1-return.png",
+      "sha256": "4e7f042e4dbc3afc03d230e880be48efe4fb4236fb1cf8b0b8b32183964225ba"
+    },
+    {
+      "file": "ever-grande-house-2-gift.png",
+      "sha256": "04b4ec2108f7b11b98a4321423f3abfec06681437b0f994e29e56ac09dabe67f"
+    },
+    {
+      "file": "ever-grande-house-2-return.png",
+      "sha256": "a34797cfd425e4a2f33ff71af838d47134573e8d46312e25da450219bcffc31f"
+    },
+    {
+      "file": "ever-grande-market-open.png",
+      "sha256": "5c1f9498bf0a98e711d8eaa8a6feb356a96b96c698b78dce7859ab4603b4e28f"
+    },
+    {
+      "file": "generated-ever-grande-transition-1.png",
+      "sha256": "96c37fa78673162c3a43c0fded2693108cf47693cd9b98bb8841be90acba822c"
+    },
+    {
+      "file": "generated-ever-grande-transition-2.png",
+      "sha256": "2d0a78ffe0bbea26703e26e013d08542a74a77d344aa3fbfa69cbe58f1108d3d"
+    },
+    {
+      "file": "generated-ever-grande-transition-3.png",
+      "sha256": "100415e4570dd13c80195f03c634e2eb8b0311f9134b383c99173eb9a7e3ea94"
+    },
+    {
+      "file": "generated-ever-grande-transition-4.png",
+      "sha256": "8eb20766c9421dc4dd4d3fbe3df6d06b2d096806989922bcb927abe847029ba8"
+    }
+  ],
+  "initial_city_party_and_gift_flags_are_fixtures": true,
+  "full_campaign_playthrough": false
+}

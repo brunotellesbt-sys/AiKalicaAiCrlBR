@@ -40,7 +40,12 @@ _, y, x = min((abs(x - dw['x']) + abs(y - dw['y']), y, x) for y in range(ch) for
 walk((chamber, x, y)); picture('seafoam-native-entry'); walk((surface, *start))
 checks.append(dict(map=chamber, surface=surface, access='surf', surface_start=list(start), controller_entry_and_return=True))
 assert len(checks) == 15
+capture_files = [args.output / (row['map'] + '-entrance.png')
+                 for row in checks[:-1]] + [args.output / 'seafoam-native-entry.png']
+captures = [dict(file=path.name, sha256=hashlib.sha256(path.read_bytes()).hexdigest())
+            for path in capture_files]
 lib.stop(); (args.output / 'coastal-cave-access.json').write_text(json.dumps(dict(passed=True,
+    kind='coastal-cave-access', captures=captures,
     rom_sha256=hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest(), caves=checks,
     native_controller_entries_and_returns=True, no_internal_warps_or_coordinate_writes=True,
     initial_surface_positions_and_party_are_fixtures=True, legendary_capture_rules_preserved=True), indent=2) + '\n')

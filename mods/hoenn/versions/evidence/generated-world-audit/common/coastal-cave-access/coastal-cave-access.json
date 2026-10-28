@@ -1,0 +1,251 @@
+{
+  "passed": true,
+  "kind": "coastal-cave-access",
+  "captures": [
+    {
+      "file": "JourneySanctuaryTempestades-entrance.png",
+      "sha256": "0c78cfd7566f4e35a08f1548c5a9a861ea78676fc295c6ed4da7bc232c9b8adb"
+    },
+    {
+      "file": "JourneySanctuaryAurora-entrance.png",
+      "sha256": "8ffc1b62e6e285946ef5033b4795e768f9dcaca34c5b135ebeba579882d86b37"
+    },
+    {
+      "file": "JourneySanctuaryVulcao-entrance.png",
+      "sha256": "f8b06fc97dd14b8abba7b65793d2432025ef39a4fb166b3244ef067d75a02537"
+    },
+    {
+      "file": "JourneySanctuaryTitans-entrance.png",
+      "sha256": "c827be07080109a74ee68de3805f2ca6d97d508d2326434b19d283c165e6af02"
+    },
+    {
+      "file": "JourneySanctuaryFloresta-entrance.png",
+      "sha256": "39bcae985828fb5cf4708753be2c67718784f2315295dcf9950c63203d60d481"
+    },
+    {
+      "file": "JourneySanctuaryEclipse-entrance.png",
+      "sha256": "ea7b0216ff47637bdf9a5804719750dee6a7aa28efaa4379a8cd3b7681001697"
+    },
+    {
+      "file": "JourneySanctuaryDragoes-entrance.png",
+      "sha256": "5ff05f30348854e93cbc1fd8e02366b8b973bef0b0e9388b6b94037dc49d650f"
+    },
+    {
+      "file": "JourneySanctuaryEstrelas-entrance.png",
+      "sha256": "ec51dc9dfbd9da1e6e3fdc34a9379a365628bc9a39d1cbbc0f370d6398d4dea8"
+    },
+    {
+      "file": "JourneySanctuaryCristais-entrance.png",
+      "sha256": "fa293b42ba10d0b9a9120d27bc8c9774f4a449318ff52c40b1463fec27e19a2c"
+    },
+    {
+      "file": "JourneySanctuaryMares-entrance.png",
+      "sha256": "ce2afa1012b7444b07e0075e901948463647807a3871493cbd95657d6471986a"
+    },
+    {
+      "file": "JourneySanctuaryOrigens-entrance.png",
+      "sha256": "39bcae985828fb5cf4708753be2c67718784f2315295dcf9950c63203d60d481"
+    },
+    {
+      "file": "JourneySanctuaryProfundezas-entrance.png",
+      "sha256": "a00dd830be1e2cb2cb42c95261610a524f0b4930ee53611cf11c3ace4f53682e"
+    },
+    {
+      "file": "JourneySanctuaryDimensoes-entrance.png",
+      "sha256": "31d5d5a0743b2e9c4cae2009720ebc44ac87b2b59913b2050d5d653a4018a362"
+    },
+    {
+      "file": "JourneySanctuaryAbismo-entrance.png",
+      "sha256": "39bcae985828fb5cf4708753be2c67718784f2315295dcf9950c63203d60d481"
+    },
+    {
+      "file": "seafoam-native-entry.png",
+      "sha256": "30a3edae27f52ba3b09d21ca1afddec796c4e0f335736817a010dee180546b80"
+    }
+  ],
+  "rom_sha256": "b04918724939a54bbe3321d274953a9311ab8c7b4eebc3cbeb844ffcd3604386",
+  "caves": [
+    {
+      "map": "JourneySanctuaryTempestades",
+      "surface": "JourneyWorldSea00",
+      "access": "surf",
+      "surface_start": [
+        45,
+        18
+      ],
+      "controller_entry_and_return": true,
+      "native_surf_and_dive_prompts": true,
+      "walked_tiles": 29
+    },
+    {
+      "map": "JourneySanctuaryAurora",
+      "surface": "JourneyWorldSea01",
+      "access": "surf",
+      "surface_start": [
+        45,
+        19
+      ],
+      "controller_entry_and_return": true,
+      "native_surf_and_dive_prompts": true,
+      "walked_tiles": 31
+    },
+    {
+      "map": "JourneySanctuaryVulcao",
+      "surface": "JourneyWorldSea02",
+      "access": "surf",
+      "surface_start": [
+        44,
+        17
+      ],
+      "controller_entry_and_return": true,
+      "native_surf_and_dive_prompts": true,
+      "walked_tiles": 25
+    },
+    {
+      "map": "JourneySanctuaryTitans",
+      "surface": "JourneyWorldSea03",
+      "access": "surf",
+      "surface_start": [
+        44,
+        17
+      ],
+      "controller_entry_and_return": true,
+      "native_surf_and_dive_prompts": true,
+      "walked_tiles": 25
+    },
+    {
+      "map": "JourneySanctuaryFloresta",
+      "surface": "JourneyWorldSea04",
+      "access": "surf",
+      "surface_start": [
+        45,
+        19
+      ],
+      "controller_entry_and_return": true,
+      "native_surf_and_dive_prompts": true,
+      "walked_tiles": 31
+    },
+    {
+      "map": "JourneySanctuaryEclipse",
+      "surface": "JourneyWorldSea05",
+      "access": "surf",
+      "surface_start": [
+        39,
+        15
+      ],
+      "controller_entry_and_return": true,
+      "native_surf_and_dive_prompts": true,
+      "walked_tiles": 31
+    },
+    {
+      "map": "JourneySanctuaryDragoes",
+      "surface": "JourneyWorldSea06",
+      "access": "surf",
+      "surface_start": [
+        44,
+        19
+      ],
+      "controller_entry_and_return": true,
+      "native_surf_and_dive_prompts": true,
+      "walked_tiles": 29
+    },
+    {
+      "map": "JourneySanctuaryEstrelas",
+      "surface": "JourneyWorldSea07",
+      "access": "surf",
+      "surface_start": [
+        46,
+        17
+      ],
+      "controller_entry_and_return": true,
+      "native_surf_and_dive_prompts": true,
+      "walked_tiles": 29
+    },
+    {
+      "map": "JourneySanctuaryCristais",
+      "surface": "JourneyWorldSea08",
+      "access": "surf",
+      "surface_start": [
+        44,
+        21
+      ],
+      "controller_entry_and_return": true,
+      "native_surf_and_dive_prompts": true,
+      "walked_tiles": 33
+    },
+    {
+      "map": "JourneySanctuaryMares",
+      "surface": "JourneyHoennNorthSea",
+      "access": "dive",
+      "surface_start": [
+        39,
+        11
+      ],
+      "controller_entry_and_return": true,
+      "native_surf_and_dive_prompts": true,
+      "walked_tiles": 15
+    },
+    {
+      "map": "JourneySanctuaryOrigens",
+      "surface": "JourneyHoennMiddleSea",
+      "access": "dive",
+      "surface_start": [
+        39,
+        11
+      ],
+      "controller_entry_and_return": true,
+      "native_surf_and_dive_prompts": true,
+      "walked_tiles": 15
+    },
+    {
+      "map": "JourneySanctuaryProfundezas",
+      "surface": "JourneyHoennSouthSea",
+      "access": "dive",
+      "surface_start": [
+        39,
+        11
+      ],
+      "controller_entry_and_return": true,
+      "native_surf_and_dive_prompts": true,
+      "walked_tiles": 15
+    },
+    {
+      "map": "JourneySanctuaryDimensoes",
+      "surface": "JourneyRustboroCoast",
+      "access": "dive",
+      "surface_start": [
+        31,
+        65
+      ],
+      "controller_entry_and_return": true,
+      "native_surf_and_dive_prompts": true,
+      "walked_tiles": 15
+    },
+    {
+      "map": "JourneySanctuaryAbismo",
+      "surface": "JourneyDewfordCoast",
+      "access": "dive",
+      "surface_start": [
+        31,
+        65
+      ],
+      "controller_entry_and_return": true,
+      "native_surf_and_dive_prompts": true,
+      "walked_tiles": 15
+    },
+    {
+      "map": "SeafoamIslands_1F_Frlg",
+      "surface": "Route20_Frlg",
+      "access": "surf",
+      "surface_start": [
+        60,
+        13
+      ],
+      "controller_entry_and_return": true
+    }
+  ],
+  "native_controller_entries_and_returns": true,
+  "no_internal_warps_or_coordinate_writes": true,
+  "initial_surface_positions_and_party_are_fixtures": true,
+  "legendary_capture_rules_preserved": true
+}

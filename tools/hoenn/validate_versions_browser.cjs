@@ -6,7 +6,7 @@ const crypto = require('crypto');
 const ROOT = path.resolve(__dirname, '../..');
 const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'mods/hoenn/versions/versions.json')));
 const releases = [...manifest.variants];
-const includesTestEdition = ['extra-gyms','dewford-coast-safety','badge-story','coastal-closures','sevii-integrated-piers'].includes(manifest.validation_scope);
+const includesTestEdition = ['extra-gyms','dewford-coast-safety','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers'].includes(manifest.validation_scope);
 if (includesTestEdition) releases.push(JSON.parse(fs.readFileSync(path.join(ROOT,'roms/rom-de-teste/review.json'))));
 const OUT = process.env.BROWSER_VALIDATION_OUTPUT || path.join(ROOT, 'mods/hoenn/versions-validation/browser');
 const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';

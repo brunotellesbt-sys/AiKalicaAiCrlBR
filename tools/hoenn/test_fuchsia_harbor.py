@@ -13,7 +13,7 @@ OUT=ROOT/'mods/hoenn/fuchsia-harbor-validation'
 class FuchsiaHarbor(unittest.TestCase):
     def test_every_edition_walks_the_quay_and_uses_the_indoor_captain(self):
         release=verify(ROOT/'mods/hoenn/versions')
-        while release.get('validation_scope') in ('badge-story','coastal-closures','sevii-integrated-piers','dewford-coast-safety','extra-gyms','ever-grande-market','dewford-competitive-shop','surf-review','annotated-world-links','island-harbors','sevii-harbors','three-harbor-terminals'):release=previous_release(release)
+        while release.get('validation_scope') in ('generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers','dewford-coast-safety','extra-gyms','ever-grande-market','dewford-competitive-shop','surf-review','annotated-world-links','island-harbors','sevii-harbors','three-harbor-terminals'):release=previous_release(release)
         self.assertEqual(release['validation_scope'],'fuchsia-harbor')
         targets=[('validation',release['parent_rom_sha256'])]
         targets += [(r['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba'),r['sha256']) for r in release['variants']]
@@ -36,7 +36,7 @@ class FuchsiaHarbor(unittest.TestCase):
 
     def test_old_reports_keep_their_original_rom_hashes(self):
         release=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
-        while release.get('validation_scope') in ('badge-story','coastal-closures','sevii-integrated-piers','dewford-coast-safety','extra-gyms','ever-grande-market','dewford-competitive-shop','surf-review','annotated-world-links','island-harbors','sevii-harbors','three-harbor-terminals'):release=previous_release(release)
+        while release.get('validation_scope') in ('generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers','dewford-coast-safety','extra-gyms','ever-grande-market','dewford-competitive-shop','surf-review','annotated-world-links','island-harbors','sevii-harbors','three-harbor-terminals'):release=previous_release(release)
         old=previous_release(release)
         self.assertNotEqual(old['parent_rom_sha256'],release['parent_rom_sha256'])
         self.assertEqual(old['integration_layers']+['fuchsia-harbor'],release['integration_layers'])
