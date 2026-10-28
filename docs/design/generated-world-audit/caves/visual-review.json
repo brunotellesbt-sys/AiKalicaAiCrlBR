@@ -1,0 +1,1439 @@
+{
+  "kind": "generated-caves-and-interiors-visual-review",
+  "source_rom_sha256": "3111ff0e2f5f1caa94b808c8fecf62f7b313d6b241014f416de31eff80105771",
+  "source_only": true,
+  "reviewed_whole_maps": 115,
+  "caves": 28,
+  "other_interiors": 87,
+  "maps": [
+    {
+      "map": "ArtisanCave_1F",
+      "category": "caves",
+      "source_image": "ArtisanCave_1F-source.png",
+      "source_image_sha256": "9f3057202c36470f2586e6c557ad873871b3e671cc4c0d5d5e3afbea2342e83a",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyCaveAlvorada",
+      "category": "caves",
+      "source_image": "JourneyCaveAlvorada-source.png",
+      "source_image_sha256": "09c9ac208676e4e8fd628c8cd97160ecbd85077fb7e5c956c7b37203b7b01042",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyCaveBrisa",
+      "category": "caves",
+      "source_image": "JourneyCaveBrisa-source.png",
+      "source_image_sha256": "9d685e20fd553a1e370ba3f528f4dca42e13a50a749a113a391871702c2d8e49",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 4,
+          "graphics_id": "OBJ_EVENT_GFX_SPECIES(KELDEO_ORDINARY)",
+          "position": [
+            10,
+            10
+          ],
+          "reason": "FileNotFoundError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyCaveCoral",
+      "category": "caves",
+      "source_image": "JourneyCaveCoral-source.png",
+      "source_image_sha256": "bf0ea2af91e135637bd84b98c5057ded2ee955e6f0d0d3cfdd563e143edea8da",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyCaveEspuma",
+      "category": "caves",
+      "source_image": "JourneyCaveEspuma-source.png",
+      "source_image_sha256": "9b3f84e4e870745461636c0b459f47fd82dfad211f86e2cc51fc5e5075d28b25",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 2,
+          "graphics_id": "OBJ_EVENT_GFX_SPECIES(ZAMAZENTA_HERO)",
+          "position": [
+            10,
+            2
+          ],
+          "reason": "FileNotFoundError"
+        },
+        {
+          "local_id": 1,
+          "graphics_id": "OBJ_EVENT_GFX_SPECIES(ZACIAN_HERO)",
+          "position": [
+            13,
+            26
+          ],
+          "reason": "FileNotFoundError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyCaveFarol",
+      "category": "caves",
+      "source_image": "JourneyCaveFarol-source.png",
+      "source_image_sha256": "edd34210ba7ec49089de544a8cefe228e50809f9b838d28bc7f05165d8862155",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyCaveHorizonte",
+      "category": "caves",
+      "source_image": "JourneyCaveHorizonte-source.png",
+      "source_image_sha256": "3e73d25309303f7bbb1374a6369e5f96f9f4eddbb96ed8945f86c8a2184ab15f",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 1,
+          "graphics_id": "OBJ_EVENT_GFX_SPECIES(XERNEAS_NEUTRAL)",
+          "position": [
+            3,
+            26
+          ],
+          "reason": "FileNotFoundError"
+        },
+        {
+          "local_id": 3,
+          "graphics_id": "OBJ_EVENT_GFX_SPECIES(ZYGARDE_50)",
+          "position": [
+            10,
+            29
+          ],
+          "reason": "FileNotFoundError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyCaveMare",
+      "category": "caves",
+      "source_image": "JourneyCaveMare-source.png",
+      "source_image_sha256": "4372776977072a6ff0adb61715aee56e83402a628f56ad517b2e80249cdcf57b",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 4,
+          "graphics_id": "OBJ_EVENT_GFX_SPECIES(OGERPON_TEAL)",
+          "position": [
+            18,
+            7
+          ],
+          "reason": "FileNotFoundError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyCaveOcaso",
+      "category": "caves",
+      "source_image": "JourneyCaveOcaso-source.png",
+      "source_image_sha256": "5332e17939000e5edad6a2980813a14062cc2656fcf2c32ee2601d4c9283a452",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyGalacticHall",
+      "category": "caves",
+      "source_image": "JourneyGalacticHall-source.png",
+      "source_image_sha256": "1711363eca8e4af6d586e8211a4af1accd1ded5cacf179e9dc425dc022e44851",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyParadoxFuture",
+      "category": "caves",
+      "source_image": "JourneyParadoxFuture-source.png",
+      "source_image_sha256": "83bfbb0c3124dbd61264d8ea734a49be6d52a61e2dcce5cf3ab744dc3d625307",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyParadoxPast",
+      "category": "caves",
+      "source_image": "JourneyParadoxPast-source.png",
+      "source_image_sha256": "d2c4b1d3d183c7fde5108d180aaf3e6f1aabd4a4fc887806e7d298da74f02d5a",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyRocketBaseB1F",
+      "category": "caves",
+      "source_image": "JourneyRocketBaseB1F-source.png",
+      "source_image_sha256": "de87c75aee8d22915967828f4df74e50f5e008501bf3d2fe378efc0d0564ee85",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "finding": "Seven isolated desk-corner fragments replaced with three complete native desks.",
+      "after_source_image": "JourneyRocketBaseB1F-after-source.png",
+      "after_source_image_sha256": "f736673481f10a1ee76a344ba47799ec8871aaa3768bf6ee6df1ede97f5a9b37",
+      "repair_helper": "tools/hoenn/generated_world_caves.py"
+    },
+    {
+      "map": "JourneyRocketBaseB2F",
+      "category": "caves",
+      "source_image": "JourneyRocketBaseB2F-source.png",
+      "source_image_sha256": "53c32b4b6e93f0d7e2850f70de2e780d8572ad5a56ad7155f61f7cdd45721d81",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "finding": "Seven isolated desk-corner fragments replaced with three complete native desks.",
+      "after_source_image": "JourneyRocketBaseB2F-after-source.png",
+      "after_source_image_sha256": "94425799ac2f2334bf28dfaabfd04c7a0a0811362b0b3e5a14850e07d872d975",
+      "repair_helper": "tools/hoenn/generated_world_caves.py"
+    },
+    {
+      "map": "JourneySanctuaryAbismo",
+      "category": "caves",
+      "source_image": "JourneySanctuaryAbismo-source.png",
+      "source_image_sha256": "cbc2d17f79b1bd3fe06a74026ec21b713481dba8d1b843bfc482b1418d65e91a",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySanctuaryAurora",
+      "category": "caves",
+      "source_image": "JourneySanctuaryAurora-source.png",
+      "source_image_sha256": "71999d469906a3b0546fd4721fd5128519c26441c512ca03a56d4ab42b866884",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySanctuaryCristais",
+      "category": "caves",
+      "source_image": "JourneySanctuaryCristais-source.png",
+      "source_image_sha256": "56d7ed83a0af8e8b3012a83ba4a9f13918027e426f811a597b0e951919ed02d2",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySanctuaryDimensoes",
+      "category": "caves",
+      "source_image": "JourneySanctuaryDimensoes-source.png",
+      "source_image_sha256": "b75a72301d8810cc75934440aff129616578accd20ec75999cde6a3b554c90ce",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "finding": "Fifteen blocked stair-top fragments stranded both Paradox routes; native south ridge restored and complete ladders placed on open floor.",
+      "after_source_image": "JourneySanctuaryDimensoes-after-source.png",
+      "after_source_image_sha256": "89ced5aa0455cda3039a4401d6f65244d5ec86db4e230ddba9ab155466d38a6a",
+      "repair_helper": "tools/hoenn/generated_world_caves.py"
+    },
+    {
+      "map": "JourneySanctuaryDragoes",
+      "category": "caves",
+      "source_image": "JourneySanctuaryDragoes-source.png",
+      "source_image_sha256": "cd7d7d00cf2921b80d45e70a1350d86f1b7f8e243fe5caae0e8fc92be3c043ad",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySanctuaryEclipse",
+      "category": "caves",
+      "source_image": "JourneySanctuaryEclipse-source.png",
+      "source_image_sha256": "7a874431366b146fb4b8ffc97fe2df3feba39c49b389945464bfc15d15da642f",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySanctuaryEstrelas",
+      "category": "caves",
+      "source_image": "JourneySanctuaryEstrelas-source.png",
+      "source_image_sha256": "dd690dfc528f1d046e9d30fc147a9ec4bdc922b50f15c33523df611c5924a528",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySanctuaryFloresta",
+      "category": "caves",
+      "source_image": "JourneySanctuaryFloresta-source.png",
+      "source_image_sha256": "24c8251da6c01f4924cf2914defe2ac5158fb6d0814b38ad4303385e150f1e1b",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySanctuaryMares",
+      "category": "caves",
+      "source_image": "JourneySanctuaryMares-source.png",
+      "source_image_sha256": "1f3852f5a9d703d44ced351bde028335d4f1301cbf44dbcf5f754438bd5ddfd3",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySanctuaryOrigens",
+      "category": "caves",
+      "source_image": "JourneySanctuaryOrigens-source.png",
+      "source_image_sha256": "58993d6759f1ab8e3b9c015681636a1f65adcff3037f5fe940be6029f7f912bc",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 3,
+          "graphics_id": "OBJ_EVENT_GFX_SPECIES(GIRATINA_ALTERED)",
+          "position": [
+            17,
+            4
+          ],
+          "reason": "FileNotFoundError"
+        },
+        {
+          "local_id": 4,
+          "graphics_id": "OBJ_EVENT_GFX_SPECIES(ARCEUS_NORMAL)",
+          "position": [
+            10,
+            10
+          ],
+          "reason": "FileNotFoundError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySanctuaryProfundezas",
+      "category": "caves",
+      "source_image": "JourneySanctuaryProfundezas-source.png",
+      "source_image_sha256": "008687c90366c8d995b4d3a129f29b39d01987431b9ff33c92b7329a6983a24b",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 1,
+          "graphics_id": "OBJ_EVENT_GFX_SPECIES(TORNADUS_INCARNATE)",
+          "position": [
+            4,
+            4
+          ],
+          "reason": "FileNotFoundError"
+        },
+        {
+          "local_id": 3,
+          "graphics_id": "OBJ_EVENT_GFX_SPECIES(LANDORUS_INCARNATE)",
+          "position": [
+            17,
+            4
+          ],
+          "reason": "FileNotFoundError"
+        },
+        {
+          "local_id": 4,
+          "graphics_id": "OBJ_EVENT_GFX_SPECIES(ENAMORUS_INCARNATE)",
+          "position": [
+            10,
+            10
+          ],
+          "reason": "FileNotFoundError"
+        },
+        {
+          "local_id": 2,
+          "graphics_id": "OBJ_EVENT_GFX_SPECIES(THUNDURUS_INCARNATE)",
+          "position": [
+            17,
+            16
+          ],
+          "reason": "FileNotFoundError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySanctuaryTempestades",
+      "category": "caves",
+      "source_image": "JourneySanctuaryTempestades-source.png",
+      "source_image_sha256": "27ee69024d57ba7afa517ade05df87c978fd10127c3e2a6bc9488d5b08531781",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySanctuaryTitans",
+      "category": "caves",
+      "source_image": "JourneySanctuaryTitans-source.png",
+      "source_image_sha256": "12e9cd201ee7c12051f58d9d19bc49363cfcee1c01c8a9116a91b43c329e9c86",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySanctuaryVulcao",
+      "category": "caves",
+      "source_image": "JourneySanctuaryVulcao-source.png",
+      "source_image_sha256": "cb700afec4ef1b0581b96e9f2bc297ac7eb7cbb76162501bbb1c8caaa1e6a6d6",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyCeruleanHarbor",
+      "category": "rooms",
+      "source_image": "JourneyCeruleanHarbor-source.png",
+      "source_image_sha256": "58b83a49389ff70f6b5cb88532fd0b724c7d196b34569ce7caae35dde60c14ed",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyCinnabarHarbor",
+      "category": "rooms",
+      "source_image": "JourneyCinnabarHarbor-source.png",
+      "source_image_sha256": "58b83a49389ff70f6b5cb88532fd0b724c7d196b34569ce7caae35dde60c14ed",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyCinnabarSailorsLodge",
+      "category": "rooms",
+      "source_image": "JourneyCinnabarSailorsLodge-source.png",
+      "source_image_sha256": "5fd784783c3dffc66c2df9d4017676bdff67acf378259806c1de737b8c35e1fb",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyDewfordHarbor",
+      "category": "rooms",
+      "source_image": "JourneyDewfordHarbor-source.png",
+      "source_image_sha256": "58b83a49389ff70f6b5cb88532fd0b724c7d196b34569ce7caae35dde60c14ed",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyBedroom01",
+      "category": "rooms",
+      "source_image": "JourneyFamilyBedroom01-source.png",
+      "source_image_sha256": "069bea37a69468f46f1a55a264f2ae3334dd1d1837d024746beaf9f3c0da7ad8",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyBedroom02",
+      "category": "rooms",
+      "source_image": "JourneyFamilyBedroom02-source.png",
+      "source_image_sha256": "069bea37a69468f46f1a55a264f2ae3334dd1d1837d024746beaf9f3c0da7ad8",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyBedroom03",
+      "category": "rooms",
+      "source_image": "JourneyFamilyBedroom03-source.png",
+      "source_image_sha256": "069bea37a69468f46f1a55a264f2ae3334dd1d1837d024746beaf9f3c0da7ad8",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyBedroom04",
+      "category": "rooms",
+      "source_image": "JourneyFamilyBedroom04-source.png",
+      "source_image_sha256": "069bea37a69468f46f1a55a264f2ae3334dd1d1837d024746beaf9f3c0da7ad8",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyBedroom05",
+      "category": "rooms",
+      "source_image": "JourneyFamilyBedroom05-source.png",
+      "source_image_sha256": "069bea37a69468f46f1a55a264f2ae3334dd1d1837d024746beaf9f3c0da7ad8",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyBedroom06",
+      "category": "rooms",
+      "source_image": "JourneyFamilyBedroom06-source.png",
+      "source_image_sha256": "069bea37a69468f46f1a55a264f2ae3334dd1d1837d024746beaf9f3c0da7ad8",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyBedroom07",
+      "category": "rooms",
+      "source_image": "JourneyFamilyBedroom07-source.png",
+      "source_image_sha256": "069bea37a69468f46f1a55a264f2ae3334dd1d1837d024746beaf9f3c0da7ad8",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyBedroom08",
+      "category": "rooms",
+      "source_image": "JourneyFamilyBedroom08-source.png",
+      "source_image_sha256": "069bea37a69468f46f1a55a264f2ae3334dd1d1837d024746beaf9f3c0da7ad8",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyBedroom09",
+      "category": "rooms",
+      "source_image": "JourneyFamilyBedroom09-source.png",
+      "source_image_sha256": "069bea37a69468f46f1a55a264f2ae3334dd1d1837d024746beaf9f3c0da7ad8",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyBedroom10",
+      "category": "rooms",
+      "source_image": "JourneyFamilyBedroom10-source.png",
+      "source_image_sha256": "069bea37a69468f46f1a55a264f2ae3334dd1d1837d024746beaf9f3c0da7ad8",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyBedroom11",
+      "category": "rooms",
+      "source_image": "JourneyFamilyBedroom11-source.png",
+      "source_image_sha256": "069bea37a69468f46f1a55a264f2ae3334dd1d1837d024746beaf9f3c0da7ad8",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyBedroom12",
+      "category": "rooms",
+      "source_image": "JourneyFamilyBedroom12-source.png",
+      "source_image_sha256": "069bea37a69468f46f1a55a264f2ae3334dd1d1837d024746beaf9f3c0da7ad8",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyBedroom13",
+      "category": "rooms",
+      "source_image": "JourneyFamilyBedroom13-source.png",
+      "source_image_sha256": "069bea37a69468f46f1a55a264f2ae3334dd1d1837d024746beaf9f3c0da7ad8",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyBedroom14",
+      "category": "rooms",
+      "source_image": "JourneyFamilyBedroom14-source.png",
+      "source_image_sha256": "069bea37a69468f46f1a55a264f2ae3334dd1d1837d024746beaf9f3c0da7ad8",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyBedroom15",
+      "category": "rooms",
+      "source_image": "JourneyFamilyBedroom15-source.png",
+      "source_image_sha256": "069bea37a69468f46f1a55a264f2ae3334dd1d1837d024746beaf9f3c0da7ad8",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyLiving01",
+      "category": "rooms",
+      "source_image": "JourneyFamilyLiving01-source.png",
+      "source_image_sha256": "fec4c410f5417fd91b30b2ee109d2c9a6647a40f291fbdcdbea89b35ca5023b1",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 4,
+          "graphics_id": "OBJ_EVENT_GFX_JOURNEY_FAMILY_CASE",
+          "position": [
+            6,
+            4
+          ],
+          "reason": "TypeError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyLiving02",
+      "category": "rooms",
+      "source_image": "JourneyFamilyLiving02-source.png",
+      "source_image_sha256": "941c6365ac6b56532935de21612af21eef92e350276841993e94a85001a890eb",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 4,
+          "graphics_id": "OBJ_EVENT_GFX_JOURNEY_FAMILY_CASE",
+          "position": [
+            6,
+            4
+          ],
+          "reason": "TypeError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyLiving03",
+      "category": "rooms",
+      "source_image": "JourneyFamilyLiving03-source.png",
+      "source_image_sha256": "7da81940abe594e22b4fe2d87652e4c50eb990903e8b36b051b32b6231de8dce",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 3,
+          "graphics_id": "OBJ_EVENT_GFX_JOURNEY_FAMILY_CASE",
+          "position": [
+            6,
+            4
+          ],
+          "reason": "TypeError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyLiving04",
+      "category": "rooms",
+      "source_image": "JourneyFamilyLiving04-source.png",
+      "source_image_sha256": "941c6365ac6b56532935de21612af21eef92e350276841993e94a85001a890eb",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 4,
+          "graphics_id": "OBJ_EVENT_GFX_JOURNEY_FAMILY_CASE",
+          "position": [
+            6,
+            4
+          ],
+          "reason": "TypeError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyLiving05",
+      "category": "rooms",
+      "source_image": "JourneyFamilyLiving05-source.png",
+      "source_image_sha256": "7da81940abe594e22b4fe2d87652e4c50eb990903e8b36b051b32b6231de8dce",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 3,
+          "graphics_id": "OBJ_EVENT_GFX_JOURNEY_FAMILY_CASE",
+          "position": [
+            6,
+            4
+          ],
+          "reason": "TypeError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyLiving06",
+      "category": "rooms",
+      "source_image": "JourneyFamilyLiving06-source.png",
+      "source_image_sha256": "3c5343d992d92b086d6f9526f260e5c67de43390b1178d745db483d097d5485c",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 5,
+          "graphics_id": "OBJ_EVENT_GFX_JOURNEY_FAMILY_CASE",
+          "position": [
+            6,
+            4
+          ],
+          "reason": "TypeError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyLiving07",
+      "category": "rooms",
+      "source_image": "JourneyFamilyLiving07-source.png",
+      "source_image_sha256": "3c5343d992d92b086d6f9526f260e5c67de43390b1178d745db483d097d5485c",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 5,
+          "graphics_id": "OBJ_EVENT_GFX_JOURNEY_FAMILY_CASE",
+          "position": [
+            6,
+            4
+          ],
+          "reason": "TypeError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyLiving08",
+      "category": "rooms",
+      "source_image": "JourneyFamilyLiving08-source.png",
+      "source_image_sha256": "941c6365ac6b56532935de21612af21eef92e350276841993e94a85001a890eb",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 4,
+          "graphics_id": "OBJ_EVENT_GFX_JOURNEY_FAMILY_CASE",
+          "position": [
+            6,
+            4
+          ],
+          "reason": "TypeError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyLiving09",
+      "category": "rooms",
+      "source_image": "JourneyFamilyLiving09-source.png",
+      "source_image_sha256": "fec4c410f5417fd91b30b2ee109d2c9a6647a40f291fbdcdbea89b35ca5023b1",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 4,
+          "graphics_id": "OBJ_EVENT_GFX_JOURNEY_FAMILY_CASE",
+          "position": [
+            6,
+            4
+          ],
+          "reason": "TypeError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyLiving10",
+      "category": "rooms",
+      "source_image": "JourneyFamilyLiving10-source.png",
+      "source_image_sha256": "7da81940abe594e22b4fe2d87652e4c50eb990903e8b36b051b32b6231de8dce",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 3,
+          "graphics_id": "OBJ_EVENT_GFX_JOURNEY_FAMILY_CASE",
+          "position": [
+            6,
+            4
+          ],
+          "reason": "TypeError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyLiving11",
+      "category": "rooms",
+      "source_image": "JourneyFamilyLiving11-source.png",
+      "source_image_sha256": "7da81940abe594e22b4fe2d87652e4c50eb990903e8b36b051b32b6231de8dce",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 3,
+          "graphics_id": "OBJ_EVENT_GFX_JOURNEY_FAMILY_CASE",
+          "position": [
+            6,
+            4
+          ],
+          "reason": "TypeError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyLiving12",
+      "category": "rooms",
+      "source_image": "JourneyFamilyLiving12-source.png",
+      "source_image_sha256": "7da81940abe594e22b4fe2d87652e4c50eb990903e8b36b051b32b6231de8dce",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 3,
+          "graphics_id": "OBJ_EVENT_GFX_JOURNEY_FAMILY_CASE",
+          "position": [
+            6,
+            4
+          ],
+          "reason": "TypeError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyLiving13",
+      "category": "rooms",
+      "source_image": "JourneyFamilyLiving13-source.png",
+      "source_image_sha256": "7da81940abe594e22b4fe2d87652e4c50eb990903e8b36b051b32b6231de8dce",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 3,
+          "graphics_id": "OBJ_EVENT_GFX_JOURNEY_FAMILY_CASE",
+          "position": [
+            6,
+            4
+          ],
+          "reason": "TypeError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyLiving14",
+      "category": "rooms",
+      "source_image": "JourneyFamilyLiving14-source.png",
+      "source_image_sha256": "7da81940abe594e22b4fe2d87652e4c50eb990903e8b36b051b32b6231de8dce",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 3,
+          "graphics_id": "OBJ_EVENT_GFX_JOURNEY_FAMILY_CASE",
+          "position": [
+            6,
+            4
+          ],
+          "reason": "TypeError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFamilyLiving15",
+      "category": "rooms",
+      "source_image": "JourneyFamilyLiving15-source.png",
+      "source_image_sha256": "7da81940abe594e22b4fe2d87652e4c50eb990903e8b36b051b32b6231de8dce",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [
+        {
+          "local_id": 3,
+          "graphics_id": "OBJ_EVENT_GFX_JOURNEY_FAMILY_CASE",
+          "position": [
+            6,
+            4
+          ],
+          "reason": "TypeError"
+        }
+      ],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFiveIslandHarborPortLodge",
+      "category": "rooms",
+      "source_image": "JourneyFiveIslandHarborPortLodge-source.png",
+      "source_image_sha256": "f172ed442c99928b5a88d6c423dde225b8f3eefff5c559af6b7eb656859315b3",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFourIslandHarborPortLodge",
+      "category": "rooms",
+      "source_image": "JourneyFourIslandHarborPortLodge-source.png",
+      "source_image_sha256": "f172ed442c99928b5a88d6c423dde225b8f3eefff5c559af6b7eb656859315b3",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyFuchsiaHarbor",
+      "category": "rooms",
+      "source_image": "JourneyFuchsiaHarbor-source.png",
+      "source_image_sha256": "58b83a49389ff70f6b5cb88532fd0b724c7d196b34569ce7caae35dde60c14ed",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennBedroom01",
+      "category": "rooms",
+      "source_image": "JourneyHoennBedroom01-source.png",
+      "source_image_sha256": "e91107e44133dc9fe5385d1441aff6dcd97195f3ed6cdc5e9eb2545429ee642b",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennBedroom02",
+      "category": "rooms",
+      "source_image": "JourneyHoennBedroom02-source.png",
+      "source_image_sha256": "e91107e44133dc9fe5385d1441aff6dcd97195f3ed6cdc5e9eb2545429ee642b",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennBedroom03",
+      "category": "rooms",
+      "source_image": "JourneyHoennBedroom03-source.png",
+      "source_image_sha256": "e91107e44133dc9fe5385d1441aff6dcd97195f3ed6cdc5e9eb2545429ee642b",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennBedroom04",
+      "category": "rooms",
+      "source_image": "JourneyHoennBedroom04-source.png",
+      "source_image_sha256": "e91107e44133dc9fe5385d1441aff6dcd97195f3ed6cdc5e9eb2545429ee642b",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennBedroom05",
+      "category": "rooms",
+      "source_image": "JourneyHoennBedroom05-source.png",
+      "source_image_sha256": "e91107e44133dc9fe5385d1441aff6dcd97195f3ed6cdc5e9eb2545429ee642b",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennBedroom06",
+      "category": "rooms",
+      "source_image": "JourneyHoennBedroom06-source.png",
+      "source_image_sha256": "e91107e44133dc9fe5385d1441aff6dcd97195f3ed6cdc5e9eb2545429ee642b",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennBedroom07",
+      "category": "rooms",
+      "source_image": "JourneyHoennBedroom07-source.png",
+      "source_image_sha256": "e91107e44133dc9fe5385d1441aff6dcd97195f3ed6cdc5e9eb2545429ee642b",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennBedroom08",
+      "category": "rooms",
+      "source_image": "JourneyHoennBedroom08-source.png",
+      "source_image_sha256": "e91107e44133dc9fe5385d1441aff6dcd97195f3ed6cdc5e9eb2545429ee642b",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennBedroom09",
+      "category": "rooms",
+      "source_image": "JourneyHoennBedroom09-source.png",
+      "source_image_sha256": "e91107e44133dc9fe5385d1441aff6dcd97195f3ed6cdc5e9eb2545429ee642b",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennBedroom10",
+      "category": "rooms",
+      "source_image": "JourneyHoennBedroom10-source.png",
+      "source_image_sha256": "e91107e44133dc9fe5385d1441aff6dcd97195f3ed6cdc5e9eb2545429ee642b",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennBedroom11",
+      "category": "rooms",
+      "source_image": "JourneyHoennBedroom11-source.png",
+      "source_image_sha256": "e91107e44133dc9fe5385d1441aff6dcd97195f3ed6cdc5e9eb2545429ee642b",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennBedroom12",
+      "category": "rooms",
+      "source_image": "JourneyHoennBedroom12-source.png",
+      "source_image_sha256": "e91107e44133dc9fe5385d1441aff6dcd97195f3ed6cdc5e9eb2545429ee642b",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennBedroom13",
+      "category": "rooms",
+      "source_image": "JourneyHoennBedroom13-source.png",
+      "source_image_sha256": "e91107e44133dc9fe5385d1441aff6dcd97195f3ed6cdc5e9eb2545429ee642b",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennBedroom14",
+      "category": "rooms",
+      "source_image": "JourneyHoennBedroom14-source.png",
+      "source_image_sha256": "e91107e44133dc9fe5385d1441aff6dcd97195f3ed6cdc5e9eb2545429ee642b",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennLiving01",
+      "category": "rooms",
+      "source_image": "JourneyHoennLiving01-source.png",
+      "source_image_sha256": "359f9e6e1cfeeab6ac275bc8dcca571d2be1c6baf3dccc7ea40c4ce647d0e0ab",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennLiving02",
+      "category": "rooms",
+      "source_image": "JourneyHoennLiving02-source.png",
+      "source_image_sha256": "5bb017d686d8c3bfa34c5057be2ee1009ef56b3d709b1529ca941e930d955673",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennLiving03",
+      "category": "rooms",
+      "source_image": "JourneyHoennLiving03-source.png",
+      "source_image_sha256": "35ddd40d9195238c8feca4ebeaad3e5d86cc513d11f78a0fa9217f719883aca8",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennLiving04",
+      "category": "rooms",
+      "source_image": "JourneyHoennLiving04-source.png",
+      "source_image_sha256": "5bb017d686d8c3bfa34c5057be2ee1009ef56b3d709b1529ca941e930d955673",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennLiving05",
+      "category": "rooms",
+      "source_image": "JourneyHoennLiving05-source.png",
+      "source_image_sha256": "5bb017d686d8c3bfa34c5057be2ee1009ef56b3d709b1529ca941e930d955673",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennLiving06",
+      "category": "rooms",
+      "source_image": "JourneyHoennLiving06-source.png",
+      "source_image_sha256": "359f9e6e1cfeeab6ac275bc8dcca571d2be1c6baf3dccc7ea40c4ce647d0e0ab",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennLiving07",
+      "category": "rooms",
+      "source_image": "JourneyHoennLiving07-source.png",
+      "source_image_sha256": "35ddd40d9195238c8feca4ebeaad3e5d86cc513d11f78a0fa9217f719883aca8",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennLiving08",
+      "category": "rooms",
+      "source_image": "JourneyHoennLiving08-source.png",
+      "source_image_sha256": "359f9e6e1cfeeab6ac275bc8dcca571d2be1c6baf3dccc7ea40c4ce647d0e0ab",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennLiving09",
+      "category": "rooms",
+      "source_image": "JourneyHoennLiving09-source.png",
+      "source_image_sha256": "b5cccfa54646502914fdd3730ffd9ba6d7d2f622b3469c8a6d267535e32966be",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennLiving10",
+      "category": "rooms",
+      "source_image": "JourneyHoennLiving10-source.png",
+      "source_image_sha256": "b5cccfa54646502914fdd3730ffd9ba6d7d2f622b3469c8a6d267535e32966be",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennLiving11",
+      "category": "rooms",
+      "source_image": "JourneyHoennLiving11-source.png",
+      "source_image_sha256": "359f9e6e1cfeeab6ac275bc8dcca571d2be1c6baf3dccc7ea40c4ce647d0e0ab",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennLiving12",
+      "category": "rooms",
+      "source_image": "JourneyHoennLiving12-source.png",
+      "source_image_sha256": "5bb017d686d8c3bfa34c5057be2ee1009ef56b3d709b1529ca941e930d955673",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennLiving13",
+      "category": "rooms",
+      "source_image": "JourneyHoennLiving13-source.png",
+      "source_image_sha256": "359f9e6e1cfeeab6ac275bc8dcca571d2be1c6baf3dccc7ea40c4ce647d0e0ab",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyHoennLiving14",
+      "category": "rooms",
+      "source_image": "JourneyHoennLiving14-source.png",
+      "source_image_sha256": "5bb017d686d8c3bfa34c5057be2ee1009ef56b3d709b1529ca941e930d955673",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyLavenderHarbor",
+      "category": "rooms",
+      "source_image": "JourneyLavenderHarbor-source.png",
+      "source_image_sha256": "58b83a49389ff70f6b5cb88532fd0b724c7d196b34569ce7caae35dde60c14ed",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyLavenderWorkshop",
+      "category": "rooms",
+      "source_image": "JourneyLavenderWorkshop-source.png",
+      "source_image_sha256": "5d73b5ad471e7cb86a6d94417a76966776f4612d9799d951ca48193158bf5e42",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyMossdeepHarbor",
+      "category": "rooms",
+      "source_image": "JourneyMossdeepHarbor-source.png",
+      "source_image_sha256": "58b83a49389ff70f6b5cb88532fd0b724c7d196b34569ce7caae35dde60c14ed",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyMossdeepSailorsLodge",
+      "category": "rooms",
+      "source_image": "JourneyMossdeepSailorsLodge-source.png",
+      "source_image_sha256": "d4f2084174b6102e8d91fb4792b2b0b2a47f80327bd6bbea43da032a7689320c",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyOneIslandHarborPortLodge",
+      "category": "rooms",
+      "source_image": "JourneyOneIslandHarborPortLodge-source.png",
+      "source_image_sha256": "f172ed442c99928b5a88d6c423dde225b8f3eefff5c559af6b7eb656859315b3",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyPalletHarbor",
+      "category": "rooms",
+      "source_image": "JourneyPalletHarbor-source.png",
+      "source_image_sha256": "58b83a49389ff70f6b5cb88532fd0b724c7d196b34569ce7caae35dde60c14ed",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyPalletTownPortLodge",
+      "category": "rooms",
+      "source_image": "JourneyPalletTownPortLodge-source.png",
+      "source_image_sha256": "f172ed442c99928b5a88d6c423dde225b8f3eefff5c559af6b7eb656859315b3",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyPetalburgHarbor",
+      "category": "rooms",
+      "source_image": "JourneyPetalburgHarbor-source.png",
+      "source_image_sha256": "58b83a49389ff70f6b5cb88532fd0b724c7d196b34569ce7caae35dde60c14ed",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyRoute12SailorsLodge",
+      "category": "rooms",
+      "source_image": "JourneyRoute12SailorsLodge-source.png",
+      "source_image_sha256": "bb7381412ef4c79f40bcc9f38afeb27edabc3a15137c50c32847be88d4a629bf",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyRoute19PortLodge",
+      "category": "rooms",
+      "source_image": "JourneyRoute19PortLodge-source.png",
+      "source_image_sha256": "2a12378bccc36ba0dc190188f3eb56a722c8649c34b4b7c9925bddc33884780f",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySevenIslandHarborPortLodge",
+      "category": "rooms",
+      "source_image": "JourneySevenIslandHarborPortLodge-source.png",
+      "source_image_sha256": "f172ed442c99928b5a88d6c423dde225b8f3eefff5c559af6b7eb656859315b3",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySeviiFiveHarbor",
+      "category": "rooms",
+      "source_image": "JourneySeviiFiveHarbor-source.png",
+      "source_image_sha256": "58b83a49389ff70f6b5cb88532fd0b724c7d196b34569ce7caae35dde60c14ed",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySeviiFourHarbor",
+      "category": "rooms",
+      "source_image": "JourneySeviiFourHarbor-source.png",
+      "source_image_sha256": "58b83a49389ff70f6b5cb88532fd0b724c7d196b34569ce7caae35dde60c14ed",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySeviiOneHarbor",
+      "category": "rooms",
+      "source_image": "JourneySeviiOneHarbor-source.png",
+      "source_image_sha256": "58b83a49389ff70f6b5cb88532fd0b724c7d196b34569ce7caae35dde60c14ed",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySeviiSevenHarbor",
+      "category": "rooms",
+      "source_image": "JourneySeviiSevenHarbor-source.png",
+      "source_image_sha256": "58b83a49389ff70f6b5cb88532fd0b724c7d196b34569ce7caae35dde60c14ed",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySeviiSixHarbor",
+      "category": "rooms",
+      "source_image": "JourneySeviiSixHarbor-source.png",
+      "source_image_sha256": "58b83a49389ff70f6b5cb88532fd0b724c7d196b34569ce7caae35dde60c14ed",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySeviiThreeHarbor",
+      "category": "rooms",
+      "source_image": "JourneySeviiThreeHarbor-source.png",
+      "source_image_sha256": "58b83a49389ff70f6b5cb88532fd0b724c7d196b34569ce7caae35dde60c14ed",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySeviiTwoHarbor",
+      "category": "rooms",
+      "source_image": "JourneySeviiTwoHarbor-source.png",
+      "source_image_sha256": "58b83a49389ff70f6b5cb88532fd0b724c7d196b34569ce7caae35dde60c14ed",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySixIslandHarborPortLodge",
+      "category": "rooms",
+      "source_image": "JourneySixIslandHarborPortLodge-source.png",
+      "source_image_sha256": "f172ed442c99928b5a88d6c423dde225b8f3eefff5c559af6b7eb656859315b3",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneySootopolisHarbor",
+      "category": "rooms",
+      "source_image": "JourneySootopolisHarbor-source.png",
+      "source_image_sha256": "9676cbeefdc4b23a083853aad9178dc51cf5c6393717f9c582f98eda2ca1668d",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyThreeIslandHarborPortLodge",
+      "category": "rooms",
+      "source_image": "JourneyThreeIslandHarborPortLodge-source.png",
+      "source_image_sha256": "f172ed442c99928b5a88d6c423dde225b8f3eefff5c559af6b7eb656859315b3",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    },
+    {
+      "map": "JourneyTwoIslandHarborPortLodge",
+      "category": "rooms",
+      "source_image": "JourneyTwoIslandHarborPortLodge-source.png",
+      "source_image_sha256": "f172ed442c99928b5a88d6c423dde225b8f3eefff5c559af6b7eb656859315b3",
+      "whole_map_model_visual_review": true,
+      "source_render_not_emulator": true,
+      "unresolved_static_npcs": [],
+      "no_new_incomplete_terrain_object_identified": true
+    }
+  ],
+  "notes": [
+    "Review inspected all twenty whole-map contact sheets and the three complete after maps; controller proof is separate.",
+    "Family-house variable NPCs and some species assets are unresolved in the static renderer and are explicitly marked, never replaced with invented sprites.",
+    "The square northern water/floor boundary in sanctuary shells matches the native NavelRock_Bottom artwork. It is not treated as a missing beach tile.",
+    "Galactic prisoners are intentionally gated by story state; event-specific native validation covers their release."
+  ]
+}

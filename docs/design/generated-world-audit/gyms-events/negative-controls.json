@@ -1,0 +1,103 @@
+{
+  "source_analysis_only": true,
+  "synthetic_mutations_only": true,
+  "controls": [
+    {
+      "mutation": "trainer_faces_wall",
+      "map": "JourneyLavenderGym",
+      "position": [
+        14,
+        36
+      ],
+      "failures": [
+        {
+          "map": "JourneyLavenderGym",
+          "check": "four_different_facings"
+        },
+        {
+          "map": "JourneyLavenderGym",
+          "position": [
+            14,
+            36
+          ],
+          "local_id": 3,
+          "check": "clear_sightline"
+        },
+        {
+          "map": "JourneyLavenderGym",
+          "position": [
+            14,
+            36
+          ],
+          "local_id": 3,
+          "check": "three_wide_approach"
+        },
+        {
+          "map": "JourneyLavenderGym",
+          "position": [
+            14,
+            36
+          ],
+          "local_id": 3,
+          "check": "sightline_is_mandatory"
+        },
+        {
+          "map": "JourneyLavenderGym",
+          "position": [
+            14,
+            36
+          ],
+          "local_id": 3,
+          "check": "can_reach_every_sight_cell"
+        }
+      ]
+    },
+    {
+      "mutation": "solid_tile_in_sightline",
+      "map": "JourneyLavenderGym",
+      "position": [
+        14,
+        38
+      ],
+      "failures": [
+        {
+          "map": "JourneyLavenderGym",
+          "position": [
+            14,
+            36
+          ],
+          "local_id": 3,
+          "check": "clear_sightline"
+        },
+        {
+          "map": "JourneyLavenderGym",
+          "position": [
+            14,
+            36
+          ],
+          "local_id": 3,
+          "check": "three_wide_approach"
+        },
+        {
+          "map": "JourneyLavenderGym",
+          "position": [
+            14,
+            36
+          ],
+          "local_id": 3,
+          "check": "can_reach_every_sight_cell"
+        }
+      ]
+    },
+    {
+      "mutation": "guide_blocks_entry",
+      "map": "JourneyLavenderGym",
+      "failures": [
+        {
+          "map": "JourneyLavenderGym",
+          "check": "guide_off_three_wide_entry"
+        }
+      ]
+    }
+  ]
+}
