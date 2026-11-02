@@ -1,0 +1,67 @@
+{
+  "kind": "coastal-ecology-native-case",
+  "passed": true,
+  "rom_sha256": "70343cea8318bbf81b688ff4cc3b2b45729fc0e5d135dc8667ae6d8f309d9215",
+  "elf_sha256": "3f8ba485b37d17f58f7c7a5a64b1a8dd28492a9ea612afdead2487ceef3d1f9e",
+  "compiled_rom": true,
+  "native_validation_performed": true,
+  "map": "Route114",
+  "profile": "river",
+  "review_mode": false,
+  "max_national_dex": 493,
+  "phase": 2,
+  "area": 1,
+  "underwater": false,
+  "initial_position": [
+    9,
+    16
+  ],
+  "walking_pair": [
+    [
+      9,
+      16
+    ],
+    [
+      10,
+      16
+    ]
+  ],
+  "native_case_behavior": 21,
+  "native_fishing_available": true,
+  "actual_controller_steps": 3,
+  "controller_input_only_after_initial_fixture": true,
+  "party_and_map_and_badges_are_initial_fixtures": true,
+  "trainer_defeat_flags_not_written": true,
+  "wild_encounters_disabled_fixture": false,
+  "repel_fixture_steps": 0,
+  "allowed_species": [
+    171
+  ],
+  "native_pool_samples": [
+    171
+  ],
+  "battle": {
+    "species": 171,
+    "national_dex": 171,
+    "level": 30,
+    "actual_battle_main_callback": true,
+    "battle_type_flags": 4,
+    "battle_action_menu_rendered": true,
+    "framebuffer_distinct_rgb_colors": 73,
+    "framebuffer_nonblack_pixels": 38304
+  },
+  "standard_encounter_suppression_attempts": 0,
+  "captures": [
+    {
+      "file": "controller-aquatic-start.png",
+      "sha256": "d94d501d226063a1f2bd4d7001015627259aa4a81dc23db13cd83bff56e44078",
+      "native_emulator_capture": true
+    },
+    {
+      "file": "controller-wild-battle.png",
+      "sha256": "10b6d5959b287db1e2b0395710d0d9952562e04f3ce755eae35a5cf6cfa44217",
+      "native_emulator_capture": true
+    }
+  ],
+  "no_battle_result_or_avatar_coordinate_writes": true
+}

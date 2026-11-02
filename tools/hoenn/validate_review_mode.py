@@ -1,7 +1,13 @@
 """Compare native encounter/approach behavior in review and normal ROMs."""
-import hashlib,json
+import argparse,hashlib,json,sys
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
+# Consume this runner's extra option before the shared native bootstrap reads
+# its existing source/library/output arguments.
+review_parser=argparse.ArgumentParser(add_help=False)
+review_parser.add_argument('--save-output',type=Path)
+review_options,remaining=review_parser.parse_known_args()
+sys.argv=[sys.argv[0],*remaining]
 prefix=(ROOT/'tools/hoenn/validate_team_missions.py').read_text().split('\nassert pending(True) == 7')[0]
 exec(compile(prefix,__file__,'exec'))
 mode=lib.read8(s['gJourneyReviewMode']);assert mode in [0,1]
@@ -43,7 +49,8 @@ else:
     assert native('LoadGameSave',0,max_frames=6000)==1
     import ctypes
     lib.export_save.argtypes=[ctypes.c_char_p];lib.export_save.restype=ctypes.c_int
-    destination=ROOT/'roms/rom-de-teste/Pokemon-Journey-TESTE.sav'
+    destination=review_options.save_output or ROOT/'roms/rom-de-teste/Pokemon-Journey-TESTE.sav'
+    destination.parent.mkdir(parents=True,exist_ok=True)
     assert lib.export_save(str(destination).encode());assert destination.stat().st_size==131072
     picture('review-save-mossdeep');checks['native_flash_save_exported']=True
     checks['save_sha256']=hashlib.sha256(destination.read_bytes()).hexdigest();lib.stop()

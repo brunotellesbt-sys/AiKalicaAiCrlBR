@@ -1,7 +1,6 @@
 """Finish ocean scenery, eight annotated cave branches and an isolated review mode."""
 import argparse, copy, io, json, re, struct
 from pathlib import Path
-import numpy as np
 from PIL import Image
 from candidate_layer import Layer
 from prepare_surf_cave_coasts import PRIOR, LAYER as PREVIOUS
@@ -20,6 +19,9 @@ OPP=dict(left='right',right='left',up='down',down='up')
 def prepare(source):
     layer=Layer(source,LAYER,PRIOR)
     if old:=layer.existing():return old
+    # Historical lineage is imported by release verification in the light CI
+    # environment; numerical tooling is needed only to prepare this layer.
+    import numpy as np
     s=layer.source
     maps={p.parent.name:json.loads(p.read_text()) for p in (s/'data/maps').glob('*/map.json')}
     ld=json.loads((s/'data/layouts/layouts.json').read_text()); ls={l['id']:l for l in ld['layouts']}

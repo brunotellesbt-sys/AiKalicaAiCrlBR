@@ -1,7 +1,6 @@
 """Build the six yellow atlas requests as real open-water connections."""
 import argparse,copy,json,re,struct
 from pathlib import Path
-import numpy as np
 from PIL import Image
 from candidate_layer import Layer
 from prepare_continuous_ocean import PRIOR,LAYER as PREVIOUS
@@ -48,6 +47,7 @@ def path_pixels(points):
 def prepare(source):
     layer=Layer(source,LAYER,PRIOR)
     if old:=layer.existing():return old
+    import numpy as np
     s=layer.source
     maps={p.parent.name:json.loads(p.read_text()) for p in (s/'data/maps').glob('*/map.json')};before=copy.deepcopy(maps)
     ld=json.loads((s/'data/layouts/layouts.json').read_text());layouts={l['id']:l for l in ld['layouts']}

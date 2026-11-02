@@ -1,0 +1,582 @@
+{
+  "passed": true,
+  "rom_sha256": "f7af65b4856e6697d5d972f48f8699c7c6b7d4b277ea19cfa3949926265d1b89",
+  "original_bridge_preserved": true,
+  "outside_boat_shifted_right": true,
+  "bridge_walked_without_surf": true,
+  "controller_entry_and_exit": true,
+  "interior_captain_interacted_physically": true,
+  "outside_captain_removed": true,
+  "bridges_joined_and_walked": true,
+  "complete_trees_checked": true,
+  "upper_cliff_rim": true,
+  "ship_sprite_size": [
+    96,
+    40
+  ],
+  "ship_hull_blocked_over_water": true,
+  "returned_to_original_land": true,
+  "route21_surf_roundtrip": true,
+  "merged_bay_surfed": true,
+  "south_bridge_walked": true,
+  "eastern_corridor_walked": true,
+  "bridge_crossed_by_surf_below": true,
+  "upper_corner_corrected": true,
+  "route21_atlas_seam_delta": 0,
+  "trips": [
+    {
+      "destination": "JourneyLavenderHarbor",
+      "arrival": [
+        16,
+        13
+      ],
+      "native_animation_observations": 18
+    },
+    {
+      "destination": "JourneyPalletHarbor",
+      "arrival": [
+        16,
+        13
+      ],
+      "native_animation_observations": 18
+    }
+  ],
+  "initial_story_state_and_first_placement_are_fixtures": true,
+  "full_campaign_playthrough": false,
+  "kind": "coastal-pallet",
+  "compiled_rom": true,
+  "elf_sha256": "3f8ba485b37d17f58f7c7a5a64b1a8dd28492a9ea612afdead2487ceef3d1f9e",
+  "native_validation_performed": true,
+  "whole_standalone_tree_pattern": [
+    14,
+    15,
+    30,
+    31,
+    38,
+    39
+  ],
+  "all_tree_parts_checked_through_native_map_grid": true,
+  "walking_surf_doors_and_ferry_use_controller": true,
+  "fixture_wild_encounters_disabled": true,
+  "captures": [
+    {
+      "file": "original-bridge-and-boat.png",
+      "sha256": "8300500582c12a91b9b15810fcca6048f246c4b0b5819fd772e6b9c756eb349d"
+    },
+    {
+      "file": "terminal-front-walked.png",
+      "sha256": "5e01a74078befea3da5405932b1fdf857a0075c85d892de864f8f05fc8d7902f"
+    },
+    {
+      "file": "terminal-entered.png",
+      "sha256": "4591a69a3e47e46eee3bef2117ab52d1a8624ef1568d596afe2eec7a265c015a"
+    },
+    {
+      "file": "interior-world-port-menu.png",
+      "sha256": "2f4d7be5017440b7b1a28a1a6747a7dd41ce338b5dd19d70a03383e89848b698"
+    },
+    {
+      "file": "network-return-inside.png",
+      "sha256": "73171344b906789f41576bab4c5716f6ebf66786cc567ff638f02eba8aa0834c"
+    },
+    {
+      "file": "returned-to-original-land.png",
+      "sha256": "b871bf8c42b79532f9610de098d73792a0e0c4cf50d2f0c706ca37b903a3c78f"
+    },
+    {
+      "file": "south-access-and-east-corridor.png",
+      "sha256": "e4cf66112d0cde7e2052d8df1d8a977bd3def764c83961b8411023160f936349"
+    },
+    {
+      "file": "north-wet-cliff-edge-0.png",
+      "sha256": "c3c7af7b597b999c04d1a8f7bcaf44542c282053727537d9b31080f70468e8e1"
+    },
+    {
+      "file": "north-wet-cliff-edge-1.png",
+      "sha256": "8c5b2911d69c2e1e15841ed76deb17663eca84a98622e03c797eb9966dd4e347"
+    },
+    {
+      "file": "north-wet-cliff-edge-2.png",
+      "sha256": "dcfedcfe31c22a9a9d1dab92aa861b671fa87c4556209dfd7b6b885b4367ffbc"
+    },
+    {
+      "file": "north-wet-cliff-edge-3.png",
+      "sha256": "57d793340bdcf7c93af1e219c6b7c6aee4a7f471edab8bcea51c98cee98431b9"
+    },
+    {
+      "file": "north-wet-cliff-edge-4.png",
+      "sha256": "4d78806d790669991965f80f29974b4c97d19e5054e952a14646cb5a7d2c9cf3"
+    },
+    {
+      "file": "north-wet-cliff-edge-5.png",
+      "sha256": "ce5f3744a3552842b3e2b74f7c50d7ed1877079f643eccca081a690874386d66"
+    },
+    {
+      "file": "north-wet-cliff-edge-6.png",
+      "sha256": "477907901d96a01316870db2f2a42bec1bfb79cb7452a54ee5101c6f513514ac"
+    },
+    {
+      "file": "north-wet-cliff-edge-7.png",
+      "sha256": "f08486267657e7de0d80cfb7dbe1c35d994fc3601230b26454c086be3eedc406"
+    },
+    {
+      "file": "north-wet-cliff-edge-8.png",
+      "sha256": "2ed74ffd875634a4931f13dd56d7fa27e8db1800aa6b96f9281fa96a6f95d188"
+    },
+    {
+      "file": "south-bridge-full-grass-start.png",
+      "sha256": "df8fc4d63f0db62dad54a2769200cebc28ef0e810d8711d132e7820128ca17c6"
+    },
+    {
+      "file": "south-bridge-dry-roundtrip-0.png",
+      "sha256": "0290eaf7c3c21401c483dabb9e8652e25f0d7928ef3de5aa2307555b83498edf"
+    },
+    {
+      "file": "south-bridge-dry-roundtrip-1.png",
+      "sha256": "0281a3ba3650109c337ca203bf77b6b264ca1f73e2cbe64e1412aa18e7fd6e35"
+    },
+    {
+      "file": "south-bridge-dry-roundtrip-2.png",
+      "sha256": "6edcbaab82704366fa7f54516d617196877aa88da8e59b8fed75aecaa507e836"
+    },
+    {
+      "file": "south-bridge-dry-roundtrip-3.png",
+      "sha256": "ddbac7e2185252ad53267173fed141c01fb76c7543a074bdb88414dca29c6d50"
+    },
+    {
+      "file": "merged-bay-surfed.png",
+      "sha256": "9eac01337abf76822b36aaf3e30b10bfba1da06740c7d96c335e24ddaaed5e0a"
+    },
+    {
+      "file": "surf-route21-outbound.png",
+      "sha256": "7e171e3362705601983d3f65d7b4a10b549e0a31db8de92d25212d35f8f3a775"
+    },
+    {
+      "file": "surf-route21-return.png",
+      "sha256": "4be582bba4e485715b1aa82e6e9cf75bcf96e32d62d32e7b158dca1cfef5994f"
+    }
+  ],
+  "north_rim_cells": [
+    {
+      "tile": [
+        15,
+        17
+      ],
+      "metatile": 770,
+      "elevation": 3,
+      "collision": 1,
+      "behavior": 0
+    },
+    {
+      "tile": [
+        16,
+        17
+      ],
+      "metatile": 770,
+      "elevation": 3,
+      "collision": 1,
+      "behavior": 0
+    },
+    {
+      "tile": [
+        17,
+        17
+      ],
+      "metatile": 770,
+      "elevation": 3,
+      "collision": 1,
+      "behavior": 0
+    },
+    {
+      "tile": [
+        18,
+        17
+      ],
+      "metatile": 770,
+      "elevation": 3,
+      "collision": 1,
+      "behavior": 0
+    },
+    {
+      "tile": [
+        19,
+        17
+      ],
+      "metatile": 770,
+      "elevation": 3,
+      "collision": 1,
+      "behavior": 0
+    },
+    {
+      "tile": [
+        20,
+        17
+      ],
+      "metatile": 770,
+      "elevation": 3,
+      "collision": 1,
+      "behavior": 0
+    },
+    {
+      "tile": [
+        21,
+        17
+      ],
+      "metatile": 770,
+      "elevation": 3,
+      "collision": 1,
+      "behavior": 0
+    },
+    {
+      "tile": [
+        22,
+        17
+      ],
+      "metatile": 771,
+      "elevation": 3,
+      "collision": 1,
+      "behavior": 0
+    }
+  ],
+  "north_rim_blocked_probes": [
+    {
+      "start": [
+        14,
+        17
+      ],
+      "target": [
+        15,
+        17
+      ],
+      "direction_key": 16,
+      "held_input_frames": 48,
+      "before": {
+        "tile": [
+          14,
+          17
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "after": {
+        "tile": [
+          14,
+          17
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "controller_input_only": true,
+      "blocked": true
+    },
+    {
+      "start": [
+        15,
+        16
+      ],
+      "target": [
+        15,
+        17
+      ],
+      "direction_key": 128,
+      "held_input_frames": 48,
+      "before": {
+        "tile": [
+          15,
+          16
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "after": {
+        "tile": [
+          15,
+          16
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "controller_input_only": true,
+      "blocked": true
+    },
+    {
+      "start": [
+        16,
+        16
+      ],
+      "target": [
+        16,
+        17
+      ],
+      "direction_key": 128,
+      "held_input_frames": 48,
+      "before": {
+        "tile": [
+          16,
+          16
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "after": {
+        "tile": [
+          16,
+          16
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "controller_input_only": true,
+      "blocked": true
+    },
+    {
+      "start": [
+        17,
+        16
+      ],
+      "target": [
+        17,
+        17
+      ],
+      "direction_key": 128,
+      "held_input_frames": 48,
+      "before": {
+        "tile": [
+          17,
+          16
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "after": {
+        "tile": [
+          17,
+          16
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "controller_input_only": true,
+      "blocked": true
+    },
+    {
+      "start": [
+        18,
+        16
+      ],
+      "target": [
+        18,
+        17
+      ],
+      "direction_key": 128,
+      "held_input_frames": 48,
+      "before": {
+        "tile": [
+          18,
+          16
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "after": {
+        "tile": [
+          18,
+          16
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "controller_input_only": true,
+      "blocked": true
+    },
+    {
+      "start": [
+        19,
+        16
+      ],
+      "target": [
+        19,
+        17
+      ],
+      "direction_key": 128,
+      "held_input_frames": 48,
+      "before": {
+        "tile": [
+          19,
+          16
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "after": {
+        "tile": [
+          19,
+          16
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "controller_input_only": true,
+      "blocked": true
+    },
+    {
+      "start": [
+        21,
+        16
+      ],
+      "target": [
+        21,
+        17
+      ],
+      "direction_key": 128,
+      "held_input_frames": 48,
+      "before": {
+        "tile": [
+          21,
+          16
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "after": {
+        "tile": [
+          21,
+          16
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "controller_input_only": true,
+      "blocked": true
+    },
+    {
+      "start": [
+        22,
+        16
+      ],
+      "target": [
+        22,
+        17
+      ],
+      "direction_key": 128,
+      "held_input_frames": 48,
+      "before": {
+        "tile": [
+          22,
+          16
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "after": {
+        "tile": [
+          22,
+          16
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "controller_input_only": true,
+      "blocked": true
+    },
+    {
+      "start": [
+        23,
+        17
+      ],
+      "target": [
+        22,
+        17
+      ],
+      "direction_key": 32,
+      "held_input_frames": 48,
+      "before": {
+        "tile": [
+          23,
+          17
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "after": {
+        "tile": [
+          23,
+          17
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "tile_elevation": 3
+      },
+      "controller_input_only": true,
+      "blocked": true
+    }
+  ],
+  "all_wet_mixed_rim_cells_blocked": true,
+  "north_rim_surrounding_land_route_walked": true,
+  "south_bridge_dry_roundtrip": [
+    {
+      "tile": [
+        18,
+        26
+      ],
+      "surfing": false,
+      "elevation": 3,
+      "tile_elevation": 3
+    },
+    {
+      "tile": [
+        18,
+        25
+      ],
+      "surfing": false,
+      "elevation": 3,
+      "tile_elevation": 15
+    },
+    {
+      "tile": [
+        18,
+        24
+      ],
+      "surfing": false,
+      "elevation": 3,
+      "tile_elevation": 3
+    },
+    {
+      "tile": [
+        18,
+        25
+      ],
+      "surfing": false,
+      "elevation": 3,
+      "tile_elevation": 15
+    },
+    {
+      "tile": [
+        18,
+        26
+      ],
+      "surfing": false,
+      "elevation": 3,
+      "tile_elevation": 3
+    }
+  ],
+  "south_bridge_from_full_grass_controller_roundtrip": true,
+  "no_new_travel_fixture_after_initial_land_route": true
+}

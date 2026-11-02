@@ -1,0 +1,58 @@
+{
+  "kind": "coastal-ecology-native-case",
+  "passed": true,
+  "rom_sha256": "5f31cf1886580efed0a0fc9b0e93d6bde9d7853be86646ae3e65b5aaf8702ccc",
+  "elf_sha256": "3f8ba485b37d17f58f7c7a5a64b1a8dd28492a9ea612afdead2487ceef3d1f9e",
+  "compiled_rom": true,
+  "native_validation_performed": true,
+  "map": "SixIsland_Frlg",
+  "profile": "coast",
+  "review_mode": true,
+  "max_national_dex": 1025,
+  "phase": 0,
+  "area": 1,
+  "underwater": false,
+  "initial_position": [
+    11,
+    4
+  ],
+  "walking_pair": [
+    [
+      11,
+      4
+    ],
+    [
+      12,
+      4
+    ]
+  ],
+  "native_case_behavior": 44,
+  "native_fishing_available": false,
+  "actual_controller_steps": 220,
+  "controller_input_only_after_initial_fixture": true,
+  "party_and_map_and_badges_are_initial_fixtures": true,
+  "trainer_defeat_flags_not_written": true,
+  "wild_encounters_disabled_fixture": false,
+  "repel_fixture_steps": 0,
+  "allowed_species": [
+    845
+  ],
+  "native_pool_samples": [
+    845
+  ],
+  "battle": null,
+  "standard_encounter_suppression_attempts": 200,
+  "captures": [
+    {
+      "file": "controller-aquatic-start.png",
+      "sha256": "249c6398fa6d6cd81116841d858eb36976ae3ca411b6d0b8691c7ff4faaf8830",
+      "native_emulator_capture": true
+    },
+    {
+      "file": "review-controller-water-without-encounters.png",
+      "sha256": "68a02e92a21786ff299b047aa6742c5f830fc42ce0dd70bcf98cc331d709b04c",
+      "native_emulator_capture": true
+    }
+  ],
+  "no_battle_result_or_avatar_coordinate_writes": true
+}

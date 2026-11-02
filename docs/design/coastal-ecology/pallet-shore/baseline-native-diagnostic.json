@@ -1,0 +1,122 @@
+{
+  "rom_sha256": "bcd8da4c7b226aab21dce512c8f098897660489aa2165e426747fc54ae961006",
+  "rows": [
+    {
+      "tile": [
+        15,
+        17
+      ],
+      "surf": false,
+      "elevation": 3,
+      "tile_elevation": 3,
+      "behavior": 0
+    },
+    {
+      "tile": [
+        16,
+        17
+      ],
+      "surf": false,
+      "elevation": 3,
+      "tile_elevation": 3,
+      "behavior": 0
+    },
+    {
+      "tile": [
+        17,
+        17
+      ],
+      "surf": false,
+      "elevation": 3,
+      "tile_elevation": 3,
+      "behavior": 0
+    },
+    {
+      "tile": [
+        18,
+        17
+      ],
+      "surf": false,
+      "elevation": 3,
+      "tile_elevation": 3,
+      "behavior": 0
+    },
+    {
+      "tile": [
+        19,
+        17
+      ],
+      "surf": false,
+      "elevation": 3,
+      "tile_elevation": 3,
+      "behavior": 0
+    },
+    {
+      "tile": [
+        20,
+        17
+      ],
+      "surf": false,
+      "elevation": 3,
+      "tile_elevation": 3,
+      "behavior": 0
+    },
+    {
+      "tile": [
+        21,
+        17
+      ],
+      "surf": false,
+      "elevation": 3,
+      "tile_elevation": 3,
+      "behavior": 0
+    },
+    {
+      "tile": [
+        22,
+        17
+      ],
+      "surf": false,
+      "elevation": 3,
+      "tile_elevation": 3,
+      "behavior": 0
+    },
+    {
+      "tile": [
+        23,
+        24
+      ],
+      "surf": false,
+      "elevation": 3,
+      "tile_elevation": 3,
+      "behavior": 0
+    },
+    {
+      "tile": [
+        23,
+        20
+      ],
+      "surf": false,
+      "elevation": 3,
+      "tile_elevation": 3,
+      "behavior": 0
+    }
+  ],
+  "dry_north_rim_and_east_corridor_walked": true,
+  "east_water_requires_surf": true,
+  "note": "Baseline native reproduction of the old open mixed cliff lip; this is diagnostic evidence of the defect, not a completed final check.",
+  "captures": [
+    {
+      "file": "baseline-south-multilevel-bridge-native.png",
+      "sha256": "484069685304fd9f49f60297e2e7c5720da8acf98ba38dbae03855e2436dfc07"
+    },
+    {
+      "file": "baseline-east-real-water-blocked-native.png",
+      "sha256": "7b3efe050246d8c56e746c829765ccb889b612d738755a0838921481afd98c9f"
+    },
+    {
+      "file": "baseline-north-mixed-lip-native.png",
+      "sha256": "867fe698e09686cbe3a5c7aa684e67867adc7a3b044ba204cd7d607c2a774cd1"
+    }
+  ]
+}

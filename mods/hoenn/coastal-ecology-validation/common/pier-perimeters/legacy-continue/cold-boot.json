@@ -1,0 +1,276 @@
+{
+  "passed": true,
+  "rom_sha256": "f7af65b4856e6697d5d972f48f8699c7c6b7d4b277ea19cfa3949926265d1b89",
+  "fresh_rom_boot_to_title": true,
+  "fresh_rom_title_to_new_game": true,
+  "no_assert_screen": true,
+  "controllers_only": true,
+  "no_game_memory_writes": true,
+  "bundled_save_tested": true,
+  "runs": [
+    {
+      "battery": false,
+      "frames": 2464,
+      "samples": [
+        {
+          "frame": 1200,
+          "callback": "MainCB2_Intro"
+        },
+        {
+          "frame": 1201,
+          "callback": "MainCB2_EndIntro"
+        },
+        {
+          "frame": 1291,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1591,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1592,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1682,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1683,
+          "callback": "CB2_GoToMainMenu"
+        },
+        {
+          "frame": 1773,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2073,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2074,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2164,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2464,
+          "callback": "CB2_MainMenu"
+        }
+      ],
+      "fresh_rom_boot_to_title": true,
+      "fresh_rom_title_to_new_game": true,
+      "new_game_tasks": [
+        "Task_HandleMultichoiceInput",
+        "Task_JourneyIntroRegion"
+      ]
+    },
+    {
+      "battery": true,
+      "frames": 3802,
+      "samples": [
+        {
+          "frame": 1200,
+          "callback": "MainCB2_Intro"
+        },
+        {
+          "frame": 1201,
+          "callback": "MainCB2_EndIntro"
+        },
+        {
+          "frame": 1291,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1591,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1592,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1682,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1683,
+          "callback": "CB2_GoToMainMenu"
+        },
+        {
+          "frame": 1773,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2073,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2074,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2164,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3064,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3664,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3665,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3666,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3667,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3668,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3669,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3670,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3671,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3672,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3673,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3733,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3734,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3735,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3736,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3737,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3738,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3739,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3740,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3741,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3742,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3802,
+          "callback": "CB2_Overworld"
+        }
+      ],
+      "bundled_save_continue_to_field": true,
+      "field_map": [
+        37,
+        46
+      ],
+      "player_tile": [
+        21,
+        7
+      ],
+      "avatar_surfing": true,
+      "elevation": 1,
+      "legacy_controller_returned_to_pier": true,
+      "legacy_controller_movements": [
+        {
+          "initial": {
+            "player_tile": [
+              21,
+              7
+            ],
+            "avatar_surfing": true,
+            "elevation": 1
+          },
+          "returned": {
+            "player_tile": [
+              21,
+              6
+            ],
+            "avatar_surfing": true,
+            "elevation": 1
+          },
+          "direction_key": 64,
+          "held_input_frames": 9,
+          "controller_input_only": true
+        },
+        {
+          "initial": {
+            "player_tile": [
+              21,
+              6
+            ],
+            "avatar_surfing": true,
+            "elevation": 1
+          },
+          "returned": {
+            "player_tile": [
+              20,
+              6
+            ],
+            "avatar_surfing": false,
+            "elevation": 3
+          },
+          "direction_key": 32,
+          "held_input_frames": 9,
+          "controller_input_only": true
+        }
+      ],
+      "legacy_final_state": {
+        "player_tile": [
+          20,
+          6
+        ],
+        "avatar_surfing": false,
+        "elevation": 3
+      }
+    }
+  ],
+  "bundled_save_continue_to_field": true,
+  "bundled_save_sha256": "db25a1d938ec4127f9311513646eca1f97409dadce81eb0b7b6adea0a4d5dbfb"
+}

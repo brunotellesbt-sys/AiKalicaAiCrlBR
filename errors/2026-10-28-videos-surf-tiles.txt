@@ -1,0 +1,198 @@
+REGISTRO DE ERROS — VÍDEOS DE 28/10/2026
+Projeto: Pokémon Journey — revisão coastal-ecology, camada 166.
+Solicitação: analisar os vídeos, corrigir falhas e manter esta memória no GitHub.
+
+RECEBIMENTO
+9 arquivos de vídeo diferentes, 10 envios: o primeiro foi enviado duas vezes.
+1. Screenrecorder-20261028-153534.mp4
+2. Screenrecorder-20261028-154148.mp4
+3. Screenrecorder-20261028-154241.mp4
+4. Screenrecorder-20261028-154358.mp4
+5. Screenrecorder-20261028-154510.mp4
+6. Screenrecorder-20261028-154528.mp4
+7. Screenrecorder-20261028-154612.mp4
+8. Screenrecorder-20261028-155423.mp4
+9. Screenrecorder-20261028-155440.mp4
+
+COMO LER ESTE REGISTRO
+As coordenadas são locais ao mapa, sem MAP_OFFSET.
+IDs de metatiles dependem do banco gráfico; nunca são universais.
+O código de correção e os validadores ficam em tools/hoenn/.
+As provas finais ficam em mods/hoenn/coastal-ecology-validation/.
+Os mapas nativos inteiros ficam em docs/design/coastal-ecology/.
+O resultado das verificações está no final deste arquivo.
+
+ERRO 01 — SAIR DO PÍER CAMINHANDO SOBRE O MAR
+Vídeos: 153534 e 154358.
+Local: OneIsland_TreasureBeach_Frlg, bordas do píer.
+Reprodução: terra (20,6) -> água (21,6); frente (16,6) -> (16,7).
+Causa: 65 células aquáticas tinham altura 0, de transição. O jogador mantinha
+o modo pedestre ao sair do tablado; as células seguintes herdavam esse estado.
+Solução: água verdadeira recebe altura de Surf 1; madeira baixa permanece
+terra 3. Preservar colisão, comportamento, desenho, eventos e acessos.
+Prova exigida: tentar caminhar sem Surf; abrir o prompt nativo; sair com Surf;
+desembarcar de volta, em todas as 107 bordas expostas dos sete píeres.
+Arquivos: coastal_ecology_piers.py; validate_coastal_pier_perimeters.py.
+Prevenção: testar os dois sentidos; altura 0 não substitui ponte multinível 15.
+
+ERRO 02 — SAVE ANTIGO CONTINUAVA COM O ESTADO DE PEDESTRE NA ÁGUA
+Local: Treasure Beach (21,7), bateria salva na ROM anterior ao conserto.
+Causa: Continue restaura o objeto e os gráficos salvos; corrigir a altura do
+mapa não executa automaticamente a transição para Surf nesse caminho de boot.
+Solução: após a restauração completa do objeto, fazer a transição nativa para
+Surf somente nesse mapa, em água real de altura 1, com jogador a pé na altura 1.
+Preservar coordenadas, altura, save e os demais estados do personagem.
+Prova exigida: boot real da bateria antiga, Continue e retorno ao píer usando
+apenas os controles. Não escrever callbacks, coordenadas ou modo no teste.
+Arquivo: coastal_ecology_legacy_surf.py.
+Prevenção: testar saves anteriores, além de iniciar uma partida ou usar warp.
+
+ERRO 03 — ENCOSTA CORTADA NA EMENDA DE KINDLE ROAD
+Vídeo: 154148.
+Local: Kindle Road (7,139), limite com One Island e Treasure Beach.
+Causa: a massa de rocha terminava sem frente e cantos coerentes no mapa vizinho.
+Solução: fechar o cabo inteiro com peças nativas: 26 células distribuídas nos
+três mapas, incluindo a retirada da antiga ponta isolada no vizinho.
+Prova exigida: renderizar os três mapas inteiros e o contexto da ligação;
+atravessar a conexão de Surf nos dois sentidos na ROM compilada.
+Arquivos: coastal_ecology_kindle_cliff.py; validate_coastal_fragments.py.
+Prevenção: conferir todos os mapas que compartilham um objeto na borda.
+
+ERRO 04 — METADE SUPERIOR DE ROCHAS PERMANECIA NA ÁGUA
+Vídeo: 154241; busca do mesmo padrão nas outras áreas modificadas.
+Local: 16 pares em nove mapas de Kanto/Sevii.
+Causa: o detector anterior considerava variantes 0x110/111 e 0x118/119,
+mas não 0x108/109; removeu bases, deixando partes superiores de rochas.
+Solução: substituir as 32 peças órfãs pela frente completa de encosta nativa
+0x123, preservando os bits de altura/colisão. Manter dois exemplares completos
+de Six Island Green Path como controle, sem apagar objetos válidos.
+Prova exigida: censo por família de objetos, nove mapas inteiros e passagem
+real de Surf; não comparar apenas o bloco inteiro com seus bits físicos.
+Arquivos: coastal_ecology_cliff_rocks.py; audit_coastal_complete_objects.py.
+Prevenção: identificar metatile com bloco & 0x3FF e validar o objeto inteiro.
+
+ERRO 05 — PÉS SOBRE ÁGUA NA BORDA NORTE DA BAÍA DE PALLET
+Vídeo: 154510.
+Local: Pallet, linha 17, colunas 15 a 22.
+Causa: oito tiles mistos, grama em cima e água embaixo, estavam transitáveis.
+O estado era pedestre, mas os pés apareciam sobre o trecho azul do desenho.
+Solução: bloquear somente esses oito tiles mistos; manter a grama completa
+da linha 16, o píer principal e o corredor leste acessíveis. Preservar a arte.
+Prova exigida: tentativas pelos acessos possíveis e caminho completo pela
+grama -> corredor leste -> rampa sul -> ponte -> cais -> retorno.
+Arquivos: coastal_ecology_pallet_shore.py; pallet_shore_controller.py.
+Prevenção: avaliar onde os pés pousam na arte, além da classificação do chão.
+
+ERRO 06 — CHAPÉU/CABEÇA ESCONDIDOS PELAS TÁBUAS
+Vídeos: 154528 e 154612.
+Locais: aproximação sul de Pallet (x11..22,y26); apêndice de madeira de
+Cinnabar (x9..10,y16..17), junto à ponte elevada.
+Causa: o pé já estava em terra seca, mas o topo do sprite sobrepunha a ponte
+ao norte e era desenhado atrás dela. Movimento válido não provava visibilidade.
+Solução: ajustar somente a prioridade de desenho do pedestre nas aproximações
+completas. Preservar altura física 3, estado, posição e Surf na camada inferior.
+Prova exigida: pixels do personagem inteiro em 16 células secas, ambos os
+sentidos, ponte superior a pé e travessia inferior com Surf, ida e volta.
+Arquivos: coastal_ecology_pier_priority.py; validate_coastal_pier_visibility.py.
+Prevenção: inspecionar pixels reais; não corrigir sobreposição com altura falsa.
+
+ERRO 07 — COR DO MAR DIFERENTE SOB MARGENS/OBJETOS
+Locais: costas marinhas modificadas de Sevii e Kanto.
+Causa: as mesmas peças animadas 454/455 usavam paleta 6 em algumas margens,
+enquanto o mar conectado usava paleta 4. A imagem tinha corte de cor.
+Solução: bancos privados para as costas marinhas; normalizar apenas as peças
+inferiores de água. Preservar objetos superiores, atributos e callbacks nativos
+de animação. Não alterar bancos compartilhados de rios/lagos de água doce.
+Prova exigida: 43 mapas-alvo, oito fases nativas e tabelas efetivas da ROM;
+comparar o mesmo quadro de animação durante a conexão e as portas dos bancos.
+Arquivos: coastal_ecology_ocean.py; coastal_ecology_sevii_aliases.py;
+coastal_ecology_kanto_sea.py; validate_coastal_ocean_palette.py.
+Prevenção: conferir bancos carregados e quadro de animação, não só screenshots.
+
+OBSERVAÇÃO 08 — ÁGUA EM MOSSDEEP / MAR EXTERNO
+Vídeos: 155423 e 155440. Nome no jogo: Mossdeep City.
+O aspecto quadriculado alterna com ondas nas oito fases originais de Emerald.
+A investigação não confirmou uma diferença de paleta entre esses dois mapas:
+ambos usam as mesmas peças 454/455 e paleta 4. A ponta de montanha continua
+no mapa vizinho e não é uma metade órfã.
+Decisão: preservar essa arte nativa. Comparar VRAM e pixels no mesmo quadro e
+atravessar Mossdeep (79,34) <-> mar externo (0,26) nos dois sentidos.
+Arquivo: coastal_ecology_hoenn_ocean.py.
+Prevenção: não inventar um conserto gráfico para uma fase nativa de animação.
+
+ERRO 09 — ÁRVORES ISOLADAS DE PALLET COM PEÇAS DE FLORESTA
+Encontrado no censo adicional, não atribuído a um vídeo específico.
+Causa: linhas intermediárias de floresta usadas como tronco/base isolados.
+Solução: recompor 30 árvores completas 2x3 com doador nativo identificado,
+alterando 60 IDs gráficos e preservando os bits físicos.
+Prova exigida: mapa inteiro antes/depois e censo de objetos completos.
+Arquivo: coastal_ecology_tiles.py.
+
+ERRO 10 — ÁGUAS JOGÁVEIS SEM TABELA/LISTA EFETIVA DE SELVAGENS
+Encontrado no censo adicional solicitado pelo usuário.
+Escopo: 434 mapas aquáticos; 379 requerem encontros e 55 têm exceção explícita
+por serem interiores, instalações nativas, áreas quietas ou portos aposentados.
+Causa: cabeçalho/tabela ausente, família sem pool efetivo ou comportamento
+aquático novo sem o gatilho nativo correspondente.
+Solução: completar tabelas/pools; organizar famílias por mar, costa, rio e
+profundidade; atualizar o habitat/Dex sem duplicar famílias entre habitats.
+Conservar encontros de terra, Pokémon fixos e a TESTE sem encontros aleatórios.
+Prova exigida: censo completo na ROM, quatro períodos do dia e batalhas reais
+em Gen1-4 e Gen1-9; confirmar a supressão dos mesmos gatilhos na TESTE.
+Arquivos: coastal_ecology_encounters.py; coastal_ecology_runtime.py;
+validate_coastal_ecology.py.
+
+ROTINA PARA NÃO REPETIR
+1. Ler este registro, AGENTS.md e docs/AJUSTES-GBA.txt antes de editar.
+2. Identificar mapa/banco/ID/altura/colisão/comportamento/camadas no source real.
+3. Renderizar o mapa inteiro e os vizinhos; escolher objeto doador completo.
+4. Corrigir o mínimo necessário; preservar eventos e o mapa-múndi autorizado.
+5. Compilar uma vez e congelar ROM+ELF+source; não editar durante os testes.
+6. Testar pé/Surf, entradas/saídas, ida/volta, sprite inteiro e save antigo.
+7. Registrar SHA e provas da ROM final, sem reaproveitar prova da ROM anterior.
+8. Atualizar quatro ROMs normais, TESTE/save, pacote e player; testar os boots.
+9. Abrir o PR somente após concluir as correções e verificações.
+
+PROMPT REUTILIZÁVEL
+"Leia errors/ e docs/AJUSTES-GBA.txt. No mapa [nome], em [x,y], há [defeito].
+Confira os bancos nativos e o objeto completo, incluindo os mapas vizinhos.
+Corrija arte, altura, colisão e prioridade somente quando a causa exigir.
+Preserve eventos e o mapa-múndi. Prove a passagem nos dois sentidos na ROM
+final, a pé e com Surf quando aplicável, e verifique Continue com save antigo.
+Atualize este registro, as cinco ROMs e as evidências antes de abrir o PR."
+
+VALIDAÇÃO NATIVA FINAL — 29/10/2026
+ROM-base final:
+f7af65b4856e6697d5d972f48f8699c7c6b7d4b277ea19cfa3949926265d1b89
+ELF final:
+3f8ba485b37d17f58f7c7a5a64b1a8dd28492a9ea612afdead2487ceef3d1f9e
+Preparação independente: 38 arquivos alterados, 32.244 inputs conferidos,
+23 binários de mapas/metatiles vinculados aos bytes compilados.
+Píeres: 107 bordas de madeira/água, sete ilhas, bloqueio a pé e Surf ida/volta.
+Continue da bateria antiga: recuperação nativa para Surf e retorno ao píer
+por controles, sem reposicionamento ou alteração do estado pelo teste.
+Pallet: oito margens mistas bloqueadas, nove acessos tentados; grama, rampa,
+ponte, portas, balsa e retorno conferidos. Cinnabar/Pallet: corpo inteiro
+verificado em 32 observações direcionais nas 16 células secas; pontes a pé
+e caminhos inferiores de Surf preservados nos dois sentidos.
+Encostas: 16 pares de rochas corrigidos, duas variantes completas preservadas,
+26 células do cabo de Kindle e travessias verificadas na ROM final.
+Censo de objetos: 415 mapas de superfície; 613 rochas completas, 27 variantes,
+zero padrões órfãos e zero padrões não nativos de pinheiros no censo aplicado.
+Oceano: 43 mapas, 11 tabelas compiladas, 498 palavras inferiores corrigidas;
+Hoenn: 85 mapas no censo, oito fases nativas e conexão Mossdeep ida/volta
+com contador de animação contínuo, sem reinício na emenda.
+Encontros: censo 434/379/55 sem lacunas; dez batalhas selvagens reais nas
+duas gerações. TESTE: 1.100 passos e 1.000 consultas nativas sem encontros.
+Abertura: cinco edições aprovadas, TESTE também com Continue do save entregue.
+Limite: testes de caminhos e casos declarados, não uma campanha inteira jogada
+novamente nem uma certificação de todos os emuladores. My Boy não foi executado.
+
+CONFERÊNCIA DA ENTREGA — RETOMADA EM 02/11/2026
+As cinco ROMs e o save continuam correspondendo aos hashes congelados.
+20 provas nativas finais aprovadas; cinco edições abertas no mGBA do navegador.
+Suíte após atualizar os arquivos: 596 testes Hoenn, 12 testes de Surf e seis
+testes de CI aprovados, sem falhas; descoberta testada sem NumPy/SciPy.
+Player estático preparado com as cinco ROMs atuais e esta pasta errors/.
+Mapa-múndi preservado. A revisão visual adicional não substitui as provas
+de movimento, assim como o censo por famílias não certifica todo objeto possível.

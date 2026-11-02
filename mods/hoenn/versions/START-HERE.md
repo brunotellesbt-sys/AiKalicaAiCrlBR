@@ -1,6 +1,8 @@
 # Pokémon Journey — quatro edições GBA
 
-Atualização atual: [competição da 18ª insígnia, rivais e capítulo Galactic na 22ª](../../../docs/badge-story.md). A vitória na competição da Battle Frontier libera as duas Ligas com 18 insígnias; o capítulo Galactic passa para 22. Os rivais seguem o personagem e a região inicial, e os sprites de Eren e Luffy usam a escala dos outros rivais.
+Atualização atual: [encontros aquáticos e acabamento costeiro](../../../docs/coastal-ecology.md). Completa os encontros nas águas jogáveis das edições normais, corrige encostas e rochas incompletas, árvores de Pallet, margens e a visibilidade nas aproximações dos cais. A TESTE mantém os mesmos mapas, sem encontros aleatórios nem abordagem automática de treinadores. [Registro dos nove vídeos, causas e soluções em TXT](../../../errors/2026-10-28-videos-surf-tiles.txt).
+
+Conserva a [competição da 18ª insígnia, rivais e capítulo Galactic na 22ª](../../../docs/badge-story.md). A vitória na competição da Battle Frontier libera as duas Ligas com 18 insígnias; o capítulo Galactic passa para 22. Os rivais seguem o personagem e a região inicial, e os sprites de Eren e Luffy usam a escala dos outros rivais.
 
 Conserva os [24 ginásios](../../../docs/ginasios-extras-e-travessias.md), os dois atendentes de Dewford e os sete terminais integrados às pontes das Sevii. Mantém as [encostas completas e praias animadas](../../../docs/coastal-closures.md). As quatro edições e a TESTE recebem a mesma campanha e os mesmos mapas.
 
