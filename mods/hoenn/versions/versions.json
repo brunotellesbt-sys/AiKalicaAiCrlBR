@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "b04918724939a54bbe3321d274953a9311ab8c7b4eebc3cbeb844ffcd3604386",
-  "build_rules_offset": 9132476,
+  "parent_rom_sha256": "f7af65b4856e6697d5d972f48f8699c7c6b7d4b277ea19cfa3949926265d1b89",
+  "build_rules_offset": 9161644,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "2e7e7a234b16638ee3c997b1001f2006f21b39b7ecbecc08536d28485728f760",
+      "sha256": "70343cea8318bbf81b688ff4cc3b2b45729fc0e5d135dc8667ae6d8f309d9215",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        9132476,
-        9132477,
-        9132478
+        9161644,
+        9161645,
+        9161646
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "ca9233a26ae8659ea4aa1222d45074e4d4968eac6563a89c90e4e64be0c0e86e",
+      "sha256": "1eca0267b5b7012e994c7c2746c11cd10062d6ed391feb81f0728f092f81a06b",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        9132476,
-        9132477
+        9161644,
+        9161645
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "fe5be134b17757534a917a68a9da098e9987bf157de34ca8a75b7c2ac712d46b",
+      "sha256": "ccf63286810feb58d6a5d27a3e7ab7d1ce1bb47bbfcf7cc0b5d684439d69bed5",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        9132478
+        9161646
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "b69daf45ebb815c798d71e8531b5f4ec1c8cc55411ffc9ebed88b9e82b3330f4",
+      "sha256": "5ba67a921ebd98ab7de572296a2643c3f3691c7e58c39637db828417b558e5ad",
       "patched_byte_offsets": [
         160,
         162,
@@ -270,166 +270,131 @@
     "sevii-integrated-piers",
     "coastal-closures",
     "badge-story",
-    "generated-world-audit"
+    "generated-world-audit",
+    "coastal-ecology"
   ],
-  "validation_scope": "generated-world-audit",
+  "validation_scope": "coastal-ecology",
   "full_campaign_playthrough": false,
   "proofs": [
     {
-      "file": "evidence/generated-world-audit/Pokemon-Journey-Gen1-4-Hard/cold-boot/cold-boot.json",
+      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-4-Hard/cold-boot/cold-boot.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "cold-boot",
-      "sha256": "7db32cab42e1b3438675f07c9616a1a2f1a0d38842691d14d1b5d08a9a1f7ec6"
+      "sha256": "8ed922670b8136c8e0fcea23bfe575d3cdd5147cb983c22155df6e43c569426c"
     },
     {
-      "file": "evidence/generated-world-audit/Pokemon-Journey-Gen1-4-Hard/review-mode/review-mode.json",
+      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-4-Hard/review-mode/review-mode.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "review-mode",
-      "sha256": "db25c15ba341cc720e6dd724cf6c0cb1584554dc6042c583567f76dedd7dc17a"
+      "sha256": "ce008767dc48ebbbf0dbd4a10c5d3bc2160084995a60b3632e51c8f4c4403694"
     },
     {
-      "file": "evidence/generated-world-audit/Pokemon-Journey-Gen1-4-Normal/cold-boot/cold-boot.json",
+      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-4-Normal/coastal-ecology-native/coastal-ecology-native.json",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "kind": "coastal-ecology-native",
+      "sha256": "bab958b43897ac328e04d6412e7d0a88860c750dc9ec1a7a345b3fdcea356048"
+    },
+    {
+      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-4-Normal/cold-boot/cold-boot.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "cold-boot",
-      "sha256": "29d5954b04a8df8c2d1464916db5ea289d32350ff883d7087dc868e84d137df3"
+      "sha256": "6f45524a4345b48e81b5dbe3ae22bd2178473ac10c00acdf553bd3ae862894a4"
     },
     {
-      "file": "evidence/generated-world-audit/Pokemon-Journey-Gen1-4-Normal/review-mode/review-mode.json",
+      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-4-Normal/review-mode/review-mode.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "review-mode",
-      "sha256": "911174925b75244401ee09bad4130daed4e018ec9b4311c0d27cd4b5a8d8e8b9"
+      "sha256": "44128c28a6f2436ef7270181f30edba49ca3af038f443ef288f7c76687693ee8"
     },
     {
-      "file": "evidence/generated-world-audit/Pokemon-Journey-Gen1-9-Hard/cold-boot/cold-boot.json",
+      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-9-Hard/cold-boot/cold-boot.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "cold-boot",
-      "sha256": "e26878bbe4c6f40d7fbae911eba47bdd0046540a05784462896e78c2bd18e43a"
+      "sha256": "1a456f9c641b3459cfca36da1d6ba43ccbc7eb50b2c1d4f32b28ffe5283124ac"
     },
     {
-      "file": "evidence/generated-world-audit/Pokemon-Journey-Gen1-9-Hard/review-mode/review-mode.json",
+      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-9-Hard/review-mode/review-mode.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "review-mode",
-      "sha256": "3876996077a50cd60d17785f9b9c6e35b5bdaccb74ba19c92a4b355609964d8b"
+      "sha256": "6c53dbfc9b46007dacc1771e5211bff9dcd9c10581eda2f512b2a3718a6e54a2"
     },
     {
-      "file": "evidence/generated-world-audit/Pokemon-Journey-Gen1-9-Normal/cold-boot/cold-boot.json",
+      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-9-Normal/cold-boot/cold-boot.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "cold-boot",
-      "sha256": "0fe6b31b96f93f7d2726e5d74add4fcccb1f9f8cb868a2d39d80426d75e78798"
+      "sha256": "a75d8aa98f54c29c5615c2f1745c13d24fb46f774f35384914b0bd9f4f37977d"
     },
     {
-      "file": "evidence/generated-world-audit/Pokemon-Journey-Gen1-9-Normal/review-mode/review-mode.json",
+      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-9-Normal/review-mode/review-mode.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "review-mode",
-      "sha256": "c90d6ba5d44e862cd81e8dc92cdbbf5364d586f7cda73d9790ac18c1a013636b"
+      "sha256": "06e60006a067196bb4f997cee8ed5d018b50e51b2279d994529cf94ecc798697"
     },
     {
-      "file": "evidence/generated-world-audit/common/badge-gates/badge-gates.json",
+      "file": "evidence/coastal-ecology/common/coastal-ecology-census/coastal-ecology-census.json",
       "target": "common",
-      "kind": "badge-gates",
-      "sha256": "d13bb4d6042863535fb942bd191938cb251f922122106c562a2164d03184e1aa"
+      "kind": "coastal-ecology-census",
+      "sha256": "05e824883f4a7a70b9134c76cd7cf1235bddc592029b15d4c5f78986f35a25a9"
     },
     {
-      "file": "evidence/generated-world-audit/common/coastal-cave-access/coastal-cave-access.json",
+      "file": "evidence/coastal-ecology/common/coastal-ecology-native/coastal-ecology-native.json",
       "target": "common",
-      "kind": "coastal-cave-access",
-      "sha256": "12c64dbe9bf5726127c5281922f78014fa296e2626194e0d42550eed914bc193"
+      "kind": "coastal-ecology-native",
+      "sha256": "409b4f57a02a8dc362399e24fdd19ea50bb067310a745a697ae3192d22383dae"
     },
     {
-      "file": "evidence/generated-world-audit/common/dewford-movement/dewford-movement.json",
+      "file": "evidence/coastal-ecology/common/coastal-ecology-source/coastal-ecology-source.json",
       "target": "common",
-      "kind": "dewford-movement",
-      "sha256": "4347cd652afa056abf4e6e901a0d9cc6b175e2df1d8e8c7f8ef2774e081dbc50"
+      "kind": "coastal-ecology-source",
+      "sha256": "2a6170a91599b00b5f89580fc8d4bfd8cebc67840ea9fef82b49e1b022df447a"
     },
     {
-      "file": "evidence/generated-world-audit/common/generated-cave-routes/generated-cave-routes.json",
+      "file": "evidence/coastal-ecology/common/coastal-fragments/coastal-fragments.json",
       "target": "common",
-      "kind": "generated-cave-routes",
-      "sha256": "c4de842fd64b2ea5bc8e1293f83f75cd06b022b28468d847cecaf72880d51767"
+      "kind": "coastal-fragments",
+      "sha256": "6cfaf4c63b4fc13d47df8394d0c82bae14ac2a2e0939674ca9a5963e84f27dd5"
     },
     {
-      "file": "evidence/generated-world-audit/common/generated-ever-grande/generated-ever-grande.json",
+      "file": "evidence/coastal-ecology/common/coastal-ocean-palette/coastal-ocean-palette.json",
       "target": "common",
-      "kind": "generated-ever-grande",
-      "sha256": "6b28f9cd4327445a66ac688f3f705788c8d0904835f9f0e616eb28cdfb452544"
+      "kind": "coastal-ocean-palette",
+      "sha256": "002595c00b611497d2029f83d807f9f7a5b6cc9ba021a9963232b3c7a9cc1877"
     },
     {
-      "file": "evidence/generated-world-audit/common/generated-gym-native-walk/generated-gym-native-walk.json",
+      "file": "evidence/coastal-ecology/common/coastal-pallet/coastal-pallet.json",
       "target": "common",
-      "kind": "generated-gym-native-walk",
-      "sha256": "3fb0c58dd22ab1379ca1f2062536d5b77ef2c3cc0c474aceb6ae66c75b82d78c"
+      "kind": "coastal-pallet",
+      "sha256": "3bb04581ccf9436880801d47083cd6d28e2d6d3e78e80d55621afee9a16a2752"
     },
     {
-      "file": "evidence/generated-world-audit/common/generated-navigation/generated-navigation.json",
+      "file": "evidence/coastal-ecology/common/coastal-pier-perimeters/coastal-pier-perimeters.json",
       "target": "common",
-      "kind": "generated-navigation",
-      "sha256": "f87374b94456aa8b1314ec4379ac6e50d79d2c613e0e7104b499d6f8813b1a40"
+      "kind": "coastal-pier-perimeters",
+      "sha256": "661ca4c8e9fc6e09113669292d35c5ff162b3da8edd8cb4ee7e68efbbe37dca0"
     },
     {
-      "file": "evidence/generated-world-audit/common/generated-pwt-access/generated-pwt-access.json",
+      "file": "evidence/coastal-ecology/common/coastal-pier-visibility/coastal-pier-visibility.json",
       "target": "common",
-      "kind": "generated-pwt-access",
-      "sha256": "e3a6dba4b61ca14091eeb1f3448c5c136ef6002c9d09b0ac18d478b7118cc02d"
+      "kind": "coastal-pier-visibility",
+      "sha256": "569344a0a879064d53aa81501945ef6fa0a025289ee11de864a0562129452327"
     },
     {
-      "file": "evidence/generated-world-audit/common/generated-shore-animation-native-banks/generated-shore-animation-native-banks.json",
-      "target": "common",
-      "kind": "generated-shore-animation-native-banks",
-      "sha256": "d27b870ceb696de9b5d5ee2fede706ee9acd3599777be89d1bd1ee764986e5a4"
+      "file": "evidence/coastal-ecology/test/coastal-ecology-review/coastal-ecology-review.json",
+      "target": "test",
+      "kind": "coastal-ecology-review",
+      "sha256": "5cfcc70ef3cb144509088def69d62a970c2c548169fff75f459f090461ac3185"
     },
     {
-      "file": "evidence/generated-world-audit/common/generated-shore-animation-source-census/generated-shore-animation-source-census.json",
-      "target": "common",
-      "kind": "generated-shore-animation-source-census",
-      "sha256": "077162189cc3da2211f72982816bf12a186d9754b3e41d43834225505f3e26a4"
-    },
-    {
-      "file": "evidence/generated-world-audit/common/generated-world-source/generated-world-source.json",
-      "target": "common",
-      "kind": "generated-world-source",
-      "sha256": "e3ac39c11e86cff81ebb1af938109d9013a2e66c26dca71e89878aaf02bed1c0"
-    },
-    {
-      "file": "evidence/generated-world-audit/common/integrated-piers/integrated-piers.json",
-      "target": "common",
-      "kind": "integrated-piers",
-      "sha256": "bb92723410dc51e7c1874bb534a105a817d80539c40e095fcf7ab2510fad67e7"
-    },
-    {
-      "file": "evidence/generated-world-audit/common/qualifier-event/qualifier-event.json",
-      "target": "common",
-      "kind": "qualifier-event",
-      "sha256": "5f29fd2f0f363e523bcb00bd6a7037cec1da4229de7809c6330e5249cc448055"
-    },
-    {
-      "file": "evidence/generated-world-audit/common/shore-animation/shore-animation.json",
-      "target": "common",
-      "kind": "shore-animation",
-      "sha256": "734a6d0cde3fd6ee9d4472edf2d636ba710ad5b3d474d53f42f42face8638d38"
-    },
-    {
-      "file": "evidence/generated-world-audit/common/surf-repairs/surf-repairs.json",
-      "target": "common",
-      "kind": "surf-repairs",
-      "sha256": "5c47cc1f5770e384487a915de13f78efc87ed45390d8f2a9e38494b51aee8c62"
-    },
-    {
-      "file": "evidence/generated-world-audit/test/cold-boot/cold-boot.json",
+      "file": "evidence/coastal-ecology/test/cold-boot/cold-boot.json",
       "target": "test",
       "kind": "cold-boot",
-      "sha256": "0e846b9bae88afb7225356f943e26efbde68845d441ce5bdc87d27a5fbf5c8b2"
+      "sha256": "7ca9a34cec628fe3b8a71744d485858efd6d94e6412281732b4b9c5596ed7590"
     },
     {
-      "file": "evidence/generated-world-audit/test/generated-gym-native-walk/generated-gym-native-walk.json",
-      "target": "test",
-      "kind": "generated-gym-native-walk",
-      "sha256": "1473d83ed30177ea648e616a0998c5817dee99f79d101de88232455d03388010"
-    },
-    {
-      "file": "evidence/generated-world-audit/test/review-mode/review-mode.json",
+      "file": "evidence/coastal-ecology/test/review-mode/review-mode.json",
       "target": "test",
       "kind": "review-mode",
-      "sha256": "3de53fcfcecf091e5fce8af6ff303d7233435d28bb45eb196a983c7602dd9171"
+      "sha256": "7d4f896f8c632a6d75fe888f55f5cee5c3937a350d7a8882a4bb647e66628015"
     }
   ],
   "historical_validation": {
@@ -450,29 +415,29 @@
     "retested_on_current_rom": false
   },
   "previous_port_validation": {
-    "manifest": "mods/hoenn/generated-world-audit-validation/baseline/versions.json",
-    "manifest_sha256": "256ff6d42c9907d9e320ef621495e979d7cfcc8cc170ed3f04a86941ecf90143",
+    "manifest": "mods/hoenn/coastal-ecology-validation/baseline/versions.json",
+    "manifest_sha256": "fbd402670c693be275a45121000b4f6878b516b90b5117fed6e4d06bd012444f",
     "retested_on_current_rom": false
   },
   "previous_review_validation": {
-    "file": "mods/hoenn/generated-world-audit-validation/baseline/review.json",
-    "sha256": "c48de52608bdd397bd328ad62a02b26e39d701f664c533ca59cb6e61604c5a3e"
+    "file": "mods/hoenn/coastal-ecology-validation/baseline/review.json",
+    "sha256": "02f499b309c363c7004e24815ec6f5eba1f31fb64292e8f03084c9d182f293fa"
   },
   "previous_review_save_validation": {
-    "file": "mods/hoenn/generated-world-audit-validation/baseline/test.sav",
-    "sha256": "c420ff2fa5022cddd49b86c8efae62ab043f5e16bfb3b9977aa6e475bfe4ce27"
+    "file": "mods/hoenn/coastal-ecology-validation/baseline/test.sav",
+    "sha256": "7224bde1a307a5b6a213666a44e981ee0d40a0badd2875fd416248f1752d450c"
   },
   "previous_features_retested_on_current_rom": false,
   "historical_release": {
-    "scope": "badge-story",
-    "parent_rom_sha256": "3111ff0e2f5f1caa94b808c8fecf62f7b313d6b241014f416de31eff80105771",
+    "scope": "generated-world-audit",
+    "parent_rom_sha256": "b04918724939a54bbe3321d274953a9311ab8c7b4eebc3cbeb844ffcd3604386",
     "variants": {
-      "Pokemon-Journey-Gen1-4-Normal.gba": "08df49acf299e1e46508f6d55d8e4b78c68d755585ccd92ca4f8d665b52fa6ba",
-      "Pokemon-Journey-Gen1-4-Hard.gba": "53900d0ed0af1c3500c512cf42df97cd70ec46f55681346e758cd105ab8644fa",
-      "Pokemon-Journey-Gen1-9-Normal.gba": "c3d922e19ea7f07b906469d212159113006c89cc9df3d42c94eed727048a5eac",
-      "Pokemon-Journey-Gen1-9-Hard.gba": "d429ffd91f94b5719b6823acd82dd18bbb419562395c97839623e12c75856ad7"
+      "Pokemon-Journey-Gen1-4-Normal.gba": "2e7e7a234b16638ee3c997b1001f2006f21b39b7ecbecc08536d28485728f760",
+      "Pokemon-Journey-Gen1-4-Hard.gba": "ca9233a26ae8659ea4aa1222d45074e4d4968eac6563a89c90e4e64be0c0e86e",
+      "Pokemon-Journey-Gen1-9-Normal.gba": "fe5be134b17757534a917a68a9da098e9987bf157de34ca8a75b7c2ac712d46b",
+      "Pokemon-Journey-Gen1-9-Hard.gba": "b69daf45ebb815c798d71e8531b5f4ec1c8cc55411ffc9ebed88b9e82b3330f4"
     },
-    "test_rom_sha256": "be58ddd252c7ee58d7093b5620279b14c3fb1dd0fe241da23de35e35eb83fc61",
+    "test_rom_sha256": "57874edc8472deb479410ac4e7f35d12e6cd49e45cd38fbbfade7640c3a68b88",
     "proof_count": 26,
     "retested_on_current_rom": false
   }

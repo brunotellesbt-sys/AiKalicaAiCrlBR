@@ -1,0 +1,67 @@
+{
+  "kind": "coastal-ecology-native-case",
+  "passed": true,
+  "rom_sha256": "f7af65b4856e6697d5d972f48f8699c7c6b7d4b277ea19cfa3949926265d1b89",
+  "elf_sha256": "3f8ba485b37d17f58f7c7a5a64b1a8dd28492a9ea612afdead2487ceef3d1f9e",
+  "compiled_rom": true,
+  "native_validation_performed": true,
+  "map": "SixIsland_Frlg",
+  "profile": "coast",
+  "review_mode": false,
+  "max_national_dex": 1025,
+  "phase": 0,
+  "area": 1,
+  "underwater": false,
+  "initial_position": [
+    11,
+    4
+  ],
+  "walking_pair": [
+    [
+      11,
+      4
+    ],
+    [
+      12,
+      4
+    ]
+  ],
+  "native_case_behavior": 44,
+  "native_fishing_available": true,
+  "actual_controller_steps": 15,
+  "controller_input_only_after_initial_fixture": true,
+  "party_and_map_and_badges_are_initial_fixtures": true,
+  "trainer_defeat_flags_not_written": true,
+  "wild_encounters_disabled_fixture": false,
+  "repel_fixture_steps": 0,
+  "allowed_species": [
+    845
+  ],
+  "native_pool_samples": [
+    845
+  ],
+  "battle": {
+    "species": 845,
+    "national_dex": 845,
+    "level": 31,
+    "actual_battle_main_callback": true,
+    "battle_type_flags": 4,
+    "battle_action_menu_rendered": true,
+    "framebuffer_distinct_rgb_colors": 76,
+    "framebuffer_nonblack_pixels": 38400
+  },
+  "standard_encounter_suppression_attempts": 0,
+  "captures": [
+    {
+      "file": "controller-aquatic-start.png",
+      "sha256": "249c6398fa6d6cd81116841d858eb36976ae3ca411b6d0b8691c7ff4faaf8830",
+      "native_emulator_capture": true
+    },
+    {
+      "file": "controller-wild-battle.png",
+      "sha256": "5d405a05a79b68280e9c61c5872e2d3a95a7daca06bdceb8b41ddbd37f7e8dd2",
+      "native_emulator_capture": true
+    }
+  ],
+  "no_battle_result_or_avatar_coordinate_writes": true
+}

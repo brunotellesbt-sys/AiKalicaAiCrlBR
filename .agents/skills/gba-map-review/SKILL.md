@@ -13,6 +13,8 @@ Atualização explícita do usuário: “esquece essa parte de desenhar”. A ge
 
 ## Antes de editar
 
+Consulte `errors/README.md` e os registros relevantes em `errors/` para não repetir defeitos já diagnosticados. Registre a reprodução, a causa, a solução e as provas finais dos novos casos; diferencie defeito confirmado de animação nativa.
+
 1. Confira a branch, alterações locais e PRs recentes para preservar o trabalho paralelo do usuário. Leia os mapas e conexões reais envolvidos.
 2. Renderize o mapa inteiro e as bordas dos mapas vizinhos usando os tiles nativos. Inspecione essas imagens. Identifique árvores, cercas, montanhas, rochas e construções como objetos completos, com sua largura, altura, colisão e acesso.
 3. Gere uma **imagem de proposta inspirada em GBA** somente se o usuário voltar a pedir desenhos. A dispensa explícita acima prevalece sobre a preferência anterior. Propostas devem ser identificadas como referência, nunca como captura da ROM.

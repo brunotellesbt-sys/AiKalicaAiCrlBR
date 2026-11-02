@@ -20,13 +20,15 @@ def stage(output):
         for name in [row['file'] for row in release['variants']]+['versions.json']:
             download=ROOT/'roms'/name if name.endswith('.gba') else versions/name
             shutil.copyfile(download,games/name)
-        if release.get('validation_scope') in ('extra-gyms','dewford-coast-safety','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers'):
+        if release.get('validation_scope') in ('extra-gyms','dewford-coast-safety','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers'):
             from package_review_rom import verify as verify_review
             review_dir=ROOT/'roms/rom-de-teste'
             review=verify_review(review_dir,versions/'Pokemon-Journey-Gen1-9-Normal.gba')
             for name in [review['file'],'review.json']:
                 shutil.copyfile(review_dir/name,games/name)
         shutil.copytree(ROOT/'docs',output/'docs',dirs_exist_ok=True)
+        if (ROOT/'errors').is_dir():
+            shutil.copytree(ROOT/'errors',output/'errors',dirs_exist_ok=True)
         shutil.copyfile(versions/'START-HERE.md',output/'START-HERE.md')
     (output/'.nojekyll').write_text('')
     print('Static player, bundled mGBA and verified ROM staged:',output)

@@ -1,0 +1,2280 @@
+{
+  "passed": true,
+  "kind": "coastal-ocean-palette",
+  "rom_sha256": "f7af65b4856e6697d5d972f48f8699c7c6b7d4b277ea19cfa3949926265d1b89",
+  "elf_sha256": "3f8ba485b37d17f58f7c7a5a64b1a8dd28492a9ea612afdead2487ceef3d1f9e",
+  "compiled_rom": true,
+  "native_validation_performed": true,
+  "compiled_tables": [
+    {
+      "path": "data/tilesets/primary/general_frlg/journey_sevii_sea_metatiles.bin",
+      "tileset": "gTileset_JourneySeviiSea",
+      "sha256": "abdf713261e5366930a25aa68cd1448e640f7ff4cd0497a3fc2cc0528654373b",
+      "words_changed": 162
+    },
+    {
+      "path": "data/tilesets/secondary/sevii_islands_123_frlg/journey_sevii_sea_metatiles.bin",
+      "tileset": "gTileset_JourneySeviiSea123",
+      "sha256": "1fd03c079fbf0aa59dedfa854bb30b26d66da76f2ec0f1aed8e8614d08ae9554",
+      "words_changed": 27
+    },
+    {
+      "path": "data/tilesets/secondary/journey_sevii_integrated_123/metatiles.bin",
+      "tileset": "gTileset_JourneySeviiIntegrated123",
+      "sha256": "c752e6b2341645c81a8e44fd1a1ec620e42dd798f7390fd2ed49a0e65f4bb1e9",
+      "words_changed": 27
+    },
+    {
+      "path": "data/tilesets/secondary/sevii_islands_45_frlg/journey_sevii_sea_metatiles.bin",
+      "tileset": "gTileset_JourneySeviiSea45",
+      "sha256": "1e1a1ce8245499298404bcfc5e57bbad423e7aa586ddbeb31e2089f9233d2ca5",
+      "words_changed": 38
+    },
+    {
+      "path": "data/tilesets/secondary/journey_sevii_integrated_45/metatiles.bin",
+      "tileset": "gTileset_JourneySeviiIntegrated45",
+      "sha256": "49d535f41bf2d795731d57a466c89607d143ec7987662b147fe2164050ec55a6",
+      "words_changed": 38
+    },
+    {
+      "path": "data/tilesets/secondary/sevii_islands_67_frlg/journey_sevii_sea_metatiles.bin",
+      "tileset": "gTileset_JourneySeviiSea67",
+      "sha256": "c8a882e8cec20ee44c9e3fbda3e0f597dfc48fa9dbdabf857cd8051017605ea0",
+      "words_changed": 23
+    },
+    {
+      "path": "data/tilesets/secondary/journey_sevii_integrated_67/metatiles.bin",
+      "tileset": "gTileset_JourneySeviiIntegrated67",
+      "sha256": "3c937682139f3c4e8d9e92b39f8400ae87a6b4dbc06c772eafcb482435d98394",
+      "words_changed": 23
+    },
+    {
+      "path": "data/tilesets/secondary/cinnabar_island_frlg/journey_kanto_sea_metatiles.bin",
+      "tileset": "gTileset_JourneyKantoSeaCinnabarIsland",
+      "sha256": "0d2a8c5bf332a1a199ad510f561cda1edd59da0a4bace2e971b2d83284d481e9",
+      "words_changed": 8
+    },
+    {
+      "path": "data/tilesets/secondary/pallet_town_frlg/journey_kanto_sea_metatiles.bin",
+      "tileset": "gTileset_JourneyKantoSeaPalletTown",
+      "sha256": "b9501e280def48e9c79d2c2e53a116c506a4b7b217bc319dce07ec2a28bc6166",
+      "words_changed": 17
+    },
+    {
+      "path": "data/tilesets/secondary/lavender_town_frlg/journey_kanto_sea_metatiles.bin",
+      "tileset": "gTileset_JourneyKantoSeaLavenderTown",
+      "sha256": "dd9db49645721c0a6c6385c8c96d4c98f47f36e4b2640fee018eabab2df0de4b",
+      "words_changed": 82
+    },
+    {
+      "path": "data/tilesets/secondary/vermilion_city_frlg/journey_kanto_sea_metatiles.bin",
+      "tileset": "gTileset_JourneyKantoSeaVermilionCity",
+      "sha256": "24d9dee7de95c4ae92919f5466b3289b495fe94f4734af3f0d3e227e422fe015",
+      "words_changed": 53
+    }
+  ],
+  "loaded_maps": [
+    {
+      "map": "BirthIsland_Exterior_Frlg",
+      "initial_position": [
+        10,
+        13
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea67",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608140,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "CinnabarIsland_Frlg",
+      "initial_position": [
+        11,
+        10
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaCinnabarIsland",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608116,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "FiveIsland_Frlg",
+      "initial_position": [
+        12,
+        8
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiIntegrated45",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608260,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "FiveIsland_Meadow_Frlg",
+      "initial_position": [
+        13,
+        22
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea45",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608164,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "FiveIsland_MemorialPillar_Frlg",
+      "initial_position": [
+        13,
+        26
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea45",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608164,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "FiveIsland_ResortGorgeous_Frlg",
+      "initial_position": [
+        39,
+        9
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea45",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608164,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "FiveIsland_WaterLabyrinth_Frlg",
+      "initial_position": [
+        17,
+        10
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea45",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608164,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "FourIsland_Frlg",
+      "initial_position": [
+        24,
+        22
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiIntegrated45",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608260,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "JourneyRoute12OuterSea",
+      "initial_position": [
+        32,
+        30
+      ],
+      "surfing": true,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaLavenderTown",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608068,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "JourneyRoute12Shipyard",
+      "initial_position": [
+        32,
+        30
+      ],
+      "surfing": true,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaLavenderTown",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608068,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "JourneySurfLink01000",
+      "initial_position": [
+        8,
+        6
+      ],
+      "surfing": true,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea45",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608164,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "JourneySurfLink05100",
+      "initial_position": [
+        8,
+        6
+      ],
+      "surfing": true,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea67",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608140,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "JourneySurfLink05200",
+      "initial_position": [
+        8,
+        6
+      ],
+      "surfing": true,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea67",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608140,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "JourneySurfLink05301",
+      "initial_position": [
+        8,
+        6
+      ],
+      "surfing": true,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea123",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608188,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "NavelRock_Exterior_Frlg",
+      "initial_position": [
+        10,
+        11
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea123",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608188,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "OneIsland_Frlg",
+      "initial_position": [
+        7,
+        13
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiIntegrated123",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608284,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "OneIsland_KindleRoad_Frlg",
+      "initial_position": [
+        10,
+        78
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea123",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608188,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "OneIsland_TreasureBeach_Frlg",
+      "initial_position": [
+        12,
+        24
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiIntegrated123",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608284,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "PalletTown_Frlg",
+      "initial_position": [
+        13,
+        16
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaPalletTown",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608092,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "Route11_Frlg",
+      "initial_position": [
+        36,
+        9
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaVermilionCity",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608044,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "Route12_Frlg",
+      "initial_position": [
+        16,
+        59
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaLavenderTown",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608068,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "Route13_Frlg",
+      "initial_position": [
+        36,
+        11
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaLavenderTown",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608068,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "Route14_Frlg",
+      "initial_position": [
+        8,
+        29
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaLavenderTown",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608068,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "Route19_Frlg",
+      "initial_position": [
+        12,
+        30
+      ],
+      "surfing": true,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_FuchsiaCity",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151609940,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "Route20_Frlg",
+      "initial_position": [
+        60,
+        13
+      ],
+      "surfing": true,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaCinnabarIsland",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608116,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "Route21_North_Frlg",
+      "initial_position": [
+        12,
+        10
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaPalletTown",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608092,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "Route21_South_Frlg",
+      "initial_position": [
+        12,
+        25
+      ],
+      "surfing": true,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaCinnabarIsland",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608116,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "SevenIsland_Frlg",
+      "initial_position": [
+        15,
+        10
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiIntegrated67",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608236,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+      "initial_position": [
+        12,
+        20
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiIntegrated67",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608236,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "SevenIsland_SevaultCanyon_Frlg",
+      "initial_position": [
+        12,
+        38
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea67",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608140,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "SevenIsland_TanobyRuins_Frlg",
+      "initial_position": [
+        66,
+        4
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea67",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608140,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "SevenIsland_TrainerTower_Frlg",
+      "initial_position": [
+        60,
+        16
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea67",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608140,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "SixIsland_Frlg",
+      "initial_position": [
+        9,
+        15
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiIntegrated67",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608236,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "SixIsland_GreenPath_Frlg",
+      "initial_position": [
+        38,
+        10
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea67",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608140,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "SixIsland_OutcastIsland_Frlg",
+      "initial_position": [
+        12,
+        40
+      ],
+      "surfing": true,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea67",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608140,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "SixIsland_WaterPath_Frlg",
+      "initial_position": [
+        12,
+        53
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea67",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608140,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "ThreeIsland_BondBridge_Frlg",
+      "initial_position": [
+        56,
+        10
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea123",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608188,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "ThreeIsland_Frlg",
+      "initial_position": [
+        11,
+        19
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea123",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608188,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "ThreeIsland_Port_Frlg",
+      "initial_position": [
+        31,
+        7
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiIntegrated123",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608284,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "TwoIsland_CapeBrink_Frlg",
+      "initial_position": [
+        12,
+        17
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea123",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608188,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "TwoIsland_Frlg",
+      "initial_position": [
+        24,
+        11
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiIntegrated123",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608284,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "TwoIsland_Harbor_Frlg",
+      "initial_position": [
+        8,
+        6
+      ],
+      "surfing": true,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_IslandHarbor_Frlg",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608692,
+      "banks_loaded_from_final_rom": true
+    },
+    {
+      "map": "VermilionCity_Frlg",
+      "initial_position": [
+        24,
+        20
+      ],
+      "surfing": false,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaVermilionCity",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608044,
+      "banks_loaded_from_final_rom": true
+    }
+  ],
+  "loaded_map_count": 43,
+  "target_maps": [
+    "BirthIsland_Exterior_Frlg",
+    "CinnabarIsland_Frlg",
+    "FiveIsland_Frlg",
+    "FiveIsland_Meadow_Frlg",
+    "FiveIsland_MemorialPillar_Frlg",
+    "FiveIsland_ResortGorgeous_Frlg",
+    "FiveIsland_WaterLabyrinth_Frlg",
+    "FourIsland_Frlg",
+    "JourneyRoute12OuterSea",
+    "JourneyRoute12Shipyard",
+    "JourneySurfLink01000",
+    "JourneySurfLink05100",
+    "JourneySurfLink05200",
+    "JourneySurfLink05301",
+    "NavelRock_Exterior_Frlg",
+    "OneIsland_Frlg",
+    "OneIsland_KindleRoad_Frlg",
+    "OneIsland_TreasureBeach_Frlg",
+    "PalletTown_Frlg",
+    "Route11_Frlg",
+    "Route12_Frlg",
+    "Route13_Frlg",
+    "Route14_Frlg",
+    "Route19_Frlg",
+    "Route20_Frlg",
+    "Route21_North_Frlg",
+    "Route21_South_Frlg",
+    "SevenIsland_Frlg",
+    "SevenIsland_SevaultCanyon_Entrance_Frlg",
+    "SevenIsland_SevaultCanyon_Frlg",
+    "SevenIsland_TanobyRuins_Frlg",
+    "SevenIsland_TrainerTower_Frlg",
+    "SixIsland_Frlg",
+    "SixIsland_GreenPath_Frlg",
+    "SixIsland_OutcastIsland_Frlg",
+    "SixIsland_WaterPath_Frlg",
+    "ThreeIsland_BondBridge_Frlg",
+    "ThreeIsland_Frlg",
+    "ThreeIsland_Port_Frlg",
+    "TwoIsland_CapeBrink_Frlg",
+    "TwoIsland_Frlg",
+    "TwoIsland_Harbor_Frlg",
+    "VermilionCity_Frlg"
+  ],
+  "compiled_native_bank_aliases": [
+    {
+      "original": "gTileset_General_Frlg",
+      "private": "gTileset_JourneySeviiSea",
+      "original_address": 151610132,
+      "private_address": 151608212,
+      "header_fields_except_private_metatile_pointer_identical": true
+    },
+    {
+      "original": "gTileset_SeviiIslands123",
+      "private": "gTileset_JourneySeviiSea123",
+      "original_address": 151608788,
+      "private_address": 151608188,
+      "header_fields_except_private_metatile_pointer_identical": true
+    },
+    {
+      "original": "gTileset_SeviiIslands45",
+      "private": "gTileset_JourneySeviiSea45",
+      "original_address": 151608764,
+      "private_address": 151608164,
+      "header_fields_except_private_metatile_pointer_identical": true
+    },
+    {
+      "original": "gTileset_SeviiIslands67",
+      "private": "gTileset_JourneySeviiSea67",
+      "original_address": 151608740,
+      "private_address": 151608140,
+      "header_fields_except_private_metatile_pointer_identical": true
+    },
+    {
+      "original": "gTileset_CinnabarIsland",
+      "private": "gTileset_JourneyKantoSeaCinnabarIsland",
+      "original_address": 151609916,
+      "private_address": 151608116,
+      "header_fields_except_private_metatile_pointer_identical": true
+    },
+    {
+      "original": "gTileset_PalletTown",
+      "private": "gTileset_JourneyKantoSeaPalletTown",
+      "original_address": 151610108,
+      "private_address": 151608092,
+      "header_fields_except_private_metatile_pointer_identical": true
+    },
+    {
+      "original": "gTileset_LavenderTown",
+      "private": "gTileset_JourneyKantoSeaLavenderTown",
+      "original_address": 151610012,
+      "private_address": 151608068,
+      "header_fields_except_private_metatile_pointer_identical": true
+    },
+    {
+      "original": "gTileset_VermilionCity",
+      "private": "gTileset_JourneyKantoSeaVermilionCity",
+      "original_address": 151609988,
+      "private_address": 151608044,
+      "header_fields_except_private_metatile_pointer_identical": true
+    }
+  ],
+  "native_coast_layout_aliases": [
+    {
+      "map": "BirthIsland_Exterior_Frlg",
+      "layout": "LAYOUT_BIRTH_ISLAND_EXTERIOR_FRLG",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608140,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea67",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "CinnabarIsland_Frlg",
+      "layout": "LAYOUT_CINNABAR_ISLAND",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608116,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaCinnabarIsland",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "FiveIsland_Meadow_Frlg",
+      "layout": "LAYOUT_FIVE_ISLAND_MEADOW",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608164,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea45",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "FiveIsland_MemorialPillar_Frlg",
+      "layout": "LAYOUT_FIVE_ISLAND_MEMORIAL_PILLAR",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608164,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea45",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "FiveIsland_ResortGorgeous_Frlg",
+      "layout": "LAYOUT_FIVE_ISLAND_RESORT_GORGEOUS",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608164,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea45",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "FiveIsland_WaterLabyrinth_Frlg",
+      "layout": "LAYOUT_FIVE_ISLAND_WATER_LABYRINTH",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608164,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea45",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "JourneyRoute12OuterSea",
+      "layout": "LAYOUT_JOURNEYROUTE12OUTERSEA",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608068,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaLavenderTown",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "JourneyRoute12Shipyard",
+      "layout": "LAYOUT_JOURNEYROUTE12SHIPYARD",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608068,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaLavenderTown",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "NavelRock_Exterior_Frlg",
+      "layout": "LAYOUT_NAVEL_ROCK_EXTERIOR_FRLG",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608188,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea123",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "OneIsland_KindleRoad_Frlg",
+      "layout": "LAYOUT_ONE_ISLAND_KINDLE_ROAD",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608188,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea123",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "PalletTown_Frlg",
+      "layout": "LAYOUT_PALLET_TOWN",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608092,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaPalletTown",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "Route11_Frlg",
+      "layout": "LAYOUT_ROUTE11",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608044,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaVermilionCity",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "Route12_Frlg",
+      "layout": "LAYOUT_ROUTE12",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608068,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaLavenderTown",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "Route13_Frlg",
+      "layout": "LAYOUT_ROUTE13",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608068,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaLavenderTown",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "Route14_Frlg",
+      "layout": "LAYOUT_ROUTE14",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608068,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaLavenderTown",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "Route19_Frlg",
+      "layout": "LAYOUT_ROUTE19",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151609940,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_FuchsiaCity",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "Route20_Frlg",
+      "layout": "LAYOUT_ROUTE20",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608116,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaCinnabarIsland",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "Route21_North_Frlg",
+      "layout": "LAYOUT_ROUTE21_NORTH",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608092,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaPalletTown",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "Route21_South_Frlg",
+      "layout": "LAYOUT_ROUTE21_SOUTH",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608116,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaCinnabarIsland",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "SevenIsland_TanobyRuins_Frlg",
+      "layout": "LAYOUT_SEVEN_ISLAND_TANOBY_RUINS",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608140,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea67",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "SixIsland_GreenPath_Frlg",
+      "layout": "LAYOUT_SIX_ISLAND_GREEN_PATH",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608140,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea67",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "SixIsland_OutcastIsland_Frlg",
+      "layout": "LAYOUT_SIX_ISLAND_OUTCAST_ISLAND",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608140,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea67",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "ThreeIsland_BondBridge_Frlg",
+      "layout": "LAYOUT_THREE_ISLAND_BOND_BRIDGE",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608188,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea123",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "TwoIsland_Harbor_Frlg",
+      "layout": "LAYOUT_JOURNEY_SEVII_TWO_PORT",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608692,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_IslandHarbor_Frlg",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    },
+    {
+      "map": "VermilionCity_Frlg",
+      "layout": "LAYOUT_VERMILION_CITY",
+      "primary_pointer": 151608212,
+      "secondary_pointer": 151608044,
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneyKantoSeaVermilionCity",
+      "actual_loaded_private_bank_pointers_match_final_layout": true
+    }
+  ],
+  "native_same_frame_pixel_checks": [
+    {
+      "sample": 0,
+      "bay_cell": [
+        15,
+        7
+      ],
+      "offshore_cell": [
+        21,
+        3
+      ],
+      "identical_rgb_sha256": "8e29b50d8bbf09e4e00311e9c134e5c7d4023b249457a9278841e32482595576",
+      "same_native_frame": true,
+      "valid_animation_phases": [
+        5
+      ]
+    },
+    {
+      "sample": 1,
+      "bay_cell": [
+        15,
+        7
+      ],
+      "offshore_cell": [
+        21,
+        3
+      ],
+      "identical_rgb_sha256": "3dd7894612ddba5f2866543a6ac1b991361c549521742aa53212840ffc9f79ba",
+      "same_native_frame": true,
+      "valid_animation_phases": [
+        6
+      ]
+    },
+    {
+      "sample": 2,
+      "bay_cell": [
+        15,
+        7
+      ],
+      "offshore_cell": [
+        21,
+        3
+      ],
+      "identical_rgb_sha256": "92c7a8d85f182b7cf7583b45ac1304c476766c8819bde0f6032533005049ea34",
+      "same_native_frame": true,
+      "valid_animation_phases": [
+        7
+      ]
+    },
+    {
+      "sample": 3,
+      "bay_cell": [
+        15,
+        7
+      ],
+      "offshore_cell": [
+        21,
+        3
+      ],
+      "identical_rgb_sha256": "de47800bd2091dea63a308627540348bdefd48a3c7f1cbafd6a0f649af8dec8e",
+      "same_native_frame": true,
+      "valid_animation_phases": [
+        0
+      ]
+    },
+    {
+      "sample": 4,
+      "bay_cell": [
+        15,
+        7
+      ],
+      "offshore_cell": [
+        21,
+        3
+      ],
+      "identical_rgb_sha256": "6a71d2ff175a16ec4b88facb337ca3206eaf11205083ac83c07e9e8e2023e524",
+      "same_native_frame": true,
+      "valid_animation_phases": [
+        1
+      ]
+    },
+    {
+      "sample": 5,
+      "bay_cell": [
+        15,
+        7
+      ],
+      "offshore_cell": [
+        21,
+        3
+      ],
+      "identical_rgb_sha256": "4a11be2d2ae16d0f6ee9487f27ef1d56440f70ee65e538982025e5e6b067fdbd",
+      "same_native_frame": true,
+      "valid_animation_phases": [
+        2
+      ]
+    },
+    {
+      "sample": 6,
+      "bay_cell": [
+        15,
+        7
+      ],
+      "offshore_cell": [
+        21,
+        3
+      ],
+      "identical_rgb_sha256": "3f1e97961a68ee4b1ffb16c11e0125fe8d0cf6bf8432700b979542f334e5e3f2",
+      "same_native_frame": true,
+      "valid_animation_phases": [
+        3
+      ]
+    },
+    {
+      "sample": 7,
+      "bay_cell": [
+        15,
+        7
+      ],
+      "offshore_cell": [
+        21,
+        3
+      ],
+      "identical_rgb_sha256": "dd0c52b945b6d7df3c156c1ae07408107e8c87fb405b6209cc4a7cb6e153f874",
+      "same_native_frame": true,
+      "valid_animation_phases": [
+        4
+      ]
+    }
+  ],
+  "former_bay_border_palette_seam_removed": true,
+  "lower_water_words_changed": 498,
+  "source_ocean_groups": [
+    {
+      "region": "sevii",
+      "maps": [
+        "BirthIsland_Exterior_Frlg",
+        "FiveIsland_Frlg",
+        "FiveIsland_Meadow_Frlg",
+        "FiveIsland_MemorialPillar_Frlg",
+        "FiveIsland_ResortGorgeous_Frlg",
+        "FiveIsland_WaterLabyrinth_Frlg",
+        "FourIsland_Frlg",
+        "JourneySurfLink01000",
+        "JourneySurfLink05100",
+        "JourneySurfLink05200",
+        "JourneySurfLink05301",
+        "OneIsland_Frlg",
+        "OneIsland_KindleRoad_Frlg",
+        "OneIsland_TreasureBeach_Frlg",
+        "SevenIsland_Frlg",
+        "SevenIsland_SevaultCanyon_Entrance_Frlg",
+        "SevenIsland_SevaultCanyon_Frlg",
+        "SevenIsland_TanobyRuins_Frlg",
+        "SevenIsland_TrainerTower_Frlg",
+        "SixIsland_Frlg",
+        "SixIsland_GreenPath_Frlg",
+        "SixIsland_OutcastIsland_Frlg",
+        "SixIsland_WaterPath_Frlg",
+        "ThreeIsland_BondBridge_Frlg",
+        "ThreeIsland_Frlg",
+        "ThreeIsland_Port_Frlg",
+        "TwoIsland_CapeBrink_Frlg",
+        "TwoIsland_Frlg"
+      ],
+      "lower_water_words_changed": 338
+    },
+    {
+      "region": "kanto",
+      "maps": [
+        "CinnabarIsland_Frlg",
+        "JourneyRoute12OuterSea",
+        "JourneyRoute12Shipyard",
+        "NavelRock_Exterior_Frlg",
+        "PalletTown_Frlg",
+        "Route11_Frlg",
+        "Route12_Frlg",
+        "Route13_Frlg",
+        "Route14_Frlg",
+        "Route19_Frlg",
+        "Route20_Frlg",
+        "Route21_North_Frlg",
+        "Route21_South_Frlg",
+        "TwoIsland_Harbor_Frlg",
+        "VermilionCity_Frlg"
+      ],
+      "lower_water_words_changed": 160
+    }
+  ],
+  "hoenn_ocean": {
+    "source_census": {
+      "source_analysis_only": true,
+      "maps": [
+        {
+          "map": "BattleFrontier_OutsideEast",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_BattleFrontierOutsideEast",
+          "blockdata_sha256": "5df5eafca4c42444ae5c2354c1064614fac62ad38717a9112306e72768e413de"
+        },
+        {
+          "map": "BattleFrontier_OutsideWest",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_BattleFrontierOutsideWest",
+          "blockdata_sha256": "4facdb0f28839d41a06e664f0b8ad747048422280d300cea0543a03100747d5d"
+        },
+        {
+          "map": "DewfordTown",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_JourneyDewfordHarbor",
+          "blockdata_sha256": "3c93bf38b4f8a845db0161a2ea485fb85e0ab99485150dc0fb11b6202bdcdeae"
+        },
+        {
+          "map": "EverGrandeCity",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_EverGrande",
+          "blockdata_sha256": "e06803bd4c2e933d8f6920707e7c788e92e2c38e77a30ccf931b7d53b967bb84"
+        },
+        {
+          "map": "JourneyDewfordCoast",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Fallarbor",
+          "blockdata_sha256": "8ddde7c51823a7ad99a5a678cf2dd2a3c72991b332a9a2ca31c9908b32b29d6f"
+        },
+        {
+          "map": "JourneyDewfordGate",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Fallarbor",
+          "blockdata_sha256": "671cc42c3510d49de18e66948f637bcfa2a68386b5b661b8fdb1dbdd180a3c18"
+        },
+        {
+          "map": "JourneyDewfordPortIsland",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_JourneyDewfordHarbor",
+          "blockdata_sha256": "0de43aab52ce3b124f9e558a4ac79f425a69f17f1e98ea545a6afbd81aa8f00b"
+        },
+        {
+          "map": "JourneyEverGrandeBackSea",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "39528a29fedfae955d06c09f8f624b8e0440b3f676c0a8c0c9016ba25bdedc62"
+        },
+        {
+          "map": "JourneyEverGrandeBackSouthSea",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "3c6b2b39bfa296312bddecfe2337279a0734e27e632b2f239d2ce78387a8cd5a"
+        },
+        {
+          "map": "JourneyHoennCrossing",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "a525dff5ae6bd5e99e8c7d88a5dc39a08b9e44d0204a257f7b7e0d9799f59ca2"
+        },
+        {
+          "map": "JourneyHoennMiddleEastSea",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "6d897d04589d321184f97c0e65b9cf6167948bd9e03a326bbdf135474ed2b24d"
+        },
+        {
+          "map": "JourneyHoennMiddleSea",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "f11a78fd6619e5179b566507cfa075fa7ec96bc32332e788a20247a384fc03d8"
+        },
+        {
+          "map": "JourneyHoennNorthSea",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "337ec13d3ae8afab45d15201b25b1e15a990d7a01b4dc51a5ac70237c1945c26"
+        },
+        {
+          "map": "JourneyHoennSouthEastSea",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "544720ca771059214f5a06b00a8cc7c19dee7135bb782f707493fabc7de7b70f"
+        },
+        {
+          "map": "JourneyHoennSouthSea",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "d9c12e69fbabc3988f6364533850978dd390808dca118ffdda6505ae76d103fd"
+        },
+        {
+          "map": "JourneyMossdeepOuterEastSea",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "7be36a970405541229cdc2688acadf03f10c4e663e5070a0515a3a428e8ff72c"
+        },
+        {
+          "map": "JourneyMossdeepOuterSea",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "386b613afc8f4022e54fd8cfd596a4ad03119b9d7e151563494fc41c1293ce8c"
+        },
+        {
+          "map": "JourneyPacifidlogSea",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Pacifidlog",
+          "blockdata_sha256": "6b275651c061bdab8c950aea9edbf2ed5404caf21053037e898893805ecefd91"
+        },
+        {
+          "map": "JourneyRustboroCoast",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Fallarbor",
+          "blockdata_sha256": "256abec0c1b7176ab8d50d19139206422450df5f8643aed250e9a9a0bd6ebf76"
+        },
+        {
+          "map": "JourneyRustboroGate",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Fallarbor",
+          "blockdata_sha256": "d57524ab9dd48a3ac869aa8c19ea6395ff2d9675c669dde7f61df7a3621b57c1"
+        },
+        {
+          "map": "JourneySootopolisSouthChannel",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "69204253698c16c99e63f1457848a671d7e759186440047fa4fc7fc732ced0c4"
+        },
+        {
+          "map": "JourneySurfLink00500",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_EverGrande",
+          "blockdata_sha256": "f8ebb42e23fc37840d5f881610e270696e40c7ce42ba3f8177c98837b06ef488"
+        },
+        {
+          "map": "JourneySurfLink00501",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "f8ebb42e23fc37840d5f881610e270696e40c7ce42ba3f8177c98837b06ef488"
+        },
+        {
+          "map": "JourneySurfLink01101",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Cave",
+          "blockdata_sha256": "25b74564d65098e7293ca23da11030c7398ad37440bcd96a78952039070d8021"
+        },
+        {
+          "map": "JourneySurfLink01202",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Fallarbor",
+          "blockdata_sha256": "25b74564d65098e7293ca23da11030c7398ad37440bcd96a78952039070d8021"
+        },
+        {
+          "map": "JourneySurfLink01203",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Fallarbor",
+          "blockdata_sha256": "25b74564d65098e7293ca23da11030c7398ad37440bcd96a78952039070d8021"
+        },
+        {
+          "map": "JourneySurfLink01300",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Fallarbor",
+          "blockdata_sha256": "f8ebb42e23fc37840d5f881610e270696e40c7ce42ba3f8177c98837b06ef488"
+        },
+        {
+          "map": "JourneySurfLink01301",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Dewford",
+          "blockdata_sha256": "f8ebb42e23fc37840d5f881610e270696e40c7ce42ba3f8177c98837b06ef488"
+        },
+        {
+          "map": "JourneySurfLink01401",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "25b74564d65098e7293ca23da11030c7398ad37440bcd96a78952039070d8021"
+        },
+        {
+          "map": "JourneySurfLink01500",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "f8ebb42e23fc37840d5f881610e270696e40c7ce42ba3f8177c98837b06ef488"
+        },
+        {
+          "map": "JourneySurfLink01600",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "9ce648617efae8ac5c14d775a3d1d73548367bd8bfc62b27b5d853d481743177"
+        },
+        {
+          "map": "JourneySurfLink01700",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "f8ebb42e23fc37840d5f881610e270696e40c7ce42ba3f8177c98837b06ef488"
+        },
+        {
+          "map": "JourneySurfLink01800",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "8a9d662788367686ddf2edf519a6944bd8042aec14654bc0849f4b7cac4d7b2e"
+        },
+        {
+          "map": "JourneySurfLink01902",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "b57574a13af7e00508054c628038ab33e064382a68a36c41edc12f3d6ec6832c"
+        },
+        {
+          "map": "JourneySurfLink01903",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "25b74564d65098e7293ca23da11030c7398ad37440bcd96a78952039070d8021"
+        },
+        {
+          "map": "JourneySurfLink02100",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "9ce648617efae8ac5c14d775a3d1d73548367bd8bfc62b27b5d853d481743177"
+        },
+        {
+          "map": "JourneySurfLink02101",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "967f5018fbb70a5fdf1483d466c606764277a3b276e9de5b50f8770838ced3a0"
+        },
+        {
+          "map": "JourneySurfLink02200",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "f8ebb42e23fc37840d5f881610e270696e40c7ce42ba3f8177c98837b06ef488"
+        },
+        {
+          "map": "JourneySurfLink02300",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "f8ebb42e23fc37840d5f881610e270696e40c7ce42ba3f8177c98837b06ef488"
+        },
+        {
+          "map": "JourneySurfLink02400",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "f8ebb42e23fc37840d5f881610e270696e40c7ce42ba3f8177c98837b06ef488"
+        },
+        {
+          "map": "JourneySurfLink02500",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "25b74564d65098e7293ca23da11030c7398ad37440bcd96a78952039070d8021"
+        },
+        {
+          "map": "JourneySurfLink03200",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "15a578147c0613d656ad073a7779a2961590869493117d82c500613906dc6671"
+        },
+        {
+          "map": "JourneySurfLink03201",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "a9d5a83fffaaaa459c7647e0d42a83c50f08ca5c83f65be6c7a83575aaa4a872"
+        },
+        {
+          "map": "JourneySurfLink03300",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "f8ebb42e23fc37840d5f881610e270696e40c7ce42ba3f8177c98837b06ef488"
+        },
+        {
+          "map": "JourneySurfLink03401",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "25b74564d65098e7293ca23da11030c7398ad37440bcd96a78952039070d8021"
+        },
+        {
+          "map": "JourneySurfLink03600",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Pacifidlog",
+          "blockdata_sha256": "f8ebb42e23fc37840d5f881610e270696e40c7ce42ba3f8177c98837b06ef488"
+        },
+        {
+          "map": "JourneySurfLink03601",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "f8ebb42e23fc37840d5f881610e270696e40c7ce42ba3f8177c98837b06ef488"
+        },
+        {
+          "map": "JourneyWestRiver",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Fallarbor",
+          "blockdata_sha256": "1e63cf6bac17fbdd61bec8cc4448a877390df8b1744245a9d9472f768d0bd726"
+        },
+        {
+          "map": "LilycoveCity",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Lilycove",
+          "blockdata_sha256": "ad1a003b04f8b52923c59468e9b6b5060d3f18c3ce4a51883d97fda5ff3c36cd"
+        },
+        {
+          "map": "MauvilleCity",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mauville",
+          "blockdata_sha256": "ec1e2a33d33024c4b029b11ca991bfeee25647e860209a0d9fb65ab3a7db8b68"
+        },
+        {
+          "map": "MossdeepCity",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "afb9765414d911e01519c00f3524a2bf812645d8fab14fd679709a4ae06d6d27"
+        },
+        {
+          "map": "PacifidlogTown",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Pacifidlog",
+          "blockdata_sha256": "027718c1887ac8e17965f511765d36f606b9cf8d2fb1a735861c13a94bad6527"
+        },
+        {
+          "map": "Route103",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Petalburg",
+          "blockdata_sha256": "945988583b1b54d37e3816140ad9178801270cfbdde3f63ad27be2affc8a8799"
+        },
+        {
+          "map": "Route104",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Rustboro",
+          "blockdata_sha256": "9f854c22c373f79ccffb8a661fa9cc9b130e827a1fd03c24a4ec70a9a5c1dff6"
+        },
+        {
+          "map": "Route105",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Dewford",
+          "blockdata_sha256": "d3d626813579b3009a924d29249fe70f82343ffe3518ec59c3fbf42d1487d7b6"
+        },
+        {
+          "map": "Route106",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_JourneyDewfordHarbor",
+          "blockdata_sha256": "d42aa5a3ee97af922c269497eeedd0f32751801494101cef9400beb69716d467"
+        },
+        {
+          "map": "Route107",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_JourneyDewfordHarbor",
+          "blockdata_sha256": "35d3032ea9b2f30891c3fbca1ca8e840f8101b853e07da8293975fed42a735b7"
+        },
+        {
+          "map": "Route108",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Slateport",
+          "blockdata_sha256": "f5f70c2374d1b68f30364de9bcebfb0a391803a4a6ff44e35bcee2a1d542dfd9"
+        },
+        {
+          "map": "Route109",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Slateport",
+          "blockdata_sha256": "458556cfcd726754bf96a48e8edbaca28da7fbba6ddbb7da1b42965b77779816"
+        },
+        {
+          "map": "Route110",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mauville",
+          "blockdata_sha256": "9d82f1a8286b78a6b5af2b3b630145563026f5b2aa9df707aa96d16a399cbe8e"
+        },
+        {
+          "map": "Route114",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Fallarbor",
+          "blockdata_sha256": "ef654f8226531d20f6bf520fa0e60bd1014c9dd21d0a038896c337e856adb516"
+        },
+        {
+          "map": "Route115",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Fallarbor",
+          "blockdata_sha256": "3c74fe4b2587ed1a6d95d6b8a25d0e148693b7130a6753a4763dc2f704715ec8"
+        },
+        {
+          "map": "Route118",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mauville",
+          "blockdata_sha256": "4d94d553276a8c652f824ceff2174cffbff1f80bbf023da8f208d2f8bdcbb5f4"
+        },
+        {
+          "map": "Route119",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Fortree",
+          "blockdata_sha256": "db12f414266f3205cd3ac92b3b3bee44f39d8729201dcc3667c4cf54ae554aef"
+        },
+        {
+          "map": "Route120",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Fortree",
+          "blockdata_sha256": "5a05035e557bc5aa82a66e5817708a6e4d280731938f6b2840eef3a90cae4818"
+        },
+        {
+          "map": "Route121",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Lilycove",
+          "blockdata_sha256": "7b0be69ed44f64691f521623549e3b937ebd57936fa5c3a57ea66f2d25cbd556"
+        },
+        {
+          "map": "Route122",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Lilycove",
+          "blockdata_sha256": "3b8e5b96fe71bd73c5567dd8035e4ec7442acf923947d93802f6e123fa29ed13"
+        },
+        {
+          "map": "Route123",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Lilycove",
+          "blockdata_sha256": "18ac219841ec9d2213a788cff291087d81266e8baf8c12e1b8bf5d918d4dc26e"
+        },
+        {
+          "map": "Route124",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "f907814880affe6d3df506f0d1bdeb046e169116a074af93514db9db9e5ceb19"
+        },
+        {
+          "map": "Route125",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "ad1af492163230decd23b2402fd7bc80ddd1009d4b4d0704e5183675b1a3099d"
+        },
+        {
+          "map": "Route126",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "6ed3e1ac0d85acacb1274525502ef716afee32f0ab2fd6343378809b9a80c404"
+        },
+        {
+          "map": "Route127",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "c0fd5936328ac6afcc75f22eeab6c1322e0cc889c8b9a1b2e3d8f7a8fc8832ca"
+        },
+        {
+          "map": "Route128",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "e5b5788660dc15f0a419fd0447c47f350db1940db054de3c49a8606530a514c1"
+        },
+        {
+          "map": "Route129",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Mossdeep",
+          "blockdata_sha256": "c94312d9a479a06ecbc938e0e57e8c45b2f5e4b32b8fe700fa88d55f239cc89d"
+        },
+        {
+          "map": "Route130",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Cave",
+          "blockdata_sha256": "ff8e169092502ed1097ec9853006d4a3aa0d3594cce516e1feaf8b7ffca8b7bb"
+        },
+        {
+          "map": "Route131",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Pacifidlog",
+          "blockdata_sha256": "64533bf92ab5eada5aeb8d8acfb69bcd28a9d661495710533bcbc4307933c821"
+        },
+        {
+          "map": "Route132",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Pacifidlog",
+          "blockdata_sha256": "00f363e2f7319baeb2da774e698953a740910bece64500c7f5ce1c47077a7569"
+        },
+        {
+          "map": "Route133",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Pacifidlog",
+          "blockdata_sha256": "22afec0011dda655975645132b09a91b18ea8526ff5e6e40705f189e1f2642bc"
+        },
+        {
+          "map": "Route134",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Pacifidlog",
+          "blockdata_sha256": "e577f330b8311cc4b33ed0bd4fe0ead6f30cc62944e398d657a646a5ef0f819b"
+        },
+        {
+          "map": "RustboroCity",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Rustboro",
+          "blockdata_sha256": "4cfa79fec96d90319033d614ec1c3ed4dbd531750a30796d474443da3df10805"
+        },
+        {
+          "map": "SafariZone_Northeast",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Lilycove",
+          "blockdata_sha256": "528ec2de1456b9c5bc44bfb94e1245e49d2149c2a5fe3dd053ef3be5437c19d4"
+        },
+        {
+          "map": "SafariZone_Southeast",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Lilycove",
+          "blockdata_sha256": "5d716128aadd66ece00984213764187ab20cfc228b4bf028f3be035eea388c3b"
+        },
+        {
+          "map": "SkyPillar_Outside",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Pacifidlog",
+          "blockdata_sha256": "a480face5426284c9c7f4cd35bbbed8a0c13a79f7f82bbe39a9eb1ef0b950071"
+        },
+        {
+          "map": "SlateportCity",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Slateport",
+          "blockdata_sha256": "cdc2bdc378e087865d08b15c5d73e7fb4a35d697181a8bda856f7fe9c6bc2b08"
+        },
+        {
+          "map": "SouthernIsland_Exterior",
+          "primary": "gTileset_General",
+          "secondary": "gTileset_Rustboro",
+          "blockdata_sha256": "cbc829d4d152ad97f40e7d703b71e0d9c5ac7daf4629e821e1b79da7ff4a0d42"
+        }
+      ],
+      "map_count": 85,
+      "water_graphics": [
+        454,
+        455
+      ],
+      "ocean_palette": 4,
+      "water_banks": [
+        {
+          "bank": "gTileset_BattleFrontierOutsideEast",
+          "referenced_lower_water_words": 43
+        },
+        {
+          "bank": "gTileset_BattleFrontierOutsideWest",
+          "referenced_lower_water_words": 155
+        },
+        {
+          "bank": "gTileset_Dewford",
+          "referenced_lower_water_words": 4
+        },
+        {
+          "bank": "gTileset_Fallarbor",
+          "referenced_lower_water_words": 145
+        },
+        {
+          "bank": "gTileset_Fortree",
+          "referenced_lower_water_words": 41
+        },
+        {
+          "bank": "gTileset_General",
+          "referenced_lower_water_words": 2380
+        },
+        {
+          "bank": "gTileset_JourneyDewfordHarbor",
+          "referenced_lower_water_words": 238
+        },
+        {
+          "bank": "gTileset_Lilycove",
+          "referenced_lower_water_words": 13
+        },
+        {
+          "bank": "gTileset_Mauville",
+          "referenced_lower_water_words": 95
+        },
+        {
+          "bank": "gTileset_Mossdeep",
+          "referenced_lower_water_words": 845
+        },
+        {
+          "bank": "gTileset_Pacifidlog",
+          "referenced_lower_water_words": 126
+        },
+        {
+          "bank": "gTileset_Rustboro",
+          "referenced_lower_water_words": 20
+        },
+        {
+          "bank": "gTileset_Slateport",
+          "referenced_lower_water_words": 133
+        }
+      ],
+      "all_referenced_hoenn_ocean_words_use_palette4": true,
+      "original_river_deep_water_dive_and_current_behaviors_unchanged": true
+    },
+    "phases": [
+      {
+        "phase": 2,
+        "visible_native_water_pixels": 31881,
+        "water_vram_sha256": "781bd5f6837d53667ccf2d3a9f155cba6388c1f89776ed4209427140645b8ed3",
+        "tile": [
+          79,
+          34
+        ]
+      },
+      {
+        "phase": 3,
+        "visible_native_water_pixels": 31917,
+        "water_vram_sha256": "e2d37e9f2fac51a14d445f34fa78837d7ac62c2048349d2e996e3d2866ea23c1",
+        "tile": [
+          79,
+          34
+        ]
+      },
+      {
+        "phase": 4,
+        "visible_native_water_pixels": 31881,
+        "water_vram_sha256": "761f737b87a8d176b802ae5ddda7ea60d9128d194ed6b3c9b179bebc3579a241",
+        "tile": [
+          79,
+          34
+        ]
+      },
+      {
+        "phase": 5,
+        "visible_native_water_pixels": 31917,
+        "water_vram_sha256": "3052e821aed736e0a7e3b52e86166cef6c3a77c42f6409ea7541029bc130345a",
+        "tile": [
+          79,
+          34
+        ]
+      },
+      {
+        "phase": 6,
+        "visible_native_water_pixels": 31881,
+        "water_vram_sha256": "2b6071e11f89b9db9ab49c38d1ab33689cc2201ca253700db4ac4f3677a5fc78",
+        "tile": [
+          79,
+          34
+        ]
+      },
+      {
+        "phase": 7,
+        "visible_native_water_pixels": 31917,
+        "water_vram_sha256": "47564444689ac954d965e9c3717645b8f7e552b45a08b469c043d885642c508b",
+        "tile": [
+          79,
+          34
+        ]
+      },
+      {
+        "phase": 0,
+        "visible_native_water_pixels": 31881,
+        "water_vram_sha256": "92d5fe8c7ca132529dbc4974566c0a2deabf815857cc930ba77c5682add4fc7f",
+        "tile": [
+          79,
+          34
+        ]
+      },
+      {
+        "phase": 1,
+        "visible_native_water_pixels": 31917,
+        "water_vram_sha256": "3722b368b760664d19b409edf27a4ce50ce30ec729071558c73cc01daecb0017",
+        "tile": [
+          79,
+          34
+        ]
+      }
+    ],
+    "crossings": [
+      {
+        "map": "JourneyMossdeepOuterSea",
+        "tile": [
+          0,
+          26
+        ],
+        "surfing": true,
+        "primary_pointer": 151611908,
+        "secondary_pointer": 151611668,
+        "native_primary_animation_counter_steps": [
+          {
+            "before": 64,
+            "after": 65,
+            "map": [
+              0,
+              6
+            ]
+          },
+          {
+            "before": 65,
+            "after": 66,
+            "map": [
+              0,
+              6
+            ]
+          },
+          {
+            "before": 66,
+            "after": 67,
+            "map": [
+              0,
+              6
+            ]
+          },
+          {
+            "before": 67,
+            "after": 68,
+            "map": [
+              0,
+              6
+            ]
+          },
+          {
+            "before": 68,
+            "after": 69,
+            "map": [
+              0,
+              6
+            ]
+          },
+          {
+            "before": 69,
+            "after": 70,
+            "map": [
+              0,
+              6
+            ]
+          },
+          {
+            "before": 70,
+            "after": 71,
+            "map": [
+              0,
+              6
+            ]
+          },
+          {
+            "before": 71,
+            "after": 72,
+            "map": [
+              0,
+              6
+            ]
+          },
+          {
+            "before": 72,
+            "after": 72,
+            "map": [
+              78,
+              6
+            ]
+          }
+        ],
+        "primary_animation_clock_continuous_across_connection": true
+      },
+      {
+        "map": "MossdeepCity",
+        "tile": [
+          79,
+          34
+        ],
+        "surfing": true,
+        "primary_pointer": 151611908,
+        "secondary_pointer": 151611668,
+        "native_primary_animation_counter_steps": [
+          {
+            "before": 109,
+            "after": 110,
+            "map": [
+              78,
+              6
+            ]
+          },
+          {
+            "before": 110,
+            "after": 111,
+            "map": [
+              78,
+              6
+            ]
+          },
+          {
+            "before": 111,
+            "after": 112,
+            "map": [
+              78,
+              6
+            ]
+          },
+          {
+            "before": 112,
+            "after": 113,
+            "map": [
+              78,
+              6
+            ]
+          },
+          {
+            "before": 113,
+            "after": 114,
+            "map": [
+              78,
+              6
+            ]
+          },
+          {
+            "before": 114,
+            "after": 115,
+            "map": [
+              78,
+              6
+            ]
+          },
+          {
+            "before": 115,
+            "after": 116,
+            "map": [
+              78,
+              6
+            ]
+          },
+          {
+            "before": 116,
+            "after": 117,
+            "map": [
+              78,
+              6
+            ]
+          },
+          {
+            "before": 117,
+            "after": 117,
+            "map": [
+              0,
+              6
+            ]
+          }
+        ],
+        "primary_animation_clock_continuous_across_connection": true
+      }
+    ],
+    "captures": [
+      {
+        "file": "mossdeep-ocean-native-phase-2.png",
+        "sha256": "2db4c487c643fb2fd45f3d06c6380598892c4deae2434a94f592d5c7cbc6506e"
+      },
+      {
+        "file": "mossdeep-ocean-native-phase-3.png",
+        "sha256": "62fc8c2a30d2d042551b2901739b7e0adf79d21ae3aa0585aec2fee0d805916b"
+      },
+      {
+        "file": "mossdeep-ocean-native-phase-4.png",
+        "sha256": "a639406a543331c7938315adae8c8e508c581b93db2a7e5aa8aca92a16beee07"
+      },
+      {
+        "file": "mossdeep-ocean-native-phase-5.png",
+        "sha256": "09caaaf03ab4dce19c3aa980ea7e5ab8246bfa5c89dcc7b4ad710f58c333601a"
+      },
+      {
+        "file": "mossdeep-ocean-native-phase-6.png",
+        "sha256": "63daa4a9c7c4e60a42002d41755191e24a532a42bae24e695544088eec2a5a6a"
+      },
+      {
+        "file": "mossdeep-ocean-native-phase-7.png",
+        "sha256": "f99c6f8dcc4da4ebf292f7567754fcbd1cccabe95a438a4bf0acdcaad4a495b3"
+      },
+      {
+        "file": "mossdeep-ocean-native-phase-0.png",
+        "sha256": "3ae7788f3f99a7dfb1c4c96e92cca6e1e53d129c0fd10f79bff1ebfa22b2f6ba"
+      },
+      {
+        "file": "mossdeep-ocean-native-phase-1.png",
+        "sha256": "4e7f889bd543e82c1bee0f226061e7e4a2cac30c82bd4507e667ad761b157b5c"
+      },
+      {
+        "file": "mossdeep-ocean-seam-JourneyMossdeepOuterSea.png",
+        "sha256": "14adfbb524b74e9cbf4ffb80aa7c70078df1b122e9515bb1c03ff85bce72cdf0"
+      },
+      {
+        "file": "mossdeep-ocean-seam-MossdeepCity.png",
+        "sha256": "5180bb12673f6ae8588bd415ce52d7057ae366074e24525d2f5ef62362c89316"
+      }
+    ],
+    "all_eight_original_water_frames_observed": true,
+    "native_visible_pixels_match_loaded_graphics": true,
+    "identical_loaded_banks_across_mossdeep_city_outer_sea": true,
+    "controller_surf_crossing_both_directions": true,
+    "primary_animation_clock_continuous_across_both_connections": true,
+    "palette_vram_animation_clock_and_map_grid_not_written": true,
+    "initial_travel_progress_and_surf_state_are_fixtures": true
+  },
+  "upper_object_layers_attributes_and_geometry_preserved": true,
+  "initial_party_progress_travel_and_encounter_suppression_are_fixtures": true,
+  "no_palette_vram_map_grid_or_avatar_coordinate_writes": true,
+  "captures": [
+    {
+      "file": "BirthIsland_Exterior_Frlg-native.png",
+      "sha256": "f0f78262b77a11a3d5f04e5f6fdea37a77f4395cd890837000a2c90c244b611d"
+    },
+    {
+      "file": "CinnabarIsland_Frlg-native.png",
+      "sha256": "063b838b85c8684ed05de7197569a0cbe2a450bc5520a4afb15fe4d002b580b7"
+    },
+    {
+      "file": "FiveIsland_Frlg-native.png",
+      "sha256": "05437c4cc3224b4a2ac9581faa24bff96846ce31e3972e76cd71f3f5805b8552"
+    },
+    {
+      "file": "FiveIsland_Meadow_Frlg-native.png",
+      "sha256": "3f3f12375b4cbc8f87d66f02d0393d3f9de13b95207fddfc4624c817f5b5704b"
+    },
+    {
+      "file": "FiveIsland_MemorialPillar_Frlg-native.png",
+      "sha256": "5d7e3dc902426e51c3b55d094f005b4ab5bc70b748dffae783bd85a69f637665"
+    },
+    {
+      "file": "FiveIsland_ResortGorgeous_Frlg-native.png",
+      "sha256": "91838dd988680c11d35aad01f85af98f141e8dbb2d74b8efff430748cd913134"
+    },
+    {
+      "file": "FiveIsland_WaterLabyrinth_Frlg-native.png",
+      "sha256": "86c8e3caccca119993f1f95a81f43b34104d6499d0455e49859806efeaa2e069"
+    },
+    {
+      "file": "FourIsland_Frlg-native.png",
+      "sha256": "2762b0546dbc330fb8eaf53191c3f76f6bb6b432389fb7086c03a0d57ef8c51e"
+    },
+    {
+      "file": "JourneyRoute12OuterSea-native.png",
+      "sha256": "04c703ac093306e6554695d68f61f63219739b06648a0d32fefc9b2da9f31516"
+    },
+    {
+      "file": "JourneyRoute12Shipyard-native.png",
+      "sha256": "48bcf39bdc248e17b81fe93d08cff52091fac8fa282497845a009ba713adabb0"
+    },
+    {
+      "file": "JourneySurfLink01000-native.png",
+      "sha256": "fe95e16d59cb17169bb068bacfa18a63091da63100e3ab600710ac254afaffff"
+    },
+    {
+      "file": "JourneySurfLink05100-native.png",
+      "sha256": "bd4c8a935a18bbb41b64d19bdf9fe00916f3eb75ae238d94427009ceecb814d0"
+    },
+    {
+      "file": "JourneySurfLink05200-native.png",
+      "sha256": "7c9314087c41fd26f76cb0df3e5a370a4bb11b3dd37e8459c5356c15777be404"
+    },
+    {
+      "file": "JourneySurfLink05301-native.png",
+      "sha256": "787d39bedf386497b7112933b96b4c1c6a3050fc6579d30abcb214fdee3f09f8"
+    },
+    {
+      "file": "NavelRock_Exterior_Frlg-native.png",
+      "sha256": "37b5f39ed6dbceb6bcca38be2192b4251ba4f8c2dc4475df4cd034405ca2286b"
+    },
+    {
+      "file": "OneIsland_Frlg-native.png",
+      "sha256": "9ea4a140d9b3395feac515d38e19917e36ecfdcfb78ba3b2b358a5cd98bcebae"
+    },
+    {
+      "file": "OneIsland_KindleRoad_Frlg-native.png",
+      "sha256": "054b8ad5d6de2cb57cca0e831b6ca66a0259aab37dd0a59fef065e002e82cfcf"
+    },
+    {
+      "file": "OneIsland_TreasureBeach_Frlg-native.png",
+      "sha256": "35885b2bd9ca144f22d713197f38b6b2a4d9c38a1ad9fee828147dca3afaefca"
+    },
+    {
+      "file": "PalletTown_Frlg-native.png",
+      "sha256": "31a4222af370aaa0139ed9204d347f15fab085f493e2272f359b5fc9ac11d7db"
+    },
+    {
+      "file": "Route11_Frlg-native.png",
+      "sha256": "85b6317c2b33b09d57b2d368663460ab1c4c33e01d86ee787630c1fd87cd14c3"
+    },
+    {
+      "file": "Route12_Frlg-native.png",
+      "sha256": "7520b7907de7a220dc1bd2810012fff64d2a6948fad0cd019df51af5cb35364b"
+    },
+    {
+      "file": "Route13_Frlg-native.png",
+      "sha256": "44fdee3363bd3e37f5a3859a57b4b008ea25ad2d1f01971ac97728bfe1893bd6"
+    },
+    {
+      "file": "Route14_Frlg-native.png",
+      "sha256": "547cf0f857797bc3a833d0d825beb7453cc59e9d1cc38e7120724cc14769a5fc"
+    },
+    {
+      "file": "Route19_Frlg-native.png",
+      "sha256": "7e58b31d14ccc2f1ddb4d07181a730089c1138c89c8948b67e4f0cc9461729ef"
+    },
+    {
+      "file": "Route20_Frlg-native.png",
+      "sha256": "d8e50a376c883d3aa874e1c755b5f1273fb72bdd6a9842cd5faf8ed09a5a72e5"
+    },
+    {
+      "file": "Route21_North_Frlg-native.png",
+      "sha256": "e8ff5967e08c0193b1cfdd272f0de998b10ad7a1c48c19ab1a826fa53b95e4f2"
+    },
+    {
+      "file": "Route21_South_Frlg-native.png",
+      "sha256": "ab1262c7fb9b78e934a1172979d4a36fdf672850049cd43066612f11fe6916ec"
+    },
+    {
+      "file": "SevenIsland_Frlg-native.png",
+      "sha256": "1e2913ca75782e4eb0b03b21f808ee4dfa3865056d71b26b9578d6a0edb2fdad"
+    },
+    {
+      "file": "SevenIsland_SevaultCanyon_Entrance_Frlg-native.png",
+      "sha256": "4c8cb9404318bee24a64902dd7defa0c094648a1b52cbc24878a7004094da697"
+    },
+    {
+      "file": "SevenIsland_SevaultCanyon_Frlg-native.png",
+      "sha256": "ad38fdb23e9df902a3ab726c52c6b94e0ffc38b6b27daafc2667c6816ab6553f"
+    },
+    {
+      "file": "SevenIsland_TanobyRuins_Frlg-native.png",
+      "sha256": "fdb023ccf80eb5e6b027b24a9b159dce46b24fffe33b2c93556cb334914dc27d"
+    },
+    {
+      "file": "SevenIsland_TrainerTower_Frlg-native.png",
+      "sha256": "e2396b4c3fa6e7136b00d8fd52522dc86864d4bf6a4a8f014370d3f2c2e1bb3a"
+    },
+    {
+      "file": "SixIsland_Frlg-native.png",
+      "sha256": "15ce55f54c0368317bc5c0e055005c994a9abaf78ca2c48e7a38fd7452183b12"
+    },
+    {
+      "file": "SixIsland_GreenPath_Frlg-native.png",
+      "sha256": "2d1300d01fa9edc074f0deecd019653bdfefa67afd058510d764df4c90bb27c0"
+    },
+    {
+      "file": "SixIsland_OutcastIsland_Frlg-native.png",
+      "sha256": "fec4b2e46eb16ce4e3a23261b5d5fa000cd45c03aa366ac460c55899337c1e65"
+    },
+    {
+      "file": "SixIsland_WaterPath_Frlg-native.png",
+      "sha256": "b7f657c488193d6008ab93a2de830333cbf04e1813560faa2df2c054c9d9aea2"
+    },
+    {
+      "file": "ThreeIsland_BondBridge_Frlg-native.png",
+      "sha256": "570bf8c4796a2a0f788dab00cd02fede50ad32edb9875618d44f1b1f0c09d428"
+    },
+    {
+      "file": "ThreeIsland_Frlg-native.png",
+      "sha256": "7d81a88bd6b16eaa9901d891448ed03719d5ff5abdb43855ff44ba4759d95f7c"
+    },
+    {
+      "file": "ThreeIsland_Port_Frlg-native.png",
+      "sha256": "9655623f3cd9bfec115ae292e30f6d977e416615d7c43681b7bec60517e0cc1a"
+    },
+    {
+      "file": "TwoIsland_CapeBrink_Frlg-native.png",
+      "sha256": "7e0d75569cb649a278ca6c6c2994ee9ae0bd09a78997cfebff26f5f37192e358"
+    },
+    {
+      "file": "TwoIsland_Frlg-native.png",
+      "sha256": "bc88aef054a4a5f99dae6ca09a458cff97abb07a58e229815f42e5d72fa91bac"
+    },
+    {
+      "file": "TwoIsland_Harbor_Frlg-native.png",
+      "sha256": "ddd61454e2d69d3d124683acd1057d7e7d09a6fcf018c3458f150f82e01ac628"
+    },
+    {
+      "file": "VermilionCity_Frlg-native.png",
+      "sha256": "92b35dad0d9f841ad05f5159839f70579c14dda1ad4d373f3ea7473601a81028"
+    },
+    {
+      "file": "treasure-bay-and-border-phase-0.png",
+      "sha256": "f138535cc1757c78307223da92d3768d2f6b8126f8d116cc554c53d86ad46f33"
+    },
+    {
+      "file": "treasure-bay-and-border-phase-1.png",
+      "sha256": "538b023377dd03b128061fe444e17030fde00bec940b4269c89fa9798af36163"
+    },
+    {
+      "file": "treasure-bay-and-border-phase-2.png",
+      "sha256": "faa5477edc6c21f9b9b27b10280466fb4d72b5c453affc70990dc77ba532a1fa"
+    },
+    {
+      "file": "treasure-bay-and-border-phase-3.png",
+      "sha256": "25b23072fbd7da6900e69acfa256db726dbced84c4e2e9e9af69bca4341b9741"
+    },
+    {
+      "file": "treasure-bay-and-border-phase-4.png",
+      "sha256": "e7c0006b7e9cfe2fed5885fb4f8190ce569ba47266d3fb6cdfb464e59b65d36e"
+    },
+    {
+      "file": "treasure-bay-and-border-phase-5.png",
+      "sha256": "12c959253e11a5ad6b489ee92a5a180a76a902fa173e6bfa85db4b5114d9a62f"
+    },
+    {
+      "file": "treasure-bay-and-border-phase-6.png",
+      "sha256": "864d26d5718460ad605a357ed648bc9051b185000f5b697e2d3570eebdcf2700"
+    },
+    {
+      "file": "treasure-bay-and-border-phase-7.png",
+      "sha256": "3f01b590a790c0163ed5bff8e5a271e37e4682ed4d90d3aa3c6fb1a850671ade"
+    },
+    {
+      "file": "mossdeep-ocean-native-phase-2.png",
+      "sha256": "2db4c487c643fb2fd45f3d06c6380598892c4deae2434a94f592d5c7cbc6506e"
+    },
+    {
+      "file": "mossdeep-ocean-native-phase-3.png",
+      "sha256": "62fc8c2a30d2d042551b2901739b7e0adf79d21ae3aa0585aec2fee0d805916b"
+    },
+    {
+      "file": "mossdeep-ocean-native-phase-4.png",
+      "sha256": "a639406a543331c7938315adae8c8e508c581b93db2a7e5aa8aca92a16beee07"
+    },
+    {
+      "file": "mossdeep-ocean-native-phase-5.png",
+      "sha256": "09caaaf03ab4dce19c3aa980ea7e5ab8246bfa5c89dcc7b4ad710f58c333601a"
+    },
+    {
+      "file": "mossdeep-ocean-native-phase-6.png",
+      "sha256": "63daa4a9c7c4e60a42002d41755191e24a532a42bae24e695544088eec2a5a6a"
+    },
+    {
+      "file": "mossdeep-ocean-native-phase-7.png",
+      "sha256": "f99c6f8dcc4da4ebf292f7567754fcbd1cccabe95a438a4bf0acdcaad4a495b3"
+    },
+    {
+      "file": "mossdeep-ocean-native-phase-0.png",
+      "sha256": "3ae7788f3f99a7dfb1c4c96e92cca6e1e53d129c0fd10f79bff1ebfa22b2f6ba"
+    },
+    {
+      "file": "mossdeep-ocean-native-phase-1.png",
+      "sha256": "4e7f889bd543e82c1bee0f226061e7e4a2cac30c82bd4507e667ad761b157b5c"
+    },
+    {
+      "file": "mossdeep-ocean-seam-JourneyMossdeepOuterSea.png",
+      "sha256": "14adfbb524b74e9cbf4ffb80aa7c70078df1b122e9515bb1c03ff85bce72cdf0"
+    },
+    {
+      "file": "mossdeep-ocean-seam-MossdeepCity.png",
+      "sha256": "5180bb12673f6ae8588bd415ce52d7057ae366074e24525d2f5ef62362c89316"
+    }
+  ]
+}

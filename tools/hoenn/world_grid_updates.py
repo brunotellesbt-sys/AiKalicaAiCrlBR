@@ -1,9 +1,9 @@
 """Keep stable native map IDs while extending the per-tile world cursor table."""
 import re
-import numpy as np
 
 
 def rebuild(header, old_projections, projections, authored=None):
+    import numpy as np
     authored=authored or {}
     packed=np.array(list(map(int,re.search(r'sWorldNavigationPixels\[\] = \{([^}]+)',header)[1].split(','))),dtype=np.int32)
     grids={};at=0

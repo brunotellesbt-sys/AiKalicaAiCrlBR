@@ -1,11 +1,11 @@
 """Reconcile existing tile GPS at newly connected coasts, preserving valid values."""
 import re
-import numpy as np
-from scipy.sparse import coo_matrix
-from scipy.sparse.csgraph import dijkstra
 
 
 def reconcile(header, projections, maps, fixed_maps=()):
+    import numpy as np
+    from scipy.sparse import coo_matrix
+    from scipy.sparse.csgraph import dijkstra
     packed=np.array(list(map(int,re.search(r'sWorldNavigationPixels\[\] = \{([^}]+)',header)[1].split(','))),dtype=np.int32)
     old=np.stack([packed&255,packed>>8],axis=1)
     grids={};offset=0;edges=[]

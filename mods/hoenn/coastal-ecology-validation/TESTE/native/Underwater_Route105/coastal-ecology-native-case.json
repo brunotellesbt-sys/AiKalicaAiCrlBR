@@ -1,0 +1,58 @@
+{
+  "kind": "coastal-ecology-native-case",
+  "passed": true,
+  "rom_sha256": "5f31cf1886580efed0a0fc9b0e93d6bde9d7853be86646ae3e65b5aaf8702ccc",
+  "elf_sha256": "3f8ba485b37d17f58f7c7a5a64b1a8dd28492a9ea612afdead2487ceef3d1f9e",
+  "compiled_rom": true,
+  "native_validation_performed": true,
+  "map": "Underwater_Route105",
+  "profile": "native-depth",
+  "review_mode": true,
+  "max_national_dex": 1025,
+  "phase": 1,
+  "area": 1,
+  "underwater": true,
+  "initial_position": [
+    13,
+    32
+  ],
+  "walking_pair": [
+    [
+      13,
+      32
+    ],
+    [
+      14,
+      32
+    ]
+  ],
+  "native_case_behavior": 25,
+  "native_fishing_available": false,
+  "actual_controller_steps": 220,
+  "controller_input_only_after_initial_fixture": true,
+  "party_and_map_and_badges_are_initial_fixtures": true,
+  "trainer_defeat_flags_not_written": true,
+  "wild_encounters_disabled_fixture": false,
+  "repel_fixture_steps": 0,
+  "allowed_species": [
+    594
+  ],
+  "native_pool_samples": [
+    594
+  ],
+  "battle": null,
+  "standard_encounter_suppression_attempts": 200,
+  "captures": [
+    {
+      "file": "controller-aquatic-start.png",
+      "sha256": "7f2ab2f02fe0c0db12211a2c4a251f4eed2ac192bb1062fb25331c31bc166210",
+      "native_emulator_capture": true
+    },
+    {
+      "file": "review-controller-water-without-encounters.png",
+      "sha256": "dbb1843c60d78b803723e3fc2de9987459616c92c23b9a5d3bbe0ede3f41a119",
+      "native_emulator_capture": true
+    }
+  ],
+  "no_battle_result_or_avatar_coordinate_writes": true
+}

@@ -3,6 +3,8 @@ Leia primeiro RESUMO. Consulte só a seção necessária durante o ajuste.
 Este arquivo descreve o método; um exemplo não autoriza alterar outros mapas.
 
 [RESUMO]
+Consultar errors/README.md e o TXT relevante antes de editar. O registro dos
+nove vídeos de 28/10 fica em errors/2026-10-28-videos-surf-tiles.txt.
 1. Conferir branch, PRs recentes e SHA da ROM que apresentou o erro.
 2. Identificar mapa + coordenadas + direção + estado (a pé/Surf/ponte).
 3. Inspecionar o tile e vizinhos com inspect_map_tile.py. Não adivinhar pelo RGB.
@@ -31,6 +33,43 @@ recebe x/y de 8 bits com sinal. Nunca corrigir isso escrevendo o avatar.
 Na observação de uma emenda, esperar a câmera nativa terminar: o ID do mapa
 pode mudar antes das coordenadas, inclusive quando elas cabem no novo mapa.
 Consultar docs/generated-world-audit.md para geração, provas e publicação.
+
+[ECOLOGIA E PÍERES — REVISÃO 166]
+Encontros: conferir cabeçalho nativo + pool da geração + comportamento do piso.
+Uma tabela preenchida não faz MB_FAST_WATER ou piso subaquático comum acionar
+encontros. Validar o gatilho compilado e obter uma batalha com passos reais.
+Preservar as regras da TESTE; não usar Repel para demonstrar sua supressão.
+Famílias: alterar o pool exige revisar habitat e Pokédex. Remover só a indicação
+ordinária deslocada; conservar encontros fixos, workshop e famílias em outros
+locais. Uma mesma família continua pertencendo a um único ID de habitat.
+Píeres: testar TODAS as fronteiras transitáveis de madeira/água, não apenas o
+ponto frontal escolhido para embarque. Em Treasure Beach, (20,6)->(21,6) expôs
+água de altura 0: permitia entrar a pé e continuar na água de altura 1. O reparo
+normaliza a mancha aquática inteira de 65 células, sem trocar arte nem colisão.
+Mar: comparar também as paletas nas palavras gráficas inferiores. A água em
+0x1D9 usava os gráficos animados 454/455 com paleta 6; a baía em 0x12B usava os
+mesmos gráficos com paleta 4. Sincronizar o relógio não corrige essa diferença.
+Conservar os gráficos superiores de rochas e encostas ao unificar a água.
+Árvores e rochas: conferir também as variantes 0x108/109, não apenas
+0x110/111 e 0x118/119. O detector antigo deixava a metade superior de rochas.
+Kindle Road: a encosta cruza One Island/Kindle/Treasure; revisar os três mapas
+inteiros antes de fechar a frente. Não deixar o antigo pé no vizinho.
+Pallet: um tile misto de grama/água pode ter comportamento de terra e mostrar
+os pés sobre a água; bloquear só a margem mista, preservando a grama completa.
+Pallet/Cinnabar: o topo do sprite pode ficar atrás da ponte ao norte mesmo
+depois de chegar ao piso seco. Ajustar prioridade visual na aproximação inteira,
+sem mudar posição, altura física ou a passagem inferior de Surf.
+Continue: a restauração do objeto pode recuperar gráficos de pedestre salvos
+na água. Testar bateria antiga real; recuperação nativa vem após criar o objeto
+e sprite. Não tentar provar o conserto escrevendo avatar ou callback no teste.
+Mossdeep: a animação Emerald nativa tem ondas e quadros pontilhados. Comparar
+VRAM/pixels no mesmo quadro e o contador durante a emenda, antes de trocar arte.
+Exemplo de pedido preciso: "Em One Island/Treasure Beach, saindo pela lateral
+leste do píer (20,6), entro em (21,6) a pé. Corrija a água sem mover o porto,
+teste todas as laterais dos sete píeres, Surf ida/volta e Continue do save."
+Exemplo de prova: registrar posição, altura e estado antes/depois por controles;
+capturar o personagem inteiro, o mar em duas fases e o menu de batalha visível.
+RAM preenchida durante a tela preta da introdução não basta como captura.
 
 [DIAGNÓSTICO RÁPIDO]
 Comandos a partir da raiz do repositório. Substituir SOURCE pelo snapshot atual.
