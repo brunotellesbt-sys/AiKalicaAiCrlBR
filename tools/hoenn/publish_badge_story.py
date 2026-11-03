@@ -28,7 +28,7 @@ from verify_versions import verify
 
 
 HISTORICAL_COMMIT = '4f7e33cd49004cde4dfb668d76deb95803981cf9'
-ATTACHMENT_SCOPES = {SCOPE, 'coastal-closures', 'sevii-integrated-piers', 'generated-world-audit'}
+ATTACHMENT_SCOPES = {SCOPE, 'coastal-ecology', 'coastal-closures', 'sevii-integrated-piers', 'generated-world-audit'}
 
 
 def releases(info):

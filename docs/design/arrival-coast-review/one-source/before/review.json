@@ -1,0 +1,211 @@
+{
+  "source_map_renders_not_emulator_captures": true,
+  "maps": {
+    "OneIsland_Frlg": {
+      "origin": [
+        16,
+        120
+      ],
+      "map_json_sha256": "4f591a024bc38cf20f3e6ee9ce11051152bcf1d2943d4ff23e2f014b430cf954",
+      "blockdata_sha256": "281950098fa3524deb56fbb373357d2d35f85d8aa5f8677053b015b81377abd9",
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiIntegrated123",
+      "dimensions": [
+        24,
+        20
+      ],
+      "permanent_actors": [
+        {
+          "tile": [
+            13,
+            9
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN"
+        },
+        {
+          "tile": [
+            16,
+            12
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1"
+        }
+      ]
+    },
+    "OneIsland_TreasureBeach_Frlg": {
+      "origin": [
+        16,
+        140
+      ],
+      "map_json_sha256": "0856f96236d2feabf427519efe43d3b98e3b9accc76bc530cf82904f1e101771",
+      "blockdata_sha256": "3798f127b1b5f66abcae8a7aaa0853aaa6febb6b27a4bf7560558172cbcdabb8",
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiIntegrated123",
+      "dimensions": [
+        24,
+        40
+      ],
+      "permanent_actors": [
+        {
+          "tile": [
+            9,
+            10
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_JOURNEYSEVIIBOAT"
+        },
+        {
+          "tile": [
+            19,
+            10
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_SEAGALLOP"
+        },
+        {
+          "tile": [
+            8,
+            11
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER"
+        },
+        {
+          "tile": [
+            13,
+            20
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_BOY"
+        }
+      ]
+    },
+    "JourneySurfLink05000": {
+      "origin": [
+        0,
+        127
+      ],
+      "map_json_sha256": "7edaea5ad9ca612ea9ac74c20c3e38ebfe66718324d2892225c63ddd312f62a0",
+      "blockdata_sha256": "8de9688c24756ae92473758e806950b0523ae1d7851e99b399795aca35859589",
+      "primary": "gTileset_General_Frlg",
+      "secondary": "gTileset_SeviiIslands123",
+      "dimensions": [
+        16,
+        13
+      ],
+      "permanent_actors": []
+    },
+    "OneIsland_KindleRoad_Frlg": {
+      "origin": [
+        40,
+        0
+      ],
+      "map_json_sha256": "4417b63a6b1b2bf16fcd39bb764ebcc0cd149448eb0d7da8d27e14d076382e2e",
+      "blockdata_sha256": "4f9f0fcfd3f584b6eef2eaa6c795db9ea64acc18d5fc6cfa5fee74652bb025eb",
+      "primary": "gTileset_JourneySeviiSea",
+      "secondary": "gTileset_JourneySeviiSea123",
+      "dimensions": [
+        24,
+        140
+      ],
+      "permanent_actors": [
+        {
+          "tile": [
+            15,
+            25
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_FISHER"
+        },
+        {
+          "tile": [
+            11,
+            32
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_WATER"
+        },
+        {
+          "tile": [
+            7,
+            39
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_WATER"
+        },
+        {
+          "tile": [
+            9,
+            53
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_CRUSH_GIRL"
+        },
+        {
+          "tile": [
+            16,
+            64
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG"
+        },
+        {
+          "tile": [
+            11,
+            64
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG"
+        },
+        {
+          "tile": [
+            8,
+            68
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT_FRLG"
+        },
+        {
+          "tile": [
+            9,
+            68
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_CRUSH_GIRL"
+        },
+        {
+          "tile": [
+            19,
+            79
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M_LAND"
+        },
+        {
+          "tile": [
+            11,
+            89
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_CAMPER_FRLG"
+        },
+        {
+          "tile": [
+            18,
+            105
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_CRUSH_GIRL"
+        },
+        {
+          "tile": [
+            9,
+            108
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_PICNICKER_FRLG"
+        },
+        {
+          "tile": [
+            17,
+            132
+          ],
+          "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F_LAND"
+        }
+      ]
+    }
+  },
+  "conditional_event_state": "permanent actors only; one static native animation frame",
+  "layouts_json_sha256": "1045be8cf7f3a57b66214d7f59bac738d03eb142291ff8e2a9c06ec4d898019d",
+  "images_sha256": {
+    "JourneySurfLink05000-whole-source.png": "98e6487d814fff1f3d2809a6bada278a5faec522f08a9455caf0539e5dabd9af",
+    "One-connected-whole-source.png": "fdcc720bfd86b4b8d7fbfc5b4360cd1fb5b35acc3145448614fd69ed686cfe7a",
+    "One-west-cape-source.png": "a888d8c6b8e2125698eb82e0165028193aef254523932f952fc7fba1d7f642b3",
+    "OneIsland_Frlg-whole-source.png": "c85c33e5257f9c7f031a5b018f39369d6f12142ea9d56916e9dfd7ab3d4b4317",
+    "OneIsland_KindleRoad_Frlg-whole-source.png": "5d255beb7aa8c593b4ae50f228c8aabdb5ced12f4f458608242bf930b936327b",
+    "OneIsland_TreasureBeach_Frlg-whole-source.png": "2af6dc024aa094a46ae150e9f755d19da67bd01ab615e1caec371d1ee614be12"
+  }
+}

@@ -1,6 +1,6 @@
 # Pokémon Journey — documentação do jogo
 
-[Entrega atual: encontros aquáticos e acabamento costeiro](coastal-ecology.md). [Erros dos nove vídeos, soluções e prevenção em TXT](../errors/2026-10-28-videos-surf-tiles.txt). Mantém a [competição da 18ª insígnia, rivais e Galactic na 22ª](badge-story.md), os portos integrados, as [correções costeiras](coastal-closures.md) e os [24 ginásios](ginasios-extras-e-travessias.md). [Guia prático em TXT](AJUSTES-GBA.txt) · [Pasta local de tiles](../assets/tiles/README.md).
+[Entrega atual: chegadas, florestas e costas](arrival-coast-review.md). [Revisão anterior de encontros aquáticos](coastal-ecology.md). [Erros dos nove vídeos, soluções e prevenção em TXT](../errors/2026-10-28-videos-surf-tiles.txt). Mantém a [competição da 18ª insígnia, rivais e Galactic na 22ª](badge-story.md), os portos integrados, as [correções costeiras](coastal-closures.md) e os [24 ginásios](ginasios-extras-e-travessias.md). [Guia prático em TXT](AJUSTES-GBA.txt) · [Pasta local de tiles](../assets/tiles/README.md).
 
 Kanto, Hoenn e Sevii formam um mundo conectado por rotas marítimas. O jogo e seus diálogos estão em inglês; este guia está em português.
 

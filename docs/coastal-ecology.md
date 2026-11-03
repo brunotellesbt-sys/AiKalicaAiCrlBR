@@ -1,5 +1,9 @@
 # Encontros aquáticos e acabamento costeiro
 
+Revisão histórica da camada 166. As fotos e os vídeos seguintes expuseram lacunas
+na cobertura; veja as [correções e limites da revisão 167](arrival-coast-review.md).
+As provas abaixo pertencem à ROM 166 e não foram renomeadas como provas atuais.
+
 Esta revisão parte do PR 102, camada 165 (`af1a430`). O mapa-múndi é preservado.
 As alterações da camada `coastal-ecology` são aplicadas em um snapshot separado;
 a ROM e os registros da revisão anterior continuam imutáveis.

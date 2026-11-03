@@ -1,0 +1,82 @@
+VÍDEO DE 02/11 — FLORESTA CORTADA A LESTE DE FUCHSIA
+
+Arquivo: Screenrecorder-20261102-150041.mp4.
+SHA-256: a32f2ede49ba2cff9a5784cbf146d42328d12eabcf0ee0b300a2d25c444fc678.
+
+LOCAL CONFIRMADO
+A coluna de arbustos é FuchsiaCity_Frlg x45, y25..36; as árvores da margem
+ocupam x46..47. O retângulo aquático começa em JourneyFuchsiaInlet (0,0),
+ligado à cidade por conexão leste com offset30 e ao sul de Route15_Frlg.
+O jogador segue de Surf junto à quina e ocorre batalha Chinchou3/Mudkip5.
+A identificação combina as árvores, os arbustos, cercas e prédio completos,
+não depende de atribuir a gravação a uma edição desconhecida.
+
+CAUSA CONFIRMADA NO SOURCE166
+Route15 usa floresta nativa sobreposta até a última linha, não árvores
+isoladas completas. As peças 0x014/015 e 0x01C/01D pressupunham continuação
+da floresta além da antiga borda. O oceano novo substituiu essa continuação
+por água, expondo copas/meios sem as bases. A coluna leste de Fuchsia também
+conservava peças internas contra o mar novo. Correspondência com upstream
+e reconhecimento de padrões nativos não comprovavam o objeto no novo contexto.
+
+O censo de todas as 56 conexões cardinais adicionadas de mapas FRLG nativos
+para oceanos novos encontrou cinco emendas e 105 células nessa condição:
+Fuchsia/Inlet; Route15/Inlet; Route15/SouthSea; Route14/SouthSea; e a quina
+Route14/Route13Coast. As cinco pertencem à mesma floresta/costa contínua.
+O detector inclui General_Frlg e JourneySeviiSea e não certifica outros
+objetos, bordas sem conexão ou árvores isoladas por ausência de achados.
+
+CORREÇÃO PREPARADA
+arrival_coast_forest.py termina a floresta com bases nativas completas dos
+doadores Fuchsia (0x01C/01D + 0x024/025) e Six Island (0x00E/00F +
+0x01E/01F + 0x026/027). A base atravessa os vizinhos físicos quando a copa
+e o meio anteriores chegam à última linha do mapa. Variantes externas fecham
+as laterais e os pés; margens de falésia/água nativas contornam a floresta.
+
+As 232 células alteradas estão em seis mapas, sem mudar eventos, arbustos,
+cercas, prédios, dimensões, conexões, bordas, ilhas existentes ou mapa-múndi.
+A pequena margem seca do inlet tem altura3; mar/margem aquática têm altura1.
+A faixa oeste de Surf de 28x8 tiles e os corredores horizontais permanecem.
+
+Cinco layouts reutilizam os bancos marinhos privados já existentes da 166.
+Os headers conservam gráficos, atributos, paletas, callbacks e aliases de
+porta; apenas o ponteiro da tabela de metatiles difere. Isso evita que a
+margem nativa com água de paleta6 forme outro retângulo sobre o mar de paleta4,
+inclusive antes da travessia, quando a câmera ainda carrega o banco da cidade.
+Não foram criados slots privados nem repintados gráficos compartilhados.
+
+PROVAS DE SOURCE
+O source original166 permanece intacto. O staging e a validação independente
+passaram: os mesmos 56 IDs/conexões foram examinados antes/depois, de cinco
+emendas/105 células para zero achados. Foram revisados renders nativos de
+source dos mapas inteiros com atores permanentes e vizinhos reais, incluindo
+Route13 acima e Route19/SouthWestSea abaixo. Esses renders não são capturas
+do emulador nem prova da ROM compilada.
+
+PROVA NATIVA FINAL DA CORREÇÃO
+validate_arrival_coast_forest.py passou na ROM167 de SHA-256
+9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5,
+ELF b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e.
+Relatório: mods/hoenn/arrival-coast-review-validation/common/photos/forest/
+arrival-coast-forest-native.json. Não foram reutilizadas capturas166.
+
+O percurso de 424 tiles pelos controles verifica a quina real, dez tentativas
+bloqueadas nas árvores/arbustos, desembarque seco de altura3, retorno pelo
+prompt nativo de Surf de altura1, ida/volta pela costa inteira Route15/14 e
+a quina leste de Route14. O acesso terrestre passa pela cidade e pelas duas
+portas do gatehouse original de Route15 antes de chegar a Route14. A primeira
+versão do planner omitia esse interior; foi corrigida para percorrer as portas
+reais, sem modificar o jogo nem pular o prédio.
+
+Sete observações conferem seis mapas/bancos carregados; oito fases distintas
+de animação foram vistas em VRAM e na tela, com 1.144 ou 1.147 amostras de água
+por fase, todas na paleta4. Há 43 capturas de percurso e oito da animação,
+vinculadas por hash. As capturas da quina, margens, bases e acessos terrestres
+também foram inspecionadas visualmente; copas, troncos e contornos estão inteiros.
+
+verify_arrival_coast_forest_proof.py rejeita bancos errados, fase repetida,
+ausência de retorno, passagem pelas árvores, salto do gatehouse e imagens
+adulteradas, mesmo quando recalculam o hash para encobrir o personagem ou a água.
+São fixtures declaradas a viagem inicial, equipe, progresso e supressão de
+encontros desta prova geométrica; o restante usa controles nativos. Isso não
+é uma campanha completa nem certifica outras regiões por ausência de achados.

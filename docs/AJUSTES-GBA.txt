@@ -34,6 +34,26 @@ Na observação de uma emenda, esperar a câmera nativa terminar: o ID do mapa
 pode mudar antes das coordenadas, inclusive quando elas cabem no novo mapa.
 Consultar docs/generated-world-audit.md para geração, provas e publicação.
 
+[CHEGADAS E COSTAS — REVISÃO 167]
+Fatos/soluções: errors/2026-11-02-{fotos-chegada-e-costas,video-cinnabar,
+video-floresta-fuchsia}.txt; docs/arrival-coast-review.md.
+One: conferir água na camada SUPERIOR e INFERIOR, com todas as fases;
+430..433 e 478..481 são água nos conjuntos revisados, não generalizar IDs.
+Abrir Surf expõe bordas antes escondidas: fechar faces/cantos e pôr limite
+VISÍVEL inteiro. Conferir banco carregado ANTES e DEPOIS de cruzar a emenda.
+Fuchsia/R14/R15: bases da floresta podem cruzar mapas; o censo de 56 emendas não
+substitui câmera, colisão e percurso. Não omitir a portaria do grafo de teste.
+Cinnabar: entrar e sair da PORTA real antes de testar a ponte. Terra→ponte
+isolada não reproduz altura0 herdada da porta. Continue de baterias reais
+antigas deve corrigir ponte0/água a pé sem escrever estado no teste.
+Portos movidos: auditar tabela de início + mãe + veículo. Testar boot→escolha
+da cidade→viagem→fala→quarto; menu Nova Partida sozinho não cobre chegada.
+Provas: validate_coastal_followup_arrivals.py --all-custom-starts;
+validate_arrival_coast_photos.py, validate_arrival_coast_forest.py,
+validate_cinnabar_door_exit.py. Todos recebem --source --library --output.
+Pacote: verificar relatórios na CÓPIA exportada antes de trocar ROMs; cada
+PNG de animação deve constar em captures, não só em campos internos.
+
 [ECOLOGIA E PÍERES — REVISÃO 166]
 Encontros: conferir cabeçalho nativo + pool da geração + comportamento do piso.
 Uma tabela preenchida não faz MB_FAST_WATER ou piso subaquático comum acionar

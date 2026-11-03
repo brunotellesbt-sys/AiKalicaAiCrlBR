@@ -1,0 +1,83 @@
+{
+  "kind": "cinnabar-door-water-parent-regression",
+  "passed": true,
+  "rom_sha256": "f7af65b4856e6697d5d972f48f8699c7c6b7d4b277ea19cfa3949926265d1b89",
+  "elf_sha256": "3f8ba485b37d17f58f7c7a5a64b1a8dd28492a9ea612afdead2487ceef3d1f9e",
+  "initial": {
+    "map": "CinnabarIsland_Frlg",
+    "tile": [
+      11,
+      14
+    ],
+    "surfing": false,
+    "elevation": 3,
+    "tile_elevation": 3,
+    "priority": 2,
+    "sprite_visible": true,
+    "object_visible": true
+  },
+  "interior": {
+    "map": "JourneyCinnabarHarbor",
+    "tile": [
+      11,
+      13
+    ],
+    "surfing": false,
+    "elevation": 3,
+    "tile_elevation": 3,
+    "priority": 2,
+    "sprite_visible": true,
+    "object_visible": true
+  },
+  "broken": {
+    "map": "CinnabarIsland_Frlg",
+    "tile": [
+      12,
+      15
+    ],
+    "surfing": false,
+    "elevation": 1,
+    "tile_elevation": 1,
+    "priority": 2,
+    "sprite_visible": true,
+    "object_visible": true
+  },
+  "actual_terminal_entry_and_exit_reproduce_level0": true,
+  "no_midtrip_coordinate_elevation_or_avatar_writes": true,
+  "initial_placement_party_and_progress_are_fixtures": true,
+  "movement_fixture_random_encounters_disabled": true,
+  "battery": "cinnabar-door-walking-water.sav",
+  "battery_sha256": "b9bdae0d7eea112c9ff3e26f6b956838e9e7a2f5ddac3d7befe9a5893af9453a",
+  "map_id": [
+    37,
+    8
+  ],
+  "tile": [
+    12,
+    15
+  ],
+  "captures": [
+    {
+      "file": "faulty-door-exit-before-save.png",
+      "sha256": "2dab493863c6a612f66885f76135355a03e69155559abaa5330d0fa40524c577"
+    },
+    {
+      "file": "faulty-door-walking-water-before-save.png",
+      "sha256": "80e12490b08e934836d0c3868949f0729aa66adf13bc4447001e94ec67afba68"
+    }
+  ],
+  "bridge_before_water": {
+    "map": "CinnabarIsland_Frlg",
+    "tile": [
+      7,
+      15
+    ],
+    "surfing": false,
+    "elevation": 0,
+    "tile_elevation": 15,
+    "priority": 2,
+    "sprite_visible": true,
+    "object_visible": true
+  },
+  "walking_water_reproduced_by_controller": true
+}

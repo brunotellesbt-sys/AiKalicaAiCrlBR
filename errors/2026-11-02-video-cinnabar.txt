@@ -1,0 +1,83 @@
+VÍDEO DE 02/11 — SAÍDA DO TERMINAL DE CINNABAR
+
+Arquivo: Screenrecorder-20261102-145837.mp4.
+Dois envios, um único arquivo: ambos têm 12.013.269 bytes e SHA-256
+b01a7b2aa59faa5b161cf2da1b262ca11704f57fbba394ee8ab97a53c2b93102.
+
+LOCAL E SINTOMAS
+Local confirmado por comparação do mapa e reprodução: CinnabarIsland_Frlg.
+Ao sair do terminal, parte do jogador fica escondida pelas tábuas.
+Depois, ele consegue caminhar sobre a água à direita do cais sem Surf.
+Não é preciso atribuir o problema a uma ROM antiga ou a um save defeituoso:
+ele foi reproduzido na ROM 166 revisada, partindo de terra válida e entrando
+e saindo da porta normalmente pelos controles.
+
+CAUSA CONFIRMADA NA ROM 166
+A porta em (7,14) usa altura de transição 0. O passo automático de saída
+termina na ponte em (7,15), altura múltipla 15. Esse tipo de ponte conserva
+a altura anterior, portanto o jogador fica a pé com altura 0.
+Altura 0 aceita a passagem para água 1; o jogador passa a andar sobre ela.
+Sua prioridade também fica abaixo das tábuas: só 66 de 210 pixels do sprite
+aparecem logo após sair e 58 de 191 na borda direita do cais.
+
+POR QUE A REVISÃO ANTERIOR NÃO CAPTUROU
+O teste da aproximação começava na terra em (11,14), já em altura 3, e
+andava até a ponte. Nesse percurso ela conserva 3 e bloqueia a água; o
+teste passava, mas não exercitava a procedência real pela porta do terminal.
+Os 107 testes de perímetro eram dos sete píeres de Sevii, não deste porto.
+Uma porta e uma ponte serem acessíveis separadamente não prova a sequência
+de entrar no prédio, sair na ponte e tentar embarcar/desembarcar.
+
+CORREÇÃO VALIDADA
+tools/hoenn/coastal_followup_pier.py muda somente a altura da porta (7,14),
+de 0 para 3, conservando arte, comportamento e evento de warp. A ponte
+continua em altura múltipla 15 para preservar o Surf por baixo.
+O mesmo helper restaura 3 somente no estado inválido de jogador a pé com
+altura 0 nas colunas 6..11 da linha 15 da ponte de Cinnabar. Surf, NPCs,
+bicicletas, outras alturas, outros mapas e outras células são preservados.
+Para baterias antigas já salvas a pé na água de Cinnabar, reaproveita a
+recuperação nativa de Surf existente para Treasure Beach. O ponto salvo e
+a estrutura do save não mudam; o jogador recupera Surf e pode desembarcar.
+
+TESTE NOVO
+tools/hoenn/validate_cinnabar_door_exit.py percorre a porta de verdade,
+confere o corpo inteiro nos dez tiles do cais, tenta as nove bordas expostas
+de água, usa o prompt nativo de Surf, atravessa por baixo da ponte e volta.
+Também repete a saída depois do Surf. A opção de bateria antiga faz boot e
+Continue reais, sem escrever callbacks, altura ou coordenadas no jogo.
+
+PROVAS DA ROM FINAL
+Defeito reproduzido na ROM 166:
+f7af65b4856e6697d5d972f48f8699c7c6b7d4b277ea19cfa3949926265d1b89.
+As duas baterias antigas foram criadas por controles: uma na ponte em altura
+0 após sair pela porta, outra na água em (12,15), altura 1 e sem Surf,
+depois de caminhar da ponte para o mar. Nenhuma altura ou estado de Surf
+foi escrito no teste. Arquivos, manifestos e capturas anteriores:
+docs/design/arrival-coast-review/baseline/cinnabar-door/.
+
+ROM final da revisão 167:
+9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5.
+ELF b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e.
+Relatório nativo:
+mods/hoenn/arrival-coast-review-validation/common/photos/cinnabar/cinnabar-door-exit.json.
+
+Resultado: porta percorrida de dentro para fora; dez células secas do cais
+com corpo inteiro visível; nove bordas expostas impedem andar na água;
+34 observações de Surf mantêm altura 1, inclusive sob a ponte; o retorno
+pelo prompt nativo e nova saída da porta passam. Na saída, 210 de 210 pixels
+do personagem aparecem, incluindo cabeça, corpo e pés.
+
+As duas baterias antigas passaram em boot e Continue reais, sem escrita
+em memória do jogo: ponte recupera altura 3 e bloqueia a água; a segunda
+recupera Surf em (12,15), cruza a passagem inferior e retorna pelos controles
+até (9,17), a pé em altura 3 e com o personagem inteiro visível.
+As 66 capturas finais estão vinculadas por SHA no relatório. A colocação
+inicial, equipe e progresso do teste de geometria são fixtures declaradas;
+isto não é uma campanha completa jogada.
+
+PREVENÇÃO
+Testar a origem real do estado: entrar no prédio e sair pela porta antes
+de percorrer o cais. O teste iniciado em terra não substitui essa sequência.
+Em pontes de altura 15, conferir o nível que a porta entrega e os pixels
+reais do sprite, além de colisão. Guardar baterias produzidas pelo defeito
+e testar Continue sem editar coordenadas, altura, callbacks ou modo do avatar.

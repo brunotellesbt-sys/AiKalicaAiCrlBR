@@ -48,6 +48,9 @@ Consulte `errors/README.md` e os registros relevantes em `errors/` para não rep
 - As sete pontas prolongadas terminam em madeira, sem a faixa metálica. Ao substituir a arte de um tile que aciona uma passagem, preserve seu comportamento, altura e evento. Use definições privadas realmente vazias e sem referências, confira a arte compilada e percorra o warp nos dois sentidos; não repinte um tile compartilhado por outras estruturas.
 - Bloqueie áreas externas com pedras inteiras sem fechar passagens existentes. Não permita caminhar sobre água nem surfar em terra ou estruturas.
 - Verifique transições nos dois sentidos. Distância e direção percorridas devem corresponder às conexões físicas do mundo.
+- Abrir uma conexão pode expor o interior de uma montanha na antiga borda do mapa. Reavalie faces e cantos nesse novo contexto, mesmo quando os tiles coincidem com upstream.
+- Água animada pode ocupar também a camada superior de um metatile de rocha ou praia. Confira cada referência e os pixels de todas as fases; preservar cegamente a camada superior pode conservar manchas de outra paleta.
+- Ao mover ou aposentar portos, audite os destinos de início de jogo e as posições da mãe/veículo, além de warps. Boot até o menu não prova a chegada: percorra a escolha da cidade até a cena inicial em terreno seco.
 
 ## Revisão obrigatória antes de concluir
 
