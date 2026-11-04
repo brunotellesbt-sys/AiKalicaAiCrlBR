@@ -1,0 +1,74 @@
+REABERTURA DA REVISÃO — FOTOS DE CHEGADA E COSTAS
+
+As cinco fotos novas demonstraram lacunas na revisão anterior. A afirmação
+de acabamento concluído não cobria esses casos e foi ampla demais.
+Este registro vincula os diagnósticos às correções e provas da ROM 167.
+
+FOTOS 1, 3 E 5 — ÁGUA EM RETÂNGULOS JUNTO ÀS ROCHAS
+Confirmado na versão 166, não apenas por aparência de uma ROM desconhecida.
+Na costa de One Island, metatiles 0x1CB/1CC/D3/D4 combinam água nas duas
+camadas. O reparo anterior tratou a camada inferior e presumiu que todas as
+peças superiores eram objetos a preservar. Algumas são água animada:
+gráficos 430..433 ainda usam paleta 6 sobre água inferior de paleta 4.
+O mesmo censo encontrou referências aquáticas 478..481 nessa condição.
+São 30 palavras superiores no banco marinho principal; não se deve trocar
+indiscriminadamente a paleta de todos os gráficos animados, pois há areia
+e outros elementos com índices diferentes.
+Correção: 30 palavras superiores normalizadas para a paleta 4; três quartos
+órfãos removidos para água de Surf. O objeto completo que atravessa One Island
+e Treasure Beach foi preservado. Prova final: oito fases reais de corrente
+e praia, em três câmeras, com VRAM, paleta, pixels de tela e Surf nas três
+células removidas; relatório common/photos/one/arrival-coast-one-native.json.
+
+FOTO 2 — CORTE VERTICAL NA MONTANHA DE ONE ISLAND
+O acesso de Surf a oeste expôs o limite de uma massa de montanha que antes
+continuava fora da câmera acessível. Reutilizar as peças do mapa original
+não certifica o contorno depois de abrir o oceano ao seu lado.
+A revisão anterior reconhecia famílias de rochas/árvores, mas esse caso exige
+conferir a face oeste e os cantos no contexto da nova conexão física.
+Correção: 49 células fechadas com faces/cantos do conjunto nativo, mais uma
+rocha completa no limite norte alinhada ao recife do vizinho. A câmera da rota
+oeste usa o banco compatível antes da travessia. Prova final: controles nos
+dois sentidos, bloqueio norte visível, rocha inteira com 150/150 pixels reais,
+colisões e 49 blocos compilados conferidos; mesmo relatório nativo de One.
+
+FOTO 4 — CENA DA MÃE SOBRE O OCEANO
+Script confirmado: JourneyBirth_Arrival, texto "We have arrived!".
+Os sete destinos iniciais de Sevii continuavam apontando aos antigos mapas
+de porto, transformados em rotas aquáticas após mover os terminais.
+O censo dos 31 inícios também encontrou pares inválidos em Mossdeep, Dewford
+e Pacifidlog: jogador ou mãe posicionados em água nas coordenadas antigas.
+A foto sozinha não permite atribuir qual desses dez destinos foi escolhido.
+O teste de abertura anterior chegava ao menu de nova partida; não percorria
+a escolha da cidade até essa cena. Testar um warp de inspeção não substitui
+esse percurso. Essa ausência permitiu que o erro passasse.
+Correção: os dez pares agora chegam aos destinos atuais em terreno seco.
+Prova final: 30 inícios personalizados percorridos desde o boot, pelas escolhas
+reais de região/cidade, viagem, fala da mãe e quarto. O censo compilado confere
+os 31 destinos e 62 células; Littleroot original fica restrita a esse censo.
+Prova: common/landing/arrival-coast-landing.json e seus 30 relatórios completos.
+
+MUDANÇAS NO MÉTODO DE REVISÃO
+- Identificar água nas duas camadas pela semântica e por todas as fases.
+- Comparar pixels visíveis junto aos objetos, não só slots inferiores.
+- Reavaliar bordas originais que passaram a ficar expostas por conexões novas.
+- Auditar consumidores indiretos: inícios de jogo, veículos e NPCs de chegada,
+  além de warps, portas e mapas vizinhos.
+- Separar boot até o menu de nova partida de chegada funcional à cidade.
+- Não usar número de testes ou correspondência com upstream como prova de
+  acabamento que o teste não observou.
+
+ESTADO FINAL — ROM 167
+As reproduções descritas acima passaram na ROM base
+9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5
+e ELF b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e.
+Os relatórios citados ficam em mods/hoenn/arrival-coast-review-validation/.
+Cada PNG é vinculado por hash; as provas são verificadas novamente depois de
+copiadas ao pacote, antes de substituir os arquivos públicos.
+
+Também foram corrigidos os vídeos novos de Cinnabar e Fuchsia: consultar
+2026-11-02-video-cinnabar.txt e 2026-11-02-video-floresta-fuchsia.txt.
+
+A versão 166 foi preservada para comparação. Seus testes anteriores permanecem
+históricos. As provas atuais não equivalem a uma campanha completa jogada nem
+a uma nova inspeção funcional de todos os mapas do mundo gerado.

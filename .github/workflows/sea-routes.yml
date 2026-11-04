@@ -20,7 +20,8 @@ jobs:
           git fetch --no-tags --depth=1 origin \
             4f7e33cd49004cde4dfb668d76deb95803981cf9 \
             9627c4325d0ade100d4f55afa7ad1104049b15d5 \
-            af1a43031c0ef1d1483648d2ebffa199e9ac5683
+            af1a43031c0ef1d1483648d2ebffa199e9ac5683 \
+            23881bc1c3f3326befe2cfbe357da06abc63a062
       - name: Install indexed sprite validation dependency
         run: python3 -m pip install Pillow==11.3.0
       - name: Verify catalog, water elevations, NPCs and connections

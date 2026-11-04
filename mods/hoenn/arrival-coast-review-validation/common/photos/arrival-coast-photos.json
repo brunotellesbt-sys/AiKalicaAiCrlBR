@@ -1,0 +1,26 @@
+{
+  "kind": "arrival-coast-photos",
+  "passed": true,
+  "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+  "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+  "compiled_rom": true,
+  "native_validation_performed": true,
+  "components": [
+    {
+      "kind": "arrival-coast-one-native",
+      "file": "one/arrival-coast-one-native.json",
+      "sha256": "9aae6cfe5742fb6ac487f45a1b162babb3a49512875a001c3a2379ee6653bf66"
+    },
+    {
+      "kind": "arrival-coast-forest-native",
+      "file": "forest/arrival-coast-forest-native.json",
+      "sha256": "5e6a67fdf31f4a2ee29f2278cf803a430af0921fd7685e883ed8073a95588558"
+    },
+    {
+      "kind": "cinnabar-door-exit",
+      "file": "cinnabar/cinnabar-door-exit.json",
+      "sha256": "86b6369eace41ff7024033fbeaa9e88ab7b57fa59cb60fca42056233591f947c"
+    }
+  ],
+  "full_campaign_playthrough": false
+}

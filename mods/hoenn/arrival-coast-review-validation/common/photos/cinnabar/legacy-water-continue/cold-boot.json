@@ -1,0 +1,2506 @@
+{
+  "passed": true,
+  "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+  "fresh_rom_boot_to_title": true,
+  "fresh_rom_title_to_new_game": true,
+  "no_assert_screen": true,
+  "controllers_only": true,
+  "no_game_memory_writes": true,
+  "bundled_save_tested": true,
+  "runs": [
+    {
+      "battery": false,
+      "frames": 2464,
+      "samples": [
+        {
+          "frame": 1200,
+          "callback": "MainCB2_Intro"
+        },
+        {
+          "frame": 1201,
+          "callback": "MainCB2_EndIntro"
+        },
+        {
+          "frame": 1291,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1591,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1592,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1682,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1683,
+          "callback": "CB2_GoToMainMenu"
+        },
+        {
+          "frame": 1773,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2073,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2074,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2164,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2464,
+          "callback": "CB2_MainMenu"
+        }
+      ],
+      "fresh_rom_boot_to_title": true,
+      "fresh_rom_title_to_new_game": true,
+      "new_game_tasks": [
+        "Task_HandleMultichoiceInput",
+        "Task_JourneyIntroRegion"
+      ]
+    },
+    {
+      "battery": true,
+      "frames": 4245,
+      "samples": [
+        {
+          "frame": 1200,
+          "callback": "MainCB2_Intro"
+        },
+        {
+          "frame": 1201,
+          "callback": "MainCB2_EndIntro"
+        },
+        {
+          "frame": 1291,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1591,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1592,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1682,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1683,
+          "callback": "CB2_GoToMainMenu"
+        },
+        {
+          "frame": 1773,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2073,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2074,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2164,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3064,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3664,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3665,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3666,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3667,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3668,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3669,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3670,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3671,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3672,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3673,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3733,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3734,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3794,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3795,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3855,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3856,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3916,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3917,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3918,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3919,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3920,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3921,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3922,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3923,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3924,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3925,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3985,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3986,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4046,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4047,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4107,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4108,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4109,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4110,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4111,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4112,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4113,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4114,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4115,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4116,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4176,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4177,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4178,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4179,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4180,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4181,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4182,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4183,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4184,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4185,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 4245,
+          "callback": "CB2_Overworld"
+        }
+      ],
+      "bundled_save_continue_to_field": true,
+      "field_map": [
+        37,
+        8
+      ],
+      "legacy_walking_water_recovers_native_surf": true,
+      "legacy_controller_returned_to_pier": true,
+      "legacy_initial_state": {
+        "tile": [
+          12,
+          15
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "priority": 2
+      },
+      "legacy_final_state": {
+        "tile": [
+          9,
+          17
+        ],
+        "surfing": false,
+        "elevation": 3,
+        "priority": 1,
+        "native_avatar_pixels": {
+          "hardware_oam_index": 0,
+          "screen_rectangle": [
+            112,
+            56,
+            16,
+            32
+          ],
+          "expected_opaque_pixels": 212,
+          "matching_scanout_pixels": 212,
+          "head_body_feet_bands": [
+            {
+              "expected": 76,
+              "matched": 76
+            },
+            {
+              "expected": 76,
+              "matched": 76
+            },
+            {
+              "expected": 60,
+              "matched": 60
+            }
+          ],
+          "exclusive_obj_palette_pixels": 93,
+          "exclusive_obj_palette_pixels_visible": 93,
+          "expected_scanout_pixels": [
+            [
+              116,
+              68,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              117,
+              68,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              118,
+              68,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              119,
+              68,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              120,
+              68,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              121,
+              68,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              122,
+              68,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              123,
+              68,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              115,
+              69,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              116,
+              69,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              117,
+              69,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              118,
+              69,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              119,
+              69,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              120,
+              69,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              121,
+              69,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              122,
+              69,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              123,
+              69,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              124,
+              69,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              115,
+              70,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              116,
+              70,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              117,
+              70,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              118,
+              70,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              119,
+              70,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              120,
+              70,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              121,
+              70,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              122,
+              70,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              123,
+              70,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              124,
+              70,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              114,
+              71,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              115,
+              71,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              116,
+              71,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              117,
+              71,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              118,
+              71,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              119,
+              71,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              120,
+              71,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              121,
+              71,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              122,
+              71,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              123,
+              71,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              124,
+              71,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              125,
+              71,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              114,
+              72,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              115,
+              72,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              116,
+              72,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              117,
+              72,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              118,
+              72,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              119,
+              72,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              120,
+              72,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              121,
+              72,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              122,
+              72,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              123,
+              72,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              124,
+              72,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              125,
+              72,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              114,
+              73,
+              0,
+              0,
+              0,
+              0,
+              false
+            ],
+            [
+              115,
+              73,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              116,
+              73,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              117,
+              73,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              118,
+              73,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              119,
+              73,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              120,
+              73,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              121,
+              73,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              122,
+              73,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              123,
+              73,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              124,
+              73,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              125,
+              73,
+              0,
+              0,
+              0,
+              0,
+              false
+            ],
+            [
+              114,
+              74,
+              0,
+              0,
+              0,
+              0,
+              false
+            ],
+            [
+              115,
+              74,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              116,
+              74,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              117,
+              74,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              118,
+              74,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              119,
+              74,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              120,
+              74,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              121,
+              74,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              122,
+              74,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              123,
+              74,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              124,
+              74,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              125,
+              74,
+              0,
+              0,
+              0,
+              0,
+              false
+            ],
+            [
+              113,
+              75,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              114,
+              75,
+              168,
+              120,
+              64,
+              1,
+              true
+            ],
+            [
+              115,
+              75,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              116,
+              75,
+              104,
+              40,
+              40,
+              1,
+              true
+            ],
+            [
+              117,
+              75,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              118,
+              75,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              119,
+              75,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              120,
+              75,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              121,
+              75,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              122,
+              75,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              123,
+              75,
+              104,
+              40,
+              40,
+              1,
+              true
+            ],
+            [
+              124,
+              75,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              125,
+              75,
+              168,
+              120,
+              64,
+              1,
+              true
+            ],
+            [
+              126,
+              75,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              113,
+              76,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              114,
+              76,
+              216,
+              144,
+              112,
+              1,
+              false
+            ],
+            [
+              115,
+              76,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              116,
+              76,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              117,
+              76,
+              104,
+              40,
+              40,
+              1,
+              true
+            ],
+            [
+              118,
+              76,
+              104,
+              40,
+              40,
+              1,
+              true
+            ],
+            [
+              119,
+              76,
+              104,
+              40,
+              40,
+              1,
+              true
+            ],
+            [
+              120,
+              76,
+              104,
+              40,
+              40,
+              1,
+              true
+            ],
+            [
+              121,
+              76,
+              104,
+              40,
+              40,
+              1,
+              true
+            ],
+            [
+              122,
+              76,
+              104,
+              40,
+              40,
+              1,
+              true
+            ],
+            [
+              123,
+              76,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              124,
+              76,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              125,
+              76,
+              216,
+              144,
+              112,
+              1,
+              false
+            ],
+            [
+              126,
+              76,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              114,
+              77,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              115,
+              77,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              116,
+              77,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              117,
+              77,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              118,
+              77,
+              168,
+              120,
+              64,
+              1,
+              true
+            ],
+            [
+              119,
+              77,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              120,
+              77,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              121,
+              77,
+              168,
+              120,
+              64,
+              1,
+              true
+            ],
+            [
+              122,
+              77,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              123,
+              77,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              124,
+              77,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              125,
+              77,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              115,
+              78,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              116,
+              78,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              117,
+              78,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              118,
+              78,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              119,
+              78,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              120,
+              78,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              121,
+              78,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              122,
+              78,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              123,
+              78,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              124,
+              78,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              114,
+              79,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              115,
+              79,
+              56,
+              56,
+              120,
+              1,
+              true
+            ],
+            [
+              116,
+              79,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              117,
+              79,
+              184,
+              152,
+              56,
+              1,
+              true
+            ],
+            [
+              118,
+              79,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              119,
+              79,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              120,
+              79,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              121,
+              79,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              122,
+              79,
+              184,
+              152,
+              56,
+              1,
+              true
+            ],
+            [
+              123,
+              79,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              124,
+              79,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              125,
+              79,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              113,
+              80,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              114,
+              80,
+              248,
+              192,
+              144,
+              1,
+              false
+            ],
+            [
+              115,
+              80,
+              56,
+              56,
+              120,
+              1,
+              true
+            ],
+            [
+              116,
+              80,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              117,
+              80,
+              184,
+              152,
+              56,
+              1,
+              true
+            ],
+            [
+              118,
+              80,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              119,
+              80,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              120,
+              80,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              121,
+              80,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              122,
+              80,
+              184,
+              152,
+              56,
+              1,
+              true
+            ],
+            [
+              123,
+              80,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              124,
+              80,
+              56,
+              56,
+              120,
+              1,
+              true
+            ],
+            [
+              125,
+              80,
+              248,
+              192,
+              144,
+              1,
+              false
+            ],
+            [
+              126,
+              80,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              113,
+              81,
+              120,
+              64,
+              64,
+              2,
+              false
+            ],
+            [
+              114,
+              81,
+              216,
+              144,
+              112,
+              2,
+              false
+            ],
+            [
+              115,
+              81,
+              120,
+              64,
+              64,
+              2,
+              false
+            ],
+            [
+              116,
+              81,
+              192,
+              56,
+              56,
+              2,
+              false
+            ],
+            [
+              117,
+              81,
+              120,
+              64,
+              64,
+              2,
+              false
+            ],
+            [
+              118,
+              81,
+              248,
+              216,
+              88,
+              2,
+              true
+            ],
+            [
+              119,
+              81,
+              248,
+              216,
+              88,
+              2,
+              true
+            ],
+            [
+              120,
+              81,
+              248,
+              216,
+              88,
+              2,
+              true
+            ],
+            [
+              121,
+              81,
+              248,
+              216,
+              88,
+              2,
+              true
+            ],
+            [
+              122,
+              81,
+              120,
+              64,
+              64,
+              2,
+              false
+            ],
+            [
+              123,
+              81,
+              192,
+              56,
+              56,
+              2,
+              false
+            ],
+            [
+              124,
+              81,
+              120,
+              64,
+              64,
+              2,
+              false
+            ],
+            [
+              125,
+              81,
+              216,
+              144,
+              112,
+              2,
+              false
+            ],
+            [
+              126,
+              81,
+              120,
+              64,
+              64,
+              2,
+              false
+            ],
+            [
+              114,
+              82,
+              120,
+              64,
+              64,
+              2,
+              false
+            ],
+            [
+              115,
+              82,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              116,
+              82,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              117,
+              82,
+              184,
+              152,
+              56,
+              2,
+              true
+            ],
+            [
+              118,
+              82,
+              248,
+              216,
+              88,
+              2,
+              true
+            ],
+            [
+              119,
+              82,
+              248,
+              216,
+              88,
+              2,
+              true
+            ],
+            [
+              120,
+              82,
+              248,
+              216,
+              88,
+              2,
+              true
+            ],
+            [
+              121,
+              82,
+              248,
+              216,
+              88,
+              2,
+              true
+            ],
+            [
+              122,
+              82,
+              184,
+              152,
+              56,
+              2,
+              true
+            ],
+            [
+              123,
+              82,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              124,
+              82,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              125,
+              82,
+              120,
+              64,
+              64,
+              2,
+              false
+            ],
+            [
+              115,
+              83,
+              56,
+              56,
+              120,
+              2,
+              true
+            ],
+            [
+              116,
+              83,
+              112,
+              160,
+              192,
+              2,
+              true
+            ],
+            [
+              117,
+              83,
+              184,
+              152,
+              56,
+              2,
+              true
+            ],
+            [
+              118,
+              83,
+              184,
+              152,
+              56,
+              2,
+              true
+            ],
+            [
+              119,
+              83,
+              184,
+              152,
+              56,
+              2,
+              true
+            ],
+            [
+              120,
+              83,
+              184,
+              152,
+              56,
+              2,
+              true
+            ],
+            [
+              121,
+              83,
+              184,
+              152,
+              56,
+              2,
+              true
+            ],
+            [
+              122,
+              83,
+              184,
+              152,
+              56,
+              2,
+              true
+            ],
+            [
+              123,
+              83,
+              112,
+              160,
+              192,
+              2,
+              true
+            ],
+            [
+              124,
+              83,
+              56,
+              56,
+              120,
+              2,
+              true
+            ],
+            [
+              115,
+              84,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              116,
+              84,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              117,
+              84,
+              112,
+              160,
+              192,
+              2,
+              true
+            ],
+            [
+              118,
+              84,
+              184,
+              152,
+              56,
+              2,
+              true
+            ],
+            [
+              119,
+              84,
+              120,
+              64,
+              64,
+              2,
+              false
+            ],
+            [
+              120,
+              84,
+              120,
+              64,
+              64,
+              2,
+              false
+            ],
+            [
+              121,
+              84,
+              184,
+              152,
+              56,
+              2,
+              true
+            ],
+            [
+              122,
+              84,
+              112,
+              160,
+              192,
+              2,
+              true
+            ],
+            [
+              123,
+              84,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              124,
+              84,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              115,
+              85,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              116,
+              85,
+              56,
+              56,
+              120,
+              2,
+              true
+            ],
+            [
+              117,
+              85,
+              56,
+              56,
+              120,
+              2,
+              true
+            ],
+            [
+              118,
+              85,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              119,
+              85,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              120,
+              85,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              121,
+              85,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              122,
+              85,
+              56,
+              56,
+              120,
+              2,
+              true
+            ],
+            [
+              123,
+              85,
+              56,
+              56,
+              120,
+              2,
+              true
+            ],
+            [
+              124,
+              85,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              116,
+              86,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              117,
+              86,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              122,
+              86,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              123,
+              86,
+              0,
+              0,
+              0,
+              2,
+              false
+            ]
+          ],
+          "exact_current_vram_frame_compared": true,
+          "background_color_coincidence_not_used": true
+        }
+      },
+      "legacy_controller_movements": [
+        {
+          "initial": {
+            "tile": [
+              12,
+              15
+            ],
+            "surfing": true,
+            "elevation": 1,
+            "priority": 2
+          },
+          "returned": {
+            "tile": [
+              11,
+              15
+            ],
+            "surfing": true,
+            "elevation": 1,
+            "priority": 2
+          },
+          "direction_key": 32,
+          "held_input_frames": 9,
+          "controller_input_only": true
+        },
+        {
+          "initial": {
+            "tile": [
+              11,
+              15
+            ],
+            "surfing": true,
+            "elevation": 1,
+            "priority": 2
+          },
+          "returned": {
+            "tile": [
+              10,
+              15
+            ],
+            "surfing": true,
+            "elevation": 1,
+            "priority": 2
+          },
+          "direction_key": 32,
+          "held_input_frames": 1,
+          "controller_input_only": true
+        },
+        {
+          "initial": {
+            "tile": [
+              10,
+              15
+            ],
+            "surfing": true,
+            "elevation": 1,
+            "priority": 2
+          },
+          "returned": {
+            "tile": [
+              9,
+              15
+            ],
+            "surfing": true,
+            "elevation": 1,
+            "priority": 2
+          },
+          "direction_key": 32,
+          "held_input_frames": 1,
+          "controller_input_only": true
+        },
+        {
+          "initial": {
+            "tile": [
+              9,
+              15
+            ],
+            "surfing": true,
+            "elevation": 1,
+            "priority": 2
+          },
+          "returned": {
+            "tile": [
+              8,
+              15
+            ],
+            "surfing": true,
+            "elevation": 1,
+            "priority": 2
+          },
+          "direction_key": 32,
+          "held_input_frames": 1,
+          "controller_input_only": true
+        },
+        {
+          "initial": {
+            "tile": [
+              8,
+              15
+            ],
+            "surfing": true,
+            "elevation": 1,
+            "priority": 2
+          },
+          "returned": {
+            "tile": [
+              8,
+              16
+            ],
+            "surfing": true,
+            "elevation": 1,
+            "priority": 2
+          },
+          "direction_key": 128,
+          "held_input_frames": 9,
+          "controller_input_only": true
+        },
+        {
+          "initial": {
+            "tile": [
+              8,
+              16
+            ],
+            "surfing": true,
+            "elevation": 1,
+            "priority": 2
+          },
+          "returned": {
+            "tile": [
+              8,
+              17
+            ],
+            "surfing": true,
+            "elevation": 1,
+            "priority": 2
+          },
+          "direction_key": 128,
+          "held_input_frames": 1,
+          "controller_input_only": true
+        },
+        {
+          "initial": {
+            "tile": [
+              8,
+              17
+            ],
+            "surfing": true,
+            "elevation": 1,
+            "priority": 2
+          },
+          "returned": {
+            "tile": [
+              8,
+              18
+            ],
+            "surfing": true,
+            "elevation": 1,
+            "priority": 2
+          },
+          "direction_key": 128,
+          "held_input_frames": 1,
+          "controller_input_only": true
+        },
+        {
+          "initial": {
+            "tile": [
+              8,
+              18
+            ],
+            "surfing": true,
+            "elevation": 1,
+            "priority": 2
+          },
+          "returned": {
+            "tile": [
+              9,
+              18
+            ],
+            "surfing": true,
+            "elevation": 1,
+            "priority": 2
+          },
+          "direction_key": 16,
+          "held_input_frames": 9,
+          "controller_input_only": true
+        },
+        {
+          "initial": {
+            "tile": [
+              9,
+              18
+            ],
+            "surfing": true,
+            "elevation": 1,
+            "priority": 2
+          },
+          "returned": {
+            "tile": [
+              9,
+              17
+            ],
+            "surfing": false,
+            "elevation": 3,
+            "priority": 1
+          },
+          "direction_key": 64,
+          "held_input_frames": 9,
+          "controller_input_only": true
+        }
+      ],
+      "no_game_memory_writes": true
+    }
+  ],
+  "bundled_save_continue_to_field": true,
+  "bundled_save_sha256": "b9bdae0d7eea112c9ff3e26f6b956838e9e7a2f5ddac3d7befe9a5893af9453a"
+}

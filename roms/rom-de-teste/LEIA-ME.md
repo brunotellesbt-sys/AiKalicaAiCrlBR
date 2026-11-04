@@ -1,12 +1,12 @@
 # ROM de teste da campanha e das rotas
 
-Esta ROM inclui a [camada 166](../../docs/coastal-ecology.md): correções de água caminhável, margens, encostas, rochas, árvores e visibilidade nos cais. Mantém os mesmos mapas e tabelas das edições normais, com os encontros aleatórios desativados nesta edição. [Erros dos nove vídeos e soluções em TXT](../../errors/2026-10-28-videos-surf-tiles.txt).
+Esta ROM inclui a [camada 167](../../docs/arrival-coast-review.md): chegadas em terreno seco, montanha oeste de One Island, água animada nas duas camadas, floresta de Fuchsia/rotas 14–15 e saída do terminal de Cinnabar. Mantém os mapas e tabelas das edições normais; esta edição desativa encontros aleatórios e abordagens automáticas. [Causas, soluções e provas em TXT](../../errors/README.md).
 
 Conserva a [campanha da camada 164](../../docs/badge-story.md): competição da 18ª insígnia que libera as duas Ligas, Galactic na 22ª, rivais por personagem e região inicial e Eren/Luffy na escala dos outros rivais. Mantém os 24 ginásios e as [correções costeiras da camada 163](../../docs/coastal-closures.md), incluindo praias animadas e retorno de Surf aos píeres. A abertura é testada sem save e com a bateria de inspeção desta pasta.
 
 Abra `Pokemon-Journey-TESTE.gba` no emulador. Esta edição deriva de Gen1–9 Normal e contém as mesmas rotas, portos e cavernas das quatro ROMs normais.
 
-A tela azul relatada não foi reproduzida no mGBA com os arquivos desta entrega, abrindo sem save e usando Continue com o save abaixo. A causa específica no My Boy permanece sem confirmação; [relatórios e capturas atuais](../../mods/hoenn/coastal-ecology-validation/TESTE/cold-boot/).
+A tela azul relatada não foi reproduzida no mGBA com os arquivos desta entrega, abrindo sem save e usando Continue com o save abaixo. A causa específica no My Boy permanece sem confirmação; [relatórios e capturas atuais](../../mods/hoenn/arrival-coast-review-validation/TESTE/cold-boot/).
 
 No player do GitHub Pages, selecione **TESTE · Explore without encounters**. O navegador confere o arquivo atual e mantém um save separado das quatro edições normais.
 

@@ -1,0 +1,65 @@
+{
+  "kind": "cinnabar-door-parent-regression",
+  "passed": true,
+  "rom_sha256": "f7af65b4856e6697d5d972f48f8699c7c6b7d4b277ea19cfa3949926265d1b89",
+  "elf_sha256": "3f8ba485b37d17f58f7c7a5a64b1a8dd28492a9ea612afdead2487ceef3d1f9e",
+  "initial": {
+    "map": "CinnabarIsland_Frlg",
+    "tile": [
+      11,
+      14
+    ],
+    "surfing": false,
+    "elevation": 3,
+    "tile_elevation": 3,
+    "priority": 2,
+    "sprite_visible": true,
+    "object_visible": true
+  },
+  "interior": {
+    "map": "JourneyCinnabarHarbor",
+    "tile": [
+      11,
+      13
+    ],
+    "surfing": false,
+    "elevation": 3,
+    "tile_elevation": 3,
+    "priority": 2,
+    "sprite_visible": true,
+    "object_visible": true
+  },
+  "broken": {
+    "map": "CinnabarIsland_Frlg",
+    "tile": [
+      7,
+      15
+    ],
+    "surfing": false,
+    "elevation": 0,
+    "tile_elevation": 15,
+    "priority": 2,
+    "sprite_visible": true,
+    "object_visible": true
+  },
+  "actual_terminal_entry_and_exit_reproduce_level0": true,
+  "no_midtrip_coordinate_elevation_or_avatar_writes": true,
+  "initial_placement_party_and_progress_are_fixtures": true,
+  "movement_fixture_random_encounters_disabled": true,
+  "battery": "cinnabar-door-level0.sav",
+  "battery_sha256": "a47e3f94b17b559c5da96bfeab2bbe51af412c26524772f1321f51136dac97fb",
+  "map_id": [
+    37,
+    8
+  ],
+  "tile": [
+    7,
+    15
+  ],
+  "captures": [
+    {
+      "file": "faulty-door-exit-before-save.png",
+      "sha256": "2dab493863c6a612f66885f76135355a03e69155559abaa5330d0fa40524c577"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "f7af65b4856e6697d5d972f48f8699c7c6b7d4b277ea19cfa3949926265d1b89",
-  "build_rules_offset": 9161644,
+  "parent_rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+  "build_rules_offset": 9161804,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "70343cea8318bbf81b688ff4cc3b2b45729fc0e5d135dc8667ae6d8f309d9215",
+      "sha256": "95e650209c761bc0c9173e408b577a5d054779a2c2a43184f42500598ff8d40a",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        9161644,
-        9161645,
-        9161646
+        9161804,
+        9161805,
+        9161806
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "1eca0267b5b7012e994c7c2746c11cd10062d6ed391feb81f0728f092f81a06b",
+      "sha256": "83453d864f2b92eb1f47e7c38a61f22f7be0522060ed0451e542c2e5149a4bc9",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        9161644,
-        9161645
+        9161804,
+        9161805
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "ccf63286810feb58d6a5d27a3e7ab7d1ce1bb47bbfcf7cc0b5d684439d69bed5",
+      "sha256": "020e726d6e412088c6342f0baeb3dc265dff6a3d9036b1235783a09abe0b196f",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        9161646
+        9161806
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "5ba67a921ebd98ab7de572296a2643c3f3691c7e58c39637db828417b558e5ad",
+      "sha256": "7f48d6250e47b533060100c93b7fdc108277c307d12677ded6f74102e8200284",
       "patched_byte_offsets": [
         160,
         162,
@@ -271,130 +271,89 @@
     "coastal-closures",
     "badge-story",
     "generated-world-audit",
-    "coastal-ecology"
+    "coastal-ecology",
+    "arrival-coast-review"
   ],
-  "validation_scope": "coastal-ecology",
+  "validation_scope": "arrival-coast-review",
   "full_campaign_playthrough": false,
   "proofs": [
     {
-      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-4-Hard/cold-boot/cold-boot.json",
+      "file": "evidence/arrival-coast-review/Pokemon-Journey-Gen1-4-Hard/cold-boot/cold-boot.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "cold-boot",
-      "sha256": "8ed922670b8136c8e0fcea23bfe575d3cdd5147cb983c22155df6e43c569426c"
+      "sha256": "a21d196c67b83661fbd80f35b98bb3acff9b2a3acfc2af441f4c6f38c4d72d8d"
     },
     {
-      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-4-Hard/review-mode/review-mode.json",
+      "file": "evidence/arrival-coast-review/Pokemon-Journey-Gen1-4-Hard/review-mode/review-mode.json",
       "target": "Pokemon-Journey-Gen1-4-Hard.gba",
       "kind": "review-mode",
-      "sha256": "ce008767dc48ebbbf0dbd4a10c5d3bc2160084995a60b3632e51c8f4c4403694"
+      "sha256": "abbbfe002247c0912162395ac7c6d855c2ba23863fcd03cff4ef073b70ca9318"
     },
     {
-      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-4-Normal/coastal-ecology-native/coastal-ecology-native.json",
-      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "coastal-ecology-native",
-      "sha256": "bab958b43897ac328e04d6412e7d0a88860c750dc9ec1a7a345b3fdcea356048"
-    },
-    {
-      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-4-Normal/cold-boot/cold-boot.json",
+      "file": "evidence/arrival-coast-review/Pokemon-Journey-Gen1-4-Normal/cold-boot/cold-boot.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "cold-boot",
-      "sha256": "6f45524a4345b48e81b5dbe3ae22bd2178473ac10c00acdf553bd3ae862894a4"
+      "sha256": "854528b1af6fc9f4763980862b13c1948e48831d5ec1e0542f5b8cccbb2d093c"
     },
     {
-      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-4-Normal/review-mode/review-mode.json",
+      "file": "evidence/arrival-coast-review/Pokemon-Journey-Gen1-4-Normal/review-mode/review-mode.json",
       "target": "Pokemon-Journey-Gen1-4-Normal.gba",
       "kind": "review-mode",
-      "sha256": "44128c28a6f2436ef7270181f30edba49ca3af038f443ef288f7c76687693ee8"
+      "sha256": "629472edd5c2c2b1ce84da39aa2f35438330272034de74bb825928c065dc9453"
     },
     {
-      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-9-Hard/cold-boot/cold-boot.json",
+      "file": "evidence/arrival-coast-review/Pokemon-Journey-Gen1-9-Hard/cold-boot/cold-boot.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "cold-boot",
-      "sha256": "1a456f9c641b3459cfca36da1d6ba43ccbc7eb50b2c1d4f32b28ffe5283124ac"
+      "sha256": "0d837adc6abce69180778a87af619fd45fba73a5221368e2e8e5b9138ff39728"
     },
     {
-      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-9-Hard/review-mode/review-mode.json",
+      "file": "evidence/arrival-coast-review/Pokemon-Journey-Gen1-9-Hard/review-mode/review-mode.json",
       "target": "Pokemon-Journey-Gen1-9-Hard.gba",
       "kind": "review-mode",
-      "sha256": "6c53dbfc9b46007dacc1771e5211bff9dcd9c10581eda2f512b2a3718a6e54a2"
+      "sha256": "4155b0ddbb13425cf5c160da447df92bc73e0077d9402f0deddb1d6656410cc6"
     },
     {
-      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-9-Normal/cold-boot/cold-boot.json",
+      "file": "evidence/arrival-coast-review/Pokemon-Journey-Gen1-9-Normal/cold-boot/cold-boot.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "cold-boot",
-      "sha256": "a75d8aa98f54c29c5615c2f1745c13d24fb46f774f35384914b0bd9f4f37977d"
+      "sha256": "f171f3254a3fb940161bfb18e011ef841b7d84428ee2b1c320919934e5158df7"
     },
     {
-      "file": "evidence/coastal-ecology/Pokemon-Journey-Gen1-9-Normal/review-mode/review-mode.json",
+      "file": "evidence/arrival-coast-review/Pokemon-Journey-Gen1-9-Normal/review-mode/review-mode.json",
       "target": "Pokemon-Journey-Gen1-9-Normal.gba",
       "kind": "review-mode",
-      "sha256": "06e60006a067196bb4f997cee8ed5d018b50e51b2279d994529cf94ecc798697"
+      "sha256": "acbb7bbe11f285cd9a291139e982a9ad68e21c7a14682f9eda2962f5b5e970f0"
     },
     {
-      "file": "evidence/coastal-ecology/common/coastal-ecology-census/coastal-ecology-census.json",
+      "file": "evidence/arrival-coast-review/common/arrival-coast-landing/arrival-coast-landing.json",
       "target": "common",
-      "kind": "coastal-ecology-census",
-      "sha256": "05e824883f4a7a70b9134c76cd7cf1235bddc592029b15d4c5f78986f35a25a9"
+      "kind": "arrival-coast-landing",
+      "sha256": "8e000b03c2f818249397c8167236598e845c4cf3f2e49455a13e42f48243c5a9"
     },
     {
-      "file": "evidence/coastal-ecology/common/coastal-ecology-native/coastal-ecology-native.json",
+      "file": "evidence/arrival-coast-review/common/arrival-coast-photos/arrival-coast-photos.json",
       "target": "common",
-      "kind": "coastal-ecology-native",
-      "sha256": "409b4f57a02a8dc362399e24fdd19ea50bb067310a745a697ae3192d22383dae"
+      "kind": "arrival-coast-photos",
+      "sha256": "4ae3c931ed788b3c34b1d7c0be7250b92975b094bb0888c6be663690bbb4aec6"
     },
     {
-      "file": "evidence/coastal-ecology/common/coastal-ecology-source/coastal-ecology-source.json",
+      "file": "evidence/arrival-coast-review/common/arrival-coast-source/arrival-coast-source.json",
       "target": "common",
-      "kind": "coastal-ecology-source",
-      "sha256": "2a6170a91599b00b5f89580fc8d4bfd8cebc67840ea9fef82b49e1b022df447a"
+      "kind": "arrival-coast-source",
+      "sha256": "8c247d63ab0036e99832ea491d21e3ba6e45064013da5f2c3ab942e28a5e0ccc"
     },
     {
-      "file": "evidence/coastal-ecology/common/coastal-fragments/coastal-fragments.json",
-      "target": "common",
-      "kind": "coastal-fragments",
-      "sha256": "6cfaf4c63b4fc13d47df8394d0c82bae14ac2a2e0939674ca9a5963e84f27dd5"
-    },
-    {
-      "file": "evidence/coastal-ecology/common/coastal-ocean-palette/coastal-ocean-palette.json",
-      "target": "common",
-      "kind": "coastal-ocean-palette",
-      "sha256": "002595c00b611497d2029f83d807f9f7a5b6cc9ba021a9963232b3c7a9cc1877"
-    },
-    {
-      "file": "evidence/coastal-ecology/common/coastal-pallet/coastal-pallet.json",
-      "target": "common",
-      "kind": "coastal-pallet",
-      "sha256": "3bb04581ccf9436880801d47083cd6d28e2d6d3e78e80d55621afee9a16a2752"
-    },
-    {
-      "file": "evidence/coastal-ecology/common/coastal-pier-perimeters/coastal-pier-perimeters.json",
-      "target": "common",
-      "kind": "coastal-pier-perimeters",
-      "sha256": "661ca4c8e9fc6e09113669292d35c5ff162b3da8edd8cb4ee7e68efbbe37dca0"
-    },
-    {
-      "file": "evidence/coastal-ecology/common/coastal-pier-visibility/coastal-pier-visibility.json",
-      "target": "common",
-      "kind": "coastal-pier-visibility",
-      "sha256": "569344a0a879064d53aa81501945ef6fa0a025289ee11de864a0562129452327"
-    },
-    {
-      "file": "evidence/coastal-ecology/test/coastal-ecology-review/coastal-ecology-review.json",
-      "target": "test",
-      "kind": "coastal-ecology-review",
-      "sha256": "5cfcc70ef3cb144509088def69d62a970c2c548169fff75f459f090461ac3185"
-    },
-    {
-      "file": "evidence/coastal-ecology/test/cold-boot/cold-boot.json",
+      "file": "evidence/arrival-coast-review/test/cold-boot/cold-boot.json",
       "target": "test",
       "kind": "cold-boot",
-      "sha256": "7ca9a34cec628fe3b8a71744d485858efd6d94e6412281732b4b9c5596ed7590"
+      "sha256": "374eb64e326e6fc2bfe3cc97508f6344bb99a4387bfe4dabf09634a49ed824bb"
     },
     {
-      "file": "evidence/coastal-ecology/test/review-mode/review-mode.json",
+      "file": "evidence/arrival-coast-review/test/review-mode/review-mode.json",
       "target": "test",
       "kind": "review-mode",
-      "sha256": "7d4f896f8c632a6d75fe888f55f5cee5c3937a350d7a8882a4bb647e66628015"
+      "sha256": "e396d0d8a0152b144aa5703b7a64385d8b79331710e051b2c02b62ae549a6c93"
     }
   ],
   "historical_validation": {
@@ -415,30 +374,30 @@
     "retested_on_current_rom": false
   },
   "previous_port_validation": {
-    "manifest": "mods/hoenn/coastal-ecology-validation/baseline/versions.json",
-    "manifest_sha256": "fbd402670c693be275a45121000b4f6878b516b90b5117fed6e4d06bd012444f",
+    "manifest": "mods/hoenn/arrival-coast-review-validation/baseline/versions.json",
+    "manifest_sha256": "e655ae718eee24044bfcecb6812b3c40e764335e53b61b314c18d18d7b9062a8",
     "retested_on_current_rom": false
   },
   "previous_review_validation": {
-    "file": "mods/hoenn/coastal-ecology-validation/baseline/review.json",
-    "sha256": "02f499b309c363c7004e24815ec6f5eba1f31fb64292e8f03084c9d182f293fa"
+    "file": "mods/hoenn/arrival-coast-review-validation/baseline/review.json",
+    "sha256": "3e6a948181c48faa3a267cce944ab5e3cb7ce258ff56dd32b1c72bd6f49b14ce"
   },
   "previous_review_save_validation": {
-    "file": "mods/hoenn/coastal-ecology-validation/baseline/test.sav",
-    "sha256": "7224bde1a307a5b6a213666a44e981ee0d40a0badd2875fd416248f1752d450c"
+    "file": "mods/hoenn/arrival-coast-review-validation/baseline/test.sav",
+    "sha256": "aee846ce79e19c8576bb92d6f5492bb09f8b90a98c372622df9196a12131cd83"
   },
   "previous_features_retested_on_current_rom": false,
   "historical_release": {
-    "scope": "generated-world-audit",
-    "parent_rom_sha256": "b04918724939a54bbe3321d274953a9311ab8c7b4eebc3cbeb844ffcd3604386",
+    "scope": "coastal-ecology",
+    "parent_rom_sha256": "f7af65b4856e6697d5d972f48f8699c7c6b7d4b277ea19cfa3949926265d1b89",
     "variants": {
-      "Pokemon-Journey-Gen1-4-Normal.gba": "2e7e7a234b16638ee3c997b1001f2006f21b39b7ecbecc08536d28485728f760",
-      "Pokemon-Journey-Gen1-4-Hard.gba": "ca9233a26ae8659ea4aa1222d45074e4d4968eac6563a89c90e4e64be0c0e86e",
-      "Pokemon-Journey-Gen1-9-Normal.gba": "fe5be134b17757534a917a68a9da098e9987bf157de34ca8a75b7c2ac712d46b",
-      "Pokemon-Journey-Gen1-9-Hard.gba": "b69daf45ebb815c798d71e8531b5f4ec1c8cc55411ffc9ebed88b9e82b3330f4"
+      "Pokemon-Journey-Gen1-4-Normal.gba": "70343cea8318bbf81b688ff4cc3b2b45729fc0e5d135dc8667ae6d8f309d9215",
+      "Pokemon-Journey-Gen1-4-Hard.gba": "1eca0267b5b7012e994c7c2746c11cd10062d6ed391feb81f0728f092f81a06b",
+      "Pokemon-Journey-Gen1-9-Normal.gba": "ccf63286810feb58d6a5d27a3e7ab7d1ce1bb47bbfcf7cc0b5d684439d69bed5",
+      "Pokemon-Journey-Gen1-9-Hard.gba": "5ba67a921ebd98ab7de572296a2643c3f3691c7e58c39637db828417b558e5ad"
     },
-    "test_rom_sha256": "57874edc8472deb479410ac4e7f35d12e6cd49e45cd38fbbfade7640c3a68b88",
-    "proof_count": 26,
+    "test_rom_sha256": "5f31cf1886580efed0a0fc9b0e93d6bde9d7853be86646ae3e65b5aaf8702ccc",
+    "proof_count": 20,
     "retested_on_current_rom": false
   }
 }

@@ -1,0 +1,4809 @@
+{
+  "kind": "arrival-coast-landing",
+  "passed": true,
+  "diagnostic": false,
+  "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+  "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+  "compiled_arrival_census": {
+    "rows": [
+      {
+        "home_index": 1,
+        "map": "PalletTown_Frlg",
+        "map_id": [
+          37,
+          0
+        ],
+        "truck": [
+          6,
+          10
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            7,
+            10
+          ],
+          "block": 12950,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            8,
+            9
+          ],
+          "block": 12950,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 2,
+        "map": "ViridianCity_Frlg",
+        "map_id": [
+          37,
+          1
+        ],
+        "truck": [
+          25,
+          8
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            26,
+            8
+          ],
+          "block": 12970,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            27,
+            7
+          ],
+          "block": 12654,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 3,
+        "map": "PewterCity_Frlg",
+        "map_id": [
+          37,
+          2
+        ],
+        "truck": [
+          33,
+          14
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            34,
+            14
+          ],
+          "block": 12745,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            35,
+            13
+          ],
+          "block": 12737,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 4,
+        "map": "CeruleanCity_Frlg",
+        "map_id": [
+          37,
+          3
+        ],
+        "truck": [
+          10,
+          14
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            11,
+            14
+          ],
+          "block": 12516,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            12,
+            13
+          ],
+          "block": 12508,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 5,
+        "map": "VermilionCity_Frlg",
+        "map_id": [
+          37,
+          5
+        ],
+        "truck": [
+          28,
+          21
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            29,
+            21
+          ],
+          "block": 12988,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            30,
+            20
+          ],
+          "block": 12289,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 6,
+        "map": "LavenderTown_Frlg",
+        "map_id": [
+          37,
+          4
+        ],
+        "truck": [
+          14,
+          16
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            15,
+            16
+          ],
+          "block": 12297,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            16,
+            15
+          ],
+          "block": 12289,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 7,
+        "map": "CeladonCity_Frlg",
+        "map_id": [
+          37,
+          6
+        ],
+        "truck": [
+          41,
+          32
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            42,
+            32
+          ],
+          "block": 12662,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            43,
+            31
+          ],
+          "block": 12646,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 8,
+        "map": "FuchsiaCity_Frlg",
+        "map_id": [
+          37,
+          7
+        ],
+        "truck": [
+          14,
+          34
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            15,
+            34
+          ],
+          "block": 12516,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            16,
+            33
+          ],
+          "block": 12508,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 9,
+        "map": "SaffronCity_Frlg",
+        "map_id": [
+          37,
+          10
+        ],
+        "truck": [
+          24,
+          24
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            25,
+            24
+          ],
+          "block": 13033,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            26,
+            23
+          ],
+          "block": 13033,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 10,
+        "map": "OneIsland_TreasureBeach_Frlg",
+        "map_id": [
+          37,
+          46
+        ],
+        "truck": [
+          10,
+          6
+        ],
+        "boat": true,
+        "player": {
+          "tile": [
+            12,
+            4
+          ],
+          "block": 13217,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            12,
+            3
+          ],
+          "block": 13217,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 11,
+        "map": "TwoIsland_Frlg",
+        "map_id": [
+          37,
+          13
+        ],
+        "truck": [
+          10,
+          6
+        ],
+        "boat": true,
+        "player": {
+          "tile": [
+            10,
+            12
+          ],
+          "block": 13217,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            10,
+            11
+          ],
+          "block": 13217,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 12,
+        "map": "ThreeIsland_Port_Frlg",
+        "map_id": [
+          37,
+          49
+        ],
+        "truck": [
+          10,
+          6
+        ],
+        "boat": true,
+        "player": {
+          "tile": [
+            12,
+            17
+          ],
+          "block": 13217,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            12,
+            16
+          ],
+          "block": 13217,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 13,
+        "map": "FourIsland_Frlg",
+        "map_id": [
+          37,
+          15
+        ],
+        "truck": [
+          10,
+          6
+        ],
+        "boat": true,
+        "player": {
+          "tile": [
+            10,
+            32
+          ],
+          "block": 12928,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            10,
+            31
+          ],
+          "block": 12928,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 14,
+        "map": "FiveIsland_Frlg",
+        "map_id": [
+          37,
+          16
+        ],
+        "truck": [
+          10,
+          6
+        ],
+        "boat": true,
+        "player": {
+          "tile": [
+            12,
+            17
+          ],
+          "block": 12928,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            12,
+            16
+          ],
+          "block": 12928,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 15,
+        "map": "SixIsland_Frlg",
+        "map_id": [
+          37,
+          18
+        ],
+        "truck": [
+          10,
+          6
+        ],
+        "boat": true,
+        "player": {
+          "tile": [
+            11,
+            27
+          ],
+          "block": 13168,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            11,
+            26
+          ],
+          "block": 13168,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 16,
+        "map": "SevenIsland_Frlg",
+        "map_id": [
+          37,
+          17
+        ],
+        "truck": [
+          10,
+          6
+        ],
+        "boat": true,
+        "player": {
+          "tile": [
+            15,
+            17
+          ],
+          "block": 13168,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            15,
+            16
+          ],
+          "block": 13168,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 17,
+        "map": "LittlerootTown",
+        "map_id": [
+          0,
+          9
+        ],
+        "truck": [
+          5,
+          11
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            6,
+            11
+          ],
+          "block": 12289,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            7,
+            10
+          ],
+          "block": 12289,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 18,
+        "map": "OldaleTown",
+        "map_id": [
+          0,
+          10
+        ],
+        "truck": [
+          5,
+          4
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            6,
+            4
+          ],
+          "block": 12909,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            7,
+            3
+          ],
+          "block": 12289,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 19,
+        "map": "PetalburgCity",
+        "map_id": [
+          0,
+          0
+        ],
+        "truck": [
+          10,
+          22
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            11,
+            22
+          ],
+          "block": 12289,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            12,
+            21
+          ],
+          "block": 12289,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 20,
+        "map": "RustboroCity",
+        "map_id": [
+          0,
+          3
+        ],
+        "truck": [
+          30,
+          24
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            31,
+            24
+          ],
+          "block": 12837,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            32,
+            23
+          ],
+          "block": 12987,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 21,
+        "map": "DewfordTown",
+        "map_id": [
+          0,
+          11
+        ],
+        "truck": [
+          14,
+          10
+        ],
+        "boat": true,
+        "player": {
+          "tile": [
+            14,
+            12
+          ],
+          "block": 12580,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 33,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            14,
+            11
+          ],
+          "block": 12605,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 33,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 22,
+        "map": "SlateportCity",
+        "map_id": [
+          0,
+          1
+        ],
+        "truck": [
+          21,
+          41
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            22,
+            41
+          ],
+          "block": 12993,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            23,
+            40
+          ],
+          "block": 12802,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 23,
+        "map": "MauvilleCity",
+        "map_id": [
+          0,
+          2
+        ],
+        "truck": [
+          19,
+          11
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            20,
+            11
+          ],
+          "block": 12932,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            21,
+            10
+          ],
+          "block": 12289,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 24,
+        "map": "VerdanturfTown",
+        "map_id": [
+          0,
+          14
+        ],
+        "truck": [
+          16,
+          12
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            17,
+            12
+          ],
+          "block": 13193,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            18,
+            11
+          ],
+          "block": 12804,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 7,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 25,
+        "map": "FallarborTown",
+        "map_id": [
+          0,
+          13
+        ],
+        "truck": [
+          2,
+          10
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            3,
+            10
+          ],
+          "block": 13049,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            4,
+            9
+          ],
+          "block": 13033,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 26,
+        "map": "LavaridgeTown",
+        "map_id": [
+          0,
+          12
+        ],
+        "truck": [
+          16,
+          12
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            17,
+            12
+          ],
+          "block": 12297,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            18,
+            11
+          ],
+          "block": 12289,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 27,
+        "map": "FortreeCity",
+        "map_id": [
+          0,
+          4
+        ],
+        "truck": [
+          3,
+          9
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            4,
+            9
+          ],
+          "block": 12289,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            5,
+            8
+          ],
+          "block": 12896,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 28,
+        "map": "LilycoveCity",
+        "map_id": [
+          0,
+          5
+        ],
+        "truck": [
+          42,
+          9
+        ],
+        "boat": false,
+        "player": {
+          "tile": [
+            43,
+            9
+          ],
+          "block": 21052,
+          "elevation": 5,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            44,
+            8
+          ],
+          "block": 20481,
+          "elevation": 5,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 29,
+        "map": "MossdeepCity",
+        "map_id": [
+          0,
+          6
+        ],
+        "truck": [
+          7,
+          33
+        ],
+        "boat": true,
+        "player": {
+          "tile": [
+            6,
+            25
+          ],
+          "block": 12580,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 33,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            6,
+            24
+          ],
+          "block": 12580,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 33,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 30,
+        "map": "JourneySootopolisHarbor",
+        "map_id": [
+          76,
+          40
+        ],
+        "truck": [
+          8,
+          9
+        ],
+        "boat": true,
+        "player": {
+          "tile": [
+            11,
+            12
+          ],
+          "block": 12802,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            11,
+            11
+          ],
+          "block": 12804,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 0,
+          "surfable": false,
+          "dry": true
+        }
+      },
+      {
+        "home_index": 31,
+        "map": "PacifidlogTown",
+        "map_id": [
+          0,
+          15
+        ],
+        "truck": [
+          12,
+          29
+        ],
+        "boat": true,
+        "player": {
+          "tile": [
+            8,
+            24
+          ],
+          "block": 12896,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 117,
+          "surfable": false,
+          "dry": true
+        },
+        "mother": {
+          "tile": [
+            8,
+            23
+          ],
+          "block": 12888,
+          "elevation": 3,
+          "collision": 0,
+          "behavior": 116,
+          "surfable": false,
+          "dry": true
+        }
+      }
+    ],
+    "row_count": 31,
+    "compiled_table_sha256": "27fbe1125e420de9476b6a33ae07e542107071dee03bf335ed153ede095eace6",
+    "compiled_source_table_equal": true,
+    "all_player_and_mother_cells_dry": true,
+    "direct_compiled_map_layout_blockdata_and_attribute_reads": true
+  },
+  "cases": [
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "sevii",
+      "city_index": 0,
+      "home_index": 10,
+      "avatar_index": 3,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": true,
+      "welcome": {
+        "map": "OneIsland_TreasureBeach_Frlg",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            12,
+            4
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 13217,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 4,
+          "local_id": 251,
+          "tile": [
+            12,
+            3
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 13217,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "OneIsland_TreasureBeach_Frlg",
+      "expected_welcome_player_tile": [
+        12,
+        4
+      ],
+      "expected_welcome_mother_tile": [
+        12,
+        3
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyFamilyBedroom09",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10767
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "sevii",
+      "city_index": 1,
+      "home_index": 11,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": true,
+      "welcome": {
+        "map": "TwoIsland_Frlg",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            10,
+            12
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 13217,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 3,
+          "local_id": 251,
+          "tile": [
+            10,
+            11
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 13217,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "TwoIsland_Frlg",
+      "expected_welcome_player_tile": [
+        10,
+        12
+      ],
+      "expected_welcome_mother_tile": [
+        10,
+        11
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyFamilyBedroom10",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10629
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "sevii",
+      "city_index": 2,
+      "home_index": 12,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": true,
+      "welcome": {
+        "map": "ThreeIsland_Port_Frlg",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            12,
+            17
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 13217,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 4,
+          "local_id": 251,
+          "tile": [
+            12,
+            16
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 13217,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "ThreeIsland_Port_Frlg",
+      "expected_welcome_player_tile": [
+        12,
+        17
+      ],
+      "expected_welcome_mother_tile": [
+        12,
+        16
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyFamilyBedroom11",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10721
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "sevii",
+      "city_index": 3,
+      "home_index": 13,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": true,
+      "welcome": {
+        "map": "FourIsland_Frlg",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            10,
+            32
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12928,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 4,
+          "local_id": 251,
+          "tile": [
+            10,
+            31
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12928,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "FourIsland_Frlg",
+      "expected_welcome_player_tile": [
+        10,
+        32
+      ],
+      "expected_welcome_mother_tile": [
+        10,
+        31
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyFamilyBedroom12",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10767
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "sevii",
+      "city_index": 4,
+      "home_index": 14,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": true,
+      "welcome": {
+        "map": "FiveIsland_Frlg",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            12,
+            17
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12928,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 4,
+          "local_id": 251,
+          "tile": [
+            12,
+            16
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12928,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "FiveIsland_Frlg",
+      "expected_welcome_player_tile": [
+        12,
+        17
+      ],
+      "expected_welcome_mother_tile": [
+        12,
+        16
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyFamilyBedroom13",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10813
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "sevii",
+      "city_index": 5,
+      "home_index": 15,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": true,
+      "welcome": {
+        "map": "SixIsland_Frlg",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            11,
+            27
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 13168,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 1,
+          "local_id": 251,
+          "tile": [
+            11,
+            26
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 13168,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "SixIsland_Frlg",
+      "expected_welcome_player_tile": [
+        11,
+        27
+      ],
+      "expected_welcome_mother_tile": [
+        11,
+        26
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyFamilyBedroom14",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10813
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "sevii",
+      "city_index": 6,
+      "home_index": 16,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": true,
+      "welcome": {
+        "map": "SevenIsland_Frlg",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            15,
+            17
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 13168,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 2,
+          "local_id": 251,
+          "tile": [
+            15,
+            16
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 13168,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "SevenIsland_Frlg",
+      "expected_welcome_player_tile": [
+        15,
+        17
+      ],
+      "expected_welcome_mother_tile": [
+        15,
+        16
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyFamilyBedroom15",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10951
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "hoenn",
+      "city_index": 4,
+      "home_index": 21,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": true,
+      "welcome": {
+        "map": "DewfordTown",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            14,
+            12
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12580,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 33,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 5,
+          "local_id": 251,
+          "tile": [
+            14,
+            11
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12605,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 33,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "DewfordTown",
+      "expected_welcome_player_tile": [
+        14,
+        12
+      ],
+      "expected_welcome_mother_tile": [
+        14,
+        11
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyHoennBedroom04",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10537
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "hoenn",
+      "city_index": 12,
+      "home_index": 29,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": true,
+      "welcome": {
+        "map": "MossdeepCity",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            25
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12580,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 33,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 2,
+          "local_id": 251,
+          "tile": [
+            6,
+            24
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12580,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 33,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "MossdeepCity",
+      "expected_welcome_player_tile": [
+        6,
+        25
+      ],
+      "expected_welcome_mother_tile": [
+        6,
+        24
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyHoennBedroom12",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10629
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "hoenn",
+      "city_index": 14,
+      "home_index": 31,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": true,
+      "welcome": {
+        "map": "PacifidlogTown",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            8,
+            24
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12898,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 117,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 4,
+          "local_id": 251,
+          "tile": [
+            8,
+            23
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12890,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 116,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "PacifidlogTown",
+      "expected_welcome_player_tile": [
+        8,
+        24
+      ],
+      "expected_welcome_mother_tile": [
+        8,
+        23
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyHoennBedroom14",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10721
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "kanto",
+      "city_index": 0,
+      "home_index": 1,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "PalletTown_Frlg",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            8,
+            10
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12950,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 3,
+          "local_id": 251,
+          "tile": [
+            8,
+            9
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12950,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "PalletTown_Frlg",
+      "expected_welcome_player_tile": [
+        8,
+        10
+      ],
+      "expected_welcome_mother_tile": [
+        8,
+        9
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "PalletTown_PlayersHouse_2F_Frlg",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10445
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "kanto",
+      "city_index": 1,
+      "home_index": 2,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "ViridianCity_Frlg",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            27,
+            8
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12971,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 6,
+          "local_id": 251,
+          "tile": [
+            27,
+            7
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12654,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "ViridianCity_Frlg",
+      "expected_welcome_player_tile": [
+        27,
+        8
+      ],
+      "expected_welcome_mother_tile": [
+        27,
+        7
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyFamilyBedroom01",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10445
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "kanto",
+      "city_index": 2,
+      "home_index": 3,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "PewterCity_Frlg",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            35,
+            14
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12745,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 4,
+          "local_id": 251,
+          "tile": [
+            35,
+            13
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12737,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "PewterCity_Frlg",
+      "expected_welcome_player_tile": [
+        35,
+        14
+      ],
+      "expected_welcome_mother_tile": [
+        35,
+        13
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyFamilyBedroom02",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10491
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "kanto",
+      "city_index": 3,
+      "home_index": 4,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "CeruleanCity_Frlg",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            12,
+            14
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12516,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 4,
+          "local_id": 251,
+          "tile": [
+            12,
+            13
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12508,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "CeruleanCity_Frlg",
+      "expected_welcome_player_tile": [
+        12,
+        14
+      ],
+      "expected_welcome_mother_tile": [
+        12,
+        13
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyFamilyBedroom03",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10491
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "kanto",
+      "city_index": 4,
+      "home_index": 5,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "VermilionCity_Frlg",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            30,
+            21
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12989,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 4,
+          "local_id": 251,
+          "tile": [
+            30,
+            20
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12289,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "VermilionCity_Frlg",
+      "expected_welcome_player_tile": [
+        30,
+        21
+      ],
+      "expected_welcome_mother_tile": [
+        30,
+        20
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyFamilyBedroom04",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10537
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "kanto",
+      "city_index": 5,
+      "home_index": 6,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "LavenderTown_Frlg",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            16,
+            16
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12642,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 4,
+          "local_id": 251,
+          "tile": [
+            16,
+            15
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12289,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "LavenderTown_Frlg",
+      "expected_welcome_player_tile": [
+        16,
+        16
+      ],
+      "expected_welcome_mother_tile": [
+        16,
+        15
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyFamilyBedroom05",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10537
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "kanto",
+      "city_index": 6,
+      "home_index": 7,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "CeladonCity_Frlg",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            43,
+            32
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12662,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 3,
+          "local_id": 251,
+          "tile": [
+            43,
+            31
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12646,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "CeladonCity_Frlg",
+      "expected_welcome_player_tile": [
+        43,
+        32
+      ],
+      "expected_welcome_mother_tile": [
+        43,
+        31
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyFamilyBedroom06",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10491
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "kanto",
+      "city_index": 7,
+      "home_index": 8,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "FuchsiaCity_Frlg",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            16,
+            34
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12516,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 2,
+          "local_id": 251,
+          "tile": [
+            16,
+            33
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12508,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "FuchsiaCity_Frlg",
+      "expected_welcome_player_tile": [
+        16,
+        34
+      ],
+      "expected_welcome_mother_tile": [
+        16,
+        33
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyFamilyBedroom07",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10583
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "kanto",
+      "city_index": 8,
+      "home_index": 9,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "SaffronCity_Frlg",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            26,
+            24
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 13033,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 5,
+          "local_id": 251,
+          "tile": [
+            26,
+            23
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 13033,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "SaffronCity_Frlg",
+      "expected_welcome_player_tile": [
+        26,
+        24
+      ],
+      "expected_welcome_mother_tile": [
+        26,
+        23
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyFamilyBedroom08",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10583
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "hoenn",
+      "city_index": 1,
+      "home_index": 18,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "OldaleTown",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            7,
+            4
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12910,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 4,
+          "local_id": 251,
+          "tile": [
+            7,
+            3
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12289,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "OldaleTown",
+      "expected_welcome_player_tile": [
+        7,
+        4
+      ],
+      "expected_welcome_mother_tile": [
+        7,
+        3
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyHoennBedroom01",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10353
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "hoenn",
+      "city_index": 2,
+      "home_index": 19,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "PetalburgCity",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            12,
+            22
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12289,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 5,
+          "local_id": 251,
+          "tile": [
+            12,
+            21
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12289,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "PetalburgCity",
+      "expected_welcome_player_tile": [
+        12,
+        22
+      ],
+      "expected_welcome_mother_tile": [
+        12,
+        21
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyHoennBedroom02",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10399
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "hoenn",
+      "city_index": 3,
+      "home_index": 20,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "RustboroCity",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            32,
+            24
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12838,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 3,
+          "local_id": 251,
+          "tile": [
+            32,
+            23
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12987,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "RustboroCity",
+      "expected_welcome_player_tile": [
+        32,
+        24
+      ],
+      "expected_welcome_mother_tile": [
+        32,
+        23
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyHoennBedroom03",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10353
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "hoenn",
+      "city_index": 5,
+      "home_index": 22,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "SlateportCity",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            23,
+            41
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12994,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 5,
+          "local_id": 251,
+          "tile": [
+            23,
+            40
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12802,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "SlateportCity",
+      "expected_welcome_player_tile": [
+        23,
+        41
+      ],
+      "expected_welcome_mother_tile": [
+        23,
+        40
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyHoennBedroom05",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10445
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "hoenn",
+      "city_index": 6,
+      "home_index": 23,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "MauvilleCity",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            21,
+            11
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12933,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 9,
+          "local_id": 251,
+          "tile": [
+            21,
+            10
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12289,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "MauvilleCity",
+      "expected_welcome_player_tile": [
+        21,
+        11
+      ],
+      "expected_welcome_mother_tile": [
+        21,
+        10
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyHoennBedroom06",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10353
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "hoenn",
+      "city_index": 7,
+      "home_index": 24,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "VerdanturfTown",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            18,
+            12
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 13193,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 2,
+          "local_id": 251,
+          "tile": [
+            18,
+            11
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12804,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 7,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "VerdanturfTown",
+      "expected_welcome_player_tile": [
+        18,
+        12
+      ],
+      "expected_welcome_mother_tile": [
+        18,
+        11
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyHoennBedroom07",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10445
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "hoenn",
+      "city_index": 8,
+      "home_index": 25,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "FallarborTown",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            4,
+            10
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 13049,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 6,
+          "local_id": 251,
+          "tile": [
+            4,
+            9
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 13033,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "FallarborTown",
+      "expected_welcome_player_tile": [
+        4,
+        10
+      ],
+      "expected_welcome_mother_tile": [
+        4,
+        9
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyHoennBedroom08",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10491
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "hoenn",
+      "city_index": 9,
+      "home_index": 26,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "LavaridgeTown",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            18,
+            12
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12298,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 4,
+          "local_id": 251,
+          "tile": [
+            18,
+            11
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12289,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "LavaridgeTown",
+      "expected_welcome_player_tile": [
+        18,
+        12
+      ],
+      "expected_welcome_mother_tile": [
+        18,
+        11
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyHoennBedroom09",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10399
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "hoenn",
+      "city_index": 10,
+      "home_index": 27,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "FortreeCity",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            5,
+            9
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12904,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 5,
+          "local_id": 251,
+          "tile": [
+            5,
+            8
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12896,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "FortreeCity",
+      "expected_welcome_player_tile": [
+        5,
+        9
+      ],
+      "expected_welcome_mother_tile": [
+        5,
+        8
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyHoennBedroom10",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10491
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "hoenn",
+      "city_index": 11,
+      "home_index": 28,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": false,
+      "welcome": {
+        "map": "LilycoveCity",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            44,
+            9
+          ],
+          "elevation": 5,
+          "terrain": {
+            "block": 20481,
+            "elevation": 5,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 7,
+          "local_id": 251,
+          "tile": [
+            44,
+            8
+          ],
+          "elevation": 5,
+          "terrain": {
+            "block": 20481,
+            "elevation": 5,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "LilycoveCity",
+      "expected_welcome_player_tile": [
+        44,
+        9
+      ],
+      "expected_welcome_mother_tile": [
+        44,
+        8
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyHoennBedroom11",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10491
+    },
+    {
+      "kind": "arrival-coast-landing-case",
+      "passed": true,
+      "diagnostic": false,
+      "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+      "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+      "starting_region": "hoenn",
+      "city_index": 13,
+      "home_index": 30,
+      "avatar_index": 0,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_or_script_injection": true,
+      "actual_cold_boot": true,
+      "actual_city_selection_and_confirmation": true,
+      "native_truck_door_crossed": true,
+      "native_boat_scene_observed": true,
+      "welcome": {
+        "map": "JourneySootopolisHarbor",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            11,
+            12
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12802,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          },
+          "surfing": false
+        },
+        "mother": {
+          "index": 3,
+          "local_id": 251,
+          "tile": [
+            11,
+            11
+          ],
+          "elevation": 3,
+          "terrain": {
+            "block": 12804,
+            "elevation": 3,
+            "collision": 0,
+            "behavior": 0,
+            "surfable": false,
+            "dry": true
+          }
+        },
+        "other_npc_overlaps": []
+      },
+      "arrival_player_and_mother_dry": true,
+      "compiled_selected_destination_observed": true,
+      "expected_welcome_map": "JourneySootopolisHarbor",
+      "expected_welcome_player_tile": [
+        11,
+        12
+      ],
+      "expected_welcome_mother_tile": [
+        11,
+        11
+      ],
+      "actor_elevations_match_physical_ground": true,
+      "no_existing_npc_overlap": true,
+      "native_home_bedroom_reached": true,
+      "bedroom": {
+        "map": "JourneyHoennBedroom13",
+        "player": {
+          "index": 0,
+          "local_id": 255,
+          "tile": [
+            6,
+            6
+          ],
+          "elevation": 3
+        },
+        "surfing": false
+      },
+      "frames": 10675
+    }
+  ],
+  "case_reports": [
+    {
+      "file": "sevii-00/arrival-coast-landing-case.json",
+      "sha256": "d5641b8c98b71d7d293ffb50795a4e2dc23fa5bb099b31336e5c284aae546c9c"
+    },
+    {
+      "file": "sevii-01/arrival-coast-landing-case.json",
+      "sha256": "14a8ba8296e3606ed2fcd3707463f6a59d64ff7ad160a88e01cc51f468383f95"
+    },
+    {
+      "file": "sevii-02/arrival-coast-landing-case.json",
+      "sha256": "b28d026753420338348b12f97ce1a843a7ac3e86cf87b26aa3cc3e3bc8f439c5"
+    },
+    {
+      "file": "sevii-03/arrival-coast-landing-case.json",
+      "sha256": "f9f059ec0cae01301b5ba5452c23ed6679cc1981908cf67a1b81db58a0a9aa8c"
+    },
+    {
+      "file": "sevii-04/arrival-coast-landing-case.json",
+      "sha256": "ccb86d172aa3125eb642f724d53f534e2407d31dd0259e388cdb03e5a8cc8685"
+    },
+    {
+      "file": "sevii-05/arrival-coast-landing-case.json",
+      "sha256": "837f1254c76f16b6301184cc701471f040781e6093f27c9efd4e66e0eef160ed"
+    },
+    {
+      "file": "sevii-06/arrival-coast-landing-case.json",
+      "sha256": "8affe158505538cd1486f7f39dc4202241f84e935ac881a3cbe92feb7998c77b"
+    },
+    {
+      "file": "hoenn-04/arrival-coast-landing-case.json",
+      "sha256": "fcfe8973fd093055d448d447ae99b41940db7bd26d46e49262489d687a94b834"
+    },
+    {
+      "file": "hoenn-12/arrival-coast-landing-case.json",
+      "sha256": "7b404bdadb0b5b26fe503c6282c229c3d01e5b44d17c528891f21400fbf553b0"
+    },
+    {
+      "file": "hoenn-14/arrival-coast-landing-case.json",
+      "sha256": "b9b4663c62e84eaaf4de6444906e88b8c172493fa8106b015b835e9349fc7753"
+    },
+    {
+      "file": "kanto-00/arrival-coast-landing-case.json",
+      "sha256": "3aa05bf9733414d20f8d3ce9df19965381cebf696ce84b48325a4a230fe22f21"
+    },
+    {
+      "file": "kanto-01/arrival-coast-landing-case.json",
+      "sha256": "22ec4b41bfc35518cee5aadec916d1b97507a70543fdd03b88b4a844abade855"
+    },
+    {
+      "file": "kanto-02/arrival-coast-landing-case.json",
+      "sha256": "bd27a9bd088c010af16d6dca8594878f9e23f9b7bdcc7891f305e5965891d2f5"
+    },
+    {
+      "file": "kanto-03/arrival-coast-landing-case.json",
+      "sha256": "1ed39be965fc2cba888200ffa3b0a90fa7043cc991e46364c8f01cb814da14ce"
+    },
+    {
+      "file": "kanto-04/arrival-coast-landing-case.json",
+      "sha256": "b7e4be47e8d2546deb63a63a8a6e6b2aa773012633321ff67db5e44f6aa47e5b"
+    },
+    {
+      "file": "kanto-05/arrival-coast-landing-case.json",
+      "sha256": "4db9cdb913fc0d666e67fcb9d57396f3ff32a358e920ad9ee2e446988e092ac2"
+    },
+    {
+      "file": "kanto-06/arrival-coast-landing-case.json",
+      "sha256": "6b9f20f56933758ec4013d5cb08a5918a51846e900cffd2b8ee576be9a5f408e"
+    },
+    {
+      "file": "kanto-07/arrival-coast-landing-case.json",
+      "sha256": "575934384f2f50a0f70fdd4ede71bb39f786e09b2c163a39fc016ecea94a7969"
+    },
+    {
+      "file": "kanto-08/arrival-coast-landing-case.json",
+      "sha256": "f6b7f601135112ca097c66bc62ee634aba50c510e1bcca7f3aa9d9b60446da34"
+    },
+    {
+      "file": "hoenn-01/arrival-coast-landing-case.json",
+      "sha256": "7233c4049282c74ff7d8d863a6b7d97eefd885f8397e14b5ae912513791dceb4"
+    },
+    {
+      "file": "hoenn-02/arrival-coast-landing-case.json",
+      "sha256": "bc8b2546847e827f88688f7a437e975d2c2c8cf4b65f0f9fce4a54a3a1eb2f67"
+    },
+    {
+      "file": "hoenn-03/arrival-coast-landing-case.json",
+      "sha256": "243dd3b85d05565578d9baa9a0b500baefe6c325d3e72e5ee26e4434b43eb76a"
+    },
+    {
+      "file": "hoenn-05/arrival-coast-landing-case.json",
+      "sha256": "6d4b136fb3a055c660e59d6d97506a5fb8e60288ed0e9d598dfa14a36a9205b8"
+    },
+    {
+      "file": "hoenn-06/arrival-coast-landing-case.json",
+      "sha256": "af4140eeab61f17fe403159c87e60e5aacc867eb7b728e8722fc7331d00bc99c"
+    },
+    {
+      "file": "hoenn-07/arrival-coast-landing-case.json",
+      "sha256": "fcb67d8b4c5182bbb0ba1f5b418ff85031867ff800e3372250ab4b0f9274c1e5"
+    },
+    {
+      "file": "hoenn-08/arrival-coast-landing-case.json",
+      "sha256": "272d22be8749dd1d974e6ae8da11512037f0279780930fc5eb923e16f61ae7ad"
+    },
+    {
+      "file": "hoenn-09/arrival-coast-landing-case.json",
+      "sha256": "910249e36c92af8f353266858707f3160814227e9a73b4994108acee3c6338fd"
+    },
+    {
+      "file": "hoenn-10/arrival-coast-landing-case.json",
+      "sha256": "59c537a0b81a5559193df099d7b4bd78d89b4e27bddc2bb65cf86f7c44f46d38"
+    },
+    {
+      "file": "hoenn-11/arrival-coast-landing-case.json",
+      "sha256": "2cf15b055981722131ff4cba4781427f8216bba7b9b0b86f67bfc001793bd36d"
+    },
+    {
+      "file": "hoenn-13/arrival-coast-landing-case.json",
+      "sha256": "3f38b12a121f95b8eef2c96bdfb2b7c7905229f2056e6f2bced6438359cae2fc"
+    }
+  ],
+  "captures": [
+    {
+      "file": "sevii-00/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "sevii-00/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "sevii-00/03-city-menu.png",
+      "sha256": "ad59aa6eabeb0cd60ba499a7842887940e0c94266c0aef420732b41b58fa2eda"
+    },
+    {
+      "file": "sevii-00/04-city-confirmation.png",
+      "sha256": "7faa7779de27200d062214659287a18996a7cf21b39fb95feff4a3d3dfe0df33"
+    },
+    {
+      "file": "sevii-00/05-truck.png",
+      "sha256": "911c2c10080bb7a6e7d0b1d2748251c9691f9e57e4998c9409e77e17b6c2cac3"
+    },
+    {
+      "file": "sevii-00/06-mother-welcome.png",
+      "sha256": "5245509418fa562098dbde999b265691605c4541f20e7b079e83ce2b6a9eeb85"
+    },
+    {
+      "file": "sevii-00/07-home-bedroom.png",
+      "sha256": "4288754012858fd23a41f8b9042fb0a1338eec80772b39247f0b83a9640a9e8f"
+    },
+    {
+      "file": "sevii-01/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "sevii-01/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "sevii-01/03-city-menu.png",
+      "sha256": "8c4eff7a655aa9fba75eecab092b0985f761df79f738c6f41a05b2d4fecb7d6f"
+    },
+    {
+      "file": "sevii-01/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "sevii-01/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "sevii-01/06-mother-welcome.png",
+      "sha256": "212c0519fe90a169d70fdaf7dccda241938bfd07b850fd1fb704a1a2ddd9587a"
+    },
+    {
+      "file": "sevii-01/07-home-bedroom.png",
+      "sha256": "b2f1994bc8a38e02dd7c4c3a3e12a07fc8f5f7aec1de865c87e98e7bf1a4a332"
+    },
+    {
+      "file": "sevii-02/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "sevii-02/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "sevii-02/03-city-menu.png",
+      "sha256": "8c4eff7a655aa9fba75eecab092b0985f761df79f738c6f41a05b2d4fecb7d6f"
+    },
+    {
+      "file": "sevii-02/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "sevii-02/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "sevii-02/06-mother-welcome.png",
+      "sha256": "43c3dd75746a2dea346070897961d427782a97b988460d003df9dfe085702471"
+    },
+    {
+      "file": "sevii-02/07-home-bedroom.png",
+      "sha256": "b2f1994bc8a38e02dd7c4c3a3e12a07fc8f5f7aec1de865c87e98e7bf1a4a332"
+    },
+    {
+      "file": "sevii-03/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "sevii-03/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "sevii-03/03-city-menu.png",
+      "sha256": "8c4eff7a655aa9fba75eecab092b0985f761df79f738c6f41a05b2d4fecb7d6f"
+    },
+    {
+      "file": "sevii-03/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "sevii-03/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "sevii-03/06-mother-welcome.png",
+      "sha256": "aca5597b131a1476cfa4003c8506a9fdb799ca3565b3fd1cd48332bbd48005d1"
+    },
+    {
+      "file": "sevii-03/07-home-bedroom.png",
+      "sha256": "b2f1994bc8a38e02dd7c4c3a3e12a07fc8f5f7aec1de865c87e98e7bf1a4a332"
+    },
+    {
+      "file": "sevii-04/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "sevii-04/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "sevii-04/03-city-menu.png",
+      "sha256": "8c4eff7a655aa9fba75eecab092b0985f761df79f738c6f41a05b2d4fecb7d6f"
+    },
+    {
+      "file": "sevii-04/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "sevii-04/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "sevii-04/06-mother-welcome.png",
+      "sha256": "89a0b324af24eca5d4c8e9ec5ec9efb7809f741abf2aaec7e05772860221bbca"
+    },
+    {
+      "file": "sevii-04/07-home-bedroom.png",
+      "sha256": "b2f1994bc8a38e02dd7c4c3a3e12a07fc8f5f7aec1de865c87e98e7bf1a4a332"
+    },
+    {
+      "file": "sevii-05/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "sevii-05/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "sevii-05/03-city-menu.png",
+      "sha256": "8c4eff7a655aa9fba75eecab092b0985f761df79f738c6f41a05b2d4fecb7d6f"
+    },
+    {
+      "file": "sevii-05/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "sevii-05/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "sevii-05/06-mother-welcome.png",
+      "sha256": "c159ba304607e0d56f5add8eb3a744007d2cfb97f5f3f2aa7f295b1f28ccee94"
+    },
+    {
+      "file": "sevii-05/07-home-bedroom.png",
+      "sha256": "b2f1994bc8a38e02dd7c4c3a3e12a07fc8f5f7aec1de865c87e98e7bf1a4a332"
+    },
+    {
+      "file": "sevii-06/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "sevii-06/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "sevii-06/03-city-menu.png",
+      "sha256": "8c4eff7a655aa9fba75eecab092b0985f761df79f738c6f41a05b2d4fecb7d6f"
+    },
+    {
+      "file": "sevii-06/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "sevii-06/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "sevii-06/06-mother-welcome.png",
+      "sha256": "1b2a9e21a16a8aa3ad8b6de66c873802854c5c0200d5ff13b691c63e0f8d1313"
+    },
+    {
+      "file": "sevii-06/07-home-bedroom.png",
+      "sha256": "b2f1994bc8a38e02dd7c4c3a3e12a07fc8f5f7aec1de865c87e98e7bf1a4a332"
+    },
+    {
+      "file": "hoenn-04/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "hoenn-04/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "hoenn-04/03-city-menu.png",
+      "sha256": "792ed8ecfac2d6e3dc7b49d61bf4eff385f6b6366a151ab09e65b08e3f05e56a"
+    },
+    {
+      "file": "hoenn-04/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "hoenn-04/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "hoenn-04/06-mother-welcome.png",
+      "sha256": "f51e5ad41098d57b76c60547b4402cbe9421753e114f7902d92960f2692a8990"
+    },
+    {
+      "file": "hoenn-04/07-home-bedroom.png",
+      "sha256": "94071a41c60efd02d5fea9706c0453b7f8aadd9055648287a3fd4a83df1a169c"
+    },
+    {
+      "file": "hoenn-12/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "hoenn-12/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "hoenn-12/03-city-menu.png",
+      "sha256": "792ed8ecfac2d6e3dc7b49d61bf4eff385f6b6366a151ab09e65b08e3f05e56a"
+    },
+    {
+      "file": "hoenn-12/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "hoenn-12/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "hoenn-12/06-mother-welcome.png",
+      "sha256": "ef46a16046bdc5b56a89f91823e6855e4749881ac681c401470e9737ca8d52c1"
+    },
+    {
+      "file": "hoenn-12/07-home-bedroom.png",
+      "sha256": "94071a41c60efd02d5fea9706c0453b7f8aadd9055648287a3fd4a83df1a169c"
+    },
+    {
+      "file": "hoenn-14/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "hoenn-14/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "hoenn-14/03-city-menu.png",
+      "sha256": "792ed8ecfac2d6e3dc7b49d61bf4eff385f6b6366a151ab09e65b08e3f05e56a"
+    },
+    {
+      "file": "hoenn-14/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "hoenn-14/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "hoenn-14/06-mother-welcome.png",
+      "sha256": "8ebf4a1eaa18161126fbf14619a4e027ee6c7ddc58dbfb280a9355ba557ee597"
+    },
+    {
+      "file": "hoenn-14/07-home-bedroom.png",
+      "sha256": "94071a41c60efd02d5fea9706c0453b7f8aadd9055648287a3fd4a83df1a169c"
+    },
+    {
+      "file": "kanto-00/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "kanto-00/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "kanto-00/03-city-menu.png",
+      "sha256": "e3c10ce2e34f6be52d1d799331ef175a70f61bd0d510c11f45d1a3e11ae69601"
+    },
+    {
+      "file": "kanto-00/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "kanto-00/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "kanto-00/06-mother-welcome.png",
+      "sha256": "03d877396ce18d8fcb0cc8359d2aab67fd17454b54a34207393abf9c8ed6647e"
+    },
+    {
+      "file": "kanto-00/07-home-bedroom.png",
+      "sha256": "cb10a7604c9ee58933298cb303bd0e7738de5d6ed293c0b08111ff272f9b6133"
+    },
+    {
+      "file": "kanto-01/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "kanto-01/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "kanto-01/03-city-menu.png",
+      "sha256": "e3c10ce2e34f6be52d1d799331ef175a70f61bd0d510c11f45d1a3e11ae69601"
+    },
+    {
+      "file": "kanto-01/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "kanto-01/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "kanto-01/06-mother-welcome.png",
+      "sha256": "ec4f9e70b849601c10fdb01695eff3d6de67943538fd5d2c1685563408fae83c"
+    },
+    {
+      "file": "kanto-01/07-home-bedroom.png",
+      "sha256": "b2f1994bc8a38e02dd7c4c3a3e12a07fc8f5f7aec1de865c87e98e7bf1a4a332"
+    },
+    {
+      "file": "kanto-02/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "kanto-02/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "kanto-02/03-city-menu.png",
+      "sha256": "e3c10ce2e34f6be52d1d799331ef175a70f61bd0d510c11f45d1a3e11ae69601"
+    },
+    {
+      "file": "kanto-02/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "kanto-02/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "kanto-02/06-mother-welcome.png",
+      "sha256": "533b565b5fe4f0cc35a1a2b49d6ba8f50d9f98e6d21f7ffa00885f1bd33553ac"
+    },
+    {
+      "file": "kanto-02/07-home-bedroom.png",
+      "sha256": "b2f1994bc8a38e02dd7c4c3a3e12a07fc8f5f7aec1de865c87e98e7bf1a4a332"
+    },
+    {
+      "file": "kanto-03/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "kanto-03/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "kanto-03/03-city-menu.png",
+      "sha256": "e3c10ce2e34f6be52d1d799331ef175a70f61bd0d510c11f45d1a3e11ae69601"
+    },
+    {
+      "file": "kanto-03/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "kanto-03/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "kanto-03/06-mother-welcome.png",
+      "sha256": "4972b905860eb51cd07770f0ff8bb5cba9b11815361cc34d96bb79fc9e3505e0"
+    },
+    {
+      "file": "kanto-03/07-home-bedroom.png",
+      "sha256": "b2f1994bc8a38e02dd7c4c3a3e12a07fc8f5f7aec1de865c87e98e7bf1a4a332"
+    },
+    {
+      "file": "kanto-04/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "kanto-04/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "kanto-04/03-city-menu.png",
+      "sha256": "e3c10ce2e34f6be52d1d799331ef175a70f61bd0d510c11f45d1a3e11ae69601"
+    },
+    {
+      "file": "kanto-04/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "kanto-04/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "kanto-04/06-mother-welcome.png",
+      "sha256": "e18071cadaa9a31fcbc15d57c568b7c64d2d464d67726b8af3ea1e082bb4ce8c"
+    },
+    {
+      "file": "kanto-04/07-home-bedroom.png",
+      "sha256": "b2f1994bc8a38e02dd7c4c3a3e12a07fc8f5f7aec1de865c87e98e7bf1a4a332"
+    },
+    {
+      "file": "kanto-05/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "kanto-05/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "kanto-05/03-city-menu.png",
+      "sha256": "e3c10ce2e34f6be52d1d799331ef175a70f61bd0d510c11f45d1a3e11ae69601"
+    },
+    {
+      "file": "kanto-05/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "kanto-05/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "kanto-05/06-mother-welcome.png",
+      "sha256": "e89e1226cc2f78c7602cc9279fa58b1afa213fa30d168861a3e70a71701cc469"
+    },
+    {
+      "file": "kanto-05/07-home-bedroom.png",
+      "sha256": "b2f1994bc8a38e02dd7c4c3a3e12a07fc8f5f7aec1de865c87e98e7bf1a4a332"
+    },
+    {
+      "file": "kanto-06/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "kanto-06/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "kanto-06/03-city-menu.png",
+      "sha256": "e3c10ce2e34f6be52d1d799331ef175a70f61bd0d510c11f45d1a3e11ae69601"
+    },
+    {
+      "file": "kanto-06/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "kanto-06/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "kanto-06/06-mother-welcome.png",
+      "sha256": "abb59bcd248194e24396f1a44c86e1477cf82fc8dbc4ffcda3310c3fcd0d0b60"
+    },
+    {
+      "file": "kanto-06/07-home-bedroom.png",
+      "sha256": "b2f1994bc8a38e02dd7c4c3a3e12a07fc8f5f7aec1de865c87e98e7bf1a4a332"
+    },
+    {
+      "file": "kanto-07/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "kanto-07/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "kanto-07/03-city-menu.png",
+      "sha256": "e3c10ce2e34f6be52d1d799331ef175a70f61bd0d510c11f45d1a3e11ae69601"
+    },
+    {
+      "file": "kanto-07/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "kanto-07/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "kanto-07/06-mother-welcome.png",
+      "sha256": "7187fae02f293b667d4ae927456ff4df3ff8f83e754b58c96a39331510683343"
+    },
+    {
+      "file": "kanto-07/07-home-bedroom.png",
+      "sha256": "b2f1994bc8a38e02dd7c4c3a3e12a07fc8f5f7aec1de865c87e98e7bf1a4a332"
+    },
+    {
+      "file": "kanto-08/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "kanto-08/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "kanto-08/03-city-menu.png",
+      "sha256": "e3c10ce2e34f6be52d1d799331ef175a70f61bd0d510c11f45d1a3e11ae69601"
+    },
+    {
+      "file": "kanto-08/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "kanto-08/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "kanto-08/06-mother-welcome.png",
+      "sha256": "33cd3540dc0a6e22ae154516f6fc79b5988963a025cbffb3946e7f55aeb19a67"
+    },
+    {
+      "file": "kanto-08/07-home-bedroom.png",
+      "sha256": "b2f1994bc8a38e02dd7c4c3a3e12a07fc8f5f7aec1de865c87e98e7bf1a4a332"
+    },
+    {
+      "file": "hoenn-01/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "hoenn-01/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "hoenn-01/03-city-menu.png",
+      "sha256": "792ed8ecfac2d6e3dc7b49d61bf4eff385f6b6366a151ab09e65b08e3f05e56a"
+    },
+    {
+      "file": "hoenn-01/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "hoenn-01/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "hoenn-01/06-mother-welcome.png",
+      "sha256": "214d724f7117214377005a1742ea4cbfc16bd61e295c254b942b888cfc414991"
+    },
+    {
+      "file": "hoenn-01/07-home-bedroom.png",
+      "sha256": "94071a41c60efd02d5fea9706c0453b7f8aadd9055648287a3fd4a83df1a169c"
+    },
+    {
+      "file": "hoenn-02/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "hoenn-02/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "hoenn-02/03-city-menu.png",
+      "sha256": "792ed8ecfac2d6e3dc7b49d61bf4eff385f6b6366a151ab09e65b08e3f05e56a"
+    },
+    {
+      "file": "hoenn-02/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "hoenn-02/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "hoenn-02/06-mother-welcome.png",
+      "sha256": "480be692ac9aa397f4304002d6e320e9a936b79e51ce752fe51c3a189f8f1212"
+    },
+    {
+      "file": "hoenn-02/07-home-bedroom.png",
+      "sha256": "94071a41c60efd02d5fea9706c0453b7f8aadd9055648287a3fd4a83df1a169c"
+    },
+    {
+      "file": "hoenn-03/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "hoenn-03/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "hoenn-03/03-city-menu.png",
+      "sha256": "792ed8ecfac2d6e3dc7b49d61bf4eff385f6b6366a151ab09e65b08e3f05e56a"
+    },
+    {
+      "file": "hoenn-03/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "hoenn-03/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "hoenn-03/06-mother-welcome.png",
+      "sha256": "c4e875d774535e6cb78eb28344f2ee5c9a1ad3b29927ab1d02a275df53c4d4bd"
+    },
+    {
+      "file": "hoenn-03/07-home-bedroom.png",
+      "sha256": "94071a41c60efd02d5fea9706c0453b7f8aadd9055648287a3fd4a83df1a169c"
+    },
+    {
+      "file": "hoenn-05/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "hoenn-05/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "hoenn-05/03-city-menu.png",
+      "sha256": "792ed8ecfac2d6e3dc7b49d61bf4eff385f6b6366a151ab09e65b08e3f05e56a"
+    },
+    {
+      "file": "hoenn-05/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "hoenn-05/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "hoenn-05/06-mother-welcome.png",
+      "sha256": "21b5266a82e970bc8230ced356fa35210f4378b99dbd88785a05ae1fbb912a1f"
+    },
+    {
+      "file": "hoenn-05/07-home-bedroom.png",
+      "sha256": "94071a41c60efd02d5fea9706c0453b7f8aadd9055648287a3fd4a83df1a169c"
+    },
+    {
+      "file": "hoenn-06/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "hoenn-06/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "hoenn-06/03-city-menu.png",
+      "sha256": "792ed8ecfac2d6e3dc7b49d61bf4eff385f6b6366a151ab09e65b08e3f05e56a"
+    },
+    {
+      "file": "hoenn-06/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "hoenn-06/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "hoenn-06/06-mother-welcome.png",
+      "sha256": "572284589fbf2c39c7e4e1487a77d4e22427facdae4a3917a75cbc02ec26e533"
+    },
+    {
+      "file": "hoenn-06/07-home-bedroom.png",
+      "sha256": "94071a41c60efd02d5fea9706c0453b7f8aadd9055648287a3fd4a83df1a169c"
+    },
+    {
+      "file": "hoenn-07/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "hoenn-07/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "hoenn-07/03-city-menu.png",
+      "sha256": "792ed8ecfac2d6e3dc7b49d61bf4eff385f6b6366a151ab09e65b08e3f05e56a"
+    },
+    {
+      "file": "hoenn-07/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "hoenn-07/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "hoenn-07/06-mother-welcome.png",
+      "sha256": "3c90c2cdb78230723ae6d97ecdf2a6c3b7787c1a48ebfb38a8dc52e7f03dac2e"
+    },
+    {
+      "file": "hoenn-07/07-home-bedroom.png",
+      "sha256": "94071a41c60efd02d5fea9706c0453b7f8aadd9055648287a3fd4a83df1a169c"
+    },
+    {
+      "file": "hoenn-08/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "hoenn-08/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "hoenn-08/03-city-menu.png",
+      "sha256": "792ed8ecfac2d6e3dc7b49d61bf4eff385f6b6366a151ab09e65b08e3f05e56a"
+    },
+    {
+      "file": "hoenn-08/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "hoenn-08/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "hoenn-08/06-mother-welcome.png",
+      "sha256": "d5b2ebd5e8761b8a3d9ffe5c7fd9c4e4c6932a4b3cf350a8f6a23a18fb8f7eda"
+    },
+    {
+      "file": "hoenn-08/07-home-bedroom.png",
+      "sha256": "94071a41c60efd02d5fea9706c0453b7f8aadd9055648287a3fd4a83df1a169c"
+    },
+    {
+      "file": "hoenn-09/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "hoenn-09/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "hoenn-09/03-city-menu.png",
+      "sha256": "792ed8ecfac2d6e3dc7b49d61bf4eff385f6b6366a151ab09e65b08e3f05e56a"
+    },
+    {
+      "file": "hoenn-09/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "hoenn-09/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "hoenn-09/06-mother-welcome.png",
+      "sha256": "ce23569645415eff7354824209239e8e0f425aee838377129c43c4bf73fb8612"
+    },
+    {
+      "file": "hoenn-09/07-home-bedroom.png",
+      "sha256": "94071a41c60efd02d5fea9706c0453b7f8aadd9055648287a3fd4a83df1a169c"
+    },
+    {
+      "file": "hoenn-10/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "hoenn-10/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "hoenn-10/03-city-menu.png",
+      "sha256": "792ed8ecfac2d6e3dc7b49d61bf4eff385f6b6366a151ab09e65b08e3f05e56a"
+    },
+    {
+      "file": "hoenn-10/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "hoenn-10/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "hoenn-10/06-mother-welcome.png",
+      "sha256": "01309be3de8bed50d47748775c861c73d118a754c54958bf0a332f25b5efbf58"
+    },
+    {
+      "file": "hoenn-10/07-home-bedroom.png",
+      "sha256": "94071a41c60efd02d5fea9706c0453b7f8aadd9055648287a3fd4a83df1a169c"
+    },
+    {
+      "file": "hoenn-11/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "hoenn-11/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "hoenn-11/03-city-menu.png",
+      "sha256": "792ed8ecfac2d6e3dc7b49d61bf4eff385f6b6366a151ab09e65b08e3f05e56a"
+    },
+    {
+      "file": "hoenn-11/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "hoenn-11/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "hoenn-11/06-mother-welcome.png",
+      "sha256": "b252d65aafcc21c9f3b679be29e7c54897248b8a14a088daad35a278d63473b1"
+    },
+    {
+      "file": "hoenn-11/07-home-bedroom.png",
+      "sha256": "94071a41c60efd02d5fea9706c0453b7f8aadd9055648287a3fd4a83df1a169c"
+    },
+    {
+      "file": "hoenn-13/01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "hoenn-13/02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "hoenn-13/03-city-menu.png",
+      "sha256": "792ed8ecfac2d6e3dc7b49d61bf4eff385f6b6366a151ab09e65b08e3f05e56a"
+    },
+    {
+      "file": "hoenn-13/04-city-confirmation.png",
+      "sha256": "c643156929f32b4d617a0c21401e93d69179de4a6cb9be4e1cf77e518d70a16d"
+    },
+    {
+      "file": "hoenn-13/05-truck.png",
+      "sha256": "110ef94abdfda6adf7cb09d76b4ef4d30791f396dcce674c39968743cc526030"
+    },
+    {
+      "file": "hoenn-13/06-mother-welcome.png",
+      "sha256": "b0b8b8af91cf04eb44d2909d7579f54f29a24b299750ef3e99e3281ec0783dc0"
+    },
+    {
+      "file": "hoenn-13/07-home-bedroom.png",
+      "sha256": "94071a41c60efd02d5fea9706c0453b7f8aadd9055648287a3fd4a83df1a169c"
+    }
+  ],
+  "full_new_game_controller_cases": 30,
+  "all_ten_modified_boat_starts_tested": true,
+  "all_thirty_custom_start_cities_tested": true,
+  "original_littleroot_scene_covered_by_compiled_census_only": true,
+  "actual_cold_boot": true,
+  "controllers_only": true,
+  "no_game_memory_writes": true,
+  "no_callback_or_script_injection": true,
+  "components": [
+    {
+      "file": "sevii-00/arrival-coast-landing-case.json",
+      "sha256": "d5641b8c98b71d7d293ffb50795a4e2dc23fa5bb099b31336e5c284aae546c9c"
+    },
+    {
+      "file": "sevii-01/arrival-coast-landing-case.json",
+      "sha256": "14a8ba8296e3606ed2fcd3707463f6a59d64ff7ad160a88e01cc51f468383f95"
+    },
+    {
+      "file": "sevii-02/arrival-coast-landing-case.json",
+      "sha256": "b28d026753420338348b12f97ce1a843a7ac3e86cf87b26aa3cc3e3bc8f439c5"
+    },
+    {
+      "file": "sevii-03/arrival-coast-landing-case.json",
+      "sha256": "f9f059ec0cae01301b5ba5452c23ed6679cc1981908cf67a1b81db58a0a9aa8c"
+    },
+    {
+      "file": "sevii-04/arrival-coast-landing-case.json",
+      "sha256": "ccb86d172aa3125eb642f724d53f534e2407d31dd0259e388cdb03e5a8cc8685"
+    },
+    {
+      "file": "sevii-05/arrival-coast-landing-case.json",
+      "sha256": "837f1254c76f16b6301184cc701471f040781e6093f27c9efd4e66e0eef160ed"
+    },
+    {
+      "file": "sevii-06/arrival-coast-landing-case.json",
+      "sha256": "8affe158505538cd1486f7f39dc4202241f84e935ac881a3cbe92feb7998c77b"
+    },
+    {
+      "file": "hoenn-04/arrival-coast-landing-case.json",
+      "sha256": "fcfe8973fd093055d448d447ae99b41940db7bd26d46e49262489d687a94b834"
+    },
+    {
+      "file": "hoenn-12/arrival-coast-landing-case.json",
+      "sha256": "7b404bdadb0b5b26fe503c6282c229c3d01e5b44d17c528891f21400fbf553b0"
+    },
+    {
+      "file": "hoenn-14/arrival-coast-landing-case.json",
+      "sha256": "b9b4663c62e84eaaf4de6444906e88b8c172493fa8106b015b835e9349fc7753"
+    },
+    {
+      "file": "kanto-00/arrival-coast-landing-case.json",
+      "sha256": "3aa05bf9733414d20f8d3ce9df19965381cebf696ce84b48325a4a230fe22f21"
+    },
+    {
+      "file": "kanto-01/arrival-coast-landing-case.json",
+      "sha256": "22ec4b41bfc35518cee5aadec916d1b97507a70543fdd03b88b4a844abade855"
+    },
+    {
+      "file": "kanto-02/arrival-coast-landing-case.json",
+      "sha256": "bd27a9bd088c010af16d6dca8594878f9e23f9b7bdcc7891f305e5965891d2f5"
+    },
+    {
+      "file": "kanto-03/arrival-coast-landing-case.json",
+      "sha256": "1ed39be965fc2cba888200ffa3b0a90fa7043cc991e46364c8f01cb814da14ce"
+    },
+    {
+      "file": "kanto-04/arrival-coast-landing-case.json",
+      "sha256": "b7e4be47e8d2546deb63a63a8a6e6b2aa773012633321ff67db5e44f6aa47e5b"
+    },
+    {
+      "file": "kanto-05/arrival-coast-landing-case.json",
+      "sha256": "4db9cdb913fc0d666e67fcb9d57396f3ff32a358e920ad9ee2e446988e092ac2"
+    },
+    {
+      "file": "kanto-06/arrival-coast-landing-case.json",
+      "sha256": "6b9f20f56933758ec4013d5cb08a5918a51846e900cffd2b8ee576be9a5f408e"
+    },
+    {
+      "file": "kanto-07/arrival-coast-landing-case.json",
+      "sha256": "575934384f2f50a0f70fdd4ede71bb39f786e09b2c163a39fc016ecea94a7969"
+    },
+    {
+      "file": "kanto-08/arrival-coast-landing-case.json",
+      "sha256": "f6b7f601135112ca097c66bc62ee634aba50c510e1bcca7f3aa9d9b60446da34"
+    },
+    {
+      "file": "hoenn-01/arrival-coast-landing-case.json",
+      "sha256": "7233c4049282c74ff7d8d863a6b7d97eefd885f8397e14b5ae912513791dceb4"
+    },
+    {
+      "file": "hoenn-02/arrival-coast-landing-case.json",
+      "sha256": "bc8b2546847e827f88688f7a437e975d2c2c8cf4b65f0f9fce4a54a3a1eb2f67"
+    },
+    {
+      "file": "hoenn-03/arrival-coast-landing-case.json",
+      "sha256": "243dd3b85d05565578d9baa9a0b500baefe6c325d3e72e5ee26e4434b43eb76a"
+    },
+    {
+      "file": "hoenn-05/arrival-coast-landing-case.json",
+      "sha256": "6d4b136fb3a055c660e59d6d97506a5fb8e60288ed0e9d598dfa14a36a9205b8"
+    },
+    {
+      "file": "hoenn-06/arrival-coast-landing-case.json",
+      "sha256": "af4140eeab61f17fe403159c87e60e5aacc867eb7b728e8722fc7331d00bc99c"
+    },
+    {
+      "file": "hoenn-07/arrival-coast-landing-case.json",
+      "sha256": "fcb67d8b4c5182bbb0ba1f5b418ff85031867ff800e3372250ab4b0f9274c1e5"
+    },
+    {
+      "file": "hoenn-08/arrival-coast-landing-case.json",
+      "sha256": "272d22be8749dd1d974e6ae8da11512037f0279780930fc5eb923e16f61ae7ad"
+    },
+    {
+      "file": "hoenn-09/arrival-coast-landing-case.json",
+      "sha256": "910249e36c92af8f353266858707f3160814227e9a73b4994108acee3c6338fd"
+    },
+    {
+      "file": "hoenn-10/arrival-coast-landing-case.json",
+      "sha256": "59c537a0b81a5559193df099d7b4bd78d89b4e27bddc2bb65cf86f7c44f46d38"
+    },
+    {
+      "file": "hoenn-11/arrival-coast-landing-case.json",
+      "sha256": "2cf15b055981722131ff4cba4781427f8216bba7b9b0b86f67bfc001793bd36d"
+    },
+    {
+      "file": "hoenn-13/arrival-coast-landing-case.json",
+      "sha256": "3f38b12a121f95b8eef2c96bdfb2b7c7905229f2056e6f2bced6438359cae2fc"
+    }
+  ]
+}
