@@ -1,0 +1,161 @@
+{
+  "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+  "records": [
+    {
+      "route": "JourneySurfLink01000",
+      "town": "FourIsland_Frlg",
+      "before": {
+        "map": "JourneySurfLink01000",
+        "tile": [
+          14,
+          6
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "after": {
+        "map": "FourIsland_Frlg",
+        "tile": [
+          0,
+          33
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      }
+    },
+    {
+      "route": "JourneySurfLink05400",
+      "town": "TwoIsland_Frlg",
+      "before": {
+        "map": "JourneySurfLink05400",
+        "tile": [
+          14,
+          6
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "after": {
+        "map": "TwoIsland_Frlg",
+        "tile": [
+          0,
+          13
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      }
+    },
+    {
+      "route": "JourneySurfLink05301",
+      "town": "ThreeIsland_Port_Frlg",
+      "before": {
+        "map": "JourneySurfLink05301",
+        "tile": [
+          14,
+          6
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "after": {
+        "map": "ThreeIsland_Port_Frlg",
+        "tile": [
+          0,
+          13
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      }
+    },
+    {
+      "route": "JourneySurfLink05200",
+      "town": "SixIsland_Frlg",
+      "before": {
+        "map": "JourneySurfLink05200",
+        "tile": [
+          14,
+          6
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "after": {
+        "map": "SixIsland_Frlg",
+        "tile": [
+          0,
+          23
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      }
+    }
+  ],
+  "captures": [
+    {
+      "file": "JourneySurfLink01000-before-crossing.png",
+      "sha256": "08aa024d42d50fc112cfbe68e5c404ec30d9a9fa8d88d84897bc358fe42df4c5"
+    },
+    {
+      "file": "FourIsland_Frlg-after-crossing.png",
+      "sha256": "1654c6c55a50530d6929aa74982ae0a126f559b54a43488f9cb10c3a20183cf2"
+    },
+    {
+      "file": "JourneySurfLink05400-before-crossing.png",
+      "sha256": "f363823da5b8568e526d329cef7710630723b8626b09281a5316ae61f3dfb298"
+    },
+    {
+      "file": "TwoIsland_Frlg-after-crossing.png",
+      "sha256": "15f66be32d8ebfdf2f8fc3e68896072172fa5407b49c59c5acc52b8a14649c0d"
+    },
+    {
+      "file": "JourneySurfLink05301-before-crossing.png",
+      "sha256": "edf1ce593e286fc2706451860c587759e7fd8e14d4c103a2bb0a7ad227d22a07"
+    },
+    {
+      "file": "ThreeIsland_Port_Frlg-after-crossing.png",
+      "sha256": "a30ce1c9cd563f8238e57d6518b85cb412cb772f15327fe7410de7d3fa7a9eda"
+    },
+    {
+      "file": "JourneySurfLink05200-before-crossing.png",
+      "sha256": "db2a49d3c97f0063256831a9a4987eef55e6d3b483dadfb5cbc30df46205a06f"
+    },
+    {
+      "file": "SixIsland_Frlg-after-crossing.png",
+      "sha256": "c7123134ab46b689bd3b98c98ebccac6fc016467584814cccc208c2bff91669f"
+    }
+  ],
+  "initial_placement_progress_encounters_are_fixtures": true,
+  "no_midroute_camera_bank_or_vram_writes": true
+}

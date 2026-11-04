@@ -4,6 +4,12 @@ As quatro ROMs atuais são jogáveis. A validação completa de campanha continu
 
 ## 1. Interiores e regressão final de navegação
 
+A revisão 168 corrige dois bloqueios do Instituto do Clima e as câmeras de
+16 mapas costeiros. Há batalha/recompensa/entrada no ginásio/Continue nativos,
+32 travessias atuais e comparação de fonte de 92 conexões direcionais. As
+provas anteriores continuam históricas; isso não equivale a repetir todos os
+percursos do mundo na ROM mais recente. Veja [a revisão](../../docs/game-continuity-review.md).
+
 A correção desta revisão cadastra 145 andares de cavernas originais e remove o fallback incorreto para Petalburg nos quatro casos reportados. Os 56 mares gerados ativos e as rotas marítimas solicitadas têm viagens por controles, com retorno e save/Continue. A revisão final da campanha ainda deve conferir outros tipos de interiores e os acessos feitos durante as missões reais.
 
 ## 2. Campanha contínua e balanceamento
@@ -12,7 +18,14 @@ Concluir New Game até os dois Hall of Fame nas quatro edições, variando a reg
 
 Conferir dificuldade e diálogos nessas sessões e corrigir os problemas observados. As quantidades e níveis dos ginásios já têm testes específicos; isso não comprova o balanceamento de uma campanha inteira.
 
-## 3. Referências de equipes e mecânicas restantes
+## 3. Emulador específico
+
+A tela azul relatada no My Boy não foi reproduzida no mGBA. Continuam
+pendentes uma reprodução nesse emulador e a identificação da causa; os testes
+de boot com e sem bateria nas cinco edições não permitem declarar essa
+causa resolvida.
+
+## 4. Referências de equipes e mecânicas restantes
 
 O catálogo do PWT contém 162 inscrições. Quatorze equipes originais de Platinum possuem auditoria contra dados de origem fixados; 145 personagens dos jogos continuam sem essa conferência externa. Eren, Luffy e Ash são os três convidados adicionais, com referências próprias. Também falta fechar a cobertura de personagens de Legends Z-A. As equipes existem no jogo; a pendência é confirmar sua fidelidade às referências solicitadas.
 

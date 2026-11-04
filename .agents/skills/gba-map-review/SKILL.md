@@ -51,6 +51,8 @@ Consulte `errors/README.md` e os registros relevantes em `errors/` para não rep
 - Abrir uma conexão pode expor o interior de uma montanha na antiga borda do mapa. Reavalie faces e cantos nesse novo contexto, mesmo quando os tiles coincidem com upstream.
 - Água animada pode ocupar também a camada superior de um metatile de rocha ou praia. Confira cada referência e os pixels de todas as fases; preservar cegamente a camada superior pode conservar manchas de outra paleta.
 - Ao mover ou aposentar portos, audite os destinos de início de jogo e as posições da mãe/veículo, além de warps. Boot até o menu não prova a chegada: percorra a escolha da cidade até a cena inicial em terreno seco.
+- A câmera desenha partes dos vizinhos com os bancos do mapa atual. Ao ampliar um terminal, confira as peças do prédio antes de cruzar a divisa; o banco antigo da rota pode transformá-las em listras mesmo quando o arquivo da ilha está completo. Compare as bordas nas duas câmeras, incluindo atributos, fases e pixels visíveis.
+- Em missões obrigatórias, confira a presença do NPC pelo mesmo identificador usado no seletor do capítulo. Depois da batalha, acompanhe recompensa, saída, próxima porta e Continue: um script de transição pode avançar o estado da missão e tornar um predicado restrito ao estado anterior falso novamente.
 
 ## Revisão obrigatória antes de concluir
 

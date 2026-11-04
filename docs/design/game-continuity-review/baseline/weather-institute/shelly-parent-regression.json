@@ -1,0 +1,30 @@
+{
+  "kind": "shelly-campaign-parent-regression",
+  "passed": true,
+  "diagnostic": true,
+  "rom_sha256": "9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5",
+  "elf_sha256": "b441e07a811665f170114eba582e26165081a34d0077a7df6d2f1c46500c7b8e",
+  "hoenn_badges": 4,
+  "pending_event": 15,
+  "weather_state": 0,
+  "shelly_defeated": false,
+  "aqua_hidden": false,
+  "shelly_guard_result": 0,
+  "shelly_object_id": 16,
+  "object_count": 16,
+  "real_shelly_script_address": 137523135,
+  "map": "Route119_WeatherInstitute_2F",
+  "shelly_tile": [
+    4,
+    6
+  ],
+  "initial_badges_prior_quests_party_and_travel_are_fixtures": true,
+  "no_script_entry_battle_or_outcome_writes": true,
+  "expected_original_bug": "unfinishedWeatherInstituteevent15suppressesShellywhosevisibilityguardexpects14",
+  "captures": [
+    {
+      "file": "weather-institute-shelly-missing.png",
+      "sha256": "5e31865f866f454a09aa86abef1d74bb4825d51f0026111e657a572cb33e8838"
+    }
+  ]
+}

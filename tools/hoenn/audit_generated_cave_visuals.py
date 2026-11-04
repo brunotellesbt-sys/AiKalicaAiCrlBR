@@ -18,22 +18,9 @@ def sha(path):
 
 
 def creature(renderer, graphics):
-    name = re.fullmatch(r'OBJ_EVENT_GFX_SPECIES\((\w+)\)', graphics)[1].lower()
-    path = renderer.source / 'graphics/pokemon' / name / 'overworld.png'
-    if not path.exists():
-        parts = name.split('_')
-        for split in range(1, len(parts)):
-            candidate = renderer.source / 'graphics/pokemon' / '_'.join(parts[:split]) / '_'.join(parts[split:]) / 'overworld.png'
-            if candidate.exists():
-                path = candidate
-                break
-    original = Image.open(path)
-    width = height = original.height
-    assert width in (16, 32, 64, 128) and original.width >= width, (path, original.size)
-    frame = original.crop((0, 0, width, height))
-    result = frame.convert('RGBA')
-    result.putalpha(Image.frombytes('L', frame.size, bytes(255 if i else 0 for i in frame.tobytes())))
-    return result
+    # Species/form names are aliases, not reliable filesystem names. Resolve
+    # the same descriptor, frame table and transparency as the native game.
+    return renderer.sprite(graphics)
 
 
 def draw_map(renderer, name):

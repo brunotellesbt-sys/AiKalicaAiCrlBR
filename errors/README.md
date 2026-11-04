@@ -1,6 +1,7 @@
 # Registro de erros
 
 Antes de alterar terreno, água, pontes, encostas ou objetos compostos, consulte
+[campanha e câmeras costeiras](2026-11-04-campanha-e-cameras.txt),
 [fotos de chegada e costas](2026-11-02-fotos-chegada-e-costas.txt),
 [porta e ponte de Cinnabar](2026-11-02-video-cinnabar.txt),
 [floresta de Fuchsia e rotas 14/15](2026-11-02-video-floresta-fuchsia.txt),
