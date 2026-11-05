@@ -79,6 +79,14 @@ def report_dependencies(file, *, expected_sha=None, active=None):
         assert digest == row['sha256'], ('Proof attachment hash mismatch', source)
         assert path not in result, ('Duplicate attachment path', path)
         result[path] = source, digest
+    for row in report.get('battery_saves', []):
+        path = Path(relative_name(row['file']))
+        assert path.suffix == '.sav' and row['bytes'] == 131072, ('Invalid proof battery', path)
+        source = file.parent / path
+        raw = source.read_bytes()
+        assert len(raw) == row['bytes'] and hashlib.sha256(raw).hexdigest() == row['sha256'], ('Proof battery hash mismatch', source)
+        assert path not in result, ('Duplicate proof battery', path)
+        result[path] = source, row['sha256']
     for component in report.get('components', []):
         path = Path(relative_name(component['file']))
         assert path.suffix == '.json', ('A proof component must be a JSON report', path)

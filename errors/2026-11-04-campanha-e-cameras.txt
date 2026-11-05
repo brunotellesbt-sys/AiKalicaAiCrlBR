@@ -1,0 +1,92 @@
+REVISÃO DE CAMPANHA E CÂMERAS — 04/11/2026
+
+ESCOPO
+Continuação do jogo após a entrega 167. A parte do PR foi resolvida pelo
+usuário. Este trabalho trata dos defeitos confirmados abaixo; não representa
+uma campanha inteira jogada nem uma certificação visual de todo o mundo.
+
+1. INSTITUTO DO CLIMA — CHEFE OBRIGATÓRIA INVISÍVEL
+
+Reprodução confirmada na ROM 167:
+9ade93b456c32bc41868642dabb287e0297cba8ebbeda97aa478bd6b11c678f5
+
+Com quatro insígnias de Hoenn, requisitos anteriores cumpridos e a batalha
+de Shelly ainda pendente, o seletor da campanha devolve evento 15. A rotina
+que decide quais personagens aparecem comparava o script de Shelly com 14,
+o identificador da crise de Rayquaza. Shelly não era criada no mapa, embora
+a passagem à etapa seguinte exigisse resolver o Instituto do Clima.
+
+Mapa: Route119_WeatherInstitute_2F, personagem local 3, célula (4,6).
+Reprodução nativa: evento pendente 15; flag de esconder desativada; treinador
+não derrotado; visibilidade falsa; busca do objeto devolve 16 (não existe).
+O estado prévio, a equipe e a viagem inicial são fixtures declaradas. Nenhuma
+batalha ou resultado foi forçado na reprodução.
+
+Solução: compartilhar os nomes WEATHER_INSTITUTE=15 e RAYQUAZA=14
+entre seletor e visibilidade. Preservar os números dos eventos, os scripts,
+as flags, os saves, as equipes e as recompensas. As onze outras condições
+numéricas de visibilidade foram comparadas com seus seletores.
+
+O percurso completo encontrou outro bloqueio: o script nativo da Rota 119
+avança o estado do Instituto de 1 para 2 ao sair. O predicado de conclusão
+aceitava apenas 1 e voltava a bloquear o ginásio, apesar da vitória e de
+Castform já recebido. A conclusão agora aceita os estados posteriores a zero
+e continua exigindo a flag de derrota de Shelly.
+
+Prova final: 447 tiles por controles, Shelly presente, desafio por A, batalha
+vencida sem escrever resultado/atributos, Castform recebido, saída pela rota,
+entrada real no ginásio de Fortree, retorno ao Instituto e save/Continue.
+O estado 2 e a recompensa persistem; Shelly não reaparece duplicada.
+
+2. PORTOS DESFIGURADOS ANTES DE CRUZAR A DIVISA
+
+Confirmado na mesma ROM em Four, Two, Three e Six Island. Aproximando-se por
+Surf, o porto aparece com listras ou peças de outros prédios; ao atravessar
+a divisa da ilha, a construção reaparece corretamente.
+
+Causa: a câmera da rota desenha também o terreno do mapa vizinho, usando os
+seus próprios bancos gráficos. Os blocos ampliados dos terminais existem no
+banco integrado da ilha, mas não no banco secundário carregado pela rota.
+Conferir somente o arquivo da ilha ou a imagem depois de atravessar oculta
+esse problema. A água pode sofrer a mesma inconsistência de banco/paleta.
+
+Solução: atribuir bancos já existentes e compatíveis às rotas
+afetadas, com comparação do terreno próprio e das bordas de todos os vizinhos.
+Não redesenhar ilhas, portos ou mapa-múndi para corrigir a seleção do banco.
+
+Foram ajustadas somente as atribuições de bancos em 16 layouts. O censo
+compara 92 conexões direcionais afetadas, nas duas câmeras, incluindo oito
+colunas ou seis fileiras do vizinho. Pixels e atributos do terreno próprio
+permanecem iguais; não houve mudança de blockdata, evento, conexão ou callback.
+
+Prova final na ROM: 16 travessias de ida e volta (32 mudanças de mapa),
+304 capturas e os oito quadros dos três grupos de água. Os blocos gráficos
+dos vizinhos são comparados com as palavras BG reais, VRAM, paletas e pixels
+de tela. A prova nativa cobre 16 percursos; as 92 conexões têm a comparação
+de fonte, não 92 travessias novas. Todas as imagens constam em captures.
+
+3. MÉTODO DE REVISÃO
+
+- A existência de uma batalha obrigatória não garante que seu NPC apareça.
+  Conferir seletor, presença, interação, resolução e desbloqueio em sequência.
+- Usar nomes compartilhados para identificadores de eventos, conservando a ABI.
+- Uma construção inteira no arquivo da ilha pode estar errada na câmera da rota.
+  Comparar também as peças do vizinho com o banco efetivamente carregado.
+- Render sem NPCs que falharam não é uma revisão visual completa. Resolver as
+  constantes e os arquivos nativos; registrar explicitamente qualquer omissão.
+- Prova histórica continua histórica. Relatório novo precisa apontar aos bytes
+  da ROM efetivamente executada e distinguir fixtures de progressão real.
+
+ESTADO FINAL DAS REPRODUÇÕES
+Os dois bloqueios de campanha e as câmeras descritas passaram na ROM-base
+cd91b1a3b8b783fe860c6668a7efcc741e847d198f0363b2288e382045e55479
+e ELF ab5dbf1fbb10d335adde96a972e352d4a1f3a35158cc1513ee67bd71d6ee5103.
+Provas: mods/hoenn/game-continuity-review-validation/common/{campaign,coasts}/.
+A publicação exige as provas de fonte, as duas provas nativas e a abertura/
+regras das cinco edições, verificadas também depois da cópia para o pacote.
+
+PENDÊNCIAS DISTINTAS
+Continuam fora desta conferência as quatro campanhas completas com atributos
+normais, a auditoria externa das equipes restantes do PWT e as demais
+mecânicas ainda sem exercício. A causa da tela azul específica do My Boy
+continua sem reprodução; abertura no mGBA não comprova essa causa resolvida.

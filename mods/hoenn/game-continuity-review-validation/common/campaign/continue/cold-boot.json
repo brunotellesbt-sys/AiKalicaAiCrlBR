@@ -1,0 +1,178 @@
+{
+  "passed": true,
+  "rom_sha256": "cd91b1a3b8b783fe860c6668a7efcc741e847d198f0363b2288e382045e55479",
+  "fresh_rom_boot_to_title": true,
+  "fresh_rom_title_to_new_game": true,
+  "no_assert_screen": true,
+  "controllers_only": true,
+  "no_game_memory_writes": true,
+  "bundled_save_tested": true,
+  "runs": [
+    {
+      "battery": false,
+      "frames": 2464,
+      "samples": [
+        {
+          "frame": 1200,
+          "callback": "MainCB2_Intro"
+        },
+        {
+          "frame": 1201,
+          "callback": "MainCB2_EndIntro"
+        },
+        {
+          "frame": 1291,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1591,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1592,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1682,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1683,
+          "callback": "CB2_GoToMainMenu"
+        },
+        {
+          "frame": 1773,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2073,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2074,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2164,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2464,
+          "callback": "CB2_MainMenu"
+        }
+      ],
+      "fresh_rom_boot_to_title": true,
+      "fresh_rom_title_to_new_game": true,
+      "new_game_tasks": [
+        "Task_HandleMultichoiceInput",
+        "Task_JourneyIntroRegion"
+      ]
+    },
+    {
+      "battery": true,
+      "frames": 3664,
+      "samples": [
+        {
+          "frame": 1200,
+          "callback": "MainCB2_Intro"
+        },
+        {
+          "frame": 1201,
+          "callback": "MainCB2_EndIntro"
+        },
+        {
+          "frame": 1291,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1591,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1592,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1682,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1683,
+          "callback": "CB2_GoToMainMenu"
+        },
+        {
+          "frame": 1773,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2073,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2074,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2164,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3064,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3664,
+          "callback": "CB2_Overworld"
+        }
+      ],
+      "bundled_save_continue_to_field": true,
+      "field_map": [
+        32,
+        1
+      ],
+      "weather_state": 2,
+      "shelly_defeated": true,
+      "castform_received": true,
+      "party_count": 4,
+      "hoenn_badges": 4,
+      "kanto_badges": 4,
+      "active_objects": [
+        {
+          "local_id": 255,
+          "map_id": [
+            32,
+            1
+          ],
+          "tile": [
+            5,
+            8
+          ]
+        }
+      ],
+      "local_id_counts": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0
+      },
+      "shelly_instances": 0,
+      "no_duplicate_local_ids": true,
+      "player_tile": [
+        5,
+        8
+      ],
+      "player_elevation": 3,
+      "player_surfing": false,
+      "controllers_only": true,
+      "no_game_memory_writes": true,
+      "no_callback_script_or_native_call_injection": true
+    }
+  ],
+  "bundled_save_continue_to_field": true,
+  "bundled_save_sha256": "95a2e078d74ac8e10a8316b42617c3950e252f3b8b422e2b2ba266e7a53fe206"
+}

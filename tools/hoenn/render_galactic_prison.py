@@ -12,17 +12,10 @@ def render(source,output):
     layout=renderer.layouts[m['layout']]
     for event in m['object_events']:
         gfx=event['graphics_id']
-        if gfx.startswith('OBJ_EVENT_GFX_JOURNEY_'):
-            key=gfx.removeprefix('OBJ_EVENT_GFX_JOURNEY_').lower()
-            path=source/'graphics/object_events/pics/people'/('journey_'+key+'.png');w,h=16,32
-        elif gfx.startswith('OBJ_EVENT_GFX_SPECIES('):
-            key=gfx.split('(',1)[1].rstrip(')').lower()
-            path=source/'graphics/pokemon'/key/'overworld.png';w=h=64
-        else:continue
-        frame=Image.open(path).crop((0,0,w,h));sprite=frame.convert('RGBA')
-        if frame.mode=='P':
-            mask=Image.new('L',frame.size);mask.putdata([0 if i==0 else 255 for i in frame.get_flattened_data()]);sprite.putalpha(mask)
-        room.paste(sprite,(event['x']*16+8-w//2,event['y']*16+16-h),sprite)
+        sprite=renderer.sprite(gfx)
+        dx,dy=renderer.sprite_offset(gfx)
+        room.paste(sprite,(event['x']*16+8-sprite.width//2+dx,
+                          event['y']*16+16-sprite.height+dy),sprite)
     # Source rendering normally flattens the layers. Reapply only the cage's
     # transparent foreground, as the GBA does above the prisoner sprites.
     metas=renderer.tileset(layout['secondary_tileset'])

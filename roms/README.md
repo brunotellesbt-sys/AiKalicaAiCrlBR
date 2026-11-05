@@ -1,6 +1,6 @@
 # ROMs atuais
 
-Atualização atual: [chegadas, florestas e costas — camada 167](../docs/arrival-coast-review.md). Corrige os inícios no mar, a saída do terminal de Cinnabar, as bases da floresta de Fuchsia/rotas 14–15 e o acabamento de One Island. As quatro edições e a TESTE recebem os mesmos mapas; a TESTE continua sem encontros aleatórios nem abordagens automáticas. [Registros em TXT](../errors/README.md).
+Atualização atual: [continuidade da campanha e câmeras costeiras — camada 168](../docs/game-continuity-review.md). Corrige dois bloqueios do Instituto do Clima e as câmeras de 16 mapas, mantendo as correções anteriores de chegadas e terreno. As quatro edições e a TESTE recebem os mesmos ajustes; a TESTE continua sem encontros aleatórios e abordagens automáticas. [Registros em TXT](../errors/README.md).
 
 Conserva a [competição da 18ª insígnia, rivais por personagem e região inicial e Galactic na 22ª](../docs/badge-story.md). A vitória na competição libera ambas as Ligas com 18 insígnias. Eren e Luffy usam a mesma escala dos outros rivais. Mantém os [24 ginásios](../docs/ginasios-extras-e-travessias.md), os terminais integrados e as [correções costeiras](../docs/coastal-closures.md).
 
