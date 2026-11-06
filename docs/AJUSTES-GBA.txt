@@ -16,6 +16,17 @@ nove vídeos de 28/10 fica em errors/2026-10-28-videos-surf-tiles.txt.
 9. Executar testes, navegador e stage_pages. Abrir PR normal ao concluir tudo.
 Não redesenhar o mapa-múndi nem mexer em prédios/NPCs/rotas fora do pedido.
 
+[OBJETOS E CANTOS — REVISÃO 170]
+Registro: errors/2026-11-06-objetos-e-cantos-costeiros.txt.
+Não tratar comportamento Surf como prova de água pura: o mesmo bloco pode
+carregar a face da encosta ou a espuma da praia na camada superior. Preservar
+o objeto completo. Auditar também rochas redondas, angulares e fundidas à
+encosta; usar apenas a família110/111/118/119 deixou outras metades intactas.
+Censo sem IDs contraditórios não prova compatibilidade gráfica: comparar os
+oito words, paletas, atributos, gráficos e callback e observar os pixels reais.
+Decoração feita como ator precisa existir na câmera do vizinho antes da
+primeira entrada. Conferir identidade, alcance, descarregamento e Continue.
+
 [CANTOS MARÍTIMOS E SAVES — REVISÃO 169]
 Registro: errors/2026-11-05-limites-e-acesso-one-island.txt.
 Uma borda pode mudar mesmo com bancos iguais: a câmera carrega vizinhos

@@ -1,6 +1,6 @@
 # Pokémon Journey — quatro edições GBA
 
-Atualização atual: [limites marítimos e acesso sul de One Island — camada 169](../../../docs/sevii-route-boundaries.md). Completa as laterais com pedras, corrige os cantos reproduzidos do Sea 36 e permite contornar Treasure Beach por Surf, chegar ao cais e entrar em One Island. Inclui migração da posição de saves 168 no cais. Mantém as correções do Instituto do Clima, portos, árvores e praias. [Causas, soluções e prevenção em TXT](../../../errors/2026-11-05-limites-e-acesso-one-island.txt).
+Atualização atual: [objetos inteiros e continuidade costeira — camada 170](../../../docs/coast-scenery-review.md). Corrige rochas incompletas, recompõe encostas e praias e alinha as câmeras de outras curvas do oceano. A TESTE mantém os mesmos mapas, sem encontros aleatórios nem abordagem automática de treinadores. [Causas, soluções e prevenção em TXT](../../../errors/2026-11-06-objetos-e-cantos-costeiros.txt).
 
 Conserva a [competição da 18ª insígnia, rivais e capítulo Galactic na 22ª](../../../docs/badge-story.md). A vitória na competição da Battle Frontier libera as duas Ligas com 18 insígnias; o capítulo Galactic passa para 22. Os rivais seguem o personagem e a região inicial, e os sprites de Eren e Luffy usam a escala dos outros rivais.
 

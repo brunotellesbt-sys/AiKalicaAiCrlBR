@@ -1,26 +1,20 @@
 """Check released bytes and native map evidence, rather than source snippets."""
-import hashlib,json,unittest,struct,zlib
+import hashlib,io,json,unittest
 from pathlib import Path
+from PIL import Image
 from verify_playable import verify
 ROOT=Path(__file__).resolve().parents[2]
 EVIDENCE=ROOT/'mods/hoenn/playable-validation'
 def png_colors(path,positions=()):
- raw=Path(path).read_bytes();at=8;data=b''
- while at<len(raw):
-  size=struct.unpack_from('>I',raw,at)[0];kind=raw[at+4:at+8];chunk=raw[at+8:at+8+size];at+=size+12
-  if kind==b'IHDR':w,h,depth,color,*_=struct.unpack('>IIBBBBB',chunk);assert (depth,color)==(8,2)
-  elif kind==b'IDAT':data+=chunk
- data=zlib.decompress(data);previous=bytearray(w*3);colors=set();samples={};at=0
- for y in range(h):
-  filt=data[at];row=bytearray(data[at+1:at+1+w*3]);at+=w*3+1
-  for i in range(len(row)):
-   a=row[i-3] if i>=3 else 0;b=previous[i];c=previous[i-3] if i>=3 else 0
-   predictor=a+b-c;dist=[abs(predictor-v) for v in [a,b,c]];paeth=[a,b,c][dist.index(min(dist))]
-   row[i]=(row[i]+[0,a,b,(a+b)//2,paeth][filt])&255
-  for x,yy in positions:
-   if yy==y:samples[(x,yy)]=tuple(row[x*3:x*3+3])
-  colors.update(tuple(row[i:i+3]) for i in range(0,len(row),3));previous=row
- return samples if positions else colors
+ # Pillow is already pinned for the native-asset checks. Decode PNG filters
+ # once in its native implementation instead of running Paeth per byte in
+ # Python for every large map. Keep the original 8-bit RGB requirement and
+ # the same exact color/sample assertions.
+ raw=Path(path).read_bytes()
+ assert raw[:8]==b'\x89PNG\r\n\x1a\n' and raw[12:16]==b'IHDR' and raw[24:26]==b'\x08\x02'
+ with Image.open(io.BytesIO(raw)) as image:
+  assert image.mode=='RGB'
+  return {point:image.getpixel(point) for point in positions} if positions else set(image.getdata())
 
 class PlayableAlpha(unittest.TestCase):
  def test_exported_rom_matches_all_validation_evidence(self):

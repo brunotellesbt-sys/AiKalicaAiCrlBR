@@ -1,6 +1,6 @@
 # ROMs atuais
 
-Atualização atual: [limites marítimos e acesso sul de One Island — camada 169](../docs/sevii-route-boundaries.md). Completa bordas de pedra, corrige os cantos reproduzidos do Sea 36 e abre o contorno de Treasure Beach por Surf até One Island, com migração de posição para saves 168 no cais. As quatro edições e a TESTE recebem os mesmos ajustes; a TESTE continua sem encontros aleatórios e abordagens automáticas. [Registros em TXT](../errors/README.md).
+Atualização atual: [objetos inteiros e continuidade costeira — camada 170](../docs/coast-scenery-review.md). Corrige rochas incompletas e peças de encosta/praia, mantém a decoração visível antes da travessia e alinha outras curvas do oceano. As quatro edições e a TESTE recebem os mesmos ajustes; a TESTE continua sem encontros aleatórios e abordagens automáticas. [Registro em TXT](../errors/2026-11-06-objetos-e-cantos-costeiros.txt).
 
 Conserva a [competição da 18ª insígnia, rivais por personagem e região inicial e Galactic na 22ª](../docs/badge-story.md). A vitória na competição libera ambas as Ligas com 18 insígnias. Eren e Luffy usam a mesma escala dos outros rivais. Mantém os [24 ginásios](../docs/ginasios-extras-e-travessias.md), os terminais integrados e as [correções costeiras](../docs/coastal-closures.md).
 

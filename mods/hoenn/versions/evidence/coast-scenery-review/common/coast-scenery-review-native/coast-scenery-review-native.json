@@ -1,0 +1,31 @@
+{
+  "kind": "coast-scenery-review-native",
+  "passed": true,
+  "rom_sha256": "6a70d43313df75d2258c5bac46d7ab8c0aa50b6e4f1a7246d540159ee726d5fc",
+  "elf_sha256": "df384a54339cbd4de07c187592208ef4999636f095856e34aa4c1a47e5303545",
+  "components": [
+    {
+      "kind": "coast-scenery-corners-native",
+      "file": "corners/corners.json",
+      "sha256": "6c901141dd9c26c78c60291fe98f50bedf09c85f77c9036b6181db93c0ffbdd7"
+    },
+    {
+      "kind": "coast-scenery-objects-native",
+      "file": "objects/objects.json",
+      "sha256": "d510fba1d8344f29c6bcc5e7fd71df00e108008fce89e908188ad0da74514eb6"
+    },
+    {
+      "kind": "sevii-route-boundaries-native",
+      "file": "surf-regression/sevii-route-boundaries-native.json",
+      "sha256": "f9de47500bea1dffa699de353b0309658fe1a1effca12180f7e41ea78284894e"
+    }
+  ],
+  "complete_objects": true,
+  "camera_cases": true,
+  "collision_controls": true,
+  "animation_checks": true,
+  "cold_save": true,
+  "frozen_source_and_artifact_unchanged": true,
+  "initial_placements_progress_and_encounter_suppression_are_fixtures": true,
+  "full_campaign_playthrough": false
+}

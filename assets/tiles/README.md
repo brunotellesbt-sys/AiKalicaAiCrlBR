@@ -4,6 +4,11 @@ Catálogo local com recortes dos tiles reais da camada 162. As imagens são rend
 
 [Catálogo visual](catalogo-visual.png) · [Dados completos](catalogo.json) · [Guia de ajustes](../../docs/AJUSTES-GBA.txt)
 
+[Rochas e composição costeira da revisão 170](costas-170/catalogo.json)
+acrescenta cinco famílias nativas com nomes, banco, mapa doador, composição,
+altura/colisão e hashes. A variante fundida à encosta exige o relevo vizinho;
+não é uma rocha isolada para colar sobre água vazia.
+
 Os nomes separam **Emerald** de **FRLG**. IDs, paletas, altura e comportamento pertencem ao tileset indicado, não são universais. `catalogo.json` contém mapa doador, coordenadas, oito referências gráficas por metatile e hashes.
 
 `native/` conserva os gráficos 8×8 indexados `.4bpp`, as paletas `.pal` e os frames nativos usados. Cada referência aponta para seu arquivo correto. `source.png` é um preview RGB; para implementar, use os dados indexados e preserve atributos, flips e callbacks. Os arquivos de animação declaram slot inicial e quantidade de gráficos no catálogo.

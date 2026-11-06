@@ -1,0 +1,99 @@
+REVISÃO 170 — OBJETOS INTEIROS E CONTINUIDADE DAS COSTAS
+
+PEDIDO
+Procurar os mesmos defeitos em outros locais, corrigir e continuar o projeto.
+Conservar o desenho do mapa-múndi. Atualizar as cinco ROMs, save da TESTE,
+ZIP e jogador web. Abrir o PR somente ao terminar a validação.
+
+ERROS CONFIRMADOS E SOLUÇÕES
+1. Rochas incompletas após o preenchimento da borda na revisão 169.
+   Locais: Kindle Road, Two Island Harbor, Three Island Port e Four Island.
+   Causa: o perímetro trocou só um lado de objetos nativos de 2x2 tiles.
+   Foram identificados 38 objetos em cinco famílias, incluindo rochas redondas,
+   angulares e uma rocha fundida à encosta. Os 37 objetos isolados recebem
+   pedras pequenas nativas inteiras em toda a antiga área de 2x2. A rocha
+   fundida à encosta conserva o topo e recupera as duas peças inferiores.
+   Altura e colisão de cada uma dessas células permanecem iguais à revisão169.
+
+2. Encostas e praias apagadas por uma regra que só verificava água navegável.
+   Locais: One, Three, Four, Six e Seven Island, além de Kindle Road.
+   Causa: um metatile de água também pode conter parte da encosta ou da praia
+   na camada superior. Não é um espaço vazio para pintar com pedrinhas.
+   Solução: recuperar 61 peças de encosta e nove peças de praia a partir dos
+   blocos originais registrados no marcador imutável da revisão 169.
+   Preservar a altura e o bloqueio atuais. A arte nativa mantém seus slots
+   e callback de animação; não copiar pixels estáticos de água ou espuma.
+
+3. Pedra permanente de One Island ausente na câmera da rota vizinha.
+   Reprodução: entrar em JourneySurfLink05000, aproximar-se de One Island,
+   atravessar e voltar. Antes, a pedra só aparecia depois da primeira entrada.
+   Causa: era um objeto gráfico e o spawn normal só lia os atores do mapa atual.
+   Solução: carregar a decoração dedicada também a partir da conexão visível,
+   com o mesmo localID4, mapa proprietário, flag, alcance e ciclo de remoção.
+   Não se generaliza esse comportamento a treinadores ou objetos interativos.
+   Preservam-se a encosta sob a pedra, eventos e formato dos saves.
+
+4. Pedras que viravam água após atravessar outras curvas do oceano.
+   Locais reproduzidos: Five Island, faixa costeira de Kanto, canal21,
+   Fill30Right, Fill31Right, WorldSea03 e WorldSea06/07. Mossdeep também
+   entra no controle de consistência. JourneySurfLink03104 contém um caso
+   da inspeção de fonte fora da câmera observada; não é chamado de vídeo
+   reproduzido nem de defeito visível comprovado.
+   Causa: dois caminhos de conexões projetavam água e rocha no mesmo canto.
+   Solução: alinhar 118 células de água com as rochas nativas já existentes
+   na outra projeção. O censo de 107 células contraditórias passa a zero.
+   Conferir os componentes globais e os vãos físicos de Surf: um pequeno
+   trecho local de NorthSea mantém o retorno pelo vizinho ao sul.
+
+5. Compatibilidade gráfica de Tanoby ainda falhava no teste nativo.
+   Fonte com IDs iguais não basta: General_Frlg e JourneySeviiSea desenham
+   os quatro quartos dessa rocha com nibbles diferentes de paleta (6 e4).
+   Solução: WorldSea06 e WorldSea07 passam a usar JourneySeviiSea, como
+   a encosta vizinha. Conferir cada metatile primário já usado nos dois mapas:
+   seus oito words são idênticos entre os bancos. Gráficos, paletas, atributos,
+   callback, banco secundário, terreno e coordenadas continuam iguais.
+   Não afrouxar a função de compatibilidade para aceitar arte diferente.
+   A câmera também limitava essa consulta aos grupos originais de rotas.
+   Incluir rotas oceânicas do banco costeiro dedicado nessa consulta visual;
+   manter intactos colisão, altura, células indefinidas e regras de movimento.
+
+VERIFICAÇÃO E IDENTIDADE
+ROM base final: 6a70d43313df75d2258c5bac46d7ab8c0aa50b6e4f1a7246d540159ee726d5fc
+ELF final: df384a54339cbd4de07c187592208ef4999636f095856e34aa4c1a47e5303545
+TESTE final: 00bf3d1a221128382e70fa556076421c8ccabc2f401aceb891828c2af5ae40af
+
+Os resultados finais e hashes ficam em:
+mods/hoenn/coast-scenery-review-validation/common/source/
+mods/hoenn/coast-scenery-review-validation/common/native/
+mods/hoenn/coast-scenery-review-validation/editions/
+mods/hoenn/versions/versions.json
+O manifesto final deve informar validation_scope=coast-scenery-review,
+170 camadas, cinco ROMs verificadas e os hashes das provas correspondentes.
+Os renders inteiros de fonte e as capturas do emulador têm identificação
+separada. Provas preliminares e históricas não certificam a ROM final.
+
+MÉTODO REUTILIZÁVEL
+1. Localizar mapa, posição, direção e SHA; consultar o banco e objeto inteiro.
+2. Comparar os dois lados da conexão e a diagonal, inclusive bordas indefinidas.
+3. Identificar todas as famílias do objeto, não só110/111/118/119.
+4. Separar água pura de água com praia, encosta ou rocha na camada superior.
+5. Conferir integridade de terreno e eventos, vãos e componentes de navegação.
+6. Compilar e testar BG/OAM/VRAM e pixels nas duas câmeras, indo e voltando
+   pelos controles. Colisão/altura e aparência precisam de provas distintas.
+7. Testar remoção, reaparição e duplicação de decoração e Continue com bateria.
+8. Congelar ROM/ELF antes das cinco edições. Repetir as provas se houver rebuild.
+
+PROMPTS COMPLETOS PARA AJUSTES FUTUROS
+"Na ROM [SHA], em [mapa,x,y], indo para [direção], [objeto] muda ao atravessar
+para [mapa,x,y]. Corrija o objeto completo e a projeção dos vizinhos. Preserve
+eventos, terreno seco, mapa-múndi e formato de save. Prove ida, volta, colisão,
+animação e Continue nas cinco edições; registre a causa e atualize os artefatos."
+
+"Audite os objetos compostos de [mapas] nas famílias do catálogo e nos bancos
+reais. Examine as duas camadas e o contexto original. Recupere a geometria
+completa; não substitua praia/encosta só porque o comportamento contém água."
+
+LIMITES
+Este recorte examina 284 mapas marítimos e seus vizinhos. Os testes de percurso
+e cenas são casos identificados; não equivalem a quatro campanhas completas
+nem à certificação visual de todas as cavernas e interiores do jogo.
