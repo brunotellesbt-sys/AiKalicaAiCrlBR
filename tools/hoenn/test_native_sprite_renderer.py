@@ -146,6 +146,17 @@ const u16 gShinyOverworldPalette_{token}[] = INCBIN_U16("graphics/pokemon/{folde
         (self.source/'graphics/npc_3.gbapal').write_bytes(raw[:30])
         with self.assertRaises(AssertionError):MapRenderer(self.source).sprite('OBJ_EVENT_GFX_CASE_ALIAS')
 
+    def test_frame_count_dimensions_do_not_override_native_oam_shape(self):
+        path=self.source/'src/data/object_events/object_event_pic_tables.h'
+        text=path.read_text()
+        path.write_text(text.replace('Pic_Reordered,2,2,','Pic_Reordered,1,4,'))
+        image=MapRenderer(self.source).sprite('OBJ_EVENT_GFX_REORDERED',1)
+        self.assertEqual(image.size,(16,16))
+        self.assertEqual(image.getpixel((1,1)),(*self.colors[2],255))
+        self.assertEqual(image.getpixel((15,15)),(*self.colors[3],255))
+        path.write_text(text.replace('Pic_Reordered,2,2,','Pic_Reordered,1,3,'))
+        with self.assertRaises(AssertionError):MapRenderer(self.source).sprite('OBJ_EVENT_GFX_REORDERED')
+
     def test_relative_frame_bounds_reject_partial_or_missing_frames(self):
         self.assertIsNotNone(shutil.which('cpp'),'Native C preprocessor is required')
         renderer=MapRenderer(self.source)

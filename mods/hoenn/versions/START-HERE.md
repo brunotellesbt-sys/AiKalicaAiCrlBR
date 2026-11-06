@@ -1,6 +1,6 @@
 # Pokémon Journey — quatro edições GBA
 
-Atualização atual: [continuidade da campanha e câmeras costeiras — camada 168](../../../docs/game-continuity-review.md). Corrige a presença de Shelly e a conclusão do Instituto do Clima após sair pela Rota 119, além dos bancos de câmera de 16 mapas. Mantém os ajustes anteriores de chegadas, árvores, encostas e Surf. [Causas, soluções e prevenção em TXT](../../../errors/2026-11-04-campanha-e-cameras.txt).
+Atualização atual: [limites marítimos e acesso sul de One Island — camada 169](../../../docs/sevii-route-boundaries.md). Completa as laterais com pedras, corrige os cantos reproduzidos do Sea 36 e permite contornar Treasure Beach por Surf, chegar ao cais e entrar em One Island. Inclui migração da posição de saves 168 no cais. Mantém as correções do Instituto do Clima, portos, árvores e praias. [Causas, soluções e prevenção em TXT](../../../errors/2026-11-05-limites-e-acesso-one-island.txt).
 
 Conserva a [competição da 18ª insígnia, rivais e capítulo Galactic na 22ª](../../../docs/badge-story.md). A vitória na competição da Battle Frontier libera as duas Ligas com 18 insígnias; o capítulo Galactic passa para 22. Os rivais seguem o personagem e a região inicial, e os sprites de Eren e Luffy usam a escala dos outros rivais.
 
@@ -26,7 +26,7 @@ Inclui a [correção do rio de Fallarbor](../../../docs/fallarbor-river.md): pra
 [Novo porto de Sootopolis](../../../docs/porto-sootopolis.md): ponte ligada à terra,
 terminal com capitão da rede mundial e submarino ampliado. Validado nas quatro edições.
 
-Escolha uma edição e comece um save novo. A Bag ampliada muda o formato do save; saves antigos não são compatíveis com esta entrega. Todas as edições possuem Kanto, Hoenn, Sevii e o capítulo Galactic.
+Escolha uma edição e mantenha um backup do save original. Saves anteriores à ampliação da Bag usam outro formato e exigem Nova Partida. Esta revisão também valida uma bateria 168 no cais de Treasure Beach: a posição acompanha a ampliação uma única vez, inclusive após salvar e continuar novamente. Essa prova não certifica todas as builds antigas. Todas as edições possuem Kanto, Hoenn, Sevii e o capítulo Galactic.
 
 No repositório, as quatro ROMs atuais também ficam em [`roms/`](../../../roms/README.md), atualizadas automaticamente pelo empacotamento e conferidas pela CI.
 

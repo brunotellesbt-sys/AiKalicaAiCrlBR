@@ -1,6 +1,6 @@
 # ROMs atuais
 
-Atualização atual: [continuidade da campanha e câmeras costeiras — camada 168](../docs/game-continuity-review.md). Corrige dois bloqueios do Instituto do Clima e as câmeras de 16 mapas, mantendo as correções anteriores de chegadas e terreno. As quatro edições e a TESTE recebem os mesmos ajustes; a TESTE continua sem encontros aleatórios e abordagens automáticas. [Registros em TXT](../errors/README.md).
+Atualização atual: [limites marítimos e acesso sul de One Island — camada 169](../docs/sevii-route-boundaries.md). Completa bordas de pedra, corrige os cantos reproduzidos do Sea 36 e abre o contorno de Treasure Beach por Surf até One Island, com migração de posição para saves 168 no cais. As quatro edições e a TESTE recebem os mesmos ajustes; a TESTE continua sem encontros aleatórios e abordagens automáticas. [Registros em TXT](../errors/README.md).
 
 Conserva a [competição da 18ª insígnia, rivais por personagem e região inicial e Galactic na 22ª](../docs/badge-story.md). A vitória na competição libera ambas as Ligas com 18 insígnias. Eren e Luffy usam a mesma escala dos outros rivais. Mantém os [24 ginásios](../docs/ginasios-extras-e-travessias.md), os terminais integrados e as [correções costeiras](../docs/coastal-closures.md).
 

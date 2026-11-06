@@ -1,0 +1,98 @@
+LIMITES MARÍTIMOS, CÂMERAS E ACESSO SUL DE ONE ISLAND — 05/11/2026
+
+RESUMO
+Fotos 349083/349081/349078/349080: limites interrompidos, pedras que só
+apareciam depois da mudança de mapa e ausência de acesso pelo sul de One.
+KANTO-SEVII SEA 36 identifica JourneySurfLink03500..03505; não existe um
+mapa chamado JourneyWorldSea36. O desenho do mapa-múndi foi preservado.
+
+1. PEDRAS QUE APARECIAM SOMENTE APÓS A TRAVESSIA
+Reprodução na ROM 168: cd91b1a3b8b783fe860c6668a7efcc741e847d198f0363b2288e382045e55479.
+No mapa JourneySurfLink03502, jogador(4,0), a célula(-1,1) mostra água
+vinda de JourneySurfLink03501(111,1). Ao subir para03503(1,65), o mesmo
+ponto físico(-4,67) passa a mostrar a borda de pedras. Há outro caso na
+saída oeste03502(0,1)→03501(111,1). Os dois foram reproduzidos no mGBA.
+
+Causa: a montagem nativa carrega retângulos dos vizinhos diretos. Na curva,
+a parte do terceiro mapa que aparece na diagonal fica indefinida e recebe
+a borda repetida do mapa atual. Conferir apenas bancos de tiles não detecta
+esse caso: os mapas das duas reproduções já usam o mesmo formato FRLG.
+
+Solução: resolver somente a arte dessas células consultando até dois saltos
+de conexões. Conferir banco, atributos, gráficos e paleta; rejeitar candidatos
+contraditórios. A célula de movimento continua indefinida: colisão, altura e
+GetMapBorderIdAt não são liberados para criar uma travessia inexistente.
+Pedras pequenas e os quatro quadrantes das grandes também têm tradução
+explícita nas conexões marítimas entre os formatos FRLG e Emerald.
+
+2. LATERAIS SEM LIMITES VISÍVEIS
+Conferência de fonte em284 mapas: completar apenas água nas bordas externas
+sem conexão real. Usar pedras nativas inteiras0x243(FRLG)/0x1F9(Emerald),
+com colisão e altura1; uniformizar as bordas repetidas no mesmo conjunto.
+Não usar quartos de rochas, tiles vazios bloqueados ou objetos móveis como
+substitutos de um limite permanente. Foram fechadas1148 células em41 mapas.
+Os vãos das conexões existentes foram preservados, inclusive nos cantos.
+
+3. IMPOSSIBILIDADE DE CONTORNAR TREASURE BEACH
+Antes:24x40, somente conexão norte com One Island; a massa da montanha sul
+ocupava toda a largura e terminava no corte do mapa. Não havia canal externo.
+Agora:40x48, com8 colunas de água de cada lado e8 linhas ao sul. Os960 blocos
+originais continuam exatamente iguais emx+8, incluindo porto, árvores e
+montanha. A frente e os cantos expostos da montanha recebem peças nativas
+completas, com doadores registrados. Eventos mantêm ordem, IDs e destinos.
+
+Conexões:Treasure UP One offset8;One DOWN Treasure offset-8;
+Treasure UP JourneySurfLink05000 offset-8;05000 DOWN Treasure offset8.
+Abrir somente as oito pedras da antiga borda sul do link(x8..15,y12).
+É possível vir do Sea36, entrar no canal oeste, passar abaixo da montanha,
+subir pelo leste, desembarcar no cais e entrar em One Island, e retornar.
+
+O GPS preserva as960 posições lógicas antigas e todas as grades dos outros
+mapas. A extensão coincide com os pixels da nova conexão, sem redesenhar o
+atlas; o teste nativo observou no máximo2 pixels por passo e0 nas emendas.
+
+4. SAVE ANTIGO NO CAIS
+A ampliação desloca o terreno. Um save168 em(12,2) precisa continuar em(20,2),
+com o mesmo estado a pé e altura3. A migração usa a variável antes livre0x40DC,
+inicializada na Nova Partida. Antes de restaurar objetos, traduz uma única vez
+as posições antigas, os retornos diretos e o cache de visão correspondente.
+Não muda a estrutura do save, IDs de warps, atributos ou modo do jogador.
+Prova: bateria nativa168→Continue169→salvar pelo menu→Continue169 novamente,
+mantendo(20,2) e os pixels visíveis do personagem; não aplica+8 pela segunda vez.
+
+PROVAS DA ROM FINAL
+ROM-base:7b3a89e266b51a52fdb03bcb6531e04aa1b7192e11148400f16f8c9e43e6ce51.
+ELF:2617c27802b69b5bb5abfc3182c6b078d3a210dbf0cb33dde8b93fb914932133.
+Fonte:284 layouts compilados,55 caminhos de overlay,46 mapas inteiros com NPCs.
+Nativo:dois casos de câmera, oito tentativas de atravessar pedras,392 tiles de
+ida e volta e10 mudanças de mapa; mar e margens em oito fases de três grupos.
+Save/Continue atual e migração com duas retomadas frias também executados.
+Nova Partida em One Island também percorreu os menus, a viagem, a chegada
+da mãe em piso seco e a entrada no quarto pelos controles, com Leaf.
+Relatórios:mods/hoenn/sevii-route-boundaries-validation/{common,editions}/.
+As quatro normais e a TESTE têm provas separadas de abertura e regras.
+
+LIMITES DA CONFERÊNCIA
+O censo conservador encontrou107 células de canto com candidatos geométricos
+contraditórios em nove outros mapas. Isso não é prova de107 defeitos visíveis:
+inclui células fora da câmera jogável. Não certificar todas as câmeras do mundo
+com os dois percursos do Sea36. Esses candidatos precisam de reprodução nativa
+específica antes de alterar conexões ou encostas. Campanhas completas e a
+causa da tela azul específica do My Boy continuam pendências separadas.
+
+MÉTODO REUTILIZÁVEL
+1. Anotar mapa, coordenadas, direção e modo do jogador na emenda.
+2. Comparar o mesmo ponto físico nas duas câmeras, incluindo diagonais e borda.
+3. Conferir blocos reais, banco carregado, atributos, colisão e altura; não RGB.
+4. Provar travessia, retorno, barreira visível, animação e save na ROM congelada.
+5. Não compilar ou empacotar enquanto um validador estiver lendo a mesma ROM.
+6. Usar uma ponte mGBA que exponha export_save/load_save para provas de bateria;
+   a ponte de consultas antiga sozinha não implementa exportação de save.
+7. Não reaplicar SetPlayerAvatarTransitionFlags(SURF) em uma fixture já surfando:
+   isso cria um segundo efeito visual que pode seguir o jogador no chão.
+   Conferir os sprites ativos: um blob na água e nenhum depois do desembarque.
+
+PROMPT PRECISO
+"Em JourneySurfLink03502(4,0), ao subir para03503(1,65), a célula que estava
+à esquerda muda de água para pedra. Corrija a câmera diagonal preservando
+as colisões e prove ida/volta, pixels nativos e save na ROM final."

@@ -1,0 +1,1331 @@
+{
+  "kind": "arrival-coast-landing-case",
+  "passed": true,
+  "diagnostic": false,
+  "rom_sha256": "7b3a89e266b51a52fdb03bcb6531e04aa1b7192e11148400f16f8c9e43e6ce51",
+  "elf_sha256": "2617c27802b69b5bb5abfc3182c6b078d3a210dbf0cb33dde8b93fb914932133",
+  "starting_region": "sevii",
+  "city_index": 0,
+  "home_index": 10,
+  "avatar_index": 3,
+  "controllers_only": true,
+  "no_game_memory_writes": true,
+  "no_callback_or_script_injection": true,
+  "actual_cold_boot": true,
+  "actual_city_selection_and_confirmation": true,
+  "native_truck_door_crossed": true,
+  "native_boat_scene_observed": true,
+  "welcome": {
+    "map": "OneIsland_TreasureBeach_Frlg",
+    "player": {
+      "index": 0,
+      "local_id": 255,
+      "tile": [
+        20,
+        4
+      ],
+      "elevation": 3,
+      "terrain": {
+        "block": 13217,
+        "elevation": 3,
+        "collision": 0,
+        "behavior": 0,
+        "surfable": false,
+        "dry": true
+      },
+      "surfing": false
+    },
+    "mother": {
+      "index": 4,
+      "local_id": 251,
+      "tile": [
+        20,
+        3
+      ],
+      "elevation": 3,
+      "terrain": {
+        "block": 13217,
+        "elevation": 3,
+        "collision": 0,
+        "behavior": 0,
+        "surfable": false,
+        "dry": true
+      }
+    },
+    "other_npc_overlaps": []
+  },
+  "arrival_player_and_mother_dry": true,
+  "compiled_selected_destination_observed": true,
+  "expected_welcome_map": "OneIsland_TreasureBeach_Frlg",
+  "expected_welcome_player_tile": [
+    20,
+    4
+  ],
+  "expected_welcome_mother_tile": [
+    20,
+    3
+  ],
+  "actor_elevations_match_physical_ground": true,
+  "no_existing_npc_overlap": true,
+  "native_home_bedroom_reached": true,
+  "bedroom": {
+    "map": "JourneyFamilyBedroom09",
+    "player": {
+      "index": 0,
+      "local_id": 255,
+      "tile": [
+        6,
+        6
+      ],
+      "elevation": 3
+    },
+    "surfing": false
+  },
+  "frames": 10813,
+  "input_log": [
+    {
+      "frame": 1200,
+      "key": 8,
+      "held_frames": 1,
+      "pause_frames": 300
+    },
+    {
+      "frame": 1501,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 1547,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 1893,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2059,
+      "key": 128,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2105,
+      "key": 128,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2151,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2197,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2243,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2289,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2335,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2381,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2427,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2473,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2519,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2565,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2611,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2657,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2703,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2749,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2795,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2841,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2887,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2933,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 2979,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3025,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3071,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3117,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3163,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3209,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3255,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3301,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3347,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3393,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3439,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3485,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3531,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3577,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3623,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3669,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3715,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3761,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3807,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3853,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3899,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3945,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 3991,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4037,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4083,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4129,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4175,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4221,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4267,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4313,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4359,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4405,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4451,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4497,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4543,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4589,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4635,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4681,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4727,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4773,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4819,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4865,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4911,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 4957,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5003,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5049,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5095,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5141,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5187,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5233,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5279,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5325,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5371,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5417,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5463,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5509,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5555,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5601,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5647,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5693,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5739,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5785,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5831,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 5997,
+      "key": 8,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6043,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6089,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6135,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6181,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6227,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6273,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6319,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6365,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6411,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6457,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6503,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6549,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6595,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6641,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6687,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6733,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6779,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6825,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6871,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6917,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 6963,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7009,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7055,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7101,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7147,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7193,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7239,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7285,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7331,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7377,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7423,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7469,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7515,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7561,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7607,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7653,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7699,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7745,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7791,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7837,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7883,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7929,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 7975,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8021,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8067,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8113,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8159,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8205,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8251,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8297,
+      "key": 128,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8343,
+      "key": 128,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8389,
+      "key": 128,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8435,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8481,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8527,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8573,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8619,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8665,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8771,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8817,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8863,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8909,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 8955,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9001,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9047,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9093,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9139,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9185,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9231,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9277,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9323,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9369,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9415,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9461,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9507,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9553,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9599,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9645,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9691,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9737,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9783,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9829,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 9875,
+      "key": 16,
+      "held_frames": 8,
+      "pause_frames": 20
+    },
+    {
+      "frame": 9903,
+      "key": 16,
+      "held_frames": 8,
+      "pause_frames": 20
+    },
+    {
+      "frame": 9931,
+      "key": 16,
+      "held_frames": 8,
+      "pause_frames": 20
+    },
+    {
+      "frame": 9959,
+      "key": 16,
+      "held_frames": 8,
+      "pause_frames": 20
+    },
+    {
+      "frame": 9987,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 10033,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 10079,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 10125,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 10171,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 10217,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 10263,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 10399,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 10445,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 10491,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 10537,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 10583,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 10629,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 10675,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 10721,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    },
+    {
+      "frame": 10767,
+      "key": 1,
+      "held_frames": 1,
+      "pause_frames": 45
+    }
+  ],
+  "callback_transitions": [
+    {
+      "frame": 30,
+      "callback": "gInitialMainCB2"
+    },
+    {
+      "frame": 180,
+      "callback": "CB2_ExpansionIntro"
+    },
+    {
+      "frame": 480,
+      "callback": "MainCB2_Intro"
+    },
+    {
+      "frame": 1201,
+      "callback": "MainCB2_EndIntro"
+    },
+    {
+      "frame": 1231,
+      "callback": "CB2_InitTitleScreen"
+    },
+    {
+      "frame": 1261,
+      "callback": "MainCB2"
+    },
+    {
+      "frame": 1548,
+      "callback": "CB2_GoToMainMenu"
+    },
+    {
+      "frame": 1578,
+      "callback": "CB2_MainMenu"
+    },
+    {
+      "frame": 5862,
+      "callback": "CB2_LoadNamingScreen"
+    },
+    {
+      "frame": 5877,
+      "callback": "CB2_NamingScreen"
+    },
+    {
+      "frame": 6074,
+      "callback": "CB2_MainMenu"
+    },
+    {
+      "frame": 7960,
+      "callback": "CB2_NewGame"
+    },
+    {
+      "frame": 7975,
+      "callback": "CB2_Overworld"
+    },
+    {
+      "frame": 9987,
+      "callback": "CB2_LoadMap2"
+    },
+    {
+      "frame": 10018,
+      "callback": "CB2_Overworld"
+    },
+    {
+      "frame": 10064,
+      "callback": "MainCB2_SeaGallop"
+    },
+    {
+      "frame": 10263,
+      "callback": "CB2_LoadMap2"
+    },
+    {
+      "frame": 10294,
+      "callback": "CB2_Overworld"
+    }
+  ],
+  "captures": [
+    {
+      "file": "01-region-menu.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "02-avatar-menu.png",
+      "sha256": "ade00fa190fa2dce02d45cf13407f258b649f8522aa4f3d84c7191f152c87d66"
+    },
+    {
+      "file": "03-city-menu.png",
+      "sha256": "ad59aa6eabeb0cd60ba499a7842887940e0c94266c0aef420732b41b58fa2eda"
+    },
+    {
+      "file": "04-city-confirmation.png",
+      "sha256": "7faa7779de27200d062214659287a18996a7cf21b39fb95feff4a3d3dfe0df33"
+    },
+    {
+      "file": "05-truck.png",
+      "sha256": "911c2c10080bb7a6e7d0b1d2748251c9691f9e57e4998c9409e77e17b6c2cac3"
+    },
+    {
+      "file": "06-mother-welcome.png",
+      "sha256": "4a8a97b712674b4a63443aea6bcd95444a3af53df29383cb9efa6e16e58c8670"
+    },
+    {
+      "file": "07-home-bedroom.png",
+      "sha256": "4288754012858fd23a41f8b9042fb0a1338eec80772b39247f0b83a9640a9e8f"
+    }
+  ]
+}

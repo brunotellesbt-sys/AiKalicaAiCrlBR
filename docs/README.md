@@ -1,6 +1,6 @@
 # Pokémon Journey — documentação do jogo
 
-[Entrega atual: continuidade da campanha e câmeras costeiras](game-continuity-review.md). [Revisão de chegadas e florestas](arrival-coast-review.md). [Revisão anterior de encontros aquáticos](coastal-ecology.md). [Erros dos nove vídeos, soluções e prevenção em TXT](../errors/2026-10-28-videos-surf-tiles.txt). Mantém a [competição da 18ª insígnia, rivais e Galactic na 22ª](badge-story.md), os portos integrados, as [correções costeiras](coastal-closures.md) e os [24 ginásios](ginasios-extras-e-travessias.md). [Guia prático em TXT](AJUSTES-GBA.txt) · [Pasta local de tiles](../assets/tiles/README.md).
+[Entrega atual: limites marítimos e acesso sul de One Island](sevii-route-boundaries.md). [Continuidade da campanha e câmeras costeiras](game-continuity-review.md). [Revisão de chegadas e florestas](arrival-coast-review.md). [Revisão anterior de encontros aquáticos](coastal-ecology.md). [Erros dos nove vídeos, soluções e prevenção em TXT](../errors/2026-10-28-videos-surf-tiles.txt). Mantém a [competição da 18ª insígnia, rivais e Galactic na 22ª](badge-story.md), os portos integrados, as [correções costeiras](coastal-closures.md) e os [24 ginásios](ginasios-extras-e-travessias.md). [Guia prático em TXT](AJUSTES-GBA.txt) · [Pasta local de tiles](../assets/tiles/README.md).
 
 Kanto, Hoenn e Sevii formam um mundo conectado por rotas marítimas. O jogo e seus diálogos estão em inglês; este guia está em português.
 
@@ -43,6 +43,11 @@ Escolha a edição antes de iniciar o emulador. Escolha Hoenn, Kanto ou Sevii na
 Converse com os familiares para receber Surf, Dive e Waterfall. Eles podem ser usados sem insígnias, com um Pokémon apto a aprender o golpe. A Mach Bike é a bicicleta única; obter uma em uma região impede receber outra na outra região.
 
 Comece um save novo nesta entrega e mantenha backups. Cada edição do player web tem seu próprio save. Use o menu do jogo para salvar e o menu do emulador para exportar uma cópia; apagar os dados do navegador pode apagar seus saves.
+
+A revisão 169 também testa uma migração específica: uma bateria da revisão
+168 salva no cais de Treasure Beach mantém o personagem no cais após a
+ampliação, inclusive depois de salvar e continuar novamente. Essa prova não
+certifica baterias de todas as versões antigas; conserve a cópia original.
 
 ## Controles
 

@@ -102,7 +102,7 @@ def verify_elf_binding(reports):
             assert observed==expected,'Native camera banks differ from compiled source bindings'
 
 
-def verify_update(directory, info):
+def verify_update(directory, info, *, historical_review=None, historical_save=None):
     require_final_contract()
     directory = Path(directory)
     old = previous_release(info)
@@ -121,7 +121,18 @@ def verify_update(directory, info):
         assert digest(path) == row['sha256'] == contract.BASELINE_SHA256[name]
         baseline(name, path.read_bytes())
         references[name] = path
-    test = verify_review(ROOT/'roms/rom-de-teste', directory/'Pokemon-Journey-Gen1-9-Normal.gba')
+    if historical_review is None:
+        assert historical_save is None
+        test = verify_review(ROOT/'roms/rom-de-teste', directory/'Pokemon-Journey-Gen1-9-Normal.gba')
+        proof_save = ROOT/'roms/rom-de-teste/Pokemon-Journey-TESTE.sav'
+    else:
+        test = historical_review
+        assert historical_save is not None, 'Historical TESTE evidence requires its pinned save'
+        normal = next(row for row in info['variants'] if row['file'] == test['base_normal_file'])
+        assert test['base_normal_sha256'] == normal['sha256'] and test['bytes'] == 33554432
+        assert test['file'] == 'Pokemon-Journey-TESTE.gba' and test['separate_save_identity'] is True
+        assert test['random_wild_encounters'] is False and test['automatic_trainer_approaches'] is False
+        proof_save = Path(historical_save)
     expected = {'common': info['parent_rom_sha256'], 'test': test['sha256'],
                 **{row['file']: row['sha256'] for row in info['variants']}}
     covered, reports = set(), []
@@ -137,7 +148,7 @@ def verify_update(directory, info):
         assert report['rom_sha256'] == expected[proof['target']], ('Stale current proof', key)
         reports.append((proof['kind'], report))
         verify_proof(report, file.parent, proof['kind'], proof['target'],
-                     ROOT/'roms/rom-de-teste/Pokemon-Journey-TESTE.sav', info, old)
+                     proof_save, info, old)
     assert required_keys(info) == covered
     verify_elf_binding(reports)
     previous_review = json.loads(references['review.json'].read_bytes())

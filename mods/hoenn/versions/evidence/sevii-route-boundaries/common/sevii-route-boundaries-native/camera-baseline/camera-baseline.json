@@ -1,0 +1,1000 @@
+{
+  "kind": "sevii-route-boundaries-camera-baseline",
+  "passed": true,
+  "expected_broken_baseline": true,
+  "bug_reproduced": true,
+  "native_validation_performed": true,
+  "rom_sha256": "cd91b1a3b8b783fe860c6668a7efcc741e847d198f0363b2288e382045e55479",
+  "elf_sha256": "ab5dbf1fbb10d335adde96a972e352d4a1f3a35158cc1513ee67bd71d6ee5103",
+  "initial_views_party_progress_and_encounter_suppression_are_fixtures": true,
+  "cases": [
+    {
+      "case": {
+        "map": "JourneySurfLink03502",
+        "player": [
+          4,
+          0
+        ],
+        "direction": "up",
+        "neighbor": "JourneySurfLink03503",
+        "target": [
+          1,
+          65
+        ],
+        "cell": [
+          -1,
+          1
+        ],
+        "neighbor_cell": [
+          -4,
+          67
+        ],
+        "expected_metatile": 299,
+        "source_map": "JourneySurfLink03501",
+        "source_cell": [
+          111,
+          1
+        ]
+      },
+      "before": {
+        "state": {
+          "map": "JourneySurfLink03502",
+          "tile": [
+            4,
+            0
+          ],
+          "surfing": true,
+          "elevation": 1,
+          "tile_elevation": 1,
+          "priority": 2,
+          "sprite_visible": true,
+          "object_visible": true
+        },
+        "cell": [
+          -1,
+          1
+        ],
+        "metatile": 299,
+        "collision": 0,
+        "elevation": 1,
+        "border_id": 3,
+        "pixels": {
+          "map": "JourneySurfLink03502",
+          "cells": [
+            {
+              "cell": [
+                -1,
+                1
+              ],
+              "expected_metatile": 299,
+              "native_metatile": 299,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                0,
+                0,
+                0,
+                0
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  33,
+                  89,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  35,
+                  89,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  37,
+                  89,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  39,
+                  89,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  41,
+                  89,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  43,
+                  89,
+                  136,
+                  160,
+                  216,
+                  1
+                ],
+                [
+                  45,
+                  89,
+                  136,
+                  160,
+                  216,
+                  1
+                ],
+                [
+                  47,
+                  89,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  33,
+                  97,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  35,
+                  97,
+                  136,
+                  160,
+                  216,
+                  2
+                ],
+                [
+                  37,
+                  97,
+                  136,
+                  160,
+                  216,
+                  2
+                ],
+                [
+                  39,
+                  97,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  41,
+                  97,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  43,
+                  97,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  45,
+                  97,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  47,
+                  97,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "baseline-corner-0-before.png",
+          "sha256": "bf4fb5807c25bdaaf7d84211f6aca450e4c782be93511600f4fe75dfbfb350ae"
+        },
+        "initial_view_placement_is_a_fixture": true
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink03503",
+          "tile": [
+            1,
+            65
+          ],
+          "surfing": true,
+          "elevation": 1,
+          "tile_elevation": 1,
+          "priority": 2,
+          "sprite_visible": true,
+          "object_visible": true
+        },
+        "cell": [
+          -4,
+          67
+        ],
+        "metatile": 579,
+        "collision": 1,
+        "elevation": 0,
+        "border_id": 4294967295,
+        "pixels": {
+          "map": "JourneySurfLink03503",
+          "cells": [
+            {
+              "cell": [
+                -4,
+                67
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  33,
+                  105,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  35,
+                  105,
+                  168,
+                  192,
+                  224,
+                  0
+                ],
+                [
+                  37,
+                  105,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  39,
+                  105,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  41,
+                  105,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  43,
+                  105,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  45,
+                  105,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  47,
+                  105,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  33,
+                  113,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  35,
+                  113,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  37,
+                  113,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  39,
+                  113,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  41,
+                  113,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  43,
+                  113,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  45,
+                  113,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  47,
+                  113,
+                  104,
+                  128,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "baseline-corner-0-after.png",
+          "sha256": "54e1a837fe9e3312cda2d9a4608deb7193565b7a999e54da1a9e40c4d4b99135"
+        },
+        "initial_view_placement_is_a_fixture": true
+      },
+      "same_world_cell": true,
+      "reproduced_metatile_disagreement": true
+    },
+    {
+      "case": {
+        "map": "JourneySurfLink03502",
+        "player": [
+          0,
+          1
+        ],
+        "direction": "left",
+        "neighbor": "JourneySurfLink03501",
+        "target": [
+          111,
+          1
+        ],
+        "cell": [
+          4,
+          -1
+        ],
+        "neighbor_cell": [
+          116,
+          -1
+        ],
+        "expected_metatile": 299,
+        "source_map": "JourneySurfLink03503",
+        "source_cell": [
+          1,
+          65
+        ]
+      },
+      "before": {
+        "state": {
+          "map": "JourneySurfLink03502",
+          "tile": [
+            0,
+            1
+          ],
+          "surfing": true,
+          "elevation": 1,
+          "tile_elevation": 1,
+          "priority": 2,
+          "sprite_visible": true,
+          "object_visible": true
+        },
+        "cell": [
+          4,
+          -1
+        ],
+        "metatile": 299,
+        "collision": 0,
+        "elevation": 1,
+        "border_id": 2,
+        "pixels": {
+          "map": "JourneySurfLink03502",
+          "cells": [
+            {
+              "cell": [
+                4,
+                -1
+              ],
+              "expected_metatile": 299,
+              "native_metatile": 299,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                0,
+                0,
+                0,
+                0
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  177,
+                  41,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  179,
+                  41,
+                  168,
+                  192,
+                  224,
+                  0
+                ],
+                [
+                  181,
+                  41,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  183,
+                  41,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  185,
+                  41,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  187,
+                  41,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  189,
+                  41,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  191,
+                  41,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  177,
+                  49,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  179,
+                  49,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  181,
+                  49,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  183,
+                  49,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  185,
+                  49,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  187,
+                  49,
+                  168,
+                  192,
+                  224,
+                  3
+                ],
+                [
+                  189,
+                  49,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  191,
+                  49,
+                  104,
+                  128,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "baseline-corner-1-before.png",
+          "sha256": "4176bb4157ca4f4f43e5e7a86547456d5fcecc21e416c28e3adca517edef0ebd"
+        },
+        "initial_view_placement_is_a_fixture": true
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink03501",
+          "tile": [
+            111,
+            1
+          ],
+          "surfing": true,
+          "elevation": 1,
+          "tile_elevation": 1,
+          "priority": 2,
+          "sprite_visible": true,
+          "object_visible": true
+        },
+        "cell": [
+          116,
+          -1
+        ],
+        "metatile": 579,
+        "collision": 1,
+        "elevation": 0,
+        "border_id": 4294967295,
+        "pixels": {
+          "map": "JourneySurfLink03501",
+          "cells": [
+            {
+              "cell": [
+                116,
+                -1
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  193,
+                  41,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  195,
+                  41,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  197,
+                  41,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  199,
+                  41,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  201,
+                  41,
+                  136,
+                  160,
+                  216,
+                  1
+                ],
+                [
+                  203,
+                  41,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  205,
+                  41,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  207,
+                  41,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  193,
+                  49,
+                  136,
+                  160,
+                  216,
+                  2
+                ],
+                [
+                  195,
+                  49,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  197,
+                  49,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  199,
+                  49,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  201,
+                  49,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  203,
+                  49,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  205,
+                  49,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  207,
+                  49,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "baseline-corner-1-after.png",
+          "sha256": "a90bbb7fa7f9bce3916a8a904c36be6c8b0b559ad3756be681cdd1aa3d6f410e"
+        },
+        "initial_view_placement_is_a_fixture": true
+      },
+      "same_world_cell": true,
+      "reproduced_metatile_disagreement": true
+    }
+  ],
+  "captures": [
+    {
+      "file": "baseline-corner-0-before.png",
+      "sha256": "bf4fb5807c25bdaaf7d84211f6aca450e4c782be93511600f4fe75dfbfb350ae"
+    },
+    {
+      "file": "baseline-corner-0-after.png",
+      "sha256": "54e1a837fe9e3312cda2d9a4608deb7193565b7a999e54da1a9e40c4d4b99135"
+    },
+    {
+      "file": "baseline-corner-1-before.png",
+      "sha256": "4176bb4157ca4f4f43e5e7a86547456d5fcecc21e416c28e3adca517edef0ebd"
+    },
+    {
+      "file": "baseline-corner-1-after.png",
+      "sha256": "a90bbb7fa7f9bce3916a8a904c36be6c8b0b559ad3756be681cdd1aa3d6f410e"
+    }
+  ]
+}
