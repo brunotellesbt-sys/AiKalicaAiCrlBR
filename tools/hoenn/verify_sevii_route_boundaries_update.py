@@ -84,7 +84,25 @@ def verify_elf_binding(reports):
         assert report['rom_sha256'] == source['rom_sha256'], ('Mixed common ROMs', kind)
 
 
-def verify_update(directory, info):
+def review_identity(directory, info, *, historical_review=None, historical_save=None):
+    """Resolve the TESTE identity without reading a newer public edition."""
+    if historical_review is None:
+        assert historical_save is None
+        test = verify_review(ROOT/'roms/rom-de-teste', Path(directory)/'Pokemon-Journey-Gen1-9-Normal.gba')
+        return test, ROOT/'roms/rom-de-teste/Pokemon-Journey-TESTE.sav'
+    assert historical_save is not None, 'Historical TESTE evidence requires its pinned save'
+    test = historical_review
+    normal = next(row for row in info['variants'] if row['file'] == test['base_normal_file'])
+    assert test['base_normal_sha256'] == normal['sha256'] and test['bytes'] == 33554432
+    assert test['file'] == 'Pokemon-Journey-TESTE.gba' and test['separate_save_identity'] is True
+    assert test['random_wild_encounters'] is False and test['automatic_trainer_approaches'] is False
+    assert test['fishing_encounters'] is False and test['manual_trainer_and_legendary_interactions_preserved'] is True
+    save = Path(historical_save)
+    assert save.is_file() and save.stat().st_size == 131072
+    return test, save
+
+
+def verify_update(directory, info, *, historical_review=None, historical_save=None):
     require_final_contract()
     directory = Path(directory)
     old = previous_release(info)
@@ -105,7 +123,8 @@ def verify_update(directory, info):
         assert digest(path) == row['sha256'] == contract.BASELINE_SHA256[name]
         baseline(name, path.read_bytes())
         references[name] = path
-    test = verify_review(ROOT/'roms/rom-de-teste', directory/'Pokemon-Journey-Gen1-9-Normal.gba')
+    test, proof_save = review_identity(directory, info, historical_review=historical_review,
+                                       historical_save=historical_save)
     expected = {'common': info['parent_rom_sha256'], 'test': test['sha256'],
                 **{row['file']: row['sha256'] for row in info['variants']}}
     covered, reports = set(), []
@@ -121,7 +140,7 @@ def verify_update(directory, info):
         assert report['rom_sha256'] == expected[proof['target']], ('Stale current proof', key)
         reports.append((proof['kind'], report))
         verify_proof(report, file.parent, proof['kind'], proof['target'],
-                     ROOT/'roms/rom-de-teste/Pokemon-Journey-TESTE.sav', info, old)
+                     proof_save, info, old)
     assert required_keys(info) == covered
     verify_elf_binding(reports)
     previous_review = json.loads(references['review.json'].read_bytes())

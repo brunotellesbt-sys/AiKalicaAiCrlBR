@@ -1,0 +1,7083 @@
+{
+  "kind": "coast-scenery-corners-native",
+  "passed": true,
+  "rom_sha256": "7b3a89e266b51a52fdb03bcb6531e04aa1b7192e11148400f16f8c9e43e6ce51",
+  "elf_sha256": "2617c27802b69b5bb5abfc3182c6b078d3a210dbf0cb33dde8b93fb914932133",
+  "baseline": true,
+  "native_validation_performed": true,
+  "initial_placements_and_surf_state_are_fixtures": true,
+  "private_query_trampoline_declared": true,
+  "only_read_only_queries_after_placement": true,
+  "no_midtrip_position_collision_elevation_camera_palette_or_vram_writes": true,
+  "parent_source_and_rom_unchanged": true,
+  "corner_cases": [
+    {
+      "case": {
+        "label": "mossdeep",
+        "map": "JourneyMossdeepOuterEastSea",
+        "player": [
+          0,
+          0
+        ],
+        "direction": "left",
+        "neighbor": "JourneyMossdeepOuterSea",
+        "target": [
+          109,
+          0
+        ],
+        "cell": [
+          -2,
+          -2
+        ],
+        "neighbor_cell": [
+          108,
+          -2
+        ],
+        "expected_metatile": 505,
+        "parent_pop_confirmed": false
+      },
+      "before": {
+        "state": {
+          "map": "JourneyMossdeepOuterEastSea",
+          "tile": [
+            0,
+            0
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -2,
+            -2
+          ],
+          "block": 1023,
+          "metatile": 505,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyMossdeepOuterEastSea",
+          "cells": [
+            {
+              "cell": [
+                -2,
+                -2
+              ],
+              "expected_metatile": 505,
+              "native_metatile": 505,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16888,
+                16889,
+                16890,
+                16891
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16888,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16889,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16890,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16891,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  81,
+                  41,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  83,
+                  41,
+                  168,
+                  192,
+                  224,
+                  0
+                ],
+                [
+                  85,
+                  41,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  87,
+                  41,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  89,
+                  41,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  91,
+                  41,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  93,
+                  41,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  95,
+                  41,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  81,
+                  49,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  83,
+                  49,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  85,
+                  49,
+                  56,
+                  80,
+                  152,
+                  2
+                ],
+                [
+                  87,
+                  49,
+                  56,
+                  80,
+                  152,
+                  2
+                ],
+                [
+                  89,
+                  49,
+                  40,
+                  64,
+                  136,
+                  3
+                ],
+                [
+                  91,
+                  49,
+                  216,
+                  224,
+                  232,
+                  3
+                ],
+                [
+                  93,
+                  49,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  95,
+                  49,
+                  104,
+                  128,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "mossdeep-before.png",
+          "sha256": "ae8004393420167af960dd25be80961af1748d4f9a73d209ba9e5bcffb729eeb"
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneyMossdeepOuterSea",
+          "tile": [
+            109,
+            0
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            108,
+            -2
+          ],
+          "block": 1023,
+          "metatile": 505,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyMossdeepOuterSea",
+          "cells": [
+            {
+              "cell": [
+                108,
+                -2
+              ],
+              "expected_metatile": 505,
+              "native_metatile": 505,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16888,
+                16889,
+                16890,
+                16891
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16888,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16889,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16890,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16891,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  97,
+                  41,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  99,
+                  41,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  101,
+                  41,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  103,
+                  41,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  105,
+                  41,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  107,
+                  41,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  109,
+                  41,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  111,
+                  41,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  97,
+                  49,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  99,
+                  49,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  101,
+                  49,
+                  56,
+                  80,
+                  152,
+                  2
+                ],
+                [
+                  103,
+                  49,
+                  56,
+                  80,
+                  152,
+                  2
+                ],
+                [
+                  105,
+                  49,
+                  40,
+                  64,
+                  136,
+                  3
+                ],
+                [
+                  107,
+                  49,
+                  216,
+                  224,
+                  232,
+                  3
+                ],
+                [
+                  109,
+                  49,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  111,
+                  49,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "mossdeep-after.png",
+          "sha256": "4a33c4e998cdd32f1d461a095a6263743381607f41a61796b4c8f41c738f2675"
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "JourneyMossdeepOuterEastSea",
+          "tile": [
+            0,
+            0
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -2,
+            -2
+          ],
+          "block": 1023,
+          "metatile": 505,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyMossdeepOuterEastSea",
+          "cells": [
+            {
+              "cell": [
+                -2,
+                -2
+              ],
+              "expected_metatile": 505,
+              "native_metatile": 505,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16888,
+                16889,
+                16890,
+                16891
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16888,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16889,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16890,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16891,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  81,
+                  41,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  83,
+                  41,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  85,
+                  41,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  87,
+                  41,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  89,
+                  41,
+                  136,
+                  160,
+                  216,
+                  1
+                ],
+                [
+                  91,
+                  41,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  93,
+                  41,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  95,
+                  41,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  81,
+                  49,
+                  136,
+                  160,
+                  216,
+                  2
+                ],
+                [
+                  83,
+                  49,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  85,
+                  49,
+                  56,
+                  80,
+                  152,
+                  2
+                ],
+                [
+                  87,
+                  49,
+                  56,
+                  80,
+                  152,
+                  2
+                ],
+                [
+                  89,
+                  49,
+                  40,
+                  64,
+                  136,
+                  3
+                ],
+                [
+                  91,
+                  49,
+                  216,
+                  224,
+                  232,
+                  3
+                ],
+                [
+                  93,
+                  49,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  95,
+                  49,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "mossdeep-returned.png",
+          "sha256": "8fc17ac9a87c8562b93b6455266f1f350cf1b069ac4f5646641f08e47408154e"
+        }
+      },
+      "outbound_and_return_with_controllers": true,
+      "parent_pop_observed": false
+    },
+    {
+      "case": {
+        "label": "five-corner",
+        "map": "JourneySurfLink00701",
+        "player": [
+          23,
+          3
+        ],
+        "direction": "right",
+        "neighbor": "JourneySurfLink00700",
+        "target": [
+          0,
+          2
+        ],
+        "cell": [
+          24,
+          0
+        ],
+        "neighbor_cell": [
+          0,
+          -1
+        ],
+        "expected_metatile": 579
+      },
+      "before": {
+        "state": {
+          "map": "JourneySurfLink00701",
+          "tile": [
+            23,
+            3
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            24,
+            0
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneySurfLink00701",
+          "cells": [
+            {
+              "cell": [
+                24,
+                0
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  129,
+                  25,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  131,
+                  25,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  133,
+                  25,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  135,
+                  25,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  137,
+                  25,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  139,
+                  25,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  141,
+                  25,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  143,
+                  25,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  129,
+                  33,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  131,
+                  33,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  133,
+                  33,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  135,
+                  33,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  137,
+                  33,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  139,
+                  33,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  141,
+                  33,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  143,
+                  33,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "five-corner-before.png",
+          "sha256": "59c8245005099b6d52bbe9b0d2954a787f9da532a1d6eeb7fb2b9ec2b55c62b5"
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink00700",
+          "tile": [
+            0,
+            2
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            0,
+            -1
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 2
+        },
+        "pixels": {
+          "map": "JourneySurfLink00700",
+          "cells": [
+            {
+              "cell": [
+                0,
+                -1
+              ],
+              "expected_metatile": 299,
+              "native_metatile": 299,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                0,
+                0,
+                0,
+                0
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  113,
+                  25,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  115,
+                  25,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  117,
+                  25,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  119,
+                  25,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  121,
+                  25,
+                  136,
+                  160,
+                  216,
+                  1
+                ],
+                [
+                  123,
+                  25,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  125,
+                  25,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  127,
+                  25,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  113,
+                  33,
+                  136,
+                  160,
+                  216,
+                  2
+                ],
+                [
+                  115,
+                  33,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  117,
+                  33,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  119,
+                  33,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  121,
+                  33,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  123,
+                  33,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  125,
+                  33,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  127,
+                  33,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "five-corner-after.png",
+          "sha256": "6405ed4097d9dbc7094e639542a20dfd0e3bf0f031e3ffbfe12cbd30c80d83e6"
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "JourneySurfLink00701",
+          "tile": [
+            23,
+            3
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            24,
+            0
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneySurfLink00701",
+          "cells": [
+            {
+              "cell": [
+                24,
+                0
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  129,
+                  25,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  131,
+                  25,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  133,
+                  25,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  135,
+                  25,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  137,
+                  25,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  139,
+                  25,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  141,
+                  25,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  143,
+                  25,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  129,
+                  33,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  131,
+                  33,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  133,
+                  33,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  135,
+                  33,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  137,
+                  33,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  139,
+                  33,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  141,
+                  33,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  143,
+                  33,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "five-corner-returned.png",
+          "sha256": "efaad6eec0470c5d048b27552ab1db371c397db6c3fec6085cf5d58998b9396e"
+        }
+      },
+      "outbound_and_return_with_controllers": true,
+      "parent_pop_observed": true
+    },
+    {
+      "case": {
+        "label": "kanto-corner",
+        "map": "JourneyKantoCoastalBand",
+        "player": [
+          83,
+          19
+        ],
+        "direction": "down",
+        "neighbor": "JourneySurfLink02700",
+        "target": [
+          17,
+          0
+        ],
+        "cell": [
+          88,
+          19
+        ],
+        "neighbor_cell": [
+          22,
+          -1
+        ],
+        "expected_metatile": 579
+      },
+      "before": {
+        "state": {
+          "map": "JourneyKantoCoastalBand",
+          "tile": [
+            83,
+            19
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            88,
+            19
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyKantoCoastalBand",
+          "cells": [
+            {
+              "cell": [
+                88,
+                19
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  193,
+                  73,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  195,
+                  73,
+                  168,
+                  192,
+                  224,
+                  0
+                ],
+                [
+                  197,
+                  73,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  199,
+                  73,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  201,
+                  73,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  203,
+                  73,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  205,
+                  73,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  207,
+                  73,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  193,
+                  81,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  195,
+                  81,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  197,
+                  81,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  199,
+                  81,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  201,
+                  81,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  203,
+                  81,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  205,
+                  81,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  207,
+                  81,
+                  104,
+                  128,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "kanto-corner-before.png",
+          "sha256": "bb621d9697389d6202370f6ff3e07485d7f85a0c0d9735673d1cebcc751b152c"
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink02700",
+          "tile": [
+            17,
+            0
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            22,
+            -1
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 4
+        },
+        "pixels": {
+          "map": "JourneySurfLink02700",
+          "cells": [
+            {
+              "cell": [
+                22,
+                -1
+              ],
+              "expected_metatile": 299,
+              "native_metatile": 299,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                0,
+                0,
+                0,
+                0
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  193,
+                  57,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  195,
+                  57,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  197,
+                  57,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  199,
+                  57,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  201,
+                  57,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  203,
+                  57,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  205,
+                  57,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  207,
+                  57,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  193,
+                  65,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  195,
+                  65,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  197,
+                  65,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  199,
+                  65,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  201,
+                  65,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  203,
+                  65,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  205,
+                  65,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  207,
+                  65,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "kanto-corner-after.png",
+          "sha256": "476061c08c965317b08d001593ddbfce551212b0294cd5efc89f7c29f75093ae"
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "JourneyKantoCoastalBand",
+          "tile": [
+            83,
+            19
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            88,
+            19
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyKantoCoastalBand",
+          "cells": [
+            {
+              "cell": [
+                88,
+                19
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  193,
+                  73,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  195,
+                  73,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  197,
+                  73,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  199,
+                  73,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  201,
+                  73,
+                  136,
+                  160,
+                  216,
+                  1
+                ],
+                [
+                  203,
+                  73,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  205,
+                  73,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  207,
+                  73,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  193,
+                  81,
+                  136,
+                  160,
+                  216,
+                  2
+                ],
+                [
+                  195,
+                  81,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  197,
+                  81,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  199,
+                  81,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  201,
+                  81,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  203,
+                  81,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  205,
+                  81,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  207,
+                  81,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "kanto-corner-returned.png",
+          "sha256": "f184cfa2c9fc7be08d1a1ca8986f348857f58f24cf2bc792709596bfee753932"
+        }
+      },
+      "outbound_and_return_with_controllers": true,
+      "parent_pop_observed": true
+    },
+    {
+      "case": {
+        "label": "lane21-corner",
+        "map": "JourneySurfLink04501",
+        "player": [
+          1,
+          20
+        ],
+        "direction": "down",
+        "neighbor": "JourneySurfLink04500",
+        "target": [
+          4,
+          0
+        ],
+        "cell": [
+          -5,
+          20
+        ],
+        "neighbor_cell": [
+          -2,
+          -1
+        ],
+        "expected_metatile": 579
+      },
+      "before": {
+        "state": {
+          "map": "JourneySurfLink04501",
+          "tile": [
+            1,
+            20
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -5,
+            20
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneySurfLink04501",
+          "cells": [
+            {
+              "cell": [
+                -5,
+                20
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  17,
+                  73,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  19,
+                  73,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  21,
+                  73,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  23,
+                  73,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  25,
+                  73,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  27,
+                  73,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  29,
+                  73,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  31,
+                  73,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  17,
+                  81,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  19,
+                  81,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  21,
+                  81,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  23,
+                  81,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  25,
+                  81,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  27,
+                  81,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  29,
+                  81,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  31,
+                  81,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "lane21-corner-before.png",
+          "sha256": "f1b8c2625d8135261d2ebcf7b463890b5419b5c0c99b8837bfe4a897867567da"
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink04500",
+          "tile": [
+            4,
+            0
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -2,
+            -1
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 3
+        },
+        "pixels": {
+          "map": "JourneySurfLink04500",
+          "cells": [
+            {
+              "cell": [
+                -2,
+                -1
+              ],
+              "expected_metatile": 299,
+              "native_metatile": 299,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                0,
+                0,
+                0,
+                0
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  17,
+                  57,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  19,
+                  57,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  21,
+                  57,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  23,
+                  57,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  25,
+                  57,
+                  136,
+                  160,
+                  216,
+                  1
+                ],
+                [
+                  27,
+                  57,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  29,
+                  57,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  31,
+                  57,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  17,
+                  65,
+                  136,
+                  160,
+                  216,
+                  2
+                ],
+                [
+                  19,
+                  65,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  21,
+                  65,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  23,
+                  65,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  25,
+                  65,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  27,
+                  65,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  29,
+                  65,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  31,
+                  65,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "lane21-corner-after.png",
+          "sha256": "a80a14102e93f43518eedd20ce0930fa2de5070e68ebbbd8103680f7595681d9"
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "JourneySurfLink04501",
+          "tile": [
+            1,
+            20
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -5,
+            20
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneySurfLink04501",
+          "cells": [
+            {
+              "cell": [
+                -5,
+                20
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  17,
+                  73,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  19,
+                  73,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  21,
+                  73,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  23,
+                  73,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  25,
+                  73,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  27,
+                  73,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  29,
+                  73,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  31,
+                  73,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  17,
+                  81,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  19,
+                  81,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  21,
+                  81,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  23,
+                  81,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  25,
+                  81,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  27,
+                  81,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  29,
+                  81,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  31,
+                  81,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "lane21-corner-returned.png",
+          "sha256": "ecb3c16d2a47203e9ee343e7f1f9f9d3b925e5f92f5d49f6808ebdeec1a6f5fe"
+        }
+      },
+      "outbound_and_return_with_controllers": true,
+      "parent_pop_observed": true
+    },
+    {
+      "case": {
+        "label": "fill30-corner",
+        "map": "JourneyWorldFill30Right",
+        "player": [
+          1,
+          47
+        ],
+        "direction": "down",
+        "neighbor": "JourneySurfLink04000",
+        "target": [
+          0,
+          0
+        ],
+        "cell": [
+          -1,
+          48
+        ],
+        "neighbor_cell": [
+          -2,
+          0
+        ],
+        "expected_metatile": 579
+      },
+      "before": {
+        "state": {
+          "map": "JourneyWorldFill30Right",
+          "tile": [
+            1,
+            47
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -1,
+            48
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldFill30Right",
+          "cells": [
+            {
+              "cell": [
+                -1,
+                48
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  81,
+                  89,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  83,
+                  89,
+                  168,
+                  192,
+                  224,
+                  0
+                ],
+                [
+                  85,
+                  89,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  87,
+                  89,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  89,
+                  89,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  91,
+                  89,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  93,
+                  89,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  95,
+                  89,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  81,
+                  97,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  83,
+                  97,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  85,
+                  97,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  87,
+                  97,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  89,
+                  97,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  91,
+                  97,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  93,
+                  97,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  95,
+                  97,
+                  104,
+                  128,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "fill30-corner-before.png",
+          "sha256": "c3fdd68bcd006d1df19c5e0108d50ae873b39393f01090bbb2ad25f7e0b21935"
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink04000",
+          "tile": [
+            0,
+            0
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -2,
+            0
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 3
+        },
+        "pixels": {
+          "map": "JourneySurfLink04000",
+          "cells": [
+            {
+              "cell": [
+                -2,
+                0
+              ],
+              "expected_metatile": 299,
+              "native_metatile": 299,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                0,
+                0,
+                0,
+                0
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  81,
+                  73,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  83,
+                  73,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  85,
+                  73,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  87,
+                  73,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  89,
+                  73,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  91,
+                  73,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  93,
+                  73,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  95,
+                  73,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  81,
+                  81,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  83,
+                  81,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  85,
+                  81,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  87,
+                  81,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  89,
+                  81,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  91,
+                  81,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  93,
+                  81,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  95,
+                  81,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "fill30-corner-after.png",
+          "sha256": "9411aae68bfa0fd569f225c22ba8e2428cb682d58aaf9c36863a3abd6cf43b49"
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "JourneyWorldFill30Right",
+          "tile": [
+            1,
+            47
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -1,
+            48
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldFill30Right",
+          "cells": [
+            {
+              "cell": [
+                -1,
+                48
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  81,
+                  89,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  83,
+                  89,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  85,
+                  89,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  87,
+                  89,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  89,
+                  89,
+                  136,
+                  160,
+                  216,
+                  1
+                ],
+                [
+                  91,
+                  89,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  93,
+                  89,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  95,
+                  89,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  81,
+                  97,
+                  136,
+                  160,
+                  216,
+                  2
+                ],
+                [
+                  83,
+                  97,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  85,
+                  97,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  87,
+                  97,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  89,
+                  97,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  91,
+                  97,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  93,
+                  97,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  95,
+                  97,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "fill30-corner-returned.png",
+          "sha256": "f22f9887a3f0625636ff1b58b6e40d7d5e947af161123a69a3055ea56ea583b4"
+        }
+      },
+      "outbound_and_return_with_controllers": true,
+      "parent_pop_observed": true
+    },
+    {
+      "case": {
+        "label": "fill31-corner",
+        "map": "JourneyWorldFill31Right",
+        "player": [
+          4,
+          0
+        ],
+        "direction": "up",
+        "neighbor": "JourneySurfLink04300",
+        "target": [
+          3,
+          15
+        ],
+        "cell": [
+          0,
+          -1
+        ],
+        "neighbor_cell": [
+          -1,
+          15
+        ],
+        "expected_metatile": 579
+      },
+      "before": {
+        "state": {
+          "map": "JourneyWorldFill31Right",
+          "tile": [
+            4,
+            0
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            0,
+            -1
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldFill31Right",
+          "cells": [
+            {
+              "cell": [
+                0,
+                -1
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  49,
+                  57,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  51,
+                  57,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  53,
+                  57,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  55,
+                  57,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  57,
+                  57,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  59,
+                  57,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  61,
+                  57,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  63,
+                  57,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  49,
+                  65,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  51,
+                  65,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  53,
+                  65,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  55,
+                  65,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  57,
+                  65,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  59,
+                  65,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  61,
+                  65,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  63,
+                  65,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "fill31-corner-before.png",
+          "sha256": "5d58db0f3b227776d74bca9e2b84949bd1e3f6c252da6a323c8a74af0f07aa41"
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink04300",
+          "tile": [
+            3,
+            15
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -1,
+            15
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 3
+        },
+        "pixels": {
+          "map": "JourneySurfLink04300",
+          "cells": [
+            {
+              "cell": [
+                -1,
+                15
+              ],
+              "expected_metatile": 299,
+              "native_metatile": 299,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                0,
+                0,
+                0,
+                0
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  49,
+                  73,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  51,
+                  73,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  53,
+                  73,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  55,
+                  73,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  57,
+                  73,
+                  136,
+                  160,
+                  216,
+                  1
+                ],
+                [
+                  59,
+                  73,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  61,
+                  73,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  63,
+                  73,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  49,
+                  81,
+                  136,
+                  160,
+                  216,
+                  2
+                ],
+                [
+                  51,
+                  81,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  53,
+                  81,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  55,
+                  81,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  57,
+                  81,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  59,
+                  81,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  61,
+                  81,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  63,
+                  81,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "fill31-corner-after.png",
+          "sha256": "21869ba9ecc4a75be69a345367d7d2d8ebf580b1749732ecd99bb68754e1be6a"
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "JourneyWorldFill31Right",
+          "tile": [
+            4,
+            0
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            0,
+            -1
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldFill31Right",
+          "cells": [
+            {
+              "cell": [
+                0,
+                -1
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  49,
+                  57,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  51,
+                  57,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  53,
+                  57,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  55,
+                  57,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  57,
+                  57,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  59,
+                  57,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  61,
+                  57,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  63,
+                  57,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  49,
+                  65,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  51,
+                  65,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  53,
+                  65,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  55,
+                  65,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  57,
+                  65,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  59,
+                  65,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  61,
+                  65,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  63,
+                  65,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "fill31-corner-returned.png",
+          "sha256": "97676e34aac31ce074f3a9e58b2868e265d6f468701716d508f842f19f6bc125"
+        }
+      },
+      "outbound_and_return_with_controllers": true,
+      "parent_pop_observed": true
+    },
+    {
+      "case": {
+        "label": "three-corner",
+        "map": "JourneyWorldSea03",
+        "player": [
+          27,
+          0
+        ],
+        "direction": "up",
+        "neighbor": "ThreeIsland_Harbor_Frlg",
+        "target": [
+          3,
+          12
+        ],
+        "cell": [
+          23,
+          -2
+        ],
+        "neighbor_cell": [
+          -1,
+          11
+        ],
+        "expected_metatile": 579
+      },
+      "before": {
+        "state": {
+          "map": "JourneyWorldSea03",
+          "tile": [
+            27,
+            0
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            23,
+            -2
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldSea03",
+          "cells": [
+            {
+              "cell": [
+                23,
+                -2
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  49,
+                  41,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  51,
+                  41,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  53,
+                  41,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  55,
+                  41,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  57,
+                  41,
+                  136,
+                  160,
+                  216,
+                  1
+                ],
+                [
+                  59,
+                  41,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  61,
+                  41,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  63,
+                  41,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  49,
+                  49,
+                  136,
+                  160,
+                  216,
+                  2
+                ],
+                [
+                  51,
+                  49,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  53,
+                  49,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  55,
+                  49,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  57,
+                  49,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  59,
+                  49,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  61,
+                  49,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  63,
+                  49,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "three-corner-before.png",
+          "sha256": "cf4967e8e14bda70b15f305aad069ac5f71f640240a9208e06cbc33b8249eefe"
+        }
+      },
+      "after": {
+        "state": {
+          "map": "ThreeIsland_Harbor_Frlg",
+          "tile": [
+            3,
+            12
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -1,
+            11
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 3
+        },
+        "pixels": {
+          "map": "ThreeIsland_Harbor_Frlg",
+          "cells": [
+            {
+              "cell": [
+                -1,
+                11
+              ],
+              "expected_metatile": 299,
+              "native_metatile": 299,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                0,
+                0,
+                0,
+                0
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  49,
+                  57,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  51,
+                  57,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  53,
+                  57,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  55,
+                  57,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  57,
+                  57,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  59,
+                  57,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  61,
+                  57,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  63,
+                  57,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  49,
+                  65,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  51,
+                  65,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  53,
+                  65,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  55,
+                  65,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  57,
+                  65,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  59,
+                  65,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  61,
+                  65,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  63,
+                  65,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "three-corner-after.png",
+          "sha256": "fc3e9df5956e0c33018d3047a9919111dafd26b51a5e5e748645e5a4cf3a007a"
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "JourneyWorldSea03",
+          "tile": [
+            27,
+            0
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            23,
+            -2
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldSea03",
+          "cells": [
+            {
+              "cell": [
+                23,
+                -2
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  49,
+                  41,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  51,
+                  41,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  53,
+                  41,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  55,
+                  41,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  57,
+                  41,
+                  136,
+                  160,
+                  216,
+                  1
+                ],
+                [
+                  59,
+                  41,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  61,
+                  41,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  63,
+                  41,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  49,
+                  49,
+                  136,
+                  160,
+                  216,
+                  2
+                ],
+                [
+                  51,
+                  49,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  53,
+                  49,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  55,
+                  49,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  57,
+                  49,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  59,
+                  49,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  61,
+                  49,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  63,
+                  49,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "three-corner-returned.png",
+          "sha256": "2b5e87ddfa87b65f4c7dd0793b10d96444bc58631294755e493b9fd0e2e31076"
+        }
+      },
+      "outbound_and_return_with_controllers": true,
+      "parent_pop_observed": true
+    },
+    {
+      "case": {
+        "label": "tanoby-corner",
+        "map": "JourneyWorldSea06",
+        "player": [
+          63,
+          45
+        ],
+        "direction": "right",
+        "neighbor": "JourneyWorldSea07",
+        "target": [
+          0,
+          45
+        ],
+        "cell": [
+          64,
+          48
+        ],
+        "neighbor_cell": [
+          0,
+          48
+        ],
+        "expected_metatile": 272
+      },
+      "before": {
+        "state": {
+          "map": "JourneyWorldSea06",
+          "tile": [
+            63,
+            45
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            64,
+            48
+          ],
+          "block": 1023,
+          "metatile": 299,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldSea06",
+          "cells": [
+            {
+              "cell": [
+                64,
+                48
+              ],
+              "expected_metatile": 299,
+              "native_metatile": 299,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                0,
+                0,
+                0,
+                0
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  129,
+                  121,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  131,
+                  121,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  133,
+                  121,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  135,
+                  121,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  137,
+                  121,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  139,
+                  121,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  141,
+                  121,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  143,
+                  121,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  129,
+                  129,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  131,
+                  129,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  133,
+                  129,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  135,
+                  129,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  137,
+                  129,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  139,
+                  129,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  141,
+                  129,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  143,
+                  129,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "tanoby-corner-before.png",
+          "sha256": "a9eaaf5012c8e14d72d9e793160981b9ea1e6c5f3f0f1943aee95814ede0e576"
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneyWorldSea07",
+          "tile": [
+            0,
+            45
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            0,
+            48
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldSea07",
+          "cells": [
+            {
+              "cell": [
+                0,
+                48
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  113,
+                  121,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  115,
+                  121,
+                  168,
+                  192,
+                  224,
+                  0
+                ],
+                [
+                  117,
+                  121,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  119,
+                  121,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  121,
+                  121,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  123,
+                  121,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  125,
+                  121,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  127,
+                  121,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  113,
+                  129,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  115,
+                  129,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  117,
+                  129,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  119,
+                  129,
+                  200,
+                  216,
+                  232,
+                  2
+                ],
+                [
+                  121,
+                  129,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  123,
+                  129,
+                  200,
+                  216,
+                  232,
+                  3
+                ],
+                [
+                  125,
+                  129,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  127,
+                  129,
+                  104,
+                  128,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "tanoby-corner-after.png",
+          "sha256": "cb3637781994c3057a9692f6641c97a0fd626041d759f08d2143171e72f3b89e"
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "JourneyWorldSea06",
+          "tile": [
+            63,
+            45
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            64,
+            48
+          ],
+          "block": 1023,
+          "metatile": 299,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldSea06",
+          "cells": [
+            {
+              "cell": [
+                64,
+                48
+              ],
+              "expected_metatile": 299,
+              "native_metatile": 299,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                0,
+                0,
+                0,
+                0
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  129,
+                  121,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  131,
+                  121,
+                  104,
+                  128,
+                  208,
+                  0
+                ],
+                [
+                  133,
+                  121,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  135,
+                  121,
+                  80,
+                  104,
+                  208,
+                  0
+                ],
+                [
+                  137,
+                  121,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  139,
+                  121,
+                  104,
+                  128,
+                  208,
+                  1
+                ],
+                [
+                  141,
+                  121,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  143,
+                  121,
+                  80,
+                  104,
+                  208,
+                  1
+                ],
+                [
+                  129,
+                  129,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  131,
+                  129,
+                  104,
+                  128,
+                  208,
+                  2
+                ],
+                [
+                  133,
+                  129,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  135,
+                  129,
+                  80,
+                  104,
+                  208,
+                  2
+                ],
+                [
+                  137,
+                  129,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  139,
+                  129,
+                  104,
+                  128,
+                  208,
+                  3
+                ],
+                [
+                  141,
+                  129,
+                  80,
+                  104,
+                  208,
+                  3
+                ],
+                [
+                  143,
+                  129,
+                  80,
+                  104,
+                  208,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "tanoby-corner-returned.png",
+          "sha256": "4af0ec266a86fc7cbd1885a1f57217c07338a9c21c7041754d8ba3b4c6a80790"
+        }
+      },
+      "outbound_and_return_with_controllers": true,
+      "parent_pop_observed": true
+    }
+  ],
+  "source_only_case": {
+    "case": {
+      "map": "JourneySurfLink03104",
+      "player": [
+        0,
+        15
+      ],
+      "direction": "left",
+      "neighbor": "JourneySurfLink03103",
+      "target": [
+        17,
+        15
+      ],
+      "cell": [
+        -2,
+        21
+      ],
+      "neighbor_cell": [
+        16,
+        21
+      ],
+      "visible_pixels_before": 0,
+      "visible_pixels_after": 0,
+      "reason": "Outside the playable viewport in both cameras"
+    },
+    "before": {
+      "state": {
+        "map": "JourneySurfLink03104",
+        "tile": [
+          0,
+          15
+        ],
+        "surfing": true
+      },
+      "grid": {
+        "cell": [
+          -2,
+          21
+        ],
+        "block": 1023,
+        "metatile": 579,
+        "collision": 1,
+        "elevation": 0,
+        "border_id": 4294967295
+      },
+      "visible_pixels": 0
+    },
+    "after": {
+      "state": {
+        "map": "JourneySurfLink03103",
+        "tile": [
+          17,
+          15
+        ],
+        "surfing": true
+      },
+      "grid": {
+        "cell": [
+          16,
+          21
+        ],
+        "block": 4395,
+        "metatile": 299,
+        "collision": 0,
+        "elevation": 1,
+        "border_id": 1
+      },
+      "visible_pixels": 0
+    },
+    "source_only_not_a_visible_bug": true
+  },
+  "reef_bumps": [],
+  "fixtures": [
+    {
+      "label": "mossdeep",
+      "map": "JourneyMossdeepOuterEastSea",
+      "tile": [
+        0,
+        0
+      ],
+      "surfing": true
+    },
+    {
+      "label": "five-corner",
+      "map": "JourneySurfLink00701",
+      "tile": [
+        23,
+        3
+      ],
+      "surfing": true
+    },
+    {
+      "label": "kanto-corner",
+      "map": "JourneyKantoCoastalBand",
+      "tile": [
+        83,
+        19
+      ],
+      "surfing": true
+    },
+    {
+      "label": "lane21-corner",
+      "map": "JourneySurfLink04501",
+      "tile": [
+        1,
+        20
+      ],
+      "surfing": true
+    },
+    {
+      "label": "fill30-corner",
+      "map": "JourneyWorldFill30Right",
+      "tile": [
+        1,
+        47
+      ],
+      "surfing": true
+    },
+    {
+      "label": "fill31-corner",
+      "map": "JourneyWorldFill31Right",
+      "tile": [
+        4,
+        0
+      ],
+      "surfing": true
+    },
+    {
+      "label": "three-corner",
+      "map": "JourneyWorldSea03",
+      "tile": [
+        27,
+        0
+      ],
+      "surfing": true
+    },
+    {
+      "label": "tanoby-corner",
+      "map": "JourneyWorldSea06",
+      "tile": [
+        63,
+        45
+      ],
+      "surfing": true
+    },
+    {
+      "label": "unviewable-03104",
+      "map": "JourneySurfLink03104",
+      "tile": [
+        0,
+        15
+      ],
+      "surfing": true
+    }
+  ],
+  "controls": [
+    {
+      "direction": "left",
+      "frames": 9,
+      "neighbor": "JourneyMossdeepOuterSea",
+      "target": [
+        109,
+        0
+      ]
+    },
+    {
+      "direction": "right",
+      "frames": 9,
+      "neighbor": "JourneyMossdeepOuterEastSea",
+      "target": [
+        0,
+        0
+      ]
+    },
+    {
+      "direction": "right",
+      "frames": 9,
+      "neighbor": "JourneySurfLink00700",
+      "target": [
+        0,
+        2
+      ]
+    },
+    {
+      "direction": "left",
+      "frames": 9,
+      "neighbor": "JourneySurfLink00701",
+      "target": [
+        23,
+        3
+      ]
+    },
+    {
+      "direction": "down",
+      "frames": 1,
+      "neighbor": "JourneySurfLink02700",
+      "target": [
+        17,
+        0
+      ]
+    },
+    {
+      "direction": "up",
+      "frames": 9,
+      "neighbor": "JourneyKantoCoastalBand",
+      "target": [
+        83,
+        19
+      ]
+    },
+    {
+      "direction": "down",
+      "frames": 1,
+      "neighbor": "JourneySurfLink04500",
+      "target": [
+        4,
+        0
+      ]
+    },
+    {
+      "direction": "up",
+      "frames": 9,
+      "neighbor": "JourneySurfLink04501",
+      "target": [
+        1,
+        20
+      ]
+    },
+    {
+      "direction": "down",
+      "frames": 1,
+      "neighbor": "JourneySurfLink04000",
+      "target": [
+        0,
+        0
+      ]
+    },
+    {
+      "direction": "up",
+      "frames": 9,
+      "neighbor": "JourneyWorldFill30Right",
+      "target": [
+        1,
+        47
+      ]
+    },
+    {
+      "direction": "up",
+      "frames": 9,
+      "neighbor": "JourneySurfLink04300",
+      "target": [
+        3,
+        15
+      ]
+    },
+    {
+      "direction": "down",
+      "frames": 9,
+      "neighbor": "JourneyWorldFill31Right",
+      "target": [
+        4,
+        0
+      ]
+    },
+    {
+      "direction": "up",
+      "frames": 9,
+      "neighbor": "ThreeIsland_Harbor_Frlg",
+      "target": [
+        3,
+        12
+      ]
+    },
+    {
+      "direction": "down",
+      "frames": 9,
+      "neighbor": "JourneyWorldSea03",
+      "target": [
+        27,
+        0
+      ]
+    },
+    {
+      "direction": "right",
+      "frames": 9,
+      "neighbor": "JourneyWorldSea07",
+      "target": [
+        0,
+        45
+      ]
+    },
+    {
+      "direction": "left",
+      "frames": 9,
+      "neighbor": "JourneyWorldSea06",
+      "target": [
+        63,
+        45
+      ]
+    },
+    {
+      "direction": "left",
+      "frames": 9,
+      "neighbor": "JourneySurfLink03103",
+      "target": [
+        17,
+        15
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        5,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        5,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        5,
+        5
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        5,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        5,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        5,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        115,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        115,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        115,
+        5
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        115,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        115,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        115,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        5,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        5,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        5,
+        5
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        5,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        5,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        5,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        31,
+        7
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        31,
+        7
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        31,
+        7
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        31,
+        7
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        31,
+        7
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        31,
+        7
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        31,
+        7
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        31,
+        7
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        31,
+        7
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        31,
+        7
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        31,
+        7
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        31,
+        7
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        95,
+        26
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        95,
+        26
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        95,
+        26
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        95,
+        26
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        95,
+        26
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        95,
+        26
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        29,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        29,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        29,
+        6
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        29,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        29,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        29,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        95,
+        26
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        95,
+        26
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        95,
+        26
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        95,
+        26
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        95,
+        26
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        95,
+        26
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        2,
+        27
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        2,
+        27
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        2,
+        27
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        2,
+        27
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        2,
+        27
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        2,
+        27
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        5,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        5,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        5,
+        6
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        5,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        5,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        5,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        2,
+        27
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        2,
+        27
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        2,
+        27
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        2,
+        27
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        2,
+        27
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        2,
+        27
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        6,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        6,
+        55
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        6,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        6,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        5,
+        7
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        5,
+        7
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        5,
+        7
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        5,
+        7
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        5,
+        7
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        5,
+        7
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        6,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        6,
+        55
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        6,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        6,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        22
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        6,
+        22
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        6,
+        22
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        6,
+        22
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        22
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        6,
+        22
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        7,
+        6
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        30,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        30,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        30,
+        5
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        30,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        30,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        30,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        18
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        6,
+        18
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        6,
+        18
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        6,
+        18
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        18
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        6,
+        18
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        30,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        30,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        30,
+        5
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        30,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        30,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        30,
+        5
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        71,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        71,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        71,
+        55
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        71,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        71,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        71,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        7,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        7,
+        55
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        7,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        7,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        71,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        71,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        71,
+        55
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        71,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        71,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        71,
+        55
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        5,
+        28
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        5,
+        28
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        5,
+        28
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        5,
+        28
+      ]
+    },
+    {
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        28
+      ]
+    },
+    {
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        28
+      ]
+    },
+    {
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        28
+      ]
+    },
+    {
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        28
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "file": "mossdeep-before.png",
+      "sha256": "ae8004393420167af960dd25be80961af1748d4f9a73d209ba9e5bcffb729eeb"
+    },
+    {
+      "file": "mossdeep-after.png",
+      "sha256": "4a33c4e998cdd32f1d461a095a6263743381607f41a61796b4c8f41c738f2675"
+    },
+    {
+      "file": "mossdeep-returned.png",
+      "sha256": "8fc17ac9a87c8562b93b6455266f1f350cf1b069ac4f5646641f08e47408154e"
+    },
+    {
+      "file": "five-corner-before.png",
+      "sha256": "59c8245005099b6d52bbe9b0d2954a787f9da532a1d6eeb7fb2b9ec2b55c62b5"
+    },
+    {
+      "file": "five-corner-after.png",
+      "sha256": "6405ed4097d9dbc7094e639542a20dfd0e3bf0f031e3ffbfe12cbd30c80d83e6"
+    },
+    {
+      "file": "five-corner-returned.png",
+      "sha256": "efaad6eec0470c5d048b27552ab1db371c397db6c3fec6085cf5d58998b9396e"
+    },
+    {
+      "file": "kanto-corner-before.png",
+      "sha256": "bb621d9697389d6202370f6ff3e07485d7f85a0c0d9735673d1cebcc751b152c"
+    },
+    {
+      "file": "kanto-corner-after.png",
+      "sha256": "476061c08c965317b08d001593ddbfce551212b0294cd5efc89f7c29f75093ae"
+    },
+    {
+      "file": "kanto-corner-returned.png",
+      "sha256": "f184cfa2c9fc7be08d1a1ca8986f348857f58f24cf2bc792709596bfee753932"
+    },
+    {
+      "file": "lane21-corner-before.png",
+      "sha256": "f1b8c2625d8135261d2ebcf7b463890b5419b5c0c99b8837bfe4a897867567da"
+    },
+    {
+      "file": "lane21-corner-after.png",
+      "sha256": "a80a14102e93f43518eedd20ce0930fa2de5070e68ebbbd8103680f7595681d9"
+    },
+    {
+      "file": "lane21-corner-returned.png",
+      "sha256": "ecb3c16d2a47203e9ee343e7f1f9f9d3b925e5f92f5d49f6808ebdeec1a6f5fe"
+    },
+    {
+      "file": "fill30-corner-before.png",
+      "sha256": "c3fdd68bcd006d1df19c5e0108d50ae873b39393f01090bbb2ad25f7e0b21935"
+    },
+    {
+      "file": "fill30-corner-after.png",
+      "sha256": "9411aae68bfa0fd569f225c22ba8e2428cb682d58aaf9c36863a3abd6cf43b49"
+    },
+    {
+      "file": "fill30-corner-returned.png",
+      "sha256": "f22f9887a3f0625636ff1b58b6e40d7d5e947af161123a69a3055ea56ea583b4"
+    },
+    {
+      "file": "fill31-corner-before.png",
+      "sha256": "5d58db0f3b227776d74bca9e2b84949bd1e3f6c252da6a323c8a74af0f07aa41"
+    },
+    {
+      "file": "fill31-corner-after.png",
+      "sha256": "21869ba9ecc4a75be69a345367d7d2d8ebf580b1749732ecd99bb68754e1be6a"
+    },
+    {
+      "file": "fill31-corner-returned.png",
+      "sha256": "97676e34aac31ce074f3a9e58b2868e265d6f468701716d508f842f19f6bc125"
+    },
+    {
+      "file": "three-corner-before.png",
+      "sha256": "cf4967e8e14bda70b15f305aad069ac5f71f640240a9208e06cbc33b8249eefe"
+    },
+    {
+      "file": "three-corner-after.png",
+      "sha256": "fc3e9df5956e0c33018d3047a9919111dafd26b51a5e5e748645e5a4cf3a007a"
+    },
+    {
+      "file": "three-corner-returned.png",
+      "sha256": "2b5e87ddfa87b65f4c7dd0793b10d96444bc58631294755e493b9fd0e2e31076"
+    },
+    {
+      "file": "tanoby-corner-before.png",
+      "sha256": "a9eaaf5012c8e14d72d9e793160981b9ea1e6c5f3f0f1943aee95814ede0e576"
+    },
+    {
+      "file": "tanoby-corner-after.png",
+      "sha256": "cb3637781994c3057a9692f6641c97a0fd626041d759f08d2143171e72f3b89e"
+    },
+    {
+      "file": "tanoby-corner-returned.png",
+      "sha256": "4af0ec266a86fc7cbd1885a1f57217c07338a9c21c7041754d8ba3b4c6a80790"
+    }
+  ],
+  "full_campaign_playthrough": false
+}
