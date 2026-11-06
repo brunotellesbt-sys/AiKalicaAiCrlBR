@@ -4,6 +4,15 @@ As quatro ROMs atuais são jogáveis. A validação completa de campanha continu
 
 ## 1. Interiores e regressão final de navegação
 
+A revisão 169 completa limites aquáticos, corrige os dois cantos reproduzidos
+do Sea 36 e permite contornar Treasure Beach para chegar a One Island por
+Surf. O percurso de 392 tiles, dez transições e a migração de bateria antiga
+têm provas nativas atuais. O censo de câmeras registra 107 células de canto
+com candidatos conflitantes em nove outros mapas: reproduzir quais são
+visíveis e alcançáveis antes de alterar suas conexões. Isso não equivale a
+107 defeitos confirmados nem a uma certificação visual de todo o mundo.
+Veja [a revisão](../../docs/sevii-route-boundaries.md).
+
 A revisão 168 corrige dois bloqueios do Instituto do Clima e as câmeras de
 16 mapas costeiros. Há batalha/recompensa/entrada no ginásio/Continue nativos,
 32 travessias atuais e comparação de fonte de 92 conexões direcionais. As

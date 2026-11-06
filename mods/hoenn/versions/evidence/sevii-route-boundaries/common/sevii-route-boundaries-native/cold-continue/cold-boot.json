@@ -1,0 +1,170 @@
+{
+  "passed": true,
+  "rom_sha256": "7b3a89e266b51a52fdb03bcb6531e04aa1b7192e11148400f16f8c9e43e6ce51",
+  "fresh_rom_boot_to_title": true,
+  "fresh_rom_title_to_new_game": true,
+  "no_assert_screen": true,
+  "controllers_only": true,
+  "no_game_memory_writes": true,
+  "bundled_save_tested": true,
+  "runs": [
+    {
+      "battery": false,
+      "frames": 2464,
+      "samples": [
+        {
+          "frame": 1200,
+          "callback": "MainCB2_Intro"
+        },
+        {
+          "frame": 1201,
+          "callback": "MainCB2_EndIntro"
+        },
+        {
+          "frame": 1291,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1591,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1592,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1682,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1683,
+          "callback": "CB2_GoToMainMenu"
+        },
+        {
+          "frame": 1773,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2073,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2074,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2164,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2464,
+          "callback": "CB2_MainMenu"
+        }
+      ],
+      "fresh_rom_boot_to_title": true,
+      "fresh_rom_title_to_new_game": true,
+      "new_game_tasks": [
+        "Task_HandleMultichoiceInput",
+        "Task_JourneyIntroRegion"
+      ]
+    },
+    {
+      "battery": true,
+      "frames": 3664,
+      "samples": [
+        {
+          "frame": 1200,
+          "callback": "MainCB2_Intro"
+        },
+        {
+          "frame": 1201,
+          "callback": "MainCB2_EndIntro"
+        },
+        {
+          "frame": 1291,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1591,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1592,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1682,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1683,
+          "callback": "CB2_GoToMainMenu"
+        },
+        {
+          "frame": 1773,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2073,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2074,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2164,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3064,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3664,
+          "callback": "CB2_Overworld"
+        }
+      ],
+      "bundled_save_continue_to_field": true,
+      "field_map": [
+        89,
+        23
+      ],
+      "player_tile": [
+        8,
+        14
+      ],
+      "player_surfing": true,
+      "player_elevation": 1,
+      "no_callback_script_or_native_call_injection": true
+    }
+  ],
+  "bundled_save_continue_to_field": true,
+  "bundled_save_sha256": "f2c95d0752e7464edbce62cdd2b95e42b31dd3ae6f95f1315a9381b73b445f00",
+  "captures": [
+    {
+      "file": "battery-continued-to-field.png",
+      "sha256": "cae4a015d8e513cc3e73a4778353e174fcfc4409c66c06691849506526ae4883"
+    },
+    {
+      "file": "battery-main-menu.png",
+      "sha256": "6e366086fcab6f8e5bfb1e3c528bf2e77faa5900acad6a0cf84e573a7967d1b1"
+    },
+    {
+      "file": "battery-title.png",
+      "sha256": "069d9f3aaaa6602e095264fd2fbef05e9cc1034f1dafe06ab74943356415dc4c"
+    },
+    {
+      "file": "fresh-main-menu.png",
+      "sha256": "e14a1501caf995f06e3a78db2495425b37b3d8601de4402898b14aef0e1e22b1"
+    },
+    {
+      "file": "fresh-new-game.png",
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379"
+    },
+    {
+      "file": "fresh-title.png",
+      "sha256": "069d9f3aaaa6602e095264fd2fbef05e9cc1034f1dafe06ab74943356415dc4c"
+    }
+  ]
+}

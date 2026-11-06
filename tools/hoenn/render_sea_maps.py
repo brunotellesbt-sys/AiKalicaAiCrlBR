@@ -165,7 +165,10 @@ class MapRenderer:
         args=[arg.strip() for arg in args.split(',')]
         graphic=_alias(args[0],graphics)
         if macro!='obj_frame_tiles':
-            assert (_integer(args[1])*8,_integer(args[2])*8)==(width,height), ('Native frame dimensions differ',pic)
+            # overworld_frame uses these dimensions only to count bytes.
+            # Seagallop's 4x16 declaration contains the same 2048-byte frame
+            # that its native 64x64 OAM renders; it is not a 32x128 actor.
+            assert _integer(args[1])*_integer(args[2])*64==width*height, ('Native frame byte count differs',pic)
         source_frame=frame_index if relative else (_integer(args[3]) if macro=='overworld_frame' else 0)
         path,inline=self._graphic_input(graphic,graphics)
         if inline is None:

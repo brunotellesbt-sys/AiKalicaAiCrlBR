@@ -1,6 +1,7 @@
 # Registro de erros
 
 Antes de alterar terreno, água, pontes, encostas ou objetos compostos, consulte
+[limites e acesso sul de One Island](2026-11-05-limites-e-acesso-one-island.txt),
 [campanha e câmeras costeiras](2026-11-04-campanha-e-cameras.txt),
 [fotos de chegada e costas](2026-11-02-fotos-chegada-e-costas.txt),
 [porta e ponte de Cinnabar](2026-11-02-video-cinnabar.txt),

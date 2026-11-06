@@ -16,6 +16,20 @@ nove vídeos de 28/10 fica em errors/2026-10-28-videos-surf-tiles.txt.
 9. Executar testes, navegador e stage_pages. Abrir PR normal ao concluir tudo.
 Não redesenhar o mapa-múndi nem mexer em prédios/NPCs/rotas fora do pedido.
 
+[CANTOS MARÍTIMOS E SAVES — REVISÃO 169]
+Registro: errors/2026-11-05-limites-e-acesso-one-island.txt.
+Uma borda pode mudar mesmo com bancos iguais: a câmera carrega vizinhos
+diretos e pode omitir o terceiro mapa na diagonal. Conferir o mesmo ponto
+físico nas duas vistas, inclusive células indefinidas; não pular essas células
+no observador. A consulta visual não pode liberar GetMapBorderIdAt/colisão.
+Limites usam rochas inteiras; preservar todos os vãos reais das conexões,
+inclusive o canto que pertence ao vão de outro lado. Em ampliação, conservar
+objetos completos, fechar a montanha que era cortada pelo antigo mapa e testar
+o save anterior. Translação de coordenadas exige migração versionada única;
+não somar deslocamento em todo Continue. A ponte mGBA precisa export_save e
+load_save para provas de bateria. Não confundir macro de tamanho em bytes
+de um frame com o formato de OAM do ator, como no Seagallop 64x64.
+
 [REVISÃO DO MUNDO GERADO — CAMADA 165]
 Inventário: audit_generated_world_inventory.py compara os hashes das camadas
 com upstream, incluindo mudanças apenas no layout e consumidores indiretos.
