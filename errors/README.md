@@ -1,6 +1,7 @@
 # Registro de erros
 
 Antes de alterar terreno, água, pontes, encostas ou objetos compostos, consulte
+[canal sul, portos e cavernas criadas](2026-11-07-generated-area-review.txt),
 [objetos e cantos costeiros](2026-11-06-objetos-e-cantos-costeiros.txt),
 [limites e acesso sul de One Island](2026-11-05-limites-e-acesso-one-island.txt),
 [campanha e câmeras costeiras](2026-11-04-campanha-e-cameras.txt),

@@ -1,0 +1,42 @@
+{
+  "kind": "generated-area-review-native",
+  "passed": true,
+  "rom_sha256": "52156af727381fb5b47dacf83f8f57696e05dae05c4971368310b98515eba935",
+  "elf_sha256": "000a4795be90877c83c4b133b3efa5234d042e8414e832d5e0e687ae4304bd46",
+  "components": [
+    {
+      "kind": "generated-coast-cameras-native",
+      "file": "coast/coast.json",
+      "sha256": "9b8798da6c1fc394959e80d21b5110a5d1ba2696ec2ea6a6ecf56840d201329e"
+    },
+    {
+      "kind": "generated-cave-portals-native",
+      "file": "caves/caves.json",
+      "sha256": "fb7ff6b1148e1ee83850a5bf5df6fcd14895e5267e956a105236423486c3e875"
+    },
+    {
+      "kind": "port-boundary-scenery-native",
+      "file": "ports/ports.json",
+      "sha256": "b11e82e56be80675ad8b2c5120986e1c2b918c3e3847efe2b3e34b7cc612b45d"
+    },
+    {
+      "kind": "one-south-surf-link-native",
+      "file": "south/south.json",
+      "sha256": "9d3e88324fe5b337f23e4592dea8b51417a511aa26960c99987345628b705345"
+    },
+    {
+      "kind": "coast-scenery-review-native",
+      "file": "coast-regression/coast-scenery-review-native.json",
+      "sha256": "a87eb717776d02fd762b22b4da96b7671f190e1f0acf38df3d277bee8afda3df"
+    }
+  ],
+  "complete_objects": true,
+  "camera_transitions": true,
+  "port_surf_roundtrips": true,
+  "new_vertical_horizontal_connection": true,
+  "remaining_cave_exit_and_actors_reachable": true,
+  "animation_and_battery_continue": true,
+  "frozen_source_and_artifact_unchanged": true,
+  "initial_placements_progress_and_encounter_suppression_are_fixtures": true,
+  "full_campaign_playthrough": false
+}

@@ -1,0 +1,175 @@
+REVISÃO 171 — CANAL SUL, LIMITES DOS PORTOS E ÁREAS CRIADAS
+
+PEDIDO E RECORTE
+Conectar a rota vertical de Surf abaixo de One Island à rota horizontal
+já desenhada. Corrigir tiles defeituosos e limites sem pedrinhas perto dos
+portos; procurar ocorrências semelhantes nos locais criados. Preservar o
+mapa-múndi, construções completas e conteúdo fora do pedido. Publicar as
+cinco ROMs, save da TESTE e ZIP; abrir PR somente depois das verificações.
+
+ERROS CONFIRMADOS, REPRODUÇÃO E SOLUÇÃO
+1. Canal oeste de Treasure Beach terminava em recifes sem conexão ao sul.
+   Reprodução: OneIsland_TreasureBeach_Frlg, por volta de (4,43), seguir
+   para baixo até a última fileira (y47). Não existia conexão DOWN.
+   Solução: acrescentar JourneyOneSouthPassage, 8x32, entre Treasure Beach
+   e JourneyKantoSeviiTransit. Manter pedrinhas inteiras nas colunas0 e7,
+   com água nas colunas1..6. Abrir seis células em Beach(y47,x1..6) e
+   DOZE no mar horizontal(y0 E y1,x63..68). Abrir só a primeira fileira
+   deixaria um segundo bloqueio imediatamente após a travessia.
+   Conexões: Beach DOWN(offset0) / canal UP(offset0); canal DOWN(offset-62)
+   / Transit UP(offset62). O novo mapa é acrescentado ao grupo existente,
+   sem renumerar os mapas antigos. Seus256 valores de GPS seguem o
+   meridiano desenhado; os525848 valores anteriores e a arte são preservados.
+   Nome no mapa: ONE SOUTH PASSAGE. A família de encontros vem de Transit;
+   a supressão da TESTE permanece na regra global existente.
+
+2. Pontas da encosta de Treasure Beach usavam o canto do lado oposto.
+   Reprodução: navegar junto ao oeste(7,37) e ao leste(32,37) da montanha.
+   Causa: cap direito à esquerda e cap esquerdo à direita; primeiras
+   peças de espuma também não acompanhavam o canto correspondente.
+   Solução no banco JourneySeviiSea:
+     (7,37): 051F->0517; (6,38): 112C->1128;
+     (32,37): 0517->051F; (33,38): 112A->1129.
+   Conferir o conjunto completo no doador nativo, não escolher pelo ID:
+   SevenIsland_TrainerTower_Frlg(39,36..37) e KindleRoad(6,135..136),
+   incluindo as peças de água/espuma adjacentes. O corpo da montanha
+   permanece no lugar; alturas e colisões dessas quatro células não mudam.
+
+3. Quatro rochas de2x2 estavam cortadas junto aos terminais.
+   Treasure Beach, âncora(19,7): o embarque apagou apenas o quarto superior
+   direito. Os três quartos restantes viram pedras pequenas inteiras;
+   preservar a água de embarque(20,7).
+   Four Island, âncoras(1,27) e(7,35): o telhado e o caminho costeiro
+   deixaram quartos órfãos. Recuperar água nativa nas quatro peças restantes,
+   sem apagar o telhado. Bloquear essas posições separaria os caminhos
+   existentes, portanto não preencher indiscriminadamente com pedras.
+   Five Island, âncora(5,14): depois da passagem do barco sobraram as duas
+   peças superiores. Substituir ambas por pedrinhas inteiras bloqueadas;
+   conservar as conexões e a navegabilidade da água restante.
+   São nove células de arte. Validar o objeto inteiro e o espaço de
+   embarque, não apenas o quarto encontrado pelo primeiro detector.
+
+4. Limites externos dos portos tinham água sem barreira visível.
+   São53 células: Three Island Port(1), Four Island(6), Six Island(1),
+   Sevault Canyon Entrance/terminal de Seven(45). Destas,46 já bloqueavam
+   o jogador mas pareciam água livre; sete a leste de Seven(x23,y2..8)
+   também precisavam do bloqueio, pois não pertencem à conexão à direita,
+   que só começa em y20. Usar o recife pequeno nativo completo0x243.
+   A seleção exige os OITO words de água pura, camada superior vazia:
+   41C6,41C7,41C7,41C6,0000,0000,0000,0000.
+   Preservar cada altura:38 peças de Seven são0676->0643, não1643;
+   oito outros limites são1673->1643; as sete aberturas externas1273->1643.
+   Não converter praia/encosta em recife só porque possui comportamento Surf.
+   Proteger os sete embarques, todos os vãos físicos de conexão e os
+   footprints completos dos12 barcos(Seagallop64x64 e barco32x32).
+
+5. Six Island não permitia embarcar pelo ponto do terminal.
+   Reprodução: a pé em(3,29), olhar à esquerda para(2,29): água parecia
+   navegável, mas seu bloco1673 tinha colisão. O prompt Surf não surgia.
+   Solução:1673->1273, conservando desenho e altura. Esse ponto alcança
+   JourneySurfLink05200 pela conexão real à esquerda; não é uma piscina
+   isolada. Testar embarque, travessia, retorno e desembarque pelos controles.
+   As correções dos itens3..5 somam63 células em seis mapas.
+
+6. Caverna Horizonte conservava desenhos de passagens sem destino.
+   É clone46x38 de ShoalCave_LowTideInnerRoom, bancos General+Cave.
+   Dois arcos pretos inativos(15,19) e(30,25), além de limiares sem warp
+   em(33..35,30) e(39..41,34), pareciam portas funcionais. Fechar todo o
+   objeto com faces nativas contínuas:0619 no arco3x2 e0609 nos limiares,
+   incluindo a antiga peça adicional(13,19). Em(19,14), uma escada removida
+   havia sido substituída por4209, um degrau; restaurar4211, piso de caverna.
+   Total20 células. A única entrada/saída real(14,33), os três NPCs,
+   eventos, bancos e conexões permanecem iguais. Só as duas células
+   internas dos falsos portais perdem passagem. Esses setores já eram
+   separados da região acessível pela entrada real: a prova local de
+   acabamento usa posições iniciais declaradas, sem chamar isso de viagem
+   natural pela caverna. Testar também o percurso real entrada->NPCs->saída.
+
+7. Água e pedras trocavam na câmera de duas novas emendas oceânicas.
+   Reprodução A: JourneyWorldSea02(0,2), sair à esquerda para Sea01(63,2).
+   A célula físicaSea02(-3,-2)/Sea01(61,-2) mudava recife->água.
+   Reprodução B: JourneyWorldFill21Right(2,47), sair ao sul paraSea07(43,0).
+   A célulaFill21(-1,47)/Sea07(40,-1) tinha a mesma troca.
+   Causa: mapas gerados independentes não usavam o dono adequado do
+   contorno repetido na câmera. O grafo contém rotas distantes dobradas;
+   projetar qualquer vizinho pode escolher uma costa que não está ali.
+   Solução de desenho restrita a esses DOIS mapas: escolher o retângulo
+   do vizinho direto mais próximo, respeitar as faixas nativas das conexões
+   e sua ordem de sobreposição, e usar a borda local do proprietário quando
+   necessário. Empates com arte diferente ou bancos incompatíveis recusam
+   a projeção. A consulta só desenha; colisão, altura, gBackupMapLayout e
+   GetMapBorderIdAt de células indefinidas continuam iguais e bloqueados.
+   Conservar os três controles de Sea02/TwoThreeMouth/Fill21Cap e os11
+   vãos de SevenHarbor->JourneySurfLink05101. Não fechar água real para
+   esconder um problema de câmera. O censo bruto ainda registra30 conflitos
+   de projeção; isso não equivale a30 falhas visíveis nem a zero global.
+
+PROVAS E ESTADO DA PUBLICAÇÃO
+Os relatórios finais devem ficar vinculados à mesma ROM/ELF em:
+  mods/hoenn/generated-area-review-validation/common/source/
+  mods/hoenn/generated-area-review-validation/common/native/
+  mods/hoenn/generated-area-review-validation/editions/
+  mods/hoenn/versions/versions.json
+Escopo esperado: generated-area-review,171 camadas.
+Enquanto esse manifesto não estiver selado e as provas não estiverem
+concluídas, este TXT descreve reparos preparados; não certifica a ROM pública.
+Fonte/ROM nativa171 congelada e provas comuns aprovadas:
+  ROM: 52156af727381fb5b47dacf83f8f57696e05dae05c4971368310b98515eba935
+  ELF: 000a4795be90877c83c4b133b3efa5234d042e8414e832d5e0e687ae4304bd46
+  32.250 hashes de fonte; 35 mapas inteiros antes/depois, 70 painéis.
+  Rede física: 389 mapas; componentes de água168->168 e terra1223->1223.
+  Conexões desabilitadas nativamente são excluídas da análise; também
+  conferir componentes direcionados, pois uma volta só de ida não serve.
+  Nativo: sete embarques/retornos, ligação vertical/horizontal completa,
+  quatro travessias de divisa, oito fases de água, duas baterias salvas
+  pelos controles; caverna com três personagens e saída, bateria antiga;
+  cinco políticas de câmera e regressão costeira anterior na ROM171.
+  As cinco edições congeladas passaram abertura e regra de abordagem.
+  TESTE: 200 tentativas aleatórias, pesca, Sweet Scent e Rock Smash
+  desativados, treinador invicto sem abordagem por 600 quadros, sem Repel
+  na fixture; abertura sem bateria e Continue com o save de 128 KiB.
+  Publicação171 selada com 12 provas atuais e cinco ROMs atualizadas.
+  Navegador: cinco downloads de 32 MiB conferidos e executados no mGBA.
+  Suítes: 825 testes de Hoenn +12 Surf +6 CI =843, todos aprovados.
+  Canal: 261 passos por controles, 30 destinos, quatro divisas e GPS
+  contínuo; o verificador exige trajetória e contagem reais, sem estimativa.
+  Staging do Pages aprovado: cinco ROMs, manifesto e player com bytes
+  iguais aos downloads. O deploy público ocorre após o merge em main.
+
+MÉTODO CURTO PARA NÃO REPETIR
+1. Fixar SHA,mapa,x,y,direção e estado. Ler o TXT relevante e o catálogo.
+2. Inspecionar o mapa inteiro, vizinhos e todos os quartos do objeto.
+3. Conferir os oito words, bancos, comportamento, altura e colisão separados.
+4. Em novo canal, conferir também as segundas fileiras das duas bocas.
+5. Preservar mapa-múndi e GPS antigos; acrescentar só o trecho necessário.
+6. Antes de pôr pedras, excluir vãos de conexão, embarques e barcos inteiros;
+   comparar componentes globais, não apenas a piscina aparente do mapa.
+7. Remover um warp exige revisar arco, limiar, escada e comportamento residual.
+8. Compilar; congelar ROM/ELF; percorrer ida/volta, bloqueios e desembarques.
+9. Separar captura do emulador de render de fonte e fixture de percurso real.
+10. Provar animação e Continue com bateria real, cinco edições e TESTE sem
+    encontros/abordagem; atualizar ROMs,save,ZIP,navegador e só então abrir PR.
+
+PROMPTS COMPLETOS REUTILIZÁVEIS
+"Na ROM[SHA], em[mapa,x,y], seguindo[direção] com[Surf/a pé], o caminho
+termina antes de chegar a[mapa]. Confira conexões e offsets reais, todas as
+fileiras bloqueadas nas duas bocas e o GPS existente. Una o trecho já
+desenhado sem redesenhar o mapa-múndi, com recifes inteiros nos limites.
+Preserve eventos, barcos, praias, altura e save; prove ida, volta e Continue."
+
+"Em[porto,mapa,x,y], a rocha está cortada e o limite parece água livre.
+Identifique o objeto inteiro no banco atual e o doador nativo. Exclua todos
+os embarques, vãos e footprints dos barcos. Corrija apenas água pura ou o
+objeto incompleto, preserve a conectividade global e prove Surf nos dois
+sentidos nas sete ilhas, incluindo voltar ao tablado."
+
+"Em[mapa,x,y], o arco de caverna permanece desenhado após remover seu warp.
+Confira arco completo, limiar, piso e degrau no doador. Feche só o portal
+inativo, mantenha saída e NPCs acessíveis e diferencie a prova local de
+acabamento do percurso pela entrada real. Teste bateria antiga e Continue."
+
+LIMITES
+Não é uma certificação de quatro campanhas completas. Censo de fonte não
+substitui provas nativas. A revisão não altera lógica de ginásios, rivais
+ou eventos. Animações devem ser verificadas no banco e em fases reais;
+oito quadros de água não provam automaticamente todas as praias do mundo.

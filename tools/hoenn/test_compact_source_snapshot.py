@@ -32,6 +32,18 @@ class CompactSnapshotTests(unittest.TestCase):
             with self.assertRaises(AssertionError):
                 clone(source, source, [])
 
+    def test_materializes_mutable_ancestors_from_an_already_compact_parent(self):
+        with tempfile.TemporaryDirectory(dir='/tmp') as directory:
+            root = Path(directory)
+            frozen, parent, candidate = root/'frozen', root/'parent', root/'candidate'
+            frozen.mkdir(); parent.mkdir()
+            (frozen/'map.bin').write_bytes(b'frozen')
+            (parent/'maps').symlink_to(frozen, target_is_directory=True)
+            clone(parent, candidate, ['maps/map.bin'])
+            self.assertFalse((candidate/'maps').is_symlink())
+            (candidate/'maps/map.bin').write_bytes(b'candidate')
+            self.assertEqual((frozen/'map.bin').read_bytes(), b'frozen')
+
 
 if __name__ == '__main__':
     unittest.main()

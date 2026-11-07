@@ -24,7 +24,8 @@ jobs:
             23881bc1c3f3326befe2cfbe357da06abc63a062 \
             b0e1c565853826b14ab19c8f0e5eee6df5abc4f4 \
             841b6545ad93bd66eaa30aebed808d30304084eb \
-            f7b4967fcd38da56fccf5249815bfa2950890cab
+            f7b4967fcd38da56fccf5249815bfa2950890cab \
+            6f45ef80fd0e0adf7864978ff56aac8ca8404cf3
       - name: Install indexed sprite validation dependency
         run: python3 -m pip install Pillow==11.3.0
       - name: Verify catalog, water elevations, NPCs and connections

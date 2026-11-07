@@ -4,13 +4,15 @@ As quatro ROMs atuais são jogáveis. A validação completa de campanha continu
 
 ## 1. Interiores e regressão final de navegação
 
-A revisão 170 amplia a busca a 284 mapas marítimos: recompõe 38 rochas,
+A revisão 171 acrescenta o canal sul de One Island, revisão de portos e caverna Horizonte, com 12 provas atuais. Veja [o recorte e as limitações](../../docs/generated-area-review.md). A campanha completa descrita abaixo continua pendente.
+
+A revisão anterior 170 amplia a busca a 284 mapas marítimos: recompõe 38 rochas,
 restaura 70 peças de encosta/praia e elimina as 107 posições contraditórias
 registradas no censo anterior. As travessias nativas cobrem oito casos, com
 um controle de Mossdeep; o caso de fonte em03104 não aparece na câmera.
 A revisão também conserva o circuito sul de One Island e a migração de saves.
 A inspeção deste recorte não certifica todos os interiores, cavernas ou quatro
-campanhas completas. Veja [a revisão atual](../../docs/coast-scenery-review.md).
+campanhas completas. Veja [a revisão 170](../../docs/coast-scenery-review.md).
 
 A revisão 168 corrige dois bloqueios do Instituto do Clima e as câmeras de
 16 mapas costeiros. Há batalha/recompensa/entrada no ginásio/Continue nativos,

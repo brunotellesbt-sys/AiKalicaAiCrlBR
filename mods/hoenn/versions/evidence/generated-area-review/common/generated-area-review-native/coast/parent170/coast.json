@@ -1,0 +1,6995 @@
+{
+  "kind": "generated-coast-cameras-native",
+  "passed": true,
+  "baseline": true,
+  "rom_sha256": "6a70d43313df75d2258c5bac46d7ab8c0aa50b6e4f1a7246d540159ee726d5fc",
+  "elf_sha256": "df384a54339cbd4de07c187592208ef4999636f095856e34aa4c1a47e5303545",
+  "native_validation_performed": true,
+  "initial_placements_and_surf_state_are_fixtures": true,
+  "private_query_trampoline_declared": true,
+  "only_read_only_queries_after_placement": true,
+  "gameplay_scripts_not_injected_after_placement": true,
+  "no_midtrip_position_collision_elevation_camera_palette_or_vram_writes": true,
+  "source_and_rom_unchanged": true,
+  "source_inputs_sha256": {
+    "data/layouts/JourneyMarineLimits/frlg-border.bin": "23d6a6e9b3db90a879a59c7179bc454f488d9864441da95e0b384ad9f639be1e",
+    "data/layouts/JourneySeviiSevenPort/map.bin": "13856f7ce2ada50fff3b4576547c3d4d5ad5aa522804d57e15d01d19f369554b",
+    "data/layouts/JourneySurfLink05101/map.bin": "8de9688c24756ae92473758e806950b0523ae1d7851e99b399795aca35859589",
+    "data/layouts/JourneyTwoThreeMouth/map.bin": "c251861769b2062d5224b2001985d494db1d22a5e9090f2c30f7acc9e7be88eb",
+    "data/layouts/JourneyWorldFill21Cap/map.bin": "b14546c5fd48ffee5e88e8f46b02135a31fd465f3d33ac36075de1ae5121aced",
+    "data/layouts/JourneyWorldFill21Right/map.bin": "7580dfd4295551eedec87932087866bb066aafc00dbe221dd8e47e05f9b4b6c8",
+    "data/layouts/JourneyWorldSea01/map.bin": "9c3067dca8ebe3a4f828c098fce5c2acdb774ba8facf70cd5e71f7f39b75c631",
+    "data/layouts/JourneyWorldSea02/map.bin": "c2c0081a0a056bfc59506a2f1bcb8466e4884a6c18dc9a006d25ee7cb827ab29",
+    "data/layouts/JourneyWorldSea07/map.bin": "17456a5f10fe1ec988823135d2fd422c96744aec83163ef4ad07c804b6ff9d3a",
+    "data/maps/JourneySurfLink05101/map.json": "d62d4f96950041fb501da77ed8b8ce25bad26e88cd105da0f7bf9878f15a75b9",
+    "data/maps/JourneyTwoThreeMouth/map.json": "0a7d7d92bbda811110284c4dbc755fdb56d7ea13317e7055854913a28337fb64",
+    "data/maps/JourneyWorldFill21Cap/map.json": "fb872b452845a930f14d9bbcc74ef4613d41179db7dbcbdfc6e30fa9a226413a",
+    "data/maps/JourneyWorldFill21Right/map.json": "56f3707b2317addd06c2032e0726d0fdf0d4a1df46d0699b94e77fbf285a91ef",
+    "data/maps/JourneyWorldSea01/map.json": "b0bd1eaad2eca423ec681861394e42855fd898215477ee6ab4c4dade7880e09a",
+    "data/maps/JourneyWorldSea02/map.json": "7234ce6f1de2fcfed1850b072f380e6e24d2c16213b8589d067b3ca06aeb87c1",
+    "data/maps/JourneyWorldSea07/map.json": "6f2c01c1bce5a1aa435b4b397d0bedf1af663c9620d7981c8a6c64c92ca077d4",
+    "data/maps/SevenIsland_Harbor_Frlg/map.json": "3be81b6e51600001f1459d8b6e232cd1ccb6e9bdddd6d189040c53682cb518ad",
+    "src/fieldmap.c": "a4df27f3ca4a5a5e0a8698205378b33d131b7ce8b20f70f604aeff24a49ad5f3"
+  },
+  "scoped_maps": [
+    "JourneyWorldSea02",
+    "JourneyWorldFill21Right"
+  ],
+  "full_world_camera_certified": false,
+  "full_campaign_playthrough": false,
+  "corner_cases": [
+    {
+      "case": {
+        "label": "sea02-west",
+        "map": "JourneyWorldSea02",
+        "player": [
+          0,
+          2
+        ],
+        "direction": "left",
+        "neighbor": "JourneyWorldSea01",
+        "target": [
+          63,
+          2
+        ],
+        "cell": [
+          -3,
+          -2
+        ],
+        "neighbor_cell": [
+          61,
+          -2
+        ],
+        "expected_metatile": 299
+      },
+      "before": {
+        "state": {
+          "map": "JourneyWorldSea02",
+          "tile": [
+            0,
+            2
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -3,
+            -2
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldSea02",
+          "cells": [
+            {
+              "cell": [
+                -3,
+                -2
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  65,
+                  9,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  67,
+                  9,
+                  72,
+                  80,
+                  136,
+                  0
+                ],
+                [
+                  69,
+                  9,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  71,
+                  9,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  73,
+                  9,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  75,
+                  9,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  77,
+                  9,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  79,
+                  9,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  65,
+                  17,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  67,
+                  17,
+                  32,
+                  40,
+                  120,
+                  2
+                ],
+                [
+                  69,
+                  17,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  71,
+                  17,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  73,
+                  17,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  75,
+                  17,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  77,
+                  17,
+                  40,
+                  56,
+                  120,
+                  3
+                ],
+                [
+                  79,
+                  17,
+                  40,
+                  56,
+                  120,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "sea02-west-before.png",
+          "sha256": "88f5e6114889095d0e6cbbc27dda48d95aa50a8cbf5b1a6e29f5d673b847aee6"
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneyWorldSea01",
+          "tile": [
+            63,
+            2
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            61,
+            -2
+          ],
+          "block": 1023,
+          "metatile": 299,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldSea01",
+          "cells": [
+            {
+              "cell": [
+                61,
+                -2
+              ],
+              "expected_metatile": 299,
+              "native_metatile": 299,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                0,
+                0,
+                0,
+                0
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  81,
+                  9,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  83,
+                  9,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  85,
+                  9,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  87,
+                  9,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  89,
+                  9,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  91,
+                  9,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  93,
+                  9,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  95,
+                  9,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  81,
+                  17,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  83,
+                  17,
+                  32,
+                  40,
+                  120,
+                  2
+                ],
+                [
+                  85,
+                  17,
+                  32,
+                  40,
+                  120,
+                  2
+                ],
+                [
+                  87,
+                  17,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  89,
+                  17,
+                  32,
+                  40,
+                  120,
+                  3
+                ],
+                [
+                  91,
+                  17,
+                  32,
+                  40,
+                  120,
+                  3
+                ],
+                [
+                  93,
+                  17,
+                  32,
+                  40,
+                  120,
+                  3
+                ],
+                [
+                  95,
+                  17,
+                  32,
+                  40,
+                  120,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "sea02-west-after.png",
+          "sha256": "4e0e0cfc52b4a531e7732adbd7fa2934c429431ad4e30cdc366eafb2404142f1"
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "JourneyWorldSea02",
+          "tile": [
+            0,
+            2
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -3,
+            -2
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldSea02",
+          "cells": [
+            {
+              "cell": [
+                -3,
+                -2
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  65,
+                  13,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  67,
+                  13,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  65,
+                  15,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  67,
+                  15,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  73,
+                  15,
+                  72,
+                  80,
+                  120,
+                  1
+                ],
+                [
+                  75,
+                  15,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  77,
+                  15,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  79,
+                  15,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  65,
+                  17,
+                  56,
+                  72,
+                  128,
+                  2
+                ],
+                [
+                  67,
+                  17,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  69,
+                  17,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  71,
+                  17,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  73,
+                  17,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  75,
+                  17,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  77,
+                  17,
+                  32,
+                  40,
+                  120,
+                  3
+                ],
+                [
+                  79,
+                  17,
+                  32,
+                  40,
+                  120,
+                  3
+                ]
+              ],
+              "checked_pixels": 42
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "sea02-west-returned.png",
+          "sha256": "33d642439d23adbd5ed12a7e770d062245f363ddba9caca91f31b29b3f3a60e6"
+        }
+      },
+      "outbound_and_return_with_controllers": true,
+      "parent_pop_observed": true
+    },
+    {
+      "case": {
+        "label": "fill21-seven",
+        "map": "JourneyWorldFill21Right",
+        "player": [
+          2,
+          47
+        ],
+        "direction": "down",
+        "neighbor": "JourneyWorldSea07",
+        "target": [
+          43,
+          0
+        ],
+        "cell": [
+          -1,
+          47
+        ],
+        "neighbor_cell": [
+          40,
+          -1
+        ],
+        "expected_metatile": 299
+      },
+      "before": {
+        "state": {
+          "map": "JourneyWorldFill21Right",
+          "tile": [
+            2,
+            47
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -1,
+            47
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldFill21Right",
+          "cells": [
+            {
+              "cell": [
+                -1,
+                47
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  65,
+                  73,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  67,
+                  73,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  69,
+                  73,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  71,
+                  73,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  73,
+                  73,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  75,
+                  73,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  77,
+                  73,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  79,
+                  73,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  65,
+                  81,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  67,
+                  81,
+                  32,
+                  40,
+                  120,
+                  2
+                ],
+                [
+                  69,
+                  81,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  71,
+                  81,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  73,
+                  81,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  75,
+                  81,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  77,
+                  81,
+                  32,
+                  40,
+                  120,
+                  3
+                ],
+                [
+                  79,
+                  81,
+                  32,
+                  40,
+                  120,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "fill21-seven-before.png",
+          "sha256": "b89bcc9103d2beabe821815523c23d5c3762d72209c06ed99961afadf1022766"
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneyWorldSea07",
+          "tile": [
+            43,
+            0
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            40,
+            -1
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 2
+        },
+        "pixels": {
+          "map": "JourneyWorldSea07",
+          "cells": [
+            {
+              "cell": [
+                40,
+                -1
+              ],
+              "expected_metatile": 299,
+              "native_metatile": 299,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                0,
+                0,
+                0,
+                0
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    0,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    0,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  65,
+                  57,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  67,
+                  57,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  69,
+                  57,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  71,
+                  57,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  73,
+                  57,
+                  56,
+                  72,
+                  128,
+                  1
+                ],
+                [
+                  75,
+                  57,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  77,
+                  57,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  79,
+                  57,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  65,
+                  65,
+                  56,
+                  72,
+                  128,
+                  2
+                ],
+                [
+                  67,
+                  65,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  69,
+                  65,
+                  32,
+                  40,
+                  120,
+                  2
+                ],
+                [
+                  71,
+                  65,
+                  32,
+                  40,
+                  120,
+                  2
+                ],
+                [
+                  73,
+                  65,
+                  40,
+                  56,
+                  120,
+                  3
+                ],
+                [
+                  75,
+                  65,
+                  40,
+                  56,
+                  120,
+                  3
+                ],
+                [
+                  77,
+                  65,
+                  32,
+                  40,
+                  120,
+                  3
+                ],
+                [
+                  79,
+                  65,
+                  32,
+                  40,
+                  120,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "fill21-seven-after.png",
+          "sha256": "d9435cb11da3d7cd5fbbbb8ca55b7a7a31a0740d3177a28c53dbb1b3ac9f2bbf"
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "JourneyWorldFill21Right",
+          "tile": [
+            2,
+            47
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -1,
+            47
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldFill21Right",
+          "cells": [
+            {
+              "cell": [
+                -1,
+                47
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  65,
+                  73,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  67,
+                  73,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  69,
+                  73,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  71,
+                  73,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  73,
+                  73,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  75,
+                  73,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  77,
+                  73,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  79,
+                  73,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  65,
+                  81,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  67,
+                  81,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  69,
+                  81,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  71,
+                  81,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  73,
+                  81,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  75,
+                  81,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  77,
+                  81,
+                  32,
+                  40,
+                  120,
+                  3
+                ],
+                [
+                  79,
+                  81,
+                  32,
+                  40,
+                  120,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "fill21-seven-returned.png",
+          "sha256": "9b38605b72500e575bace46b892820f5516ae80ecee49368e43f9df378f61c27"
+        }
+      },
+      "outbound_and_return_with_controllers": true,
+      "parent_pop_observed": true
+    },
+    {
+      "case": {
+        "label": "sea02-mouth-water-projection",
+        "map": "JourneyWorldSea02",
+        "player": [
+          24,
+          0
+        ],
+        "direction": "up",
+        "neighbor": "JourneyTwoThreeMouth",
+        "target": [
+          0,
+          23
+        ],
+        "cell": [
+          20,
+          -1
+        ],
+        "neighbor_cell": [
+          -4,
+          23
+        ],
+        "expected_metatile": 579
+      },
+      "before": {
+        "state": {
+          "map": "JourneyWorldSea02",
+          "tile": [
+            24,
+            0
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            20,
+            -1
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldSea02",
+          "cells": [
+            {
+              "cell": [
+                20,
+                -1
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  49,
+                  57,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  51,
+                  57,
+                  72,
+                  80,
+                  136,
+                  0
+                ],
+                [
+                  53,
+                  57,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  55,
+                  57,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  57,
+                  57,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  59,
+                  57,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  61,
+                  57,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  63,
+                  57,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  49,
+                  65,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  51,
+                  65,
+                  32,
+                  40,
+                  120,
+                  2
+                ],
+                [
+                  53,
+                  65,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  55,
+                  65,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  57,
+                  65,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  59,
+                  65,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  61,
+                  65,
+                  40,
+                  56,
+                  120,
+                  3
+                ],
+                [
+                  63,
+                  65,
+                  40,
+                  56,
+                  120,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "sea02-mouth-water-projection-before.png",
+          "sha256": "f7fd336b25846e6b38f99690764dd70bcfe70af93764dcdb213e5099f3604783"
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneyTwoThreeMouth",
+          "tile": [
+            0,
+            23
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -4,
+            23
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyTwoThreeMouth",
+          "cells": [
+            {
+              "cell": [
+                -4,
+                23
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  49,
+                  73,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  51,
+                  73,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  53,
+                  73,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  55,
+                  73,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  57,
+                  73,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  59,
+                  73,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  61,
+                  73,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  63,
+                  73,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  49,
+                  81,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  51,
+                  81,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  53,
+                  81,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  55,
+                  81,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  57,
+                  81,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  59,
+                  81,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  61,
+                  81,
+                  32,
+                  40,
+                  120,
+                  3
+                ],
+                [
+                  63,
+                  81,
+                  32,
+                  40,
+                  120,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "sea02-mouth-water-projection-after.png",
+          "sha256": "30705cd34deac3159bf375702d0725684abdbf852220fbfb7563b9b0dc960e4a"
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "JourneyWorldSea02",
+          "tile": [
+            24,
+            0
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            20,
+            -1
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldSea02",
+          "cells": [
+            {
+              "cell": [
+                20,
+                -1
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  49,
+                  57,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  51,
+                  57,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  53,
+                  57,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  55,
+                  57,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  57,
+                  57,
+                  56,
+                  72,
+                  128,
+                  1
+                ],
+                [
+                  59,
+                  57,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  61,
+                  57,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  63,
+                  57,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  49,
+                  65,
+                  56,
+                  72,
+                  128,
+                  2
+                ],
+                [
+                  51,
+                  65,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  53,
+                  65,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  55,
+                  65,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  57,
+                  65,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  59,
+                  65,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  61,
+                  65,
+                  32,
+                  40,
+                  120,
+                  3
+                ],
+                [
+                  63,
+                  65,
+                  32,
+                  40,
+                  120,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "sea02-mouth-water-projection-returned.png",
+          "sha256": "bf4e5025aec603405485ecd154f274535adaf7e9d07c9d9a9950869a11bea3b3"
+        }
+      },
+      "outbound_and_return_with_controllers": true,
+      "parent_pop_observed": false
+    },
+    {
+      "case": {
+        "label": "sea02-mouth-conflict",
+        "map": "JourneyWorldSea02",
+        "player": [
+          24,
+          0
+        ],
+        "direction": "up",
+        "neighbor": "JourneyTwoThreeMouth",
+        "target": [
+          0,
+          23
+        ],
+        "cell": [
+          23,
+          -4
+        ],
+        "neighbor_cell": [
+          -1,
+          20
+        ],
+        "expected_metatile": 579
+      },
+      "before": {
+        "state": {
+          "map": "JourneyWorldSea02",
+          "tile": [
+            24,
+            0
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            23,
+            -4
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldSea02",
+          "cells": [
+            {
+              "cell": [
+                23,
+                -4
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  97,
+                  9,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  99,
+                  9,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  101,
+                  9,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  103,
+                  9,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  105,
+                  9,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  107,
+                  9,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  109,
+                  9,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  111,
+                  9,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  97,
+                  17,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  99,
+                  17,
+                  32,
+                  40,
+                  120,
+                  2
+                ],
+                [
+                  101,
+                  17,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  103,
+                  17,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  105,
+                  17,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  107,
+                  17,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  109,
+                  17,
+                  32,
+                  40,
+                  120,
+                  3
+                ],
+                [
+                  111,
+                  17,
+                  32,
+                  40,
+                  120,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "sea02-mouth-conflict-before.png",
+          "sha256": "325ec6272dcd58af6003c6b74006ed2c4b1a834b96e0bcd5e1626434d6066ef9"
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneyTwoThreeMouth",
+          "tile": [
+            0,
+            23
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -1,
+            20
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyTwoThreeMouth",
+          "cells": [
+            {
+              "cell": [
+                -1,
+                20
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  97,
+                  25,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  99,
+                  25,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  101,
+                  25,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  103,
+                  25,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  105,
+                  25,
+                  56,
+                  72,
+                  128,
+                  1
+                ],
+                [
+                  107,
+                  25,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  109,
+                  25,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  111,
+                  25,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  97,
+                  33,
+                  56,
+                  72,
+                  128,
+                  2
+                ],
+                [
+                  99,
+                  33,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  101,
+                  33,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  103,
+                  33,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  105,
+                  33,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  107,
+                  33,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  109,
+                  33,
+                  32,
+                  40,
+                  120,
+                  3
+                ],
+                [
+                  111,
+                  33,
+                  32,
+                  40,
+                  120,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "sea02-mouth-conflict-after.png",
+          "sha256": "de77d2f0a72fff1898535a164ed4480dd1b8624b123cd6f08a89b756234ec15a"
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "JourneyWorldSea02",
+          "tile": [
+            24,
+            0
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            23,
+            -4
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldSea02",
+          "cells": [
+            {
+              "cell": [
+                23,
+                -4
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  97,
+                  9,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  99,
+                  9,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  101,
+                  9,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  103,
+                  9,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  105,
+                  9,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  107,
+                  9,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  109,
+                  9,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  111,
+                  9,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  97,
+                  17,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  99,
+                  17,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  101,
+                  17,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  103,
+                  17,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  105,
+                  17,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  107,
+                  17,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  109,
+                  17,
+                  32,
+                  40,
+                  120,
+                  3
+                ],
+                [
+                  111,
+                  17,
+                  32,
+                  40,
+                  120,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "sea02-mouth-conflict-returned.png",
+          "sha256": "0ff722729a22788570d4b28f14288e574cd5982761273c2ca43a193429ae3d87"
+        }
+      },
+      "outbound_and_return_with_controllers": true,
+      "parent_pop_observed": false
+    },
+    {
+      "case": {
+        "label": "fill21-cap",
+        "map": "JourneyWorldFill21Right",
+        "player": [
+          0,
+          34
+        ],
+        "direction": "left",
+        "neighbor": "JourneyWorldFill21Cap",
+        "target": [
+          16,
+          34
+        ],
+        "cell": [
+          -1,
+          36
+        ],
+        "neighbor_cell": [
+          16,
+          36
+        ],
+        "expected_metatile": 579
+      },
+      "before": {
+        "state": {
+          "map": "JourneyWorldFill21Right",
+          "tile": [
+            0,
+            34
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -1,
+            36
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldFill21Right",
+          "cells": [
+            {
+              "cell": [
+                -1,
+                36
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  97,
+                  105,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  99,
+                  105,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  101,
+                  105,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  103,
+                  105,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  105,
+                  105,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  107,
+                  105,
+                  56,
+                  72,
+                  128,
+                  1
+                ],
+                [
+                  109,
+                  105,
+                  56,
+                  72,
+                  128,
+                  1
+                ],
+                [
+                  111,
+                  105,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  97,
+                  113,
+                  32,
+                  40,
+                  120,
+                  2
+                ],
+                [
+                  99,
+                  113,
+                  56,
+                  72,
+                  128,
+                  2
+                ],
+                [
+                  101,
+                  113,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  103,
+                  113,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  105,
+                  113,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  107,
+                  113,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  109,
+                  113,
+                  32,
+                  40,
+                  120,
+                  3
+                ],
+                [
+                  111,
+                  113,
+                  32,
+                  40,
+                  120,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "fill21-cap-before.png",
+          "sha256": "1b0b1b937c5afa0babb2d599f5f2b2a09ff20fd4e42a60383cffa38e4b3b52f5"
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneyWorldFill21Cap",
+          "tile": [
+            16,
+            34
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            36
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldFill21Cap",
+          "cells": [
+            {
+              "cell": [
+                16,
+                36
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  113,
+                  105,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  115,
+                  105,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  117,
+                  105,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  119,
+                  105,
+                  32,
+                  40,
+                  120,
+                  0
+                ],
+                [
+                  121,
+                  105,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  123,
+                  105,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  125,
+                  105,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  127,
+                  105,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  113,
+                  113,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  115,
+                  113,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  117,
+                  113,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  119,
+                  113,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  121,
+                  113,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  123,
+                  113,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  125,
+                  113,
+                  32,
+                  40,
+                  120,
+                  3
+                ],
+                [
+                  127,
+                  113,
+                  32,
+                  40,
+                  120,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "fill21-cap-after.png",
+          "sha256": "e9035e4af145834b1cfd4ea6fc5f8a226f14536737bca2fd6501addb2161d22f"
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "JourneyWorldFill21Right",
+          "tile": [
+            0,
+            34
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -1,
+            36
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "pixels": {
+          "map": "JourneyWorldFill21Right",
+          "cells": [
+            {
+              "cell": [
+                -1,
+                36
+              ],
+              "expected_metatile": 579,
+              "native_metatile": 579,
+              "layer": 1,
+              "definition_words": [
+                16838,
+                16839,
+                16839,
+                16838,
+                16866,
+                16867,
+                16868,
+                16869
+              ],
+              "quadrants": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "actual_bg_words": [
+                {
+                  "quadrant": 0,
+                  "words": [
+                    0,
+                    16866,
+                    16838
+                  ]
+                },
+                {
+                  "quadrant": 1,
+                  "words": [
+                    0,
+                    16867,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 2,
+                  "words": [
+                    0,
+                    16868,
+                    16839
+                  ]
+                },
+                {
+                  "quadrant": 3,
+                  "words": [
+                    0,
+                    16869,
+                    16838
+                  ]
+                }
+              ],
+              "samples": [
+                [
+                  97,
+                  105,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  99,
+                  105,
+                  72,
+                  80,
+                  136,
+                  0
+                ],
+                [
+                  101,
+                  105,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  103,
+                  105,
+                  40,
+                  56,
+                  120,
+                  0
+                ],
+                [
+                  105,
+                  105,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  107,
+                  105,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  109,
+                  105,
+                  32,
+                  40,
+                  120,
+                  1
+                ],
+                [
+                  111,
+                  105,
+                  40,
+                  56,
+                  120,
+                  1
+                ],
+                [
+                  97,
+                  113,
+                  40,
+                  56,
+                  120,
+                  2
+                ],
+                [
+                  99,
+                  113,
+                  32,
+                  40,
+                  120,
+                  2
+                ],
+                [
+                  101,
+                  113,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  103,
+                  113,
+                  88,
+                  96,
+                  136,
+                  2
+                ],
+                [
+                  105,
+                  113,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  107,
+                  113,
+                  88,
+                  96,
+                  136,
+                  3
+                ],
+                [
+                  109,
+                  113,
+                  40,
+                  56,
+                  120,
+                  3
+                ],
+                [
+                  111,
+                  113,
+                  40,
+                  56,
+                  120,
+                  3
+                ]
+              ],
+              "checked_pixels": 64
+            }
+          ],
+          "undefined_cells_included": true,
+          "actual_hardware_bg_words_and_scanout_checked": true,
+          "sprites_and_opaque_ui_explicitly_excluded": true,
+          "mismatches_not_discarded": true
+        },
+        "capture": {
+          "file": "fill21-cap-returned.png",
+          "sha256": "876f9836846306d23471b8a918e86503579cf0a6fe13b8dc47c6d08a9c9ba68c"
+        }
+      },
+      "outbound_and_return_with_controllers": true,
+      "parent_pop_observed": false
+    }
+  ],
+  "seven_east_openings": [
+    {
+      "opening": {
+        "map": "SevenIsland_Harbor_Frlg",
+        "player": [
+          16,
+          1
+        ],
+        "direction": "right",
+        "neighbor": "JourneySurfLink05101",
+        "target": [
+          0,
+          1
+        ],
+        "blocks": [
+          4395,
+          4395
+        ]
+      },
+      "before": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            1
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            1
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink05101",
+          "tile": [
+            0,
+            1
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            0,
+            1
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            1
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            1
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        },
+        "capture": {
+          "file": "seven-east-01-returned.png",
+          "sha256": "0664e4e10b11a789dd6d3efb2906b2f033e6fbd44138f534f4e9654f0c8ccba8"
+        }
+      },
+      "outbound_and_return_with_controllers": true
+    },
+    {
+      "opening": {
+        "map": "SevenIsland_Harbor_Frlg",
+        "player": [
+          16,
+          2
+        ],
+        "direction": "right",
+        "neighbor": "JourneySurfLink05101",
+        "target": [
+          0,
+          2
+        ],
+        "blocks": [
+          4395,
+          4395
+        ]
+      },
+      "before": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            2
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            2
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink05101",
+          "tile": [
+            0,
+            2
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            0,
+            2
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            2
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            2
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        },
+        "capture": {
+          "file": "seven-east-02-returned.png",
+          "sha256": "519b1994a684f33d1eb71cb0d2e5034414515e9d94407cc7690d17625bd07cb3"
+        }
+      },
+      "outbound_and_return_with_controllers": true
+    },
+    {
+      "opening": {
+        "map": "SevenIsland_Harbor_Frlg",
+        "player": [
+          16,
+          3
+        ],
+        "direction": "right",
+        "neighbor": "JourneySurfLink05101",
+        "target": [
+          0,
+          3
+        ],
+        "blocks": [
+          4395,
+          4395
+        ]
+      },
+      "before": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            3
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            3
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink05101",
+          "tile": [
+            0,
+            3
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            0,
+            3
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            3
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            3
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        },
+        "capture": {
+          "file": "seven-east-03-returned.png",
+          "sha256": "ef1aa126a34db9cb440258fda4292b75965e1156c0773be7c11bfc7fdf916074"
+        }
+      },
+      "outbound_and_return_with_controllers": true
+    },
+    {
+      "opening": {
+        "map": "SevenIsland_Harbor_Frlg",
+        "player": [
+          16,
+          4
+        ],
+        "direction": "right",
+        "neighbor": "JourneySurfLink05101",
+        "target": [
+          0,
+          4
+        ],
+        "blocks": [
+          4395,
+          4395
+        ]
+      },
+      "before": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            4
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            4
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink05101",
+          "tile": [
+            0,
+            4
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            0,
+            4
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            4
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            4
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        },
+        "capture": {
+          "file": "seven-east-04-returned.png",
+          "sha256": "2ca86eda147834d6b61c34aa72917bc6cf1299e15f33558e8eadcc346a3e8f30"
+        }
+      },
+      "outbound_and_return_with_controllers": true
+    },
+    {
+      "opening": {
+        "map": "SevenIsland_Harbor_Frlg",
+        "player": [
+          16,
+          5
+        ],
+        "direction": "right",
+        "neighbor": "JourneySurfLink05101",
+        "target": [
+          0,
+          5
+        ],
+        "blocks": [
+          4395,
+          4395
+        ]
+      },
+      "before": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            5
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            5
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink05101",
+          "tile": [
+            0,
+            5
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            0,
+            5
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            5
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            5
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        },
+        "capture": {
+          "file": "seven-east-05-returned.png",
+          "sha256": "7d42b36e4f4b998f7647a8dfd35bded173c6c635aacf807ee98e9513fd70c780"
+        }
+      },
+      "outbound_and_return_with_controllers": true
+    },
+    {
+      "opening": {
+        "map": "SevenIsland_Harbor_Frlg",
+        "player": [
+          16,
+          6
+        ],
+        "direction": "right",
+        "neighbor": "JourneySurfLink05101",
+        "target": [
+          0,
+          6
+        ],
+        "blocks": [
+          4395,
+          4395
+        ]
+      },
+      "before": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            6
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            6
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink05101",
+          "tile": [
+            0,
+            6
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            0,
+            6
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            6
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            6
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        },
+        "capture": {
+          "file": "seven-east-06-returned.png",
+          "sha256": "b18e83be7edf431298d124d9e4887a6a82ee3665b2936c4ac9c33965297425ee"
+        }
+      },
+      "outbound_and_return_with_controllers": true
+    },
+    {
+      "opening": {
+        "map": "SevenIsland_Harbor_Frlg",
+        "player": [
+          16,
+          7
+        ],
+        "direction": "right",
+        "neighbor": "JourneySurfLink05101",
+        "target": [
+          0,
+          7
+        ],
+        "blocks": [
+          4395,
+          4395
+        ]
+      },
+      "before": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            7
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            7
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink05101",
+          "tile": [
+            0,
+            7
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            0,
+            7
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            7
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            7
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        },
+        "capture": {
+          "file": "seven-east-07-returned.png",
+          "sha256": "4e3cffc71e7194520787ce6015478122dde4fd0fb0793e451dd88bd4f880654c"
+        }
+      },
+      "outbound_and_return_with_controllers": true
+    },
+    {
+      "opening": {
+        "map": "SevenIsland_Harbor_Frlg",
+        "player": [
+          16,
+          8
+        ],
+        "direction": "right",
+        "neighbor": "JourneySurfLink05101",
+        "target": [
+          0,
+          8
+        ],
+        "blocks": [
+          4395,
+          4395
+        ]
+      },
+      "before": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            8
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            8
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink05101",
+          "tile": [
+            0,
+            8
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            0,
+            8
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            8
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            8
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        },
+        "capture": {
+          "file": "seven-east-08-returned.png",
+          "sha256": "cf3b2fa22f660678d35b21529e3d2d2339b769a8564b4b2f9cff5d841b5e987a"
+        }
+      },
+      "outbound_and_return_with_controllers": true
+    },
+    {
+      "opening": {
+        "map": "SevenIsland_Harbor_Frlg",
+        "player": [
+          16,
+          9
+        ],
+        "direction": "right",
+        "neighbor": "JourneySurfLink05101",
+        "target": [
+          0,
+          9
+        ],
+        "blocks": [
+          4395,
+          4395
+        ]
+      },
+      "before": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            9
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            9
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink05101",
+          "tile": [
+            0,
+            9
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            0,
+            9
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            9
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            9
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        },
+        "capture": {
+          "file": "seven-east-09-returned.png",
+          "sha256": "1f1876ec8b4c494f2c177bfaa56f729e1cfd723f401d355cddae48e6eaf2e0ab"
+        }
+      },
+      "outbound_and_return_with_controllers": true
+    },
+    {
+      "opening": {
+        "map": "SevenIsland_Harbor_Frlg",
+        "player": [
+          16,
+          10
+        ],
+        "direction": "right",
+        "neighbor": "JourneySurfLink05101",
+        "target": [
+          0,
+          10
+        ],
+        "blocks": [
+          4395,
+          4395
+        ]
+      },
+      "before": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            10
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            10
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink05101",
+          "tile": [
+            0,
+            10
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            0,
+            10
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            10
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            10
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        },
+        "capture": {
+          "file": "seven-east-10-returned.png",
+          "sha256": "4ceba3e5d4ca98e6f7722ca2f24a5b293f1474783d90e5bfd061b460e33e202e"
+        }
+      },
+      "outbound_and_return_with_controllers": true
+    },
+    {
+      "opening": {
+        "map": "SevenIsland_Harbor_Frlg",
+        "player": [
+          16,
+          11
+        ],
+        "direction": "right",
+        "neighbor": "JourneySurfLink05101",
+        "target": [
+          0,
+          11
+        ],
+        "blocks": [
+          4395,
+          4395
+        ]
+      },
+      "before": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            11
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            11
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "after": {
+        "state": {
+          "map": "JourneySurfLink05101",
+          "tile": [
+            0,
+            11
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            0,
+            11
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        }
+      },
+      "returned": {
+        "state": {
+          "map": "SevenIsland_Harbor_Frlg",
+          "tile": [
+            16,
+            11
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            16,
+            11
+          ],
+          "block": 4395,
+          "metatile": 299,
+          "collision": 0,
+          "elevation": 1,
+          "border_id": 0
+        },
+        "capture": {
+          "file": "seven-east-11-returned.png",
+          "sha256": "baedde24ec53fafc2dcc3cd89e11beffb8b4c886c098f34d67219a326ca342d2"
+        }
+      },
+      "outbound_and_return_with_controllers": true
+    }
+  ],
+  "undefined_boundary_bumps": [
+    {
+      "case": {
+        "label": "sea02-undefined-north",
+        "map": "JourneyWorldSea02",
+        "player": [
+          20,
+          0
+        ],
+        "direction": "up",
+        "cell": [
+          20,
+          -1
+        ],
+        "expected_metatile": 579
+      },
+      "before": {
+        "map": "JourneyWorldSea02",
+        "tile": [
+          20,
+          0
+        ],
+        "surfing": true
+      },
+      "after": {
+        "map": "JourneyWorldSea02",
+        "tile": [
+          20,
+          0
+        ],
+        "surfing": true
+      },
+      "target": {
+        "cell": [
+          20,
+          -1
+        ],
+        "block": 1023,
+        "metatile": 579,
+        "collision": 1,
+        "elevation": 0,
+        "border_id": 4294967295
+      },
+      "held_frames": 48,
+      "native_directional_input_blocked": true,
+      "view": {
+        "state": {
+          "map": "JourneyWorldSea02",
+          "tile": [
+            20,
+            0
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            20,
+            -1
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "capture": {
+          "file": "sea02-undefined-north-blocked.png",
+          "sha256": "ae3b0a695c027088b9db882c939874c6475647fa185176dbde36f32bc409d670"
+        }
+      }
+    },
+    {
+      "case": {
+        "label": "fill21-undefined-west",
+        "map": "JourneyWorldFill21Right",
+        "player": [
+          0,
+          47
+        ],
+        "direction": "left",
+        "cell": [
+          -1,
+          47
+        ],
+        "expected_metatile": 299
+      },
+      "before": {
+        "map": "JourneyWorldFill21Right",
+        "tile": [
+          0,
+          47
+        ],
+        "surfing": true
+      },
+      "after": {
+        "map": "JourneyWorldFill21Right",
+        "tile": [
+          0,
+          47
+        ],
+        "surfing": true
+      },
+      "target": {
+        "cell": [
+          -1,
+          47
+        ],
+        "block": 1023,
+        "metatile": 579,
+        "collision": 1,
+        "elevation": 0,
+        "border_id": 4294967295
+      },
+      "held_frames": 48,
+      "native_directional_input_blocked": true,
+      "view": {
+        "state": {
+          "map": "JourneyWorldFill21Right",
+          "tile": [
+            0,
+            47
+          ],
+          "surfing": true
+        },
+        "grid": {
+          "cell": [
+            -1,
+            47
+          ],
+          "block": 1023,
+          "metatile": 579,
+          "collision": 1,
+          "elevation": 0,
+          "border_id": 4294967295
+        },
+        "capture": {
+          "file": "fill21-undefined-west-blocked.png",
+          "sha256": "41c8bdb4ae27ddfab1699057788694ccadb66f76e2aa64500b2e69ea57b540d9"
+        }
+      }
+    }
+  ],
+  "fixtures": [
+    {
+      "label": "sea02-west",
+      "map": "JourneyWorldSea02",
+      "tile": [
+        0,
+        2
+      ],
+      "surfing": true
+    },
+    {
+      "label": "fill21-seven",
+      "map": "JourneyWorldFill21Right",
+      "tile": [
+        2,
+        47
+      ],
+      "surfing": true
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "map": "JourneyWorldSea02",
+      "tile": [
+        24,
+        0
+      ],
+      "surfing": true
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "map": "JourneyWorldSea02",
+      "tile": [
+        24,
+        0
+      ],
+      "surfing": true
+    },
+    {
+      "label": "fill21-cap",
+      "map": "JourneyWorldFill21Right",
+      "tile": [
+        0,
+        34
+      ],
+      "surfing": true
+    },
+    {
+      "label": "seven-east-01",
+      "map": "SevenIsland_Harbor_Frlg",
+      "tile": [
+        16,
+        1
+      ],
+      "surfing": true
+    },
+    {
+      "label": "seven-east-02",
+      "map": "SevenIsland_Harbor_Frlg",
+      "tile": [
+        16,
+        2
+      ],
+      "surfing": true
+    },
+    {
+      "label": "seven-east-03",
+      "map": "SevenIsland_Harbor_Frlg",
+      "tile": [
+        16,
+        3
+      ],
+      "surfing": true
+    },
+    {
+      "label": "seven-east-04",
+      "map": "SevenIsland_Harbor_Frlg",
+      "tile": [
+        16,
+        4
+      ],
+      "surfing": true
+    },
+    {
+      "label": "seven-east-05",
+      "map": "SevenIsland_Harbor_Frlg",
+      "tile": [
+        16,
+        5
+      ],
+      "surfing": true
+    },
+    {
+      "label": "seven-east-06",
+      "map": "SevenIsland_Harbor_Frlg",
+      "tile": [
+        16,
+        6
+      ],
+      "surfing": true
+    },
+    {
+      "label": "seven-east-07",
+      "map": "SevenIsland_Harbor_Frlg",
+      "tile": [
+        16,
+        7
+      ],
+      "surfing": true
+    },
+    {
+      "label": "seven-east-08",
+      "map": "SevenIsland_Harbor_Frlg",
+      "tile": [
+        16,
+        8
+      ],
+      "surfing": true
+    },
+    {
+      "label": "seven-east-09",
+      "map": "SevenIsland_Harbor_Frlg",
+      "tile": [
+        16,
+        9
+      ],
+      "surfing": true
+    },
+    {
+      "label": "seven-east-10",
+      "map": "SevenIsland_Harbor_Frlg",
+      "tile": [
+        16,
+        10
+      ],
+      "surfing": true
+    },
+    {
+      "label": "seven-east-11",
+      "map": "SevenIsland_Harbor_Frlg",
+      "tile": [
+        16,
+        11
+      ],
+      "surfing": true
+    },
+    {
+      "label": "sea02-undefined-north",
+      "map": "JourneyWorldSea02",
+      "tile": [
+        20,
+        0
+      ],
+      "surfing": true
+    },
+    {
+      "label": "fill21-undefined-west",
+      "map": "JourneyWorldFill21Right",
+      "tile": [
+        0,
+        47
+      ],
+      "surfing": true
+    }
+  ],
+  "controls": [
+    {
+      "label": "sea02-west",
+      "key": 32,
+      "frames": 9
+    },
+    {
+      "label": "sea02-west",
+      "key": 16,
+      "frames": 10
+    },
+    {
+      "label": "fill21-seven",
+      "key": 128,
+      "frames": 1
+    },
+    {
+      "label": "fill21-seven",
+      "key": 64,
+      "frames": 9
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "key": 64,
+      "frames": 9
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "key": 128,
+      "frames": 9
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "key": 64,
+      "frames": 9
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "key": 128,
+      "frames": 9
+    },
+    {
+      "label": "fill21-cap",
+      "key": 32,
+      "frames": 9
+    },
+    {
+      "label": "fill21-cap",
+      "key": 16,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-01",
+      "key": 16,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-01",
+      "key": 32,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-02",
+      "key": 16,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-02",
+      "key": 32,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-03",
+      "key": 16,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-03",
+      "key": 32,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-04",
+      "key": 16,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-04",
+      "key": 32,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-05",
+      "key": 16,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-05",
+      "key": 32,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-06",
+      "key": 16,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-06",
+      "key": 32,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-07",
+      "key": 16,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-07",
+      "key": 32,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-08",
+      "key": 16,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-08",
+      "key": 32,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-09",
+      "key": 16,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-09",
+      "key": 32,
+      "frames": 10
+    },
+    {
+      "label": "seven-east-10",
+      "key": 16,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-10",
+      "key": 32,
+      "frames": 10
+    },
+    {
+      "label": "seven-east-11",
+      "key": 16,
+      "frames": 9
+    },
+    {
+      "label": "seven-east-11",
+      "key": 32,
+      "frames": 10
+    },
+    {
+      "label": "sea02-undefined-north",
+      "key": 64,
+      "frames": 48
+    },
+    {
+      "label": "fill21-undefined-west",
+      "key": 32,
+      "frames": 48
+    }
+  ],
+  "queries": [
+    {
+      "label": "sea02-west",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        4,
+        5
+      ]
+    },
+    {
+      "label": "sea02-west",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        4,
+        5
+      ]
+    },
+    {
+      "label": "sea02-west",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        4,
+        5
+      ]
+    },
+    {
+      "label": "sea02-west",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        4,
+        5
+      ]
+    },
+    {
+      "label": "sea02-west",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        4,
+        5
+      ]
+    },
+    {
+      "label": "sea02-west",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        4,
+        5
+      ]
+    },
+    {
+      "label": "sea02-west",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        68,
+        5
+      ]
+    },
+    {
+      "label": "sea02-west",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        68,
+        5
+      ]
+    },
+    {
+      "label": "sea02-west",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        68,
+        5
+      ]
+    },
+    {
+      "label": "sea02-west",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        68,
+        5
+      ]
+    },
+    {
+      "label": "sea02-west",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        68,
+        5
+      ]
+    },
+    {
+      "label": "sea02-west",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        68,
+        5
+      ]
+    },
+    {
+      "label": "sea02-west",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        4,
+        5
+      ]
+    },
+    {
+      "label": "sea02-west",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        4,
+        5
+      ]
+    },
+    {
+      "label": "sea02-west",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        4,
+        5
+      ]
+    },
+    {
+      "label": "sea02-west",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        4,
+        5
+      ]
+    },
+    {
+      "label": "sea02-west",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        4,
+        5
+      ]
+    },
+    {
+      "label": "sea02-west",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        4,
+        5
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        47,
+        6
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        47,
+        6
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        47,
+        6
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        47,
+        6
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        47,
+        6
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        47,
+        6
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-seven",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        3,
+        30
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        3,
+        30
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        3,
+        30
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        3,
+        30
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        3,
+        30
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        3,
+        30
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-mouth-water-projection",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        30,
+        3
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        30,
+        3
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        30,
+        3
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        30,
+        3
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        30,
+        3
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        30,
+        3
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        27
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        6,
+        27
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        6,
+        27
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        6,
+        27
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        27
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        6,
+        27
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        30,
+        3
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        30,
+        3
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        30,
+        3
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        30,
+        3
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        30,
+        3
+      ]
+    },
+    {
+      "label": "sea02-mouth-conflict",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        30,
+        3
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        43
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        6,
+        43
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        6,
+        43
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        6,
+        43
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        43
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        6,
+        43
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        43
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        43
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        43
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        43
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        43
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        23,
+        43
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        43
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        6,
+        43
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        6,
+        43
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        6,
+        43
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        43
+      ]
+    },
+    {
+      "label": "fill21-cap",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        6,
+        43
+      ]
+    },
+    {
+      "label": "seven-east-01",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        8
+      ]
+    },
+    {
+      "label": "seven-east-01",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        8
+      ]
+    },
+    {
+      "label": "seven-east-01",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        8
+      ]
+    },
+    {
+      "label": "seven-east-01",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        8
+      ]
+    },
+    {
+      "label": "seven-east-01",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        8
+      ]
+    },
+    {
+      "label": "seven-east-01",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        7,
+        8
+      ]
+    },
+    {
+      "label": "seven-east-01",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        7,
+        8
+      ]
+    },
+    {
+      "label": "seven-east-01",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        7,
+        8
+      ]
+    },
+    {
+      "label": "seven-east-01",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        8
+      ]
+    },
+    {
+      "label": "seven-east-01",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        8
+      ]
+    },
+    {
+      "label": "seven-east-01",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        8
+      ]
+    },
+    {
+      "label": "seven-east-01",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        8
+      ]
+    },
+    {
+      "label": "seven-east-02",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        9
+      ]
+    },
+    {
+      "label": "seven-east-02",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        9
+      ]
+    },
+    {
+      "label": "seven-east-02",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        9
+      ]
+    },
+    {
+      "label": "seven-east-02",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        9
+      ]
+    },
+    {
+      "label": "seven-east-02",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        9
+      ]
+    },
+    {
+      "label": "seven-east-02",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        7,
+        9
+      ]
+    },
+    {
+      "label": "seven-east-02",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        7,
+        9
+      ]
+    },
+    {
+      "label": "seven-east-02",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        7,
+        9
+      ]
+    },
+    {
+      "label": "seven-east-02",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        9
+      ]
+    },
+    {
+      "label": "seven-east-02",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        9
+      ]
+    },
+    {
+      "label": "seven-east-02",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        9
+      ]
+    },
+    {
+      "label": "seven-east-02",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        9
+      ]
+    },
+    {
+      "label": "seven-east-03",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        10
+      ]
+    },
+    {
+      "label": "seven-east-03",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        10
+      ]
+    },
+    {
+      "label": "seven-east-03",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        10
+      ]
+    },
+    {
+      "label": "seven-east-03",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        10
+      ]
+    },
+    {
+      "label": "seven-east-03",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        10
+      ]
+    },
+    {
+      "label": "seven-east-03",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        7,
+        10
+      ]
+    },
+    {
+      "label": "seven-east-03",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        7,
+        10
+      ]
+    },
+    {
+      "label": "seven-east-03",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        7,
+        10
+      ]
+    },
+    {
+      "label": "seven-east-03",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        10
+      ]
+    },
+    {
+      "label": "seven-east-03",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        10
+      ]
+    },
+    {
+      "label": "seven-east-03",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        10
+      ]
+    },
+    {
+      "label": "seven-east-03",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        10
+      ]
+    },
+    {
+      "label": "seven-east-04",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        11
+      ]
+    },
+    {
+      "label": "seven-east-04",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        11
+      ]
+    },
+    {
+      "label": "seven-east-04",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        11
+      ]
+    },
+    {
+      "label": "seven-east-04",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        11
+      ]
+    },
+    {
+      "label": "seven-east-04",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        11
+      ]
+    },
+    {
+      "label": "seven-east-04",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        7,
+        11
+      ]
+    },
+    {
+      "label": "seven-east-04",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        7,
+        11
+      ]
+    },
+    {
+      "label": "seven-east-04",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        7,
+        11
+      ]
+    },
+    {
+      "label": "seven-east-04",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        11
+      ]
+    },
+    {
+      "label": "seven-east-04",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        11
+      ]
+    },
+    {
+      "label": "seven-east-04",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        11
+      ]
+    },
+    {
+      "label": "seven-east-04",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        11
+      ]
+    },
+    {
+      "label": "seven-east-05",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        12
+      ]
+    },
+    {
+      "label": "seven-east-05",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        12
+      ]
+    },
+    {
+      "label": "seven-east-05",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        12
+      ]
+    },
+    {
+      "label": "seven-east-05",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        12
+      ]
+    },
+    {
+      "label": "seven-east-05",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        12
+      ]
+    },
+    {
+      "label": "seven-east-05",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        7,
+        12
+      ]
+    },
+    {
+      "label": "seven-east-05",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        7,
+        12
+      ]
+    },
+    {
+      "label": "seven-east-05",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        7,
+        12
+      ]
+    },
+    {
+      "label": "seven-east-05",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        12
+      ]
+    },
+    {
+      "label": "seven-east-05",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        12
+      ]
+    },
+    {
+      "label": "seven-east-05",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        12
+      ]
+    },
+    {
+      "label": "seven-east-05",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        12
+      ]
+    },
+    {
+      "label": "seven-east-06",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        13
+      ]
+    },
+    {
+      "label": "seven-east-06",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        13
+      ]
+    },
+    {
+      "label": "seven-east-06",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        13
+      ]
+    },
+    {
+      "label": "seven-east-06",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        13
+      ]
+    },
+    {
+      "label": "seven-east-06",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        13
+      ]
+    },
+    {
+      "label": "seven-east-06",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        7,
+        13
+      ]
+    },
+    {
+      "label": "seven-east-06",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        7,
+        13
+      ]
+    },
+    {
+      "label": "seven-east-06",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        7,
+        13
+      ]
+    },
+    {
+      "label": "seven-east-06",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        13
+      ]
+    },
+    {
+      "label": "seven-east-06",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        13
+      ]
+    },
+    {
+      "label": "seven-east-06",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        13
+      ]
+    },
+    {
+      "label": "seven-east-06",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        13
+      ]
+    },
+    {
+      "label": "seven-east-07",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        14
+      ]
+    },
+    {
+      "label": "seven-east-07",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        14
+      ]
+    },
+    {
+      "label": "seven-east-07",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        14
+      ]
+    },
+    {
+      "label": "seven-east-07",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        14
+      ]
+    },
+    {
+      "label": "seven-east-07",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        14
+      ]
+    },
+    {
+      "label": "seven-east-07",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        7,
+        14
+      ]
+    },
+    {
+      "label": "seven-east-07",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        7,
+        14
+      ]
+    },
+    {
+      "label": "seven-east-07",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        7,
+        14
+      ]
+    },
+    {
+      "label": "seven-east-07",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        14
+      ]
+    },
+    {
+      "label": "seven-east-07",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        14
+      ]
+    },
+    {
+      "label": "seven-east-07",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        14
+      ]
+    },
+    {
+      "label": "seven-east-07",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        14
+      ]
+    },
+    {
+      "label": "seven-east-08",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        15
+      ]
+    },
+    {
+      "label": "seven-east-08",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        15
+      ]
+    },
+    {
+      "label": "seven-east-08",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        15
+      ]
+    },
+    {
+      "label": "seven-east-08",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        15
+      ]
+    },
+    {
+      "label": "seven-east-08",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        15
+      ]
+    },
+    {
+      "label": "seven-east-08",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        7,
+        15
+      ]
+    },
+    {
+      "label": "seven-east-08",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        7,
+        15
+      ]
+    },
+    {
+      "label": "seven-east-08",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        7,
+        15
+      ]
+    },
+    {
+      "label": "seven-east-08",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        15
+      ]
+    },
+    {
+      "label": "seven-east-08",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        15
+      ]
+    },
+    {
+      "label": "seven-east-08",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        15
+      ]
+    },
+    {
+      "label": "seven-east-08",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        15
+      ]
+    },
+    {
+      "label": "seven-east-09",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        16
+      ]
+    },
+    {
+      "label": "seven-east-09",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        16
+      ]
+    },
+    {
+      "label": "seven-east-09",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        16
+      ]
+    },
+    {
+      "label": "seven-east-09",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        16
+      ]
+    },
+    {
+      "label": "seven-east-09",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        16
+      ]
+    },
+    {
+      "label": "seven-east-09",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        7,
+        16
+      ]
+    },
+    {
+      "label": "seven-east-09",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        7,
+        16
+      ]
+    },
+    {
+      "label": "seven-east-09",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        7,
+        16
+      ]
+    },
+    {
+      "label": "seven-east-09",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        16
+      ]
+    },
+    {
+      "label": "seven-east-09",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        16
+      ]
+    },
+    {
+      "label": "seven-east-09",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        16
+      ]
+    },
+    {
+      "label": "seven-east-09",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        16
+      ]
+    },
+    {
+      "label": "seven-east-10",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        17
+      ]
+    },
+    {
+      "label": "seven-east-10",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        17
+      ]
+    },
+    {
+      "label": "seven-east-10",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        17
+      ]
+    },
+    {
+      "label": "seven-east-10",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        17
+      ]
+    },
+    {
+      "label": "seven-east-10",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        17
+      ]
+    },
+    {
+      "label": "seven-east-10",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        7,
+        17
+      ]
+    },
+    {
+      "label": "seven-east-10",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        7,
+        17
+      ]
+    },
+    {
+      "label": "seven-east-10",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        7,
+        17
+      ]
+    },
+    {
+      "label": "seven-east-10",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        17
+      ]
+    },
+    {
+      "label": "seven-east-10",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        17
+      ]
+    },
+    {
+      "label": "seven-east-10",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        17
+      ]
+    },
+    {
+      "label": "seven-east-10",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        17
+      ]
+    },
+    {
+      "label": "seven-east-11",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        18
+      ]
+    },
+    {
+      "label": "seven-east-11",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        18
+      ]
+    },
+    {
+      "label": "seven-east-11",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        18
+      ]
+    },
+    {
+      "label": "seven-east-11",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        18
+      ]
+    },
+    {
+      "label": "seven-east-11",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        7,
+        18
+      ]
+    },
+    {
+      "label": "seven-east-11",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        7,
+        18
+      ]
+    },
+    {
+      "label": "seven-east-11",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        7,
+        18
+      ]
+    },
+    {
+      "label": "seven-east-11",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        7,
+        18
+      ]
+    },
+    {
+      "label": "seven-east-11",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        23,
+        18
+      ]
+    },
+    {
+      "label": "seven-east-11",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        23,
+        18
+      ]
+    },
+    {
+      "label": "seven-east-11",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        23,
+        18
+      ]
+    },
+    {
+      "label": "seven-east-11",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        23,
+        18
+      ]
+    },
+    {
+      "label": "sea02-undefined-north",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-undefined-north",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-undefined-north",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-undefined-north",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-undefined-north",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-undefined-north",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-undefined-north",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "sea02-undefined-north",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        27,
+        6
+      ]
+    },
+    {
+      "label": "fill21-undefined-west",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-undefined-west",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-undefined-west",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-undefined-west",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-undefined-west",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-undefined-west",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-undefined-west",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        6,
+        54
+      ]
+    },
+    {
+      "label": "fill21-undefined-west",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        6,
+        54
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "file": "sea02-west-before.png",
+      "sha256": "88f5e6114889095d0e6cbbc27dda48d95aa50a8cbf5b1a6e29f5d673b847aee6"
+    },
+    {
+      "file": "sea02-west-after.png",
+      "sha256": "4e0e0cfc52b4a531e7732adbd7fa2934c429431ad4e30cdc366eafb2404142f1"
+    },
+    {
+      "file": "sea02-west-returned.png",
+      "sha256": "33d642439d23adbd5ed12a7e770d062245f363ddba9caca91f31b29b3f3a60e6"
+    },
+    {
+      "file": "fill21-seven-before.png",
+      "sha256": "b89bcc9103d2beabe821815523c23d5c3762d72209c06ed99961afadf1022766"
+    },
+    {
+      "file": "fill21-seven-after.png",
+      "sha256": "d9435cb11da3d7cd5fbbbb8ca55b7a7a31a0740d3177a28c53dbb1b3ac9f2bbf"
+    },
+    {
+      "file": "fill21-seven-returned.png",
+      "sha256": "9b38605b72500e575bace46b892820f5516ae80ecee49368e43f9df378f61c27"
+    },
+    {
+      "file": "sea02-mouth-water-projection-before.png",
+      "sha256": "f7fd336b25846e6b38f99690764dd70bcfe70af93764dcdb213e5099f3604783"
+    },
+    {
+      "file": "sea02-mouth-water-projection-after.png",
+      "sha256": "30705cd34deac3159bf375702d0725684abdbf852220fbfb7563b9b0dc960e4a"
+    },
+    {
+      "file": "sea02-mouth-water-projection-returned.png",
+      "sha256": "bf4e5025aec603405485ecd154f274535adaf7e9d07c9d9a9950869a11bea3b3"
+    },
+    {
+      "file": "sea02-mouth-conflict-before.png",
+      "sha256": "325ec6272dcd58af6003c6b74006ed2c4b1a834b96e0bcd5e1626434d6066ef9"
+    },
+    {
+      "file": "sea02-mouth-conflict-after.png",
+      "sha256": "de77d2f0a72fff1898535a164ed4480dd1b8624b123cd6f08a89b756234ec15a"
+    },
+    {
+      "file": "sea02-mouth-conflict-returned.png",
+      "sha256": "0ff722729a22788570d4b28f14288e574cd5982761273c2ca43a193429ae3d87"
+    },
+    {
+      "file": "fill21-cap-before.png",
+      "sha256": "1b0b1b937c5afa0babb2d599f5f2b2a09ff20fd4e42a60383cffa38e4b3b52f5"
+    },
+    {
+      "file": "fill21-cap-after.png",
+      "sha256": "e9035e4af145834b1cfd4ea6fc5f8a226f14536737bca2fd6501addb2161d22f"
+    },
+    {
+      "file": "fill21-cap-returned.png",
+      "sha256": "876f9836846306d23471b8a918e86503579cf0a6fe13b8dc47c6d08a9c9ba68c"
+    },
+    {
+      "file": "seven-east-01-returned.png",
+      "sha256": "0664e4e10b11a789dd6d3efb2906b2f033e6fbd44138f534f4e9654f0c8ccba8"
+    },
+    {
+      "file": "seven-east-02-returned.png",
+      "sha256": "519b1994a684f33d1eb71cb0d2e5034414515e9d94407cc7690d17625bd07cb3"
+    },
+    {
+      "file": "seven-east-03-returned.png",
+      "sha256": "ef1aa126a34db9cb440258fda4292b75965e1156c0773be7c11bfc7fdf916074"
+    },
+    {
+      "file": "seven-east-04-returned.png",
+      "sha256": "2ca86eda147834d6b61c34aa72917bc6cf1299e15f33558e8eadcc346a3e8f30"
+    },
+    {
+      "file": "seven-east-05-returned.png",
+      "sha256": "7d42b36e4f4b998f7647a8dfd35bded173c6c635aacf807ee98e9513fd70c780"
+    },
+    {
+      "file": "seven-east-06-returned.png",
+      "sha256": "b18e83be7edf431298d124d9e4887a6a82ee3665b2936c4ac9c33965297425ee"
+    },
+    {
+      "file": "seven-east-07-returned.png",
+      "sha256": "4e3cffc71e7194520787ce6015478122dde4fd0fb0793e451dd88bd4f880654c"
+    },
+    {
+      "file": "seven-east-08-returned.png",
+      "sha256": "cf3b2fa22f660678d35b21529e3d2d2339b769a8564b4b2f9cff5d841b5e987a"
+    },
+    {
+      "file": "seven-east-09-returned.png",
+      "sha256": "1f1876ec8b4c494f2c177bfaa56f729e1cfd723f401d355cddae48e6eaf2e0ab"
+    },
+    {
+      "file": "seven-east-10-returned.png",
+      "sha256": "4ceba3e5d4ca98e6f7722ca2f24a5b293f1474783d90e5bfd061b460e33e202e"
+    },
+    {
+      "file": "seven-east-11-returned.png",
+      "sha256": "baedde24ec53fafc2dcc3cd89e11beffb8b4c886c098f34d67219a326ca342d2"
+    },
+    {
+      "file": "sea02-undefined-north-blocked.png",
+      "sha256": "ae3b0a695c027088b9db882c939874c6475647fa185176dbde36f32bc409d670"
+    },
+    {
+      "file": "fill21-undefined-west-blocked.png",
+      "sha256": "41c8bdb4ae27ddfab1699057788694ccadb66f76e2aa64500b2e69ea57b540d9"
+    }
+  ],
+  "components": []
+}

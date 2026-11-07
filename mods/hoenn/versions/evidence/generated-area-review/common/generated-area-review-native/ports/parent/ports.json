@@ -1,0 +1,6854 @@
+{
+  "kind": "port-boundary-scenery-native",
+  "passed": true,
+  "rom_sha256": "6a70d43313df75d2258c5bac46d7ab8c0aa50b6e4f1a7246d540159ee726d5fc",
+  "elf_sha256": "df384a54339cbd4de07c187592208ef4999636f095856e34aa4c1a47e5303545",
+  "expected_broken_baseline": true,
+  "source_census": {
+    "ports": [
+      {
+        "island": "One",
+        "boarding": {
+          "dry": [
+            "OneIsland_TreasureBeach_Frlg",
+            20,
+            6
+          ],
+          "water": [
+            "OneIsland_TreasureBeach_Frlg",
+            20,
+            7
+          ],
+          "outward_key": 128
+        },
+        "water_cell": {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "cell": [
+            20,
+            7
+          ],
+          "block": 4395
+        },
+        "nearby_objects": [
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "anchor": [
+              19,
+              7
+            ],
+            "family": "round",
+            "expected_metatiles": [
+              459,
+              460,
+              467,
+              468
+            ],
+            "actual_metatiles": [
+              459,
+              299,
+              467,
+              468
+            ],
+            "matched_quarters": 3,
+            "complete": false,
+            "native_complete_variant": null,
+            "all_cells_resolved": true,
+            "connected_map_parts": false,
+            "cells": [
+              {
+                "map": "OneIsland_TreasureBeach_Frlg",
+                "cell": [
+                  19,
+                  7
+                ],
+                "block": 1483
+              },
+              {
+                "map": "OneIsland_TreasureBeach_Frlg",
+                "cell": [
+                  20,
+                  7
+                ],
+                "block": 4395
+              },
+              {
+                "map": "OneIsland_TreasureBeach_Frlg",
+                "cell": [
+                  19,
+                  8
+                ],
+                "block": 1491
+              },
+              {
+                "map": "OneIsland_TreasureBeach_Frlg",
+                "cell": [
+                  20,
+                  8
+                ],
+                "block": 1492
+              }
+            ]
+          },
+          {
+            "map": "OneIsland_TreasureBeach_Frlg",
+            "anchor": [
+              20,
+              9
+            ],
+            "family": "round",
+            "expected_metatiles": [
+              459,
+              460,
+              467,
+              468
+            ],
+            "actual_metatiles": [
+              459,
+              460,
+              467,
+              468
+            ],
+            "matched_quarters": 4,
+            "complete": true,
+            "native_complete_variant": null,
+            "all_cells_resolved": true,
+            "connected_map_parts": false,
+            "cells": [
+              {
+                "map": "OneIsland_TreasureBeach_Frlg",
+                "cell": [
+                  20,
+                  9
+                ],
+                "block": 1483
+              },
+              {
+                "map": "OneIsland_TreasureBeach_Frlg",
+                "cell": [
+                  21,
+                  9
+                ],
+                "block": 1484
+              },
+              {
+                "map": "OneIsland_TreasureBeach_Frlg",
+                "cell": [
+                  20,
+                  10
+                ],
+                "block": 1491
+              },
+              {
+                "map": "OneIsland_TreasureBeach_Frlg",
+                "cell": [
+                  21,
+                  10
+                ],
+                "block": 1492
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "island": "Two",
+        "boarding": {
+          "dry": [
+            "TwoIsland_Frlg",
+            10,
+            14
+          ],
+          "water": [
+            "TwoIsland_Frlg",
+            10,
+            15
+          ],
+          "outward_key": 128
+        },
+        "water_cell": {
+          "map": "TwoIsland_Frlg",
+          "cell": [
+            10,
+            15
+          ],
+          "block": 4395
+        },
+        "nearby_objects": []
+      },
+      {
+        "island": "Three",
+        "boarding": {
+          "dry": [
+            "ThreeIsland_Port_Frlg",
+            13,
+            17
+          ],
+          "water": [
+            "ThreeIsland_Port_Frlg",
+            14,
+            17
+          ],
+          "outward_key": 16
+        },
+        "water_cell": {
+          "map": "ThreeIsland_Port_Frlg",
+          "cell": [
+            14,
+            17
+          ],
+          "block": 4723
+        },
+        "nearby_objects": []
+      },
+      {
+        "island": "Four",
+        "boarding": {
+          "dry": [
+            "FourIsland_Frlg",
+            10,
+            34
+          ],
+          "water": [
+            "FourIsland_Frlg",
+            10,
+            35
+          ],
+          "outward_key": 128
+        },
+        "water_cell": {
+          "map": "FourIsland_Frlg",
+          "cell": [
+            10,
+            35
+          ],
+          "block": 4723
+        },
+        "nearby_objects": [
+          {
+            "map": "FourIsland_Frlg",
+            "anchor": [
+              7,
+              35
+            ],
+            "family": "secondary",
+            "expected_metatiles": [
+              580,
+              581,
+              588,
+              589
+            ],
+            "actual_metatiles": [
+              627,
+              581,
+              627,
+              627
+            ],
+            "matched_quarters": 1,
+            "complete": false,
+            "native_complete_variant": null,
+            "all_cells_resolved": true,
+            "connected_map_parts": false,
+            "cells": [
+              {
+                "map": "FourIsland_Frlg",
+                "cell": [
+                  7,
+                  35
+                ],
+                "block": 4723
+              },
+              {
+                "map": "FourIsland_Frlg",
+                "cell": [
+                  8,
+                  35
+                ],
+                "block": 4677
+              },
+              {
+                "map": "FourIsland_Frlg",
+                "cell": [
+                  7,
+                  36
+                ],
+                "block": 5747
+              },
+              {
+                "map": "FourIsland_Frlg",
+                "cell": [
+                  8,
+                  36
+                ],
+                "block": 4723
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "island": "Five",
+        "boarding": {
+          "dry": [
+            "FiveIsland_Frlg",
+            11,
+            15
+          ],
+          "water": [
+            "FiveIsland_Frlg",
+            10,
+            15
+          ],
+          "outward_key": 32
+        },
+        "water_cell": {
+          "map": "FiveIsland_Frlg",
+          "cell": [
+            10,
+            15
+          ],
+          "block": 4395
+        },
+        "nearby_objects": [
+          {
+            "map": "FiveIsland_Frlg",
+            "anchor": [
+              5,
+              14
+            ],
+            "family": "round",
+            "expected_metatiles": [
+              459,
+              460,
+              467,
+              468
+            ],
+            "actual_metatiles": [
+              459,
+              460,
+              299,
+              299
+            ],
+            "matched_quarters": 2,
+            "complete": false,
+            "native_complete_variant": null,
+            "all_cells_resolved": true,
+            "connected_map_parts": false,
+            "cells": [
+              {
+                "map": "FiveIsland_Frlg",
+                "cell": [
+                  5,
+                  14
+                ],
+                "block": 4555
+              },
+              {
+                "map": "FiveIsland_Frlg",
+                "cell": [
+                  6,
+                  14
+                ],
+                "block": 4556
+              },
+              {
+                "map": "FiveIsland_Frlg",
+                "cell": [
+                  5,
+                  15
+                ],
+                "block": 4395
+              },
+              {
+                "map": "FiveIsland_Frlg",
+                "cell": [
+                  6,
+                  15
+                ],
+                "block": 4395
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "island": "Six",
+        "boarding": {
+          "dry": [
+            "SixIsland_Frlg",
+            3,
+            29
+          ],
+          "water": [
+            "SixIsland_Frlg",
+            2,
+            29
+          ],
+          "outward_key": 32
+        },
+        "water_cell": {
+          "map": "SixIsland_Frlg",
+          "cell": [
+            2,
+            29
+          ],
+          "block": 5747
+        },
+        "nearby_objects": []
+      },
+      {
+        "island": "Seven",
+        "boarding": {
+          "dry": [
+            "SevenIsland_SevaultCanyon_Entrance_Frlg",
+            14,
+            1
+          ],
+          "water": [
+            "SevenIsland_SevaultCanyon_Entrance_Frlg",
+            13,
+            1
+          ],
+          "outward_key": 32
+        },
+        "water_cell": {
+          "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+          "cell": [
+            13,
+            1
+          ],
+          "block": 4723
+        },
+        "nearby_objects": []
+      }
+    ],
+    "all_port_maps": {
+      "kind": "all-sevii-port-reef-families",
+      "maps": [
+        "OneIsland_Frlg",
+        "OneIsland_TreasureBeach_Frlg",
+        "TwoIsland_Frlg",
+        "ThreeIsland_Port_Frlg",
+        "FourIsland_Frlg",
+        "FiveIsland_Frlg",
+        "SixIsland_Frlg",
+        "SevenIsland_Frlg",
+        "SevenIsland_SevaultCanyon_Entrance_Frlg"
+      ],
+      "families": {
+        "standard": [
+          272,
+          273,
+          280,
+          281
+        ],
+        "round": [
+          459,
+          460,
+          467,
+          468
+        ],
+        "angled": [
+          530,
+          531,
+          538,
+          539
+        ],
+        "secondary": [
+          580,
+          581,
+          588,
+          589
+        ],
+        "cliff_merged": [
+          606,
+          607,
+          588,
+          589
+        ]
+      },
+      "objects": [
+        {
+          "map": "OneIsland_Frlg",
+          "anchor": [
+            2,
+            19
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": true,
+          "cells": [
+            {
+              "map": "OneIsland_Frlg",
+              "cell": [
+                2,
+                19
+              ],
+              "block": 4555
+            },
+            {
+              "map": "OneIsland_Frlg",
+              "cell": [
+                3,
+                19
+              ],
+              "block": 4556
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                10,
+                0
+              ],
+              "block": 1491
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                11,
+                0
+              ],
+              "block": 1492
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_Frlg",
+          "anchor": [
+            22,
+            1
+          ],
+          "family": "standard",
+          "expected_metatiles": [
+            272,
+            273,
+            280,
+            281
+          ],
+          "actual_metatiles": [
+            274,
+            273,
+            282,
+            281
+          ],
+          "matched_quarters": 2,
+          "complete": true,
+          "native_complete_variant": [
+            274,
+            273,
+            282,
+            281
+          ],
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_Frlg",
+              "cell": [
+                22,
+                1
+              ],
+              "block": 4370
+            },
+            {
+              "map": "OneIsland_Frlg",
+              "cell": [
+                23,
+                1
+              ],
+              "block": 4369
+            },
+            {
+              "map": "OneIsland_Frlg",
+              "cell": [
+                22,
+                2
+              ],
+              "block": 4378
+            },
+            {
+              "map": "OneIsland_Frlg",
+              "cell": [
+                23,
+                2
+              ],
+              "block": 4377
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            9,
+            5
+          ],
+          "family": "standard",
+          "expected_metatiles": [
+            272,
+            273,
+            280,
+            281
+          ],
+          "actual_metatiles": [
+            272,
+            273,
+            280,
+            281
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                9,
+                5
+              ],
+              "block": 1296
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                10,
+                5
+              ],
+              "block": 1297
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                9,
+                6
+              ],
+              "block": 1304
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                10,
+                6
+              ],
+              "block": 1305
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            9,
+            9
+          ],
+          "family": "standard",
+          "expected_metatiles": [
+            272,
+            273,
+            280,
+            281
+          ],
+          "actual_metatiles": [
+            272,
+            273,
+            280,
+            281
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                9,
+                9
+              ],
+              "block": 1296
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                10,
+                9
+              ],
+              "block": 1297
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                9,
+                10
+              ],
+              "block": 1304
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                10,
+                10
+              ],
+              "block": 1305
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            9,
+            19
+          ],
+          "family": "standard",
+          "expected_metatiles": [
+            272,
+            273,
+            280,
+            281
+          ],
+          "actual_metatiles": [
+            272,
+            273,
+            280,
+            281
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                9,
+                19
+              ],
+              "block": 1296
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                10,
+                19
+              ],
+              "block": 1297
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                9,
+                20
+              ],
+              "block": 1304
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                10,
+                20
+              ],
+              "block": 1305
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            9,
+            23
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                9,
+                23
+              ],
+              "block": 1483
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                10,
+                23
+              ],
+              "block": 1484
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                9,
+                24
+              ],
+              "block": 1491
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                10,
+                24
+              ],
+              "block": 1492
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            9,
+            25
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                9,
+                25
+              ],
+              "block": 1483
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                10,
+                25
+              ],
+              "block": 1484
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                9,
+                26
+              ],
+              "block": 1491
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                10,
+                26
+              ],
+              "block": 1492
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            9,
+            27
+          ],
+          "family": "standard",
+          "expected_metatiles": [
+            272,
+            273,
+            280,
+            281
+          ],
+          "actual_metatiles": [
+            272,
+            273,
+            280,
+            281
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                9,
+                27
+              ],
+              "block": 1296
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                10,
+                27
+              ],
+              "block": 1297
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                9,
+                28
+              ],
+              "block": 1304
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                10,
+                28
+              ],
+              "block": 1305
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            10,
+            -1
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": true,
+          "cells": [
+            {
+              "map": "OneIsland_Frlg",
+              "cell": [
+                2,
+                19
+              ],
+              "block": 4555
+            },
+            {
+              "map": "OneIsland_Frlg",
+              "cell": [
+                3,
+                19
+              ],
+              "block": 4556
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                10,
+                0
+              ],
+              "block": 1491
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                11,
+                0
+              ],
+              "block": 1492
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            10,
+            17
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                10,
+                17
+              ],
+              "block": 1483
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                11,
+                17
+              ],
+              "block": 1484
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                10,
+                18
+              ],
+              "block": 1491
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                11,
+                18
+              ],
+              "block": 1492
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            11,
+            4
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                11,
+                4
+              ],
+              "block": 1483
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                12,
+                4
+              ],
+              "block": 1484
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                11,
+                5
+              ],
+              "block": 1491
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                12,
+                5
+              ],
+              "block": 1492
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            11,
+            7
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                11,
+                7
+              ],
+              "block": 1483
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                12,
+                7
+              ],
+              "block": 1484
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                11,
+                8
+              ],
+              "block": 1491
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                12,
+                8
+              ],
+              "block": 1492
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            13,
+            0
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                13,
+                0
+              ],
+              "block": 1483
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                14,
+                0
+              ],
+              "block": 1484
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                13,
+                1
+              ],
+              "block": 1491
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                14,
+                1
+              ],
+              "block": 1492
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            19,
+            7
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            299,
+            467,
+            468
+          ],
+          "matched_quarters": 3,
+          "complete": false,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                19,
+                7
+              ],
+              "block": 1483
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                20,
+                7
+              ],
+              "block": 4395
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                19,
+                8
+              ],
+              "block": 1491
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                20,
+                8
+              ],
+              "block": 1492
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            20,
+            9
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                20,
+                9
+              ],
+              "block": 1483
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                21,
+                9
+              ],
+              "block": 1484
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                20,
+                10
+              ],
+              "block": 1491
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                21,
+                10
+              ],
+              "block": 1492
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            27,
+            16
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                27,
+                16
+              ],
+              "block": 1483
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                28,
+                16
+              ],
+              "block": 1484
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                27,
+                17
+              ],
+              "block": 1491
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                28,
+                17
+              ],
+              "block": 1492
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            29,
+            18
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                29,
+                18
+              ],
+              "block": 1483
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                30,
+                18
+              ],
+              "block": 1484
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                29,
+                19
+              ],
+              "block": 1491
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                30,
+                19
+              ],
+              "block": 1492
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            30,
+            4
+          ],
+          "family": "angled",
+          "expected_metatiles": [
+            530,
+            531,
+            538,
+            539
+          ],
+          "actual_metatiles": [
+            530,
+            531,
+            538,
+            539
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                30,
+                4
+              ],
+              "block": 1554
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                31,
+                4
+              ],
+              "block": 1555
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                30,
+                5
+              ],
+              "block": 1562
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                31,
+                5
+              ],
+              "block": 1563
+            }
+          ]
+        },
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            30,
+            11
+          ],
+          "family": "angled",
+          "expected_metatiles": [
+            530,
+            531,
+            538,
+            539
+          ],
+          "actual_metatiles": [
+            530,
+            531,
+            538,
+            539
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                30,
+                11
+              ],
+              "block": 1554
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                31,
+                11
+              ],
+              "block": 1555
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                30,
+                12
+              ],
+              "block": 1562
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                31,
+                12
+              ],
+              "block": 1563
+            }
+          ]
+        },
+        {
+          "map": "ThreeIsland_Port_Frlg",
+          "anchor": [
+            0,
+            12
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                0,
+                12
+              ],
+              "block": 4676
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                1,
+                12
+              ],
+              "block": 4677
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                0,
+                13
+              ],
+              "block": 4684
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                1,
+                13
+              ],
+              "block": 4685
+            }
+          ]
+        },
+        {
+          "map": "ThreeIsland_Port_Frlg",
+          "anchor": [
+            22,
+            11
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                22,
+                11
+              ],
+              "block": 4676
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                23,
+                11
+              ],
+              "block": 4677
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                22,
+                12
+              ],
+              "block": 4684
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                23,
+                12
+              ],
+              "block": 4685
+            }
+          ]
+        },
+        {
+          "map": "ThreeIsland_Port_Frlg",
+          "anchor": [
+            25,
+            13
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                25,
+                13
+              ],
+              "block": 4676
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                26,
+                13
+              ],
+              "block": 4677
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                25,
+                14
+              ],
+              "block": 4684
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                26,
+                14
+              ],
+              "block": 4685
+            }
+          ]
+        },
+        {
+          "map": "ThreeIsland_Port_Frlg",
+          "anchor": [
+            30,
+            16
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                30,
+                16
+              ],
+              "block": 4676
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                31,
+                16
+              ],
+              "block": 4677
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                30,
+                17
+              ],
+              "block": 4684
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                31,
+                17
+              ],
+              "block": 4685
+            }
+          ]
+        },
+        {
+          "map": "ThreeIsland_Port_Frlg",
+          "anchor": [
+            42,
+            15
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                42,
+                15
+              ],
+              "block": 4676
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                43,
+                15
+              ],
+              "block": 4677
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                42,
+                16
+              ],
+              "block": 4684
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                43,
+                16
+              ],
+              "block": 4685
+            }
+          ]
+        },
+        {
+          "map": "ThreeIsland_Port_Frlg",
+          "anchor": [
+            45,
+            9
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                45,
+                9
+              ],
+              "block": 4676
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                46,
+                9
+              ],
+              "block": 4677
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                45,
+                10
+              ],
+              "block": 4684
+            },
+            {
+              "map": "ThreeIsland_Port_Frlg",
+              "cell": [
+                46,
+                10
+              ],
+              "block": 4685
+            }
+          ]
+        },
+        {
+          "map": "FourIsland_Frlg",
+          "anchor": [
+            1,
+            27
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            580,
+            581,
+            588,
+            794
+          ],
+          "matched_quarters": 3,
+          "complete": false,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                1,
+                27
+              ],
+              "block": 4676
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                2,
+                27
+              ],
+              "block": 4677
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                1,
+                28
+              ],
+              "block": 4684
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                2,
+                28
+              ],
+              "block": 1818
+            }
+          ]
+        },
+        {
+          "map": "FourIsland_Frlg",
+          "anchor": [
+            2,
+            18
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                2,
+                18
+              ],
+              "block": 4676
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                3,
+                18
+              ],
+              "block": 4677
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                2,
+                19
+              ],
+              "block": 4684
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                3,
+                19
+              ],
+              "block": 4685
+            }
+          ]
+        },
+        {
+          "map": "FourIsland_Frlg",
+          "anchor": [
+            2,
+            23
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                2,
+                23
+              ],
+              "block": 4676
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                3,
+                23
+              ],
+              "block": 4677
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                2,
+                24
+              ],
+              "block": 4684
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                3,
+                24
+              ],
+              "block": 4685
+            }
+          ]
+        },
+        {
+          "map": "FourIsland_Frlg",
+          "anchor": [
+            7,
+            35
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            627,
+            581,
+            627,
+            627
+          ],
+          "matched_quarters": 1,
+          "complete": false,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                7,
+                35
+              ],
+              "block": 4723
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                8,
+                35
+              ],
+              "block": 4677
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                7,
+                36
+              ],
+              "block": 5747
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                8,
+                36
+              ],
+              "block": 4723
+            }
+          ]
+        },
+        {
+          "map": "FourIsland_Frlg",
+          "anchor": [
+            17,
+            37
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                17,
+                37
+              ],
+              "block": 4676
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                18,
+                37
+              ],
+              "block": 4677
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                17,
+                38
+              ],
+              "block": 4684
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                18,
+                38
+              ],
+              "block": 4685
+            }
+          ]
+        },
+        {
+          "map": "FourIsland_Frlg",
+          "anchor": [
+            28,
+            38
+          ],
+          "family": "cliff_merged",
+          "expected_metatiles": [
+            606,
+            607,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            606,
+            607,
+            588,
+            589
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                28,
+                38
+              ],
+              "block": 4702
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                29,
+                38
+              ],
+              "block": 4703
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                28,
+                39
+              ],
+              "block": 5708
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                29,
+                39
+              ],
+              "block": 5709
+            }
+          ]
+        },
+        {
+          "map": "FiveIsland_Frlg",
+          "anchor": [
+            0,
+            14
+          ],
+          "family": "angled",
+          "expected_metatiles": [
+            530,
+            531,
+            538,
+            539
+          ],
+          "actual_metatiles": [
+            530,
+            531,
+            538,
+            539
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                0,
+                14
+              ],
+              "block": 4626
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                1,
+                14
+              ],
+              "block": 4627
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                0,
+                15
+              ],
+              "block": 4634
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                1,
+                15
+              ],
+              "block": 4635
+            }
+          ]
+        },
+        {
+          "map": "FiveIsland_Frlg",
+          "anchor": [
+            1,
+            6
+          ],
+          "family": "standard",
+          "expected_metatiles": [
+            272,
+            273,
+            280,
+            281
+          ],
+          "actual_metatiles": [
+            272,
+            273,
+            280,
+            281
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                1,
+                6
+              ],
+              "block": 4368
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                2,
+                6
+              ],
+              "block": 4369
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                1,
+                7
+              ],
+              "block": 4376
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                2,
+                7
+              ],
+              "block": 4377
+            }
+          ]
+        },
+        {
+          "map": "FiveIsland_Frlg",
+          "anchor": [
+            1,
+            10
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                1,
+                10
+              ],
+              "block": 4555
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                2,
+                10
+              ],
+              "block": 4556
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                1,
+                11
+              ],
+              "block": 4563
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                2,
+                11
+              ],
+              "block": 4564
+            }
+          ]
+        },
+        {
+          "map": "FiveIsland_Frlg",
+          "anchor": [
+            2,
+            8
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                2,
+                8
+              ],
+              "block": 4555
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                3,
+                8
+              ],
+              "block": 4556
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                2,
+                9
+              ],
+              "block": 4563
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                3,
+                9
+              ],
+              "block": 4564
+            }
+          ]
+        },
+        {
+          "map": "FiveIsland_Frlg",
+          "anchor": [
+            4,
+            0
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                4,
+                0
+              ],
+              "block": 4555
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                5,
+                0
+              ],
+              "block": 4556
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                4,
+                1
+              ],
+              "block": 4563
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                5,
+                1
+              ],
+              "block": 4564
+            }
+          ]
+        },
+        {
+          "map": "FiveIsland_Frlg",
+          "anchor": [
+            5,
+            14
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            299,
+            299
+          ],
+          "matched_quarters": 2,
+          "complete": false,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                5,
+                14
+              ],
+              "block": 4555
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                6,
+                14
+              ],
+              "block": 4556
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                5,
+                15
+              ],
+              "block": 4395
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                6,
+                15
+              ],
+              "block": 4395
+            }
+          ]
+        },
+        {
+          "map": "FiveIsland_Frlg",
+          "anchor": [
+            20,
+            0
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                20,
+                0
+              ],
+              "block": 4555
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                21,
+                0
+              ],
+              "block": 4556
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                20,
+                1
+              ],
+              "block": 4563
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                21,
+                1
+              ],
+              "block": 4564
+            }
+          ]
+        },
+        {
+          "map": "FiveIsland_Frlg",
+          "anchor": [
+            22,
+            15
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                22,
+                15
+              ],
+              "block": 4555
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                23,
+                15
+              ],
+              "block": 4556
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                22,
+                16
+              ],
+              "block": 4563
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                23,
+                16
+              ],
+              "block": 4564
+            }
+          ]
+        },
+        {
+          "map": "SevenIsland_Frlg",
+          "anchor": [
+            2,
+            17
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "SevenIsland_Frlg",
+              "cell": [
+                2,
+                17
+              ],
+              "block": 4676
+            },
+            {
+              "map": "SevenIsland_Frlg",
+              "cell": [
+                3,
+                17
+              ],
+              "block": 4677
+            },
+            {
+              "map": "SevenIsland_Frlg",
+              "cell": [
+                2,
+                18
+              ],
+              "block": 4684
+            },
+            {
+              "map": "SevenIsland_Frlg",
+              "cell": [
+                3,
+                18
+              ],
+              "block": 4685
+            }
+          ]
+        },
+        {
+          "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+          "anchor": [
+            0,
+            8
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                0,
+                8
+              ],
+              "block": 1604
+            },
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                1,
+                8
+              ],
+              "block": 1605
+            },
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                0,
+                9
+              ],
+              "block": 1612
+            },
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                1,
+                9
+              ],
+              "block": 1613
+            }
+          ]
+        },
+        {
+          "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+          "anchor": [
+            0,
+            19
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                0,
+                19
+              ],
+              "block": 1604
+            },
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                1,
+                19
+              ],
+              "block": 1605
+            },
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                0,
+                20
+              ],
+              "block": 1612
+            },
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                1,
+                20
+              ],
+              "block": 1613
+            }
+          ]
+        },
+        {
+          "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+          "anchor": [
+            0,
+            37
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                0,
+                37
+              ],
+              "block": 1604
+            },
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                1,
+                37
+              ],
+              "block": 1605
+            },
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                0,
+                38
+              ],
+              "block": 1612
+            },
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                1,
+                38
+              ],
+              "block": 1613
+            }
+          ]
+        },
+        {
+          "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+          "anchor": [
+            1,
+            2
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                1,
+                2
+              ],
+              "block": 1604
+            },
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                2,
+                2
+              ],
+              "block": 1605
+            },
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                1,
+                3
+              ],
+              "block": 1612
+            },
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                2,
+                3
+              ],
+              "block": 1613
+            }
+          ]
+        },
+        {
+          "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+          "anchor": [
+            1,
+            13
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "matched_quarters": 4,
+          "complete": true,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                1,
+                13
+              ],
+              "block": 1604
+            },
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                2,
+                13
+              ],
+              "block": 1605
+            },
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                1,
+                14
+              ],
+              "block": 1612
+            },
+            {
+              "map": "SevenIsland_SevaultCanyon_Entrance_Frlg",
+              "cell": [
+                2,
+                14
+              ],
+              "block": 1613
+            }
+          ]
+        }
+      ],
+      "incomplete": [
+        {
+          "map": "OneIsland_TreasureBeach_Frlg",
+          "anchor": [
+            19,
+            7
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            299,
+            467,
+            468
+          ],
+          "matched_quarters": 3,
+          "complete": false,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                19,
+                7
+              ],
+              "block": 1483
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                20,
+                7
+              ],
+              "block": 4395
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                19,
+                8
+              ],
+              "block": 1491
+            },
+            {
+              "map": "OneIsland_TreasureBeach_Frlg",
+              "cell": [
+                20,
+                8
+              ],
+              "block": 1492
+            }
+          ]
+        },
+        {
+          "map": "FourIsland_Frlg",
+          "anchor": [
+            1,
+            27
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            580,
+            581,
+            588,
+            794
+          ],
+          "matched_quarters": 3,
+          "complete": false,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                1,
+                27
+              ],
+              "block": 4676
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                2,
+                27
+              ],
+              "block": 4677
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                1,
+                28
+              ],
+              "block": 4684
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                2,
+                28
+              ],
+              "block": 1818
+            }
+          ]
+        },
+        {
+          "map": "FourIsland_Frlg",
+          "anchor": [
+            7,
+            35
+          ],
+          "family": "secondary",
+          "expected_metatiles": [
+            580,
+            581,
+            588,
+            589
+          ],
+          "actual_metatiles": [
+            627,
+            581,
+            627,
+            627
+          ],
+          "matched_quarters": 1,
+          "complete": false,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                7,
+                35
+              ],
+              "block": 4723
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                8,
+                35
+              ],
+              "block": 4677
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                7,
+                36
+              ],
+              "block": 5747
+            },
+            {
+              "map": "FourIsland_Frlg",
+              "cell": [
+                8,
+                36
+              ],
+              "block": 4723
+            }
+          ]
+        },
+        {
+          "map": "FiveIsland_Frlg",
+          "anchor": [
+            5,
+            14
+          ],
+          "family": "round",
+          "expected_metatiles": [
+            459,
+            460,
+            467,
+            468
+          ],
+          "actual_metatiles": [
+            459,
+            460,
+            299,
+            299
+          ],
+          "matched_quarters": 2,
+          "complete": false,
+          "native_complete_variant": null,
+          "all_cells_resolved": true,
+          "connected_map_parts": false,
+          "cells": [
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                5,
+                14
+              ],
+              "block": 4555
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                6,
+                14
+              ],
+              "block": 4556
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                5,
+                15
+              ],
+              "block": 4395
+            },
+            {
+              "map": "FiveIsland_Frlg",
+              "cell": [
+                6,
+                15
+              ],
+              "block": 4395
+            }
+          ]
+        }
+      ],
+      "source_inspection_not_native_proof": true
+    }
+  },
+  "fixtures": [
+    {
+      "case": "reef-movement-1",
+      "map": "FourIsland_Frlg",
+      "cell": [
+        1,
+        26
+      ],
+      "surfing": true
+    },
+    {
+      "case": "reef-movement-2",
+      "map": "FourIsland_Frlg",
+      "cell": [
+        2,
+        26
+      ],
+      "surfing": true
+    },
+    {
+      "case": "reef-movement-3",
+      "map": "FourIsland_Frlg",
+      "cell": [
+        1,
+        29
+      ],
+      "surfing": true
+    },
+    {
+      "case": "reef-movement-4",
+      "map": "FourIsland_Frlg",
+      "cell": [
+        9,
+        35
+      ],
+      "surfing": true
+    },
+    {
+      "case": "reef-movement-5",
+      "map": "FiveIsland_Frlg",
+      "cell": [
+        5,
+        13
+      ],
+      "surfing": true
+    },
+    {
+      "case": "reef-movement-6",
+      "map": "FiveIsland_Frlg",
+      "cell": [
+        6,
+        13
+      ],
+      "surfing": true
+    },
+    {
+      "case": "reef-movement-7",
+      "map": "OneIsland_TreasureBeach_Frlg",
+      "cell": [
+        18,
+        7
+      ],
+      "surfing": true
+    },
+    {
+      "case": "reef-movement-8",
+      "map": "OneIsland_TreasureBeach_Frlg",
+      "cell": [
+        18,
+        8
+      ],
+      "surfing": true
+    },
+    {
+      "case": "reef-movement-9",
+      "map": "OneIsland_TreasureBeach_Frlg",
+      "cell": [
+        21,
+        8
+      ],
+      "surfing": true
+    },
+    {
+      "case": "whole-reef-art-1",
+      "map": "OneIsland_TreasureBeach_Frlg",
+      "cell": [
+        22,
+        11
+      ],
+      "surfing": true
+    },
+    {
+      "case": "whole-reef-art-2",
+      "map": "FourIsland_Frlg",
+      "cell": [
+        4,
+        25
+      ],
+      "surfing": true
+    },
+    {
+      "case": "whole-reef-art-3",
+      "map": "FourIsland_Frlg",
+      "cell": [
+        10,
+        37
+      ],
+      "surfing": true
+    },
+    {
+      "case": "whole-reef-art-4",
+      "map": "FiveIsland_Frlg",
+      "cell": [
+        3,
+        12
+      ],
+      "surfing": true
+    }
+  ],
+  "inputs": [
+    {
+      "case": "reef-movement-1",
+      "frames": 15,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-1",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "case": "reef-movement-1",
+      "frames": 86,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-1",
+      "frames": 9,
+      "key": 64
+    },
+    {
+      "case": "reef-movement-1",
+      "frames": 86,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-2",
+      "frames": 15,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-2",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "case": "reef-movement-2",
+      "frames": 86,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-2",
+      "frames": 9,
+      "key": 64
+    },
+    {
+      "case": "reef-movement-2",
+      "frames": 86,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-3",
+      "frames": 15,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-3",
+      "frames": 9,
+      "key": 64
+    },
+    {
+      "case": "reef-movement-3",
+      "frames": 86,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-3",
+      "frames": 9,
+      "key": 128
+    },
+    {
+      "case": "reef-movement-3",
+      "frames": 86,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-4",
+      "frames": 15,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-4",
+      "frames": 9,
+      "key": 32
+    },
+    {
+      "case": "reef-movement-4",
+      "frames": 86,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-4",
+      "frames": 9,
+      "key": 16
+    },
+    {
+      "case": "reef-movement-4",
+      "frames": 86,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-5",
+      "frames": 15,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-5",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "case": "reef-movement-5",
+      "frames": 86,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-5",
+      "frames": 9,
+      "key": 64
+    },
+    {
+      "case": "reef-movement-5",
+      "frames": 86,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-6",
+      "frames": 15,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-6",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "case": "reef-movement-6",
+      "frames": 86,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-6",
+      "frames": 9,
+      "key": 64
+    },
+    {
+      "case": "reef-movement-6",
+      "frames": 86,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-7",
+      "frames": 15,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-7",
+      "frames": 100,
+      "key": 16
+    },
+    {
+      "case": "reef-movement-7",
+      "frames": 86,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-8",
+      "frames": 15,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-8",
+      "frames": 100,
+      "key": 16
+    },
+    {
+      "case": "reef-movement-8",
+      "frames": 86,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-9",
+      "frames": 15,
+      "key": 0
+    },
+    {
+      "case": "reef-movement-9",
+      "frames": 100,
+      "key": 32
+    },
+    {
+      "case": "reef-movement-9",
+      "frames": 86,
+      "key": 0
+    },
+    {
+      "case": "whole-reef-art-1",
+      "frames": 24,
+      "key": 0
+    },
+    {
+      "case": "whole-reef-art-2",
+      "frames": 24,
+      "key": 0
+    },
+    {
+      "case": "whole-reef-art-3",
+      "frames": 12,
+      "key": 0
+    },
+    {
+      "case": "whole-reef-art-4",
+      "frames": 18,
+      "key": 0
+    }
+  ],
+  "read_only_queries": [
+    {
+      "case": "reef-movement-1",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-1",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        8,
+        33
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-1",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-1",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        8,
+        33
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-1",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        8,
+        34
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-1",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-1",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        8,
+        34
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-1",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-1",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        8,
+        33
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-2",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-2",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        9,
+        33
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-2",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-2",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        9,
+        33
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-2",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        9,
+        34
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-2",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-2",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        9,
+        34
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-2",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-2",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        9,
+        33
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-3",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-3",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        8,
+        36
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-3",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-3",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        8,
+        36
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-3",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        8,
+        35
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-3",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-3",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        8,
+        35
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-3",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-3",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        8,
+        36
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-4",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-4",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        16,
+        42
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-4",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-4",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        16,
+        42
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-4",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        15,
+        42
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-4",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-4",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        15,
+        42
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-4",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-4",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        16,
+        42
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-5",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-5",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        12,
+        20
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-5",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-5",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        12,
+        20
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-5",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        12,
+        21
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-5",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-5",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        12,
+        21
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-5",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-5",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        12,
+        20
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-6",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-6",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        13,
+        20
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-6",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-6",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        13,
+        20
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-6",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        13,
+        21
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-6",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-6",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        13,
+        21
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-6",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-6",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        13,
+        20
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-7",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-7",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        25,
+        14
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-7",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-7",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        25,
+        14
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-7",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        26,
+        14
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-7",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-7",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        25,
+        14
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-8",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-8",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        25,
+        15
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-8",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-8",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        25,
+        15
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-8",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        26,
+        15
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-8",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-8",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        25,
+        15
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-9",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-9",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        28,
+        15
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-9",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-9",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        28,
+        15
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-9",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        27,
+        15
+      ],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-9",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "reef-movement-9",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        28,
+        15
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-1",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-1",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        29,
+        18
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-1",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        26,
+        14
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-1",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        26,
+        14
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-1",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        26,
+        15
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-1",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        26,
+        15
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-1",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        27,
+        15
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-1",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        27,
+        15
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-2",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-2",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        11,
+        32
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-2",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        8,
+        34
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-2",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        8,
+        34
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-2",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        9,
+        34
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-2",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        9,
+        34
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-2",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        8,
+        35
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-2",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        8,
+        35
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-3",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-3",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        17,
+        44
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-3",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        15,
+        42
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-3",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        15,
+        42
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-4",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-4",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        10,
+        19
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-4",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        12,
+        21
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-4",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        12,
+        21
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-4",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        13,
+        21
+      ],
+      "read_only": true
+    },
+    {
+      "case": "whole-reef-art-4",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        13,
+        21
+      ],
+      "read_only": true
+    }
+  ],
+  "captures": [
+    {
+      "file": "reef-movement-1.png",
+      "sha256": "d510f213abfc6d654f6cf076ffee0ca12ae6536c801965f7ca8273103bc6f18c"
+    },
+    {
+      "file": "reef-movement-2.png",
+      "sha256": "350dd57ff98f22cb9fc89086acb7eb36488e84d8c0c3ae4d2f196cb39744c5c1"
+    },
+    {
+      "file": "reef-movement-3.png",
+      "sha256": "620724b8d0c97bec616ff65add0eb6770532ec7ca3ec25dacfb50582c810e674"
+    },
+    {
+      "file": "reef-movement-4.png",
+      "sha256": "d7172f664cb4d7eeedac1c1783f16e5df7b8c951e22386176fac2cefbdc65ee9"
+    },
+    {
+      "file": "reef-movement-5.png",
+      "sha256": "2890f7debba1e735f96650021edcb32c3dee2258380ba9e7f921f6d1b5501a40"
+    },
+    {
+      "file": "reef-movement-6.png",
+      "sha256": "7deec381530a523e2545cae02eef5223e72c68644fd915361c3e263323bfd89c"
+    },
+    {
+      "file": "reef-movement-7.png",
+      "sha256": "12905dcaf15c443f0b0bf7c9992f33aaba34a558ae13f7cdd2e6ed9c9d19e3ba"
+    },
+    {
+      "file": "reef-movement-8.png",
+      "sha256": "8ddbc587dffc38b4d6d851b70e9370c18e8873363ad8e6828a4aebf722e632a2"
+    },
+    {
+      "file": "reef-movement-9.png",
+      "sha256": "7331615922253a502ea4032d00c20cf44c9671890fe240463d91bd044d89c8c4"
+    },
+    {
+      "file": "whole-reef-art-1.png",
+      "sha256": "c8e0944bd40d485b9d64d7c6f590fce441229bd781e192d1519f9828a00fb3e1"
+    },
+    {
+      "file": "whole-reef-art-2.png",
+      "sha256": "0c674a87db3efcab6ce18f85617015325087b1786dd52f9c48da506671b37172"
+    },
+    {
+      "file": "whole-reef-art-3.png",
+      "sha256": "87bdfeba43e61dba5cd099dea6bdabc54cf18d1b7245073c817adf5cc9e80521"
+    },
+    {
+      "file": "whole-reef-art-4.png",
+      "sha256": "d368075fdcab161045993feb59d73e01a8924a49271fed43117140a414a299a0"
+    }
+  ],
+  "movement_cases": [
+    {
+      "case": "reef-movement-1",
+      "map": "FourIsland_Frlg",
+      "target": [
+        1,
+        27
+      ],
+      "before": {
+        "map": "FourIsland_Frlg",
+        "tile": [
+          1,
+          26
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "attempted": {
+        "map": "FourIsland_Frlg",
+        "tile": [
+          1,
+          27
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "returned": {
+        "map": "FourIsland_Frlg",
+        "tile": [
+          1,
+          26
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "native_collision": 0,
+      "entered_target": true,
+      "native_controller_return": true,
+      "capture": {
+        "file": "reef-movement-1.png",
+        "sha256": "d510f213abfc6d654f6cf076ffee0ca12ae6536c801965f7ca8273103bc6f18c"
+      }
+    },
+    {
+      "case": "reef-movement-2",
+      "map": "FourIsland_Frlg",
+      "target": [
+        2,
+        27
+      ],
+      "before": {
+        "map": "FourIsland_Frlg",
+        "tile": [
+          2,
+          26
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "attempted": {
+        "map": "FourIsland_Frlg",
+        "tile": [
+          2,
+          27
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "returned": {
+        "map": "FourIsland_Frlg",
+        "tile": [
+          2,
+          26
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "native_collision": 0,
+      "entered_target": true,
+      "native_controller_return": true,
+      "capture": {
+        "file": "reef-movement-2.png",
+        "sha256": "350dd57ff98f22cb9fc89086acb7eb36488e84d8c0c3ae4d2f196cb39744c5c1"
+      }
+    },
+    {
+      "case": "reef-movement-3",
+      "map": "FourIsland_Frlg",
+      "target": [
+        1,
+        28
+      ],
+      "before": {
+        "map": "FourIsland_Frlg",
+        "tile": [
+          1,
+          29
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "attempted": {
+        "map": "FourIsland_Frlg",
+        "tile": [
+          1,
+          28
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "returned": {
+        "map": "FourIsland_Frlg",
+        "tile": [
+          1,
+          29
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "native_collision": 0,
+      "entered_target": true,
+      "native_controller_return": true,
+      "capture": {
+        "file": "reef-movement-3.png",
+        "sha256": "620724b8d0c97bec616ff65add0eb6770532ec7ca3ec25dacfb50582c810e674"
+      }
+    },
+    {
+      "case": "reef-movement-4",
+      "map": "FourIsland_Frlg",
+      "target": [
+        8,
+        35
+      ],
+      "before": {
+        "map": "FourIsland_Frlg",
+        "tile": [
+          9,
+          35
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "attempted": {
+        "map": "FourIsland_Frlg",
+        "tile": [
+          8,
+          35
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "returned": {
+        "map": "FourIsland_Frlg",
+        "tile": [
+          9,
+          35
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "native_collision": 0,
+      "entered_target": true,
+      "native_controller_return": true,
+      "capture": {
+        "file": "reef-movement-4.png",
+        "sha256": "d7172f664cb4d7eeedac1c1783f16e5df7b8c951e22386176fac2cefbdc65ee9"
+      }
+    },
+    {
+      "case": "reef-movement-5",
+      "map": "FiveIsland_Frlg",
+      "target": [
+        5,
+        14
+      ],
+      "before": {
+        "map": "FiveIsland_Frlg",
+        "tile": [
+          5,
+          13
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "attempted": {
+        "map": "FiveIsland_Frlg",
+        "tile": [
+          5,
+          14
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "returned": {
+        "map": "FiveIsland_Frlg",
+        "tile": [
+          5,
+          13
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "native_collision": 0,
+      "entered_target": true,
+      "native_controller_return": true,
+      "capture": {
+        "file": "reef-movement-5.png",
+        "sha256": "2890f7debba1e735f96650021edcb32c3dee2258380ba9e7f921f6d1b5501a40"
+      }
+    },
+    {
+      "case": "reef-movement-6",
+      "map": "FiveIsland_Frlg",
+      "target": [
+        6,
+        14
+      ],
+      "before": {
+        "map": "FiveIsland_Frlg",
+        "tile": [
+          6,
+          13
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "attempted": {
+        "map": "FiveIsland_Frlg",
+        "tile": [
+          6,
+          14
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "returned": {
+        "map": "FiveIsland_Frlg",
+        "tile": [
+          6,
+          13
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "native_collision": 0,
+      "entered_target": true,
+      "native_controller_return": true,
+      "capture": {
+        "file": "reef-movement-6.png",
+        "sha256": "7deec381530a523e2545cae02eef5223e72c68644fd915361c3e263323bfd89c"
+      }
+    },
+    {
+      "case": "reef-movement-7",
+      "map": "OneIsland_TreasureBeach_Frlg",
+      "target": [
+        19,
+        7
+      ],
+      "before": {
+        "map": "OneIsland_TreasureBeach_Frlg",
+        "tile": [
+          18,
+          7
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "attempted": {
+        "map": "OneIsland_TreasureBeach_Frlg",
+        "tile": [
+          18,
+          7
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "returned": {
+        "map": "OneIsland_TreasureBeach_Frlg",
+        "tile": [
+          18,
+          7
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "native_collision": 1,
+      "entered_target": false,
+      "native_controller_return": true,
+      "capture": {
+        "file": "reef-movement-7.png",
+        "sha256": "12905dcaf15c443f0b0bf7c9992f33aaba34a558ae13f7cdd2e6ed9c9d19e3ba"
+      }
+    },
+    {
+      "case": "reef-movement-8",
+      "map": "OneIsland_TreasureBeach_Frlg",
+      "target": [
+        19,
+        8
+      ],
+      "before": {
+        "map": "OneIsland_TreasureBeach_Frlg",
+        "tile": [
+          18,
+          8
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "attempted": {
+        "map": "OneIsland_TreasureBeach_Frlg",
+        "tile": [
+          18,
+          8
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "returned": {
+        "map": "OneIsland_TreasureBeach_Frlg",
+        "tile": [
+          18,
+          8
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "native_collision": 1,
+      "entered_target": false,
+      "native_controller_return": true,
+      "capture": {
+        "file": "reef-movement-8.png",
+        "sha256": "8ddbc587dffc38b4d6d851b70e9370c18e8873363ad8e6828a4aebf722e632a2"
+      }
+    },
+    {
+      "case": "reef-movement-9",
+      "map": "OneIsland_TreasureBeach_Frlg",
+      "target": [
+        20,
+        8
+      ],
+      "before": {
+        "map": "OneIsland_TreasureBeach_Frlg",
+        "tile": [
+          21,
+          8
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "attempted": {
+        "map": "OneIsland_TreasureBeach_Frlg",
+        "tile": [
+          21,
+          8
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "returned": {
+        "map": "OneIsland_TreasureBeach_Frlg",
+        "tile": [
+          21,
+          8
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true
+      },
+      "native_collision": 1,
+      "entered_target": false,
+      "native_controller_return": true,
+      "capture": {
+        "file": "reef-movement-9.png",
+        "sha256": "7331615922253a502ea4032d00c20cf44c9671890fe240463d91bd044d89c8c4"
+      }
+    }
+  ],
+  "whole_object_art": [
+    {
+      "case": "whole-reef-art-1",
+      "map": "OneIsland_TreasureBeach_Frlg",
+      "point": [
+        22,
+        11
+      ],
+      "pixels": {
+        "map": "OneIsland_TreasureBeach_Frlg",
+        "cells": [
+          {
+            "cell": [
+              19,
+              7
+            ],
+            "expected_metatile": 459,
+            "native_metatile": 459,
+            "layer": 1,
+            "definition_words": [
+              16838,
+              16839,
+              16839,
+              16838,
+              16814,
+              2048,
+              0,
+              8365
+            ],
+            "quadrants": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "actual_bg_words": [
+              {
+                "quadrant": 0,
+                "words": [
+                  0,
+                  16814,
+                  16838
+                ]
+              },
+              {
+                "quadrant": 1,
+                "words": [
+                  0,
+                  2048,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 2,
+                "words": [
+                  0,
+                  0,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 3,
+                "words": [
+                  0,
+                  8365,
+                  16838
+                ]
+              }
+            ],
+            "samples": [
+              [
+                65,
+                9,
+                104,
+                128,
+                208,
+                0
+              ],
+              [
+                67,
+                9,
+                104,
+                128,
+                208,
+                0
+              ],
+              [
+                69,
+                9,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                71,
+                9,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                73,
+                9,
+                104,
+                128,
+                208,
+                1
+              ],
+              [
+                75,
+                9,
+                104,
+                128,
+                208,
+                1
+              ],
+              [
+                77,
+                9,
+                80,
+                104,
+                208,
+                1
+              ],
+              [
+                79,
+                9,
+                80,
+                104,
+                208,
+                1
+              ],
+              [
+                65,
+                17,
+                104,
+                128,
+                208,
+                2
+              ],
+              [
+                67,
+                17,
+                104,
+                128,
+                208,
+                2
+              ],
+              [
+                69,
+                17,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                71,
+                17,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                73,
+                17,
+                104,
+                128,
+                208,
+                3
+              ],
+              [
+                75,
+                17,
+                104,
+                128,
+                208,
+                3
+              ],
+              [
+                77,
+                17,
+                80,
+                104,
+                208,
+                3
+              ],
+              [
+                79,
+                17,
+                144,
+                160,
+                176,
+                3
+              ]
+            ],
+            "checked_pixels": 64
+          },
+          {
+            "cell": [
+              19,
+              8
+            ],
+            "expected_metatile": 467,
+            "native_metatile": 467,
+            "layer": 1,
+            "definition_words": [
+              16838,
+              16839,
+              16839,
+              16838,
+              0,
+              8381,
+              16816,
+              0
+            ],
+            "quadrants": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "actual_bg_words": [
+              {
+                "quadrant": 0,
+                "words": [
+                  0,
+                  0,
+                  16838
+                ]
+              },
+              {
+                "quadrant": 1,
+                "words": [
+                  0,
+                  8381,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 2,
+                "words": [
+                  0,
+                  16816,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 3,
+                "words": [
+                  0,
+                  0,
+                  16838
+                ]
+              }
+            ],
+            "samples": [
+              [
+                65,
+                25,
+                104,
+                128,
+                208,
+                0
+              ],
+              [
+                67,
+                25,
+                104,
+                128,
+                208,
+                0
+              ],
+              [
+                69,
+                25,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                71,
+                25,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                73,
+                25,
+                168,
+                184,
+                200,
+                1
+              ],
+              [
+                75,
+                25,
+                200,
+                216,
+                232,
+                1
+              ],
+              [
+                77,
+                25,
+                88,
+                88,
+                112,
+                1
+              ],
+              [
+                79,
+                25,
+                120,
+                120,
+                128,
+                1
+              ],
+              [
+                65,
+                33,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                67,
+                33,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                69,
+                33,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                71,
+                33,
+                104,
+                128,
+                208,
+                2
+              ],
+              [
+                73,
+                33,
+                104,
+                128,
+                208,
+                3
+              ],
+              [
+                75,
+                33,
+                104,
+                128,
+                208,
+                3
+              ],
+              [
+                77,
+                33,
+                80,
+                104,
+                208,
+                3
+              ],
+              [
+                79,
+                33,
+                80,
+                104,
+                208,
+                3
+              ]
+            ],
+            "checked_pixels": 64
+          },
+          {
+            "cell": [
+              20,
+              8
+            ],
+            "expected_metatile": 468,
+            "native_metatile": 468,
+            "layer": 1,
+            "definition_words": [
+              16838,
+              16839,
+              16839,
+              16838,
+              8382,
+              3072,
+              0,
+              16817
+            ],
+            "quadrants": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "actual_bg_words": [
+              {
+                "quadrant": 0,
+                "words": [
+                  0,
+                  8382,
+                  16838
+                ]
+              },
+              {
+                "quadrant": 1,
+                "words": [
+                  0,
+                  3072,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 2,
+                "words": [
+                  0,
+                  0,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 3,
+                "words": [
+                  0,
+                  16817,
+                  16838
+                ]
+              }
+            ],
+            "samples": [
+              [
+                81,
+                25,
+                200,
+                216,
+                232,
+                0
+              ],
+              [
+                83,
+                25,
+                64,
+                72,
+                104,
+                0
+              ],
+              [
+                85,
+                25,
+                64,
+                72,
+                104,
+                0
+              ],
+              [
+                87,
+                25,
+                88,
+                88,
+                112,
+                0
+              ],
+              [
+                89,
+                25,
+                104,
+                128,
+                208,
+                1
+              ],
+              [
+                91,
+                25,
+                104,
+                128,
+                208,
+                1
+              ],
+              [
+                93,
+                25,
+                80,
+                104,
+                208,
+                1
+              ],
+              [
+                95,
+                25,
+                80,
+                104,
+                208,
+                1
+              ],
+              [
+                81,
+                33,
+                104,
+                128,
+                208,
+                2
+              ],
+              [
+                83,
+                33,
+                104,
+                128,
+                208,
+                2
+              ],
+              [
+                85,
+                33,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                87,
+                33,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                89,
+                33,
+                80,
+                104,
+                208,
+                3
+              ],
+              [
+                91,
+                33,
+                80,
+                104,
+                208,
+                3
+              ],
+              [
+                93,
+                33,
+                80,
+                104,
+                208,
+                3
+              ],
+              [
+                95,
+                33,
+                80,
+                104,
+                208,
+                3
+              ]
+            ],
+            "checked_pixels": 64
+          }
+        ],
+        "undefined_cells_included": true,
+        "actual_hardware_bg_words_and_scanout_checked": true,
+        "sprites_and_opaque_ui_explicitly_excluded": true,
+        "mismatches_not_discarded": true
+      },
+      "capture": {
+        "file": "whole-reef-art-1.png",
+        "sha256": "c8e0944bd40d485b9d64d7c6f590fce441229bd781e192d1519f9828a00fb3e1"
+      }
+    },
+    {
+      "case": "whole-reef-art-2",
+      "map": "FourIsland_Frlg",
+      "point": [
+        4,
+        25
+      ],
+      "pixels": {
+        "map": "FourIsland_Frlg",
+        "cells": [
+          {
+            "cell": [
+              1,
+              27
+            ],
+            "expected_metatile": 580,
+            "native_metatile": 580,
+            "layer": 1,
+            "definition_words": [
+              16838,
+              16839,
+              16839,
+              16838,
+              16862,
+              2048,
+              0,
+              16852
+            ],
+            "quadrants": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "actual_bg_words": [
+              {
+                "quadrant": 0,
+                "words": [
+                  0,
+                  16862,
+                  16838
+                ]
+              },
+              {
+                "quadrant": 1,
+                "words": [
+                  0,
+                  2048,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 2,
+                "words": [
+                  0,
+                  0,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 3,
+                "words": [
+                  0,
+                  16852,
+                  16838
+                ]
+              }
+            ],
+            "samples": [
+              [
+                65,
+                105,
+                104,
+                128,
+                208,
+                0
+              ],
+              [
+                67,
+                105,
+                104,
+                128,
+                208,
+                0
+              ],
+              [
+                69,
+                105,
+                104,
+                128,
+                208,
+                0
+              ],
+              [
+                71,
+                105,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                73,
+                105,
+                104,
+                128,
+                208,
+                1
+              ],
+              [
+                75,
+                105,
+                104,
+                128,
+                208,
+                1
+              ],
+              [
+                77,
+                105,
+                80,
+                104,
+                208,
+                1
+              ],
+              [
+                79,
+                105,
+                80,
+                104,
+                208,
+                1
+              ],
+              [
+                65,
+                113,
+                104,
+                128,
+                208,
+                2
+              ],
+              [
+                67,
+                113,
+                104,
+                128,
+                208,
+                2
+              ],
+              [
+                69,
+                113,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                71,
+                113,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                73,
+                113,
+                104,
+                128,
+                208,
+                3
+              ],
+              [
+                75,
+                113,
+                104,
+                128,
+                208,
+                3
+              ],
+              [
+                77,
+                113,
+                168,
+                184,
+                200,
+                3
+              ],
+              [
+                79,
+                113,
+                120,
+                120,
+                128,
+                3
+              ]
+            ],
+            "checked_pixels": 64
+          },
+          {
+            "cell": [
+              2,
+              27
+            ],
+            "expected_metatile": 581,
+            "native_metatile": 581,
+            "layer": 1,
+            "definition_words": [
+              16838,
+              16839,
+              16839,
+              16838,
+              2048,
+              16863,
+              16853,
+              3072
+            ],
+            "quadrants": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "actual_bg_words": [
+              {
+                "quadrant": 0,
+                "words": [
+                  0,
+                  2048,
+                  16838
+                ]
+              },
+              {
+                "quadrant": 1,
+                "words": [
+                  0,
+                  16863,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 2,
+                "words": [
+                  0,
+                  16853,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 3,
+                "words": [
+                  0,
+                  3072,
+                  16838
+                ]
+              }
+            ],
+            "samples": [
+              [
+                81,
+                105,
+                104,
+                128,
+                208,
+                0
+              ],
+              [
+                83,
+                105,
+                104,
+                128,
+                208,
+                0
+              ],
+              [
+                85,
+                105,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                87,
+                105,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                89,
+                105,
+                80,
+                104,
+                208,
+                1
+              ],
+              [
+                91,
+                105,
+                104,
+                128,
+                208,
+                1
+              ],
+              [
+                93,
+                105,
+                80,
+                104,
+                208,
+                1
+              ],
+              [
+                95,
+                105,
+                80,
+                104,
+                208,
+                1
+              ],
+              [
+                81,
+                113,
+                200,
+                216,
+                232,
+                2
+              ],
+              [
+                83,
+                113,
+                120,
+                120,
+                128,
+                2
+              ],
+              [
+                85,
+                113,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                87,
+                113,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                89,
+                113,
+                104,
+                128,
+                208,
+                3
+              ],
+              [
+                91,
+                113,
+                104,
+                128,
+                208,
+                3
+              ],
+              [
+                93,
+                113,
+                80,
+                104,
+                208,
+                3
+              ],
+              [
+                95,
+                113,
+                80,
+                104,
+                208,
+                3
+              ]
+            ],
+            "checked_pixels": 64
+          },
+          {
+            "cell": [
+              1,
+              28
+            ],
+            "expected_metatile": 588,
+            "native_metatile": 588,
+            "layer": 1,
+            "definition_words": [
+              16838,
+              16839,
+              16839,
+              16838,
+              0,
+              16854,
+              16864,
+              0
+            ],
+            "quadrants": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "actual_bg_words": [
+              {
+                "quadrant": 0,
+                "words": [
+                  0,
+                  0,
+                  16838
+                ]
+              },
+              {
+                "quadrant": 1,
+                "words": [
+                  0,
+                  16854,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 2,
+                "words": [
+                  0,
+                  16864,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 3,
+                "words": [
+                  0,
+                  0,
+                  16838
+                ]
+              }
+            ],
+            "samples": [
+              [
+                65,
+                121,
+                104,
+                128,
+                208,
+                0
+              ],
+              [
+                67,
+                121,
+                104,
+                128,
+                208,
+                0
+              ],
+              [
+                69,
+                121,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                71,
+                121,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                73,
+                121,
+                168,
+                184,
+                200,
+                1
+              ],
+              [
+                75,
+                121,
+                120,
+                120,
+                128,
+                1
+              ],
+              [
+                77,
+                121,
+                200,
+                216,
+                232,
+                1
+              ],
+              [
+                79,
+                121,
+                120,
+                120,
+                128,
+                1
+              ],
+              [
+                65,
+                129,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                67,
+                129,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                69,
+                129,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                71,
+                129,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                73,
+                129,
+                104,
+                128,
+                208,
+                3
+              ],
+              [
+                75,
+                129,
+                104,
+                128,
+                208,
+                3
+              ],
+              [
+                77,
+                129,
+                80,
+                104,
+                208,
+                3
+              ],
+              [
+                79,
+                129,
+                80,
+                104,
+                208,
+                3
+              ]
+            ],
+            "checked_pixels": 64
+          }
+        ],
+        "undefined_cells_included": true,
+        "actual_hardware_bg_words_and_scanout_checked": true,
+        "sprites_and_opaque_ui_explicitly_excluded": true,
+        "mismatches_not_discarded": true
+      },
+      "capture": {
+        "file": "whole-reef-art-2.png",
+        "sha256": "0c674a87db3efcab6ce18f85617015325087b1786dd52f9c48da506671b37172"
+      }
+    },
+    {
+      "case": "whole-reef-art-3",
+      "map": "FourIsland_Frlg",
+      "point": [
+        10,
+        37
+      ],
+      "pixels": {
+        "map": "FourIsland_Frlg",
+        "cells": [
+          {
+            "cell": [
+              8,
+              35
+            ],
+            "expected_metatile": 581,
+            "native_metatile": 581,
+            "layer": 1,
+            "definition_words": [
+              16838,
+              16839,
+              16839,
+              16838,
+              2048,
+              16863,
+              16853,
+              3072
+            ],
+            "quadrants": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "actual_bg_words": [
+              {
+                "quadrant": 0,
+                "words": [
+                  0,
+                  2048,
+                  16838
+                ]
+              },
+              {
+                "quadrant": 1,
+                "words": [
+                  0,
+                  16863,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 2,
+                "words": [
+                  0,
+                  16853,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 3,
+                "words": [
+                  0,
+                  3072,
+                  16838
+                ]
+              }
+            ],
+            "samples": [
+              [
+                81,
+                41,
+                104,
+                128,
+                208,
+                0
+              ],
+              [
+                83,
+                41,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                85,
+                41,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                87,
+                41,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                89,
+                41,
+                104,
+                128,
+                208,
+                1
+              ],
+              [
+                91,
+                41,
+                136,
+                160,
+                216,
+                1
+              ],
+              [
+                93,
+                41,
+                104,
+                128,
+                208,
+                1
+              ],
+              [
+                95,
+                41,
+                80,
+                104,
+                208,
+                1
+              ],
+              [
+                81,
+                49,
+                200,
+                216,
+                232,
+                2
+              ],
+              [
+                83,
+                49,
+                120,
+                120,
+                128,
+                2
+              ],
+              [
+                85,
+                49,
+                104,
+                128,
+                208,
+                2
+              ],
+              [
+                87,
+                49,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                89,
+                49,
+                104,
+                128,
+                208,
+                3
+              ],
+              [
+                91,
+                49,
+                80,
+                104,
+                208,
+                3
+              ],
+              [
+                93,
+                49,
+                80,
+                104,
+                208,
+                3
+              ],
+              [
+                95,
+                49,
+                80,
+                104,
+                208,
+                3
+              ]
+            ],
+            "checked_pixels": 64
+          }
+        ],
+        "undefined_cells_included": true,
+        "actual_hardware_bg_words_and_scanout_checked": true,
+        "sprites_and_opaque_ui_explicitly_excluded": true,
+        "mismatches_not_discarded": true
+      },
+      "capture": {
+        "file": "whole-reef-art-3.png",
+        "sha256": "87bdfeba43e61dba5cd099dea6bdabc54cf18d1b7245073c817adf5cc9e80521"
+      }
+    },
+    {
+      "case": "whole-reef-art-4",
+      "map": "FiveIsland_Frlg",
+      "point": [
+        3,
+        12
+      ],
+      "pixels": {
+        "map": "FiveIsland_Frlg",
+        "cells": [
+          {
+            "cell": [
+              5,
+              14
+            ],
+            "expected_metatile": 459,
+            "native_metatile": 459,
+            "layer": 1,
+            "definition_words": [
+              16838,
+              16839,
+              16839,
+              16838,
+              16814,
+              2048,
+              0,
+              8365
+            ],
+            "quadrants": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "actual_bg_words": [
+              {
+                "quadrant": 0,
+                "words": [
+                  0,
+                  16814,
+                  16838
+                ]
+              },
+              {
+                "quadrant": 1,
+                "words": [
+                  0,
+                  2048,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 2,
+                "words": [
+                  0,
+                  0,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 3,
+                "words": [
+                  0,
+                  8365,
+                  16838
+                ]
+              }
+            ],
+            "samples": [
+              [
+                145,
+                105,
+                104,
+                128,
+                208,
+                0
+              ],
+              [
+                147,
+                105,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                149,
+                105,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                151,
+                105,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                153,
+                105,
+                80,
+                104,
+                208,
+                1
+              ],
+              [
+                155,
+                105,
+                136,
+                160,
+                216,
+                1
+              ],
+              [
+                157,
+                105,
+                104,
+                128,
+                208,
+                1
+              ],
+              [
+                159,
+                105,
+                80,
+                104,
+                208,
+                1
+              ],
+              [
+                145,
+                113,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                147,
+                113,
+                136,
+                160,
+                216,
+                2
+              ],
+              [
+                149,
+                113,
+                104,
+                128,
+                208,
+                2
+              ],
+              [
+                151,
+                113,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                153,
+                113,
+                104,
+                128,
+                208,
+                3
+              ],
+              [
+                155,
+                113,
+                80,
+                104,
+                208,
+                3
+              ],
+              [
+                157,
+                113,
+                80,
+                104,
+                208,
+                3
+              ],
+              [
+                159,
+                113,
+                144,
+                160,
+                176,
+                3
+              ]
+            ],
+            "checked_pixels": 64
+          },
+          {
+            "cell": [
+              6,
+              14
+            ],
+            "expected_metatile": 460,
+            "native_metatile": 460,
+            "layer": 1,
+            "definition_words": [
+              16838,
+              16839,
+              16839,
+              16838,
+              2048,
+              16815,
+              8366,
+              3072
+            ],
+            "quadrants": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "actual_bg_words": [
+              {
+                "quadrant": 0,
+                "words": [
+                  0,
+                  2048,
+                  16838
+                ]
+              },
+              {
+                "quadrant": 1,
+                "words": [
+                  0,
+                  16815,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 2,
+                "words": [
+                  0,
+                  8366,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 3,
+                "words": [
+                  0,
+                  3072,
+                  16838
+                ]
+              }
+            ],
+            "samples": [
+              [
+                161,
+                105,
+                104,
+                128,
+                208,
+                0
+              ],
+              [
+                163,
+                105,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                165,
+                105,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                167,
+                105,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                169,
+                105,
+                80,
+                104,
+                208,
+                1
+              ],
+              [
+                171,
+                105,
+                136,
+                160,
+                216,
+                1
+              ],
+              [
+                173,
+                105,
+                104,
+                128,
+                208,
+                1
+              ],
+              [
+                175,
+                105,
+                80,
+                104,
+                208,
+                1
+              ],
+              [
+                161,
+                113,
+                200,
+                216,
+                232,
+                2
+              ],
+              [
+                163,
+                113,
+                200,
+                216,
+                232,
+                2
+              ],
+              [
+                165,
+                113,
+                104,
+                128,
+                208,
+                2
+              ],
+              [
+                167,
+                113,
+                80,
+                104,
+                208,
+                2
+              ],
+              [
+                169,
+                113,
+                104,
+                128,
+                208,
+                3
+              ],
+              [
+                171,
+                113,
+                80,
+                104,
+                208,
+                3
+              ],
+              [
+                173,
+                113,
+                80,
+                104,
+                208,
+                3
+              ],
+              [
+                175,
+                113,
+                80,
+                104,
+                208,
+                3
+              ]
+            ],
+            "checked_pixels": 64
+          }
+        ],
+        "undefined_cells_included": true,
+        "actual_hardware_bg_words_and_scanout_checked": true,
+        "sprites_and_opaque_ui_explicitly_excluded": true,
+        "mismatches_not_discarded": true
+      },
+      "capture": {
+        "file": "whole-reef-art-4.png",
+        "sha256": "d368075fdcab161045993feb59d73e01a8924a49271fed43117140a414a299a0"
+      }
+    }
+  ],
+  "boarding": [],
+  "outer_limits": [],
+  "native_validation_performed": true,
+  "initial_party_progress_and_placement_are_fixtures": true,
+  "post_placement_movement_controllers_only": true,
+  "no_midtrip_map_grid_or_avatar_writes": true,
+  "exact_bg_oam_vram_palette_and_scanout_verified": true,
+  "full_campaign_playthrough": false
+}

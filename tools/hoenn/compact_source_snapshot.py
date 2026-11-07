@@ -30,7 +30,7 @@ def clone(source, destination, mutable_paths, *, cache=None):
                 shutil.copytree(before, after, symlinks=True)
             else:
                 shutil.copy2(before, after)
-        elif before.is_dir() and not before.is_symlink():
+        elif before.is_dir():
             if split:
                 after.mkdir(exist_ok=True)
                 shutil.copystat(before, after)
@@ -39,7 +39,10 @@ def clone(source, destination, mutable_paths, *, cache=None):
             else:
                 after.symlink_to(before, target_is_directory=True)
         elif before.is_symlink():
-            after.symlink_to(before.resolve(), target_is_directory=before.is_dir())
+            if relative in private:
+                shutil.copy2(before, after)
+            else:
+                after.symlink_to(before.resolve())
         elif relative in private or relative.suffix in {'.gba', '.elf', '.map', '.sym'}:
             shutil.copy2(before, after)
         else:

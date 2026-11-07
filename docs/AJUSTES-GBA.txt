@@ -16,6 +16,19 @@ nove vídeos de 28/10 fica em errors/2026-10-28-videos-surf-tiles.txt.
 9. Executar testes, navegador e stage_pages. Abrir PR normal ao concluir tudo.
 Não redesenhar o mapa-múndi nem mexer em prédios/NPCs/rotas fora do pedido.
 
+[CANAIS, PORTOS E CAVERNAS — REVISÃO 171]
+Registro: errors/2026-11-07-generated-area-review.txt.
+Novo canal: abrir TODAS as fileiras bloqueadas das duas bocas; preservar GPS
+e IDs antigos e acrescentar só o trecho já representado no mapa-múndi.
+Pedrinhas: selecionar água pura pelos oito words e excluir embarques, vãos
+de conexão e footprint inteiro dos barcos. Não forçar altura1 nos recifes
+de altura0. Provar componentes globais e ida/volta ao tablado nas sete ilhas.
+Portais removidos: fechar arco e limiar completos; conferir também se o piso
+da escada removida virou degrau. Separar fixture local de percurso real.
+Câmera: grafos de rotas dobrados podem ter projeções distantes contraditórias;
+não fechar passagens para esconder esse desenho. Ajuste visual restrito deve
+preservar colisão/altura das células indefinidas e controles não afetados.
+
 [OBJETOS E CANTOS — REVISÃO 170]
 Registro: errors/2026-11-06-objetos-e-cantos-costeiros.txt.
 Não tratar comportamento Surf como prova de água pura: o mesmo bloco pode
