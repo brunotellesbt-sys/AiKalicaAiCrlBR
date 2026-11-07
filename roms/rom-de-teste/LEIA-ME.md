@@ -1,12 +1,12 @@
 # ROM de teste da campanha e das rotas
 
-Esta ROM inclui a [camada 168](../../docs/game-continuity-review.md): progressão do Instituto do Clima e câmeras de 16 mapas costeiros corrigidas, com os ajustes anteriores de terreno e Surf. A TESTE mantém os mapas e missões das normais e conserva os encontros aleatórios e abordagens automáticas desativados. [Registro em TXT](../../errors/2026-11-04-campanha-e-cameras.txt).
+Esta ROM inclui a [camada 171](../../docs/generated-area-review.md): canal vertical ao sul de One Island ligado ao mar horizontal, limites e rochas dos portos, câmeras e caverna Horizonte corrigidos. Mantém a mesma campanha das normais e conserva encontros aleatórios e abordagens automáticas desativados. [Registro em TXT](../../errors/2026-11-07-generated-area-review.txt).
 
 Conserva a [campanha da camada 164](../../docs/badge-story.md): competição da 18ª insígnia que libera as duas Ligas, Galactic na 22ª, rivais por personagem e região inicial e Eren/Luffy na escala dos outros rivais. Mantém os 24 ginásios e as [correções costeiras da camada 163](../../docs/coastal-closures.md), incluindo praias animadas e retorno de Surf aos píeres. A abertura é testada sem save e com a bateria de inspeção desta pasta.
 
 Abra `Pokemon-Journey-TESTE.gba` no emulador. Esta edição deriva de Gen1–9 Normal e contém as mesmas rotas, portos e cavernas das quatro ROMs normais.
 
-A tela azul relatada não foi reproduzida no mGBA com os arquivos desta entrega, abrindo sem save e usando Continue com o save abaixo. A causa específica no My Boy permanece sem confirmação; [relatórios e capturas atuais](../../mods/hoenn/game-continuity-review-validation/TESTE/cold-boot/).
+A tela azul relatada não foi reproduzida no mGBA com os arquivos desta entrega, abrindo sem save e usando Continue com o save abaixo. A causa específica no My Boy permanece sem confirmação; [relatórios e capturas atuais](../../mods/hoenn/generated-area-review-validation/editions/TESTE/cold-boot/).
 
 No player do GitHub Pages, selecione **TESTE · Explore without encounters**. O navegador confere o arquivo atual e mantém um save separado das quatro edições normais.
 

@@ -1,0 +1,109 @@
+{
+  "kind": "generated-cave-portals-legacy-save-fixture",
+  "passed": true,
+  "rom_sha256": "6a70d43313df75d2258c5bac46d7ab8c0aa50b6e4f1a7246d540159ee726d5fc",
+  "elf_sha256": "df384a54339cbd4de07c187592208ef4999636f095856e34aa4c1a47e5303545",
+  "before": {
+    "map": "JourneyCaveHorizonte",
+    "tile": [
+      15,
+      20
+    ],
+    "surfing": false,
+    "elevation": 3,
+    "sprite_visible": true,
+    "object_visible": true
+  },
+  "entered": {
+    "map": "JourneyCaveHorizonte",
+    "tile": [
+      15,
+      19
+    ],
+    "surfing": false,
+    "elevation": 3,
+    "sprite_visible": true,
+    "object_visible": true
+  },
+  "door_grid": {
+    "metatile": 532,
+    "collision": 0,
+    "elevation": 3
+  },
+  "saved_origin": [
+    15,
+    19
+  ],
+  "captures": [
+    {
+      "file": "layer170-retired-door.png",
+      "sha256": "4f22a947cb47fb6e9c594de8753bb977bb01cf2408f04fc0716f2be81c7c4acd"
+    }
+  ],
+  "fixtures": [
+    {
+      "label": "legacy-passable-north-door",
+      "map": "JourneyCaveHorizonte",
+      "tile": [
+        15,
+        20
+      ],
+      "surfing": false
+    }
+  ],
+  "controls": [
+    {
+      "phase": "legacy-passable-north-door",
+      "key": 64,
+      "frames": 120
+    },
+    {
+      "phase": "legacy-passable-north-door",
+      "key": 0,
+      "frames": 60
+    }
+  ],
+  "queries": [
+    {
+      "phase": "legacy-passable-north-door",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        22,
+        26
+      ]
+    },
+    {
+      "phase": "legacy-passable-north-door",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        22,
+        26
+      ]
+    },
+    {
+      "phase": "legacy-passable-north-door",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        22,
+        26
+      ]
+    },
+    {
+      "phase": "legacy-passable-north-door",
+      "function": "TrySavingData",
+      "arguments": [
+        0
+      ]
+    }
+  ],
+  "battery_saves": [
+    {
+      "file": "layer170-retired-door.sav",
+      "sha256": "1fa08c6bd2f197cfd6e19e08986bee5dab65d93d505e5d493030ee1a0e5e6e3f",
+      "bytes": 131072
+    }
+  ],
+  "actual_native_flash_export": true,
+  "old_passable_door_entered_with_controllers": true,
+  "initial_party_progress_and_local_placements_are_fixtures": true
+}
