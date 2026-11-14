@@ -24,8 +24,9 @@ continuidade; suas pendências devem estar explícitas no corpo do PR.
 O PR normal [#110](https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/pull/110)
 foi integrado externamente em `5dc9e1b1273515f7837c1ba7013273157e641aec`.
 Ele incluiu diagnóstico, ferramentas e documentos, sem publicar ROM172.
-A branch foi atualizada por fast-forward, preservando o trabalho. O próximo
-checkpoint de integração deve abrir outro PR normal, com as pendências claras.
+A branch foi atualizada por fast-forward, preservando o trabalho. O [PR normal #111](https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/pull/111)
+está aberto para a integração, com pendências explícitas. Push conferido:
+`017eafc2f80148c24d6e787a12bd7702e7969ca5`.
 
 O documento histórico completo recebido está em
 [RETOMADA_TECNICA_POKEMON_JOURNEY.json](RETOMADA_TECNICA_POKEMON_JOURNEY.json).
@@ -514,3 +515,23 @@ para migração apenas, retirada dos grids aposentados da navegação, fallback
 seguro para os 273 IDs, preenchimento das reservas e registros de costa. Depois,
 preparar candidata íntegra, auditar e compilar; as cinco ROMs só mudam após as
 provas finais. Não publicar o diagnóstico como se resolvesse a rede completa.
+
+
+Diagnóstico dos cinco Dive, preparação em andamento posterior ao checkpoint111:
+`prepare_atlas_dive_diagnostic.py` criou cinco probes isolados, sem classificar
+ou publicar a rede final. A cópia privada anteriormente chamada
+`.local/atlas-physical-smoke-src` foi verificada novamente:32.250inputs e ROM/ELF
+171 exatos; não continha camada172parcial. Foi preservada por renomeação para
+`.local/atlas-dive-smoke-src`, sem apagar arquivos. O marker histórico
+`.journey-atlas-route-tracking` pertence à cadeia171 e foi autenticado; só
+markers Atlas novos impedem reutilizar uma cópia limpa.
+
+A primeira seleção do doador mostrou que Route127 não contém a pedrinha1F9,
+embora tenha o banco correto. O preparador agora lê água/pedra inteiras de
+JourneyHoennNorthSea e o DeepWater real de Route127(72,49), com os MESMOS
+bancos Emerald General/Mossdeep. Log da tentativa sem pedra foi preservado.
+São42inputs preparados, incluindo cinco transforms Dive e os sete destinos
+de balsa. Marker SHA256:
+`977de91864b104dcfa8f1f8d791075d9a618db0c20f86abf9b4172292880de4c`.
+Build ARM e prova nativa desse diagnóstico ainda pendentes neste checkpoint.
+Essa preparação não comprova geografia global, migração ou publicação172.
