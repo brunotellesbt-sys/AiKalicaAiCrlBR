@@ -65,7 +65,40 @@ Inventário confirmado nesta máquina:
   Inicial:6,4GiB e521052 inodes livres,9GiB RAM disponível; medir antes de builds.
 
 Próximo passo:
-  Adquirir fonte upstream fixada e determinar reconstrução171 reproduzível;
-  recuperar verdade do atlas e gerar contrato geométrico independente.
+  Fonte171 reconstruída:171 camadas,32.250 inputs, contrato171 exato.
+  Manifesto dos inputs:
+  d3a06e90f222f83a3e7778df52895594f6bd02719a8bc925151d7d80bfa1fed7
+  Nova verificação read-only reproduziu o mesmo resultado.
+  Build171 em cópia privada .local/review171-build-src; conferir hashes ao
+  terminar, sem confundir build de base com build172. Fonte estável em
+  .local/generated-area-review-src; não compilar essa árvore em uso por leitores.
+
+  Primeiro checkpoint remoto confirmado:c03dac777eae6199d4be2643f77d4c862c111851.
+  Módulos recuperados por reconstrução (não arquivos do ambiente antigo):
+  restore_generated_area_review,atlas_surf_truth,atlas_surf_geometry,
+  validate_atlas_surf_layout_plan,atlas_surf_layer,atlas_surf_runtime,
+  atlas_surf_ecology,atlas_surface_batteries,atlas_surf_native_scenery.
+  41 testes de geometria/plano/runtime/ecologia/materialização aprovados.
+  O código da migração2 está preservado, mas sua bateria de testes C e as
+  provas nativas Save/Continue ainda não foram concluídas. Não usar em release.
+  O runtime passou equivalência C para65.536IDs e313.200coordenadas;
+  desempenho real no GBA ainda PENDENTE.
+
+  Atlas real decodificado:1529pixels azuis iguais à referência publicada.
+  Ícone de porto(96,40) comprovado pelo padrão3x3; a classificação dos45
+  pixels nativos ainda precisa prova física. Usar o GPS171 cegamente daria184
+  pixels candidatos: isso NÃO comprova propriedade nativa.
+  Diagnóstico sobre TODOS1529azuis (não plano final):347chunks32tiles,
+  74.688células de água,15componentes. Não forçar436 nem duplicar rotas nativas.
+  Costa acrescenta4pixels oceânicos; Artisan termina no ícone(119,104),
+  não num pixel oceânico. As duas exceções precisam vínculo aos acessos reais.
+
+  Birth:reconstruída correção de15células de telhado+2pontas laterais;
+  gráfico privado dewarp740 usa madeira nativa, atributos/eventos preservados.
+  Render inteiro antes/depois em docs/design/atlas-surf-layout (sem NPCs
+  dinâmicos, não capturas de ROM). Ida/volta,visibilidade e bloqueios PENDENTES.
+
+  Próximo:fazer classificação/adaptadores reais e integração dos módulos;
+  auditar fonte,migração e ecologia; compilar172 apenas depois disso.
   Após cada lote: verificações, atualizar este arquivo, commit/push, conferir
   SHA remoto. Não deixar único exemplar importante só no disco local.
