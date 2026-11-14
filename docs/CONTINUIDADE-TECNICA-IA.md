@@ -32,6 +32,14 @@ o estado atual dos relatos do ambiente antigo. Só os dois identificadores
 privados foram omitidos da cópia pública; o original integral foi salvo fora
 do Git como `/workspace/RETOMADA_TECNICA_POKEMON_JOURNEY.json`.
 
+O usuário acrescentou o delta integral
+[ULTIMO_PEDIDO_POS_PR108.json](ULTIMO_PEDIDO_POS_PR108.json), com 21 seções.
+Ele fixa o pedido principal: corrigir a malha física gerada conforme o atlas,
+sem mexer na arte e sem usar apenas GPS para esconder o defeito. Suas
+contagens e resultados de execução são históricos; não substituem provas
+atuais. A referência histórica a rascunho não revoga o pedido posterior de
+PR normal. Último checkpoint remoto conferido: `7eaa0f6a3bd3182af9f2ae7a35034c4c96ff7129`.
+
 ## Pedidos do usuário e resultado
 
 ### Último pedido de continuidade, completo
@@ -68,6 +76,13 @@ especialmente `primary_user_goal`, `latest_generation_plan`,
 A entrega só termina com geografia correta, cinco edições atualizadas,
 provas atuais, save TESTE, ZIP, manifestos, navegador, Pages e PR. Não pedir
 ao usuário que reconte o histórico ou execute os comandos técnicos.
+
+Resumo fiel confirmado no último delta recebido:
+
+> Consertar as rotas de Surf geradas para corresponderem ao mapa-múndi. Não alterar o mapa-múndi. Se necessário, mudar posição, formato, dimensão, conexões e acessos das rotas físicas.
+
+Essa confirmação preserva o escopo principal. Não reiniciar ginásios, torneio
+ou conteúdo integrado, nem reduzir o problema a mais uma passagem local.
 
 ## Regras permanentes
 
@@ -241,6 +256,9 @@ passou na v2, incluindo o corpo bloqueado, sem reciclar o resultado v1.
 3. Completar a classificação física dos pixels nativos e do ícone (96,40).
    Costa: quatro pixels oceânicos interiores entre (128,89) e (133,89).
    Artisan: endpoint (119,104) é ícone de caverna, não oceano livre.
+   Inventário preliminar nos dados 171 encontrou 273 IDs candidatos, 18
+   warps de cavernas e 33 componentes costeiras de interface; ainda precisa
+   ser formalizado e testado, sem chamar isso de conectividade final.
 4. Integrar 157 conjuntos autenticados e 14 ilhotas de trainers, POIs,
    eventos, 18 cavernas e 33 adaptadores. Preservar os 273 IDs históricos.
    Route114: conferir (0,17)/(0,18), 0x1170→0x15F9, sem tocar a margem y16.

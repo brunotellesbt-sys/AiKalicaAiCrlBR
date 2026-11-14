@@ -32,6 +32,7 @@ ATTACHMENT_SCOPES = {SCOPE, 'coastal-ecology', 'coastal-closures', 'sevii-integr
                      'arrival-coast-review', 'game-continuity-review', 'sevii-route-boundaries', 'coast-scenery-review', 'generated-area-review'}
 CONTINUITY_FILES = ('docs/CONTINUIDADE-TECNICA-IA.md',
                     'docs/RETOMADA_TECNICA_POKEMON_JOURNEY.json',
+                    'docs/ULTIMO_PEDIDO_POS_PR108.json',
                     'docs/atlas-surf-layout.md', 'errors/ESTADO-DA-TAREFA.txt')
 
 
