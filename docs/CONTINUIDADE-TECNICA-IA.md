@@ -535,3 +535,38 @@ de balsa. Marker SHA256:
 `977de91864b104dcfa8f1f8d791075d9a618db0c20f86abf9b4172292880de4c`.
 Build ARM e prova nativa desse diagnóstico ainda pendentes neste checkpoint.
 Essa preparação não comprova geografia global, migração ou publicação172.
+
+
+## Resultado nativo dos cinco Dive no diagnóstico
+
+A preparação anterior já compilou e seus bytes ficaram congelados:
+
+```text
+Fonte: .local/atlas-dive-smoke-src;42 inputs preparados.
+ROM: dc80c3a05901ba2dcf0e963d7002ac1b884ad674eb9d4239a01e513d7355a016
+ELF: 2c55a6dd4251cd52ab6ab5843c0e90f92b22d4caeb856426cfa02304702cf13c
+Marker: 977de91864b104dcfa8f1f8d791075d9a618db0c20f86abf9b4172292880de4c
+ROM usada:32.653.064bytes(97,31%);EWRAM245432;IWRAM28660.
+```
+
+`validate_atlas_surf_dives_native.py` passou os cinco casos por controles:
+Surface→Depth, entrada real no santuário, saída e Emerge→Surface. O deslocamento
+local foi preservado nas duas direções. B não emergiu sobre recife nem célula
+sem dono. Cada caso teve fixture inicial explícita de party/progresso/posição,
+Surf e encontros; após a partida não usou setters, warps, FieldEffectStart ou
+TrySetDiveWarp como consulta. Dive e Emerge foram iniciados por A/B e diálogos
+nativos. O piso0x0364 do santuário foi aceito em altura0; avatar/pixels reais
+foram conferidos. Isso é prova local, não campanha completa ou Save/Continue.
+
+Quarenta capturas, relatório e runner exatamente executado estão em
+`docs/design/atlas-surf-layout/diagnostic-dives-native`. O verificador separado
+confere as40capturas/pixels, destinos, estados e todos42inputs/marker/ROM/ELF
+com o source atual. Índice com hashes em `diagnostic-dives-review.json` e
+`diagnostic-dives-frozen.json`.145testes atlas e1decontinuidade passaram;
+quatro testes novos rejeitam destino/modo/piso adulterados, imagem inválida,
+consulta mutável ou promoção desse diagnóstico a release.
+
+O perfil lido no ROM congelado é maxNational1025, perfectTrainerIvs=true,
+reviewMode0. Não é uma prova das outras edições, da TESTE ou dos encontros.
+A rede completa ainda não foi preparada/publicada; as ROMs oficiais continuam
+171. Conservar este resultado como diagnóstico e repetir no artefato final.
