@@ -596,3 +596,34 @@ Pedido principal incompleto: geometria integral, cenários, classificação,
 migração funcional, provas finais e atualização das cinco ROMs públicas.
 O PR normal111 continua aberto; ROMs públicas seguem171. Próximo: materializar
 os 33 acessos e posicionar todos os objetos completos na rede física.
+
+
+## Colocação concreta de costas e cenário completo
+
+Pedido literal atual: “Continue”. O PR normal111 permanece aberto. Foram
+registrados os 33 acessos de costa por arte e terreno reais, com boca, direção,
+offset, banco e retorno local autenticados. Nenhum dado de GPS antigo escolheu
+os encaixes. Onze testes costeiros passaram. Quatro bocas são mais estreitas
+por causa do terreno nativo, e Ever Grande mantém altura3 com transição3→0→1
+somente no adaptador novo. A análise separada do GPS antigo encontrou saltos
+em32/33 bocas: integração da projeção nativa ainda PENDENTE. Não ocultar esse
+problema nem declarar as viagens aprovadas por ter encaixes source-only.
+
+O empacotamento colocou374 componentes inteiras:18 cavernas nas âncoras
+originais e356 componentes em82 reservas decorativas. Objetos do mesmo banco
+E mesmo dono ecológico compartilham a margem de câmera9, mantendo cada core
+inteiro e IDs de NPC sem colisões. Decoração fica ao lado do corredor real,
+em oceano da arte, num raio autoral de12pixels da âncora lógica do mapa antigo;
+não usa seu GPS interpolado. Os cinco quadrados Dive antigos5x5 são substituídos
+explicitamente pelos cinco patches nativos5x3, total75células; nenhum evento
+é descartado. Zero componentes sem colocação. Sete testes de empacotamento
+passaram. Os13 conflitos residuais entre corredor e terreno seco de cavernas
+fixas estão registrados; precisam de SCC e percurso real, sem chamar terra de água.
+
+Relatórios integrais comprimidos, imagem do atlas REAL anotada e hashes em
+`docs/design/atlas-surf-layout/whole-layout-placement-review.json`.
+Limite: geometria conjunta ainda não materializada/auditada/compilada. Faltam
+classificação nativa, ajuste funcional da projeção nas costas, migração real,
+ecologia alcançável, ROMs finais e publicação. Último lote concluído:33acessos
+e inventário inteiro com colocação. Próximo: aplicar reservas/objetos/eventos
+no source staged e auditar acessos globais antes de compilar.
