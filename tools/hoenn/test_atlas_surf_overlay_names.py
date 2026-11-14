@@ -57,6 +57,35 @@ class OverlayAndNamesTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'isolated native compiler snapshot'):
             _=view.behavior_flags
 
+    def test_old_unused_map_records_are_preserved_without_invented_ids(self):
+        root,layer=self.fixture()
+        original=json.loads((root/'data/maps/Old/map.json').read_text())
+        orphan=dict(original,id='MAP_UNUSED_HOUSE')
+        layer.parent('data/maps/UnusedHouse/map.json',orphan)
+        view=OverlaySource(layer)
+        self.assertIn('UnusedHouse',view.maps)
+        self.assertNotIn('UnusedHouse',view.identities)
+        layer.outputs['data/maps/NewUnregistered/map.json']=json.dumps(dict(original,id='MAP_NEW_UNREGISTERED')).encode()
+        with self.assertRaisesRegex(ValueError,'missing from compiled registry'):
+            OverlaySource(layer)
+
+    def test_reordering_existing_map_ids_is_rejected(self):
+        root,layer=self.fixture()
+        groups=json.loads((root/'data/maps/map_groups.json').read_text())
+        groups['Group'].reverse()
+        layer.outputs['data/maps/map_groups.json']=json.dumps(groups).encode()
+        with self.assertRaisesRegex(ValueError,'historical compiled map identity'):
+            OverlaySource(layer)
+
+    def test_parent_registry_mutation_cannot_hide_behind_a_staged_copy(self):
+        root,layer=self.fixture()
+        path='data/maps/map_groups.json'
+        raw=(root/path).read_bytes()
+        layer.outputs[path]=raw
+        (root/path).write_bytes(raw+b' ')
+        with self.assertRaisesRegex(ValueError,'Historical map registry changed'):
+            OverlaySource(layer)
+
 
 if __name__=='__main__':
     unittest.main()

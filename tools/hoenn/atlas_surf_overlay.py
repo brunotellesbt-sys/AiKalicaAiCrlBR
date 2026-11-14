@@ -15,7 +15,19 @@ from badge_story_layer import read
 class OverlaySource(Source):
     def __init__(self, layer):
         self.layer=layer
+        registry_path='data/maps/map_groups.json'
+        original_raw=(Path(layer.source)/registry_path).read_bytes()
+        if hashlib.sha256(original_raw).hexdigest()!=layer.expected[registry_path]:
+            raise ValueError('Historical map registry changed behind the candidate overlay')
+        original_registry=json.loads(original_raw)
+        original_ids={name:(group<<8)|number
+                      for group,label in enumerate(original_registry['group_order'])
+                      for number,name in enumerate(original_registry[label])}
         super().__init__(layer.source)
+        original_names=set(self.maps)
+        for name,identity in original_ids.items():
+            if self.identities.get(name)!=identity:
+                raise ValueError(('Candidate changed a historical compiled map identity',name))
         for path in sorted(layer.outputs):
             match=re.fullmatch(r'data/maps/([^/]+)/map.json',path)
             if match:
@@ -24,7 +36,10 @@ class OverlaySource(Source):
         for name,row in self.maps.items():
             if row['id'] in self.by_id:
                 raise ValueError(('Duplicate staged map constant',row['id']))
-            if name not in self.identities:
+            # Upstream contains unused map JSONs without compiled IDs. Keep
+            # them as source records; never invent a registry identity. Only
+            # newly introduced maps must be registered by this overlay.
+            if name not in self.identities and name not in original_names:
                 raise ValueError(('Staged map missing from compiled registry',name))
             self.by_id[row['id']]=name
 

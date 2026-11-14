@@ -246,3 +246,29 @@ Continuidade posterior ao merge110 (14/11UTC):
   VerificadorindependentePASScomfonteatual;145atlas+1continuidadePASS.
   PerfilROMreal1025/perfectIVsTRUE/review0,semalterarcapRAM;outras4ediçõespendentes.
   NÃOérederealcompleta,ecologiaROM,campanhainteira,Save/Continue ourelease172.
+
+
+## GPS legado compacto para migração (checkpoint posterior à prova Dive)
+
+`atlas_surf_legacy.py` separa os 273 mapas aposentados da navegação ativa.
+Mantém seu GPS exato em RLE indexado e uma máscara nativa de água para auxiliar
+migração; bit seco NÃO certifica chão seguro. Os IDs, eventos, layouts e arte
+permanecem intactos. Comparação do C real: todas as 235.650 células antigas,
+65.536 IDs, clamps e 149 grids retidos passaram. Os dados diminuem de
+1.057.272 para 784.870 bytes, economia de 272.402 bytes antes de código/padding.
+Isso ainda precisa ser integrado, compilado e validado no Continue real.
+
+Relatório íntegro comprimido e hashes em
+`docs/design/atlas-surf-layout/legacy-navigation-review.json`. A visão de fonte
+staged também preserva os quatro JSONs nativos sem identidade compilada,
+rejeita novos mapas não registrados e qualquer reordenação dos IDs antigos;
+a leitura do registro original confere o hash do parent antes da auditoria.
+
+167 testes atlas passaram neste checkpoint (incluindo os registros costeiros
+em elaboração); os arquivos concretos desses registros ainda serão congelados
+no lote seguinte. Pedido literal mais recente: “Continue os trabalhos”.
+Último lote concluído: GPS legado compacto e guarda da auditoria staged.
+Pedido principal incompleto: geometria integral, cenários, classificação,
+migração funcional, provas finais e atualização das cinco ROMs públicas.
+O PR normal111 continua aberto; ROMs públicas seguem171. Próximo: materializar
+os 33 acessos e posicionar todos os objetos completos na rede física.
