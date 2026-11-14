@@ -30,6 +30,9 @@ from verify_versions import verify
 HISTORICAL_COMMIT = '4f7e33cd49004cde4dfb668d76deb95803981cf9'
 ATTACHMENT_SCOPES = {SCOPE, 'coastal-ecology', 'coastal-closures', 'sevii-integrated-piers', 'generated-world-audit',
                      'arrival-coast-review', 'game-continuity-review', 'sevii-route-boundaries', 'coast-scenery-review', 'generated-area-review'}
+CONTINUITY_FILES = ('docs/CONTINUIDADE-TECNICA-IA.md',
+                    'docs/RETOMADA_TECNICA_POKEMON_JOURNEY.json',
+                    'docs/atlas-surf-layout.md', 'errors/ESTADO-DA-TAREFA.txt')
 
 
 def releases(info):
@@ -157,6 +160,8 @@ def archive_plan(info, output, *, include_roms=True, current_scope=SCOPE, extra_
         path = ROOT / name
         if path.exists():
             add(path)
+    for name in CONTINUITY_FILES:
+        add(ROOT / name)  # A new release cannot silently omit its handoff.
     for path in (ROOT / 'assets/tiles').rglob('*'):
         if path.is_file():
             add(path)

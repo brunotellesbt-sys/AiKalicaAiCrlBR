@@ -19,7 +19,8 @@ gatilhos efetivos, revisão dos mapas inteiros e travessias reais na ROM.
 Relatórios estáticos ou de candidatos anteriores não substituem essas provas.
 
 O código será preservado em checkpoints remotos. Enquanto houver pendências,
-o PR deve permanecer em rascunho e as ROMs públicas continuam na revisão 171.
+o usuário pediu PR normal com pendências explícitas. As ROMs públicas
+continuam na revisão 171 até a conclusão das provas finais.
 
 ## Checkpoint da reconstrução
 
@@ -33,7 +34,8 @@ Os módulos geométricos usam oito tiles por pixel, corredores de seis tiles,
 grupos de até cem mapas e coordenadas afins. A auditoria do plano é separada
 do gerador e exige classificação externa. Os módulos de ecologia usam donos
 históricos explícitos; aliases não certificam que o terreno tem gatilhos de
-captura. A migração de saves 2 ainda precisa testes e provas nativas.
+captura. A migração de saves 2 passou testes C de versões e registros;
+as provas nativas Save/Continue continuam pendentes.
 
 O diagnóstico que trata **todos** os 1.529 pixels azuis como água gerada
 produz 347 mapas de até 32 tiles e 15 componentes. Ele inclui pixels nativos
@@ -44,8 +46,9 @@ adaptadores e a integração de eventos, cenário e ecologia.
 ## Birth Island
 
 O telhado isolado foi identificado no mapa inteiro da fonte 171. O gerador
-novo retira o objeto de quinze células, restaura água e troca as duas pontas
-metálicas por madeira nativa. O metatile do warp possui uma única referência
+novo troca as quinze células do objeto por um corpo completo de madeira
+nativa, mantendo colisões e alturas, e substitui as duas pontas metálicas.
+O metatile do warp possui uma única referência
 nesse banco e recebe madeira sem alterar seu comportamento ou evento.
 Navel Rock mantém a embarcação completa.
 
@@ -55,3 +58,9 @@ Navel Rock mantém a embarcação completa.
 
 São renders de fonte sem os NPCs dinâmicos; não são capturas do jogo nem
 provas de travessia. A correção ainda não foi publicada numa ROM 172.
+
+O primeiro diagnóstico abriu água no lugar do telhado e passou o percurso
+local; o JSON técnico recebido depois esclareceu que o corpo deve continuar
+bloqueado. O gerador e o render acima já foram corrigidos. Aquele diagnóstico
+anterior não valida o corpo de madeira atual; a prova está sendo repetida em
+uma nova cópia identificada, preservando os artefatos anteriores.

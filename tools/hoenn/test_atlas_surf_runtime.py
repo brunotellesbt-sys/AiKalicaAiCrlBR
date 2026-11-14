@@ -27,7 +27,7 @@ def fixture():
                                origin=[col * 39 - 51, row * 43 - 66],
                                width=5 + (i * 17) % 30, height=3 + (i * 11) % 35))
     chunks.append(dict(name='LongSea', id='MAP_LONG_SEA', group_index=95, group='LongSeas',
-                       number=99, origin=[-130, -100], width=23, height=500))
+                       number=99, origin=[-130, -100], width=23, height=255))
     return dict(scale=8, chunks=chunks)
 
 
@@ -44,6 +44,7 @@ class GeneratedRuntimeTests(unittest.TestCase):
 #include <stdint.h>
 #include <stddef.h>
 typedef uint8_t bool8;
+typedef uint8_t u8;
 typedef uint16_t u16;
 typedef uint32_t u32;
 typedef int16_t s16;
@@ -149,13 +150,14 @@ int floor32(int value) { return JourneyAtlasFloor32(value); }
         total_area = sum(c['width'] * c['height'] for c in self.plan['chunks'])
         self.assertLess(self.metadata['table_bytes'], total_area // 2)
         self.assertFalse(self.metadata['per_cell_gps_table'])
+        self.assertEqual(self.metadata['chunk_stride_bytes'], 8)
         self.assertEqual(self.metadata['spatial_row_tiles'], 32)
         self.assertLess(self.metadata['maximum_row_maps'], len(self.plan['chunks']) // 2)
 
 
 class RuntimePlanValidationTests(unittest.TestCase):
     def test_bad_ids_and_ambiguous_rectangles_rejected(self):
-        for change in [dict(number=100), dict(group_index=256), dict(width=0),
+        for change in [dict(number=100), dict(group_index=128), dict(width=0), dict(height=256),
                        dict(origin=[32760, 0], width=20)]:
             plan = fixture()
             plan['chunks'][0].update(change)

@@ -7,6 +7,7 @@ Pokémon Journey reúne Kanto, Hoenn e Sevii, com duas campanhas, 16 insígnias,
 - [Documentação da história, encontros, itens e equipes dos ginásios](docs/README.md)
 - [Prisão Galactic com Dialga, Giratina e Palkia](docs/images/team-galactic-final-chamber.png)
 - [Estado da integração e limites da validação](mods/hoenn/INTEGRATION-STATUS.md)
+- [Continuidade técnica para a próxima IA: pedidos, regras, provas e pendências](docs/CONTINUIDADE-TECNICA-IA.md)
 
 O player do GitHub Pages permite escolher uma das quatro edições. Comece um save novo: a Bag foi ampliada para comportar todos os tipos de item, e os TMs são reutilizáveis. Há escolha de Red, Leaf, Brendan ou May independentemente da região inicial. As 16 insígnias aparecem em páginas separadas de Kanto e Hoenn no cartão de treinador.
 

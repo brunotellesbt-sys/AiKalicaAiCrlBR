@@ -48,8 +48,8 @@ Pendências obrigatórias:
     provas nativas por controles e revisão de mapas inteiros/vizinhos.
   - Cinco edições, TESTE com supressão existente, review-mode e cold-boot;
     TESTE com e sem bateria; salvar/Continue reais; ecologia Gen9/Gen4.
-  - Só publicar ROMs/PR pronto depois de todas as provas e hashes atuais.
-    Rascunho é autorizado para preservar avanço ainda incompleto.
+  - Só publicar ROMs depois de todas as provas e hashes atuais.
+    Pedido posterior14/11:PR NORMAL,sem rascunho,com pendências explícitas.
 
 Não confundir com validação172:
   Os resultados449 componentes/7 portos/18 cavernas/45 pixels eram análises
@@ -69,8 +69,8 @@ Próximo passo:
   Manifesto dos inputs:
   d3a06e90f222f83a3e7778df52895594f6bd02719a8bc925151d7d80bfa1fed7
   Nova verificação read-only reproduziu o mesmo resultado.
-  Build171 em cópia privada .local/review171-build-src; conferir hashes ao
-  terminar, sem confundir build de base com build172. Fonte estável em
+  Build171 concluído em cópia privada .local/review171-build-src; ROM e ELF
+  coincidiram EXATAMENTE com os hashes históricos informados. Fonte estável em
   .local/generated-area-review-src; não compilar essa árvore em uso por leitores.
 
   Primeiro checkpoint remoto confirmado:c03dac777eae6199d4be2643f77d4c862c111851.
@@ -78,9 +78,10 @@ Próximo passo:
   restore_generated_area_review,atlas_surf_truth,atlas_surf_geometry,
   validate_atlas_surf_layout_plan,atlas_surf_layer,atlas_surf_runtime,
   atlas_surf_ecology,atlas_surface_batteries,atlas_surf_native_scenery.
-  41 testes de geometria/plano/runtime/ecologia/materialização aprovados.
-  O código da migração2 está preservado, mas sua bateria de testes C e as
-  provas nativas Save/Continue ainda não foram concluídas. Não usar em release.
+  46 testes de geometria/plano/runtime/ecologia/materialização/migração C
+  aprovados; mais1teste garante documentos técnicos no ZIP do jogo.
+  Migração2:C executado contra versões0/1/2,warpsdiretos/evento,idempotência;
+  provas nativas Save/Continue continuam PENDENTES. Não usar em release.
   O runtime passou equivalência C para65.536IDs e313.200coordenadas;
   desempenho real no GBA ainda PENDENTE.
 
@@ -93,10 +94,24 @@ Próximo passo:
   Costa acrescenta4pixels oceânicos; Artisan termina no ícone(119,104),
   não num pixel oceânico. As duas exceções precisam vínculo aos acessos reais.
 
+  Checkpoint f0860a7 integrado via PR109 (merge9db7793). PR109 já encerrado;
+  continuar na mesma branch com NOVO PR NORMAL,conforme pedido explícito.
+  Documento permanente docs/CONTINUIDADE-TECNICA-IA.md contém pedido literal,
+  último pedido resolvido,incompleto,regras,artefatos,hashes e próximos passos.
+  JSON histórico técnico salvo localmente integral; cópia pública inclui
+  todas35seções,omitiu apenas2IDsprivados já bloqueados na revisão automática.
+  Esses documentos agora são exigidos no empacotador do jogo.
+
   Birth:reconstruída correção de15células de telhado+2pontas laterais;
   gráfico privado dewarp740 usa madeira nativa, atributos/eventos preservados.
   Render inteiro antes/depois em docs/design/atlas-surf-layout (sem NPCs
-  dinâmicos, não capturas de ROM). Ida/volta,visibilidade e bloqueios PENDENTES.
+  dinâmicos,não capturas de ROM). Diagnóstico inicial com água no lugar do
+  telhado passou ida/volta,Surf e avatar. JSON posterior esclareceu corpo de
+  madeira BLOQUEADO; gerador e renders corrigidos para conservar TODOS os
+  bits de altura/colisão. Repetindo prova na nova cópia atlas-smoke-v2-src.
+  Preservados smoke1 e seu relatório; NÃO reutilizar como prova do reparo atual.
+  Outros ajustes após primeiro smoke:stride8 para chunks,guard de espécies
+  de evento antes de alias comum,hashesbytes das4arrays atlas conferidos.
 
   Próximo:fazer classificação/adaptadores reais e integração dos módulos;
   auditar fonte,migração e ecologia; compilar172 apenas depois disso.
