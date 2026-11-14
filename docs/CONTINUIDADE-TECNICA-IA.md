@@ -38,7 +38,7 @@ Ele fixa o pedido principal: corrigir a malha física gerada conforme o atlas,
 sem mexer na arte e sem usar apenas GPS para esconder o defeito. Suas
 contagens e resultados de execução são históricos; não substituem provas
 atuais. A referência histórica a rascunho não revoga o pedido posterior de
-PR normal. Último checkpoint remoto conferido antes deste lote: `c00b41b7e2ec278fbbdca2855747321e898347d1`.
+PR normal. Último checkpoint remoto conferido antes deste lote: `b7bb3f225d42f5fa99bb51cd05da7d17f24c37e0`.
 
 ## Pedidos do usuário e resultado
 
@@ -137,7 +137,9 @@ com os quatro valores recebidos:
 | atlas_surf_geometry.py | Raster afim e chunks/conexões sem GPS por célula | Não integra cenário, atores ou adaptadores |
 | validate_atlas_surf_layout_plan.py | Auditor independente do raster, eixos, distâncias, IDs e emendas | Prova do plano, sem certificação source/ROM |
 | atlas_surf_layer.py | Materializa chunks com doadores de banco explícitos e IDs preservados | Não aposenta a rede antiga nem move os eventos |
-| atlas_surf_runtime.py | Índice direto de mapa, bins espaciais de 32 tiles, GPS e hook visual | Halo físico estreito ainda falta; C dos chunks ajustado para stride 8 |
+| atlas_surf_runtime.py | Índice direto de mapa, bins espaciais de 32 tiles, GPS e hook visual | C dos chunks com stride 8; desempenho na rede final pendente |
+| atlas_surf_physical.py | Clipping de cópia, halo físico por dono global, prioridade de costa nativa e guarda de conexão | Cinco testes C aprovados; integração/build/prova nativa pendentes |
+| prepare_atlas_surf_diagnostic.py | Prepara três mapas privados em L, um com quatro tiles de largura | Fixture sintética, sem substituir a geografia real ou release |
 | atlas_surf_ecology.py | Aliases explícitos dos pools/habitats e header nativo | Auditoria de gatilhos, áreas Dex e Gen4/Gen9/TESTE final falta |
 | atlas_surface_batteries.py | Código da migração 2 e validação dos destinos | Não é o harness histórico de baterias; Save/Continue nativo falta |
 | atlas_surf_source.py | Lê bancos/terreno e compila o enum/flags C nativo, detectando alterações dos inputs | Componentes locais, sem certificado do motor |
@@ -237,8 +239,8 @@ nem contornar TLS/proxy. Esse problema não explica o 404 do ambiente antigo.
 
 ## Provas atuais e limites
 
-55 testes de plano, geradores, materialização, runtime, ecologia, migração C
-e inventário nativo passaram no lote atual. Runtime: todos os 65.536 IDs e centenas de milhares
+60 testes de plano, geradores, materialização, runtime, halo físico, ecologia,
+migração C e inventário nativo passaram no lote atual. Runtime: todos os 65.536 IDs e centenas de milhares
 de coordenadas; divisão negativa usa floor verdadeiro. Migração C: versões
 0/1/2, Treasure +8 uma vez, jogador, cinco referências, warp por ID, view e
 idempotência. Um teste adicional verifica documentos legíveis no plano do ZIP.
@@ -295,6 +297,37 @@ Comando de reprodução somente de leitura:
 .local/ci-python/bin/python tools/hoenn/inventory_atlas_surf_parent.py --source .local/generated-area-review-src --output .local/atlas-parent-inventory.json
 ```
 
+## Halo físico: código em checkpoint antes de compilar
+
+`atlas_surf_physical.stage(layer, plan)` deve rodar após o runtime indexado.
+Limita fonte/destino antes de formar ponteiros em FillConnection, preenche o
+halo pelos retângulos globais reais e preserva todas as células do mapa atual.
+O índice direto por layout evita depender de uma posição de save intermediária.
+Costa nativa direta precede o background Atlas; tradução desconhecida ou
+conflito fica indefinido. Bits de altura/colisão são preservados, inclusive0.
+Uma célula diagonal visível não cria conexão de movimento: a borda exige o
+vizinho direto correto naquele offset. Cópias entre mapas históricos preservados
+continuam no caminho original do motor.
+
+Cinco testes C executados:500 retângulos solicitados com origens negativas e
+limites independentes, mapa estreito, célula diagonal, costa nativa, terreno
+runtime, caminho sem conexão, alvo errado, header obsoleto,64 combinações de
+altura/colisão e tradução desconhecida. São shims do motor no host; não provam
+câmera, VRAM, desempenho ou viagens na ROM. Total60atlas+1continuidade.
+
+Próxima execução autorizada, sem sobrescrever diagnósticos antigos:
+
+```sh
+.local/ci-python/bin/python tools/hoenn/prepare_atlas_surf_diagnostic.py --source .local/atlas-physical-smoke-src --clone-from .local/review171-build-src
+```
+
+O preparador verifica o parent171 antes/depois, cria cópia sem hardlinks e
+recusa qualquer destino já existente, inclusive parcial. A fixture tem três
+mapas em L, um com largura4, derivada de cinco pixels sintéticos. Não é a
+classificação real do atlas. A migração limitada incluída é fixture sintética,
+**nunca mapeamento de saves para release**. Build, hashes, provas nativas e
+vínculos precisam ser registrados após executar; não há resultado pressuposto.
+
 ## Próximo trabalho técnico, em ordem
 
 1. Conferir o checkpoint mais recente no PR normal #110 e preservar cada
@@ -311,9 +344,10 @@ Comando de reprodução somente de leitura:
 4. Integrar 157 conjuntos autenticados e 14 ilhotas de trainers, POIs,
    eventos, 18 cavernas e 33 adaptadores. Preservar os 273 IDs históricos.
    Route114: conferir (0,17)/(0,18), 0x1170→0x15F9, sem tocar a margem y16.
-5. Implementar clipping de FillConnection e halo **físico** por dono global,
-   mantendo prioridade de entrada nativa, alterações runtime, bancos e cantos.
-   O hook visual atual sozinho não resolve leitura além de mapas estreitos.
+5. Integrar e provar o novo clipping de FillConnection e halo **físico** por
+   dono global. O código e cinco testes C já existem; ainda não há build ARM
+   nem prova de travessia nativa desse módulo. Executar o preparador diagnóstico
+   em uma cópia nova e preservada antes de aplicá-lo à candidata final.
 6. Integrar cinco Dive conforme âncoras/fórmulas do JSON e migração segura de
    todas as posições/warps/saves, incluindo atualizações de templates.
 7. Auditoria independente da SCC global e ecologia por gatilho: 383/190

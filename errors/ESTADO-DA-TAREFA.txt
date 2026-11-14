@@ -154,3 +154,19 @@ Lote atual - inventário técnico da fonte171:
   Não há novos destinos físicos,conectividade global,release172 ou ROM pública.
   Próximo:classificar45pixels nativos,revisar EverGrande,integrar cenário/POIs,
   implementar halo físico e então candidata completa/migração/ecologia/provas.
+
+
+Lote físico - checkpoint de código ANTES do build:
+  Push remoto b7bb3f225d42f5fa99bb51cd05da7d17f24c37e0 confirmado.
+  atlas_surf_physical:clipping sem ponteiros fora dos arrays;halo por dono
+  global;prioridade da costa nativa;preserva runtime e bits altura/colisão;
+  tradução desconhecida indefinida;movimento exige conexão direta correta.
+  Índice por layout sem buscas lineares e sem depender do save intermediário.
+  Cinco testesC:500requests de clipping,diagonal,nativo,runtime,conexões,
+  header obsoleto,64combinações altura/colisão,failclosed;60atlas+1docs PASS.
+  NOVO prepare_atlas_surf_diagnostic cria3mapasL/largura4 em cópia privada;
+  preserva diagnósticos anteriores e recusa destino existente/parcial.
+  Build ARM/prova nativa desse módulo AINDA PENDENTES. Próximo:preparar
+  .local/atlas-physical-smoke-src a partir da cópia171 verificada,compilar,
+  congelar hashes e testar travessias por controles;repetir Birth.
+  Fixture sintética:migração limitada NÃO É mapeamento real de saves172.
