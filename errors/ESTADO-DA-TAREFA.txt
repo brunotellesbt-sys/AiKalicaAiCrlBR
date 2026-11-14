@@ -135,3 +135,22 @@ Próximo passo:
   auditar fonte,migração e ecologia; compilar172 apenas depois disso.
   Após cada lote: verificações, atualizar este arquivo, commit/push, conferir
   SHA remoto. Não deixar único exemplar importante só no disco local.
+
+
+Lote atual - inventário técnico da fonte171:
+  Delta integral preservado no checkpoint remoto c00b41b7e2ec278fbbdca2855747321e898347d1.
+  Inventário formalizado:273 IDs(266Journey ativos+7exteriores vazios),56bordas,
+  33componentes costeiras candidatas/29hosts,18portais recíprocos,5Dive,7portos.
+  Somente32componentes têm contato com altura compatível. EverGrandeCity
+  comp2:16células;11contatos39,60..70 água3170altura3 versus SurfLink00500
+  água1170altura1. Revisar acesso real; não certificar nem nivelar água nativa.
+  Route114 só0,17/0,18 tem gerador de fechamento1170->15f9 em overlay;
+  margem16/eventos/NPCs preservados. Ainda não aplicada à candidata final.
+  Fonte171/32.250inputs conferidos antes/depois; atlas imutável igual;
+  inventário de1.699inputs,manifesto90f69251d9080c45778560214cfe1c39bf74d7f11544ee15f578e78ed13bc8e7.
+  Relatório docs/design/atlas-surf-layout/parent-inventory.json SHA256:
+  19c48184ecc6e3ab80e30cf0f2ec387af50a4cdd616adc721677f9cccb81eeac.
+  Nove novos testes nativos;55atlas+1continuidade aprovados.
+  Não há novos destinos físicos,conectividade global,release172 ou ROM pública.
+  Próximo:classificar45pixels nativos,revisar EverGrande,integrar cenário/POIs,
+  implementar halo físico e então candidata completa/migração/ecologia/provas.

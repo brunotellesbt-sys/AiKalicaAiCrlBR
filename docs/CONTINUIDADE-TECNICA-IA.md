@@ -38,7 +38,7 @@ Ele fixa o pedido principal: corrigir a malha física gerada conforme o atlas,
 sem mexer na arte e sem usar apenas GPS para esconder o defeito. Suas
 contagens e resultados de execução são históricos; não substituem provas
 atuais. A referência histórica a rascunho não revoga o pedido posterior de
-PR normal. Último checkpoint remoto conferido: `7eaa0f6a3bd3182af9f2ae7a35034c4c96ff7129`.
+PR normal. Último checkpoint remoto conferido antes deste lote: `c00b41b7e2ec278fbbdca2855747321e898347d1`.
 
 ## Pedidos do usuário e resultado
 
@@ -140,13 +140,20 @@ com os quatro valores recebidos:
 | atlas_surf_runtime.py | Índice direto de mapa, bins espaciais de 32 tiles, GPS e hook visual | Halo físico estreito ainda falta; C dos chunks ajustado para stride 8 |
 | atlas_surf_ecology.py | Aliases explícitos dos pools/habitats e header nativo | Auditoria de gatilhos, áreas Dex e Gen4/Gen9/TESTE final falta |
 | atlas_surface_batteries.py | Código da migração 2 e validação dos destinos | Não é o harness histórico de baterias; Save/Continue nativo falta |
+| atlas_surf_source.py | Lê bancos/terreno e compila o enum/flags C nativo, detectando alterações dos inputs | Componentes locais, sem certificado do motor |
+| atlas_surf_coasts.py | Inventário dos 273 IDs antigos e fechamento exato de duas células de Route114 em overlay | Não aposenta nem reloca mapas na candidata |
+| atlas_surf_adapters.py | 33 componentes costeiras candidatas em 29 hosts; 32 com contato de altura compatível | Ever Grande requer revisão; nenhum novo destino atribuído |
+| atlas_surf_pois.py | 18 portais recíprocos, cinco Dive e sete portos com terreno real | Inventário, sem criação dos novos acessos |
+| inventory_atlas_surf_parent.py | Relatório reproduzível vinculado a 1.699 inputs e ao contrato completo 171 | Não prova conectividade global nem ROM |
 | atlas_surf_native_scenery.py | 17 células e gráfico privado de Birth, corpo bloqueado | Prova do corpo passou no diagnóstico v2; repetir na candidata final |
 | validate_atlas_surf_birth_native.py | Viagem por controles, avatar, bloqueio, Surf e Harbor | Repetir sobre o artefato final |
 
 As APIs reconstruídas diferem das antigas descritas no JSON. Não supor que
 um nome de módulo significa recuperação ou equivalência de implementação.
-Ainda não existem os módulos finais de POIs, costas, adaptadores, Dive,
-SCC global, contrato 172, preparação/freeze/publicação e verificadores finais.
+Os módulos de POIs, costas e adaptadores agora existem como inventários e
+um fechamento em overlay. Ainda faltam suas integrações físicas finais,
+Dive, SCC global, contrato 172, preparação/freeze/publicação e verificadores
+finais. Não tratar inventário como reposicionamento de eventos ou mapas.
 
 O diagnóstico de todos os pixels azuis produz 347 chunks, 74.688 células de
 água e 15 componentes. Inclui pixels nativos e ícone; **não é plano final**.
@@ -230,8 +237,8 @@ nem contornar TLS/proxy. Esse problema não explica o 404 do ambiente antigo.
 
 ## Provas atuais e limites
 
-46 testes de plano, geradores, materialização, runtime, ecologia e migração C
-passaram no lote atual. Runtime: todos os 65.536 IDs e centenas de milhares
+55 testes de plano, geradores, materialização, runtime, ecologia, migração C
+e inventário nativo passaram no lote atual. Runtime: todos os 65.536 IDs e centenas de milhares
 de coordenadas; divisão negativa usa floor verdadeiro. Migração C: versões
 0/1/2, Treasure +8 uma vez, jogador, cinco referências, warp por ID, view e
 idempotência. Um teste adicional verifica documentos legíveis no plano do ZIP.
@@ -247,6 +254,47 @@ primeiro reparo abria água nesse espaço; foi substituído por corpo inteiro de
 madeira preservando todos os bits de colisão/altura. A prova foi repetida e
 passou na v2, incluindo o corpo bloqueado, sem reciclar o resultado v1.
 
+## Inventário físico da base 171, reproduzido nesta etapa
+
+Relatório versionado: [parent-inventory.json](design/atlas-surf-layout/parent-inventory.json).
+SHA-256: `19c48184ecc6e3ab80e30cf0f2ec387af50a4cdd616adc721677f9cccb81eeac`.
+Manifesto dos 1.699 inputs lidos pelo inventário:
+`90f69251d9080c45778560214cfe1c39bf74d7f11544ee15f578e78ed13bc8e7`.
+O contrato completo dos 32.250 arquivos da base 171 foi verificado antes e
+depois; nenhuma fonte foi alterada e as quatro arrays do atlas coincidem.
+
+Os 273 IDs derivam dos dados: 266 mapas oceânicos Journey ativos e sete
+exteriores de portos antigos sem eventos. O protótipo isolado HoennCrossing
+fica fora. O Shipyard (96,40) conserva porto, nove atores e warp completos;
+seu centro azul autenticado de ícone não vira rota oceânica duplicada.
+
+Das 56 interfaces antigas com mapas preservados, as células de Surf reais
+formam 33 componentes candidatas em 29 mapas nativos. Uma tem revisão de
+altura pendente: EverGrandeCity, componente 2, 16 células; os 11 contatos em
+(39,60)..(39,70) têm `0x3170` (altura 3), enquanto JourneySurfLink00500 tem
+`0x1170` (altura 1). Não mudar alturas nativas indiscriminadamente nem contar
+essa borda como passagem aprovada. As seis interfaces sem par de água e o
+fechamento rejeitado de Route114 também estão explícitos no relatório.
+
+As 18 entradas têm warps de retorno verificados contra os eventos reais.
+As cinco Depth preservam portal, entrada/saída e âncoras fixas. Os sete portos
+usam sementes secas/molhadas reais e o deslocamento histórico Treasure +8
+uma única vez na leitura dos metadados. Isso ainda não redireciona a balsa.
+A âncora fixa do interior Artisan é (119,105); ela não substitui o ponto de
+acesso (119,104) na borda do ícone nem autoriza abrir oceano sob a caverna.
+
+Nove testes novos cobrem enum C implícito, cutoff/width de banco, colisão,
+alturas 0/1/3, piscinas separadas, offsets positivos/negativos, conexão sem
+retorno, portal com piso 0, alteração durante leitura, Route114 exata e
+Treasure +8 sem mutação do parent. Total atual: 55 testes atlas e um teste
+de empacotamento da documentação. Nenhuma ROM pública foi substituída.
+
+Comando de reprodução somente de leitura:
+
+```sh
+.local/ci-python/bin/python tools/hoenn/inventory_atlas_surf_parent.py --source .local/generated-area-review-src --output .local/atlas-parent-inventory.json
+```
+
 ## Próximo trabalho técnico, em ordem
 
 1. Conferir o checkpoint mais recente no PR normal #110 e preservar cada
@@ -256,9 +304,10 @@ passou na v2, incluindo o corpo bloqueado, sem reciclar o resultado v1.
 3. Completar a classificação física dos pixels nativos e do ícone (96,40).
    Costa: quatro pixels oceânicos interiores entre (128,89) e (133,89).
    Artisan: endpoint (119,104) é ícone de caverna, não oceano livre.
-   Inventário preliminar nos dados 171 encontrou 273 IDs candidatos, 18
-   warps de cavernas e 33 componentes costeiras de interface; ainda precisa
-   ser formalizado e testado, sem chamar isso de conectividade final.
+   Inventário formalizado e testado: 273 IDs, 18 warps recíprocos de cavernas,
+   cinco Dive e sete portos. Há 33 componentes costeiras candidatas em 29
+   hosts; 32 têm contato com altura compatível e uma exige revisão em Ever
+   Grande. Isso não prova conectividade final nem novas posições.
 4. Integrar 157 conjuntos autenticados e 14 ilhotas de trainers, POIs,
    eventos, 18 cavernas e 33 adaptadores. Preservar os 273 IDs históricos.
    Route114: conferir (0,17)/(0,18), 0x1170→0x15F9, sem tocar a margem y16.

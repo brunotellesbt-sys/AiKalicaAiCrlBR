@@ -1,0 +1,38 @@
+Reconstrução172: inventário de terreno e interfaces da base171
+
+Contexto e pedido:
+  Corrigir geografia física de Surf conforme atlas imutável, preservar eventos,
+  objetos, saves e cinco edições. Delta completo em docs/ULTIMO_PEDIDO_POS_PR108.json.
+  PR normal110; documentação permanente docs/CONTINUIDADE-TECNICA-IA.md.
+
+Reprodução por arquivos:
+  inventory_atlas_surf_parent.py sobre .local/generated-area-review-src,
+  verificando o contrato171 completo antes/depois e os bancos reais.
+  EverGrandeCity (39,60)..(39,70): água0x3170, altura3; vizinho antigo
+  JourneySurfLink00500 (0,1)..(0,11): água0x1170, altura1.
+  Uma das33componentes de interface tem somente contatos com essa diferença.
+  Isso exige revisão de caminho/altura no motor; não é prova de passagem.
+
+Causa de falso positivo a evitar:
+  Chamar toda célula de arte azul de água transitável, ignorar colisão/altura
+  ou ler enums com parser que perde valores implícitos. Copiar IDs de banco
+  entre FRLG/Emerald também altera o comportamento efetivo.
+
+Implementação deste lote:
+  Leitura rastreada, enum/flags C compilados, componentes locais por terreno,
+  testemunhas reais de borda e portais recíprocos. Mismatch fica explícito.
+  Derivados273IDs,18cavernas,5Dive,7portos e33componentes/29hosts;32interfaces
+  têm contato de altura compatível. Nenhum novo destino foi inventado.
+  Route114: fechamento em overlay de duas células externas somente, com
+  rejeição de parent diferente e comparação de todas as demais células.
+
+Provas:
+  55testes atlas e1teste de documentação no ZIP aprovados.
+  Relatório completo e hashes: docs/design/atlas-surf-layout/parent-inventory.json.
+  Contrato171 conferido sem mutação; quatro arrays da arte idênticas.
+
+Limites e próximo passo:
+  Não foi preparada uma rede final nem alterada uma ROM pública neste lote.
+  Completar propriedade dos45pixels nativos, cenário/POIs/adaptadores e halo
+  físico, auditoria global e provas nativas vinculadas à candidata final.
+  O inventário não substitui ida/volta, câmera, animações ou Save/Continue.
