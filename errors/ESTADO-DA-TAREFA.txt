@@ -1,5 +1,12 @@
 RETOMADA — 2026-11-14 — CAMADA 172 / ATLAS-SURF-LAYOUT
 
+Último delta integral do usuário:docs/ULTIMO_PEDIDO_POS_PR108.json (21seções).
+Pedido reafirmado:substituir malha física gerada incompatível comatlasfixo;
+não alterar arte,mascarar porGPS ou reabrir ginásios/torneio integrados.
+As provas históricas descritas no delta não validam a reconstrução atual.
+PRnormal110 permanece requisito posterior; trecho histórico sobre rascunho
+no delta não altera essa orientação. Checkpoint7eaa0f6 remoto confirmado.
+
 ESTADO: RECONSTRUÇÃO EM ANDAMENTO. NÃO É RELEASE VALIDADO.
 
 Base recuperada do GitHub:
@@ -48,8 +55,8 @@ Pendências obrigatórias:
     provas nativas por controles e revisão de mapas inteiros/vizinhos.
   - Cinco edições, TESTE com supressão existente, review-mode e cold-boot;
     TESTE com e sem bateria; salvar/Continue reais; ecologia Gen9/Gen4.
-  - Só publicar ROMs/PR pronto depois de todas as provas e hashes atuais.
-    Rascunho é autorizado para preservar avanço ainda incompleto.
+  - Só publicar ROMs depois de todas as provas e hashes atuais.
+    Pedido posterior14/11:PR NORMAL,sem rascunho,com pendências explícitas.
 
 Não confundir com validação172:
   Os resultados449 componentes/7 portos/18 cavernas/45 pixels eram análises
@@ -69,8 +76,8 @@ Próximo passo:
   Manifesto dos inputs:
   d3a06e90f222f83a3e7778df52895594f6bd02719a8bc925151d7d80bfa1fed7
   Nova verificação read-only reproduziu o mesmo resultado.
-  Build171 em cópia privada .local/review171-build-src; conferir hashes ao
-  terminar, sem confundir build de base com build172. Fonte estável em
+  Build171 concluído em cópia privada .local/review171-build-src; ROM e ELF
+  coincidiram EXATAMENTE com os hashes históricos informados. Fonte estável em
   .local/generated-area-review-src; não compilar essa árvore em uso por leitores.
 
   Primeiro checkpoint remoto confirmado:c03dac777eae6199d4be2643f77d4c862c111851.
@@ -78,9 +85,10 @@ Próximo passo:
   restore_generated_area_review,atlas_surf_truth,atlas_surf_geometry,
   validate_atlas_surf_layout_plan,atlas_surf_layer,atlas_surf_runtime,
   atlas_surf_ecology,atlas_surface_batteries,atlas_surf_native_scenery.
-  41 testes de geometria/plano/runtime/ecologia/materialização aprovados.
-  O código da migração2 está preservado, mas sua bateria de testes C e as
-  provas nativas Save/Continue ainda não foram concluídas. Não usar em release.
+  46 testes de geometria/plano/runtime/ecologia/materialização/migração C
+  aprovados; mais1teste garante documentos técnicos no ZIP do jogo.
+  Migração2:C executado contra versões0/1/2,warpsdiretos/evento,idempotência;
+  provas nativas Save/Continue continuam PENDENTES. Não usar em release.
   O runtime passou equivalência C para65.536IDs e313.200coordenadas;
   desempenho real no GBA ainda PENDENTE.
 
@@ -93,12 +101,105 @@ Próximo passo:
   Costa acrescenta4pixels oceânicos; Artisan termina no ícone(119,104),
   não num pixel oceânico. As duas exceções precisam vínculo aos acessos reais.
 
+  Checkpoint f0860a7 integrado via PR109 (merge9db7793). PR109 já encerrado;
+  continuar na mesma branch com PR NORMAL110,aberto e confirmado draft=false:
+  https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/pull/110
+  Checkpoint remoto confirmado6aa7e90b8ec1db3948a38b7c3b5398dc089e7d86.
+  Documento permanente docs/CONTINUIDADE-TECNICA-IA.md contém pedido literal,
+  último pedido resolvido,incompleto,regras,artefatos,hashes e próximos passos.
+  JSON histórico técnico salvo localmente integral; cópia pública inclui
+  todas35seções,omitiu apenas2IDsprivados já bloqueados na revisão automática.
+  Esses documentos agora são exigidos no empacotador do jogo.
+
   Birth:reconstruída correção de15células de telhado+2pontas laterais;
   gráfico privado dewarp740 usa madeira nativa, atributos/eventos preservados.
   Render inteiro antes/depois em docs/design/atlas-surf-layout (sem NPCs
-  dinâmicos, não capturas de ROM). Ida/volta,visibilidade e bloqueios PENDENTES.
+  dinâmicos,não capturas de ROM). Diagnóstico inicial com água no lugar do
+  telhado passou ida/volta,Surf e avatar. JSON posterior esclareceu corpo de
+  madeira BLOQUEADO; gerador e renders corrigidos para conservar TODOS os
+  bits de altura/colisão. Prova repetida na nova cópia atlas-smoke-v2-src:
+  PASS corpo bloqueado contraSurf,saída/retorno pelo lado,Harbor ida/volta,
+  pixels do avatar e bloqueio de pedestre na borda. Seis capturas+relatório
+  preservados em docs/design/atlas-surf-layout/diagnostic-birth-native.
+  ROMdiag:b058983d8c07cb7a501d426592dd1ed574cd4858880da94cd52c5f63d8c29fa7
+  ELFdiag:8fc3803a6cec06ff72ca07eae435658b6e29836d7abaaa6d99b94daec8c6ccb0
+  Um único chunk isolado contém os2pixels desse smoke; não é rede final.
+  Compilado stride8 e guard ecológico corrigido,ROM usada32.649.504bytes.
+  Repetição nativa com vínculos completos:ROM,ELF,marker e21inputs preparados
+  conferidos antes/depois,mais seis capturas conferidas porSHA e noGit.
+  Preservados smoke1 e seu relatório; NÃO reutilizar como prova do reparo atual.
+  Outros ajustes após primeiro smoke:stride8 para chunks,guard de espécies
+  de evento antes de alias comum,hashesbytes das4arrays atlas conferidos.
 
   Próximo:fazer classificação/adaptadores reais e integração dos módulos;
   auditar fonte,migração e ecologia; compilar172 apenas depois disso.
   Após cada lote: verificações, atualizar este arquivo, commit/push, conferir
   SHA remoto. Não deixar único exemplar importante só no disco local.
+
+
+Lote atual - inventário técnico da fonte171:
+  Delta integral preservado no checkpoint remoto c00b41b7e2ec278fbbdca2855747321e898347d1.
+  Inventário formalizado:273 IDs(266Journey ativos+7exteriores vazios),56bordas,
+  33componentes costeiras candidatas/29hosts,18portais recíprocos,5Dive,7portos.
+  Somente32componentes têm contato com altura compatível. EverGrandeCity
+  comp2:16células;11contatos39,60..70 água3170altura3 versus SurfLink00500
+  água1170altura1. Revisar acesso real; não certificar nem nivelar água nativa.
+  Route114 só0,17/0,18 tem gerador de fechamento1170->15f9 em overlay;
+  margem16/eventos/NPCs preservados. Ainda não aplicada à candidata final.
+  Fonte171/32.250inputs conferidos antes/depois; atlas imutável igual;
+  inventário de1.699inputs,manifesto90f69251d9080c45778560214cfe1c39bf74d7f11544ee15f578e78ed13bc8e7.
+  Relatório docs/design/atlas-surf-layout/parent-inventory.json SHA256:
+  19c48184ecc6e3ab80e30cf0f2ec387af50a4cdd616adc721677f9cccb81eeac.
+  Nove novos testes nativos;55atlas+1continuidade aprovados.
+  Não há novos destinos físicos,conectividade global,release172 ou ROM pública.
+  Próximo:classificar45pixels nativos,revisar EverGrande,integrar cenário/POIs,
+  implementar halo físico e então candidata completa/migração/ecologia/provas.
+
+
+Lote físico - checkpoint de código ANTES do build:
+  Push remoto b7bb3f225d42f5fa99bb51cd05da7d17f24c37e0 confirmado.
+  atlas_surf_physical:clipping sem ponteiros fora dos arrays;halo por dono
+  global;prioridade da costa nativa;preserva runtime e bits altura/colisão;
+  tradução desconhecida indefinida;movimento exige conexão direta correta.
+  Índice por layout sem buscas lineares e sem depender do save intermediário.
+  Cinco testesC:500requests de clipping,diagonal,nativo,runtime,conexões,
+  header obsoleto,64combinações altura/colisão,failclosed;60atlas+1docs PASS.
+  NOVO prepare_atlas_surf_diagnostic cria3mapasL/largura4 em cópia privada;
+  preserva diagnósticos anteriores e recusa destino existente/parcial.
+  Build ARM/prova nativa desse módulo AINDA PENDENTES. Próximo:preparar
+  .local/atlas-physical-smoke-src a partir da cópia171 verificada,compilar,
+  congelar hashes e testar travessias por controles;repetir Birth.
+  Fixture sintética:migração limitada NÃO É mapeamento real de saves172.
+
+  Preparação física:primeira cópia atlas-physical-smoke-src preservada intacta
+  sem marker após guarda de banco rejeitar suposição incorreta do preparador.
+  Doador REAL Sea00:General_Frlg+IslandHarbor_Frlg. Guarda corrigida para par
+  autenticado171 e verificado comportamento Surf pelo enum/atributos nativos.
+  Nova cópia atlas-physical-smoke-v2-src preparada:28inputs,3mapas sintéticos,
+  marker1d38cf4d7ce85cb4bebb122fb6338efeb797a16c18d56758f712015d3bc84f17.
+  Parent171 conferido antes/depois,sem hardlinks. Build ainda não executado.
+
+
+Diagnóstico físico - conclusão do lote após aa33a98 remoto confirmado:
+  Build ARM terminou em cópia privada atlas-physical-smoke-v2-src;28inputs.
+  ROM3e4cd81123c776de390c13f6f8c628ed275106ff7fe3c6e07ded4c05e53b081b
+  ELF7429b6ad085531ae5690a1d1496f1216dcc2ac6bfecc74d253cde2f67036c8ad
+  Marker1d38cf4d7ce85cb4bebb122fb6338efeb797a16c18d56758f712015d3bc84f17
+  ROMusada32.652.272(97,31%),EWRAM245436,IWRAM28660.
+  Quatro travessias reais por controles:A->B->C->B->A, incluindo largura4.
+  Coordenadas consistentes3..5frames após ID;24..33frames/caso com20estáveis.
+  Cronometragem sem chamadas nativas,apenas frames/leituras;timestamps ligados.
+  8tiles norte:sem derivaX,GPSreduz1pixelY;recife bloqueiaSurf;vizinho estreito
+  e terceiro mapa diagonal têm words/altura/colisão reais;64pixelsBG/4quadrantes
+  da diagonal+pixelsOBJavatar conferidos. Movimento diagonal continua inválido.
+  Verificador independente PASS comROM/ELF/marker/28inputs e6capturas atuais.
+  Birth repetida nessaROM:PASS madeira/bloqueios/Surf/Harbor/retorno/avatar,
+  outras6capturas;provas antigas permanecem locais/versionadas como anteriores.
+  Evidência em docs/design/atlas-surf-layout/diagnostic-physical-{native,birth}
+  e diagnostic-physical-frozen.json. Não prova rede436 nem release172.
+  64atlas+1continuidade:verificações do lote;manter resultado dos testes.
+  Ambiente reiniciou,voltouready;arquivos conferidos e preservados.
+  Recursosmedidos:1,7GiB/97.983inodes livres;reavaliar antes de novosbuilds.
+  PR NORMAL110 permanece para continuidade. ROMs públicas seguem171.
+  Próximo:45pixelsnativos/cenário/POIs/adaptadores/Dive/SCC/ecologia e migração
+  real, candidata completa;provas dos saves e das cinco edições antes de publicar.

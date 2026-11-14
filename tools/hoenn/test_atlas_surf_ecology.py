@@ -9,7 +9,7 @@ import tempfile
 import unittest
 
 from atlas_surf_ecology import (CONTENT_PATHS, GROUPS, HEADER, IMPLEMENTATION,
-                                alias_rows, generate_lookup, stage)
+                                alias_rows, generate_lookup, stage, _habitat_hook)
 
 
 class FixtureLayer:
@@ -69,6 +69,11 @@ bool32 JourneyWildPoolAvailable(u32 area)
         layer.write_parent('src/journey_habitats.c', '''#include "global.h"
 bool32 JourneyHabitatHasSpecies(u32 group, u32 map, u32 species)
 {
+    if (species == sJourneyEventDex[0])
+    {
+        if (group == 0 && map == 1) return TRUE;
+        return FALSE;
+    }
     if (gJourneyBuildRules.maxNational == 493)
         return group == 0 && map == 1 && species == 72;
     return group == 0 && map == 1 && species == 592;
@@ -147,6 +152,35 @@ bool8 StandardWildEncounter(void)
                         {'NewA': 'NewB'}, {'OldA': 'OldZero'}):
             with self.subTest(mapping=mapping), self.assertRaises(ValueError):
                 alias_rows(self.fixture(), mapping)
+
+    def test_event_species_checks_physical_map_before_ordinary_alias_in_compiled_c(self):
+        layer = self.fixture()
+        patched = _habitat_hook((layer.source/'src/journey_habitats.c').read_text())
+        prefix = '''#include <stdint.h>
+typedef uint32_t u32; typedef uint16_t u16; typedef uint32_t bool32;
+#define TRUE 1
+#define FALSE 0
+#define MAP_GROUP(x) ((x)>>8)
+#define MAP_NUM(x) ((x)&255)
+static const u32 sJourneyEventDex[]={201};
+static struct {u32 maxNational;} gJourneyBuildRules={1025};
+static u16 JourneyAtlasEcologyOwner(u16 map) { return map==512 ? 1 : map; }
+'''
+        patched = patched.replace('#include "global.h"', '')
+        code, so = layer.source/'event-order.c', layer.source/'event-order.so'
+        code.write_text(prefix+patched+'\nvoid cap(unsigned n) { gJourneyBuildRules.maxNational=n; }\n')
+        subprocess.run(['gcc', '-std=gnu17', '-shared', '-fPIC', '-Wall', '-Wextra', '-Werror',
+                        str(code), '-o', str(so)], check=True, capture_output=True)
+        lib = ctypes.CDLL(str(so))
+        habitat = lib.JourneyHabitatHasSpecies
+        habitat.argtypes = [ctypes.c_uint32]*3
+        self.assertEqual(habitat(0, 1, 201), 1)
+        self.assertEqual(habitat(2, 0, 201), 0)  # Alias to event owner is insufficient.
+        self.assertEqual(habitat(2, 0, 592), 1)
+        lib.cap(493)
+        self.assertEqual(habitat(2, 0, 72), 1)
+        self.assertEqual(habitat(2, 0, 592), 0)
+        self.assertEqual(habitat(2, 0, 201), 0)
 
     def test_refuse_renumbered_historical_owner(self):
         layer = self.fixture()

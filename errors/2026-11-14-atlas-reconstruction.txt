@@ -1,0 +1,54 @@
+Reconstrução172: inventário de terreno e interfaces da base171
+
+Contexto e pedido:
+  Corrigir geografia física de Surf conforme atlas imutável, preservar eventos,
+  objetos, saves e cinco edições. Delta completo em docs/ULTIMO_PEDIDO_POS_PR108.json.
+  PR normal110; documentação permanente docs/CONTINUIDADE-TECNICA-IA.md.
+
+Reprodução por arquivos:
+  inventory_atlas_surf_parent.py sobre .local/generated-area-review-src,
+  verificando o contrato171 completo antes/depois e os bancos reais.
+  EverGrandeCity (39,60)..(39,70): água0x3170, altura3; vizinho antigo
+  JourneySurfLink00500 (0,1)..(0,11): água0x1170, altura1.
+  Uma das33componentes de interface tem somente contatos com essa diferença.
+  Isso exige revisão de caminho/altura no motor; não é prova de passagem.
+
+Causa de falso positivo a evitar:
+  Chamar toda célula de arte azul de água transitável, ignorar colisão/altura
+  ou ler enums com parser que perde valores implícitos. Copiar IDs de banco
+  entre FRLG/Emerald também altera o comportamento efetivo.
+
+Implementação deste lote:
+  Leitura rastreada, enum/flags C compilados, componentes locais por terreno,
+  testemunhas reais de borda e portais recíprocos. Mismatch fica explícito.
+  Derivados273IDs,18cavernas,5Dive,7portos e33componentes/29hosts;32interfaces
+  têm contato de altura compatível. Nenhum novo destino foi inventado.
+  Route114: fechamento em overlay de duas células externas somente, com
+  rejeição de parent diferente e comparação de todas as demais células.
+
+Provas:
+  55testes atlas e1teste de documentação no ZIP aprovados.
+  Relatório completo e hashes: docs/design/atlas-surf-layout/parent-inventory.json.
+  Contrato171 conferido sem mutação; quatro arrays da arte idênticas.
+
+Limites e próximo passo:
+  Não foi preparada uma rede final nem alterada uma ROM pública neste lote.
+  Completar propriedade dos45pixels nativos, cenário/POIs/adaptadores e halo
+  físico, auditoria global e provas nativas vinculadas à candidata final.
+  O inventário não substitui ida/volta, câmera, animações ou Save/Continue.
+
+Lote posterior:halo físico compilado e diagnóstico nativo
+  atlas_surf_physical limita a interseção antes de formar ponteiros,copia
+  words completos para o halo,preserva mapa atual e prioriza costa direta.
+  Tradução desconhecida falha;diagonal não cria conexão sem vizinho direto.
+  Cinco testesC+quatro testes de adulteração de evidência;total64atlas+1docs.
+  Build ARM três mapasL(um largura4),28inputs,ROMusada32.652.272bytes.
+  ROM3e4cd81123c776de390c13f6f8c628ed275106ff7fe3c6e07ded4c05e53b081b
+  Prova nativa quatro travessias ida/volta:3..5frames entre novoID e coordenadas
+  consistentes,sem queries no intervalo cronometrado,sem aumentar o limite.
+  Norte8tiles sem derivaX,GPSY-1;recifes bloqueiamSurf;word do vizinho estreito,
+  diagonal física,pixelsBG eavatar conferidos;diagonal sem conexão continua
+  inválida para movimento. Verificador independente confirma capturas/frames
+  e todos28inputs,ROM,ELF,marker. Birth repetida nessaROM passou também.
+  Artefatos docs/design/atlas-surf-layout/diagnostic-physical-{native,birth}.
+  Isto NÃO prova a escala436,conectividade global,saves ou release172 final.

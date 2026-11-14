@@ -110,7 +110,7 @@ def validate_plan(plan, *, route_pixels, access_pixels=(), native_pixels=(), ico
         packed_ids.add(packed)
         groups[group] += 1
         if 'group_index' in chunk:
-            assert 0 <= integer(chunk['group_index'], 'group index') <= 255
+            assert 0 <= integer(chunk['group_index'], 'group index') <= 127
         assert isinstance(chunk['origin'], (list, tuple)) and len(chunk['origin']) == 2
         ox, oy = (integer(v, 'global origin') for v in chunk['origin'])
         w, h = (integer(chunk[key], key) for key in ('width', 'height'))

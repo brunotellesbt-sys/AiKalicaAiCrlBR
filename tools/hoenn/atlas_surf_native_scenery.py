@@ -1,7 +1,8 @@
 """Replace Birth Island's orphan roof with the native low wooden landing.
 
-The fifteen roof cells return to native water. Two metal side pieces become
-plain wood; the unique warp metatile keeps its behavior/height and receives
+The fifteen roof cells become a complete native wooden dock, retaining their
+blocked collision and height. Two metal side pieces become plain wood;
+the unique warp metatile keeps its behavior/height and receives
 the native center-plank artwork. Navel Rock's complete vessel is untouched.
 """
 import hashlib
@@ -39,15 +40,18 @@ def repair(layer):
             (0x6F0, 0x6F1, 0x6F1, 0x6F1, 0x6F2),
             (0x6F8, 0x6F9, 0x6F9, 0x6F9, 0x6FA))
     changes = []
-    water = values[25*30+12]
-    assert water == 0x112B
+    wood = ((0x1BD, 0x1BE, 0x1BE, 0x1BE, 0x1BF),
+            (0x1C5, 0x1C6, 0x1C6, 0x1C6, 0x1C7),
+            (0x1CD, 0x1CE, 0x1CE, 0x1CE, 0x1CF))
     for dy, row in enumerate(roof):
         for dx, expected in enumerate(row):
             x, y = 13+dx, 25+dy
             at = y*30+x
             assert values[at] == expected, ('Birth roof footprint changed', x, y)
-            changes.append(dict(cell=[x, y], before=values[at], after=water))
-            values[at] = water
+            after = (values[at] & ~1023) | wood[dy][dx]
+            assert after & 0xC00 and after & ~1023 == values[at] & ~1023
+            changes.append(dict(cell=[x, y], before=values[at], after=after))
+            values[at] = after
     for x, old, donor_x in ((14, 0x32E3, 14), (16, 0x32E5, 16)):
         at = 24*30+x
         wood = values[23*30+donor_x]
@@ -93,4 +97,5 @@ def repair(layer):
                 before_sha256=hashlib.sha256(before).hexdigest(),
                 after_sha256=hashlib.sha256(blockdata).hexdigest(),
                 events_height_collision_and_warp_behavior_preserved=True,
+                complete_native_dock_body_blocked=True,
                 navel_rock_unchanged=True, native_return_and_visibility_validated=False)

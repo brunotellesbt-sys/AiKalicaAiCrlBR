@@ -1,0 +1,32 @@
+{
+  "schema": "atlas-physical-diagnostic-evidence-bundle/v1",
+  "diagnostic_only": true,
+  "final_release_validated": false,
+  "tests": {
+    "atlas": 64,
+    "technical_continuity": 1
+  },
+  "frozen_source_inputs": 28,
+  "files_sha256": {
+    "diagnostic-physical-frozen.json": "4b71235812db810a10f9cc6318b1c71a2ffb6f07cc2c2bc0c97bb73f96be9e2d",
+    "diagnostic-physical-native/diagonal-real-terrain.png": "d67af7a30d0f417fb41a445524e0bc685ae3b8b16f161e18063dc753f85a3d9b",
+    "diagnostic-physical-native/east-out-of-four-tile-map.png": "573c7ec7dedd6296bf308a318dee7b4257efbcca318b33081a3c5b306402564b",
+    "diagnostic-physical-native/north-return.png": "38199b5fda2f264353f97e82fe3522ba986890aac782450738efbf9c74987b7d",
+    "diagnostic-physical-native/physical-native.json": "6718877202124733dc9f919207a55e9f3de220bc84c97ca4fb20dff7125a6b54",
+    "diagnostic-physical-native/reef-blocks-surf.png": "eb54039d1cd1c454f3bd9052cb59e5639b691d9e7c421dceb060f9cbf0b7ac5d",
+    "diagnostic-physical-native/south-across-second-seam.png": "db8721fafbd8f8970ba6c0b4eb541a620d9a2edc2002d61f051c04e77442cf5f",
+    "diagnostic-physical-native/west-return-to-four-tile-map.png": "93e2bddbb076f875945cc1c7fc3951bbc5cff6710c311c5ffdcdf32649b2ad1a",
+    "diagnostic-physical-birth/birth-dock-body-blocked.png": "af72b8e3a4abcb68cea57bc09cb61b57c58e63f0452439ac21e95c3c99d20d8e",
+    "diagnostic-physical-birth/birth-harbor-arrival.png": "52365327ff1069d2911026f144747869a23b0690a3d6398e1d1fbe68dfef3f2e",
+    "diagnostic-physical-birth/birth-island-returned.png": "22d78983a1246432f5d06ab493bbd08b40cbed64571dff23ac67ef2cd8a2cb36",
+    "diagnostic-physical-birth/birth-native.json": "d7607c356f4dc5e730382224d54522eed093a093c995a0fbf9d1666cb2eeecfe",
+    "diagnostic-physical-birth/birth-water-beside-native-dock.png": "0c041def40dbe2628c4448ef476d9ae1065853adb127668ae4b71d9e5f3d494a",
+    "diagnostic-physical-birth/birth-wood-side-blocked.png": "f6d186c089d33ed80a480415b6691067b7064e72523f56bfe8de7c58b3b28ae5",
+    "diagnostic-physical-birth/birth-wood-tip.png": "97166adb7257d32a049dc74b1175fb5113933b2e655b21cd713ebe873cbcf055"
+  },
+  "limitations": [
+    "three synthetic maps, not the real classified network",
+    "no final full-network timing, save migration or five-edition proof",
+    "public ROMs remain revision171"
+  ]
+}

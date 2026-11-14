@@ -1,0 +1,821 @@
+{
+  "schema": "codex-project-handoff/v1",
+  "filename": "RETOMADA_TECNICA_POKEMON_JOURNEY.json",
+  "language": "pt-BR",
+  "purpose": "Retomar tecnicamente o desenvolvimento do jogo em outro ambiente, preservando o trabalho antigo e distinguindo arquivos recuperados, reconstrução, evidências históricas e validação final.",
+  "evidence_state": {
+    "last_development_date": "2026-11-13",
+    "environment_failure_observed": "2026-11-14",
+    "this_document_contains_full_source_code": false,
+    "original_workspace_recovery_confirmed": false,
+    "layer172_remote_backup_confirmed": false,
+    "latest_generation_command_outcome": "unknown",
+    "final_source_audit": "not_completed",
+    "latest_candidate_native_validation": "not_completed",
+    "final_rom_publication": "not_completed",
+    "new_pr_created": false,
+    "interpretation": "Os resultados registrados são históricos. Confirmar os arquivos e hashes reais no ambiente de retomada antes de reutilizá-los."
+  },
+  "project_identity": {
+    "repository": "https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR",
+    "original_task_id": null,
+    "original_environment_id": null,
+    "original_checkout": "/workspace/AiKalicaAiCrlBR",
+    "working_branch": "fix/atlas-surf-layout",
+    "last_confirmed_head": "7ec174b8f7d0c621ec9a60d8b771619e86628889",
+    "head_description": "Merge do PR108. A árvore desse commit corresponde ao parent171; não contém as alterações locais172.",
+    "last_confirmed_merged_pr": "https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/pull/108",
+    "historical_parent_commit": "8710d464d808bdd9566e16b9dc02940167906c0e",
+    "historical_layer": {
+      "number": 171,
+      "scope": "generated-area-review"
+    },
+    "pending_layer": {
+      "number": 172,
+      "scope": "atlas-surf-layout",
+      "git_state_last_known": "Alterações locais, incluindo arquivos novos, sem commit e push confirmados."
+    }
+  },
+  "primary_user_goal": {
+    "work": "Corrigir o jogo, compilar e validar as cinco edições, atualizar os arquivos publicados e entregar as alterações pelo GitHub.",
+    "immediate_priority": "Reconstruir a geometria física das rotas de Surf geradas conforme o mapa-múndi existente.",
+    "authoritative_reference": "A arte do mapa-múndi está correta e deve permanecer intacta.",
+    "allowed_changes": [
+      "Posições, formatos e dimensões das rotas físicas geradas.",
+      "Conexões, acessos e desembarques necessários para corresponder à geografia desenhada.",
+      "Defeitos de objetos incompletos, colisões, altura, bancos gráficos, paletas e animações nos locais criados."
+    ],
+    "marker_semantics": {
+      "cyan_or_light_blue": "Posição real do jogador.",
+      "red_square": "Cursor do mapa.",
+      "warning": "O nome mostrado sob o cursor não prova a localização real do jogador."
+    },
+    "forbidden_shortcut": "Não corrigir apenas o GPS ou o marcador para esconder conexões físicas erradas.",
+    "drawings": "O usuário dispensou a geração de novas propostas desenhadas. Usar source nativo e capturas reais."
+  },
+  "preservation_requirements": [
+    "Não apagar, resetar, substituir ou arquivar a tarefa antiga nem seu filesystem.",
+    "Não executar git reset ou git clean para contornar a falha do ambiente.",
+    "Não apresentar um clone do GitHub como recuperação da camada172.",
+    "Não alterar a arte do mapa-múndi.",
+    "Não apagar NPCs, eventos, missões ou objetos para fazer um teste de passagem funcionar.",
+    "Não alterar contratos ou desativar verificações para aprovar uma candidata incompleta.",
+    "Não publicar ROMs ou provas novas como finais enquanto os testes da candidata atual estiverem pendentes."
+  ],
+  "required_project_documents": [
+    "AGENTS.md",
+    ".agents/skills/gba-map-review/SKILL.md",
+    "errors/README.md",
+    "docs/AJUSTES-GBA.txt"
+  ],
+  "recovery_plan": [
+    {
+      "step": 1,
+      "action": "Inspecionar o ambiente atual, repositórios, HEAD, branches remotas e alterações existentes.",
+      "success_condition": "Identificar exatamente quais arquivos estão presentes e qual revisão representam."
+    },
+    {
+      "step": 2,
+      "action": "Se houver acesso ao filesystem antigo ou snapshot, preservar alterações commitadas, não commitadas, arquivos novos e dependências relevantes antes de builds.",
+      "success_condition": "Criar checkpoint de código recuperado e confirmar push remoto."
+    },
+    {
+      "step": 3,
+      "action": "Se somente o GitHub estiver acessível, verificar o último commit disponível e procurar branches adicionais.",
+      "success_condition": "Não presumir que o código172 existe no remoto. A última confirmação alcançava171."
+    },
+    {
+      "step": 4,
+      "action": "Se os arquivos172 não puderem ser recuperados, declarar explicitamente reconstrução a partir de171 e deste documento.",
+      "success_condition": "Não afirmar recuperação byte a byte ou reaproveitar evidências como se fossem da reconstrução."
+    },
+    {
+      "step": 5,
+      "action": "Produzir uma candidata identificada, completar a auditoria, compilar, congelar seus bytes e executar provas atuais.",
+      "success_condition": "ROM, ELF, marker, fontes e evidências vinculados por hashes."
+    }
+  ],
+  "infrastructure_diagnosis": {
+    "reported_error": "Environment provisioning failed during load. Cause: container_service_failed. Details: http_status=404.",
+    "secondary_error": "failed to query executor configuration capabilities",
+    "last_observed_status": {
+      "desired_phase": "running",
+      "observed_phase": "pending",
+      "connectivity": "offline",
+      "capabilities": []
+    },
+    "retained_network_diagnostics": {
+      "history_status": "not_found",
+      "records": 0,
+      "meaning": "Nenhum diagnóstico de rede retido foi disponibilizado. Isso não prova perda dos arquivos do workspace."
+    },
+    "root_cause": "Não determinada. Não atribuir a Microsoft, limite de uso, disco ou corrupção sem evidência.",
+    "last_resources_before_new_preparation": {
+      "disk_free_gib_approx": 1.3,
+      "inodes_free": 14347,
+      "current_values_known": false
+    },
+    "separate_network_issue": "Git HTTPS funcionava, mas api.github.com recebia403 no CONNECT do proxy. Isso é separado do404 do contêiner."
+  },
+  "historical_parent171": {
+    "source": ".local/generated-area-review-src",
+    "rom_sha256": "52156af727381fb5b47dacf83f8f57696e05dae05c4971368310b98515eba935",
+    "elf_sha256": "000a4795be90877c83c4b133b3efa5234d042e8414e832d5e0e687ae4304bd46",
+    "marker": ".journey-generated-area-review",
+    "marker_sha256": "a5e99f28bc3fbb682a496561a48a0334609afe4c4651cf6b5f8b5a015ad34fa9",
+    "baseline_directory": "mods/hoenn/atlas-surf-layout-validation/baseline",
+    "baseline_sha256": {
+      "versions.json": "eca26adfcb0b15f9da78aadec1b8738f66288fcc58d4d727ee2ea2a6274e29ec",
+      "review.json": "de814b1090e0a5cdd056fa964f7c078f4434c1bc31d80d263eed2f47344bb05b",
+      "test.sav": "fb567ed9c75d7a4ccc84654c5da81f0b25d5c8bfb434d066b6430d1f48919033"
+    },
+    "test_save_bytes": 131072,
+    "warning": "Esses hashes identificam171, não uma candidata172."
+  },
+  "fixed_world_art": {
+    "source_header": "src/data/journey_world_map.h",
+    "hash_method": "SHA256 dos bytes das arrays interpretadas. Não confundir com hash do header inteiro.",
+    "arrays_sha256": {
+      "sWorldTiles": "09e5334176c31cc5c6fa30ed9a2e46b6f90df524ebfa0a92b3f2403742fa7b9f",
+      "sWorldTilemap": "ae2c327dad6d9ab1a1897369b793969e1229d18f45d0add22a79e4ba5a7a3196",
+      "sWorldDetailPixels": "a7a9ce35ca044ee2df75bd49878a79536fa42f05fb1cdb0cd0593593db3b58f2",
+      "sWorldPalette": "da38567f7f701d0d76c5c53ef00407fc6eeb75632efdf6121590b9b2f7aca73a"
+    },
+    "invariant": "As quatro arrays devem permanecer byte a byte iguais."
+  },
+  "old_geometry_root_cause": {
+    "module": "tools/hoenn/repair_surf_geometry.py",
+    "defect": "O gerador acrescentava segmentos e curvas arbitrários e interpolava cada retângulo físico na mesma polilinha abstrata, sem respeitar a direção real do trecho.",
+    "reproduction": {
+      "map": "JourneyWorldSea01",
+      "start_tile": [
+        44,
+        10
+      ],
+      "start_atlas": [
+        137,
+        55
+      ],
+      "input": "Segurar UP até y0.",
+      "observed_atlas": [
+        157,
+        44
+      ],
+      "meaning": "Dez passos para norte deslocavam o marcador aproximadamente20pixels para leste e11para norte."
+    },
+    "old_test_gap": "Pequeno salto de GPS nas emendas não prova eixos físicos, direção, distância ou geografia global."
+  },
+  "latest_generation_plan": {
+    "status": "Geradores revisados e replay por arquivos. Compilação e provas finais pendentes.",
+    "atlas_dimensions_pixels": [
+      224,
+      112
+    ],
+    "tiles_per_atlas_pixel": 8,
+    "corridor_width_tiles": 6,
+    "ordinary_chunk_size_tiles": [
+      32,
+      32
+    ],
+    "smaller_rectangles_possible": true,
+    "world_position_formula": "[(originX+localX)//8,(originY+localY)//8]",
+    "old_interpolated_gps_controls_new_travel": false,
+    "new_per_cell_gps_arrays": false,
+    "counts": {
+      "chunks": 436,
+      "retired_map_ids": 273,
+      "native_adapters": 33,
+      "whole_stamps": 171,
+      "surface_caves": 18,
+      "dive_sites": 5
+    },
+    "whole_stamps": "157 conjuntos autenticados de cenário e14ilhotas de trainers com doador nativo completo.",
+    "chart_classification": {
+      "all_blue_pixels": 1529,
+      "generated_route_pixels": 1483,
+      "native_owned_pixels": 45,
+      "non_route_icon_center": 1
+    },
+    "classification_rule": "Não gerar piscinas duplicadas sobre rotas nativas ou sobre o centro branco/azul do ícone de porto.",
+    "explicit_short_accesses": [
+      {
+        "kind": "coastal",
+        "from": [
+          128,
+          89
+        ],
+        "to": [
+          133,
+          89
+        ],
+        "condition": "Interiores no oceano real do atlas; endpoints autenticados de rota/costa."
+      },
+      {
+        "kind": "ArtisanCave",
+        "from": [
+          119,
+          103
+        ],
+        "to": [
+          119,
+          104
+        ]
+      }
+    ],
+    "map_ids": "Append-only. Preservar IDs antigos para migração.",
+    "group_limit": "No máximo100mapas por grupo novo. WarpData.mapNum é s8; nunca gerar índice128 ou superior.",
+    "route114_closure": {
+      "cells": [
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "before": "0x1170",
+      "after": "0x15F9",
+      "preserve": "Lagoa, NPCs, eventos e overlay da margem em y16."
+    },
+    "native_edit_audit": "41alterações de bocas/fechamento, separadas da auditoria artística de Birth.",
+    "metadata_keys": [
+      "chunks",
+      "stamps",
+      "native_adapters",
+      "retired_maps",
+      "native_chart_ownership",
+      "non_route_blue_glyphs",
+      "route_ink_pixels",
+      "route_access_paths",
+      "poi_access_paths",
+      "runtime",
+      "ecology",
+      "dives",
+      "native_scenery"
+    ]
+  },
+  "source_reachability_proof": {
+    "status": "PASS histórico no replay imutável171 do plano436.",
+    "report": ".local/atlas-global-strict-preview.json",
+    "log": ".local/atlas-global-strict.log",
+    "generated_water_components": {
+      "expected": 449,
+      "reachable_and_returnable": 449
+    },
+    "ports": {
+      "count": 7,
+      "dry_and_wet_seeds": 14,
+      "same_strongly_connected_component": true
+    },
+    "surface_caves": {
+      "count": 18,
+      "surface_and_interior_reachable_and_returnable": true,
+      "Artisan_included": true
+    },
+    "native_owned_pixels_with_reachable_witness": 45,
+    "method": "Terreno real, regras de altura/escadas/margens, conexões recíprocas, warps explícitos dirigidos e Dive com coordenadas preservadas. Uma SCC a partir de desembarque autêntico.",
+    "restriction": "Isso não é validação nativa da ROM."
+  },
+  "terrain_and_graphics_contract": {
+    "map_word": {
+      "metatile_id_mask": "0x03FF",
+      "collision_mask": "0x0C00",
+      "height": "word >> 12"
+    },
+    "generated_ordinary_water": {
+      "height": 1,
+      "collision": 0,
+      "requirement": "Comportamento de Surf real e banco gráfico correto."
+    },
+    "dry_boarding": {
+      "usual_height": 3,
+      "requirement": "Transição nativa de desembarque e prompt nativo de Surf nos dois sentidos."
+    },
+    "native_height_exception": "Água nativa de altura0 pode ser transicional. Não substituir pelo nível1 indiscriminadamente nem exigir que todo piso de interior tenha nível3.",
+    "bank_rule": "IDs não são universais. Conferir banco, oito words gráficos, atributos, paletas e callbacks.",
+    "whole_object_rule": "Preservar copa/tronco/base/sombra, fachada/entrada e faces/cantos completos. Não substituir apenas quartos de uma rocha2x2.",
+    "beach_rule": "Arte de praia pode ter comportamento de água; verificar camada superior e animações antes de alterar altura ou preencher recifes.",
+    "boat_rule": "Excluir água de embarque e footprint completo do barco ao preencher limites."
+  },
+  "runtime_architecture": {
+    "generator": "tools/hoenn/atlas_surf_runtime.py",
+    "staged_files": [
+      "include/journey_atlas_layout.h",
+      "src/journey_atlas_layout.c",
+      "src/data/journey_atlas_layout.h",
+      "src/data/journey_atlas_legacy.h",
+      "data/journey_atlas_legacy_land.bin"
+    ],
+    "compiled_chunk_record": "struct JourneyAtlasChunk {u16 map; s16 originX,originY; u8 width,height;}; stride8",
+    "symbols": [
+      "gJourneyAtlasChunks",
+      "gJourneyAtlasChunkCount"
+    ],
+    "functions": [
+      "JourneyAtlasWorldPosition(u16 map,s16 x,s16 y,u16 *position)",
+      "JourneyAtlasLegacyWorldPosition(u16 map,s16 x,s16 y,u16 *position)",
+      "JourneyAtlasSurfaceTile(s32 gx,s32 gy,u16 *map,s16 *x,s16 *y,u16 *word)",
+      "JourneyAtlasVisualBlock(s32 x,s32 y,const struct MapLayout **layout,u16 *block)",
+      "JourneyAtlasViewGroup(u16 group)",
+      "JourneyAtlasIsMap(u16 map)",
+      "JourneyAtlasMigrateSavedGeometry(void)",
+      "JourneyAtlasRestoreMapTemplates(void)"
+    ],
+    "physical_halo": [
+      "Clipping de FillConnection apenas nos mapas Atlas, evitando ler7tiles além do array de vizinho estreito.",
+      "JourneyAtlasFillPhysicalView após InitBackupMapLayoutConnections preenche o halo com o dono global real.",
+      "A conexão nativa direta tem prioridade na face de entrada; o background bloqueado não pode impedir o retorno à costa.",
+      "Preservar mudanças runtime do mapa atual.",
+      "Revisar o terceiro mapa visível na diagonal, gráficos, atributos e paletas.",
+      "Uma correção exclusivamente visual não substitui geometria física correta."
+    ],
+    "marine_bank_translation": {
+      "direction": "FRLG para Emerald, com inversa autenticada no retorno.",
+      "water": [
+        "0x12B",
+        "0x170"
+      ],
+      "small_reef": [
+        "0x243",
+        "0x1F9"
+      ],
+      "boulders": "0x110/111/118/119 -> 0x150/151/158/159",
+      "sandbar": "0x10C/10D/10E/114/115/116/11C/11D/11E -> cadaID+15",
+      "unknown_definition": "Falhar. Nunca transformar objeto desconhecido em água para esconder incompatibilidade."
+    }
+  },
+  "runtime_performance_bug": {
+    "observed_candidate": "Primeira ROM448.",
+    "seam": "JourneyAtlasSea410 -> JourneyAtlasSea409, direção oeste.",
+    "symptom": "O mapa novo era publicado enquanto objeto/save ainda estavam em coordenadas intermediárias.",
+    "observed_intermediate_state": {
+      "object_position": [
+        -1,
+        10
+      ],
+      "save_position": [
+        32,
+        10
+      ]
+    },
+    "settling": "Terminava aproximadamente no frame420; cerca de300frames de carregamento síncrono, aproximadamente5segundos.",
+    "confirmed_cause": "Milhões de instruções em buscas lineares repetidas sobre448mapas durante InitMap e desenho.",
+    "fix_written": [
+      "AtlasChunk com índice direto por grupo/número e validação do ID.",
+      "AtlasWorldChunk com índice espacial por linhas de32tiles.",
+      "Tabelas compactas emitidas em journey_atlas_legacy.h."
+    ],
+    "equivalence_tests": "C real compilado comparado com oracle linear:65.536IDs e aproximadamente379mil coordenadas, incluindo retângulos pequenos e pontos externos.",
+    "compiled_into_final_rom": false,
+    "native_fix_proven": false,
+    "do_not": "Aumentar somente o timeout do teste. Eliminar a pausa real no jogo e provar a travessia."
+  },
+  "save_migration": {
+    "geometry_version": 2,
+    "variable": "VAR_JOURNEY_SEVII_GEOMETRY_VERSION / 0x40DC",
+    "historical_version1": "Manter guarda>=1 e set1 na migração antiga. Não reaplicar o deslocamento de TreasureBeach ao mudar CURRENT para2.",
+    "hook": "CopyPartyAndObjectsFromSave antes de LoadObjectEvents.",
+    "template_refresh": "CB2_ContinueSavedGame após LoadSaveblockMapHeader.",
+    "strategy": [
+      "Dentro de stamp preservado: translação exata.",
+      "Demais posições: GPS antigo usado apenas na migração, máscara autêntica de terra/água e destino seguro correspondente.",
+      "Conservar estado e altura adequados do jogador."
+    ],
+    "update": [
+      "location e pos",
+      "Coordenadas cacheadas do jogador",
+      "Demais registros WarpData",
+      "Referências antigas de warp",
+      "mapView e templates quando necessário"
+    ],
+    "preserve": [
+      "Formato e ABI do save",
+      "Flags e progresso",
+      "IDs antigos reservados",
+      "NPCs e eventos necessários"
+    ],
+    "validation": "Bateria171 -> Continue -> salvar pelo menu -> Continue novamente.",
+    "battery_api": "Carregar e exportar a bateria pela API real. Abrir a ROM não importa automaticamente um arquivo.sav.",
+    "boat_arrivals": "Sete destinos Seagallop e sete scripts journey_campaign_gates foram redirecionados aos tablados secos integrados. Conferir current_ports(source)."
+  },
+  "ecology": {
+    "status": "Gerador e auditoria de gatilhos revisados; prova nativa final pendente.",
+    "generator": "tools/hoenn/atlas_surf_ecology.py",
+    "api": "repair(layer,metadata,maps=maps,chunks=chunks)",
+    "native_alias": "u16 JourneyAtlasEcologyMap(u16 map); paresu16(new,donor),4bytes por mapa.",
+    "hooks": [
+      "JourneyWildSpecies",
+      "JourneyWildPoolAvailable",
+      "JourneyFishingOdds",
+      "JourneyHabitatHasSpecies"
+    ],
+    "event_guard": "Aplicar restrição de espécie/evento ANTES de resolver alias ordinário.",
+    "geography_rule": "Escolher pools por alias não altera a identidade geográfica do jogador nem os saves.",
+    "compiled_owner_data_preserved": [
+      "include/journey_wild_data.h",
+      "include/journey_generation4_pools.h",
+      "include/journey_habitat_data.h",
+      "include/journey_generation4_habitats.h"
+    ],
+    "actual_trigger_families": {
+      "Gen9": {
+        "before": 383,
+        "after": 383
+      },
+      "Gen4": {
+        "before": 190,
+        "after": 190
+      }
+    },
+    "old_pool_union_not_actual_availability": {
+      "Gen9": 403,
+      "Gen4": 200
+    },
+    "native_grass_preserved": {
+      "chunks": 6,
+      "source_cells": 269,
+      "new_grass_required": false
+    },
+    "dex_repair": "Remover referências ordinárias aos IDs aposentados e gerar marcadores por área com gatilho real e célula acessível. Preservar registros fixos, eventos e oficina.",
+    "preview_statistics": {
+      "actual_area_markers": 854,
+      "removed_retired_ordinary_rows": 1050,
+      "added_physical_rows": 1844,
+      "compiled_dex_net_bytes": 6352
+    },
+    "reports": [
+      ".local/atlas-ecology-actual-trigger-preview.json",
+      ".local/atlas-ecology-before-after-triggers.json"
+    ],
+    "refuted_alarm": "Um parser ignorava os valores implícitos do enum de comportamentos e produzia tabela vazia. A suspeita de perda de35/10famílias foi refutada pela auditoria corrigida.",
+    "native_validation": [
+      "Usar a geração/cap real da ROM; não trocar cap em RAM para simular outra edição.",
+      "Verificar pool Surf(area1) e pesca(area3).",
+      "Conferir que a espécie retornada pertence ao habitat permitido.",
+      "Conferir chances de pesca e supressão da TESTE."
+    ]
+  },
+  "dive_sites": {
+    "generator": "tools/hoenn/atlas_surf_dives.py",
+    "sites": [
+      {
+        "name": "Mares",
+        "atlas": [
+          125,
+          68
+        ],
+        "portal": [
+          38,
+          10
+        ]
+      },
+      {
+        "name": "Origens",
+        "atlas": [
+          135,
+          87
+        ],
+        "portal": [
+          38,
+          10
+        ]
+      },
+      {
+        "name": "Profundezas",
+        "atlas": [
+          134,
+          97
+        ],
+        "portal": [
+          38,
+          10
+        ]
+      },
+      {
+        "name": "Dimensoes",
+        "atlas": [
+          13,
+          89
+        ],
+        "portal": [
+          30,
+          64
+        ]
+      },
+      {
+        "name": "Abismo",
+        "atlas": [
+          14,
+          99
+        ],
+        "portal": [
+          30,
+          64
+        ]
+      }
+    ],
+    "formulas": {
+      "depth_origin": "8*atlasAnchor+4-portalLocal",
+      "depth_arrival": "portalLocal+[0,2]",
+      "surface_patch": "[8*x+2,8*y+5,5,3]"
+    },
+    "requirements": [
+      "Preservar layouts, portais e NPCs dos cinco Depth.",
+      "Usar o efeito e estado nativo Dive, sem substituir por warp comum.",
+      "Reservar patch contra cenário e atores.",
+      "Recusar Emerge sobre terra, recife ou célula sem dono.",
+      "Preservar deslocamento válido entre Surface e Depth.",
+      "Remover a conexão emerge antiga para Surface aposentada sem apagar Underwater."
+    ],
+    "native_terrain": {
+      "depth_entry": {
+        "word": "0x3216",
+        "height": 3,
+        "collision": 0
+      },
+      "sanctuary_arrival": {
+        "tile": [
+          14,
+          17
+        ],
+        "word": "0x0364",
+        "height": 0,
+        "collision": 0
+      },
+      "avatar_modes": {
+        "foot": 1,
+        "surf": 8,
+        "underwater": 16
+      }
+    },
+    "harness_fixes_written": [
+      "Ler marker['atlas']; dive_sites não está no topo do marker.",
+      "Não exigir altura3 no piso0x0364 do santuário."
+    ],
+    "historical_native_result": {
+      "candidate": "448first",
+      "passed_sites": 5,
+      "captures": 120,
+      "blocked_emerge_tested": true,
+      "eight_water_animation_phases_tested": true,
+      "validates_final436": false
+    }
+  },
+  "birth_island_visual_repair": {
+    "generator": "tools/hoenn/atlas_surf_native_scenery.py",
+    "api": "repair(layer)",
+    "metadata": "metadata['native_scenery']",
+    "map": "BirthIsland_Exterior_Frlg",
+    "defect": "Telhado vermelho isolado5x3 em x13..17,y25..27, abaixo da rampa.",
+    "active_warp": {
+      "tile": [
+        15,
+        24
+      ],
+      "destination": "BirthIsland_Harbor_Frlg",
+      "destination_tile": [
+        8,
+        2
+      ]
+    },
+    "source_fix": {
+      "changed_cells": 17,
+      "private_metatile": "0x2E4",
+      "graphic_bytes": 16,
+      "native_behavior_preserved": "MB101"
+    },
+    "preserve": [
+      "Eventos",
+      "Altura e colisão das células",
+      "Corpo de madeira bloqueado",
+      "NPC e barco do Harbor",
+      "Acesso funcional"
+    ],
+    "result": "Madeira completa com ponta sem metal.",
+    "NavelRock": "Exterior contém embarcação completa; preservado.",
+    "native_proof_pending": "Rampa -> warp -> Harbor -> retorno; pixels BG/OBJ, altura, visibilidade e bloqueio do corpo."
+  },
+  "historical_first_candidate": {
+    "chunks": 448,
+    "raw_rom_sha256": "d307b8b38f405e04655c6d0cecf0486447ad25694567e1f53aecba7e2a94df36",
+    "elf_sha256": "c4546d80e86377ab93be4dac0eef2cd2d8cc6062091b43d0ef1dc3798fb2f156",
+    "marker_sha256": "175e0b0a214639fa0beb4096571444865ce1894576c4e659548e0587525f00e4",
+    "compiled_rom_used_bytes": 33168288,
+    "max_rom_bytes": 33554432,
+    "native_passes": [
+      "Cinco Dive com120capturas.",
+      "Entrada e retorno Surf de Aurora."
+    ],
+    "native_incomplete": [
+      "O teste seguinte parou na travessia próxima de Artisan devido à pausa de aproximadamente5segundos.",
+      "A suíte completa das demais cavernas, adaptadores, portos, barreiras, viagens e baterias não terminou."
+    ],
+    "source_renders": {
+      "chunks": 448,
+      "halo_tiles": 7,
+      "whole_objects": 171,
+      "native_hosts_initial": 29,
+      "folder": ".local/atlas-render-diagnostic",
+      "review": ".local/atlas-render-diagnostic/visual-review.txt"
+    },
+    "archive": ".local/atlas-surf-layout-first-candidate-preserved.tar.gz",
+    "archive_manifest": ".local/atlas-surf-layout-first-candidate-preserved.tar.manifest.json",
+    "verified_archive_members": 13667,
+    "archive_is_external_backup": false,
+    "warning": "Essa ROM não contém todas as correções posteriores. Suas provas não são provas da candidata final."
+  },
+  "source_modules": {
+    "directory": "tools/hoenn",
+    "modules": {
+      "atlas_surf_truth.py": "Arte, pixels, âncoras e classificação de rotas nativas/geradas/ícones.",
+      "atlas_surf_geometry.py": "Canvas puro, corredores, objetos completos, retângulos e conexões.",
+      "atlas_surf_pois.py": "Inventário de POIs, portais, atores e warps recíprocos.",
+      "atlas_surf_coasts.py": "Aposentar costas geradas duplicadas e preservar POIs/atores funcionais.",
+      "atlas_surf_adapters.py": "Interfaces nativas reais, componentes de água e reservas seguras.",
+      "atlas_surf_layer.py": "IDs append-only, staging de layouts/eventos/conexões/wild e composição dos reparos.",
+      "atlas_surf_runtime.py": "C afim, halo físico, índices eficientes e migração de saves.",
+      "atlas_surf_dives.py": "Dive/Emerge dos cinco ícones fixos.",
+      "atlas_surf_ecology.py": "Aliases de pools/habitats e marcadores Dex por área real.",
+      "atlas_surf_native_scenery.py": "Reparo inteiro do desembarque de Birth.",
+      "atlas_surf_reachability.py": "Componentes reais e SCC global.",
+      "atlas_surface_batteries.py": "Provas de Save/Continue com baterias novas e171.",
+      "atlas_surf_layout_contract.py": "Parent, baselines, PREPARED_SHA256 e NATIVE_CONTRACT_FINALIZED.",
+      "prepare_atlas_surf_layout.py": "Clone privado171 e geração da camada172.",
+      "freeze_atlas_surf_layout.py": "Cinco artefatos e views imutáveis.",
+      "publish_atlas_surf_layout.py": "Preflight das provas antes de substituir arquivos públicos.",
+      "verify_atlas_surf_layout_update.py": "Contrato do release172 e continuidade histórica171.",
+      "render_atlas_surf_layout.py": "MapRenderer real, mapas inteiros, halo, stamps, costas e proveniência."
+    }
+  },
+  "validation_modules": [
+    "validate_atlas_surf_classification.py",
+    "validate_atlas_surf_ecology_source.py",
+    "validate_atlas_surf_layout_source.py",
+    "verify_atlas_surf_layout_source.py",
+    "validate_atlas_surf_layout_native.py",
+    "verify_atlas_surf_layout_native.py",
+    "validate_atlas_surf_surface_native.py",
+    "validate_atlas_surf_dives_native.py",
+    "verify_atlas_surf_dives_native.py",
+    "validate_atlas_surf_ecology_native.py",
+    "verify_atlas_surf_ecology_native.py",
+    "test_atlas_*.py",
+    "test_render_atlas_surf_layout.py"
+  ],
+  "integration_files_modified_locally": [
+    ".github/workflows/sea-routes.yml",
+    "tools/hoenn/compact_source_snapshot.py",
+    "tools/hoenn/package_versions.py",
+    "tools/hoenn/publish_badge_story.py",
+    "tools/hoenn/run_versions_browser.py",
+    "tools/hoenn/stage_pages.py",
+    "tools/hoenn/validate_versions_browser.cjs",
+    "tools/hoenn/verify_versions.py",
+    "tools/hoenn/verify_fuchsia_update.py",
+    "web/player.js",
+    ".agents/skills/gba-map-review/SKILL.md",
+    "docs/AJUSTES-GBA.txt",
+    "errors/README.md"
+  ],
+  "new_documentation": [
+    "docs/atlas-surf-layout.md",
+    "docs/design/atlas-surf-layout/",
+    "errors/2026-11-13-rotas-conforme-atlas.txt"
+  ],
+  "last_operation": {
+    "outcome": "unknown",
+    "argv": [
+      ".local/ci-python/bin/python",
+      "tools/hoenn/prepare_atlas_surf_layout.py",
+      "--source",
+      ".local/atlas-surf-layout-src",
+      "--clone-from",
+      ".local/generated-area-review-src",
+      "--compact"
+    ],
+    "log": ".local/atlas-surf-layout-prepare-final.log",
+    "marker": ".local/atlas-surf-layout-src/.journey-atlas-surf-layout",
+    "required_inspection": [
+      "Processo terminou ou ainda está ativo?",
+      "Marker completo e válido?",
+      "Arquivos correspondem aos prepared hashes?",
+      "Diretório parcial ou mistura de gerações?",
+      "Source, ELF e ROM correspondem à mesma candidata?"
+    ],
+    "warning": "A existência do diretório não prova preparação concluída. Não apagar uma preparação parcial sem preservar e diagnosticar."
+  },
+  "native_validation_rules": [
+    "Declarar fixtures iniciais de party, progresso, posicionamento e supressão de encounters.",
+    "Depois da colocação inicial, viajar por controles; não teletransportar nem escrever posição, altura, câmera, paleta ou VRAM para fazer passar.",
+    "Trampoline de getters read-only deve ser declarado. Não usar setters nativos no meio do percurso.",
+    "A bridge não passa automaticamente argumentos extras além dos quatro registradores. Não consultar JourneyAtlasSurfaceTile de seis argumentos como se fossem quatro.",
+    "Aplicar altura e comportamento reais. Não impor3 a todo interior ou1 a toda água nativa transicional0.",
+    "O último census previa33barreiras de adaptadores e17hosts nativos aplicáveis;12hosts sem aproximação válida devem ter ausência autenticada, não fixture inventada.",
+    "Provar animação por fases, VRAM e pixels no frame capturado, incluindo camadas superiores de praia/rocha.",
+    "Provas de passagem e provas visuais são distintas.",
+    "Não chamar fixtures locais de campanha completa.",
+    "Não reaproveitar capturas de outra ROM como prova da candidata atual."
+  ],
+  "release_contract": {
+    "editions": [
+      "Gen1-4-Normal",
+      "Gen1-4-Hard",
+      "Gen1-9-Normal",
+      "Gen1-9-Hard",
+      "TESTE"
+    ],
+    "TESTE": "Atualizada e funcional, preservando a supressão existente de encounters e de batalhas/abordagens automáticas de trainers.",
+    "top_level_proofs": {
+      "common": [
+        "atlas-surf-layout-source",
+        "atlas-surf-layout-native"
+      ],
+      "per_edition": [
+        "review-mode",
+        "cold-boot"
+      ],
+      "total": 12
+    },
+    "native_components": [
+      "surface",
+      "dives",
+      "ecology",
+      "new-batteries",
+      "legacy-batteries"
+    ],
+    "bindings": [
+      "ROM SHA256",
+      "ELF SHA256",
+      "marker SHA256",
+      "prepared source hashes",
+      "Tabela compilada real de8bytes e IDs",
+      "Capturas e componentes com hashes recursivos"
+    ],
+    "NATIVE_CONTRACT_FINALIZED_last_known": false,
+    "prepared_pins_last_known": "Podem ainda corresponder aos2149arquivos do primeiro candidato.",
+    "pinning_rule": "Atualizar somente após auditoria verdadeira; não promover campos ou reduzir verificações para aceitar a nova candidata.",
+    "publication_authorized_by_current_evidence": false,
+    "full_campaign_playthrough_claim_authorized": false,
+    "frozen_paths": [
+      ".local/atlas-surf-layout-artifacts",
+      ".local/atlas-surf-layout-editions",
+      ".local/atlas-surf-layout-frozen.json"
+    ],
+    "public_paths": [
+      "mods/hoenn/versions",
+      "roms",
+      "roms/rom-de-teste"
+    ],
+    "budget": "ROM GBA máxima32MiB. O primeiro candidato usava98,85%. Evitar GPS por célula e duplicação massiva de pools."
+  },
+  "completion_order": [
+    "Recuperar os bytes172 ou declarar reconstrução a partir de171.",
+    "Preservar o código disponível com checkpoint e push antes de operações longas.",
+    "Concluir auditoria independente da ecologia por gatilho/SCC, índices espaciais e exceção de Birth.",
+    "Executar preflight e revisar todos os outputs antes de fixar os hashes preparados.",
+    "Medir recursos e compilar ARM pelo fluxo existente, inicialmente com4jobs.",
+    "Congelar source, ELF e ROM, registrando seus hashes.",
+    "Executar superfície completa e Birth; provar a correção da pausa da emenda, ida/volta, colisão, banco, câmera e avatar.",
+    "Executar os cinco Dive e ecologia Gen9/Gen4/TESTE.",
+    "Executar baterias antigas e novas: Continue, salvar pelo menu, Continue novamente.",
+    "Renderizar e revisar novamente os mapas finais, objetos completos e emendas.",
+    "Congelar as cinco edições.",
+    "Executar review-mode e cold-boot real de cada edição; TESTE com e sem a bateria distribuída.",
+    "Com todas as provas atuais aprovadas, publicar ROMs, saveTESTE, ZIP e manifestos.",
+    "Validar navegador e stage_pages.",
+    "Atualizar TXT, errors e documentação com hashes finais, resultados e limites.",
+    "Fazer commit/push verificado e entregar PR; rascunho pode preservar WIP, mas não declarar pronto para merge antes da validação."
+  ],
+  "earlier_user_requirements_to_preserve": [
+    "Dewford: preservar a restauração solicitada ao sul e revisar Route107 e adjacências.",
+    "Sevii: sete portos integrados, madeira sem metal na ponta, embarque/desembarque e limites completos.",
+    "Ginásios extras: salas e temas distintos, quatro trainers, campos de visão livres que cruzem separadamente o percurso obrigatório, guia fora da porta e objetos completos.",
+    "Evitar puzzles complicados como buracos, gelo deslizante e portas artificiais nos ginásios.",
+    "Histórico de eventos: qualificador na18ªinsígnia, Team Galaxy na22ª, lógica de rivais e escala adequada de Luffy/Eren.",
+    "Ler a implementação existente antes de reabrir conteúdo já integrado. O foco imediato172 é geografia de Surf e suas regressões."
+  ],
+  "operational_hints": {
+    "historical_python": ".local/ci-python/bin/python",
+    "historical_mgba_bridge": ".local/mgba-bridge-ci.so",
+    "exec_login": false,
+    "arm_environment": {
+      "PATH_prefixes": [
+        "$PWD/.local/arm-gcc/usr/bin",
+        "$PWD/.local/arm-binutils/usr/bin"
+      ],
+      "CPATH": "$PWD/.local/arm-binutils/usr/include",
+      "LIBRARY_PATH": "$PWD/.local/arm-binutils/usr/lib/x86_64-linux-gnu",
+      "PKG_CONFIG_LIBDIR": "$PWD/.local/arm-binutils/usr/lib/x86_64-linux-gnu/pkgconfig",
+      "PKG_CONFIG_SYSROOT_DIR": "$PWD/.local/arm-binutils"
+    },
+    "fresh_machine": "Confirmar caminhos e dependências reais. Não presumir que arquivos.local foram restaurados num clone do GitHub.",
+    "resources": "Medir disco, inodes, memória e processos antes de builds/renders. Evitar checkouts completos duplicados e varreduras amplas de todo.local.",
+    "trust": "Preservar TLS e checksums; reutilizar autenticação Git da plataforma; não imprimir tokens nem dumps de ambiente.",
+    "concurrency": "Não compilar, regenerar ou empacotar enquanto validadores leem o mesmo source, ELF ou ROM.",
+    "delegation": "Tarefas pequenas com proprietário claro dos arquivos. Recolher e fazer checkpoint dos resultados antes de longas suítes."
+  },
+  "first_action_expected_from_successor": "Inventariar o que realmente está disponível, identificar recuperação versus reconstrução e preservar o código remotamente. Prosseguir com este direcionamento sem pedir ao usuário para recontar o histórico ou executar comandos técnicos.",
+  "publication_note": "Cópia técnica pública do documento histórico fornecido pelo usuário. Apenas os dois identificadores privados da tarefa e ambiente foram omitidos; o original integral fica fora do Git em /workspace/RETOMADA_TECNICA_POKEMON_JOURNEY.json. O estado atual está em docs/CONTINUIDADE-TECNICA-IA.md."
+}

@@ -12,6 +12,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import struct
 from typing import Iterable, Mapping
 
 ATLAS_WIDTH = 224
@@ -74,9 +75,11 @@ def decode_atlas(header: str) -> AtlasTruth:
             if index >= len(palette):
                 raise ValueError(f"Atlas references missing palette at {x},{y}")
             pixels.append(index)
-    # Hash canonical integer arrays, including detail art.  Whitespace-only C
-    # changes do not obscure a mutation of any actual art byte/word.
-    hashes = {name: hashlib.sha256(json.dumps(values, separators=(",", ":")).encode()).hexdigest()
+    # Hash the actual little-endian ROM bytes, including detail art. These
+    # identities match the historical art contract, independent of C whitespace.
+    widths = {'sWorldTiles': 'B', 'sWorldTilemap': 'H',
+              'sWorldPalette': 'H', 'sWorldDetailPixels': 'B'}
+    hashes = {name: hashlib.sha256(struct.pack('<' + widths[name]*len(values), *values)).hexdigest()
               for name, values in arrays.items()}
     return AtlasTruth(tuple(pixels), palette, hashes, hashlib.sha256(header.encode()).hexdigest())
 

@@ -76,6 +76,8 @@ def alias_rows(layer, owner_mapping):
             raise ValueError(f'Historical owner was removed or renumbered: {owner}')
         if after[target] & 255 >= 100:
             raise ValueError(f'Atlas target exceeds 100-map group limit: {target}')
+        if after[target] >> 8 >= 128:
+            raise ValueError(f'Atlas target exceeds signed WarpData group limit: {target}')
         if before[owner] == 65535:
             raise ValueError('MAP_UNDEFINED cannot own encounters')
         target_id = json.loads(read(layer, f'data/maps/{target}/map.json'))['id']
@@ -160,10 +162,17 @@ def _habitat_hook(text):
     opening, end = _function(text, name)
     body = text[opening:end]
     assert 'group' in body and 'map' in body, 'Habitat lookup parameters changed'
-    declaration = ('\n    u16 ecologyMap = JourneyAtlasEcologyOwner((group << 8) | map);'
-                   '\n    group = MAP_GROUP(ecologyMap);'
-                   '\n    map = MAP_NUM(ecologyMap);')
-    return text[:opening] + '{' + declaration + body[1:] + text[end:]
+    # Event-only species must check the physical map before ordinary aliases.
+    # Otherwise a new sea chunk owned by a special-event map inherits that
+    # event's species even though it has no corresponding event trigger.
+    anchor = re.search(r'\n(?P<indent>\s*)if\s*\(\s*gJourneyBuildRules\.maxNational\s*==\s*493\s*\)', body)
+    assert anchor and 'sJourneyEventDex' in body[:anchor.start()], 'Event guard must precede ordinary habitat aliases'
+    assert 'return FALSE;' in body[:anchor.start()], 'Event-only species need a closed physical-map guard'
+    assignment = ('\n    ecologyMap = JourneyAtlasEcologyOwner((group << 8) | map);'
+                  '\n    group = MAP_GROUP(ecologyMap);'
+                  '\n    map = MAP_NUM(ecologyMap);\n')
+    body = body[:anchor.start()] + assignment + body[anchor.start():]
+    return text[:opening] + '{\n    u16 ecologyMap;' + body[1:] + text[end:]
 
 
 def stage(layer, owner_mapping):
