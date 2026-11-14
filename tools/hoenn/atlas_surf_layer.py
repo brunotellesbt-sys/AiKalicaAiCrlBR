@@ -106,7 +106,9 @@ def stage_geometry(layer, plan, donors):
                     raise ValueError(('Duplicate water cell', name, x, y))
                 occupied.add(at)
                 values[at] = water
-        if not occupied:
+        if not occupied and not (chunk.get('reserved_terrain') is True
+                                 and chunk.get('kind') in ('stamp','cave','adapter','dive','port')
+                                 and chunk.get('evidence')):
             raise ValueError(('Empty generated ocean', name))
         for connection in chunk['connections']:
             if connection['map'] not in ids or connection['direction'] not in ('up', 'down', 'left', 'right'):

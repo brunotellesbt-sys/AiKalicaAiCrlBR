@@ -21,9 +21,11 @@ foi integrado externamente em `9db77933fba27108b00e4d717219e5d01c165df6`.
 Esse merge preservou ferramentas e documentação, sem atualizar as ROMs.
 O pedido mais recente exige **PR normal, sem rascunho**, mesmo durante a
 continuidade; suas pendências devem estar explícitas no corpo do PR.
-PR normal aberto e confirmado: [#110](https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/pull/110),
-`draft=false`, a partir do checkpoint remoto
-`6aa7e90b8ec1db3948a38b7c3b5398dc089e7d86`.
+O PR normal [#110](https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/pull/110)
+foi integrado externamente em `5dc9e1b1273515f7837c1ba7013273157e641aec`.
+Ele incluiu diagnóstico, ferramentas e documentos, sem publicar ROM172.
+A branch foi atualizada por fast-forward, preservando o trabalho. O próximo
+checkpoint de integração deve abrir outro PR normal, com as pendências claras.
 
 O documento histórico completo recebido está em
 [RETOMADA_TECNICA_POKEMON_JOURNEY.json](RETOMADA_TECNICA_POKEMON_JOURNEY.json).
@@ -38,7 +40,7 @@ Ele fixa o pedido principal: corrigir a malha física gerada conforme o atlas,
 sem mexer na arte e sem usar apenas GPS para esconder o defeito. Suas
 contagens e resultados de execução são históricos; não substituem provas
 atuais. A referência histórica a rascunho não revoga o pedido posterior de
-PR normal. Último checkpoint remoto conferido antes deste lote: `aa33a98c04fd6d13ddccfe49df8c9dd9b3925142`.
+PR normal. Último checkpoint remoto conferido antes deste lote: `bd8c477d9145e44e56e687900de35f7f67220537` (integrado no merge110 acima).
 
 ## Pedidos do usuário e resultado
 
@@ -153,10 +155,11 @@ com os quatro valores recebidos:
 
 As APIs reconstruídas diferem das antigas descritas no JSON. Não supor que
 um nome de módulo significa recuperação ou equivalência de implementação.
-Os módulos de POIs, costas e adaptadores agora existem como inventários e
-um fechamento em overlay. Ainda faltam suas integrações físicas finais,
-Dive, SCC global, contrato 172, preparação/freeze/publicação e verificadores
-finais. Não tratar inventário como reposicionamento de eventos ou mapas.
+POIs/costas/adaptadores têm inventários e APIs de integração. Dive, cenário,
+SCC e auditoria ecológica agora existem, com testes C/source; a aplicação à
+rede completa ainda está pendente. Faltam registros concretos de todas as
+costas, colocação completa de cenário e candidata integral, contrato172 e
+pipeline final de publicação. Não confundir módulos existentes com release.
 
 O diagnóstico de todos os pixels azuis produz 347 chunks, 74.688 células de
 água e 15 componentes. Inclui pixels nativos e ícone; **não é plano final**.
@@ -333,7 +336,7 @@ abaixo já terminaram; não extrapolar seus resultados para a rede completa.
 
 ## Próximo trabalho técnico, em ordem
 
-1. Conferir o checkpoint mais recente no PR normal #110 e preservar cada
+1. Conferir o merge do PR normal #110 e o PR seguinte de integração; preservar cada
    novo lote antes de operações longas; os artefatos diagnósticos estão no Git.
 2. Repetir as provas em cada candidata que mudar: o guard de espécie/evento
    e o stride 8 passaram nos testes C e no build ARM diagnóstico v2.
@@ -437,3 +440,77 @@ Reverificação somente de leitura:
 O ambiente reiniciou durante a exportação e voltou disponível; os arquivos
 foram conferidos novamente. O ambiente antigo perdido não foi recuperado.
 Última medição:1,7GiB e97.983inodes livres; medir antes da próxima preparação.
+
+
+## Última instrução do usuário e checkpoint de integração
+
+O usuário observou literalmente: “Continue, só achei estranho uma coisa,
+nenhuma rom atualizada. Última semana passada.” Em seguida: “Continue os
+trabalhos”. A observação é correta: as ROMs públicas ainda são171. A ROM nova
+compilada e provada até agora é o diagnóstico de três mapas, sem a rede
+completa. Não foi entregue172 final. Prosseguir integrando o jogo; não voltar
+à configuração de editores nem encerrar o pedido principal como resolvido.
+
+Última entrega totalmente concluída: PR normal110 integrado, base171
+reproduzida, diagnóstico do halo físico e Birth com hashes/capturas preservados.
+Último pedido incompleto continua a rede de Surf conforme arte fixa, com
+acessos/save/ecologia e todas as cinco ROMs/publicação verificadas.
+
+O lote posterior ao merge110 passou141 testes atlas e1 teste de continuidade.
+Inclui código pronto para integração, ainda sem nova ROM integral:
+
+- `atlas_surf_plan.plan_reserved_geometry`: recorta retângulos ordinários ao
+  redor de reservas exclusivas de objetos completos, sem cortar cenário para
+  caber em32 tiles. Máscara de água nativa é autoritativa; terra nunca vira água
+  porque o raster passava ali. Obstrução de corredor exige evidência explícita
+  e continua sujeita à SCC/ROM. Margem gráfica de 9 tiles evita banco desconhecido antes
+  de mudar de mapa. Grupos seguem100 mapas e coordenadas assinadas válidas.
+- `atlas_surf_scenery`: extrai terreno, bancos, callbacks, sprites e eventos;
+  preserva 379 componentes candidatas (18 com portal, 140 de terreno, 196 de decoração e 25 de atores),
+  com 478 componentes de limites registradas separadamente. Isso não força os
+  números perdidos157 + 14; colocação final e exceções Dive ainda são auditadas.
+- `atlas_surf_adapters`: ligações nativas recíprocas e transições locais3→0→1
+  somente no adaptador novo, sem nivelar a água nativa. Registros concretos33
+  ainda em elaboração. Continentes nativos NÃO têm embedding uniforme de 8 tiles por pixel; a
+  escala de 8 é da malha nova. Registrar interfaces locais por arte/âncora/costa,
+  com direção e terreno autênticos; não inventar prova de antigoGPS.
+- `atlas_surf_dives`: cinco patches/75células, transformação global↔Depth,
+  GPSDepth afim e hook anterior a GetMapConnection. Preserva DoDiveWarp,
+  Depth/NPC/portais; remove somente 5 pares antigos. Treze testes em C e no source
+  passaram; ainda precisa execução na ROM final. Doador Emerald autenticado;
+  nunca copiar0x14F para FRLG como IDuniversal.
+- `atlas_surf_reachability`: CSR/SCC compacta, alturas/colisão/bancos,
+  conexões/warps reais e requisitos explícitos. Dezessete testes iniciais e
+  diagnóstico real3 mapas passaram source-only. O suporte às transformações
+  Dive novas está sendo integrado; não aceitar falsas conexões iguais antigas.
+- `validate_atlas_surf_ecology_source`: enums, predicados e pools C reais
+  reproduziram383 na Gen9 e 190 na Gen4; união403/200 não significa gatilho. Na fonte 171,
+  as 269 células de grama estão em3 mapas: Sea05 = 17 (bbox [6,38]..[12,42]),
+  Sea08 = 126 (9,31..27,42), Sea09 = 126 (9,26..27,37). A divisão em 6 trechos era
+  do plano 172 perdido. Preservar essas três fontes/donos em reservas específicas.
+  O DEX remove somente claims ordinárias aposentadas sem gatilho demonstrável
+  e exige testemunhas finais alcançáveis para substituir as efetivas.
+- `atlas_surf_classification`: proveniência gráfica de 19 pixels azuis regionais
+  foi reconstruída semGPS. Isso NÃO prova propriedade física desses 19, nem a
+  contagem histórica de 45. A classificação nativa final depende das interfaces
+  e testemunhas físicas/retorno. Não forçar número para aprovar candidata.
+- `atlas_surf_ports`: sete destinos C do Seagallop e sete warps de chegada antigos
+  passam aos tablados secos autênticos, com Treasure +8 lido uma vez. Stage em
+  memória da fonte 171 passou; cena, NPCs, terminais e outros destinos intactos.
+- `atlas_surf_overlay.OverlaySource`: audita a camada staged sem escrever a
+  fonte; qualquer input modificado exige uma visão nova. Enum C staged diferente
+  do header realmente compilado é rejeitado.
+- `atlas_surf_names`: registra labels dos novos mapas, mantendo as quatro
+  arrays da arte byte a byte. Label/posição do cursor não prova local do jogador.
+
+Relatórios completos preservados em JSON.gz determinístico, comSHA do JSON
+original e do arquivo comprimido em
+[integration-source-checkpoint.json](design/atlas-surf-layout/integration-source-checkpoint.json).
+São relatórios do source171 e extração/investigação, NÃO provas de ROM 172.
+Leitura portátil: `json.loads(gzip.decompress(Path(caminho).read_bytes()))`.
+
+Trabalho seguinte já atribuído e ainda não certificado: GPS legado em RLE
+para migração apenas, retirada dos grids aposentados da navegação, fallback
+seguro para os 273 IDs, preenchimento das reservas e registros de costa. Depois,
+preparar candidata íntegra, auditar e compilar; as cinco ROMs só mudam após as
+provas finais. Não publicar o diagnóstico como se resolvesse a rede completa.
