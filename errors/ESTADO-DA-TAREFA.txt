@@ -95,7 +95,9 @@ Próximo passo:
   não num pixel oceânico. As duas exceções precisam vínculo aos acessos reais.
 
   Checkpoint f0860a7 integrado via PR109 (merge9db7793). PR109 já encerrado;
-  continuar na mesma branch com NOVO PR NORMAL,conforme pedido explícito.
+  continuar na mesma branch com PR NORMAL110,aberto e confirmado draft=false:
+  https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/pull/110
+  Checkpoint remoto confirmado6aa7e90b8ec1db3948a38b7c3b5398dc089e7d86.
   Documento permanente docs/CONTINUIDADE-TECNICA-IA.md contém pedido literal,
   último pedido resolvido,incompleto,regras,artefatos,hashes e próximos passos.
   JSON histórico técnico salvo localmente integral; cópia pública inclui
@@ -108,7 +110,16 @@ Próximo passo:
   dinâmicos,não capturas de ROM). Diagnóstico inicial com água no lugar do
   telhado passou ida/volta,Surf e avatar. JSON posterior esclareceu corpo de
   madeira BLOQUEADO; gerador e renders corrigidos para conservar TODOS os
-  bits de altura/colisão. Repetindo prova na nova cópia atlas-smoke-v2-src.
+  bits de altura/colisão. Prova repetida na nova cópia atlas-smoke-v2-src:
+  PASS corpo bloqueado contraSurf,saída/retorno pelo lado,Harbor ida/volta,
+  pixels do avatar e bloqueio de pedestre na borda. Seis capturas+relatório
+  preservados em docs/design/atlas-surf-layout/diagnostic-birth-native.
+  ROMdiag:b058983d8c07cb7a501d426592dd1ed574cd4858880da94cd52c5f63d8c29fa7
+  ELFdiag:8fc3803a6cec06ff72ca07eae435658b6e29836d7abaaa6d99b94daec8c6ccb0
+  Um único chunk isolado contém os2pixels desse smoke; não é rede final.
+  Compilado stride8 e guard ecológico corrigido,ROM usada32.649.504bytes.
+  Repetição nativa com vínculos completos:ROM,ELF,marker e21inputs preparados
+  conferidos antes/depois,mais seis capturas conferidas porSHA e noGit.
   Preservados smoke1 e seu relatório; NÃO reutilizar como prova do reparo atual.
   Outros ajustes após primeiro smoke:stride8 para chunks,guard de espécies
   de evento antes de alias comum,hashesbytes das4arrays atlas conferidos.

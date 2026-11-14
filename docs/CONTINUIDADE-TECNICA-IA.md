@@ -21,6 +21,9 @@ foi integrado externamente em `9db77933fba27108b00e4d717219e5d01c165df6`.
 Esse merge preservou ferramentas e documentação, sem atualizar as ROMs.
 O pedido mais recente exige **PR normal, sem rascunho**, mesmo durante a
 continuidade; suas pendências devem estar explícitas no corpo do PR.
+PR normal aberto e confirmado: [#110](https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/pull/110),
+`draft=false`, a partir do checkpoint remoto
+`6aa7e90b8ec1db3948a38b7c3b5398dc089e7d86`.
 
 O documento histórico completo recebido está em
 [RETOMADA_TECNICA_POKEMON_JOURNEY.json](RETOMADA_TECNICA_POKEMON_JOURNEY.json).
@@ -37,8 +40,8 @@ do Git como `/workspace/RETOMADA_TECNICA_POKEMON_JOURNEY.json`.
 
 Atendimento nesta etapa: JSON histórico salvo, este guia criado, leitura
 obrigatória registrada em AGENTS.md e inclusão dos documentos no empacotador
-do jogo. A abertura do próximo PR normal precisa ser conferida no GitHub e
-registrada aqui antes de concluir este lote. A manutenção contínua deste guia
+do jogo. O PR #110 foi aberto como normal e seu estado foi confirmado.
+A manutenção contínua deste guia
 é um requisito permanente, não uma tarefa que termina com sua criação.
 
 ### Últimos pedidos resolvidos
@@ -50,6 +53,10 @@ registrada aqui antes de concluir este lote. A manutenção contínua deste guia
   reproduzidos. ROM e ELF coincidem exatamente com os hashes históricos.
 - Preservação remota dos dois primeiros lotes: pushes confirmados, PR #109
   criado e posteriormente integrado. Isso não recuperou os arquivos antigos.
+- Pedido de 14/11 para documentação técnica permanente e PR normal: guia e
+  JSON no repositório, AGENTS atualizado, inclusão no ZIP verificada,
+  checkpoint 6aa7e90 e PR #110 normal confirmado. O pedido principal de
+  corrigir e entregar o jogo continua incompleto, como descrito abaixo.
 
 ### Pedido principal incompleto — manter aberto
 
@@ -118,7 +125,7 @@ com os quatro valores recebidos:
 | atlas_surf_runtime.py | Índice direto de mapa, bins espaciais de 32 tiles, GPS e hook visual | Halo físico estreito ainda falta; C dos chunks ajustado para stride 8 |
 | atlas_surf_ecology.py | Aliases explícitos dos pools/habitats e header nativo | Auditoria de gatilhos, áreas Dex e Gen4/Gen9/TESTE final falta |
 | atlas_surface_batteries.py | Código da migração 2 e validação dos destinos | Não é o harness histórico de baterias; Save/Continue nativo falta |
-| atlas_surf_native_scenery.py | 17 células e gráfico privado de Birth, corpo bloqueado | Prova do novo corpo em repetição; nunca certificação do release |
+| atlas_surf_native_scenery.py | 17 células e gráfico privado de Birth, corpo bloqueado | Prova do corpo passou no diagnóstico v2; repetir na candidata final |
 | validate_atlas_surf_birth_native.py | Viagem por controles, avatar, bloqueio, Surf e Harbor | Repetir sobre o artefato final |
 
 As APIs reconstruídas diferem das antigas descritas no JSON. Não supor que
@@ -140,10 +147,11 @@ Não presumir que `.local` existe no ambiente seguinte. Verifique cada arquivo.
 | .local/generated-area-review-restored.json | Relatório dos 32.250 inputs e 171 markers |
 | .local/review171-build-src | Cópia privada compilada, ROM/ELF 171 exatos |
 | .local/review171-build.log | Build base; ROM usada 32.647.568 bytes (97,30%) |
-| .local/atlas-smoke-build-src | Integração diagnóstica de apenas dois chunks, sem ligação à rede completa |
+| .local/atlas-smoke-build-src | Dois pixels de atlas num chunk isolado, sem ligação à rede completa |
 | .local/atlas-smoke-build.log | Build diagnóstico; não é candidata final 172 |
 | .local/atlas-birth-smoke-native/birth-native.json | Prova nativa de Birth e capturas ligadas à ROM diagnóstica |
 | .local/atlas-smoke-v2-src | Nova cópia com corpo de Birth bloqueado, stride 8 e guard ecológico corrigido |
+| docs/design/atlas-surf-layout/diagnostic-birth-native | Relatório e capturas v2 preservados no Git; explicitamente diagnósticos |
 | .local/atlas-reconstruction-tests.log | Testes atuais da infraestrutura de reconstrução |
 | .local/ci-python/bin/python | Python com Pillow 13.0.0, numpy 2.3.5 e scipy 1.16.3 |
 | .local/ci-env.sh | Toolchain ARM 14.2.1, binutils e dependências locais |
@@ -165,10 +173,29 @@ ROM: f424aaf4511161d83f6bf87f886e4665e5a82e6f0b8310ae2476f92ce57daeda
 ELF: 02f7af0b36a04101e9365894f1caecf9a66a6bffb3ed645d581d3f8cf10d2358
 ```
 
-Esse smoke usa dois chunks isolados e uma relocação sintética. Não distribuir
+Esse smoke usa um chunk isolado e uma relocação sintética. Não distribuir
 essa ROM, não transformar o mapeamento sintético em migração final e não
 reutilizar suas provas para outra candidata. Sua compilação precede os
 ajustes posteriores do stride 8 e da ordem do guard de espécies de evento.
+
+O novo smoke v2 também usa dois pixels de atlas em **um único chunk**;
+não há prova de travessia entre chunks nesse diagnóstico. Compilou com
+stride 8 e o guard ecológico corrigido:
+
+```text
+ROM: b058983d8c07cb7a501d426592dd1ed574cd4858880da94cd52c5f63d8c29fa7
+ELF: 8fc3803a6cec06ff72ca07eae435658b6e29836d7abaaa6d99b94daec8c6ccb0
+ROM usada: 32.649.504 bytes (97,30%). EWRAM: 245.436; IWRAM: 28.660.
+```
+
+Fonte, ROM e ELF v2 ficaram estáveis durante a prova de Birth. Ela passou
+com bloqueio do corpo contra Surf, saída/retorno pelo lado, Harbor nos dois
+sentidos, pixels de cabeça/corpo/pés e bloqueio de pedestre na borda.
+O relatório e seis capturas estão no diretório diagnóstico versionado acima;
+o resultado mantém `diagnostic_build=true` e `final_release_validated=false`.
+Uma repetição com vínculos completos conferiu, antes e depois do percurso,
+os hashes da ROM, ELF, marker e dos 21 inputs preparados desse smoke. Seu
+relatório local está em `.local/atlas-birth-smoke-v2-bound-native`.
 
 Comandos úteis, sem substituir a inspeção dos arquivos:
 
@@ -202,14 +229,15 @@ inicial e supressão de encontros foram fixtures. Não é campanha completa,
 nem prova final das cinco edições, animação de todas as praias ou Save/Continue.
 O JSON posterior esclareceu que o corpo 5x3 deve continuar bloqueado. O
 primeiro reparo abria água nesse espaço; foi substituído por corpo inteiro de
-madeira preservando todos os bits de colisão/altura. A prova precisa repetir
-o bloqueio do corpo e o percurso na cópia v2, sem reciclar o resultado v1.
+madeira preservando todos os bits de colisão/altura. A prova foi repetida e
+passou na v2, incluindo o corpo bloqueado, sem reciclar o resultado v1.
 
 ## Próximo trabalho técnico, em ordem
 
-1. Preservar este lote e abrir o novo PR **normal**; registrar seu número.
-2. Auditar o guard de espécie/evento antes de resolver alias comum; compilar
-   novamente os ajustes de stride e aliases antes de qualquer prova final.
+1. Conferir o checkpoint mais recente no PR normal #110 e preservar cada
+   novo lote antes de operações longas; os artefatos diagnósticos estão no Git.
+2. Repetir as provas em cada candidata que mudar: o guard de espécie/evento
+   e o stride 8 passaram nos testes C e no build ARM diagnóstico v2.
 3. Completar a classificação física dos pixels nativos e do ícone (96,40).
    Costa: quatro pixels oceânicos interiores entre (128,89) e (133,89).
    Artisan: endpoint (119,104) é ícone de caverna, não oceano livre.

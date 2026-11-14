@@ -162,6 +162,9 @@ def archive_plan(info, output, *, include_roms=True, current_scope=SCOPE, extra_
             add(path)
     for name in CONTINUITY_FILES:
         add(ROOT / name)  # A new release cannot silently omit its handoff.
+    for path in sorted((ROOT / 'docs/design/atlas-surf-layout').rglob('*')):
+        if path.is_file():
+            add(path)
     for path in (ROOT / 'assets/tiles').rglob('*'):
         if path.is_file():
             add(path)

@@ -24,6 +24,16 @@ def run(source, library, output):
     source, library, output = map(lambda p: Path(p).resolve(), (source, library, output))
     output.mkdir(parents=True, exist_ok=True)
     frozen = {name: digest(source/name) for name in ('pokeemerald.gba', 'pokeemerald.elf')}
+    marker = next((source/name for name in ('.journey-atlas-surf-layout', '.journey-atlas-stage-smoke')
+                   if (source/name).is_file()), None)
+    assert marker is not None, 'Birth proof needs an identified atlas candidate marker'
+    marker_sha = digest(marker)
+    prepared = json.loads(marker.read_text())['prepared_sha256']
+    assert prepared, 'Candidate marker has no prepared inputs'
+    for name, expected in prepared.items():
+        path = Path(name)
+        assert not path.is_absolute() and '..' not in path.parts
+        assert digest(source/path) == expected, ('Prepared source changed before proof', name)
     ns = bootstrap(source, library, output, [OUTSIDE, INSIDE])
     original = {key: ns[key] for key in ('step', 'native', 'script', 'warp', 'picture')}
     fixture, depth, phase = True, 0, 'placement'
@@ -113,10 +123,15 @@ def run(source, library, output):
         assert any(row['before'][0] == OUTSIDE and row['after'][0] == INSIDE for row in route)
         assert any(row['before'][0] == INSIDE and row['after'][0] == OUTSIDE for row in route)
         assert frozen == {name: digest(source/name) for name in frozen}
+        assert digest(marker) == marker_sha
+        for name, expected in prepared.items():
+            assert digest(source/name) == expected, ('Prepared source changed during proof', name)
         report = dict(kind='atlas-birth-native-component', passed=True,
                       rom_sha256=frozen['pokeemerald.gba'], elf_sha256=frozen['pokeemerald.elf'],
                       diagnostic_build=(source/'.journey-atlas-stage-smoke').exists(),
                       final_release_validated=False,
+                      marker_sha256=marker_sha, prepared_source_sha256=prepared,
+                      source_files_checked=len(prepared),
                       initial_party_progress_encounters_and_placement_are_fixtures=True,
                       after_placement_movement_controllers_only=True,
                       private_read_only_query_trampoline_declared=True,
@@ -125,6 +140,7 @@ def run(source, library, output):
                       dock_body_blocks_surf=True,
                       harbor_roundtrip=True, controls=controls, queries=queries,
                       route=route, states=states, captures=captures,
+                      frozen_prepared_source_marker_rom_and_elf_unchanged=True,
                       frozen_rom_and_elf_unchanged=True)
         (output/'birth-native.json').write_text(json.dumps(report, indent=2)+'\n')
         return report

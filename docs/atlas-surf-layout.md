@@ -62,5 +62,9 @@ provas de travessia. A correção ainda não foi publicada numa ROM 172.
 O primeiro diagnóstico abriu água no lugar do telhado e passou o percurso
 local; o JSON técnico recebido depois esclareceu que o corpo deve continuar
 bloqueado. O gerador e o render acima já foram corrigidos. Aquele diagnóstico
-anterior não valida o corpo de madeira atual; a prova está sendo repetida em
-uma nova cópia identificada, preservando os artefatos anteriores.
+anterior não valida o corpo de madeira atual. A prova foi repetida e passou
+na nova ROM diagnóstica `b058983d…`: corpo bloqueado contra Surf, saída e
+retorno pelo lado, Harbor nos dois sentidos e pixels do avatar. O
+[relatório e capturas](design/atlas-surf-layout/diagnostic-birth-native/birth-native.json)
+estão preservados com os hashes. Continuam sendo prova diagnóstica; repetir
+na candidata final e nas edições pertinentes.
