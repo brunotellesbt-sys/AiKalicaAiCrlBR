@@ -373,3 +373,14 @@ O JSON recebido é um relato histórico; atualizar o estado aqui e em
 
 Este guia e o JSON técnico integram a documentação do pacote ZIP do jogo.
 Mudanças só de continuidade não justificam recompilar ou publicar ROMs.
+
+
+Registro da preparação do diagnóstico físico: o primeiro destino
+`.local/atlas-physical-smoke-src` foi preservado sem marker, após a guarda do
+preparador rejeitar uma suposição incorreta sobre o banco doador. A fonte
+real171 usa `gTileset_General_Frlg` + `gTileset_IslandHarbor_Frlg` em Sea00;
+a guarda agora confere esse par e o comportamento Surf compilado.
+Nova cópia `.local/atlas-physical-smoke-v2-src` preparada com28inputs e3mapas.
+Marker SHA256 `1d38cf4d7ce85cb4bebb122fb6338efeb797a16c18d56758f712015d3bc84f17`.
+Parent171 íntegro antes/depois. Build/prova nativa ainda pendentes neste
+checkpoint de preparação. Nenhum destino anterior foi apagado ou reutilizado.

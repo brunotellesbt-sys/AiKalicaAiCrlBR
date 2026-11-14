@@ -17,6 +17,7 @@ from atlas_surf_runtime import stage as stage_runtime
 from atlas_surf_physical import stage as stage_physical
 from atlas_surf_ecology import stage as stage_ecology
 from atlas_surf_native_scenery import repair as stage_scenery
+from atlas_surf_source import Source
 from atlas_surface_batteries import stage as stage_migration
 from candidate_layer import Layer
 from prepare_generated_area_review import PRIOR, LAYER
@@ -70,9 +71,14 @@ def prepare(source, clone_from):
     layouts = {row['id']:row for row in json.loads((source/'data/layouts/layouts.json').read_text())['layouts']}
     layout = layouts[mapping['layout']]
     words = struct.unpack('<'+'H'*(layout['width']*layout['height']), (source/layout['blockdata_filepath']).read_bytes())
-    if layout['primary_tileset'] != 'gTileset_JourneySeviiSea' or layout['layout_version'] != 'frlg':
+    if (layout['primary_tileset'], layout['secondary_tileset'], layout['layout_version']) != (
+            'gTileset_General_Frlg','gTileset_IslandHarbor_Frlg','frlg'):
         raise ValueError('Diagnostic donor bank changed')
     wet, reef = words.index(0x112B), words.index(0x1643)
+    terrain = Source(source)
+    if not terrain.water('JourneyWorldSea00',wet%layout['width'],wet//layout['width']):
+        raise ValueError('Diagnostic donor no longer has native Surf behavior')
+    terrain.assert_unchanged()
     donors = {row['name']:dict(map='JourneyWorldSea00',water_tile=[wet%layout['width'],wet//layout['width']],
                                reef_tile=[reef%layout['width'],reef//layout['width']]) for row in plan['chunks']}
     plan, geometry = stage_geometry(layer,plan,donors)
