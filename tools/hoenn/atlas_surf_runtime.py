@@ -1,0 +1,322 @@
+"""Emit compact affine lookups for atlas-aligned physical sea maps.
+
+No cell-position table is emitted. Map IDs use a two-level direct index;
+world rectangles use 32-tile row bins and an x-sorted interval search. The
+drawing hook only handles undefined *visual* cells. Native collision, height,
+connection validity and map-grid contents remain under the engine's control.
+
+This module prepares source. Its C equivalence tests do not certify timing,
+graphics or travel in a compiled game ROM.
+"""
+from copy import deepcopy
+import hashlib
+import json
+
+from badge_story_layer import read
+
+
+HEADER_PATH = 'src/data/journey_atlas_runtime.h'
+SPATIAL_ROW_TILES = 32
+SCALE = 8
+
+
+def _integer(value, label, minimum, maximum):
+    if type(value) is not int or not minimum <= value <= maximum:
+        raise ValueError(f'{label}: expected integer in [{minimum}, {maximum}]')
+    return value
+
+
+def bind_groups(plan, map_groups):
+    """Resolve planner group names against the staged engine map registry."""
+    bound = deepcopy(plan)
+    order = map_groups['group_order']
+    for chunk in bound['chunks']:
+        name = chunk['name']
+        group = chunk['group']
+        if type(group) is int:
+            group_name = order[group]
+            index = group
+        else:
+            group_name = group
+            index = order.index(group_name)
+        number = chunk['number']
+        if not 0 <= number < len(map_groups[group_name]):
+            raise ValueError(f'Missing map registry slot: {group_name}/{number}')
+        if map_groups[group_name][number] != name:
+            raise ValueError(f'Map registry disagrees with plan: {name}')
+        if 'group_index' in chunk and chunk['group_index'] != index:
+            raise ValueError(f'Map group index changed: {name}')
+        chunk['group_index'] = index
+    return bound
+
+
+def _chunks(plan):
+    if plan.get('scale') != SCALE:
+        raise ValueError('Atlas runtime requires eight tiles per atlas pixel')
+    chunks = []
+    seen = set()
+    for index, row in enumerate(plan['chunks']):
+        group = row.get('group_index', row.get('group'))
+        group = _integer(group, f'chunk {index} group', 0, 255)
+        number = _integer(row['number'], f'chunk {index} number', 0, 99)
+        key = (group << 8) | number
+        if key in seen:
+            raise ValueError(f'Duplicate atlas map ID: {group}/{number}')
+        seen.add(key)
+        x, y = row['origin']
+        x = _integer(x, 'origin x', -32768, 32767)
+        y = _integer(y, 'origin y', -32768, 32767)
+        width = _integer(row['width'], 'width', 1, 32767)
+        height = _integer(row['height'], 'height', 1, 32767)
+        if x + width > 32768 or y + height > 32768:
+            raise ValueError('Atlas rectangle exceeds signed world coordinates')
+        chunks.append(dict(index=index, map=key, group=group, number=number,
+                           x=x, y=y, width=width, height=height))
+    if not 0 < len(chunks) <= 65534:
+        raise ValueError('Atlas runtime requires between one and 65534 maps')
+    for i, a in enumerate(chunks):
+        for b in chunks[i + 1:]:
+            if (max(a['x'], b['x']) < min(a['x'] + a['width'], b['x'] + b['width'])
+                    and max(a['y'], b['y']) < min(a['y'] + a['height'], b['y'] + b['height'])):
+                raise ValueError(f'Overlapping atlas rectangles: {a["index"]}/{b["index"]}')
+    return chunks
+
+
+def _tables(chunks):
+    groups = {}
+    rows = {}
+    for chunk in chunks:
+        groups.setdefault(chunk['group'], {})[chunk['number']] = chunk['index'] + 1
+        for row in range(chunk['y'] // SPATIAL_ROW_TILES,
+                         (chunk['y'] + chunk['height'] - 1) // SPATIAL_ROW_TILES + 1):
+            rows.setdefault(row, []).append(chunk['index'])
+    group_base, group_last = min(groups), max(groups)
+    group_ranges, slots = [], []
+    for group in range(group_base, group_last + 1):
+        members = groups.get(group, {})
+        count = max(members) + 1 if members else 0
+        group_ranges.append((len(slots), count))
+        slots.extend(members.get(number, 0) for number in range(count))
+    row_base, row_last = min(rows), max(rows)
+    row_ranges, row_chunks = [], []
+    for row in range(row_base, row_last + 1):
+        members = sorted(rows.get(row, []), key=lambda index: (chunks[index]['x'], index))
+        row_ranges.append((len(row_chunks), len(members),
+                           max((chunks[index]['width'] for index in members), default=0)))
+        row_chunks.extend(members)
+    if max(len(slots), len(row_chunks)) > 65535:
+        raise ValueError('Atlas lookup table exceeds 16-bit indices')
+    return dict(group_base=group_base, group_ranges=group_ranges, slots=slots,
+                row_base=row_base, row_ranges=row_ranges, row_chunks=row_chunks)
+
+
+def render_runtime(plan):
+    """Return (C header, statistics) for a plan with resolved group_index."""
+    chunks = _chunks(plan)
+    tables = _tables(chunks)
+    code = '''// Generated by atlas_surf_runtime.py. Do not hand-edit.
+#ifndef GUARD_JOURNEY_ATLAS_RUNTIME_H
+#define GUARD_JOURNEY_ATLAS_RUNTIME_H
+struct JourneyAtlasChunk { u16 map; s16 x, y; u16 width, height; };
+struct JourneyAtlasGroupRange { u16 first, count; };
+struct JourneyAtlasRowRange { u16 first, count, maxWidth; };
+static const struct JourneyAtlasChunk sAtlasChunks[] = {
+'''
+    code += ''.join('    {%d,%d,%d,%d,%d},\n' % (
+        c['map'], c['x'], c['y'], c['width'], c['height']) for c in chunks)
+    code += '};\nstatic const struct JourneyAtlasGroupRange sAtlasGroups[] = {\n'
+    code += ''.join('    {%d,%d},\n' % row for row in tables['group_ranges'])
+    code += '};\nstatic const u16 sAtlasMapSlots[] = {' + ','.join(map(str, tables['slots'])) + '};\n'
+    code += 'static const struct JourneyAtlasRowRange sAtlasRows[] = {\n'
+    code += ''.join('    {%d,%d,%d},\n' % row for row in tables['row_ranges'])
+    code += '};\nstatic const u16 sAtlasRowChunks[] = {' + ','.join(map(str, tables['row_chunks'])) + '};\n'
+    code += f'#define JOURNEY_ATLAS_GROUP_BASE {tables["group_base"]}\n'
+    code += f'#define JOURNEY_ATLAS_ROW_BASE ({tables["row_base"]})\n'
+    code += f'#define JOURNEY_ATLAS_MIN_X ({min(c["x"] for c in chunks)})\n'
+    code += f'#define JOURNEY_ATLAS_MAX_X ({max(c["x"] + c["width"] for c in chunks)})\n'
+    code += r'''
+static s32 JourneyAtlasFloor8(s32 value)
+{
+    return value >= 0 ? value / 8 : -1 - ((-1 - value) / 8);
+}
+
+static s32 JourneyAtlasFloor32(s32 value)
+{
+    return value >= 0 ? value / 32 : -1 - ((-1 - value) / 32);
+}
+
+static bool8 JourneyAtlasGroup(u16 group)
+{
+    s32 index = (s32)group - JOURNEY_ATLAS_GROUP_BASE;
+    return index >= 0 && index < (s32)ARRAY_COUNT(sAtlasGroups)
+        && sAtlasGroups[index].count != 0;
+}
+
+static const struct JourneyAtlasChunk *JourneyAtlasChunk(u16 group, u16 number)
+{
+    const struct JourneyAtlasGroupRange *range;
+    const struct JourneyAtlasChunk *chunk;
+    s32 index = (s32)group - JOURNEY_ATLAS_GROUP_BASE;
+    u16 slot;
+    if (index < 0 || index >= (s32)ARRAY_COUNT(sAtlasGroups) || number >= 100)
+        return NULL;
+    range = &sAtlasGroups[index];
+    if (number >= range->count)
+        return NULL;
+    slot = sAtlasMapSlots[range->first + number];
+    if (slot == 0)
+        return NULL;
+    chunk = &sAtlasChunks[slot - 1];
+    return chunk->map == ((group << 8) | number) ? chunk : NULL;
+}
+
+static const struct JourneyAtlasChunk *JourneyAtlasWorldChunk(s32 x, s32 y)
+{
+    const struct JourneyAtlasRowRange *range;
+    const struct JourneyAtlasChunk *chunk, *found = NULL;
+    s32 row = JourneyAtlasFloor32(y) - JOURNEY_ATLAS_ROW_BASE;
+    u32 lo, hi, mid;
+    if (x < JOURNEY_ATLAS_MIN_X || x >= JOURNEY_ATLAS_MAX_X
+        || row < 0 || row >= (s32)ARRAY_COUNT(sAtlasRows))
+        return NULL;
+    range = &sAtlasRows[row];
+    lo = range->first; hi = lo + range->count;
+    // Upper bound by left edge. Earlier intervals wider than this row's
+    // maximum cannot contain x, so scanning stops without walking all maps.
+    while (lo < hi)
+    {
+        mid = lo + (hi - lo) / 2;
+        if (sAtlasChunks[sAtlasRowChunks[mid]].x <= x)
+            lo = mid + 1;
+        else
+            hi = mid;
+    }
+    while (lo > range->first)
+    {
+        chunk = &sAtlasChunks[sAtlasRowChunks[--lo]];
+        if (x - chunk->x >= range->maxWidth)
+            break;
+        if (x < chunk->x + chunk->width && y >= chunk->y && y < chunk->y + chunk->height)
+        {
+            // Rectangles are nonoverlapping; retain deterministic ordering
+            // even if a corrupted table ever violates that source invariant.
+            if (found == NULL || chunk < found)
+                found = chunk;
+        }
+    }
+    return found;
+}
+
+static bool8 JourneyAtlasPosition(u16 group, u16 number, s16 x, s16 y, u16 *result)
+{
+    const struct JourneyAtlasChunk *chunk = JourneyAtlasChunk(group, number);
+    s32 px, py;
+    if (chunk == NULL)
+        return FALSE;
+    px = JourneyAtlasFloor8(chunk->x + (s32)x);
+    py = JourneyAtlasFloor8(chunk->y + (s32)y);
+    if (px < 0 || px > 255 || py < 0 || py > 255)
+        return FALSE;
+    *result = px | (py << 8);
+    return TRUE;
+}
+#endif
+'''
+    statistics = dict(kind='atlas-affine-indexed-runtime', maps=len(chunks), scale=SCALE,
+                      spatial_row_tiles=SPATIAL_ROW_TILES,
+                      group_ranges=len(tables['group_ranges']), map_slots=len(tables['slots']),
+                      spatial_rows=len(tables['row_ranges']), row_references=len(tables['row_chunks']),
+                      maximum_row_maps=max(row[1] for row in tables['row_ranges']),
+                      table_bytes=(10 * len(chunks) + 4 * len(tables['group_ranges'])
+                                   + 2 * len(tables['slots']) + 6 * len(tables['row_ranges'])
+                                   + 2 * len(tables['row_chunks'])),
+                      per_cell_gps_table=False,
+                      header_sha256=hashlib.sha256(code.encode()).hexdigest())
+    return code, statistics
+
+
+VISUAL_HELPER = r'''
+// Atlas rectangles share physical world coordinates. Resolve only actual
+// neighboring artwork; this function never opens an undefined movement cell.
+static bool8 JourneyAtlasVisualBlock(s32 x, s32 y, u16 *result)
+{
+    const struct JourneyAtlasChunk *current = JourneyAtlasChunk(
+        gSaveBlock1Ptr->location.mapGroup, gSaveBlock1Ptr->location.mapNum);
+    const struct JourneyAtlasChunk *owner;
+    const struct MapHeader *header;
+    const struct MapLayout *layout;
+    s32 wx, wy, xx, yy;
+    if (current == NULL)
+        return FALSE;
+    wx = current->x + x; wy = current->y + y;
+    owner = JourneyAtlasWorldChunk(wx, wy);
+    if (owner == NULL)
+        return FALSE;
+    header = Overworld_GetMapHeaderByGroupAndId(owner->map >> 8, owner->map & 255);
+    if (header == NULL)
+        return FALSE;
+    layout = header->mapLayout;
+    xx = wx - owner->x; yy = wy - owner->y;
+    if (layout == NULL || xx < 0 || yy < 0 || xx >= layout->width || yy >= layout->height)
+        return FALSE;
+    return JourneyMarineViewCompatible(layout, layout->map[yy * layout->width + xx], result);
+}
+'''
+
+
+def _replace_once(text, before, after):
+    if text.count(before) != 1:
+        raise ValueError(f'Expected one atlas runtime insertion anchor: {before!r}')
+    return text.replace(before, after, 1)
+
+
+def stage(layer, plan):
+    """Stage runtime plus narrow GPS/drawing hooks over the verified parent."""
+    groups = json.loads(read(layer, 'data/maps/map_groups.json'))
+    bound = bind_groups(plan, groups)
+    header, metadata = render_runtime(bound)
+    world_path = 'src/journey_world_map.c'
+    world = read(layer, world_path).decode()
+    if 'JourneyAtlasPosition' in world:
+        raise ValueError('Atlas position runtime already installed')
+    world = _replace_once(world, '#include "global.h"',
+                          '#include "global.h"\n#include "data/journey_atlas_runtime.h"')
+    world = _replace_once(world, 'u16 JourneyWorldMapPosition(void)\n{',
+                          'u16 JourneyWorldMapPosition(void)\n{\n    u16 atlasPosition;')
+    anchor = '    x -= MAP_OFFSET; y -= MAP_OFFSET;'
+    world = _replace_once(world, anchor, anchor + '''
+    if (JourneyAtlasPosition(gSaveBlock1Ptr->location.mapGroup,
+        gSaveBlock1Ptr->location.mapNum, x, y, &atlasPosition))
+        return atlasPosition;''')
+    field_path = 'src/fieldmap.c'
+    field = read(layer, field_path).decode()
+    if 'JourneyAtlasVisualBlock' in field:
+        raise ValueError('Atlas drawing runtime already installed')
+    field = _replace_once(field, '#include "global.h"',
+                          '#include "global.h"\n#include "data/journey_atlas_runtime.h"')
+    field = _replace_once(field, 'static bool8 JourneyMarineViewGroup(u16 group)\n{',
+                          '''static bool8 JourneyMarineViewGroup(u16 group)
+{
+    if (JourneyAtlasGroup(group))
+        return TRUE;''')
+    corner = 'static bool8 JourneyMarineCornerMetatile(s32 x, s32 y, u16 *result)\n{'
+    field = _replace_once(field, corner, VISUAL_HELPER + '\n' + corner)
+    # Scope replacement to the corner function: an apron helper has a similar
+    # guard and must keep its original behavior.
+    start = field.index(corner)
+    before, function = field[:start], field[start:]
+    guard = '    if (!JourneyMarineViewMap(current) || current->connections == NULL)\n'
+    if guard not in function:
+        raise ValueError('Atlas corner function is missing the native view guard')
+    function = function.replace(guard, '''    if (JourneyAtlasVisualBlock(x, y, result))
+        return TRUE;
+''' + guard, 1)
+    field = before + function
+    layer.stage(HEADER_PATH, header)
+    layer.stage(world_path, world)
+    layer.stage(field_path, field)
+    return dict(**metadata, changed_paths=[HEADER_PATH, world_path, field_path],
+                native_position_fallback_preserved=True,
+                atlas_art_arrays_unchanged=True,
+                undefined_movement_collision_height_and_border_id_unchanged=True,
+                native_rom_validation_pending=True)

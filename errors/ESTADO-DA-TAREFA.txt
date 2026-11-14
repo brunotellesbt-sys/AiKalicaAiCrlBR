@@ -1,0 +1,104 @@
+RETOMADA — 2026-11-14 — CAMADA 172 / ATLAS-SURF-LAYOUT
+
+ESTADO: RECONSTRUÇÃO EM ANDAMENTO. NÃO É RELEASE VALIDADO.
+
+Base recuperada do GitHub:
+  main: 7ec174b8f7d0c621ec9a60d8b771619e86628889 (PR #108, revisão171).
+  branch desta tarefa: fix/atlas-surf-layout.
+  Última conferência remota: a branch172 ainda não existia.
+
+Preservação:
+  Identificadores privados da tarefa e ambiente antigos ficam somente no
+  registro local de retomada, fora deste repositório público.
+  Não apagar, resetar, substituir nem arquivar aquela tarefa/workspace.
+  Esta conversa não dispõe de acesso ao workspace ou snapshot antigo.
+  O clone171 NÃO recuperou as alterações locais172. Não há scripts
+  atlas_surf_*, relatórios172, fonte/ELF172 ou backup172 no Git recuperado.
+
+Objetivo autorizado:
+  Corrigir geografia física das rotas de Surf segundo a ARTE IMUTÁVEL do
+  mapa-múndi; preservar eventos, NPCs, bancos gráficos, animações e acessos.
+  Não mascarar defeitos por GPS. Ciano=player; vermelho=cursor do mapa.
+  Configurar só as dependências para corrigir, compilar, validar e entregar.
+
+Plano histórico a RECONSTRUIR e COMPROVAR (não resultados recuperados):
+  escala8 tiles/pixel; corredores6; coordenadas afins globais;
+  436 mapas novos, 273 IDs aposentados, grupos com no máximo100 mapas;
+  33 adaptadores,171 conjuntos completos,18 cavernas de superfície,5 Dive;
+  atlas:1529 pixels azuis=1483 novas rotas+45 nativos+1 centro de porto;
+  acessos curtos128,89->133,89 e119,103->119,104 exigem prova na arte.
+  Sem arrays GPS por célula; ROM de32MiB, candidato anterior98,85% cheio.
+
+Pendências obrigatórias:
+  - Reproduzir o defeito Sea01(44,10): dez passos norte não podem mover
+    vinte pixels leste. Verificar direção/distância global, não só emendas.
+  - Reconstruir fonte171 sem alterar os arquivos/hashes históricos.
+  - Migração saves2 uma vez, preservando migração1 de Treasure Beach;
+    Continue->salvar pelo menu->Continue, estado/altura/objetos/visão/warps.
+  - Portos Seagallop e scripts de chegada redirecionados aos desembarques.
+  - Route114: preservar lagoa/margem/NPCs; fechar só ligação externa indevida.
+  - Ecologia efetiva compilada: Gen9/Gen4, pools/pesca/níveis/gatilhos;
+    histórico correto383/190 famílias com gatilhos, não união403/200.
+    Seis trechos/269 células de grama: confirmar contra fonte reconstruída.
+  - Índice direto grupo/número e índice espacial por linhas32 para desenho;
+    eliminar a pausa de aproximadamente300frames NA ROM, não dar mais timeout.
+  - BirthIsland_Exterior_Frlg: objeto inteiro do telhado isolado para madeira,
+    comportamento/altura/eventos preservados, ponta sem metal; preservar Navel.
+  - Auditoria independente fonte; build; orçamento; congelar fonte/ELF/ROM;
+    provas nativas por controles e revisão de mapas inteiros/vizinhos.
+  - Cinco edições, TESTE com supressão existente, review-mode e cold-boot;
+    TESTE com e sem bateria; salvar/Continue reais; ecologia Gen9/Gen4.
+  - Só publicar ROMs/PR pronto depois de todas as provas e hashes atuais.
+    Rascunho é autorizado para preservar avanço ainda incompleto.
+
+Não confundir com validação172:
+  Os resultados449 componentes/7 portos/18 cavernas/45 pixels eram análises
+  de arquivos no ambiente perdido. O primeiro candidato448 e seus renders,
+  provas Dive/Aurora e testes C NÃO validam a nova reconstrução ou ROM final.
+  Não aprovar hashes antigos nem NATIVE_CONTRACT_FINALIZED artificialmente.
+
+Inventário confirmado nesta máquina:
+  checkout raso/parcial; .agents/.github/docs/errors/tools/roms/web/assets/tiles.
+  SHA-256 dos26 pacotes de ferramentas e4 ROMs públicas171: OK.
+  Terminal, Git HTTPS e Docker respondem; sem imagens/volumes antigos.
+  Fora do sandbox o proxy Git funciona; preservar autenticação da plataforma.
+  Inicial:6,4GiB e521052 inodes livres,9GiB RAM disponível; medir antes de builds.
+
+Próximo passo:
+  Fonte171 reconstruída:171 camadas,32.250 inputs, contrato171 exato.
+  Manifesto dos inputs:
+  d3a06e90f222f83a3e7778df52895594f6bd02719a8bc925151d7d80bfa1fed7
+  Nova verificação read-only reproduziu o mesmo resultado.
+  Build171 em cópia privada .local/review171-build-src; conferir hashes ao
+  terminar, sem confundir build de base com build172. Fonte estável em
+  .local/generated-area-review-src; não compilar essa árvore em uso por leitores.
+
+  Primeiro checkpoint remoto confirmado:c03dac777eae6199d4be2643f77d4c862c111851.
+  Módulos recuperados por reconstrução (não arquivos do ambiente antigo):
+  restore_generated_area_review,atlas_surf_truth,atlas_surf_geometry,
+  validate_atlas_surf_layout_plan,atlas_surf_layer,atlas_surf_runtime,
+  atlas_surf_ecology,atlas_surface_batteries,atlas_surf_native_scenery.
+  41 testes de geometria/plano/runtime/ecologia/materialização aprovados.
+  O código da migração2 está preservado, mas sua bateria de testes C e as
+  provas nativas Save/Continue ainda não foram concluídas. Não usar em release.
+  O runtime passou equivalência C para65.536IDs e313.200coordenadas;
+  desempenho real no GBA ainda PENDENTE.
+
+  Atlas real decodificado:1529pixels azuis iguais à referência publicada.
+  Ícone de porto(96,40) comprovado pelo padrão3x3; a classificação dos45
+  pixels nativos ainda precisa prova física. Usar o GPS171 cegamente daria184
+  pixels candidatos: isso NÃO comprova propriedade nativa.
+  Diagnóstico sobre TODOS1529azuis (não plano final):347chunks32tiles,
+  74.688células de água,15componentes. Não forçar436 nem duplicar rotas nativas.
+  Costa acrescenta4pixels oceânicos; Artisan termina no ícone(119,104),
+  não num pixel oceânico. As duas exceções precisam vínculo aos acessos reais.
+
+  Birth:reconstruída correção de15células de telhado+2pontas laterais;
+  gráfico privado dewarp740 usa madeira nativa, atributos/eventos preservados.
+  Render inteiro antes/depois em docs/design/atlas-surf-layout (sem NPCs
+  dinâmicos, não capturas de ROM). Ida/volta,visibilidade e bloqueios PENDENTES.
+
+  Próximo:fazer classificação/adaptadores reais e integração dos módulos;
+  auditar fonte,migração e ecologia; compilar172 apenas depois disso.
+  Após cada lote: verificações, atualizar este arquivo, commit/push, conferir
+  SHA remoto. Não deixar único exemplar importante só no disco local.
