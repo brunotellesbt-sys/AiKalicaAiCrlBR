@@ -178,3 +178,28 @@ Lote físico - checkpoint de código ANTES do build:
   Nova cópia atlas-physical-smoke-v2-src preparada:28inputs,3mapas sintéticos,
   marker1d38cf4d7ce85cb4bebb122fb6338efeb797a16c18d56758f712015d3bc84f17.
   Parent171 conferido antes/depois,sem hardlinks. Build ainda não executado.
+
+
+Diagnóstico físico - conclusão do lote após aa33a98 remoto confirmado:
+  Build ARM terminou em cópia privada atlas-physical-smoke-v2-src;28inputs.
+  ROM3e4cd81123c776de390c13f6f8c628ed275106ff7fe3c6e07ded4c05e53b081b
+  ELF7429b6ad085531ae5690a1d1496f1216dcc2ac6bfecc74d253cde2f67036c8ad
+  Marker1d38cf4d7ce85cb4bebb122fb6338efeb797a16c18d56758f712015d3bc84f17
+  ROMusada32.652.272(97,31%),EWRAM245436,IWRAM28660.
+  Quatro travessias reais por controles:A->B->C->B->A, incluindo largura4.
+  Coordenadas consistentes3..5frames após ID;24..33frames/caso com20estáveis.
+  Cronometragem sem chamadas nativas,apenas frames/leituras;timestamps ligados.
+  8tiles norte:sem derivaX,GPSreduz1pixelY;recife bloqueiaSurf;vizinho estreito
+  e terceiro mapa diagonal têm words/altura/colisão reais;64pixelsBG/4quadrantes
+  da diagonal+pixelsOBJavatar conferidos. Movimento diagonal continua inválido.
+  Verificador independente PASS comROM/ELF/marker/28inputs e6capturas atuais.
+  Birth repetida nessaROM:PASS madeira/bloqueios/Surf/Harbor/retorno/avatar,
+  outras6capturas;provas antigas permanecem locais/versionadas como anteriores.
+  Evidência em docs/design/atlas-surf-layout/diagnostic-physical-{native,birth}
+  e diagnostic-physical-frozen.json. Não prova rede436 nem release172.
+  64atlas+1continuidade:verificações do lote;manter resultado dos testes.
+  Ambiente reiniciou,voltouready;arquivos conferidos e preservados.
+  Recursosmedidos:1,7GiB/97.983inodes livres;reavaliar antes de novosbuilds.
+  PR NORMAL110 permanece para continuidade. ROMs públicas seguem171.
+  Próximo:45pixelsnativos/cenário/POIs/adaptadores/Dive/SCC/ecologia e migração
+  real, candidata completa;provas dos saves e das cinco edições antes de publicar.

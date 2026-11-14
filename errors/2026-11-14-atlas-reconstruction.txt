@@ -36,3 +36,19 @@ Limites e próximo passo:
   Completar propriedade dos45pixels nativos, cenário/POIs/adaptadores e halo
   físico, auditoria global e provas nativas vinculadas à candidata final.
   O inventário não substitui ida/volta, câmera, animações ou Save/Continue.
+
+Lote posterior:halo físico compilado e diagnóstico nativo
+  atlas_surf_physical limita a interseção antes de formar ponteiros,copia
+  words completos para o halo,preserva mapa atual e prioriza costa direta.
+  Tradução desconhecida falha;diagonal não cria conexão sem vizinho direto.
+  Cinco testesC+quatro testes de adulteração de evidência;total64atlas+1docs.
+  Build ARM três mapasL(um largura4),28inputs,ROMusada32.652.272bytes.
+  ROM3e4cd81123c776de390c13f6f8c628ed275106ff7fe3c6e07ded4c05e53b081b
+  Prova nativa quatro travessias ida/volta:3..5frames entre novoID e coordenadas
+  consistentes,sem queries no intervalo cronometrado,sem aumentar o limite.
+  Norte8tiles sem derivaX,GPSY-1;recifes bloqueiamSurf;word do vizinho estreito,
+  diagonal física,pixelsBG eavatar conferidos;diagonal sem conexão continua
+  inválida para movimento. Verificador independente confirma capturas/frames
+  e todos28inputs,ROM,ELF,marker. Birth repetida nessaROM passou também.
+  Artefatos docs/design/atlas-surf-layout/diagnostic-physical-{native,birth}.
+  Isto NÃO prova a escala436,conectividade global,saves ou release172 final.

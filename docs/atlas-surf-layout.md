@@ -68,3 +68,13 @@ retorno pelo lado, Harbor nos dois sentidos e pixels do avatar. O
 [relatório e capturas](design/atlas-surf-layout/diagnostic-birth-native/birth-native.json)
 estão preservados com os hashes. Continuam sendo prova diagnóstica; repetir
 na candidata final e nas edições pertinentes.
+
+
+Atualização de14/11: o halo físico agora tem módulo próprio e prova diagnóstica
+nativa de três mapas em L (incluindo largura4). Quatro divisas ida/volta,
+coordenadas consistentes3–5frames após trocar ID, oito tiles norte sem deriva,
+recifes, diagonal BG e avatar passaram. Birth foi repetida na mesma ROM.
+64testes atlas e1teste de continuidade aprovados. Índice das12capturas e dois
+relatórios: `docs/design/atlas-surf-layout/diagnostic-physical-review.json`.
+A candidata real completa e as cinco edições continuam pendentes. O diagnóstico
+não autoriza publicação172 ou afirmação de desempenho na escala436.

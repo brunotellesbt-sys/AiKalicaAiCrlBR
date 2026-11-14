@@ -1,0 +1,6123 @@
+{
+  "kind": "atlas-physical-three-map-native-diagnostic",
+  "passed": true,
+  "diagnostic_build": true,
+  "final_release_validated": false,
+  "artifact_sha256": {
+    "pokeemerald.gba": "3e4cd81123c776de390c13f6f8c628ed275106ff7fe3c6e07ded4c05e53b081b",
+    "pokeemerald.elf": "7429b6ad085531ae5690a1d1496f1216dcc2ac6bfecc74d253cde2f67036c8ad",
+    ".journey-atlas-stage-smoke": "1d38cf4d7ce85cb4bebb122fb6338efeb797a16c18d56758f712015d3bc84f17"
+  },
+  "prepared_source_sha256": {
+    "data/maps/JourneyAtlasProbe0/map.json": "e96ed0d09e1d7f0bd084fa396e326e18c02074c2804f16a5025c68100f5c5fcb",
+    "data/layouts/JourneyAtlasProbe0/map.bin": "8c8a4219411b174061f66a38a332bd705ff49f9abe338cbae9fb63e0b8b4c270",
+    "data/layouts/JourneyAtlasProbe0/border.bin": "23d6a6e9b3db90a879a59c7179bc454f488d9864441da95e0b384ad9f639be1e",
+    "data/maps/JourneyAtlasProbe1/map.json": "80354a66b0f517738ee85e6f7de5d8e6de1c8ca0bc90bd404510e4bcbab4af9c",
+    "data/layouts/JourneyAtlasProbe1/map.bin": "402d35879e007fc242d84990c3aa823119f416a5e62379b8ac24149d4fa58eb9",
+    "data/layouts/JourneyAtlasProbe1/border.bin": "23d6a6e9b3db90a879a59c7179bc454f488d9864441da95e0b384ad9f639be1e",
+    "data/maps/JourneyAtlasProbe2/map.json": "78088e673ce38bfa7786d366b51f54f2a5681860ef88f8fb7145674cd7b67ac0",
+    "data/layouts/JourneyAtlasProbe2/map.bin": "fd0b74c6ef1b90bb43a72da1f83f29aa657f892bfbf0fc205cabae2e63b178c6",
+    "data/layouts/JourneyAtlasProbe2/border.bin": "23d6a6e9b3db90a879a59c7179bc454f488d9864441da95e0b384ad9f639be1e",
+    "data/maps/map_groups.json": "59a4889322399f8728976791a643829bd166b275cd432e89623d41d5ca2fc697",
+    "data/layouts/layouts.json": "acb8533741898ae0bb1795f47be136eae82422fb0353ea82064fe88a9fd649c9",
+    "data/maps/JourneyAtlasSeas.inc": "bcb43915c3e725183c37c2026f2ddc84446e73fe6886b4ac31d7f5eb5504e4eb",
+    "data/event_scripts.s": "60298390ec2a134cb4f31fbb266590a2fcd01916dbe19f569969a089b89aab86",
+    "src/data/journey_atlas_runtime.h": "a2e34c930c79c00694b0ab9dd1a32f06fb984d3c0a2bf2d73eee049a04ac4a67",
+    "src/journey_world_map.c": "91f15f3ba2118bc7e55408595659f7b912be2a313d1b8afacdfc522e699f61e5",
+    "src/fieldmap.c": "01476e6431d78a96c11beec724ef41e8a07fa0303d5a9c4ce86a4a341f2fdd03",
+    "src/data/journey_atlas_physical.h": "dc045bc85b7c4e3eb646bfc69f36df0c7590993e2240269a351df97b9d6e4f99",
+    "include/journey_atlas_ecology.h": "3794700b3c814456b6bdcf1a124e82848b6657c52e56442a24726528b374abcd",
+    "src/journey_atlas_ecology.c": "1e86a970944b4efb7a7378454f0bbde505d3e349d9900d157796d04b9a0f379a",
+    "src/journey_wild.c": "c8fdf66fad4e9de9c81b010dc5f571420105eab84fcdca4216b262b3cde528f7",
+    "src/wild_encounter.c": "8639af0119833e387afeeef540d83df23c57c722f0d872b1edcbb1aa2e7edc8a",
+    "src/journey_habitats.c": "86ebf226d0f7da33a941735948a9448070c12da6f791fcab74e84826c3535238",
+    "src/load_save.c": "9621ca915f93c530e995cecd5911ae506f890ce86d9157b8cf71c694eb003024",
+    "include/constants/vars.h": "d2dc30737d36d73997e65826f54b21e6872dc067831bc8e3b9a96a2c739cae03",
+    "include/load_save.h": "e761afdd1c24265c7abfa0d4b8c7c4dc1a2a62d98e43d7db76adc51015b17091",
+    "src/overworld.c": "ec0dd79c37c9985a5ec76ea165eecbb3b002af53a624de088e6dbc4b97ced1d3",
+    "data/layouts/BirthIsland_Exterior_Frlg/map.bin": "97fc8aa9368b339d83e066221d3c6455df7bb419e3d0436b06a563f342d778c3",
+    "data/tilesets/secondary/sevii_islands_67_frlg/journey_sevii_sea_metatiles.bin": "34692f1eb0078a6d3eb59e47a64af6dfca751c355db27e29ff4596469345dd1a"
+  },
+  "initial_party_progress_placement_surf_and_encounter_suppression_are_fixtures": true,
+  "after_placement_movement_controllers_only": true,
+  "private_read_only_query_trampoline_declared": true,
+  "frozen_source_marker_rom_and_elf_unchanged": true,
+  "real_atlas_route_classification_proven": false,
+  "full_network_performance_proven": false,
+  "seams": [
+    {
+      "case": "east-out-of-four-tile-map",
+      "before": {
+        "map": "JourneyAtlasProbe0",
+        "tile": [
+          3,
+          3
+        ],
+        "saved_tile": [
+          3,
+          3
+        ],
+        "idle": true,
+        "surfing": true,
+        "object_active": true
+      },
+      "after": {
+        "map": "JourneyAtlasProbe1",
+        "tile": [
+          0,
+          3
+        ],
+        "saved_tile": [
+          0,
+          3
+        ],
+        "idle": true,
+        "surfing": true,
+        "object_active": true
+      },
+      "key": 16,
+      "start_frame": 1026,
+      "end_frame": 1059,
+      "total_frames": 33,
+      "map_published_frame": 9,
+      "consistent_coordinates_frame": 14,
+      "inconsistent_coordinate_frames": 5,
+      "frame_samples": [
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 1
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 2
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 3
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 4
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 5
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 6
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 7
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 8
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            4,
+            3
+          ],
+          "saved_tile": [
+            65535,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 9
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            4,
+            3
+          ],
+          "saved_tile": [
+            65535,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 10
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            4,
+            3
+          ],
+          "saved_tile": [
+            65535,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 11
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            4,
+            3
+          ],
+          "saved_tile": [
+            65535,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 12
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            4,
+            3
+          ],
+          "saved_tile": [
+            65535,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 13
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 14
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 15
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 16
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 17
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 18
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 19
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 20
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 21
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 22
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 23
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 24
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 25
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 26
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 27
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 28
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 29
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 30
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 31
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 32
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 33
+        }
+      ],
+      "no_native_queries_during_timing": true,
+      "global_tile_delta": [
+        1,
+        0
+      ],
+      "capture": {
+        "file": "east-out-of-four-tile-map.png",
+        "sha256": "573c7ec7dedd6296bf308a318dee7b4257efbcca318b33081a3c5b306402564b"
+      }
+    },
+    {
+      "case": "south-across-second-seam",
+      "before": {
+        "map": "JourneyAtlasProbe1",
+        "tile": [
+          13,
+          7
+        ],
+        "saved_tile": [
+          13,
+          7
+        ],
+        "idle": true,
+        "surfing": true,
+        "object_active": true
+      },
+      "after": {
+        "map": "JourneyAtlasProbe2",
+        "tile": [
+          13,
+          0
+        ],
+        "saved_tile": [
+          13,
+          0
+        ],
+        "idle": true,
+        "surfing": true,
+        "object_active": true
+      },
+      "key": 128,
+      "start_frame": 1804,
+      "end_frame": 1828,
+      "total_frames": 24,
+      "map_published_frame": 1,
+      "consistent_coordinates_frame": 5,
+      "inconsistent_coordinate_frames": 4,
+      "frame_samples": [
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            8
+          ],
+          "saved_tile": [
+            13,
+            65535
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 1
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            8
+          ],
+          "saved_tile": [
+            13,
+            65535
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 2
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            8
+          ],
+          "saved_tile": [
+            13,
+            65535
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 3
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            8
+          ],
+          "saved_tile": [
+            13,
+            65535
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 4
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 5
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 6
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 7
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 8
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 9
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 10
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 11
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 12
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 13
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 14
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 15
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 16
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 17
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 18
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 19
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 20
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 21
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 22
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 23
+        },
+        {
+          "map": "JourneyAtlasProbe2",
+          "tile": [
+            13,
+            0
+          ],
+          "saved_tile": [
+            13,
+            0
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 24
+        }
+      ],
+      "no_native_queries_during_timing": true,
+      "global_tile_delta": [
+        0,
+        1
+      ],
+      "capture": {
+        "file": "south-across-second-seam.png",
+        "sha256": "db8721fafbd8f8970ba6c0b4eb541a620d9a2edc2002d61f051c04e77442cf5f"
+      }
+    },
+    {
+      "case": "north-return",
+      "before": {
+        "map": "JourneyAtlasProbe2",
+        "tile": [
+          13,
+          0
+        ],
+        "saved_tile": [
+          13,
+          0
+        ],
+        "idle": true,
+        "surfing": true,
+        "object_active": true
+      },
+      "after": {
+        "map": "JourneyAtlasProbe1",
+        "tile": [
+          13,
+          7
+        ],
+        "saved_tile": [
+          13,
+          7
+        ],
+        "idle": true,
+        "surfing": true,
+        "object_active": true
+      },
+      "key": 64,
+      "start_frame": 2842,
+      "end_frame": 2867,
+      "total_frames": 25,
+      "map_published_frame": 1,
+      "consistent_coordinates_frame": 6,
+      "inconsistent_coordinate_frames": 5,
+      "frame_samples": [
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            -1
+          ],
+          "saved_tile": [
+            13,
+            8
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 1
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            -1
+          ],
+          "saved_tile": [
+            13,
+            8
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 2
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            -1
+          ],
+          "saved_tile": [
+            13,
+            8
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 3
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            -1
+          ],
+          "saved_tile": [
+            13,
+            8
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 4
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            -1
+          ],
+          "saved_tile": [
+            13,
+            8
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 5
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 6
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 7
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 8
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 9
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 10
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 11
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 12
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 13
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 14
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 15
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 16
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 17
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 18
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 19
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 20
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 21
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 22
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 23
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 24
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            13,
+            7
+          ],
+          "saved_tile": [
+            13,
+            7
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 25
+        }
+      ],
+      "no_native_queries_during_timing": true,
+      "global_tile_delta": [
+        0,
+        -1
+      ],
+      "capture": {
+        "file": "north-return.png",
+        "sha256": "38199b5fda2f264353f97e82fe3522ba986890aac782450738efbf9c74987b7d"
+      }
+    },
+    {
+      "case": "west-return-to-four-tile-map",
+      "before": {
+        "map": "JourneyAtlasProbe1",
+        "tile": [
+          0,
+          3
+        ],
+        "saved_tile": [
+          0,
+          3
+        ],
+        "idle": true,
+        "surfing": true,
+        "object_active": true
+      },
+      "after": {
+        "map": "JourneyAtlasProbe0",
+        "tile": [
+          3,
+          3
+        ],
+        "saved_tile": [
+          3,
+          3
+        ],
+        "idle": true,
+        "surfing": true,
+        "object_active": true
+      },
+      "key": 32,
+      "start_frame": 3747,
+      "end_frame": 3778,
+      "total_frames": 31,
+      "map_published_frame": 9,
+      "consistent_coordinates_frame": 12,
+      "inconsistent_coordinate_frames": 3,
+      "frame_samples": [
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 1
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 2
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 3
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 4
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 5
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 6
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 7
+        },
+        {
+          "map": "JourneyAtlasProbe1",
+          "tile": [
+            0,
+            3
+          ],
+          "saved_tile": [
+            0,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 8
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            -1,
+            3
+          ],
+          "saved_tile": [
+            4,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 9
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            -1,
+            3
+          ],
+          "saved_tile": [
+            4,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 10
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            -1,
+            3
+          ],
+          "saved_tile": [
+            4,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 11
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 12
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 13
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 14
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 15
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 16
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 17
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 18
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 19
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 20
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 21
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 22
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 23
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 24
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 25
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 26
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 27
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 28
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 29
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 30
+        },
+        {
+          "map": "JourneyAtlasProbe0",
+          "tile": [
+            3,
+            3
+          ],
+          "saved_tile": [
+            3,
+            3
+          ],
+          "idle": true,
+          "surfing": true,
+          "object_active": true,
+          "frame": 31
+        }
+      ],
+      "no_native_queries_during_timing": true,
+      "global_tile_delta": [
+        -1,
+        0
+      ],
+      "capture": {
+        "file": "west-return-to-four-tile-map.png",
+        "sha256": "93e2bddbb076f875945cc1c7fc3951bbc5cff6710c311c5ffdcdf32649b2ad1a"
+      }
+    }
+  ],
+  "observations": [
+    {
+      "case": "west-strip-from-narrow-source",
+      "terrain": {
+        "cell": [
+          -1,
+          3
+        ],
+        "loaded_word": 4395,
+        "height": 1,
+        "collision": 0
+      }
+    },
+    {
+      "case": "north-eight-tiles",
+      "start": {
+        "point": [
+          "JourneyAtlasProbe2",
+          13,
+          10
+        ],
+        "global_tile": [
+          1137,
+          578
+        ],
+        "atlas": [
+          142,
+          72
+        ]
+      },
+      "end": {
+        "point": [
+          "JourneyAtlasProbe2",
+          13,
+          2
+        ],
+        "global_tile": [
+          1137,
+          570
+        ],
+        "atlas": [
+          142,
+          71
+        ]
+      }
+    },
+    {
+      "case": "reef-blocks-surf",
+      "terrain": {
+        "cell": [
+          12,
+          2
+        ],
+        "loaded_word": 5699,
+        "height": 1,
+        "collision": 1
+      },
+      "player": {
+        "map": "JourneyAtlasProbe2",
+        "tile": [
+          13,
+          2
+        ],
+        "surfing": true,
+        "elevation": 1,
+        "tile_elevation": 1,
+        "priority": 2,
+        "sprite_visible": true,
+        "object_visible": true,
+        "native_avatar_pixels": {
+          "hardware_oam_index": 0,
+          "screen_rectangle": [
+            112,
+            55,
+            16,
+            32
+          ],
+          "expected_opaque_pixels": 200,
+          "matching_scanout_pixels": 200,
+          "head_body_feet_bands": [
+            {
+              "expected": 70,
+              "matched": 70
+            },
+            {
+              "expected": 68,
+              "matched": 68
+            },
+            {
+              "expected": 62,
+              "matched": 62
+            }
+          ],
+          "exclusive_obj_palette_pixels": 75,
+          "exclusive_obj_palette_pixels_visible": 75,
+          "expected_scanout_pixels": [
+            [
+              117,
+              67,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              118,
+              67,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              119,
+              67,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              120,
+              67,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              121,
+              67,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              122,
+              67,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              123,
+              67,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              124,
+              67,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              116,
+              68,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              117,
+              68,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              118,
+              68,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              119,
+              68,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              120,
+              68,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              121,
+              68,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              122,
+              68,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              123,
+              68,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              124,
+              68,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              125,
+              68,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              115,
+              69,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              116,
+              69,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              117,
+              69,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              118,
+              69,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              119,
+              69,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              120,
+              69,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              121,
+              69,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              122,
+              69,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              123,
+              69,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              124,
+              69,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              125,
+              69,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              114,
+              70,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              115,
+              70,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              116,
+              70,
+              232,
+              232,
+              248,
+              0,
+              false
+            ],
+            [
+              117,
+              70,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              118,
+              70,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              119,
+              70,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              120,
+              70,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              121,
+              70,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              122,
+              70,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              123,
+              70,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              124,
+              70,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              125,
+              70,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              126,
+              70,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              113,
+              71,
+              0,
+              0,
+              0,
+              0,
+              false
+            ],
+            [
+              114,
+              71,
+              232,
+              232,
+              248,
+              0,
+              false
+            ],
+            [
+              115,
+              71,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              116,
+              71,
+              232,
+              232,
+              248,
+              0,
+              false
+            ],
+            [
+              117,
+              71,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              118,
+              71,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              119,
+              71,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              120,
+              71,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              121,
+              71,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              122,
+              71,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              123,
+              71,
+              248,
+              104,
+              72,
+              0,
+              true
+            ],
+            [
+              124,
+              71,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              125,
+              71,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              126,
+              71,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              113,
+              72,
+              0,
+              0,
+              0,
+              0,
+              false
+            ],
+            [
+              114,
+              72,
+              232,
+              232,
+              248,
+              0,
+              false
+            ],
+            [
+              115,
+              72,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              116,
+              72,
+              176,
+              176,
+              208,
+              0,
+              false
+            ],
+            [
+              117,
+              72,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              118,
+              72,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              119,
+              72,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              120,
+              72,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              121,
+              72,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              122,
+              72,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              123,
+              72,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              124,
+              72,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              125,
+              72,
+              192,
+              56,
+              56,
+              0,
+              false
+            ],
+            [
+              126,
+              72,
+              104,
+              40,
+              40,
+              0,
+              true
+            ],
+            [
+              113,
+              73,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              114,
+              73,
+              232,
+              232,
+              248,
+              1,
+              false
+            ],
+            [
+              115,
+              73,
+              176,
+              176,
+              208,
+              1,
+              false
+            ],
+            [
+              116,
+              73,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              117,
+              73,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              118,
+              73,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              119,
+              73,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              120,
+              73,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              121,
+              73,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              122,
+              73,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              123,
+              73,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              124,
+              73,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              125,
+              73,
+              104,
+              40,
+              40,
+              1,
+              true
+            ],
+            [
+              126,
+              73,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              114,
+              74,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              115,
+              74,
+              176,
+              176,
+              208,
+              1,
+              false
+            ],
+            [
+              116,
+              74,
+              176,
+              176,
+              208,
+              1,
+              false
+            ],
+            [
+              117,
+              74,
+              176,
+              176,
+              208,
+              1,
+              false
+            ],
+            [
+              118,
+              74,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              119,
+              74,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              120,
+              74,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              121,
+              74,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              122,
+              74,
+              192,
+              56,
+              56,
+              1,
+              false
+            ],
+            [
+              123,
+              74,
+              104,
+              40,
+              40,
+              1,
+              true
+            ],
+            [
+              124,
+              74,
+              104,
+              40,
+              40,
+              1,
+              true
+            ],
+            [
+              125,
+              74,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              126,
+              74,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              115,
+              75,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              116,
+              75,
+              56,
+              56,
+              120,
+              1,
+              true
+            ],
+            [
+              117,
+              75,
+              104,
+              40,
+              40,
+              1,
+              true
+            ],
+            [
+              118,
+              75,
+              104,
+              40,
+              40,
+              1,
+              true
+            ],
+            [
+              119,
+              75,
+              104,
+              40,
+              40,
+              1,
+              true
+            ],
+            [
+              120,
+              75,
+              104,
+              40,
+              40,
+              1,
+              true
+            ],
+            [
+              121,
+              75,
+              104,
+              40,
+              40,
+              1,
+              true
+            ],
+            [
+              122,
+              75,
+              104,
+              40,
+              40,
+              1,
+              true
+            ],
+            [
+              123,
+              75,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              124,
+              75,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              125,
+              75,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              126,
+              75,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              115,
+              76,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              116,
+              76,
+              216,
+              144,
+              112,
+              1,
+              false
+            ],
+            [
+              117,
+              76,
+              216,
+              144,
+              112,
+              1,
+              false
+            ],
+            [
+              118,
+              76,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              119,
+              76,
+              216,
+              144,
+              112,
+              1,
+              false
+            ],
+            [
+              120,
+              76,
+              216,
+              144,
+              112,
+              1,
+              false
+            ],
+            [
+              121,
+              76,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              122,
+              76,
+              248,
+              192,
+              144,
+              1,
+              false
+            ],
+            [
+              123,
+              76,
+              216,
+              144,
+              112,
+              1,
+              false
+            ],
+            [
+              124,
+              76,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              125,
+              76,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              116,
+              77,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              117,
+              77,
+              248,
+              192,
+              144,
+              1,
+              false
+            ],
+            [
+              118,
+              77,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              119,
+              77,
+              248,
+              192,
+              144,
+              1,
+              false
+            ],
+            [
+              120,
+              77,
+              216,
+              144,
+              112,
+              1,
+              false
+            ],
+            [
+              121,
+              77,
+              216,
+              144,
+              112,
+              1,
+              false
+            ],
+            [
+              122,
+              77,
+              248,
+              192,
+              144,
+              1,
+              false
+            ],
+            [
+              123,
+              77,
+              216,
+              144,
+              112,
+              1,
+              false
+            ],
+            [
+              124,
+              77,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              117,
+              78,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              118,
+              78,
+              216,
+              144,
+              112,
+              1,
+              false
+            ],
+            [
+              119,
+              78,
+              216,
+              144,
+              112,
+              1,
+              false
+            ],
+            [
+              120,
+              78,
+              216,
+              144,
+              112,
+              1,
+              false
+            ],
+            [
+              121,
+              78,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              122,
+              78,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              123,
+              78,
+              120,
+              64,
+              64,
+              1,
+              false
+            ],
+            [
+              124,
+              78,
+              184,
+              152,
+              56,
+              1,
+              false
+            ],
+            [
+              125,
+              78,
+              0,
+              0,
+              0,
+              1,
+              false
+            ],
+            [
+              117,
+              79,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              118,
+              79,
+              120,
+              64,
+              64,
+              2,
+              false
+            ],
+            [
+              119,
+              79,
+              120,
+              64,
+              64,
+              2,
+              false
+            ],
+            [
+              120,
+              79,
+              120,
+              64,
+              64,
+              2,
+              false
+            ],
+            [
+              121,
+              79,
+              184,
+              152,
+              56,
+              2,
+              false
+            ],
+            [
+              122,
+              79,
+              104,
+              40,
+              40,
+              2,
+              true
+            ],
+            [
+              123,
+              79,
+              184,
+              152,
+              56,
+              2,
+              false
+            ],
+            [
+              124,
+              79,
+              248,
+              216,
+              88,
+              2,
+              true
+            ],
+            [
+              125,
+              79,
+              248,
+              216,
+              88,
+              2,
+              true
+            ],
+            [
+              126,
+              79,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              115,
+              80,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              116,
+              80,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              117,
+              80,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              118,
+              80,
+              192,
+              56,
+              56,
+              2,
+              false
+            ],
+            [
+              119,
+              80,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              120,
+              80,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              121,
+              80,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              122,
+              80,
+              104,
+              40,
+              40,
+              2,
+              true
+            ],
+            [
+              123,
+              80,
+              184,
+              152,
+              56,
+              2,
+              false
+            ],
+            [
+              124,
+              80,
+              248,
+              216,
+              88,
+              2,
+              true
+            ],
+            [
+              125,
+              80,
+              120,
+              64,
+              64,
+              2,
+              false
+            ],
+            [
+              126,
+              80,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              114,
+              81,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              115,
+              81,
+              56,
+              56,
+              120,
+              2,
+              true
+            ],
+            [
+              116,
+              81,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              117,
+              81,
+              56,
+              56,
+              120,
+              2,
+              true
+            ],
+            [
+              118,
+              81,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              119,
+              81,
+              104,
+              40,
+              40,
+              2,
+              true
+            ],
+            [
+              120,
+              81,
+              56,
+              56,
+              120,
+              2,
+              true
+            ],
+            [
+              121,
+              81,
+              56,
+              56,
+              120,
+              2,
+              true
+            ],
+            [
+              122,
+              81,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              123,
+              81,
+              104,
+              40,
+              40,
+              2,
+              true
+            ],
+            [
+              124,
+              81,
+              120,
+              64,
+              64,
+              2,
+              false
+            ],
+            [
+              125,
+              81,
+              184,
+              152,
+              56,
+              2,
+              false
+            ],
+            [
+              126,
+              81,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              114,
+              82,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              115,
+              82,
+              56,
+              56,
+              120,
+              2,
+              true
+            ],
+            [
+              116,
+              82,
+              192,
+              56,
+              56,
+              2,
+              false
+            ],
+            [
+              117,
+              82,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              118,
+              82,
+              112,
+              160,
+              192,
+              2,
+              true
+            ],
+            [
+              119,
+              82,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              120,
+              82,
+              56,
+              56,
+              120,
+              2,
+              true
+            ],
+            [
+              121,
+              82,
+              56,
+              56,
+              120,
+              2,
+              true
+            ],
+            [
+              122,
+              82,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              123,
+              82,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              124,
+              82,
+              184,
+              152,
+              56,
+              2,
+              false
+            ],
+            [
+              125,
+              82,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              115,
+              83,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              116,
+              83,
+              56,
+              56,
+              120,
+              2,
+              true
+            ],
+            [
+              117,
+              83,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              118,
+              83,
+              56,
+              56,
+              120,
+              2,
+              true
+            ],
+            [
+              119,
+              83,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              120,
+              83,
+              216,
+              144,
+              112,
+              2,
+              false
+            ],
+            [
+              121,
+              83,
+              216,
+              144,
+              112,
+              2,
+              false
+            ],
+            [
+              122,
+              83,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              123,
+              83,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              124,
+              83,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              116,
+              84,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              117,
+              84,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              118,
+              84,
+              0,
+              0,
+              0,
+              2,
+              false
+            ],
+            [
+              120,
+              84,
+              104,
+              40,
+              40,
+              2,
+              true
+            ],
+            [
+              121,
+              84,
+              104,
+              40,
+              40,
+              2,
+              true
+            ]
+          ],
+          "exact_current_vram_frame_compared": true,
+          "background_color_coincidence_not_used": true
+        }
+      },
+      "capture": {
+        "file": "reef-blocks-surf.png",
+        "sha256": "eb54039d1cd1c454f3bd9052cb59e5639b691d9e7c421dceb060f9cbf0b7ac5d"
+      }
+    },
+    {
+      "case": "diagonal-real-terrain-without-direct-connection",
+      "terrain": {
+        "cell": [
+          4,
+          8
+        ],
+        "loaded_word": 5699,
+        "height": 1,
+        "collision": 1
+      },
+      "border_invalid": true,
+      "pixels": {
+        "map": "JourneyAtlasProbe0",
+        "cells": [
+          {
+            "cell": [
+              4,
+              8
+            ],
+            "expected_metatile": 579,
+            "native_metatile": 579,
+            "layer": 1,
+            "definition_words": [
+              16838,
+              16839,
+              16839,
+              16838,
+              16866,
+              16867,
+              16868,
+              16869
+            ],
+            "quadrants": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "actual_bg_words": [
+              {
+                "quadrant": 0,
+                "words": [
+                  0,
+                  16866,
+                  16838
+                ]
+              },
+              {
+                "quadrant": 1,
+                "words": [
+                  0,
+                  16867,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 2,
+                "words": [
+                  0,
+                  16868,
+                  16839
+                ]
+              },
+              {
+                "quadrant": 3,
+                "words": [
+                  0,
+                  16869,
+                  16838
+                ]
+              }
+            ],
+            "samples": [
+              [
+                129,
+                105,
+                104,
+                128,
+                208,
+                0
+              ],
+              [
+                131,
+                105,
+                104,
+                128,
+                208,
+                0
+              ],
+              [
+                133,
+                105,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                135,
+                105,
+                80,
+                104,
+                208,
+                0
+              ],
+              [
+                137,
+                105,
+                136,
+                160,
+                216,
+                1
+              ],
+              [
+                139,
+                105,
+                104,
+                128,
+                208,
+                1
+              ],
+              [
+                141,
+                105,
+                80,
+                104,
+                208,
+                1
+              ],
+              [
+                143,
+                105,
+                80,
+                104,
+                208,
+                1
+              ],
+              [
+                129,
+                113,
+                136,
+                160,
+                216,
+                2
+              ],
+              [
+                131,
+                113,
+                104,
+                128,
+                208,
+                2
+              ],
+              [
+                133,
+                113,
+                200,
+                216,
+                232,
+                2
+              ],
+              [
+                135,
+                113,
+                200,
+                216,
+                232,
+                2
+              ],
+              [
+                137,
+                113,
+                200,
+                216,
+                232,
+                3
+              ],
+              [
+                139,
+                113,
+                200,
+                216,
+                232,
+                3
+              ],
+              [
+                141,
+                113,
+                80,
+                104,
+                208,
+                3
+              ],
+              [
+                143,
+                113,
+                80,
+                104,
+                208,
+                3
+              ]
+            ],
+            "checked_pixels": 64
+          }
+        ],
+        "undefined_cells_included": true,
+        "actual_hardware_bg_words_and_scanout_checked": true,
+        "sprites_and_opaque_ui_explicitly_excluded": true,
+        "mismatches_not_discarded": true
+      },
+      "capture": {
+        "file": "diagonal-real-terrain.png",
+        "sha256": "d67af7a30d0f417fb41a445524e0bc685ae3b8b16f161e18063dc753f85a3d9b"
+      }
+    }
+  ],
+  "route": [
+    {
+      "phase": "east-out-of-four-tile-map",
+      "before": [
+        "JourneyAtlasProbe0",
+        3,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        0,
+        3
+      ],
+      "global_before": [
+        1123,
+        563
+      ],
+      "global_after": [
+        1124,
+        563
+      ]
+    },
+    {
+      "phase": "approach-south-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        0,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        1,
+        3
+      ],
+      "global_before": [
+        1124,
+        563
+      ],
+      "global_after": [
+        1125,
+        563
+      ]
+    },
+    {
+      "phase": "approach-south-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        1,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        2,
+        3
+      ],
+      "global_before": [
+        1125,
+        563
+      ],
+      "global_after": [
+        1126,
+        563
+      ]
+    },
+    {
+      "phase": "approach-south-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        2,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        3,
+        3
+      ],
+      "global_before": [
+        1126,
+        563
+      ],
+      "global_after": [
+        1127,
+        563
+      ]
+    },
+    {
+      "phase": "approach-south-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        3,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        4,
+        3
+      ],
+      "global_before": [
+        1127,
+        563
+      ],
+      "global_after": [
+        1128,
+        563
+      ]
+    },
+    {
+      "phase": "approach-south-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        4,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        5,
+        3
+      ],
+      "global_before": [
+        1128,
+        563
+      ],
+      "global_after": [
+        1129,
+        563
+      ]
+    },
+    {
+      "phase": "approach-south-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        5,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        6,
+        3
+      ],
+      "global_before": [
+        1129,
+        563
+      ],
+      "global_after": [
+        1130,
+        563
+      ]
+    },
+    {
+      "phase": "approach-south-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        6,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        7,
+        3
+      ],
+      "global_before": [
+        1130,
+        563
+      ],
+      "global_after": [
+        1131,
+        563
+      ]
+    },
+    {
+      "phase": "approach-south-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        7,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        8,
+        3
+      ],
+      "global_before": [
+        1131,
+        563
+      ],
+      "global_after": [
+        1132,
+        563
+      ]
+    },
+    {
+      "phase": "approach-south-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        8,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        9,
+        3
+      ],
+      "global_before": [
+        1132,
+        563
+      ],
+      "global_after": [
+        1133,
+        563
+      ]
+    },
+    {
+      "phase": "approach-south-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        9,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        10,
+        3
+      ],
+      "global_before": [
+        1133,
+        563
+      ],
+      "global_after": [
+        1134,
+        563
+      ]
+    },
+    {
+      "phase": "approach-south-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        10,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        11,
+        3
+      ],
+      "global_before": [
+        1134,
+        563
+      ],
+      "global_after": [
+        1135,
+        563
+      ]
+    },
+    {
+      "phase": "approach-south-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        11,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        12,
+        3
+      ],
+      "global_before": [
+        1135,
+        563
+      ],
+      "global_after": [
+        1136,
+        563
+      ]
+    },
+    {
+      "phase": "approach-south-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        12,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        13,
+        3
+      ],
+      "global_before": [
+        1136,
+        563
+      ],
+      "global_after": [
+        1137,
+        563
+      ]
+    },
+    {
+      "phase": "approach-south-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        13,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        13,
+        4
+      ],
+      "global_before": [
+        1137,
+        563
+      ],
+      "global_after": [
+        1137,
+        564
+      ]
+    },
+    {
+      "phase": "approach-south-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        13,
+        4
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        13,
+        5
+      ],
+      "global_before": [
+        1137,
+        564
+      ],
+      "global_after": [
+        1137,
+        565
+      ]
+    },
+    {
+      "phase": "approach-south-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        13,
+        5
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        13,
+        6
+      ],
+      "global_before": [
+        1137,
+        565
+      ],
+      "global_after": [
+        1137,
+        566
+      ]
+    },
+    {
+      "phase": "approach-south-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        13,
+        6
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        13,
+        7
+      ],
+      "global_before": [
+        1137,
+        566
+      ],
+      "global_after": [
+        1137,
+        567
+      ]
+    },
+    {
+      "phase": "south-across-second-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        13,
+        7
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        0
+      ],
+      "global_before": [
+        1137,
+        567
+      ],
+      "global_after": [
+        1137,
+        568
+      ]
+    },
+    {
+      "phase": "south-to-north-start",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        0
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        1
+      ],
+      "global_before": [
+        1137,
+        568
+      ],
+      "global_after": [
+        1137,
+        569
+      ]
+    },
+    {
+      "phase": "south-to-north-start",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        1
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        2
+      ],
+      "global_before": [
+        1137,
+        569
+      ],
+      "global_after": [
+        1137,
+        570
+      ]
+    },
+    {
+      "phase": "south-to-north-start",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        2
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        3
+      ],
+      "global_before": [
+        1137,
+        570
+      ],
+      "global_after": [
+        1137,
+        571
+      ]
+    },
+    {
+      "phase": "south-to-north-start",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        4
+      ],
+      "global_before": [
+        1137,
+        571
+      ],
+      "global_after": [
+        1137,
+        572
+      ]
+    },
+    {
+      "phase": "south-to-north-start",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        4
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        5
+      ],
+      "global_before": [
+        1137,
+        572
+      ],
+      "global_after": [
+        1137,
+        573
+      ]
+    },
+    {
+      "phase": "south-to-north-start",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        5
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        6
+      ],
+      "global_before": [
+        1137,
+        573
+      ],
+      "global_after": [
+        1137,
+        574
+      ]
+    },
+    {
+      "phase": "south-to-north-start",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        6
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        7
+      ],
+      "global_before": [
+        1137,
+        574
+      ],
+      "global_after": [
+        1137,
+        575
+      ]
+    },
+    {
+      "phase": "south-to-north-start",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        7
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        8
+      ],
+      "global_before": [
+        1137,
+        575
+      ],
+      "global_after": [
+        1137,
+        576
+      ]
+    },
+    {
+      "phase": "south-to-north-start",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        8
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        9
+      ],
+      "global_before": [
+        1137,
+        576
+      ],
+      "global_after": [
+        1137,
+        577
+      ]
+    },
+    {
+      "phase": "south-to-north-start",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        9
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        10
+      ],
+      "global_before": [
+        1137,
+        577
+      ],
+      "global_after": [
+        1137,
+        578
+      ]
+    },
+    {
+      "phase": "north-eight-tiles",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        10
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        9
+      ],
+      "global_before": [
+        1137,
+        578
+      ],
+      "global_after": [
+        1137,
+        577
+      ]
+    },
+    {
+      "phase": "north-eight-tiles",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        9
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        8
+      ],
+      "global_before": [
+        1137,
+        577
+      ],
+      "global_after": [
+        1137,
+        576
+      ]
+    },
+    {
+      "phase": "north-eight-tiles",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        8
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        7
+      ],
+      "global_before": [
+        1137,
+        576
+      ],
+      "global_after": [
+        1137,
+        575
+      ]
+    },
+    {
+      "phase": "north-eight-tiles",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        7
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        6
+      ],
+      "global_before": [
+        1137,
+        575
+      ],
+      "global_after": [
+        1137,
+        574
+      ]
+    },
+    {
+      "phase": "north-eight-tiles",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        6
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        5
+      ],
+      "global_before": [
+        1137,
+        574
+      ],
+      "global_after": [
+        1137,
+        573
+      ]
+    },
+    {
+      "phase": "north-eight-tiles",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        5
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        4
+      ],
+      "global_before": [
+        1137,
+        573
+      ],
+      "global_after": [
+        1137,
+        572
+      ]
+    },
+    {
+      "phase": "north-eight-tiles",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        4
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        3
+      ],
+      "global_before": [
+        1137,
+        572
+      ],
+      "global_after": [
+        1137,
+        571
+      ]
+    },
+    {
+      "phase": "north-eight-tiles",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        2
+      ],
+      "global_before": [
+        1137,
+        571
+      ],
+      "global_after": [
+        1137,
+        570
+      ]
+    },
+    {
+      "phase": "approach-north-seam",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        2
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        1
+      ],
+      "global_before": [
+        1137,
+        570
+      ],
+      "global_after": [
+        1137,
+        569
+      ]
+    },
+    {
+      "phase": "approach-north-seam",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        1
+      ],
+      "after": [
+        "JourneyAtlasProbe2",
+        13,
+        0
+      ],
+      "global_before": [
+        1137,
+        569
+      ],
+      "global_after": [
+        1137,
+        568
+      ]
+    },
+    {
+      "phase": "north-return",
+      "before": [
+        "JourneyAtlasProbe2",
+        13,
+        0
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        13,
+        7
+      ],
+      "global_before": [
+        1137,
+        568
+      ],
+      "global_after": [
+        1137,
+        567
+      ]
+    },
+    {
+      "phase": "approach-west-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        13,
+        7
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        13,
+        6
+      ],
+      "global_before": [
+        1137,
+        567
+      ],
+      "global_after": [
+        1137,
+        566
+      ]
+    },
+    {
+      "phase": "approach-west-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        13,
+        6
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        12,
+        6
+      ],
+      "global_before": [
+        1137,
+        566
+      ],
+      "global_after": [
+        1136,
+        566
+      ]
+    },
+    {
+      "phase": "approach-west-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        12,
+        6
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        11,
+        6
+      ],
+      "global_before": [
+        1136,
+        566
+      ],
+      "global_after": [
+        1135,
+        566
+      ]
+    },
+    {
+      "phase": "approach-west-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        11,
+        6
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        10,
+        6
+      ],
+      "global_before": [
+        1135,
+        566
+      ],
+      "global_after": [
+        1134,
+        566
+      ]
+    },
+    {
+      "phase": "approach-west-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        10,
+        6
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        9,
+        6
+      ],
+      "global_before": [
+        1134,
+        566
+      ],
+      "global_after": [
+        1133,
+        566
+      ]
+    },
+    {
+      "phase": "approach-west-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        9,
+        6
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        8,
+        6
+      ],
+      "global_before": [
+        1133,
+        566
+      ],
+      "global_after": [
+        1132,
+        566
+      ]
+    },
+    {
+      "phase": "approach-west-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        8,
+        6
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        7,
+        6
+      ],
+      "global_before": [
+        1132,
+        566
+      ],
+      "global_after": [
+        1131,
+        566
+      ]
+    },
+    {
+      "phase": "approach-west-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        7,
+        6
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        6,
+        6
+      ],
+      "global_before": [
+        1131,
+        566
+      ],
+      "global_after": [
+        1130,
+        566
+      ]
+    },
+    {
+      "phase": "approach-west-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        6,
+        6
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        5,
+        6
+      ],
+      "global_before": [
+        1130,
+        566
+      ],
+      "global_after": [
+        1129,
+        566
+      ]
+    },
+    {
+      "phase": "approach-west-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        5,
+        6
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        4,
+        6
+      ],
+      "global_before": [
+        1129,
+        566
+      ],
+      "global_after": [
+        1128,
+        566
+      ]
+    },
+    {
+      "phase": "approach-west-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        4,
+        6
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        3,
+        6
+      ],
+      "global_before": [
+        1128,
+        566
+      ],
+      "global_after": [
+        1127,
+        566
+      ]
+    },
+    {
+      "phase": "approach-west-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        3,
+        6
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        2,
+        6
+      ],
+      "global_before": [
+        1127,
+        566
+      ],
+      "global_after": [
+        1126,
+        566
+      ]
+    },
+    {
+      "phase": "approach-west-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        2,
+        6
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        1,
+        6
+      ],
+      "global_before": [
+        1126,
+        566
+      ],
+      "global_after": [
+        1125,
+        566
+      ]
+    },
+    {
+      "phase": "approach-west-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        1,
+        6
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        0,
+        6
+      ],
+      "global_before": [
+        1125,
+        566
+      ],
+      "global_after": [
+        1124,
+        566
+      ]
+    },
+    {
+      "phase": "approach-west-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        0,
+        6
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        0,
+        5
+      ],
+      "global_before": [
+        1124,
+        566
+      ],
+      "global_after": [
+        1124,
+        565
+      ]
+    },
+    {
+      "phase": "approach-west-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        0,
+        5
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        0,
+        4
+      ],
+      "global_before": [
+        1124,
+        565
+      ],
+      "global_after": [
+        1124,
+        564
+      ]
+    },
+    {
+      "phase": "approach-west-seam",
+      "before": [
+        "JourneyAtlasProbe1",
+        0,
+        4
+      ],
+      "after": [
+        "JourneyAtlasProbe1",
+        0,
+        3
+      ],
+      "global_before": [
+        1124,
+        564
+      ],
+      "global_after": [
+        1124,
+        563
+      ]
+    },
+    {
+      "phase": "west-return-to-four-tile-map",
+      "before": [
+        "JourneyAtlasProbe1",
+        0,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe0",
+        3,
+        3
+      ],
+      "global_before": [
+        1124,
+        563
+      ],
+      "global_after": [
+        1123,
+        563
+      ]
+    },
+    {
+      "phase": "diagonal-before-entering",
+      "before": [
+        "JourneyAtlasProbe0",
+        3,
+        3
+      ],
+      "after": [
+        "JourneyAtlasProbe0",
+        3,
+        4
+      ],
+      "global_before": [
+        1123,
+        563
+      ],
+      "global_after": [
+        1123,
+        564
+      ]
+    },
+    {
+      "phase": "diagonal-before-entering",
+      "before": [
+        "JourneyAtlasProbe0",
+        3,
+        4
+      ],
+      "after": [
+        "JourneyAtlasProbe0",
+        3,
+        5
+      ],
+      "global_before": [
+        1123,
+        564
+      ],
+      "global_after": [
+        1123,
+        565
+      ]
+    },
+    {
+      "phase": "diagonal-before-entering",
+      "before": [
+        "JourneyAtlasProbe0",
+        3,
+        5
+      ],
+      "after": [
+        "JourneyAtlasProbe0",
+        3,
+        6
+      ],
+      "global_before": [
+        1123,
+        565
+      ],
+      "global_after": [
+        1123,
+        566
+      ]
+    }
+  ],
+  "controls": [
+    {
+      "phase": "east-out-of-four-tile-map",
+      "frames": 14,
+      "key": 16
+    },
+    {
+      "phase": "east-out-of-four-tile-map",
+      "frames": 19,
+      "key": 0
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 1,
+      "key": 16
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 1,
+      "key": 16
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 1,
+      "key": 16
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 1,
+      "key": 16
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 1,
+      "key": 16
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 1,
+      "key": 16
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 1,
+      "key": 16
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 1,
+      "key": 16
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 1,
+      "key": 16
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 1,
+      "key": 16
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 1,
+      "key": 16
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 1,
+      "key": 16
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 1,
+      "key": 16
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 9,
+      "key": 128
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "phase": "approach-south-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "south-across-second-seam",
+      "frames": 5,
+      "key": 128
+    },
+    {
+      "phase": "south-across-second-seam",
+      "frames": 19,
+      "key": 0
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "phase": "south-to-north-start",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "north-eight-tiles",
+      "frames": 9,
+      "key": 64
+    },
+    {
+      "phase": "north-eight-tiles",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "north-eight-tiles",
+      "frames": 1,
+      "key": 64
+    },
+    {
+      "phase": "north-eight-tiles",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "north-eight-tiles",
+      "frames": 1,
+      "key": 64
+    },
+    {
+      "phase": "north-eight-tiles",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "north-eight-tiles",
+      "frames": 1,
+      "key": 64
+    },
+    {
+      "phase": "north-eight-tiles",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "north-eight-tiles",
+      "frames": 1,
+      "key": 64
+    },
+    {
+      "phase": "north-eight-tiles",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "north-eight-tiles",
+      "frames": 1,
+      "key": 64
+    },
+    {
+      "phase": "north-eight-tiles",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "north-eight-tiles",
+      "frames": 1,
+      "key": 64
+    },
+    {
+      "phase": "north-eight-tiles",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "north-eight-tiles",
+      "frames": 1,
+      "key": 64
+    },
+    {
+      "phase": "north-eight-tiles",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "reef-blocks-surf",
+      "frames": 90,
+      "key": 32
+    },
+    {
+      "phase": "reef-blocks-surf",
+      "frames": 30,
+      "key": 0
+    },
+    {
+      "phase": "approach-north-seam",
+      "frames": 9,
+      "key": 64
+    },
+    {
+      "phase": "approach-north-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-north-seam",
+      "frames": 1,
+      "key": 64
+    },
+    {
+      "phase": "approach-north-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "north-return",
+      "frames": 6,
+      "key": 64
+    },
+    {
+      "phase": "north-return",
+      "frames": 19,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 80,
+      "key": 32
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 9,
+      "key": 64
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 9,
+      "key": 32
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 1,
+      "key": 32
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 1,
+      "key": 32
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 1,
+      "key": 32
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 1,
+      "key": 32
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 1,
+      "key": 32
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 1,
+      "key": 32
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 1,
+      "key": 32
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 1,
+      "key": 32
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 1,
+      "key": 32
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 1,
+      "key": 32
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 1,
+      "key": 32
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 1,
+      "key": 32
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 9,
+      "key": 64
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 1,
+      "key": 64
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 1,
+      "key": 64
+    },
+    {
+      "phase": "approach-west-seam",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "west-return-to-four-tile-map",
+      "frames": 12,
+      "key": 32
+    },
+    {
+      "phase": "west-return-to-four-tile-map",
+      "frames": 19,
+      "key": 0
+    },
+    {
+      "phase": "diagonal-before-entering",
+      "frames": 9,
+      "key": 128
+    },
+    {
+      "phase": "diagonal-before-entering",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "diagonal-before-entering",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "phase": "diagonal-before-entering",
+      "frames": 42,
+      "key": 0
+    },
+    {
+      "phase": "diagonal-before-entering",
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "phase": "diagonal-before-entering",
+      "frames": 42,
+      "key": 0
+    }
+  ],
+  "queries": [
+    {
+      "phase": "east-out-of-four-tile-map",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        6,
+        10
+      ],
+      "frame": 1059
+    },
+    {
+      "phase": "east-out-of-four-tile-map",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        6,
+        10
+      ],
+      "frame": 1062
+    },
+    {
+      "phase": "south-to-north-start",
+      "function": "JourneyWorldMapPosition",
+      "arguments": [],
+      "frame": 2258
+    },
+    {
+      "phase": "north-eight-tiles",
+      "function": "JourneyWorldMapPosition",
+      "arguments": [],
+      "frame": 2613
+    },
+    {
+      "phase": "reef-blocks-surf",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        19,
+        9
+      ],
+      "frame": 2736
+    },
+    {
+      "phase": "reef-blocks-surf",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        19,
+        9
+      ],
+      "frame": 2739
+    },
+    {
+      "phase": "reef-blocks-surf",
+      "function": "PlayerGetElevation",
+      "arguments": [],
+      "frame": 2742
+    },
+    {
+      "phase": "reef-blocks-surf",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        20,
+        9
+      ],
+      "frame": 2745
+    },
+    {
+      "phase": "approach-west-seam",
+      "function": "MapGridGetMetatileBehaviorAt",
+      "arguments": [
+        19,
+        14
+      ],
+      "frame": 2989
+    },
+    {
+      "phase": "diagonal-before-entering",
+      "function": "MapGridGetCollisionAt",
+      "arguments": [
+        11,
+        15
+      ],
+      "frame": 3915
+    },
+    {
+      "phase": "diagonal-before-entering",
+      "function": "MapGridGetElevationAt",
+      "arguments": [
+        11,
+        15
+      ],
+      "frame": 3918
+    },
+    {
+      "phase": "diagonal-before-entering",
+      "function": "GetMapBorderIdAt",
+      "arguments": [
+        11,
+        15
+      ],
+      "frame": 3921
+    },
+    {
+      "phase": "diagonal-before-entering",
+      "function": "MapGridGetMetatileIdAt",
+      "arguments": [
+        11,
+        15
+      ],
+      "frame": 3924
+    },
+    {
+      "phase": "diagonal-before-entering",
+      "function": "MapGridGetMetatileLayerTypeAt",
+      "arguments": [
+        11,
+        15
+      ],
+      "frame": 3927
+    }
+  ],
+  "captures": [
+    {
+      "file": "east-out-of-four-tile-map.png",
+      "sha256": "573c7ec7dedd6296bf308a318dee7b4257efbcca318b33081a3c5b306402564b"
+    },
+    {
+      "file": "south-across-second-seam.png",
+      "sha256": "db8721fafbd8f8970ba6c0b4eb541a620d9a2edc2002d61f051c04e77442cf5f"
+    },
+    {
+      "file": "reef-blocks-surf.png",
+      "sha256": "eb54039d1cd1c454f3bd9052cb59e5639b691d9e7c421dceb060f9cbf0b7ac5d"
+    },
+    {
+      "file": "north-return.png",
+      "sha256": "38199b5fda2f264353f97e82fe3522ba986890aac782450738efbf9c74987b7d"
+    },
+    {
+      "file": "west-return-to-four-tile-map.png",
+      "sha256": "93e2bddbb076f875945cc1c7fc3951bbc5cff6710c311c5ffdcdf32649b2ad1a"
+    },
+    {
+      "file": "diagonal-real-terrain.png",
+      "sha256": "d67af7a30d0f417fb41a445524e0bc685ae3b8b16f161e18063dc753f85a3d9b"
+    }
+  ]
+}

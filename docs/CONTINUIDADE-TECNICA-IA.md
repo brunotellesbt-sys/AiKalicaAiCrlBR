@@ -38,7 +38,7 @@ Ele fixa o pedido principal: corrigir a malha física gerada conforme o atlas,
 sem mexer na arte e sem usar apenas GPS para esconder o defeito. Suas
 contagens e resultados de execução são históricos; não substituem provas
 atuais. A referência histórica a rascunho não revoga o pedido posterior de
-PR normal. Último checkpoint remoto conferido antes deste lote: `b7bb3f225d42f5fa99bb51cd05da7d17f24c37e0`.
+PR normal. Último checkpoint remoto conferido antes deste lote: `aa33a98c04fd6d13ddccfe49df8c9dd9b3925142`.
 
 ## Pedidos do usuário e resultado
 
@@ -138,7 +138,7 @@ com os quatro valores recebidos:
 | validate_atlas_surf_layout_plan.py | Auditor independente do raster, eixos, distâncias, IDs e emendas | Prova do plano, sem certificação source/ROM |
 | atlas_surf_layer.py | Materializa chunks com doadores de banco explícitos e IDs preservados | Não aposenta a rede antiga nem move os eventos |
 | atlas_surf_runtime.py | Índice direto de mapa, bins espaciais de 32 tiles, GPS e hook visual | C dos chunks com stride 8; desempenho na rede final pendente |
-| atlas_surf_physical.py | Clipping de cópia, halo físico por dono global, prioridade de costa nativa e guarda de conexão | Cinco testes C aprovados; integração/build/prova nativa pendentes |
+| atlas_surf_physical.py | Clipping de cópia, halo físico por dono global, prioridade de costa nativa e guarda de conexão | C e travessias nativas de três mapas passaram; repetir na rede final |
 | prepare_atlas_surf_diagnostic.py | Prepara três mapas privados em L, um com quatro tiles de largura | Fixture sintética, sem substituir a geografia real ou release |
 | atlas_surf_ecology.py | Aliases explícitos dos pools/habitats e header nativo | Auditoria de gatilhos, áreas Dex e Gen4/Gen9/TESTE final falta |
 | atlas_surface_batteries.py | Código da migração 2 e validação dos destinos | Não é o harness histórico de baterias; Save/Continue nativo falta |
@@ -148,6 +148,7 @@ com os quatro valores recebidos:
 | atlas_surf_pois.py | 18 portais recíprocos, cinco Dive e sete portos com terreno real | Inventário, sem criação dos novos acessos |
 | inventory_atlas_surf_parent.py | Relatório reproduzível vinculado a 1.699 inputs e ao contrato completo 171 | Não prova conectividade global nem ROM |
 | atlas_surf_native_scenery.py | 17 células e gráfico privado de Birth, corpo bloqueado | Prova do corpo passou no diagnóstico v2; repetir na candidata final |
+| validate_atlas_surf_physical_native.py / verify_atlas_surf_physical_native.py | Quatro travessias, timing em frames, direção, diagonal, bloqueio e pixels | Diagnóstico de três mapas, sem certificar escala436 ou release |
 | validate_atlas_surf_birth_native.py | Viagem por controles, avatar, bloqueio, Surf e Harbor | Repetir sobre o artefato final |
 
 As APIs reconstruídas diferem das antigas descritas no JSON. Não supor que
@@ -239,7 +240,7 @@ nem contornar TLS/proxy. Esse problema não explica o 404 do ambiente antigo.
 
 ## Provas atuais e limites
 
-60 testes de plano, geradores, materialização, runtime, halo físico, ecologia,
+64 testes de plano, geradores, materialização, runtime, halo físico, ecologia,
 migração C e inventário nativo passaram no lote atual. Runtime: todos os 65.536 IDs e centenas de milhares
 de coordenadas; divisão negativa usa floor verdadeiro. Migração C: versões
 0/1/2, Treasure +8 uma vez, jogador, cinco referências, warp por ID, view e
@@ -297,7 +298,7 @@ Comando de reprodução somente de leitura:
 .local/ci-python/bin/python tools/hoenn/inventory_atlas_surf_parent.py --source .local/generated-area-review-src --output .local/atlas-parent-inventory.json
 ```
 
-## Halo físico: código em checkpoint antes de compilar
+## Halo físico: diagnóstico compilado e validado
 
 `atlas_surf_physical.stage(layer, plan)` deve rodar após o runtime indexado.
 Limita fonte/destino antes de formar ponteiros em FillConnection, preenche o
@@ -313,20 +314,22 @@ Cinco testes C executados:500 retângulos solicitados com origens negativas e
 limites independentes, mapa estreito, célula diagonal, costa nativa, terreno
 runtime, caminho sem conexão, alvo errado, header obsoleto,64 combinações de
 altura/colisão e tradução desconhecida. São shims do motor no host; não provam
-câmera, VRAM, desempenho ou viagens na ROM. Total60atlas+1continuidade.
+câmera, VRAM, desempenho ou viagens na ROM. A prova nativa abaixo cobre o
+diagnóstico. Mais quatro testes rejeitam evidências alteradas ou promoção a
+release. Total atual:64atlas+1continuidade.
 
-Próxima execução autorizada, sem sobrescrever diagnósticos antigos:
+Comando reproduzível do preparador, exigindo um destino novo:
 
 ```sh
-.local/ci-python/bin/python tools/hoenn/prepare_atlas_surf_diagnostic.py --source .local/atlas-physical-smoke-src --clone-from .local/review171-build-src
+.local/ci-python/bin/python tools/hoenn/prepare_atlas_surf_diagnostic.py --source .local/novo-diagnostico-privado --clone-from .local/review171-build-src
 ```
 
 O preparador verifica o parent171 antes/depois, cria cópia sem hardlinks e
 recusa qualquer destino já existente, inclusive parcial. A fixture tem três
 mapas em L, um com largura4, derivada de cinco pixels sintéticos. Não é a
 classificação real do atlas. A migração limitada incluída é fixture sintética,
-**nunca mapeamento de saves para release**. Build, hashes, provas nativas e
-vínculos precisam ser registrados após executar; não há resultado pressuposto.
+**nunca mapeamento de saves para release**. O build diagnóstico e as provas
+abaixo já terminaram; não extrapolar seus resultados para a rede completa.
 
 ## Próximo trabalho técnico, em ordem
 
@@ -344,10 +347,10 @@ vínculos precisam ser registrados após executar; não há resultado pressupost
 4. Integrar 157 conjuntos autenticados e 14 ilhotas de trainers, POIs,
    eventos, 18 cavernas e 33 adaptadores. Preservar os 273 IDs históricos.
    Route114: conferir (0,17)/(0,18), 0x1170→0x15F9, sem tocar a margem y16.
-5. Integrar e provar o novo clipping de FillConnection e halo **físico** por
-   dono global. O código e cinco testes C já existem; ainda não há build ARM
-   nem prova de travessia nativa desse módulo. Executar o preparador diagnóstico
-   em uma cópia nova e preservada antes de aplicá-lo à candidata final.
+5. Integrar o clipping de FillConnection e halo **físico** à candidata final.
+   O módulo já compilou em ARM e passou quatro travessias nativas de três
+   mapas, incluindo largura4 e terreno diagonal. Repetir com toda a rede,
+   bancos/costas, cenários e carga de mapas reais; escala436 ainda não provada.
 6. Integrar cinco Dive conforme âncoras/fórmulas do JSON e migração segura de
    todas as posições/warps/saves, incluindo atualizações de templates.
 7. Auditoria independente da SCC global e ecologia por gatilho: 383/190
@@ -382,5 +385,55 @@ real171 usa `gTileset_General_Frlg` + `gTileset_IslandHarbor_Frlg` em Sea00;
 a guarda agora confere esse par e o comportamento Surf compilado.
 Nova cópia `.local/atlas-physical-smoke-v2-src` preparada com28inputs e3mapas.
 Marker SHA256 `1d38cf4d7ce85cb4bebb122fb6338efeb797a16c18d56758f712015d3bc84f17`.
-Parent171 íntegro antes/depois. Build/prova nativa ainda pendentes neste
-checkpoint de preparação. Nenhum destino anterior foi apagado ou reutilizado.
+Parent171 íntegro antes/depois. Esse foi o checkpoint anterior ao build;
+a execução posterior foi concluída, como registrado abaixo. Nenhum destino anterior foi apagado ou reutilizado.
+
+
+Resultado atual do diagnóstico físico, congelado antes das provas:
+
+```text
+Fonte: .local/atlas-physical-smoke-v2-src (28 inputs preparados)
+ROM: 3e4cd81123c776de390c13f6f8c628ed275106ff7fe3c6e07ded4c05e53b081b
+ELF: 7429b6ad085531ae5690a1d1496f1216dcc2ac6bfecc74d253cde2f67036c8ad
+Marker: 1d38cf4d7ce85cb4bebb122fb6338efeb797a16c18d56758f712015d3bc84f17
+ROM usada: 32.652.272 bytes (97,31%); EWRAM245436; IWRAM28660.
+```
+
+Prova exportada em `docs/design/atlas-surf-layout/diagnostic-physical-native`:
+seis capturas e relatório. A→B, B→C, C→B e B→A passaram por controles; A tem
+largura4. Coordenadas coincidiram com o novo mapa3–5frames após publicar o ID;
+total24–33frames por caso, incluindo20frames consecutivos de estado estável.
+Nenhuma consulta nativa roda no intervalo cronometrado: leitura direta e
+controles somente, com timestamps no relatório. O teste rejeita atraso acima
+de30frames entre ID e coordenadas, sem aumentar timeout para aceitar pausas.
+Isso mede três mapas e **não certifica desempenho da rede final com436**.
+
+Oito tiles para norte mantiveram X e reduziram Y em8; GPS afim reduziu apenas
+um pixel emY. Recifes bloquearam Surf. Água/collision/altura do vizinho de
+largura4 apareceram antes da entrada. O terceiro mapa diagonal teve terreno
+físico correto, quatro quadrantes BG e64pixels nativos conferidos; sua célula
+não ganhou conexão de movimento. Avatar Surf teve pixels de cabeça/corpo/pés
+comparados com a captura, além de flags/altura.
+
+O verificador independente confere frames, ausência de queries durante o
+timing, direção, capturas, pixels BG/OBJ e vínculos com os28inputs, marker,
+ROM e ELF atuais. Os quatro testes de contrato rejeitam adulteração de pixels,
+hashes, direção, pausa longa, query no intervalo ou promoção desse diagnóstico
+para release. O primeiro export sem timestamps foi preservado localmente;
+a prova versionada foi repetida com os vínculos completos.
+
+Birth foi repetida na MESMA ROM nova e passou, com seis capturas adicionais
+em `diagnostic-physical-birth`; relatório anterior v2 permanece preservado.
+Ponta/corpo de madeira, pedestre/Surf bloqueados, saída/retorno pelo lado,
+Harbor nos dois sentidos e pixels do avatar. Isso continua sendo prova local
+de fixture, sem Save/Continue, campanha completa ou cinco edições finais.
+
+Reverificação somente de leitura:
+
+```sh
+.local/ci-python/bin/python tools/hoenn/verify_atlas_surf_physical_native.py --report docs/design/atlas-surf-layout/diagnostic-physical-native/physical-native.json --source .local/atlas-physical-smoke-v2-src
+```
+
+O ambiente reiniciou durante a exportação e voltou disponível; os arquivos
+foram conferidos novamente. O ambiente antigo perdido não foi recuperado.
+Última medição:1,7GiB e97.983inodes livres; medir antes da próxima preparação.
