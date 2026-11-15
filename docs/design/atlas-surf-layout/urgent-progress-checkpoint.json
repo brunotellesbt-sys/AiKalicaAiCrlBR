@@ -1,0 +1,88 @@
+{
+  "schema": "atlas-urgent-progress-checkpoint/v1",
+  "user_latest_request": "Abre o pr, meu limite vai acabar",
+  "previous_remote_commit": "f5e9ef0a4adf788a44cc29bfb40bc1afaaf962a6",
+  "PR": 111,
+  "normal_not_draft": true,
+  "ROMs_unchanged": true,
+  "Birth_current_candidate": {
+    "passed": true,
+    "ROM_sha256": "f2cac1ecb79e23c3b6a6a43e07568b7c5b03579dc265ba99d33bc3bad7940c0e",
+    "report": "docs/design/atlas-surf-layout/current-ROM-birth-native/birth-native.json",
+    "surf_departure_and_return": true,
+    "dock_body_blocked": true,
+    "harbor_roundtrip": true,
+    "avatar_pixels_checked": true,
+    "wood_tip_capture_reviewed": true,
+    "full_release_validated": false
+  },
+  "pending_source_diagnostics": {
+    "generated_water_SCCs": 17,
+    "main_SCC": 823,
+    "main_generated_water_cells": 73997,
+    "caves_in_main": 14,
+    "ports_in_main": 6,
+    "ThreeIsland": "Native port48x20: boarding(14,17) component0/east; adapter enters component1/west. No existing water connection around intact terminal; repair not implemented.",
+    "other_generated_SCC_water_cells": {
+      "Cinnabar-737": 2746,
+      "west-Hoenn-736": 2498,
+      "Pacifidlog-west-731": 1668,
+      "Pacifidlog-emblem-730": 132,
+      "south-729": 858,
+      "Route128-stub-732": 108,
+      "Route128-stub-733": 102,
+      "Titans-740": 1361,
+      "Artisan-825": 1181,
+      "Mare-741": 350,
+      "Alvorada-742": 273
+    },
+    "historical_source_diagnostic_not_ROM_travel_proof": true
+  },
+  "WIP": {
+    "files": [
+      {
+        "file": "docs/design/atlas-surf-layout/WIP-occluded-routes/atlas_surf_occluded_routes.py.txt",
+        "sha256": "5501a246321454525c15feba2f056d355dd9929505c3ef7a4763eac9ab3b04be"
+      },
+      {
+        "file": "docs/design/atlas-surf-layout/WIP-occluded-routes/test_atlas_surf_occluded_routes.py.txt",
+        "sha256": "7f28dc354e6584faad6fc8782b0741bedba4e85b01f13eb36f63286e46e51179"
+      }
+    ],
+    "integrated": false,
+    "unit_test_status": "ERROR before cases: ValueError Recorded branch endpoints changed Ocaso",
+    "preserved_as_text_to_avoid_loading_unfinished_test": true,
+    "seven_proposed_occluded_pixels": [
+      [
+        109,
+        49
+      ],
+      [
+        210,
+        65
+      ],
+      [
+        210,
+        86
+      ],
+      [
+        141,
+        110
+      ],
+      [
+        200,
+        110
+      ],
+      [
+        119,
+        104
+      ],
+      [
+        119,
+        105
+      ]
+    ],
+    "next": "Correct pinned Ocaso endpoint interpretation against immutable marker; run tests before integrating into compose"
+  },
+  "release_still_pending": true
+}

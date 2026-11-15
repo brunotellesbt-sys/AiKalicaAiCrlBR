@@ -1,3 +1,11 @@
+# TESTE — candidata172
+
+Esta ROM foi recompilada com as modificações atuais e mantém a supressão de
+encounters e abordagens automáticas. A bateria incluída foi salva pelo menu na
+ROM nova e passou novamente pelo Continue. A validação global da geografia
+continua pendente; consulte [o manifesto](../CANDIDATA-172.json) e a
+[continuidade técnica](../../docs/CONTINUIDADE-TECNICA-IA.md).
+
 # ROM de teste da campanha e das rotas
 
 Esta ROM inclui a [camada 171](../../docs/generated-area-review.md): canal vertical ao sul de One Island ligado ao mar horizontal, limites e rochas dos portos, câmeras e caverna Horizonte corrigidos. Mantém a mesma campanha das normais e conserva encontros aleatórios e abordagens automáticas desativados. [Registro em TXT](../../errors/2026-11-07-generated-area-review.txt).

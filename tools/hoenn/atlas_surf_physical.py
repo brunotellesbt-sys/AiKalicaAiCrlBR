@@ -81,16 +81,76 @@ static bool8 JourneyAtlasNativeFace(const struct MapHeader *current,
     return found;
 }
 
+// Match GetMapConnectionAtPos: the first actual connection owns this face.
+// This also restores native apron cells after a later Atlas perimeter copy.
+static bool8 JourneyAtlasFirstConnectionFace(const struct MapHeader *current,
+    s32 x, s32 y, u16 *result)
+{
+    s32 i, nx, ny, xx, yy;
+    const struct MapHeader *next;
+    const struct MapConnection *connection;
+    if (current->connections == NULL) return FALSE;
+    for (i = 0; i < current->connections->count; i++)
+    {
+        connection = &current->connections->connections[i];
+        if (!((connection->direction == CONNECTION_WEST && x < 0)
+            || (connection->direction == CONNECTION_EAST && x >= current->mapLayout->width)
+            || (connection->direction == CONNECTION_NORTH && y < 0)
+            || (connection->direction == CONNECTION_SOUTH && y >= current->mapLayout->height)))
+            continue;
+        if (!JourneyMarineConnectionOrigin(current->mapLayout, connection, &next, &nx, &ny))
+            continue;
+        xx = x - nx; yy = y - ny;
+        if (xx < 0 || yy < 0 || xx >= next->mapLayout->width || yy >= next->mapLayout->height)
+            continue;
+        if (JourneyAtlasHeaderChunk(next) == NULL)
+        {
+            // Native-to-native copies retain the original engine's full
+            // words. Do not replace existing city scenery with undefined
+            // cells merely because an Atlas neighbor was added elsewhere.
+            *result = next->mapLayout->map[yy * next->mapLayout->width + xx];
+            return TRUE;
+        }
+        *result = MAPGRID_UNDEFINED;
+        JourneyAtlasPhysicalWord(next->mapLayout,
+            next->mapLayout->map[yy * next->mapLayout->width + xx], result);
+        return TRUE;
+    }
+    return FALSE;
+}
+
 static void JourneyAtlasFillPhysicalView(const struct MapHeader *current)
 {
     const struct JourneyAtlasChunk *chunk = JourneyAtlasHeaderChunk(current);
     const struct JourneyAtlasChunk *owner;
     const struct MapHeader *next;
     const struct MapLayout *layout;
-    s32 x, y, xx, yy, gx, gy;
+    s32 x, y, xx, yy, gx, gy, i;
     u16 value;
     if (chunk == NULL)
+    {
+        // Unrelated native maps retain their original implementation. Only
+        // native hosts of a new Atlas connection need apron precedence repair.
+        if (current->connections == NULL) return;
+        for (i = 0; i < current->connections->count; i++)
+        {
+            const struct MapConnection *c = &current->connections->connections[i];
+            if (c->direction < CONNECTION_SOUTH || c->direction > CONNECTION_EAST) continue;
+            next = Overworld_GetMapHeaderByGroupAndId(c->mapGroup, c->mapNum);
+            if (JourneyAtlasHeaderChunk(next) != NULL) break;
+        }
+        if (i == current->connections->count) return;
+        for (y = 0; y < gBackupMapLayout.height; y++)
+            for (x = 0; x < gBackupMapLayout.width; x++)
+            {
+                xx = x - MAP_OFFSET; yy = y - MAP_OFFSET;
+                if (xx >= 0 && yy >= 0 && xx < current->mapLayout->width && yy < current->mapLayout->height)
+                    continue;
+                if (JourneyAtlasFirstConnectionFace(current, xx, yy, &value))
+                    gBackupMapLayout.map[y * gBackupMapLayout.width + x] = value;
+            }
         return;
+    }
     for (y = 0; y < gBackupMapLayout.height; y++)
         for (x = 0; x < gBackupMapLayout.width; x++)
         {
@@ -208,6 +268,8 @@ def stage(layer, plan):
                           '            sMapConnectionFlags = sDummyConnectionFlags;\n'
                           '        InitBackupMapLayoutConnections(mapHeader);\n'
                           '        JourneyAtlasFillPhysicalView(mapHeader);')
+    field = _replace_once(field,'    LoadSavedMapView();',
+                          '    LoadSavedMapView();\n    JourneyAtlasFillPhysicalView(&gMapHeader);')
     # ViewCompatible returns only the metatile. Physical cells must retain
     # all original collision/elevation bits, including transitional height0.
     word = r'''
@@ -249,4 +311,6 @@ static bool8 JourneyAtlasPhysicalWord(const struct MapLayout *from, u16 word, u1
                 current_map_runtime_cells_preserved=True, native_face_priority=True,
                 unknown_bank_translation_fails_closed=True, movement_requires_direct_connection=True,
                 historical_non_atlas_copies_preserved=True, per_cell_gps_table=False,
+                native_connected_halo_uses_first_actual_connection=True,
+                saved_view_halo_refreshed_after_restore=True,
                 source_audit_finalized=False, native_validated=False, final_release_validated=False)

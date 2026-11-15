@@ -1,5 +1,13 @@
 # AiKalicaAiCrlBR
 
+**Próxima janela de IA/Codex:** comece pelo [guia técnico Aqui](Aqui/README.md)
+e pelo [registro de erros e logs](Aqui/ERROS-PARA-PROXIMA-IA.md).
+O guia também acompanha o ZIP; a candidata172 ainda tem validações pendentes.
+
+As [cinco ROMs desta branch](roms/) foram recompiladas na candidata172; boot e
+Continue/save da TESTE passaram. [Validação global e pendências](docs/CONTINUIDADE-TECNICA-IA.md)
+ainda estão em andamento.
+
 Pokémon Journey reúne Kanto, Hoenn e Sevii, com duas campanhas, 16 insígnias, rotas marítimas contínuas e uma missão Galactic final. O jogo está em inglês; a documentação está em português.
 
 - [Quatro edições GBA: Gen 1–4 / Gen 1–9, Normal / Hard](mods/hoenn/versions/START-HERE.md)

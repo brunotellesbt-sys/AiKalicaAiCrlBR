@@ -1,0 +1,88 @@
+CI após o checkpoint de ROMs172 — histórico e publicação final
+15/11/2026 UTC
+
+REPRODUÇÃO RECEBIDA
+Workflow Validate Surf routes do PR111, commit3ae4650.
+1074 testes em32,571s:12FAIL,13ERROR,34skipped.
+KeyError proofs/previous_port_validation/previous_sootopolis_validation e flags
+históricas; graph221 vs layout202; parent203c... vsf2cac...;
+Unvalidated release nos testes que exigem aprovação completa da entrega.
+
+CAUSA CONFIRMADA
+O checkpoint foi exportado como candidata172 validated=false. Seu manifesto
+novo descartou as referências históricas da171 e a lista explícita proofs[].
+Leitores antigos não conheciam o novo escopo e tentaram ler campos/provas de
+outra camada como se fossem desta ROM. A arte e os gráficos221/202 não mudaram
+entre a171 e este commit: o teste escolhia o layout202 antigo por não percorrer
+a ponte da candidata até a cadeia que selecionava surf-review/layout221.
+O SHA203c identifica a prova histórica; nunca deve ser substituído pelo novo
+f2cac. Unvalidated release é um bloqueio correto, separado desses defeitos.
+
+CORREÇÃO
+O manifesto da candidata mantém proofs=[], candidate=true, validated=false,
+final_release_validated=false. previous_port_validation aponta explicitamente
+para mods/hoenn/atlas-surf-layout-validation/baseline/versions.json:
+eca26adfcb0b15f9da78aadec1b8738f66288fcc58d4d727ee2ea2a6274e29ec.
+Somente referências historical_validation/previous_validation são herdadas;
+nenhum passed/flag/prova antiga vira certificado da172.
+Resolvedor confere caminho dentro do repositório, hash, false literal de
+reteste, ancestral aprovado e prefixo estrito de camadas. Leitores de portos
+percorrem172→171→histórico. PWT/mecânicas continua lendo o parent/ROM do PR79,
+com hashes do arquivo comprimido e bytes reconstruídos verificados.
+Casos históricos de Fuchsia/atlas foram nomeados explicitamente como tal e
+resolvem o ancestral; não exigem mudar o hash antigo nem redesenhar a arte.
+O gate verify_versions(require_seal=True) permanece intacto e deve rejeitar172.
+A CI mostra checks de checkpoint, alpha histórica e gate final em passos
+separados; os passos explicativos rodam mesmo após erro nos testes. Browser e
+Pages continuam bloqueados se qualquer teste/gate falhar.
+
+PROVAS E LIMITES
+Onze testes novos do resolvedor passaram (incluem fraude de aprovação,
+reteste falso, troca de hashes, path/symlink externo e baseline indevida).
+Cadeia de21manifests reais conferida até a148, sem alterar candidata.
+Três testes históricos de atlas passaram com leitura readonly dos blobs Git.
+Fuchsia exige blobs históricos não materializados no sparse checkout local;
+a validação completa será repetida pela CI com checkout integral.
+O checkpoint de ROMs já passou5cold-boots e Continue→Save→Continue daTESTE;
+isso não certifica viagens globais. Fonte permanece com17componentes,
+14/18cavernas e6/7portos no diagnóstico da componente principal. Validação
+nativa integral, ecologia/DEX/visuais e release final continuam pendentes.
+Não enfraquecer contratos nem marcar validated=true para deixar Actions verde.
+
+OPERACIONAL
+Workspace atual é sparse checkout. Arquivo rastreado ausente não é perda de
+arquivo; consultar Git de forma dirigida. git ls-tree -l em clone parcial
+acionou fetch de promisor blobs e falhou por disco; o comando terminou e o
+espaço voltou a429MiB sem apagar dados. Não usar varredura de tamanhos em Git
+parcial nem atribuir isso à falha404 antiga. ROMs congeladas não foram editadas.
+
+Tentativa local de descoberta global:1011tests,8FAIL,381ERROR,27skipped;
+cloneparcial semblobs históricos; log.local/CI-repro-hoenn.log. NãoéPASS.
+Nove testes do verificador de checkpoint passaram; a CI integral segue pendente.
+
+Classificação dos381erros locais:380FileNotFoundError sobmods/ (237paths) e
+1gateExtraGyms legítimo. Dos8FAIL,7são Unvalidatedrelease e1não encontra
+shore-animation por sparse. Não houve KeyError nem rejeição de hash/prefixo
+no resolvedor. Relatório enxuto:docs/design/atlas-surf-layout/ci-history-repair.json.
+
+
+Resultado remoto confirmado — reparo dos metadados
+Actions43737388074/job132882888189, commit8d1164f296d76294a570c1cff2fcd06b452bda60:
+12/12testes sea_routes PASS. Hoenn executou1094testes em30,306s:
+8FAIL,1ERROR,34skipped. ZEROKeyError. Os6casos históricos de Fuchsia/atlas
+passaram no checkout integral. Os12erros de integração anteriores desapareceram.
+A integridade da candidata (cincoROMs/perfis/TESTE/save/boots/freeze/tabelas/ZIP)
+e a alpha histórica passaram em passos próprios. O job global continua FAIL:
+7casos rejeitam Unvalidatedrelease; Sootopolis exige manifest.validated=true;
+ExtraGyms.setUpClass é o únicoERROR e também rejeita Unvalidatedrelease.
+São9exigências de aprovação final ainda não satisfeitas. Não torná-las verdes
+apenas editandoflags, trocandoSHA, ignorandotestes ou pulandoo gate. Browser e
+Pages ficaram bloqueados. Nenhum defeito funcional novo da ROM foi demonstrado
+por essas9recusas; a rede física172 já tinha suas pendências reais conhecidas.
+
+Último subpedido concluído: reparar os leitores/metadados históricos do log
+recebido e verificar o resultado na CI integral. Último pedido incompleto:
+concluir e provar geografia, cenas, saves/ecologia/edições para release172.
+Os5binários e a bateria preservam os hashes do checkpoint3ae4650; este lote
+finaliza documentação e ZIP e registra a evidência remota acima. A próximaIA
+deve seguir o conserto da rede e a validação nativa, não remover os gates.

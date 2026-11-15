@@ -1,6 +1,6 @@
 {
-  "parent_rom_sha256": "52156af727381fb5b47dacf83f8f57696e05dae05c4971368310b98515eba935",
-  "build_rules_offset": 9165148,
+  "parent_rom_sha256": "f2cac1ecb79e23c3b6a6a43e07568b7c5b03579dc265ba99d33bc3bad7940c0e",
+  "build_rules_offset": 9179948,
   "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
   "parent_rules_hex": "01040100",
   "variants": [
@@ -11,7 +11,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "2bb21aa0e06db47615e8c8f551fa1f5939ceb48aff3ca54c5e7cc438b190ece0",
+      "sha256": "a24b7304d4dda4a7d1abd60849161409468a4a29d00528a9549643333e7cb40d",
       "patched_byte_offsets": [
         160,
         162,
@@ -24,9 +24,9 @@
         170,
         171,
         189,
-        9165148,
-        9165149,
-        9165150
+        9179948,
+        9179949,
+        9179950
       ],
       "requires_new_save": true
     },
@@ -37,7 +37,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "65fbaff846a4502c1c564d3f134e110fc84c3d1ef960c3c2e0325339df3490d2",
+      "sha256": "a2103c4bebe2f8fecc12d863b16f7e0971fb35040b6cf15bf2f0a95f5275146c",
       "patched_byte_offsets": [
         160,
         162,
@@ -50,8 +50,8 @@
         170,
         171,
         189,
-        9165148,
-        9165149
+        9179948,
+        9179949
       ],
       "requires_new_save": true
     },
@@ -62,7 +62,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "a2c7c39627694864812cb6a2fda77526e3171b824c172fb2e2162c0507cf790c",
+      "sha256": "47a3a75c36b50bcd96584bd7c7ced7f121f68b8e5b14e93338f503c17b7f951f",
       "patched_byte_offsets": [
         160,
         162,
@@ -75,7 +75,7 @@
         170,
         171,
         189,
-        9165150
+        9179950
       ],
       "requires_new_save": true
     },
@@ -86,7 +86,7 @@
       "important_opponents_only": true,
       "evs": 510,
       "bytes": 33554432,
-      "sha256": "fc17ef2d233670dd240f9206435eb0374c406dc0bcd07feacec705d0de69d015",
+      "sha256": "14ebe89fc88f3d4d55cc8a48f7ed1edf36bf997a26d397a8c653e5d6320bf36d",
       "patched_byte_offsets": [
         160,
         162,
@@ -104,7 +104,7 @@
     }
   ],
   "all_other_bytes_identical": true,
-  "validated": true,
+  "validated": false,
   "integration_layers": [
     "hoenn-crossing",
     "worldsea",
@@ -276,84 +276,51 @@
     "game-continuity-review",
     "sevii-route-boundaries",
     "coast-scenery-review",
-    "generated-area-review"
+    "generated-area-review",
+    "atlas-surf-layout"
   ],
-  "validation_scope": "generated-area-review",
-  "full_campaign_playthrough": false,
-  "proofs": [
-    {
-      "file": "evidence/generated-area-review/Pokemon-Journey-Gen1-4-Hard/cold-boot/cold-boot.json",
-      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "cold-boot",
-      "sha256": "94b89ee3ac7903157a993e8f17a5e7ab13d7eec0e45206be7b606712ee27bc16"
+  "validation_scope": "atlas-surf-layout-candidate",
+  "candidate": true,
+  "final_release_validated": false,
+  "source_marker_sha256": "dede6825a87fd08742f369478f2004a70b9e7d2b8f1a6c0aa44ad43d559328f8",
+  "pending_obligations": [
+    "geographic/native SCC review of partial chart pixels and local coast registrations",
+    "native coast GPS integration; historical grids disagree at32/33 interfaces",
+    "global source SCC including fixed caves and transformed Dive",
+    "safe version2 migration of every retired save position and warp reference",
+    "all remaining C/script references to retired map IDs",
+    "reachable ecology/DEX replacement and real edition caps",
+    "whole-map rendering, native controls, batteries and five edition proofs"
+  ],
+  "native_cold_boot": {
+    "Gen1-4-Normal": {
+      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/Gen1-4-Normal/cold-boot.json",
+      "sha256": "2dd979a0bc0d2dd7c37f11f944fe3378824ebd5a88745494c9902587eb27df07"
     },
-    {
-      "file": "evidence/generated-area-review/Pokemon-Journey-Gen1-4-Hard/review-mode/review-mode.json",
-      "target": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "kind": "review-mode",
-      "sha256": "8ba0ed4925406998921239a8af6d1bcd9cb0e7da6377aeeea066abe976220490"
+    "Gen1-4-Hard": {
+      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/Gen1-4-Hard/cold-boot.json",
+      "sha256": "ed2b4ada9431a967347894dce476eefd2c7c148acfb32ff51bac004224a0e190"
     },
-    {
-      "file": "evidence/generated-area-review/Pokemon-Journey-Gen1-4-Normal/cold-boot/cold-boot.json",
-      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "cold-boot",
-      "sha256": "244c7ff77ec19fbf7a272aa74c13c18465a8f98c6b9618ace6eb6d312d46847b"
+    "Gen1-9-Normal": {
+      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/Gen1-9-Normal/cold-boot.json",
+      "sha256": "c09585dff4e0134c0ced199880699922f581a5442e3dc00b2ecc80d15de3a0f7"
     },
-    {
-      "file": "evidence/generated-area-review/Pokemon-Journey-Gen1-4-Normal/review-mode/review-mode.json",
-      "target": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "kind": "review-mode",
-      "sha256": "758c890e681e5c3408a72f3afa7ec900d1ece6eda852e6528a73fa2cdec27280"
+    "Gen1-9-Hard": {
+      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/Gen1-9-Hard/cold-boot.json",
+      "sha256": "3473ed0db718053c0c2fe7a8224a66faeab23586a3022c9a59e0b4c259767647"
     },
-    {
-      "file": "evidence/generated-area-review/Pokemon-Journey-Gen1-9-Hard/cold-boot/cold-boot.json",
-      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "cold-boot",
-      "sha256": "5b73bf017c9d6cd7b369d8517930716d9935fc55441d600ad262e7d06b10c87d"
-    },
-    {
-      "file": "evidence/generated-area-review/Pokemon-Journey-Gen1-9-Hard/review-mode/review-mode.json",
-      "target": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "kind": "review-mode",
-      "sha256": "f60f3e39b27c2387ad5a07ebd6ec6b1bf70b7c5d8c3f14fc3d1d7f0b150b1144"
-    },
-    {
-      "file": "evidence/generated-area-review/Pokemon-Journey-Gen1-9-Normal/cold-boot/cold-boot.json",
-      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "cold-boot",
-      "sha256": "09662ec451b7d16a87f9e27c59ac98a1a5b03f400f09a60d1cd8ed0afbbd95be"
-    },
-    {
-      "file": "evidence/generated-area-review/Pokemon-Journey-Gen1-9-Normal/review-mode/review-mode.json",
-      "target": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "kind": "review-mode",
-      "sha256": "77466c77469b211ac16839daab02c1a10979f2df8f2bd222e03d117bc008d3f3"
-    },
-    {
-      "file": "evidence/generated-area-review/common/generated-area-review-native/generated-area-review-native.json",
-      "target": "common",
-      "kind": "generated-area-review-native",
-      "sha256": "4f50659b5c93eabcfebca8aee29e2e424efecda39a9033b25c277c4a0a9b851c"
-    },
-    {
-      "file": "evidence/generated-area-review/common/generated-area-review-source/generated-area-review-source.json",
-      "target": "common",
-      "kind": "generated-area-review-source",
-      "sha256": "bacd23020f268a91b11c1c59c073e25696f9851f6d6d263ab0861e5dc812da1d"
-    },
-    {
-      "file": "evidence/generated-area-review/test/cold-boot/cold-boot.json",
-      "target": "test",
-      "kind": "cold-boot",
-      "sha256": "89dd7da2ce7daf587f4cbd4fd4f5885a0d9a69e5d40a2421cda7660c6c61ea95"
-    },
-    {
-      "file": "evidence/generated-area-review/test/review-mode/review-mode.json",
-      "target": "test",
-      "kind": "review-mode",
-      "sha256": "aa24d6228fbd2461e845fc79fe4b9033231dc5b51e5764372199155b291da61e"
+    "TESTE": {
+      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/TESTE-continued-after-save/cold-boot.json",
+      "sha256": "f89b018d59b4969d746694c9f890003d8091d42f48b64795e291ea4d883a84aa"
     }
-  ],
+  },
+  "parent_elf_sha256": "618b0556e031fee25a1aace83f33bb8491b7e316ebd910a34f968098b135ba73",
+  "layer_marker_sha256": "dede6825a87fd08742f369478f2004a70b9e7d2b8f1a6c0aa44ad43d559328f8",
+  "rom_used_bytes": 32920992,
+  "rom_limit_bytes": 33554432,
+  "known_generated_water_components": 17,
+  "user_requested_progress_checkpoint": true,
+  "proofs": [],
   "historical_validation": {
     "manifest": "mods/hoenn/validation-baselines/pr79/versions.json",
     "manifest_sha256": "aef1de99346ea209c848483e112f96bb342b45bc4837a0cbbed208dd0e0bf077",
@@ -372,30 +339,8 @@
     "retested_on_current_rom": false
   },
   "previous_port_validation": {
-    "manifest": "mods/hoenn/generated-area-review-validation/baseline/versions.json",
-    "manifest_sha256": "f2032e91d771ca47204d88b347210a6521801544560a737195b901c7809490f0",
-    "retested_on_current_rom": false
-  },
-  "previous_review_validation": {
-    "file": "mods/hoenn/generated-area-review-validation/baseline/review.json",
-    "sha256": "815f88c3eadd9776e2a398e6a5bb453a403741d7af051f485278d8fa9f38f9d8"
-  },
-  "previous_review_save_validation": {
-    "file": "mods/hoenn/generated-area-review-validation/baseline/test.sav",
-    "sha256": "28235301c63c6c49011a09f7e97cbcb91a926c8a85b1fa699f161b1aa91d89b1"
-  },
-  "previous_features_retested_on_current_rom": false,
-  "historical_release": {
-    "scope": "coast-scenery-review",
-    "parent_rom_sha256": "6a70d43313df75d2258c5bac46d7ab8c0aa50b6e4f1a7246d540159ee726d5fc",
-    "variants": {
-      "Pokemon-Journey-Gen1-4-Normal.gba": "f8130e29f30fa61ff6741edf3ccedddb649a7b5e12e09b2177d3e170ae0e5f60",
-      "Pokemon-Journey-Gen1-4-Hard.gba": "39e71ded6acd729958ec3053d71da9dd7018dbb38124b056c0900ccc12046541",
-      "Pokemon-Journey-Gen1-9-Normal.gba": "6fe8890b5d8a9a47d72fd2c99972e209b18424996e4719832ed856f3e8b6fffc",
-      "Pokemon-Journey-Gen1-9-Hard.gba": "cf969eccd799c8f9460033909a8fb54e492abc6158285d4fb077df0973bf264e"
-    },
-    "test_rom_sha256": "00bf3d1a221128382e70fa556076421c8ccabc2f401aceb891828c2af5ae40af",
-    "proof_count": 12,
+    "manifest": "mods/hoenn/atlas-surf-layout-validation/baseline/versions.json",
+    "manifest_sha256": "eca26adfcb0b15f9da78aadec1b8738f66288fcc58d4d727ee2ea2a6274e29ec",
     "retested_on_current_rom": false
   }
 }

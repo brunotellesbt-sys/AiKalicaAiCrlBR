@@ -1,0 +1,80 @@
+{
+  "schema": "atlas-source-integration-checkpoint/v1",
+  "parent_commit": "7ec174b8f7d0c621ec9a60d8b771619e86628889",
+  "latest_merged_checkpoint": "5dc9e1b1273515f7837c1ba7013273157e641aec",
+  "public_rom_layer": 171,
+  "final_network_prepared": false,
+  "final_rom_validated": false,
+  "reports": [
+    {
+      "file": "ecology-parent-source.json.gz",
+      "compressed_sha256": "10406bb1f6be3c3843f6e7a476294b115b7a1d06f438915b79adb75e92cbbe20",
+      "json_sha256": "cc00320234c689bb5bdf91f53c70fda11067eddf3fb485c922beacf251977f73",
+      "json_bytes": 3661527,
+      "compressed_bytes": 245310
+    },
+    {
+      "file": "parent-scenery-extraction.json.gz",
+      "compressed_sha256": "782d37d46d626fa5c668a8f68861437932631d1133da1bf46d0fc4c640d768da",
+      "json_sha256": "73bf07d96325ae14d3d17b72d664a1e4567f111474c26149fa8d9afb146758b3",
+      "json_bytes": 2002409,
+      "compressed_bytes": 207034
+    },
+    {
+      "file": "classification-investigation.json.gz",
+      "compressed_sha256": "17b5b6750e44c476afe0680e5c5992a6059215ef49f9580d6f0d00aa0141f0fa",
+      "json_sha256": "e860bcb14f1554b5afc72cb17e5caa0a76e259605bd642bdd72d1ff8681160d2",
+      "json_bytes": 173823,
+      "compressed_bytes": 63645
+    },
+    {
+      "file": "ports-staged-preview.json.gz",
+      "compressed_sha256": "2e54a2295d591a30618af30d10d5a404dbef0a7b66a2d4e4f7673767487395e2",
+      "json_sha256": "e7a0e56a12be96628555c88b1d140a9106855cc264631267337217248761229c",
+      "json_bytes": 7755,
+      "compressed_bytes": 1061
+    }
+  ],
+  "ecology": {
+    "Gen9_actual_trigger_families": 383,
+    "Gen4_actual_trigger_families": 190,
+    "retired_map_native_grass_cells": 269,
+    "grass_parent_maps": [
+      "JourneyWorldSea05",
+      "JourneyWorldSea08",
+      "JourneyWorldSea09"
+    ],
+    "source_only": true,
+    "global_scc_proven": false
+  },
+  "scenery": {
+    "extracted_stamps": 379,
+    "portal": 18,
+    "land": 140,
+    "water_decor": 196,
+    "water_actors": 25,
+    "old_boundary_components_recorded_separately": 478,
+    "placements_final": false
+  },
+  "classification": {
+    "regional_art_blue_provenance": 19,
+    "physical_native_ownership_final": false,
+    "historical_native_pixel_count_not_forced": true
+  },
+  "ports": {
+    "old_ferry_rows_staged": 7,
+    "old_script_arrivals_staged": 7,
+    "native_roundtrip_proven": false
+  },
+  "tests": {
+    "atlas": 141,
+    "technical_continuity": 1
+  },
+  "pending": [
+    "concrete authenticated native coast registrations",
+    "final whole-scene placement and collision/corridor review",
+    "classification derived from registered native witnesses",
+    "complete source/SCC/ecology/migration audit",
+    "five-edition frozen native proofs and ROM publication"
+  ]
+}

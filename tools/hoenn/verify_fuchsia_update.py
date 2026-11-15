@@ -2,22 +2,18 @@
 import hashlib
 import json
 from pathlib import Path
+from published_evidence import release_baseline,resolve_previous_release
 
 ROOT=Path(__file__).resolve().parents[2]
 
 
 def previous_release(info):
-    reference=info['previous_port_validation']
-    path=Path(reference['manifest'])
-    assert not path.is_absolute() and '..' not in path.parts
-    raw=(ROOT/path).read_bytes()
-    assert hashlib.sha256(raw).hexdigest()==reference['manifest_sha256']
-    assert reference['retested_on_current_rom'] is False
-    return json.loads(raw)
+    return resolve_previous_release(info)
 
 
 def harbor_baseline(info):
     """Resolve the release on which unchanged older features were exercised."""
+    info=release_baseline(info)
     while info.get('validation_scope') in ('generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers','dewford-coast-safety','extra-gyms','ever-grande-market','dewford-competitive-shop','surf-review','annotated-world-links','island-harbors','sevii-harbors','three-harbor-terminals','fuchsia-harbor'):
         info=previous_release(info)
     return info

@@ -30,7 +30,18 @@ def package(source,output):
  r=dict(parent_rom_sha256=hashlib.sha256(base).hexdigest(),build_rules_offset=at,
         parent_header_hex=base[0xA0:0xBE].hex(),parent_rules_hex=base[at:at+4].hex(),
         variants=rows,all_other_bytes_identical=True,validated=False)
- if (source/'.journey-generated-area-review').exists():
+ if (source/'.journey-atlas-surf-layout').exists():
+  from prepare_generated_area_review import PRIOR,LAYER
+  marker=source/'.journey-atlas-surf-layout'
+  prepared=json.loads(marker.read_bytes())
+  r['integration_layers']=PRIOR+[LAYER,'atlas-surf-layout']
+  r['validation_scope']='atlas-surf-layout-candidate'
+  r['candidate']=True
+  r['validated']=False
+  r['final_release_validated']=False
+  r['source_marker_sha256']=hashlib.sha256(marker.read_bytes()).hexdigest()
+  r['pending_obligations']=prepared['pending_obligations']
+ elif (source/'.journey-generated-area-review').exists():
   from prepare_generated_area_review import PRIOR,LAYER
   r['integration_layers']=PRIOR+[LAYER]
  elif (source/'.journey-coast-scenery-review').exists():

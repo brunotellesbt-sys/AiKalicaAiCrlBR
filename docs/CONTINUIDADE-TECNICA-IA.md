@@ -1,14 +1,19 @@
 # Continuidade técnica de Pokémon Journey
 
-Atualizado em 14/11/2026 (UTC). Este é o ponto de entrada permanente para
+> Entrada consolidada e atual para a próxima janela: [Aqui/README.md](../Aqui/README.md).
+> Estado até o checkpoint1bf71eda2d8276a377e38e84cc4baaaad070c085.
+> Atualização atual: guia e pasta Aqui sincronizados também no ZIP; integridade conferida. ROMs/save não foram alterados.
+
+Atualizado em 15/11/2026 (UTC). Este é o ponto de entrada permanente para
 outra IA ou outro ambiente. Atualize-o a cada lote verificado, antes do
 checkpoint remoto. Mantenha o pedido pendente até a entrega completa.
 
 ## Estado executivo verificável
 
-O jogo publicado continua na revisão **171 / generated-area-review**. O
-trabalho aberto é **172 / atlas-surf-layout**, em reconstrução. Não existe
-release 172 final validado. O workspace antigo não foi recuperado e não foi
+As **cinco ROMs desta branch foram atualizadas** para a candidata **172 /
+atlas-surf-layout**: quatro edições, TESTE, save e ZIP. A base anterior validada
+é **171 / generated-area-review**. A geografia global continua em correção;
+não existe release 172 final validado. O workspace antigo não foi recuperado e não foi
 apagado, resetado, substituído nem arquivado por esta tarefa.
 
 Repositório: https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR
@@ -21,9 +26,17 @@ foi integrado externamente em `9db77933fba27108b00e4d717219e5d01c165df6`.
 Esse merge preservou ferramentas e documentação, sem atualizar as ROMs.
 O pedido mais recente exige **PR normal, sem rascunho**, mesmo durante a
 continuidade; suas pendências devem estar explícitas no corpo do PR.
-PR normal aberto e confirmado: [#110](https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/pull/110),
-`draft=false`, a partir do checkpoint remoto
-`6aa7e90b8ec1db3948a38b7c3b5398dc089e7d86`.
+O PR normal [#110](https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/pull/110)
+foi integrado externamente em `5dc9e1b1273515f7837c1ba7013273157e641aec`.
+Ele incluiu diagnóstico, ferramentas e documentos, sem publicar ROM172.
+A branch foi atualizada por fast-forward, preservando o trabalho. O [PR normal #111](https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/pull/111)
+está aberto para a integração, com pendências explícitas. Push conferido:
+`3ae46505cc076d0ad9a9582f0791f1fd6f3ca860` (inclui as cinco ROMs).
+O reparo atual da consulta às provas históricas está descrito no fim deste guia.
+Os binários atuais e suas provas estão em [roms/CANDIDATA-172.json](../roms/CANDIDATA-172.json);
+boot passou nas cinco e a TESTE passou Continue → salvar pelo menu → Continue.
+O ZIP contém este guia e as provas atuais. A publicação final/Pages permanece
+pendente, sem promoção artificial dos contratos.
 
 O documento histórico completo recebido está em
 [RETOMADA_TECNICA_POKEMON_JOURNEY.json](RETOMADA_TECNICA_POKEMON_JOURNEY.json).
@@ -38,7 +51,7 @@ Ele fixa o pedido principal: corrigir a malha física gerada conforme o atlas,
 sem mexer na arte e sem usar apenas GPS para esconder o defeito. Suas
 contagens e resultados de execução são históricos; não substituem provas
 atuais. A referência histórica a rascunho não revoga o pedido posterior de
-PR normal. Último checkpoint remoto conferido antes deste lote: `aa33a98c04fd6d13ddccfe49df8c9dd9b3925142`.
+PR normal. Último checkpoint remoto conferido antes deste lote: `bd8c477d9145e44e56e687900de35f7f67220537` (integrado no merge110 acima).
 
 ## Pedidos do usuário e resultado
 
@@ -53,6 +66,12 @@ A manutenção contínua deste guia
 é um requisito permanente, não uma tarefa que termina com sua criação.
 
 ### Últimos pedidos resolvidos
+
+- “Mas eu quero que atualize as roms com as modificações feitas, já pedi.”:
+  as cinco ROMs foram recompiladas e substituídas nesta branch, com ZIP, save
+  TESTE e manifestos de candidata. O PR normal #111 recebe esses arquivos.
+  Isso conclui o checkpoint de binários solicitado, sem concluir a correção
+  global do jogo; os resultados e hashes atuais estão no fim deste guia.
 
 - “Conecte ao meu github” e seleção do repositório: conta e acesso de
   leitura/escrita confirmados para `brunotellesbt-sys/AiKalicaAiCrlBR`.
@@ -153,10 +172,11 @@ com os quatro valores recebidos:
 
 As APIs reconstruídas diferem das antigas descritas no JSON. Não supor que
 um nome de módulo significa recuperação ou equivalência de implementação.
-Os módulos de POIs, costas e adaptadores agora existem como inventários e
-um fechamento em overlay. Ainda faltam suas integrações físicas finais,
-Dive, SCC global, contrato 172, preparação/freeze/publicação e verificadores
-finais. Não tratar inventário como reposicionamento de eventos ou mapas.
+POIs/costas/adaptadores têm inventários e APIs de integração. Dive, cenário,
+SCC e auditoria ecológica agora existem, com testes C/source; a aplicação à
+rede completa ainda está pendente. Faltam registros concretos de todas as
+costas, colocação completa de cenário e candidata integral, contrato172 e
+pipeline final de publicação. Não confundir módulos existentes com release.
 
 O diagnóstico de todos os pixels azuis produz 347 chunks, 74.688 células de
 água e 15 componentes. Inclui pixels nativos e ícone; **não é plano final**.
@@ -333,7 +353,7 @@ abaixo já terminaram; não extrapolar seus resultados para a rede completa.
 
 ## Próximo trabalho técnico, em ordem
 
-1. Conferir o checkpoint mais recente no PR normal #110 e preservar cada
+1. Conferir o merge do PR normal #110 e o PR seguinte de integração; preservar cada
    novo lote antes de operações longas; os artefatos diagnósticos estão no Git.
 2. Repetir as provas em cada candidata que mudar: o guard de espécie/evento
    e o stride 8 passaram nos testes C e no build ARM diagnóstico v2.
@@ -437,3 +457,515 @@ Reverificação somente de leitura:
 O ambiente reiniciou durante a exportação e voltou disponível; os arquivos
 foram conferidos novamente. O ambiente antigo perdido não foi recuperado.
 Última medição:1,7GiB e97.983inodes livres; medir antes da próxima preparação.
+
+
+## Última instrução do usuário e checkpoint de integração
+
+O usuário observou literalmente: “Continue, só achei estranho uma coisa,
+nenhuma rom atualizada. Última semana passada.” Em seguida: “Continue os
+trabalhos”. A observação é correta: as ROMs públicas ainda são171. A ROM nova
+compilada e provada até agora é o diagnóstico de três mapas, sem a rede
+completa. Não foi entregue172 final. Prosseguir integrando o jogo; não voltar
+à configuração de editores nem encerrar o pedido principal como resolvido.
+
+Última entrega totalmente concluída: PR normal110 integrado, base171
+reproduzida, diagnóstico do halo físico e Birth com hashes/capturas preservados.
+Último pedido incompleto continua a rede de Surf conforme arte fixa, com
+acessos/save/ecologia e todas as cinco ROMs/publicação verificadas.
+
+O lote posterior ao merge110 passou141 testes atlas e1 teste de continuidade.
+Inclui código pronto para integração, ainda sem nova ROM integral:
+
+- `atlas_surf_plan.plan_reserved_geometry`: recorta retângulos ordinários ao
+  redor de reservas exclusivas de objetos completos, sem cortar cenário para
+  caber em32 tiles. Máscara de água nativa é autoritativa; terra nunca vira água
+  porque o raster passava ali. Obstrução de corredor exige evidência explícita
+  e continua sujeita à SCC/ROM. Margem gráfica de 9 tiles evita banco desconhecido antes
+  de mudar de mapa. Grupos seguem100 mapas e coordenadas assinadas válidas.
+- `atlas_surf_scenery`: extrai terreno, bancos, callbacks, sprites e eventos;
+  preserva 379 componentes candidatas (18 com portal, 140 de terreno, 196 de decoração e 25 de atores),
+  com 478 componentes de limites registradas separadamente. Isso não força os
+  números perdidos157 + 14; colocação final e exceções Dive ainda são auditadas.
+- `atlas_surf_adapters`: ligações nativas recíprocas e transições locais3→0→1
+  somente no adaptador novo, sem nivelar a água nativa. Registros concretos33
+  ainda em elaboração. Continentes nativos NÃO têm embedding uniforme de 8 tiles por pixel; a
+  escala de 8 é da malha nova. Registrar interfaces locais por arte/âncora/costa,
+  com direção e terreno autênticos; não inventar prova de antigoGPS.
+- `atlas_surf_dives`: cinco patches/75células, transformação global↔Depth,
+  GPSDepth afim e hook anterior a GetMapConnection. Preserva DoDiveWarp,
+  Depth/NPC/portais; remove somente 5 pares antigos. Treze testes em C e no source
+  passaram; ainda precisa execução na ROM final. Doador Emerald autenticado;
+  nunca copiar0x14F para FRLG como IDuniversal.
+- `atlas_surf_reachability`: CSR/SCC compacta, alturas/colisão/bancos,
+  conexões/warps reais e requisitos explícitos. Dezessete testes iniciais e
+  diagnóstico real3 mapas passaram source-only. O suporte às transformações
+  Dive novas está sendo integrado; não aceitar falsas conexões iguais antigas.
+- `validate_atlas_surf_ecology_source`: enums, predicados e pools C reais
+  reproduziram383 na Gen9 e 190 na Gen4; união403/200 não significa gatilho. Na fonte 171,
+  as 269 células de grama estão em3 mapas: Sea05 = 17 (bbox [6,38]..[12,42]),
+  Sea08 = 126 (9,31..27,42), Sea09 = 126 (9,26..27,37). A divisão em 6 trechos era
+  do plano 172 perdido. Preservar essas três fontes/donos em reservas específicas.
+  O DEX remove somente claims ordinárias aposentadas sem gatilho demonstrável
+  e exige testemunhas finais alcançáveis para substituir as efetivas.
+- `atlas_surf_classification`: proveniência gráfica de 19 pixels azuis regionais
+  foi reconstruída semGPS. Isso NÃO prova propriedade física desses 19, nem a
+  contagem histórica de 45. A classificação nativa final depende das interfaces
+  e testemunhas físicas/retorno. Não forçar número para aprovar candidata.
+- `atlas_surf_ports`: sete destinos C do Seagallop e sete warps de chegada antigos
+  passam aos tablados secos autênticos, com Treasure +8 lido uma vez. Stage em
+  memória da fonte 171 passou; cena, NPCs, terminais e outros destinos intactos.
+- `atlas_surf_overlay.OverlaySource`: audita a camada staged sem escrever a
+  fonte; qualquer input modificado exige uma visão nova. Enum C staged diferente
+  do header realmente compilado é rejeitado.
+- `atlas_surf_names`: registra labels dos novos mapas, mantendo as quatro
+  arrays da arte byte a byte. Label/posição do cursor não prova local do jogador.
+
+Relatórios completos preservados em JSON.gz determinístico, comSHA do JSON
+original e do arquivo comprimido em
+[integration-source-checkpoint.json](design/atlas-surf-layout/integration-source-checkpoint.json).
+São relatórios do source171 e extração/investigação, NÃO provas de ROM 172.
+Leitura portátil: `json.loads(gzip.decompress(Path(caminho).read_bytes()))`.
+
+Trabalho seguinte já atribuído e ainda não certificado: GPS legado em RLE
+para migração apenas, retirada dos grids aposentados da navegação, fallback
+seguro para os 273 IDs, preenchimento das reservas e registros de costa. Depois,
+preparar candidata íntegra, auditar e compilar; as cinco ROMs só mudam após as
+provas finais. Não publicar o diagnóstico como se resolvesse a rede completa.
+
+
+Diagnóstico dos cinco Dive, preparação em andamento posterior ao checkpoint111:
+`prepare_atlas_dive_diagnostic.py` criou cinco probes isolados, sem classificar
+ou publicar a rede final. A cópia privada anteriormente chamada
+`.local/atlas-physical-smoke-src` foi verificada novamente:32.250inputs e ROM/ELF
+171 exatos; não continha camada172parcial. Foi preservada por renomeação para
+`.local/atlas-dive-smoke-src`, sem apagar arquivos. O marker histórico
+`.journey-atlas-route-tracking` pertence à cadeia171 e foi autenticado; só
+markers Atlas novos impedem reutilizar uma cópia limpa.
+
+A primeira seleção do doador mostrou que Route127 não contém a pedrinha1F9,
+embora tenha o banco correto. O preparador agora lê água/pedra inteiras de
+JourneyHoennNorthSea e o DeepWater real de Route127(72,49), com os MESMOS
+bancos Emerald General/Mossdeep. Log da tentativa sem pedra foi preservado.
+São42inputs preparados, incluindo cinco transforms Dive e os sete destinos
+de balsa. Marker SHA256:
+`977de91864b104dcfa8f1f8d791075d9a618db0c20f86abf9b4172292880de4c`.
+Build ARM e prova nativa desse diagnóstico ainda pendentes neste checkpoint.
+Essa preparação não comprova geografia global, migração ou publicação172.
+
+
+## Resultado nativo dos cinco Dive no diagnóstico
+
+A preparação anterior já compilou e seus bytes ficaram congelados:
+
+```text
+Fonte: .local/atlas-dive-smoke-src;42 inputs preparados.
+ROM: dc80c3a05901ba2dcf0e963d7002ac1b884ad674eb9d4239a01e513d7355a016
+ELF: 2c55a6dd4251cd52ab6ab5843c0e90f92b22d4caeb856426cfa02304702cf13c
+Marker: 977de91864b104dcfa8f1f8d791075d9a618db0c20f86abf9b4172292880de4c
+ROM usada:32.653.064bytes(97,31%);EWRAM245432;IWRAM28660.
+```
+
+`validate_atlas_surf_dives_native.py` passou os cinco casos por controles:
+Surface→Depth, entrada real no santuário, saída e Emerge→Surface. O deslocamento
+local foi preservado nas duas direções. B não emergiu sobre recife nem célula
+sem dono. Cada caso teve fixture inicial explícita de party/progresso/posição,
+Surf e encontros; após a partida não usou setters, warps, FieldEffectStart ou
+TrySetDiveWarp como consulta. Dive e Emerge foram iniciados por A/B e diálogos
+nativos. O piso0x0364 do santuário foi aceito em altura0; avatar/pixels reais
+foram conferidos. Isso é prova local, não campanha completa ou Save/Continue.
+
+Quarenta capturas, relatório e runner exatamente executado estão em
+`docs/design/atlas-surf-layout/diagnostic-dives-native`. O verificador separado
+confere as40capturas/pixels, destinos, estados e todos42inputs/marker/ROM/ELF
+com o source atual. Índice com hashes em `diagnostic-dives-review.json` e
+`diagnostic-dives-frozen.json`.145testes atlas e1decontinuidade passaram;
+quatro testes novos rejeitam destino/modo/piso adulterados, imagem inválida,
+consulta mutável ou promoção desse diagnóstico a release.
+
+O perfil lido no ROM congelado é maxNational1025, perfectTrainerIvs=true,
+reviewMode0. Não é uma prova das outras edições, da TESTE ou dos encontros.
+A rede completa ainda não foi preparada/publicada; as ROMs oficiais continuam
+171. Conservar este resultado como diagnóstico e repetir no artefato final.
+
+
+## GPS legado compacto para migração (checkpoint posterior à prova Dive)
+
+`atlas_surf_legacy.py` separa os 273 mapas aposentados da navegação ativa.
+Mantém seu GPS exato em RLE indexado e uma máscara nativa de água para auxiliar
+migração; bit seco NÃO certifica chão seguro. Os IDs, eventos, layouts e arte
+permanecem intactos. Comparação do C real: todas as 235.650 células antigas,
+65.536 IDs, clamps e 149 grids retidos passaram. Os dados diminuem de
+1.057.272 para 784.870 bytes, economia de 272.402 bytes antes de código/padding.
+Isso ainda precisa ser integrado, compilado e validado no Continue real.
+
+Relatório íntegro comprimido e hashes em
+`docs/design/atlas-surf-layout/legacy-navigation-review.json`. A visão de fonte
+staged também preserva os quatro JSONs nativos sem identidade compilada,
+rejeita novos mapas não registrados e qualquer reordenação dos IDs antigos;
+a leitura do registro original confere o hash do parent antes da auditoria.
+
+167 testes atlas passaram neste checkpoint (incluindo os registros costeiros
+em elaboração); os arquivos concretos desses registros ainda serão congelados
+no lote seguinte. Pedido literal mais recente: “Continue os trabalhos”.
+Último lote concluído: GPS legado compacto e guarda da auditoria staged.
+Pedido principal incompleto: geometria integral, cenários, classificação,
+migração funcional, provas finais e atualização das cinco ROMs públicas.
+O PR normal111 continua aberto; ROMs públicas seguem171. Próximo: materializar
+os 33 acessos e posicionar todos os objetos completos na rede física.
+
+
+## Colocação concreta de costas e cenário completo
+
+Pedido literal atual: “Continue”. O PR normal111 permanece aberto. Foram
+registrados os 33 acessos de costa por arte e terreno reais, com boca, direção,
+offset, banco e retorno local autenticados. Nenhum dado de GPS antigo escolheu
+os encaixes. Onze testes costeiros passaram. Quatro bocas são mais estreitas
+por causa do terreno nativo, e Ever Grande mantém altura3 com transição3→0→1
+somente no adaptador novo. A análise separada do GPS antigo encontrou saltos
+em32/33 bocas: integração da projeção nativa ainda PENDENTE. Não ocultar esse
+problema nem declarar as viagens aprovadas por ter encaixes source-only.
+
+O empacotamento colocou374 componentes inteiras:18 cavernas nas âncoras
+originais e356 componentes em82 reservas decorativas. Objetos do mesmo banco
+E mesmo dono ecológico compartilham a margem de câmera9, mantendo cada core
+inteiro e IDs de NPC sem colisões. Decoração fica ao lado do corredor real,
+em oceano da arte, num raio autoral de12pixels da âncora lógica do mapa antigo;
+não usa seu GPS interpolado. Os cinco quadrados Dive antigos5x5 são substituídos
+explicitamente pelos cinco patches nativos5x3, total75células; nenhum evento
+é descartado. Zero componentes sem colocação. Sete testes de empacotamento
+passaram. Os13 conflitos residuais entre corredor e terreno seco de cavernas
+fixas estão registrados; precisam de SCC e percurso real, sem chamar terra de água.
+
+Relatórios integrais comprimidos, imagem do atlas REAL anotada e hashes em
+`docs/design/atlas-surf-layout/whole-layout-placement-review.json`.
+Limite: geometria conjunta ainda não materializada/auditada/compilada. Faltam
+classificação nativa, ajuste funcional da projeção nas costas, migração real,
+ecologia alcançável, ROMs finais e publicação. Último lote concluído:33acessos
+e inventário inteiro com colocação. Próximo: aplicar reservas/objetos/eventos
+no source staged e auditar acessos globais antes de compilar.
+
+
+## Composição integral e migração — 15/11/2026 UTC
+
+Pedido literal atual: “Continue”. Último lote concluído: composição em memória,
+sem escrita na fonte171, de533 mapas novos/1955inputs preparados,74eventos
+(56NPCs) transferidos,273IDs aposentados preservados e migração v2 completa
+implementada. Os33 retângulos nativos têm propriedade exclusiva:1.018células
+do raster gerado foram removidas, incluindo o recorte dos próprios retângulos
+dos mapas novos. Não basta deixar água bloqueada dentro de um mapa sobreposto.
+O censo encontra9pixels comnúcleo totalmente nativo e12parciais;35tocamraster,
+47incluemfranjas. Esses números são novos, NÃO o histórico45 forçado.
+
+O reempacotamento conserva374stamps em18cavernas+83reservas decorativas;cinco
+marcasDive5x5 viram cinco patches5x3 explícitos. Acrescenta7.590células de franja
+molhada copiadas de testemunhas nativas adjacentes, preservando palavra inteira,
+para não criar piscinas isoladas nos cantos dos objetos. As533 dimensões cabem
+no buffer nativo10.240células comhalo (máximoatual5.120), além de coordenadas s8.
+
+O backend mapjson agora aceita native_local_id numérico e mantém local_id como
+nome de macro; seu C++ real foi compilado e a saída171 padrão inteira continuou
+idêntica. Grupos acumulam os vários objetos no mesmo map.bin sem sobrescrever
+os anteriores. IDs, scripts, trainers e flags sobrevivem à troca de índices.
+Retirement exige cobertura exata antes de limpar os eventos antigos, desconecta
+as faces antigas já bloqueadas e o acesso falso autorizado de Route114; somente
+suas duas células pedidas mudam, mantendo a margem y16 e o restante da lagoa.
+
+A migração usa GPS legado RLE uma vez, prioridade de translação dos cores
+seguros e destinos reais para todos273IDs. A comparação C conferiu235.650células;
+5117pixels legados usam1985destinos (380pedestres/1605Surf),42.612bytes de tabela,
+mais980retângulos exatos para6781células. Resgate aproximado máximo22pixels,
+declarado para posições sem correspondência segura; não é GPS de viagem nova.
+A migração histórica1 permanece uma vez; ID de warp desconhecido usa resgate
+explícito pelo mapa, nunca interpreta coordenadas sentinela como posição.
+Continue→salvar→Continue no emulador continua PENDENTE.
+
+O auditor Dive lê as tabelas C/índices reais e o hooktri-state antes do lookup
+antigo:5sites/75pares transformados passaram sem conexões JSON falsas.38testes
+desse auditor e13testes do C gerado passaram. A suíte atlas completa atual
+passou244testes; a composição real confere cada palavra dos374stamps, os IDs
+numéricos, bancosDive e a ausência de sobreposição com os33patches nativos.
+Índice dos relatórios integrais e hashes: whole-layout-composition-review.json.
+
+Pedido principal AINDA INCOMPLETO: SCC global, bancos nas câmeras/divisas,
+projeção geográfica NATIVA (grids antigos tinham reconciliação incorreta),
+DEX/ecologia alcançável, referências C pendentes, build/capturas/baterias e
+cinco edições finais. Não tratar sWorldPoints como coordenadas locais exatas:
+o gerador antigo truncava Y>107 e fazia centros artificiais. A auditoria dos
+landmarks nativos está em andamento; não esconder conflito ajustando sóGPS.
+Os 273 mapas/arquivos antigos permanecem para migração; layouts/IDs não foram
+apagados. ROMs oficiais seguem171. PR normal111 aberto. Próximo: concluir
+auditoria física global, materializar candidata privada e medir o buildARM;
+publicação segue bloqueada até provas atuais, sem promover contratos à força.
+
+
+## Pedido explícito de atualizar as ROMs — 15/11/2026
+
+Últimos pedidos literais: “Abra o pr com tudo que implementou e modificou nas
+roms pra guardar o progresso.”; depois: “Mas eu quero que atualize as roms com
+as modificações feitas, já pedi.” A prioridade agora é compilar a candidata
+INTEGRAL atual e enviar as CINCO ROMs modificadas no PR normal111, não apenas
+código ou diagnósticos antigos. O usuário foi informado de que essa candidata
+terá testes/falhas pendentes e não será apresentada como release final aprovada.
+Essa instrução permite preservar binários em andamento na branch/PR; não
+promover NATIVE_CONTRACT_FINALIZED nem inventar validação ou publicar Pages
+como release final. Preservar a171 e seus hashes/bateria para retorno e testes.
+
+Checkpoint anterior remoto c162689b58bceb73923e18077361a7c62c26cc90 confirmado.
+Novos códigos: prioridade física da primeira conexão no halo nativo quando há
+Atlas, reaplicação depois de LoadSavedMapView mantendo core/runtime, ciano
+clipped em y111/desenhado sobre cursor sem mudar coordenadas, auditor C real
+entre bancos, obrigações marítimas e acessos curtos autenticados dos cinco
+Dive (Origens evita a terra abaixo do glifo). A expansão de água nativa de
+cavernas usa somente células Surf reais do doador e respeita os limites do atlas.
+
+A auditoria com bancos autenticados reduziu110componentes para22; os cinco
+acessos Dive corrigidos reduziram para17. Isso é FALHA global ainda aberta,
+não PASS:14/18 cavernas no diagnóstico de pertinência à componente principal. Seis
+portos têm dry/wet na componente principal; Three ainda está isolado na fonte.
+O censo sem filtro SCC confirmou383/190famílias e269células de grama novas;
+não é prova de alcançabilidade ou ROM. O projetor regional nativo e a proveniência
+de rotas ocultas por glifos seguem em desenvolvimento. A arte continua fixa.
+
+Próximo imediato: checkpoint de código atual, clonar PRIVADAMENTE a cópia171
+compilada/verificada, preparar, make -j4 com recursos medidos, corrigir erros
+ARM, congelar ROM/ELF/marker, exportar quatro regras de geração/dificuldade e
+TESTE mantendo supressão, fazer smoke/coldboot possível e atualizar os arquivos
+e manifestos no PR com status de candidata e as pendências reais. Não editar
+ou compilar enquanto um leitor usa o MESMO source/ELF/ROM; o parent171 segue
+intocado. Depois continuar os consertos até a validação final pedida originalmente.
+
+
+## Cinco ROMs recompiladas para o checkpoint solicitado
+
+Pedido literal: “Mas eu quero que atualize as roms com as modificações feitas,
+já pedi.” A candidata integral foi compilada e exportada nas cinco edições;
+esta atualização de binários no PR é autorizada mesmo com validação global
+pendente. Não é uma publicação final aprovada. Foram261testes atlas aprovados
+antes do build e os oito testes da migração passaram após corrigir um erro real
+do ABIARM: structs de seis bytes precisam de __attribute__((packed)), pois
+APCS arredondava para oito. O compilador confirmou os asserts após a correção.
+O parent171 foi preservado; o build usou cópia privada com cache derivado
+verificado e nenhum inode gravável compartilhado. O primeiro preparo com o
+cache como source foi recusado por um agregado gerado não autenticado; log
+preservado, e a fonte passou a ser a171 congelada, com cache só para derivados.
+
+ROM bruta compilada:f2cac1ecb79e23c3b6a6a43e07568b7c5b03579dc265ba99d33bc3bad7940c0e
+ELF:618b0556e031fee25a1aace83f33bb8491b7e316ebd910a34f968098b135ba73
+Uso:32.920.992/33.554.432bytes(98,11%);EWRAM245456;IWRAM28660.
+Três cópias reais da tabela de533chunks/stride8 foram extraídas da ROM e
+comparadas com todos os IDs/origens/dimensões preparados; passaram. Relatório:
+`candidate-compiled-tables.json`. Os1955inputs preparados foram conferidos.
+
+SHA256 das CINCO ROMs atuais:
+Gen1-4Normal:a24b7304d4dda4a7d1abd60849161409468a4a29d00528a9549643333e7cb40d
+Gen1-4Hard:a2103c4bebe2f8fecc12d863b16f7e0971fb35040b6cf15bf2f0a95f5275146c
+Gen1-9Normal:47a3a75c36b50bcd96584bd7c7ced7f121f68b8e5b14e93338f503c17b7f951f
+Gen1-9Hard:14ebe89fc88f3d4d55cc8a48f7ed1edf36bf997a26d397a8c653e5d6320bf36d
+TESTE:b7445c29804f36f188e0b753849ac4bb55fa605218c7486c04ee73d3fc7945ae
+
+As cinco passaram cold-boot real por controles até NovaPartida. A TESTE também
+passou com a bateria171:Continue→campo→salvar pelo menu→exportar pela API de
+bateria→novo boot→Continue. Manteve Mossdeep[0,6],tile[28,18],a pé,altura5 nativa;
+não impor altura3 a essa cidade. Bateria nova131072bytes:
+36ace517a44bc0315a4a5309054a4913f39e0f1872a073763ba685c3421e5861.
+A primeira extensão do runner teve erro de closurePython; corrigido, execução
+válida repetida e runner exatamente executado preservado. Nenhuma escrita de
+callback/posição/flags/EWRAM foi usada nestes cold-boots ou no menuSalvar.
+A supressão global da TESTE foi mantida via sua regra real de ROM; a suíte
+completa de encontros/trainers da candidata continua pendente.
+
+Estado de entrega:roms/ e os quatro espelhos de mods/hoenn/versions recebem
+os binários novos, a TESTE/save/hash recebem seus bytes atuais, ZIP inclui as
+quatro edições e este documento técnico (TESTE separada). Manifesto fica
+explicitamente candidate=true,validated=false,scope atlas-surf-layout-candidate.
+Não alterar contratos finais ou forçar CI/Pages a aprovar. A171 anterior está
+preservada no históricoGit e seus manifests/save em atlas-surf-layout-validation/baseline.
+
+Último pedido concluído neste lote: compilar/exportar/testar boot e salvar as
+cinco ROMs modificadas no PR normal111. Último pedido AINDA INCOMPLETO: consertar
+e validar toda a geografia/acessos/visuais/ecologia e entregar release final.
+A fonte ainda tem17componentes de água gerada;14/18cavernas e6/7portos estão na
+componente principal no diagnóstico, mas o validadorglobal permanece FAIL por
+não haver uma únicaSCC. Não confundir esse diagnóstico com aprovado. Faltam
+underlay autenticado de glifos, propriedade nativa/projeção/registros costeiros,
+ThreeIslandPort e demais ligações, revisão visual integral, provas por controles
+e edição/TESTE completas, DEX e Pages. Trabalhos readonly de projeção regional
+e glifos ainda não aplicados em runtime precisam ser preservados como WIP,
+sem afirmá-los incluídos nos binários. Próximo passo: seguir esses consertos
+sobre este checkpoint verificável; cada novo build precisa de provas próprias.
+
+Revisão dos auxiliares deste checkpoint: o empacotador vincula cada arquivo
+real ao freeze de cinco ROMs antes da cópia; os hashes públicos e o conteúdo
+do ZIP são conferidos depois. O projetor regional readonly foi preservado
+como pesquisa WIP, sem alterar a candidata: filtra mapas sem identidade
+compilada e seu shim define os tipos usados no C nativo. Dois testes, incluindo
+cinco casos comparados com o C real da171, passaram. Isso não prova domínio
+físico de pixels nem resolve as ligações nativas.
+
+
+## Continuidade de 15/11: falha de CI recebida após atualizar as ROMs
+
+Última mensagem do usuário: log integral da Actions iniciado em
+2026-11-15T16:24:20Z; resumo literal: "Ran 1074 tests in 32.571s / FAILED
+(failures=12, errors=13, skipped=34)". Retomar a correção desse diagnóstico
+sem desfazer o checkpoint de binários solicitado.
+
+Último checkpoint remoto conferido antes deste lote:
+3ae46505cc076d0ad9a9582f0791f1fd6f3ca860 no PR normal111. As cinco ROMs e a
+bateria preservam todos os hashes registrados acima. Este lote altera cadeia
+histórica, ferramentas, metadados, documentos e ZIP; não recompila o jogo.
+
+Causa confirmada: ao gerar versions.json da candidata, as referências a
+provas históricas foram descartadas. Leitores esperavam proofs/previous_* e
+flags antigas, ou escolhiam layout202 por não reconhecer o novo escopo. A
+comparação221/202 e o SHA203c... se referem ao histórico; não provam regressão
+nova da arte, que não mudou. O bloqueio "Unvalidated release" é correto:
+as viagens e demais validações172 ainda não terminaram.
+
+Correção: proofs=[] explícito e ponte171 pinada SHAeca26adf...; somente refs
+historical_validation e previous_validation são herdadas. Resolvedores
+validam caminho/hash/retested=false/ancestral aprovado/prefixo. Históricos
+usam seus próprios bytes e SHA, nunca a ROM172. Onze testes anticorrupção do
+resolvedor e nove de integridade da candidata passaram. Três casos de atlas
+passaram com leitura readonly dos blobs históricos. O novo CLI
+verify_atlas_surf_checkpoint.py verifica bytes/profíles, TESTE/save, cinco
+coldboots, freeze, tabelas compiladas e ZIP/docs; não aprova gameplay global.
+
+A suíte completa foi tentada localmente via harness readonly de sparse Git:
+1011testes,8FAIL,381ERROR,27skipped. A maior parte dos erros locais corresponde
+a blobs históricos não materializados no clone parcial, sem fetch automático;
+esse resultado NÃO é CI aprovada nem prova de regressão da ROM. Relatório local
+.local/CI-repro-hoenn.log. A execução integral de Actions deve confirmar a
+correção dos leitores num checkout com todos os arquivos. Não substituir
+arquivos ausentes por fixtures inventadas nem omitir falhas do resultado.
+
+CI agora registra integridade do checkpoint, alpha histórica e gate final em
+passos distintos. verify_versions(require_seal=True) permanece intocado e
+DEVE recusar a candidata; browser/Pages continuam condicionados ao sucesso.
+Não marcar validated=true, fabricar provas ou pular o gate para Actions ficar
+verde. Registro técnico: errors/2026-11-15-candidate-history-ci.txt, incluído
+no ZIP juntamente com este guia e a baseline171 pinada.
+
+Último pedido concluído: atualização e preservação remota das cinco ROMs,
+TESTE/save e guia. Lote atual: reparo dos leitores históricos em validação.
+Último pedido incompleto continua corrigir todas as rotas/acessos/visuais,
+ecologia/DEX, saves e provas172 para a release final. Há17componentes no
+último diagnóstico fonte,14/18cavernas e6/7portos na componente principal.
+Próximo passo: conferir Actions após o checkpoint deste reparo e seguir as
+ligações nativas/ThreeIsland/underlay, sem tratar smoke/boot como prova final.
+
+Classificação dos381erros locais:380FileNotFoundError sobmods/ (237paths) e
+1gateExtraGyms legítimo. Dos8FAIL,7são Unvalidatedrelease e1não encontra
+shore-animation por sparse. Não houve KeyError nem rejeição de hash/prefixo
+no resolvedor. Relatório enxuto:docs/design/atlas-surf-layout/ci-history-repair.json.
+
+
+Resultado remoto confirmado — reparo dos metadados
+Actions43737388074/job132882888189, commit8d1164f296d76294a570c1cff2fcd06b452bda60:
+12/12testes sea_routes PASS. Hoenn executou1094testes em30,306s:
+8FAIL,1ERROR,34skipped. ZEROKeyError. Os6casos históricos de Fuchsia/atlas
+passaram no checkout integral. Os12erros de integração anteriores desapareceram.
+A integridade da candidata (cincoROMs/perfis/TESTE/save/boots/freeze/tabelas/ZIP)
+e a alpha histórica passaram em passos próprios. O job global continua FAIL:
+7casos rejeitam Unvalidatedrelease; Sootopolis exige manifest.validated=true;
+ExtraGyms.setUpClass é o únicoERROR e também rejeita Unvalidatedrelease.
+São9exigências de aprovação final ainda não satisfeitas. Não torná-las verdes
+apenas editandoflags, trocandoSHA, ignorandotestes ou pulandoo gate. Browser e
+Pages ficaram bloqueados. Nenhum defeito funcional novo da ROM foi demonstrado
+por essas9recusas; a rede física172 já tinha suas pendências reais conhecidas.
+
+Último subpedido concluído: reparar os leitores/metadados históricos do log
+recebido e verificar o resultado na CI integral. Último pedido incompleto:
+concluir e provar geografia, cenas, saves/ecologia/edições para release172.
+Os5binários e a bateria preservam os hashes do checkpoint3ae4650; este lote
+finaliza documentação e ZIP e registra a evidência remota acima. A próximaIA
+deve seguir o conserto da rede e a validação nativa, não remover os gates.
+
+
+## Checkpoint urgente solicitado: PR antes do limite
+
+Pedido literal mais recente: “Abre o pr, meu limite vai acabar”. O PR111 já
+está aberto como NORMAL, sem rascunho; este lote preserva os novos arquivos.
+Último remoto confirmado antes dele:f5e9ef0a4adf788a44cc29bfb40bc1afaaf962a6.
+
+Progresso REAL desta etapa: BirthIsland passou na ROM integral atual533mapas,
+rawROMf2cac1ecb79e23c3b6a6a43e07568b7c5b03579dc265ba99d33bc3bad7940c0e.
+Fonte/ELF/marker e1955preparedinputs foram conferidos antes/depois. Percurso
+por controles: rampa/ponte, pedestre bloqueado na lateral, Surf saída/retorno,
+corpo de madeira bloqueado, Harbor e volta à ilha, avatar visível por pixels
+reais de OBJ/VRAM/scanout. Captura birth-wood-tip.png foi inspecionada: madeira
+inteira sem metal na ponta. Prova/copias no diretório current-ROM-birth-native.
+Não é aprovação da rede inteira, das cinco edições nem do release final.
+
+Diagnóstico fonte confirmado: ThreeIsland_Port_Frlg48x20 tem duas componentes
+água; embarque(14,17) na0/leste, adaptador na1/oeste. Terminal/ponte separa as
+águas e os recifes fecham embaixo. Nenhuma correção foi aplicada ainda. Avaliar
+redirecionar boca do adaptador com referência ao atlas; não apagar terminal,
+NPCs ou abrir canal arbitrário. As17SCCs e demais clusters foram preservados
+em urgent-progress-checkpoint.json, sem promover diagnóstico a PASS.
+
+A pesquisa dos7pixels escondidos por glifos foi interrompida pelo limite dos
+agentes. Os arquivos completos existentes foram preservados byte a byte em
+WIP-occluded-routes/*.py.txt, com hashes no relatório. NÃO estão integrados
+nem compilados. Seu teste ainda falha antes dos casos: endpoints Ocaso.
+A próximaIA deve corrigir essa interpretação contra o marker171, testar e só
+então integrar. Não enfraquecer contratos para passar. Outros agentes não
+chegaram a escrever seus relatórios; os achados recebidos estão registrados.
+
+Último subpedido concluído: guardar o progresso atual no PR normal, com prova
+Birth e pesquisa WIP preservada. Pedido original INCOMPLETO: corrigir e provar
+a rede Surf,17SCCs, acessos restantes, visuais, saves/ecologia e release172.
+As5ROMs continuam atualizadas com os mesmos hashes; nenhum novo build neste
+lote. CI ainda8FAIL+1ERROR de release não validada. Próximo: consertar Ocaso/
+glifos, Three e lacunas nativas; repetir fonte/bancos, preparar/build privado,
+congelar e repetir todas as provas/edições antes da publicação final.
+
+## Atualização exclusivamente documental — pasta Aqui
+
+Pedido literal mais recente:
+“Ok, uma coisa, atualiza o documento técnico especificando o que falta, crie
+uma pasta dentro do repo com nome "Aqui" pra eu indicar pra próxima janela
+de I.A codex sobre do que se trata, como funciona, como atualizar, o que foi
+feito, o que falta, o que não fazer (coisas erradas que não são pra serem
+feitas) e como é o correto que eu quero. Tudo de forma técnica nesse arquivo.
+Atualize bem feito, cuidado com meu limite, faça apenas isso nesse commit
+dentro do mesmo pr.”
+
+Aqui/README.md consolida identidade, arquitetura, requisitos do usuário,
+hashes/provas, pendências concretas Ocaso/Three/17SCCs, CI, ambiente, erros
+proibidos e operação correta. Último remoto anterior:
+1bf71eda2d8276a377e38e84cc4baaaad070c085. PR111 normal permanece aberto.
+Último subpedido documental atendido neste lote; pedido de terminar e validar
+o jogo continua incompleto. Apenas documentação: sem builds/provas novos,
+código/ROM/save/ZIP/manifestos/workflow intocados. O ZIP conserva o texto
+anterior; a comparação estrita contra documentos do HEAD pode acusar
+Stale archive entry. Reempacotar com Aqui/guia atualizado somente na próxima
+etapa autorizada do pacote, sem relaxar verificador.
+
+
+15/11/2026 — erros recebidos para a próxima IA
+Pedido: criar documento de erros na mesma pasta Aqui e preservar os três
+logs de CI para corrigir em outra janela. Criados Aqui/ERROS-PARA-PROXIMA-IA.md
+e Aqui/LOG-CI-2026-11-15.txt, com origem Actions43761665375/job132957596992,
+commit29b1dca, log completo e SHA. README aponta para o registro.
+Resultados recebidos:1094testes,8FAIL,1ERROR,34skipped; Unvalidated release
+na suíte/gate e Stale archive entry no guia dentro do ZIP. O último decorre
+da atualização somente documental sem reempacotamento. Correções pendentes:
+sincronizar pacote quando autorizado e concluir as provas reais da release.
+Subpedido atendido: documentação dos erros. Erros NÃO corrigidos neste lote;
+código/ROMs/save/ZIP/manifestos/workflows intocados. Conferir push ao entregar.
+
+
+15/11/2026 — sincronização do guia antes do merge solicitado pelo usuário
+Último remoto anterior:846aa59b0d2d2e6d00babb7bca259eb9ef251d9d.
+O guia no Git estava atualizado, mas o ZIP preservava a edição anterior por
+pedido de somente documentação. Nova solicitação autoriza sincronizar o
+pacote. Guia Aqui atualizado; README/erros/log entram no ZIP; empacotador e
+verificador incluem Aqui e conservam comparação estrita. Regressão testa
+alteração do guia e dos registros após empacotar. Hash/tamanho externos do
+ZIP atualizados. ROMs/save/source/ELF não foram modificados ou recompilados.
+Este lote resolve o desencontro documental do pacote, não a release172:
+17SCCs/Ocaso/Three/lacunas e provas finais continuam pendentes, assim como
+8FAIL+1ERROR do gatefinal. Logs originais preservados com seu SHA. O usuário
+pretende fazer o merge, sem autorizar a IA a marcar release validada.
+Após reempacotar: verificar integridade, commit/push e conferir SHA remoto.

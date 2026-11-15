@@ -1,6 +1,13 @@
 # Pokémon Journey — quatro edições GBA
 
-Atualização atual: [canal sul de One Island, portos e cavernas — camada 171](../../../docs/generated-area-review.md). Liga a rota vertical ao mar horizontal sem redesenhar o mapa-múndi, corrige rochas, cantos e limites dos portos e conserva o retorno do Surf aos sete cais. Fecha entradas inativas da caverna Horizonte. A TESTE mantém os mesmos mapas, sem encontros aleatórios nem abordagem automática de treinadores. [Causas, soluções e prevenção em TXT](../../../errors/2026-11-07-generated-area-review.txt).
+As quatro ROMs desta branch e a TESTE foram recompiladas para a **candidata172**.
+Boot passou nas cinco; a TESTE passou Continue → salvar pelo menu → Continue.
+A geografia global e a revisão visual ainda estão em correção. Este é o
+checkpoint de binários solicitado no PR111; não é release final aprovada.
+[Hashes e pendências atuais](../../../roms/CANDIDATA-172.json) ·
+[Continuidade técnica incluída no ZIP](../../../docs/CONTINUIDADE-TECNICA-IA.md).
+
+Referência da entrega anterior validada: [canal sul de One Island, portos e cavernas — camada 171](../../../docs/generated-area-review.md). Liga a rota vertical ao mar horizontal sem redesenhar o mapa-múndi, corrige rochas, cantos e limites dos portos e conserva o retorno do Surf aos sete cais. Fecha entradas inativas da caverna Horizonte. A TESTE mantém os mesmos mapas, sem encontros aleatórios nem abordagem automática de treinadores. [Causas, soluções e prevenção em TXT](../../../errors/2026-11-07-generated-area-review.txt).
 
 Conserva a [competição da 18ª insígnia, rivais e capítulo Galactic na 22ª](../../../docs/badge-story.md). A vitória na competição da Battle Frontier libera as duas Ligas com 18 insígnias; o capítulo Galactic passa para 22. Os rivais seguem o personagem e a região inicial, e os sprites de Eren e Luffy usam a escala dos outros rivais.
 
@@ -26,9 +33,9 @@ Inclui a [correção do rio de Fallarbor](../../../docs/fallarbor-river.md): pra
 [Novo porto de Sootopolis](../../../docs/porto-sootopolis.md): ponte ligada à terra,
 terminal com capitão da rede mundial e submarino ampliado. Validado nas quatro edições.
 
-Escolha uma edição e mantenha um backup do save original. Saves anteriores à ampliação da Bag usam outro formato e exigem Nova Partida. Esta revisão também valida uma bateria 168 no cais de Treasure Beach: a posição acompanha a ampliação uma única vez, inclusive após salvar e continuar novamente. Essa prova não certifica todas as builds antigas. Todas as edições possuem Kanto, Hoenn, Sevii e o capítulo Galactic.
+Escolha uma edição e mantenha um backup do save original. Saves anteriores à ampliação da Bag usam outro formato e exigem Nova Partida. A revisão171 anterior validou uma bateria 168 no cais de Treasure Beach: a posição acompanha a ampliação uma única vez, inclusive após salvar e continuar novamente. Essa prova não certifica todas as builds antigas. Todas as edições possuem Kanto, Hoenn, Sevii e o capítulo Galactic.
 
-No repositório, as quatro ROMs atuais também ficam em [`roms/`](../../../roms/README.md), atualizadas automaticamente pelo empacotamento e conferidas pela CI.
+No repositório, as quatro ROMs atuais também ficam em [`roms/`](../../../roms/README.md), com os mesmos hashes do manifesto da candidata; a validação final da CI permanece pendente.
 
 | Edição | Pokémon | IVs dos oponentes importantes |
 |---|---|---|
@@ -39,7 +46,7 @@ No repositório, as quatro ROMs atuais também ficam em [`roms/`](../../../roms/
 
 [Baixar as quatro edições em ZIP](Pokemon-Journey-Four-Editions.zip). [SHA-256](SHA256SUMS). [Manifesto e evidências](versions.json).
 
-O ZIP contém exatamente as quatro ROMs normais. A [TESTE atual é um download separado](../../../roms/rom-de-teste/LEIA-ME.md), também disponível no player. Dentro do ZIP, `TESTE-DOWNLOAD.md` informa seu link e SHA-256; os metadados, a lista de checksum e o save de bateria da TESTE acompanham o pacote. As provas e capturas atuais estão incluídas. Os relatórios históricos preservam seus hashes; suas capturas continuam no repositório, com hashes e links do commit anterior em `HISTORICAL-MEDIA.json`. O ZIP não representa uma reprodução offline de todo o histórico.
+O ZIP contém exatamente as quatro ROMs normais. A [TESTE atual é um download separado](../../../roms/rom-de-teste/LEIA-ME.md), também disponível no player. Dentro do ZIP, `TESTE-DOWNLOAD.md` informa seu link e SHA-256; os metadados, a lista de checksum e o save de bateria da TESTE acompanham o pacote. As provas e capturas atuais estão incluídas. Os relatórios históricos da171 continuam no histórico Git e em `mods/hoenn/atlas-surf-layout-validation/baseline`, com seus hashes originais. O ZIP não representa uma reprodução offline de todo o histórico.
 
 Rivais, líderes, Elite Four, campeões, chefes e administradores recebem builds competitivas, 510 EVs e IA avançada nas duas dificuldades. Treinadores comuns preservam o tratamento comum. Treinadores comuns usam a média atual −5/+2, inclusive dentro dos ginásios. Líderes usam −1/+5 e o principal fica obrigatoriamente em +5; quantidades continuam por ordem regional. Evoluções e golpes respeitam o nível final.
 

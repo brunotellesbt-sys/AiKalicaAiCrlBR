@@ -1,0 +1,93 @@
+"""Authenticated cave-underlay recovery rejects new gaps and altered evidence."""
+import hashlib
+import json
+from pathlib import Path
+import unittest
+from unittest.mock import patch
+
+from atlas_surf_geometry import rasterize
+from atlas_surf_occluded_routes import ART_SHA256, HEADER, MARKER, extract_occluded_routes
+from atlas_surf_truth import read_atlas
+
+
+ROOT = Path(__file__).resolve().parents[2]
+SOURCE = ROOT/'.local/generated-area-review-src'
+EXPECTED = frozenset({(109, 49), (210, 65), (210, 86), (141, 110), (200, 110),
+                      (119, 104), (119, 105)})
+
+
+class MemorySource:
+    def __init__(self, values):
+        self.values = values
+
+    def read(self, name):
+        return self.values[name]
+
+
+@unittest.skipUnless((SOURCE/HEADER).exists(), 'Immutable171 atlas source required')
+class OccludedRoutesTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.original = {p: (SOURCE/p).read_bytes() for p in (HEADER, MARKER)}
+        cls.truth = read_atlas(SOURCE)
+        cls.pixels, cls.proof = extract_occluded_routes(MemorySource(cls.original), cls.truth)
+
+    def test_exact_historical_underlay_and_immutable_art(self):
+        self.assertEqual(self.pixels, EXPECTED)
+        self.assertEqual(self.proof['counts']['recovered'], 7)
+        self.assertEqual(self.proof['counts']['occluded_branches'], 6)
+        self.assertEqual(self.proof['art_sha256_before'], ART_SHA256)
+        self.assertEqual(self.proof['art_sha256_after'], ART_SHA256)
+        self.assertTrue(all(self.truth.pixel(p) in (0, 15) for p in self.pixels))
+        self.assertEqual({p: (SOURCE/p).read_bytes() for p in self.original}, self.original)
+
+    def test_recorded_paths_and_physical_stitches_have_no_invented_ocean(self):
+        routes = self.truth.blue_pixels | self.pixels
+        water = rasterize(routes)
+        for branch in self.proof['branches']:
+            path = list(map(tuple, branch['literal_painted_path']))
+            self.assertTrue(set(path) <= routes)
+            self.assertTrue(all(abs(a[0]-b[0])+abs(a[1]-b[1]) == 1
+                                for a, b in zip(path, path[1:])))
+            self.assertEqual([r['atlas'] for r in branch['hidden_pixels']],
+                             [list(p) for p in path if p in self.pixels])
+        for edge in self.proof['physical_stitches']:
+            self.assertEqual(len(edge['game_tile_pairs']), 6)
+            for a, b in edge['game_tile_pairs']:
+                self.assertIn(tuple(a), water)
+                self.assertIn(tuple(b), water)
+                self.assertEqual(abs(a[0]-b[0])+abs(a[1]-b[1]), 1)
+        self.assertEqual(len(self.proof['atlas_component_sizes_before']), 15)
+        self.assertEqual(len(self.proof['atlas_component_sizes_after']), 10)
+        self.assertFalse(self.proof['arbitrary_ocean_added'])
+        self.assertFalse(self.proof['native_validated'])
+
+    def test_changed_marker_cannot_authorize_an_ocean_shortcut(self):
+        changed = dict(self.original)
+        marker = json.loads(changed[MARKER])
+        marker['branches'][0]['polyline'] = [[109, 49], [109, 48], [110, 48]]
+        changed[MARKER] = json.dumps(marker).encode()
+        with self.assertRaisesRegex(ValueError, 'marker changed'):
+            extract_occluded_routes(MemorySource(changed))
+
+    def test_all_four_art_arrays_are_pinned(self):
+        for symbol in ART_SHA256:
+            changed = dict(self.original)
+            header = changed[HEADER].decode()
+            import re
+            pattern = r'(\b'+symbol+r'\s*\[\s*\]\s*=\s*\{\s*)(0x[0-9a-fA-F]+|\d+)'
+            changed[HEADER] = re.sub(pattern, lambda m: m[1]+str(int(m[2], 0)^1),
+                                     header, count=1).encode()
+            self.assertNotEqual(changed[HEADER], self.original[HEADER], symbol)
+            with self.assertRaises(ValueError, msg=symbol):
+                extract_occluded_routes(MemorySource(changed))
+
+    def test_changed_paint_order_implementation_is_rejected(self):
+        with patch('atlas_surf_occluded_routes.DRAW_SOURCES',
+                   {'tools/hoenn/prepare_surf_review.py': '0'*64}):
+            with self.assertRaisesRegex(ValueError, 'paint implementation changed'):
+                extract_occluded_routes(MemorySource(self.original))
+
+
+if __name__ == '__main__':
+    unittest.main()

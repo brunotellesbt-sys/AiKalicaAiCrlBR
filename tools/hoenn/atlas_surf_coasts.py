@@ -130,3 +130,53 @@ def stage_route114_closure(layer):
                 row16_lagoon_margin_and_all_other_cells_preserved=True,
                 events_npcs_connections_and_atlas_unchanged=True,
                 native_validated=False)
+
+
+def stage_closed_native_connections(layer,inputs,retired_maps,*,route114_closure):
+    """Remove obsolete, blocked native faces and the authorized Route114 link.
+
+    Live wet or walkable interfaces cannot silently disappear. The Route114
+    exception is the user's explicit removal of an inland lagoon's false ocean
+    connection; its two-cell repair must already exist and row16 stays intact.
+    This changes connections only, preserving all native events and terrain.
+    """
+    retired={r['map'] if isinstance(r,dict) else r for r in retired_maps}
+    by_id=inputs.by_id;outputs={};removed=[]
+    layouts={r['id']:r for r in json.loads(read(layer,'data/layouts/layouts.json'))['layouts']}
+    for name in sorted(set(inputs.maps)-retired):
+        path=f'data/maps/{name}/map.json';mapping=json.loads(read(layer,path))
+        remaining=[];old_connections=mapping.get('connections') or []
+        for connection in old_connections:
+            old=by_id.get(connection['map'])
+            if old not in retired:
+                remaining.append(connection);continue
+            direction=connection['direction'];offset=int(connection['offset'])
+            if direction not in ('left','right','up','down'):
+                raise ValueError(('Unresolved non-cardinal retired native connection',name,connection))
+            a,b=layouts[mapping['layout']],inputs.layout(old)
+            raw=read(layer,a['blockdata_filepath']);native_words=struct.unpack('<'+'H'*(len(raw)//2),raw)
+            axis='height' if direction in ('left','right') else 'width';pairs=[]
+            for value in range(max(0,offset),min(a[axis],offset+b[axis])):
+                source=((a['width']-1 if direction=='right' else 0),value) if axis=='height' else (value,a['height']-1 if direction=='down' else 0)
+                target=((0 if direction=='right' else b['width']-1),value-offset) if axis=='height' else (value-offset,0 if direction=='down' else b['height']-1)
+                first=native_words[source[1]*a['width']+source[0]];second=inputs.word(old,*target)
+                pairs.append(dict(native_tile=list(source),old_tile=list(target),words=[first,second]))
+            lagoon=name=='Route114'
+            if lagoon:
+                if (route114_closure.get('kind')!='route114-false-ocean-mouth-closure'
+                        or route114_closure.get('map')!='Route114'
+                        or [r['cell'] for r in route114_closure['cells']]!=[[0,17],[0,18]]
+                        or any(native_words[y*a['width']]!=0x15f9 for y in (17,18))):
+                    raise ValueError('Route114 false-ocean disconnection lacks its exact authorized repair')
+            elif any(not (r['words'][0]&0xc00 or r['words'][1]&0xc00) for r in pairs):
+                raise ValueError(('Obsolete native face still has an unreplaced traversable pair',name,old))
+            removed.append(dict(native_map=name,old_map=old,connection=connection,
+                                native_edge_pairs=pairs,
+                                reason='explicitly rejected Route114 inland-lagoon ocean access' if lagoon
+                                       else 'every actual boundary pair blocked before retirement'))
+        if remaining!=old_connections:
+            mapping['connections']=remaining;outputs[path]=(json.dumps(mapping,indent=2)+'\n').encode()
+    for path,raw in outputs.items():layer.stage(path,raw)
+    inputs.assert_unchanged()
+    return dict(kind='retired-closed-native-faces',removed=removed,
+                native_terrain_and_events_unchanged=True,native_validated=False)

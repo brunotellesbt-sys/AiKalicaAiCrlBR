@@ -31,6 +31,8 @@ LOOKUP_FUNCTIONS = (
     ('src/journey_wild.c', 'JourneyFishingOdds'),
     ('src/wild_encounter.c', 'GetCurrentMapWildMonHeaderId'),
 )
+DEX_LOCATIONS = 'src/data/journey_world_dex_locations.h'
+DEX_ROW = re.compile(r'\{(SPECIES_\w+),(MAP_\w+),(\d+),(\d+),(\d+),(\d+)\}')
 
 
 def _identities(groups):
@@ -203,3 +205,123 @@ def stage(layer, owner_mapping):
                 test_and_review_encounter_suppression_preserved=True,
                 catchable_families_require_independent_compiled_trigger_audit=True,
                 compiled_rom_validated=False)
+
+
+def repair_dex_locations(header, before_census, after_census, plan, catalog):
+    """Replace retired AREA claims only with actual graph-reachable triggers.
+
+    The before/after reports come from validate_atlas_surf_ecology_source,
+    after the physical source and aliases have been materialized. New chunks
+    (including dedicated scenery reserves) must be in plan['chunks'] with
+    their true global origin. No fixed-event or preserved-native row changes.
+    Dead old habitat claims are removed explicitly rather than assigned a
+    fictitious patch of grass. Loss of a previously effective claim rejects.
+    """
+    schema = 'atlas-surf-ecology-source-v1'
+    if any(report.get('schema') != schema or not report.get('native_c_compiled')
+           for report in (before_census, after_census)):
+        raise ValueError('Dex repair requires native-C ecology source censuses')
+    if not after_census.get('graph_reachable_cells_supplied'):
+        raise ValueError('Dex AREA requires explicit graph-reachable trigger cells')
+    if before_census.get('retired_maps'):
+        raise ValueError('Before census must include historical physical routes')
+    retired = set(after_census['retired_maps'])
+    if not retired:
+        raise ValueError('No retired maps supplied for Dex relocation')
+    if plan.get('scale') != 8:
+        raise ValueError('Dex atlas positions require the physical scale8 plan')
+    chunks = {row['name']: row for row in plan['chunks']}
+    if len(chunks) != len(plan['chunks']):
+        raise ValueError('Duplicate Dex physical chunk names')
+    species = {int(key): row['name'] for key, row in catalog.items()}
+    # Parent map constants are included in the census for a content-bound
+    # mapping from generated identifiers to their historical owners.
+    parent_ids = before_census.get('map_constants', {})
+    if not parent_ids:
+        raise ValueError('Before census lacks bound native map constants')
+    old_names = {constant: name for name, constant in parent_ids.items()}
+    active_before = set()
+    for row in before_census['map_areas']:
+        for cap, members in row['species'].items():
+            for member in members:
+                active_before.add((row['map'], species[member], 4 if int(cap) == 493 else 9))
+    replacements = {}
+    for row in after_census['map_areas']:
+        owner = row['owner']
+        if owner not in retired or not any(row['species'].values()):
+            continue
+        chunk = chunks.get(row['map'])
+        if chunk is None:
+            raise ValueError(('Effective retired owner has no physical chunk origin', row['map']))
+        if chunk.get('ecology_owner') != owner:
+            raise ValueError(('Dex owner differs from physical chunk owner', row['map']))
+        if not row['trigger_sample']:
+            raise ValueError('Species claim lacks an actual trigger coordinate')
+        x, y = row['trigger_sample'][0]
+        if not (0 <= x < chunk['width'] and 0 <= y < chunk['height']):
+            raise ValueError('Dex trigger outside physical chunk')
+        gx, gy = chunk['origin']
+        atlas = (gx+x)//8, (gy+y)//8
+        if not (0 <= atlas[0] < 224 and 0 <= atlas[1] < 112):
+            raise ValueError('Dex trigger projects outside the immutable atlas')
+        for cap, members in row['species'].items():
+            for member in members:
+                key = owner, species[member], 4 if int(cap) == 493 else 9
+                value = (species[member], chunk['id'], atlas[0], atlas[1], 0, key[2])
+                replacements.setdefault(key, set()).add(value)
+    matches = list(DEX_ROW.finditer(header))
+    if not matches or header.count('sWorldDexLocations') != 1:
+        raise ValueError('Expected one native Dex AREA array')
+    emitted = set()
+    removed_dead, remapped, missing = [], [], []
+    for match in matches:
+        name, ident = match[1], match[2]
+        value = (name, ident, *map(int, match.groups()[2:]))
+        old = old_names.get(ident)
+        if old not in retired:
+            emitted.add(value)
+            continue
+        if value[4]:
+            raise ValueError('Fixed event AREA on retired map needs explicit event relocation')
+        key = old, name, value[5]
+        target = replacements.get(key)
+        if target:
+            # Keep one real witness for each old claim, rather than multiplying
+            # every pool member across all chunks and wasting scarce ROM space.
+            chosen = min(target, key=lambda row: (abs(row[2]-value[2])+abs(row[3]-value[3]), row))
+            emitted.add(chosen)
+            remapped.append(dict(old_map=old, species=name, cap=value[5],
+                                 destination=chosen[1], atlas=list(chosen[2:4]),
+                                 eligible_trigger_locations=len(target)))
+        elif key in active_before:
+            missing.append(dict(old_map=old, species=name, cap=value[5]))
+        else:
+            removed_dead.append(dict(old_map=old, species=name, cap=value[5],
+                                     reason='Historical habitat row had no effective area trigger'))
+    if missing:
+        raise ValueError(('Previously effective Dex AREA species lost its trigger', missing))
+    start = re.search(r'(static const struct JourneyWorldDexLocation sWorldDexLocations\[\]\s*=\s*\{)', header)
+    if start is None:
+        raise ValueError('Missing native Dex array initializer')
+    end = header.find('};', start.end())
+    if end < 0:
+        raise ValueError('Unterminated native Dex array')
+    body = '\n'.join('{'+','.join(map(str, row))+'},' for row in sorted(emitted))
+    rewritten = header[:start.end()]+'\n'+body+'\n'+header[end:]
+    return rewritten, dict(kind='atlas-surf-dex-trigger-relocation',
+                           before_rows=len(matches), after_rows=len(emitted),
+                           remapped_rows=remapped, removed_dead_claims=removed_dead,
+                           effective_claims_lost=[], graph_reachable_source_witnesses=True,
+                           replacement_rows_per_old_claim_at_most_one=True,
+                           fixed_and_native_rows_preserved=True,
+                           before_source_manifest_sha256=before_census['source_manifest_sha256'],
+                           after_source_manifest_sha256=after_census['source_manifest_sha256'],
+                           compiled_rom_validated=False)
+
+
+def stage_dex_locations(layer, before_census, after_census, plan, catalog):
+    """Stage an independently witnessed AREA correction in the current layer."""
+    header = read(layer, DEX_LOCATIONS).decode()
+    updated, report = repair_dex_locations(header, before_census, after_census, plan, catalog)
+    layer.stage(DEX_LOCATIONS, updated)
+    return report
