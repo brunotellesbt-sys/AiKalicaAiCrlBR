@@ -1,5 +1,7 @@
 # Aqui — LEIA PRIMEIRO: retomada técnica de Pokémon Journey
 
+> [Erros atuais da CI, log completo e roteiro de correção](ERROS-PARA-PROXIMA-IA.md).
+
 Atualizado em 15/11/2026 UTC. Este é o guia consolidado para a próxima janela
 de IA/Codex. Leia integralmente antes de alterar, gerar, compilar ou publicar.
 
@@ -315,3 +317,13 @@ reempacotar, atualizar hash externo e repetir verificações. Não reempacotar a
   a release172. Próximo trabalho útil: corrigir/testar Ocaso/underlay, resolver
   Three e lacunas nativas, repetir grafo/bancos, só então nova candidata,
   compilação privada, congelamento e provas finais das cinco edições.
+
+## Registro posterior: erros enviados às21:06–21:07 UTC
+
+Consultar ERROS-PARA-PROXIMA-IA.md e LOG-CI-2026-11-15.txt nesta pasta.
+Nesta execução:1094testes,8FAIL,1ERROR,34skipped; gate final rejeita release
+não validada. Além disso, o checkpoint agora FALHA por Stale archive entry
+no guia técnico: o Git foi atualizado, mas o ZIP não, conforme o pedido
+documental. Não extrapolar o PASS anterior do pacote para este HEAD.
+Último pedido: somente registrar os três erros para a próxima IA corrigir;
+nenhuma correção de código, pacote ou ROM foi realizada neste lote.

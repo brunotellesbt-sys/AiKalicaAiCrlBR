@@ -941,3 +941,16 @@ código/ROM/save/ZIP/manifestos/workflow intocados. O ZIP conserva o texto
 anterior; a comparação estrita contra documentos do HEAD pode acusar
 Stale archive entry. Reempacotar com Aqui/guia atualizado somente na próxima
 etapa autorizada do pacote, sem relaxar verificador.
+
+
+15/11/2026 — erros recebidos para a próxima IA
+Pedido: criar documento de erros na mesma pasta Aqui e preservar os três
+logs de CI para corrigir em outra janela. Criados Aqui/ERROS-PARA-PROXIMA-IA.md
+e Aqui/LOG-CI-2026-11-15.txt, com origem Actions43761665375/job132957596992,
+commit29b1dca, log completo e SHA. README aponta para o registro.
+Resultados recebidos:1094testes,8FAIL,1ERROR,34skipped; Unvalidated release
+na suíte/gate e Stale archive entry no guia dentro do ZIP. O último decorre
+da atualização somente documental sem reempacotamento. Correções pendentes:
+sincronizar pacote quando autorizado e concluir as provas reais da release.
+Subpedido atendido: documentação dos erros. Erros NÃO corrigidos neste lote;
+código/ROMs/save/ZIP/manifestos/workflows intocados. Conferir push ao entregar.
