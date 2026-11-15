@@ -21,6 +21,280 @@ DIRS = {'left': (-1, 0), 'right': (1, 0), 'up': (0, -1), 'down': (0, 1)}
 OPPOSITE = {'left': 'right', 'right': 'left', 'up': 'down', 'down': 'up'}
 KINDS = ('ports', 'caves', 'dives', 'adapters', 'native_pixels')
 
+# Reviewed resolver bodies, already exercised by the emitted-C Dive tests.
+# These fingerprints authenticate the implemented arithmetic/guards; they are
+# never ROM hashes or native-pass flags. A changed implementation needs review.
+_DIVE_FUNCTIONS = {
+    'JourneyAtlasDiveBehavior': 'c399842c462501d62eeb831fcc4c51b924934f0849602a1f2f262211ea84eaef',
+    'JourneyAtlasDiveSurfaceCell': 'a05cfeeb9cb51d87fa348f4bd61809df39ccefd6fa2861d025093382b0d5dea6',
+    'JourneyAtlasDiveDepthCell': '6b6c70470e3dc29cccf225cb73629915209b085e05b1ed5452477ec1ab35ce80',
+    'JourneyAtlasSetDiveWarp': 'dc2cb20d7691797d51152416ca22ee6bc69cdcd8d31559ae3862c7cecb08dfc6',
+    'JourneyAtlasDepthSite': 'c97804c3dc5b4cd1ac7e0b0379661c6b4367851fbda80c719d4dc1dca214e252',
+    'JourneyAtlasChunk': 'c4ad33eaacad6107322995108d296eb8a59570840961a821adcc1f4720e9416b',
+    'JourneyAtlasWorldChunk': '40804dd14372b06890ba589d6ce89c3cde64cdddcfc343351687507c983d1995',
+    'JourneyAtlasFloor32': 'c529c2b6911b3db22f939bcf93425fd57ad32453fa13155c9c39549183d3d87d',
+}
+
+
+def _compact(text):
+    return re.sub(r'\s+', '', re.sub(r'/\*.*?\*/|//[^\n]*', '', text, flags=re.S))
+
+
+def _function_body(text, name):
+    clean = re.sub(r'/\*.*?\*/|//[^\n]*', '', text, flags=re.S)
+    match = re.search(r'\b'+re.escape(name)+r'\s*\([^;{}]*\)\s*\{', clean)
+    if not match:
+        raise ValueError(('Missing implemented source function', name))
+    depth, end = 1, match.end()
+    start = end
+    while end < len(clean) and depth:
+        depth += (clean[end] == '{')-(clean[end] == '}')
+        end += 1
+    if depth:
+        raise ValueError(('Unclosed implemented source function', name))
+    return clean[start:end-1]
+
+
+def _literal_rows(text, symbol, columns):
+    clean = re.sub(r'/\*.*?\*/|//[^\n]*', '', text, flags=re.S)
+    match = re.search(r'\b'+re.escape(symbol)+r'\s*\[\s*\]\s*=\s*\{(.*?)\};', clean, re.S)
+    if not match:
+        raise ValueError(('Missing literal C table', symbol))
+    body = match[1]
+    groups = re.findall(r'\{([^{}]*)\}', body) if columns > 1 else [body]
+    if columns > 1 and re.sub(r'\{[^{}]*\}|[\s,]', '', body):
+        raise ValueError(('Nonliteral or nested C initializer', symbol))
+    rows = []
+    for group in groups:
+        tokens = [token.strip() for token in group.split(',') if token.strip()]
+        if any(not re.fullmatch(r'[+-]?(?:0[xX][0-9a-fA-F]+|\d+)', token) for token in tokens):
+            raise ValueError(('Nonliteral numeric C initializer', symbol))
+        values = [int(token, 16) if 'x' in token.lower() else int(token) for token in tokens]
+        if columns > 1 and len(values) != columns:
+            raise ValueError(('C initializer field count changed', symbol))
+        rows.append(values)
+    return rows if columns > 1 else rows[0]
+
+
+def _define_integer(text, name):
+    match = re.search(r'^\s*#define\s+'+re.escape(name)+r'\s+\(?([+-]?\d+)\)?\s*$', text, re.M)
+    if not match:
+        raise ValueError(('Missing literal C bound', name))
+    return int(match[1])
+
+
+class AtlasDiveSource:
+    """Model the implemented tri-state resolver and its actual numeric tables.
+
+    No JSON Dive/Emerge connection is added, required, or trusted. Surface
+    owners come from the authenticated runtime C table; underwater coordinates
+    come from the independent Depth-origin table. All destination words are
+    read using their own source map's bank, just as the reviewed C helper does.
+    """
+    def __init__(self, source, graph, header):
+        self.source, self.graph = source, graph
+        runtime = source.read('src/data/journey_atlas_runtime.h').decode()
+        overworld = source.read('src/overworld.c').decode()
+        self.input_sha256 = {name: hashlib.sha256(text.encode()).hexdigest() for name,text in (
+            ('src/data/journey_atlas_dives.h',header),
+            ('src/data/journey_atlas_runtime.h',runtime),('src/overworld.c',overworld))}
+        expected_struct = ('struct JourneyAtlasDiveSite { u16 depth; s16 x, y; u16 width, height; '
+                           's16 left, top; u16 patchWidth, patchHeight; };')
+        if _compact(expected_struct) not in _compact(header) or _compact(
+                'struct JourneyAtlasChunk { u16 map; s16 x, y; u8 width, height; };') not in _compact(runtime):
+            raise ValueError('Actual C Dive/chunk field layout changed')
+        for name,expected in _DIVE_FUNCTIONS.items():
+            text = header if name == 'JourneyAtlasDepthSite' else runtime if name in (
+                'JourneyAtlasChunk','JourneyAtlasWorldChunk','JourneyAtlasFloor32') else overworld
+            if hashlib.sha256(_compact(_function_body(text,name)).encode()).hexdigest() != expected:
+                raise ValueError(('Implemented Dive arithmetic or rejection guard is unreviewed',name))
+        predicates=source.read('src/metatile_behavior.c').decode()
+        for name,expected in (
+                ('MetatileBehavior_IsSurfableWaterOrUnderwater','c618a9a8b0f2670a63b262dba9d4785d363ca4ae98b16650748c55a2138affb1'),
+                ('MetatileBehavior_IsDiveable','aa7ae21e5649102bce84b9a7e3975b02513b7f9290f10925fbe07c7697e3ea7a'),
+                ('MetatileBehavior_IsUnableToEmerge','b6ea192a3b18de62dfab7b6e676939c42f1f005b8fa64eed7f0261e786148fc5')):
+            if hashlib.sha256(_compact(_function_body(predicates,name)).encode()).hexdigest()!=expected:
+                raise ValueError(('Native Dive callback semantics changed',name))
+        config=source.read('include/config/general.h').decode()
+        if not re.search(r'^\s*#define\s+BUGFIX\s*$',config,re.M) or re.search(r'^\s*#undef\s+BUGFIX\b',config,re.M):
+            raise ValueError('Native UnableToEmerge BUGFIX configuration is unmodelled')
+        hook = _compact(_function_body(overworld,'SetDiveWarp'))
+        prefix = _compact('''const struct MapConnection *connection;
+            s8 atlas = JourneyAtlasSetDiveWarp(dir, x, y);
+            if (atlas >= 0) return atlas != 0;
+            connection = GetMapConnection(dir);''')
+        if not hook.startswith(prefix) or hook.count('JourneyAtlasSetDiveWarp(') != 1:
+            raise ValueError('Tri-state Dive resolver must reject/resolve before legacy GetMapConnection')
+        if '#include "data/journey_atlas_dives.h"' not in overworld or '#include "data/journey_atlas_runtime.h"' not in overworld:
+            raise ValueError('Implemented overworld Dive hook does not include its actual tables')
+        identities = getattr(source,'identities',None)
+        if not identities or len(set(identities.values())) != len(identities):
+            raise ValueError('Compiled map registry identities required for actual C Dive tables')
+        by_identity = {value:name for name,value in identities.items()}
+        self.chunks = []
+        for identity,x,y,width,height in _literal_rows(runtime,'sAtlasChunks',5):
+            name = by_identity.get(identity)
+            if name is None or name not in source.maps or identity>>8 >= 128 or identity&255 >= 100:
+                raise ValueError(('Atlas C owner has an invalid signed map identity',identity))
+            layout = source.layout(name)
+            if [width,height] != [layout['width'],layout['height']] or not 1 <= width <= 127 or not 1 <= height <= 127:
+                raise ValueError(('Atlas C owner dimensions differ from source layout',name))
+            if not (-32768 <= x <= 32767 and -32768 <= y <= 32767 and x+width <= 32768 and y+height <= 32768):
+                raise ValueError(('Atlas C owner coordinate overflows its signed fields',name))
+            self.chunks.append(dict(map=identity,name=name,x=x,y=y,width=width,height=height))
+        if not self.chunks or len({c['map'] for c in self.chunks}) != len(self.chunks):
+            raise ValueError('Atlas runtime C owners are empty or duplicated')
+        for i,first in enumerate(self.chunks):
+            for second in self.chunks[i+1:]:
+                if (max(first['x'],second['x']) < min(first['x']+first['width'],second['x']+second['width'])
+                        and max(first['y'],second['y']) < min(first['y']+first['height'],second['y']+second['height'])):
+                    raise ValueError('Actual C runtime owners overlap')
+        self._validate_indexes(runtime)
+        self.by_name = {c['name']:c for c in self.chunks}
+        self.sites = {}
+        for identity,x,y,width,height,left,top,patch_width,patch_height in _literal_rows(header,'sAtlasDiveSites',9):
+            name = by_identity.get(identity)
+            if name is None or identity>>8 >= 128 or identity&255 >= 128 or name in self.sites:
+                raise ValueError(('Depth C table has an unknown/duplicate signed map identity',identity))
+            layout = source.layout(name)
+            if source.maps[name].get('map_type') != 'MAP_TYPE_UNDERWATER' or [width,height] != [layout['width'],layout['height']]:
+                raise ValueError(('Depth C table disagrees with its actual underwater layout',name))
+            if not (1 <= width < 128 and 1 <= height < 128
+                    and 0 < patch_width <= width and 0 < patch_height <= height
+                    and -32768 <= x <= 32767 and -32768 <= y <= 32767
+                    and -32768 <= left <= 32767 and -32768 <= top <= 32767
+                    and x <= left and y <= top and left+patch_width <= x+width
+                    and top+patch_height <= y+height):
+                raise ValueError(('Depth C table coordinate bounds invalid',name))
+            self.sites[name] = dict(name=name,map=identity,x=x,y=y,width=width,height=height,
+                left=left,top=top,patch_width=patch_width,patch_height=patch_height)
+        if not self.sites:
+            raise ValueError('Actual C Dive site table is empty')
+        sites=list(self.sites.values())
+        for i,first in enumerate(sites):
+            for second in sites[i+1:]:
+                if (max(first['left'],second['left']) < min(first['left']+first['patch_width'],second['left']+second['patch_width'])
+                        and max(first['top'],second['top']) < min(first['top']+first['patch_height'],second['top']+second['patch_height'])):
+                    raise ValueError('Actual C Dive patch rectangles overlap')
+        self.resolved_requirements=[]
+
+    def _validate_indexes(self,runtime):
+        groups,spatial={},{}
+        for index,chunk in enumerate(self.chunks):
+            group,number=chunk['map']>>8,chunk['map']&255
+            groups.setdefault(group,{})[number]=index+1
+            for row in range(chunk['y']//32,(chunk['y']+chunk['height']-1)//32+1):
+                spatial.setdefault(row,[]).append(index)
+        base,last=min(groups),max(groups);group_rows=[];slots=[]
+        for group in range(base,last+1):
+            members=groups.get(group,{})
+            count=max(members)+1 if members else 0
+            group_rows.append([len(slots),count]);slots.extend(members.get(n,0) for n in range(count))
+        row_base,row_last=min(spatial),max(spatial);row_rows=[];row_chunks=[]
+        for row in range(row_base,row_last+1):
+            members=sorted(spatial.get(row,[]),key=lambda index:(self.chunks[index]['x'],index))
+            row_rows.append([len(row_chunks),len(members),max((self.chunks[i]['width'] for i in members),default=0)])
+            row_chunks.extend(members)
+        expected=(('sAtlasGroups',2,group_rows),('sAtlasMapSlots',1,slots),
+                  ('sAtlasRows',3,row_rows),('sAtlasRowChunks',1,row_chunks))
+        for symbol,columns,values in expected:
+            if _literal_rows(runtime,symbol,columns) != values:
+                raise ValueError(('Actual C runtime owner index differs from real rectangles',symbol))
+        for name,value in (('JOURNEY_ATLAS_GROUP_BASE',base),('JOURNEY_ATLAS_ROW_BASE',row_base),
+                           ('JOURNEY_ATLAS_MIN_X',min(c['x'] for c in self.chunks)),
+                           ('JOURNEY_ATLAS_MAX_X',max(c['x']+c['width'] for c in self.chunks))):
+            if _define_integer(runtime,name) != value:
+                raise ValueError(('Actual C runtime index bound changed',name))
+
+    def owner(self,x,y):
+        return next((c for c in self.chunks if c['x'] <= x < c['x']+c['width']
+                     and c['y'] <= y < c['y']+c['height']),None)
+
+    def surface_valid(self,name,x,y,require_dive=False):
+        if name not in self.graph.by_name or self.source.maps[name].get('map_type') == 'MAP_TYPE_UNDERWATER':
+            return False
+        try:cell=self.graph.point([name,x,y])
+        except ValueError:return False
+        return (not self.graph.words[cell]&0xC00 and self.graph.words[cell]>>12==1
+                and self.source.behavior(name,self.graph.words[cell])<=255
+                and self.graph.water[cell] and (not require_dive or self.graph.behaviors[cell] in (
+                    'MB_INTERIOR_DEEP_WATER','MB_DEEP_WATER','MB_SOOTOPOLIS_DEEP_WATER')))
+
+    def depth_valid(self,name,x,y):
+        if name not in self.graph.by_name or self.source.maps[name].get('map_type') != 'MAP_TYPE_UNDERWATER':
+            return False
+        try:cell=self.graph.point([name,x,y])
+        except ValueError:return False
+        return (not self.graph.words[cell]&0xC00 and self.graph.words[cell]>>12==3
+                and self.source.behavior(name,self.graph.words[cell])<=255
+                and self.graph.behaviors[cell] not in ('MB_NO_SURFACING','MB_SEAWEED_NO_SURFACING','MB_WATER_DOOR','UNKNOWN'))
+
+    def descend(self,surface,x,y):
+        chunk=self.by_name.get(surface)
+        if chunk is None or not self.surface_valid(surface,x,y,True):return None
+        gx,gy=chunk['x']+x,chunk['y']+y
+        for site in self.sites.values():
+            if site['left'] <= gx < site['left']+site['patch_width'] and site['top'] <= gy < site['top']+site['patch_height']:
+                xx,yy=gx-site['x'],gy-site['y']
+                return [site['name'],xx,yy] if self.depth_valid(site['name'],xx,yy) else None
+        return None
+
+    def emerge(self,depth,x,y):
+        site=self.sites.get(depth)
+        if site is None or not self.depth_valid(depth,x,y):return None
+        gx,gy=site['x']+x,site['y']+y
+        chunk=self.owner(gx,gy)
+        if chunk is None:return None
+        xx,yy=gx-chunk['x'],gy-chunk['y']
+        return [chunk['name'],xx,yy] if self.surface_valid(chunk['name'],xx,yy) else None
+
+    def add_edges(self):
+        for site in self.sites.values():
+            for gy in range(site['top'],site['top']+site['patch_height']):
+                for gx in range(site['left'],site['left']+site['patch_width']):
+                    chunk=self.owner(gx,gy)
+                    if chunk is None:
+                        self.graph.errors.append(dict(kind='atlas-dive-patch-owner-missing',depth=site['name'],global_tile=[gx,gy]))
+                        continue
+                    source=[chunk['name'],gx-chunk['x'],gy-chunk['y']]
+                    destination=self.descend(*source)
+                    if destination is None:
+                        self.graph.errors.append(dict(kind='atlas-dive-patch-terrain-rejected',depth=site['name'],surface=source))
+                    else:self.graph.dives.setdefault(self.graph.point(source),[]).append(self.graph.point(destination))
+            if site['name'] not in self.graph.by_name:
+                self.graph.errors.append(dict(kind='atlas-depth-outside-audited-scope',depth=site['name']))
+                continue
+            for y in range(site['height']):
+                for x in range(site['width']):
+                    destination=self.emerge(site['name'],x,y)
+                    if destination is not None:
+                        self.graph.dives.setdefault(self.graph.point([site['name'],x,y]),[]).append(self.graph.point(destination))
+
+    def requirements(self,rows):
+        covered=set()
+        for row in rows:
+            surface,depth=row.get('surface'),row.get('depth')
+            resolved=[];valid=True
+            if surface not in self.by_name or depth not in self.sites or not row.get('points'):
+                self.graph.errors.append(dict(kind='atlas-dive-required-map-or-points-invalid',key=row.get('key')))
+                self.resolved_requirements.append((row,[],False));continue
+            covered.add(depth);site=self.sites[depth];chunk=self.by_name[surface]
+            for field,actual in (('depth_origin',[site['x'],site['y']]),('surface_origin',[chunk['x'],chunk['y']])):
+                if field in row and row[field] != actual:
+                    valid=False;self.graph.errors.append(dict(kind='atlas-dive-required-origin-differs-from-c-table',key=row.get('key'),field=field))
+            for point in row['points']:
+                if len(point)!=2 or any(type(v) is not int or not 0<=v<128 for v in point):
+                    valid=False;self.graph.errors.append(dict(kind='atlas-dive-required-point-bounds-invalid',key=row.get('key')));continue
+                destination=self.descend(surface,*point)
+                returned=self.emerge(*destination) if destination is not None else None
+                source=[surface,*point]
+                if destination is None or destination[0]!=depth or returned!=source:
+                    valid=False;self.graph.errors.append(dict(kind='atlas-dive-required-transform-roundtrip-rejected',key=row.get('key'),surface=source,depth=destination,returned=returned))
+                else:resolved.append((source,destination))
+            self.resolved_requirements.append((row,resolved,valid and len(resolved)==len(row['points'])))
+        for depth in self.sites.keys()-covered:
+            self.graph.pending.append(dict(kind='final-atlas-dive-site-uncovered',depth=depth))
+
 
 def elevation_step(current, old_word, new_word):
     """Mirror mismatch and ObjectEventUpdateElevation, including bridge carry.
@@ -368,6 +642,16 @@ def audit(source, *, plan, requirements=None, strict=False, max_states=1000000, 
     for kind in ('caves', 'dives'):
         for row in requirements.get(kind, []):
             names.update(row[key] for key in ('surface', 'interior', 'depth') if row.get(key))
+    atlas_header=None;atlas_header_error=None
+    if hasattr(source,'read'):
+        try:atlas_header=source.read('src/data/journey_atlas_dives.h').decode()
+        except FileNotFoundError:pass
+        if atlas_header is not None:
+            try:
+                by_identity={value:name for name,value in getattr(source,'identities',{}).items()}
+                names.update(by_identity[row[0]] for row in _literal_rows(atlas_header,'sAtlasDiveSites',9)
+                             if row[0] in by_identity)
+            except ValueError as error:atlas_header_error=str(error)
     origins = dict(requirements.get('physical_origins', {}))
     origins.update({row['name']: row['origin'] for row in plan['chunks'] if 'origin' in row})
     graph = PhysicalGraph(source, names, max_states=max_states,
@@ -377,7 +661,18 @@ def audit(source, *, plan, requirements=None, strict=False, max_states=1000000, 
     for kind in KINDS:
         if kind not in requirements:
             graph.pending.append(dict(kind='final-mapping-missing', category=kind))
-    for row in requirements.get('dives', []):
+    atlas_model=None
+    if atlas_header is not None:
+        try:
+            if atlas_header_error:raise ValueError(atlas_header_error)
+            atlas_model=AtlasDiveSource(source,graph,atlas_header)
+            atlas_model.add_edges()
+            atlas_model.requirements(requirements.get('dives',[]))
+        except ValueError as error:
+            graph.errors.append(dict(kind='atlas-dive-source-contract-invalid',detail=str(error)))
+    elif any(row.get('model')=='atlas-affine' for row in requirements.get('dives',[])):
+        graph.errors.append(dict(kind='atlas-dive-c-header-missing'))
+    for row in requirements.get('dives', []) if atlas_header is None else []:
         surface, depth = row.get('surface'), row.get('depth')
         if not surface or not depth or not row.get('points'):
             graph.pending.append(dict(kind='final-dive-coordinates-missing', key=row.get('key')))
@@ -495,7 +790,15 @@ def audit(source, *, plan, requirements=None, strict=False, max_states=1000000, 
             checks[kind].append(dict(key=row.get('key'), passed=passed, component=component))
             if not passed:
                 graph.errors.append(dict(kind='required-physical-point-unreachable', category=kind, key=row.get('key')))
-    for row in requirements.get('dives', []):
+    if atlas_header is not None:
+        for row,resolved,valid in atlas_model.resolved_requirements if atlas_model is not None else []:
+            components=[graph.component(point) for pair in resolved for point in pair]
+            passed=valid and bool(resolved) and all(c is not None and c==ocean for c in components)
+            checks['dives'].append(dict(key=row.get('key'),passed=passed,components=components,
+                model='actual-C-table-affine-tri-state',resolved_points=[dict(surface=a,depth=b) for a,b in resolved],
+                identical_source_and_depth_coordinates=False,legacy_json_links_required=False))
+            if not passed:graph.errors.append(dict(kind='dive-emerge-roundtrip-failed',key=row.get('key')))
+    for row in requirements.get('dives', []) if atlas_header is None else []:
         points = row.get('points', [])
         components = [graph.component([row[side], x, y]) for side in ('surface', 'depth')
                       for x, y in points if row.get(side)]
@@ -513,6 +816,11 @@ def audit(source, *, plan, requirements=None, strict=False, max_states=1000000, 
                   generated_water_sccs=len(generated), metrics=metrics,
                   checks=checks, errors=graph.errors, pending=graph.pending,
                   connections=graph.connection_witnesses,
+                  dive_resolution_model='actual-C-table-affine-tri-state' if atlas_header is not None else 'legacy-native-json-connections',
+                  dive_source_contract=(dict(table_sha256=atlas_model.input_sha256,
+                      depth_sites=list(atlas_model.sites.values()),runtime_owners=len(atlas_model.chunks),
+                      tri_state_hook_precedes_legacy_lookup=True,actual_runtime_indexes_checked=True,
+                      native_dive_avatar_and_effect_not_certified=True) if atlas_model is not None else None),
                   unmodelled_behavior_blockers=dict(graph.unmodelled),
                   input_sha256=dict(getattr(source, 'inputs', {})),
                   limitations=['party/HM/story access prerequisites assumed',

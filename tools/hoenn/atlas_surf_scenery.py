@@ -16,6 +16,7 @@ import re
 import struct
 
 from atlas_surf_source import CARDINAL
+from atlas_surf_object_ids import native_local_id, validate_object_ids, stage_object_id_backend
 from badge_story_layer import read
 
 EVENT_FIELDS = ("object_events", "warp_events", "coord_events", "bg_events")
@@ -227,7 +228,7 @@ def extract_stamps(inputs, names, *, authenticate_sprites=True):
             for row in associated:
                 event = copy.deepcopy(row["event"])
                 record = dict(field=row["field"], source_index=row["source_index"],
-                              source_local_id=row["source_index"]+1 if row["field"] == "object_events" else None,
+                              source_local_id=native_local_id(event,row["source_index"]) if row["field"] == "object_events" else None,
                               event=event, offset=[event["x"]-left, event["y"]-top])
                 if row["field"] == "object_events":
                     record["sprite"] = _sprite_provenance(inputs, renderer, event) if renderer else None
@@ -380,7 +381,7 @@ def fixed_portal_placements(inputs, inventory, portals, route_water, *, existing
 def check_placements(stamps, placements, *, core_corridor=(), allow_corridor_overrides=()):
     """Reject cropped scenery, overlaps and silently blocked six-tile corridors."""
     lookup = {stamp["key"]: stamp for stamp in stamps}
-    occupied, seen, conflicts = {}, set(), []
+    occupied, seen, conflicts, groups, cores = {}, set(), [], {}, {}
     corridor = set(map(tuple, core_corridor))
     overrides = set(map(tuple, allow_corridor_overrides))
     for row in placements:
@@ -395,20 +396,37 @@ def check_placements(stamps, placements, *, core_corridor=(), allow_corridor_ove
             raise ValueError(("Scenery stamp changed/cropped after authentication", row["stamp"]))
         width, height = stamp["source_rect"][2:]
         halo = row.get("camera_halo",0)
-        if ((row["width"], row["height"]) != (width+2*halo,height+2*halo)
-                or row.get("stamp_offset",[0,0]) != [halo,halo]
-                or row["bank_signature"] != stamp["bank_signature"]):
+        sx,sy=row.get("stamp_offset",[0,0])
+        shared=row.get('shared_reservation') is True
+        if shared:
+            shape_ok=(row['kind']=='stamp' and 1<=row['width']<=127 and 1<=row['height']<=127
+                      and sx>=halo and sy>=halo and sx+width+halo<=row['width']
+                      and sy+height+halo<=row['height']
+                      and row.get('component_global_rect')==[row['origin'][0]+sx,row['origin'][1]+sy,width,height])
+            signature=(tuple(row['origin']),row['width'],row['height'],row['bank_signature'],row['ecology_owner'])
+            if row['name'] in groups and groups[row['name']]!=signature:
+                raise ValueError(('Shared scenery reservation identity or bank changed',row['name']))
+            groups[row['name']]=signature
+        else:
+            shape_ok=((row["width"],row["height"])==(width+2*halo,height+2*halo) and [sx,sy]==[halo,halo])
+        if not shape_ok or row["bank_signature"] != stamp["bank_signature"]:
             raise ValueError(("Scenery dimensions or bank changed", row["stamp"]))
         if row.get("fixed_atlas") is not None:
             if [value//8 for value in row["global_anchor"]] != row["fixed_atlas"]:
                 raise ValueError(("Fixed cave anchor moved off original atlas icon", row["stamp"]))
+        for y in range(sy,sy+height):
+            for x in range(sx,sx+width):
+                point=row['origin'][0]+x,row['origin'][1]+y
+                if point in cores:
+                    raise ValueError(('Native whole scenery cores overlap',row['stamp'],cores[point],point))
+                cores[point]=row['stamp']
         for y in range(row["height"]):
             for x in range(row["width"]):
                 point = row["origin"][0]+x, row["origin"][1]+y
-                if point in occupied:
+                if point in occupied and not (shared and occupied[point]==row['name']):
                     raise ValueError(("Exclusive scenery rectangles overlap", row["stamp"], occupied[point], point))
-                occupied[point] = row["stamp"]
-                local_x,local_y=x-halo,y-halo
+                occupied[point] = row['name'] if shared else row["stamp"]
+                local_x,local_y=x-sx,y-sy
                 word = stamp["words"][local_y*width+local_x] if 0<=local_x<width and 0<=local_y<height else stamp["pure_water_word"]
                 if point in corridor-overrides and word != stamp["pure_water_word"]:
                     conflicts.append(dict(stamp=row["stamp"], tile=list(point), word=word))
@@ -425,14 +443,17 @@ def stage_placements(layer, inputs, inventory, placements, *, allow_local_id_rei
 
     Returns every old-to-new event identity for migration/script audits. Warp
     references across the entire source are repointed, including cave returns.
-    Static object-local-ID changes need an explicit caller-audited allowlist;
-    trainer/script/flag identity is otherwise copied verbatim.
+    Numeric object/clone IDs survive array reordering through native_local_id
+    and the staged mapjson backend. ``local_id`` stays the native macro name.
+    The old allow_local_id_reindex argument is accepted for compatibility but
+    cannot authorize a numeric ID change. Script/flag identity is preserved.
     """
     stamps = {row["key"]: row for row in inventory["stamps"]}
     check_placements(inventory["stamps"], placements)
     layouts = {row["id"]: row for row in json.loads(read(layer,"data/layouts/layouts.json"))["layouts"]}
     mappings, values, old_to_new = {}, {}, {}
-    approved = set(tuple(row) for row in allow_local_id_reindex)
+    deprecated_allowlist = tuple(allow_local_id_reindex)
+    object_ids = []
     def mapping(name):
         if name not in mappings:
             mappings[name] = json.loads(read(layer,f"data/maps/{name}/map.json"))
@@ -447,7 +468,8 @@ def stage_placements(layer, inputs, inventory, placements, *, allow_local_id_rei
         if (layout["width"],layout["height"]) != (row["width"],row["height"]):
             raise ValueError(("Reserved source map does not fit whole scenery rectangle", stamp["key"], target_name))
         path = layout["blockdata_filepath"]
-        original_words = list(struct.unpack("<"+"H"*(layout["width"]*layout["height"]),read(layer,path)))
+        original_raw = values[path] if path in values else read(layer,path)
+        original_words = list(struct.unpack("<"+"H"*(layout["width"]*layout["height"]),original_raw))
         sw,sh=stamp["source_rect"][2:]
         sx,sy=row.get("stamp_offset",[0,0])
         for y in range(sh):
@@ -461,9 +483,16 @@ def stage_placements(layer, inputs, inventory, placements, *, allow_local_id_rei
                 raise ValueError(("Parent event changed since scenery extraction", stamp["key"], field, index))
             existing = target.setdefault(field,[])
             new_index = len(existing)
-            if field == "object_events" and new_index != index and (stamp["parent_map"],index) not in approved:
-                raise ValueError(("Object local-ID changes require explicit script audit", stamp["parent_map"],index,new_index))
             event = copy.deepcopy(event_row["event"])
+            numeric_id = None
+            if field == "object_events":
+                validate_object_ids(original)
+                numeric_id = native_local_id(event,index)
+                if event_row.get("source_local_id",numeric_id) != numeric_id:
+                    raise ValueError(("Authenticated source object local ID changed",stamp["parent_map"],index))
+                if numeric_id in validate_object_ids(existing):
+                    raise ValueError(("Relocated native object local-ID collision",target_name,numeric_id))
+                event["native_local_id"] = numeric_id
             event["x"] += sx-left
             event["y"] += sy-top
             existing.append(event)
@@ -475,6 +504,10 @@ def stage_placements(layer, inputs, inventory, placements, *, allow_local_id_rei
                                    target_map=target_name,target_map_id=target["id"],target_index=new_index,
                                    target_tile=[event["x"],event["y"]],
                                    global_tile=[row["origin"][0]+event["x"],row["origin"][1]+event["y"]])
+            if numeric_id is not None:
+                old_to_new[key].update(source_local_id=numeric_id,target_local_id=numeric_id)
+                object_ids.append(dict(source_map=stamp["parent_map"],source_index=index,
+                    target_map=target_name,target_index=new_index,native_local_id=numeric_id))
     # Apply reciprocal and other incoming warp references using the original
     # identities. Never assume a cave's sole return is numbered zero.
     by_id = inputs.by_id
@@ -497,6 +530,8 @@ def stage_placements(layer, inputs, inventory, placements, *, allow_local_id_rei
                 event["dest_map"] = replacement["target_map_id"]
                 event["dest_warp_id"] = str(replacement["target_index"])
                 warp_references.append(dict(map=name,index=index,before=before,after=copy.deepcopy(event)))
+    inputs.assert_unchanged()
+    backend = stage_object_id_backend(layer) if object_ids else None
     for path, blob in values.items():
         layer.stage(path,blob)
     for name, current in mappings.items():
@@ -505,8 +540,10 @@ def stage_placements(layer, inputs, inventory, placements, *, allow_local_id_rei
         blob = (json.dumps(current,indent=2)+"\n").encode()
         if json.loads(original) != current:
             layer.stage(path,blob)
-    inputs.assert_unchanged()
     return dict(kind="whole-scenery-and-event-relocation", placements=len(placements),
                 relocated_events=list(old_to_new.values()), incoming_warps_repointed=warp_references,
                 historical_source_preserved=True, source_events_cleared_by_retirement_stage=False,
-                local_id_reindex_requires_native_regression=True, native_validated=False)
+                object_numeric_ids_preserved=True,relocated_object_ids=object_ids,
+                source_index_is_not_local_id=True,native_object_id_backend=backend,
+                deprecated_local_id_reindex_allowlist_ignored=bool(deprecated_allowlist),
+                local_id_reindex_requires_native_regression=False, native_validated=False)

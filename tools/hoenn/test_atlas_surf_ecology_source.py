@@ -5,6 +5,8 @@ import struct
 import unittest
 
 from atlas_surf_ecology import repair_dex_locations
+from atlas_surf_ecology import generate_lookup
+from atlas_surf_overlay import OverlaySource
 from atlas_surf_source import Source
 import test_atlas_surf_source_inventory as source_fixtures
 from validate_atlas_surf_ecology_source import (CompiledEcology, census, compare,
@@ -52,6 +54,7 @@ bool8 MetatileBehavior_IsSurfableFishableWater(u8 b) {return b==MB_OCEAN_WATER;}
 bool8 MetatileBehavior_IsWaterfall(u8 b) {return b==MB_WATERFALL;}
 ''')
         overlay.parent('include/constants/map_types.h', b'enum MapType {MAP_TYPE_OCEAN_ROUTE, MAP_TYPE_UNDERWATER};\n')
+        overlay.parent('include/constants/maps.h',b'#include "map_groups.h"\n#define MAP_GROUP(x) ((x)>>8)\n#define MAP_NUM(x) ((x)&255)\n')
         overlay.parent('src/journey_sevii_surf.c', b'''
 static bool32 IsConnectedSeviiCoast(u8 group,u8 num) {return group==0&&num==1;}
 ''')
@@ -108,6 +111,25 @@ static const struct JourneyHabitat sJourneyGeneration4Habitats[]={
                                 (12, 'SPECIES_PHANTOM'), (201, 'SPECIES_EVENT'))}
         return source, overlay, catalog
 
+    def overlay_fixture(self):
+        source,overlay,catalog=self.fixture()
+        groups=json.loads((source/'data/maps/map_groups.json').read_bytes())
+        groups['group_order'].append('Atlas');groups['Atlas']=['NewSea']
+        overlay.stage('data/maps/map_groups.json',json.dumps(groups))
+        layouts=json.loads((source/'data/layouts/layouts.json').read_bytes())
+        row=copy.deepcopy(layouts['layouts'][0]);row.update(id='LAYOUT_NEWSEA',width=2,height=1,
+                                                          blockdata_filepath='new-sea.bin')
+        layouts['layouts'].append(row);overlay.stage('data/layouts/layouts.json',json.dumps(layouts))
+        mapping=copy.deepcopy(json.loads((source/'data/maps/OldWater/map.json').read_bytes()))
+        mapping.update(id='MAP_NEWSEA',layout='LAYOUT_NEWSEA')
+        overlay.stage('data/maps/NewSea/map.json',json.dumps(mapping))
+        overlay.stage('new-sea.bin',struct.pack('<2H',0x1001,0x1001))
+        header,implementation=generate_lookup([dict(map_id='MAP_NEWSEA',owner_map_id='MAP_OLDWATER',
+                                                    packed_map_id=256,owner_packed_map_id=0)])
+        overlay.stage('include/journey_atlas_ecology.h',header)
+        overlay.stage('src/journey_atlas_ecology.c',implementation)
+        return source,overlay,catalog
+
     def test_real_predicates_compile_implicit_enum_values_and_context(self):
         source, _, _ = self.fixture()
         native = CompiledEcology(Source(source)).native
@@ -117,6 +139,65 @@ static const struct JourneyHabitat sJourneyGeneration4Habitats[]={
         self.assertEqual(native.ecology_trigger(1, 1, 0)&2, 2)
         self.assertEqual(native.ecology_trigger(1, 0, 0)&2, 0)
         self.assertEqual(native.ecology_trigger(0, 0, 1)&3, 1)
+
+    def test_compiled_ecology_accepts_path_and_real_staged_alias_with_new_macro(self):
+        source,overlay,_=self.overlay_fixture()
+        self.assertEqual(CompiledEcology(source).native.ecology_owner(256),256)
+        compiled=CompiledEcology(OverlaySource(overlay))
+        self.assertEqual(compiled.native.ecology_owner(256),0)
+        self.assertEqual(compiled.map_registry_proof['historical_maps'],2)
+        self.assertEqual(compiled.map_registry_proof['compiled_maps'],3)
+        self.assertIn('constants/map_groups.h',compiled.compilation_headers_sha256)
+        self.assertFalse((source/'src/journey_atlas_ecology.c').exists())
+        self.assertFalse((source/'data/maps/NewSea/map.json').exists())
+
+    def test_census_accepts_source_like_and_new_terrain_without_materializing(self):
+        source,overlay,catalog=self.overlay_fixture()
+        class SourceProxy:
+            def __init__(self,inner):self.inner=inner
+            def __getattr__(self,name):return getattr(self.inner,name)
+        report=census(SourceProxy(OverlaySource(overlay)),owner_mapping={'NewSea':'OldWater'},
+                      retired_maps=['OldWater'],reachable_cells={'NewSea':[[0,0],[1,0]]},catalog=catalog)
+        self.assertEqual(report['aliases'],{'NewSea':'OldWater'})
+        self.assertEqual(report['families']['493'],[11])
+        self.assertTrue(report['graph_reachable_cells_supplied'])
+        self.assertTrue(any(row['map']=='NewSea' and row['owner']=='OldWater' for row in report['map_areas']))
+        self.assertFalse((source/'new-sea.bin').exists())
+
+    def test_compiler_reads_staged_pool_bytes_instead_of_parent_headers(self):
+        source,overlay,_=self.overlay_fixture()
+        path='include/journey_wild_data.h'
+        raw=(source/path).read_bytes();changed=raw.replace(b'{MAP_OLDWATER,15}',b'{MAP_OLDWATER,27}')
+        self.assertNotEqual(changed,raw)
+        overlay.stage(path,changed)
+        compiled=CompiledEcology(OverlaySource(overlay))
+        self.assertEqual(compiled.fishing[0],27)
+        self.assertEqual(CompiledEcology(source).fishing[0],15)
+        self.assertEqual((source/path).read_bytes(),raw)
+
+    def test_staged_transitive_enum_include_is_compiled_from_logical_view(self):
+        source,overlay,_=self.overlay_fixture()
+        path='include/constants/metatile_behaviors.h'
+        original=(source/path).read_bytes()
+        overlay.stage(path,b'#include "enum_base.h"\n'+original.replace(b'MB_RESERVED=0x80',b'MB_RESERVED=ECOLOGY_BEHAVIOR_BASE'))
+        overlay.stage('include/constants/enum_base.h',b'#define ECOLOGY_BEHAVIOR_BASE 0x90\n')
+        compiled=CompiledEcology(OverlaySource(overlay))
+        self.assertEqual(compiled.native.ecology_trigger(256,0,0x91)&3,2)
+        self.assertIn('constants/enum_base.h',compiled.compilation_headers_sha256)
+        self.assertEqual((source/path).read_bytes(),original)
+        self.assertFalse((source/'include/constants/enum_base.h').exists())
+
+    def test_compilation_rejects_cached_identity_tampering(self):
+        _,overlay,_=self.overlay_fixture()
+        view=OverlaySource(overlay)
+        view.identities['OldWater']=7
+        with self.assertRaisesRegex(ValueError,'authenticated logical registry'):
+            CompiledEcology(view)
+
+    def test_staged_aliases_must_match_requested_owner_contract(self):
+        _,overlay,catalog=self.overlay_fixture()
+        with self.assertRaisesRegex(ValueError,'aliases differ'):
+            census(OverlaySource(overlay),owner_mapping={'NewSea':'OldDry'},catalog=catalog)
 
     def test_pool_union_is_not_a_catchability_claim(self):
         source, _, catalog = self.fixture()

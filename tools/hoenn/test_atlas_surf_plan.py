@@ -113,8 +113,37 @@ class ReservedGeometryTests(unittest.TestCase):
         row=dict(name='Native',origin=[0,0],width=8,height=8,kind='stamp',evidence=dict(parent='native'))
         with self.assertRaisesRegex(ValueError,'overlap'):
             plan_reserved_geometry([(0,0)],[row,dict(row,origin=[7,0],name='Other')])
-        for change in [dict(width=128),dict(kind='unknown'),dict(evidence=None),dict(origin=[32767,0])]:
+        for change in [dict(width=128),dict(width=127,height=127),dict(kind='unknown'),dict(evidence=None),dict(origin=[32767,0])]:
             with self.assertRaises(ValueError):plan_reserved_geometry([(0,0)],[dict(row,**change)])
+
+    def test_native_patch_is_excluded_from_rectangles_not_only_from_water(self):
+        native=dict(native_map='NativeCoast',origin=[0,0],local_rect=[9,0,17,8],
+                    global_rect=[9,0,17,8],evidence=dict(registered_component='source-witness'))
+        plan=plan_reserved_geometry([(x,0) for x in range(4)],native_regions=[native])
+        self.assertGreater(plan['route_raster_cells_owned_by_registered_native_terrain'],0)
+        for row in plan['chunks']:
+            x,y=row['origin'];r,b=x+row['width'],y+row['height']
+            self.assertFalse(max(x,9)<min(r,17) and max(y,0)<min(b,8))
+        expected=independent_corridor({(x,0) for x in range(4)})
+        expected={p for p in expected if not (9<=p[0]<17 and 0<=p[1]<8)}
+        actual={(row['origin'][0]+x,row['origin'][1]+y)
+                for row in plan['chunks'] for y,a,b in row['water_runs'] for x in range(a,b)}
+        self.assertEqual(actual,expected)
+
+    def test_native_registration_mismatch_or_generated_overlap_is_rejected(self):
+        native=dict(native_map='NativeCoast',origin=[0,0],local_rect=[8,0,16,8],
+                    global_rect=[8,0,16,8],evidence=dict(registered_component='source-witness'))
+        row=dict(name='Scene',origin=[7,0],width=8,height=8,kind='stamp',evidence=dict(parent='native'))
+        with self.assertRaisesRegex(ValueError,'registered native terrain'):
+            plan_reserved_geometry([(0,0),(1,0)],[row],native_regions=[native])
+        changed=dict(native,global_rect=[9,0,17,8])
+        with self.assertRaisesRegex(ValueError,'local registration'):
+            plan_reserved_geometry([(0,0)],native_regions=[changed])
+        overlapping=dict(native,origin=[1,0],global_rect=[9,0,17,8])
+        with self.assertRaisesRegex(ValueError,'native terrain owners overlap'):
+            plan_reserved_geometry([(0,0)],native_regions=[native,overlapping])
+        touching=dict(native,origin=[8,0],global_rect=[16,0,24,8])
+        plan_reserved_geometry([(x,0) for x in range(4)],native_regions=[native,touching])
 
 
 if __name__=='__main__':

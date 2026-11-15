@@ -303,3 +303,56 @@ classificação nativa, ajuste funcional da projeção nas costas, migração re
 ecologia alcançável, ROMs finais e publicação. Último lote concluído:33acessos
 e inventário inteiro com colocação. Próximo: aplicar reservas/objetos/eventos
 no source staged e auditar acessos globais antes de compilar.
+
+
+## Composição integral e migração — 15/11/2026 UTC
+
+Pedido literal atual: “Continue”. Último lote concluído: composição em memória,
+sem escrita na fonte171, de533 mapas novos/1955inputs preparados,74eventos
+(56NPCs) transferidos,273IDs aposentados preservados e migração v2 completa
+implementada. Os33 retângulos nativos têm propriedade exclusiva:1.018células
+do raster gerado foram removidas, incluindo o recorte dos próprios retângulos
+dos mapas novos. Não basta deixar água bloqueada dentro de um mapa sobreposto.
+O censo encontra9pixels comnúcleo totalmente nativo e12parciais;35tocamraster,
+47incluemfranjas. Esses números são novos, NÃO o histórico45 forçado.
+
+O reempacotamento conserva374stamps em18cavernas+83reservas decorativas;cinco
+marcasDive5x5 viram cinco patches5x3 explícitos. Acrescenta7.590células de franja
+molhada copiadas de testemunhas nativas adjacentes, preservando palavra inteira,
+para não criar piscinas isoladas nos cantos dos objetos. As533 dimensões cabem
+no buffer nativo10.240células comhalo (máximoatual5.120), além de coordenadas s8.
+
+O backend mapjson agora aceita native_local_id numérico e mantém local_id como
+nome de macro; seu C++ real foi compilado e a saída171 padrão inteira continuou
+idêntica. Grupos acumulam os vários objetos no mesmo map.bin sem sobrescrever
+os anteriores. IDs, scripts, trainers e flags sobrevivem à troca de índices.
+Retirement exige cobertura exata antes de limpar os eventos antigos, desconecta
+as faces antigas já bloqueadas e o acesso falso autorizado de Route114; somente
+suas duas células pedidas mudam, mantendo a margem y16 e o restante da lagoa.
+
+A migração usa GPS legado RLE uma vez, prioridade de translação dos cores
+seguros e destinos reais para todos273IDs. A comparação C conferiu235.650células;
+5117pixels legados usam1985destinos (380pedestres/1605Surf),42.612bytes de tabela,
+mais980retângulos exatos para6781células. Resgate aproximado máximo22pixels,
+declarado para posições sem correspondência segura; não é GPS de viagem nova.
+A migração histórica1 permanece uma vez; ID de warp desconhecido usa resgate
+explícito pelo mapa, nunca interpreta coordenadas sentinela como posição.
+Continue→salvar→Continue no emulador continua PENDENTE.
+
+O auditor Dive lê as tabelas C/índices reais e o hooktri-state antes do lookup
+antigo:5sites/75pares transformados passaram sem conexões JSON falsas.38testes
+desse auditor e13testes do C gerado passaram. A suíte atlas completa atual
+passou244testes; a composição real confere cada palavra dos374stamps, os IDs
+numéricos, bancosDive e a ausência de sobreposição com os33patches nativos.
+Índice dos relatórios integrais e hashes: whole-layout-composition-review.json.
+
+Pedido principal AINDA INCOMPLETO: SCC global, bancos nas câmeras/divisas,
+projeção geográfica NATIVA (grids antigos tinham reconciliação incorreta),
+DEX/ecologia alcançável, referências C pendentes, build/capturas/baterias e
+cinco edições finais. Não tratar sWorldPoints como coordenadas locais exatas:
+o gerador antigo truncava Y>107 e fazia centros artificiais. A auditoria dos
+landmarks nativos está em andamento; não esconder conflito ajustando sóGPS.
+Os 273 mapas/arquivos antigos permanecem para migração; layouts/IDs não foram
+apagados. ROMs oficiais seguem171. PR normal111 aberto. Próximo: concluir
+auditoria física global, materializar candidata privada e medir o buildARM;
+publicação segue bloqueada até provas atuais, sem promover contratos à força.

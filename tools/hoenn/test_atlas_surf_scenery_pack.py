@@ -6,7 +6,8 @@ import unittest
 from atlas_surf_dives import OLD_SURFACES,patch_specs
 from atlas_surf_geometry import rasterize
 from atlas_surf_scenery import _json_digest
-from atlas_surf_scenery_pack import fixed_dive_reservations,pack_scenery,pack_grouped_scenery
+from atlas_surf_scenery_pack import (fixed_dive_reservations,pack_scenery,pack_grouped_scenery,
+                                    preserve_native_water_collars)
 from test_atlas_surf_scenery import stamp_fixture
 
 
@@ -101,6 +102,20 @@ class WholeSceneryPackingTests(unittest.TestCase):
         self.assertTrue(plan['complete'])
         self.assertEqual(plan['placements'][0]['source_rect'],[2,4,3,3])
         self.assertEqual(stamp['words'],[0x15f9]*9)
+
+    def test_native_water_fringe_requires_each_real_source_cell_and_keeps_full_word(self):
+        stamp=self.stamp('OldSea:000')
+        plan=pack_grouped_scenery(Inputs(),self.truth,dict(stamps=[stamp]),self.pixels)
+        class FringeInputs(Inputs):
+            def layout(self,name):return dict(width=10,height=10)
+            def water(self,name,x,y):return (x,y)!=(1,3)
+            def word(self,name,x,y):return 0x0170 if x==1 else 0x1170
+        result=preserve_native_water_collars(FringeInputs(),dict(stamps=[stamp]),plan)
+        witness=result['native_water_collar_witnesses'][0]
+        self.assertEqual(len(witness['cells']),15)
+        self.assertNotIn([1,3],[c['source_tile'] for c in witness['cells']])
+        self.assertIn(0x0170,[c['word'] for c in witness['cells']])
+        self.assertEqual(plan.get('native_water_collar_cells'),None)
 
 
 if __name__=='__main__':unittest.main()

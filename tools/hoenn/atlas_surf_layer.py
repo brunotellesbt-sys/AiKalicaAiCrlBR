@@ -88,6 +88,8 @@ def stage_geometry(layer, plan, donors):
         w, h = chunk['width'], chunk['height']
         if any(type(v) is not int or not 1 <= v <= 127 for v in (w, h)):
             raise ValueError(('Map dimensions exceed signed native coordinates', name))
+        if (w+15)*(h+14)>10240:
+            raise ValueError(('Map dimensions exceed the native backup buffer',name))
         spec = donors[name]
         donor = donor_maps[spec['map']]
         layout = copy.deepcopy(layouts[donor['layout']])

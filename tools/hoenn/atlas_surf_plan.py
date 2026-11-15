@@ -18,6 +18,8 @@ def _rectangle(row):
     x,y=row['origin'];w,h=row['width'],row['height']
     if any(type(v) is not int for v in (x,y,w,h)) or not 1<=w<=127 or not 1<=h<=127:
         raise ValueError(('Reservation must fit native signed coordinates',row))
+    if (w+15)*(h+14)>10240:
+        raise ValueError('Whole reservation exceeds the native map backup buffer')
     if not -32768<=x<=32767-w or not -32768<=y<=32767-h:
         raise ValueError('Reservation exceeds signed physical world coordinates')
     if row.get('kind') not in KINDS or not row.get('evidence'):
@@ -51,17 +53,38 @@ def _free_rectangles(left,top,size,rectangles):
     return result+list(active.values())
 
 
-def plan_reserved_geometry(pixels, reservations=(), *, chunk_tiles=32, prefix='JourneyAtlasSea'):
+def plan_reserved_geometry(pixels, reservations=(), *, native_regions=(),chunk_tiles=32, prefix='JourneyAtlasSea'):
     if type(chunk_tiles) is not int or chunk_tiles<8 or chunk_tiles>127 or chunk_tiles%8:
         raise ValueError('Ordinary storage rectangles must divide atlas pixels and fit s8')
     pixels=frozenset(tuple(p) for p in pixels)
     route_water=rasterize(pixels)
     reservations=[deepcopy(r) for r in reservations]
     rectangles=[_rectangle(r) for r in reservations]
+    native_regions=deepcopy(list(native_regions));native_rectangles=[]
+    for row in native_regions:
+        if not row.get('native_map') or not row.get('evidence'):
+            raise ValueError('Native exclusion needs a real registered map and source evidence')
+        local=row.get('local_rect',[]);origin=row.get('origin',[]);rect=row.get('global_rect',[])
+        if (len(local)!=4 or len(origin)!=2 or len(rect)!=4
+                or any(type(v) is not int for v in local+origin+rect)
+                or not 0<=local[0]<local[2] or not 0<=local[1]<local[3]
+                or rect!=[origin[0]+local[0],origin[1]+local[1],origin[0]+local[2],origin[1]+local[3]]):
+            raise ValueError('Native exclusion differs from its authenticated local registration')
+        native_rectangles.append(tuple(rect))
+    for i,a in enumerate(native_rectangles):
+        for b in native_rectangles[i+1:]:
+            if max(a[0],b[0])<min(a[2],b[2]) and max(a[1],b[1])<min(a[3],b[3]):
+                raise ValueError('Registered native terrain owners overlap')
     for i,a in enumerate(rectangles):
         for b in rectangles[i+1:]:
             if max(a[0],b[0])<min(a[2],b[2]) and max(a[1],b[1])<min(a[3],b[3]):
                 raise ValueError('Whole native reservations overlap; relocate or authenticate a merged object')
+    for a in rectangles:
+        for b in native_rectangles:
+            if max(a[0],b[0])<min(a[2],b[2]) and max(a[1],b[1])<min(a[3],b[3]):
+                raise ValueError('Whole generated reservation overlaps registered native terrain')
+    all_rectangles=rectangles+native_rectangles
+    native_route_cells={p for p in route_water if any(_inside(p,r) for r in native_rectangles)}
     ownership={};chunks=[];extra_water=set();native_obstructions=set()
     for i,(row,rect) in enumerate(zip(reservations,rectangles)):
         route_cells={p for p in route_water if _inside(p,rect)}
@@ -91,13 +114,13 @@ def plan_reserved_geometry(pixels, reservations=(), *, chunk_tiles=32, prefix='J
         for p in cells:ownership[p]=chunk
     buckets=defaultdict(set)
     for p in route_water:
-        if not any(_inside(p,r) for r in rectangles):
+        if not any(_inside(p,r) for r in all_rectangles):
             buckets[p[0]//chunk_tiles,p[1]//chunk_tiles].add(p)
     # Only storage buckets containing route ink need ordinary maps. Explicit
     # reservations remain complete even when all their terrain is dry.
     for (cx,cy),cells in sorted(buckets.items(),key=lambda item:(item[0][1],item[0][0])):
         left,top=cx*chunk_tiles,cy*chunk_tiles
-        nearby=[r for r in rectangles if max(left,r[0])<min(left+chunk_tiles,r[2])
+        nearby=[r for r in all_rectangles if max(left,r[0])<min(left+chunk_tiles,r[2])
                 and max(top,r[1])<min(top+chunk_tiles,r[3])]
         for a,b,c,d in _free_rectangles(left,top,chunk_tiles,nearby):
             selected={p for p in cells if a<=p[0]<c and b<=p[1]<d}
@@ -110,7 +133,7 @@ def plan_reserved_geometry(pixels, reservations=(), *, chunk_tiles=32, prefix='J
             for p in selected:
                 if p in ownership:raise AssertionError('Duplicate ownership after reservation sweep')
                 ownership[p]=chunk
-    if set(ownership)!=(route_water-native_obstructions)|extra_water:
+    if set(ownership)!=((route_water-native_obstructions-native_route_cells)|extra_water):
         raise AssertionError('Reservation partition omitted physical route water')
     chunks.sort(key=lambda c:(c['origin'][1],c['origin'][0],c.get('name','')))
     names=set()
@@ -167,5 +190,7 @@ def plan_reserved_geometry(pixels, reservations=(), *, chunk_tiles=32, prefix='J
                 water_tiles=len(ownership),ordinary_route_water_tiles=len(route_water),
                 route_water_replaced_by_authenticated_native_terrain=len(native_obstructions),
                 reserved_additional_water_tiles=len(extra_water),whole_reservations=len(reservations),
+                native_regions=native_regions,
+                route_raster_cells_owned_by_registered_native_terrain=len(native_route_cells),
                 affine_projection='floor((origin_global_tile + local_tile) / 8)',
                 source_certified=False,native_certified=False,art_changed=False,per_cell_gps_arrays=False)

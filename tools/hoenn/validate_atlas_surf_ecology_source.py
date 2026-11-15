@@ -12,7 +12,9 @@ from collections import Counter, defaultdict
 import ctypes
 import hashlib
 import json
+import os
 from pathlib import Path
+import posixpath
 import re
 import shutil
 import subprocess
@@ -25,6 +27,114 @@ from atlas_surf_source import Source, CARDINAL, compatible_height
 ROOT = Path(__file__).resolve().parents[2]
 FIELDS = ('land_mons', 'water_mons', 'rock_smash_mons', 'fishing_mons', 'hidden_mons')
 CAPS = (493, 1025)
+
+
+def _source_view(value):
+    """Accept a disk source or the verified logical Source/OverlaySource API."""
+    if isinstance(value,(str,os.PathLike)):
+        return Source(value)
+    methods=('read','js','layout','words','word','behavior','assert_unchanged')
+    if (not all(callable(getattr(value,name,None)) for name in methods)
+            or not all(hasattr(value,name) for name in ('source','maps','identities','inputs'))):
+        raise TypeError('Ecology census requires a path or verified Source-like terrain view')
+    return value
+
+
+def _registry_ids(groups):
+    result={}
+    order=groups.get('group_order')
+    if not isinstance(order,list) or len(order)>256 or len(set(order))!=len(order):
+        raise ValueError('Invalid compiled ecology map group order')
+    for group,label in enumerate(order):
+        names=groups.get(label)
+        if not isinstance(names,list) or len(names)>256:
+            raise ValueError(('Invalid compiled ecology map group',label))
+        for number,name in enumerate(names):
+            if not isinstance(name,str) or name in result:
+                raise ValueError(('Duplicate or invalid compiled ecology map name',name))
+            result[name]=(group<<8)|number
+    return result
+
+
+def _map_id_header(inputs):
+    """Generate only the absent native map_groups.h from authenticated JSON.
+
+    An overlay must preserve every disk-parent registry identity. Map constants
+    come from the same logical map JSON consumed by the terrain census; cached
+    Source dictionaries may not silently diverge from those verified reads.
+    """
+    registry_path='data/maps/map_groups.json'
+    current_raw=inputs.read(registry_path)
+    current=_registry_ids(json.loads(current_raw))
+    if current!=inputs.identities:
+        raise ValueError('Ecology Source identities differ from its authenticated logical registry')
+    parent_path=Path(inputs.source)/registry_path
+    parent_raw=parent_path.read_bytes()
+    layer=getattr(inputs,'layer',None)
+    if layer is not None and hashlib.sha256(parent_raw).hexdigest()!=layer.expected[registry_path]:
+        raise ValueError('Ecology historical registry changed behind the candidate overlay')
+    historical=_registry_ids(json.loads(parent_raw))
+    for name,identity in historical.items():
+        if current.get(name)!=identity:
+            raise ValueError(('Ecology overlay removed or renumbered a historical map',name))
+    lines=['// Host audit: generated from the verified logical map registry.',
+           '#ifndef GUARD_ATLAS_ECOLOGY_MAP_GROUPS_H','#define GUARD_ATLAS_ECOLOGY_MAP_GROUPS_H']
+    seen=set()
+    for name,identity in sorted(current.items(),key=lambda item:item[1]):
+        mapping=inputs.js(f'data/maps/{name}/map.json')
+        symbol=mapping['id']
+        if (not re.fullmatch(r'MAP_[A-Z0-9_]+',symbol) or symbol in seen
+                or name not in inputs.maps or inputs.maps[name]['id']!=symbol):
+            raise ValueError(('Invalid or inconsistent ecology map constant',name,symbol))
+        seen.add(symbol)
+        lines.append(f'#define {symbol} {identity}')
+    lines.extend(('#endif',''))
+    raw='\n'.join(lines).encode()
+    return raw,dict(logical_registry_sha256=hashlib.sha256(current_raw).hexdigest(),
+                    historical_registry_sha256=hashlib.sha256(parent_raw).hexdigest(),
+                    generated_map_groups_sha256=hashlib.sha256(raw).hexdigest(),
+                    historical_maps=len(historical),compiled_maps=len(current),
+                    historical_ids_unchanged=True)
+
+
+def _write_header_view(inputs,destination,roots,map_groups):
+    """Mirror quoted native includes through Source.read, with no disk fallback.
+
+    In particular, a staged pool/species/header cannot accidentally be compiled
+    from the immutable parent's include directory. The sole synthetic header
+    is map_groups.h, normally emitted by the native mapjson build step.
+    """
+    synthetic={'constants/map_groups.h':map_groups}
+    written={}
+    visiting=set()
+    def normalized(path):
+        result=posixpath.normpath(path)
+        if result.startswith('../') or result.startswith('/') or result== '..' or '\\' in result:
+            raise ValueError(('Unsafe quoted native ecology include',path))
+        return result
+    def write(path,known=None):
+        path=normalized(path)
+        if path in written or path in visiting:return
+        raw=known if known is not None else synthetic[path] if path in synthetic else inputs.read('include/'+path)
+        visiting.add(path)
+        target=destination/path;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(raw)
+        written[path]=hashlib.sha256(raw).hexdigest()
+        for include in re.findall(r'^\s*#\s*include\s*"([^"\n]+)"',raw.decode(),re.M):
+            attempts=list(dict.fromkeys((normalized(posixpath.join(posixpath.dirname(path),include)),normalized(include))))
+            for candidate in attempts:
+                if candidate in synthetic:
+                    write(candidate);break
+                try:child=inputs.read('include/'+candidate)
+                except FileNotFoundError:continue
+                write(candidate,child);break
+            else:
+                raise ValueError(('Native ecology include is unavailable in the logical source',path,include))
+        visiting.remove(path)
+    for path in roots:write(path)
+    # Even when the top-level native wrapper is guarded out, retain the full
+    # generated identity header in this compilation's deterministic manifest.
+    write('constants/map_groups.h')
+    return dict(sorted(written.items()))
 
 
 def definition(text, name):
@@ -46,6 +156,7 @@ def definition(text, name):
 class CompiledEcology:
     """Native data and predicates, evaluated without guessing implicit enums."""
     def __init__(self, inputs):
+        inputs=_source_view(inputs)
         self.inputs = inputs
         source = inputs.source
         wild = inputs.read('src/journey_wild.c').decode()
@@ -62,15 +173,13 @@ class CompiledEcology:
                       'MetatileBehavior_IsLandWildEncounter', 'MetatileBehavior_IsWaterWildEncounter',
                       'MetatileBehavior_IsBridgeOverWater', 'MetatileBehavior_IsSurfableFishableWater',
                       'MetatileBehavior_IsWaterfall')
-        paths = ('include/constants/species.h', 'include/constants/metatile_behaviors.h',
+        paths = ('include/constants/maps.h','include/constants/species.h', 'include/constants/metatile_behaviors.h',
                  'include/constants/map_types.h', 'include/journey_wild_data.h',
                  'include/journey_generation4_pools.h', 'include/journey_habitat_data.h',
                  'include/journey_generation4_habitats.h')
         for path in paths:
             inputs.read(path)
-        mapping = '#define MAP_GROUP(x) ((x)>>8)\n#define MAP_NUM(x) ((x)&255)\n'
-        mapping += '\n'.join(f'#define {inputs.maps[name]["id"]} {packed}'
-                             for name, packed in sorted(inputs.identities.items()))
+        map_groups,self.map_registry_proof=_map_id_header(inputs)
         prefix = r'''
 #include <stdint.h>
 #include <stddef.h>
@@ -80,6 +189,7 @@ typedef uint8_t bool8; typedef uint32_t bool32;
 #define FALSE 0
 #define ARRAY_COUNT(a) (sizeof(a)/sizeof((a)[0]))
 #include "constants/species.h"
+#include "constants/maps.h"
 #include "constants/metatile_behaviors.h"
 #include "constants/map_types.h"
 static struct {struct {u8 mapGroup,mapNum;} location;} save;
@@ -92,10 +202,10 @@ static struct {enum MapType mapType;} gMapHeader;
         # Habitat data are compiled here too, preserving their actual species IDs.
         data += '#include "journey_habitat_data.h"\n#include "journey_generation4_habitats.h"\n'
         alias_path = 'src/journey_atlas_ecology.c'
-        if (source/alias_path).is_file():
+        try:
             aliases = inputs.read(alias_path).decode()
             aliases = re.sub(r'^\s*#include[^\n]*\n', '', aliases, flags=re.M)
-        else:
+        except FileNotFoundError:
             aliases = 'u16 JourneyAtlasEcologyOwner(u16 map) {return map;}\n'
         functions = definition(coast, 'IsConnectedSeviiCoast')+'\n'
         functions += 'bool32 JourneySeviiIsOpenCoast(void) { return IsConnectedSeviiCoast(save.location.mapGroup, save.location.mapNum); }\n'
@@ -133,20 +243,27 @@ u32 ecology_trigger(u32 packed,u32 underwater,u32 behavior) {
  | (MetatileBehavior_IsWaterfall(behavior)?32:0);
 }
 '''
-        code = prefix+'\n'+mapping+'\n'+data+'\n'+aliases+'\n'+flags+'\n'+table[0]+'\n'+functions+'\n'+exports
-        self.code_sha256 = hashlib.sha256(code.encode()).hexdigest()
+        code = prefix+'\n'+data+'\n'+aliases+'\n'+flags+'\n'+table[0]+'\n'+functions+'\n'+exports
         compiler = shutil.which('cc') or shutil.which('gcc')
         if not compiler:
             raise RuntimeError('Native C compiler required for ecology audit')
         with tempfile.TemporaryDirectory(prefix='atlas-ecology-c-') as temp:
             path, library = Path(temp)/'ecology.c', Path(temp)/'ecology.so'
+            include_root=Path(temp)/'include'
+            self.compilation_headers_sha256=_write_header_view(inputs,include_root,
+                [path.removeprefix('include/') for path in paths],map_groups)
+            self.code_sha256=hashlib.sha256(code.encode()+json.dumps(self.compilation_headers_sha256,sort_keys=True).encode()).hexdigest()
             path.write_text(code)
             command = [compiler, '-std=gnu17', '-Wall', '-Wextra', '-Werror', '-shared', '-fPIC',
-                       '-iquote', str(source/'include'), str(path), '-o', str(library)]
+                       '-iquote', str(include_root), str(path), '-o', str(library)]
             result = subprocess.run(command, capture_output=True, text=True)
             if result.returncode:
                 raise ValueError(('Native ecology compilation failed', result.stderr))
             self.native = ctypes.CDLL(str(library))
+        parent_registry=Path(inputs.source)/'data/maps/map_groups.json'
+        if hashlib.sha256(parent_registry.read_bytes()).hexdigest()!=self.map_registry_proof['historical_registry_sha256']:
+            raise ValueError('Historical ecology map registry changed during native compilation')
+        inputs.assert_unchanged()
         self.pools, self.habitats, self.stages, self.fishing = {}, {}, {}, {}
         buffer = (ctypes.c_uint32*64)()
         for cap in CAPS:
@@ -281,7 +398,7 @@ def census(source, *, owner_mapping=None, retired_maps=(), reachable_cells=None,
     ``reachable_cells`` optionally maps each physical map to graph-proved tile
     coordinates; absent cells in that mode do not become a trigger witness.
     """
-    inputs = Source(source)
+    inputs = _source_view(source)
     compiled = CompiledEcology(inputs)
     catalog_path = ROOT/'tools/hoenn/catalog_metadata.json'
     raw = catalog_path.read_bytes() if catalog is None else json.dumps(catalog, sort_keys=True).encode()
@@ -360,6 +477,8 @@ def census(source, *, owner_mapping=None, retired_maps=(), reachable_cells=None,
     manifest = dict(sorted(inputs.inputs.items()))
     return dict(schema='atlas-surf-ecology-source-v1', kind='atlas-surf-ecology-source-census',
                 native_c_compiled=True, native_c_sha256=compiled.code_sha256,
+                native_c_headers_sha256=compiled.compilation_headers_sha256,
+                compiled_map_registry=compiled.map_registry_proof,
                 source_inputs_sha256=manifest,
                 source_manifest_sha256=hashlib.sha256(json.dumps(manifest, sort_keys=True).encode()).hexdigest(),
                 catalog_sha256=hashlib.sha256(raw).hexdigest(),

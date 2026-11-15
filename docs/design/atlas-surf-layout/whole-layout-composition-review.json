@@ -1,0 +1,40 @@
+{
+  "schema": "atlas-whole-layout-composition-review/v1",
+  "files": {
+    "native-ownership-source.json.gz": {
+      "json_sha256": "3d6c389c61b6d743ccfe883b06407ac74cf7ce4fb40f90a99117b0aa5efe4ea6",
+      "gzip_sha256": "ee1d6811c0d1745ff25750256dd7426e6e4de57009eb19148af787df8b3f1146"
+    },
+    "dive-affine-source-contract.json.gz": {
+      "json_sha256": "56db98930a2dc56bc3535a70cfd7ee5871dd8823a0a33d7623de137ed23c46f7",
+      "gzip_sha256": "e5b7902612a4c50487dfa05db3b10ab95e96935b0fb076fffb01b45089fafa04"
+    },
+    "whole-layout-composed-source.json.gz": {
+      "json_sha256": "73f72227ff73d8214c96d09d3e1c13ce99eef54c94ce926c62018ed4dc40be02",
+      "gzip_sha256": "54067a50e3c1a019fd99e9842a628102c11b08ab38ad0074ddb98ea135380f59"
+    },
+    "migration-source-host-proof.json.gz": {
+      "json_sha256": "070c68b748842ac6ff94d4ea7503349c6d5096cb112d7d5430923e19b352623a",
+      "gzip_sha256": "5c3950ef89f13bb3a847c635ce2e141321bd146225070b416ac9221b50df7fd7"
+    },
+    "retirement-parent-reference-audit.json.gz": {
+      "json_sha256": "56359757ccc81e36ad323aa6dd3e84900037e3d6eb76d733bcae1abc9309f801",
+      "gzip_sha256": "9d9a111969de46b849564428f6ff671466c5e271006969a72c5aa8050686f0ef"
+    }
+  },
+  "source_only": true,
+  "new_maps": 533,
+  "prepared_inputs": 1955,
+  "relocated_events": 74,
+  "relocated_npcs": 56,
+  "retired_maps": 273,
+  "native_regions": 33,
+  "generated_raster_cells_removed_from_native_terrain": 1018,
+  "native_water_fringe_cells": 7590,
+  "native_dive_pairs_verified": 75,
+  "host_legacy_cells_checked": 235650,
+  "unit_tests": 244,
+  "native_ROM_validated": false,
+  "global_SCC_validated": false,
+  "public_ROMs_updated": false
+}

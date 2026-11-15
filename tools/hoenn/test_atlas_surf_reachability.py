@@ -1,5 +1,6 @@
 """Reject source-network gaps that a plausible map/GPS diagram cannot prove."""
 import copy
+import hashlib
 import unittest
 
 from atlas_surf_reachability import audit, elevation_step
@@ -222,6 +223,187 @@ class PhysicalReachability(unittest.TestCase):
         source, plan, requirements = self.fixture()
         with self.assertRaisesRegex(ValueError, 'budget exceeded'):
             audit(source, plan=plan, requirements=requirements, max_states=3)
+
+
+class AtlasAffineDiveSource(unittest.TestCase):
+    """Read real emitted C, then corrupt tables, guards, owners and terrain.
+
+    Fixture requirements use different Surface/Depth coordinates. The graph
+    cannot pass by resurrecting the deleted zero-offset JSON connections.
+    """
+    def fixture(self):
+        from atlas_surf_dives import HELPERS,render_header
+        from atlas_surf_runtime import render_runtime
+        source=Terrain();source.add('A',word=0x1003);source.add('B')
+        source.connect('A','B');source.add('Depth',4,4,0x3000)
+        source.maps['Depth']['map_type']='MAP_TYPE_UNDERWATER'
+        source.identities={'A':90<<8,'B':(90<<8)|1,'Depth':83<<8}
+        chunks=[dict(name='A',id='MAP_A',group_index=90,number=0,origin=[80,80],width=3,height=3),
+                dict(name='B',id='MAP_B',group_index=90,number=1,origin=[83,80],width=3,height=3)]
+        plan=dict(scale=8,chunks=chunks)
+        runtime,_=render_runtime(plan)
+        header=render_header([dict(depth_id=83<<8,depth_origin=[79,79],
+            depth_dimensions=[4,4],global_rect=[80,80,3,3])])
+        hook='''
+#include "data/journey_atlas_runtime.h"
+#include "data/journey_atlas_dives.h"
+static bool8 SetDiveWarp(enum Connection dir, u16 x, u16 y)
+{
+    const struct MapConnection *connection;
+    s8 atlas = JourneyAtlasSetDiveWarp(dir, x, y);
+    if (atlas >= 0)
+        return atlas != 0;
+    connection = GetMapConnection(dir);
+    return connection != NULL;
+}
+'''
+        source.texts={'src/data/journey_atlas_runtime.h':runtime,
+                      'src/data/journey_atlas_dives.h':header,
+                      'src/overworld.c':HELPERS+hook,
+                      'include/config/general.h':'#define BUGFIX\n',
+                      'src/metatile_behavior.c':r'''
+bool8 MetatileBehavior_IsSurfableWaterOrUnderwater(u8 metatileBehavior)
+{
+    if ((sTileBitAttributes[metatileBehavior] & TILE_FLAG_SURFABLE)) return TRUE;
+    else return FALSE;
+}
+bool8 MetatileBehavior_IsDiveable(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_INTERIOR_DEEP_WATER
+     || metatileBehavior == MB_DEEP_WATER
+     || metatileBehavior == MB_SOOTOPOLIS_DEEP_WATER) return TRUE;
+    else return FALSE;
+}
+bool8 MetatileBehavior_IsUnableToEmerge(u8 metatileBehavior)
+{
+    if (metatileBehavior == MB_NO_SURFACING
+     || metatileBehavior == MB_SEAWEED_NO_SURFACING
+     #ifdef BUGFIX
+     || metatileBehavior == MB_WATER_DOOR
+     #endif
+     ) return TRUE;
+    else return FALSE;
+}
+'''}
+        def read(name):
+            if name not in source.texts:raise FileNotFoundError(name)
+            raw=source.texts[name].encode();source.inputs[name]=hashlib.sha256(raw).hexdigest();return raw
+        source.read=read
+        requirements=dict(complete=True,ports=[],caves=[],adapters=[],native_pixels=[],
+            dives=[dict(key='Affine',surface='A',depth='Depth',points=[[1,1]],
+                        model='atlas-affine',surface_origin=[80,80],depth_origin=[79,79])])
+        return source,plan,requirements
+
+    def run_fixture(self,fixture):
+        source,plan,requirements=fixture
+        return audit(source,plan=plan,requirements=requirements)
+
+    def test_actual_c_origin_transform_passes_with_no_json_dive_or_emerge_links(self):
+        source,plan,requirements=self.fixture()
+        self.assertFalse(source.maps['Depth']['connections'])
+        self.assertEqual([c['direction'] for c in source.maps['A']['connections']],['right'])
+        result=audit(source,plan=plan,requirements=requirements)
+        self.assertTrue(result['passed'],result)
+        check=result['checks']['dives'][0]
+        self.assertEqual(check['resolved_points'],[dict(surface=['A',1,1],depth=['Depth',2,2])])
+        self.assertFalse(check['legacy_json_links_required'])
+        self.assertTrue(result['dive_source_contract']['actual_runtime_indexes_checked'])
+        self.assertFalse(result['native_controller_validated'])
+
+    def test_obsolete_json_links_cannot_change_the_implemented_atlas_resolver(self):
+        source,plan,requirements=self.fixture()
+        source.maps['Depth']['connections']=[dict(direction='emerge',offset=77,map='MAP_B')]
+        self.assertTrue(audit(source,plan=plan,requirements=requirements)['passed'])
+
+    def reject_text(self,path,old,new):
+        fixture=self.fixture();source=fixture[0]
+        self.assertIn(old,source.texts[path]);source.texts[path]=source.texts[path].replace(old,new,1)
+        result=self.run_fixture(fixture)
+        self.assertFalse(result['passed'])
+        self.assertIn('atlas-dive-source-contract-invalid',{r['kind'] for r in result['errors']})
+        return result
+
+    def test_depth_c_table_unknown_identity_is_rejected(self):
+        self.reject_text('src/data/journey_atlas_dives.h','{21248,79,79,4,4,80,80,3,3}',
+                         '{65535,79,79,4,4,80,80,3,3}')
+
+    def test_depth_c_table_dimensions_must_match_the_real_layout(self):
+        self.reject_text('src/data/journey_atlas_dives.h','{21248,79,79,4,4,80,80,3,3}',
+                         '{21248,79,79,5,4,80,80,3,3}')
+
+    def test_depth_patch_bounds_cannot_overflow_or_scan_unbounded_terrain(self):
+        self.reject_text('src/data/journey_atlas_dives.h','{21248,79,79,4,4,80,80,3,3}',
+                         '{21248,79,79,4,4,80,80,65536,3}')
+
+    def test_c_owner_signed_coordinate_overflow_is_not_python_geometry(self):
+        self.reject_text('src/data/journey_atlas_runtime.h','{23040,80,80,3,3}',
+                         '{23040,65536,80,3,3}')
+
+    def test_runtime_map_slot_corruption_cannot_invent_an_owner(self):
+        self.reject_text('src/data/journey_atlas_runtime.h','sAtlasMapSlots[] = {1,2}',
+                         'sAtlasMapSlots[] = {0,2}')
+
+    def test_spatial_row_index_corruption_is_rejected(self):
+        self.reject_text('src/data/journey_atlas_runtime.h','sAtlasRowChunks[] = {0,1}',
+                         'sAtlasRowChunks[] = {1,0}')
+
+    def test_getconnection_cannot_run_before_the_tristate_hook(self):
+        self.reject_text('src/overworld.c','s8 atlas = JourneyAtlasSetDiveWarp(dir, x, y);',
+                         'connection = GetMapConnection(dir);\n    s8 atlas = JourneyAtlasSetDiveWarp(dir, x, y);')
+
+    def test_zero_rejection_cannot_fall_back_to_legacy_connections(self):
+        self.reject_text('src/overworld.c','if (atlas >= 0)','if (atlas > 0)')
+
+    def test_changed_helper_arithmetic_or_terrain_guard_needs_review(self):
+        self.reject_text('src/overworld.c','xx = gx - site->x; yy = gy - site->y;',
+                         'xx = gx + site->x; yy = gy - site->y;')
+
+    def test_native_callback_cannot_accept_no_surfacing_behind_the_auditor(self):
+        self.reject_text('src/metatile_behavior.c','metatileBehavior == MB_NO_SURFACING',
+                         'metatileBehavior != MB_NO_SURFACING')
+
+    def test_disabled_native_bugfix_stays_unmodelled(self):
+        self.reject_text('include/config/general.h','#define BUGFIX','#undef BUGFIX')
+
+    def test_target_depth_collision_is_read_from_real_destination_cells(self):
+        source,plan,requirements=self.fixture();source.set('Depth',2,2,0x3C00)
+        result=audit(source,plan=plan,requirements=requirements)
+        self.assertFalse(result['passed'])
+        self.assertIn('atlas-dive-patch-terrain-rejected',{r['kind'] for r in result['errors']})
+
+    def test_depth_height_zero_cannot_substitute_for_real_default_height_three(self):
+        source,plan,requirements=self.fixture();source.set('Depth',2,2,0x0000)
+        self.assertFalse(audit(source,plan=plan,requirements=requirements)['passed'])
+
+    def test_target_no_surfacing_behavior_blocks_the_new_transform(self):
+        source,plan,requirements=self.fixture();source.set('Depth',2,2,0x3004)
+        self.assertFalse(audit(source,plan=plan,requirements=requirements)['passed'])
+
+    def test_ordinary_water_does_not_authorize_descent(self):
+        source,plan,requirements=self.fixture();source.set('A',1,1,0x1001)
+        self.assertFalse(audit(source,plan=plan,requirements=requirements)['passed'])
+
+    def test_requirement_origins_cannot_override_the_actual_c_table(self):
+        source,plan,requirements=self.fixture();requirements['dives'][0]['depth_origin']=[80,80]
+        result=audit(source,plan=plan,requirements=requirements)
+        self.assertIn('atlas-dive-required-origin-differs-from-c-table',{r['kind'] for r in result['errors']})
+
+    def test_required_surface_coordinate_bounds_fail_without_synthetic_warp(self):
+        source,plan,requirements=self.fixture();requirements['dives'][0]['points']=[[128,1]]
+        result=audit(source,plan=plan,requirements=requirements)
+        self.assertIn('atlas-dive-required-point-bounds-invalid',{r['kind'] for r in result['errors']})
+
+    def test_missing_affine_c_header_cannot_be_replaced_by_json_links(self):
+        source,plan,requirements=self.fixture();del source.texts['src/data/journey_atlas_dives.h']
+        source.maps['A']['connections'].append(dict(direction='dive',offset=0,map='MAP_DEPTH'))
+        source.maps['Depth']['connections'].append(dict(direction='emerge',offset=0,map='MAP_A'))
+        result=audit(source,plan=plan,requirements=requirements)
+        self.assertIn('atlas-dive-c-header-missing',{r['kind'] for r in result['errors']})
+
+    def test_all_actual_c_sites_need_a_declared_final_obligation(self):
+        source,plan,requirements=self.fixture();requirements['dives']=[]
+        result=audit(source,plan=plan,requirements=requirements)
+        self.assertIn('final-atlas-dive-site-uncovered',{r['kind'] for r in result['pending']})
 
 
 if __name__ == '__main__':

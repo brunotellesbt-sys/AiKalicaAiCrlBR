@@ -73,8 +73,8 @@ def fixed_dive_reservations(inventory, route_water, *, halo=9):
         x,y,w,h=site['global_rect'];origin=[x-halo,y-halo]
         row=dict(name='JourneyAtlasDive'+site['name'],kind='dive',origin=origin,
                  width=w+2*halo,height=h+2*halo,camera_halo=halo,
-                 donor=stamp['parent_map'],ecology_owner=stamp['parent_map'],
-                 bank_signature=stamp['bank_signature'],dive_site=deepcopy(site),
+                 donor='JourneyHoennNorthSea',ecology_owner=stamp['parent_map'],
+                 preferred_donor_banks=deepcopy(site['preferred_donor_banks']),dive_site=deepcopy(site),
                  additional_water_runs=[[halo+dy,halo,halo+w] for dy in range(h)],
                  native_water_evidence=dict(original_stamp=stamp['key'],
                                             stamp_sha256=stamp['stamp_sha256'],
@@ -251,6 +251,8 @@ def pack_grouped_scenery(inputs, truth, inventory, route_pixels, *, fixed=(), ex
                     max(r[2] for r in rects),max(r[3] for r in rects))
             if merged[2]-merged[0]>127 or merged[3]-merged[1]>127:
                 counts['signed_native_extent']+=1;continue
+            if (merged[2]-merged[0]+15)*(merged[3]-merged[1]+14)>10240:
+                counts['native_map_backup_buffer']+=1;continue
             if any(overlaps(merged,r) for r in blocked) or any(
                 overlaps(merged,g['rect']) for i,g in enumerate(groups) if i not in touching):
                 counts['merged_corner_overlap']+=1;continue
@@ -303,3 +305,70 @@ def pack_grouped_scenery(inputs, truth, inventory, route_pixels, *, fixed=(), ex
                 grouped_decorative_maps=len(groups),replaced_native_dive_stamps=sorted(replaced),
                 unplaced_stamps=conflicts,complete=not conflicts,rejected_candidate_counts=dict(counts),
                 art_changed=False,original_player_gps_used=False,source_routing_proven=False,native_validated=False)
+
+
+def preserve_native_water_collars(inputs,inventory,plan):
+    """Keep the actual one-tile native water fringe around a complete object.
+
+    Copying only the object's bounding rectangle can strand its wet corners in
+    tiny artificial pools. Each added cell here has an exact adjacent native
+    source word and a collision-zero Surf witness; no invented ocean path is
+    permitted. Nine camera tiles already reserve this fringe's physical owner.
+    """
+    result=deepcopy(plan);stamps={s['key']:s for s in inventory['stamps']}
+    maps={r['name']:r for r in result['reservations']};witnesses=[]
+    words_by_map=defaultdict(dict)
+    for row in result['placements']:
+        stamp=stamps[row['stamp']];name=stamp['parent_map'];layout=inputs.layout(name)
+        left,top,w,h=stamp['source_rect'];sx,sy=row['stamp_offset']
+        proof=[]
+        for yy in range(-1,h+1):
+            for xx in range(-1,w+1):
+                if 0<=xx<w and 0<=yy<h:continue
+                px,py=left+xx,top+yy
+                if not (0<=px<layout['width'] and 0<=py<layout['height']):continue
+                if not inputs.water(name,px,py):continue
+                x,y=sx+xx,sy+yy
+                if not (0<=x<row['width'] and 0<=y<row['height']):
+                    raise ValueError('Whole native water fringe escaped its camera reservation')
+                word=inputs.word(name,px,py);key=x,y
+                previous=words_by_map[row['name']].get(key,word)
+                if previous!=word:raise ValueError('Shared native water collars disagree on a full metatile word')
+                words_by_map[row['name']][key]=word
+                proof.append(dict(source_tile=[px,py],target_tile=[x,y],word=word))
+        witnesses.append(dict(stamp=stamp['key'],target_map=row['name'],native_map=name,cells=proof))
+    for name,words in words_by_map.items():
+        row=maps[name]
+        if row.get('reserved_water_policy')!='native':
+            raise ValueError('Native water collar requires an authoritative whole-object water mask')
+        cells=_cells(row['water_runs']);cells.update(words)
+        row['water_runs']=_runs(cells)
+        row.setdefault('native_water_evidence',{})['one_tile_native_fringe']=[w for w in witnesses if w['target_map']==name]
+        row['native_water_word_overrides']=[dict(tile=list(tile),word=word) for tile,word in sorted(words.items(),key=lambda p:(p[0][1],p[0][0]))]
+        # The original obstruction census predates the native fringe. Terrain
+        # remains authoritative and the integration recalculates its final SCC.
+    result['native_water_collar_witnesses']=witnesses
+    result['native_water_collar_cells']=sum(len(w) for w in words_by_map.values())
+    inputs.assert_unchanged()
+    return result
+
+
+def stage_native_water_collars(layer,plan):
+    """Apply the authenticated full words after geometry and whole cores."""
+    import json,struct
+    from badge_story_layer import read
+    layouts={r['id']:r for r in json.loads(read(layer,'data/layouts/layouts.json'))['layouts']}
+    counts={}
+    for row in plan['reservations']:
+        overrides=row.get('native_water_word_overrides',[])
+        if not overrides:continue
+        mapping=json.loads(read(layer,f'data/maps/{row["name"]}/map.json'))
+        layout=layouts[mapping['layout']];path=layout['blockdata_filepath'];raw=read(layer,path)
+        words=list(struct.unpack('<'+'H'*(len(raw)//2),raw))
+        for cell in overrides:
+            x,y=cell['tile'];word=cell['word']
+            if not (0<=x<layout['width'] and 0<=y<layout['height']) or word&0xc00:
+                raise ValueError('Invalid authenticated native water fringe cell')
+            words[y*layout['width']+x]=word
+        layer.stage(path,struct.pack('<'+'H'*len(words),*words));counts[row['name']]=len(overrides)
+    return dict(kind='whole-native-water-fringe',maps=len(counts),cells=sum(counts.values()),native_validated=False)

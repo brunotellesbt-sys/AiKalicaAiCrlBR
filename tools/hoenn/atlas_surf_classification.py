@@ -3,8 +3,9 @@
 Native ownership is not inferred from the revision171 player GPS, map-section
 rectangles, nearest names, or a requested pixel count. The regional overlay is
 reproduced from its authenticated PNGs for visual provenance. A *physical*
-native exclusion additionally requires a supplied global registration and an
-entire six-by-six corridor core covered by real, compatible native water.
+native ownership additionally requires a supplied local interface registration
+and real water connected to its native mouth. Six-wide cores belong to the
+generated geometry; narrow native channels retain their original terrain.
 
 Registrations are authored integration inputs: this reader checks their real
 terrain and mutual geometry, but does not invent their atlas positions. Reports
@@ -117,6 +118,165 @@ def protected_icon_witnesses(inputs, truth=None):
         actors=len(mapping['object_events']),warps=len(mapping['warp_events']))}
 
 
+def _raster_cell(point, blue):
+    """Independent six-wide generated raster, including its two-tile joins."""
+    x,y = point
+    ax,ay,dx,dy = x//8,y//8,x%8,y%8
+    if (ax,ay) not in blue:
+        return False
+    if 1 <= dx <= 6 and 1 <= dy <= 6:
+        return True
+    if 1 <= dy <= 6:
+        return dx == 0 and (ax-1,ay) in blue or dx == 7 and (ax+1,ay) in blue
+    if 1 <= dx <= 6:
+        return dy == 0 and (ax,ay-1) in blue or dy == 7 and (ax,ay+1) in blue
+    return False
+
+
+def _authenticate_registration(inputs,row,truth):
+    evidence = row['atlas_evidence']
+    if evidence.get('art_sha256') != dict(truth.array_sha256):
+        raise ValueError(('Registration does not bind the actual immutable atlas',row['native_map']))
+    anchor = evidence['fixed_anchor']
+    if anchor['map'] != row['native_map'] or inputs.anchors()[row['native_map']]['atlas'] != anchor['atlas']:
+        raise ValueError(('Registration fixed anchor differs from source',row['native_map']))
+    if 'gps' in evidence.get('sole_basis','').lower():
+        raise ValueError('Player GPS cannot establish physical native ownership')
+    path = evidence['authored_anchor_to_coast_path']
+    target = [v//8 for v in row['global_tile']]
+    if not path or path[0] != anchor['atlas'] or path[-1] != target:
+        raise ValueError(('Authored coast path does not bind its actual interface',row['native_map'],target))
+    if any(sum(abs(a-b) for a,b in zip(first,second)) != 1 for first,second in zip(path,path[1:])):
+        raise ValueError(('Non-cardinal authored registration path',row['native_map']))
+    samples = evidence['art_samples']
+    for sample in samples:
+        if truth.pixel(tuple(sample['atlas'])) != sample['palette_index']:
+            raise ValueError(('Registration art sample changed',row['native_map'],sample))
+    if truth.pixel(tuple(target)) != 2:
+        raise ValueError(('Registered coast mouth is outside route ink',row['native_map'],target))
+    return dict(immutable_art_bound=True,fixed_anchor_bound=True,
+                exact_art_samples_checked=len(samples),cardinal_authored_path=True,
+                geographic_registration_authored_not_recovered=True,
+                independent_geographic_review_pending=evidence.get('independent_geographic_review_pending',True))
+
+
+def census_native_bounds(inputs, registration_report):
+    """Audit actual terrain under all proposed native patch exclusions.
+
+    Pixel ownership can be mixed. The six-wide footprint belongs to generated
+    geometry; an authentic native channel can be one tile wide. Consequently
+    *any* real water of the registered component is recorded as a native
+    witness, while full/partial core coverage remains a separate diagnostic.
+    Rectangular native exclusions preserve dry/blocked native cells too.
+    This proves source ownership of local patches, not global SCC or controls.
+    """
+    truth = decode_atlas(inputs.read('src/data/journey_world_map.h').decode())
+    icons = protected_icon_witnesses(inputs,truth)
+    blue = truth.blue_pixels-set(icons)
+    rows = registration_report['registrations']
+    _normalize_registrations(inputs,rows)
+    by_key = {(r['native_map'],r['component']):r for r in rows}
+    bounds = registration_report['adapter_plan']['native_bounds']
+    if len(by_key) != len(rows) or {(b['native_map'],b['component']) for b in bounds} != set(by_key):
+        raise ValueError('Native bounds and registrations do not cover the same unique components')
+    all_pixels,patches,exclusions,owners = {},[],set(),{}
+    for bound in bounds:
+        name,component = bound['native_map'],bound['component']
+        registration = by_key[name,component]
+        authentication = _authenticate_registration(inputs,registration,truth)
+        ox,oy = bound['origin']
+        expected_origin = [registration['global_tile'][i]-registration['native_tile'][i] for i in (0,1)]
+        if [ox,oy] != expected_origin or bound['local_rect'] != registration['local_rect']:
+            raise ValueError(('Native patch differs from its authored interface',name,component))
+        left,top,right,bottom = bound['local_rect']
+        if bound['global_rect'] != [left+ox,top+oy,right+ox,bottom+oy]:
+            raise ValueError(('Native global rectangle translation is inconsistent',name,component))
+        labels,_ = inputs.water_components(name)
+        cells,core_pixels,occupied_pixels = [],set(),set()
+        for ny in range(top,bottom):
+            for nx in range(left,right):
+                gx,gy = ox+nx,oy+ny
+                if (gx,gy) in owners:
+                    raise ValueError(('Two native local frames claim the same physical tile',name,component,(gx,gy)))
+                owners[gx,gy] = (name,component)
+                point = gx//8,gy//8
+                if point not in blue:
+                    continue
+                word = inputs.word(name,nx,ny)
+                behavior = inputs.behavior(name,word)
+                water = inputs.water(name,nx,ny)
+                actual_component = labels.get((nx,ny))
+                core = 1 <= gx%8 <= 6 and 1 <= gy%8 <= 6
+                raster = _raster_cell((gx,gy),blue)
+                matched = water and actual_component == component
+                sample = dict(global_tile=[gx,gy],native_tile=[nx,ny],native_map=name,
+                    registered_component=component,actual_component=actual_component,
+                    word=word,metatile=word&1023,collision=(word>>10)&3,
+                    elevation=word>>12,behavior=behavior,surfable_passable=water,
+                    expected_component_water=matched,generated_core_cell=core,
+                    generated_raster_cell=raster)
+                cells.append(sample)
+                pixel = all_pixels.setdefault(point,dict(atlas=list(point),cells=[]))
+                pixel['cells'].append(sample)
+                if core:
+                    core_pixels.add(point)
+                if raster:
+                    exclusions.add((gx,gy));occupied_pixels.add(point)
+        patches.append(dict(native_map=name,component=component,origin=[ox,oy],
+            local_rect=list(bound['local_rect']),global_rect=list(bound['global_rect']),
+            registration_authentication=authentication,
+            blue_pixels_touched=_ordered({tuple(c['global_tile'][i]//8 for i in (0,1)) for c in cells}),
+            blue_core_pixels_touched=_ordered(core_pixels),
+            blue_raster_pixels_touched=_ordered(occupied_pixels),
+            raster_cells_to_preserve_as_native=sum(c['generated_raster_cell'] for c in cells),
+            raster_water_cells_of_expected_component=sum(c['generated_raster_cell'] and c['expected_component_water'] for c in cells),
+            native_higher_water_requires_runtime_proof=any(c['elevation'] not in (0,1,15) and c['expected_component_water'] for c in cells),
+            cells=cells))
+    pixels_out=[]
+    for point,pixel in sorted(all_pixels.items(),key=lambda pair:(pair[0][1],pair[0][0])):
+        cells=pixel['cells'];core=[c for c in cells if c['generated_core_cell']]
+        core_water=[c for c in core if c['expected_component_water']]
+        raster=[c for c in cells if c['generated_raster_cell']]
+        witnesses=[c for c in cells if c['expected_component_water']]
+        pixel.update(native_core_cells=len(core),native_core_water_cells=len(core_water),
+            native_raster_cells=len(raster),native_water_witness_cells=len(witnesses),
+            full_generated_core_is_native_water=len(core_water)==36,
+            source_native_witness_proven=bool(witnesses),
+            ownership='mixed-native-and-generated' if len(core_water)<36 else 'complete-core-native-water',
+            water_heights=sorted({c['elevation'] for c in witnesses}),
+            global_scc_return_proven=False,native_controls_proven=False)
+        pixels_out.append(pixel)
+    core_rows=[p for p in pixels_out if p['native_core_cells']]
+    raster_rows=[p for p in pixels_out if p['native_raster_cells']]
+    full=[p['atlas'] for p in core_rows if p['full_generated_core_is_native_water']]
+    partial=[p['atlas'] for p in core_rows if not p['full_generated_core_is_native_water']]
+    inputs.assert_unchanged()
+    return dict(kind='atlas-native-local-ownership-source-preview/v1',
+        ownership_model='Exact native terrain under authored local interface frames; mixed pixels allowed',
+        art_sha256=dict(truth.array_sha256),patch_count=len(patches),
+        blue_pixel_count=len(truth.blue_pixels),icon_pixels=_ordered(icons),
+        blue_core_overlap_pixel_count=len(core_rows),blue_raster_overlap_pixel_count=len(raster_rows),
+        blue_any_patch_overlap_pixel_count=len(pixels_out),
+        native_core_water_cell_count=sum(p['native_core_water_cells'] for p in core_rows),
+        native_core_nonwater_or_other_component_cell_count=sum(p['native_core_cells']-p['native_core_water_cells'] for p in core_rows),
+        fully_native_core_pixels=full,partially_native_core_pixels=partial,
+        native_candidate_pixels=[p['atlas'] for p in pixels_out if p['source_native_witness_proven']],
+        indeterminate_pixels=[p['atlas'] for p in pixels_out if not p['source_native_witness_proven']],
+        remove_generated_global_cells=_ordered(exclusions),
+        removal_policy='Exclude complete native global rectangles, retaining native water AND blocked/dry cells',
+        patches=patches,pixels=pixels_out,
+        old_player_gps_used=False,native_scale_8_assumed=False,
+        six_by_six_native_core_required_for_witness=False,
+        source_local_component_membership_verified=True,
+        global_scc_return_proven=False,native_controls_proven=False,
+        geographic_registrations_independent_review_complete=False,
+        physical_classification_complete=False,final_release_validated=False,
+        pending=['Independent geographic review of authored interface locations',
+                 'Directed global SCC and return through the actual native adapter mouths',
+                 'Native control proof, especially height3 EverGrande and narrow mouths'],
+        input_sha256=dict(inputs.inputs))
+
+
 def _normalize_registrations(inputs, registrations):
     normalized = []
     seen = set()
@@ -226,12 +386,13 @@ def registered_water(inputs, registrations):
 
 
 def classify_registered_native(inputs, registrations, *, icon_witnesses=None, accesses=(), expected_components=()):
-    """Exclude a blue pixel only when its entire core is actual native water.
+    """Locate native witnesses without imposing generated width on native maps.
 
-    Partial ownership is reported at game-tile resolution. It must be handled
-    by exclusive physical reservation/clipping; silently excluding a whole
-    atlas pixel on a single native-water witness would leave a missing route.
-    Conversely, filling it without clipping would duplicate native water.
+    A witnessed pixel can have mixed owners. ``native_pixels`` therefore names
+    pixels with a source witness, not a license to delete a whole six-wide
+    generated footprint. Integration must use the exact native patch bounds
+    and prove its real mouth/return in the final network. Use
+    ``census_native_bounds`` for the per-cell exclusion evidence.
     """
     truth = decode_atlas(inputs.read('src/data/journey_world_map.h').decode())
     water, rows, seams = registered_water(inputs,registrations)
@@ -239,23 +400,24 @@ def classify_registered_native(inputs, registrations, *, icon_witnesses=None, ac
     for point in sorted(truth.blue_pixels,key=lambda p:(p[1],p[0])):
         x,y = point
         core = {(x*8+dx,y*8+dy) for dy in range(1,7) for dx in range(1,7)}
-        covered = core & water.keys()
+        footprint = {(x*8+dx,y*8+dy) for dy in range(8) for dx in range(8)}
+        covered = footprint & water.keys()
         if not covered:
             continue
         records = [water[p] for p in sorted(covered,key=lambda p:(p[1],p[0]))]
-        # A corridor can cross a native0/15 transition; height3 water does not
-        # establish a surfer's valid core and must remain a reported conflict.
+        covered_core = core & covered
+        # Native height3 Surf is retained, but its generated approach and
+        # actual avatar mode still need independent native movement proof.
         bad = [r for r in records if r['word'] >> 12 not in (0,1,15)]
         if bad:
             incompatible.append(dict(atlas=list(point),cells=bad))
-        if covered == core and not bad:
-            witnesses[point] = [dict(**record,atlas=list(point),surfable=True)
-                                for record in records]
-        else:
-            partial.append(dict(atlas=list(point),native_cells=len(covered),
+        witnesses[point] = [dict(**record,atlas=list(point),surfable=True)
+                            for record in records]
+        if covered_core != core:
+            partial.append(dict(atlas=list(point),native_cells=len(covered_core),
                                 core_cells=36,cells=records,
-                                missing_global_cells=_ordered(core-covered),
-                                incompatible_height_cells=len(bad)))
+                                missing_global_cells=_ordered(core-covered_core),
+                                nonstandard_native_height_cells=len(bad)))
     icons = protected_icon_witnesses(inputs,truth) if icon_witnesses is None else icon_witnesses
     result = classify_pixels(truth,native_witnesses=witnesses,
                              icon_witnesses=icons,accesses=accesses)
@@ -264,11 +426,14 @@ def classify_registered_native(inputs, registrations, *, icon_witnesses=None, ac
     missing = sorted(expected-registered)
     result.update(kind='atlas-registered-native-classification',registrations=rows,
                   native_registration_seams=seams,partial_native_pixel_coverage=partial,
-                  incompatible_native_water_heights=incompatible,
-                  all_native_pixel_cores_physically_covered=True,
+                  native_water_heights_require_runtime_proof=incompatible,
+                  all_native_pixel_cores_physically_covered=not partial,
                   authored_registrations_read_from_external_plan=True,
                   registration_geography_independently_certified=False,
                   partial_pixels_require_exclusive_game_tile_ownership=bool(partial),
+                  native_pixel_list_is_witness_inventory_not_full_pixel_exclusion=True,
+                  native_core_width_six_required=False,
+                  global_scc_return_proven=False,
                   expected_components_supplied=bool(expected),
                   missing_component_registrations=[dict(native_map=name,component=component)
                                                    for name,component in missing],
@@ -294,15 +459,26 @@ def main():
                   final_release_validated=False)
     if args.registrations:
         data = json.loads(args.registrations.read_text())
-        report['classification'] = classify_registered_native(source,data['registrations'],
-            accesses=data.get('accesses',()),expected_components=data.get('expected_components',()))
+        if 'adapter_plan' in data and 'native_bounds' in data['adapter_plan']:
+            report = census_native_bounds(source,data)
+        else:
+            report['classification'] = classify_registered_native(source,data['registrations'],
+                accesses=data.get('accesses',()),expected_components=data.get('expected_components',()))
         report['registration_file_sha256'] = hashlib.sha256(args.registrations.read_bytes()).hexdigest()
+    report['tool_sha256'] = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
     report['input_sha256'] = dict(source.inputs)
     source.assert_unchanged()
     args.output.parent.mkdir(parents=True,exist_ok=True)
     args.output.write_text(json.dumps(report,indent=2)+'\n')
-    print(json.dumps(dict(regional_art_blue_pixels=report['regional_art']['surviving_native_art_blue_count'],
-                         physical_classification_complete=False,output=str(args.output))))
+    summary = dict(physical_classification_complete=False,output=str(args.output))
+    if 'regional_art' in report:
+        summary['regional_art_blue_pixels'] = report['regional_art']['surviving_native_art_blue_count']
+    else:
+        summary.update(core_pixels=report['blue_core_overlap_pixel_count'],
+                       raster_pixels=report['blue_raster_overlap_pixel_count'],
+                       complete_native_cores=len(report['fully_native_core_pixels']),
+                       partial_native_cores=len(report['partially_native_core_pixels']))
+    print(json.dumps(summary))
 
 
 if __name__ == '__main__':

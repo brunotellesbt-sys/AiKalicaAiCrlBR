@@ -5,21 +5,28 @@
       "json_sha256": "12221420ebb787e3552d75be0a595be485d9d5406efe834e1bf2de483f05f09c",
       "gzip_sha256": "b6eaa95d54655f493bf4c121a77e45a7b0a7fb93b74e53cd9dc7b301b7d180a5"
     },
-    "whole-scenery-placement-source.json.gz": {
-      "json_sha256": "48fabd747bcaba26cf9ccedb73c3211d4c151416e5b92e8220a07fdb4fed1058",
-      "gzip_sha256": "3beaf76378ced383fba18919ce96da09d03a57f1f95e4dbf69e67c1347e0ab85"
-    },
     "coast-registrations-source.png": {
       "sha256": "7d6c002786fd8e43fe723e334438d22f3b08532a704632ec59a63586bc041e43"
+    },
+    "whole-scenery-native-exclusive-source.json.gz": {
+      "json_sha256": "0f939728c52e987f3227049df3a311aebb1e629b1229e05fbe33f745b700e654",
+      "gzip_sha256": "37824fc7768e41147c156996a3131cae3e151844ad90bcfc4a4fea02554ec534"
     }
   },
   "coast_interfaces": 33,
   "whole_native_stamps": 374,
   "fixed_caves": 18,
-  "decorative_maps": 82,
+  "decorative_maps": 83,
   "replaced_surface_dive_markers": 5,
   "replacement_dive_patch_cells": 75,
   "source_routing_proven": false,
   "native_rom_validated": false,
-  "public_roms_updated": false
+  "public_roms_updated": false,
+  "historical_placement_report": {
+    "file": "whole-scenery-placement-source.json.gz",
+    "json_sha256": "48fabd747bcaba26cf9ccedb73c3211d4c151416e5b92e8220a07fdb4fed1058",
+    "gzip_sha256": "3beaf76378ced383fba18919ce96da09d03a57f1f95e4dbf69e67c1347e0ab85"
+  },
+  "native_exclusions_reserved": true,
+  "all_native_whole_stamps_placed": true
 }

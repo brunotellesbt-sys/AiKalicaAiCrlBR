@@ -235,13 +235,18 @@ static void JourneyMigrateSeviiSaveGeometry(void)
 '''
 
 
-def migration_source(relocations):
+def migration_source(relocations, *, fallback_header=None):
     """Return C source retaining the byte-for-byte historical migration body.
 
     Only its function name, fixed guard and fixed final version are changed.
     This prevents raising CURRENT to 2 from reapplying Treasure's translation.
     """
-    rows, warps = normalize_relocations(relocations)
+    if fallback_header is not None and fallback_header != 'data/journey_atlas_migration.h':
+        raise ValueError('Unreviewed migration fallback header')
+    if relocations or fallback_header is None:
+        rows, warps = normalize_relocations(relocations)
+    else:
+        rows, warps = [], []
     legacy = MIGRATION.replace('JourneyMigrateSeviiSaveGeometry(void)',
                                'JourneyMigrateSeviiSaveGeometryVersion1(void)')
     legacy = legacy.replace(VERSION, '1')
@@ -255,7 +260,7 @@ def migration_source(relocations):
                   left, top, right, bottom, x-left, y-top,
                   MODES[row['mode']], row['elevation']]
         entries.append('    {'+', '.join(map(str, fields))+'},')
-    tables = 'static const struct JourneyAtlasSaveMove sJourneyAtlasSaveMoves[] = {\n'+'\n'.join(entries)+'\n};\n'
+    tables = 'static const struct JourneyAtlasSaveMove sJourneyAtlasSaveMoves[] = {\n'+('\n'.join(entries) if entries else '    {0,0,0,0,0,0,0,0,0,0,0,0},')+'\n};\n'
     entries = []
     for row in warps:
         old, new = row['old_map'], row['destination_map']
@@ -266,7 +271,71 @@ def migration_source(relocations):
     tables += 'static const struct JourneyAtlasSaveWarp sJourneyAtlasSaveWarps[] = {\n'
     tables += '\n'.join(entries) if entries else '    {0, 0, 0, 0, 0, 0},'
     tables += '\n};\n'
-    return legacy+ATLAS_MIGRATION.replace('@TABLES@', tables).replace('@WARP_COUNT@', str(len(warps)))
+    tables += 'static const u32 sJourneyAtlasSaveWarpCount = '+str(len(warps))+';\n'
+    body=ATLAS_MIGRATION.replace('@TABLES@', tables).replace('@WARP_COUNT@', 'sJourneyAtlasSaveWarpCount')
+    if fallback_header:
+        anchor='\nstatic EWRAM_DATA bool8 sJourneyAtlasReloadSavedObjects = FALSE;'
+        if body.count(anchor)!=1:
+            raise ValueError('Migration fallback include anchor changed')
+        body=body.replace(anchor,'\n#include "'+fallback_header+'"\n'+anchor,1)
+        anchor='    return NULL;\n}\n\nstatic void JourneyAtlasMigrateSavedWarp'
+        if body.count(anchor)!=1:
+            raise ValueError('Migration fallback resolver anchor changed')
+        body=body.replace(anchor,'    return JourneyAtlasMigrationFallback(group, num, x, y);\n}\n\nstatic void JourneyAtlasMigrateSavedWarp',1)
+        begin=body.index('static void JourneyAtlasMigrateSavedWarp(')
+        end=body.index('\nstatic void JourneyAtlasMigrateCurrentSave',begin)
+        body=body[:begin]+FALLBACK_SAVED_WARP.replace('@WARP_COUNT@','sJourneyAtlasSaveWarpCount')+body[end:]
+        anchor='    // The normal Continue path will load the new header first, then rebuild'
+        body=body.replace(anchor,'    CpuFill16(0, gSaveBlock1Ptr->objectEventTemplates, sizeof(gSaveBlock1Ptr->objectEventTemplates));\n'+anchor,1)
+        anchor='            object->previousCoords.y += move->dy;'
+        body=body.replace(anchor,anchor+'''\n            if (object->isPlayer)
+            {
+                // Saved position is authoritative across unfinished map seams.
+                object->initialCoords.x = object->currentCoords.x = object->previousCoords.x = gSaveBlock1Ptr->pos.x + MAP_OFFSET;
+                object->initialCoords.y = object->currentCoords.y = object->previousCoords.y = gSaveBlock1Ptr->pos.y + MAP_OFFSET;
+            }''',1)
+    return legacy+body
+
+
+FALLBACK_SAVED_WARP = r'''static void JourneyAtlasMigrateSavedWarp(struct WarpData *warp)
+{
+    const struct JourneyAtlasSaveMove *move;
+    const struct JourneyAtlasLegacyMap *old;
+    u32 i;
+    s16 x = warp->x, y = warp->y;
+    if (warp->warpId >= 0)
+    {
+        for (i = 0; i < @WARP_COUNT@; i++)
+        {
+            const struct JourneyAtlasSaveWarp *entry = &sJourneyAtlasSaveWarps[i];
+            if (warp->mapGroup == entry->oldGroup && warp->mapNum == entry->oldNum && warp->warpId == entry->oldId)
+            {
+                warp->mapGroup = entry->newGroup;
+                warp->mapNum = entry->newNum;
+                warp->warpId = entry->newId;
+                return;
+            }
+        }
+        old = JourneyAtlasLegacyFind(((u16)(u8)warp->mapGroup << 8) | (u8)warp->mapNum);
+        if (old == NULL)
+            return;
+        // An unmatched event ID has no meaningful x/y. Resolve a separately
+        // declared map-centre rescue; never reinterpret its unset sentinels.
+        x = old->width / 2;
+        y = old->height / 2;
+        move = JourneyAtlasMigrationFallback(warp->mapGroup, warp->mapNum, x, y);
+    }
+    else
+        move = JourneyAtlasSavedMove(warp->mapGroup, warp->mapNum, x, y);
+    if (move == NULL)
+        return;
+    warp->mapGroup = move->newGroup;
+    warp->mapNum = move->newNum;
+    warp->warpId = -1;
+    warp->x = x + move->dx;
+    warp->y = y + move->dy;
+}
+'''
 
 
 def _map_inputs(layer):
@@ -326,10 +395,19 @@ def validate_source_destinations(layer, relocations):
     return rows, warps
 
 
-def stage(layer, relocations):
+def stage(layer, relocations, *, fallback_header=None):
     """Install migration 2 on a verified revision171-style parent layer."""
-    rows, warps = validate_source_destinations(layer, relocations)
-    source = migration_source(relocations)
+    if fallback_header is not None and fallback_header != 'data/journey_atlas_migration.h':
+        raise ValueError('Unreviewed migration fallback header')
+    if relocations or fallback_header is None:
+        rows, warps = validate_source_destinations(layer, relocations)
+    else:
+        rows, warps = [], []
+    if fallback_header:
+        header=read(layer,'src/'+fallback_header).decode()
+        if 'JourneyAtlasMigrationFallback' not in header or 'journey_atlas_legacy.h' not in header:
+            raise ValueError('Migration fallback header is missing its resolver/legacy contract')
+    source = migration_source(relocations,fallback_header=fallback_header)
     path = 'src/load_save.c'
     text = read(layer, path).decode()
     if text.count(MIGRATION) != 1:
@@ -340,6 +418,8 @@ def stage(layer, relocations):
     text = text.replace(MIGRATION, source+'\n')
     if '#include "field_player_avatar.h"' not in text:
         text = text.replace('#include "load_save.h"', '#include "load_save.h"\n#include "field_player_avatar.h"')
+    if fallback_header and '#include "fieldmap.h"' not in text:
+        text=text.replace('#include "load_save.h"','#include "load_save.h"\n#include "fieldmap.h"')
     layer.stage(path, text)
     path = 'include/constants/vars.h'
     text = read(layer, path).decode()
@@ -369,4 +449,5 @@ def stage(layer, relocations):
                 source_sha256=hashlib.sha256(source.encode()).hexdigest(),
                 restore_hook='CopyPartyAndObjectsFromSave before LoadObjectEvents',
                 destination_templates='Native LoadObjEventTemplatesFromHeader with clone resolution',
+                fallback_header=fallback_header,
                 native_save_continue_validated=False)
