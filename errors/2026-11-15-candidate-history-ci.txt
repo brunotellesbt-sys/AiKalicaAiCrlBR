@@ -64,3 +64,25 @@ Classificação dos381erros locais:380FileNotFoundError sobmods/ (237paths) e
 1gateExtraGyms legítimo. Dos8FAIL,7são Unvalidatedrelease e1não encontra
 shore-animation por sparse. Não houve KeyError nem rejeição de hash/prefixo
 no resolvedor. Relatório enxuto:docs/design/atlas-surf-layout/ci-history-repair.json.
+
+
+Resultado remoto confirmado — reparo dos metadados
+Actions43737388074/job132882888189, commit8d1164f296d76294a570c1cff2fcd06b452bda60:
+12/12testes sea_routes PASS. Hoenn executou1094testes em30,306s:
+8FAIL,1ERROR,34skipped. ZEROKeyError. Os6casos históricos de Fuchsia/atlas
+passaram no checkout integral. Os12erros de integração anteriores desapareceram.
+A integridade da candidata (cincoROMs/perfis/TESTE/save/boots/freeze/tabelas/ZIP)
+e a alpha histórica passaram em passos próprios. O job global continua FAIL:
+7casos rejeitam Unvalidatedrelease; Sootopolis exige manifest.validated=true;
+ExtraGyms.setUpClass é o únicoERROR e também rejeita Unvalidatedrelease.
+São9exigências de aprovação final ainda não satisfeitas. Não torná-las verdes
+apenas editandoflags, trocandoSHA, ignorandotestes ou pulandoo gate. Browser e
+Pages ficaram bloqueados. Nenhum defeito funcional novo da ROM foi demonstrado
+por essas9recusas; a rede física172 já tinha suas pendências reais conhecidas.
+
+Último subpedido concluído: reparar os leitores/metadados históricos do log
+recebido e verificar o resultado na CI integral. Último pedido incompleto:
+concluir e provar geografia, cenas, saves/ecologia/edições para release172.
+Os5binários e a bateria preservam os hashes do checkpoint3ae4650; este lote
+finaliza documentação e ZIP e registra a evidência remota acima. A próximaIA
+deve seguir o conserto da rede e a validação nativa, não remover os gates.

@@ -23,7 +23,30 @@
     "complete_checkout": false,
     "passed": false
   },
-  "remote_Actions_after_fix": "pending",
+  "remote_Actions_after_fix": {
+    "run_id": 43737388074,
+    "job_id": 132882888189,
+    "commit": "8d1164f296d76294a570c1cff2fcd06b452bda60",
+    "url": "https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/actions/runs/43737388074",
+    "sea_routes": {
+      "tests": 12,
+      "passed": true
+    },
+    "hoenn": {
+      "tests": 1094,
+      "failures": 8,
+      "errors": 1,
+      "skipped": 34,
+      "KeyError": 0,
+      "historical_Fuchsia_and_chart_tests_passed": 6
+    },
+    "candidate_checkpoint_integrity": true,
+    "historical_playable_alpha": true,
+    "final_release_gate": "rejected-unvalidated-release",
+    "remaining_failures_reason": "Eight assertions require validated current release; one ExtraGyms class setup rejects the unvalidated current release",
+    "overall_job_passed": false,
+    "browser_and_Pages": "blocked"
+  },
   "ROM_bytes_modified": false,
   "final_release_validated": false,
   "native_gameplay_validation": "pending",
