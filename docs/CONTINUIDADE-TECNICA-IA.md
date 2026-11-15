@@ -1,5 +1,9 @@
 # Continuidade técnica de Pokémon Journey
 
+> Entrada consolidada e atual para a próxima janela: [Aqui/README.md](../Aqui/README.md).
+> Estado até o checkpoint1bf71eda2d8276a377e38e84cc4baaaad070c085.
+> Este lote é exclusivamente documental; ROMs/save/ZIP não foram alterados.
+
 Atualizado em 15/11/2026 (UTC). Este é o ponto de entrada permanente para
 outra IA ou outro ambiente. Atualize-o a cada lote verificado, antes do
 checkpoint remoto. Mantenha o pedido pendente até a entrega completa.
@@ -915,3 +919,25 @@ As5ROMs continuam atualizadas com os mesmos hashes; nenhum novo build neste
 lote. CI ainda8FAIL+1ERROR de release não validada. Próximo: consertar Ocaso/
 glifos, Three e lacunas nativas; repetir fonte/bancos, preparar/build privado,
 congelar e repetir todas as provas/edições antes da publicação final.
+
+## Atualização exclusivamente documental — pasta Aqui
+
+Pedido literal mais recente:
+“Ok, uma coisa, atualiza o documento técnico especificando o que falta, crie
+uma pasta dentro do repo com nome "Aqui" pra eu indicar pra próxima janela
+de I.A codex sobre do que se trata, como funciona, como atualizar, o que foi
+feito, o que falta, o que não fazer (coisas erradas que não são pra serem
+feitas) e como é o correto que eu quero. Tudo de forma técnica nesse arquivo.
+Atualize bem feito, cuidado com meu limite, faça apenas isso nesse commit
+dentro do mesmo pr.”
+
+Aqui/README.md consolida identidade, arquitetura, requisitos do usuário,
+hashes/provas, pendências concretas Ocaso/Three/17SCCs, CI, ambiente, erros
+proibidos e operação correta. Último remoto anterior:
+1bf71eda2d8276a377e38e84cc4baaaad070c085. PR111 normal permanece aberto.
+Último subpedido documental atendido neste lote; pedido de terminar e validar
+o jogo continua incompleto. Apenas documentação: sem builds/provas novos,
+código/ROM/save/ZIP/manifestos/workflow intocados. O ZIP conserva o texto
+anterior; a comparação estrita contra documentos do HEAD pode acusar
+Stale archive entry. Reempacotar com Aqui/guia atualizado somente na próxima
+etapa autorizada do pacote, sem relaxar verificador.
