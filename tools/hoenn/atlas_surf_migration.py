@@ -262,8 +262,8 @@ def render_fallback(tables):
 #ifndef GUARD_JOURNEY_ATLAS_MIGRATION_H
 #define GUARD_JOURNEY_ATLAS_MIGRATION_H
 #include "journey_atlas_legacy.h"
-struct JourneyAtlasMigrationTarget { u16 map; u8 x,y,mode,elevation; };
-struct JourneyAtlasMigrationPixel { u16 pixel,foot,surf; };
+struct __attribute__((packed)) JourneyAtlasMigrationTarget { u16 map; u8 x,y,mode,elevation; };
+struct __attribute__((packed)) JourneyAtlasMigrationPixel { u16 pixel,foot,surf; };
 typedef char JourneyAtlasMigrationTargetSixBytes[(sizeof(struct JourneyAtlasMigrationTarget)==6)?1:-1];
 typedef char JourneyAtlasMigrationPixelSixBytes[(sizeof(struct JourneyAtlasMigrationPixel)==6)?1:-1];
 static const struct JourneyAtlasMigrationTarget sAtlasMigrationTargets[]={

@@ -196,7 +196,49 @@ def compose(source):
     return layer,metadata
 
 
-def prepare(source,clone_from=None,*,preview_output=None):
+def _derived_cache_path(relative):
+    """Recognize known make outputs; leave every unknown path for make."""
+    if relative.parts[0]=='build':
+        return relative.suffix in ('.o','.d','.s','.a')
+    if relative.parts[0]=='graphics':
+        return relative.name.endswith((
+            '.1bpp','.4bpp','.8bpp','.gbapal',
+            '.4bpp.lz','.8bpp.lz','.gbapal.lz','.bin.lz',
+            '.4bpp.smol','.8bpp.smol','.gbapal.smol','.bin.smolTM'))
+    if relative.as_posix() in {
+        'data/layouts/layouts.inc','data/layouts/layouts_table.inc',
+        'include/constants/map_groups.h','include/constants/layouts.h',
+        'include/constants/map_event_ids.h','src/data/map_group_count.h',
+        'data/maps/connections.inc','data/maps/groups.inc',
+        'data/maps/events.inc','data/maps/headers.inc',
+        'include/constants/region_map_sections.h',
+        'src/data/region_map/region_map_entries.h',
+    }:
+        return True
+    return (len(relative.parts)==4 and relative.parts[:2]==('data','maps')
+            and relative.name in ('header.inc','events.inc','connections.inc'))
+
+
+def seed_build_cache(cache,target,protected_paths):
+    """Copy only derived artifacts; verified/staged source always wins."""
+    cache,target=Path(cache),Path(target);count=0;copied_bytes=0
+    protected=set(protected_paths)|{'.source-acquired.json'}
+    for before in cache.rglob('*'):
+        if not before.is_file():continue
+        relative=before.relative_to(cache);name=relative.as_posix()
+        if name in protected or relative.parts[0].startswith('.'):
+            continue
+        if not _derived_cache_path(relative):
+            continue
+        after=target/relative
+        if after.exists():continue
+        after.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(before,after)
+        count+=1;copied_bytes+=after.stat().st_size
+    return dict(kind='private-derived-build-cache-copy',files=count,bytes=copied_bytes,
+                verified_source_overwritten=False,shared_writable_inodes=False)
+
+
+def prepare(source,clone_from=None,*,preview_output=None,build_cache_from=None):
     target=Path(source).resolve()
     parent=Path(clone_from).resolve() if clone_from is not None else target
     if clone_from is not None and target.exists():
@@ -211,8 +253,17 @@ def prepare(source,clone_from=None,*,preview_output=None):
         raise ValueError('Materialization requires a new private --clone-from copy; the parent is immutable')
     if target==parent or target.is_relative_to(parent):
         raise ValueError('Private source destination may not replace or nest in its immutable parent')
+    cache_proof=None
+    if build_cache_from is not None:
+        cache_proof=verify_prefix(Path(build_cache_from),complete=True)
+        if cache_proof['source_manifest_sha256']!=metadata['parent']['source_manifest_sha256']:
+            raise ValueError('Build cache sources do not match the immutable parent')
     shutil.copytree(parent,target,copy_function=shutil.copy2,symlinks=False)
     verify_prefix(target,complete=True)
+    if cache_proof is not None:
+        metadata['build_cache']=seed_build_cache(build_cache_from,target,
+            set(layer.expected)|set(layer.outputs)|{p.name for p in parent.glob('.journey-*')})
+        metadata['build_cache']['source_manifest_sha256']=cache_proof['source_manifest_sha256']
     layer.source=target;layer.marker=target/'.journey-atlas-surf-layout'
     report=layer.finish(**metadata)
     verify_prefix(parent,complete=True)
@@ -224,8 +275,9 @@ if __name__=='__main__':
     parser.add_argument('--source',type=Path,required=True)
     parser.add_argument('--clone-from',type=Path)
     parser.add_argument('--preview-output',type=Path)
+    parser.add_argument('--build-cache-from',type=Path)
     args=parser.parse_args()
-    report=prepare(args.source,args.clone_from,preview_output=args.preview_output)
+    report=prepare(args.source,args.clone_from,preview_output=args.preview_output,build_cache_from=args.build_cache_from)
     print(json.dumps(dict(maps=report['geometry_plan']['map_count'],
                          prepared_files=len(report['prepared_sha256']),
                          pending=report['pending_obligations'],release_eligible=False),indent=2))

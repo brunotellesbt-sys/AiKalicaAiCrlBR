@@ -18,7 +18,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def validate(source, library, output, battery=None):
+def validate(source, library, output, battery=None, save_output=None):
     source, library, output = map(Path, (source, library, output))
     output.mkdir(parents=True, exist_ok=True)
     sha = hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest()
@@ -81,6 +81,37 @@ def validate(source, library, output, battery=None):
                     picture('battery-continued-to-field')
                     save = lib.read32(symbols['gSaveBlock1Ptr'])
                     result = dict(bundled_save_continue_to_field=True, field_map=[lib.read8(save+4), lib.read8(save+5)])
+                    obj=symbols['gObjectEvents']+36*lib.read8(symbols['gPlayerAvatar']+5)
+                    result.update(player_tile=[lib.read16(obj+16)-7,lib.read16(obj+18)-7],
+                                  player_surfing=bool(lib.read8(symbols['gPlayerAvatar'])&8),
+                                  player_elevation=lib.read8(obj+11)&15)
+                    if save_output is not None:
+                        press(8);step(90)
+                        count=lib.read8(symbols['sNumStartMenuActions'])
+                        actions=[lib.read8(symbols['sCurrentStartMenuActions']+i) for i in range(count)]
+                        assert actions.count(5)==1,('SAVE absent from native start menu',actions)
+                        target=actions.index(5)
+                        for _ in range(12):
+                            if lib.read8(symbols['sStartMenuCursorPos'])==target:break
+                            press(128)
+                        assert lib.read8(symbols['sStartMenuCursorPos'])==target
+                        press(1);seen=set()
+                        for _ in range(120):
+                            callback=lib.read32(symbols['sSaveDialogCallback'])&~1
+                            seen.add(callbacks.get(callback,hex(callback)))
+                            if callback==symbols['SaveOverwriteInputCallback']:press(64)
+                            if 'SaveReturnSuccessCallback' in seen and not lib.read8(symbols['sLockFieldControls']):break
+                            press(1)
+                        else:raise AssertionError(('Native controller save did not finish',seen))
+                        assert 'SaveReturnSuccessCallback' in seen
+                        destination=Path(save_output).resolve();destination.parent.mkdir(parents=True,exist_ok=True)
+                        lib.export_save.argtypes=[ctypes.c_char_p];lib.export_save.restype=ctypes.c_int
+                        assert lib.export_save(str(destination).encode())
+                        assert destination.stat().st_size==131072
+                        picture('battery-saved-through-menu')
+                        result.update(saved_after_continue_with_controllers=True,
+                                      save_menu_callbacks=sorted(seen),
+                                      saved_battery_sha256=hashlib.sha256(destination.read_bytes()).hexdigest())
                 else:
                     step(300)
                     active = tasks()
@@ -112,5 +143,6 @@ if __name__ == '__main__':
     parser.add_argument('--library', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--battery', type=Path)
+    parser.add_argument('--save-output',type=Path)
     a = parser.parse_args()
-    validate(a.source, a.library, a.output, a.battery)
+    validate(a.source, a.library, a.output, a.battery,a.save_output)

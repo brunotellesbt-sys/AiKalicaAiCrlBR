@@ -1,14 +1,15 @@
 # Continuidade técnica de Pokémon Journey
 
-Atualizado em 14/11/2026 (UTC). Este é o ponto de entrada permanente para
+Atualizado em 15/11/2026 (UTC). Este é o ponto de entrada permanente para
 outra IA ou outro ambiente. Atualize-o a cada lote verificado, antes do
 checkpoint remoto. Mantenha o pedido pendente até a entrega completa.
 
 ## Estado executivo verificável
 
-O jogo publicado continua na revisão **171 / generated-area-review**. O
-trabalho aberto é **172 / atlas-surf-layout**, em reconstrução. Não existe
-release 172 final validado. O workspace antigo não foi recuperado e não foi
+As **cinco ROMs desta branch foram atualizadas** para a candidata **172 /
+atlas-surf-layout**: quatro edições, TESTE, save e ZIP. A base anterior validada
+é **171 / generated-area-review**. A geografia global continua em correção;
+não existe release 172 final validado. O workspace antigo não foi recuperado e não foi
 apagado, resetado, substituído nem arquivado por esta tarefa.
 
 Repositório: https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR
@@ -26,7 +27,11 @@ foi integrado externamente em `5dc9e1b1273515f7837c1ba7013273157e641aec`.
 Ele incluiu diagnóstico, ferramentas e documentos, sem publicar ROM172.
 A branch foi atualizada por fast-forward, preservando o trabalho. O [PR normal #111](https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/pull/111)
 está aberto para a integração, com pendências explícitas. Push conferido:
-`017eafc2f80148c24d6e787a12bd7702e7969ca5`.
+`e065b34b22df177793c9190b590415e9f764c31d` antes do novo lote de ROMs.
+Os binários atuais e suas provas estão em [roms/CANDIDATA-172.json](../roms/CANDIDATA-172.json);
+boot passou nas cinco e a TESTE passou Continue → salvar pelo menu → Continue.
+O ZIP contém este guia e as provas atuais. A publicação final/Pages permanece
+pendente, sem promoção artificial dos contratos.
 
 O documento histórico completo recebido está em
 [RETOMADA_TECNICA_POKEMON_JOURNEY.json](RETOMADA_TECNICA_POKEMON_JOURNEY.json).
@@ -56,6 +61,12 @@ A manutenção contínua deste guia
 é um requisito permanente, não uma tarefa que termina com sua criação.
 
 ### Últimos pedidos resolvidos
+
+- “Mas eu quero que atualize as roms com as modificações feitas, já pedi.”:
+  as cinco ROMs foram recompiladas e substituídas nesta branch, com ZIP, save
+  TESTE e manifestos de candidata. O PR normal #111 recebe esses arquivos.
+  Isso conclui o checkpoint de binários solicitado, sem concluir a correção
+  global do jogo; os resultados e hashes atuais estão no fim deste guia.
 
 - “Conecte ao meu github” e seleção do repositório: conta e acesso de
   leitura/escrita confirmados para `brunotellesbt-sys/AiKalicaAiCrlBR`.
@@ -704,7 +715,7 @@ cavernas usa somente células Surf reais do doador e respeita os limites do atla
 
 A auditoria com bancos autenticados reduziu110componentes para22; os cinco
 acessos Dive corrigidos reduziram para17. Isso é FALHA global ainda aberta,
-não PASS:15/18? conferir JSON atual para o número exato, não inferir. Seis
+não PASS:14/18 cavernas no diagnóstico de pertinência à componente principal. Seis
 portos têm dry/wet na componente principal; Three ainda está isolado na fonte.
 O censo sem filtro SCC confirmou383/190famílias e269células de grama novas;
 não é prova de alcançabilidade ou ROM. O projetor regional nativo e a proveniência
@@ -717,3 +728,71 @@ TESTE mantendo supressão, fazer smoke/coldboot possível e atualizar os arquivo
 e manifestos no PR com status de candidata e as pendências reais. Não editar
 ou compilar enquanto um leitor usa o MESMO source/ELF/ROM; o parent171 segue
 intocado. Depois continuar os consertos até a validação final pedida originalmente.
+
+
+## Cinco ROMs recompiladas para o checkpoint solicitado
+
+Pedido literal: “Mas eu quero que atualize as roms com as modificações feitas,
+já pedi.” A candidata integral foi compilada e exportada nas cinco edições;
+esta atualização de binários no PR é autorizada mesmo com validação global
+pendente. Não é uma publicação final aprovada. Foram261testes atlas aprovados
+antes do build e os oito testes da migração passaram após corrigir um erro real
+do ABIARM: structs de seis bytes precisam de __attribute__((packed)), pois
+APCS arredondava para oito. O compilador confirmou os asserts após a correção.
+O parent171 foi preservado; o build usou cópia privada com cache derivado
+verificado e nenhum inode gravável compartilhado. O primeiro preparo com o
+cache como source foi recusado por um agregado gerado não autenticado; log
+preservado, e a fonte passou a ser a171 congelada, com cache só para derivados.
+
+ROM bruta compilada:f2cac1ecb79e23c3b6a6a43e07568b7c5b03579dc265ba99d33bc3bad7940c0e
+ELF:618b0556e031fee25a1aace83f33bb8491b7e316ebd910a34f968098b135ba73
+Uso:32.920.992/33.554.432bytes(98,11%);EWRAM245456;IWRAM28660.
+Três cópias reais da tabela de533chunks/stride8 foram extraídas da ROM e
+comparadas com todos os IDs/origens/dimensões preparados; passaram. Relatório:
+`candidate-compiled-tables.json`. Os1955inputs preparados foram conferidos.
+
+SHA256 das CINCO ROMs atuais:
+Gen1-4Normal:a24b7304d4dda4a7d1abd60849161409468a4a29d00528a9549643333e7cb40d
+Gen1-4Hard:a2103c4bebe2f8fecc12d863b16f7e0971fb35040b6cf15bf2f0a95f5275146c
+Gen1-9Normal:47a3a75c36b50bcd96584bd7c7ced7f121f68b8e5b14e93338f503c17b7f951f
+Gen1-9Hard:14ebe89fc88f3d4d55cc8a48f7ed1edf36bf997a26d397a8c653e5d6320bf36d
+TESTE:b7445c29804f36f188e0b753849ac4bb55fa605218c7486c04ee73d3fc7945ae
+
+As cinco passaram cold-boot real por controles até NovaPartida. A TESTE também
+passou com a bateria171:Continue→campo→salvar pelo menu→exportar pela API de
+bateria→novo boot→Continue. Manteve Mossdeep[0,6],tile[28,18],a pé,altura5 nativa;
+não impor altura3 a essa cidade. Bateria nova131072bytes:
+36ace517a44bc0315a4a5309054a4913f39e0f1872a073763ba685c3421e5861.
+A primeira extensão do runner teve erro de closurePython; corrigido, execução
+válida repetida e runner exatamente executado preservado. Nenhuma escrita de
+callback/posição/flags/EWRAM foi usada nestes cold-boots ou no menuSalvar.
+A supressão global da TESTE foi mantida via sua regra real de ROM; a suíte
+completa de encontros/trainers da candidata continua pendente.
+
+Estado de entrega:roms/ e os quatro espelhos de mods/hoenn/versions recebem
+os binários novos, a TESTE/save/hash recebem seus bytes atuais, ZIP inclui as
+quatro edições e este documento técnico (TESTE separada). Manifesto fica
+explicitamente candidate=true,validated=false,scope atlas-surf-layout-candidate.
+Não alterar contratos finais ou forçar CI/Pages a aprovar. A171 anterior está
+preservada no históricoGit e seus manifests/save em atlas-surf-layout-validation/baseline.
+
+Último pedido concluído neste lote: compilar/exportar/testar boot e salvar as
+cinco ROMs modificadas no PR normal111. Último pedido AINDA INCOMPLETO: consertar
+e validar toda a geografia/acessos/visuais/ecologia e entregar release final.
+A fonte ainda tem17componentes de água gerada;14/18cavernas e6/7portos estão na
+componente principal no diagnóstico, mas o validadorglobal permanece FAIL por
+não haver uma únicaSCC. Não confundir esse diagnóstico com aprovado. Faltam
+underlay autenticado de glifos, propriedade nativa/projeção/registros costeiros,
+ThreeIslandPort e demais ligações, revisão visual integral, provas por controles
+e edição/TESTE completas, DEX e Pages. Trabalhos readonly de projeção regional
+e glifos ainda não aplicados em runtime precisam ser preservados como WIP,
+sem afirmá-los incluídos nos binários. Próximo passo: seguir esses consertos
+sobre este checkpoint verificável; cada novo build precisa de provas próprias.
+
+Revisão dos auxiliares deste checkpoint: o empacotador vincula cada arquivo
+real ao freeze de cinco ROMs antes da cópia; os hashes públicos e o conteúdo
+do ZIP são conferidos depois. O projetor regional readonly foi preservado
+como pesquisa WIP, sem alterar a candidata: filtra mapas sem identidade
+compilada e seu shim define os tipos usados no C nativo. Dois testes, incluindo
+cinco casos comparados com o C real da171, passaram. Isso não prova domínio
+físico de pixels nem resolve as ligações nativas.

@@ -1,6 +1,15 @@
 # ROMs atuais
 
-Atualização atual: [canal sul de One Island, portos e cavernas — camada 171](../docs/generated-area-review.md). Liga o canal vertical ao mar horizontal, corrige cantos de encosta, rochas incompletas e limites visíveis, restaura o embarque de Six Island e fecha portais inativos. As quatro edições e a TESTE recebem os ajustes; a TESTE mantém encontros aleatórios e abordagens automáticas desativados. [Registro em TXT](../errors/2026-11-07-generated-area-review.txt).
+Atualização desta branch: **candidata da camada172 — rotas físicas conforme o atlas**.
+As quatro edições abaixo e a TESTE foram recompiladas com os533mapas, cenários,
+acessosDive e migração atuais. Boot real passou nas cinco; a TESTE passou também
+Continue→salvar pelo menu→Continue. A validação global ainda está pendente:
+existem trechos sem ligação comprovada de ida/volta e ajustes nativos/visuais em
+andamento. Esta candidata guarda o progresso pedido pelo usuário e não é uma
+release final aprovada. [Manifesto e hashes](CANDIDATA-172.json) ·
+[Continuidade técnica](../docs/CONTINUIDADE-TECNICA-IA.md).
+
+Versão anterior validada: [canal sul de One Island, portos e cavernas — camada 171](../docs/generated-area-review.md). Liga o canal vertical ao mar horizontal, corrige cantos de encosta, rochas incompletas e limites visíveis, restaura o embarque de Six Island e fecha portais inativos. As quatro edições e a TESTE recebem os ajustes; a TESTE mantém encontros aleatórios e abordagens automáticas desativados. [Registro em TXT](../errors/2026-11-07-generated-area-review.txt).
 
 Conserva a [competição da 18ª insígnia, rivais por personagem e região inicial e Galactic na 22ª](../docs/badge-story.md). A vitória na competição libera ambas as Ligas com 18 insígnias. Eren e Luffy usam a mesma escala dos outros rivais. Mantém os [24 ginásios](../docs/ginasios-extras-e-travessias.md), os terminais integrados e as [correções costeiras](../docs/coastal-closures.md).
 
@@ -22,7 +31,7 @@ As quatro edições incluem Kanto, Hoenn e Sevii. Megas e formas regionais de es
 
 [ZIP com as quatro ROMs e documentação](../mods/hoenn/versions/Pokemon-Journey-Four-Editions.zip) · [Documentação](../docs/README.md) · [Limites da validação](../mods/hoenn/INTEGRATION-STATUS.md) · [SHA-256](SHA256SUMS)
 
-A entrega atual inclui a revisão de Surf, [105 espécies especiais em 48 câmaras nomeadas](../docs/cavernas-lendarias.md) e acesso à Artisan Cave. [Mapa e imagens](../docs/revisao-surf-cavernas.md). A [ROM de teste e o save de inspeção](rom-de-teste/LEIA-ME.md) ficam em pasta separada, sem encontros aleatórios ou abordagem automática. O manifesto atual usa `validation_scope: badge-story`; as evidências de campanha e recursos anteriores continuam associadas às suas ROMs históricas.
+A entrega atual inclui a revisão de Surf, [105 espécies especiais em 48 câmaras nomeadas](../docs/cavernas-lendarias.md) e acesso à Artisan Cave. [Mapa e imagens](../docs/revisao-surf-cavernas.md). A [ROM de teste e o save de inspeção](rom-de-teste/LEIA-ME.md) ficam em pasta separada, sem encontros aleatórios ou abordagem automática. O manifesto desta candidata usa `validation_scope: atlas-surf-layout-candidate`; as evidências de campanha e recursos anteriores continuam associadas às suas ROMs históricas.
 
 ## Atualizar a entrega
 
