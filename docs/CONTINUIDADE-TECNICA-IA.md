@@ -876,3 +876,42 @@ concluir e provar geografia, cenas, saves/ecologia/edições para release172.
 Os5binários e a bateria preservam os hashes do checkpoint3ae4650; este lote
 finaliza documentação e ZIP e registra a evidência remota acima. A próximaIA
 deve seguir o conserto da rede e a validação nativa, não remover os gates.
+
+
+## Checkpoint urgente solicitado: PR antes do limite
+
+Pedido literal mais recente: “Abre o pr, meu limite vai acabar”. O PR111 já
+está aberto como NORMAL, sem rascunho; este lote preserva os novos arquivos.
+Último remoto confirmado antes dele:f5e9ef0a4adf788a44cc29bfb40bc1afaaf962a6.
+
+Progresso REAL desta etapa: BirthIsland passou na ROM integral atual533mapas,
+rawROMf2cac1ecb79e23c3b6a6a43e07568b7c5b03579dc265ba99d33bc3bad7940c0e.
+Fonte/ELF/marker e1955preparedinputs foram conferidos antes/depois. Percurso
+por controles: rampa/ponte, pedestre bloqueado na lateral, Surf saída/retorno,
+corpo de madeira bloqueado, Harbor e volta à ilha, avatar visível por pixels
+reais de OBJ/VRAM/scanout. Captura birth-wood-tip.png foi inspecionada: madeira
+inteira sem metal na ponta. Prova/copias no diretório current-ROM-birth-native.
+Não é aprovação da rede inteira, das cinco edições nem do release final.
+
+Diagnóstico fonte confirmado: ThreeIsland_Port_Frlg48x20 tem duas componentes
+água; embarque(14,17) na0/leste, adaptador na1/oeste. Terminal/ponte separa as
+águas e os recifes fecham embaixo. Nenhuma correção foi aplicada ainda. Avaliar
+redirecionar boca do adaptador com referência ao atlas; não apagar terminal,
+NPCs ou abrir canal arbitrário. As17SCCs e demais clusters foram preservados
+em urgent-progress-checkpoint.json, sem promover diagnóstico a PASS.
+
+A pesquisa dos7pixels escondidos por glifos foi interrompida pelo limite dos
+agentes. Os arquivos completos existentes foram preservados byte a byte em
+WIP-occluded-routes/*.py.txt, com hashes no relatório. NÃO estão integrados
+nem compilados. Seu teste ainda falha antes dos casos: endpoints Ocaso.
+A próximaIA deve corrigir essa interpretação contra o marker171, testar e só
+então integrar. Não enfraquecer contratos para passar. Outros agentes não
+chegaram a escrever seus relatórios; os achados recebidos estão registrados.
+
+Último subpedido concluído: guardar o progresso atual no PR normal, com prova
+Birth e pesquisa WIP preservada. Pedido original INCOMPLETO: corrigir e provar
+a rede Surf,17SCCs, acessos restantes, visuais, saves/ecologia e release172.
+As5ROMs continuam atualizadas com os mesmos hashes; nenhum novo build neste
+lote. CI ainda8FAIL+1ERROR de release não validada. Próximo: consertar Ocaso/
+glifos, Three e lacunas nativas; repetir fonte/bancos, preparar/build privado,
+congelar e repetir todas as provas/edições antes da publicação final.
