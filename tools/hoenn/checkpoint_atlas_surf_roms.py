@@ -18,6 +18,29 @@ ROOT=Path(__file__).resolve().parents[2]
 def digest(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
+PARENT_MANIFEST='mods/hoenn/atlas-surf-layout-validation/baseline/versions.json'
+PARENT_MANIFEST_SHA256='eca26adfcb0b15f9da78aadec1b8738f66288fcc58d4d727ee2ea2a6274e29ec'
+
+
+def preserve_historical_references(info):
+    """Keep old proof ownership explicit; never attach old proofs to new bytes."""
+    assert info['candidate'] is True and info['validated'] is False
+    assert info['final_release_validated'] is False
+    assert info.get('proofs',[])==[], 'Candidate checkpoint must not masquerade as a sealed release'
+    raw=(ROOT/PARENT_MANIFEST).read_bytes()
+    assert hashlib.sha256(raw).hexdigest()==PARENT_MANIFEST_SHA256
+    previous=json.loads(raw)
+    assert previous['validated'] is True and previous['validation_scope']=='generated-area-review'
+    assert len(previous['integration_layers'])==171
+    assert info['integration_layers']==previous['integration_layers']+['atlas-surf-layout']
+    info['proofs']=[]
+    info['historical_validation']=previous['historical_validation']
+    info['previous_validation']=previous['previous_validation']
+    info['previous_port_validation']=dict(manifest=PARENT_MANIFEST,
+        manifest_sha256=PARENT_MANIFEST_SHA256,retested_on_current_rom=False)
+    return info
+
+
 def checkpoint(frozen_path,artifacts,cold_boot,*,battery=None):
     frozen_path,artifacts,cold_boot=map(Path,(frozen_path,artifacts,cold_boot))
     frozen=json.loads(frozen_path.read_bytes());source=Path(frozen['source'])
@@ -52,6 +75,7 @@ def checkpoint(frozen_path,artifacts,cold_boot,*,battery=None):
                 rom_used_bytes=frozen['rom_used_bytes'],rom_limit_bytes=frozen['rom_limit_bytes'],
                 known_generated_water_components=frozen['known_generated_water_components'],
                 user_requested_progress_checkpoint=True)
+    preserve_historical_references(info)
     review.update(candidate=True,validated=False,final_release_validated=False,
                   validation_scope='atlas-surf-layout-candidate',cold_boot=reports['TESTE'])
     if battery is not None:
@@ -91,7 +115,8 @@ def checkpoint(frozen_path,artifacts,cold_boot,*,battery=None):
                  variants=[dict(file=r['file'],sha256=r['sha256']) for r in info['variants']],
                  TESTE=dict(file='rom-de-teste/'+review['file'],sha256=review['sha256'],
                             battery_sha256=review['bundled_save_sha256']),cold_boot=reports,
-                 pending_obligations=info['pending_obligations'])
+                 pending_obligations=info['pending_obligations'],
+                 previous_port_validation=info['previous_port_validation'])
     (roms/'CANDIDATA-172.json').write_text(json.dumps(summary,indent=2)+'\n')
     archive=write_archive(versions,roms,test,proof,info)
     summary['archive_sha256']=digest(archive);summary['archive_bytes']=archive.stat().st_size
@@ -115,6 +140,11 @@ def write_archive(versions,roms,test,proof,info):
     archive=versions/'Pokemon-Journey-Four-Editions.zip';pending=archive.with_suffix('.zip.candidate-tmp')
     files={r['file']:versions/r['file'] for r in info['variants']}
     files.update({p:ROOT/p for p in CONTINUITY_FILES})
+    for name in ('errors/README.md','errors/2026-11-15-candidate-history-ci.txt'):
+        files[name]=ROOT/name
+    baseline=ROOT/PARENT_MANIFEST
+    for p in baseline.parent.iterdir():
+        if p.is_file():files[p.relative_to(ROOT).as_posix()]=p
     for p in proof.rglob('*'):
         if p.is_file() and p.name!='candidate-ROM-checkpoint.json':
             files[p.relative_to(ROOT).as_posix()]=p

@@ -1,8 +1,9 @@
-"""Bind the new Fuchsia terminal and its physical validation to shipped ROMs."""
+"""Bind historical Fuchsia terminal evidence to its original ROMs."""
 import hashlib
 import json
 import unittest
 from pathlib import Path
+from published_evidence import release_baseline
 from verify_versions import verify
 from verify_fuchsia_update import previous_release
 
@@ -11,8 +12,12 @@ OUT=ROOT/'mods/hoenn/fuchsia-harbor-validation'
 
 
 class FuchsiaHarbor(unittest.TestCase):
-    def test_every_edition_walks_the_quay_and_uses_the_indoor_captain(self):
-        release=verify(ROOT/'mods/hoenn/versions')
+    def test_historical_editions_walk_the_quay_and_use_the_indoor_captain(self):
+        release=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
+        if release.get('validation_scope')=='atlas-surf-layout-candidate':
+            release=release_baseline(release)
+        else:
+            release=verify(ROOT/'mods/hoenn/versions')
         while release.get('validation_scope') in ('generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers','dewford-coast-safety','extra-gyms','ever-grande-market','dewford-competitive-shop','surf-review','annotated-world-links','island-harbors','sevii-harbors','three-harbor-terminals'):release=previous_release(release)
         self.assertEqual(release['validation_scope'],'fuchsia-harbor')
         targets=[('validation',release['parent_rom_sha256'])]
@@ -26,7 +31,7 @@ class FuchsiaHarbor(unittest.TestCase):
             self.assertTrue(r['save_continue_inside_terminal'] and r['old_lodge_exit_walked'])
             self.assertEqual([t['destination'] for t in r['trips']],['JourneyPalletHarbor','JourneyFuchsiaHarbor'])
 
-    def test_only_fuchsia_changes_and_shared_city_art_stays_identical(self):
+    def test_historical_fuchsia_changes_preserve_shared_city_art(self):
         r=json.loads((OUT/'source.json').read_text())
         self.assertTrue(r['original_inputs_verified'] and r['idempotent'])
         self.assertFalse(r['differences']);self.assertGreater(r['unrelated_source_inputs_checked'],30000)
@@ -36,6 +41,8 @@ class FuchsiaHarbor(unittest.TestCase):
 
     def test_old_reports_keep_their_original_rom_hashes(self):
         release=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
+        if release.get('validation_scope')=='atlas-surf-layout-candidate':
+            release=release_baseline(release)
         while release.get('validation_scope') in ('generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers','dewford-coast-safety','extra-gyms','ever-grande-market','dewford-competitive-shop','surf-review','annotated-world-links','island-harbors','sevii-harbors','three-harbor-terminals'):release=previous_release(release)
         old=previous_release(release)
         self.assertNotEqual(old['parent_rom_sha256'],release['parent_rom_sha256'])

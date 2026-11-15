@@ -32,8 +32,17 @@ jobs:
         run: |
           python3 -m unittest discover -s tools/sea_routes -v
           python3 -m unittest discover -s tools/hoenn -v
-          python3 tools/hoenn/verify_playable.py
-          python3 tools/hoenn/verify_versions.py
+      - name: Verify candidate checkpoint integrity (not a final release approval)
+        if: always()
+        run: python3 tools/hoenn/verify_atlas_surf_checkpoint.py --if-candidate
+      - name: Verify historical playable alpha
+        if: always()
+        run: python3 tools/hoenn/verify_playable.py
+      - name: Require complete current release validation before browser and Pages
+        # Candidate checkpoints must still fail this final gate. Boot/hash
+        # checks never replace source/native/five-edition release evidence.
+        if: always()
+        run: python3 tools/hoenn/verify_versions.py
       - name: Configure Ubuntu package downloads
         run: |
           python3 -m unittest discover -s tools/ci -v

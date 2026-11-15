@@ -461,3 +461,60 @@ como pesquisa WIP, sem alterar a candidata: filtra mapas sem identidade
 compilada e seu shim define os tipos usados no C nativo. Dois testes, incluindo
 cinco casos comparados com o C real da171, passaram. Isso não prova domínio
 físico de pixels nem resolve as ligações nativas.
+
+
+## Continuidade de 15/11: falha de CI recebida após atualizar as ROMs
+
+Última mensagem do usuário: log integral da Actions iniciado em
+2026-11-15T16:24:20Z; resumo literal: "Ran 1074 tests in 32.571s / FAILED
+(failures=12, errors=13, skipped=34)". Retomar a correção desse diagnóstico
+sem desfazer o checkpoint de binários solicitado.
+
+Último checkpoint remoto conferido antes deste lote:
+3ae46505cc076d0ad9a9582f0791f1fd6f3ca860 no PR normal111. As cinco ROMs e a
+bateria preservam todos os hashes registrados acima. Este lote altera cadeia
+histórica, ferramentas, metadados, documentos e ZIP; não recompila o jogo.
+
+Causa confirmada: ao gerar versions.json da candidata, as referências a
+provas históricas foram descartadas. Leitores esperavam proofs/previous_* e
+flags antigas, ou escolhiam layout202 por não reconhecer o novo escopo. A
+comparação221/202 e o SHA203c... se referem ao histórico; não provam regressão
+nova da arte, que não mudou. O bloqueio "Unvalidated release" é correto:
+as viagens e demais validações172 ainda não terminaram.
+
+Correção: proofs=[] explícito e ponte171 pinada SHAeca26adf...; somente refs
+historical_validation e previous_validation são herdadas. Resolvedores
+validam caminho/hash/retested=false/ancestral aprovado/prefixo. Históricos
+usam seus próprios bytes e SHA, nunca a ROM172. Onze testes anticorrupção do
+resolvedor e nove de integridade da candidata passaram. Três casos de atlas
+passaram com leitura readonly dos blobs históricos. O novo CLI
+verify_atlas_surf_checkpoint.py verifica bytes/profíles, TESTE/save, cinco
+coldboots, freeze, tabelas compiladas e ZIP/docs; não aprova gameplay global.
+
+A suíte completa foi tentada localmente via harness readonly de sparse Git:
+1011testes,8FAIL,381ERROR,27skipped. A maior parte dos erros locais corresponde
+a blobs históricos não materializados no clone parcial, sem fetch automático;
+esse resultado NÃO é CI aprovada nem prova de regressão da ROM. Relatório local
+.local/CI-repro-hoenn.log. A execução integral de Actions deve confirmar a
+correção dos leitores num checkout com todos os arquivos. Não substituir
+arquivos ausentes por fixtures inventadas nem omitir falhas do resultado.
+
+CI agora registra integridade do checkpoint, alpha histórica e gate final em
+passos distintos. verify_versions(require_seal=True) permanece intocado e
+DEVE recusar a candidata; browser/Pages continuam condicionados ao sucesso.
+Não marcar validated=true, fabricar provas ou pular o gate para Actions ficar
+verde. Registro técnico: errors/2026-11-15-candidate-history-ci.txt, incluído
+no ZIP juntamente com este guia e a baseline171 pinada.
+
+Último pedido concluído: atualização e preservação remota das cinco ROMs,
+TESTE/save e guia. Lote atual: reparo dos leitores históricos em validação.
+Último pedido incompleto continua corrigir todas as rotas/acessos/visuais,
+ecologia/DEX, saves e provas172 para a release final. Há17componentes no
+último diagnóstico fonte,14/18cavernas e6/7portos na componente principal.
+Próximo passo: conferir Actions após o checkpoint deste reparo e seguir as
+ligações nativas/ThreeIsland/underlay, sem tratar smoke/boot como prova final.
+
+Classificação dos381erros locais:380FileNotFoundError sobmods/ (237paths) e
+1gateExtraGyms legítimo. Dos8FAIL,7são Unvalidatedrelease e1não encontra
+shore-animation por sparse. Não houve KeyError nem rejeição de hash/prefixo
+no resolvedor. Relatório enxuto:docs/design/atlas-surf-layout/ci-history-repair.json.

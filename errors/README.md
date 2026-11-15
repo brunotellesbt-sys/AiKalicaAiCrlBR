@@ -1,5 +1,8 @@
 # Registro de erros
 
+Para o checkpoint de ROMs172 e a cadeia de provas, consulte
+[CI, histórico e bloqueio da release final](2026-11-15-candidate-history-ci.txt).
+
 Antes de alterar terreno, água, pontes, encostas ou objetos compostos, consulte
 [inventário e reconstrução do atlas](2026-11-14-atlas-reconstruction.txt),
 [canal sul, portos e cavernas criadas](2026-11-07-generated-area-review.txt),

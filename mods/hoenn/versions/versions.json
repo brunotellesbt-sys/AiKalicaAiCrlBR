@@ -319,5 +319,28 @@
   "rom_used_bytes": 32920992,
   "rom_limit_bytes": 33554432,
   "known_generated_water_components": 17,
-  "user_requested_progress_checkpoint": true
+  "user_requested_progress_checkpoint": true,
+  "proofs": [],
+  "historical_validation": {
+    "manifest": "mods/hoenn/validation-baselines/pr79/versions.json",
+    "manifest_sha256": "aef1de99346ea209c848483e112f96bb342b45bc4837a0cbbed208dd0e0bf077",
+    "parent_rom_sha256": "6be718b3917eb6b6f639384ee99563280e272417beec5e22b6722c4cad033462",
+    "compressed_parent_sha256": "e535f4c1d775f07a872b9d4998baf985638afbf68fffdf6df2e8490184cc58bc",
+    "retested_on_current_rom": false,
+    "source": "PR79",
+    "notes": "Earlier PWT/mechanics runs remain bound to their original ROM bytes; no tournaments repeated for this coastal update."
+  },
+  "previous_validation": {
+    "manifest": "mods/hoenn/validation-baselines/pr81/versions.json",
+    "manifest_sha256": "d67a4baba3462f9030ac07d5416c815a915737a1d5ea25a3c7dc06f1b0966175",
+    "parent_rom": "mods/hoenn/validation-baselines/pr81/parent.gba.gz",
+    "parent_archive_sha256": "632707c8c5fb96f674bd7f3d1770c3870d22434431deccebfe48cbe88b45122a",
+    "evidence_directory": "mods/hoenn/versions",
+    "retested_on_current_rom": false
+  },
+  "previous_port_validation": {
+    "manifest": "mods/hoenn/atlas-surf-layout-validation/baseline/versions.json",
+    "manifest_sha256": "eca26adfcb0b15f9da78aadec1b8738f66288fcc58d4d727ee2ea2a6274e29ec",
+    "retested_on_current_rom": false
+  }
 }

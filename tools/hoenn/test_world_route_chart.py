@@ -1,8 +1,9 @@
-"""Require actual new Surf crossings and a moving native MAP cursor."""
-from verify_fuchsia_update import harbor_baseline
+"""Preserve historical Surf crossing and native MAP cursor evidence."""
+from verify_fuchsia_update import harbor_baseline, previous_release
 import json
 import unittest
 from pathlib import Path
+from published_evidence import release_baseline
 from PIL import Image
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -10,8 +11,10 @@ OUT=ROOT/'mods/hoenn/world-route-chart-validation'
 
 
 class WorldRouteChart(unittest.TestCase):
-    def test_current_rom_crosses_every_new_passage_and_reopens_map_at_real_position(self):
+    def test_historical_rom_crosses_every_new_passage_and_reopens_map_at_real_position(self):
         release=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
+        if release.get('validation_scope')=='atlas-surf-layout-candidate':
+            release=release_baseline(release)
         release=harbor_baseline(release)
         r=json.loads((OUT/'world-route-chart.json').read_text())
         self.assertTrue(r['passed'])
@@ -26,13 +29,14 @@ class WorldRouteChart(unittest.TestCase):
             self.assertTrue(all(s['cursor_matches_compiled_tile_position'] and s['return_preserves_position'] for s in p['cursor_samples']))
             self.assertTrue(all(c['outbound_and_return'] and c['surf_preserved'] for c in p['controller_crossings']))
 
-    def test_chart_has_no_printed_names_and_all_links_are_real_and_orthogonal(self):
+    def test_historical_chart_has_no_printed_names_and_all_links_are_real_and_orthogonal(self):
         layout=json.loads((OUT/'layout.json').read_text())
         index=json.loads((ROOT/'docs/images/navigation/world-routes.json').read_text())
         proof=json.loads((OUT/'world-route-chart.json').read_text())
         release=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
+        if release.get('validation_scope')=='atlas-surf-layout-candidate':
+            release=release_baseline(release)
         while release.get('validation_scope') in ['generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers','dewford-coast-safety','extra-gyms','ever-grande-market','dewford-competitive-shop']:
-            from verify_fuchsia_update import previous_release
             release=previous_release(release)
         if release.get('validation_scope')=='annotated-world-links':
             layout=json.loads((ROOT/'mods/hoenn/continuous-ocean-validation/layout/annotated-world-links.json').read_text())['chart']
@@ -54,7 +58,7 @@ class WorldRouteChart(unittest.TestCase):
             self.assertEqual(definitions[passage['map']]['name'],passage['name'])
             self.assertEqual(definitions[passage['map']]['definition'],passage['definition'])
 
-    def test_routes_are_visibly_drawn_at_the_red_annotations(self):
+    def test_historical_routes_are_visibly_drawn_at_the_red_annotations(self):
         im=Image.open(ROOT/'docs/images/navigation/world-map-current.png').convert('RGB')
         proof=json.loads((OUT/'world-route-chart.json').read_text())
         expected=[(101,65),(101,69),(101,73),(175,43),(181,46),(190,50),

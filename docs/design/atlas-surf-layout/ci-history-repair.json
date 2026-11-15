@@ -1,0 +1,40 @@
+{
+  "schema": "atlas-candidate-ci-history-repair/v1",
+  "baseline_commit": "3ae46505cc076d0ad9a9582f0791f1fd6f3ca860",
+  "user_CI_report": {
+    "tests": 1074,
+    "failures": 12,
+    "errors": 13,
+    "skipped": 34
+  },
+  "new_unit_tests_passed": 20,
+  "historical_atlas_tests_passed": 3,
+  "local_global_attempt": {
+    "tests": 1011,
+    "failures": 8,
+    "errors": 381,
+    "skipped": 27,
+    "missing_historical_blob_errors": 380,
+    "final_release_rejection_errors": 1,
+    "release_gate_failures": 7,
+    "missing_shore_proof_failures": 1,
+    "sparse_readonly_Git_fallback": true,
+    "lazy_fetch": false,
+    "complete_checkout": false,
+    "passed": false
+  },
+  "remote_Actions_after_fix": "pending",
+  "ROM_bytes_modified": false,
+  "final_release_validated": false,
+  "native_gameplay_validation": "pending",
+  "input_sha256": {
+    "tools/hoenn/published_evidence.py": "74e8b027dd093b19f165bffc8da2049b8531c23a150aecb0ff6ce5a20cafaefd",
+    "tools/hoenn/verify_fuchsia_update.py": "c86f791b060da9620a03e5edc085eaf3285fb496eb3bbd30f3b11d93da4327cc",
+    "tools/hoenn/test_published_evidence.py": "e3266be27ab0887bab745ec5da9ccb0b4c1e2d533f979402de12830da240f31a",
+    "tools/hoenn/verify_atlas_surf_checkpoint.py": "9706bfae334c12698900fba78fbe41f39a6277027acd02d48241beb187d8fd6c",
+    "tools/hoenn/test_atlas_surf_checkpoint.py": "782b07738a544d0a238d3044551c125005642e59613cf6ab099f368f032e84cb",
+    "tools/hoenn/test_fuchsia_harbor.py": "53dfde35ce98439659740c33bde0fac48cc0109a21c5accabe5a5da4d5c35f61",
+    "tools/hoenn/test_world_route_chart.py": "aa68e45caef241f7c175c092b119db005248418e47437ba81bb40c08897091e3",
+    ".github/workflows/sea-routes.yml": "096e2a1b4c646e472f96248ba27edeae8d901a932bc6362787a9db0b888045ef"
+  }
+}
