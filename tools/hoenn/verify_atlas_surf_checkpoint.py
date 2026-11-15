@@ -158,6 +158,9 @@ def verify_archive(root, directory, info, summary):
     assert digest(archive.read_bytes()) == summary['archive_sha256'], 'Archive hash changed'
     files = {row['file']: directory / row['file'] for row in info['variants']}
     files.update({name: root / name for name in CONTINUITY_FILES})
+    for path in (root / 'Aqui').rglob('*'):
+        if path.is_file():
+            files[path.relative_to(root).as_posix()] = path
     for path in (root / PROOF).rglob('*'):
         if path.is_file() and path.name != 'candidate-ROM-checkpoint.json':
             files[path.relative_to(root).as_posix()] = path

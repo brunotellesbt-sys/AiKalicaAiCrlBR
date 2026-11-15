@@ -2,7 +2,7 @@
 
 > [Erros atuais da CI, log completo e roteiro de correção](ERROS-PARA-PROXIMA-IA.md).
 
-Atualizado em 15/11/2026 UTC. Este é o guia consolidado para a próxima janela
+Atualizado em 15/11/2026 UTC, incluindo a sincronização do pacote pedida após os logs. Este é o guia consolidado para a próxima janela
 de IA/Codex. Leia integralmente antes de alterar, gerar, compilar ou publicar.
 
 ## 1. Projeto, objetivo e situação atual
@@ -29,9 +29,10 @@ A candidata atual tem cinco ROMs recompiladas e enviadas, mas NÃO é release
 final validada. O grafo fonte continua fragmentado. PR normal não significa
 aprovação para merge/publicação final. A main só recebe o que for integrado.
 
-Pedido exclusivo DESTE commit: criar a pasta Aqui e atualizar documentação,
-poupando limite, em um commit no mesmo PR. Nenhum código, ROM, save, ZIP,
-manifesto ou workflow deve mudar neste lote.
+Pedido do commit29b1dca, já concluído: criar Aqui apenas com documentação.
+Pedido MAIS RECENTE: atualizar o guia antes do merge e sincronizar a cópia
+dentro do ZIP. Neste lote, inclusão/verificação de Aqui no empacotador e
+documentação do pacote são atualizadas; ROMs/save/source/ELF não mudam.
 
 ## 2. Resultado correto exigido pelo usuário
 
@@ -299,31 +300,56 @@ Conferir links/diff, rodar checks adequados, commitar, fazer push e comparar SHA
 remoto. Atualizar o mesmo PR normal, sem duplicata/merge automático. Se outro
 chat integrou a branch, inspecionar remoto e preservar alterações antes de agir.
 
-ATENÇÃO AO ESCOPO DESTE COMMIT: somente documentação. ROMs/save/ZIP/manifests/
-código/workflows não mudam. O ZIP conserva textos do checkpoint1bf71ed;
-a documentação mais recente passa a estar no Git nesta pasta Aqui.
-O verificador compara guia/estado do HEAD ao ZIP e pode acusar Stale archive
-entry nesses textos após esta atualização documental. Não relaxar a comparação:
-na próxima atualização autorizada do pacote, incluir guia atual e pasta Aqui,
-reempacotar, atualizar hash externo e repetir verificações. Não reempacotar agora.
+ATUALIZAÇÃO MAIS RECENTE: o usuário pediu sincronizar o guia antes do merge.
+O ZIP foi reempacotado com a documentação atual e a pasta Aqui completa,
+incluindo o registro de erros e o log original. O empacotador agora inclui
+Aqui e o verificador exige seus bytes atuais; não foi afrouxada a comparação.
+ROMs/save/source/ELF preservam os mesmos hashes. Só documentação, integração
+documental do pacote e hash/tamanho externo do ZIP mudaram neste lote.
+
+O erro Stale archive entry relatado anteriormente é histórico e foi tratado
+por sincronizar o pacote, não por ignorar checks. A verificação de integridade
+é executada após empacotar. Os8FAIL+1ERROR de aprovação final continuam
+pendentes, pois a rede e as provas172 ainda não foram concluídas.
+Futuras edições destes textos devem entrar no ZIP antes de declarar o pacote
+sincronizado. Depois atualizar hash/tamanho externos e repetir a verificação.
 
 ## 11. Último concluído e último incompleto
 
 - Antes deste lote: cinco ROMs/save/ZIP enviados; histórico/CI reparados;
   Birth na ROM atual passou; pesquisa WIP preservada no PR111/checkpoint1bf71ed.
-- Neste lote: pasta Aqui e guia técnico de retomada atualizados; entregar
-  um único commit documental no mesmo PR e conferir o push remoto.
+- Mais recente: guia no Git e dentro do ZIP sincronizados, com Aqui/erros/log
+  incluídos e comparação estrita testada; enviar ao mesmo PR e conferir push.
 - INCOMPLETO: consertar toda a geografia/acessos/visuais/saves/ecologia e provar
   a release172. Próximo trabalho útil: corrigir/testar Ocaso/underlay, resolver
   Three e lacunas nativas, repetir grafo/bancos, só então nova candidata,
   compilação privada, congelamento e provas finais das cinco edições.
 
-## Registro posterior: erros enviados às21:06–21:07 UTC
+## Histórico: erros enviados às21:06–21:07 UTC, antes da sincronização
 
 Consultar ERROS-PARA-PROXIMA-IA.md e LOG-CI-2026-11-15.txt nesta pasta.
-Nesta execução:1094testes,8FAIL,1ERROR,34skipped; gate final rejeita release
-não validada. Além disso, o checkpoint agora FALHA por Stale archive entry
+Naquela execução:1094testes,8FAIL,1ERROR,34skipped; gate final rejeitou release
+não validada. Além disso, o checkpoint FALHOU por Stale archive entry
 no guia técnico: o Git foi atualizado, mas o ZIP não, conforme o pedido
 documental. Não extrapolar o PASS anterior do pacote para este HEAD.
-Último pedido: somente registrar os três erros para a próxima IA corrigir;
-nenhuma correção de código, pacote ou ROM foi realizada neste lote.
+Naquele lote o pedido era somente registrar os três erros; o pacote não foi
+corrigido então. A sincronização mais recente, descrita abaixo, resolve o
+erro documental; as provas finais da release continuam pendentes.
+
+## Situação final desta entrega de guia
+
+Último pedido: “Vou fazer o merge do pull request mesmo com esses erros pq
+vai acabar o limite. E pq o guia tá desatualizado? Atualize o guia po, antes
+de acabar o limite, quando acabar vou fazer o merge, pode deixar o guia
+nessa página também.”
+
+O guia no Git já havia sido atualizado. A cópia antiga era a do ZIP,
+preservada pelos pedidos anteriores de somente documentação. Esta nova etapa
+sincroniza ambas e acrescenta toda a pasta Aqui ao pacote, sem recompilar ou
+trocar as cinco ROMs/save. O usuário pretende realizar o merge por conta
+própria; não fazer merge automático nem interpretar isso como release validada.
+
+Concluído: guia/erros/log no Git e ZIP, integração documental e check de
+integridade do pacote. INCOMPLETO: rede17SCCs, Ocaso/underlay, Three, demais
+lacunas e provas da release172. O registro de erros conserva os logs originais;
+o erro2 tem atualização de estado no topo do documento.

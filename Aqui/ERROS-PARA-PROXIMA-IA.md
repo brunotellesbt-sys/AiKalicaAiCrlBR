@@ -1,5 +1,11 @@
 # Erros de CI — entregar à próxima IA
 
+> Atualização posterior, a pedido do usuário: guia e pasta Aqui sincronizados
+> no ZIP; erro2 (Stale archive entry) tratado por reempacotamento, mantendo
+> a verificação estrita. Logs abaixo continuam históricos e intactos.
+> Itens1/3 (8FAIL+1ERROR, release não validada) continuam pendentes.
+> Nenhuma ROM/save foi alterada; conferir o check de integridade desta entrega.
+
 Registro de 15/11/2026 UTC. Pedido do usuário: guardar os erros nesta pasta
 para corrigir com a próxima IA. Este commit SOMENTE documenta; nenhuma
 correção, compilação, reexecução de testes ou alteração de pacote foi feita.

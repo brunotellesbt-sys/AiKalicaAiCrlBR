@@ -140,7 +140,7 @@ class ArchiveTests(unittest.TestCase):
             root = Path(tmp)
             directory = root / 'mods/hoenn/versions'
             directory.mkdir(parents=True)
-            names = list(check.CONTINUITY_FILES) + ['roms/README.md', 'roms/CANDIDATA-172.json',
+            names = list(check.CONTINUITY_FILES) + ['Aqui/README.md', 'Aqui/ERROS-PARA-PROXIMA-IA.md', 'roms/README.md', 'roms/CANDIDATA-172.json',
                 'roms/rom-de-teste/LEIA-ME.md', 'roms/rom-de-teste/review.json',
                 'roms/rom-de-teste/SHA256SUMS', 'roms/rom-de-teste/Pokemon-Journey-TESTE.sav']
             for name in names:
@@ -158,9 +158,15 @@ class ArchiveTests(unittest.TestCase):
             summary = dict(archive_bytes=archive.stat().st_size,
                            archive_sha256=check.digest(archive.read_bytes()))
             check.verify_archive(root, directory, dict(variants=[]), summary)
-            (root / check.CONTINUITY_FILES[0]).write_text('updated continuity')
-            with self.assertRaisesRegex(AssertionError, 'Stale archive entry'):
-                check.verify_archive(root, directory, dict(variants=[]), summary)
+            for name in (check.CONTINUITY_FILES[0], 'Aqui/README.md', 'Aqui/ERROS-PARA-PROXIMA-IA.md'):
+                path = root / name
+                original = path.read_bytes()
+                path.write_text('updated continuity')
+                try:
+                    with self.subTest(name=name), self.assertRaisesRegex(AssertionError, 'Stale archive entry'):
+                        check.verify_archive(root, directory, dict(variants=[]), summary)
+                finally:
+                    path.write_bytes(original)
 
 
 if __name__ == '__main__':

@@ -140,6 +140,8 @@ def write_archive(versions,roms,test,proof,info):
     archive=versions/'Pokemon-Journey-Four-Editions.zip';pending=archive.with_suffix('.zip.candidate-tmp')
     files={r['file']:versions/r['file'] for r in info['variants']}
     files.update({p:ROOT/p for p in CONTINUITY_FILES})
+    for p in (ROOT/'Aqui').rglob('*'):
+        if p.is_file():files[p.relative_to(ROOT).as_posix()]=p
     for name in ('errors/README.md','errors/2026-11-15-candidate-history-ci.txt'):
         files[name]=ROOT/name
     baseline=ROOT/PARENT_MANIFEST

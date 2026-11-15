@@ -2,7 +2,7 @@
 
 > Entrada consolidada e atual para a próxima janela: [Aqui/README.md](../Aqui/README.md).
 > Estado até o checkpoint1bf71eda2d8276a377e38e84cc4baaaad070c085.
-> Este lote é exclusivamente documental; ROMs/save/ZIP não foram alterados.
+> Atualização atual: guia e pasta Aqui sincronizados também no ZIP; integridade conferida. ROMs/save não foram alterados.
 
 Atualizado em 15/11/2026 (UTC). Este é o ponto de entrada permanente para
 outra IA ou outro ambiente. Atualize-o a cada lote verificado, antes do
@@ -954,3 +954,18 @@ da atualização somente documental sem reempacotamento. Correções pendentes:
 sincronizar pacote quando autorizado e concluir as provas reais da release.
 Subpedido atendido: documentação dos erros. Erros NÃO corrigidos neste lote;
 código/ROMs/save/ZIP/manifestos/workflows intocados. Conferir push ao entregar.
+
+
+15/11/2026 — sincronização do guia antes do merge solicitado pelo usuário
+Último remoto anterior:846aa59b0d2d2e6d00babb7bca259eb9ef251d9d.
+O guia no Git estava atualizado, mas o ZIP preservava a edição anterior por
+pedido de somente documentação. Nova solicitação autoriza sincronizar o
+pacote. Guia Aqui atualizado; README/erros/log entram no ZIP; empacotador e
+verificador incluem Aqui e conservam comparação estrita. Regressão testa
+alteração do guia e dos registros após empacotar. Hash/tamanho externos do
+ZIP atualizados. ROMs/save/source/ELF não foram modificados ou recompilados.
+Este lote resolve o desencontro documental do pacote, não a release172:
+17SCCs/Ocaso/Three/lacunas e provas finais continuam pendentes, assim como
+8FAIL+1ERROR do gatefinal. Logs originais preservados com seu SHA. O usuário
+pretende fazer o merge, sem autorizar a IA a marcar release validada.
+Após reempacotar: verificar integridade, commit/push e conferir SHA remoto.
