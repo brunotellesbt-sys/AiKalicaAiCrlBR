@@ -35,6 +35,10 @@ static void InitBackupMapLayoutConnections(struct MapHeader *mapHeader);
 void InitMap(struct MapHeader *mapHeader) {
         InitBackupMapLayoutConnections(mapHeader);
 }
+void RestoreSaved(void) {
+    LoadSavedMapView();
+    RunOnLoadMapScript();
+}
 static void FillConnection(int x, int y, struct MapHeader const *connectedMapHeader, int x2, int y2, int width, int height)
 {
     int mapWidth;
@@ -167,6 +171,13 @@ int native_unchanged(void) {
     for(i=0;i<17*16;i++)if(backup[i]!=0xBEEF)return 0;
     return 1;
 }
+void native_first_face(u16 *out) {
+    static const struct MapConnection nativeLinks[] = {{CONNECTION_EAST,0,0,0},{CONNECTION_EAST,0,1,1}};
+    static const struct MapConnections nativeConnections = {2,nativeLinks};
+    init();gMapHeader=headers[0];gMapHeader.connections=&nativeConnections;
+    backup[7*17+8]=0x15F9;backup[8*17+8]=0x1170;
+    JourneyAtlasFillPhysicalView(&gMapHeader);memcpy(out,backup,sizeof(backup));
+}
 int word(unsigned value,int unknown) {
     u16 result=0x3FF;
     struct MapLayout l={1,1,NULL,0,(void*)2,(void*)2};init();
@@ -232,6 +243,12 @@ int stale_header(void) {
             self.assertEqual(self.lib.word((high<<10)|0x12B,0),(high<<10)|0x170)
             self.assertEqual(self.lib.word((high<<10)|0x12B,1),0x3FF)
 
+    def test_native_first_face_restores_live_path_and_keeps_blocked_first_owner(self):
+        actual=self.array();self.lib.native_first_face(actual)
+        self.assertEqual(actual[7*17+8],0x3000)
+        self.assertEqual(actual[8*17+8],0x3C00)
+        self.assertEqual(actual[7*17+7],0xBEEF)
+
     def test_stage_is_narrow_and_refuses_double_install(self):
         layer=FixtureLayer();stage(layer,PLAN)
         field=layer.outputs['src/fieldmap.c'].decode()
@@ -239,6 +256,7 @@ int stale_header(void) {
         self.assertIn('    return LegacyBorder(x, y);',field)
         self.assertLess(field.index('#include "wild_encounter.h"'),field.index('#include "data/journey_atlas_physical.h"'))
         self.assertFalse(self.metadata['native_validated'])
+        self.assertIn('LoadSavedMapView();\n    JourneyAtlasFillPhysicalView(&gMapHeader);',field)
         with self.assertRaisesRegex(ValueError,'already installed'):
             stage(layer,PLAN)
 

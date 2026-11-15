@@ -16,10 +16,12 @@ import shutil
 from atlas_surf_adapters import stage_bindings
 from atlas_surf_coasts import stage_route114_closure,stage_closed_native_connections
 from atlas_surf_dives import reserve_patches,stage as stage_dives
+from atlas_surf_dive_access import attach_accesses
 from atlas_surf_ecology import stage as stage_ecology
 from atlas_surf_layer import stage_geometry
 from atlas_surf_legacy import stage_navigation_prune
 from atlas_surf_names import stage as stage_names
+from atlas_surf_marker import stage as stage_marker
 from atlas_surf_overlay import OverlaySource
 from atlas_surf_physical import stage as stage_physical
 from atlas_surf_ports import stage as stage_ports
@@ -117,8 +119,9 @@ def compose(source):
     scenery=preserve_native_water_collars(inputs,inventory,scenery)
     adapter_plan=coasts['adapter_plan']
     native_regions=_native_regions(inputs,adapter_plan)
+    dive_reservations=attach_accesses(truth,scenery['dive_features']['reservations'],pixels)
     reservations=deepcopy(adapter_plan['reservations']+scenery['reservations']
-                          +scenery['dive_features']['reservations'])
+                          +dive_reservations)
     for row in reservations:
         if row.get('route_water_obstructed'):
             row['route_obstruction_evidence']=dict(kind='fixed-cave-native-whole-footprint',
@@ -159,6 +162,7 @@ def compose(source):
     route114=stage_route114_closure(layer)
     dives=stage_dives(layer,plan,donor=dict(map='Route127',tile=[72,49]))
     ecology=stage_ecology(layer,owners);names=stage_names(layer,plan,owners)
+    marker=stage_marker(layer)
     ports=stage_ports(layer,inputs)
     from atlas_surf_native_scenery import repair as repair_native_scenery
     native_scenery=repair_native_scenery(layer)
@@ -182,6 +186,7 @@ def compose(source):
                   physical=physical,objects=objects,native_water_fringe=fringe,
                   dives=dives,ecology=ecology,names=names,ports=ports,legacy=legacy,
                   native_scenery=native_scenery,route114=route114,
+                  player_marker=marker,
                   closed_native_faces=closed_native,retirement=retirement,migration=migration,
                   adapter_plan=adapter_plan,donor_evidence=donor_evidence,
                   owner_mapping=owners,art_sha256=dict(truth.array_sha256),

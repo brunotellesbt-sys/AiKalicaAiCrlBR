@@ -72,6 +72,41 @@ class PhysicalReachability(unittest.TestCase):
         self.assertFalse(result['compiled_rom_validated'])
         self.assertFalse(result['gps_used_for_edges'])
 
+    def test_blocked_later_perimeter_cannot_replace_a_live_native_connection(self):
+        source,plan,requirements=self.fixture()
+        source.add('C',word=0x1401);source.connect('A','C')
+        requirements['transit_maps']=['C']
+        result=audit(source,plan=plan,requirements=requirements)
+        self.assertTrue(result['passed'],result['errors'])
+        self.assertEqual(len(result['blocked_connection_overlaps']),3)
+        self.assertTrue(all(r['chosen'][0]=='B' and r['shadow'][0]=='C'
+                            for r in result['blocked_connection_overlaps']))
+        source.tiles['C']=[0x1001]*9
+        result=audit(source,plan=plan,requirements=requirements)
+        self.assertIn('ambiguous-boundary-owner',{r['kind'] for r in result['errors']})
+
+    def test_blocked_first_connection_does_not_fall_through_to_a_later_open_face(self):
+        source,plan,requirements=self.fixture();source.add('C');source.connect('A','C')
+        source.tiles['B']=[0x1401]*9
+        plan['chunks'][1]=dict(name='C',origin=[3,0])
+        requirements['transit_maps']=['B']
+        result=audit(source,plan=plan,requirements=requirements)
+        self.assertEqual(result['generated_water_sccs'],2)
+        self.assertFalse(result['passed'])
+        self.assertTrue(all(r['chosen'][0]=='B' and 'chosen' in r['blocked_roles']
+                            for r in result['blocked_connection_overlaps']))
+        source.layouts['B']['secondary_tileset']='Unknown'
+        self.assertEqual(audit(source,plan=plan,requirements=requirements)['generated_water_sccs'],2)
+
+    def test_all_blocked_native_face_needs_no_movement_bank_whitelist(self):
+        source,plan,requirements=self.fixture()
+        source.tiles['B']=[0x1401]*9;source.layouts['B']['secondary_tileset']='Unknown'
+        plan['chunks']=plan['chunks'][:1];requirements['transit_maps']=['B']
+        result=audit(source,plan=plan,requirements=requirements)
+        self.assertTrue(result['passed'],result['pending'])
+        self.assertTrue(all(r['all_contacts_terrain_blocked'] and not r['banks_checked']
+                            for r in result['connections']))
+
     def test_high_water_cannot_join_height_one_by_metadata(self):
         source, plan, requirements = self.fixture()
         source.tiles['B'] = [0x3001] * 9
@@ -218,6 +253,22 @@ class PhysicalReachability(unittest.TestCase):
                          {'final-port-mapping-missing', 'native-pixel-not-authenticated'})
         with self.assertRaises(AssertionError):
             audit(source, plan=plan, requirements=requirements, strict=True)
+
+    def test_native_partial_pixel_uses_its_local_region_without_whole_continent_embedding(self):
+        source,plan,requirements=self.fixture()
+        plan['chunks']=plan['chunks'][:1]
+        plan['native_regions']=[dict(native_map='B',local_rect=[0,0,3,3],origin=[3,0],
+                                     global_rect=[3,0,6,3],evidence=dict(real_source='coast'))]
+        requirements['native_pixels']=[dict(key='partial',point=['B',1,1],atlas=[0,0],
+                                            authenticated=True,native_region_index=0)]
+        self.assertTrue(audit(source,plan=plan,requirements=requirements)['passed'])
+        for index in (True,-1,1):
+            changed=copy.deepcopy(requirements);changed['native_pixels'][0]['native_region_index']=index
+            result=audit(source,plan=plan,requirements=changed)
+            self.assertIn('native-pixel-region-identity-invalid',{r['kind'] for r in result['errors']})
+        plan['native_regions'][0]['local_rect']=[0,0,1,3]
+        result=audit(source,plan=plan,requirements=requirements)
+        self.assertIn('native-pixel-outside-registered-region',{r['kind'] for r in result['errors']})
 
     def test_state_budget_is_enforced(self):
         source, plan, requirements = self.fixture()

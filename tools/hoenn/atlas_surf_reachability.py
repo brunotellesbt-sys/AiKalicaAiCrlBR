@@ -411,7 +411,9 @@ class PhysicalGraph:
                     self.behaviors.append(self.behavior_names.get(source.behavior(name, word), 'UNKNOWN'))
                     self.map_at.append(index)
         self.connections = {}
+        self.claimed_connections = {}
         self.connection_witnesses = []
+        self.blocked_connection_overlaps = []
         self._connections()
         self._warps()
 
@@ -456,10 +458,9 @@ class PhysicalGraph:
                     self.errors.append(dict(kind='nonreciprocal-connection', map=name, target=target,
                                             direction=direction, offset=offset))
                 bank_ok = self.banks_match(name, target)
-                if not bank_ok:
-                    self.pending.append(dict(kind='bank-translation-unproven', map=name, target=target))
                 axis = 'height' if direction in ('left', 'right') else 'width'
                 pairs = 0
+                passable_contacts = 0
                 for value in range(max(0, offset), min(row[axis], offset + other[axis])):
                     if direction in ('left', 'right'):
                         a = [name, row['width'] - 1 if direction == 'right' else 0, value]
@@ -477,17 +478,36 @@ class PhysicalGraph:
                             self.errors.append(dict(kind='nonaffine-physical-connection', map=name,
                                 target=target, direction=direction, source_tile=a[1:], target_tile=b[1:]))
                             break
-                    if bank_ok:
-                        key = first, direction
-                        if key in self.connections and self.connections[key] != second:
-                            self.errors.append(dict(kind='ambiguous-boundary-owner', map=name, tile=a[1:]))
-                        else:
-                            self.connections[key] = second
+                    if self.passable(first) and self.passable(second):passable_contacts+=1
+                    key = first,direction
+                    if key in self.claimed_connections:
+                        if self.claimed_connections[key] != second:
+                            chosen=self.claimed_connections[key]
+                            # Native lookup chooses the first matching map
+                            # connection. A later blocked perimeter cell must
+                            # not replace that live owner or create a fake gap.
+                            if self.passable(first) and self.passable(chosen) and self.passable(second):
+                                self.errors.append(dict(kind='ambiguous-boundary-owner', map=name, tile=a[1:]))
+                            else:
+                                self.blocked_connection_overlaps.append(dict(map=name,tile=a[1:],
+                                    direction=direction,chosen=list(self.location(chosen)),
+                                    shadow=list(self.location(second)),
+                                    chosen_word=self.words[chosen],shadow_word=self.words[second],
+                                    blocked_roles=[role for role,cell in (
+                                        ('source',first),('chosen',chosen),('shadow',second))
+                                        if not self.passable(cell)]))
+                    else:
+                        self.claimed_connections[key]=second
+                        if bank_ok:self.connections[key]=second
                     if self.water[first] and self.water[second] and not self.words[first] & 0xC00 and not self.words[second] & 0xC00:
                         if elevation_step(self.words[first] >> 12, self.words[first], self.words[second]) is not None:
                             pairs += 1
+                if not bank_ok and passable_contacts:
+                    self.pending.append(dict(kind='bank-translation-unproven',map=name,target=target))
                 self.connection_witnesses.append(dict(map=name, target=target, direction=direction,
-                    offset=offset, reciprocal=len(reverse) == 1, compatible_water_pairs=pairs, banks_checked=bank_ok))
+                    offset=offset, reciprocal=len(reverse) == 1, compatible_water_pairs=pairs,
+                    passable_contacts=passable_contacts,banks_checked=bank_ok,
+                    all_contacts_terrain_blocked=passable_contacts==0))
 
     def _warps(self):
         for name in self.names:
@@ -777,6 +797,17 @@ def audit(source, *, plan, requirements=None, strict=False, max_states=1000000, 
             if kind == 'native_pixels':
                 name, x, y = row['point']
                 origin = origins.get(name)
+                if 'native_region_index' in row:
+                    index=row['native_region_index'];regions=plan.get('native_regions',[])
+                    if type(index) is not int or not 0<=index<len(regions):
+                        graph.errors.append(dict(kind='native-pixel-region-identity-invalid',key=row.get('key')))
+                        continue
+                    region=regions[index];rect=region.get('local_rect',[])
+                    if (region.get('native_map')!=name or len(rect)!=4 or not region.get('evidence')
+                            or not (rect[0]<=x<rect[2] and rect[1]<=y<rect[3])):
+                        graph.errors.append(dict(kind='native-pixel-outside-registered-region',key=row.get('key')))
+                        continue
+                    origin=region.get('origin')
                 if origin is None or not row.get('atlas'):
                     graph.pending.append(dict(kind='native-pixel-physical-binding-missing', key=row.get('key')))
                     continue
@@ -816,6 +847,8 @@ def audit(source, *, plan, requirements=None, strict=False, max_states=1000000, 
                   generated_water_sccs=len(generated), metrics=metrics,
                   checks=checks, errors=graph.errors, pending=graph.pending,
                   connections=graph.connection_witnesses,
+                  blocked_connection_overlaps=graph.blocked_connection_overlaps,
+                  connection_order_policy='native-first-matching-connection; blocked shadows never replace it',
                   dive_resolution_model='actual-C-table-affine-tri-state' if atlas_header is not None else 'legacy-native-json-connections',
                   dive_source_contract=(dict(table_sha256=atlas_model.input_sha256,
                       depth_sites=list(atlas_model.sites.values()),runtime_owners=len(atlas_model.chunks),

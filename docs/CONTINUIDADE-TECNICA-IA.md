@@ -680,3 +680,40 @@ Os 273 mapas/arquivos antigos permanecem para migração; layouts/IDs não foram
 apagados. ROMs oficiais seguem171. PR normal111 aberto. Próximo: concluir
 auditoria física global, materializar candidata privada e medir o buildARM;
 publicação segue bloqueada até provas atuais, sem promover contratos à força.
+
+
+## Pedido explícito de atualizar as ROMs — 15/11/2026
+
+Últimos pedidos literais: “Abra o pr com tudo que implementou e modificou nas
+roms pra guardar o progresso.”; depois: “Mas eu quero que atualize as roms com
+as modificações feitas, já pedi.” A prioridade agora é compilar a candidata
+INTEGRAL atual e enviar as CINCO ROMs modificadas no PR normal111, não apenas
+código ou diagnósticos antigos. O usuário foi informado de que essa candidata
+terá testes/falhas pendentes e não será apresentada como release final aprovada.
+Essa instrução permite preservar binários em andamento na branch/PR; não
+promover NATIVE_CONTRACT_FINALIZED nem inventar validação ou publicar Pages
+como release final. Preservar a171 e seus hashes/bateria para retorno e testes.
+
+Checkpoint anterior remoto c162689b58bceb73923e18077361a7c62c26cc90 confirmado.
+Novos códigos: prioridade física da primeira conexão no halo nativo quando há
+Atlas, reaplicação depois de LoadSavedMapView mantendo core/runtime, ciano
+clipped em y111/desenhado sobre cursor sem mudar coordenadas, auditor C real
+entre bancos, obrigações marítimas e acessos curtos autenticados dos cinco
+Dive (Origens evita a terra abaixo do glifo). A expansão de água nativa de
+cavernas usa somente células Surf reais do doador e respeita os limites do atlas.
+
+A auditoria com bancos autenticados reduziu110componentes para22; os cinco
+acessos Dive corrigidos reduziram para17. Isso é FALHA global ainda aberta,
+não PASS:15/18? conferir JSON atual para o número exato, não inferir. Seis
+portos têm dry/wet na componente principal; Three ainda está isolado na fonte.
+O censo sem filtro SCC confirmou383/190famílias e269células de grama novas;
+não é prova de alcançabilidade ou ROM. O projetor regional nativo e a proveniência
+de rotas ocultas por glifos seguem em desenvolvimento. A arte continua fixa.
+
+Próximo imediato: checkpoint de código atual, clonar PRIVADAMENTE a cópia171
+compilada/verificada, preparar, make -j4 com recursos medidos, corrigir erros
+ARM, congelar ROM/ELF/marker, exportar quatro regras de geração/dificuldade e
+TESTE mantendo supressão, fazer smoke/coldboot possível e atualizar os arquivos
+e manifestos no PR com status de candidata e as pendências reais. Não editar
+ou compilar enquanto um leitor usa o MESMO source/ELF/ROM; o parent171 segue
+intocado. Depois continuar os consertos até a validação final pedida originalmente.

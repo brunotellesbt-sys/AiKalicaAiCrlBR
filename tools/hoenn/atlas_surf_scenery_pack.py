@@ -308,10 +308,12 @@ def pack_grouped_scenery(inputs, truth, inventory, route_pixels, *, fixed=(), ex
 
 
 def preserve_native_water_collars(inputs,inventory,plan):
-    """Keep the actual one-tile native water fringe around a complete object.
+    """Keep the actual native water fringe around a complete object.
 
     Copying only the object's bounding rectangle can strand its wet corners in
-    tiny artificial pools. Each added cell here has an exact adjacent native
+    tiny artificial pools. Fixed cave islands need three native water tiles
+    to meet the pixel's real six-tile channel across its margin. Other scenery
+    keeps one tile. Each added cell has an exact adjacent native
     source word and a collision-zero Surf witness; no invented ocean path is
     permitted. Nine camera tiles already reserve this fringe's physical owner.
     """
@@ -321,9 +323,10 @@ def preserve_native_water_collars(inputs,inventory,plan):
     for row in result['placements']:
         stamp=stamps[row['stamp']];name=stamp['parent_map'];layout=inputs.layout(name)
         left,top,w,h=stamp['source_rect'];sx,sy=row['stamp_offset']
+        radius=3 if row['kind']=='cave' else 1
         proof=[]
-        for yy in range(-1,h+1):
-            for xx in range(-1,w+1):
+        for yy in range(-radius,h+radius):
+            for xx in range(-radius,w+radius):
                 if 0<=xx<w and 0<=yy<h:continue
                 px,py=left+xx,top+yy
                 if not (0<=px<layout['width'] and 0<=py<layout['height']):continue
@@ -331,19 +334,22 @@ def preserve_native_water_collars(inputs,inventory,plan):
                 x,y=sx+xx,sy+yy
                 if not (0<=x<row['width'] and 0<=y<row['height']):
                     raise ValueError('Whole native water fringe escaped its camera reservation')
+                if not (0<=row['origin'][0]+x<ATLAS_WIDTH*8
+                        and 0<=row['origin'][1]+y<ATLAS_HEIGHT*8):
+                    continue
                 word=inputs.word(name,px,py);key=x,y
                 previous=words_by_map[row['name']].get(key,word)
                 if previous!=word:raise ValueError('Shared native water collars disagree on a full metatile word')
                 words_by_map[row['name']][key]=word
                 proof.append(dict(source_tile=[px,py],target_tile=[x,y],word=word))
-        witnesses.append(dict(stamp=stamp['key'],target_map=row['name'],native_map=name,cells=proof))
+        witnesses.append(dict(stamp=stamp['key'],target_map=row['name'],native_map=name,radius=radius,cells=proof))
     for name,words in words_by_map.items():
         row=maps[name]
         if row.get('reserved_water_policy')!='native':
             raise ValueError('Native water collar requires an authoritative whole-object water mask')
         cells=_cells(row['water_runs']);cells.update(words)
         row['water_runs']=_runs(cells)
-        row.setdefault('native_water_evidence',{})['one_tile_native_fringe']=[w for w in witnesses if w['target_map']==name]
+        row.setdefault('native_water_evidence',{})['authenticated_native_fringe']=[w for w in witnesses if w['target_map']==name]
         row['native_water_word_overrides']=[dict(tile=list(tile),word=word) for tile,word in sorted(words.items(),key=lambda p:(p[0][1],p[0][0]))]
         # The original obstruction census predates the native fringe. Terrain
         # remains authoritative and the integration recalculates its final SCC.
