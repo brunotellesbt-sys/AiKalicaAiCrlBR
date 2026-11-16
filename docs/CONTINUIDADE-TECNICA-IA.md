@@ -2,6 +2,60 @@
 
 ## Retomada atual — 16/11/2026 (precede o histórico abaixo)
 
+PEDIDOS ADICIONAIS: mover barqueiro para a casa mais próxima em Pacifidlog e
+eliminar pedras partidas de Slateport. Implementados na fonte e ROM privada.
+CapitãoTown(11,27)→House3(7,6), porta(12,24); mantémJourney_FerryPort11/ID4,
+barcoID5, todos os outros atores/warps. A aproximação e saída ficam livres.
+Slateport: duas fatias verticais0x164/0x16C na encosta em(36,6) e(38,15)
+retiradas inteiras; quatro células viram0x190 do mesmo banco, mantendo todos
+os bits físicos. Nada de prolongar pedra por cima de floresta/chão da cidade.
+Renders inteiros fonte antes/depois de cidade/House3/Slateport revisados.
+
+Build privado533mapas/1959inputs em.local/atlas-harbor-fixes-src, congelado:
+ROMe8e0ae3d33c1b77d3cc5c6012a67f44f920ddd70fd40c46b4ffac781937fc413;
+ELFdde63270413a14aa79350a05573f3b83a33d22711f26f04175fdbcbcd62c37b5;
+marker6b7dd869595e21b9f90672fd1202fd08a3d79d32755a8598cb63aeb180cab411.
+Uso32922104bytes. Derivados do build anterior foram COPIADOS para cache
+privado após conferir hashes congelados; nenhum source verificado substituído.
+Capitão PASS por controles: ponte nos dois sentidos, porta real/House3,
+moradores1/2 ecapitão4 presentes, barco5 preservado, menu/port11,
+ferryHouse3→Mossdeep e volta ao píer, reentrada na casa, SAVE pelo menu.
+Boot novo sem writes de memória e Continue emHouse3[7,7], pedestre3 PASS.
+Queries durante menus usam leitura direta de RAM; não usar a trampoline
+de script paraVarGet enquanto o evento está ativo, pois interfere na conversa.
+Encostas: quatro metatiles carregados0x190, colisão1/altura0, barreiras reais
+por controles e capturas nativas revisadas PASS.
+O quarteto sul150/151/158/159 foi conferido carregado na câmera deSlateport;
+travessiaSlateport→Route109→Slateport por controles e capturas dos dois lados PASS.
+As metades que atravessam essa conexão nativa pertencem ao mesmo objeto
+completo. Preservadas; um render recortado na borda não autoriza apagá-las.
+Three/Birth PASS na mesma ROM, sem reaproveitar8602. Cinco edições privadas exportadas e bootadas,
+TESTE com save distribuído.302testes atlas PASS em77,902s. Evidência completa
+e1959inputs exatos compactados:harbor-native-review. ROMs públicas continuam
+anteriores; não declarar validação global ou novas ROMs públicas neste lote.
+O grafo dessa composição533, igual aos inputs compilados, continua15SCCs.
+
+Prévia nova separada: saída de Slateport na face leste em39,45..58, água
+nativa real e livre de conexão; Route134 existente cobre só0..39. Doadores
+Route109 dos mesmos bancosGeneral/Slateport, recife inteiro1tile0x1F9.
+Guardas rejeitam contato inventado e sombreamento de conexão nativa anterior.
+EverGrande: altura3 mantém face nativa completa; novos contatos laterais com
+mar1 ganham transição0 só a partir do segundo passo, em água nova. Fonte
+538mapas/5SCCs,18cavernas e7portos na maior componente, globalFAIL. Esse delta
+NÃO está na ROMe8e0. Relatóriocoast-new-exit-review; reprodutor recebe
+--additional-native-edges. Nova partição exige migração da candidata533 antes
+de materializar. Restam4clusters: BondBridge,Pacifidlog,TreasureBeach e ilha
+com treinador emRoute12. Projeção nativaUI localiza candidatos, não autoriza
+exclusão completa nem substitui acesso físico/retorno por controles.
+
+Detalhes emerrors/2026-11-16-harbor-actors-rocks.txt. As duas correções visuais
+pedidas não encerram o objetivo anterior. Revisão global das outras famílias
+de rochas, rede/migração/ecologia/saves/5edições/publicação/PR seguem em curso.
+8FAIL+1ERROR finais persistem, flagsfalse preservadas, não abrir PR ainda.
+Checkpoint remoto anterior3f77734dd98790e5feaa4a1a8033d24e3440b5e2.
+
+Lotes anteriores:
+
 Pedido atual: “Tá e por que não resolveu? Faz as ligações e valide a rom. Já pedi.”
 Trabalho continua até ligações/provas finais; checkpoint parcial não encerra o pedido.
 

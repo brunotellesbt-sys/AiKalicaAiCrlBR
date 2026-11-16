@@ -105,7 +105,8 @@ def _read_evidence(inputs):
     return parent,inventory,result['coasts'],result['scenery']
 
 
-def compose(source, *, preview_occluded_routes=False, cave_radius=9,coast_proposals=None):
+def compose(source, *, preview_occluded_routes=False, cave_radius=9,coast_proposals=None,
+            additional_native_edges=False):
     """Return a complete staged terrain/event candidate plus honest blockers."""
     source=Path(source).resolve();parent_proof=verify_prefix(source,complete=True)
     inputs=Source(source);parent,inventory,coasts,scenery=_read_evidence(inputs)
@@ -124,6 +125,11 @@ def compose(source, *, preview_occluded_routes=False, cave_radius=9,coast_propos
         from atlas_surf_scenery_pack import rebind_cave_route_water
         scenery=rebind_cave_route_water(inventory,scenery,pixels)
     scenery=preserve_native_water_collars(inputs,inventory,scenery,cave_radius=cave_radius)
+    component_inventory=parent['adapters']
+    if additional_native_edges:
+        if coast_proposals is None:raise ValueError('New native exits require a complete explicit coast preview')
+        from atlas_surf_native_edges import extend_inventory
+        component_inventory=extend_inventory(inputs,component_inventory)
     if coast_proposals is not None:
         from atlas_surf_adapters import plan_adapters
         from atlas_surf_geometry import plan_geometry
@@ -131,10 +137,10 @@ def compose(source, *, preview_occluded_routes=False, cave_radius=9,coast_propos
             raise ValueError('Coast preview must cover all actual components without adding raster water')
         for path,wanted in coast_proposals['input_sha256'].items():
             if _sha(inputs.read(path))!=wanted:raise ValueError(('Coast proposal source changed',path))
-        actual=plan_adapters(inputs,parent['adapters'],plan_geometry(pixels),
+        actual=plan_adapters(inputs,component_inventory,plan_geometry(pixels),
                              coast_proposals['registrations'],truth)
         for reservation,binding in zip(actual['reservations'],actual['bindings']):
-            row=next(r for r in parent['adapters']['adapters']
+            row=next(r for r in component_inventory['adapters']
                      if (r['native_map'],r['component'])==(binding['native_map'],binding['component']))
             _,proof=_donor(inputs,row)
             reservation['evidence']=dict(kind='authored-local-native-coast',native_map=binding['native_map'],
@@ -197,6 +203,10 @@ def compose(source, *, preview_occluded_routes=False, cave_radius=9,coast_propos
     ecology=stage_ecology(layer,owners);names=stage_names(layer,plan,owners)
     marker=stage_marker(layer)
     ports=stage_ports(layer,inputs)
+    from atlas_surf_pacifidlog_captain import stage as stage_pacifidlog_captain
+    pacifidlog_captain=stage_pacifidlog_captain(layer,inputs)
+    from atlas_surf_slateport_rocks import stage as stage_slateport_rocks
+    slateport_rocks=stage_slateport_rocks(layer,inputs)
     from atlas_surf_native_scenery import repair as repair_native_scenery
     native_scenery=repair_native_scenery(layer)
     closed_native=stage_closed_native_connections(layer,inputs,retired,route114_closure=route114)
@@ -218,6 +228,8 @@ def compose(source, *, preview_occluded_routes=False, cave_radius=9,coast_propos
                   parent=parent_proof,geometry_plan=plan,geometry=geometry,runtime=runtime,
                   physical=physical,objects=objects,native_water_fringe=fringe,
                   dives=dives,ecology=ecology,names=names,ports=ports,legacy=legacy,
+                  pacifidlog_captain=pacifidlog_captain,
+                  slateport_rocks=slateport_rocks,
                   native_scenery=native_scenery,route114=route114,
                   three_port=three_port,
                   old_perimeter=old_perimeter,
@@ -225,6 +237,7 @@ def compose(source, *, preview_occluded_routes=False, cave_radius=9,coast_propos
                   closed_native_faces=closed_native,retirement=retirement,migration=migration,
                   adapter_plan=adapter_plan,donor_evidence=donor_evidence,
                   coast_proposals_preview=coast_proposals is not None,
+                  additional_native_edges_preview=additional_native_edges,
                   occluded_routes_preview=occluded_routes,
                   occluded_routes_native_obstructions=underlay_obstructions,
                   owner_mapping=owners,art_sha256=dict(truth.array_sha256),

@@ -2,6 +2,30 @@
 
 ## Estado mais recente — 16/11/2026
 
+Pedidos adicionais já corrigidos e testados na ROM privada: barqueiro da
+ponte de Pacifidlog dentro da House3, a casa mais próxima; quatro células
+com fatias de rocha na falésia de Slateport agora formam a face reta nativa.
+Barqueiro conserva serviço/ID4; barco conservaID5, moradores/warps preservados.
+Ponte/porta/capitão/ferryMossdeep/volta/SAVE/novoContinue dentro da casa PASS.
+Capturas e colisões das duas encostas PASS; mapas inteiros fonte revisados.
+Three/Birth refeitos na ROMe8e0ae3d… PASS; cinco edições privadas bootadas,
+TESTE com save.302atlasPASS. Provas e fonte preparada1959arquivos:
+[harbor-native-review](../docs/design/atlas-surf-layout/harbor-native-review/review.json).
+Detalhes/limites: [registro atual](../errors/2026-11-16-harbor-actors-rocks.txt).
+
+Separar geometrias: ROM privada atual usa533mapas e tem15SCCs na análise
+fonte. A prévia NÃO compilada usa538mapas e5SCCs, com a nova saída real de
+Slateport além de Route134 e transição lateral em EverGrande.18cavernas/7portos
+na maior componente da prévia; aindaFAIL global. Fonte/ROM/manifestos públicos
+não foram trocados por essa prévia. Ela exige migração de saves533 e provas.
+Não excluir fragmentos por projeçãoUI apenas nem enfraquecer os gates finais.
+[coast-new-exit-review](../docs/design/atlas-surf-layout/coast-new-exit-review/review.json).
+Ainda faltam classificação/acessos de trechos nativos, revisão global de
+objetos, migração, rede/ecologia/edições e publicação.8FAIL+1ERROR pendentes;
+PR permanece para depois da correção completa. Continuar o pedido original.
+
+Lotes anteriores:
+
 Lote em andamento após o pedido “Tá e por que não resolveu? Faz as ligações
 e valide a rom. Já pedi.” Three foi corrigido fisicamente: terminal48x20
 preservado e oceano nativo de seis tiles ao sul, mapa48x27. Nove recifes

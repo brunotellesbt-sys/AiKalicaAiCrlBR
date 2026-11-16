@@ -68,6 +68,21 @@ def fixture(direction='right', height=1):
 
 
 class AdapterTests(unittest.TestCase):
+    def test_height3_lateral_junction_transitions_leave_complete_native_face_at_height3(self):
+        args=list(fixture(height=3));chunk=args[2]['chunks'][0]
+        chunk['height']+=2
+        chunk['water_runs']+=[[6,1,17],[7,1,17]]
+        result=plan_adapters(*args);reservation=result['reservations'][0]
+        binding=result['bindings'][0]
+        self.assertTrue(binding['lateral_height_transitions'])
+        overrides={tuple(r['tile']):r['word']>>12 for r in reservation['word_overrides']}
+        for tile in binding['lateral_height_transitions']:
+            self.assertEqual(overrides[tuple(tile)],0)
+            self.assertGreater(tile[0],0)
+        for (x,y),height in overrides.items():
+            if x==0:self.assertEqual(height,3)
+        self.assertEqual(args[0].word('Native',11,5)>>12,3)
+
     def test_raster_junction_padding_needs_an_independent_native_edge_witness(self):
         args=list(fixture());chunk=args[2]['chunks'][0]
         chunk['height']+=1

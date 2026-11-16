@@ -1,0 +1,364 @@
+{
+  "kind": "pacifidlog-captain-and-slateport-cliffs-native-review",
+  "ROM_sha256": "e8e0ae3d33c1b77d3cc5c6012a67f44f920ddd70fd40c46b4ffac781937fc413",
+  "ELF_sha256": "dde63270413a14aa79350a05573f3b83a33d22711f26f04175fdbcbcd62c37b5",
+  "marker_sha256": "6b7dd869595e21b9f90672fd1202fd08a3d79d32755a8598cb63aeb180cab411",
+  "prepared_files": 1959,
+  "captain_inside_nearest_House3": true,
+  "freed_bridge_both_directions": true,
+  "ferry_Pacifidlog_Mossdeep_roundtrip": true,
+  "saved_through_native_menu_and_fresh_Continue": true,
+  "saved_map": [
+    7,
+    4
+  ],
+  "saved_tile": [
+    7,
+    7
+  ],
+  "saved_elevation": 3,
+  "both_Slateport_cliff_faces_native_captures_and_collision_passed": true,
+  "Three_and_Birth_repeated_on_same_ROM": true,
+  "five_private_edition_boots_passed": true,
+  "source_renders_not_emulator_captures": "six *-source.png images; captures in captain/cliffs/three/birth/house-saved-coldboot are actual mGBA output",
+  "global_network_validated": false,
+  "final_release_validated": false,
+  "public_ROMs_updated": false,
+  "later_new_Slateport_exit_and_lateral_height_transitions_not_in_this_ROM": true,
+  "files": {
+    "edition-boots.json": {
+      "sha256": "c07d927d22e82413dd97377dba6e5eeb47642b589ec6186e7c84b44f11bf6378",
+      "bytes": 1035
+    },
+    "PacifidlogTown_House3-after-source.png": {
+      "sha256": "78e066612adfaf8f4fac8401f3e48734e0539bbd18bd9d961e5d586005fd5bcf",
+      "bytes": 4576
+    },
+    "PacifidlogTown-before-source.png": {
+      "sha256": "b035edb914e1daf933ecf67a6fc21e5d3ca9d6763ec9f19587645df8dc9f8464",
+      "bytes": 27839
+    },
+    "PacifidlogTown-after-source.png": {
+      "sha256": "f04a35432449523d2e25485c6d20450de53dcbdbff0ebe946a5a7ae1b2ccb6b1",
+      "bytes": 27310
+    },
+    "banks.json.gz": {
+      "sha256": "2b8d17a2d7a22622f37faf29a4105acf79670ed2f5dcedf3c2db7aadb1ef756b",
+      "bytes": 196773
+    },
+    "frozen.json": {
+      "sha256": "0b30dee918fe27cd6ee05406aacd31b30b3c0e9120672dca169c64a5c1406bed",
+      "bytes": 226561
+    },
+    "source.json.gz": {
+      "sha256": "863bc3ffcc2d074ad8ae91a82b935a8010790243a4a95aaa4bd86445ebe660ee",
+      "bytes": 193370
+    },
+    "prepared-source.tar.gz": {
+      "sha256": "d5518c0bd97f8ceee55eeed8648868d1fba2161639c9d6489c07c0b1ee9013ca",
+      "bytes": 1566563
+    },
+    "SlateportCity-after-source.png": {
+      "sha256": "dfdcbb9dfca9a280368a912b62486f43c0bd57e035dc21c8fd584884a5be94cb",
+      "bytes": 106213
+    },
+    "PacifidlogTown_House3-before-source.png": {
+      "sha256": "f2645e36cd226bf463a0c9299cd71527e7fc54971bf8b9b0c328b6d7211a9845",
+      "bytes": 4125
+    },
+    "SlateportCity-before-source.png": {
+      "sha256": "5b2ecd0c48bc97d954aa87911e93941ca67ed0953a37a147557d5ca3107dc175",
+      "bytes": 107059
+    },
+    "three/three-saved-through-native-menu.png": {
+      "sha256": "46fdc08392ddca41b1fa3966e567bac72f01c8ee691eefe916d663f2426a6637",
+      "bytes": 3500
+    },
+    "three/three-west-water-reached.png": {
+      "sha256": "81401ae3692114e34bf6af2ebbff18631a9456e08a32b659d83fe9f748495faf",
+      "bytes": 2965
+    },
+    "three/three-pedestrian-blocked.png": {
+      "sha256": "c495c3a79896ef7a14f7b63fd2a401cbf62ac80b726fcf79d267432d045576fb",
+      "bytes": 3482
+    },
+    "three/three-terminal-blocks-surf.png": {
+      "sha256": "bec005f78e91e6e6a89b4725c46b16ee9dee418813cc27fe20cd482095c2b0f6",
+      "bytes": 3136
+    },
+    "three/three-returned-east-water.png": {
+      "sha256": "62ed2540e3653c6fc384dcf5cd5cc41c9b3ee4c5594d4e85bc3ad4c7158661d3",
+      "bytes": 3363
+    },
+    "three/three-real-coast-crossed.png": {
+      "sha256": "3eb152a49f4aa3e163304b856d23622ea31bab833aff8f85e535d6ef172676a2",
+      "bytes": 2124
+    },
+    "three/three-reboarded-dry-terminal.png": {
+      "sha256": "18df06190c12db9b158fe82f6f7c6d44dd2799fe7c0c03a62a1ff7257c118525",
+      "bytes": 3523
+    },
+    "three/three-coast-returned.png": {
+      "sha256": "5cf6f2684c80a9454857640c07b3031f3d7925d4ffd7a91d8ab4e13d85a10fa5",
+      "bytes": 2968
+    },
+    "three/three-after-controller-save.sav": {
+      "sha256": "ae14f18af3328c9c307625ce1d96e8e551d157db85949337cb3927f352592fc6",
+      "bytes": 131072
+    },
+    "three/three-southern-reef-blocked.png": {
+      "sha256": "458ee8e8f291cb77d60008bd9c51d474327c89e4636ac5cb1a83c59e72a1b913",
+      "bytes": 1694
+    },
+    "three/three-native.json": {
+      "sha256": "f80d216de14a3b3f4e5283cb51287fd7d37261eb078cfb0ef72002bfb6f68f79",
+      "bytes": 350842
+    },
+    "three/three-east-boarding-water.png": {
+      "sha256": "fbb223048a24e488bb6cc16313787f325e59e4446ade2efed760bb7996eef2be",
+      "bytes": 3558
+    },
+    "cliffs/cliffs-native.json": {
+      "sha256": "25dc9b4dc2a8ac005d361eae1b21d49f50f9fcdc326e17dcb8e50ce4be6be91a",
+      "bytes": 242103
+    },
+    "cliffs/cliff-38-16-complete-native-face.png": {
+      "sha256": "5cfa0acd1d7350d1b36a6fd057033f6a874e9b1be51c71f765dd2a6ef929604d",
+      "bytes": 3330
+    },
+    "cliffs/cliff-36-7-complete-native-face.png": {
+      "sha256": "8ae4a6b50b3fac38a2f97063be0e4284f43bd1e91c51519520cdc80eddbf1f9c",
+      "bytes": 4133
+    },
+    "cliffs/cliff-38-15-complete-native-face.png": {
+      "sha256": "2948005f76e94bb2a233fe35d057fe97aee942a9ec27e723a2fffedc691c34d5",
+      "bytes": 3362
+    },
+    "cliffs/cliff-36-6-complete-native-face.png": {
+      "sha256": "71af07aadf63789e4337c5f6334689fa7b8278a9fd9fd1efc00982a8b0fb3caf",
+      "bytes": 4022
+    },
+    "birth/birth-dock-body-blocked.png": {
+      "sha256": "af72b8e3a4abcb68cea57bc09cb61b57c58e63f0452439ac21e95c3c99d20d8e",
+      "bytes": 1971
+    },
+    "birth/birth-wood-side-blocked.png": {
+      "sha256": "f6d186c089d33ed80a480415b6691067b7064e72523f56bfe8de7c58b3b28ae5",
+      "bytes": 2191
+    },
+    "birth/birth-harbor-arrival.png": {
+      "sha256": "8c61ba278d4a4acbead75619ead6bcd9ee5d223642ff8abeb9d1bd42b1570e7c",
+      "bytes": 3698
+    },
+    "birth/birth-island-returned.png": {
+      "sha256": "6c46f0de562f089525646472ee091b067aad680475ef8ede5a673b9db119641e",
+      "bytes": 3164
+    },
+    "birth/birth-wood-tip.png": {
+      "sha256": "97166adb7257d32a049dc74b1175fb5113933b2e655b21cd713ebe873cbcf055",
+      "bytes": 2315
+    },
+    "birth/birth-native.json": {
+      "sha256": "aa8df94f3c7b67319e437f300b925ef4bee87ef159715d7402d6ce873073ddcc",
+      "bytes": 359791
+    },
+    "birth/birth-water-beside-native-dock.png": {
+      "sha256": "c71de80eadbbe138d9a999c1d05f72f2f0bf67e0955af7521be94fa7df6f539d",
+      "bytes": 1973
+    },
+    "house-saved-coldboot/battery-title.png": {
+      "sha256": "069d9f3aaaa6602e095264fd2fbef05e9cc1034f1dafe06ab74943356415dc4c",
+      "bytes": 9195
+    },
+    "house-saved-coldboot/battery-continued-to-field.png": {
+      "sha256": "b428b358861e88df6fcd94e175eb04392569e5c92d4ae3ffaf5148d0562cacea",
+      "bytes": 3806
+    },
+    "house-saved-coldboot/cold-boot.json": {
+      "sha256": "4b5ac758b138beb28ad0c7043bbe266efb3e48aae62d4bba5bbe66eaf074aa6e",
+      "bytes": 3075
+    },
+    "house-saved-coldboot/battery-main-menu.png": {
+      "sha256": "03ace874b7a47a07b07d9a81765373cd979526e6d43976c1122fed798007d896",
+      "bytes": 2055
+    },
+    "house-saved-coldboot/fresh-new-game.png": {
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379",
+      "bytes": 881
+    },
+    "house-saved-coldboot/fresh-title.png": {
+      "sha256": "069d9f3aaaa6602e095264fd2fbef05e9cc1034f1dafe06ab74943356415dc4c",
+      "bytes": 9195
+    },
+    "house-saved-coldboot/fresh-main-menu.png": {
+      "sha256": "e14a1501caf995f06e3a78db2495425b37b3d8601de4402898b14aef0e1e22b1",
+      "bytes": 1416
+    },
+    "captain/pacifidlog-bridge-free-after-return.png": {
+      "sha256": "387dd516c79aa84d55c0a13678b90953c3318283f0a0d79f21e889340a519b6b",
+      "bytes": 6509
+    },
+    "captain/pacifidlog-house-reentered.png": {
+      "sha256": "262b1a03505730dea06cf51898d1f857665cc49a17a9ae7594db109f335e3711",
+      "bytes": 2627
+    },
+    "captain/pacifidlog-freed-bridge.png": {
+      "sha256": "da2d7b0dfc752b0dbdc5181bd2ca27683a0f4ec1f3d30d34e1276270cec9c998",
+      "bytes": 5952
+    },
+    "captain/captain-native.json": {
+      "sha256": "0de286563d7522579384f6204778909ef3db1f635b972dd1786b1c5a4472e457",
+      "bytes": 450014
+    },
+    "captain/pacifidlog-captain-inside-nearest-house.png": {
+      "sha256": "fe7f7de7bec168d3e649e950d27ffe9c8c67c68f0ca6982adf14d2230dbb5771",
+      "bytes": 2632
+    },
+    "captain/pacifidlog-indoor-captain-native-network-menu.png": {
+      "sha256": "b0d30b91dde4a773f7c7538a0c4b2d19bfc4787b90b7bca44e739171599b78ba",
+      "bytes": 2598
+    },
+    "captain/captain-house-after-native-save.sav": {
+      "sha256": "add34a5c822d9af6b18dfc88e4e3f8d00599bc97c4433f26f533d6657909fab0",
+      "bytes": 131072
+    },
+    "captain/pacifidlog-arrived-mossdeep-by-ferry.png": {
+      "sha256": "487c3744e4f520ec63ee177fb695dc6f67681b823435fcee5e033838c001df81",
+      "bytes": 2758
+    },
+    "captain/pacifidlog-returned-to-freed-bridge.png": {
+      "sha256": "d4ae1291999e08fb0e9de36a1167adfdd8bf6736994645fed5b53d08be277987",
+      "bytes": 6720
+    },
+    "captain/pacifidlog-house-saved-through-native-menu.png": {
+      "sha256": "262b1a03505730dea06cf51898d1f857665cc49a17a9ae7594db109f335e3711",
+      "bytes": 2627
+    },
+    "editions/Gen1-9-Hard/cold-boot.json": {
+      "sha256": "5c0da4a9d935cac25666503fa0d4a36eba14b9b75861b9c53dedefec8d347c61",
+      "bytes": 1576
+    },
+    "editions/Gen1-9-Hard/fresh-new-game.png": {
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379",
+      "bytes": 881
+    },
+    "editions/Gen1-9-Hard/fresh-title.png": {
+      "sha256": "069d9f3aaaa6602e095264fd2fbef05e9cc1034f1dafe06ab74943356415dc4c",
+      "bytes": 9195
+    },
+    "editions/Gen1-9-Hard/fresh-main-menu.png": {
+      "sha256": "e14a1501caf995f06e3a78db2495425b37b3d8601de4402898b14aef0e1e22b1",
+      "bytes": 1416
+    },
+    "editions/TESTE/battery-title.png": {
+      "sha256": "069d9f3aaaa6602e095264fd2fbef05e9cc1034f1dafe06ab74943356415dc4c",
+      "bytes": 9195
+    },
+    "editions/TESTE/battery-continued-to-field.png": {
+      "sha256": "554537b3616277968ec4112bc2b0bea3671c20a4abd93c209a001179014c668f",
+      "bytes": 10511
+    },
+    "editions/TESTE/cold-boot.json": {
+      "sha256": "4785c92af6ffe6bdd63b857ceeb18e285fc130a5f3ddb2f092e9629209faf3f8",
+      "bytes": 3085
+    },
+    "editions/TESTE/battery-main-menu.png": {
+      "sha256": "03ace874b7a47a07b07d9a81765373cd979526e6d43976c1122fed798007d896",
+      "bytes": 2055
+    },
+    "editions/TESTE/fresh-new-game.png": {
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379",
+      "bytes": 881
+    },
+    "editions/TESTE/fresh-title.png": {
+      "sha256": "069d9f3aaaa6602e095264fd2fbef05e9cc1034f1dafe06ab74943356415dc4c",
+      "bytes": 9195
+    },
+    "editions/TESTE/fresh-main-menu.png": {
+      "sha256": "e14a1501caf995f06e3a78db2495425b37b3d8601de4402898b14aef0e1e22b1",
+      "bytes": 1416
+    },
+    "editions/Gen1-4-Normal/cold-boot.json": {
+      "sha256": "64306748ac78347f600393bd17704d3d85cb941bba29fa66f758746e15169840",
+      "bytes": 1576
+    },
+    "editions/Gen1-4-Normal/fresh-new-game.png": {
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379",
+      "bytes": 881
+    },
+    "editions/Gen1-4-Normal/fresh-title.png": {
+      "sha256": "069d9f3aaaa6602e095264fd2fbef05e9cc1034f1dafe06ab74943356415dc4c",
+      "bytes": 9195
+    },
+    "editions/Gen1-4-Normal/fresh-main-menu.png": {
+      "sha256": "e14a1501caf995f06e3a78db2495425b37b3d8601de4402898b14aef0e1e22b1",
+      "bytes": 1416
+    },
+    "editions/Gen1-4-Hard/cold-boot.json": {
+      "sha256": "6ec147e886e550dcccce4a5619d334246c4986da61a04a42012908a1c8a91ce0",
+      "bytes": 1576
+    },
+    "editions/Gen1-4-Hard/fresh-new-game.png": {
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379",
+      "bytes": 881
+    },
+    "editions/Gen1-4-Hard/fresh-title.png": {
+      "sha256": "069d9f3aaaa6602e095264fd2fbef05e9cc1034f1dafe06ab74943356415dc4c",
+      "bytes": 9195
+    },
+    "editions/Gen1-4-Hard/fresh-main-menu.png": {
+      "sha256": "e14a1501caf995f06e3a78db2495425b37b3d8601de4402898b14aef0e1e22b1",
+      "bytes": 1416
+    },
+    "editions/Gen1-9-Normal/cold-boot.json": {
+      "sha256": "048c6e0727cbdf0e4a41c609bff1990c4d3c26a9cb0321b0c5fa01a3c8060518",
+      "bytes": 1576
+    },
+    "editions/Gen1-9-Normal/fresh-new-game.png": {
+      "sha256": "3d8b746f7eab91f634a9689a3f11d8b5577fadde1d5186befddde21c8b19e379",
+      "bytes": 881
+    },
+    "editions/Gen1-9-Normal/fresh-title.png": {
+      "sha256": "069d9f3aaaa6602e095264fd2fbef05e9cc1034f1dafe06ab74943356415dc4c",
+      "bytes": 9195
+    },
+    "editions/Gen1-9-Normal/fresh-main-menu.png": {
+      "sha256": "e14a1501caf995f06e3a78db2495425b37b3d8601de4402898b14aef0e1e22b1",
+      "bytes": 1416
+    },
+    "cliffs-with-native-seam/cliffs-native.json": {
+      "sha256": "c719e7bd6c116119165a57d06309ffc2010bd552abee950609d8b2e2733ddfc8",
+      "bytes": 335224
+    },
+    "cliffs-with-native-seam/slateport-south-complete-rock-from-route109.png": {
+      "sha256": "896e2a981bf3f44c3d5a222e56e7e85dd23bd208137ec4a45c3a913ac9cdd8bb",
+      "bytes": 5003
+    },
+    "cliffs-with-native-seam/slateport-south-native-seam-return.png": {
+      "sha256": "be8016be45d99cb4e926bddfe9bd221e9c960fa05fd8ea770589e18b395cbdbe",
+      "bytes": 4839
+    },
+    "cliffs-with-native-seam/cliff-38-16-complete-native-face.png": {
+      "sha256": "4d19520ae27e2ce6378993005c9a98e5b8fe15bf6252f5791eb23718565bd456",
+      "bytes": 3341
+    },
+    "cliffs-with-native-seam/slateport-south-complete-rock-from-town.png": {
+      "sha256": "70fd2ed04d27351970fe79436981b27fa2637259c7a0b032dc98ae752ab47ec8",
+      "bytes": 4354
+    },
+    "cliffs-with-native-seam/cliff-36-7-complete-native-face.png": {
+      "sha256": "7090a785f3f425f60e06b072c391ba2693cd0a8ccfda92d829dbd8b62f29f13e",
+      "bytes": 4064
+    },
+    "cliffs-with-native-seam/cliff-38-15-complete-native-face.png": {
+      "sha256": "fc7c755edbaf45244393a284775da7873d2b352e7ef3b8e3b4a6cd47807f1623",
+      "bytes": 3250
+    },
+    "cliffs-with-native-seam/cliff-36-6-complete-native-face.png": {
+      "sha256": "9115ebe4745110bec9471c9b24dd51a281b7545c72be85a338292433925db86c",
+      "bytes": 4072
+    }
+  },
+  "southern_rock_complete_across_Slateport_Route109_in_both_native_cameras": true,
+  "southern_seam_native_roundtrip": true
+}

@@ -27,7 +27,7 @@ from prepare_atlas_surf_layout import _read_evidence,compose
 from restore_generated_area_review import verify_prefix
 
 
-def run(source,output):
+def run(source,output,*,additional_native_edges=False):
     source,output=Path(source).resolve(),Path(output).resolve()
     if output==source or output.is_relative_to(source):raise ValueError('Output must be outside immutable source')
     before=verify_prefix(source,complete=True);inputs=Source(source)
@@ -38,11 +38,17 @@ def run(source,output):
     hidden,_=extract_occluded_routes(inputs,truth);pixels.update(hidden)
     authored=deepcopy(AUTHORED_COASTS)
     authored['Route128',1]=[choice for choice in authored['Route128',1] if choice[0]=='down']
-    coasts=propose_registrations(inputs,parent['adapters'],truth,plan_geometry(pixels),authored=authored,
+    component_inventory=parent['adapters']
+    if additional_native_edges:
+        from atlas_surf_native_edges import extend_inventory,NAME,DIRECTION,ATLAS
+        component_inventory=extend_inventory(inputs,component_inventory)
+        authored[NAME,0]=[(DIRECTION,ATLAS,'existing eastern Slateport ocean beyond the Route134 seam, at the west end of the drawn Route134/Pacifidlog line')]
+    coasts=propose_registrations(inputs,component_inventory,truth,plan_geometry(pixels),authored=authored,
         protected_reservations=scenery['reservations']+scenery['dive_features']['reservations'],
         allow_extended_native_contacts=True)
     if not coasts['all_inventory_components_registered']:raise ValueError(coasts['conflicts'])
-    layer,metadata=compose(source,preview_occluded_routes=True,coast_proposals=coasts)
+    layer,metadata=compose(source,preview_occluded_routes=True,coast_proposals=coasts,
+                           additional_native_edges=additional_native_edges)
     view=OverlaySource(layer);native=census_native_bounds(inputs,coasts)
     requirements=build_requirements(view,metadata,parent,native)
     banks=audit_edges(view,scope=requirement_scope(metadata,requirements))
@@ -73,6 +79,7 @@ def run(source,output):
     after=verify_prefix(source,complete=True)
     if before!=after:raise ValueError('Immutable source changed')
     result=dict(schema='atlas-connection-repair-source-diagnostic/v1',source=before,
+        additional_native_edges_preview=additional_native_edges,
         generated_maps=metadata['geometry_plan']['map_count'],generated_water_sccs=report['generated_water_sccs'],
         largest_component=largest,largest_component_cells=counts[largest],
         diagnostic_largest_component_membership={kind:len(rows) for kind,rows in membership.items()},
@@ -89,5 +96,6 @@ def run(source,output):
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source',type=Path,required=True);parser.add_argument('--output',type=Path,required=True)
-    args=parser.parse_args();r=run(args.source,args.output)
+    parser.add_argument('--additional-native-edges',action='store_true',help='Preview the authenticated new Slateport exit beyond its existing Route134 seam')
+    args=parser.parse_args();r=run(args.source,args.output,additional_native_edges=args.additional_native_edges)
     print(json.dumps({k:r[k] for k in ('generated_maps','generated_water_sccs','source_passed','candidate_geometry_unchanged','final_release_validated')},indent=2))

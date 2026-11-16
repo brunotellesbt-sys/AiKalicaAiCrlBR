@@ -102,6 +102,10 @@ def _edge_point(layout, point, direction):
             (direction == 'down' and y == layout['height']-1))
 
 
+def native_edge_witnesses(row):
+    return row['source_wet_edge_witnesses']+row.get('authored_native_edge_witnesses',[])
+
+
 def _water(plan):
     result = set()
     for chunk in plan['chunks']:
@@ -165,7 +169,7 @@ def _mouth(inputs, row, registration):
     layout = inputs.layout(name)
     if direction not in CARDINAL or not _edge_point(layout, anchor, direction):
         raise ValueError(('Adapter must leave the real native map edge', name, direction, anchor))
-    witnesses = {tuple(w['native_tile']): w for w in row['source_wet_edge_witnesses']
+    witnesses = {tuple(w['native_tile']): w for w in native_edge_witnesses(row)
                  if OPPOSITE[w['direction']] == direction}
     if anchor not in witnesses:
         raise ValueError(('Adapter anchor is not an authenticated old wet edge', name, anchor))
@@ -198,7 +202,7 @@ def face_witnesses(inputs,row,mouth,origin,direction,cells,near,*,allow_extensio
     both terrains. Unknown openings still fail; native terrain is not edited.
     """
     name=row['native_map'];layout=inputs.layout(name);dx,dy=CARDINAL[direction]
-    known={tuple(w['native_tile']):w for w in row['source_wet_edge_witnesses']
+    known={tuple(w['native_tile']):w for w in native_edge_witnesses(row)
            if OPPOSITE[w['direction']]==direction}
     labels,_=inputs.water_components(name);result={p:copy.deepcopy(known[p]) for p in mouth}
     base=inputs.word(name,*mouth[0])
@@ -326,10 +330,19 @@ def plan_adapters(inputs, component_inventory, plan, registrations, truth, *, re
             raise ValueError(('Mouth has incompatible native elevations', name, heights))
         adapter_height = 3 if selected == 3 else 1
         overrides = []
+        lateral_transitions=[]
         if adapter_height != 1:
             for x,y in sorted(cells, key=lambda p:(p[1],p[0])):
                 distance = (x-glob[0])*dx+(y-glob[1])*dy
                 height = 1 if distance == depth else 0 if distance == depth-1 else adapter_height
+                # A route can also meet a SIDE of the new adapter at an ink
+                # junction. Preserve the complete native face at height3;
+                # only new water at least one step away from it can receive
+                # the same transition already used at the far ocean face.
+                if 2<=distance<depth-1 and any((x+ax,y+ay) in water
+                        and not(rect[0]<=x+ax<rect[2] and rect[1]<=y+ay<rect[3])
+                        for ax,ay in CARDINAL.values()):
+                    height=0;lateral_transitions.append([x-rect[0],y-rect[1]])
                 if height != 1:
                     overrides.append(dict(tile=[x-rect[0],y-rect[1]],word=(wet&0xFFF)|(height<<12)))
         adapter_name = f'JourneyAtlasCoast{number:02}'
@@ -350,6 +363,7 @@ def plan_adapters(inputs, component_inventory, plan, registrations, truth, *, re
                              adapter_connection=dict(direction=OPPOSITE[direction],map=inputs.maps[name]['id'],offset=-offset),
                              source_wet_mouth=witnesses,native_heights=sorted(heights),
                              adapter_height=adapter_height,transition_height_zero_only_in_new_adapter=bool(overrides),
+                             lateral_height_transitions=lateral_transitions,
                              atlas_evidence=evidence))
     return dict(kind='atlas-local-native-adapter-plan/v1',reservations=reservations,native_bounds=bounds,
                 bindings=bindings,complete_component_coverage=set(supplied)==set(rows),

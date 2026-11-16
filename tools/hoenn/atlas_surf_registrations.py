@@ -14,7 +14,7 @@ import json
 from pathlib import Path
 import re
 
-from atlas_surf_adapters import _mouth, edge_pairs, plan_adapters,face_witnesses
+from atlas_surf_adapters import _mouth, edge_pairs, plan_adapters,face_witnesses,native_edge_witnesses
 from atlas_surf_geometry import plan_geometry, chunk_water
 from atlas_surf_source import CARDINAL, OPPOSITE, Source
 from atlas_surf_truth import decode_atlas
@@ -76,6 +76,10 @@ def _banks(inputs, name):
 
 
 def _donor(inputs, row):
+    if row.get('authored_new_native_edge'):
+        from atlas_surf_native_edges import authenticate,donor
+        authenticate(inputs,row)
+        return donor(inputs)
     banks = _banks(inputs,row['native_map'])
     names = {w['retired_map'] for w in row['source_wet_edge_witnesses']}
     # Several old links used a foreign graphics bank even though the native
@@ -112,7 +116,7 @@ def _donor(inputs, row):
 
 
 def _mouths(inputs,row,direction):
-    witnesses = sorted({tuple(w['native_tile']) for w in row['source_wet_edge_witnesses']
+    witnesses = sorted({tuple(w['native_tile']) for w in native_edge_witnesses(row)
                         if OPPOSITE[w['direction']] == direction})
     axis = 1 if direction in ('left','right') else 0
     for width in range(6,0,-1):
@@ -137,6 +141,10 @@ def _mouths(inputs,row,direction):
 
 
 def _authenticate_witnesses(inputs,row):
+    if row.get('authored_new_native_edge'):
+        from atlas_surf_native_edges import authenticate
+        authenticate(inputs,row)
+        return
     name = row['native_map']
     interfaces = {}
     for witness in row['source_wet_edge_witnesses']:
