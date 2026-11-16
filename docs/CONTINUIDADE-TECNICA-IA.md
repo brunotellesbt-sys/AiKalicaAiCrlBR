@@ -2,6 +2,32 @@
 
 ## Retomada atual — 16/11/2026 (precede o histórico abaixo)
 
+Segundo lote concluído NA FONTE: franja nativa das18cavernas usa9tiles da
+reserva existente em vez de3; todas as células precisam de palavra Surf
+exata no parent. Nenhum core/objeto/evento foi cortado ou movido. São5126
+células adicionais,19outputs alterados (18map.bin e tabela de migração).
+Os533IDs/origens/dimensões permanecem iguais à candidata distribuída;
+core de374stamps e todos os eventos continuam sujeitos ao teste real.
+Auditor C de bancos e grafo físico:17->16SCCs, Alvorada reunida à maior
+componente;15/18cavernas e6/7portos nela. Esse diagnóstico não éPASS global.
+Titans/Artisan/Mare e Three ainda pendentes, além dos demais clusters regionais.
+
+287testes atlas PASS; guarda adicional verifica cada palavra da franja contra
+o parent e identidades da candidata172. Renderizadas/revisadas18cavernas
+inteiras com NPCs de fonte antes/depois. Não são capturasROM, nem certificam
+câmeras/animações/viagens. Relatório e provas em
+docs/design/atlas-surf-layout/cave-fringe-review. Fonte privada materializada
+em.local/atlas-fringe9-src,1955inputs preparados, sem compartilhar inodes.
+Sem compilação/novaROM neste lote; não reutilizar Birth/capturas anteriores
+como validação do reparo. Gates finais e cinco ROMs/save preservados.
+
+Checkpoint anterior confirmado4aeaaa5a2ced857137fb63595376ff54f75add50.
+Pedido principal continua incompleto; PR só após corrigir os nove bloqueios,
+conforme pedido atual. Próximo: ligações restantes, build privado/freeze,
+provas por controles e saves/edições, depois publicação/PR.
+
+Registro do primeiro lote:
+
 Pedido literal mais recente: “Então bora progredir, comece a fazer”. Antes:
 “Ok corrigiu os erros? Aqueles 8 erros em código e + 1? Abra o pr ao corrigir”.
 Não abrir PR enquanto os8FAIL+1ERROR de release persistirem. Checkpoints/pushes

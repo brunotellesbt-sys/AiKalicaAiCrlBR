@@ -307,12 +307,13 @@ def pack_grouped_scenery(inputs, truth, inventory, route_pixels, *, fixed=(), ex
                 art_changed=False,original_player_gps_used=False,source_routing_proven=False,native_validated=False)
 
 
-def preserve_native_water_collars(inputs,inventory,plan,*,cave_radius=3):
+def preserve_native_water_collars(inputs,inventory,plan,*,cave_radius=9):
     """Keep the actual native water fringe around a complete object.
 
     Copying only the object's bounding rectangle can strand its wet corners in
-    tiny artificial pools. Fixed cave islands need three native water tiles
-    to meet the pixel's real six-tile channel across its margin. Other scenery
+    tiny artificial pools. Fixed cave islands retain all nine reserved camera
+    tiles when the original map contains real Surf water there. A three-tile
+    cutoff stranded Alvorada before its neighboring physical map. Other scenery
     keeps one tile. Each added cell has an exact adjacent native
     source word and a collision-zero Surf witness; no invented ocean path is
     permitted. Nine camera tiles already reserve this fringe's physical owner.

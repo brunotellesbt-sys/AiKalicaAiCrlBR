@@ -40,6 +40,20 @@ class RealStagedLayoutTests(unittest.TestCase):
                 layout=candidate.layout(chunk['name'])
                 self.assertEqual([layout['primary_tileset'],layout['secondary_tileset']],
                                  ['gTileset_General','gTileset_Mossdeep'])
+            if chunk.get('kind')=='cave':
+                for fringe in chunk['native_water_evidence']['authenticated_native_fringe']:
+                    self.assertEqual(fringe['radius'],9)
+                    for cell in fringe['cells']:
+                        self.assertTrue(parent.water(fringe['native_map'],*cell['source_tile']))
+                        word=parent.word(fringe['native_map'],*cell['source_tile'])
+                        self.assertEqual(cell['word'],word)
+                        self.assertEqual(candidate.word(chunk['name'],*cell['target_tile']),word)
+        # Candidate172 is already distributed. Keep its compiled IDs, origins
+        # and dimensions as well as the older native map registry.
+        baseline=json.loads(gzip.decompress((ROOT/'docs/design/atlas-surf-layout/whole-layout-composed-source.json.gz').read_bytes()))
+        identities=lambda rows:{r['name']:(r['group_index'],r['number'],r['origin'],r['width'],r['height']) for r in rows}
+        self.assertEqual(identities(report['geometry_plan']['chunks']),
+                         identities(baseline['geometry_plan']['chunks']))
         old_art=decode_atlas(parent.read('src/data/journey_world_map.h').decode())
         new_art=decode_atlas(candidate.read('src/data/journey_world_map.h').decode())
         self.assertEqual(dict(old_art.array_sha256),dict(new_art.array_sha256))

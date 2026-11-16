@@ -23,7 +23,7 @@ def digest(raw):
     return hashlib.sha256(raw).hexdigest()
 
 
-def diagnose(source, output):
+def diagnose(source, output, *, cave_radius=3):
     source, output = Path(source).resolve(), Path(output).resolve()
     if output == source or output.is_relative_to(source):
         raise ValueError('Diagnostic output must be outside the immutable source')
@@ -33,7 +33,7 @@ def diagnose(source, output):
     views, reports, blobs = [], [], {}
     output.mkdir(parents=True, exist_ok=True)
     for label, preview in [('baseline', False), ('underlay-preview', True)]:
-        layer, metadata = compose(source, preview_occluded_routes=preview)
+        layer, metadata = compose(source, preview_occluded_routes=preview,cave_radius=cave_radius)
         view = OverlaySource(layer)
         requirements = build_requirements(view, metadata, parent, native)
         banks = audit_edges(view, scope=requirement_scope(metadata, requirements))
@@ -59,7 +59,7 @@ def diagnose(source, output):
     after = verify_prefix(source, complete=True)
     if before != after:
         raise ValueError('Immutable source changed during underlay diagnostic')
-    result = dict(schema='atlas-cave-underlay-diagnostic/v1',parent_source=before,
+    result = dict(schema='atlas-cave-underlay-diagnostic/v1',parent_source=before,cave_radius=cave_radius,
         underlay=views[1][1]['occluded_routes_preview'],
         native_obstructions=views[1][1]['occluded_routes_native_obstructions'],
         comparisons=reports, changed_prepared_paths=changed,
@@ -79,8 +79,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--cave-radius',type=int,default=3,
+        help='Use3 to reproduce the historical candidate;9 reviews the complete native fringe')
     args = parser.parse_args()
-    result = diagnose(args.source, args.output)
+    result = diagnose(args.source, args.output,cave_radius=args.cave_radius)
     print(json.dumps(dict(comparisons=result['comparisons'],
         changed_prepared_paths=result['changed_prepared_paths'],
         final_release_validated=False), indent=2))

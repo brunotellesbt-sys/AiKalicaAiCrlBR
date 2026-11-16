@@ -2,6 +2,22 @@
 
 ## Estado mais recente — 16/11/2026
 
+Segundo lote: correção física das franjas nativas das18cavernas. O corte
+artificial de3tiles foi substituído pela margem já reservada de9tiles,
+copiando só células Surf comprovadas do parent e suas palavras inteiras.
+Fonte passou de17 para16SCCs; Alvorada agora está na componente principal,
+que contém15/18cavernas e6/7portos. São5126células de água nativa recuperadas,
+sem mudar core/objetos/NPCs/IDs/origens/dimensões/arte do atlas.
+287testes atlas passaram; renders fonte completos antes/depois das18cavernas
+foram inspecionados. Provas e hashes:
+[cave-fringe-review](../docs/design/atlas-surf-layout/cave-fringe-review/review.json).
+Fonte privada preparada em.local/atlas-fringe9-src; AINDA sem build ou provaROM.
+As cinco ROMs públicas/save continuam anteriores. O grafo global continua
+FAIL;8FAIL+1ERROR de release não foram eliminados. Não abrir PR ainda.
+Próximo: Titans/Artisan/Mare, ThreeIsland, redes regionais e provas nativas.
+
+Primeiro lote desta retomada, preservado abaixo:
+
 PR111 já integrado em main8a7b78a6. Continuidade em
 `fix/atlas-continuity-2026-11-16`. Pedido novo: “Então bora progredir, comece
 a fazer”. O usuário determinou **abrir o PR apenas após corrigir os8FAIL+1ERROR**;

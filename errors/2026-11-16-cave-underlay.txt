@@ -1,5 +1,26 @@
 RETOMADA 16/11/2026 — OCASO E ROTAS SOB GLIFOS
 
+LOTE POSTERIOR — CORREÇÃO FÍSICA REAL NA FONTE
+preserve_native_water_collars limitava todas as cavernas a3tiles de água
+nativa, apesar de reservar9. Alvorada ficava isolada antes de alcançar a
+face do vizinho; a ilha/caverna inteira permanecia correta.
+Agora são usados até9tiles dentro do parent e da reserva, somente em células
+Surf reais, copiando word completo, sem normalizar altura0 nem abrir terra.
+5126células adicionais em18mapas. Corpos/stamps/eventos e os533IDs/origens/
+dimensões preservados; tabela de resgate da migração acompanha a água atual.
+Fonte privada.local/atlas-fringe9-src preparada,1955inputs, sem novo build.
+
+Resultado:17->16SCCs de água gerada. Alvorada uniu à maior componente;
+15/18cavernas e6/7portos nela. Titans/Artisan/Mare e Three ainda pendentes.
+Relatório/hash/duas auditorias em cave-fringe-review;287testes atlas passaram.
+Renders completos das18cavernas antes/depois revisados, identificados como
+FONTE. Câmeras/animações e percursosROM/saves/edições seguem pendentes.
+Não afirmar correção dos8FAIL+1ERROR: o gate continua legitimamente bloqueado.
+Checkpoint anterior remoto4aeaaa5a2ced857137fb63595376ff54f75add50.
+PR adiado conforme pedido atual; preservar checkpoints de branch sem PR.
+
+REGISTRO DO PRIMEIRO LOTE:
+
 Pedido atual: “Então bora progredir, comece a fazer”. Instrução anterior:
 “Ok corrigiu os erros? Aqueles 8 erros em código e + 1? Abra o pr ao corrigir”.
 Manter checkpoints remotos, mas NÃO abrir PR com os nove bloqueios pendentes.

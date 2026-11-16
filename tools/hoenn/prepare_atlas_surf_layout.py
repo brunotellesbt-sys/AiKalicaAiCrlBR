@@ -105,7 +105,7 @@ def _read_evidence(inputs):
     return parent,inventory,result['coasts'],result['scenery']
 
 
-def compose(source, *, preview_occluded_routes=False):
+def compose(source, *, preview_occluded_routes=False, cave_radius=9):
     """Return a complete staged terrain/event candidate plus honest blockers."""
     source=Path(source).resolve();parent_proof=verify_prefix(source,complete=True)
     inputs=Source(source);parent,inventory,coasts,scenery=_read_evidence(inputs)
@@ -121,7 +121,7 @@ def compose(source, *, preview_occluded_routes=False):
         from atlas_surf_occluded_routes import extract_occluded_routes
         hidden,occluded_routes=extract_occluded_routes(inputs,truth)
         pixels.update(hidden)
-    scenery=preserve_native_water_collars(inputs,inventory,scenery)
+    scenery=preserve_native_water_collars(inputs,inventory,scenery,cave_radius=cave_radius)
     adapter_plan=coasts['adapter_plan']
     native_regions=_native_regions(inputs,adapter_plan)
     dive_reservations=attach_accesses(truth,scenery['dive_features']['reservations'],pixels)
