@@ -307,6 +307,22 @@ def pack_grouped_scenery(inputs, truth, inventory, route_pixels, *, fixed=(), ex
                 art_changed=False,original_player_gps_used=False,source_routing_proven=False,native_validated=False)
 
 
+def rebind_cave_route_water(inventory,plan,route_pixels):
+    """Recompute route halo after authenticated ink changes, keeping each core.
+
+    Stored placements predate glyph underlay recovery. Their native masks
+    cannot silently discard new route water outside the complete native core.
+    """
+    result=deepcopy(plan);stamps={s['key']:s for s in inventory['stamps']}
+    water=rasterize(route_pixels);rebound={}
+    for index,row in enumerate(result['placements']):
+        if row.get('kind')!='cave':continue
+        fresh=bind_native_water(row,stamps[row['stamp']],water)
+        result['placements'][index]=fresh;rebound[row['name']]=fresh
+    result['reservations']=[deepcopy(rebound.get(row['name'],row)) for row in result['reservations']]
+    return result
+
+
 def preserve_native_water_collars(inputs,inventory,plan,*,cave_radius=9):
     """Keep the actual native water fringe around a complete object.
 

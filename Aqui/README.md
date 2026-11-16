@@ -2,6 +2,37 @@
 
 ## Estado mais recente — 16/11/2026
 
+Lote em andamento após o pedido “Tá e por que não resolveu? Faz as ligações
+e valide a rom. Já pedi.” Three foi corrigido fisicamente: terminal48x20
+preservado e oceano nativo de seis tiles ao sul, mapa48x27. Nove recifes
+completos abertos; prédio/barcos/NPCs/warps/coordenadas anteriores preservados.
+ROM privada8602c36d… compilada: circuito por controles leste/oeste, Surf,
+adaptador/retorno, desembarque, barreiras, SAVE pelo menu e Continue em boot
+novo PASS. Birth repetido nessa mesma ROM PASS. Cinco edições privadas
+exportadas e bootadas, TESTE também com bateria distribuída. Isso é prova
+local; as ROMs públicas continuam anteriores. Provas e fonte preparada exata:
+[three-native-review](../docs/design/atlas-surf-layout/three-native-review/review.json).
+
+Titans:12recifes inteiros do antigo limite externo cruzavam a rota. Removidos
+somente esses12, com água nativa0x112B; ilha/montanha/portal/NPC intactos.
+Migração exata não aceita antiga posição bloqueada como posição de jogador.
+Renders fonte inteiros antes/depois revisados; ainda sem provaROM deste delta.
+[titans-perimeter-review](../docs/design/atlas-surf-layout/titans-perimeter-review/review.json).
+
+Prévia explícita de costas/underlay:7SCCs,18/18cavernas e7/7portos na maior
+componente, mas auditoria global continuaFAIL. Novas fases/cantos nativos e
+saída sul de Route128 mudam a partição para537mapas. NÃO materializar/publicar
+essa geometria antes da migração dos saves da candidata533. Diagnóstico:
+`tools/hoenn/diagnose_atlas_connection_repairs.py`; evidências em
+[coast-connection-review](../docs/design/atlas-surf-layout/coast-connection-review/review.json).
+Continuar pelas ilhas nativas/fragmentos, corrente oeste de Pacifidlog e
+encontro lateral de altura3 em Ever Grande. Depois migração/build/freeze e
+provas completas atuais. Os8FAIL+1ERROR de release permanecem; PR só ao concluir.
+297testes atlas PASS neste lote; inclui preservação dos374stamps, exceção
+explícita dos12recifes, migração e rejeição de cantos não autenticados.
+
+Os lotes anteriores abaixo são históricos:
+
 Segundo lote: correção física das franjas nativas das18cavernas. O corte
 artificial de3tiles foi substituído pela margem já reservada de9tiles,
 copiando só células Surf comprovadas do parent e suas palavras inteiras.

@@ -231,6 +231,24 @@ class Actual171RegistrationTests(unittest.TestCase):
         self.assertEqual(dict(self.truth.array_sha256),dict(decode_atlas(
             (self.path/'src/data/journey_world_map.h').read_text()).array_sha256))
 
+    def test_new_route127_corner_requires_opt_in_and_keeps_actual_native_words(self):
+        selected=deepcopy(self.inventory)
+        selected['adapters']=[r for r in selected['adapters'] if r['native_map']=='Route127']
+        result=propose_registrations(self.source,selected,self.truth,allow_extended_native_contacts=True)
+        contacts=result['adapter_plan']['bindings'][0]['source_wet_mouth']
+        extended=[w for w in contacts if w.get('newly_authored_corner_contact')]
+        self.assertTrue(extended)
+        self.assertTrue(any(not w['old_neighbor_passable'] for w in extended))
+        labels,_=self.source.water_components('Route127')
+        for w in extended:
+            self.assertEqual(labels[tuple(w['native_tile'])],selected['adapters'][0]['component'])
+            self.assertEqual(w['words'][1],self.source.word('Route127',*w['native_tile']))
+            self.assertEqual(w['native_blockdata_sha256'],hashlib.sha256(self.source.read(
+                self.source.layout('Route127')['blockdata_filepath'])).hexdigest())
+            self.assertEqual(w['words'][0],self.source.word(w['retired_map'],*w['retired_tile']))
+            self.assertTrue(w['native_word_preserved'])
+        self.source.assert_unchanged()
+
 
 if __name__ == '__main__':
     unittest.main()

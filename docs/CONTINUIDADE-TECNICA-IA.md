@@ -2,6 +2,62 @@
 
 ## Retomada atual — 16/11/2026 (precede o histórico abaixo)
 
+Pedido atual: “Tá e por que não resolveu? Faz as ligações e valide a rom. Já pedi.”
+Trabalho continua até ligações/provas finais; checkpoint parcial não encerra o pedido.
+
+Three: oceano sul nativo de seis tiles contorna o terminal inteiro;48x20→48x27,
+apenas nove recifes anteriores abertos. Eventos/barcos/terminal e coordenadas
+preservados. Source171 imutável; source privado.local/atlas-connections-src,
+1956inputs, ROM8602c36db5f3329d93f56d50138b6eb54785c8892fc7f6f2419b99e568675a81,
+ELFb6087220302cc2263d98b6738afbedb98d9faa046b9cdb7a7ee4292e3d13dc82,
+markera14a081092c7a545c33bec1a6787bfb7d550b2f6a71a1b0566014d6315c36776.
+Build usado32922104/33554432bytes. Não escrever nesse source/ELF/ROM congelado.
+Circuito Three por controles PASS: bloqueio de pedestre, promptSurf, contorno
+leste→oeste, terminal bloqueado, conexão Coast31 e retorno, recife sul bloqueado,
+oeste→leste, desembarque. SAVE real pelo menu/export131072bytes e novo boot
+Continue(Three13,17,pedestre,altura3) PASS. Birth refeito na mesma ROM PASS;
+boot sem bateria PASS. Cinco edições privadas exportadas/bootadas PASS,
+TESTE com/sem bateria distribuída. Não extrapolar boot para gameplay completo.
+Fonte preparada compactada e hashes/capturas/controles/saves em
+docs/design/atlas-surf-layout/three-native-review. As cinco ROMs públicas/save
+e gates de release continuam anteriores. Essa ROM não contém os deltas abaixo.
+
+Titans NA FONTE: extração do stamp JourneyWorldSea03:000 incorporou as duas
+colunas62/63 de recifes do limite antigo. No novo local,12células(y19..24)
+atravessavam a rota literal. São12objetos completos0x243, words0x1643; oito
+words BG conferidos: água41C6/41C7, recife superior41E2..41E5. Substituídos por
+água0x112B do mesmo banco em(61,19), nunca por recorte da montanha/praia.
+Guardas de hash/posições/doador/rota/eventos e teste real dos374stamps com
+allowlist independente desses12. Migração exata pula bloqueios antigos e
+continua rejeitando alteração de célula antiga transitável. Renders completos
+fonte antes/depois revisados em titans-perimeter-review; ainda sem provaROM.
+
+Costas NA PRÉVIA: esquinas molhadas do raster6/8 eram recusadas por não terem
+vizinho antigo molhado. Reabertura exige opt-in explícito, componente/altura
+nativos, conexão antiga recíproca limitada, words/hashes de ambos e nenhum
+edit do nativo. Route105 encaixa a curva no pixel19,101. Route128 usa sua
+saída sul real na mesma componente, em(128,95). As reservas de cenários/Dive
+continuam protegidas. Franjas de cavernas agora se vinculam ao underlay atual
+na prévia. Diagnóstico reproduzível, sem monkeypatch ou escrita na fonte:
+python tools/hoenn/diagnose_atlas_connection_repairs.py --source .local/generated-area-review-src --output docs/design/atlas-surf-layout/coast-connection-review
+Banco C real + censo nativo recalculado + grafo:7SCCs,537mapas gerados,
+18cavernas e7portos na maior componente. Auditoria continuaFAIL porque ainda
+há sete componentes. Não aceitar flags falsas nem reusar prova8602 para isso.
+Ficam correntes oeste/Pacifidlog, pixels de mapas nativos, ilha com treinador
+junto a Route12 e contato lateral altura3 em Ever Grande. ProjeçãoUI ajuda a
+localizar, mas sozinha não autoriza excluir raster nem inventar conexão.
+Nova partição altera identidades/retângulos da candidata533: migração dessa
+candidata para geometria nova é obrigatória antes da materialização/entrega.
+`compose(coast_proposals=...)` reautentica todos os inputs/bocas/bancos/planos;
+prepare/publicação seguem sem atalho para essa prévia. PR continua adiado,
+8FAIL+1ERROR finais ainda pendentes. Não houve publicação de ROM nova.
+Testes do lote:297atlas PASS em56,496s. Os dois erros iniciais desse conjunto
+eram arquivos rastreados ausentes pelo sparse checkout; recuperados do mesmo
+HEAD e testes repetidos sem alterar seus contratos. Não confundir com os
+8FAIL+1ERROR de aprovação final, que continuam pendentes.
+
+Lotes anteriores:
+
 Segundo lote concluído NA FONTE: franja nativa das18cavernas usa9tiles da
 reserva existente em vez de3; todas as células precisam de palavra Surf
 exata no parent. Nenhum core/objeto/evento foi cortado ou movido. São5126

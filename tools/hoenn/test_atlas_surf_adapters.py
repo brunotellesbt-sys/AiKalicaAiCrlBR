@@ -68,6 +68,18 @@ def fixture(direction='right', height=1):
 
 
 class AdapterTests(unittest.TestCase):
+    def test_raster_junction_padding_needs_an_independent_native_edge_witness(self):
+        args=list(fixture());chunk=args[2]['chunks'][0]
+        chunk['height']+=1
+        chunk['water_runs'].append([6,0,1])
+        result=plan_adapters(*args)
+        proof=result['bindings'][0]['source_wet_mouth']
+        self.assertEqual(len(proof),7)
+        self.assertIn([11,8],[w['native_tile'] for w in proof])
+        args[1]['adapters'][0]['source_wet_edge_witnesses']=[w for w in args[1]['adapters'][0]['source_wet_edge_witnesses'] if w['native_tile']!=[11,8]]
+        with self.assertRaisesRegex(ValueError,'Unregistered native water opening'):
+            plan_adapters(*args)
+
     def test_four_headings_have_real_reciprocal_offsets_and_straight_water(self):
         for direction in CARDINAL:
             with self.subTest(direction=direction):
