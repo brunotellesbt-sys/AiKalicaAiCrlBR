@@ -1,5 +1,32 @@
 # Aqui — LEIA PRIMEIRO: retomada técnica de Pokémon Journey
 
+## Estado mais recente — 16/11/2026
+
+PR111 já integrado em main8a7b78a6. Continuidade em
+`fix/atlas-continuity-2026-11-16`. Pedido novo: “Então bora progredir, comece
+a fazer”. O usuário determinou **abrir o PR apenas após corrigir os8FAIL+1ERROR**;
+isso substitui a orientação histórica de abrir PR com pendências. Fazer
+checkpoints/pushes sem PR enquanto faltarem as provas reais.
+
+Fonte171 reconstruída e conferida:171camadas,32250inputs, manifesto d3a06e90…
+igual ao contrato. WIP de Ocaso corrigido: endpoint histórico(141,111), não
+(140,111); sete pixels sob glifos autenticados por arte/branches/geradores
+pinados. Fixture portátil e12testes próprios;285testes atlas passaram.
+
+**A extração sozinha não corrige a rede.** Comparação dos overlays reais:
+ZERO diferenças nos1955arquivos preparados,533mapas e IDs/origens/dimensões
+iguais;17SCCs persistem. Os pixels recuperados ficam nas reservas de cenário,
+onde a máscara nativa prevalece. Não apagar o corpo da caverna para abrir água.
+Relatório reproduzível e hashes em
+[occluded-routes-review/review.json](../docs/design/atlas-surf-layout/occluded-routes-review/review.json).
+Detalhes/guardas em [errors](../errors/2026-11-16-cave-underlay.txt).
+
+Próximo trabalho: franja nativa de cavernas dentro da reserva existente,
+ThreeIsland e demais ligações. Sem novo build nem prova na ROM neste lote;
+as cinco candidatas/save continuam com os hashes anteriores. Os nove
+bloqueios da release continuam pendentes. O restante deste documento conserva
+o histórico de15/11 e não revoga este estado atual.
+
 > [Erros atuais da CI, log completo e roteiro de correção](ERROS-PARA-PROXIMA-IA.md).
 
 Atualizado em 15/11/2026 UTC, incluindo a sincronização do pacote pedida após os logs. Este é o guia consolidado para a próxima janela

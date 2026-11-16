@@ -33,7 +33,8 @@ ATTACHMENT_SCOPES = {SCOPE, 'coastal-ecology', 'coastal-closures', 'sevii-integr
 CONTINUITY_FILES = ('docs/CONTINUIDADE-TECNICA-IA.md',
                     'docs/RETOMADA_TECNICA_POKEMON_JOURNEY.json',
                     'docs/ULTIMO_PEDIDO_POS_PR108.json',
-                    'docs/atlas-surf-layout.md', 'errors/ESTADO-DA-TAREFA.txt')
+                    'docs/atlas-surf-layout.md', 'errors/ESTADO-DA-TAREFA.txt',
+                    'errors/2026-11-16-cave-underlay.txt')
 
 
 def releases(info):

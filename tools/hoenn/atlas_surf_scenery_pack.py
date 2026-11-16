@@ -307,7 +307,7 @@ def pack_grouped_scenery(inputs, truth, inventory, route_pixels, *, fixed=(), ex
                 art_changed=False,original_player_gps_used=False,source_routing_proven=False,native_validated=False)
 
 
-def preserve_native_water_collars(inputs,inventory,plan):
+def preserve_native_water_collars(inputs,inventory,plan,*,cave_radius=3):
     """Keep the actual native water fringe around a complete object.
 
     Copying only the object's bounding rectangle can strand its wet corners in
@@ -317,13 +317,15 @@ def preserve_native_water_collars(inputs,inventory,plan):
     source word and a collision-zero Surf witness; no invented ocean path is
     permitted. Nine camera tiles already reserve this fringe's physical owner.
     """
+    if type(cave_radius) is not int or not 0<=cave_radius<=9:
+        raise ValueError('Cave fringe must fit the nine-tile camera reservation')
     result=deepcopy(plan);stamps={s['key']:s for s in inventory['stamps']}
     maps={r['name']:r for r in result['reservations']};witnesses=[]
     words_by_map=defaultdict(dict)
     for row in result['placements']:
         stamp=stamps[row['stamp']];name=stamp['parent_map'];layout=inputs.layout(name)
         left,top,w,h=stamp['source_rect'];sx,sy=row['stamp_offset']
-        radius=3 if row['kind']=='cave' else 1
+        radius=cave_radius if row['kind']=='cave' else 1
         proof=[]
         for yy in range(-radius,h+radius):
             for xx in range(-radius,w+radius):

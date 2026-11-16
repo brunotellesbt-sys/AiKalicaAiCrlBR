@@ -1,0 +1,47 @@
+RETOMADA 16/11/2026 — OCASO E ROTAS SOB GLIFOS
+
+Pedido atual: “Então bora progredir, comece a fazer”. Instrução anterior:
+“Ok corrigiu os erros? Aqueles 8 erros em código e + 1? Abra o pr ao corrigir”.
+Manter checkpoints remotos, mas NÃO abrir PR com os nove bloqueios pendentes.
+
+Base observada: main8a7b78a6, merge do PR111. Nova branch de continuidade:
+fix/atlas-continuity-2026-11-16. Fonte171 reconstruída neste ambiente novo;
+171camadas/32250inputs, manifesto d3a06e90f222f83a3e7778df52895594f6bd02719a8bc925151d7d80bfa1fed7.
+Isto não recupera o filesystem antigo. As cinco ROMs permanecem candidatas.
+
+Falha WIP reproduzida e reparada:
+- Ocaso foi pedido em(140,111), mas route() normalizava endpoints à água
+  histórica antes de pintar. O polyline autêntico termina em(141,111).
+  Não estender a linha ao ponto solicitado, que não é mar.
+- As nove branches são iguais às de surf-review-validation/source.json,
+  SHA256f9cc441f0c7580f512d3483ae559cd807dbbf92eb6460f22e501ea2c6af0e04e.
+  Pin canônico de TODOS os campos/ordem das branches:
+  cc945342ce5a61a02a8f081f49e576892afa218c7de5ce94787d10845e20adcc.
+  O marker completo reconstruído tem SHA diferente do histórico; não alterar
+  seu pin para aceitar bytes novos. A extração usa o contrato independente
+  exato das branches, as quatro arrays intactas e os dois geradores pinados.
+  A causa da divergência do marker completo não foi estabelecida.
+- Sete pixels sob seis glifos autenticados. Raster abstrato ganha408tiles;
+  suas componentes caem15->10. Isso NÃO prova mudança de terreno físico.
+
+Diagnóstico físico observado:
+diagnose_atlas_occluded_routes.py compara dois overlays, compila os helpers
+C de banco, audita ambos e confere o parent antes/depois. Relatórios/hash em
+docs/design/atlas-surf-layout/occluded-routes-review/review.json.
+ZERO diferenças nos1955outputs; IDs/origens/dimensões intactos. Nos dois:
+533mapas gerados,622mapas auditados,86175células de água,17SCCs de água gerada.
+Os pixels estão nas reservas de cenário com máscara nativa autoritativa.
+40células da linha conceitual colidem com o corpo de Ocaso; a prévia registra
+essa obstrução, sem transformar a ilha em água nem aprovar a passagem.
+O lote NÃO conserta a conectividade e NÃO elimina8FAIL+1ERROR de release.
+
+Provas atuais:12testes da extração/guardas;285testes atlas passaram antes
+do experimento posterior de franja. A fixture portátil contém a arte171
+autêntica e todas as branches, permitindo executar os casos em CI sem.local.
+Sem novo buildARM nem prova nativa; ROMs/save e contratos finais inalterados.
+
+Próximo: testar franja de água nativa inteira dentro da reserva existente
+das cavernas, copiar somente palavras de células Surf reais do parent,
+revisar mapas inteiros/vizinhos e repetir grafo/bancos. ThreeIsland continua
+separando embarque leste do adaptador oeste; preservar terminal/barcos/NPCs.
+Provar fonte, ROM, saves, edições e publicação antes de abrir o PR solicitado.

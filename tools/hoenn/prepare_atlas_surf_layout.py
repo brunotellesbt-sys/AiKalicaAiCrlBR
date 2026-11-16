@@ -105,7 +105,7 @@ def _read_evidence(inputs):
     return parent,inventory,result['coasts'],result['scenery']
 
 
-def compose(source):
+def compose(source, *, preview_occluded_routes=False):
     """Return a complete staged terrain/event candidate plus honest blockers."""
     source=Path(source).resolve();parent_proof=verify_prefix(source,complete=True)
     inputs=Source(source);parent,inventory,coasts,scenery=_read_evidence(inputs)
@@ -116,6 +116,11 @@ def compose(source):
     # cells. A mixed chart pixel does not need a fictitious 6x6 native ocean.
     pixels=set(truth.blue_pixels)-{(96,40)}
     pixels.update((x,89) for x in range(128,134));pixels.add((119,104))
+    occluded_routes=None
+    if preview_occluded_routes:
+        from atlas_surf_occluded_routes import extract_occluded_routes
+        hidden,occluded_routes=extract_occluded_routes(inputs,truth)
+        pixels.update(hidden)
     scenery=preserve_native_water_collars(inputs,inventory,scenery)
     adapter_plan=coasts['adapter_plan']
     native_regions=_native_regions(inputs,adapter_plan)
@@ -128,6 +133,10 @@ def compose(source):
                 fixed_atlas=row['fixed_atlas'],stamp_sha256=row['stamp_sha256'],
                 blocked_water_cells=row['route_water_obstructed'],
                 source_scc_and_native_travel_still_required=True)
+    underlay_obstructions=[]
+    if preview_occluded_routes:
+        from atlas_surf_occluded_routes import record_native_obstructions
+        underlay_obstructions=record_native_obstructions(reservations,pixels,hidden,occluded_routes)
     plan=reserve_patches(plan_reserved_geometry(pixels,reservations,native_regions=native_regions))
     layer=Layer(source,'atlas-surf-layout',PRIOR+[LAYER])
     retired=parent['coasts']['retired_maps']
@@ -189,6 +198,8 @@ def compose(source):
                   player_marker=marker,
                   closed_native_faces=closed_native,retirement=retirement,migration=migration,
                   adapter_plan=adapter_plan,donor_evidence=donor_evidence,
+                  occluded_routes_preview=occluded_routes,
+                  occluded_routes_native_obstructions=underlay_obstructions,
                   owner_mapping=owners,art_sha256=dict(truth.array_sha256),
                   expected_retired_maps=retired,pending_obligations=list(PENDING),
                   source_audit_passed=False,native_validated=False,release_eligible=False,
@@ -238,12 +249,15 @@ def seed_build_cache(cache,target,protected_paths):
                 verified_source_overwritten=False,shared_writable_inodes=False)
 
 
-def prepare(source,clone_from=None,*,preview_output=None,build_cache_from=None):
+def prepare(source,clone_from=None,*,preview_output=None,build_cache_from=None,
+            preview_occluded_routes=False):
     target=Path(source).resolve()
     parent=Path(clone_from).resolve() if clone_from is not None else target
     if clone_from is not None and target.exists():
         raise ValueError('Preserve the existing candidate or partial preparation; choose a new private path')
-    layer,metadata=compose(parent)
+    if preview_occluded_routes and preview_output is None:
+        raise ValueError('Occluded-route preview cannot materialize a source before candidate-save identity review')
+    layer,metadata=compose(parent,preview_occluded_routes=preview_occluded_routes)
     if preview_output is not None:
         report=dict(metadata,prepared_sha256={p:_sha(raw) for p,raw in layer.outputs.items()},
                     source_written=False)
@@ -276,8 +290,11 @@ if __name__=='__main__':
     parser.add_argument('--clone-from',type=Path)
     parser.add_argument('--preview-output',type=Path)
     parser.add_argument('--build-cache-from',type=Path)
+    parser.add_argument('--preview-occluded-routes',action='store_true',
+        help='Preview authenticated underlay only; requires --preview-output until candidate-save identities are reviewed')
     args=parser.parse_args()
-    report=prepare(args.source,args.clone_from,preview_output=args.preview_output,build_cache_from=args.build_cache_from)
+    report=prepare(args.source,args.clone_from,preview_output=args.preview_output,build_cache_from=args.build_cache_from,
+                   preview_occluded_routes=args.preview_occluded_routes)
     print(json.dumps(dict(maps=report['geometry_plan']['map_count'],
                          prepared_files=len(report['prepared_sha256']),
                          pending=report['pending_obligations'],release_eligible=False),indent=2))

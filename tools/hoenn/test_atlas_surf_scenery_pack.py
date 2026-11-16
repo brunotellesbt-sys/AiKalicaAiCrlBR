@@ -117,5 +117,10 @@ class WholeSceneryPackingTests(unittest.TestCase):
         self.assertIn(0x0170,[c['word'] for c in witness['cells']])
         self.assertEqual(plan.get('native_water_collar_cells'),None)
 
+    def test_cave_fringe_cannot_exceed_reserved_margin(self):
+        for radius in (-1,10,True,1.5):
+            with self.assertRaisesRegex(ValueError,'nine-tile camera reservation'):
+                preserve_native_water_collars(Inputs(),dict(stamps=[]),dict(),cave_radius=radius)
+
 
 if __name__=='__main__':unittest.main()

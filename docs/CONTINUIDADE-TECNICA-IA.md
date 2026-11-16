@@ -1,5 +1,39 @@
 # Continuidade técnica de Pokémon Journey
 
+## Retomada atual — 16/11/2026 (precede o histórico abaixo)
+
+Pedido literal mais recente: “Então bora progredir, comece a fazer”. Antes:
+“Ok corrigiu os erros? Aqueles 8 erros em código e + 1? Abra o pr ao corrigir”.
+Não abrir PR enquanto os8FAIL+1ERROR de release persistirem. Checkpoints/pushes
+continuam autorizados. PR111 integrado em main8a7b78a6ca59bdc0d16c112093866cc127c157c8;
+branch nova fix/atlas-continuity-2026-11-16. Workspace antigo não recuperado.
+
+Base171 reconstruída por restore_generated_area_review.py e conferida:
+171camadas/32250inputs/manifesto d3a06e90f222f83a3e7778df52895594f6bd02719a8bc925151d7d80bfa1fed7.
+ToolchainARM14.2.1 instalado; ainda não há novo build. Ocaso WIP reparado com
+endpoint histórico(141,111) e contrato exato das nove branches publicadas,
+sem modificar os hashes da arte ou os geradores históricos. Divergência do
+marker completo foi registrada, não aprovada trocando seu pin.
+
+Diagnóstico independente baseline/prévia:533mapas,622mapas auditados,
+86175células de água,17SCCs nos dois;1955outputs idênticos byte a byte, IDs,
+origens/dimensões preservados. Os sete pixels autenticados não viram conserto
+físico porque estão nas máscaras nativas das reservas. Não atribuir os15->10
+componentes do raster abstrato à rede do jogo. Fonte/graficamente histórico,
+não prova de viagemROM.285testes atlas passaram neste primeiro lote.
+
+Arquivos novos: atlas_surf_occluded_routes.py, diagnose_atlas_occluded_routes.py,
+test_atlas_surf_occluded_routes.py, fixture portátil171, relatório/gz em
+docs/design/atlas-surf-layout/occluded-routes-review e registro em
+errors/2026-11-16-cave-underlay.txt. Prévia exige preview_output e não pode
+materializar fonte. Fonte normal e cinco ROMs/save mantidos.
+
+Último concluído: reparar/reproduzir a extração WIP e provar seu efeito nulo
+na candidata física atual. Incompleto: as17SCCs, Three/costas/projeções,
+saves/ecologia/visuais/edições e provas de release. Próximo: estudar e testar
+a franja nativa completa das cavernas, mantendo core/bancos/atlas, depois
+build privado/freeze e provas reais. Não abrir o PR nem promover flags finais.
+
 > Entrada consolidada e atual para a próxima janela: [Aqui/README.md](../Aqui/README.md).
 > Estado até o checkpoint1bf71eda2d8276a377e38e84cc4baaaad070c085.
 > Atualização atual: guia e pasta Aqui sincronizados também no ZIP; integridade conferida. ROMs/save não foram alterados.
