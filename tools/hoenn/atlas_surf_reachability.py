@@ -538,7 +538,11 @@ class PhysicalGraph:
         behavior = self.behaviors[cell]
         # Conservative: do not turn a current/ledge/forced floor into a
         # bidirectional edge merely because its collision bits are zero.
-        if any(tag in behavior for tag in ('JUMP', 'SLIDE', 'WALK_', 'CURRENT', 'STAIRS', 'ICE', 'UNKNOWN')):
+        # MB_ROCK_STAIRS is an ordinary bidirectional walking surface, not
+        # a directional stair warp/forced floor. Native Bond Bridge travel
+        # exercises it in both directions; collision and elevation still
+        # apply. Keep the other unmodelled stair/forced behaviors blocked.
+        if behavior!='MB_ROCK_STAIRS' and any(tag in behavior for tag in ('JUMP', 'SLIDE', 'WALK_', 'CURRENT', 'STAIRS', 'ICE', 'UNKNOWN')):
             self.unmodelled[behavior] += 1
             return False
         return True
@@ -796,6 +800,18 @@ def audit(source, *, plan, requirements=None, strict=False, max_states=1000000, 
                 continue
             if kind == 'native_pixels':
                 name, x, y = row['point']
+                if row.get('native_chart_feature'):
+                    from atlas_surf_native_features import verify_requirement
+                    try:verify_requirement(source,row)
+                    except (ValueError,KeyError,FileNotFoundError) as error:
+                        graph.errors.append(dict(kind='native-chart-feature-authentication-failed',key=row.get('key'),detail=str(error)))
+                        continue
+                    component=graph.component(row['point'],1)
+                    passed=component is not None and component==ocean
+                    checks[kind].append(dict(key=row.get('key'),passed=passed,component=component,
+                        native_map_scale_not_affine=True,actual_physical_graph_point=True))
+                    if not passed:graph.errors.append(dict(kind='required-physical-point-unreachable',category=kind,key=row.get('key')))
+                    continue
                 origin = origins.get(name)
                 if 'native_region_index' in row:
                     index=row['native_region_index'];regions=plan.get('native_regions',[])

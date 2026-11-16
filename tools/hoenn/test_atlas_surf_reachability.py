@@ -72,6 +72,27 @@ class PhysicalReachability(unittest.TestCase):
         self.assertFalse(result['compiled_rom_validated'])
         self.assertFalse(result['gps_used_for_edges'])
 
+    def test_native_chart_label_cannot_create_an_unverified_physical_witness(self):
+        source,plan,requirements=self.fixture()
+        requirements['native_pixels']=[dict(key='forged-glyph',point=['A',1,1],atlas=[93,39],
+            authenticated=True,native_chart_feature='route12',
+            physical_native_point_and_coast_return_proven=True,reference_travel_proof_sha256='a'*64)]
+        result=audit(source,plan=plan,requirements=requirements)
+        self.assertEqual(result['generated_water_sccs'],1)
+        self.assertFalse(result['passed'])
+        self.assertIn('native-chart-feature-authentication-failed',{e['kind'] for e in result['errors']})
+
+    def test_plain_rock_stairs_are_walkable_but_directional_stairs_stay_unmodelled(self):
+        source,plan,requirements=self.fixture()
+        source.behavior_names=dict(source.behavior_names)
+        source.behavior_names.update({6:'MB_ROCK_STAIRS',7:'MB_DIRECTIONAL_STAIRS'})
+        for y in range(3):source.set('A',1,y,0x3006)
+        result=audit(source,plan=plan,requirements=requirements)
+        self.assertTrue(result['passed'],result['errors'])
+        for y in range(3):source.set('A',1,y,0x3007)
+        result=audit(source,plan=plan,requirements=requirements)
+        self.assertFalse(result['passed']);self.assertEqual(result['generated_water_sccs'],2)
+
     def test_blocked_later_perimeter_cannot_replace_a_live_native_connection(self):
         source,plan,requirements=self.fixture()
         source.add('C',word=0x1401);source.connect('A','C')

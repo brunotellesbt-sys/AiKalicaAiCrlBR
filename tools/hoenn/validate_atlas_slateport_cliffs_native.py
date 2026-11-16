@@ -48,14 +48,20 @@ def run(source,library,output):
     try:
         warp(NAME,37,6);native('SetPlayerAvatarTransitionFlags',8);native('DisableWildEncounters',1);step(90)
         ns['assert_surf']();ns['set_passability'](water_only=True);fixture=False
-        for tile in [(36,6),(36,7),(38,15),(38,16)]:
-            x,y=tile;phase=f'cliff-{x}-{y}';ns['walk']((NAME,x+1,y))
-            before=ns['assert_surf']();step(90,32);step(30);after=ns['assert_surf']()
-            assert before['tile']==after['tile']==[x+1,y],(before,after)
+        for tile,target,key,expected in [
+                ((36,6),(37,6),32,0x190),((36,7),(37,7),32,0x190),
+                ((38,15),(39,15),32,0x190),((38,16),(39,16),32,0x190),
+                ((35,17),(35,18),64,0x189),((36,17),(36,18),64,0x189),
+                ((3,57),(3,58),64,0x12c),((4,57),(4,58),64,0x12c)]:
+            x,y=tile;phase=f'cliff-{x}-{y}'
+            if y==57:ns['set_passability']()
+            ns['walk']((NAME,*target))
+            before=ns['assert_surf']();step(90,key);step(30);after=ns['assert_surf']()
+            assert before['tile']==after['tile']==list(target),(before,after)
             loaded=dict(metatile=native('MapGridGetMetatileIdAt',x+7,y+7),
                         collision=native('MapGridGetCollisionAt',x+7,y+7),
                         elevation=native('MapGridGetElevationAt',x+7,y+7))
-            assert loaded==dict(metatile=0x190,collision=1,elevation=0),loaded
+            assert loaded==dict(metatile=expected,collision=1,elevation=0),loaded
             picture(phase+'-complete-native-face');checks.append(dict(tile=list(tile),loaded=loaded,before=before,after=after))
         phase='southern-whole-rock-across-native-seam';ns['set_passability']()
         ns['walk']((NAME,37,59));ns['assert_surf']();picture('slateport-south-complete-rock-from-town')

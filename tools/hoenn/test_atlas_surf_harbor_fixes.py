@@ -53,17 +53,30 @@ class HarborFixTests(unittest.TestCase):
     def test_boulder_slices_become_complete_cliff_without_changing_collision_or_water(self):
         values=[0x1170]*2400
         for x,y in ((36,6),(38,15)):values[y*40+x]=0x564;values[(y+1)*40+x]=0x56c
+        values[17*40+35:17*40+37]=[0x55a,0x55b]
+        values[57*40+3:57*40+5]=[0x552,0x553]
+        for x,y,pattern in [(1,58,[0x550,0x551,0x558,0x559]),(37,57,[0x1552,0x1553,0x1558,0x1559])]:
+            for q,v in enumerate(pattern):values[(y+q//2)*40+x+q%2]=v
+        values[59*40+38:59*40+40]=[0x1550,0x1551]
         original=values.copy();path='data/layouts/SlateportCity/map.bin'
         self.write(path,struct.pack('<2400H',*values))
-        layout=dict(width=40,height=60,primary_tileset='gTileset_General',secondary_tileset='gTileset_Slateport',blockdata_filepath=path)
-        inputs=SimpleNamespace(layout=lambda n:layout,word=lambda n,x,y:0x1190,maps={'SlateportCity':{}})
+        layout=dict(width=40,height=60,primary_tileset='gTileset_General',secondary_tileset='gTileset_Slateport',layout_version='emerald',blockdata_filepath=path)
+        def word(name,x,y):
+            if name=='Route109':return {(38,0):0x1558,(39,0):0x1559}.get((x,y),0x1170)
+            return {(36,5):0x1190,(34,17):0x1189,(6,58):0x112c}.get((x,y),values[y*40+x])
+        inputs=SimpleNamespace(layout=lambda n:layout,word=word,
+            maps={'SlateportCity':dict(connections=[dict(direction='down',map='MAP_ROUTE109',offset=0)]),'Route109':{}},
+            by_id={'MAP_ROUTE109':'Route109'})
         r=finish_rocks(self.layer,inputs);actual=struct.unpack('<2400H',self.layer.outputs[path])
         changed={i for i,(a,b) in enumerate(zip(original,actual)) if a!=b}
-        self.assertEqual(changed,{y*40+x for x,y in ((36,6),(36,7),(38,15),(38,16))})
+        self.assertEqual(changed,{y*40+x for x,y in ((36,6),(36,7),(38,15),(38,16),(35,17),(36,17),(3,57),(4,57))})
         for i in changed:
             self.assertEqual(original[i]&~1023,actual[i]&~1023)
-            self.assertEqual(actual[i]&1023,0x190)
+            self.assertEqual(actual[i]&1023,0x12c if i//40==57 else 0x189 if i//40==17 else 0x190)
         self.assertEqual(len(r['complete_visible_slices_removed']),2)
+        self.assertEqual(len(r['before_census']['orphan_pieces']),8)
+        self.assertEqual(r['after_census']['orphan_pieces'],[])
+        self.assertEqual(len(r['after_census']['complete_objects']),3)
 
 
 if __name__=='__main__':unittest.main()

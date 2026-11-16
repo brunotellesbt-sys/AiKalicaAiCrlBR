@@ -50,10 +50,22 @@ def build_requirements(inputs,metadata,parent_inventory,native_census,*,bank_pai
         result['native_pixels'].append(dict(key=','.join(map(str,pixel['atlas'])),
             point=[name,*cell['native_tile']],atlas=pixel['atlas'],authenticated=True,
             native_region_index=matches[0]))
+    features=metadata.get('native_chart_features')
+    dry_native_maps=set()
+    if features:
+        for feature in features['features']:
+            dry_native_maps.update(feature['reference_native_transit_maps'])
+            for pixel in feature['pixels']:
+                result['native_pixels'].append(dict(key='native-feature:'+feature['key']+':'+','.join(map(str,pixel)),
+                    point=feature['point'],atlas=pixel,authenticated=True,native_chart_feature=feature['key'],
+                    native_word=feature['native_word'],
+                    physical_native_point_and_coast_return_proven=feature['physical_native_point_and_coast_return_proven'],
+                    reference_travel_proof_sha256=feature['reference_travel_proof_sha256']))
     # Include actual native sea connections needed by this ocean audit. A
     # country-wide road closure would pull unrelated inland maps into scope;
     # this proof does not certify a complete campaign or every city street.
     names={r['native_map'] for r in metadata['adapter_plan']['bindings']}
+    if features:names.update(dry_native_maps)
     names.update(p[0] for row in result['ports'] for p in (row['dry'],row['water']))
     for row in result['caves']:names.add(row['interior'])
     for site in metadata['dives']['sites']:names.update((site['depth'],site['sanctuary']))
@@ -65,6 +77,11 @@ def build_requirements(inputs,metadata,parent_inventory,native_census,*,bank_pai
             source=((a['width']-1 if direction=='right' else 0),value) if axis=='height' else (value,a['height']-1 if direction=='down' else 0)
             target=((0 if direction=='right' else b['width']-1),value-offset) if axis=='height' else (value-offset,0 if direction=='down' else b['height']-1)
             if inputs.water(first,*source) and inputs.water(second,*target):return True
+            if first in dry_native_maps and second in dry_native_maps:
+                a_word,b_word=inputs.word(first,*source),inputs.word(second,*target)
+                if (not(a_word&0xc00 or b_word&0xc00) and not inputs.water(first,*source)
+                        and not inputs.water(second,*target) and a_word>>12 in (0,3,15) and b_word>>12 in (0,3,15)):
+                    return True
         return False
     for name in todo:
         if name in retired:raise ValueError('Source obligation still enters an obsolete map')
@@ -78,6 +95,7 @@ def build_requirements(inputs,metadata,parent_inventory,native_census,*,bank_pai
                 names.add(target);todo.append(target)
     result['transit_maps']=sorted(names-generated)
     result['native_transit_expansion']='actual-native-Surf-border-pairs-plus-required-dry-port-and-cave-maps'
+    if features:result['native_transit_expansion']='actual-native-Surf-pairs-plus-dry-seams-in-controller-proven-native-feature-trips'
     result['inventory_counts']={key:len(result[key]) for key in ('ports','caves','dives','adapters','native_pixels')}
     inputs.assert_unchanged()
     return result
