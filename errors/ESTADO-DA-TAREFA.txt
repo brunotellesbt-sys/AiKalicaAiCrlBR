@@ -1,3 +1,36 @@
+MIGRAÇÃO533 — IMPLEMENTAÇÃO GUARDADA, ANTES DO BUILD UNIFICADO
+
+Ferramentas novas:atlas_surf_candidate_history.py autentica fixture+freeze e
+reconstrói1932inputs do terreno publicado; atlas_surf_candidate_migration.py
+emite RLE/targets e instala migração3 sem alterar a migração1/2 histórica.
+Versões0/1 vão direto à geometria atual; versão2 usa a tradução533 uma vez;
+versão3 é idempotente. Posição salva é autoridade; preserva seguidores,
+18IDs de portal e sentinelas, reconstrói templates só em nativos com atores
+movidos e limpa o mapView antigo. Nenhum avanço de missão é alterado.
+
+Oito testes de C de restauração passaram: versões, quatro registros de warp,
+posição de objeto desatualizada, modoSurf/pé, seguidores, IDs/sentinelas,
+capitão salvo antigo e retornoidempotente. A primeira tabela conferiu388660
+casos/194330células/18portais emC+terreno; esse ensaio NÃO prova bateriaROM.
+A preparação final adiciona filtro obrigatório: todo destino também precisa
+ter ida/volta física à componenteoceano, inclusive destinos a pé. O resultado
+dessa preparação e o build unificado ainda serão executados após este checkpoint.
+
+prepare_atlas_connected_layout.py somente aceita o diagnóstico fontePASS1SCC,
+IDs estáveis, viagens autenticadas, reconstrução1932inputs, migração com
+censo exaustivo e destinos seguros com saída física. Cria cópia privada nova,
+sem overwrites de preparações antigas nem hardlinks. Não publica ROM nem
+marca validação nativa/final. Os testes rejeitam fonte/provas alteradas,
+destino já existente e tentativa de escolher resgate sem grafo físico.
+321testes atlas PASS (log local journey-v3-source-tools-tests.log).
+
+Próximo: preparar.local/atlas-unified-src pelo novo comando, auditar o filtro,
+compilar/congelar e testar os saves antigos naROM3. Último remoto confirmado
+e97a1239e8083ecc5142863c1fede57372f93795. Fix visual já está lá; cincoROMs
+públicas/8FAIL+1ERROR/PR ainda dependem das provas finais do trabalho original.
+
+ESTADO ANTERIOR PRESERVADO:
+
 REVISÃO COMPLEMENTAR — 16/11/2026 — pedido literal: “Ainda tem uma aqui ó”
 
 A captura mostrou a fatia horizontal sob a plataforma nordeste deSlateport,
