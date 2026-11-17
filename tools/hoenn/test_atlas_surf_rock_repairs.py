@@ -7,6 +7,7 @@ import unittest
 from atlas_surf_overlay import OverlaySource
 from atlas_surf_redesign_overlay import load
 from atlas_surf_rock_repairs import stage,PLAN,bank_paths
+from audit_atlas_rock_fragments import with_layout
 
 ROOT=Path(__file__).resolve().parents[2]
 SOURCE=ROOT/'.local/generated-area-review-src'
@@ -40,6 +41,25 @@ class CompleteNativeRockRepairs(unittest.TestCase):
         words=list(view.words('Route108'));words[1*view.layout('Route108')['width']+33]=0x593
         layer.stage(path,struct.pack('<'+'H'*len(words),*words))
         with self.assertRaisesRegex(ValueError,'reviewed fragments changed'):stage(layer)
+
+    def test_scripted_layout_repairs_preserve_the_complete_route131_boulder(self):
+        layer=self.fixture();view=OverlaySource(layer)
+        native=with_layout(view,'Route131','LAYOUT_ROUTE131_SKY_PILLAR')
+        whole=[native.word('Route131',x,y) for y in (7,8) for x in (2,3)]
+        report=stage(layer)['runtime_variants']
+        after=with_layout(OverlaySource(layer),'Route131','LAYOUT_ROUTE131_SKY_PILLAR')
+        self.assertEqual(whole,[after.word('Route131',x,y) for y in (7,8) for x in (2,3)])
+        self.assertEqual(report['additional_fragments_after'],0)
+        self.assertEqual(report['complete_boulders_in_variants_preserved'],56)
+        for row in report['repairs']:
+            self.assertEqual(after.word(row['map'],*row['tile']),row['after'])
+
+    def test_unreviewed_fragment_in_scripted_layout_rejects_the_batch(self):
+        layer=self.fixture();view=with_layout(OverlaySource(layer),'Route131','LAYOUT_ROUTE131_SKY_PILLAR')
+        layout=view.layout('Route131');words=list(view.words('Route131'))
+        words[7*layout['width']+2]=0x589
+        layer.stage(layout['blockdata_filepath'],struct.pack('<'+'H'*len(words),*words))
+        with self.assertRaisesRegex(ValueError,'variant rock inventory changed'):stage(layer)
 
     def test_interactive_event_on_a_fragment_is_preserved_by_rejecting_the_batch(self):
         layer=self.fixture();view=OverlaySource(layer);path='data/maps/Route110/map.json'

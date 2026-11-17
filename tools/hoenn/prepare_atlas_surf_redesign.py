@@ -71,7 +71,7 @@ def compose(parent):
     metadata['migration']['final_version']=4
     metadata['native_General_rock_repairs']=stage_rock_repairs(layer)
     metadata['rock_view_migration']=stage_view_refresh(layer)
-    metadata['migration']['final_version']=5
+    metadata['migration']['final_version']=6
     metadata['pending_obligations']=[
         'native current-ROM boundary, Dive/Emerge, camera, sprite, trainer and old-save checks',
         'large distinct cave exteriors and separate entrances/chambers for all105 legendaries',
@@ -111,4 +111,4 @@ if __name__=='__main__':
     parser.add_argument('--output',required=True,type=Path);parser.add_argument('--cache-freeze',type=Path)
     a=parser.parse_args();result=prepare(a.parent,a.target,a.output,a.cache_freeze)
     print(json.dumps(dict(private_source=str(a.target),source_passed=result['source_audit_passed'],
-        trainers=result['surf_trainer_redesign']['count'],migration=5,native_validated=False,release_eligible=False)))
+        trainers=result['surf_trainer_redesign']['count'],migration=result['migration']['final_version'],native_validated=False,release_eligible=False)))

@@ -1,3 +1,26 @@
+CHECKPOINT 103 + VARIANTES REAIS —17/11/2026
+Pedido literal: “Resolva essas 103 peças suspeitas”.
+
+As103correções da fonte foram compiladas na preparação preservada
+.local/atlas-rocks103-src (ROM1ab2baa41aac5b5bb4ea3d1bcb7866b5c6fa67f9c7280766d900747724f78fea).
+O emulador verificou os47primeiros grupos, mas aRota131 carrega pelo script
+LAYOUT_ROUTE131_SKY_PILLAR. A rocha(2,7)..(3,8) dessa variante está completa:
+conservar suas quatro peças. O censo adicional das12variantesGeneral encontrou
+seis fragmentos reais diferentes naRota131; todos recebem reparos explícitos.
+Preservar as56instâncias de rochas completas nessas variantes, além das462
+nos layouts principais. Seis testes de integridade/deriva/eventos/doadoresPASS.
+
+Preparador e runner agora verificam layouts nativos ativos por ponteiroELF,
+54grupos e109células, com duas testemunhas extras da rocha completa daRota131.
+Versão6 preserva migrações anteriores e limpa só o fundo salvo de baterias4/5.
+Fonte nova em preparação:.local/atlas-rocks103-runtime-src, sem alterar nenhum
+snapshot congelado. Próximo: compilar/congelar, provar pixels/animação/colisão,
+SAVE/Continue e cinco edições. NENHUM PASS nativo completo ou release final
+é declarado neste checkpoint. PR112 aberto; públicos aindaf2. Cavernas,
+câmaras individuais e demais requisitos anteriores permanecem pendentes.
+
+HISTÓRICO PRESERVADO:
+
 PEDIDO ATUAL — “Resolva essas 103 peças suspeitas” —17/11/2026
 
 Prioridade atual: concluir as103peças antes de retomar as cavernas/câmaras.

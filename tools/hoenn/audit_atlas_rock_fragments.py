@@ -6,14 +6,41 @@ Suspects require whole-map review; this tool never removes or completes art.
 """
 import argparse
 from collections import Counter
+from copy import copy
 import hashlib
 import json
 from pathlib import Path
+import re
 
 from atlas_surf_source import Source
 from atlas_surf_route_borders import _neighbor
 from atlas_surf_slateport_rocks import LARGE_ROCK_IDS,COMPLETE_PATTERNS
 from render_sea_maps import MapRenderer
+
+
+def with_layout(source,name,layout):
+    result=copy(source);result.maps=dict(source.maps);result.maps[name]=dict(source.maps[name],layout=layout)
+    result._words=dict(source._words);result._words.pop(name,None)
+    return result
+
+
+def scripted_layouts(source):
+    result=[]
+    for name in sorted(source.identities):
+        path='data/maps/'+name+'/scripts.inc'
+        if not (source.source/path).exists() and path not in getattr(getattr(source,'layer',None),'outputs',{}):continue
+        raw=source.read(path)
+        for symbol in sorted(set(re.findall(r'^\s*setmaplayoutindex\s+(LAYOUT_\w+)',raw.decode(),re.M))):
+            layout=source.layouts[symbol]
+            if (symbol==source.maps[name]['layout'] or layout['primary_tileset']!='gTileset_General'
+                    or layout['layout_version']=='frlg'):continue
+            result.append(dict(map=name,layout=symbol,script=path,script_sha256=hashlib.sha256(raw).hexdigest()))
+    return result
+
+
+def census_scripted_layouts(source,classes):
+    return [dict(row,census=census(with_layout(source,row['map'],row['layout']),[row['map']],classes))
+            for row in scripted_layouts(source)]
 
 
 def quarter_classes(words):
@@ -68,6 +95,8 @@ def audit(path):
         if layout['primary_tileset']=='gTileset_General' and layout['layout_version']!='frlg':names.append(name)
         else:outside[layout['primary_tileset']]+=1
     result=census(source,sorted(names),classes);source.assert_unchanged()
+    result['scripted_alternate_layouts']=census_scripted_layouts(source,classes)
+    source.assert_unchanged()
     result.update(kind='native-General-large-rock-graphics-census',source=str(path.resolve()),
         ROM_sha256=hashlib.sha256((path/'pokeemerald.gba').read_bytes()).hexdigest(),
         marker_sha256=hashlib.sha256((path/'.journey-atlas-surf-layout').read_bytes()).hexdigest(),

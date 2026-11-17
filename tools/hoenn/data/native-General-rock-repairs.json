@@ -968,5 +968,70 @@
       "native_definition": "data/tilesets/primary/general/metatiles.bin",
       "complete_native_16x16_body": true
     }
-  ]
+  ],
+  "scripted_alternate_repairs": [
+    {
+      "map": "Route131",
+      "layout": "LAYOUT_ROUTE131_SKY_PILLAR",
+      "tile": [
+        27,
+        3
+      ],
+      "before": 1360,
+      "after": 1420
+    },
+    {
+      "map": "Route131",
+      "layout": "LAYOUT_ROUTE131_SKY_PILLAR",
+      "tile": [
+        28,
+        3
+      ],
+      "before": 1381,
+      "after": 1426
+    },
+    {
+      "map": "Route131",
+      "layout": "LAYOUT_ROUTE131_SKY_PILLAR",
+      "tile": [
+        27,
+        4
+      ],
+      "before": 1368,
+      "after": 1420
+    },
+    {
+      "map": "Route131",
+      "layout": "LAYOUT_ROUTE131_SKY_PILLAR",
+      "tile": [
+        28,
+        4
+      ],
+      "before": 1389,
+      "after": 1426
+    },
+    {
+      "map": "Route131",
+      "layout": "LAYOUT_ROUTE131_SKY_PILLAR",
+      "tile": [
+        49,
+        32
+      ],
+      "before": 1360,
+      "after": 1420
+    },
+    {
+      "map": "Route131",
+      "layout": "LAYOUT_ROUTE131_SKY_PILLAR",
+      "tile": [
+        50,
+        32
+      ],
+      "before": 1361,
+      "after": 1420
+    }
+  ],
+  "runtime_layout_bindings": {
+    "Route131": "LAYOUT_ROUTE131_SKY_PILLAR"
+  }
 }
