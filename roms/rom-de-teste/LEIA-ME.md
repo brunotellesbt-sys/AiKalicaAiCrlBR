@@ -1,3 +1,6 @@
+Atualização: a visão das divisas da Rota131 com Pacifidlog e a Rota130 foi
+corrigida e testada antes/depois da entrada, no retorno e após SAVE/Continue.
+
 # TESTE — candidata172
 
 Esta ROM inclui o reparo das103peças de rochas e seis fragmentos adicionais daRota131.

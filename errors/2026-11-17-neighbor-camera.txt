@@ -1,5 +1,60 @@
+CONCLUÍDO — DUAS DIVISAS COM VISÃO DESATUALIZADA —17/11/2026
+Pedido atual, trecho literal: “Consegue reparar isso em alguns lugares?
+Identificar esse padrão, assim como identificou as rotas? Esses termos técnicos
+tem que ser atualizados no aqui, como se fosse um lembrete skill pra não repetir isso”.
+
+Identificado e reparado o desacordo entre layout declarado e ativo naRota131.
+O cabeçalho agora aponta paraSkyPillar, já selecionado incondicionalmente pelo
+script. Não redesenha terreno ativo, atlas, NPCs, warps ou flags. Os mapas
+condicionais130/MirageIsland e111 não foram forçados a uma variante permanente.
+Auditor reutilizávelaudit_neighbor_layouts.py:663mapas conectados; antes3variantes,
+2com diferenças nohalo; após o reparo2variantes e1candidata comhalo diferente.
+Os12patches literais próximos de conexões continuam candidatos para análise de
+estado. O censo não certifica execução de todos os scripts nem alterações emC.
+
+ROM congelada atual:c08cb7771a9731db995b7d99297c8b1ebcdd98d75a9ac5e50cdaef8dcff62c82
+ELF:36989019fbf9b14e8ce93b96701c3c517bee965a6ab755d3c380ebcb9a16449f
+marker:10a2b57e222d642aac218b0a4e04e4a296378fa0f5e237cff73c753123a97114
+Fonte:.local/neighbor-layouts-src;freeze:.local/neighbor-layouts-frozen.json.
+2212outputs,34080inputs exatos;532ativos/606slots;33207772bytes. Auditoria de
+fontePASS, uma componente jogável e nenhum escape para aágua decorativa.
+
+Na mesmaROM:Pacifidlog↔Rota131 eRota130↔Rota131 por controles. Quatro peças
+de cada rocha corretas ANTES da entrada, depois e no retorno; três fases e18
+capturas, BG/VRAM/paleta/pixels/quatro quadrantes conferidos. Dois bloqueios por
+controles: um pela cidade e outro dentro da131; não atravessa as rochas. Uso de
+fixtures iniciais declarado; após isso só controles/getters read-only. São dois
+casos locais confirmados, não uma certificação de todas as divisas do jogo.
+A regressão nativa das103peças+6extras passou novamente naROM atual:54casos,
+210capturas e48aproximações de colisão; seis grupos sem aproximação segura.
+
+Saves reais produzidos na6 junto às duas divisas reproduzem o fundo antigo.
+Continue7 lê a rocha completa no grid; SAVE pelo menu e segundoContinue7
+preservam o reparo, posição, altura eSurf. A versão7 limpa o fundo uma vez,
+sem repetir traduções ou mudar atores/flags de saves6. Cinco edições candidatas
+exportadas e coldbootsPASS; TESTE pública6→Continue7→SAVE→Continue7PASS.
+356testes AtlasPASS; verificadores extras rejeitam prova de outraROM e água
+antiga antes da entrada mesmo comflagfixed=true. Manifestos/ROMs/TESTE/save doPR
+atualizados, sem selo final. Provas emdocs/design/neighbor-layout-camera-review,
+referência compacta ematlas-surf-layout/neighbor-camera-checkpoint.json e cadeia
+compilada ematlas-surf-layout/neighbor-layouts-v7. DeltaV7 reproduzível sobreV6/C8.
+
+Lembrete obrigatório:Aqui/SKILL-DIVISAS-E-CAMERAS.md, apontado porAGENTS.md e
+pela skillgba-map-review. Inclui apron/halo, map popping, layout declarado/ativo,
+setmaplayoutindex, scripts condicionais, bancos/paletas/callbacks, diagonais e
+cachemapView, com o roteiro antes/entrada/retorno/SAVE/Continue. O ZIP foi
+sincronizado; nenhum freeze histórico foi substituído ou certificado como novo.
+
+Último subpedido concluído: identificar o padrão, reparar essas duas divisas,
+provar emROM/saves e registrar o lembrete técnico noAqui. Pendentes anteriores:
+cavernas/câmaras, outros bancos/estados de mapas,39facesDive, treinadores/sprites,
+DEX e release/browser globais. Continuamfalse os gates finais históricos.
+PR112 normal aberto, sem merge; conferir SHA remoto após o commit deste lote.
+
+HISTÓRICO PRESERVADO:
+
 EM ANDAMENTO — VISÃO DO VIZINHO DESATUALIZADA —17/11/2026
-Pedido literal mais recente: “Ok, uma coisa, temos que ter cuidado também com
+Pedido atual (resumo): “Ok, uma coisa, temos que ter cuidado também com
 rotas uma do lado da outra, modificadas, porque ao andar de um lado pro outro,
 as vezes em uma rota, a visão da outra rota não fica carregada atualizada,
 fica como se tivesse antes da edição, somente ao andar um pouco pro lado e
@@ -31,4 +86,3 @@ PR112 aberto; sem merge. Pedido anterior103+6concluído. Cavernas/câmaras e gat
 globais anteriores seguem pendentes. Não alterar flags finais para mascará-los.
 
 HISTÓRICO PRESERVADO:
-

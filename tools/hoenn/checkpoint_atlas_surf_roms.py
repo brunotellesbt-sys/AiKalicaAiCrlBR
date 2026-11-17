@@ -44,16 +44,22 @@ def preserve_historical_references(info):
 def checkpoint(frozen_path,artifacts,cold_boot,*,battery=None,revision=None):
     frozen_path,artifacts,cold_boot=map(Path,(frozen_path,artifacts,cold_boot))
     frozen=json.loads(frozen_path.read_bytes());source=Path(frozen['source'])
-    assert revision in (None,'rocks103-v6'),'Unknown candidate revision'
+    assert revision in (None,'rocks103-v6','neighbor-layouts-v7'),'Unknown candidate revision'
     proof=ROOT/'docs/design/atlas-surf-layout'
     if revision:proof=proof/revision
     assert not (proof/'candidate-cold-boot').exists(),'Keep prior candidate evidence intact'
     if revision:
         from verify_atlas_103_rocks_native import verify as verify_native_rocks
         from verify_atlas_surf_checkpoint import verify_rocks103_evidence
-        assert frozen['migration_version']==6 and frozen['global_source_validation_passed'] is True
+        assert frozen['migration_version']==(7 if revision=='neighbor-layouts-v7' else 6) and frozen['global_source_validation_passed'] is True
         assert verify_rocks103_evidence(ROOT)['native_ROM_validation_complete'] is True
-        verify_native_rocks(frozen,ROOT/'docs/design/native-rock-fragments-review/native-v6')
+        native_folder=ROOT/'docs/design/native-rock-fragments-review/native-v6'
+        if revision=='neighbor-layouts-v7':
+            from verify_neighbor_layout_camera import verify as verify_neighbor_camera,verify_reference
+            verify_reference(ROOT,frozen)
+            verify_neighbor_camera(frozen,ROOT/'docs/design/neighbor-layout-camera-review/native-v7')
+            native_folder=ROOT/'docs/design/neighbor-layout-camera-review/rock-regression-v7'
+        verify_native_rocks(frozen,native_folder)
     marker=source/'.journey-atlas-surf-layout'
     assert digest(marker)==frozen['marker_sha256']
     assert digest(source/'pokeemerald.gba')==frozen['rom_sha256']
@@ -187,6 +193,6 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--frozen',type=Path,required=True);parser.add_argument('--artifacts',type=Path,required=True)
     parser.add_argument('--cold-boot',type=Path,required=True);parser.add_argument('--battery',type=Path)
-    parser.add_argument('--revision',choices=['rocks103-v6'])
+    parser.add_argument('--revision',choices=['rocks103-v6','neighbor-layouts-v7'])
     a=parser.parse_args();r=checkpoint(a.frozen,a.artifacts,a.cold_boot,battery=a.battery,revision=a.revision)
     print(json.dumps(dict(ROMs=5,archive_bytes=r['archive_bytes'],final_release_validated=False),indent=2))

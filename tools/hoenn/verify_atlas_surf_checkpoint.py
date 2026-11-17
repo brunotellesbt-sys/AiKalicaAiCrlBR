@@ -126,7 +126,7 @@ def verify_cold_report(report, sha):
 
 def evidence_directory(info):
     revision=info.get('candidate_revision')
-    assert revision in (None,'rocks103-v6'),'Unknown candidate revision'
+    assert revision in (None,'rocks103-v6','neighbor-layouts-v7'),'Unknown candidate revision'
     return PROOF/revision if revision else PROOF
 
 
@@ -166,7 +166,7 @@ def verify_boots(root, info, review, summary):
         assert before[key] == after[key] == roundtrip[key], ('Battery state changed', key)
     if info.get('candidate_revision'):
         for report in (saved,continued):
-            assert report['runs'][-1]['geometry_version']==6,'Current battery migration not proved'
+            assert report['runs'][-1]['geometry_version']==(7 if info['candidate_revision']=='neighbor-layouts-v7' else 6),'Current battery migration not proved'
 
 
 def verify_compiled(root, info, review, summary, parent):
@@ -196,7 +196,13 @@ def verify_compiled(root, info, review, summary, parent):
         from verify_atlas_103_rocks_native import verify as verify_native_rocks
         reference=verify_rocks103_evidence(root)
         assert reference['native_ROM_validation_complete'] is True
-        verify_native_rocks(frozen,root/'docs/design/native-rock-fragments-review/native-v6')
+        native_folder=root/'docs/design/native-rock-fragments-review/native-v6'
+        if info['candidate_revision']=='neighbor-layouts-v7':
+            from verify_neighbor_layout_camera import verify as verify_neighbor_camera,verify_reference
+            verify_reference(root,frozen)
+            verify_neighbor_camera(frozen,root/'docs/design/neighbor-layout-camera-review/native-v7')
+            native_folder=root/'docs/design/neighbor-layout-camera-review/rock-regression-v7'
+        verify_native_rocks(frozen,native_folder)
 
 
 def verify_archive(root, directory, info, summary):

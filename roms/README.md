@@ -1,15 +1,12 @@
 # ROMs atuais
 
-Atualização desta branch: **candidata com as103peças de rochas corrigidas**, mais
-seis fragmentos encontrados na variante daRota131. Rochas completas foram
-preservadas. O emulador conferiu os gráficos, a animação e o bloqueio de passagem.
-As quatro edições abaixo e a TESTE passaram na abertura; a TESTE também passou
-Continue→salvar pelo menu→Continue, inclusive com saves anteriores ao reparo.
-
-As novas cavernas e câmaras individuais ainda estão em trabalho. Esta candidata
-não é uma release final aprovada. [Manifesto e hashes](CANDIDATA-172.json) ·
-[Provas das rochas](../docs/design/native-rock-fragments-review/summary.json) ·
-[Continuidade técnica](../docs/CONTINUIDADE-TECNICA-IA.md).
+Atualização desta branch: **candidata com 103 fragmentos de rochas corrigidos,
+seis fragmentos extras e visão consistente nas duas divisas da Rota131**.
+As pedras já aparecem na câmera de Pacifidlog e da Rota130 antes da entrada.
+Travessia, retorno, colisões e saves antigos foram testados no emulador.
+As cinco edições foram recompiladas; abertura e SAVE/Continue da TESTE passaram.
+A reforma das cavernas e a validação global continuam pendentes.
+[Manifesto e hashes](CANDIDATA-172.json) · [Continuidade](../docs/RETOMADA-2026-11-17.md).
 
 Versão anterior validada: [canal sul de One Island, portos e cavernas — camada 171](../docs/generated-area-review.md). Liga o canal vertical ao mar horizontal, corrige cantos de encosta, rochas incompletas e limites visíveis, restaura o embarque de Six Island e fecha portais inativos. As quatro edições e a TESTE recebem os ajustes; a TESTE mantém encontros aleatórios e abordagens automáticas desativados. [Registro em TXT](../errors/2026-11-07-generated-area-review.txt).
 

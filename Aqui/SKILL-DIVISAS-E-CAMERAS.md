@@ -74,3 +74,8 @@ declara `LAYOUT_ROUTE131`, mas sempre ativa `LAYOUT_ROUTE131_SKY_PILLAR`.
 A correção alinha o cabeçalho ao layout já usado no jogo; a Rota130/Mirage
 Island e a Rota111 continuam condicionais. Consulte o estado mais recente em
 [RETOMADA](../docs/RETOMADA-2026-11-17.md) para hashes e provas finais.
+
+Prova final desta revisão: ROM `c08cb777…`, duas divisas, três fases por
+observação, ida/volta, bloqueios e saves6→7→SAVE→Continue7 passaram. As cinco
+candidatas do PR foram atualizadas; outras divisas/estados continuam exigindo
+seus próprios casos. Evidência: `docs/design/neighbor-layout-camera-review`.

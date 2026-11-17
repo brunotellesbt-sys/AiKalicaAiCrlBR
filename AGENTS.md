@@ -1,7 +1,6 @@
 Retomada mais recente: [docs/RETOMADA-2026-11-17.md](docs/RETOMADA-2026-11-17.md).
-O runtime recuperou. O PR112 está aberto. O pedido novo inclui cavernas grandes
-e variadas, câmaras/entradas próprias por lendário, sprites reais, treinadores
-Surf e recifes só nas linhas de limite. A C8 congelada é o checkpoint anterior.
+PR112 aberto. Último lote: visão das divisas131/Pacifidlog/130 e cache salvo,
+ROMc08cb777, versão7. Cavernas/câmaras e validação global continuam pendentes.
 
 # Instruções persistentes do projeto
 

@@ -3,53 +3,53 @@
   "compiled_roms_updated": true,
   "final_release_validated": false,
   "global_gameplay_validation_complete": false,
-  "source_raw_rom_sha256": "5b5b1ace4c9b681c22540168d0d142abd30b57628d26da9264d508a82bed929c",
-  "elf_sha256": "6242e03fda753aaf193ec584bcfe7494b15a7319f30e9f598728f913de487056",
-  "marker_sha256": "6046b165b9fd07ff455f4eca7facc115e12827718a2735cee02e98ff70aef6d5",
+  "source_raw_rom_sha256": "c08cb7771a9731db995b7d99297c8b1ebcdd98d75a9ac5e50cdaef8dcff62c82",
+  "elf_sha256": "36989019fbf9b14e8ce93b96701c3c517bee965a6ab755d3c380ebcb9a16449f",
+  "marker_sha256": "10a2b57e222d642aac218b0a4e04e4a296378fa0f5e237cff73c753123a97114",
   "ROM_used_bytes": 33207772,
   "variants": [
     {
       "file": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "sha256": "ba4dc51f1078a9806d82beb4113acbc43df6ca82f3904d040c62456bd5c454ca"
+      "sha256": "08a38f0675022667b597560c2445b37b8d8f0b46e3f93c2ff30836bfda849cba"
     },
     {
       "file": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "sha256": "796867b5b60b0f0b6fe5c5e2e8a5b5f71e17a18679b7acc6fd50a66e1a04987b"
+      "sha256": "e66df395e8fa1e9189c079b4f178fea685b7e3f8e87a7971289cb5e4cd8b5690"
     },
     {
       "file": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "sha256": "0b5ca10c855be60293304ad24c46cd3545a08ec36c4d6754e9b562344edc0c87"
+      "sha256": "57a398b7e9e2ac53dd7234991468707951a14d6af809e6d55d670293ac9b394a"
     },
     {
       "file": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "sha256": "1631bec2ebea6c61c934851bc30582acfff43b8270f53fbacd730367fe8f0b1a"
+      "sha256": "e60fd859ec452c27b8e20398c6448fd2cc91f541abf9f59d74901acfa68cda88"
     }
   ],
   "TESTE": {
     "file": "rom-de-teste/Pokemon-Journey-TESTE.gba",
-    "sha256": "d95b2053e11fcae542319f242bf88ba2b03dee7a159bc99570e70dc916c215ab",
-    "battery_sha256": "b7981d05d4181683e6c2f157e9c94a337f61c5c2d68c30720078dfb7226661eb"
+    "sha256": "3e32bea09c224fe9994aad5fe18eb13b4876ef0b5dbbe0324b52b638536f5a4d",
+    "battery_sha256": "ece5c236e09415b8235d58f4e1d86fb5ef89dbdf10f2cc28c758f4edd1a19574"
   },
   "cold_boot": {
     "Gen1-4-Normal": {
-      "report": "docs/design/atlas-surf-layout/rocks103-v6/candidate-cold-boot/Gen1-4-Normal/cold-boot.json",
-      "sha256": "ba7ae6a486b3c2153430bc13c8c6f09f9d52ab402b9825afd3bd3584b411ee73"
+      "report": "docs/design/atlas-surf-layout/neighbor-layouts-v7/candidate-cold-boot/Gen1-4-Normal/cold-boot.json",
+      "sha256": "62261374fbbfce8bdfef0bae81fc196cf8abbfc5e53117fdfa3f516bed6c11d2"
     },
     "Gen1-4-Hard": {
-      "report": "docs/design/atlas-surf-layout/rocks103-v6/candidate-cold-boot/Gen1-4-Hard/cold-boot.json",
-      "sha256": "439fa771733534f45cf862ccd469e1d7f32ff824bac5dfe6640e0492d65d61d7"
+      "report": "docs/design/atlas-surf-layout/neighbor-layouts-v7/candidate-cold-boot/Gen1-4-Hard/cold-boot.json",
+      "sha256": "70d8af74fd5aad40f4c4fc047a8070dcd189c752a9c5d8d0b75ecb5121b2e0bc"
     },
     "Gen1-9-Normal": {
-      "report": "docs/design/atlas-surf-layout/rocks103-v6/candidate-cold-boot/Gen1-9-Normal/cold-boot.json",
-      "sha256": "d9535dbb888a168e0e77d0da4edfd65e1de9f9f0c26d6ee7e0f24d3878d62985"
+      "report": "docs/design/atlas-surf-layout/neighbor-layouts-v7/candidate-cold-boot/Gen1-9-Normal/cold-boot.json",
+      "sha256": "635a201ae837a84e765fbd4bd20540d5c044fb8fdff38804807115f4276f73b8"
     },
     "Gen1-9-Hard": {
-      "report": "docs/design/atlas-surf-layout/rocks103-v6/candidate-cold-boot/Gen1-9-Hard/cold-boot.json",
-      "sha256": "d0471d9df835d86d13b7d3e09183711055366a7d0dd616e9b18896d7a480389d"
+      "report": "docs/design/atlas-surf-layout/neighbor-layouts-v7/candidate-cold-boot/Gen1-9-Hard/cold-boot.json",
+      "sha256": "5e327f6ad1b5c0a2d10bdceda24956cdc17e482707ebad59f355320037a0d00f"
     },
     "TESTE": {
-      "report": "docs/design/atlas-surf-layout/rocks103-v6/candidate-cold-boot/TESTE-continued-after-save/cold-boot.json",
-      "sha256": "63db7e4beeb0e55c45636183d9e930d7b5f1b4a1e6ec1b77d2a78e5dddd3e655"
+      "report": "docs/design/atlas-surf-layout/neighbor-layouts-v7/candidate-cold-boot/TESTE-continued-after-save/cold-boot.json",
+      "sha256": "be9aa599bc54dcbbe733c6036f477a3cc98636dd71fcc99acda2f319f27b9aed"
     }
   },
   "pending_obligations": [
@@ -63,7 +63,7 @@
     "manifest_sha256": "eca26adfcb0b15f9da78aadec1b8738f66288fcc58d4d727ee2ea2a6274e29ec",
     "retested_on_current_rom": false
   },
-  "candidate_revision": "rocks103-v6",
-  "archive_sha256": "5b0a7226d70a4325b03f29ace9059ff27d316ba6c936d0eb709e5b39c50a83de",
-  "archive_bytes": 101378343
+  "candidate_revision": "neighbor-layouts-v7",
+  "archive_sha256": "d1c46dd3f014093bedecdccd0b9aae413d929a6626b5fbcb7d8099467b84c2de",
+  "archive_bytes": 101585750
 }
