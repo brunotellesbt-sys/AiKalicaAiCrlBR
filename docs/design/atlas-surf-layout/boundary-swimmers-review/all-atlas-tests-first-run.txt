@@ -1,0 +1,35 @@
+...EE..............................................................................................................................................................................................................................................................................................................................................
+======================================================================
+ERROR: test_recorded_browser_validation_matches_atlas (test_atlas.AtlasTests.test_recorded_browser_validation_matches_atlas)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/AiKalicaAiCrlBR/tools/hoenn/test_atlas.py", line 62, in test_recorded_browser_validation_matches_atlas
+    report = json.loads((ROOT / 'mods/hoenn/validation/atlas-browser.json').read_text())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/AiKalicaAiCrlBR/mods/hoenn/validation/atlas-browser.json'
+
+======================================================================
+ERROR: test_surf_links_match_shipped_map_graph (test_atlas.AtlasTests.test_surf_links_match_shipped_map_graph)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/AiKalicaAiCrlBR/tools/hoenn/test_atlas.py", line 35, in test_surf_links_match_shipped_map_graph
+    routes = json.loads((ROOT / 'mods/sea-routes/routes.json').read_text())['routes']
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/AiKalicaAiCrlBR/mods/sea-routes/routes.json'
+
+----------------------------------------------------------------------
+Ran 339 tests in 53.635s
+
+FAILED (errors=2)

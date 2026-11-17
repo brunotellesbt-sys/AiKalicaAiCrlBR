@@ -16,6 +16,7 @@ import subprocess
 import tempfile
 
 from atlas_surf_source import Source
+from atlas_surf_background import cells as background_cells, audit_isolation, parsed as parsed_background
 
 DIRS = {'left': (-1, 0), 'right': (1, 0), 'up': (0, -1), 'down': (0, 1)}
 OPPOSITE = {'left': 'right', 'right': 'left', 'up': 'down', 'down': 'up'}
@@ -98,6 +99,9 @@ class AtlasDiveSource:
         self.input_sha256 = {name: hashlib.sha256(text.encode()).hexdigest() for name,text in (
             ('src/data/journey_atlas_dives.h',header),
             ('src/data/journey_atlas_runtime.h',runtime),('src/overworld.c',overworld))}
+        self.background=set()
+        try:self.background=parsed_background(source)
+        except FileNotFoundError:pass
         expected_struct = ('struct JourneyAtlasDiveSite { u16 depth; s16 x, y; u16 width, height; '
                            's16 left, top; u16 patchWidth, patchHeight; };')
         if _compact(expected_struct) not in _compact(header) or _compact(
@@ -106,6 +110,8 @@ class AtlasDiveSource:
         for name,expected in _DIVE_FUNCTIONS.items():
             text = header if name == 'JourneyAtlasDepthSite' else runtime if name in (
                 'JourneyAtlasChunk','JourneyAtlasWorldChunk','JourneyAtlasFloor32') else overworld
+            if name=='JourneyAtlasSetDiveWarp' and self.background:
+                expected='2624a3b09903da30b82282bc0a6718734d97f07ce96462e9d91c722b71cb8ede'
             if hashlib.sha256(_compact(_function_body(text,name)).encode()).hexdigest() != expected:
                 raise ValueError(('Implemented Dive arithmetic or rejection guard is unreviewed',name))
         predicates=source.read('src/metatile_behavior.c').decode()
@@ -211,6 +217,7 @@ class AtlasDiveSource:
                      and c['y'] <= y < c['y']+c['height']),None)
 
     def surface_valid(self,name,x,y,require_dive=False):
+        if (name,x,y) in self.background:return False
         if name not in self.graph.by_name or self.source.maps[name].get('map_type') == 'MAP_TYPE_UNDERWATER':
             return False
         try:cell=self.graph.point([name,x,y])
@@ -727,14 +734,28 @@ def audit(source, *, plan, requirements=None, strict=False, max_states=1000000, 
     metrics = graph.compile()
     generated = set()
     generated_cells = 0
+    background=set()
     for chunk in plan['chunks']:
         name = chunk['name']
         layout = source.layout(name)
+        try:scenery=background_cells(chunk)
+        except ValueError as error:
+            graph.errors.append(dict(kind='invalid-decorative-water-declaration',map=name,detail=str(error)))
+            scenery=set()
+        for x,y in scenery:
+            cell=graph.point([name,x,y]);background.add(cell)
+            if not graph.water[cell] or graph.words[cell]>>12!=1 or not graph.passable(cell):
+                graph.errors.append(dict(kind='decorative-water-is-not-native-surf-water',map=name,tile=[x,y]))
+        for field in ('object_events','warp_events','coord_events','bg_events'):
+            for event in source.maps[name].get(field) or []:
+                if (event.get('x'),event.get('y')) in scenery:
+                    graph.errors.append(dict(kind='event-in-inaccessible-background',map=name,event=field))
         chunk_water = 0
         for y in range(layout['height']):
             for x in range(layout['width']):
                 cell = graph.point([name, x, y])
                 if graph.water[cell]:
+                    if (x,y) in scenery:continue
                     chunk_water += 1
                     component = graph.component([name, x, y], 1)
                     if component is not None:
@@ -750,6 +771,16 @@ def audit(source, *, plan, requirements=None, strict=False, max_states=1000000, 
         graph.errors.append(dict(kind='generated-water-not-strongly-connected', components=len(generated)))
     ocean = next(iter(generated)) if len(generated) == 1 else None
     graph.ocean_component = ocean
+    if atlas_model is not None and atlas_model.background:
+        declared={tuple(graph.location(c)) for c in background}
+        if declared!=atlas_model.background:
+            graph.errors.append(dict(kind='compiled-background-differs-from-physical-declaration',
+                declared=len(declared),compiled=len(atlas_model.background)))
+    isolation=None
+    if background and ocean is not None:
+        isolation=audit_isolation(graph,background,ocean)
+        if isolation['directed_reachable_cells']:
+            graph.errors.append(dict(kind='playable-ocean-can-reach-decorative-water',**isolation))
     checks = {kind: [] for kind in KINDS}
     for row in requirements.get('ports', []):
         if not row.get('dry') or not row.get('water'):
@@ -861,6 +892,7 @@ def audit(source, *, plan, requirements=None, strict=False, max_states=1000000, 
                   gps_used_for_edges=False, plan_connections_trusted=False,
                   physical_maps=len(names), generated_water_cells=generated_cells,
                   generated_water_sccs=len(generated), metrics=metrics,
+                  decorative_water_isolation=isolation,
                   checks=checks, errors=graph.errors, pending=graph.pending,
                   connections=graph.connection_witnesses,
                   blocked_connection_overlaps=graph.blocked_connection_overlaps,

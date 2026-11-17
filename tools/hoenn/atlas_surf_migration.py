@@ -23,6 +23,7 @@ from atlas_surf_legacy import (HEADER_PATH as LEGACY_HEADER, NAVIGATION_PATH, _n
                                _retired as _legacy_retired, _tables as _legacy_tables,
                                _render as _legacy_render)
 from atlas_surf_overlay import OverlaySource
+from atlas_surf_background import cells as background_cells
 from atlas_surface_batteries import stage as stage_batteries
 from badge_story_layer import read
 
@@ -102,6 +103,7 @@ def _destinations(view,plan,enums):
         if [layout['width'],layout['height']]!=[chunk['width'],chunk['height']]:
             raise ValueError(('Migration target dimensions differ from frozen physical plan',name))
         blocked=_occupied(view.maps[name]);ox,oy=chunk['origin']
+        blocked.update(background_cells(chunk))
         for y in range(layout['height']):
             for x in range(layout['width']):
                 if (x,y) in blocked:continue

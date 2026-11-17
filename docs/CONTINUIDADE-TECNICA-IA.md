@@ -1,3 +1,34 @@
+REFORMA EM ANDAMENTO —17/11/2026 — BORDAS, NADADORES E SPRITES NA FONTE
+
+O pedido literal mais recente continua registrado abaixo; o usuário confirmou
+“Ok?”. Preparação nova reproduzível em prepare_atlas_surf_redesign.py, sem
+editar171/C8, preserva todos os antigos IDs e células passáveis.66.669células
+de enchimento viram água real além das linhas de recifes. Primeira análise
+porSCC omitia atalhos deEmerge(3538células); corrigido com auditoria dirigida
+e guardaC deDive/Emerge baseada na tabela real de água decorativa. Fonte
+finalPASS,1SCC jogável,0células decorativas alcançáveis; obrigações antigas
+continuamPASS. Halo indefinido muda só desenho; colisão/altura/BorderId intactos.
+
+96nadadores distribuídos na água jogável, com corredor3x6 e quatro orientações.
+Flags novas compiladas contra macros/aliases antigos, sem ampliar save. Sete
+estátuas restantes trocadas pelos próprios sprites nativos, com todos os
+scripts/flags/IDs de captura intactos. Versão4 preserva migração3 e renova
+templates só nos mapas alterados, com96resgates laterais para saves exatamente
+sobre um novo treinador.339casos na suíteAtlas:337PASS na primeira execução; dois erros eram fixtures
+históricos ausentes no sparsecheckout. Restaurados3arquivos exatos doHEAD,
+os5testes desse módulo passaram, incluindo os dois.6testes de fundo/lookupC/
+ABIARM e3de migração4PASS. Não são provas nativas da ROM.
+
+Evidências emdocs/design/atlas-surf-layout/boundary-swimmers-review. Ainda
+NÃO compilado na ROM; público seguef2 eC8 congelada é o checkpoint anterior.
+Próximo: materializar fonte privada, renderizar mapas inteiros, compilar,
+congelar e testar bordas/Emerge/câmeras/sprites/batalhas/saves pelos controles.
+Continuam pendentes39faces nativas/Dive da troca visual de recifes, exteriores
+grandes/variados e105câmaras com entradas próprias, pedras globais,261declarações
+DEX,5edições/release/browser. PR112 aberto; não houve merge nem release final.
+
+HISTÓRICO PRESERVADO:
+
 RETOMADA —17/11/2026 — C8 TESTADA; NOVA REFORMA AUTORIZADA
 
 Pedido literal atual do usuário:
