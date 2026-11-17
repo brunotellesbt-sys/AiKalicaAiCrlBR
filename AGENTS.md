@@ -1,3 +1,13 @@
+Atualização do mesmo lote: a matriz105 também PASSOU na ROMBaa258f74,
+com210PNG novos e48600pixels de espécies, verificados independentemente.
+ProvasB emdocs/design/legendary-chambers-review/large-caves-v8/native.
+Os7testes anticorrupção dessas provas passaram. As demais pendências e a
+exigência de abrir PR somente com toda a suíte aprovada continuam ativas.
+
+Exigência mais recente do autor(17/11): o próximo PR só pode ser aberto depois
+de TODOS os testes e verificações obrigatórias passarem. Nenhum PR novo aberto.
+Checkpoint/push na branch são permitidos; não mascarar os8FAIL+1ERROR de selo.
+
 Retomada mais recente: [docs/RETOMADA-2026-11-17.md](docs/RETOMADA-2026-11-17.md).
 PR112 foi merged pelo autor emmain9dff8c3. Branch atual de trabalho:
 fix/cave-chambers-release-validation-2026-11-17. Gates finais e cavernas em trabalho.
