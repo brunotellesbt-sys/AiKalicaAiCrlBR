@@ -1,0 +1,54 @@
+{
+  "kind": "atlas-unified-compiled-runtime-and-migration-tables",
+  "passed": true,
+  "ROM_sha256": "c8b38210ee63de35b7cb0e3a391626e603375f00e40b6280fd7ce8d30a4605b5",
+  "ELF_sha256": "f0d58a150ecf0516b41ac8bf667855d20d232dc8ea022ca68cf678d86b0d2198",
+  "marker_sha256": "400c392356c2db4ef3d60e0cccf280ba67116a28331ce27d50d3452809fb7f20",
+  "all_three_runtime_copies_match_532_bound_rows": true,
+  "candidate_migration_533_rows_and_all_RLE_targets_warps_match": true,
+  "records": [
+    {
+      "symbol": "sAtlasChunks",
+      "address": 141486240,
+      "bytes": 4256,
+      "sha256": "406cc3425dbe05f5ccbb90556e825705da8a4b2b8a6681c9de610c2a82515a56"
+    },
+    {
+      "symbol": "sAtlasChunks",
+      "address": 144584400,
+      "bytes": 4256,
+      "sha256": "406cc3425dbe05f5ccbb90556e825705da8a4b2b8a6681c9de610c2a82515a56"
+    },
+    {
+      "symbol": "sAtlasChunks",
+      "address": 145295116,
+      "bytes": 4256,
+      "sha256": "406cc3425dbe05f5ccbb90556e825705da8a4b2b8a6681c9de610c2a82515a56"
+    },
+    {
+      "symbol": "sCandidateMaps",
+      "address": 144802164,
+      "bytes": 4264,
+      "sha256": "18253ddf66e25dcaf3f34c89701f5c4afd8a64f0810ebfb97f64e81ca57c448a"
+    },
+    {
+      "symbol": "sCandidateRuns",
+      "address": 144620820,
+      "bytes": 181344,
+      "sha256": "9922b226e7a8fe0ec9394f7eb6c13e6fde73230514d9a732e7c7a7ffbb97a261"
+    },
+    {
+      "symbol": "sCandidateTargets",
+      "address": 144594676,
+      "bytes": 26144,
+      "sha256": "e3c6a0ed50d38aff92de6e38de8df786537faf2200cfe5e974b692f68f7b2e95"
+    },
+    {
+      "symbol": "sCandidateWarps",
+      "address": 144594568,
+      "bytes": 108,
+      "sha256": "cdb709355eb4efe1e74ea72c7ec65f1020bf4c3c87d7fe071d75ae7e3e1ccac2"
+    }
+  ],
+  "final_release_validated": false
+}

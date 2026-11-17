@@ -1,0 +1,713 @@
+{
+  "kind": "candidate533-native-battery-roundtrips",
+  "passed": true,
+  "old_and_new_binaries": {
+    "old": {
+      "pokeemerald.gba": "e8e0ae3d33c1b77d3cc5c6012a67f44f920ddd70fd40c46b4ffac781937fc413",
+      "pokeemerald.elf": "dde63270413a14aa79350a05573f3b83a33d22711f26f04175fdbcbcd62c37b5",
+      ".journey-atlas-surf-layout": "6b7dd869595e21b9f90672fd1202fd08a3d79d32755a8598cb63aeb180cab411"
+    },
+    "new": {
+      "pokeemerald.gba": "c8b38210ee63de35b7cb0e3a391626e603375f00e40b6280fd7ce8d30a4605b5",
+      "pokeemerald.elf": "f0d58a150ecf0516b41ac8bf667855d20d232dc8ea022ca68cf678d86b0d2198",
+      ".journey-atlas-surf-layout": "400c392356c2db4ef3d60e0cccf280ba67116a28331ce27d50d3452809fb7f20"
+    }
+  },
+  "old_source_files_checked": 33857,
+  "new_source_files_checked": 34077,
+  "old533_geometry_matches_published_compiled_rectangles": true,
+  "old_ROM_has_local_repairs_and_is_not_relabelled_as_original_public_ROM": true,
+  "initial_old_position_version_party_and_progress_are_per_case_fixtures": true,
+  "old_battery_written_by_real_SAVE_menu": true,
+  "new_boot_and_SAVE_controllers_only": true,
+  "new_boot_no_game_memory_writes": true,
+  "table_sha256": "b1d2b138854fc114bbce142215fccc33cb6dbcc8638b653d5311b8a447beb56d",
+  "cases": [
+    {
+      "case": "unchanged",
+      "old_point": [
+        "JourneyAtlasSea000",
+        4,
+        3
+      ],
+      "old_mode": "surf",
+      "old_word": 4395,
+      "old_battery_sha256": "eb7396c3e51f1eedf2df7303c8bdc6bac746dbf61eacbb1ead975841b900eb84",
+      "migrated_battery_sha256": "0132a0d1179335ff184a0d02ea717982659b1c98564ff118a9ff18a1a8ae7f8d",
+      "expected_new_map_and_position_mode_elevation": [
+        23040,
+        4,
+        3,
+        2,
+        1
+      ],
+      "old_saved_by_controllers": true,
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "native_old_v2_continue_passed": true,
+      "new_v3_continue_menu_save_continue_passed": true,
+      "second_continue_position_and_mode_unchanged": true
+    },
+    {
+      "case": "retired",
+      "old_point": [
+        "JourneyAtlasSea004",
+        4,
+        3
+      ],
+      "old_mode": "surf",
+      "old_word": 4395,
+      "old_battery_sha256": "6d91948014c281d8e4d7e54bf024ad746c49948cacb92c5c443cbde5e450fda9",
+      "migrated_battery_sha256": "f8210eb573f6afb4f1e5936c2d525b6673c264c15c0cc0145d471beaa4ba86e6",
+      "expected_new_map_and_position_mode_elevation": [
+        9502,
+        8,
+        48,
+        2,
+        1
+      ],
+      "old_saved_by_controllers": true,
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "native_old_v2_continue_passed": true,
+      "new_v3_continue_menu_save_continue_passed": true,
+      "second_continue_position_and_mode_unchanged": true
+    },
+    {
+      "case": "moved-land",
+      "old_point": [
+        "JourneyAtlasScene002",
+        12,
+        9
+      ],
+      "old_mode": "walk",
+      "old_word": 12557,
+      "old_battery_sha256": "06860c407d2cb45e02d50833ded3972eb9b8d0d2e78dbb1b91010ad34c65bf85",
+      "migrated_battery_sha256": "8fc82e947f75c7e3a232398f22ba29546a1bf47f8bbff0fb0f2eb1e561db2816",
+      "expected_new_map_and_position_mode_elevation": [
+        9502,
+        9,
+        45,
+        1,
+        3
+      ],
+      "old_saved_by_controllers": true,
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "native_old_v2_continue_passed": true,
+      "new_v3_continue_menu_save_continue_passed": true,
+      "second_continue_position_and_mode_unchanged": true
+    }
+  ],
+  "all_possible_native_old_batteries_tested": false,
+  "final_release_validated": false
+}

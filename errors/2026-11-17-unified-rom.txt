@@ -1,0 +1,101 @@
+RETOMADA —17/11/2026 — C8 TESTADA; NOVA REFORMA AUTORIZADA
+
+Pedido literal atual do usuário:
+“Ok vamos continuar os trabalhos, avance mais, verifique se tem mais coisas mal
+feitas, até porque essa situação da pedra tem em outros lugares. Algumas massas
+de terra em caves estão iguais, eu falei que queria aleatório como as outras
+estão, e eu quero cavernas grandes, como as maiores dali, digo do lado de fora.
+Sobre os lendários nas partes de dentro, gostaria que cada um deles tivesse uma
+entrada e uma câmara dentro, no estilo dos lagos de pokemon platinum, só que
+diversificado por dentro, cada caverna dessas tem mais de um lendário, então
+deve ter uma entrada diferente pra cada câmara, certo? E dentro dessas câmaras,
+o pokemon deve ter sua aparência, e não a de uma estátua. A propósito, nas rotas
+de surf está faltando treinadores. Sobre as bordas de pedra, não precisa ser
+amontoado de tudo ser pedra, basta as bordas limites de onde está a rota, o
+resto deve ser água comum, do ambiente mesmo, só que bloqueadas de passar
+devido as linhas de pedras.” Depois confirmou:“Ok?”
+
+O usuário pediu abrir PR normal agora; PR112 aberto, sem merge:
+https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/pull/112
+A espera antiga pela release final para abrirPR foi substituída por esse pedido.
+Objetivo original de validar/publicar aROM continua junto com as novas mudanças.
+
+CHECKPOINT CONCLUÍDO, ANTES DA REFORMA NOVA
+Fonte privada.local/atlas-unified-src congelada,532ativos/606slots/2180outputs.
+ROMc8b38210ee63de35b7cb0e3a391626e603375f00e40b6280fd7ce8d30a4605b5;
+ELFf0d58a150ecf0516b41ac8bf667855d20d232dc8ea022ca68cf678d86b0d2198;
+marker400c392356c2db4ef3d60e0cccf280ba67116a28331ce27d50d3452809fb7f20.
+34077inputs conferidos; manifesto7eb8c72a83cafd4b973ccf54fb2f36ec02ad451d9b32b57240462d058798a697.
+Compilação33145420/33554432bytes(98,78%),409012livres. Não editar snapshots.
+O primeiro erro de alinhamento ARM foi corrigido com RLEpacked6bytes e teste
+real-mabi=apcs-gnu.322testes atlas PASS. Três cópias runtime532rows e quatro
+arrays completos de migração conferidos byte a byte noROM/ELF compilados.
+Fonte1SCC;34costas/18cavernas/5Dive/62testemunhas nativas/7portos PASS na fonte.
+
+PROVAS NA MESMA ROMC8
+Slateport8células/barreiras, pedra sul inteira/Route109 ida-volta PASS(11capturas).
+CapitãoHouse3, ponte livre, porta, moradores/barco, ferryMossdeep ida-volta eSAVE
+PASS(8capturas). ThreeSurf/terminal/recife/Coast/retorno/SAVE PASS(10capturas).
+Birth saída/retorno/Harbor/madeira/avatar PASS. Quatro viagens reais deRoute12,
+Treasure,Pacifidlog eBond às costas e de volta à origem seca PASS.
+CincoDive do mundo verdadeiro, não probes isolados: mergulho, portal, santuário,
+saída eEmerge aos donos físicos corretos PASS(5casos/25capturas). Rejeições de
+Emerge em todos os limites ainda não cobertas por esse runner.
+SaveTESTE público e save171 preservado: Continue→SAVE pelo menu→coldContinue
+novamente PASS, sem segunda translação. Versão3 lida via offsetofARM+literal
+GetVarPointer noELF, sem RAMwrites no coldboot. Não afirmar versão original
+lida naROM171, apenas origem da bateria preservada e versão3 na saída.
+Três saves produzidos por controles naROMe8(com a geometria533 publicada):
+Sea000Surf inalterado,Sea004Surf aposentado,Scene002pé em terreno movido.
+OldcoldContinue2→newContinue3→SAVE→newcoldContinue sem repetir migração PASS.
+Inicialização de posição/versão/party nesses três casos é fixture declarada.
+As cinco edições privadas C8 foram exportadas e todas passaram coldboot;TESTE
+com save migrado e versão3 também PASS. Boot não certifica encontros/batalhas.
+
+ECOLOGIA/DEX
+Censo deC e gatilhos preservou190famílias493 e383famílias1025. Na componente
+oceano há62/111famílias; todas as famílias das novas rotas têm testemunhas
+alcançáveis. Campanha nativa fora desse grafo não foi revalidada integralmente.
+O reparo deDEX bloqueia corretamente261declarações antigas de espécie/área
+sem gatilho do proprietário esperado. Não são261espécies extintas: contagem
+de famílias preservada não prova cada forma/área antiga. Falta atribuir donos/
+substituições de área alcançáveis, sem esconder o bloqueio nem só apagar linhas.
+Reprodutor novo diagnose_atlas_connected_ecology.py autentica freeze e produz
+relatórios completos; não escreve fonte/ROM. Antes doDEX, donos das entradas
+geométricas ordinárias são vinculados ao aliasC compilado, sem mover terreno.
+
+REVISÃO E PRESERVAÇÃO
+24mapas inteiros de fonte renderizados e contact sheet visto:6locais+18cavernas;
+23comNPCs. Birth tem VAR_0 dinâmico não resolvido no renderer; arquivo dele está
+explicitamente terrain-only, e a capturaROM existe separadamente. CapturasC8
+deSlateport,House3 eDimensoes também vistas. Objetos/margens globais ainda
+precisam da nova revisão pedida; não declarar todas as famílias de pedras limpas.
+Provas, capturas, baterias, perfis,2180outputs exatos e freeze estão em
+docs/design/atlas-surf-layout/unified-native-review. Baselines anteriores intactos.
+
+O ambiente caiu por transporte exec-server. A causa de infraestrutura não foi
+confirmada; o status do provedor chegou a dizer running enquanto comandos
+falhavam. Recuperou. Antes da recuperação, o commit13cc14dbfc033f84a4f0b1113ec1569d84ad1363
+preservou o reparo e runners pelaAPI. Após recuperar, backup tar+patch e stash
+seletivo foram guardados, fetch/fast-forward aplicado, e os cinco arquivos
+locais resultaram byte a byte MATCH com o commitAPI. Nada de reset/clean.
+Boots/provas pendentes foram retomados e concluídos. O guia/estado/ZIP agora
+recebem este checkpoint juntos. Dados locais não foram perdidos.
+
+INCOMPLETO E PRÓXIMO
+A reforma nova do usuário AINDA NÃO está naROMC8. Criar fonte privada nova;
+não modificarC8 nem171. Ampliar/diversificar18exteriores, dar entrada própria
+para cada câmara/lendário, preservar105scripts/flags de captura e referências,
+usar sprite próprio comprovado, adicionar treinadoresSurf e auditar rochas.
+Substituir enchimentos de recifes por linhas contínuas nos limites das rotas,
+com água normal além delas e prova física de que o jogador não atravessa as
+linhas. Água decorativa inacessível precisa classificação explícita no grafo,
+resgates de saves e ecologia; não fingir colisão em tiles de água passável.
+Muitos eventos atuais já declaram OBJ_EVENT_GFX_SPECIES; verificar pixels e
+resolução de sprite naROM, pois isso sozinho não prova ausência de estátuas.
+Câmaras separadas exigem warps/retornos, IDs, geração, flags eDEX coerentes.
+A arte fixa do atlas permanece intacta. Expansões de chão precisam preservar
+acessos e migração única de saves2 e3; salvos171/publicados continuam suportados.
+Depois: fechar261pendênciasDEX, viagens/câmeras/tempos restantes, encontros/caps
+nas5edições, verifier/publisher172, browser/Pages e publicação final.8FAIL+1ERROR
+finais evalidated=false não foram burlados. ROMs/save públicos seguem anteriores.

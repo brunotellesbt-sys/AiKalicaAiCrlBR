@@ -1,6 +1,7 @@
-Retomada mais recente: leia primeiro [docs/RETOMADA-2026-11-17.md](docs/RETOMADA-2026-11-17.md).
-O usuário pediu abrir o PR agora; o PR112 já está aberto. O adendo registra o build unificado,
-as provas concluídas e a indisponibilidade do runtime, preservando o ZIP anterior íntegro.
+Retomada mais recente: [docs/RETOMADA-2026-11-17.md](docs/RETOMADA-2026-11-17.md).
+O runtime recuperou. O PR112 está aberto. O pedido novo inclui cavernas grandes
+e variadas, câmaras/entradas próprias por lendário, sprites reais, treinadores
+Surf e recifes só nas linhas de limite. A C8 congelada é o checkpoint anterior.
 
 # Instruções persistentes do projeto
 
