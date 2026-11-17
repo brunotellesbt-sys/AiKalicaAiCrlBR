@@ -1,0 +1,45 @@
+{
+  "kind": "frozen-connected-ecology-diagnostic",
+  "ROM_sha256": "c8b38210ee63de35b7cb0e3a391626e603375f00e40b6280fd7ce8d30a4605b5",
+  "ELF_sha256": "f0d58a150ecf0516b41ac8bf667855d20d232dc8ea022ca68cf678d86b0d2198",
+  "marker_sha256": "400c392356c2db4ef3d60e0cccf280ba67116a28331ce27d50d3452809fb7f20",
+  "source_files_checked": 34077,
+  "physical_graph_passed": true,
+  "generated_water_sccs": 1,
+  "family_comparison": {
+    "kind": "atlas-surf-ecology-source-comparison",
+    "preserved": true,
+    "missing_families": {
+      "493": [],
+      "1025": []
+    },
+    "added_families": {
+      "493": [],
+      "1025": []
+    },
+    "before_counts": {
+      "493": 190,
+      "1025": 383
+    },
+    "after_counts": {
+      "493": 190,
+      "1025": 383
+    },
+    "compiled_rom_validated": false
+  },
+  "graph_bounded_family_counts": {
+    "493": 62,
+    "1025": 111
+  },
+  "all_new_route_families_reachable": true,
+  "missing_new_route_families": {
+    "493": [],
+    "1025": []
+  },
+  "DEX_source_proposal_passed": false,
+  "DEX_blocked_claim_count": 261,
+  "unchanged_native_campaign_outside_graph_not_newly_certified": true,
+  "native_encounters_and_caps_not_validated_here": true,
+  "source_or_ROM_written": false,
+  "final_release_validated": false
+}

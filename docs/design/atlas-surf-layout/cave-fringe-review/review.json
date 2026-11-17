@@ -1,0 +1,294 @@
+{
+  "schema": "atlas-whole-native-cave-fringe-review/v1",
+  "source_only": true,
+  "cave_radius_before": 3,
+  "cave_radius_after": 9,
+  "baseline_generated_SCCs": 17,
+  "current_generated_SCCs": 16,
+  "main_component_diagnostic_only": 822,
+  "main_component_coverage": {
+    "caves": 15,
+    "ports": 6
+  },
+  "candidate_accepted": false,
+  "native_ROM_validated": false,
+  "final_release_validated": false,
+  "changed_prepared_paths": [
+    "data/layouts/JourneyAtlasCave02/map.bin",
+    "data/layouts/JourneyAtlasCave04/map.bin",
+    "data/layouts/JourneyAtlasCave11/map.bin",
+    "data/layouts/JourneyAtlasCave09/map.bin",
+    "data/layouts/JourneyAtlasCave10/map.bin",
+    "data/layouts/JourneyAtlasCave08/map.bin",
+    "data/layouts/JourneyAtlasCave05/map.bin",
+    "data/layouts/JourneyAtlasCave12/map.bin",
+    "data/layouts/JourneyAtlasCave13/map.bin",
+    "data/layouts/JourneyAtlasCave17/map.bin",
+    "data/layouts/JourneyAtlasCave14/map.bin",
+    "data/layouts/JourneyAtlasCave00/map.bin",
+    "data/layouts/JourneyAtlasCave16/map.bin",
+    "data/layouts/JourneyAtlasCave15/map.bin",
+    "data/layouts/JourneyAtlasCave01/map.bin",
+    "data/layouts/JourneyAtlasCave03/map.bin",
+    "data/layouts/JourneyAtlasCave06/map.bin",
+    "data/layouts/JourneyAtlasCave07/map.bin",
+    "src/data/journey_atlas_migration.h"
+  ],
+  "generated_maps": 533,
+  "generated_water_cells_before": 86175,
+  "generated_water_cells_after": 91301,
+  "cave_water_cells_added": 5126,
+  "bank_summary": {
+    "edges": 762,
+    "authenticated_directed_pairs": 1464,
+    "unproven_edges": 30,
+    "face_failure_reasons": {},
+    "halo_failure_reasons": {
+      "eight-metatile-words-differ": 17,
+      "tiles-pointer-symbols-differ": 67,
+      "metatile-outside-native-bank": 14,
+      "full-metatile-attributes-differ": 25
+    }
+  },
+  "cave_checks": [
+    {
+      "key": "JourneyCaveAlvorada",
+      "passed": false,
+      "components": [
+        822,
+        822
+      ],
+      "interior_height_three_not_required": true
+    },
+    {
+      "key": "ArtisanCave_1F",
+      "passed": false,
+      "components": [
+        824,
+        824
+      ],
+      "interior_height_three_not_required": true
+    },
+    {
+      "key": "JourneyCaveBrisa",
+      "passed": false,
+      "components": [
+        822,
+        822
+      ],
+      "interior_height_three_not_required": true
+    },
+    {
+      "key": "JourneyCaveEspuma",
+      "passed": false,
+      "components": [
+        822,
+        822
+      ],
+      "interior_height_three_not_required": true
+    },
+    {
+      "key": "JourneyCaveFarol",
+      "passed": false,
+      "components": [
+        822,
+        822
+      ],
+      "interior_height_three_not_required": true
+    },
+    {
+      "key": "JourneyCaveHorizonte",
+      "passed": false,
+      "components": [
+        822,
+        822
+      ],
+      "interior_height_three_not_required": true
+    },
+    {
+      "key": "JourneyCaveMare",
+      "passed": false,
+      "components": [
+        741,
+        741
+      ],
+      "interior_height_three_not_required": true
+    },
+    {
+      "key": "JourneyCaveOcaso",
+      "passed": false,
+      "components": [
+        822,
+        822
+      ],
+      "interior_height_three_not_required": true
+    },
+    {
+      "key": "JourneySanctuaryTempestades",
+      "passed": false,
+      "components": [
+        822,
+        822
+      ],
+      "interior_height_three_not_required": true
+    },
+    {
+      "key": "JourneySanctuaryAurora",
+      "passed": false,
+      "components": [
+        822,
+        822
+      ],
+      "interior_height_three_not_required": true
+    },
+    {
+      "key": "JourneySanctuaryVulcao",
+      "passed": false,
+      "components": [
+        822,
+        822
+      ],
+      "interior_height_three_not_required": true
+    },
+    {
+      "key": "JourneySanctuaryTitans",
+      "passed": false,
+      "components": [
+        740,
+        740
+      ],
+      "interior_height_three_not_required": true
+    },
+    {
+      "key": "JourneySanctuaryFloresta",
+      "passed": false,
+      "components": [
+        822,
+        822
+      ],
+      "interior_height_three_not_required": true
+    },
+    {
+      "key": "JourneySanctuaryEclipse",
+      "passed": false,
+      "components": [
+        822,
+        822
+      ],
+      "interior_height_three_not_required": true
+    },
+    {
+      "key": "JourneyCaveCoral",
+      "passed": false,
+      "components": [
+        822,
+        822
+      ],
+      "interior_height_three_not_required": true
+    },
+    {
+      "key": "JourneySanctuaryDragoes",
+      "passed": false,
+      "components": [
+        822,
+        822
+      ],
+      "interior_height_three_not_required": true
+    },
+    {
+      "key": "JourneySanctuaryEstrelas",
+      "passed": false,
+      "components": [
+        822,
+        822
+      ],
+      "interior_height_three_not_required": true
+    },
+    {
+      "key": "JourneySanctuaryCristais",
+      "passed": false,
+      "components": [
+        822,
+        822
+      ],
+      "interior_height_three_not_required": true
+    }
+  ],
+  "port_checks": [
+    {
+      "key": "One",
+      "passed": false,
+      "dry_component": 822,
+      "water_component": 822,
+      "dry_height": 3,
+      "water_height": 1
+    },
+    {
+      "key": "Two",
+      "passed": false,
+      "dry_component": 822,
+      "water_component": 822,
+      "dry_height": 3,
+      "water_height": 1
+    },
+    {
+      "key": "Three",
+      "passed": false,
+      "dry_component": 7,
+      "water_component": 7,
+      "dry_height": 3,
+      "water_height": 1
+    },
+    {
+      "key": "Four",
+      "passed": false,
+      "dry_component": 822,
+      "water_component": 822,
+      "dry_height": 3,
+      "water_height": 1
+    },
+    {
+      "key": "Five",
+      "passed": false,
+      "dry_component": 822,
+      "water_component": 822,
+      "dry_height": 3,
+      "water_height": 1
+    },
+    {
+      "key": "Six",
+      "passed": false,
+      "dry_component": 822,
+      "water_component": 822,
+      "dry_height": 3,
+      "water_height": 1
+    },
+    {
+      "key": "Seven",
+      "passed": false,
+      "dry_component": 822,
+      "water_component": 822,
+      "dry_height": 3,
+      "water_height": 1
+    }
+  ],
+  "art_sha256": {
+    "sWorldTiles": "09e5334176c31cc5c6fa30ed9a2e46b6f90df524ebfa0a92b3f2403742fa7b9f",
+    "sWorldTilemap": "ae2c327dad6d9ab1a1897369b793969e1229d18f45d0add22a79e4ba5a7a3196",
+    "sWorldPalette": "da38567f7f701d0d76c5c53ef00407fc6eeb75632efdf6121590b9b2f7aca73a",
+    "sWorldDetailPixels": "a7a9ce35ca044ee2df75bd49878a79536fa42f05fb1cdb0cd0593593db3b58f2"
+  },
+  "source_private_preparation": ".local/atlas-fringe9-src",
+  "private_marker_sha256": "42a91de1081452ec3ea37e204bfd71f893fdaa8da7ab1f4bfb1e0c4e618fac08",
+  "private_prepared_manifest_sha256": "eb73eab9e638933f1b14e58ab3ac7153163885161c991d67c6f9a41b05b8b691",
+  "private_prepared_files_verified": 1955,
+  "whole_source_cave_maps_visually_reviewed": 18,
+  "unit_tests_passed": 287,
+  "stronger_real_preservation_test_repeated_passed": true,
+  "limitations": [
+    "Source graph remains FAIL; largest-component membership is a diagnostic only.",
+    "Whole-map source renders do not certify camera animation or ROM controller paths."
+  ],
+  "banks_sha256": "6a77de07b18bc0fc6627452cb983704db5e58938fc38eb072cb2cd57dbbbb3d6",
+  "source_sha256": "411b2e56663f5285520e1741d5ad0cff8b873e4bd0246b7d857bec00d54bac78"
+}

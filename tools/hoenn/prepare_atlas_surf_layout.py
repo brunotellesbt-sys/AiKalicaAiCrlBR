@@ -105,7 +105,8 @@ def _read_evidence(inputs):
     return parent,inventory,result['coasts'],result['scenery']
 
 
-def compose(source):
+def compose(source, *, preview_occluded_routes=False, cave_radius=9,coast_proposals=None,
+            additional_native_edges=False,native_feature_travel=None,preserve_candidate_ids=False):
     """Return a complete staged terrain/event candidate plus honest blockers."""
     source=Path(source).resolve();parent_proof=verify_prefix(source,complete=True)
     inputs=Source(source);parent,inventory,coasts,scenery=_read_evidence(inputs)
@@ -116,7 +117,47 @@ def compose(source):
     # cells. A mixed chart pixel does not need a fictitious 6x6 native ocean.
     pixels=set(truth.blue_pixels)-{(96,40)}
     pixels.update((x,89) for x in range(128,134));pixels.add((119,104))
-    scenery=preserve_native_water_collars(inputs,inventory,scenery)
+    occluded_routes=None
+    if preview_occluded_routes:
+        from atlas_surf_occluded_routes import extract_occluded_routes
+        hidden,occluded_routes=extract_occluded_routes(inputs,truth)
+        pixels.update(hidden)
+    native_features=None;native_feature_scenery=None
+    if native_feature_travel is not None:
+        if coast_proposals is None:raise ValueError('Native feature preview requires complete explicit coast proposals')
+        from atlas_surf_native_features import review as review_native_features
+        native_features=review_native_features(inputs,truth,*native_feature_travel)
+        pixels.difference_update(map(tuple,native_features['pixels']))
+    if preview_occluded_routes:
+        from atlas_surf_scenery_pack import rebind_cave_route_water
+        scenery=rebind_cave_route_water(inventory,scenery,pixels)
+    scenery=preserve_native_water_collars(inputs,inventory,scenery,cave_radius=cave_radius)
+    component_inventory=parent['adapters']
+    if additional_native_edges:
+        if coast_proposals is None:raise ValueError('New native exits require a complete explicit coast preview')
+        from atlas_surf_native_edges import extend_inventory
+        component_inventory=extend_inventory(inputs,component_inventory)
+    if coast_proposals is not None:
+        from atlas_surf_adapters import plan_adapters
+        from atlas_surf_geometry import plan_geometry
+        if not coast_proposals.get('all_inventory_components_registered') or coast_proposals.get('generated_water_added'):
+            raise ValueError('Coast preview must cover all actual components without adding raster water')
+        for path,wanted in coast_proposals['input_sha256'].items():
+            if _sha(inputs.read(path))!=wanted:raise ValueError(('Coast proposal source changed',path))
+        actual=plan_adapters(inputs,component_inventory,plan_geometry(pixels),
+                             coast_proposals['registrations'],truth)
+        for reservation,binding in zip(actual['reservations'],actual['bindings']):
+            row=next(r for r in component_inventory['adapters']
+                     if (r['native_map'],r['component'])==(binding['native_map'],binding['component']))
+            _,proof=_donor(inputs,row)
+            reservation['evidence']=dict(kind='authored-local-native-coast',native_map=binding['native_map'],
+                native_component=binding['component'],atlas_evidence=deepcopy(binding['atlas_evidence']),donor_evidence=proof)
+        if json.dumps(actual,sort_keys=True)!=json.dumps(coast_proposals['adapter_plan'],sort_keys=True):
+            raise ValueError('Coast proposal plan differs from its reauthenticated native registrations')
+        coasts=coast_proposals
+    if native_features is not None:
+        from atlas_surf_native_features import relocate_route12_island
+        scenery,native_feature_scenery=relocate_route12_island(inputs,truth,inventory,scenery,pixels,coasts)
     adapter_plan=coasts['adapter_plan']
     native_regions=_native_regions(inputs,adapter_plan)
     dive_reservations=attach_accesses(truth,scenery['dive_features']['reservations'],pixels)
@@ -128,8 +169,21 @@ def compose(source):
                 fixed_atlas=row['fixed_atlas'],stamp_sha256=row['stamp_sha256'],
                 blocked_water_cells=row['route_water_obstructed'],
                 source_scc_and_native_travel_still_required=True)
+    underlay_obstructions=[]
+    if preview_occluded_routes:
+        from atlas_surf_occluded_routes import record_native_obstructions
+        underlay_obstructions=record_native_obstructions(reservations,pixels,hidden,occluded_routes)
     plan=reserve_patches(plan_reserved_geometry(pixels,reservations,native_regions=native_regions))
+    if preserve_candidate_ids:
+        from atlas_surf_candidate_ids import load_history,bind as bind_candidate_ids
+        plan=bind_candidate_ids(plan,load_history())
     layer=Layer(source,'atlas-surf-layout',PRIOR+[LAYER])
+    if native_features is not None:
+        # Native UI provenance reads historical layer metadata. Admit only
+        # marker bytes already authenticated by the complete parent proof;
+        # the logical overlay still has no unverified disk fallback.
+        for name,wanted in parent_proof['layer_marker_sha256'].items():
+            layer.expected['.journey-'+name]=wanted
     retired=parent['coasts']['retired_maps']
     legacy=stage_navigation_prune(layer,retired)
     anchors=inputs.anchors()
@@ -154,16 +208,25 @@ def compose(source):
             spec,proof=_donor(inputs,dict(native_map=donor_owner,source_wet_edge_witnesses=[]))
             bank_donors[banks]=spec;donor_evidence[donor_owner]=proof
         donors[row['name']]=bank_donors[banks]
+    for row in plan.get('retired_candidate_placeholders',[]):donors[row['name']]=row['donor']
     plan,geometry=stage_geometry(layer,plan,donors)
     runtime=stage_runtime(layer,plan);physical=stage_physical(layer,plan)
     objects=stage_placements(layer,inputs,inventory,scenery['placements'])
     fringe=stage_native_water_collars(layer,scenery)
+    from atlas_surf_old_perimeter import stage as stage_old_perimeter
+    old_perimeter=stage_old_perimeter(layer,inputs,plan,scenery['placements'])
     stage_bindings(layer,adapter_plan,retired_maps=[r['map'] for r in retired])
     route114=stage_route114_closure(layer)
+    from atlas_surf_three_port import stage as stage_three_port
+    three_port=stage_three_port(layer,inputs)
     dives=stage_dives(layer,plan,donor=dict(map='Route127',tile=[72,49]))
     ecology=stage_ecology(layer,owners);names=stage_names(layer,plan,owners)
     marker=stage_marker(layer)
     ports=stage_ports(layer,inputs)
+    from atlas_surf_pacifidlog_captain import stage as stage_pacifidlog_captain
+    pacifidlog_captain=stage_pacifidlog_captain(layer,inputs)
+    from atlas_surf_slateport_rocks import stage as stage_slateport_rocks
+    slateport_rocks=stage_slateport_rocks(layer,inputs)
     from atlas_surf_native_scenery import repair as repair_native_scenery
     native_scenery=repair_native_scenery(layer)
     closed_native=stage_closed_native_connections(layer,inputs,retired,route114_closure=route114)
@@ -185,10 +248,19 @@ def compose(source):
                   parent=parent_proof,geometry_plan=plan,geometry=geometry,runtime=runtime,
                   physical=physical,objects=objects,native_water_fringe=fringe,
                   dives=dives,ecology=ecology,names=names,ports=ports,legacy=legacy,
+                  pacifidlog_captain=pacifidlog_captain,
+                  slateport_rocks=slateport_rocks,
                   native_scenery=native_scenery,route114=route114,
+                  three_port=three_port,
+                  old_perimeter=old_perimeter,
                   player_marker=marker,
                   closed_native_faces=closed_native,retirement=retirement,migration=migration,
                   adapter_plan=adapter_plan,donor_evidence=donor_evidence,
+                  coast_proposals_preview=coast_proposals is not None,
+                  additional_native_edges_preview=additional_native_edges,
+                  native_chart_features=native_features,native_feature_scenery=native_feature_scenery,
+                  occluded_routes_preview=occluded_routes,
+                  occluded_routes_native_obstructions=underlay_obstructions,
                   owner_mapping=owners,art_sha256=dict(truth.array_sha256),
                   expected_retired_maps=retired,pending_obligations=list(PENDING),
                   source_audit_passed=False,native_validated=False,release_eligible=False,
@@ -204,7 +276,8 @@ def _derived_cache_path(relative):
         return relative.name.endswith((
             '.1bpp','.4bpp','.8bpp','.gbapal',
             '.4bpp.lz','.8bpp.lz','.gbapal.lz','.bin.lz',
-            '.4bpp.smol','.8bpp.smol','.gbapal.smol','.bin.smolTM'))
+            '.4bpp.smol','.8bpp.smol','.gbapal.smol','.bin.smolTM',
+            '.4bpp.fastSmol','.8bpp.fastSmol','.gbapal.fastSmol','.bin.fastSmol'))
     if relative.as_posix() in {
         'data/layouts/layouts.inc','data/layouts/layouts_table.inc',
         'include/constants/map_groups.h','include/constants/layouts.h',
@@ -238,12 +311,15 @@ def seed_build_cache(cache,target,protected_paths):
                 verified_source_overwritten=False,shared_writable_inodes=False)
 
 
-def prepare(source,clone_from=None,*,preview_output=None,build_cache_from=None):
+def prepare(source,clone_from=None,*,preview_output=None,build_cache_from=None,
+            preview_occluded_routes=False):
     target=Path(source).resolve()
     parent=Path(clone_from).resolve() if clone_from is not None else target
     if clone_from is not None and target.exists():
         raise ValueError('Preserve the existing candidate or partial preparation; choose a new private path')
-    layer,metadata=compose(parent)
+    if preview_occluded_routes and preview_output is None:
+        raise ValueError('Occluded-route preview cannot materialize a source before candidate-save identity review')
+    layer,metadata=compose(parent,preview_occluded_routes=preview_occluded_routes)
     if preview_output is not None:
         report=dict(metadata,prepared_sha256={p:_sha(raw) for p,raw in layer.outputs.items()},
                     source_written=False)
@@ -276,8 +352,11 @@ if __name__=='__main__':
     parser.add_argument('--clone-from',type=Path)
     parser.add_argument('--preview-output',type=Path)
     parser.add_argument('--build-cache-from',type=Path)
+    parser.add_argument('--preview-occluded-routes',action='store_true',
+        help='Preview authenticated underlay only; requires --preview-output until candidate-save identities are reviewed')
     args=parser.parse_args()
-    report=prepare(args.source,args.clone_from,preview_output=args.preview_output,build_cache_from=args.build_cache_from)
+    report=prepare(args.source,args.clone_from,preview_output=args.preview_output,build_cache_from=args.build_cache_from,
+                   preview_occluded_routes=args.preview_occluded_routes)
     print(json.dumps(dict(maps=report['geometry_plan']['map_count'],
                          prepared_files=len(report['prepared_sha256']),
                          pending=report['pending_obligations'],release_eligible=False),indent=2))

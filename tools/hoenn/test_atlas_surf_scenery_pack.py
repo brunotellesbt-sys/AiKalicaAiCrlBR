@@ -117,5 +117,30 @@ class WholeSceneryPackingTests(unittest.TestCase):
         self.assertIn(0x0170,[c['word'] for c in witness['cells']])
         self.assertEqual(plan.get('native_water_collar_cells'),None)
 
+    def test_cave_fringe_cannot_exceed_reserved_margin(self):
+        for radius in (-1,10,True,1.5):
+            with self.assertRaisesRegex(ValueError,'nine-tile camera reservation'):
+                preserve_native_water_collars(Inputs(),dict(stamps=[]),dict(),cave_radius=radius)
+
+    def test_complete_cave_fringe_retains_source_water_beyond_old_three_tile_cutoff(self):
+        stamp=self.stamp('OldSea:000')
+        # The same whole core/rectangle is retained; only authenticated native
+        # water in its pre-existing nine-tile margin can change.
+        base=pack_grouped_scenery(Inputs(),self.truth,dict(stamps=[stamp]),self.pixels)
+        base['placements'][0]['kind']='cave'
+        class NativeWater(Inputs):
+            def layout(self,name):return dict(width=40,height=40)
+            def water(self,name,x,y):return (x,y)!=(8,8)
+            def word(self,name,x,y):return 0x0170 if x==8 else 0x1170
+        a=preserve_native_water_collars(NativeWater(),dict(stamps=[stamp]),base,cave_radius=3)
+        b=preserve_native_water_collars(NativeWater(),dict(stamps=[stamp]),base)
+        self.assertGreater(b['native_water_collar_cells'],a['native_water_collar_cells'])
+        for old,new in zip(a['reservations'],b['reservations']):
+            self.assertEqual(old['origin'],new['origin'])
+            self.assertEqual((old['width'],old['height']),(new['width'],new['height']))
+        source=[c['source_tile'] for c in b['native_water_collar_witnesses'][0]['cells']]
+        self.assertIn([8,7],source)
+        self.assertNotIn([8,8],source)
+
 
 if __name__=='__main__':unittest.main()

@@ -14,7 +14,7 @@ import json
 from pathlib import Path
 import re
 
-from atlas_surf_adapters import _mouth, edge_pairs, plan_adapters
+from atlas_surf_adapters import _mouth, edge_pairs, plan_adapters,face_witnesses,native_edge_witnesses
 from atlas_surf_geometry import plan_geometry, chunk_water
 from atlas_surf_source import CARDINAL, OPPOSITE, Source
 from atlas_surf_truth import decode_atlas
@@ -40,13 +40,15 @@ AUTHORED_COASTS = {
         ('down',(180,75),'southeastern Navel Rock approach where the southbound route leaves the east-west ink')],
     ('OneIsland_Frlg',1): [('left',(131,39),'westbound route immediately west of One Island')],
     ('OneIsland_TreasureBeach_Frlg',0): [('down',(135,48),'southbound route below the Treasure Beach shoreline')],
-    ('Route105',0): [('left',(18,101),'westbound route west of the Route105 section anchor')],
+    ('Route105',0): [('left',(18,101),'westbound route west of the Route105 section anchor'),
+                    ('left',(19,101),'eastern end of the same westbound Route105 ink, before its southern turn')],
     ('Route115',0): [('left',(16,77),'westbound ocean route outside the west coast of Route115')],
     ('Route124',0): [('up',(114,78),'northbound ocean route from the Route124 section')],
     ('Route125',0): [('right',(132,78),'eastbound route along the northeastern Route125 coast')],
     ('Route126',2): [('down',(114,92),'southern blue stem below the island centered on the Route126 anchor')],
     ('Route127',0): [('right',(127,89),'eastbound ink before the separately reviewed native coastal gap')],
-    ('Route128',1): [('up',(128,94),'northbound eastern Hoenn route above the Route128 section')],
+    ('Route128',1): [('up',(128,94),'northbound eastern Hoenn route above the Route128 section'),
+                    ('down',(128,95),'southern outlet of the same native Route128 water component on the vertical route through its section anchor')],
     ('Route129',0): [('down',(128,99),'southbound eastern Hoenn route below the Route129 section')],
     ('Route12_Frlg',1): [('right',(98,39),'eastbound route beside the upper Route12 coast')],
     ('Route12_Frlg',5): [('right',(97,49),'eastbound junction beside the separate lower Route12 inlet')],
@@ -74,6 +76,10 @@ def _banks(inputs, name):
 
 
 def _donor(inputs, row):
+    if row.get('authored_new_native_edge'):
+        from atlas_surf_native_edges import authenticate,donor
+        authenticate(inputs,row)
+        return donor(inputs)
     banks = _banks(inputs,row['native_map'])
     names = {w['retired_map'] for w in row['source_wet_edge_witnesses']}
     # Several old links used a foreign graphics bank even though the native
@@ -110,7 +116,7 @@ def _donor(inputs, row):
 
 
 def _mouths(inputs,row,direction):
-    witnesses = sorted({tuple(w['native_tile']) for w in row['source_wet_edge_witnesses']
+    witnesses = sorted({tuple(w['native_tile']) for w in native_edge_witnesses(row)
                         if OPPOSITE[w['direction']] == direction})
     axis = 1 if direction in ('left','right') else 0
     for width in range(6,0,-1):
@@ -135,6 +141,10 @@ def _mouths(inputs,row,direction):
 
 
 def _authenticate_witnesses(inputs,row):
+    if row.get('authored_new_native_edge'):
+        from atlas_surf_native_edges import authenticate
+        authenticate(inputs,row)
+        return
     name = row['native_map']
     interfaces = {}
     for witness in row['source_wet_edge_witnesses']:
@@ -177,13 +187,9 @@ def _fit(inputs,row,native,mouth,glob,direction,water):
     cells = {(x,y) for y in range(rect[1],rect[3]) for x in range(rect[0],rect[2]) if (x,y) in water}
     layout = inputs.layout(row['native_map'])
     near,far = (glob[0]+dx,glob[0]+8*dx) if dx else (glob[1]+dy,glob[1]+8*dy)
-    for x,y in cells:
-        if (x if dx else y) != near:
-            continue
-        target = x-origin[0]-dx,y-origin[1]-dy
-        if (0 <= target[0] < layout['width'] and 0 <= target[1] < layout['height']
-                and inputs.water(row['native_map'],*target) and target not in mouth):
-            return None
+    try:face_witnesses(inputs,row,mouth,origin,direction,cells,near,
+                       allow_extensions=row.get('allow_extended_native_contacts',False))
+    except ValueError:return None
     outer = {p for p in cells if p[0 if dx else 1] == far}
     if not outer or not any((x+dx,y+dy) in water and not (rect[0] <= x+dx < rect[2] and rect[1] <= y+dy < rect[3]) for x,y in outer):
         return None
@@ -253,7 +259,8 @@ def _components(pixels):
     return labels,sizes
 
 
-def propose_registrations(inputs,component_inventory,truth,plan=None,*,authored=AUTHORED_COASTS):
+def propose_registrations(inputs,component_inventory,truth,plan=None,*,authored=AUTHORED_COASTS,
+                          protected_reservations=(),allow_extended_native_contacts=False):
     """Return all concrete registrations or explicit per-component conflicts.
 
     ``plan`` may supply the integration caller's classified affine raster.
@@ -278,6 +285,7 @@ def propose_registrations(inputs,component_inventory,truth,plan=None,*,authored=
         raise ValueError('Duplicate native water component inventory')
     candidates,conflicts,donors = {},[],{}
     for row in sorted(rows,key=lambda row:(row['native_map'],row['component'])):
+        row=deepcopy(row);row['allow_extended_native_contacts']=allow_extended_native_contacts
         key = row['native_map'],row['component'];name = key[0]
         _,components = inputs.water_components(name)
         cells = sorted(components[row['component']],key=lambda p:(p[1],p[0]))
@@ -305,11 +313,22 @@ def propose_registrations(inputs,component_inventory,truth,plan=None,*,authored=
                     if fit is None:
                         continue
                     rect,origin = fit
+                    patch=_patch(inputs.layout(name),mouth,direction)
+                    native_rect=(patch[0]+origin[0],patch[1]+origin[1],patch[2]+origin[0],patch[3]+origin[1])
+                    if any(_overlap(rect,(p['origin'][0],p['origin'][1],p['origin'][0]+p['width'],p['origin'][1]+p['height']))
+                           or _overlap(native_rect,(p['origin'][0],p['origin'][1],p['origin'][0]+p['width'],p['origin'][1]+p['height']))
+                           for p in protected_reservations):
+                        continue
                     registration = dict(native_map=name,component=key[1],native_tile=list(native),
-                        global_tile=list(glob),direction=direction,local_rect=_patch(inputs.layout(name),mouth,direction),
+                        global_tile=list(glob),direction=direction,local_rect=patch,
                         mouth_width=len(mouth),depth=8,donor=deepcopy(donor),
+                        allow_extended_native_contacts=allow_extended_native_contacts,
                         atlas_evidence=_evidence(truth,row,native,mouth,target,direction,basis,anchors[name]['atlas']))
+                    patch=registration['local_rect']
+                    claimed=sum((x+origin[0],y+origin[1]) in water
+                                for y in range(patch[1],patch[3]) for x in range(patch[0],patch[2]))
                     available.append(dict(registration=registration,rect=rect,origin=origin,
+                        route_cells_claimed_by_native_patch=claimed,
                         choice=choice,mouth_index=mouth_index,phase=list(phase),
                         atlas_component=labels[target],atlas_component_pixels=sizes[labels[target]]))
         # Preserve alternatives that move along the native mouth as well as
@@ -320,7 +339,8 @@ def propose_registrations(inputs,component_inventory,truth,plan=None,*,authored=
             r = candidate['registration']
             identity = (tuple(candidate['rect']),tuple(candidate['origin']),tuple(r['local_rect']))
             unique.setdefault(identity,candidate)
-        candidates[key] = list(unique.values())
+        candidates[key] = sorted(unique.values(),key=lambda c:(c['route_cells_claimed_by_native_patch'],c['choice'])
+                                if allow_extended_native_contacts else (c['choice'],))
         if not available:
             conflicts.append(dict(native_map=name,component=key[1],reason='no-eight-tile-returning-fit',
                 attempted_choices=[dict(direction=d,atlas=list(p),geographic_basis=b) for d,p,b in authored.get(key,())],

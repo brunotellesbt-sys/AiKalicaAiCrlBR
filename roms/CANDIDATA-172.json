@@ -3,67 +3,65 @@
   "compiled_roms_updated": true,
   "final_release_validated": false,
   "global_gameplay_validation_complete": false,
-  "source_raw_rom_sha256": "f2cac1ecb79e23c3b6a6a43e07568b7c5b03579dc265ba99d33bc3bad7940c0e",
-  "elf_sha256": "618b0556e031fee25a1aace83f33bb8491b7e316ebd910a34f968098b135ba73",
-  "marker_sha256": "dede6825a87fd08742f369478f2004a70b9e7d2b8f1a6c0aa44ad43d559328f8",
-  "ROM_used_bytes": 32920992,
+  "source_raw_rom_sha256": "c08cb7771a9731db995b7d99297c8b1ebcdd98d75a9ac5e50cdaef8dcff62c82",
+  "elf_sha256": "36989019fbf9b14e8ce93b96701c3c517bee965a6ab755d3c380ebcb9a16449f",
+  "marker_sha256": "10a2b57e222d642aac218b0a4e04e4a296378fa0f5e237cff73c753123a97114",
+  "ROM_used_bytes": 33207772,
   "variants": [
     {
       "file": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "sha256": "a24b7304d4dda4a7d1abd60849161409468a4a29d00528a9549643333e7cb40d"
+      "sha256": "08a38f0675022667b597560c2445b37b8d8f0b46e3f93c2ff30836bfda849cba"
     },
     {
       "file": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "sha256": "a2103c4bebe2f8fecc12d863b16f7e0971fb35040b6cf15bf2f0a95f5275146c"
+      "sha256": "e66df395e8fa1e9189c079b4f178fea685b7e3f8e87a7971289cb5e4cd8b5690"
     },
     {
       "file": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "sha256": "47a3a75c36b50bcd96584bd7c7ced7f121f68b8e5b14e93338f503c17b7f951f"
+      "sha256": "57a398b7e9e2ac53dd7234991468707951a14d6af809e6d55d670293ac9b394a"
     },
     {
       "file": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "sha256": "14ebe89fc88f3d4d55cc8a48f7ed1edf36bf997a26d397a8c653e5d6320bf36d"
+      "sha256": "e60fd859ec452c27b8e20398c6448fd2cc91f541abf9f59d74901acfa68cda88"
     }
   ],
   "TESTE": {
     "file": "rom-de-teste/Pokemon-Journey-TESTE.gba",
-    "sha256": "b7445c29804f36f188e0b753849ac4bb55fa605218c7486c04ee73d3fc7945ae",
-    "battery_sha256": "36ace517a44bc0315a4a5309054a4913f39e0f1872a073763ba685c3421e5861"
+    "sha256": "3e32bea09c224fe9994aad5fe18eb13b4876ef0b5dbbe0324b52b638536f5a4d",
+    "battery_sha256": "ece5c236e09415b8235d58f4e1d86fb5ef89dbdf10f2cc28c758f4edd1a19574"
   },
   "cold_boot": {
     "Gen1-4-Normal": {
-      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/Gen1-4-Normal/cold-boot.json",
-      "sha256": "2dd979a0bc0d2dd7c37f11f944fe3378824ebd5a88745494c9902587eb27df07"
+      "report": "docs/design/atlas-surf-layout/neighbor-layouts-v7/candidate-cold-boot/Gen1-4-Normal/cold-boot.json",
+      "sha256": "62261374fbbfce8bdfef0bae81fc196cf8abbfc5e53117fdfa3f516bed6c11d2"
     },
     "Gen1-4-Hard": {
-      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/Gen1-4-Hard/cold-boot.json",
-      "sha256": "ed2b4ada9431a967347894dce476eefd2c7c148acfb32ff51bac004224a0e190"
+      "report": "docs/design/atlas-surf-layout/neighbor-layouts-v7/candidate-cold-boot/Gen1-4-Hard/cold-boot.json",
+      "sha256": "70d8af74fd5aad40f4c4fc047a8070dcd189c752a9c5d8d0b75ecb5121b2e0bc"
     },
     "Gen1-9-Normal": {
-      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/Gen1-9-Normal/cold-boot.json",
-      "sha256": "c09585dff4e0134c0ced199880699922f581a5442e3dc00b2ecc80d15de3a0f7"
+      "report": "docs/design/atlas-surf-layout/neighbor-layouts-v7/candidate-cold-boot/Gen1-9-Normal/cold-boot.json",
+      "sha256": "635a201ae837a84e765fbd4bd20540d5c044fb8fdff38804807115f4276f73b8"
     },
     "Gen1-9-Hard": {
-      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/Gen1-9-Hard/cold-boot.json",
-      "sha256": "3473ed0db718053c0c2fe7a8224a66faeab23586a3022c9a59e0b4c259767647"
+      "report": "docs/design/atlas-surf-layout/neighbor-layouts-v7/candidate-cold-boot/Gen1-9-Hard/cold-boot.json",
+      "sha256": "5e327f6ad1b5c0a2d10bdceda24956cdc17e482707ebad59f355320037a0d00f"
     },
     "TESTE": {
-      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/TESTE-continued-after-save/cold-boot.json",
-      "sha256": "f89b018d59b4969d746694c9f890003d8091d42f48b64795e291ea4d883a84aa"
+      "report": "docs/design/atlas-surf-layout/neighbor-layouts-v7/candidate-cold-boot/TESTE-continued-after-save/cold-boot.json",
+      "sha256": "be9aa599bc54dcbbe733c6036f477a3cc98636dd71fcc99acda2f319f27b9aed"
     }
   },
   "pending_obligations": [
-    "geographic/native SCC review of partial chart pixels and local coast registrations",
-    "native coast GPS integration; historical grids disagree at32/33 interfaces",
-    "global source SCC including fixed caves and transformed Dive",
-    "safe version2 migration of every retired save position and warp reference",
-    "all remaining C/script references to retired map IDs",
-    "reachable ecology/DEX replacement and real edition caps",
-    "whole-map rendering, native controls, batteries and five edition proofs"
+    "native current-ROM boundary, Dive/Emerge, camera, sprite, trainer and old-save checks",
+    "large distinct cave exteriors and separate entrances/chambers for all105 legendaries",
+    "complete-rock review of other native primary banks; General103 repaired",
+    "remaining DEX, five-edition, browser and final release gates"
   ],
   "previous_port_validation": {
     "manifest": "mods/hoenn/atlas-surf-layout-validation/baseline/versions.json",
     "manifest_sha256": "eca26adfcb0b15f9da78aadec1b8738f66288fcc58d4d727ee2ea2a6274e29ec",
     "retested_on_current_rom": false
-  }
+  },
+  "candidate_revision": "neighbor-layouts-v7"
 }

@@ -1,6 +1,10 @@
+Atualização: a visão das divisas da Rota131 com Pacifidlog e a Rota130 foi
+corrigida e testada antes/depois da entrada, no retorno e após SAVE/Continue.
+
 # TESTE — candidata172
 
-Esta ROM foi recompilada com as modificações atuais e mantém a supressão de
+Esta ROM inclui o reparo das103peças de rochas e seis fragmentos adicionais daRota131.
+Foi recompilada com as modificações atuais e mantém a supressão de
 encounters e abordagens automáticas. A bateria incluída foi salva pelo menu na
 ROM nova e passou novamente pelo Continue. A validação global da geografia
 continua pendente; consulte [o manifesto](../CANDIDATA-172.json) e a

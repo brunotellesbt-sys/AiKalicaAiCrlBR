@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "old_ROM_sha256": "65f11271630f6e5b212d2dabc28bc48570c883aa12427692b07b788b1c4e5b5b",
+  "current_ROM_sha256": "5b5b1ace4c9b681c22540168d0d142abd30b57628d26da9264d508a82bed929c",
+  "old_native_cached_fragments": [
+    [
+      35,
+      31,
+      1370
+    ],
+    [
+      36,
+      31,
+      1371
+    ]
+  ],
+  "new_native_repaired_cells": [
+    [
+      35,
+      31,
+      1417
+    ],
+    [
+      36,
+      31,
+      1417
+    ]
+  ],
+  "initial_party_progress_position_mode_and_version_fixture": true,
+  "after_placement_controllers_only": true,
+  "SAVE_callbacks": [
+    "SaveConfirmInputCallback",
+    "SaveDoSaveCallback",
+    "SaveReturnSuccessCallback",
+    "SaveSuccessCallback",
+    "SaveYesNoCallback"
+  ],
+  "old_save_sha256": "f254d990bf2dc08ee07e278d37ee8d83d46ddcaa1d42617ca0a91841cf926ba7",
+  "new_save_sha256": "93075a982bdf180825496fa5dc929e25fd0fbba43ca7e2189b9093c5a3c0716d",
+  "final_release_validated": false
+}

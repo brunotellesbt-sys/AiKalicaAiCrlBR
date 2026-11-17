@@ -18,12 +18,58 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def validate(source, library, output, battery=None, save_output=None):
+def geometry_layout(source):
+    """Compile the actual ARM save-field offset, then bind it to the ELF.
+
+    Struct comments contain upstream offsets and are stale in this expanded
+    game. The GetVarPointer literal must agree with the compiled layout.
+    """
+    compiler=ROOT/'.local/arm-gcc/usr/bin/arm-none-eabi-gcc'
+    code=('#include "global.h"\n#include "constants/vars.h"\n'
+          'const unsigned int journeySaveLayout[]={__builtin_offsetof(struct SaveBlock1,vars),'
+          'VAR_JOURNEY_SEVII_GEOMETRY_VERSION,VARS_START,JOURNEY_SEVII_GEOMETRY_VERSION_CURRENT};\n')
+    with tempfile.TemporaryDirectory(prefix='journey-save-layout-') as directory:
+        path=Path(directory)/'layout.c';assembly=path.with_suffix('.s');path.write_text(code)
+        subprocess.run([str(compiler),'-mabi=apcs-gnu','-mcpu=arm7tdmi','-mthumb','-std=gnu17',
+            '-DMODERN=1','-DTESTING=0','-DEMERALD','-iquote',str(source/'include'),'-S',str(path),'-o',str(assembly)],
+            check=True,capture_output=True)
+        raw=assembly.read_bytes();values=[int(v) for v in re.findall(r'^\s*\.word\s+(-?\d+)\s*$',raw.decode(),re.M)]
+    assert len(values)==4,('Save layout compiler returned unexpected initializer',values)
+    offset,variable,start,current=values
+    assert offset%2==0 and start<=variable<0x8000
+    disassembly=subprocess.check_output([str(ROOT/'.local/arm-binutils/usr/bin/arm-none-eabi-objdump'),
+        '-d','--disassemble=GetVarPointer',str(source/'pokeemerald.elf')],text=True)
+    constants={int(v,16) for v in re.findall(r'\.word\s+0x([a-fA-F0-9]+)',disassembly)}
+    assert ((offset//2-start)&0xffffffff) in constants,'GetVarPointer differs from the actual compiled save layout'
+    return dict(vars_offset=offset,variable=variable,vars_start=start,current_version=current,
+        actual_ARM_APCS_struct_compiled=True,GetVarPointer_ELF_literal_matches=True,
+        probe_assembly_sha256=hashlib.sha256(raw).hexdigest(),
+        global_header_sha256=hashlib.sha256((source/'include/global.h').read_bytes()).hexdigest())
+
+
+def backup_grid_layout(source):
+    code=('#include "global.h"\nconst unsigned int gridLayout[]={'
+          '__builtin_offsetof(struct BackupMapLayout,width),'
+          '__builtin_offsetof(struct BackupMapLayout,height),'
+          '__builtin_offsetof(struct BackupMapLayout,map)};\n')
+    with tempfile.TemporaryDirectory(prefix='journey-grid-layout-') as directory:
+        p=Path(directory)/'grid.c';p.write_text(code);out=p.with_suffix('.s')
+        subprocess.run([str(ROOT/'.local/arm-gcc/usr/bin/arm-none-eabi-gcc'),'-mabi=apcs-gnu',
+            '-mcpu=arm7tdmi','-mthumb','-std=gnu17','-DMODERN=1','-DTESTING=0','-DEMERALD',
+            '-iquote',str(source/'include'),'-S',str(p),'-o',str(out)],check=True,capture_output=True)
+        raw=out.read_bytes();values=[int(v) for v in re.findall(r'^\s*\.word\s+(-?\d+)\s*$',raw.decode(),re.M)]
+    assert len(values)==3
+    return dict(zip(('width','height','map'),values)),hashlib.sha256(raw).hexdigest()
+
+
+def validate(source, library, output, battery=None, save_output=None, expected_geometry_version=None, expected_map_cells=()):
     source, library, output = map(Path, (source, library, output))
     output.mkdir(parents=True, exist_ok=True)
     sha = hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest()
     nm = subprocess.check_output([str(ROOT/'.local/arm-binutils/usr/bin/arm-none-eabi-nm'), '-n', str(source/'pokeemerald.elf')], text=True)
     symbols = {n: int(a, 16) for a, k, n in re.findall(r'^(\w+) (\w) (\S+)$', nm, re.M)}
+    layout=geometry_layout(source) if expected_geometry_version is not None else None
+    grid_layout,grid_probe_sha=backup_grid_layout(source) if expected_map_cells else (None,None)
     callbacks = {v: k for k, v in symbols.items()}
     lib = ctypes.CDLL(str(library.resolve()))
     lib.start.argtypes = [ctypes.c_char_p]
@@ -85,6 +131,20 @@ def validate(source, library, output, battery=None, save_output=None):
                     result.update(player_tile=[lib.read16(obj+16)-7,lib.read16(obj+18)-7],
                                   player_surfing=bool(lib.read8(symbols['gPlayerAvatar'])&8),
                                   player_elevation=lib.read8(obj+11)&15)
+                    if expected_map_cells:
+                        base=symbols['gBackupMapLayout'];width=lib.read32(base+grid_layout['width'])
+                        height=lib.read32(base+grid_layout['height']);data=lib.read32(base+grid_layout['map'])
+                        observed=[]
+                        for x,y,word in expected_map_cells:
+                            assert 0<=x+7<width and 0<=y+7<height
+                            actual=lib.read16(data+2*((y+7)*width+x+7))
+                            assert actual==word,('Continued native map grid differs',x,y,actual,word)
+                            observed.append(dict(tile=[x,y],word=actual))
+                        result['continued_native_map_grid_cells']=observed
+                    if layout is not None:
+                        actual=lib.read16(save+layout['vars_offset']+2*(layout['variable']-layout['vars_start']))
+                        assert actual==expected_geometry_version,('Saved geometry migration did not finish',actual,expected_geometry_version)
+                        result['geometry_version']=actual
                     if save_output is not None:
                         press(8);step(90)
                         count=lib.read8(symbols['sNumStartMenuActions'])
@@ -129,6 +189,11 @@ def validate(source, library, output, battery=None, save_output=None):
                   fresh_rom_title_to_new_game=True, no_assert_screen=True,
                   controllers_only=True, no_game_memory_writes=True,
                   bundled_save_tested=bool(battery), runs=runs)
+    if layout is not None:
+        report['geometry_layout_proof']=layout
+    if grid_layout is not None:
+        report['backup_grid_layout_proof']=dict(offsets=grid_layout,actual_ARM_APCS_struct_compiled=True,
+                                               assembly_sha256=grid_probe_sha,read_only_RAM_observation=True)
     if battery:
         report.update(bundled_save_continue_to_field=True,
                       bundled_save_sha256=hashlib.sha256(Path(battery).read_bytes()).hexdigest())
@@ -144,5 +209,7 @@ if __name__ == '__main__':
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--battery', type=Path)
     parser.add_argument('--save-output',type=Path)
+    parser.add_argument('--expected-geometry-version',type=int)
+    parser.add_argument('--expect-cell',nargs=3,type=lambda v:int(v,0),action='append',default=[],metavar=('X','Y','WORD'))
     a = parser.parse_args()
-    validate(a.source, a.library, a.output, a.battery,a.save_output)
+    validate(a.source, a.library, a.output, a.battery,a.save_output,a.expected_geometry_version,a.expect_cell)

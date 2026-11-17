@@ -1,5 +1,10 @@
 # Registro de erros
 
+Atual: [visão desatualizada de mapas vizinhos](2026-11-17-neighbor-camera.txt).
+
+Retomada atual: [barqueiro de Pacifidlog, rochas de Slateport e ligações restantes](2026-11-16-harbor-actors-rocks.txt).
+Lote anterior: [Ocaso e diagnóstico de rotas sob glifos](2026-11-16-cave-underlay.txt).
+
 Para o checkpoint de ROMs172 e a cadeia de provas, consulte
 [CI, histórico e bloqueio da release final](2026-11-15-candidate-history-ci.txt).
 

@@ -41,7 +41,7 @@ def stage_geometry(layer, plan, donors):
     """
     if plan['scale'] != 8 or plan['corridor_width'] != 6:
         raise ValueError('Unreviewed physical atlas scale')
-    chunks = plan['chunks']
+    chunks = plan['chunks']+plan.get('retired_candidate_placeholders',[])
     if not chunks or set(donors) != {row['name'] for row in chunks}:
         raise ValueError('Every chunk requires one explicit donor specification')
     group_data = _json(layer, 'data/maps/map_groups.json')
@@ -55,12 +55,21 @@ def stage_geometry(layer, plan, donors):
     original_layouts = copy.deepcopy(layout_data)
     existing_names = {name for group in group_data['group_order'] for name in group_data[group]}
     existing_ids = set(layouts)
+    registry=plan.get('candidate_registry')
+    if registry:
+        for group in registry:
+            if group['name'] in group_data or group['index']!=len(group_data['group_order']):
+                raise ValueError('Candidate append-only registry conflicts with preserved native groups')
+            if not 0<len(group['members'])<=100 or len(set(group['members']))!=len(group['members']):
+                raise ValueError('Invalid candidate group slots')
+            group_data['group_order'].append(group['name']);group_data[group['name']]=list(group['members'])
     bound = copy.deepcopy(plan)
-    ids = {row['id']: row for row in bound['chunks']}
+    write_chunks=bound['chunks']+bound.get('retired_candidate_placeholders',[])
+    ids = {row['id']: row for row in write_chunks}
     if len(ids) != len(chunks):
         raise ValueError('Duplicate chunk map ID')
     records, scripts = [], []
-    for chunk in bound['chunks']:
+    for chunk in write_chunks:
         name = chunk['name']
         if not re.fullmatch(r'[A-Za-z][A-Za-z0-9_]*', name):
             raise ValueError(('Unsafe map name', name))
@@ -77,13 +86,13 @@ def stage_geometry(layer, plan, donors):
                 raise ValueError(('Unexpected existing group key', group))
             group_data['group_order'].append(group)
             group_data[group] = []
-        number = len(group_data[group])
-        if number != chunk['number'] or number >= 100:
+        number = chunk['number'] if registry else len(group_data[group])
+        if number != chunk['number'] or number >= 100 or (registry and (number>=len(group_data[group]) or group_data[group][number]!=name)):
             raise ValueError(('Map number does not match append-only WarpData-safe group', name, number))
         index = group_data['group_order'].index(group)
         if index > 127:
             raise ValueError('Persisted WarpData mapGroup cannot exceed signed 127')
-        group_data[group].append(name)
+        if not registry:group_data[group].append(name)
         chunk['group_index'] = index
         w, h = chunk['width'], chunk['height']
         if any(type(v) is not int or not 1 <= v <= 127 for v in (w, h)):
@@ -108,7 +117,7 @@ def stage_geometry(layer, plan, donors):
                     raise ValueError(('Duplicate water cell', name, x, y))
                 occupied.add(at)
                 values[at] = water
-        if not occupied and not (chunk.get('reserved_terrain') is True
+        if not occupied and not chunk.get('retired_candidate_placeholder') and not (chunk.get('reserved_terrain') is True
                                  and chunk.get('kind') in ('stamp','cave','adapter','dive','port')
                                  and chunk.get('evidence')):
             raise ValueError(('Empty generated ocean', name))

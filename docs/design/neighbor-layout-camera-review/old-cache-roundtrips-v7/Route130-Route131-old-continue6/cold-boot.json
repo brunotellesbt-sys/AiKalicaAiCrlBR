@@ -1,0 +1,194 @@
+{
+  "passed": true,
+  "rom_sha256": "5b5b1ace4c9b681c22540168d0d142abd30b57628d26da9264d508a82bed929c",
+  "fresh_rom_boot_to_title": true,
+  "fresh_rom_title_to_new_game": true,
+  "no_assert_screen": true,
+  "controllers_only": true,
+  "no_game_memory_writes": true,
+  "bundled_save_tested": true,
+  "runs": [
+    {
+      "battery": false,
+      "frames": 2464,
+      "samples": [
+        {
+          "frame": 1200,
+          "callback": "MainCB2_Intro"
+        },
+        {
+          "frame": 1201,
+          "callback": "MainCB2_EndIntro"
+        },
+        {
+          "frame": 1291,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1591,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1592,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1682,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1683,
+          "callback": "CB2_GoToMainMenu"
+        },
+        {
+          "frame": 1773,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2073,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2074,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2164,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2464,
+          "callback": "CB2_MainMenu"
+        }
+      ],
+      "fresh_rom_boot_to_title": true,
+      "fresh_rom_title_to_new_game": true,
+      "new_game_tasks": [
+        "Task_HandleMultichoiceInput",
+        "Task_JourneyIntroRegion"
+      ]
+    },
+    {
+      "battery": true,
+      "frames": 3664,
+      "samples": [
+        {
+          "frame": 1200,
+          "callback": "MainCB2_Intro"
+        },
+        {
+          "frame": 1201,
+          "callback": "MainCB2_EndIntro"
+        },
+        {
+          "frame": 1291,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1591,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1592,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1682,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1683,
+          "callback": "CB2_GoToMainMenu"
+        },
+        {
+          "frame": 1773,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2073,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2074,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2164,
+          "callback": "CB2_ContinueSavedGame"
+        },
+        {
+          "frame": 3064,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3664,
+          "callback": "CB2_Overworld"
+        }
+      ],
+      "bundled_save_continue_to_field": true,
+      "field_map": [
+        0,
+        45
+      ],
+      "player_tile": [
+        2,
+        22
+      ],
+      "player_surfing": true,
+      "player_elevation": 1,
+      "continued_native_map_grid_cells": [
+        {
+          "tile": [
+            -2,
+            18
+          ],
+          "word": 4464
+        },
+        {
+          "tile": [
+            -1,
+            18
+          ],
+          "word": 4464
+        },
+        {
+          "tile": [
+            -2,
+            19
+          ],
+          "word": 4464
+        },
+        {
+          "tile": [
+            -1,
+            19
+          ],
+          "word": 4464
+        }
+      ],
+      "geometry_version": 6
+    }
+  ],
+  "geometry_layout_proof": {
+    "vars_offset": 8600,
+    "variable": 16604,
+    "vars_start": 16384,
+    "current_version": 6,
+    "actual_ARM_APCS_struct_compiled": true,
+    "GetVarPointer_ELF_literal_matches": true,
+    "probe_assembly_sha256": "a1d01189091dacec271bf7f79a39c38884ac38fc821a435dacdce2fe85192948",
+    "global_header_sha256": "7efef4510fad4bea894698a4210d14da99b8141de834efdb4190bfe2bc02b283"
+  },
+  "backup_grid_layout_proof": {
+    "offsets": {
+      "width": 0,
+      "height": 4,
+      "map": 8
+    },
+    "actual_ARM_APCS_struct_compiled": true,
+    "assembly_sha256": "4dc73343c40795b1671f48532d75deb02b0adac9e6937fa435142de4f7b5aed6",
+    "read_only_RAM_observation": true
+  },
+  "bundled_save_continue_to_field": true,
+  "bundled_save_sha256": "a2e6bf828db4198d46acc304e8debee214f4b7a0182abde3cdd8f4f5b59e5fa4"
+}

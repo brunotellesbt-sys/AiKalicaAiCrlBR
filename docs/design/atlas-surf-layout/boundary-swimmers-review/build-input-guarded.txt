@@ -1,0 +1,94 @@
+make: Entering directory '/workspace/AiKalicaAiCrlBR/.local/atlas-borders-swimmers-src'
+g++ -Wall -std=c++17 -O2 json11.cpp mapjson.cpp -o mapjson 
+tools/jsonproc/jsonproc src/data/heal_locations.json src/data/heal_locations.json.txt src/data/heal_locations.h
+tools/jsonproc/jsonproc src/data/heal_locations.json src/data/heal_locations.constants.json.txt include/constants/heal_locations.h
+tools/scaninc/scaninc -M build/emerald/src/field_screen_effect.d -I include -I tools/agbcc/include src/field_screen_effect.c
+tools/scaninc/scaninc -M build/emerald/src/field_specials.d -I include -I tools/agbcc/include src/field_specials.c
+tools/scaninc/scaninc -M build/emerald/src/heal_location.d -I include -I tools/agbcc/include src/heal_location.c
+tools/scaninc/scaninc -M build/emerald/src/journey_family.d -I include -I tools/agbcc/include src/journey_family.c
+tools/scaninc/scaninc -M build/emerald/src/post_battle_event_funcs.d -I include -I tools/agbcc/include src/post_battle_event_funcs.c
+tools/scaninc/scaninc -M build/emerald/src/region_map.d -I include -I tools/agbcc/include src/region_map.c
+tools/scaninc/scaninc -M build/emerald/data/event_scripts.d -I include -I "" data/event_scripts.s
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasCoast33/map.json data/layouts/layouts.json data/maps/JourneyAtlasCoast33
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea005/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea005
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea014/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea014
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea026/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea026
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea027/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea027
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea041/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea041
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea042/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea042
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea047/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea047
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea053/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea053
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea062/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea062
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea065/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea065
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea066/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea066
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea068/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea068
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea074/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea074
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea083/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea083
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea091/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea091
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea094/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea094
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea095/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea095
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea098/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea098
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea113/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea113
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea116/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea116
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea119/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea119
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea132/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea132
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea133/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea133
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea146/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea146
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea156/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea156
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea163/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea163
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea164/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea164
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea176/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea176
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea178/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea178
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea179/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea179
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea184/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea184
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea185/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea185
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea186/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea186
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea211/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea211
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea214/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea214
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea220/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea220
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea226/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea226
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea235/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea235
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea236/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea236
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea250/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea250
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea253/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea253
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea260/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea260
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea263/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea263
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea269/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea269
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea274/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea274
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea276/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea276
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea285/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea285
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea292/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea292
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea294/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea294
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea309/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea309
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea320/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea320
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea322/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea322
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea323/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea323
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea334/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea334
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea343/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea343
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea367/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea367
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea370/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea370
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea371/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea371
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea384/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea384
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea400/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea400
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea414/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea414
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea424/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea424
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea455/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea455
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea465/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea465
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea477/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea477
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea479/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea479
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea485/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea485
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea488/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea488
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea498/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea498
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea502/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea502
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea509/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea509
+tools/mapjson/mapjson map emerald data/maps/JourneyAtlasSea527/map.json data/layouts/layouts.json data/maps/JourneyAtlasSea527
+tools/scaninc/scaninc -M build/emerald/data/map_events.d -I include -I "" data/map_events.s
+tools/scaninc/scaninc -M build/emerald/data/maps.d -I include -I "" data/maps.s
+tools/mapjson/mapjson map emerald data/maps/Route19_UnusedHouse_Frlg/map.json data/layouts/layouts.json data/maps/Route19_UnusedHouse_Frlg
+tools/mapjson/mapjson map emerald data/maps/Route6_UnusedHouse_Frlg/map.json data/layouts/layouts.json data/maps/Route6_UnusedHouse_Frlg
+tools/mapjson/mapjson map emerald data/maps/SevenIsland_UnusedHouse/map.json data/layouts/layouts.json data/maps/SevenIsland_UnusedHouse
+tools/mapjson/mapjson map emerald data/maps/Route23_UnusedHouse/map.json data/layouts/layouts.json data/maps/Route23_UnusedHouse
+python3 tools/learnset_helpers/make_teaching_types.py tools/learnset_helpers/build/all_teaching_types.json
+python3 tools/learnset_helpers/make_tutors.py tools/learnset_helpers/build/all_tutors.json
+python3 tools/learnset_helpers/make_teachables.py tools/learnset_helpers/build
+make: Leaving directory '/workspace/AiKalicaAiCrlBR/.local/atlas-borders-swimmers-src'

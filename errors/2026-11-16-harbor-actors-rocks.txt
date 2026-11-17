@@ -1,0 +1,152 @@
+MIGRAÇÃO533 — IMPLEMENTAÇÃO GUARDADA, ANTES DO BUILD UNIFICADO
+
+Ferramentas novas:atlas_surf_candidate_history.py autentica fixture+freeze e
+reconstrói1932inputs do terreno publicado; atlas_surf_candidate_migration.py
+emite RLE/targets e instala migração3 sem alterar a migração1/2 histórica.
+Versões0/1 vão direto à geometria atual; versão2 usa a tradução533 uma vez;
+versão3 é idempotente. Posição salva é autoridade; preserva seguidores,
+18IDs de portal e sentinelas, reconstrói templates só em nativos com atores
+movidos e limpa o mapView antigo. Nenhum avanço de missão é alterado.
+
+Oito testes de C de restauração passaram: versões, quatro registros de warp,
+posição de objeto desatualizada, modoSurf/pé, seguidores, IDs/sentinelas,
+capitão salvo antigo e retornoidempotente. A primeira tabela conferiu388660
+casos/194330células/18portais emC+terreno; esse ensaio NÃO prova bateriaROM.
+A preparação final adiciona filtro obrigatório: todo destino também precisa
+ter ida/volta física à componenteoceano, inclusive destinos a pé. O resultado
+dessa preparação e o build unificado ainda serão executados após este checkpoint.
+
+prepare_atlas_connected_layout.py somente aceita o diagnóstico fontePASS1SCC,
+IDs estáveis, viagens autenticadas, reconstrução1932inputs, migração com
+censo exaustivo e destinos seguros com saída física. Cria cópia privada nova,
+sem overwrites de preparações antigas nem hardlinks. Não publica ROM nem
+marca validação nativa/final. Os testes rejeitam fonte/provas alteradas,
+destino já existente e tentativa de escolher resgate sem grafo físico.
+321testes atlas PASS (log local journey-v3-source-tools-tests.log).
+
+Próximo: preparar.local/atlas-unified-src pelo novo comando, auditar o filtro,
+compilar/congelar e testar os saves antigos naROM3. Último remoto confirmado
+e97a1239e8083ecc5142863c1fede57372f93795. Fix visual já está lá; cincoROMs
+públicas/8FAIL+1ERROR/PR ainda dependem das provas finais do trabalho original.
+
+ESTADO ANTERIOR PRESERVADO:
+
+REVISÃO COMPLEMENTAR — 16/11/2026 — pedido literal: “Ainda tem uma aqui ó”
+
+A captura mostrou a fatia horizontal sob a plataforma nordeste deSlateport,
+que a primeira correção dequatrocélulas deixou passar. Corrigidas também
+(35,17)/(36,17):055A/055B→0589, e(3,57)/(4,57):0552/0553→052C na praia.
+São oito células no total, com os bits físicos originais intactos. Censo
+completo dos24metatiles General que usam os gráficos de rocha grande cinza:
+8fragmentos→0, três objetos completos preservados, inclusive a divisaRoute109.
+Isso certifica essa família emSlateport; não declarar todas as famílias do jogo.
+
+ROM privada completa3cf3b629f294ac6c40970986da50370dd1d38773ed94bd512c4067355048b9e8;
+ELFf0acdd5c37db32a5ad70e6d8dc4d34d6797d2691f4ed2736da56915d860e4f43;
+marker18a507a63d2cfb995cec34ffbd26a45535d77d25bbccc72d58f3e9d2fdcf40fd.
+Source.local/atlas-harbor-complete-src congelado,533mapas/1959inputs. Provas
+nativas por controles das8células/barreiras e divisaSul PASS,11capturas;
+capitão/ferryida-volta/SAVE/novo bootContinueHouse3 PASS; Three eBirth refeitos
+PASS nos mesmos bytes. Cincoedições3cf ainda não exportadas; não confundir
+com boot5ediçõese8 anterior. Fonte antes/depois inteira e capturasROM/inputs/
+hashes emdocs/design/atlas-surf-layout/slateport-complete-review.
+
+REDE NOVA: quatro viagens ROMe8(rota12,Treasure,Pacifidlog,Bond) comprovam
+água nativa→saída física real→retorno à origem seca. Cada uma usa só uma
+colocação inicial declarada e progresso de história real; depois controles,
+sem escrever terreno/warp. Os12pixels isolados correspondentes são glifos
+de mapas nativos, autenticados porUI+COracle+word+33857hashes+viagens, não
+rotas oceânicas duplicadas. IlhaScene002/treinador movida inteira dentro da
+região original, sem perder IDs/eventos. MB_ROCK_STAIRS é caminhável no
+motor nativo e no percursoBond, não warp; demais escadas direcionais bloqueadas.
+
+PRÉVIA532mapas: sourcePASS,1SCC de água;34costas,18cavernas,5Dive,62testemunhas
+nativas e7portos PASS na fonte. Ainda NÃO está numaROM compilada. Fonte/provas
+emdocs/design/atlas-surf-layout/native-chart-connected-review. Reproduzir com
+--additional-native-edges --native-travel-proofs <native-trips-e8>
+--native-travel-source .local/atlas-harbor-fixes-src --preserve-candidate-ids.
+IDs antigos preservados:459ativos mantêm slot,74aposentados viram placeholders
+bloqueados,73novos anexados;606slots/532ativos. Antes de materializar, falta
+migração versão3 das coordenadas/warps de saves da candidata533 publicada.
+Fixture portátil do preparador533 b8bdb774… e freeze04ddaea4… permitem refazer
+seu terreno exato;1932inputs de mapas/layouts conferidos sem divergência.
+Não usar os23hashes de cavernas/Dive de uma prévia antiga como terreno dof2.
+
+Públicos continuamf2cac1ec… evalidated=false.8FAIL+1ERROR ePR permanecem
+pendentes até migração, build final, provas nativas/visuais/ecologia/saves,
+5edições/browser e publicação. Último remotoe2a6f31c42521128116a4d4ed1cf1f11b4199309.
+Próximo: migração533→532 antes de permitir materialização; não encerrar o
+pedido original de ligar e validar aROM com este checkpoint parcial.
+
+REGISTRO ANTERIOR:
+
+PACIFIDLOG / SLATEPORT — PEDIDOS ADICIONAIS DE16/11/2026
+
+PEDIDOS LITERAIS
+“Deixe esse barqueiro dentro da casa mais próxima a ele, tira ele do caminho”
+“Tem pedras pela metade aqui, pedras de4tiles sem estarem completas. Estão
+com só um ou2, tá feio, isso não pode existir no jogo.”
+Continuam também as ligações/validação da ROM e o PR somente após os nove
+bloqueios finais. Estes pedidos adicionais não cancelaram o trabalho anterior.
+
+CORREÇÕES IMPLEMENTADAS
+1. PacifidlogTown: capitão em(11,27) obstruía a ponte. A porta mais próxima
+é a da House3 em(12,24). Ele passa para(7,6) no interior, com aproximação
+livre pela faixa(4..6,6), sem bloquear a saída. Mesmo scriptJourney_FerryPort11,
+flag/macro e IDnumérico4. Todos os outros atores preservam seus IDs; em
+especial o barco continuaID5, embora o array exterior agora tenha só4atores.
+Os dois moradores originais (girl/trader) e os warps não foram movidos.
+
+2. SlateportCity: em(36,6)/(36,7) e(38,15)/(38,16), os metatiles0x164/0x16C
+mostravam duas fatias verticais de rocha fundida à encosta. Estender a rocha
+apagaria árvores/chão da cidade. As duas fatias visíveis inteiras foram
+retiradas, continuando a face reta nativa0x190 do doador(36,5). Words0x0564/
+0x056C viram0x0590: colisão/altura continuam exatamente iguais. Água,
+construções, árvores, NPCs, eventos, dimensões e demais rochas preservados.
+Não generalizar por paridade de coordenadas nem apagar a falésia junto à pedra.
+Rochas na divisa sul precisam ser vistas com Route109; um render recortado
+na borda do mapa não prova que um objeto inteiro esteja partido no jogo.
+Também testado na ROM: caminhar/Surf até a divisa sul, cruzar Route109 e
+voltar; a câmera da cidade carrega o quarteto150/151/158/159 completo, e
+as duas câmeras nativas mostram a rocha inteira. Não apagar suas metades
+porque o render de um mapa isolado termina entre a fileira superior/inferior.
+
+PROVAS NA ROM PRIVADA ATUAL
+Source.local/atlas-harbor-fixes-src,533mapas/1959inputs preparados, imutável
+depois do build. ROMe8e0ae3d33c1b77d3cc5c6012a67f44f920ddd70fd40c46b4ffac781937fc413;
+ELFdde63270413a14aa79350a05573f3b83a33d22711f26f04175fdbcbcd62c37b5;
+marker6b7dd869595e21b9f90672fd1202fd08a3d79d32755a8598cb63aeb180cab411.
+Uso32922104/33554432bytes. Não editar/buildar durante leitores/validadores.
+Capitão: atravessar ponte nos dois sentidos, entrar House3, NPC4/moradores1/2
+presentes, menu real, ferryHouse3→Mossdeep→Pacifidlog e retorno à casa PASS.
+SAVE pelo menu e boot novo/Continue emHouse3[7,7], pedestre/altura3 PASS.
+BarcoID5 preservado e capitãoID4 ausente da ponte. Nenhum warp/flag/script
+de gameplay é injetado após a única colocação inicial declarada.
+Encostas: quatro células carregadas0x190/colisão1/altura0 e bloqueios por
+controles PASS. Capturas nativas revisadas. Renders fonte inteiros antes/
+depois de Slateport, Pacifidlog eHouse3 também revisados, separados de ROM.
+Three eBirth repetidos nessa mesma ROM PASS. Cinco edições privadas bootadas,
+TESTE também com save distribuído.302testes atlas PASS em77,902s.
+Provas/inputs/hashes em docs/design/atlas-surf-layout/harbor-native-review.
+Corrigidos os fragmentos apontados; a revisão global das demais famílias e
+as provas da release ainda não estão concluídas. Não declarar zero defeitos.
+
+LIGAÇÕES GLOBAIS — PRÉVIA SEPARADA, NÃO COMPILADA
+Saída nova de Slateport usa água nativa na face leste, linhas45..58, além
+da conexão Route134 que ocupa0..39. Confirmação de nenhuma face sombreada;
+doadoresRoute109 com bancosGeneral/Slateport idênticos. Nada do terreno muda.
+No adaptador novo de altura3 de EverGrande, uma curva lateral precisava de
+transição também para o mar1. A face nativa inteira mantém3; zeros só na
+água nova a pelo menos um passo da face. Ainda requer prova nativa própria.
+Fonte5SCCs/538mapas,18cavernas e7portos na maior componente; globalFAIL.
+Restam os fragmentos de mapas nativos/Route12; projeçãoUI sozinha NÃO permite
+excluir raster. Requerem classificação física e viagens reais. A nova
+partição também precisa migrar os saves da candidata533 antes de materializar.
+Reprodutor:diagnose_atlas_connection_repairs.py --additional-native-edges.
+Relatórios:docs/design/atlas-surf-layout/coast-new-exit-review.
+
+ESTADO DA ENTREGA
+CincoROMs/save públicos continuam com os hashes anteriores. As novas provas
+não foram atribuídas aos bytes públicos antigos. Flagvalidated=false e os
+8FAIL+1ERROR finais continuam honestamente pendentes. Não abrir PR ainda.
+Checkpoint remoto anterior3f77734dd98790e5feaa4a1a8033d24e3440b5e2.

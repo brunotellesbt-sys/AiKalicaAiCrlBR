@@ -1,4 +1,542 @@
+CONCLUÍDO — DUAS DIVISAS COM VISÃO DESATUALIZADA —17/11/2026
+Pedido atual, trecho literal: “Consegue reparar isso em alguns lugares?
+Identificar esse padrão, assim como identificou as rotas? Esses termos técnicos
+tem que ser atualizados no aqui, como se fosse um lembrete skill pra não repetir isso”.
+
+Identificado e reparado o desacordo entre layout declarado e ativo naRota131.
+O cabeçalho agora aponta paraSkyPillar, já selecionado incondicionalmente pelo
+script. Não redesenha terreno ativo, atlas, NPCs, warps ou flags. Os mapas
+condicionais130/MirageIsland e111 não foram forçados a uma variante permanente.
+Auditor reutilizávelaudit_neighbor_layouts.py:663mapas conectados; antes3variantes,
+2com diferenças nohalo; após o reparo2variantes e1candidata comhalo diferente.
+Os12patches literais próximos de conexões continuam candidatos para análise de
+estado. O censo não certifica execução de todos os scripts nem alterações emC.
+
+ROM congelada atual:c08cb7771a9731db995b7d99297c8b1ebcdd98d75a9ac5e50cdaef8dcff62c82
+ELF:36989019fbf9b14e8ce93b96701c3c517bee965a6ab755d3c380ebcb9a16449f
+marker:10a2b57e222d642aac218b0a4e04e4a296378fa0f5e237cff73c753123a97114
+Fonte:.local/neighbor-layouts-src;freeze:.local/neighbor-layouts-frozen.json.
+2212outputs,34080inputs exatos;532ativos/606slots;33207772bytes. Auditoria de
+fontePASS, uma componente jogável e nenhum escape para aágua decorativa.
+
+Na mesmaROM:Pacifidlog↔Rota131 eRota130↔Rota131 por controles. Quatro peças
+de cada rocha corretas ANTES da entrada, depois e no retorno; três fases e18
+capturas, BG/VRAM/paleta/pixels/quatro quadrantes conferidos. Dois bloqueios por
+controles: um pela cidade e outro dentro da131; não atravessa as rochas. Uso de
+fixtures iniciais declarado; após isso só controles/getters read-only. São dois
+casos locais confirmados, não uma certificação de todas as divisas do jogo.
+A regressão nativa das103peças+6extras passou novamente naROM atual:54casos,
+210capturas e48aproximações de colisão; seis grupos sem aproximação segura.
+
+Saves reais produzidos na6 junto às duas divisas reproduzem o fundo antigo.
+Continue7 lê a rocha completa no grid; SAVE pelo menu e segundoContinue7
+preservam o reparo, posição, altura eSurf. A versão7 limpa o fundo uma vez,
+sem repetir traduções ou mudar atores/flags de saves6. Cinco edições candidatas
+exportadas e coldbootsPASS; TESTE pública6→Continue7→SAVE→Continue7PASS.
+356testes AtlasPASS; verificadores extras rejeitam prova de outraROM e água
+antiga antes da entrada mesmo comflagfixed=true. Manifestos/ROMs/TESTE/save doPR
+atualizados, sem selo final. Provas emdocs/design/neighbor-layout-camera-review,
+referência compacta ematlas-surf-layout/neighbor-camera-checkpoint.json e cadeia
+compilada ematlas-surf-layout/neighbor-layouts-v7. DeltaV7 reproduzível sobreV6/C8.
+
+Lembrete obrigatório:Aqui/SKILL-DIVISAS-E-CAMERAS.md, apontado porAGENTS.md e
+pela skillgba-map-review. Inclui apron/halo, map popping, layout declarado/ativo,
+setmaplayoutindex, scripts condicionais, bancos/paletas/callbacks, diagonais e
+cachemapView, com o roteiro antes/entrada/retorno/SAVE/Continue. O ZIP foi
+sincronizado; nenhum freeze histórico foi substituído ou certificado como novo.
+
+Último subpedido concluído: identificar o padrão, reparar essas duas divisas,
+provar emROM/saves e registrar o lembrete técnico noAqui. Pendentes anteriores:
+cavernas/câmaras, outros bancos/estados de mapas,39facesDive, treinadores/sprites,
+DEX e release/browser globais. Continuamfalse os gates finais históricos.
+PR112 normal aberto, sem merge; conferir SHA remoto após o commit deste lote.
+
+HISTÓRICO PRESERVADO:
+
+EM ANDAMENTO — VISÃO DO VIZINHO DESATUALIZADA —17/11/2026
+Pedido atual (resumo): “Ok, uma coisa, temos que ter cuidado também com
+rotas uma do lado da outra, modificadas, porque ao andar de um lado pro outro,
+as vezes em uma rota, a visão da outra rota não fica carregada atualizada,
+fica como se tivesse antes da edição, somente ao andar um pouco pro lado e
+efetivamente chegar na rota modificada, que fica igual. Consegue reparar isso
+em alguns lugares? Identificar esse padrão, assim como identificou as rotas?
+Esses termos técnicos tem que ser atualizados no aqui, como se fosse um
+lembrete skill pra não repetir isso”. Consulte a conversa para a formulação exata.
+
+Censo fonte:663mapas conectados,3variantes declaradas por script,2com diferenças
+na faixa de conexão e12patches literais perto de bordas. São candidatos, não
+uma contagem de bugs confirmados. ROM5b5b confirmou duas divisas daRota131:
+Pacifidlog→131 e130→131 exibem água onde o layout ativo tem uma rocha inteira.
+Pela cidade, a faixa velha ainda é copiada para dentro pelo cache da travessia.
+A Rota131 sempre selecionaSkyPillar; o cabeçalho estático aponta paraRoute131.
+
+Reparo preparado: alinhar somente o cabeçalho131 ao layout já incondicional no
+jogo e limpar uma vez o fundo salvo de6→7. Terreno ativo/NPCs/flags/warps não
+são redesenhados. Rota130/MirageIsland eRota111 continuam condicionais. Quatro
+testes da nova lógicaPASS. Fonte privada nova em preparação, sem editar freezes.
+Nativebefore/after do reparo e publicação nova AINDA pendentes; atuais continuam
+nas cinco candidatas103/versão6. Próximo: auditar/build/freeze novo; provar as
+mesmas rochas antes/entrada/retorno, colisão, animação eSAVE/Continue; cinco edições.
+
+Novo lembrete técnico obrigatório:Aqui/SKILL-DIVISAS-E-CAMERAS.md, vinculado por
+AGENTS.md e gba-map-review. Cobre layout declarado/ativo, connectionapron/halo,
+map popping, bancos/paleta/callback, diagonais e cachemapView. Auditor reutilizável:
+audit_neighbor_layouts.py. Provas:docs/design/neighbor-layout-camera-review.
+PR112 aberto; sem merge. Pedido anterior103+6concluído. Cavernas/câmaras e gates
+globais anteriores seguem pendentes. Não alterar flags finais para mascará-los.
+
+HISTÓRICO PRESERVADO:
+
+CONCLUÍDO —103PEÇAS +6FRAGMENTOS DE VARIANTE —17/11/2026
+Pedido literal: “Resolva essas 103 peças suspeitas”.
+
+As103peças de52grupos/20mapas General foram reparadas; censo principal0órfãos,
+462rochas completas preservadas. A revisão das12variantes de layout encontrou
+mais6fragmentos reais naRota131, também reparados, com56instâncias completas
+preservadas nas variantes. A rocha(2,7)..(3,8) daRota131/SkyPillar está inteira:
+não foi apagada para imitar o layout principal. Altura, colisão, eventos, warps,
+conexões, atlas e definições gráficas/paletas/animações existentes preservados.
+
+ROM atual congelada:5b5b1ace4c9b681c22540168d0d142abd30b57628d26da9264d508a82bed929c
+ELF:6242e03fda753aaf193ec584bcfe7494b15a7319f30e9f598728f913de487056
+marker:6046b165b9fd07ff455f4eca7facc115e12827718a2735cee02e98ff70aef6d5
+Fonte:.local/atlas-rocks103-runtime-src;freeze:.local/atlas-rocks103-runtime-frozen.json.
+34080inputs conferidos;2211outputs;532mapas ativos/606slots;33207772bytes.
+Versão6 limpa o fundo salvo de4/5 uma única vez e preserva migrações anteriores.
+
+Prova na mesmaROM:54casos,103células originais+6extras, duas testemunhas da
+rocha completa preservada,210capturas, três fases, quatro quadrantes/oito words,
+BG/VRAM/paleta/scanout/RGB conferidos. Colisão lida em todas;48aproximações
+seguras testadas por controles contra bloqueio. Nos outros6grupos, não havia
+aproximação adjacente nessa componente física preservada; não inventar passagem.
+Fixture de party/progresso/posição/modo declarada; após colocação só controles
+e getters read-only. Isso não equivale a percorrer20mapas ou jogar a campanha.
+
+Cinco edições exportadas e coldboots PASS; TESTE pública2→Continue6→SAVE pelo
+menu→coldContinue6 PASS. Baterias privadas4 e5 passaram o mesmo roundtrip.
+Prova adicional junto ao fragmento: save real naROM4 com055A/055B naRota110,
+Continue6 lê0589/0589, SAVE e segundoContinue mantêm o reparo e posição/modo.
+Grid lido só daRAM, com offsetof da struct compilado emARM; nenhum setter no
+coldboot.349testes AtlasPASS; depois10testes checkpoint e2de corrupção nativa
+PASS, incluindo pixel adulterado comhash renovado e prova deROM antiga.
+
+As cinco ROMs candidatas, bateriaTESTE, checksums e manifestos doPR112 foram
+atualizados. Provas novas versionadas emdocs/design/atlas-surf-layout/rocks103-v6;
+freeze históricof2 e seus testes permanecem intactos. Evidência completa em
+docs/design/native-rock-fragments-review, incluindo antes/depois20mapas, variante,
+54casos e saves. Snapshotdelta preparado contraC8 preserva todos os2211hashes.
+O ZIP mantém referência autenticada ao material completo do repositório.
+Reprodutores:prepare_atlas_surf_redesign.py;validate_atlas_103_rocks_native.py;
+verify_atlas_103_rocks_native.py;validate_cold_boot.py --expect-cell X Y WORD;
+verify_atlas_surf_checkpoint.py. Não compilar fontes congeladas.
+
+Último subpedido concluído: corrigir/provar as103peças e os6extras encontrados.
+Pendentes do pedido anterior: cavernas externas grandes/diversas,105câmaras com
+entradas próprias, demais bancos de rochas,39faces de bordas/Dive, provas nativas
+de96treinadores/7sprites,261declaraçõesDEX, browser e release global. Flags de
+release continuamfalse;8FAIL+1ERROR históricos não foram mascarados. Sem merge.
+PR112 normal:https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/pull/112
+
+HISTÓRICO PRESERVADO:
+
+CHECKPOINT 103 + VARIANTES REAIS —17/11/2026
+Pedido literal: “Resolva essas 103 peças suspeitas”.
+
+As103correções da fonte foram compiladas na preparação preservada
+.local/atlas-rocks103-src (ROM1ab2baa41aac5b5bb4ea3d1bcb7866b5c6fa67f9c7280766d900747724f78fea).
+O emulador verificou os47primeiros grupos, mas aRota131 carrega pelo script
+LAYOUT_ROUTE131_SKY_PILLAR. A rocha(2,7)..(3,8) dessa variante está completa:
+conservar suas quatro peças. O censo adicional das12variantesGeneral encontrou
+seis fragmentos reais diferentes naRota131; todos recebem reparos explícitos.
+Preservar as56instâncias de rochas completas nessas variantes, além das462
+nos layouts principais. Seis testes de integridade/deriva/eventos/doadoresPASS.
+
+Preparador e runner agora verificam layouts nativos ativos por ponteiroELF,
+54grupos e109células, com duas testemunhas extras da rocha completa daRota131.
+Versão6 preserva migrações anteriores e limpa só o fundo salvo de baterias4/5.
+Fonte nova em preparação:.local/atlas-rocks103-runtime-src, sem alterar nenhum
+snapshot congelado. Próximo: compilar/congelar, provar pixels/animação/colisão,
+SAVE/Continue e cinco edições. NENHUM PASS nativo completo ou release final
+é declarado neste checkpoint. PR112 aberto; públicos aindaf2. Cavernas,
+câmaras individuais e demais requisitos anteriores permanecem pendentes.
+
+HISTÓRICO PRESERVADO:
+
+PEDIDO ATUAL — “Resolva essas 103 peças suspeitas” —17/11/2026
+
+Prioridade atual: concluir as103peças antes de retomar as cavernas/câmaras.
+Fonte:103fragmentos em52grupos/20mapas corrigidos;0restantes e462rochas grandes
+inteiras preservadas. Altura, colisão, eventos, warps, posições, conexões e
+arte do atlas intactos. Encostas/praias recompostas e quartos isolados trocados
+por pedras nativas inteiras18C/194. Um doador193 de vegetação foi rejeitado
+na prévia, corrigido antes de compilar. Todos os doadores são autenticados
+pelos oito words e vistos; nenhuma definição gráfica ou animação muda.
+
+Quatro testes de fontePASS. Auditoria atualPASS,1SCC jogável e0água decorativa
+alcançável. Versão5 atualiza apenas o fundo salvo de baterias4, uma só vez,
+preservando posições/NPCs/flags. Antes/depois completos e52recortes revisados
+emdocs/design/native-rock-fragments-review. Resumo e manifestohash em
+docs/design/atlas-surf-layout/rocks103-checkpoint.json; imagens completas
+ficam no repositório, sem alegação de replay offline pelo ZIP das quatro ROMs.
+
+AINDA NÃO compilado este reparo103. Próximo: fonte privada nova, build/freeze,
+verificação das103células/BG/VRAM/paleta no emulador, colisões por controles,
+SAVE/Continue e cinco edições; atualizar PR112. Não editar fontes congeladas.
+
+O lote anterior de bordas/96nadadores/7sprites foi compilado em fonte separada
+.local/atlas-borders-swimmers-src, ainda sem provas nativas novas. ROM65f11271630f6e5b212d2dabc28bc48570c883aa12427692b07b788b1c4e5b5b;
+ELFe958471761613f50618bab7e977d8e8a9105e86c7a48aab18045e2e73807ba98;
+marker2e6c26d45681533fe69f1533bd95668d1186031638b64d95fd3362cbc96ae6f8.
+34080inputs exatos;532ativos/606slots; versão4;33207700bytes ROM. Preservar.
+Públicos aindaf2; C8 e baselines permanecem. PR112 aberto, sem merge.
+Trabalhos anteriores de cavernas grandes/diversas,105câmaras e demais gates
+continuam pendentes após esta prioridade explícita do usuário.
+
+HISTÓRICO PRESERVADO:
+
+BUILD PRIVADO EM PREPARAÇÃO —17/11/2026
+
+Fonte nova materializada em.local/atlas-borders-swimmers-src:2191outputs,
+34080inputs conferidos sem divergência.499mapas inteiros comNPCs renderizados;
+contatos00..04 e20 inspecionados. O renderer usa quadro estático padrão e não
+certifica orientação/abordagem nativa. Comando reproduzível:
+render_atlas_surf_redesign.py --source <fonte> --output <fora-da-fonte>.
+
+Erro novo reproduzido no make-j4: process_groups chamava clean_heal_locations
+em paralelo; mesmo42destinos válidos reescreviam o mesmoJSON autenticado.
+Uma corrida retirou a vírgula entreRoute4/Route10. O gerador agora só valida,
+e exige reparo explícito se referência inválida. JSON original exato restaurado
+na preparação parcial, sem alterar C8/171. Dois testesC++ com chamadas paralelas
+PASS; geração de mapas/learnsets repetidaPASS e34080inputs continuam exatos.
+
+Caches derivados antigos foram regeneravelmente liberados; apenas exports
+privados reproduzíveis das5ediçõesC8 foram retirados após conferir seusSHA.
+ROMrawC8/ELF/fontes/manifests/provas preservados. PNGs imutáveis iguais entre
+snapshots antigos compartilham inode somente leitura, com todos caminhos e
+bytes preservados. A fonte nova permanece independente para escrita.
+
+Próximo: compilar/congelar esta fonte e testar pelos controles. Essa nova
+reforma ainda não tem prova nativa nem publicação. Exteriores/câmaras/rochas
+globais/DEX e demais pendências listadas abaixo continuam em trabalho.
+
+HISTÓRICO PRESERVADO:
+
+REFORMA EM ANDAMENTO —17/11/2026 — BORDAS, NADADORES E SPRITES NA FONTE
+
+O pedido literal mais recente continua registrado abaixo; o usuário confirmou
+“Ok?”. Preparação nova reproduzível em prepare_atlas_surf_redesign.py, sem
+editar171/C8, preserva todos os antigos IDs e células passáveis.66.669células
+de enchimento viram água real além das linhas de recifes. Primeira análise
+porSCC omitia atalhos deEmerge(3538células); corrigido com auditoria dirigida
+e guardaC deDive/Emerge baseada na tabela real de água decorativa. Fonte
+finalPASS,1SCC jogável,0células decorativas alcançáveis; obrigações antigas
+continuamPASS. Halo indefinido muda só desenho; colisão/altura/BorderId intactos.
+
+96nadadores distribuídos na água jogável, com corredor3x6 e quatro orientações.
+Flags novas compiladas contra macros/aliases antigos, sem ampliar save. Sete
+estátuas restantes trocadas pelos próprios sprites nativos, com todos os
+scripts/flags/IDs de captura intactos. Versão4 preserva migração3 e renova
+templates só nos mapas alterados, com96resgates laterais para saves exatamente
+sobre um novo treinador.339casos na suíteAtlas:337PASS na primeira execução; dois erros eram fixtures
+históricos ausentes no sparsecheckout. Restaurados3arquivos exatos doHEAD,
+os5testes desse módulo passaram, incluindo os dois.6testes de fundo/lookupC/
+ABIARM e3de migração4PASS. Não são provas nativas da ROM.
+
+Evidências emdocs/design/atlas-surf-layout/boundary-swimmers-review. Ainda
+NÃO compilado na ROM; público seguef2 eC8 congelada é o checkpoint anterior.
+Próximo: materializar fonte privada, renderizar mapas inteiros, compilar,
+congelar e testar bordas/Emerge/câmeras/sprites/batalhas/saves pelos controles.
+Continuam pendentes39faces nativas/Dive da troca visual de recifes, exteriores
+grandes/variados e105câmaras com entradas próprias, pedras globais,261declarações
+DEX,5edições/release/browser. PR112 aberto; não houve merge nem release final.
+
+HISTÓRICO PRESERVADO:
+
+RETOMADA —17/11/2026 — C8 TESTADA; NOVA REFORMA AUTORIZADA
+
+Pedido literal atual do usuário:
+“Ok vamos continuar os trabalhos, avance mais, verifique se tem mais coisas mal
+feitas, até porque essa situação da pedra tem em outros lugares. Algumas massas
+de terra em caves estão iguais, eu falei que queria aleatório como as outras
+estão, e eu quero cavernas grandes, como as maiores dali, digo do lado de fora.
+Sobre os lendários nas partes de dentro, gostaria que cada um deles tivesse uma
+entrada e uma câmara dentro, no estilo dos lagos de pokemon platinum, só que
+diversificado por dentro, cada caverna dessas tem mais de um lendário, então
+deve ter uma entrada diferente pra cada câmara, certo? E dentro dessas câmaras,
+o pokemon deve ter sua aparência, e não a de uma estátua. A propósito, nas rotas
+de surf está faltando treinadores. Sobre as bordas de pedra, não precisa ser
+amontoado de tudo ser pedra, basta as bordas limites de onde está a rota, o
+resto deve ser água comum, do ambiente mesmo, só que bloqueadas de passar
+devido as linhas de pedras.” Depois confirmou:“Ok?”
+
+O usuário pediu abrir PR normal agora; PR112 aberto, sem merge:
+https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/pull/112
+A espera antiga pela release final para abrirPR foi substituída por esse pedido.
+Objetivo original de validar/publicar aROM continua junto com as novas mudanças.
+
+CHECKPOINT CONCLUÍDO, ANTES DA REFORMA NOVA
+Fonte privada.local/atlas-unified-src congelada,532ativos/606slots/2180outputs.
+ROMc8b38210ee63de35b7cb0e3a391626e603375f00e40b6280fd7ce8d30a4605b5;
+ELFf0d58a150ecf0516b41ac8bf667855d20d232dc8ea022ca68cf678d86b0d2198;
+marker400c392356c2db4ef3d60e0cccf280ba67116a28331ce27d50d3452809fb7f20.
+34077inputs conferidos; manifesto7eb8c72a83cafd4b973ccf54fb2f36ec02ad451d9b32b57240462d058798a697.
+Compilação33145420/33554432bytes(98,78%),409012livres. Não editar snapshots.
+O primeiro erro de alinhamento ARM foi corrigido com RLEpacked6bytes e teste
+real-mabi=apcs-gnu.322testes atlas PASS. Três cópias runtime532rows e quatro
+arrays completos de migração conferidos byte a byte noROM/ELF compilados.
+Fonte1SCC;34costas/18cavernas/5Dive/62testemunhas nativas/7portos PASS na fonte.
+
+PROVAS NA MESMA ROMC8
+Slateport8células/barreiras, pedra sul inteira/Route109 ida-volta PASS(11capturas).
+CapitãoHouse3, ponte livre, porta, moradores/barco, ferryMossdeep ida-volta eSAVE
+PASS(8capturas). ThreeSurf/terminal/recife/Coast/retorno/SAVE PASS(10capturas).
+Birth saída/retorno/Harbor/madeira/avatar PASS. Quatro viagens reais deRoute12,
+Treasure,Pacifidlog eBond às costas e de volta à origem seca PASS.
+CincoDive do mundo verdadeiro, não probes isolados: mergulho, portal, santuário,
+saída eEmerge aos donos físicos corretos PASS(5casos/25capturas). Rejeições de
+Emerge em todos os limites ainda não cobertas por esse runner.
+SaveTESTE público e save171 preservado: Continue→SAVE pelo menu→coldContinue
+novamente PASS, sem segunda translação. Versão3 lida via offsetofARM+literal
+GetVarPointer noELF, sem RAMwrites no coldboot. Não afirmar versão original
+lida naROM171, apenas origem da bateria preservada e versão3 na saída.
+Três saves produzidos por controles naROMe8(com a geometria533 publicada):
+Sea000Surf inalterado,Sea004Surf aposentado,Scene002pé em terreno movido.
+OldcoldContinue2→newContinue3→SAVE→newcoldContinue sem repetir migração PASS.
+Inicialização de posição/versão/party nesses três casos é fixture declarada.
+As cinco edições privadas C8 foram exportadas e todas passaram coldboot;TESTE
+com save migrado e versão3 também PASS. Boot não certifica encontros/batalhas.
+
+ECOLOGIA/DEX
+Censo deC e gatilhos preservou190famílias493 e383famílias1025. Na componente
+oceano há62/111famílias; todas as famílias das novas rotas têm testemunhas
+alcançáveis. Campanha nativa fora desse grafo não foi revalidada integralmente.
+O reparo deDEX bloqueia corretamente261declarações antigas de espécie/área
+sem gatilho do proprietário esperado. Não são261espécies extintas: contagem
+de famílias preservada não prova cada forma/área antiga. Falta atribuir donos/
+substituições de área alcançáveis, sem esconder o bloqueio nem só apagar linhas.
+Reprodutor novo diagnose_atlas_connected_ecology.py autentica freeze e produz
+relatórios completos; não escreve fonte/ROM. Antes doDEX, donos das entradas
+geométricas ordinárias são vinculados ao aliasC compilado, sem mover terreno.
+
+REVISÃO E PRESERVAÇÃO
+24mapas inteiros de fonte renderizados e contact sheet visto:6locais+18cavernas;
+23comNPCs. Birth tem VAR_0 dinâmico não resolvido no renderer; arquivo dele está
+explicitamente terrain-only, e a capturaROM existe separadamente. CapturasC8
+deSlateport,House3 eDimensoes também vistas. Objetos/margens globais ainda
+precisam da nova revisão pedida; não declarar todas as famílias de pedras limpas.
+Provas, capturas, baterias, perfis,2180outputs exatos e freeze estão em
+docs/design/atlas-surf-layout/unified-native-review. Baselines anteriores intactos.
+
+O ambiente caiu por transporte exec-server. A causa de infraestrutura não foi
+confirmada; o status do provedor chegou a dizer running enquanto comandos
+falhavam. Recuperou. Antes da recuperação, o commit13cc14dbfc033f84a4f0b1113ec1569d84ad1363
+preservou o reparo e runners pelaAPI. Após recuperar, backup tar+patch e stash
+seletivo foram guardados, fetch/fast-forward aplicado, e os cinco arquivos
+locais resultaram byte a byte MATCH com o commitAPI. Nada de reset/clean.
+Boots/provas pendentes foram retomados e concluídos. O guia/estado/ZIP agora
+recebem este checkpoint juntos. Dados locais não foram perdidos.
+
+INCOMPLETO E PRÓXIMO
+A reforma nova do usuário AINDA NÃO está naROMC8. Criar fonte privada nova;
+não modificarC8 nem171. Ampliar/diversificar18exteriores, dar entrada própria
+para cada câmara/lendário, preservar105scripts/flags de captura e referências,
+usar sprite próprio comprovado, adicionar treinadoresSurf e auditar rochas.
+Substituir enchimentos de recifes por linhas contínuas nos limites das rotas,
+com água normal além delas e prova física de que o jogador não atravessa as
+linhas. Água decorativa inacessível precisa classificação explícita no grafo,
+resgates de saves e ecologia; não fingir colisão em tiles de água passável.
+Muitos eventos atuais já declaram OBJ_EVENT_GFX_SPECIES; verificar pixels e
+resolução de sprite naROM, pois isso sozinho não prova ausência de estátuas.
+Câmaras separadas exigem warps/retornos, IDs, geração, flags eDEX coerentes.
+A arte fixa do atlas permanece intacta. Expansões de chão precisam preservar
+acessos e migração única de saves2 e3; salvos171/publicados continuam suportados.
+Depois: fechar261pendênciasDEX, viagens/câmeras/tempos restantes, encontros/caps
+nas5edições, verifier/publisher172, browser/Pages e publicação final.8FAIL+1ERROR
+finais evalidated=false não foram burlados. ROMs/save públicos seguem anteriores.
+
+HISTÓRICO PRESERVADO:
+
+MIGRAÇÃO533 — IMPLEMENTAÇÃO GUARDADA, ANTES DO BUILD UNIFICADO
+
+Ferramentas novas:atlas_surf_candidate_history.py autentica fixture+freeze e
+reconstrói1932inputs do terreno publicado; atlas_surf_candidate_migration.py
+emite RLE/targets e instala migração3 sem alterar a migração1/2 histórica.
+Versões0/1 vão direto à geometria atual; versão2 usa a tradução533 uma vez;
+versão3 é idempotente. Posição salva é autoridade; preserva seguidores,
+18IDs de portal e sentinelas, reconstrói templates só em nativos com atores
+movidos e limpa o mapView antigo. Nenhum avanço de missão é alterado.
+
+Oito testes de C de restauração passaram: versões, quatro registros de warp,
+posição de objeto desatualizada, modoSurf/pé, seguidores, IDs/sentinelas,
+capitão salvo antigo e retornoidempotente. A primeira tabela conferiu388660
+casos/194330células/18portais emC+terreno; esse ensaio NÃO prova bateriaROM.
+A preparação final adiciona filtro obrigatório: todo destino também precisa
+ter ida/volta física à componenteoceano, inclusive destinos a pé. O resultado
+dessa preparação e o build unificado ainda serão executados após este checkpoint.
+
+prepare_atlas_connected_layout.py somente aceita o diagnóstico fontePASS1SCC,
+IDs estáveis, viagens autenticadas, reconstrução1932inputs, migração com
+censo exaustivo e destinos seguros com saída física. Cria cópia privada nova,
+sem overwrites de preparações antigas nem hardlinks. Não publica ROM nem
+marca validação nativa/final. Os testes rejeitam fonte/provas alteradas,
+destino já existente e tentativa de escolher resgate sem grafo físico.
+321testes atlas PASS (log local journey-v3-source-tools-tests.log).
+
+Próximo: preparar.local/atlas-unified-src pelo novo comando, auditar o filtro,
+compilar/congelar e testar os saves antigos naROM3. Último remoto confirmado
+e97a1239e8083ecc5142863c1fede57372f93795. Fix visual já está lá; cincoROMs
+públicas/8FAIL+1ERROR/PR ainda dependem das provas finais do trabalho original.
+
+ESTADO ANTERIOR PRESERVADO:
+
+REVISÃO COMPLEMENTAR — 16/11/2026 — pedido literal: “Ainda tem uma aqui ó”
+
+A captura mostrou a fatia horizontal sob a plataforma nordeste deSlateport,
+que a primeira correção dequatrocélulas deixou passar. Corrigidas também
+(35,17)/(36,17):055A/055B→0589, e(3,57)/(4,57):0552/0553→052C na praia.
+São oito células no total, com os bits físicos originais intactos. Censo
+completo dos24metatiles General que usam os gráficos de rocha grande cinza:
+8fragmentos→0, três objetos completos preservados, inclusive a divisaRoute109.
+Isso certifica essa família emSlateport; não declarar todas as famílias do jogo.
+
+ROM privada completa3cf3b629f294ac6c40970986da50370dd1d38773ed94bd512c4067355048b9e8;
+ELFf0acdd5c37db32a5ad70e6d8dc4d34d6797d2691f4ed2736da56915d860e4f43;
+marker18a507a63d2cfb995cec34ffbd26a45535d77d25bbccc72d58f3e9d2fdcf40fd.
+Source.local/atlas-harbor-complete-src congelado,533mapas/1959inputs. Provas
+nativas por controles das8células/barreiras e divisaSul PASS,11capturas;
+capitão/ferryida-volta/SAVE/novo bootContinueHouse3 PASS; Three eBirth refeitos
+PASS nos mesmos bytes. Cincoedições3cf ainda não exportadas; não confundir
+com boot5ediçõese8 anterior. Fonte antes/depois inteira e capturasROM/inputs/
+hashes emdocs/design/atlas-surf-layout/slateport-complete-review.
+
+REDE NOVA: quatro viagens ROMe8(rota12,Treasure,Pacifidlog,Bond) comprovam
+água nativa→saída física real→retorno à origem seca. Cada uma usa só uma
+colocação inicial declarada e progresso de história real; depois controles,
+sem escrever terreno/warp. Os12pixels isolados correspondentes são glifos
+de mapas nativos, autenticados porUI+COracle+word+33857hashes+viagens, não
+rotas oceânicas duplicadas. IlhaScene002/treinador movida inteira dentro da
+região original, sem perder IDs/eventos. MB_ROCK_STAIRS é caminhável no
+motor nativo e no percursoBond, não warp; demais escadas direcionais bloqueadas.
+
+PRÉVIA532mapas: sourcePASS,1SCC de água;34costas,18cavernas,5Dive,62testemunhas
+nativas e7portos PASS na fonte. Ainda NÃO está numaROM compilada. Fonte/provas
+emdocs/design/atlas-surf-layout/native-chart-connected-review. Reproduzir com
+--additional-native-edges --native-travel-proofs <native-trips-e8>
+--native-travel-source .local/atlas-harbor-fixes-src --preserve-candidate-ids.
+IDs antigos preservados:459ativos mantêm slot,74aposentados viram placeholders
+bloqueados,73novos anexados;606slots/532ativos. Antes de materializar, falta
+migração versão3 das coordenadas/warps de saves da candidata533 publicada.
+Fixture portátil do preparador533 b8bdb774… e freeze04ddaea4… permitem refazer
+seu terreno exato;1932inputs de mapas/layouts conferidos sem divergência.
+Não usar os23hashes de cavernas/Dive de uma prévia antiga como terreno dof2.
+
+Públicos continuamf2cac1ec… evalidated=false.8FAIL+1ERROR ePR permanecem
+pendentes até migração, build final, provas nativas/visuais/ecologia/saves,
+5edições/browser e publicação. Último remotoe2a6f31c42521128116a4d4ed1cf1f11b4199309.
+Próximo: migração533→532 antes de permitir materialização; não encerrar o
+pedido original de ligar e validar aROM com este checkpoint parcial.
+
+ESTADO ANTERIOR PRESERVADO:
+
 # Aqui — LEIA PRIMEIRO: retomada técnica de Pokémon Journey
+
+## Estado mais recente — 16/11/2026
+
+Pedidos adicionais já corrigidos e testados na ROM privada: barqueiro da
+ponte de Pacifidlog dentro da House3, a casa mais próxima; quatro células
+com fatias de rocha na falésia de Slateport agora formam a face reta nativa.
+Barqueiro conserva serviço/ID4; barco conservaID5, moradores/warps preservados.
+Ponte/porta/capitão/ferryMossdeep/volta/SAVE/novoContinue dentro da casa PASS.
+Capturas e colisões das duas encostas PASS; mapas inteiros fonte revisados.
+Three/Birth refeitos na ROMe8e0ae3d… PASS; cinco edições privadas bootadas,
+TESTE com save.302atlasPASS. Provas e fonte preparada1959arquivos:
+[harbor-native-review](../docs/design/atlas-surf-layout/harbor-native-review/review.json).
+Detalhes/limites: [registro atual](../errors/2026-11-16-harbor-actors-rocks.txt).
+
+Separar geometrias: ROM privada atual usa533mapas e tem15SCCs na análise
+fonte. A prévia NÃO compilada usa538mapas e5SCCs, com a nova saída real de
+Slateport além de Route134 e transição lateral em EverGrande.18cavernas/7portos
+na maior componente da prévia; aindaFAIL global. Fonte/ROM/manifestos públicos
+não foram trocados por essa prévia. Ela exige migração de saves533 e provas.
+Não excluir fragmentos por projeçãoUI apenas nem enfraquecer os gates finais.
+[coast-new-exit-review](../docs/design/atlas-surf-layout/coast-new-exit-review/review.json).
+Ainda faltam classificação/acessos de trechos nativos, revisão global de
+objetos, migração, rede/ecologia/edições e publicação.8FAIL+1ERROR pendentes;
+PR permanece para depois da correção completa. Continuar o pedido original.
+
+Lotes anteriores:
+
+Lote em andamento após o pedido “Tá e por que não resolveu? Faz as ligações
+e valide a rom. Já pedi.” Three foi corrigido fisicamente: terminal48x20
+preservado e oceano nativo de seis tiles ao sul, mapa48x27. Nove recifes
+completos abertos; prédio/barcos/NPCs/warps/coordenadas anteriores preservados.
+ROM privada8602c36d… compilada: circuito por controles leste/oeste, Surf,
+adaptador/retorno, desembarque, barreiras, SAVE pelo menu e Continue em boot
+novo PASS. Birth repetido nessa mesma ROM PASS. Cinco edições privadas
+exportadas e bootadas, TESTE também com bateria distribuída. Isso é prova
+local; as ROMs públicas continuam anteriores. Provas e fonte preparada exata:
+[three-native-review](../docs/design/atlas-surf-layout/three-native-review/review.json).
+
+Titans:12recifes inteiros do antigo limite externo cruzavam a rota. Removidos
+somente esses12, com água nativa0x112B; ilha/montanha/portal/NPC intactos.
+Migração exata não aceita antiga posição bloqueada como posição de jogador.
+Renders fonte inteiros antes/depois revisados; ainda sem provaROM deste delta.
+[titans-perimeter-review](../docs/design/atlas-surf-layout/titans-perimeter-review/review.json).
+
+Prévia explícita de costas/underlay:7SCCs,18/18cavernas e7/7portos na maior
+componente, mas auditoria global continuaFAIL. Novas fases/cantos nativos e
+saída sul de Route128 mudam a partição para537mapas. NÃO materializar/publicar
+essa geometria antes da migração dos saves da candidata533. Diagnóstico:
+`tools/hoenn/diagnose_atlas_connection_repairs.py`; evidências em
+[coast-connection-review](../docs/design/atlas-surf-layout/coast-connection-review/review.json).
+Continuar pelas ilhas nativas/fragmentos, corrente oeste de Pacifidlog e
+encontro lateral de altura3 em Ever Grande. Depois migração/build/freeze e
+provas completas atuais. Os8FAIL+1ERROR de release permanecem; PR só ao concluir.
+297testes atlas PASS neste lote; inclui preservação dos374stamps, exceção
+explícita dos12recifes, migração e rejeição de cantos não autenticados.
+
+Os lotes anteriores abaixo são históricos:
+
+Segundo lote: correção física das franjas nativas das18cavernas. O corte
+artificial de3tiles foi substituído pela margem já reservada de9tiles,
+copiando só células Surf comprovadas do parent e suas palavras inteiras.
+Fonte passou de17 para16SCCs; Alvorada agora está na componente principal,
+que contém15/18cavernas e6/7portos. São5126células de água nativa recuperadas,
+sem mudar core/objetos/NPCs/IDs/origens/dimensões/arte do atlas.
+287testes atlas passaram; renders fonte completos antes/depois das18cavernas
+foram inspecionados. Provas e hashes:
+[cave-fringe-review](../docs/design/atlas-surf-layout/cave-fringe-review/review.json).
+Fonte privada preparada em.local/atlas-fringe9-src; AINDA sem build ou provaROM.
+As cinco ROMs públicas/save continuam anteriores. O grafo global continua
+FAIL;8FAIL+1ERROR de release não foram eliminados. Não abrir PR ainda.
+Próximo: Titans/Artisan/Mare, ThreeIsland, redes regionais e provas nativas.
+
+Primeiro lote desta retomada, preservado abaixo:
+
+PR111 já integrado em main8a7b78a6. Continuidade em
+`fix/atlas-continuity-2026-11-16`. Pedido novo: “Então bora progredir, comece
+a fazer”. O usuário determinou **abrir o PR apenas após corrigir os8FAIL+1ERROR**;
+isso substitui a orientação histórica de abrir PR com pendências. Fazer
+checkpoints/pushes sem PR enquanto faltarem as provas reais.
+
+Fonte171 reconstruída e conferida:171camadas,32250inputs, manifesto d3a06e90…
+igual ao contrato. WIP de Ocaso corrigido: endpoint histórico(141,111), não
+(140,111); sete pixels sob glifos autenticados por arte/branches/geradores
+pinados. Fixture portátil e12testes próprios;285testes atlas passaram.
+
+**A extração sozinha não corrige a rede.** Comparação dos overlays reais:
+ZERO diferenças nos1955arquivos preparados,533mapas e IDs/origens/dimensões
+iguais;17SCCs persistem. Os pixels recuperados ficam nas reservas de cenário,
+onde a máscara nativa prevalece. Não apagar o corpo da caverna para abrir água.
+Relatório reproduzível e hashes em
+[occluded-routes-review/review.json](../docs/design/atlas-surf-layout/occluded-routes-review/review.json).
+Detalhes/guardas em [errors](../errors/2026-11-16-cave-underlay.txt).
+
+Próximo trabalho: franja nativa de cavernas dentro da reserva existente,
+ThreeIsland e demais ligações. Sem novo build nem prova na ROM neste lote;
+as cinco candidatas/save continuam com os hashes anteriores. Os nove
+bloqueios da release continuam pendentes. O restante deste documento conserva
+o histórico de15/11 e não revoga este estado atual.
 
 > [Erros atuais da CI, log completo e roteiro de correção](ERROS-PARA-PROXIMA-IA.md).
 

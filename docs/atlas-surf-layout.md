@@ -1,3 +1,93 @@
+PEDIDO ATUAL — “Resolva essas 103 peças suspeitas” —17/11/2026
+
+Prioridade atual: concluir as103peças antes de retomar as cavernas/câmaras.
+Fonte:103fragmentos em52grupos/20mapas corrigidos;0restantes e462rochas grandes
+inteiras preservadas. Altura, colisão, eventos, warps, posições, conexões e
+arte do atlas intactos. Encostas/praias recompostas e quartos isolados trocados
+por pedras nativas inteiras18C/194. Um doador193 de vegetação foi rejeitado
+na prévia, corrigido antes de compilar. Todos os doadores são autenticados
+pelos oito words e vistos; nenhuma definição gráfica ou animação muda.
+
+Quatro testes de fontePASS. Auditoria atualPASS,1SCC jogável e0água decorativa
+alcançável. Versão5 atualiza apenas o fundo salvo de baterias4, uma só vez,
+preservando posições/NPCs/flags. Antes/depois completos e52recortes revisados
+emdocs/design/native-rock-fragments-review. Resumo e manifestohash em
+docs/design/atlas-surf-layout/rocks103-checkpoint.json; imagens completas
+ficam no repositório, sem alegação de replay offline pelo ZIP das quatro ROMs.
+
+AINDA NÃO compilado este reparo103. Próximo: fonte privada nova, build/freeze,
+verificação das103células/BG/VRAM/paleta no emulador, colisões por controles,
+SAVE/Continue e cinco edições; atualizar PR112. Não editar fontes congeladas.
+
+O lote anterior de bordas/96nadadores/7sprites foi compilado em fonte separada
+.local/atlas-borders-swimmers-src, ainda sem provas nativas novas. ROM65f11271630f6e5b212d2dabc28bc48570c883aa12427692b07b788b1c4e5b5b;
+ELFe958471761613f50618bab7e977d8e8a9105e86c7a48aab18045e2e73807ba98;
+marker2e6c26d45681533fe69f1533bd95668d1186031638b64d95fd3362cbc96ae6f8.
+34080inputs exatos;532ativos/606slots; versão4;33207700bytes ROM. Preservar.
+Públicos aindaf2; C8 e baselines permanecem. PR112 aberto, sem merge.
+Trabalhos anteriores de cavernas grandes/diversas,105câmaras e demais gates
+continuam pendentes após esta prioridade explícita do usuário.
+
+HISTÓRICO PRESERVADO:
+
+BUILD PRIVADO EM PREPARAÇÃO —17/11/2026
+
+Fonte nova materializada em.local/atlas-borders-swimmers-src:2191outputs,
+34080inputs conferidos sem divergência.499mapas inteiros comNPCs renderizados;
+contatos00..04 e20 inspecionados. O renderer usa quadro estático padrão e não
+certifica orientação/abordagem nativa. Comando reproduzível:
+render_atlas_surf_redesign.py --source <fonte> --output <fora-da-fonte>.
+
+Erro novo reproduzido no make-j4: process_groups chamava clean_heal_locations
+em paralelo; mesmo42destinos válidos reescreviam o mesmoJSON autenticado.
+Uma corrida retirou a vírgula entreRoute4/Route10. O gerador agora só valida,
+e exige reparo explícito se referência inválida. JSON original exato restaurado
+na preparação parcial, sem alterar C8/171. Dois testesC++ com chamadas paralelas
+PASS; geração de mapas/learnsets repetidaPASS e34080inputs continuam exatos.
+
+Caches derivados antigos foram regeneravelmente liberados; apenas exports
+privados reproduzíveis das5ediçõesC8 foram retirados após conferir seusSHA.
+ROMrawC8/ELF/fontes/manifests/provas preservados. PNGs imutáveis iguais entre
+snapshots antigos compartilham inode somente leitura, com todos caminhos e
+bytes preservados. A fonte nova permanece independente para escrita.
+
+Próximo: compilar/congelar esta fonte e testar pelos controles. Essa nova
+reforma ainda não tem prova nativa nem publicação. Exteriores/câmaras/rochas
+globais/DEX e demais pendências listadas abaixo continuam em trabalho.
+
+HISTÓRICO PRESERVADO:
+
+REFORMA EM ANDAMENTO —17/11/2026 — BORDAS, NADADORES E SPRITES NA FONTE
+
+O pedido literal mais recente continua registrado abaixo; o usuário confirmou
+“Ok?”. Preparação nova reproduzível em prepare_atlas_surf_redesign.py, sem
+editar171/C8, preserva todos os antigos IDs e células passáveis.66.669células
+de enchimento viram água real além das linhas de recifes. Primeira análise
+porSCC omitia atalhos deEmerge(3538células); corrigido com auditoria dirigida
+e guardaC deDive/Emerge baseada na tabela real de água decorativa. Fonte
+finalPASS,1SCC jogável,0células decorativas alcançáveis; obrigações antigas
+continuamPASS. Halo indefinido muda só desenho; colisão/altura/BorderId intactos.
+
+96nadadores distribuídos na água jogável, com corredor3x6 e quatro orientações.
+Flags novas compiladas contra macros/aliases antigos, sem ampliar save. Sete
+estátuas restantes trocadas pelos próprios sprites nativos, com todos os
+scripts/flags/IDs de captura intactos. Versão4 preserva migração3 e renova
+templates só nos mapas alterados, com96resgates laterais para saves exatamente
+sobre um novo treinador.339casos na suíteAtlas:337PASS na primeira execução; dois erros eram fixtures
+históricos ausentes no sparsecheckout. Restaurados3arquivos exatos doHEAD,
+os5testes desse módulo passaram, incluindo os dois.6testes de fundo/lookupC/
+ABIARM e3de migração4PASS. Não são provas nativas da ROM.
+
+Evidências emdocs/design/atlas-surf-layout/boundary-swimmers-review. Ainda
+NÃO compilado na ROM; público seguef2 eC8 congelada é o checkpoint anterior.
+Próximo: materializar fonte privada, renderizar mapas inteiros, compilar,
+congelar e testar bordas/Emerge/câmeras/sprites/batalhas/saves pelos controles.
+Continuam pendentes39faces nativas/Dive da troca visual de recifes, exteriores
+grandes/variados e105câmaras com entradas próprias, pedras globais,261declarações
+DEX,5edições/release/browser. PR112 aberto; não houve merge nem release final.
+
+HISTÓRICO PRESERVADO:
+
 # Rotas físicas segundo o atlas — camada 172
 
 **Em reconstrução. Sem ROM 172 validada ou publicada.**

@@ -4,10 +4,11 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from types import SimpleNamespace
 
 from atlas_surf_legacy import _render as render_legacy
 from atlas_surface_batteries import migration_source
-from atlas_surf_migration import fallback_tables,render_fallback
+from atlas_surf_migration import fallback_tables,render_fallback,_exact_rectangles
 from test_atlas_surface_batteries import PREFIX,WRAPPERS
 
 
@@ -84,6 +85,19 @@ class FallbackRuntimeTests(unittest.TestCase):
 
 
 class FallbackTableTests(unittest.TestCase):
+    def test_removed_blocked_reef_is_never_an_exact_saved_player_destination(self):
+        placement=dict(stamp='old:0',name='New',stamp_offset=[0,0])
+        inventory=dict(stamps=[dict(key='old:0',parent_map='Old',source_rect=[0,0,2,1],core_cells=[[0,0],[1,0]])])
+        parent=SimpleNamespace(maps={'Old':dict(id='MAP_OLD')},word=lambda n,x,y:[0x112b,0x1643][x])
+        view=SimpleNamespace(maps={'New':dict(id='MAP_NEW')},word=lambda n,x,y:0x112b)
+        safe={('New',x,0):dict(mode='surf',elevation=1) for x in range(2)}
+        rows,report=_exact_rectangles(parent,view,[placement],inventory,{'Old'},safe)
+        self.assertEqual([r['source_rect'] for r in rows],[[0,0,1,1]])
+        self.assertEqual(report['unsafe_or_occupied_core_cells_using_fallback'],1)
+        parent.word=lambda n,x,y:0x312b
+        with self.assertRaisesRegex(ValueError,'altered scenery'):
+            _exact_rectangles(parent,view,[placement],inventory,{'Old'},safe)
+
     def test_missing_pixel_targets_are_frozen_and_deduplicated(self):
         fixture=fixture_tables()
         candidates={'walk':{PIXEL:fixture['target_evidence'][0]},'surf':{PIXEL:fixture['target_evidence'][1]}}

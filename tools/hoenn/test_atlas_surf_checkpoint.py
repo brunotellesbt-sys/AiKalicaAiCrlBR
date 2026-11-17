@@ -11,6 +11,12 @@ import verify_atlas_surf_checkpoint as check
 
 
 class CandidateMetadataTests(unittest.TestCase):
+    def test_revision_has_its_own_proofs_and_unknown_revision_is_rejected(self):
+        self.assertEqual(check.evidence_directory({}),check.PROOF)
+        self.assertEqual(check.evidence_directory(dict(candidate_revision='rocks103-v6')),check.PROOF/'rocks103-v6')
+        with self.assertRaisesRegex(AssertionError,'Unknown candidate revision'):
+            check.evidence_directory(dict(candidate_revision='../candidate-cold-boot'))
+
     def test_final_seal_and_missing_or_stale_proofs_are_rejected(self):
         good = dict(candidate=True, validated=False, final_release_validated=False,
                     validation_scope=check.SCOPE, proofs=[])

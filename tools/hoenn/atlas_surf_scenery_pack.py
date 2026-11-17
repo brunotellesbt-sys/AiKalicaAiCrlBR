@@ -307,23 +307,42 @@ def pack_grouped_scenery(inputs, truth, inventory, route_pixels, *, fixed=(), ex
                 art_changed=False,original_player_gps_used=False,source_routing_proven=False,native_validated=False)
 
 
-def preserve_native_water_collars(inputs,inventory,plan):
+def rebind_cave_route_water(inventory,plan,route_pixels):
+    """Recompute route halo after authenticated ink changes, keeping each core.
+
+    Stored placements predate glyph underlay recovery. Their native masks
+    cannot silently discard new route water outside the complete native core.
+    """
+    result=deepcopy(plan);stamps={s['key']:s for s in inventory['stamps']}
+    water=rasterize(route_pixels);rebound={}
+    for index,row in enumerate(result['placements']):
+        if row.get('kind')!='cave':continue
+        fresh=bind_native_water(row,stamps[row['stamp']],water)
+        result['placements'][index]=fresh;rebound[row['name']]=fresh
+    result['reservations']=[deepcopy(rebound.get(row['name'],row)) for row in result['reservations']]
+    return result
+
+
+def preserve_native_water_collars(inputs,inventory,plan,*,cave_radius=9):
     """Keep the actual native water fringe around a complete object.
 
     Copying only the object's bounding rectangle can strand its wet corners in
-    tiny artificial pools. Fixed cave islands need three native water tiles
-    to meet the pixel's real six-tile channel across its margin. Other scenery
+    tiny artificial pools. Fixed cave islands retain all nine reserved camera
+    tiles when the original map contains real Surf water there. A three-tile
+    cutoff stranded Alvorada before its neighboring physical map. Other scenery
     keeps one tile. Each added cell has an exact adjacent native
     source word and a collision-zero Surf witness; no invented ocean path is
     permitted. Nine camera tiles already reserve this fringe's physical owner.
     """
+    if type(cave_radius) is not int or not 0<=cave_radius<=9:
+        raise ValueError('Cave fringe must fit the nine-tile camera reservation')
     result=deepcopy(plan);stamps={s['key']:s for s in inventory['stamps']}
     maps={r['name']:r for r in result['reservations']};witnesses=[]
     words_by_map=defaultdict(dict)
     for row in result['placements']:
         stamp=stamps[row['stamp']];name=stamp['parent_map'];layout=inputs.layout(name)
         left,top,w,h=stamp['source_rect'];sx,sy=row['stamp_offset']
-        radius=3 if row['kind']=='cave' else 1
+        radius=cave_radius if row['kind']=='cave' else 1
         proof=[]
         for yy in range(-radius,h+radius):
             for xx in range(-radius,w+radius):

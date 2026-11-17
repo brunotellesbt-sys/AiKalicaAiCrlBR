@@ -23,6 +23,7 @@ from atlas_surf_legacy import (HEADER_PATH as LEGACY_HEADER, NAVIGATION_PATH, _n
                                _retired as _legacy_retired, _tables as _legacy_tables,
                                _render as _legacy_render)
 from atlas_surf_overlay import OverlaySource
+from atlas_surf_background import cells as background_cells
 from atlas_surface_batteries import stage as stage_batteries
 from badge_story_layer import read
 
@@ -102,6 +103,7 @@ def _destinations(view,plan,enums):
         if [layout['width'],layout['height']]!=[chunk['width'],chunk['height']]:
             raise ValueError(('Migration target dimensions differ from frozen physical plan',name))
         blocked=_occupied(view.maps[name]);ox,oy=chunk['origin']
+        blocked.update(background_cells(chunk))
         for y in range(layout['height']):
             for x in range(layout['width']):
                 if (x,y) in blocked:continue
@@ -197,7 +199,14 @@ def _exact_rectangles(parent,view,placements,inventory,retired_names,all_safe):
         for x,y in stamp['core_cells']:
             if not 0<=x<width or not 0<=y<height:raise ValueError(('Scenery core outside authenticated stamp',stamp['key']))
             source_x,source_y=left+x,top+y;target_x,target_y=sx+x,sy+y
-            if parent.word(old,source_x,source_y)!=view.word(new,target_x,target_y):
+            old_word=parent.word(old,source_x,source_y)
+            if old_word&0xc00:
+                # A blocked rock was never a legal standing position. In
+                # particular, removing an obsolete outer reef must not make
+                # that barrier an exact player-save translation. Corrupt or
+                # externally modified positions retain the safe fallback.
+                unsafe+=1;continue
+            if old_word!=view.word(new,target_x,target_y):
                 raise ValueError(('Exact save translation would enter altered scenery',stamp['key'],x,y))
             target=all_safe.get((new,target_x,target_y))
             if target is None:

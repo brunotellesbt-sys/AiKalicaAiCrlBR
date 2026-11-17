@@ -1,4 +1,10 @@
+Retomada mais recente: [docs/RETOMADA-2026-11-17.md](docs/RETOMADA-2026-11-17.md).
+PR112 aberto. Último lote: visão das divisas131/Pacifidlog/130 e cache salvo,
+ROMc08cb777, versão7. Cavernas/câmaras e validação global continuam pendentes.
+
 # Instruções persistentes do projeto
+
+Antes de editar mapas conectados, aplique também [Aqui/SKILL-DIVISAS-E-CAMERAS.md](Aqui/SKILL-DIVISAS-E-CAMERAS.md): layout declarado/ativo, faixa do vizinho, bancos, diagonais e cache `mapView` precisam concordar antes e depois da travessia.
 
 Antes de qualquer tarefa, leia [docs/CONTINUIDADE-TECNICA-IA.md](docs/CONTINUIDADE-TECNICA-IA.md)
 e o JSON histórico lá vinculado. Após cada lote coerente, atualize esse guia e

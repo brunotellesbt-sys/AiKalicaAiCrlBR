@@ -102,6 +102,10 @@ def _edge_point(layout, point, direction):
             (direction == 'down' and y == layout['height']-1))
 
 
+def native_edge_witnesses(row):
+    return row['source_wet_edge_witnesses']+row.get('authored_native_edge_witnesses',[])
+
+
 def _water(plan):
     result = set()
     for chunk in plan['chunks']:
@@ -165,7 +169,7 @@ def _mouth(inputs, row, registration):
     layout = inputs.layout(name)
     if direction not in CARDINAL or not _edge_point(layout, anchor, direction):
         raise ValueError(('Adapter must leave the real native map edge', name, direction, anchor))
-    witnesses = {tuple(w['native_tile']): w for w in row['source_wet_edge_witnesses']
+    witnesses = {tuple(w['native_tile']): w for w in native_edge_witnesses(row)
                  if OPPOSITE[w['direction']] == direction}
     if anchor not in witnesses:
         raise ValueError(('Adapter anchor is not an authenticated old wet edge', name, anchor))
@@ -186,6 +190,51 @@ def _mouth(inputs, row, registration):
     start = max(left, min(center-width//2, right-width+1))
     cells = [available[value] for value in range(start, start+width)]
     return anchor, cells, [copy.deepcopy(witnesses[p]) for p in cells]
+
+
+def face_witnesses(inputs,row,mouth,origin,direction,cells,near,*,allow_extensions=False):
+    """Authenticate the whole real face, including wet raster corner cells.
+
+    A six-wide core can have an eight-wide face at an atlas junction. Those
+    extra contacts retain the same actual native water component/elevation.
+    Reopening a blocked old-ocean corner additionally requires an explicit
+    authored opt-in, the bounded reciprocal old interface and hashes/words of
+    both terrains. Unknown openings still fail; native terrain is not edited.
+    """
+    name=row['native_map'];layout=inputs.layout(name);dx,dy=CARDINAL[direction]
+    known={tuple(w['native_tile']):w for w in native_edge_witnesses(row)
+           if OPPOSITE[w['direction']]==direction}
+    labels,_=inputs.water_components(name);result={p:copy.deepcopy(known[p]) for p in mouth}
+    base=inputs.word(name,*mouth[0])
+    for x,y in cells:
+        if (x if dx else y)!=near:continue
+        p=x-origin[0]-dx,y-origin[1]-dy
+        if not(0<=p[0]<layout['width'] and 0<=p[1]<layout['height']) or not inputs.water(name,*p):continue
+        if labels.get(p)!=row['component'] or not compatible_height(base,inputs.word(name,*p)):
+            raise ValueError(('Unregistered native water opening beside adapter mouth',name,p))
+        if p in known:result[p]=copy.deepcopy(known[p]);continue
+        if not allow_extensions or not hasattr(inputs,'read'):
+            raise ValueError(('Unregistered native water opening beside adapter mouth',name,p))
+        # The old ocean can have a blocked corner next to a genuine native
+        # water cell. A newly authored blue-ink junction may reopen that corner;
+        # authenticate BOTH old words and preserve the native map unchanged.
+        matches=[]
+        for old,d,offset in sorted({(w['retired_map'],w['direction'],w['offset'])
+                                    for w in row['source_wet_edge_witnesses'] if OPPOSITE[w['direction']]==direction}):
+            old_layout=inputs.layout(old)
+            q=(old_layout['width']-1 if dx<0 else 0,p[1]+offset) if dx else (p[0]+offset,old_layout['height']-1 if dy<0 else 0)
+            if not(0<=q[0]<old_layout['width'] and 0<=q[1]<old_layout['height']):continue
+            word=inputs.word(name,*p);old_word=inputs.word(old,*q)
+            matches.append(dict(native_tile=list(p),retired_tile=list(q),retired_map=old,
+                direction=d,offset=offset,words=[old_word,word],height_compatible=compatible_height(old_word,word),
+                newly_authored_corner_contact=True,old_neighbor_passable=inputs.water(old,*q),
+                native_word_preserved=True,
+                native_blockdata_sha256=hashlib.sha256(inputs.read(layout['blockdata_filepath'])).hexdigest(),
+                old_blockdata_sha256=hashlib.sha256(inputs.read(old_layout['blockdata_filepath'])).hexdigest()))
+        if not matches:
+            raise ValueError(('Native corner extension lacks a bounded historical neighbor',name,p))
+        result[p]=matches[0]
+    return [result[p] for p in sorted(result,key=lambda p:(p[1],p[0]))]
 
 
 def plan_adapters(inputs, component_inventory, plan, registrations, truth, *, require_complete=True):
@@ -251,12 +300,8 @@ def plan_adapters(inputs, component_inventory, plan, registrations, truth, *, re
         # All generated water at this native face must refer to the same
         # authenticated source component/contact, including padded corners.
         near = glob[0]+dx if dx else glob[1]+dy
-        for x,y in cells:
-            if (x if dx else y) != near: continue
-            target = x-origin[0]-dx, y-origin[1]-dy
-            if (0 <= target[0] < layout['width'] and 0 <= target[1] < layout['height']
-                    and inputs.water(name,*target) and target not in mouth):
-                raise ValueError(('Unregistered native water opening beside adapter mouth', name, target))
+        witnesses=face_witnesses(inputs,row,mouth,origin,direction,cells,near,
+                                 allow_extensions=registration.get('allow_extended_native_contacts',False))
         far = glob[0]+depth*dx if dx else glob[1]+depth*dy
         far_cells = {p for p in cells if p[0 if dx else 1] == far}
         if not far_cells or not any((x+dx,y+dy) in water and not (rect[0] <= x+dx < rect[2] and rect[1] <= y+dy < rect[3])
@@ -279,16 +324,25 @@ def plan_adapters(inputs, component_inventory, plan, registrations, truth, *, re
         reef = inputs.word(donor['map'], *_point(donor['reef_tile'], 'reef donor'))
         if not inputs.water(donor['map'], *donor['water_tile']) or wet >> 12 != 1 or not reef & 0xC00:
             raise ValueError('Adapter needs real height1 water and a blocked reef in its own banks')
-        heights = {inputs.word(name,*p) >> 12 for p in mouth}
+        heights = {inputs.word(name,*w['native_tile']) >> 12 for w in witnesses}
         selected = next((h for h in (1,3,0,15) if h in heights), None)
         if selected is None or not all(compatible_height(h<<12,selected<<12) for h in heights):
             raise ValueError(('Mouth has incompatible native elevations', name, heights))
         adapter_height = 3 if selected == 3 else 1
         overrides = []
+        lateral_transitions=[]
         if adapter_height != 1:
             for x,y in sorted(cells, key=lambda p:(p[1],p[0])):
                 distance = (x-glob[0])*dx+(y-glob[1])*dy
                 height = 1 if distance == depth else 0 if distance == depth-1 else adapter_height
+                # A route can also meet a SIDE of the new adapter at an ink
+                # junction. Preserve the complete native face at height3;
+                # only new water at least one step away from it can receive
+                # the same transition already used at the far ocean face.
+                if 2<=distance<depth-1 and any((x+ax,y+ay) in water
+                        and not(rect[0]<=x+ax<rect[2] and rect[1]<=y+ay<rect[3])
+                        for ax,ay in CARDINAL.values()):
+                    height=0;lateral_transitions.append([x-rect[0],y-rect[1]])
                 if height != 1:
                     overrides.append(dict(tile=[x-rect[0],y-rect[1]],word=(wet&0xFFF)|(height<<12)))
         adapter_name = f'JourneyAtlasCoast{number:02}'
@@ -309,6 +363,7 @@ def plan_adapters(inputs, component_inventory, plan, registrations, truth, *, re
                              adapter_connection=dict(direction=OPPOSITE[direction],map=inputs.maps[name]['id'],offset=-offset),
                              source_wet_mouth=witnesses,native_heights=sorted(heights),
                              adapter_height=adapter_height,transition_height_zero_only_in_new_adapter=bool(overrides),
+                             lateral_height_transitions=lateral_transitions,
                              atlas_evidence=evidence))
     return dict(kind='atlas-local-native-adapter-plan/v1',reservations=reservations,native_bounds=bounds,
                 bindings=bindings,complete_component_coverage=set(supplied)==set(rows),

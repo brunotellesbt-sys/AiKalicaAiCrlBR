@@ -1,0 +1,48 @@
+{
+  "file": "Pokemon-Journey-TESTE.gba",
+  "bytes": 33554432,
+  "sha256": "b7445c29804f36f188e0b753849ac4bb55fa605218c7486c04ee73d3fc7945ae",
+  "base_normal_file": "Pokemon-Journey-Gen1-9-Normal.gba",
+  "base_normal_sha256": "47a3a75c36b50bcd96584bd7c7ced7f121f68b8e5b14e93338f503c17b7f951f",
+  "review_mode_offset": 9178554,
+  "patched_byte_offsets": [
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    189,
+    9178554
+  ],
+  "base_header_hex": "4a4f55524e4559204739204e42504545303196000000000000000000009a",
+  "automatic_trainer_approaches": false,
+  "random_wild_encounters": false,
+  "fishing_encounters": false,
+  "manual_trainer_and_legendary_interactions_preserved": true,
+  "separate_save_identity": true,
+  "candidate": true,
+  "validated": false,
+  "final_release_validated": false,
+  "validation_scope": "atlas-surf-layout-candidate",
+  "cold_boot": {
+    "report": "docs/design/atlas-surf-layout/candidate-cold-boot/TESTE-continued-after-save/cold-boot.json",
+    "sha256": "f89b018d59b4969d746694c9f890003d8091d42f48b64795e291ea4d883a84aa"
+  },
+  "native_battery_roundtrip": {
+    "continue_save_menu_continue": true,
+    "field_map": [
+      0,
+      6
+    ],
+    "player_tile": [
+      28,
+      18
+    ],
+    "player_elevation": 5,
+    "player_surfing": false,
+    "all_retired_save_positions_natively_proven": false
+  },
+  "bundled_save_sha256": "36ace517a44bc0315a4a5309054a4913f39e0f1872a073763ba685c3421e5861"
+}

@@ -31,9 +31,13 @@ HISTORICAL_COMMIT = '4f7e33cd49004cde4dfb668d76deb95803981cf9'
 ATTACHMENT_SCOPES = {SCOPE, 'coastal-ecology', 'coastal-closures', 'sevii-integrated-piers', 'generated-world-audit',
                      'arrival-coast-review', 'game-continuity-review', 'sevii-route-boundaries', 'coast-scenery-review', 'generated-area-review'}
 CONTINUITY_FILES = ('docs/CONTINUIDADE-TECNICA-IA.md',
+                    'docs/RETOMADA-2026-11-17.md',
                     'docs/RETOMADA_TECNICA_POKEMON_JOURNEY.json',
                     'docs/ULTIMO_PEDIDO_POS_PR108.json',
-                    'docs/atlas-surf-layout.md', 'errors/ESTADO-DA-TAREFA.txt')
+                    'docs/atlas-surf-layout.md', 'errors/ESTADO-DA-TAREFA.txt',
+                    'errors/2026-11-16-cave-underlay.txt',
+                    'errors/2026-11-16-harbor-actors-rocks.txt',
+                    'errors/2026-11-17-unified-rom.txt')
 
 
 def releases(info):
