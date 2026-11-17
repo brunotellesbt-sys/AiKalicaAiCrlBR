@@ -3,67 +3,65 @@
   "compiled_roms_updated": true,
   "final_release_validated": false,
   "global_gameplay_validation_complete": false,
-  "source_raw_rom_sha256": "f2cac1ecb79e23c3b6a6a43e07568b7c5b03579dc265ba99d33bc3bad7940c0e",
-  "elf_sha256": "618b0556e031fee25a1aace83f33bb8491b7e316ebd910a34f968098b135ba73",
-  "marker_sha256": "dede6825a87fd08742f369478f2004a70b9e7d2b8f1a6c0aa44ad43d559328f8",
-  "ROM_used_bytes": 32920992,
+  "source_raw_rom_sha256": "5b5b1ace4c9b681c22540168d0d142abd30b57628d26da9264d508a82bed929c",
+  "elf_sha256": "6242e03fda753aaf193ec584bcfe7494b15a7319f30e9f598728f913de487056",
+  "marker_sha256": "6046b165b9fd07ff455f4eca7facc115e12827718a2735cee02e98ff70aef6d5",
+  "ROM_used_bytes": 33207772,
   "variants": [
     {
       "file": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "sha256": "a24b7304d4dda4a7d1abd60849161409468a4a29d00528a9549643333e7cb40d"
+      "sha256": "ba4dc51f1078a9806d82beb4113acbc43df6ca82f3904d040c62456bd5c454ca"
     },
     {
       "file": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "sha256": "a2103c4bebe2f8fecc12d863b16f7e0971fb35040b6cf15bf2f0a95f5275146c"
+      "sha256": "796867b5b60b0f0b6fe5c5e2e8a5b5f71e17a18679b7acc6fd50a66e1a04987b"
     },
     {
       "file": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "sha256": "47a3a75c36b50bcd96584bd7c7ced7f121f68b8e5b14e93338f503c17b7f951f"
+      "sha256": "0b5ca10c855be60293304ad24c46cd3545a08ec36c4d6754e9b562344edc0c87"
     },
     {
       "file": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "sha256": "14ebe89fc88f3d4d55cc8a48f7ed1edf36bf997a26d397a8c653e5d6320bf36d"
+      "sha256": "1631bec2ebea6c61c934851bc30582acfff43b8270f53fbacd730367fe8f0b1a"
     }
   ],
   "TESTE": {
     "file": "rom-de-teste/Pokemon-Journey-TESTE.gba",
-    "sha256": "b7445c29804f36f188e0b753849ac4bb55fa605218c7486c04ee73d3fc7945ae",
-    "battery_sha256": "36ace517a44bc0315a4a5309054a4913f39e0f1872a073763ba685c3421e5861"
+    "sha256": "d95b2053e11fcae542319f242bf88ba2b03dee7a159bc99570e70dc916c215ab",
+    "battery_sha256": "b7981d05d4181683e6c2f157e9c94a337f61c5c2d68c30720078dfb7226661eb"
   },
   "cold_boot": {
     "Gen1-4-Normal": {
-      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/Gen1-4-Normal/cold-boot.json",
-      "sha256": "2dd979a0bc0d2dd7c37f11f944fe3378824ebd5a88745494c9902587eb27df07"
+      "report": "docs/design/atlas-surf-layout/rocks103-v6/candidate-cold-boot/Gen1-4-Normal/cold-boot.json",
+      "sha256": "ba7ae6a486b3c2153430bc13c8c6f09f9d52ab402b9825afd3bd3584b411ee73"
     },
     "Gen1-4-Hard": {
-      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/Gen1-4-Hard/cold-boot.json",
-      "sha256": "ed2b4ada9431a967347894dce476eefd2c7c148acfb32ff51bac004224a0e190"
+      "report": "docs/design/atlas-surf-layout/rocks103-v6/candidate-cold-boot/Gen1-4-Hard/cold-boot.json",
+      "sha256": "439fa771733534f45cf862ccd469e1d7f32ff824bac5dfe6640e0492d65d61d7"
     },
     "Gen1-9-Normal": {
-      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/Gen1-9-Normal/cold-boot.json",
-      "sha256": "c09585dff4e0134c0ced199880699922f581a5442e3dc00b2ecc80d15de3a0f7"
+      "report": "docs/design/atlas-surf-layout/rocks103-v6/candidate-cold-boot/Gen1-9-Normal/cold-boot.json",
+      "sha256": "d9535dbb888a168e0e77d0da4edfd65e1de9f9f0c26d6ee7e0f24d3878d62985"
     },
     "Gen1-9-Hard": {
-      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/Gen1-9-Hard/cold-boot.json",
-      "sha256": "3473ed0db718053c0c2fe7a8224a66faeab23586a3022c9a59e0b4c259767647"
+      "report": "docs/design/atlas-surf-layout/rocks103-v6/candidate-cold-boot/Gen1-9-Hard/cold-boot.json",
+      "sha256": "d0471d9df835d86d13b7d3e09183711055366a7d0dd616e9b18896d7a480389d"
     },
     "TESTE": {
-      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/TESTE-continued-after-save/cold-boot.json",
-      "sha256": "f89b018d59b4969d746694c9f890003d8091d42f48b64795e291ea4d883a84aa"
+      "report": "docs/design/atlas-surf-layout/rocks103-v6/candidate-cold-boot/TESTE-continued-after-save/cold-boot.json",
+      "sha256": "63db7e4beeb0e55c45636183d9e930d7b5f1b4a1e6ec1b77d2a78e5dddd3e655"
     }
   },
   "pending_obligations": [
-    "geographic/native SCC review of partial chart pixels and local coast registrations",
-    "native coast GPS integration; historical grids disagree at32/33 interfaces",
-    "global source SCC including fixed caves and transformed Dive",
-    "safe version2 migration of every retired save position and warp reference",
-    "all remaining C/script references to retired map IDs",
-    "reachable ecology/DEX replacement and real edition caps",
-    "whole-map rendering, native controls, batteries and five edition proofs"
+    "native current-ROM boundary, Dive/Emerge, camera, sprite, trainer and old-save checks",
+    "large distinct cave exteriors and separate entrances/chambers for all105 legendaries",
+    "complete-rock review of other native primary banks; General103 repaired",
+    "remaining DEX, five-edition, browser and final release gates"
   ],
   "previous_port_validation": {
     "manifest": "mods/hoenn/atlas-surf-layout-validation/baseline/versions.json",
     "manifest_sha256": "eca26adfcb0b15f9da78aadec1b8738f66288fcc58d4d727ee2ea2a6274e29ec",
     "retested_on_current_rom": false
-  }
+  },
+  "candidate_revision": "rocks103-v6"
 }

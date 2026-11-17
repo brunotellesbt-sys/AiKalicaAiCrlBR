@@ -1,3 +1,55 @@
+CONCLUÍDO —103PEÇAS +6FRAGMENTOS DE VARIANTE —17/11/2026
+Pedido literal: “Resolva essas 103 peças suspeitas”.
+
+As103peças de52grupos/20mapas General foram reparadas; censo principal0órfãos,
+462rochas completas preservadas. A revisão das12variantes de layout encontrou
+mais6fragmentos reais naRota131, também reparados, com56instâncias completas
+preservadas nas variantes. A rocha(2,7)..(3,8) daRota131/SkyPillar está inteira:
+não foi apagada para imitar o layout principal. Altura, colisão, eventos, warps,
+conexões, atlas e definições gráficas/paletas/animações existentes preservados.
+
+ROM atual congelada:5b5b1ace4c9b681c22540168d0d142abd30b57628d26da9264d508a82bed929c
+ELF:6242e03fda753aaf193ec584bcfe7494b15a7319f30e9f598728f913de487056
+marker:6046b165b9fd07ff455f4eca7facc115e12827718a2735cee02e98ff70aef6d5
+Fonte:.local/atlas-rocks103-runtime-src;freeze:.local/atlas-rocks103-runtime-frozen.json.
+34080inputs conferidos;2211outputs;532mapas ativos/606slots;33207772bytes.
+Versão6 limpa o fundo salvo de4/5 uma única vez e preserva migrações anteriores.
+
+Prova na mesmaROM:54casos,103células originais+6extras, duas testemunhas da
+rocha completa preservada,210capturas, três fases, quatro quadrantes/oito words,
+BG/VRAM/paleta/scanout/RGB conferidos. Colisão lida em todas;48aproximações
+seguras testadas por controles contra bloqueio. Nos outros6grupos, não havia
+aproximação adjacente nessa componente física preservada; não inventar passagem.
+Fixture de party/progresso/posição/modo declarada; após colocação só controles
+e getters read-only. Isso não equivale a percorrer20mapas ou jogar a campanha.
+
+Cinco edições exportadas e coldboots PASS; TESTE pública2→Continue6→SAVE pelo
+menu→coldContinue6 PASS. Baterias privadas4 e5 passaram o mesmo roundtrip.
+Prova adicional junto ao fragmento: save real naROM4 com055A/055B naRota110,
+Continue6 lê0589/0589, SAVE e segundoContinue mantêm o reparo e posição/modo.
+Grid lido só daRAM, com offsetof da struct compilado emARM; nenhum setter no
+coldboot.349testes AtlasPASS; depois10testes checkpoint e2de corrupção nativa
+PASS, incluindo pixel adulterado comhash renovado e prova deROM antiga.
+
+As cinco ROMs candidatas, bateriaTESTE, checksums e manifestos doPR112 foram
+atualizados. Provas novas versionadas emdocs/design/atlas-surf-layout/rocks103-v6;
+freeze históricof2 e seus testes permanecem intactos. Evidência completa em
+docs/design/native-rock-fragments-review, incluindo antes/depois20mapas, variante,
+54casos e saves. Snapshotdelta preparado contraC8 preserva todos os2211hashes.
+O ZIP mantém referência autenticada ao material completo do repositório.
+Reprodutores:prepare_atlas_surf_redesign.py;validate_atlas_103_rocks_native.py;
+verify_atlas_103_rocks_native.py;validate_cold_boot.py --expect-cell X Y WORD;
+verify_atlas_surf_checkpoint.py. Não compilar fontes congeladas.
+
+Último subpedido concluído: corrigir/provar as103peças e os6extras encontrados.
+Pendentes do pedido anterior: cavernas externas grandes/diversas,105câmaras com
+entradas próprias, demais bancos de rochas,39faces de bordas/Dive, provas nativas
+de96treinadores/7sprites,261declaraçõesDEX, browser e release global. Flags de
+release continuamfalse;8FAIL+1ERROR históricos não foram mascarados. Sem merge.
+PR112 normal:https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/pull/112
+
+HISTÓRICO PRESERVADO:
+
 CHECKPOINT 103 + VARIANTES REAIS —17/11/2026
 Pedido literal: “Resolva essas 103 peças suspeitas”.
 

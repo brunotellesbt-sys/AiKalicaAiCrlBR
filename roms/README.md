@@ -1,12 +1,14 @@
 # ROMs atuais
 
-Atualização desta branch: **candidata da camada172 — rotas físicas conforme o atlas**.
-As quatro edições abaixo e a TESTE foram recompiladas com os533mapas, cenários,
-acessosDive e migração atuais. Boot real passou nas cinco; a TESTE passou também
-Continue→salvar pelo menu→Continue. A validação global ainda está pendente:
-existem trechos sem ligação comprovada de ida/volta e ajustes nativos/visuais em
-andamento. Esta candidata guarda o progresso pedido pelo usuário e não é uma
-release final aprovada. [Manifesto e hashes](CANDIDATA-172.json) ·
+Atualização desta branch: **candidata com as103peças de rochas corrigidas**, mais
+seis fragmentos encontrados na variante daRota131. Rochas completas foram
+preservadas. O emulador conferiu os gráficos, a animação e o bloqueio de passagem.
+As quatro edições abaixo e a TESTE passaram na abertura; a TESTE também passou
+Continue→salvar pelo menu→Continue, inclusive com saves anteriores ao reparo.
+
+As novas cavernas e câmaras individuais ainda estão em trabalho. Esta candidata
+não é uma release final aprovada. [Manifesto e hashes](CANDIDATA-172.json) ·
+[Provas das rochas](../docs/design/native-rock-fragments-review/summary.json) ·
 [Continuidade técnica](../docs/CONTINUIDADE-TECNICA-IA.md).
 
 Versão anterior validada: [canal sul de One Island, portos e cavernas — camada 171](../docs/generated-area-review.md). Liga o canal vertical ao mar horizontal, corrige cantos de encosta, rochas incompletas e limites visíveis, restaura o embarque de Six Island e fecha portais inativos. As quatro edições e a TESTE recebem os ajustes; a TESTE mantém encontros aleatórios e abordagens automáticas desativados. [Registro em TXT](../errors/2026-11-07-generated-area-review.txt).

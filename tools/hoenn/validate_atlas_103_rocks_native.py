@@ -1,13 +1,12 @@
 """Observe all103 repaired cells in actual mGBA BG/VRAM/palette/scanout.
 
-Each of52 local visual/collision cases has a declared initial party/progress,
+Each of54 local visual/collision cases has a declared initial party/progress,
 position and movement-mode fixture. After placement,
 only controllers and read-only native queries are used. This is not travel
 through all20 maps, a campaign replay, or a final release certificate.
 """
 import argparse
 from collections import deque
-from copy import deepcopy
 import hashlib
 import json
 from pathlib import Path

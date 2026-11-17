@@ -41,9 +41,19 @@ def preserve_historical_references(info):
     return info
 
 
-def checkpoint(frozen_path,artifacts,cold_boot,*,battery=None):
+def checkpoint(frozen_path,artifacts,cold_boot,*,battery=None,revision=None):
     frozen_path,artifacts,cold_boot=map(Path,(frozen_path,artifacts,cold_boot))
     frozen=json.loads(frozen_path.read_bytes());source=Path(frozen['source'])
+    assert revision in (None,'rocks103-v6'),'Unknown candidate revision'
+    proof=ROOT/'docs/design/atlas-surf-layout'
+    if revision:proof=proof/revision
+    assert not (proof/'candidate-cold-boot').exists(),'Keep prior candidate evidence intact'
+    if revision:
+        from verify_atlas_103_rocks_native import verify as verify_native_rocks
+        from verify_atlas_surf_checkpoint import verify_rocks103_evidence
+        assert frozen['migration_version']==6 and frozen['global_source_validation_passed'] is True
+        assert verify_rocks103_evidence(ROOT)['native_ROM_validation_complete'] is True
+        verify_native_rocks(frozen,ROOT/'docs/design/native-rock-fragments-review/native-v6')
     marker=source/'.journey-atlas-surf-layout'
     assert digest(marker)==frozen['marker_sha256']
     assert digest(source/'pokeemerald.gba')==frozen['rom_sha256']
@@ -62,7 +72,7 @@ def checkpoint(frozen_path,artifacts,cold_boot,*,battery=None):
         if row['edition']=='TESTE':
             assert report['bundled_save_continue_to_field']
             if battery is not None:assert report['bundled_save_sha256']==digest(battery)
-        reports[row['edition']]={'report':f'docs/design/atlas-surf-layout/candidate-cold-boot/{proof_folder}/cold-boot.json',
+        reports[row['edition']]={'report':(proof.relative_to(ROOT)/'candidate-cold-boot'/proof_folder/'cold-boot.json').as_posix(),
                                  'sha256':digest(report_path)}
     info=json.loads((artifacts/'versions.json').read_bytes())
     assert info['candidate'] and not info['validated']
@@ -76,6 +86,7 @@ def checkpoint(frozen_path,artifacts,cold_boot,*,battery=None):
                 known_generated_water_components=frozen['known_generated_water_components'],
                 user_requested_progress_checkpoint=True)
     preserve_historical_references(info)
+    if revision:info['candidate_revision']=revision
     review.update(candidate=True,validated=False,final_release_validated=False,
                   validation_scope='atlas-surf-layout-candidate',cold_boot=reports['TESTE'])
     if battery is not None:
@@ -104,7 +115,7 @@ def checkpoint(frozen_path,artifacts,cold_boot,*,battery=None):
     checksum=''.join(r['sha256']+'  '+r['file']+'\n' for r in info['variants'])
     (versions/'SHA256SUMS').write_text(checksum);(roms/'SHA256SUMS').write_text(checksum)
     (test/'SHA256SUMS').write_text(review['sha256']+'  '+review['file']+'\n')
-    proof=ROOT/'docs/design/atlas-surf-layout';target=proof/'candidate-cold-boot'
+    proof.mkdir(parents=True,exist_ok=True);target=proof/'candidate-cold-boot'
     assert not target.exists(),'Keep prior candidate evidence intact'
     shutil.copytree(cold_boot,target)
     (proof/'candidate-compiled-freeze.json.gz').write_bytes(gzip.compress(frozen_path.read_bytes(),mtime=0))
@@ -117,11 +128,12 @@ def checkpoint(frozen_path,artifacts,cold_boot,*,battery=None):
                             battery_sha256=review['bundled_save_sha256']),cold_boot=reports,
                  pending_obligations=info['pending_obligations'],
                  previous_port_validation=info['previous_port_validation'])
+    if revision:summary['candidate_revision']=revision
     (roms/'CANDIDATA-172.json').write_text(json.dumps(summary,indent=2)+'\n')
-    archive=write_archive(versions,roms,test,proof,info)
+    archive=write_archive(versions,roms,test,ROOT/'docs/design/atlas-surf-layout',info)
     summary['archive_sha256']=digest(archive);summary['archive_bytes']=archive.stat().st_size
     # Archive checksum is external; its embedded manifest cannot hash itself.
-    (proof/'candidate-ROM-checkpoint.json').write_text(json.dumps(summary,indent=2)+'\n')
+    (ROOT/'docs/design/atlas-surf-layout/candidate-ROM-checkpoint.json').write_text(json.dumps(summary,indent=2)+'\n')
     return summary
 
 
@@ -158,7 +170,7 @@ def write_archive(versions,roms,test,proof,info):
         review=json.loads((test/'review.json').read_bytes())
         bundle.writestr('TESTE-DOWNLOAD.md',
             '# TESTE da candidata172\n\n'
-            'https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/raw/refs/heads/fix/atlas-surf-layout/roms/rom-de-teste/Pokemon-Journey-TESTE.gba\n\n'
+            'https://github.com/brunotellesbt-sys/AiKalicaAiCrlBR/raw/refs/heads/fix/atlas-continuity-2026-11-16/roms/rom-de-teste/Pokemon-Journey-TESTE.gba\n\n'
             'SHA-256: '+review['sha256']+'\n\n'
             'O save e os metadados acompanham este ZIP. Validacao global pendente.\n')
         bundle.writestr('CANDIDATA-EM-VALIDACAO.txt',
@@ -175,5 +187,6 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--frozen',type=Path,required=True);parser.add_argument('--artifacts',type=Path,required=True)
     parser.add_argument('--cold-boot',type=Path,required=True);parser.add_argument('--battery',type=Path)
-    a=parser.parse_args();r=checkpoint(a.frozen,a.artifacts,a.cold_boot,battery=a.battery)
+    parser.add_argument('--revision',choices=['rocks103-v6'])
+    a=parser.parse_args();r=checkpoint(a.frozen,a.artifacts,a.cold_boot,battery=a.battery,revision=a.revision)
     print(json.dumps(dict(ROMs=5,archive_bytes=r['archive_bytes'],final_release_validated=False),indent=2))

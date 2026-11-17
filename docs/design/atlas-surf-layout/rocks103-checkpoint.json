@@ -1,16 +1,16 @@
 {
   "scope": "native-General-103-rock-fragments",
-  "phase": "source-reviewed; corrected ROM build and native proof pending",
+  "phase": "103 repairs and six runtime fragments complete in the five current candidate ROMs; native pixels, collision and save roundtrips passed",
   "summary": {
     "file": "docs/design/native-rock-fragments-review/summary.json",
-    "sha256": "ae7070a952487ddcf52901cd31777004e87d807032fbe0545f343ad4f08d1e82"
+    "sha256": "c1a7a40e11b0d53ec1d8accff77423027ce13529bd8429bb4d500ede215693b5"
   },
   "evidence_manifest": {
     "file": "docs/design/native-rock-fragments-review/SHA256SUMS",
-    "sha256": "738efbff5b1c71e364cdfaa39e00cd40eeffd50f6c1ceaedfc14f428182d5f82"
+    "sha256": "9ed2e469ec284213fa49b9fbf301b715e1a9b17dd9b2113c10b455dc7629fa2b"
   },
   "full_evidence_is_in_repository": true,
   "full_evidence_images_in_four_ROM_ZIP": false,
-  "native_ROM_validation_complete": false,
+  "native_ROM_validation_complete": true,
   "final_release_validated": false
 }

@@ -1,0 +1,71 @@
+{
+  "schema": "atlas-requested-candidate-checkpoint/v1",
+  "compiled_roms_updated": true,
+  "final_release_validated": false,
+  "global_gameplay_validation_complete": false,
+  "source_raw_rom_sha256": "f2cac1ecb79e23c3b6a6a43e07568b7c5b03579dc265ba99d33bc3bad7940c0e",
+  "elf_sha256": "618b0556e031fee25a1aace83f33bb8491b7e316ebd910a34f968098b135ba73",
+  "marker_sha256": "dede6825a87fd08742f369478f2004a70b9e7d2b8f1a6c0aa44ad43d559328f8",
+  "ROM_used_bytes": 32920992,
+  "variants": [
+    {
+      "file": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "sha256": "a24b7304d4dda4a7d1abd60849161409468a4a29d00528a9549643333e7cb40d"
+    },
+    {
+      "file": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "sha256": "a2103c4bebe2f8fecc12d863b16f7e0971fb35040b6cf15bf2f0a95f5275146c"
+    },
+    {
+      "file": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "sha256": "47a3a75c36b50bcd96584bd7c7ced7f121f68b8e5b14e93338f503c17b7f951f"
+    },
+    {
+      "file": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "sha256": "14ebe89fc88f3d4d55cc8a48f7ed1edf36bf997a26d397a8c653e5d6320bf36d"
+    }
+  ],
+  "TESTE": {
+    "file": "rom-de-teste/Pokemon-Journey-TESTE.gba",
+    "sha256": "b7445c29804f36f188e0b753849ac4bb55fa605218c7486c04ee73d3fc7945ae",
+    "battery_sha256": "36ace517a44bc0315a4a5309054a4913f39e0f1872a073763ba685c3421e5861"
+  },
+  "cold_boot": {
+    "Gen1-4-Normal": {
+      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/Gen1-4-Normal/cold-boot.json",
+      "sha256": "2dd979a0bc0d2dd7c37f11f944fe3378824ebd5a88745494c9902587eb27df07"
+    },
+    "Gen1-4-Hard": {
+      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/Gen1-4-Hard/cold-boot.json",
+      "sha256": "ed2b4ada9431a967347894dce476eefd2c7c148acfb32ff51bac004224a0e190"
+    },
+    "Gen1-9-Normal": {
+      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/Gen1-9-Normal/cold-boot.json",
+      "sha256": "c09585dff4e0134c0ced199880699922f581a5442e3dc00b2ecc80d15de3a0f7"
+    },
+    "Gen1-9-Hard": {
+      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/Gen1-9-Hard/cold-boot.json",
+      "sha256": "3473ed0db718053c0c2fe7a8224a66faeab23586a3022c9a59e0b4c259767647"
+    },
+    "TESTE": {
+      "report": "docs/design/atlas-surf-layout/candidate-cold-boot/TESTE-continued-after-save/cold-boot.json",
+      "sha256": "f89b018d59b4969d746694c9f890003d8091d42f48b64795e291ea4d883a84aa"
+    }
+  },
+  "pending_obligations": [
+    "geographic/native SCC review of partial chart pixels and local coast registrations",
+    "native coast GPS integration; historical grids disagree at32/33 interfaces",
+    "global source SCC including fixed caves and transformed Dive",
+    "safe version2 migration of every retired save position and warp reference",
+    "all remaining C/script references to retired map IDs",
+    "reachable ecology/DEX replacement and real edition caps",
+    "whole-map rendering, native controls, batteries and five edition proofs"
+  ],
+  "archive_sha256": "98d9038551151aeea3691dd9d044a2a78fe542ec370aec7bb9e43fba43787cab",
+  "archive_bytes": 100722453,
+  "previous_port_validation": {
+    "manifest": "mods/hoenn/atlas-surf-layout-validation/baseline/versions.json",
+    "manifest_sha256": "eca26adfcb0b15f9da78aadec1b8738f66288fcc58d4d727ee2ea2a6274e29ec",
+    "retested_on_current_rom": false
+  }
+}

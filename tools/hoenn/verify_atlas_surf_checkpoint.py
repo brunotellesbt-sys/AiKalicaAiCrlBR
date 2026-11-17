@@ -124,7 +124,14 @@ def verify_cold_report(report, sha):
                          and run['frames'] > 0 for run in fresh), 'Missing fresh boot run'
 
 
+def evidence_directory(info):
+    revision=info.get('candidate_revision')
+    assert revision in (None,'rocks103-v6'),'Unknown candidate revision'
+    return PROOF/revision if revision else PROOF
+
+
 def verify_boots(root, info, review, summary):
+    proof=evidence_directory(info)
     expected = {row['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba'): row['sha256']
                 for row in info['variants']}
     expected['TESTE'] = review['sha256']
@@ -134,7 +141,7 @@ def verify_boots(root, info, review, summary):
     for edition, sha in expected.items():
         ref = refs[edition]
         folder = 'TESTE-continued-after-save' if edition == 'TESTE' else edition
-        assert ref['report'] == (PROOF / 'candidate-cold-boot' / folder / 'cold-boot.json').as_posix()
+        assert ref['report'] == (proof / 'candidate-cold-boot' / folder / 'cold-boot.json').as_posix()
         raw = confined(root, ref['report']).read_bytes()
         assert digest(raw) == ref['sha256'], ('Changed cold boot report', edition)
         report = json.loads(raw)
@@ -144,7 +151,7 @@ def verify_boots(root, info, review, summary):
     continued = reports['TESTE']
     assert continued['bundled_save_tested'] is True and continued['bundled_save_continue_to_field'] is True
     assert continued['bundled_save_sha256'] == review['bundled_save_sha256']
-    saved = read_json(root / PROOF / 'candidate-cold-boot/TESTE-save-menu-v2/cold-boot.json')
+    saved = read_json(root / proof / 'candidate-cold-boot/TESTE-save-menu-v2/cold-boot.json')
     verify_cold_report(saved, review['sha256'])
     before, after = saved['runs'][-1], continued['runs'][-1]
     assert before['battery'] is True and after['battery'] is True
@@ -157,12 +164,17 @@ def verify_boots(root, info, review, summary):
     assert roundtrip['all_retired_save_positions_natively_proven'] is False
     for key in ('field_map', 'player_tile', 'player_elevation', 'player_surfing'):
         assert before[key] == after[key] == roundtrip[key], ('Battery state changed', key)
+    if info.get('candidate_revision'):
+        for report in (saved,continued):
+            assert report['runs'][-1]['geometry_version']==6,'Current battery migration not proved'
 
 
 def verify_compiled(root, info, review, summary, parent):
-    frozen = json.loads(gzip.decompress((root / PROOF / 'candidate-compiled-freeze.json.gz').read_bytes()))
+    proof=evidence_directory(info)
+    frozen = json.loads(gzip.decompress((root / proof / 'candidate-compiled-freeze.json.gz').read_bytes()))
     assert frozen['schema'] == 'atlas-candidate-compiled-freeze/v1'
-    assert frozen['final_release_validated'] is False and frozen['global_source_validation_passed'] is False
+    assert frozen['final_release_validated'] is False
+    assert frozen['global_source_validation_passed'] is bool(info.get('candidate_revision'))
     assert frozen['rom_sha256'] == info['parent_rom_sha256'] == summary['source_raw_rom_sha256']
     assert frozen['elf_sha256'] == info['parent_elf_sha256'] == summary['elf_sha256']
     assert frozen['marker_sha256'] == info['layer_marker_sha256'] == info['source_marker_sha256'] == summary['marker_sha256']
@@ -172,7 +184,7 @@ def verify_compiled(root, info, review, summary, parent):
     expected[review['file']] = review['sha256']
     editions = frozen['editions']
     assert len(editions) == 5 and {Path(r['rom']).name: r['sha256'] for r in editions} == expected
-    tables = read_json(root / PROOF / 'candidate-compiled-tables.json')
+    tables = read_json(root / proof / 'candidate-compiled-tables.json')
     assert tables['passed'] is True and tables['native_travel_proven'] is False
     assert tables['ROM_sha256'] == frozen['rom_sha256'] and tables['ELF_sha256'] == frozen['elf_sha256']
     assert tables['maps'] > 0 and tables['stride'] == 8 and len(tables['copies']) == 3
@@ -180,6 +192,11 @@ def verify_compiled(root, info, review, summary, parent):
         offset, size = int(copy['address'], 16) - 0x08000000, copy['bytes']
         assert size == tables['maps'] * 8 and 0 <= offset <= ROM_BYTES - size
         assert digest(parent[offset:offset + size]) == copy['sha256'], 'Compiled table bytes changed'
+    if info.get('candidate_revision'):
+        from verify_atlas_103_rocks_native import verify as verify_native_rocks
+        reference=verify_rocks103_evidence(root)
+        assert reference['native_ROM_validation_complete'] is True
+        verify_native_rocks(frozen,root/'docs/design/native-rock-fragments-review/native-v6')
 
 
 def verify_archive(root, directory, info, summary):
@@ -229,6 +246,7 @@ def verify(root=ROOT, *, if_candidate=False):
     assert battery.stat().st_size == 131072 and digest(battery.read_bytes()) == review['bundled_save_sha256']
     assert (test_dir / 'SHA256SUMS').read_text() == review['sha256'] + '  ' + review['file'] + '\n'
     summary = read_json(root / PROOF / 'candidate-ROM-checkpoint.json')
+    assert summary.get('candidate_revision')==info.get('candidate_revision')
     public = read_json(root / 'roms/CANDIDATA-172.json')
     assert {k: v for k, v in summary.items() if k not in ('archive_sha256', 'archive_bytes')} == public
     assert summary['final_release_validated'] is False and summary['global_gameplay_validation_complete'] is False
