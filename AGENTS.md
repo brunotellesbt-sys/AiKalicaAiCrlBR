@@ -1,6 +1,6 @@
 Retomada mais recente: [docs/RETOMADA-2026-11-17.md](docs/RETOMADA-2026-11-17.md).
-PR112 aberto. Último lote: visão das divisas131/Pacifidlog/130 e cache salvo,
-ROMc08cb777, versão7. Cavernas/câmaras e validação global continuam pendentes.
+PR112 foi merged pelo autor emmain9dff8c3. Branch atual de trabalho:
+fix/cave-chambers-release-validation-2026-11-17. Gates finais e cavernas em trabalho.
 
 # Instruções persistentes do projeto
 

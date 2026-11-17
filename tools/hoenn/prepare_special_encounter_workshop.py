@@ -437,13 +437,13 @@ JourneySpecial_Empty:
 \treleaseall
 \tend
 JourneySpecial_Appliances_Text:
-\t.string "Choose ROTOM, then the appliance it\nshould enter. Choose LIGHT BULB to\lreturn it to its original form.$"
+\t.string "Choose ROTOM, then the appliance it\nshould enter. Choose LIGHT BULB to\\lreturn it to its original form.$"
 JourneySpecial_FormTools_Text:
-\t.string "Here are reusable form-changing tools.\nUse them on compatible POKéMON.\pThe fused partners must be in your\nparty. Some forms require daytime.$"
+\t.string "Here are reusable form-changing tools.\nUse them on compatible POKéMON.\\pThe fused partners must be in your\nparty. Some forms require daytime.$"
 JourneySpecial_WorkshopGuide_Text:
-\t.string "ROTOM hides in the television.\nIts appliance forms aren't wild.\pThe oven, washer, refrigerator, fan\nand mower change its type and move.\pI don't make Mega Stones or the\nGalactic story's Origin Orbs.$"
+\t.string "ROTOM hides in the television.\nIts appliance forms aren't wild.\\pThe oven, washer, refrigerator, fan\nand mower change its type and move.\\pI don't make Mega Stones or the\nGalactic story's Origin Orbs.$"
 JourneySpecial_Excavation_Text:
-\t.string "These fossils came from a deep dig.\nPewter Museum can revive them!\pThis ODD KEYSTONE belongs in the\nold well at Memorial Pillar, Sevii.$"
+\t.string "These fossils came from a deep dig.\nPewter Museum can revive them!\\pThis ODD KEYSTONE belongs in the\nold well at Memorial Pillar, Sevii.$"
 JourneySpecial_NeedKeystone_Text:
 \t.string "Bring an ODD KEYSTONE. An explorer\nin Hoenn's Altering Cave has one.$"
 JourneySpecial_Quiet_Text:

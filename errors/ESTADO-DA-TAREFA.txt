@@ -1,3 +1,34 @@
+RETOMADA APÓS MERGE112 — CORRIGIR GATES E CAVERNAS —17/11/2026
+Pedido literal: “Fiz o merge com esse erro. Corrija isso e as outras coisas que
+pedi pfvr”. Depois:“Continue”. Merge confirmado emmain9dff8c370ddd6d718b1164cbaefa47050c88509e.
+Branch nova:fix/cave-chambers-release-validation-2026-11-17, baseada nesse merge.
+
+O log fornecido executou12testes sea_routesPASS e1173Hoenn, com8FAIL+1ERROR e
+50skipped. As nove recusas são o selo final aindafalse (Unvalidatedrelease),
+inclusiveSootopolis.validated. Não foi demonstrada nova regressão de pedra ou
+câmera. Não trocarflags/SHAs, afrouxar contratos ou ignorar testes para aprovar.
+A candidata atualc08cb777/versão7 e todas as suas provas continuam preservadas.
+
+Corrigido oSyntaxWarning deescapes\l/\p no gerador do workshop, mantendo
+exatamente osbytes do script emitido (SHA256d2a32a6d1a1891efb3cddd1699ce96133e88ef87467a16f5412406a1e474df4d).
+CompilaçãoPython comSyntaxWarning comoerroPASS. Isso corrige o aviso; não o selo.
+
+Trabalho retomado das cavernas: inventário confirma105eventos especiais em48
+cavernas,14santuários,8cavernas costeiras e26grupos em mapas nativos. Há18
+exteriores no atlas atual; nove usam o mesmo terreno compacto. Prévia técnica
+dos interiores e bancos nativos preservada em.local/chamber-native-review.
+Próximo: acessos próprios e105câmaras variadas com os próprios sprites,
+exteriores maiores/distintos, migração8 e provas nativas; então completar
+contrato/edições/ecologia/DEX/browser até a aprovação real dos gates.
+Preservar IDs, NPCs de campanha, warps originais, flags de captura e arte doatlas.
+Usar os lembretes deHere/AGENTS; não reutilizar provas antigas como atuais.
+
+Último subpedido concluído: merge identificado, causa doCI confirmada e aviso
+corrigido sem mudar saída do gerador. Pedido atual global ainda EM ANDAMENTO.
+Nenhum PR novo aberto ainda, nenhum merge executado pelaIA e nenhum selo final.
+
+HISTÓRICO PRESERVADO:
+
 CONCLUÍDO — DUAS DIVISAS COM VISÃO DESATUALIZADA —17/11/2026
 Pedido atual, trecho literal: “Consegue reparar isso em alguns lugares?
 Identificar esse padrão, assim como identificou as rotas? Esses termos técnicos
