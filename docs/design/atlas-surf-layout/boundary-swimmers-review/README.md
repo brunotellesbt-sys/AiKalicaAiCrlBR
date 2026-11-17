@@ -32,3 +32,10 @@ câmaras próprias para105lendários, auditoria global das rochas e demais gates
 Suíte completa:339casos;337PASS, dois erros por fixtures históricos ausentes
 no sparsecheckout. Três arquivos rastreados restaurados byte a byte doHEAD;
 reexecução dos5testes desse móduloPASS. Logs da falha e correção preservados.
+
+A fonte foi materializada em caminho privado novo. O primeiro gerador
+paralelo corrompeu heal_locations.json ao reescrevê-lo; agora a função é
+somente leitura e falha explicitamente para destinos não compilados. Dois
+testesC++ paralelosPASS; gerador completo repetidoPASS,34080inputs exatos.
+Os499renders completos ficam locais e são reproduzíveis pelo novo comando.
+Contatos00..04 e20 foram vistos; não afirmar todas as câmeras nativas revistas.

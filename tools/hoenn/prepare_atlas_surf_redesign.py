@@ -16,6 +16,7 @@ from atlas_surf_route_borders import stage as stage_borders,stage_undefined_draw
 from atlas_surf_background import stage as stage_background
 from atlas_surf_trainers import stage as stage_trainers
 from atlas_surf_redesign_migration import stage as stage_migration
+from atlas_surf_build_inputs import stage as stage_build_inputs
 from atlas_surf_overlay import OverlaySource
 from atlas_surf_source import Source
 from atlas_surf_classification import census_native_bounds
@@ -48,6 +49,7 @@ def source_audit(layer,metadata):
 
 def compose(parent):
     layer,metadata=load(parent)
+    metadata['build_input_guard']=stage_build_inputs(layer)
     captures=json.loads((Path(parent)/'.journey-sanctuaries').read_bytes())['captures']
     groups=json.loads((ROOT/'tools/hoenn/data/legendary-cave-groups.json').read_bytes())
     appearance=stage_appearance(layer,captures,groups)

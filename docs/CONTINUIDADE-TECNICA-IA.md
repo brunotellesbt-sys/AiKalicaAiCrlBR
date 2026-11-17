@@ -1,3 +1,30 @@
+BUILD PRIVADO EM PREPARAÇÃO —17/11/2026
+
+Fonte nova materializada em.local/atlas-borders-swimmers-src:2191outputs,
+34080inputs conferidos sem divergência.499mapas inteiros comNPCs renderizados;
+contatos00..04 e20 inspecionados. O renderer usa quadro estático padrão e não
+certifica orientação/abordagem nativa. Comando reproduzível:
+render_atlas_surf_redesign.py --source <fonte> --output <fora-da-fonte>.
+
+Erro novo reproduzido no make-j4: process_groups chamava clean_heal_locations
+em paralelo; mesmo42destinos válidos reescreviam o mesmoJSON autenticado.
+Uma corrida retirou a vírgula entreRoute4/Route10. O gerador agora só valida,
+e exige reparo explícito se referência inválida. JSON original exato restaurado
+na preparação parcial, sem alterar C8/171. Dois testesC++ com chamadas paralelas
+PASS; geração de mapas/learnsets repetidaPASS e34080inputs continuam exatos.
+
+Caches derivados antigos foram regeneravelmente liberados; apenas exports
+privados reproduzíveis das5ediçõesC8 foram retirados após conferir seusSHA.
+ROMrawC8/ELF/fontes/manifests/provas preservados. PNGs imutáveis iguais entre
+snapshots antigos compartilham inode somente leitura, com todos caminhos e
+bytes preservados. A fonte nova permanece independente para escrita.
+
+Próximo: compilar/congelar esta fonte e testar pelos controles. Essa nova
+reforma ainda não tem prova nativa nem publicação. Exteriores/câmaras/rochas
+globais/DEX e demais pendências listadas abaixo continuam em trabalho.
+
+HISTÓRICO PRESERVADO:
+
 REFORMA EM ANDAMENTO —17/11/2026 — BORDAS, NADADORES E SPRITES NA FONTE
 
 O pedido literal mais recente continua registrado abaixo; o usuário confirmou
