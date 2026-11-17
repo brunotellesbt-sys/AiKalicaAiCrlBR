@@ -5,6 +5,8 @@ Surf e recifes só nas linhas de limite. A C8 congelada é o checkpoint anterior
 
 # Instruções persistentes do projeto
 
+Antes de editar mapas conectados, aplique também [Aqui/SKILL-DIVISAS-E-CAMERAS.md](Aqui/SKILL-DIVISAS-E-CAMERAS.md): layout declarado/ativo, faixa do vizinho, bancos, diagonais e cache `mapView` precisam concordar antes e depois da travessia.
+
 Antes de qualquer tarefa, leia [docs/CONTINUIDADE-TECNICA-IA.md](docs/CONTINUIDADE-TECNICA-IA.md)
 e o JSON histórico lá vinculado. Após cada lote coerente, atualize esse guia e
 `errors/ESTADO-DA-TAREFA.txt` com o pedido literal mais recente, o último pedido

@@ -1,0 +1,34 @@
+EM ANDAMENTO — VISÃO DO VIZINHO DESATUALIZADA —17/11/2026
+Pedido literal mais recente: “Ok, uma coisa, temos que ter cuidado também com
+rotas uma do lado da outra, modificadas, porque ao andar de um lado pro outro,
+as vezes em uma rota, a visão da outra rota não fica carregada atualizada,
+fica como se tivesse antes da edição, somente ao andar um pouco pro lado e
+efetivamente chegar na rota modificada, que fica igual. Consegue reparar isso
+em alguns lugares? Identificar esse padrão, assim como identificou as rotas?
+Esses termos técnicos tem que ser atualizados no aqui, como se fosse um
+lembrete skill pra não repetir isso”. Consulte a conversa para a formulação exata.
+
+Censo fonte:663mapas conectados,3variantes declaradas por script,2com diferenças
+na faixa de conexão e12patches literais perto de bordas. São candidatos, não
+uma contagem de bugs confirmados. ROM5b5b confirmou duas divisas daRota131:
+Pacifidlog→131 e130→131 exibem água onde o layout ativo tem uma rocha inteira.
+Pela cidade, a faixa velha ainda é copiada para dentro pelo cache da travessia.
+A Rota131 sempre selecionaSkyPillar; o cabeçalho estático aponta paraRoute131.
+
+Reparo preparado: alinhar somente o cabeçalho131 ao layout já incondicional no
+jogo e limpar uma vez o fundo salvo de6→7. Terreno ativo/NPCs/flags/warps não
+são redesenhados. Rota130/MirageIsland eRota111 continuam condicionais. Quatro
+testes da nova lógicaPASS. Fonte privada nova em preparação, sem editar freezes.
+Nativebefore/after do reparo e publicação nova AINDA pendentes; atuais continuam
+nas cinco candidatas103/versão6. Próximo: auditar/build/freeze novo; provar as
+mesmas rochas antes/entrada/retorno, colisão, animação eSAVE/Continue; cinco edições.
+
+Novo lembrete técnico obrigatório:Aqui/SKILL-DIVISAS-E-CAMERAS.md, vinculado por
+AGENTS.md e gba-map-review. Cobre layout declarado/ativo, connectionapron/halo,
+map popping, bancos/paleta/callback, diagonais e cachemapView. Auditor reutilizável:
+audit_neighbor_layouts.py. Provas:docs/design/neighbor-layout-camera-review.
+PR112 aberto; sem merge. Pedido anterior103+6concluído. Cavernas/câmaras e gates
+globais anteriores seguem pendentes. Não alterar flags finais para mascará-los.
+
+HISTÓRICO PRESERVADO:
+

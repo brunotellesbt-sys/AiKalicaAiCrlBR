@@ -99,7 +99,7 @@ def run(source,library,output):
     variants=repairs['runtime_variants'];bindings=variants['runtime_layout_bindings']
     for case in cases:
         name=case['map'];case['layout']=bindings.get(name,view.maps[name]['layout'])
-        if case['layout']==view.maps[name]['layout']:continue
+        if name not in bindings:continue
         projected=with_layout(view,name,case['layout'])
         proof=next(r for r in variants['after'] if (r['map'],r['layout'])==(name,case['layout']))
         required={tuple(r['tile']) for r in case['rows']};additional={}
