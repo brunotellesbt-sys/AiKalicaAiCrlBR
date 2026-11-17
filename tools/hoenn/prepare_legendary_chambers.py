@@ -51,7 +51,8 @@ def clone_authenticated(reference, target, expected, *, omit_compiled_artifacts=
     return dict(shared_readonly_authenticated_inputs=shared, generated_files_independent=True)
 
 
-def prepare(parent, target, reference_freeze, output, *, large_exteriors=False, cache_freeze=None, resume_clone=False):
+def prepare(parent, target, reference_freeze, output, *, large_exteriors=False, cache_freeze=None, resume_clone=False,
+            dex_census=None):
     parent,target,output = map(lambda p:Path(p).resolve(),(parent,target,output))
     if target.exists() and not (resume_clone and cache_freeze):
         raise ValueError('Preserve the existing private candidate')
@@ -72,6 +73,28 @@ def prepare(parent, target, reference_freeze, output, *, large_exteriors=False, 
         stage_save_rescues(layer,exterior_report)
     metadata['legendary_individual_chambers'] = report
     metadata['migration']['final_version'] = 8
+    dex_report=None
+    if dex_census:
+        if not cache_freeze:
+            raise ValueError('Dex trigger evidence requires its authenticated compiled source')
+        frozen=json.loads(Path(cache_freeze).read_bytes());cache_path=Path(frozen['source'])
+        if ({n:hashlib.sha256(raw).hexdigest() for n,raw in layer.outputs.items()} != frozen['prepared_sha256']):
+            raise ValueError('Current staged source differs from the compiled trigger census source')
+        raw=Path(dex_census).read_bytes()
+        census=json.loads(gzip.decompress(raw) if Path(dex_census).suffix=='.gz' else raw)
+        for name,wanted in census['source_inputs_sha256'].items():
+            if hashlib.sha256((cache_path/name).read_bytes()).hexdigest()!=wanted:
+                raise ValueError(('Dex census input changed',name))
+        from atlas_dex_retired_habitats import relocate
+        from badge_story_layer import read
+        from package_versions import ROOT
+        before=json.loads(gzip.decompress((ROOT/'docs/design/atlas-surf-layout/ecology-parent-source.json.gz').read_bytes()))
+        catalog=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_bytes())['species']
+        name='src/data/journey_world_dex_locations.h'
+        rewritten,dex_report=relocate(read(layer,name).decode(),before,census,metadata['geometry_plan'],catalog)
+        layer.stage(name,rewritten)
+        metadata['retired_habitat_dex_relocation']=dex_report
+        print('Retired AREA references moved to exact reachable species/cap triggers',flush=True)
     independent = audit(layer,reference,report)
     print('105 reciprocal rooms and native campaign preservation PASS',flush=True)
     _,physical,_,banks = source_audit(layer,metadata)
@@ -87,6 +110,8 @@ def prepare(parent, target, reference_freeze, output, *, large_exteriors=False, 
         (output/(name+'.json.gz')).write_bytes(gzip.compress(json.dumps(record,sort_keys=True,separators=(',',':')).encode(),mtime=0))
     if large_exteriors:
         (output/'exteriors.json.gz').write_bytes(gzip.compress(json.dumps(exterior_report,sort_keys=True,separators=(',',':')).encode(),mtime=0))
+    if dex_report:
+        (output/'dex-relocation.json.gz').write_bytes(gzip.compress(json.dumps(dex_report,sort_keys=True,separators=(',',':')).encode(),mtime=0))
     cache=reference
     if cache_freeze:
         from candidate_layer import Layer
@@ -120,7 +145,9 @@ if __name__ == '__main__':
     parser.add_argument('--large-exteriors',action='store_true')
     parser.add_argument('--cache-freeze',type=Path)
     parser.add_argument('--resume-clone',action='store_true')
+    parser.add_argument('--dex-census',type=Path)
     args=parser.parse_args()
     result=prepare(args.parent,args.target,args.reference_freeze,args.output,
-                   large_exteriors=args.large_exteriors,cache_freeze=args.cache_freeze,resume_clone=args.resume_clone)
+                   large_exteriors=args.large_exteriors,cache_freeze=args.cache_freeze,resume_clone=args.resume_clone,
+                   dex_census=args.dex_census)
     print(json.dumps(dict(rooms=105,migration=8,source_passed=result['source_audit_passed'],native_validated=False)))

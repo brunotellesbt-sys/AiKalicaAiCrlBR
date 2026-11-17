@@ -79,3 +79,13 @@ Prova final desta revisão: ROM `c08cb777…`, duas divisas, três fases por
 observação, ida/volta, bloqueios e saves6→7→SAVE→Continue7 passaram. As cinco
 candidatas do PR foram atualizadas; outras divisas/estados continuam exigindo
 seus próprios casos. Evidência: `docs/design/neighbor-layout-camera-review`.
+
+## Fixture de treinadores também pode falsear uma falha de caminho
+
+Não use TRAINER_FLAGS_START + ID para treinadores novos sem conferir o
+resolvedor nativo JourneyBeachTrainerFlag. Os IDs novos usam flags privadas.
+Uma preparação assim ativou FLAG_SYS_CRUISE_MODE, e a CPU repetia
+SSTidalCorridor_EventScript_ReachedStepCount após o limite de passos.
+Colisão/altura/câmera corretas não bastavam para o jogador andar. Use as flags
+exatas do manifesto ou SetTrainerFlag durante o fixture; depois só controles
+e getters. Preserve o trace do diagnóstico e repita os percursos afetados.
