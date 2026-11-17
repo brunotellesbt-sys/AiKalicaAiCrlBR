@@ -1,3 +1,7 @@
+Retomada mais recente: leia primeiro [docs/RETOMADA-2026-11-17.md](docs/RETOMADA-2026-11-17.md).
+O usuário pediu abrir o PR agora; o PR112 já está aberto. O adendo registra o build unificado,
+as provas concluídas e a indisponibilidade do runtime, preservando o ZIP anterior íntegro.
+
 # Instruções persistentes do projeto
 
 Antes de qualquer tarefa, leia [docs/CONTINUIDADE-TECNICA-IA.md](docs/CONTINUIDADE-TECNICA-IA.md)

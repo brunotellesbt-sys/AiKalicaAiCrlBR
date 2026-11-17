@@ -6,6 +6,7 @@ tests never stand in for an old-ROM battery continued in the new ROM.
 import ctypes
 from pathlib import Path
 import subprocess
+import shutil
 import tempfile
 import unittest
 
@@ -121,6 +122,19 @@ class CandidateSaveRuntimeTests(unittest.TestCase):
     def test_changed_restore_anchor_is_rejected(self):
         text=migration_source(EXACT,fallback_header='data/journey_atlas_migration.h')
         with self.assertRaises(ValueError):upgrade_restore_source(text.replace('version >= 2','version >= 9'))
+
+    def test_table_sizes_under_the_actual_arm_apcs_abi(self):
+        bundled=Path(__file__).resolve().parents[2]/'.local/arm-gcc/usr/bin/arm-none-eabi-gcc'
+        compiler=str(bundled) if bundled.is_file() else shutil.which('arm-none-eabi-gcc')
+        if compiler is None:self.skipTest('Pinned ARM GCC is not installed')
+        # APCS rounds ordinary six-byte aggregates up to eight bytes. The
+        # emitted size assertions must pass under the ROM's ABI, not just x86.
+        declarations=render(TABLES).split('static const struct JourneyCandidateMap')[0]+'\n#endif\n'
+        with tempfile.TemporaryDirectory() as directory:
+            path=Path(directory)/'layout.c'
+            path.write_text('typedef unsigned char u8;typedef unsigned short u16;typedef short s16;\n'+declarations)
+            subprocess.run([compiler,'-mabi=apcs-gnu','-mcpu=arm7tdmi','-mthumb','-std=gnu17','-S',
+                            str(path),'-o',str(path.with_suffix('.s'))],check=True,capture_output=True)
 
 
 if __name__=='__main__':unittest.main()

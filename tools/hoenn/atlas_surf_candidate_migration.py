@@ -171,7 +171,7 @@ def render(tables, *, refresh_native_maps=()):
 #ifndef GUARD_JOURNEY_ATLAS_CANDIDATE_MIGRATION_H
 #define GUARD_JOURNEY_ATLAS_CANDIDATE_MIGRATION_H
 struct JourneyCandidateMap { u16 map; u8 width,height; u16 first,count; };
-struct JourneyCandidateRun { u16 end,foot,surf; };
+struct __attribute__((packed)) JourneyCandidateRun { u16 end,foot,surf; };
 struct JourneyCandidateTarget { u16 map; s16 x,y; u8 flags,elevation; };
 struct __attribute__((packed)) JourneyCandidateWarp { u16 oldMap; u8 oldId; u16 newMap; u8 newId; };
 typedef char JourneyCandidateMapEightBytes[(sizeof(struct JourneyCandidateMap)==8)?1:-1];

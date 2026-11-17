@@ -10,9 +10,10 @@ import json
 from pathlib import Path
 
 from validate_coast_scenery_objects import bootstrap
+from candidate_layer import Layer
+from prepare_generated_area_review import PRIOR,LAYER
 
 PORT='ThreeIsland_Port_Frlg'
-COAST='JourneyAtlasCoast31'
 
 
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -21,12 +22,16 @@ def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def run(source,library,output):
     source,library,output=map(lambda p:Path(p).resolve(),(source,library,output))
     output.mkdir(parents=True,exist_ok=True)
-    marker=source/'.journey-atlas-surf-layout';prepared=json.loads(marker.read_bytes())['prepared_sha256']
+    marker=source/'.journey-atlas-surf-layout';metadata=json.loads(marker.read_bytes());prepared=metadata['prepared_sha256']
+    bindings=[b for b in metadata['adapter_plan']['bindings'] if (b['native_map'],b['component'])==(PORT,1)]
+    assert len(bindings)==1,'Three needs its actual unique compiled coast binding'
+    coast=bindings[0]['adapter']
+    expected=Layer(source,'atlas-surf-layout',PRIOR+[LAYER]).expected;expected.update(prepared)
     frozen={n:sha(source/n) for n in ('pokeemerald.gba','pokeemerald.elf','.journey-atlas-surf-layout')}
     def verify():
         assert frozen=={n:sha(source/n) for n in frozen}
-        for name,wanted in prepared.items():assert sha(source/name)==wanted,name
-    verify();ns=bootstrap(source,library,output,[PORT,COAST])
+        for name,wanted in expected.items():assert sha(source/name)==wanted,name
+    verify();ns=bootstrap(source,library,output,[PORT,coast])
     original={key:ns[key] for key in ('step','native','script','warp','picture')}
     fixture=True;depth=0;phase='fixture';controls=[];queries=[];route=[];states=[];captures=[]
     def step(count,key=0):
@@ -69,7 +74,11 @@ def run(source,library,output):
         state('three-west-water-reached')
         phase='terminal-body-barrier';ns['walk']((PORT,3,17));step(90,16);step(30)
         assert state('three-terminal-blocks-surf')['tile']==[3,17]
-        phase='ocean-coast-roundtrip';ns['walk']((COAST,4,4));state('three-real-coast-crossed')
+        width,height,_=ns['blocks'][coast]
+        choices=[(x,y) for y in range(height) for x in range(width)
+            if y*width+x in ns['passable'][coast] and ns['water_behaviors'][ns['behaviors'][coast][y*width+x]]]
+        target=min(choices,key=lambda p:abs(p[0]-width//2)+abs(p[1]-height//2))
+        phase='ocean-coast-roundtrip';ns['walk']((coast,*target));state('three-real-coast-crossed')
         ns['walk']((PORT,2,17));state('three-coast-returned')
         phase='southern-perimeter-barrier';ns['walk']((PORT,3,25));step(90,128);step(30)
         assert state('three-southern-reef-blocked')['tile']==[3,25]
@@ -106,7 +115,7 @@ def run(source,library,output):
         verify()
         result=dict(kind='atlas-three-port-native-component',passed=True,
             rom_sha256=frozen['pokeemerald.gba'],elf_sha256=frozen['pokeemerald.elf'],marker_sha256=frozen['.journey-atlas-surf-layout'],
-            prepared_source_sha256=prepared,source_files_checked=len(prepared),
+            prepared_source_sha256=prepared,source_files_checked=len(expected),actual_coast_adapter=coast,
             initial_party_progress_and_dry_placement_are_fixtures=True,encounter_suppression_is_fixture=True,
             after_placement_movement_controllers_only=True,private_read_only_query_trampoline_declared=True,
             southern_ocean_both_directions=True,real_coast_connection_both_directions=True,
