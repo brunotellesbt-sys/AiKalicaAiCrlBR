@@ -14,6 +14,7 @@ a=parser.parse_args();source=a.source.resolve()
 if a.output.resolve()==source or a.output.resolve().is_relative_to(source):raise ValueError('Render outside the private source')
 m=json.loads((source/'.journey-atlas-surf-layout').read_bytes())
 names=sorted({r['map'] for r in m['route_border_redesign']['maps']}|{r['map'] for r in m['legendary_appearance_redesign']['changes']})
+names=sorted(set(names)|{r['map'] for r in m.get('native_General_rock_repairs',{}).get('repairs',[])})
 r=MapRenderer(source);out=a.output;out.mkdir(exist_ok=True);rows=[]
 for i,name in enumerate(names):
  im,_=r.render(name,npcs=True);path=out/(name+'.png');im.save(path)

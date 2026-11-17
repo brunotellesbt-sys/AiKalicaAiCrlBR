@@ -1,3 +1,35 @@
+PEDIDO ATUAL — “Resolva essas 103 peças suspeitas” —17/11/2026
+
+Prioridade atual: concluir as103peças antes de retomar as cavernas/câmaras.
+Fonte:103fragmentos em52grupos/20mapas corrigidos;0restantes e462rochas grandes
+inteiras preservadas. Altura, colisão, eventos, warps, posições, conexões e
+arte do atlas intactos. Encostas/praias recompostas e quartos isolados trocados
+por pedras nativas inteiras18C/194. Um doador193 de vegetação foi rejeitado
+na prévia, corrigido antes de compilar. Todos os doadores são autenticados
+pelos oito words e vistos; nenhuma definição gráfica ou animação muda.
+
+Quatro testes de fontePASS. Auditoria atualPASS,1SCC jogável e0água decorativa
+alcançável. Versão5 atualiza apenas o fundo salvo de baterias4, uma só vez,
+preservando posições/NPCs/flags. Antes/depois completos e52recortes revisados
+emdocs/design/native-rock-fragments-review. Resumo e manifestohash em
+docs/design/atlas-surf-layout/rocks103-checkpoint.json; imagens completas
+ficam no repositório, sem alegação de replay offline pelo ZIP das quatro ROMs.
+
+AINDA NÃO compilado este reparo103. Próximo: fonte privada nova, build/freeze,
+verificação das103células/BG/VRAM/paleta no emulador, colisões por controles,
+SAVE/Continue e cinco edições; atualizar PR112. Não editar fontes congeladas.
+
+O lote anterior de bordas/96nadadores/7sprites foi compilado em fonte separada
+.local/atlas-borders-swimmers-src, ainda sem provas nativas novas. ROM65f11271630f6e5b212d2dabc28bc48570c883aa12427692b07b788b1c4e5b5b;
+ELFe958471761613f50618bab7e977d8e8a9105e86c7a48aab18045e2e73807ba98;
+marker2e6c26d45681533fe69f1533bd95668d1186031638b64d95fd3362cbc96ae6f8.
+34080inputs exatos;532ativos/606slots; versão4;33207700bytes ROM. Preservar.
+Públicos aindaf2; C8 e baselines permanecem. PR112 aberto, sem merge.
+Trabalhos anteriores de cavernas grandes/diversas,105câmaras e demais gates
+continuam pendentes após esta prioridade explícita do usuário.
+
+HISTÓRICO PRESERVADO:
+
 BUILD PRIVADO EM PREPARAÇÃO —17/11/2026
 
 Fonte nova materializada em.local/atlas-borders-swimmers-src:2191outputs,

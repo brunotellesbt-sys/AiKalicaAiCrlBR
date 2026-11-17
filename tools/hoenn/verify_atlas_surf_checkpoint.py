@@ -35,6 +35,36 @@ def confined(root, name):
     return resolved
 
 
+def verify_rocks103_evidence(root):
+    """Bind the compact ZIP reference to the full repository review bytes."""
+    root=Path(root).resolve()
+    path=root/PROOF/'rocks103-checkpoint.json'
+    if not path.exists():return None
+    reference=read_json(path)
+    assert reference['scope']=='native-General-103-rock-fragments'
+    assert reference['final_release_validated'] is False
+    files={}
+    for key in ('summary','evidence_manifest'):
+        row=reference[key];p=confined(root,row['file'])
+        assert p.is_relative_to(root/'docs/design/native-rock-fragments-review')
+        assert digest(p.read_bytes())==row['sha256'],('Changed rock review reference',key)
+        files[key]=p
+    summary=read_json(files['summary'])
+    assert summary['source_repairs']==103 and summary['maps']==20
+    assert summary['complete_large_boulders_preserved']==462 and summary['suspect_pieces_after']==0
+    assert summary['final_release_validated'] is False
+    assert summary['native_ROM_validation_complete']==reference['native_ROM_validation_complete']
+    seen=set();base=files['evidence_manifest'].parent
+    for line in files['evidence_manifest'].read_text().splitlines():
+        expected,name=line.split('  ',1);relative=Path(name)
+        assert not relative.is_absolute() and '..' not in relative.parts and name not in seen
+        seen.add(name);p=(base/relative).resolve()
+        assert p.is_relative_to(base.resolve())
+        assert digest(p.read_bytes())==expected,('Changed rock review evidence',name)
+    assert files['summary'].relative_to(base).as_posix() in seen
+    return reference
+
+
 def candidate_flags(info, *, proofs=False):
     assert info['candidate'] is True and info['validated'] is False
     assert info['final_release_validated'] is False and info['validation_scope'] == SCOPE
@@ -179,6 +209,7 @@ def verify_archive(root, directory, info, summary):
 
 def verify(root=ROOT, *, if_candidate=False):
     root = Path(root)
+    verify_rocks103_evidence(root)
     directory = root / 'mods/hoenn/versions'
     info = read_json(directory / 'versions.json')
     if if_candidate and info.get('validation_scope') != SCOPE:

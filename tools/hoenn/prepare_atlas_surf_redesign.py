@@ -1,4 +1,4 @@
-"""Prepare private water-boundary, swimmer and native-species corrections.
+"""Prepare boundaries, swimmers, native species and103 complete-rock repairs.
 
 The large cave exteriors and separate legendary chambers are still a later
 batch. This explicit scope never labels the entire user redesign complete.
@@ -17,6 +17,7 @@ from atlas_surf_background import stage as stage_background
 from atlas_surf_trainers import stage as stage_trainers
 from atlas_surf_redesign_migration import stage as stage_migration
 from atlas_surf_build_inputs import stage as stage_build_inputs
+from atlas_surf_rock_repairs import stage as stage_rock_repairs,stage_view_refresh
 from atlas_surf_overlay import OverlaySource
 from atlas_surf_source import Source
 from atlas_surf_classification import census_native_bounds
@@ -68,10 +69,13 @@ def compose(parent):
     metadata['surf_trainer_redesign']=trainers
     metadata['template_redesign_migration']=migration
     metadata['migration']['final_version']=4
+    metadata['native_General_rock_repairs']=stage_rock_repairs(layer)
+    metadata['rock_view_migration']=stage_view_refresh(layer)
+    metadata['migration']['final_version']=5
     metadata['pending_obligations']=[
         'native current-ROM boundary, Dive/Emerge, camera, sprite, trainer and old-save checks',
         'large distinct cave exteriors and separate entrances/chambers for all105 legendaries',
-        'global bank-specific complete-rock review',
+        'complete-rock review of other native primary banks; General103 repaired',
         'remaining DEX, five-edition, browser and final release gates']
     # A fresh source view authenticates all changed objects and restore code.
     view,report,graph,banks=source_audit(layer,metadata)
@@ -107,4 +111,4 @@ if __name__=='__main__':
     parser.add_argument('--output',required=True,type=Path);parser.add_argument('--cache-freeze',type=Path)
     a=parser.parse_args();result=prepare(a.parent,a.target,a.output,a.cache_freeze)
     print(json.dumps(dict(private_source=str(a.target),source_passed=result['source_audit_passed'],
-        trainers=result['surf_trainer_redesign']['count'],migration=4,native_validated=False,release_eligible=False)))
+        trainers=result['surf_trainer_redesign']['count'],migration=5,native_validated=False,release_eligible=False)))
