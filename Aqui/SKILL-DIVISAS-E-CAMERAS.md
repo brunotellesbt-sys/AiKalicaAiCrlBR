@@ -79,3 +79,21 @@ Prova final desta revisão: ROM `c08cb777…`, duas divisas, três fases por
 observação, ida/volta, bloqueios e saves6→7→SAVE→Continue7 passaram. As cinco
 candidatas do PR foram atualizadas; outras divisas/estados continuam exigindo
 seus próprios casos. Evidência: `docs/design/neighbor-layout-camera-review`.
+
+## Fixture de treinadores também pode falsear uma falha de caminho
+
+Não use TRAINER_FLAGS_START + ID para treinadores novos sem conferir o
+resolvedor nativo JourneyBeachTrainerFlag. Os IDs novos usam flags privadas.
+Uma preparação assim ativou FLAG_SYS_CRUISE_MODE, e a CPU repetia
+SSTidalCorridor_EventScript_ReachedStepCount após o limite de passos.
+Colisão/altura/câmera corretas não bastavam para o jogador andar. Use as flags
+exatas do manifesto ou SetTrainerFlag durante o fixture; depois só controles
+e getters. Preserve o trace do diagnóstico e repita os percursos afetados.
+
+Atualização de 18/11/2026: depois de mudar chegadas de portos ou aposentar
+mapas, o validador deve ler ports.arrivals do marker atual. Coordenadas de
+metadados antigos não certificam o caminho atual; NoRoute antes do primeiro
+controle ainda é falha de planejamento, não prova de colisão no jogo.
+Cabeçalhos com shared_scripts_map/shared_events_map precisam ser comparados
+aos ponteiros e contagens do dono compartilhado declarado. Nunca aceitar um
+ponteiro divergente nem presumir que todo mapa possui seus próprios símbolos.

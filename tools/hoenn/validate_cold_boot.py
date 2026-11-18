@@ -62,7 +62,40 @@ def backup_grid_layout(source):
     return dict(zip(('width','height','map'),values)),hashlib.sha256(raw).hexdigest()
 
 
-def validate(source, library, output, battery=None, save_output=None, expected_geometry_version=None, expected_map_cells=()):
+def field_state_layout(source):
+    fields={
+        'flags':'__builtin_offsetof(struct SaveBlock1,flags)',
+        'flags_size':'sizeof(((struct SaveBlock1*)0)->flags)',
+        'saved_templates':'__builtin_offsetof(struct SaveBlock1,objectEventTemplates)',
+        'template_size':'sizeof(struct ObjectEventTemplate)',
+        'template_local_id':'__builtin_offsetof(struct ObjectEventTemplate,localId)',
+        'template_count':'sizeof(((struct SaveBlock1*)0)->objectEventTemplates)/sizeof(struct ObjectEventTemplate)',
+        'object_size':'sizeof(struct ObjectEvent)',
+        'object_local_id':'__builtin_offsetof(struct ObjectEvent,localId)',
+        'object_map_num':'__builtin_offsetof(struct ObjectEvent,mapNum)',
+        'object_map_group':'__builtin_offsetof(struct ObjectEvent,mapGroup)',
+        'object_x':'__builtin_offsetof(struct ObjectEvent,currentCoords.x)',
+        'object_y':'__builtin_offsetof(struct ObjectEvent,currentCoords.y)',
+        'object_count':'OBJECT_EVENTS_COUNT',
+        'header_events':'__builtin_offsetof(struct MapHeader,events)',
+        'event_object_count':'__builtin_offsetof(struct MapEvents,objectEventCount)',
+        'event_objects':'__builtin_offsetof(struct MapEvents,objectEvents)',
+        'pokemon_size':'sizeof(struct Pokemon)',
+    }
+    code='#include "global.h"\n#include "event_object_movement.h"\nconst unsigned int fieldLayout[]={'+','.join(fields.values())+'};\n'
+    with tempfile.TemporaryDirectory(prefix='journey-cold-field-layout-') as directory:
+        path=Path(directory)/'field.c';path.write_text(code);assembly=path.with_suffix('.s')
+        subprocess.run([str(ROOT/'.local/arm-gcc/usr/bin/arm-none-eabi-gcc'),'-mabi=apcs-gnu','-mcpu=arm7tdmi','-mthumb',
+            '-std=gnu17','-DMODERN=1','-DTESTING=0','-DEMERALD','-iquote',str(source/'include'),'-S',str(path),'-o',str(assembly)],check=True,capture_output=True)
+        raw=assembly.read_bytes();values=[int(v) for v in re.findall(r'^\s*\.word\s+(-?\d+)\s*$',raw.decode(),re.M)]
+    assert len(values)==len(fields),('Unexpected field-state ABI',values)
+    return dict(offsets=dict(zip(fields,values)),actual_ARM_APCS_struct_compiled=True,
+                assembly_sha256=hashlib.sha256(raw).hexdigest(),read_only_RAM_observation=True)
+
+
+def validate(source, library, output, battery=None, save_output=None, expected_geometry_version=None, expected_map_cells=(),
+             *, expected_flags=(), verify_current_map_objects=False, require_cleared_template_tail=False,
+             expected_party_sha256=None):
     source, library, output = map(Path, (source, library, output))
     output.mkdir(parents=True, exist_ok=True)
     sha = hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest()
@@ -70,6 +103,7 @@ def validate(source, library, output, battery=None, save_output=None, expected_g
     symbols = {n: int(a, 16) for a, k, n in re.findall(r'^(\w+) (\w) (\S+)$', nm, re.M)}
     layout=geometry_layout(source) if expected_geometry_version is not None else None
     grid_layout,grid_probe_sha=backup_grid_layout(source) if expected_map_cells else (None,None)
+    field_layout=field_state_layout(source) if expected_flags or verify_current_map_objects or expected_party_sha256 else None
     callbacks = {v: k for k, v in symbols.items()}
     lib = ctypes.CDLL(str(library.resolve()))
     lib.start.argtypes = [ctypes.c_char_p]
@@ -145,6 +179,50 @@ def validate(source, library, output, battery=None, save_output=None, expected_g
                         actual=lib.read16(save+layout['vars_offset']+2*(layout['variable']-layout['vars_start']))
                         assert actual==expected_geometry_version,('Saved geometry migration did not finish',actual,expected_geometry_version)
                         result['geometry_version']=actual
+                    if field_layout is not None:
+                        fields=field_layout['offsets']
+                        flag_values=[]
+                        for flag,wanted in dict(expected_flags).items():
+                            assert 0<flag<fields['flags_size']*8,('Flag outside actual persisted array',flag)
+                            actual=bool(lib.read8(save+fields['flags']+flag//8)&(1<<(flag&7)))
+                            assert actual==bool(wanted),('Continue changed a persistent capture/progress flag',flag,actual,wanted)
+                            flag_values.append(dict(flag=flag,value=actual))
+                        result['persistent_flags_checked']=flag_values
+                        if expected_party_sha256 is not None:
+                            count=lib.read8(symbols['gPartiesCount'])
+                            assert 0<count<=6
+                            raw=bytes(lib.read8(symbols['gParties']+i) for i in range(count*fields['pokemon_size']))
+                            actual=hashlib.sha256(raw).hexdigest()
+                            assert actual==expected_party_sha256,'Continue changed the actually captured party bytes'
+                            result['persistent_party_sha256']=actual
+                            result['persistent_party_count']=count
+                        if verify_current_map_objects:
+                            events=lib.read32(symbols['gMapHeader']+fields['header_events'])
+                            count=lib.read8(events+fields['event_object_count'])
+                            templates=lib.read32(events+fields['event_objects'])
+                            expected_ids=[lib.read8(templates+i*fields['template_size']+fields['template_local_id']) for i in range(count)]
+                            saved_all=[lib.read8(save+fields['saved_templates']+i*fields['template_size']+fields['template_local_id']) for i in range(fields['template_count'])]
+                            saved_ids=saved_all[:count]
+                            unused=[v for v in saved_all[count:] if v]
+                            assert saved_ids==expected_ids,('Continue retained old actor templates',saved_ids,expected_ids)
+                            if require_cleared_template_tail:
+                                assert not unused,('Removed actor templates remain in the saved tail',unused)
+                            active=[]
+                            for i in range(fields['object_count']):
+                                at=symbols['gObjectEvents']+i*fields['object_size']
+                                if not lib.read8(at)&1:
+                                    continue
+                                local_id=lib.read8(at+fields['object_local_id'])
+                                if local_id>=0xFD:
+                                    continue
+                                identity=[lib.read8(at+fields['object_map_group']),lib.read8(at+fields['object_map_num'])]
+                                if identity!=result['field_map']:
+                                    continue
+                                assert local_id in expected_ids,('Old actor remains active after Continue',local_id,expected_ids)
+                                active.append(dict(local_id=local_id,tile=[lib.read16(at+fields['object_x'])-7,lib.read16(at+fields['object_y'])-7]))
+                            result['native_object_templates']=dict(compiled_local_ids=expected_ids,saved_local_ids=saved_ids,
+                                active_current_map_objects=active,unused_saved_template_local_ids=unused,
+                                all_active_objects_are_current_templates=True,unused_templates_cleared=not unused)
                     if save_output is not None:
                         press(8);step(90)
                         count=lib.read8(symbols['sNumStartMenuActions'])
@@ -194,6 +272,8 @@ def validate(source, library, output, battery=None, save_output=None, expected_g
     if grid_layout is not None:
         report['backup_grid_layout_proof']=dict(offsets=grid_layout,actual_ARM_APCS_struct_compiled=True,
                                                assembly_sha256=grid_probe_sha,read_only_RAM_observation=True)
+    if field_layout is not None:
+        report['field_state_layout_proof']=field_layout
     if battery:
         report.update(bundled_save_continue_to_field=True,
                       bundled_save_sha256=hashlib.sha256(Path(battery).read_bytes()).hexdigest())

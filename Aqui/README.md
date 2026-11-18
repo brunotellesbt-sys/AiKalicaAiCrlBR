@@ -1,3 +1,98 @@
+Atualização do mesmo lote: a matriz105 também PASSOU na ROMBaa258f74,
+com210PNG novos e48600pixels de espécies, verificados independentemente.
+ProvasB emdocs/design/legendary-chambers-review/large-caves-v8/native.
+Os7testes anticorrupção dessas provas passaram. As demais pendências e a
+exigência de abrir PR somente com toda a suíte aprovada continuam ativas.
+
+EM ANDAMENTO — PR SOMENTE COM TODOS OS TESTES APROVADOS —17/11/2026
+Pedido literal mais recente: “Ok, quero o próximo PR passando em todos os testes, já resolveu aquele?”
+Resposta dada: ainda não; as8falhas+1erro continuam no gate final legítimo.
+Não abrir o próximo PR enquanto toda a suíte e as verificações obrigatórias
+não passarem. Commit/push de checkpoint na branch continuam autorizados.
+Nenhum PR novo foi aberto. O avisoPython foi corrigido, mas isso não resolve
+a aprovação final; não omitir testes, mudarflags ou reutilizar prova antiga.
+
+Implementação concreta:105câmaras próprias em48cavernas, entrada/retorno
+recíprocos,105sprites de espécie, flags/scripts de captura e NPCs/warps de
+campanha preservados. Há7famílias nativas de salas,37geometrias completas,
+sem recortar objetos. DEX consolidado em uma localização atual por espécie;
+os quatro arrays de arte do atlas não mudam. IDs antigos mantidos e dois
+grupos novos anexados; migração candidata8 renova os objetos somente nos mapas
+alterados, preservando jogador/seguidores e os eventos de captura.
+
+A primeira compilação privada(protótipoA) passou105viagens nativas de entrada,
+aproximação e retorno por controles,210capturas e48600pixels visíveis das
+espécies. O verificador independente lê cada PNG, seus hashes, OAM/frames e
+as identidades ROM/ELF/marker; captura/batalhas/saves não foram certificados.
+ROMprotótipoA:e8b3d8e5e009fe2c4f9c6ddc4521e1f2670d33a3e35ed73af83f70c20cbeedf5.
+Provas/delta emdocs/design/legendary-chambers-review/prototype-v8a. Essas
+provas são somente do protótipoA, não da compilação que inclui os exteriores.
+
+A nova compilação privadaB integra nove massas costeiras ampliadas e variadas
+por faixas nativas inteiras, e troca cada caverna3x3 pelo objeto Seafoam
+completo de81células. Recifes, bocas de conexão e o pixel fixo do atlas ficam
+preservados. Há1728posições antigas para resgate local uma vez, com destino
+do mesmo modo; ainda exigir testes do C e baterias antigas reais.
+FonteB:.local/legendary-caves-src;freeze:.local/legendary-caves-frozen.json.
+ROM:aa258f7498df10f1fc4ea57104d499b474d837d6ba8f4b3484832f0e74471051
+ELF:9b75417a2b2123e50c6a9b80abfe25c9b51527d225b3c6bbd46419d485d8977d
+marker:9a1c2e7211e153155f18bfa03e1e6406d69a694c86b1844564ab1a495647c1e3
+34396inputs/2604outputs;33367284bytes usados/33554432; uma componente Surf,
+sem fuga para água decorativa na auditoria de fonte. Galeria dos9exteriores
+inspecionada. Nova matriz105 está sendo executada na ROMB; outras provas de
+costa, colisão, Surf, saves, edições e release continuam pendentes.
+
+Corrigido também o renderizador: tabelas static de mesmo nome em unidades C
+diferentes não podem ser concatenadas. Espécies usam as tabelas de pokemon.c,
+e não a arte antiga do NPC clássico. Sete testes do renderizador e oito testes
+portáteis das105salas passaram. Comparação nativa aceita os64x64 reais montados
+por duas peças64x32; não reduzir a espécie para32x32 para contornar o teste.
+
+As cinco ROMs públicas continuam no checkpointV7; não foram substituídas por
+uma compilação sem as provas novas. A/B e os snapshots anteriores foram
+preservados. Somente caches regeneráveis e pacotes.deb já instalados foram
+reclamados por espaço, com hashes/proveniência em.local. A preparação B foi
+retomada após ENOSPC conferindo todos os arquivos parciais antes da cópia.
+
+Último subpedido concluído:105câmaras implementadas/compiladas e105entradas,
+corpos de espécies e retornos provados no protótipoA. Pedido global incompleto:
+concluir/provar exteriores e migração naB, repetir105/rochas/câmeras/costas,
+treinadores, ecologia/DEX, cinco edições, browser e contrato172, passar TODA a
+suíte e somente então abrir o PR. Não promover nativeA como prova deB.
+
+HISTÓRICO PRESERVADO:
+
+RETOMADA APÓS MERGE112 — CORRIGIR GATES E CAVERNAS —17/11/2026
+Pedido literal: “Fiz o merge com esse erro. Corrija isso e as outras coisas que
+pedi pfvr”. Depois:“Continue”. Merge confirmado emmain9dff8c370ddd6d718b1164cbaefa47050c88509e.
+Branch nova:fix/cave-chambers-release-validation-2026-11-17, baseada nesse merge.
+
+O log fornecido executou12testes sea_routesPASS e1173Hoenn, com8FAIL+1ERROR e
+50skipped. As nove recusas são o selo final aindafalse (Unvalidatedrelease),
+inclusiveSootopolis.validated. Não foi demonstrada nova regressão de pedra ou
+câmera. Não trocarflags/SHAs, afrouxar contratos ou ignorar testes para aprovar.
+A candidata atualc08cb777/versão7 e todas as suas provas continuam preservadas.
+
+Corrigido oSyntaxWarning deescapes\l/\p no gerador do workshop, mantendo
+exatamente osbytes do script emitido (SHA256d2a32a6d1a1891efb3cddd1699ce96133e88ef87467a16f5412406a1e474df4d).
+CompilaçãoPython comSyntaxWarning comoerroPASS. Isso corrige o aviso; não o selo.
+
+Trabalho retomado das cavernas: inventário confirma105eventos especiais em48
+cavernas,14santuários,8cavernas costeiras e26grupos em mapas nativos. Há18
+exteriores no atlas atual; nove usam o mesmo terreno compacto. Prévia técnica
+dos interiores e bancos nativos preservada em.local/chamber-native-review.
+Próximo: acessos próprios e105câmaras variadas com os próprios sprites,
+exteriores maiores/distintos, migração8 e provas nativas; então completar
+contrato/edições/ecologia/DEX/browser até a aprovação real dos gates.
+Preservar IDs, NPCs de campanha, warps originais, flags de captura e arte doatlas.
+Usar os lembretes deHere/AGENTS; não reutilizar provas antigas como atuais.
+
+Último subpedido concluído: merge identificado, causa doCI confirmada e aviso
+corrigido sem mudar saída do gerador. Pedido atual global ainda EM ANDAMENTO.
+Nenhum PR novo aberto ainda, nenhum merge executado pelaIA e nenhum selo final.
+
+HISTÓRICO PRESERVADO:
+
 CONCLUÍDO — DUAS DIVISAS COM VISÃO DESATUALIZADA —17/11/2026
 Pedido atual, trecho literal: “Consegue reparar isso em alguns lugares?
 Identificar esse padrão, assim como identificou as rotas? Esses termos técnicos

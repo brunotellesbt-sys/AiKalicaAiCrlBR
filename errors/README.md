@@ -1,5 +1,7 @@
 # Registro de erros
 
+Atual: [gates após merge112 e cavernas pendentes](2026-11-17-post-merge-release-gates.txt).
+
 Atual: [visão desatualizada de mapas vizinhos](2026-11-17-neighbor-camera.txt).
 
 Retomada atual: [barqueiro de Pacifidlog, rochas de Slateport e ligações restantes](2026-11-16-harbor-actors-rocks.txt).

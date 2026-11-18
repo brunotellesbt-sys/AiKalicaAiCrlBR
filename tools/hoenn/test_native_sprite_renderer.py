@@ -128,6 +128,19 @@ const u16 gShinyOverworldPalette_{token}[] = INCBIN_U16("graphics/pokemon/{folde
         self.assertEqual(female.tobytes(),renderer.sprite('OBJ_EVENT_GFX_SPECIES(KELDEO_ORDINARY)').tobytes())
         self.assertEqual(renderer.sprite('OBJ_EVENT_GFX_SPECIES(KELDEO)').tobytes(),renderer.sprite('OBJ_EVENT_GFX_SPECIES(KELDEO_ORDINARY)').tobytes())
 
+    def test_species_uses_its_translation_unit_when_classic_NPC_table_name_collides(self):
+        path=self.source/'src/data/object_events/object_event_pic_tables.h'
+        path.write_text(path.read_text()+'''
+static const struct SpriteFrameImage sPicTable_KeldeoOrdinary[] = {
+ overworld_frame(gObjectEventPic_Reordered,4,4,0),
+};
+''')
+        renderer=MapRenderer(self.source)
+        image=renderer.sprite('OBJ_EVENT_GFX_SPECIES(KELDEO_ORDINARY)')
+        self.assertEqual(image.getpixel((31,31)),(*self.colors[3],255))
+        descriptor=renderer.sprite_sources['OBJ_EVENT_GFX_SPECIES(KELDEO_ORDINARY)#0']
+        self.assertEqual(descriptor['graphic_source'],'graphics/pokemon/keldeo/overworld.png')
+
     def test_explicit_native_frame_table_order_and_bounds(self):
         renderer=MapRenderer(self.source)
         self.assertEqual(renderer.sprite('OBJ_EVENT_GFX_REORDERED',0).getpixel((1,1)),(*self.colors[4],255))

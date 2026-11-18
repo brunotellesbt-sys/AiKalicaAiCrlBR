@@ -565,9 +565,12 @@ def compiled_map_bindings(source,inputs,names):
         assert pointer==table[name][0], ('Compiled map ID/table differs',name)
         layout,events,scripts,connections=struct.unpack('<4I',read(pointer,16))
         assert layout==table[inputs.layout(name)['name']][0], ('Compiled map layout differs',name)
-        assert events==table[name+'_MapEvents'][0] and scripts==table[name+'_MapScripts'][0]
+        script_owner=mapping.get('shared_scripts_map',name)
+        event_owner=mapping.get('shared_events_map',name)
+        event_mapping=inputs.maps[event_owner]
+        assert events==table[event_owner+'_MapEvents'][0] and scripts==table[script_owner+'_MapScripts'][0]
         counts=list(read(events,4))
-        assert counts==[len(mapping.get(key,[])) for key in ('object_events','warp_events','coord_events','bg_events')], ('Compiled event counts differ',name)
+        assert counts==[len(event_mapping.get(key,[])) for key in ('object_events','warp_events','coord_events','bg_events')], ('Compiled event counts differ',name)
         disabled=mapping.get('connections_no_include',False)
         expected=[] if disabled else mapping.get('connections') or []
         rows=[]

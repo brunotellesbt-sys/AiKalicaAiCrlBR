@@ -1,0 +1,35 @@
+{
+  "schema": "large-caves-v8-followup/v1",
+  "ROM_sha256": "aa258f7498df10f1fc4ea57104d499b474d837d6ba8f4b3484832f0e74471051",
+  "final_release_validated": false,
+  "nine_large_exterior_controller_roundtrips": true,
+  "complete_mountain_cells": 729,
+  "exterior_captures": 189,
+  "real_version7_to8_save_roundtrips": 18,
+  "capture_flags_checked_per_continue": 105,
+  "all1728_positions_actual_C_passed": true,
+  "rocks": {
+    "original_cells": 103,
+    "additional_cells": 6,
+    "cases": 54,
+    "captures": 210,
+    "native_collision_bumps": 48
+  },
+  "neighbor_cameras": 2,
+  "dives": 5,
+  "captain_native_voyages": 2,
+  "three_port_roundtrip": true,
+  "native_chart_roundtrips": [
+    "route12",
+    "treasure",
+    "bond",
+    "pacifidlog"
+  ],
+  "ordinary_family_counts_before_and_after": {
+    "493": 190,
+    "1025": 383
+  },
+  "unresolved_retired_Dex_claims": 261,
+  "all261_species_already_have_exact_reachable_current_triggers": true,
+  "next_step": "Relocate retired Dex AREA references to audited exact-species/cap triggers, then compile a fresh source and repeat current-ROM proofs; finish trainers/captures/five editions/browser/final release/all CI before PR."
+}

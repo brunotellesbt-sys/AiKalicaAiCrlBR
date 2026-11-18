@@ -150,9 +150,13 @@ class MapRenderer:
         assert width>0 and height>0 and width%8==height%8==0
         assert _integer(_field(info,'size'))==width*height//2, ('Native object size differs from its full frame',symbol)
         pic=_field(info,'images')
-        tables=_without_comments((root/'object_event_pic_tables.h').read_text())
         followers=root/'object_event_pic_tables_followers.h'
-        if followers.exists(): tables+='\n'+_without_comments(followers.read_text())
+        # These static tables belong to different C translation units. Several
+        # species reuse a classic NPC table name (Articuno, for example), but
+        # gSpeciesInfo is compiled in pokemon.c with the follower table.
+        # Concatenating both files silently selected the unrelated old sprite.
+        table_path=followers if species and followers.exists() else root/'object_event_pic_tables.h'
+        tables=_without_comments(table_path.read_text())
         pic=_alias(pic,tables)
         match=re.search(r'(?:static\s+)?const struct SpriteFrameImage '+re.escape(pic)+r'\[\]\s*=\s*\{',tables)
         assert match, ('Native frame table missing',pic)

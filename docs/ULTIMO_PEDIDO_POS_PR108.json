@@ -38,22 +38,53 @@
   "confirmed_old_root_cause": {
     "module": "tools/hoenn/repair_surf_geometry.py",
     "mechanism": "O gerador acrescentava segmentos e curvas arbitrários enquanto interpolava retângulos físicos ao longo de uma polilinha abstrata, ignorando a direção real de cada trecho.",
-    "concrete_reproduction": {"map": "JourneyWorldSea01", "start_tile": [44, 10], "start_atlas": [137, 55], "input": "UP até y0", "observed_atlas": [157, 44]},
+    "concrete_reproduction": {
+      "map": "JourneyWorldSea01",
+      "start_tile": [
+        44,
+        10
+      ],
+      "start_atlas": [
+        137,
+        55
+      ],
+      "input": "UP até y0",
+      "observed_atlas": [
+        157,
+        44
+      ]
+    },
     "interpretation": "Uma caminhada apenas para norte produzia grande deslocamento para leste no atlas.",
     "old_validation_gap": "Conferir continuidade de GPS nas emendas não detectava eixos invertidos, percursos dobrados ou distâncias incompatíveis."
   },
   "implementation_being_prepared": {
     "architecture": "Reconstrução num sistema global de coordenadas físicas derivado da arte fixa.",
-    "atlas_size_pixels": [224, 112],
+    "atlas_size_pixels": [
+      224,
+      112
+    ],
     "physical_scale": "8tiles por pixel do atlas",
     "ordinary_water_corridor_width": 6,
-    "ordinary_chunk_size": [32, 32],
+    "ordinary_chunk_size": [
+      32,
+      32
+    ],
     "smaller_chunks_allowed": true,
-    "gps_formula": ["(originX + localX) // 8", "(originY + localY) // 8"],
+    "gps_formula": [
+      "(originX + localX) // 8",
+      "(originY + localY) // 8"
+    ],
     "old_interpolated_gps_controls_new_travel": false,
     "new_per_cell_gps_arrays": false,
     "reason_to_avoid_large_arrays": "A ROM precisa permanecer dentro de32MiB.",
-    "latest_source_plan": {"new_chunks": 436, "retired_old_map_ids": 273, "native_adapters": 33, "whole_scenery_stamps": 171, "surface_cave_entrances": 18, "dive_sites": 5},
+    "latest_source_plan": {
+      "new_chunks": 436,
+      "retired_old_map_ids": 273,
+      "native_adapters": 33,
+      "whole_scenery_stamps": 171,
+      "surface_cave_entrances": 18,
+      "dive_sites": 5
+    },
     "map_identity": {
       "append_only": true,
       "retired_ids_preserved_for_save_migration": true,
@@ -68,15 +99,47 @@
     "non_route_icon_center": 1,
     "reason": "Não transformar estradas nativas ou centros de ícones em piscinas duplicadas.",
     "additional_short_accesses": [
-      {"kind": "coastal_access", "from_atlas": [128, 89], "to_atlas": [133, 89], "constraint": "Trecho curto em oceano real entre linha principal e ponta costeira autenticada."},
-      {"kind": "ArtisanCave_access", "from_atlas": [119, 103], "to_atlas": [119, 104]}
+      {
+        "kind": "coastal_access",
+        "from_atlas": [
+          128,
+          89
+        ],
+        "to_atlas": [
+          133,
+          89
+        ],
+        "constraint": "Trecho curto em oceano real entre linha principal e ponta costeira autenticada."
+      },
+      {
+        "kind": "ArtisanCave_access",
+        "from_atlas": [
+          119,
+          103
+        ],
+        "to_atlas": [
+          119,
+          104
+        ]
+      }
     ]
   },
   "source_reachability_result": {
     "status": "PASS histórico para o plano436",
-    "generated_water_components": {"total": 449, "reachable_and_returnable": 449},
-    "ports": {"total": 7, "dry_and_water_seeds": 14, "same_strongly_connected_component": true},
-    "surface_caves": {"total": 18, "surface_and_interior_reachable_and_returnable": true, "Artisan_included": true},
+    "generated_water_components": {
+      "total": 449,
+      "reachable_and_returnable": 449
+    },
+    "ports": {
+      "total": 7,
+      "dry_and_water_seeds": 14,
+      "same_strongly_connected_component": true
+    },
+    "surface_caves": {
+      "total": 18,
+      "surface_and_interior_reachable_and_returnable": true,
+      "Artisan_included": true
+    },
     "native_owned_pixels_with_reachable_witness": 45,
     "report": ".local/atlas-global-strict-preview.json",
     "important_limit": "Essa prova é dos arquivos e do grafo físico. Não substitui execução na ROM."
@@ -101,17 +164,46 @@
         "Preservação das mudanças runtime do mapa atual."
       ]
     },
-    "boat_arrivals": {"repair": "Atualizar os sete destinos Seagallop e os scripts de chegada para os desembarques secos integrados.", "requirement": "Não enviar o jogador a mapas de portos aposentados."},
-    "route114": {"repair": "Fechar a antiga ligação falsa da lagoa interior ao oceano.", "cells": [[0, 17], [0, 18]], "before": "0x1170", "after": "0x15F9", "preserve": "Lagoa, margem em y16, NPCs e eventos."}
+    "boat_arrivals": {
+      "repair": "Atualizar os sete destinos Seagallop e os scripts de chegada para os desembarques secos integrados.",
+      "requirement": "Não enviar o jogador a mapas de portos aposentados."
+    },
+    "route114": {
+      "repair": "Fechar a antiga ligação falsa da lagoa interior ao oceano.",
+      "cells": [
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "before": "0x1170",
+      "after": "0x15F9",
+      "preserve": "Lagoa, margem em y16, NPCs e eventos."
+    }
   },
   "ecology_work": {
     "why_required": "Copiar os cabeçalhos wild_encounters.json para mapas novos não conecta automaticamente esses mapas aos pools e habitats compilados do jogo.",
     "implementation": "Aliases compactos dos novos mapas para os donos originais de pools/habitats, preservando geografia e saves.",
     "native_function": "JourneyAtlasEcologyMap(u16 map)",
-    "hooks": ["JourneyWildSpecies", "JourneyWildPoolAvailable", "JourneyFishingOdds", "JourneyHabitatHasSpecies"],
+    "hooks": [
+      "JourneyWildSpecies",
+      "JourneyWildPoolAvailable",
+      "JourneyFishingOdds",
+      "JourneyHabitatHasSpecies"
+    ],
     "event_guard": "As restrições de espécies/eventos devem preceder o alias ordinário.",
-    "actual_trigger_families_preserved": {"Gen9": 383, "Gen4": 190},
-    "native_grass_preserved": {"chunks": 6, "cells": 269},
+    "actual_trigger_families_preserved": {
+      "Gen9": 383,
+      "Gen4": 190
+    },
+    "native_grass_preserved": {
+      "chunks": 6,
+      "cells": 269
+    },
     "dex_repair": "Remover marcadores ordinários dos IDs aposentados e gerar marcadores por área com gatilho real e célula acessível.",
     "misleading_old_counts": "403/200 eram união de pools, incluindo linhas já sem gatilho. Não equivalem a famílias efetivamente disponíveis.",
     "status": "Gerador e auditoria por arquivos preparados; validação nativa final pendente."
@@ -119,25 +211,62 @@
   "visual_work": {
     "whole_object_policy": "Preservar objetos completos e conferir bancos, oito words gráficos, atributos, paletas e animações.",
     "source_gallery": ".local/atlas-render-diagnostic",
-    "first_candidate_rendered": {"chunks": 448, "whole_objects": 171, "neighbor_halo_tiles": 7},
+    "first_candidate_rendered": {
+      "chunks": 448,
+      "whole_objects": 171,
+      "neighbor_halo_tiles": 7
+    },
     "concrete_additional_defect": {
       "map": "BirthIsland_Exterior_Frlg",
       "problem": "Telhado vermelho isolado abaixo da rampa, sem fachada.",
-      "roof_footprint": {"x": [13, 17], "y": [25, 27]},
+      "roof_footprint": {
+        "x": [
+          13,
+          17
+        ],
+        "y": [
+          25,
+          27
+        ]
+      },
       "source_repair": "Substituição do objeto inteiro por desembarque de madeira, sem metal na ponta.",
       "changed_cells": 17,
       "private_metatile": "0x2E4",
-      "preserved": ["Warp e eventos", "Comportamento nativoMB101", "Alturas", "Colisões", "Barco e NPCs doHarbor"],
+      "preserved": [
+        "Warp e eventos",
+        "Comportamento nativoMB101",
+        "Alturas",
+        "Colisões",
+        "Barco e NPCs doHarbor"
+      ],
       "native_proof_pending": "BirthExterior -> BirthHarbor -> retorno, com visibilidade e colisões."
     },
     "NavelRock": "Embarcação completa inspecionada e preservada."
   },
   "native_runtime_problem_found": {
     "candidate": "Primeiro candidato448",
-    "successful_tests_before_failure": ["Cinco percursos Dive, com120capturas, entrada/saída e recusa de emergir sobre barreiras.", "Entrada e retorno Surf de Aurora."],
-    "next_failure": {"seam": "JourneyAtlasSea410 -> JourneyAtlasSea409", "direction": "west", "temporary_object_position": [-1, 10], "temporary_save_position": [32, 10]},
+    "successful_tests_before_failure": [
+      "Cinco percursos Dive, com120capturas, entrada/saída e recusa de emergir sobre barreiras.",
+      "Entrada e retorno Surf de Aurora."
+    ],
+    "next_failure": {
+      "seam": "JourneyAtlasSea410 -> JourneyAtlasSea409",
+      "direction": "west",
+      "temporary_object_position": [
+        -1,
+        10
+      ],
+      "temporary_save_position": [
+        32,
+        10
+      ]
+    },
     "actual_diagnosis": "O carregamento não era infinito: demorava aproximadamente5segundos porque fazia buscas lineares repetidas entre448mapas durante InitMap e desenho.",
-    "fix_written": ["AtlasChunk por índice direto grupo/número com validação doID.", "AtlasWorldChunk por índice espacial de linhas32tiles.", "Tabelas compactas em journey_atlas_legacy.h."],
+    "fix_written": [
+      "AtlasChunk por índice direto grupo/número com validação doID.",
+      "AtlasWorldChunk por índice espacial de linhas32tiles.",
+      "Tabelas compactas em journey_atlas_legacy.h."
+    ],
     "equivalence_test": "C real compilado comparado com oracle linear:65.536IDs e aproximadamente379mil coordenadas.",
     "fix_compiled_into_final_rom": false,
     "fix_proven_in_native_runtime": false,
@@ -145,10 +274,42 @@
   },
   "implementation_files": {
     "directory": "tools/hoenn",
-    "core": ["atlas_surf_truth.py", "atlas_surf_geometry.py", "atlas_surf_pois.py", "atlas_surf_coasts.py", "atlas_surf_adapters.py", "atlas_surf_layer.py", "atlas_surf_runtime.py", "atlas_surf_reachability.py"],
-    "dependent_repairs": ["atlas_surf_dives.py", "atlas_surf_ecology.py", "atlas_surf_native_scenery.py", "atlas_surface_batteries.py"],
-    "pipeline": ["atlas_surf_layout_contract.py", "prepare_atlas_surf_layout.py", "freeze_atlas_surf_layout.py", "publish_atlas_surf_layout.py", "verify_atlas_surf_layout_update.py"],
-    "validation": ["validate_atlas_surf_layout_source.py", "verify_atlas_surf_layout_source.py", "validate_atlas_surf_layout_native.py", "verify_atlas_surf_layout_native.py", "validate_atlas_surf_surface_native.py", "validate_atlas_surf_dives_native.py", "verify_atlas_surf_dives_native.py", "validate_atlas_surf_ecology_native.py", "verify_atlas_surf_ecology_native.py", "validate_atlas_surf_ecology_source.py", "validate_atlas_surf_classification.py"],
+    "core": [
+      "atlas_surf_truth.py",
+      "atlas_surf_geometry.py",
+      "atlas_surf_pois.py",
+      "atlas_surf_coasts.py",
+      "atlas_surf_adapters.py",
+      "atlas_surf_layer.py",
+      "atlas_surf_runtime.py",
+      "atlas_surf_reachability.py"
+    ],
+    "dependent_repairs": [
+      "atlas_surf_dives.py",
+      "atlas_surf_ecology.py",
+      "atlas_surf_native_scenery.py",
+      "atlas_surface_batteries.py"
+    ],
+    "pipeline": [
+      "atlas_surf_layout_contract.py",
+      "prepare_atlas_surf_layout.py",
+      "freeze_atlas_surf_layout.py",
+      "publish_atlas_surf_layout.py",
+      "verify_atlas_surf_layout_update.py"
+    ],
+    "validation": [
+      "validate_atlas_surf_layout_source.py",
+      "verify_atlas_surf_layout_source.py",
+      "validate_atlas_surf_layout_native.py",
+      "verify_atlas_surf_layout_native.py",
+      "validate_atlas_surf_surface_native.py",
+      "validate_atlas_surf_dives_native.py",
+      "verify_atlas_surf_dives_native.py",
+      "validate_atlas_surf_ecology_native.py",
+      "verify_atlas_surf_ecology_native.py",
+      "validate_atlas_surf_ecology_source.py",
+      "validate_atlas_surf_classification.py"
+    ],
     "render": "render_atlas_surf_layout.py",
     "tests": "test_atlas_*.py"
   },
@@ -167,14 +328,72 @@
     "limitation": "O arquivo ficou no mesmo workspace indisponível. Não contém todas as alterações posteriores dos geradores."
   },
   "pending_final_delivery": {
-    "source_audit": ["Concluir verificação independente dos gatilhos ecológicos e seus caminhos.", "Conferir tabelas do índice espacial e identidade compilada dos mapas.", "Conferir a exceção artística de17células de Birth.", "Revisar os hashes preparados sem enfraquecer contratos."],
-    "compile": ["Compilar a candidata final.", "Respeitar o limite de32MiB.", "Congelar source, ELF e ROM antes das provas."],
-    "native_tests": ["18cavernas de superfície.", "33adaptadores e retorno às costas.", "Sete desembarques: embarque e desembarque.", "Barreiras aplicáveis, mapas estreitos, curvas e vizinhos diagonais.", "Viagens contínuas Aurora/One/Two/Three e Hoenn/Kanto.", "Correção da pausa na divisa.", "Birth Island e retorno.", "Cinco Dive.", "Ecologia Gen9, Gen4 e TESTE.", "Baterias novas e171, com salvar e continuar reais."],
-    "editions": ["Gen1-4-Normal", "Gen1-4-Hard", "Gen1-9-Normal", "Gen1-9-Hard", "TESTE"],
+    "source_audit": [
+      "Concluir verificação independente dos gatilhos ecológicos e seus caminhos.",
+      "Conferir tabelas do índice espacial e identidade compilada dos mapas.",
+      "Conferir a exceção artística de17células de Birth.",
+      "Revisar os hashes preparados sem enfraquecer contratos."
+    ],
+    "compile": [
+      "Compilar a candidata final.",
+      "Respeitar o limite de32MiB.",
+      "Congelar source, ELF e ROM antes das provas."
+    ],
+    "native_tests": [
+      "18cavernas de superfície.",
+      "33adaptadores e retorno às costas.",
+      "Sete desembarques: embarque e desembarque.",
+      "Barreiras aplicáveis, mapas estreitos, curvas e vizinhos diagonais.",
+      "Viagens contínuas Aurora/One/Two/Three e Hoenn/Kanto.",
+      "Correção da pausa na divisa.",
+      "Birth Island e retorno.",
+      "Cinco Dive.",
+      "Ecologia Gen9, Gen4 e TESTE.",
+      "Baterias novas e171, com salvar e continuar reais."
+    ],
+    "editions": [
+      "Gen1-4-Normal",
+      "Gen1-4-Hard",
+      "Gen1-9-Normal",
+      "Gen1-9-Hard",
+      "TESTE"
+    ],
     "TESTE_requirement": "Atualizada e funcional, preservando a supressão de encounters e de batalhas/abordagens automáticas de trainers.",
-    "release_proofs": {"common": ["atlas-surf-layout-source", "atlas-surf-layout-native"], "per_edition": ["review-mode", "cold-boot"], "total": 12},
-    "publication": ["Atualizar ROMs e saveTESTE.", "Atualizar ZIP e manifestos.", "Validar navegador e stage_pages.", "Atualizar documentação/errors com os hashes finais.", "Fazer commit e push verificados.", "Entregar PR, explicitando qualquer pendência se for rascunho."]
+    "release_proofs": {
+      "common": [
+        "atlas-surf-layout-source",
+        "atlas-surf-layout-native"
+      ],
+      "per_edition": [
+        "review-mode",
+        "cold-boot"
+      ],
+      "total": 12
+    },
+    "publication": [
+      "Atualizar ROMs e saveTESTE.",
+      "Atualizar ZIP e manifestos.",
+      "Validar navegador e stage_pages.",
+      "Atualizar documentação/errors com os hashes finais.",
+      "Fazer commit e push verificados.",
+      "Entregar PR, explicitando qualquer pendência se for rascunho."
+    ]
   },
-  "what_not_to_restart_as_new_scope": ["Não redesenhar o mapa-múndi.", "Não reimplementar os ginásios ou o torneio só porque aparecem no histórico.", "Não considerar provas da primeira ROM448 como validação da geração436.", "Não chamar o problema de resolvido apenas porque o grafo por arquivos passou."],
-  "success_definition": "As viagens físicas, seus acessos e a posição ciano correspondem ao atlas fixo; não há travessias impossíveis, pausas anormais, objetos cortados ou regressões nos saves/encontros; as cinco edições e os arquivos publicados possuem provas vinculadas aos seus hashes atuais."
+  "what_not_to_restart_as_new_scope": [
+    "Não redesenhar o mapa-múndi.",
+    "Não reimplementar os ginásios ou o torneio só porque aparecem no histórico.",
+    "Não considerar provas da primeira ROM448 como validação da geração436.",
+    "Não chamar o problema de resolvido apenas porque o grafo por arquivos passou."
+  ],
+  "success_definition": "As viagens físicas, seus acessos e a posição ciano correspondem ao atlas fixo; não há travessias impossíveis, pausas anormais, objetos cortados ou regressões nos saves/encontros; as cinco edições e os arquivos publicados possuem provas vinculadas aos seus hashes atuais.",
+  "latest_progress_checkpoint_2026_11_18": {
+    "user_request": "ABRA UM PR COM TODO PROGRESSO ATÉ O MOMENTO POIS O LIMITE VAI ACABAR.",
+    "normal_progress_PR_requested": true,
+    "earlier_wait_for_green_before_PR_superseded": true,
+    "review": "docs/design/legendary-chambers-review/compiled-c-v8/README.md",
+    "frozen_source": ".local/final-atlas-src",
+    "rom_sha256": "d296428c98f989a815e24d9def5a51bfd284c50f1ca9831547cb42fb7ce8c0ce",
+    "final_release_validated": false,
+    "public_ROMs_remain_version7": true
+  }
 }
