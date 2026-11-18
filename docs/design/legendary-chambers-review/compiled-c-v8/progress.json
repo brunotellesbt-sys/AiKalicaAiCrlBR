@@ -1,0 +1,91 @@
+{
+  "schema": "requested-development-progress/v1",
+  "date": "2026-11-18",
+  "user_request": "ABRA UM PR COM TODO PROGRESSO ATÉ O MOMENTO POIS O LIMITE VAI ACABAR.",
+  "compiled_artifacts_sha256": {
+    "pokeemerald.gba": "d296428c98f989a815e24d9def5a51bfd284c50f1ca9831547cb42fb7ce8c0ce",
+    "pokeemerald.elf": "48051289a43f05e3ebc30d891a3de68e46140d44015189a1ea15766b00211214",
+    ".journey-atlas-surf-layout": "91a5f6809e36d29d9063b436f5b84de7db1967ea3aaf277515ecfcfc2a0b3cda"
+  },
+  "prepared_source_files": 2604,
+  "complete_source_files": 34396,
+  "source_delta_sha256": "183e973bef151d5fbc4aaba559a126472138394435c8f6154edd26c53c320f3d",
+  "independent_native_verification": {
+    "rooms": {
+      "passed": true,
+      "ROM_sha256": "d296428c98f989a815e24d9def5a51bfd284c50f1ca9831547cb42fb7ce8c0ce",
+      "rooms": 105,
+      "captures": 210,
+      "visible_native_species_pixels": 48600,
+      "capture_battles_and_saves_validated": false,
+      "final_release_validated": false
+    },
+    "exteriors": {
+      "passed": true,
+      "ROM_sha256": "d296428c98f989a815e24d9def5a51bfd284c50f1ca9831547cb42fb7ce8c0ce",
+      "maps": 9,
+      "complete_mountain_cells": 729,
+      "captures": 189,
+      "final_release_validated": false
+    },
+    "rocks": {
+      "original_cells": 103,
+      "additional_cells": 6,
+      "cases": 54,
+      "captures": 210,
+      "native_collision_cases": 48,
+      "native_pixels_and_artifact_identity": true,
+      "final_release_validated": false
+    }
+  },
+  "current_ROM_native_counts": {
+    "chambers": 105,
+    "large_exteriors": 9,
+    "surf_trainer_victories": 96,
+    "native_coast_faces": 34,
+    "dive_roundtrips": 5,
+    "legacy_battery_migrations": 18,
+    "neighbor_camera_cases": 2,
+    "actually_captured_special_species": [
+      144
+    ]
+  },
+  "public_five_ROMs_remain_version7": true,
+  "private_current_ROM_migration_version": 8,
+  "final_release_validated": false,
+  "full_campaign_playthrough": false,
+  "remaining": [
+    "Complete representative captures 487 and 1025 and independently aggregate all final proofs.",
+    "Update the seven-pier traversal harness to the current Atlas arrival metadata and prove all current ferry trips.",
+    "Repeat Pacifidlog captain and ThreeIsland focused controls on C (B proofs remain historical).",
+    "Export and natively validate all five C editions, caps, normal/hard rules, TESTE suppression/manual battles and cold saves.",
+    "Complete strict layer172 release contract, publisher, historical readers and browser proof.",
+    "Run every required CI check; the original 8 failures and 1 error are still blocked by the honest unvalidated release gate."
+  ],
+  "tool_sha256": {
+    "prepare_legendary_chambers.py": "3cfcb4aa1c8592eeaafd5a649ceaaa8355fa841f183a67e603953e1d6745f67e",
+    "validate_cold_boot.py": "f52291118831e5db670dcb025e3bcbbef87cd8053ac5ba26f425df0c173f1a52",
+    "validate_generated_area_review_source.py": "ffcfb93f507d27a7e57e0acbd0d56c497bf6bb71f560ab755b783720fe586e06",
+    "verify_legendary_chambers_native.py": "f37c480e63b01ae6fdaa686a3fcbed12f3528ac1dbe454d14984f972b8b059e1",
+    "validate_atlas_coast_faces_native.py": "0846f0c9e56cacdc491dc199aad4e382fc13d79b7f9b86a70353ee0a193521af",
+    "validate_atlas_final_source.py": "021ba417f8461aeefd2c3c1c6b5d9dc57d011ce3cbda0601c5d43f06cbb68a88",
+    "validate_atlas_surf_trainers_native.py": "1a53eeb222bb71c1f4d1178a659bf079fa2db2c8235fca5d38f54fb7f8ea3f19",
+    "validate_legendary_captures_native.py": "e5781bc504a05733a580897087662004838f6eb721abc5d8a732b07d6a1056fb"
+  },
+  "unit_test_results": {
+    "hoenn": {
+      "tests": 1218,
+      "failures": 8,
+      "errors": 1,
+      "skipped": 26,
+      "seconds": 126.358,
+      "passed": false,
+      "remaining_gate": "Unvalidated release"
+    },
+    "sea_routes": {
+      "tests": 12,
+      "passed": true
+    },
+    "changed_and_new_Python_modules_compiled": 8
+  }
+}

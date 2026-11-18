@@ -1,3 +1,39 @@
+CHECKPOINT PARA PR DE PROGRESSO — 18/11/2026
+Pedido literal mais recente: "ABRA UM PR COM TODO PROGRESSO ATÉ O MOMENTO POIS O LIMITE VAI ACABAR."
+O autor agora solicita abrir o PR com todo o progresso existente, mesmo com
+validação final pendente. Esta instrução substitui a espera anterior por todos
+os testes para a abertura. PR normal, conforme sua preferência persistente;
+registrar pendências explicitamente e não executar merge.
+
+ROM privada C d296428c98f989a815e24d9def5a51bfd284c50f1ca9831547cb42fb7ce8c0ce:
+105câmaras,9exteriores grandes,96vitórias Surf,34costas,5Dive,18baterias reais
+V7→8→SAVE→Continue,103+6fragmentos e2divisas131 PASS. Articuno144 capturado
+por controles, flag/ator/bola conferidos e equipe preservada em SAVE/Continue;
+não foram certificadas105capturas. A Pokédex foi corrigida na fonte e compilada:
+978referências efetivas realocadas(261trocam proprietário),72linhas antigas
+ineficazes removidas; gatilhos exatos de espécie/cap alcançáveis, sem mudar encontros.
+Prova compilada independente:34396entradas,2604saídas,2046mapas,3118warps,
+401atores afetados e2473linhas AREA. Arte do atlas preservada.
+
+Provas novas C, PNGs, baterias, delta completo, freeze, logs e SHA256SUMS:
+docs/design/legendary-chambers-review/compiled-c-v8/README.md.
+Fonte preservada:.local/final-atlas-src;freeze:.local/final-atlas-frozen.json.
+As provas A/B permanecem históricas; nunca relabelar seus hashes como C.
+Último subpedido concluído: preservar/rever as provas atuais da C e preparar o
+checkpoint solicitado para o PR. Pedido principal incompleto: concluir a ROM.
+Faltam487/1025,percurso dos7portos com ports.arrivals atual,capitão/ThreeIsland
+na C,cincoedições/regras/caps/TESTE/coldboots,encontros,browser e contrato/publicador172.
+O planejador dos7portos usa coordenadas históricas e falha antes dos controles;
+a hipótese de pontes não resolveu e foi retirada. Não declarar defeito da ROM sem prova.
+As cinco ROMs públicas continuamV7; os8FAIL+1ERROR do selo legítimo continuam
+pendentes. Abrir PR de progresso não significa testes verdes ou ROM publicada.
+
+Verificação deste checkpoint: Sea Routes12/12PASS; Hoenn1218testes em126.358s,
+8FAIL+1ERROR+26skipped. Permanecem apenas as9recusas de selo; fixtures originais
+ausentes no clone foram restaurados, sem modificar testes. Logs emcompiled-c-v8/checks/.
+
+HISTÓRICO PRESERVADO (instruções antigas de esperar o PR foram substituídas):
+
 EM ANDAMENTO — CONCLUIR A VALIDAÇÃO REAL —17/11/2026
 Pedido literal mais recente: '"as 8 falhas e 1 erro continuam bloqueados pela validação final da Rom." o que falta pra solucionar, finalizar e concluir isso? Faça.'
 Mantém a exigência: próximo PR somente depois de TODOS os testes obrigatórios.

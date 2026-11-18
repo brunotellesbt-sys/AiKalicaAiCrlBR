@@ -1,0 +1,42 @@
+CHECKPOINT DE PROGRESSO SOLICITADO — 18/11/2026
+
+Pedido literal: "ABRA UM PR COM TODO PROGRESSO ATÉ O MOMENTO POIS O LIMITE VAI ACABAR."
+Este pedido substitui a restrição anterior de esperar todos os testes para
+abrir PR. Abrir PR normal, conforme preferência persistente, com as pendências
+explícitas; não confundir a abertura com lançamento aprovado ou merge.
+
+ROM privada C: d296428c98f989a815e24d9def5a51bfd284c50f1ca9831547cb42fb7ce8c0ce
+Snapshot/provas: docs/design/legendary-chambers-review/compiled-c-v8/
+Fonte: .local/final-atlas-src; freeze: .local/final-atlas-frozen.json.
+
+Fonte compilada: 34396 entradas, 2604 saídas, 2046 mapas, 3118 warps,
+401 atores afetados, 2473 linhas AREA; replay independente e arte preservada PASS.
+DEX: 978 referências efetivas corrigidas, 261 com novo proprietário atual;
+72 linhas historicamente ineficazes removidas, sem mudar encontros.
+Atual C: 105 viagens de câmara,9exteriores,96vitórias Surf,34costas,5Dive,
+18baterias V7→8→SAVE→Continue,103+6fragmentos e2divisas131 PASS.
+Uma captura especial real: Articuno144, recusa com15insígnias, captura com16,
+remoção, consumo da bola, SAVE e Continue preservando toda a equipe. Faltam487/1025.
+
+Correções dos validadores neste lote:
+- prepare_legendary_chambers: não sobrescrever a variável before do baseline
+  com o censo de ecologia; o preparador volta a conferir a imutabilidade correta.
+- compiled_map_bindings: scripts/eventos compartilhados apontam para o dono
+  declarado pelo gerador nativo; os counts são conferidos nesse dono.
+- validate_cold_boot: opção de SHA dos bytes reais da equipe capturada após Continue.
+- verify_legendary_chambers_native: leitura integral de componentes JSON.gz.
+
+Percurso histórico dos sete portos ainda precisa ser atualizado para os pontos
+atuais ports.arrivals. O erro NoRoute ocorreu no planejador, antes de controles;
+não atribuir à geometria sem prova nativa. A tentativa de ampliar dry_only para
+pontes não resolveu e foi retirada, preservando o comportamento anterior.
+
+O clone parcial não materializava fixtures históricos. Foram recuperados os
+bytes originais de Git, conferidos por hash; os arquivos temporários de testes
+precisam ser editáveis, mesmo quando a fonte congelada é somente leitura.
+Não pular testes nem alterar provas para contornar fixtures ausentes.
+
+Cinco ROMs públicas e ZIP continuam V7, com documentos do checkpoint atualizados.
+Selo final false preservado. Faltam cinco edições C, provas de modo/caps/encontros,
+capitão/ThreeIsland atuais, contrato172/publicador/leitores, browser e suíte verde.
+Logs e resultados atuais: compiled-c-v8/checks/ e progress.json.

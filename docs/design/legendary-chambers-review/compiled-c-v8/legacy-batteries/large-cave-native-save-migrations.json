@@ -1,0 +1,4036 @@
+{
+  "kind": "large-cave-native-save-migrations",
+  "passed": true,
+  "artifacts": {
+    "old": {
+      "pokeemerald.gba": "c08cb7771a9731db995b7d99297c8b1ebcdd98d75a9ac5e50cdaef8dcff62c82",
+      "pokeemerald.elf": "36989019fbf9b14e8ce93b96701c3c517bee965a6ab755d3c380ebcb9a16449f",
+      ".journey-atlas-surf-layout": "10a2b57e222d642aac218b0a4e04e4a296378fa0f5e237cff73c753123a97114"
+    },
+    "new": {
+      "pokeemerald.gba": "d296428c98f989a815e24d9def5a51bfd284c50f1ca9831547cb42fb7ce8c0ce",
+      "pokeemerald.elf": "48051289a43f05e3ebc30d891a3de68e46140d44015189a1ea15766b00211214",
+      ".journey-atlas-surf-layout": "91a5f6809e36d29d9063b436f5b84de7db1967ea3aaf277515ecfcfc2a0b3cda"
+    }
+  },
+  "cases": [
+    {
+      "name": "JourneyAtlasCave00",
+      "label": "JourneyAtlasCave00-foot",
+      "old": [
+        16,
+        11
+      ],
+      "target": [
+        13,
+        9
+      ],
+      "surfing": false,
+      "old_word": 12565,
+      "new_word": 12557,
+      "map_id": 23841,
+      "old_battery_sha256": "f74a3be0fea88fe156fcf46f2526bd4e6c18afc860ac1258feadd1f890259723",
+      "new_battery_sha256": "3692ce168f3257e9d225c4f1f357c5528cbbbd093f33c9090038a925dddbb01a",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    },
+    {
+      "name": "JourneyAtlasCave00",
+      "label": "JourneyAtlasCave00-surf",
+      "old": [
+        11,
+        9
+      ],
+      "target": [
+        11,
+        8
+      ],
+      "surfing": true,
+      "old_word": 4395,
+      "new_word": 4395,
+      "map_id": 23841,
+      "old_battery_sha256": "acb90259bf549ed365b2563770c641e5e94cdc14f518f132396be1fe75157f31",
+      "new_battery_sha256": "23c1eb47740e0129d88de6112748c3b7f01536f06c1d89c19125b4b7b2c1ad01",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    },
+    {
+      "name": "JourneyAtlasCave01",
+      "label": "JourneyAtlasCave01-foot",
+      "old": [
+        16,
+        11
+      ],
+      "target": [
+        16,
+        8
+      ],
+      "surfing": false,
+      "old_word": 12565,
+      "new_word": 12565,
+      "map_id": 24152,
+      "old_battery_sha256": "052b2231815f76542fac85826bec667f060ff8011715161792eeefd6562bd1a2",
+      "new_battery_sha256": "e2f3aa38378d59fe2c6bef507fc6848f4e1427b8dab9a45d9af136f526fa3dae",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    },
+    {
+      "name": "JourneyAtlasCave01",
+      "label": "JourneyAtlasCave01-surf",
+      "old": [
+        16,
+        8
+      ],
+      "target": [
+        16,
+        4
+      ],
+      "surfing": true,
+      "old_word": 4395,
+      "new_word": 4395,
+      "map_id": 24152,
+      "old_battery_sha256": "c7adeaa4b03fd4c2721b81c71854b9ef1695166e76f947bbafed103443677a37",
+      "new_battery_sha256": "11aeb5d2be4ae7f60cc0f90e6ceeccbcbc9496f87dc92066ec99096424582ea9",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    },
+    {
+      "name": "JourneyAtlasCave02",
+      "label": "JourneyAtlasCave02-foot",
+      "old": [
+        16,
+        11
+      ],
+      "target": [
+        16,
+        8
+      ],
+      "surfing": false,
+      "old_word": 12565,
+      "new_word": 12565,
+      "map_id": 23079,
+      "old_battery_sha256": "dc51fa66559f46a537486a815a9e39eadf7180b3cbf320ec5dbeba645571e444",
+      "new_battery_sha256": "5cb6f99f97367a9df5be5cce41de07d9996039b58db4ff8f677b5902ce56f887",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    },
+    {
+      "name": "JourneyAtlasCave02",
+      "label": "JourneyAtlasCave02-surf",
+      "old": [
+        16,
+        8
+      ],
+      "target": [
+        16,
+        4
+      ],
+      "surfing": true,
+      "old_word": 4395,
+      "new_word": 4395,
+      "map_id": 23079,
+      "old_battery_sha256": "0f5737745f3afebfca5bbfb7e056b1a2878b42f36365150e2264884d823a0e67",
+      "new_battery_sha256": "a2d1b15d0bc01abeb71406afb50d5a1c7a1562d9f65a918de7bb710aca1a14ce",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    },
+    {
+      "name": "JourneyAtlasCave03",
+      "label": "JourneyAtlasCave03-foot",
+      "old": [
+        16,
+        11
+      ],
+      "target": [
+        16,
+        8
+      ],
+      "surfing": false,
+      "old_word": 12565,
+      "new_word": 12565,
+      "map_id": 24322,
+      "old_battery_sha256": "5343102b42fae8935cf1789858afc826e194ecb288555beac3238d7a09a7db67",
+      "new_battery_sha256": "05e9d2cc307793b05720853b9cfeb49575f355cec24704b83a5553839de1fce2",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    },
+    {
+      "name": "JourneyAtlasCave03",
+      "label": "JourneyAtlasCave03-surf",
+      "old": [
+        16,
+        8
+      ],
+      "target": [
+        16,
+        4
+      ],
+      "surfing": true,
+      "old_word": 4395,
+      "new_word": 4395,
+      "map_id": 24322,
+      "old_battery_sha256": "6700f8428092f503b4b3da5a5dbb7cab69eae6bcb29189082af2d7e62ea494be",
+      "new_battery_sha256": "6d72bd8d3a82488fff5b86d29140aba52b6e25b942fe0f621427d95718627de7",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    },
+    {
+      "name": "JourneyAtlasCave04",
+      "label": "JourneyAtlasCave04-foot",
+      "old": [
+        16,
+        11
+      ],
+      "target": [
+        13,
+        9
+      ],
+      "surfing": false,
+      "old_word": 12565,
+      "new_word": 12557,
+      "map_id": 23082,
+      "old_battery_sha256": "eeef3a64d9ba9dfb64870a6b586d4ec8d741ddcaa2a7451981d6d2eb6f05bf73",
+      "new_battery_sha256": "0759e0ff77b10815b8396129e1fa2739ba0010385865d08aef71bb9766970a0f",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    },
+    {
+      "name": "JourneyAtlasCave04",
+      "label": "JourneyAtlasCave04-surf",
+      "old": [
+        11,
+        9
+      ],
+      "target": [
+        11,
+        8
+      ],
+      "surfing": true,
+      "old_word": 4395,
+      "new_word": 4395,
+      "map_id": 23082,
+      "old_battery_sha256": "855b28d2cbe33bc4c656afce314ee0d25e3f74cbe0745636f28fe18125fea6c3",
+      "new_battery_sha256": "70749b91727afcd1daa2f8962e0bdc1f592a09a0664493513853518eb91d2f68",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    },
+    {
+      "name": "JourneyAtlasCave05",
+      "label": "JourneyAtlasCave05-foot",
+      "old": [
+        16,
+        11
+      ],
+      "target": [
+        13,
+        9
+      ],
+      "surfing": false,
+      "old_word": 12565,
+      "new_word": 12557,
+      "map_id": 23382,
+      "old_battery_sha256": "0016fe6b2babbd96155cfeab31183ada791d42eace112478e58e384bdba9cabd",
+      "new_battery_sha256": "9fb8a36604cd8d0096b6a200366ed63da4bbb8c309ff84a778fa5f0bf82bc0df",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    },
+    {
+      "name": "JourneyAtlasCave05",
+      "label": "JourneyAtlasCave05-surf",
+      "old": [
+        11,
+        9
+      ],
+      "target": [
+        11,
+        8
+      ],
+      "surfing": true,
+      "old_word": 4395,
+      "new_word": 4395,
+      "map_id": 23382,
+      "old_battery_sha256": "cdf2a493a08f72ca4799c7ed98c7f41ff7f1c160c0655b682a0dc5a25cc7c02c",
+      "new_battery_sha256": "7bd87919e62d62efc3cd8816d4580d116223ebd113d7215420a4adeee48a1cf4",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    },
+    {
+      "name": "JourneyAtlasCave06",
+      "label": "JourneyAtlasCave06-foot",
+      "old": [
+        16,
+        11
+      ],
+      "target": [
+        16,
+        8
+      ],
+      "surfing": false,
+      "old_word": 12565,
+      "new_word": 12565,
+      "map_id": 24346,
+      "old_battery_sha256": "089c993a43c292ae20d49c0beab86be97551fb2ea52216f8c5d0f716150a458f",
+      "new_battery_sha256": "0c823a833cd3a7e15a6569b79f1e80a651123f343cc8b4d7102d7f1d3c6286b1",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    },
+    {
+      "name": "JourneyAtlasCave06",
+      "label": "JourneyAtlasCave06-surf",
+      "old": [
+        16,
+        8
+      ],
+      "target": [
+        16,
+        4
+      ],
+      "surfing": true,
+      "old_word": 4395,
+      "new_word": 4395,
+      "map_id": 24346,
+      "old_battery_sha256": "9f897de4866f85ea7d5e99b2e0ae6c9d16b4ad7a97f5ffd539dd45a975978c44",
+      "new_battery_sha256": "693180cd3c477aed413c146cf0a002a97df84a92b37d7639f589286cefb31b4d",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    },
+    {
+      "name": "JourneyAtlasCave07",
+      "label": "JourneyAtlasCave07-foot",
+      "old": [
+        16,
+        11
+      ],
+      "target": [
+        13,
+        9
+      ],
+      "surfing": false,
+      "old_word": 12565,
+      "new_word": 12557,
+      "map_id": 24347,
+      "old_battery_sha256": "b758140285f28acfc5decbc55ebcbe24b57ef531c3052361a099d831a209716b",
+      "new_battery_sha256": "ef86f098255b8854fbc3418aff9e3111505ac3bdf0fa4da95d8f90a20e6ced7f",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    },
+    {
+      "name": "JourneyAtlasCave07",
+      "label": "JourneyAtlasCave07-surf",
+      "old": [
+        11,
+        9
+      ],
+      "target": [
+        11,
+        8
+      ],
+      "surfing": true,
+      "old_word": 4395,
+      "new_word": 4395,
+      "map_id": 24347,
+      "old_battery_sha256": "6c9915a6969d77120751470ccb7a3dbc3d18a24c17d71dc40ee0acd46d91f6e8",
+      "new_battery_sha256": "5458f97e5fec743005a363f3ce722b7f7de809d35e1be6acc745ac68faf7d423",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    },
+    {
+      "name": "JourneyAtlasCave14",
+      "label": "JourneyAtlasCave14-foot",
+      "old": [
+        16,
+        11
+      ],
+      "target": [
+        13,
+        9
+      ],
+      "surfing": false,
+      "old_word": 12565,
+      "new_word": 12557,
+      "map_id": 23628,
+      "old_battery_sha256": "135d544a8fcd9a0b0f15b882d6f18d0182cf5cca655abbbcbcafde46b82712ff",
+      "new_battery_sha256": "0499a2fc71ae0d46c126c8a12fb63559de53fa6f188b0b7f66cf2d6e0c07a8a1",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    },
+    {
+      "name": "JourneyAtlasCave14",
+      "label": "JourneyAtlasCave14-surf",
+      "old": [
+        11,
+        9
+      ],
+      "target": [
+        11,
+        8
+      ],
+      "surfing": true,
+      "old_word": 4395,
+      "new_word": 4395,
+      "map_id": 23628,
+      "old_battery_sha256": "71e96a726e36e12a000f6c75b6c9216af892f4662f9acb32c37f09d88dbd43f0",
+      "new_battery_sha256": "97ed85b92353d42dbce495e9652c69b82e678cae0c1fb0a7aee0472256851e2a",
+      "old_save_controls": [
+        {
+          "frames": 1,
+          "key": 8
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 90,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 128
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        },
+        {
+          "frames": 1,
+          "key": 1
+        },
+        {
+          "frames": 35,
+          "key": 0
+        }
+      ],
+      "old_save_callbacks": [
+        "SaveConfirmInputCallback",
+        "SaveDoSaveCallback",
+        "SaveReturnSuccessCallback",
+        "SaveSuccessCallback",
+        "SaveYesNoCallback"
+      ],
+      "old_save_and_both_new_continues_passed": true,
+      "capture_flags_checked": 105,
+      "native_actor_templates_match_current_compiled_map": true,
+      "second_continue_did_not_repeat_migration": true
+    }
+  ],
+  "initial_old_party_progress_position_and_version_are_fixtures": true,
+  "real_menu_batteries_and_cold_controllers_only": true,
+  "all_nine_maps_and_both_modes": true,
+  "final_release_validated": false
+}

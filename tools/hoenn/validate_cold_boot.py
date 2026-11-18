@@ -80,6 +80,7 @@ def field_state_layout(source):
         'header_events':'__builtin_offsetof(struct MapHeader,events)',
         'event_object_count':'__builtin_offsetof(struct MapEvents,objectEventCount)',
         'event_objects':'__builtin_offsetof(struct MapEvents,objectEvents)',
+        'pokemon_size':'sizeof(struct Pokemon)',
     }
     code='#include "global.h"\n#include "event_object_movement.h"\nconst unsigned int fieldLayout[]={'+','.join(fields.values())+'};\n'
     with tempfile.TemporaryDirectory(prefix='journey-cold-field-layout-') as directory:
@@ -93,7 +94,8 @@ def field_state_layout(source):
 
 
 def validate(source, library, output, battery=None, save_output=None, expected_geometry_version=None, expected_map_cells=(),
-             *, expected_flags=(), verify_current_map_objects=False, require_cleared_template_tail=False):
+             *, expected_flags=(), verify_current_map_objects=False, require_cleared_template_tail=False,
+             expected_party_sha256=None):
     source, library, output = map(Path, (source, library, output))
     output.mkdir(parents=True, exist_ok=True)
     sha = hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest()
@@ -101,7 +103,7 @@ def validate(source, library, output, battery=None, save_output=None, expected_g
     symbols = {n: int(a, 16) for a, k, n in re.findall(r'^(\w+) (\w) (\S+)$', nm, re.M)}
     layout=geometry_layout(source) if expected_geometry_version is not None else None
     grid_layout,grid_probe_sha=backup_grid_layout(source) if expected_map_cells else (None,None)
-    field_layout=field_state_layout(source) if expected_flags or verify_current_map_objects else None
+    field_layout=field_state_layout(source) if expected_flags or verify_current_map_objects or expected_party_sha256 else None
     callbacks = {v: k for k, v in symbols.items()}
     lib = ctypes.CDLL(str(library.resolve()))
     lib.start.argtypes = [ctypes.c_char_p]
@@ -186,6 +188,14 @@ def validate(source, library, output, battery=None, save_output=None, expected_g
                             assert actual==bool(wanted),('Continue changed a persistent capture/progress flag',flag,actual,wanted)
                             flag_values.append(dict(flag=flag,value=actual))
                         result['persistent_flags_checked']=flag_values
+                        if expected_party_sha256 is not None:
+                            count=lib.read8(symbols['gPartiesCount'])
+                            assert 0<count<=6
+                            raw=bytes(lib.read8(symbols['gParties']+i) for i in range(count*fields['pokemon_size']))
+                            actual=hashlib.sha256(raw).hexdigest()
+                            assert actual==expected_party_sha256,'Continue changed the actually captured party bytes'
+                            result['persistent_party_sha256']=actual
+                            result['persistent_party_count']=count
                         if verify_current_map_objects:
                             events=lib.read32(symbols['gMapHeader']+fields['header_events'])
                             count=lib.read8(events+fields['event_object_count'])

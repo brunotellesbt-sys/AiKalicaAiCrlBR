@@ -8,3 +8,6 @@ mods/hoenn/sevii-surf-validation/** linguist-generated=true
 mods/hoenn/world-route-chart-validation/** linguist-generated=true
 tools/hoenn/data/world-coast-reference.json linguist-generated=true
 docs/images/navigation/world-routes.json linguist-generated=true
+
+# GBA battery saves contain native binary data.
+*.sav binary

@@ -1,3 +1,13 @@
+Atualização de progresso — 18/11/2026
+
+A compilação privada C integra as câmaras, exteriores e a correção AREA da
+Pokédex. Provas atuais, contagens, delta e pendências estão em
+[compiled-c-v8/README.md](design/legendary-chambers-review/compiled-c-v8/README.md).
+As cinco ROMs públicas deste checkpoint continuam V7. A abertura solicitada
+do PR preserva o trabalho; a validação global da camada172 ainda está pendente.
+
+Histórico anterior:
+
 EM ANDAMENTO — CONCLUIR A VALIDAÇÃO REAL —17/11/2026
 Pedido literal mais recente: '"as 8 falhas e 1 erro continuam bloqueados pela validação final da Rom." o que falta pra solucionar, finalizar e concluir isso? Faça.'
 Mantém a exigência: próximo PR somente depois de TODOS os testes obrigatórios.

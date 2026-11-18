@@ -1,5 +1,6 @@
 """Check all 105 controller trips and opaque species pixels on one frozen ROM."""
 import hashlib
+import gzip
 import json
 from pathlib import Path
 
@@ -36,7 +37,8 @@ def verify(frozen,folder,rooms):
         path=confined(folder,component['report'])
         if digest(path)!=component['sha256']:
             raise ValueError('Native chamber component changed')
-        report=json.loads(path.read_bytes())
+        raw=path.read_bytes()
+        report=json.loads(gzip.decompress(raw) if path.suffix=='.gz' else raw)
         if not report['passed'] or report['artifact_sha256']!=artifacts:
             raise ValueError('Native chamber component belongs to another ROM')
         for flag in ('initial_adjacent_floor_party_progress_and_position_fixtures_declared',

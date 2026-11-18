@@ -88,10 +88,10 @@ def prepare(parent, target, reference_freeze, output, *, large_exteriors=False, 
         from atlas_dex_retired_habitats import relocate
         from badge_story_layer import read
         from package_versions import ROOT
-        before=json.loads(gzip.decompress((ROOT/'docs/design/atlas-surf-layout/ecology-parent-source.json.gz').read_bytes()))
+        baseline_census=json.loads(gzip.decompress((ROOT/'docs/design/atlas-surf-layout/ecology-parent-source.json.gz').read_bytes()))
         catalog=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_bytes())['species']
         name='src/data/journey_world_dex_locations.h'
-        rewritten,dex_report=relocate(read(layer,name).decode(),before,census,metadata['geometry_plan'],catalog)
+        rewritten,dex_report=relocate(read(layer,name).decode(),baseline_census,census,metadata['geometry_plan'],catalog)
         layer.stage(name,rewritten)
         metadata['retired_habitat_dex_relocation']=dex_report
         print('Retired AREA references moved to exact reachable species/cap triggers',flush=True)
