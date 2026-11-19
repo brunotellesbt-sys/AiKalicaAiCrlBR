@@ -16,7 +16,24 @@ As novas histórias são paralelas. O planejamento deve preservar a exploração
 
 A história deve reconhecer lendários já capturados, sem criar um segundo indivíduo de captura para substituir o original. Os limites de geração de cada edição também precisam ser respeitados.
 
+## Regras de leitura das versões
+
+As tabelas de cada história valem para as edições Normal e Hard da respectiva faixa de gerações. O limite de geração define quais participantes e episódios existem; Normal/Hard mantém essa mesma disponibilidade narrativa. Balanceamento e equipes ainda precisam de desenho próprio.
+
+Cada história comum às duas faixas tem conclusão completa na Gen 1–4. Uma ampliação exclusiva Gen 1–9 não pode ser requisito de cena, item, combate ou encerramento da versão Gen 1–4.
+
+Quando uma história é marcada como ausente na Gen 1–4, ela não recebe uma troca improvisada de lendário nem uma etapa impossível de concluir. A ausência deste roteiro não remove encontros ou usos anteriores de espécies disponíveis que já pertencem à campanha.
+
+As versões não modificam por este documento os critérios existentes de formas, itens, capturas únicas ou requisitos da campanha. Os reencontros respeitam Pokémon já capturados e o indivíduo original.
+
 ## 1. Mewtwo — A dívida de Giovanni
+
+### Versões desta história — Normal e Hard
+
+| Faixa de gerações | Conteúdo desta versão |
+|---|---|
+| Gen 1–4 | História completa com Mewtwo e Giovanni. A ampliação de Mew da história 8 também está disponível. |
+| Gen 1–9 | A mesma história completa e a mesma ampliação de Mew. Nenhum personagem extra é obrigatório apenas pelo limite maior de geração. |
 
 Antigos laboratórios Rocket começam a ser destruídos. Giovanni reconhece os locais e pede ajuda ao jogador, mas inicialmente esconde sua participação nos experimentos.
 
@@ -28,6 +45,13 @@ No clímax, Giovanni escolhe o resgate. Mewtwo presencia a decisão e ajuda na f
 
 ## 2. Darkrai e Cresselia — A cidade que não acorda
 
+### Versões desta história — Normal e Hard
+
+| Faixa de gerações | Conteúdo desta versão |
+|---|---|
+| Gen 1–4 | Darkrai e Cresselia conduzem o resgate completo, com pistas nos relatos e nas saídas dos sonhos. Meloetta não aparece e nenhuma etapa depende de sua canção. |
+| Gen 1–9 | O núcleo de Darkrai/Cresselia permanece completo e recebe a ampliação de Meloetta da história 11, com os fragmentos da melodia. |
+
 Moradores de cidades diferentes começam a sonhar com a mesma ilha. Depois, alguns deixam de acordar. Darkrai aparece perto das vítimas e passa a ser perseguido.
 
 A investigação leva a pequenos cenários de sonho: uma casa muda de moradores, uma rua termina dentro de um hospital e pessoas repetem lembranças incompletas. Cresselia permite escapar desses lugares e recuperar fragmentos da investigação.
@@ -37,6 +61,13 @@ Um pesquisador está amplificando os pesadelos para estudar as distorções deix
 No final, Darkrai entra no pesadelo coletivo enquanto Cresselia mantém uma saída aberta. O jogador enfrenta o responsável dentro dessa realidade instável e ajuda a despertar os moradores.
 
 ## 3. Luffy, Kyogre, Lugia e Manaphy — O mar que engole os caminhos
+
+### Versões desta história — Normal e Hard
+
+| Faixa de gerações | Conteúdo desta versão |
+|---|---|
+| Gen 1–4 | Luffy, Kyogre, Groudon, Lugia, Manaphy e a operação do Governo Mundial compõem um arco completo. O epílogo de Shaymin da história 10 também está disponível. |
+| Gen 1–9 | A mesma história marítima completa, com os mesmos responsáveis e o epílogo de Shaymin. Outros arcos exclusivos não são requisitos para esse desfecho. |
 
 ### Disponibilidade e ligação com a campanha
 
@@ -100,6 +131,13 @@ A missão não reabre automaticamente toda a crise de Sootopolis nem transforma 
 
 ## 4. Celebi — A floresta fora do tempo
 
+### Versões desta história — Normal e Hard
+
+| Faixa de gerações | Conteúdo desta versão |
+|---|---|
+| Gen 1–4 | O responsável pelo aparelho é um pesquisador local; Palkia e Celebi resolvem a crise das lembranças e épocas da floresta. Não aparecem Sada, Turo ou Pokémon Paradoxo. |
+| Gen 1–9 | A função antagonista do aparelho e de sua ampliação pertence somente a Sada e Turo, desenvolvida em 7. Não há terceiro pesquisador vilão, lacaios ou equipe subordinada. |
+
 Na Gen 1–4, esta primeira fase usa um pesquisador local como responsável pelo aparelho. Na Gen 1–9, a função antagonista é assumida exclusivamente por Sada e Turo, conforme a história 7: não se acrescenta um terceiro pesquisador vilão ou subordinados aos dois.
 
 Após a crise Galactic, uma floresta começa a apresentar distorções. Caminhos levam a lugares distantes, construções desaparecidas reaparecem e moradores encontram pessoas que conheceram décadas atrás.
@@ -108,17 +146,26 @@ Embora a grande fenda tenha sido encerrada, ficaram pontos onde espaço e tempo 
 
 Celebi aparece ferido, tentando devolver Pokémon e pessoas às suas épocas. Ele conduz o jogador por diferentes momentos da floresta. O jogador conhece uma personagem quando criança, depois adulta e finalmente idosa, descobrindo como as distorções atravessaram sua vida.
 
-Um pesquisador encontrou vestígios da tecnologia Galactic e construiu um aparelho para manter aberto um desses pontos. Ele tenta reviver o último dia que passou com sua família. Cada repetição mistura novas épocas e lugares, consumindo o futuro da floresta.
+Na Gen 1–4, um pesquisador encontrou vestígios da tecnologia Galactic e construiu um aparelho para manter aberto um desses pontos. Ele tenta reviver o último dia que passou com sua família. Cada repetição mistura novas épocas e lugares, consumindo o futuro da floresta.
+
+Na Gen 1–9, o aparelho e sua ampliação são operados por Sada e Turo, com as motivações próprias descritas em 7. A função do pesquisador local é substituída nessa versão; ele não se torna um terceiro vilão ou subordinado dos professores.
 
 Celebi protege o jogador durante as travessias. Em uma cena, escolhe gastar suas últimas forças para retirar pessoas presas em uma sobreposição temporal, deixando o responsável escapar.
 
-No clímax, o jogador atravessa versões interligadas da floresta para desligar as âncoras do aparelho enquanto Celebi mantém uma passagem segura. O pesquisador precisa aceitar o encerramento daquele dia para permitir que todos tenham um amanhã.
+No clímax, o jogador atravessa versões interligadas da floresta para desligar as âncoras do aparelho enquanto Celebi mantém uma passagem segura. Na Gen 1–4, o pesquisador precisa aceitar o encerramento daquele dia para permitir que todos tenham um amanhã. Na Gen 1–9, Sada e Turo precisam interromper suas próprias ativações e colaborar com os retornos, conforme o desfecho de 7.
 
 Com a sequência do tempo restaurada, Celebi mostra brevemente a floresta recuperada no futuro. Seu encontro opcional posterior conclui a relação construída durante a missão.
 
 Esta história é a primeira fase do arco temporal de Palkia e Celebi. Palkia estabiliza os lugares que se sobrepõem, enquanto Celebi reconhece a época das pessoas e dos Pokémon. Depois dos acontecimentos dos Regis, a mesma parceria enfrenta a expansão descrita na história 7. O arco de Ultra Wormholes continua pertencendo a Palkia e Deoxys, conforme a correção do autor.
 
 ## 5. Palkia e Deoxys — O paraíso do outro lado
+
+### Versões desta história — Normal e Hard
+
+| Faixa de gerações | Conteúdo desta versão |
+|---|---|
+| Gen 1–4 | Esta história está ausente. Não existem missão, combate ou requisito dependentes de Lusamine/Aether, Hoopa, Ultra Beasts, Necrozma ou Zygarde deste arco. Os usos e encontros existentes de Palkia e Deoxys continuam preservados. |
+| Gen 1–9 | Arco completo de Palkia e Deoxys, com Lusamine e sua equipe antagonista da Aether, Hoopa, Ultra Wormholes, Ultra Beasts, Necrozma e Zygarde. Inclui a ampliação de Cosmog/Solgaleo/Lunala em 9. |
 
 ### Disponibilidade e responsáveis
 
@@ -213,6 +260,13 @@ Necrozma recupera acesso à luz de seu ambiente e Zygarde acompanha a recuperaç
 Os encontros opcionais e as capturas anteriores continuam preservados. O roteiro reconhece quando algum participante já pertence ao jogador, e formas, recompensas e duração ficam para desenho futuro.
 
 ## 6. Eren, Groudon e os Regis — O juramento sob as muralhas
+
+### Versões desta história — Normal e Hard
+
+| Faixa de gerações | Conteúdo desta versão |
+|---|---|
+| Gen 1–4 | Conclusão própria com Eren, Groudon, Regirock/Maria, Regice/Rose, Registeel/Sina e Regigigas/Fundador e seu juramento. Não contém Regieleki, Regidrago ou os episódios de Reiner/Marley e Zeke vinculados a eles. |
+| Gen 1–9 | O mesmo núcleo e suas correspondências, acrescidos de Regieleki/Reiner/Marley e Regidrago/Zeke. O enredo de Eren já registrado é preservado; este bloco somente explicita sua divisão por edição. |
 
 ### Edições e correspondências
 
@@ -354,6 +408,13 @@ Os reencontros têm despedida própria e reconhecem as diferenças de época ent
 
 ## 7. Palkia e Celebi, Sada e Turo — Os amanhãs que atravessaram a porta
 
+### Versões desta história — Normal e Hard
+
+| Faixa de gerações | Conteúdo desta versão |
+|---|---|
+| Gen 1–4 | Palkia e Celebi encerram a crise de pessoas, lembranças e espécies disponíveis até a geração 4. O pesquisador local do episódio 4 responde pela âncora. Não há Sada, Turo ou Pokémon Paradoxo. |
+| Gen 1–9 | Palkia e Celebi investigam a ampliação temporal com os Pokémon Paradoxo. Somente Sada e Turo operam e agravam a pesquisa: sem lacaios nem terceiro antagonista pesquisador. |
+
 ### Ligações e disponibilidade
 
 O arco da floresta em 4 é a primeira manifestação de instabilidade temporal. O despertar dos Regis faz as antigas marcas do experimento Galactic voltarem a responder. Na Gen 1–9, a tentativa de Zeke amplia a crise.
@@ -477,6 +538,13 @@ O autor aprovou as sete propostas abaixo. São expansões dos outros arcos e his
 
 ## 8. Mew e Mewtwo — O original e aquele que foi criado
 
+### Versões desta história — Normal e Hard
+
+| Faixa de gerações | Conteúdo desta versão |
+|---|---|
+| Gen 1–4 | Mew amplia o arco completo de Mewtwo/Giovanni com a armadilha e a escolha pelo resgate. |
+| Gen 1–9 | A mesma ampliação de Mew e a mesma resolução. Nenhuma espécie posterior é necessária para concluí-la. |
+
 Disponível nas edições Gen 1–4 e Gen 1–9. Expansão da história 1, com Giovanni e os antigos laboratórios Rocket.
 
 Um antigo pesquisador tenta localizar Mew para reconstruir o projeto que criou Mewtwo. Mew aparece perto dos Pokémon libertados dos laboratórios, ajudando-os a encontrar abrigo.
@@ -490,6 +558,13 @@ A escolha pelo resgate desenvolve uma relação construída por ações. Giovann
 O encontro opcional de cada Pokémon continua respeitando sua própria câmara, os requisitos existentes e as capturas anteriores.
 
 ## 9. Cosmog, Solgaleo e Lunala — O direito de voltar
+
+### Versões desta história — Normal e Hard
+
+| Faixa de gerações | Conteúdo desta versão |
+|---|---|
+| Gen 1–4 | Esta ampliação está ausente, assim como seu arco espacial de origem. Não há Cosmog, Solgaleo, Lunala ou requisito equivalente para substituir esses participantes. |
+| Gen 1–9 | Cosmog, Solgaleo e Lunala integram a história da Aether, preservando o protagonismo espacial de Palkia/Deoxys e as regras dos encontros únicos. |
 
 Exclusiva das edições Gen 1–9. Expansão do arco espacial da Aether, história 5.
 
@@ -507,6 +582,13 @@ Formas evolutivas, encontros únicos e eventuais participantes já capturados pr
 
 ## 10. Shaymin — O que a água deixou para trás
 
+### Versões desta história — Normal e Hard
+
+| Faixa de gerações | Conteúdo desta versão |
+|---|---|
+| Gen 1–4 | Epílogo completo de Shaymin após a recuperação marítima, com a comunidade, o solo e a água afetados e a despedida de Luffy. |
+| Gen 1–9 | O mesmo epílogo completo. A aparição posterior de Shaymin em 14 é outro episódio do mesmo indivíduo, sem duplicação de captura e sem tornar 14 obrigatório aqui. |
+
 Disponível nas edições Gen 1–4 e Gen 1–9. Epílogo da história marítima com Luffy, Kyogre, Lugia e Manaphy.
 
 Depois que o mar começa a recuar, uma comunidade continua em dificuldade. Os barcos voltaram, mas os campos perderam produtividade e resíduos da instalação submarina contaminaram o solo.
@@ -521,6 +603,13 @@ Uma flor nascendo no antigo ponto de evacuação funciona como recompensa visual
 
 ## 11. Meloetta — A canção que atravessou o sono
 
+### Versões desta história — Normal e Hard
+
+| Faixa de gerações | Conteúdo desta versão |
+|---|---|
+| Gen 1–4 | Esta ampliação está ausente. A história 2 continua tendo investigação, resgate e conclusão completos com Darkrai e Cresselia. |
+| Gen 1–9 | Meloetta e os fragmentos de sua canção ampliam o resgate da história 2. |
+
 Exclusiva das edições Gen 1–9. Expansão da história de Darkrai e Cresselia, sem tornar a versão Gen 1–4 dependente de Meloetta.
 
 Pessoas que despertam dos pesadelos lembram fragmentos da mesma melodia. Algumas começam a cantá-la sem perceber.
@@ -534,6 +623,13 @@ No clímax, Meloetta continua cantando para orientar os presos enquanto Darkrai 
 O desfecho pode recuperar a melodia completa em uma cena com os sobreviventes, reconhecendo o papel dos três Pokémon. A captura posterior continua opcional e compatível com o encontro único já definido.
 
 ## 12. Cobalion, Terrakion, Virizion e Keldeo — A reserva que expulsou os humanos
+
+### Versões desta história — Normal e Hard
+
+| Faixa de gerações | Conteúdo desta versão |
+|---|---|
+| Gen 1–4 | Esta história está ausente. Não há Cobalion, Terrakion, Virizion, Keldeo, N ou missão substituta para esse núcleo. |
+| Gen 1–9 | História completa dos quatro espadachins, com N como mediador, investigação dos ataques e a escolha de Keldeo no resgate. |
 
 História nova, exclusiva das edições Gen 1–9.
 
@@ -556,6 +652,13 @@ A solução estabelece proteção e convivência sustentadas pelas ações do jo
 
 ## 13. Reshiram, Zekrom e Kyurem — A verdade congelada
 
+### Versões desta história — Normal e Hard
+
+| Faixa de gerações | Conteúdo desta versão |
+|---|---|
+| Gen 1–4 | Esta história está ausente. Não há Reshiram, Zekrom, Kyurem, câmara narrativa ou requisito de investigação dependente deles. |
+| Gen 1–9 | História completa das duas comunidades, das versões da tragédia e de Reshiram, Zekrom e Kyurem. |
+
 História nova, exclusiva das edições Gen 1–9.
 
 Duas comunidades contam versões incompatíveis de uma tragédia. Uma se orgulha de ter salvado a região; a outra afirma ter sido abandonada durante o desastre.
@@ -574,21 +677,96 @@ Kyurem também participa da resolução como guardião do que ficou esquecido. R
 
 ## 14. Xerneas e Yveltal — A primavera que não termina
 
-História nova, exclusiva das edições Gen 1–9.
+### Versões desta história — Normal e Hard
 
-Uma região devastada recebe a ajuda de Xerneas. A vegetação se recupera, animais retornam e a população passa a considerar a intervenção uma bênção permanente.
+| Faixa de gerações | Conteúdo desta versão |
+|---|---|
+| Gen 1–4 | Esta história está ausente: não há Xerneas, Yveltal, Zygarde, Tapu Bulu ou Tapu Fini neste núcleo. Shaymin continua disponível no epílogo marítimo 10, que tem conclusão independente. |
+| Gen 1–9 | História completa da primavera prolongada com Xerneas, Yveltal, Zygarde, Shaymin, Tapu Bulu e Tapu Fini e os resgates dos Pokémon do ambiente. |
 
-Com o tempo, o crescimento se torna excessivo. Raízes comprometem construções, plantas dominam outros habitats e o solo começa a perder condições de sustentar tanta vida.
+História exclusiva das edições Gen 1–9. A expansão acrescenta Zygarde, Shaymin, Tapu Bulu e Tapu Fini, com participação de Pokémon comuns que tornam visíveis as consequências do desequilíbrio.
 
-A chegada de Yveltal provoca pânico. Os moradores tentam afastá-lo e conservar a primavera, agravando o desequilíbrio.
+### Uma bênção que ninguém quer perder
 
-Nesta proposta, Xerneas percebe que sua intervenção precisa terminar. O despertar de Yveltal representa um risco real que exige cuidado, enquanto o jogador investiga os limites da energia que circula na região.
+Uma região devastada recebe a ajuda de Xerneas. A vegetação se recupera, animais retornam e a população passa a considerar aquela intervenção uma bênção permanente.
 
-A missão dá participação aos dois: as reações de Xerneas indicam desgaste, a aproximação de Yveltal modifica o comportamento dos envolvidos e as decisões humanas interferem na recuperação.
+Os primeiros sinais são positivos: a água volta a circular, as plantações produzem e os habitantes deixam de depender de ajuda externa. Quando a energia começa a diminuir, parte da comunidade mantém um antigo ritual para prolongar a primavera, por medo de voltar à fome.
 
-O jogador retira pessoas das áreas afetadas e interrompe as tentativas de conservar artificialmente aquela condição. O encerramento permite que a região continue viva, diferente da paisagem perfeita que os moradores queriam manter para sempre.
+Com o tempo, o crescimento se torna excessivo. Raízes comprometem construções, poucas plantas dominam os habitats e o solo perde condições de sustentar tanta vida. Xerneas demonstra cansaço e tenta se afastar, mas o sistema de árvores-santuário mantém a energia concentrada na região.
 
-O roteiro trata essas relações como uma elaboração desta história. Os encontros opcionais de ambos permanecem compatíveis com as regras e os indivíduos já existentes.
+Esse mecanismo e suas consequências pertencem à proposta narrativa. Não representam uma habilidade nova já implementada nem uma explicação oficial dos poderes desses Pokémon.
+
+### Os participantes e suas decisões
+
+| Pokémon | Relação com a situação | Participação na história |
+|---|---|---|
+| Xerneas | Recuperação e energia vital concentrada | Percebe que sua intervenção precisa terminar e ajuda a interromper o fluxo que o mantém ligado à região. |
+| Yveltal | O risco de absorção de vida e o fim da condição artificial | Sua aproximação é uma ameaça real; o jogador precisa proteger os envolvidos e evitar uma descarga sobre áreas habitadas. |
+| Zygarde | Equilíbrio do ecossistema | Detecta a perda de diversidade, acompanha os focos e contém a expansão enquanto a evacuação acontece. |
+| Shaymin | Purificação e recuperação de áreas degradadas | Identifica resíduos de decomposição e pontos onde pequenas plantas ainda resistem; sua ajuda evidencia o que pode voltar a crescer depois. |
+| Tapu Bulu | Vegetação e domínio de um território | Reage à tomada desordenada do ambiente e usa sua ligação com as plantas para reorganizar caminhos e proteger áreas ameaçadas. |
+| Tapu Fini | Água e proteção durante a travessia | Ajuda a manter um corredor de retirada e a separar as áreas afetadas, enquanto o jogador recupera a circulação da água. |
+
+As aparições de Tapu Bulu e Tapu Fini são motivadas pela perturbação das forças naturais da região. O roteiro não pressupõe acrescentar uma região de Alola ao mapa.
+
+Shaymin e Zygarde são os mesmos indivíduos reconhecidos nas outras histórias em que participam. A ordem das missões e eventuais capturas anteriores precisam ser reconhecidas, sem exigir que outro arco tenha sido concluído para iniciar este.
+
+### O primeiro engano — Confundir abundância com equilíbrio
+
+Tapu Bulu aparece quando moradores tentam abrir caminho derrubando uma parte da mata. Sua reação leva a comunidade a acreditar que ele exige ainda mais crescimento.
+
+O jogador percebe que Bulu está defendendo pequenos territórios que a expansão já sufocou. Em vez de aumentar a vegetação, ele está tentando devolver espaço a formas de vida que perderam seus lugares.
+
+Shaymin parece inicialmente confirmar a ideia de que tudo ficará bem: flores aparecem onde ele passa. Depois, o jogador vê as mesmas flores desaparecerem sob plantas de crescimento acelerado. Sua purificação ajuda com os resíduos, mas a fonte do desequilíbrio continua ativa.
+
+Essas cenas demonstram por que simplesmente repetir o ritual ou pedir mais energia não resolve a situação.
+
+### As consequências também aparecem nos Pokémon comuns
+
+Os encontros dão importância a habitantes do próprio ambiente:
+
+- Combee e Vespiquen perdem variedade de flores e precisam deslocar suas áreas de alimentação.
+- Poliwag e Wooper ficam isolados em pontos onde raízes e resíduos interromperam a circulação da água.
+- Deerling e Sawsbuck reagem à desordem dos sinais de florescimento, alimento e abrigo, ajudando o jogador a reconhecer os territórios afetados.
+
+São recursos de cena e comportamento para esta missão. Não exigem criar um sistema global de estações nem alterar os habitats permanentes já definidos no projeto.
+
+O jogador acompanha resgates e abre trajetos que funcionam para pessoas e Pokémon. A crise deixa de ser percebida apenas como um problema de construções humanas.
+
+### Yveltal e o medo de perder o paraíso
+
+A aproximação de Yveltal provoca pânico. Parte dos moradores mantém as árvores-santuário ainda mais ativas para afastá-lo, aumentando a concentração de energia e o desgaste de Xerneas.
+
+Yveltal não é apresentado como inofensivo: sua capacidade de absorver vida torna um despertar descontrolado perigoso para quem está na região. Ao mesmo tempo, persegui-lo sem compreender a situação provoca novos confrontos e impede a evacuação.
+
+Zygarde começa a conter os focos porque o ambiente perdeu diversidade e capacidade de renovação. O jogador precisa mostrar, por suas ações, que existe um caminho seguro antes que os guardiões reajam de forma mais violenta.
+
+Tapu Fini permite uma retirada protegida em um trecho crítico. Sua atuação tem limites: a passagem continua dependendo do restabelecimento dos canais e da colaboração dos moradores. O jogador não pode deixar todos em perigo esperando que um lendário resolva sozinho o problema.
+
+### Clímax — Permitir que a primavera termine
+
+O confronto final alterna ações conectadas:
+
+1. Tapu Bulu ajuda a reorganizar a vegetação que bloqueia o último caminho de retirada, enquanto o jogador liberta os Pokémon isolados.
+2. Tapu Fini protege o corredor e o jogador recupera a circulação de água necessária para retirar os resíduos.
+3. Shaymin identifica uma área capaz de sustentar nova vegetação quando o fluxo artificial parar.
+4. Zygarde contém o avanço sobre os territórios que ainda podem ser preservados.
+5. Xerneas participa do desligamento das árvores-santuário e aceita interromper sua intervenção para repousar.
+6. O jogador enfrenta o risco representado por Yveltal, conduzindo a resolução para a área já evacuada e impedindo que a liberação atinja quem foi resgatado.
+
+O desenho futuro precisa mostrar os limites, decisões e desgaste dos participantes. Essas funções não são novas regras de batalha prometidas nem exigem possuir qualquer um desses Pokémon.
+
+Os moradores envolvidos no ritual precisam colaborar com o desligamento. O conflito é o medo de perder a recuperação que conquistaram e a dificuldade de aceitar seus custos.
+
+### Desfecho — Um lugar vivo, sem uma primavera permanente
+
+A região volta a ter períodos de crescimento e repouso. A paisagem final conserva sinais do que aconteceu: áreas recuperadas, caminhos abertos e partes que precisarão de cuidado por mais tempo.
+
+Xerneas repousa. Yveltal deixa de se aproximar das áreas habitadas após o encerramento da condição que o atraiu. Zygarde acompanha a retomada dos habitats. Bulu e Fini se retiram depois que seus corredores deixam de ser necessários.
+
+Shaymin aparece em um pequeno terreno onde diferentes plantas começam a crescer juntas. A recompensa visual é uma recuperação variada, em vez de outra expansão uniforme e acelerada.
+
+Os encontros opcionais dos participantes continuam únicos e compatíveis com as regras existentes. Participar desta história não acrescenta uma segunda cópia de captura nem muda automaticamente localizações, formas ou requisitos já estabelecidos.
 
 ## Prioridade sugerida e estado do registro
 
