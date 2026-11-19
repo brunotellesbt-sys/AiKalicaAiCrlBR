@@ -470,3 +470,128 @@ A missão não exige possuir um lendário para completar outra história. Partic
 
 Recompensas, formas em cena, duração e soluções técnicas continuam como decisões futuras. Todo este arquivo é um registro de ideias; este pedido não implementa missões na ROM.
 
+
+## Ideias adicionais selecionadas em 19/11/2026
+
+O autor aprovou as sete propostas abaixo. São expansões dos outros arcos e histórias novas para trabalhos futuros. O arco de Eren permanece como estava; estes acréscimos não alteram sua trama.
+
+## 8. Mew e Mewtwo — O original e aquele que foi criado
+
+Disponível nas edições Gen 1–4 e Gen 1–9. Expansão da história 1, com Giovanni e os antigos laboratórios Rocket.
+
+Um antigo pesquisador tenta localizar Mew para reconstruir o projeto que criou Mewtwo. Mew aparece perto dos Pokémon libertados dos laboratórios, ajudando-os a encontrar abrigo.
+
+Mewtwo inicialmente o evita. Sua presença faz voltar a pergunta sobre a própria existência: ele teria sido criado apenas para superar outro ser? O conflito deve aparecer nas reações e nos encontros entre os dois, sem exigir que todos esses sentimentos sejam explicados por diálogos.
+
+O pesquisador usa a aproximação de Mew para preparar uma armadilha. No momento decisivo, Mew se arrisca para proteger Mewtwo. Mewtwo precisa escolher entre continuar perseguindo o responsável ou voltar para ajudá-lo.
+
+A escolha pelo resgate desenvolve uma relação construída por ações. Giovanni presencia a decisão e entende que reparar seu passado exige reconhecer a autonomia de quem foi tratado como experimento.
+
+O encontro opcional de cada Pokémon continua respeitando sua própria câmara, os requisitos existentes e as capturas anteriores.
+
+## 9. Cosmog, Solgaleo e Lunala — O direito de voltar
+
+Exclusiva das edições Gen 1–9. Expansão do arco espacial da Aether, história 5.
+
+A Aether apresenta um Cosmog recolhido como exemplo do sucesso de seu refúgio. Lusamine demonstra carinho por ele e impede qualquer tentativa de retorno.
+
+Cosmog reage quando determinadas passagens são abertas. Seus movimentos e sua aproximação de certos pontos ajudam o jogador a perceber que ele reconhece um caminho para casa.
+
+Solgaleo e Lunala aparecem procurando por ele. A direção da Aether interpreta a aproximação como ameaça e reforça a contenção, agravando a crise. Sua presença não substitui o protagonismo de Palkia e Deoxys na investigação.
+
+O conflito pessoal de Lusamine fica evidente: ela acredita estar protegendo alguém que deseja partir. Cosmog pode escolher aproximar-se do jogador e depois atravessar a passagem por vontade própria.
+
+Solgaleo e Lunala ajudam a proteger o retorno diante da aproximação de Necrozma. O reencontro torna concreta a responsabilidade de permitir que os seres recolhidos escolham seus caminhos.
+
+Formas evolutivas, encontros únicos e eventuais participantes já capturados precisam ser reconhecidos no detalhamento, sem criar cópias de captura nem exigir possuir um deles para concluir o roteiro.
+
+## 10. Shaymin — O que a água deixou para trás
+
+Disponível nas edições Gen 1–4 e Gen 1–9. Epílogo da história marítima com Luffy, Kyogre, Lugia e Manaphy.
+
+Depois que o mar começa a recuar, uma comunidade continua em dificuldade. Os barcos voltaram, mas os campos perderam produtividade e resíduos da instalação submarina contaminaram o solo.
+
+Shaymin aparece em pequenos pontos onde a vegetação ainda resiste. Os moradores tentam levá-lo até as plantações, acreditando que sua presença resolverá o problema. Ele insiste em voltar a um terreno aparentemente sem importância.
+
+A investigação revela que ali passa a água contaminada que continua prejudicando a região. A recuperação depende de interromper essa origem, limpar os caminhos de água e ajudar os moradores, junto da atuação de Shaymin.
+
+Luffy participa de uma última cena ajudando na reconstrução e se despede das pessoas que salvou. O momento mostra o trabalho que continua depois de vencer a crise.
+
+Uma flor nascendo no antigo ponto de evacuação funciona como recompensa visual. As mudanças de ambiente pertencem ao desenho futuro da missão, com revisão própria antes de alterar mapas.
+
+## 11. Meloetta — A canção que atravessou o sono
+
+Exclusiva das edições Gen 1–9. Expansão da história de Darkrai e Cresselia, sem tornar a versão Gen 1–4 dependente de Meloetta.
+
+Pessoas que despertam dos pesadelos lembram fragmentos da mesma melodia. Algumas começam a cantá-la sem perceber.
+
+Meloetta também foi atingida pelo experimento e está presa em uma parte do sonho coletivo. Sua canção atravessa os sonhos, chegando incompleta a cada pessoa.
+
+O jogador reúne os fragmentos ouvindo os sobreviventes. Dentro do pesadelo, a melodia permite reconhecer o caminho de saída mantido por Cresselia.
+
+No clímax, Meloetta continua cantando para orientar os presos enquanto Darkrai enfrenta a fonte da perturbação. O resgate depende de ouvir pessoas cujos relatos inicialmente pareciam desconexos.
+
+O desfecho pode recuperar a melodia completa em uma cena com os sobreviventes, reconhecendo o papel dos três Pokémon. A captura posterior continua opcional e compatível com o encontro único já definido.
+
+## 12. Cobalion, Terrakion, Virizion e Keldeo — A reserva que expulsou os humanos
+
+História nova, exclusiva das edições Gen 1–9.
+
+Depois de ataques a um habitat, os quatro passam a impedir a entrada de humanos em uma região. Moradores e Pokémon acostumados a viver juntos ficam separados pela intervenção.
+
+Cada participante reage segundo uma posição própria:
+
+- Cobalion sustenta uma regra rígida para evitar novos abusos.
+- Terrakion protege os deslocados e reage imediatamente às ameaças.
+- Virizion carrega a memória dos ataques e desconfia das promessas humanas.
+- Keldeo quer provar seu valor e toma decisões precipitadas.
+
+N atua como mediador, tornando compreensíveis as queixas dos Pokémon. O jogador investiga os ataques, ajuda os prejudicados e constrói condições concretas de convivência.
+
+A investigação precisa reconhecer o dano que motivou a proteção da reserva e as consequências da proibição para os inocentes. Os quatro mantêm suas próprias razões durante o roteiro.
+
+O clímax coloca Keldeo diante de uma pessoa em perigo: cumprir a proibição ou agir segundo a justiça que deseja defender. Sua escolha permite aos demais reconsiderar a regra sem esquecer o que aconteceu.
+
+A solução estabelece proteção e convivência sustentadas pelas ações do jogador. As escolhas narrativas não eliminam automaticamente a possibilidade dos encontros opcionais dos quatro.
+
+## 13. Reshiram, Zekrom e Kyurem — A verdade congelada
+
+História nova, exclusiva das edições Gen 1–9.
+
+Duas comunidades contam versões incompatíveis de uma tragédia. Uma se orgulha de ter salvado a região; a outra afirma ter sido abandonada durante o desastre.
+
+Uma descoberta nas ruínas ameaça derrubar a história oficial. Reshiram reage à verdade que começa a surgir, enquanto Zekrom se aproxima daqueles que desejam construir uma sociedade diferente.
+
+Kyurem guarda o lugar onde ficaram os registros e vestígios das vítimas. Sua câmara se torna um ponto que diferentes personagens querem alcançar: alguns para investigar, outros para impedir a revelação.
+
+As descobertas não tornam uma comunidade inteiramente inocente e a outra inteiramente culpada. O jogador encontra decisões difíceis, omissões e pessoas apagadas das duas versões.
+
+A investigação se desenvolve por testemunhos, lugares e provas que precisam ser confrontados. A presença dos dragões acompanha as decisões e as consequências, em vez de ficar limitada à última batalha.
+
+O encerramento exige tornar os fatos conhecidos e decidir como reparar seus efeitos. Reshiram e Zekrom representam responsabilidades que precisam coexistir: reconhecer o passado e construir algo melhor.
+
+Kyurem também participa da resolução como guardião do que ficou esquecido. Recompensas e consequências narrativas precisam preservar os encontros únicos e evitar que uma escolha de reparação apague outra espécie da coleção possível.
+
+## 14. Xerneas e Yveltal — A primavera que não termina
+
+História nova, exclusiva das edições Gen 1–9.
+
+Uma região devastada recebe a ajuda de Xerneas. A vegetação se recupera, animais retornam e a população passa a considerar a intervenção uma bênção permanente.
+
+Com o tempo, o crescimento se torna excessivo. Raízes comprometem construções, plantas dominam outros habitats e o solo começa a perder condições de sustentar tanta vida.
+
+A chegada de Yveltal provoca pânico. Os moradores tentam afastá-lo e conservar a primavera, agravando o desequilíbrio.
+
+Nesta proposta, Xerneas percebe que sua intervenção precisa terminar. O despertar de Yveltal representa um risco real que exige cuidado, enquanto o jogador investiga os limites da energia que circula na região.
+
+A missão dá participação aos dois: as reações de Xerneas indicam desgaste, a aproximação de Yveltal modifica o comportamento dos envolvidos e as decisões humanas interferem na recuperação.
+
+O jogador retira pessoas das áreas afetadas e interrompe as tentativas de conservar artificialmente aquela condição. O encerramento permite que a região continue viva, diferente da paisagem perfeita que os moradores queriam manter para sempre.
+
+O roteiro trata essas relações como uma elaboração desta história. Os encontros opcionais de ambos permanecem compatíveis com as regras e os indivíduos já existentes.
+
+## Prioridade sugerida e estado do registro
+
+A sugestão inicial é desenvolver Mew, Cosmog e Shaymin como ampliações das histórias já escolhidas. Entre os arcos novos, os quatro espadachins favorecem decisões e relações entre humanos e Pokémon; os três dragões favorecem uma investigação com revelações graduais.
+
+O autor aprovou todas as sete ideias para registro. Essa aprovação não equivale à implementação de missões, mapas, sistemas ou alterações na ROM. O detalhamento futuro deve preservar as diferenças entre as edições, os encontros únicos e a história de Eren já registrada.
