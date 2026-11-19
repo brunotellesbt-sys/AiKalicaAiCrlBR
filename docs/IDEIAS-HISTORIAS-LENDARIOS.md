@@ -100,6 +100,8 @@ A missão não reabre automaticamente toda a crise de Sootopolis nem transforma 
 
 ## 4. Celebi — A floresta fora do tempo
 
+Na Gen 1–4, esta primeira fase usa um pesquisador local como responsável pelo aparelho. Na Gen 1–9, a função antagonista é assumida exclusivamente por Sada e Turo, conforme a história 7: não se acrescenta um terceiro pesquisador vilão ou subordinados aos dois.
+
 Após a crise Galactic, uma floresta começa a apresentar distorções. Caminhos levam a lugares distantes, construções desaparecidas reaparecem e moradores encontram pessoas que conheceram décadas atrás.
 
 Embora a grande fenda tenha sido encerrada, ficaram pontos onde espaço e tempo perderam estabilidade. Na floresta, diferentes épocas de um mesmo lugar se sobrepõem.
@@ -386,7 +388,7 @@ Celebi acompanha o ciclo da vida em cada condição. Palkia contém a expansão 
 
 A personagem vista criança, adulta e idosa no primeiro arco cria o vínculo emocional. Seus relatos distinguem a passagem do tempo em uma vida das alternativas abertas pelas máquinas. Ela não prova que todos os futuros estejam determinados.
 
-O pesquisador que queria repetir o último dia com sua família precisa interromper sua própria âncora e colaborar com os resgates. Ele pertence ao episódio local da floresta e não é subordinado a Sada ou Turo.
+Na Gen 1–4, o pesquisador que queria repetir o último dia com sua família interrompe a própria âncora e colabora com os resgates. Na Gen 1–9, Sada e Turo assumem a responsabilidade pelo aparelho e por sua ampliação; não existe um terceiro antagonista local nessa versão. Os moradores afetados continuam vítimas e participantes dos resgates.
 
 ### Conclusão Gen 1–4
 
