@@ -1,0 +1,221 @@
+{
+  "passed": true,
+  "rom_sha256": "5d42387c5ec934239fcdeeb2e030ef3f3d4b763030b38f49538e3eb02fdf6cab",
+  "fresh_rom_boot_to_title": true,
+  "fresh_rom_title_to_new_game": true,
+  "no_assert_screen": true,
+  "controllers_only": true,
+  "no_game_memory_writes": true,
+  "bundled_save_tested": true,
+  "runs": [
+    {
+      "battery": false,
+      "frames": 2464,
+      "samples": [
+        {
+          "frame": 1200,
+          "callback": "MainCB2_Intro"
+        },
+        {
+          "frame": 1201,
+          "callback": "MainCB2_EndIntro"
+        },
+        {
+          "frame": 1291,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1591,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1592,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1682,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1683,
+          "callback": "CB2_GoToMainMenu"
+        },
+        {
+          "frame": 1773,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2073,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2074,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2164,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2464,
+          "callback": "CB2_MainMenu"
+        }
+      ],
+      "fresh_rom_boot_to_title": true,
+      "fresh_rom_title_to_new_game": true,
+      "new_game_tasks": [
+        "Task_HandleMultichoiceInput",
+        "Task_JourneyIntroRegion"
+      ]
+    },
+    {
+      "battery": true,
+      "frames": 3664,
+      "samples": [
+        {
+          "frame": 1200,
+          "callback": "MainCB2_Intro"
+        },
+        {
+          "frame": 1201,
+          "callback": "MainCB2_EndIntro"
+        },
+        {
+          "frame": 1291,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1591,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1592,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1682,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1683,
+          "callback": "CB2_GoToMainMenu"
+        },
+        {
+          "frame": 1773,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2073,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2074,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2164,
+          "callback": "CB2_ReturnToFieldLocal"
+        },
+        {
+          "frame": 3064,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3664,
+          "callback": "CB2_Overworld"
+        }
+      ],
+      "bundled_save_continue_to_field": true,
+      "field_map": [
+        37,
+        49
+      ],
+      "player_tile": [
+        14,
+        17
+      ],
+      "player_surfing": true,
+      "player_elevation": 1,
+      "geometry_version": 8,
+      "persistent_flags_checked": [],
+      "native_object_templates": {
+        "compiled_local_ids": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "saved_local_ids": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "active_current_map_objects": [
+          {
+            "local_id": 4,
+            "tile": [
+              16,
+              17
+            ]
+          },
+          {
+            "local_id": 5,
+            "tile": [
+              22,
+              17
+            ]
+          },
+          {
+            "local_id": 3,
+            "tile": [
+              15,
+              8
+            ]
+          }
+        ],
+        "unused_saved_template_local_ids": [],
+        "all_active_objects_are_current_templates": true,
+        "unused_templates_cleared": true
+      }
+    }
+  ],
+  "geometry_layout_proof": {
+    "vars_offset": 8600,
+    "variable": 16604,
+    "vars_start": 16384,
+    "current_version": 8,
+    "actual_ARM_APCS_struct_compiled": true,
+    "GetVarPointer_ELF_literal_matches": true,
+    "probe_assembly_sha256": "b7e39542c14784137e44134052761dff17ea7db21b764d5eca0b7e3c639ce887",
+    "global_header_sha256": "7efef4510fad4bea894698a4210d14da99b8141de834efdb4190bfe2bc02b283"
+  },
+  "field_state_layout_proof": {
+    "offsets": {
+      "flags": 7728,
+      "flags_size": 872,
+      "saved_templates": 6192,
+      "template_size": 24,
+      "template_local_id": 0,
+      "template_count": 64,
+      "object_size": 36,
+      "object_local_id": 8,
+      "object_map_num": 9,
+      "object_map_group": 10,
+      "object_x": 16,
+      "object_y": 18,
+      "object_count": 16,
+      "header_events": 4,
+      "event_object_count": 0,
+      "event_objects": 4,
+      "pokemon_size": 100
+    },
+    "actual_ARM_APCS_struct_compiled": true,
+    "assembly_sha256": "bd1844f4625d7d342209ae2f0eca89181ffc62dba1a112388c7aeefcf67b35c3",
+    "read_only_RAM_observation": true
+  },
+  "bundled_save_continue_to_field": true,
+  "bundled_save_sha256": "c8b2b3751519e6c9875206243104c203f5a6798e88af868d39c025830675ec4c"
+}

@@ -1,12 +1,10 @@
 # ROMs atuais
 
-Atualização desta branch: **candidata com 103 fragmentos de rochas corrigidos,
-seis fragmentos extras e visão consistente nas duas divisas da Rota131**.
-As pedras já aparecem na câmera de Pacifidlog e da Rota130 antes da entrada.
-Travessia, retorno, colisões e saves antigos foram testados no emulador.
-As cinco edições foram recompiladas; abertura e SAVE/Continue da TESTE passaram.
-A reforma das cavernas e a validação global continuam pendentes.
-[Manifesto e hashes](CANDIDATA-172.json) · [Continuidade](../docs/RETOMADA-2026-11-17.md).
+A camada 172 restaura os encontros terrestres em sete ilhas e os locais
+correspondentes na Pokédex das edições Gen 1–4 e Gen 1–9. A validação também
+cobre 105 câmaras, nove exteriores de cavernas, 96 treinadores de Surf, sete
+portos, as divisas da Rota 131 e a leitura de saves antigos.
+[Manifesto e hashes](../mods/hoenn/versions/versions.json).
 
 Versão anterior validada: [canal sul de One Island, portos e cavernas — camada 171](../docs/generated-area-review.md). Liga o canal vertical ao mar horizontal, corrige cantos de encosta, rochas incompletas e limites visíveis, restaura o embarque de Six Island e fecha portais inativos. As quatro edições e a TESTE recebem os ajustes; a TESTE mantém encontros aleatórios e abordagens automáticas desativados. [Registro em TXT](../errors/2026-11-07-generated-area-review.txt).
 
@@ -30,7 +28,7 @@ As quatro edições incluem Kanto, Hoenn e Sevii. Megas e formas regionais de es
 
 [ZIP com as quatro ROMs e documentação](../mods/hoenn/versions/Pokemon-Journey-Four-Editions.zip) · [Documentação](../docs/README.md) · [Limites da validação](../mods/hoenn/INTEGRATION-STATUS.md) · [SHA-256](SHA256SUMS)
 
-A entrega atual inclui a revisão de Surf, [105 espécies especiais em 48 câmaras nomeadas](../docs/cavernas-lendarias.md) e acesso à Artisan Cave. [Mapa e imagens](../docs/revisao-surf-cavernas.md). A [ROM de teste e o save de inspeção](rom-de-teste/LEIA-ME.md) ficam em pasta separada, sem encontros aleatórios ou abordagem automática. O manifesto desta candidata usa `validation_scope: atlas-surf-layout-candidate`; as evidências de campanha e recursos anteriores continuam associadas às suas ROMs históricas.
+A entrega também inclui a revisão de Surf e [105 espécies especiais em 48 grupos de cavernas](../docs/cavernas-lendarias.md) e acesso à Artisan Cave. [Mapa e imagens](../docs/revisao-surf-cavernas.md). A [ROM de teste e o save de inspeção](rom-de-teste/LEIA-ME.md) ficam em pasta separada, sem encontros aleatórios ou abordagem automática. O manifesto anterior da candidata V7 permanece disponível como [registro histórico](CANDIDATA-172.json).
 
 ## Atualizar a entrega
 

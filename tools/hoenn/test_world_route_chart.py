@@ -36,7 +36,7 @@ class WorldRouteChart(unittest.TestCase):
         release=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
         if release.get('validation_scope')=='atlas-surf-layout-candidate':
             release=release_baseline(release)
-        while release.get('validation_scope') in ['generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers','dewford-coast-safety','extra-gyms','ever-grande-market','dewford-competitive-shop']:
+        while release.get('validation_scope') in ['atlas-surf-layout','generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers','dewford-coast-safety','extra-gyms','ever-grande-market','dewford-competitive-shop']:
             release=previous_release(release)
         if release.get('validation_scope')=='annotated-world-links':
             layout=json.loads((ROOT/'mods/hoenn/continuous-ocean-validation/layout/annotated-world-links.json').read_text())['chart']

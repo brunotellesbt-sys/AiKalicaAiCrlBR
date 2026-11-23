@@ -15,7 +15,7 @@ from candidate_layer import Layer
 from prepare_generated_area_review import PRIOR, LAYER
 from prepare_legendary_chambers import clone_authenticated
 from prepare_atlas_surf_redesign import source_audit
-from validate_atlas_surf_ecology_source import census
+from validate_atlas_surf_ecology_source import census,compare
 
 ROOT=Path(__file__).resolve().parents[2]
 
@@ -66,12 +66,17 @@ def prepare(parent,reference,cache_freeze,target,output):
             name,x,y=graph.location(key//32);reachable[name].add((x,y))
     retired=[r['map'] if isinstance(r,dict) else r for r in meta['retirement']['retired_maps']]
     after=census(view,retired_maps=retired,reachable_cells=reachable)
+    full=census(view,retired_maps=retired)
+    previous=load(ROOT/'docs/design/legendary-chambers-review/compiled-c-v8/ecology-source/full.json.gz')
+    comparison=compare(previous,full)
+    assert comparison['preserved'],'Previously catchable ordinary family lost'
     header,dex=relocate(original,baseline,after,meta['geometry_plan'],catalog,restore_inactive_from_owners=OWNERS)
     layer.stage('src/data/journey_world_dex_locations.h',header)
     meta['retired_habitat_dex_relocation']=dex
     meta['source_audit_passed']=True
     print('Exact reachable AREA relocation PASS:',len(dex['relocated']),'restored',sum(r['restored_land_trigger'] for r in dex['relocated']),flush=True)
     dump(output/'graph-bounded.json.gz',after);dump(output/'physical-source.json.gz',physical)
+    dump(output/'full.json.gz',full);dump(output/'family-comparison.json.gz',comparison)
     dump(output/'dex-relocation.json.gz',dex);dump(output/'banks.json.gz',banks)
     # Share authenticated C inputs only. All compiled files and changed inputs
     # use private inodes, so rebuilding cannot mutate C or earlier releases.

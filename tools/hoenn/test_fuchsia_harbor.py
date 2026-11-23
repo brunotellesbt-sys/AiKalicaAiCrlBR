@@ -18,7 +18,7 @@ class FuchsiaHarbor(unittest.TestCase):
             release=release_baseline(release)
         else:
             release=verify(ROOT/'mods/hoenn/versions')
-        while release.get('validation_scope') in ('generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers','dewford-coast-safety','extra-gyms','ever-grande-market','dewford-competitive-shop','surf-review','annotated-world-links','island-harbors','sevii-harbors','three-harbor-terminals'):release=previous_release(release)
+        while release.get('validation_scope') in ('atlas-surf-layout','generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers','dewford-coast-safety','extra-gyms','ever-grande-market','dewford-competitive-shop','surf-review','annotated-world-links','island-harbors','sevii-harbors','three-harbor-terminals'):release=previous_release(release)
         self.assertEqual(release['validation_scope'],'fuchsia-harbor')
         targets=[('validation',release['parent_rom_sha256'])]
         targets += [(r['file'].removeprefix('Pokemon-Journey-').removesuffix('.gba'),r['sha256']) for r in release['variants']]
@@ -43,7 +43,7 @@ class FuchsiaHarbor(unittest.TestCase):
         release=json.loads((ROOT/'mods/hoenn/versions/versions.json').read_text())
         if release.get('validation_scope')=='atlas-surf-layout-candidate':
             release=release_baseline(release)
-        while release.get('validation_scope') in ('generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers','dewford-coast-safety','extra-gyms','ever-grande-market','dewford-competitive-shop','surf-review','annotated-world-links','island-harbors','sevii-harbors','three-harbor-terminals'):release=previous_release(release)
+        while release.get('validation_scope') in ('atlas-surf-layout','generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers','dewford-coast-safety','extra-gyms','ever-grande-market','dewford-competitive-shop','surf-review','annotated-world-links','island-harbors','sevii-harbors','three-harbor-terminals'):release=previous_release(release)
         old=previous_release(release)
         self.assertNotEqual(old['parent_rom_sha256'],release['parent_rom_sha256'])
         self.assertEqual(old['integration_layers']+['fuchsia-harbor'],release['integration_layers'])

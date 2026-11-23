@@ -1,110 +1,19 @@
 {
-  "parent_rom_sha256": "c08cb7771a9731db995b7d99297c8b1ebcdd98d75a9ac5e50cdaef8dcff62c82",
-  "build_rules_offset": 9206976,
-  "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
-  "parent_rules_hex": "01040100",
-  "variants": [
-    {
-      "file": "Pokemon-Journey-Gen1-4-Normal.gba",
-      "max_national": 493,
-      "perfect_trainer_ivs": false,
-      "important_opponents_only": true,
-      "evs": 510,
-      "bytes": 33554432,
-      "sha256": "08a38f0675022667b597560c2445b37b8d8f0b46e3f93c2ff30836bfda849cba",
-      "patched_byte_offsets": [
-        160,
-        162,
-        163,
-        164,
-        165,
-        166,
-        168,
-        169,
-        170,
-        171,
-        189,
-        9206976,
-        9206977,
-        9206978
-      ],
-      "requires_new_save": true
-    },
-    {
-      "file": "Pokemon-Journey-Gen1-4-Hard.gba",
-      "max_national": 493,
-      "perfect_trainer_ivs": true,
-      "important_opponents_only": true,
-      "evs": 510,
-      "bytes": 33554432,
-      "sha256": "e66df395e8fa1e9189c079b4f178fea685b7e3f8e87a7971289cb5e4cd8b5690",
-      "patched_byte_offsets": [
-        160,
-        162,
-        163,
-        164,
-        165,
-        166,
-        168,
-        169,
-        170,
-        171,
-        189,
-        9206976,
-        9206977
-      ],
-      "requires_new_save": true
-    },
-    {
-      "file": "Pokemon-Journey-Gen1-9-Normal.gba",
-      "max_national": 1025,
-      "perfect_trainer_ivs": false,
-      "important_opponents_only": true,
-      "evs": 510,
-      "bytes": 33554432,
-      "sha256": "57a398b7e9e2ac53dd7234991468707951a14d6af809e6d55d670293ac9b394a",
-      "patched_byte_offsets": [
-        160,
-        162,
-        163,
-        164,
-        165,
-        166,
-        168,
-        169,
-        170,
-        171,
-        189,
-        9206978
-      ],
-      "requires_new_save": true
-    },
-    {
-      "file": "Pokemon-Journey-Gen1-9-Hard.gba",
-      "max_national": 1025,
-      "perfect_trainer_ivs": true,
-      "important_opponents_only": true,
-      "evs": 510,
-      "bytes": 33554432,
-      "sha256": "e60fd859ec452c27b8e20398c6448fd2cc91f541abf9f59d74901acfa68cda88",
-      "patched_byte_offsets": [
-        160,
-        162,
-        163,
-        164,
-        165,
-        166,
-        168,
-        169,
-        170,
-        171,
-        189
-      ],
-      "requires_new_save": true
-    }
-  ],
   "all_other_bytes_identical": true,
-  "validated": false,
+  "build_rules_offset": 9209712,
+  "candidate": false,
+  "final_release_validated": true,
+  "full_campaign_playthrough": false,
+  "functional_contract_sha256": "b31538d7bd457c50c6634f03e0eac0ff67c01ce68124762a69a2e465b87c9eec",
+  "historical_validation": {
+    "compressed_parent_sha256": "e535f4c1d775f07a872b9d4998baf985638afbf68fffdf6df2e8490184cc58bc",
+    "manifest": "mods/hoenn/validation-baselines/pr79/versions.json",
+    "manifest_sha256": "aef1de99346ea209c848483e112f96bb342b45bc4837a0cbbed208dd0e0bf077",
+    "notes": "Earlier PWT/mechanics runs remain bound to their original ROM bytes; no tournaments repeated for this coastal update.",
+    "parent_rom_sha256": "6be718b3917eb6b6f639384ee99563280e272417beec5e22b6722c4cad033462",
+    "retested_on_current_rom": false,
+    "source": "PR79"
+  },
   "integration_layers": [
     "hoenn-crossing",
     "worldsea",
@@ -279,66 +188,212 @@
     "generated-area-review",
     "atlas-surf-layout"
   ],
-  "validation_scope": "atlas-surf-layout-candidate",
-  "candidate": true,
-  "final_release_validated": false,
-  "source_marker_sha256": "10a2b57e222d642aac218b0a4e04e4a296378fa0f5e237cff73c753123a97114",
+  "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
+  "parent_rom_sha256": "5d42387c5ec934239fcdeeb2e030ef3f3d4b763030b38f49538e3eb02fdf6cab",
+  "parent_rules_hex": "01040100",
   "pending_obligations": [
     "native current-ROM boundary, Dive/Emerge, camera, sprite, trainer and old-save checks",
     "large distinct cave exteriors and separate entrances/chambers for all105 legendaries",
     "complete-rock review of other native primary banks; General103 repaired",
     "remaining DEX, five-edition, browser and final release gates"
   ],
-  "native_cold_boot": {
-    "Gen1-4-Normal": {
-      "report": "docs/design/atlas-surf-layout/neighbor-layouts-v7/candidate-cold-boot/Gen1-4-Normal/cold-boot.json",
-      "sha256": "62261374fbbfce8bdfef0bae81fc196cf8abbfc5e53117fdfa3f516bed6c11d2"
-    },
-    "Gen1-4-Hard": {
-      "report": "docs/design/atlas-surf-layout/neighbor-layouts-v7/candidate-cold-boot/Gen1-4-Hard/cold-boot.json",
-      "sha256": "70d8af74fd5aad40f4c4fc047a8070dcd189c752a9c5d8d0b75ecb5121b2e0bc"
-    },
-    "Gen1-9-Normal": {
-      "report": "docs/design/atlas-surf-layout/neighbor-layouts-v7/candidate-cold-boot/Gen1-9-Normal/cold-boot.json",
-      "sha256": "635a201ae837a84e765fbd4bd20540d5c044fb8fdff38804807115f4276f73b8"
-    },
-    "Gen1-9-Hard": {
-      "report": "docs/design/atlas-surf-layout/neighbor-layouts-v7/candidate-cold-boot/Gen1-9-Hard/cold-boot.json",
-      "sha256": "5e327f6ad1b5c0a2d10bdceda24956cdc17e482707ebad59f355320037a0d00f"
-    },
-    "TESTE": {
-      "report": "docs/design/atlas-surf-layout/neighbor-layouts-v7/candidate-cold-boot/TESTE-continued-after-save/cold-boot.json",
-      "sha256": "be9aa599bc54dcbbe733c6036f477a3cc98636dd71fcc99acda2f319f27b9aed"
-    }
-  },
-  "parent_elf_sha256": "36989019fbf9b14e8ce93b96701c3c517bee965a6ab755d3c380ebcb9a16449f",
-  "layer_marker_sha256": "10a2b57e222d642aac218b0a4e04e4a296378fa0f5e237cff73c753123a97114",
-  "rom_used_bytes": 33207772,
-  "rom_limit_bytes": 33554432,
-  "known_generated_water_components": 1,
-  "user_requested_progress_checkpoint": true,
-  "proofs": [],
-  "historical_validation": {
-    "manifest": "mods/hoenn/validation-baselines/pr79/versions.json",
-    "manifest_sha256": "aef1de99346ea209c848483e112f96bb342b45bc4837a0cbbed208dd0e0bf077",
-    "parent_rom_sha256": "6be718b3917eb6b6f639384ee99563280e272417beec5e22b6722c4cad033462",
-    "compressed_parent_sha256": "e535f4c1d775f07a872b9d4998baf985638afbf68fffdf6df2e8490184cc58bc",
-    "retested_on_current_rom": false,
-    "source": "PR79",
-    "notes": "Earlier PWT/mechanics runs remain bound to their original ROM bytes; no tournaments repeated for this coastal update."
-  },
-  "previous_validation": {
-    "manifest": "mods/hoenn/validation-baselines/pr81/versions.json",
-    "manifest_sha256": "d67a4baba3462f9030ac07d5416c815a915737a1d5ea25a3c7dc06f1b0966175",
-    "parent_rom": "mods/hoenn/validation-baselines/pr81/parent.gba.gz",
-    "parent_archive_sha256": "632707c8c5fb96f674bd7f3d1770c3870d22434431deccebfe48cbe88b45122a",
-    "evidence_directory": "mods/hoenn/versions",
-    "retested_on_current_rom": false
-  },
+  "previous_features_retested_on_current_rom": false,
   "previous_port_validation": {
     "manifest": "mods/hoenn/atlas-surf-layout-validation/baseline/versions.json",
     "manifest_sha256": "eca26adfcb0b15f9da78aadec1b8738f66288fcc58d4d727ee2ea2a6274e29ec",
     "retested_on_current_rom": false
   },
-  "candidate_revision": "neighbor-layouts-v7"
+  "previous_review_save_validation": {
+    "file": "mods/hoenn/atlas-surf-layout-validation/baseline/test.sav",
+    "sha256": "fb567ed9c75d7a4ccc84654c5da81f0b25d5c8bfb434d066b6430d1f48919033"
+  },
+  "previous_review_validation": {
+    "file": "mods/hoenn/atlas-surf-layout-validation/baseline/review.json",
+    "sha256": "de814b1090e0a5cdd056fa964f7c078f4434c1bc31d80d263eed2f47344bb05b"
+  },
+  "previous_validation": {
+    "evidence_directory": "mods/hoenn/versions",
+    "manifest": "mods/hoenn/validation-baselines/pr81/versions.json",
+    "manifest_sha256": "d67a4baba3462f9030ac07d5416c815a915737a1d5ea25a3c7dc06f1b0966175",
+    "parent_archive_sha256": "632707c8c5fb96f674bd7f3d1770c3870d22434431deccebfe48cbe88b45122a",
+    "parent_rom": "mods/hoenn/validation-baselines/pr81/parent.gba.gz",
+    "retested_on_current_rom": false
+  },
+  "proofs": [
+    {
+      "file": "evidence/atlas-surf-layout/compiled-source/atlas-surf-final-source.json.gz",
+      "kind": "atlas-functional-source",
+      "sha256": "7d8430edd58da2b791cd9fc66d5f3bb7bf2284794894592eb50b3c785f976c7b",
+      "target": "common"
+    },
+    {
+      "file": "evidence/atlas-surf-layout/native-summary.json",
+      "kind": "atlas-functional-native",
+      "sha256": "07f50c21732f5850c7159326b726cd42cab7116d7de77e0444f425470105dc9e",
+      "target": "common"
+    },
+    {
+      "file": "evidence/atlas-surf-layout/editions/Gen1-4-Normal/rules/edition-native-rules.json.gz",
+      "kind": "edition-native-rules",
+      "sha256": "7ce908466661f17d063f38fdcf795d0f9d3b5e1349c23abd673f9e60c9cbb472",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba"
+    },
+    {
+      "file": "evidence/atlas-surf-layout/editions/Gen1-4-Normal/trainer/surf-trainers-native.json",
+      "kind": "atlas-surf-trainers-native",
+      "sha256": "ed3ca07526dd0b9e724cfe64a3f218fe3f1f133db76e51ef09e4770124b6d51a",
+      "target": "Pokemon-Journey-Gen1-4-Normal.gba"
+    },
+    {
+      "file": "evidence/atlas-surf-layout/editions/Gen1-4-Hard/rules/edition-native-rules.json.gz",
+      "kind": "edition-native-rules",
+      "sha256": "527a2622312066c7b85565452e270bc10d2c864e5710992165172f1cd76e8193",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba"
+    },
+    {
+      "file": "evidence/atlas-surf-layout/editions/Gen1-4-Hard/trainer/surf-trainers-native.json",
+      "kind": "atlas-surf-trainers-native",
+      "sha256": "01ba16472718ecb6ab96ff73c3d7bcf1e1938caf91906e1655457c7d73abd3e1",
+      "target": "Pokemon-Journey-Gen1-4-Hard.gba"
+    },
+    {
+      "file": "evidence/atlas-surf-layout/editions/Gen1-9-Normal/rules/edition-native-rules.json.gz",
+      "kind": "edition-native-rules",
+      "sha256": "dbb28e1b41adb5e122be05a15c4fc6a8e9eb7301ebf396e51f6edff467777159",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba"
+    },
+    {
+      "file": "evidence/atlas-surf-layout/editions/Gen1-9-Normal/trainer/surf-trainers-native.json",
+      "kind": "atlas-surf-trainers-native",
+      "sha256": "994e642cc5a28f3936a9f6ca2f372a602ffdaadbc539e7a4616c052b442e0ad7",
+      "target": "Pokemon-Journey-Gen1-9-Normal.gba"
+    },
+    {
+      "file": "evidence/atlas-surf-layout/editions/Gen1-9-Hard/rules/edition-native-rules.json.gz",
+      "kind": "edition-native-rules",
+      "sha256": "6179dc9d74c4e6dfdc598a6b5750d32d83d3b89d4b4f27a1848daeea3c2e85d3",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba"
+    },
+    {
+      "file": "evidence/atlas-surf-layout/editions/Gen1-9-Hard/trainer/surf-trainers-native.json",
+      "kind": "atlas-surf-trainers-native",
+      "sha256": "79e33d81505e2ce0f434cb8489aa7059b07f3c39c4b277296528f84c0ce22707",
+      "target": "Pokemon-Journey-Gen1-9-Hard.gba"
+    },
+    {
+      "file": "evidence/atlas-surf-layout/editions/TESTE/rules/edition-native-rules.json.gz",
+      "kind": "edition-native-rules",
+      "sha256": "c23030fbb2f167f2d6e91ba6b339588200439bdd160cb355f3da2eb5b376f23c",
+      "target": "test"
+    },
+    {
+      "file": "evidence/atlas-surf-layout/editions/TESTE/trainer/surf-trainers-native.json",
+      "kind": "atlas-surf-trainers-native",
+      "sha256": "a20a51e98ea30693edcecc31995013ba239c1581419f2cd33fde2c4f8cfb5f6d",
+      "target": "test"
+    }
+  ],
+  "source_marker_sha256": "b7ec6da5cb9ff9214dde31505a51edb05206c2d6d12b2e45f1bcb3b94664ff87",
+  "validated": true,
+  "validation_scope": "atlas-surf-layout",
+  "variants": [
+    {
+      "bytes": 33554432,
+      "evs": 510,
+      "file": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "important_opponents_only": true,
+      "max_national": 493,
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189,
+        9209712,
+        9209713,
+        9209714
+      ],
+      "perfect_trainer_ivs": false,
+      "requires_new_save": true,
+      "sha256": "43e5d96adc2ec0ae993d59b390dc33d940f0866b0bc7f7cd2a043e6792554b11"
+    },
+    {
+      "bytes": 33554432,
+      "evs": 510,
+      "file": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "important_opponents_only": true,
+      "max_national": 493,
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189,
+        9209712,
+        9209713
+      ],
+      "perfect_trainer_ivs": true,
+      "requires_new_save": true,
+      "sha256": "4f8febd3c8b07e95232240b7224fc6642a86c66f0f3996d69cc38efc0ba182e5"
+    },
+    {
+      "bytes": 33554432,
+      "evs": 510,
+      "file": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "important_opponents_only": true,
+      "max_national": 1025,
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189,
+        9209714
+      ],
+      "perfect_trainer_ivs": false,
+      "requires_new_save": true,
+      "sha256": "19028b334d1d038712280144919079c48e3a5fa7cb7f0e1b3d8d9b1a42ec2420"
+    },
+    {
+      "bytes": 33554432,
+      "evs": 510,
+      "file": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "important_opponents_only": true,
+      "max_national": 1025,
+      "patched_byte_offsets": [
+        160,
+        162,
+        163,
+        164,
+        165,
+        166,
+        168,
+        169,
+        170,
+        171,
+        189
+      ],
+      "perfect_trainer_ivs": true,
+      "requires_new_save": true,
+      "sha256": "d24210c122c8adbe2dc44d5a8292552dcd8e1056c244894542cc0817d4cef523"
+    }
+  ]
 }

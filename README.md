@@ -1,12 +1,9 @@
 # AiKalicaAiCrlBR
 
-**Próxima janela de IA/Codex:** comece pelo [guia técnico Aqui](Aqui/README.md)
-e pelo [registro de erros e logs](Aqui/ERROS-PARA-PROXIMA-IA.md).
-O guia também acompanha o ZIP; a candidata172 ainda tem validações pendentes.
-
-As [cinco ROMs desta branch](roms/) foram recompiladas na candidata172; boot e
-Continue/save da TESTE passaram. [Validação global e pendências](docs/CONTINUIDADE-TECNICA-IA.md)
-ainda estão em andamento.
+As cinco edições da camada 172 incluem o reparo dos encontros terrestres nas
+ilhas e dos locais da Pokédex. Os testes no mGBA cobrem as câmaras, as
+travessias, os portos e a migração dos saves. Há também provas de abertura
+das cinco edições no navegador. [Validação da versão](docs/design/atlas-functional-review-2026-11-23/README.md).
 
 Pokémon Journey reúne Kanto, Hoenn e Sevii, com duas campanhas, 16 insígnias, rotas marítimas contínuas e uma missão Galactic final. O jogo está em inglês; a documentação está em português.
 
@@ -17,6 +14,6 @@ Pokémon Journey reúne Kanto, Hoenn e Sevii, com duas campanhas, 16 insígnias,
 - [Estado da integração e limites da validação](mods/hoenn/INTEGRATION-STATUS.md)
 - [Continuidade técnica para a próxima IA: pedidos, regras, provas e pendências](docs/CONTINUIDADE-TECNICA-IA.md)
 
-O player do GitHub Pages permite escolher uma das quatro edições. Comece um save novo: a Bag foi ampliada para comportar todos os tipos de item, e os TMs são reutilizáveis. Há escolha de Red, Leaf, Brendan ou May independentemente da região inicial. As 16 insígnias aparecem em páginas separadas de Kanto e Hoenn no cartão de treinador.
+O player do GitHub Pages permite escolher uma das quatro edições normais ou a TESTE. Comece um save novo: a Bag foi ampliada para comportar todos os tipos de item, e os TMs são reutilizáveis. Há escolha de Red, Leaf, Brendan ou May independentemente da região inicial. As 16 insígnias aparecem em páginas separadas de Kanto e Hoenn no cartão de treinador.
 
 A versão anterior está preservada em [mods/hoenn/playable](mods/hoenn/playable/START-HERE.md). Os projetos anteriores de edição de LeafGreen e o kit de ferramentas permanecem disponíveis em [mods](mods/) e [tools](tools/README.md).

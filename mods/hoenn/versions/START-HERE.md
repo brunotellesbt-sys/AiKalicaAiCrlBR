@@ -1,11 +1,9 @@
 # Pokémon Journey — quatro edições GBA
 
-As quatro ROMs desta branch e a TESTE foram recompiladas para a **candidata172**.
-Boot passou nas cinco; a TESTE passou Continue → salvar pelo menu → Continue.
-A geografia global e a revisão visual ainda estão em correção. Este é o
-checkpoint de binários solicitado no PR111; não é release final aprovada.
-[Hashes e pendências atuais](../../../roms/CANDIDATA-172.json) ·
-[Continuidade técnica incluída no ZIP](../../../docs/CONTINUIDADE-TECNICA-IA.md).
+As quatro edições normais e a TESTE usam os mapas e a Pokédex validados da
+camada 172. Nas normais, as sete ilhas com famílias terrestres agora têm
+encontros na areia e locais correspondentes na Pokédex.
+[Provas e detalhes](../../../docs/design/atlas-functional-review-2026-11-23/README.md).
 
 Referência da entrega anterior validada: [canal sul de One Island, portos e cavernas — camada 171](../../../docs/generated-area-review.md). Liga a rota vertical ao mar horizontal sem redesenhar o mapa-múndi, corrige rochas, cantos e limites dos portos e conserva o retorno do Surf aos sete cais. Fecha entradas inativas da caverna Horizonte. A TESTE mantém os mesmos mapas, sem encontros aleatórios nem abordagem automática de treinadores. [Causas, soluções e prevenção em TXT](../../../errors/2026-11-07-generated-area-review.txt).
 
@@ -35,7 +33,7 @@ terminal com capitão da rede mundial e submarino ampliado. Validado nas quatro 
 
 Escolha uma edição e mantenha um backup do save original. Saves anteriores à ampliação da Bag usam outro formato e exigem Nova Partida. A revisão171 anterior validou uma bateria 168 no cais de Treasure Beach: a posição acompanha a ampliação uma única vez, inclusive após salvar e continuar novamente. Essa prova não certifica todas as builds antigas. Todas as edições possuem Kanto, Hoenn, Sevii e o capítulo Galactic.
 
-No repositório, as quatro ROMs atuais também ficam em [`roms/`](../../../roms/README.md), com os mesmos hashes do manifesto da candidata; a validação final da CI permanece pendente.
+No repositório, as quatro ROMs atuais também ficam em [`roms/`](../../../roms/README.md), com os mesmos hashes do [manifesto](versions.json).
 
 | Edição | Pokémon | IVs dos oponentes importantes |
 |---|---|---|

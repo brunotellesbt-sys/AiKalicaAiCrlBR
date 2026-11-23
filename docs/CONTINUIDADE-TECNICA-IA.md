@@ -1,3 +1,20 @@
+ATUALIZAÇÃO — FUNCIONALIDADE E TESTES DA CAMADA 172 — 23/11/2026
+
+Pedido atual: “Quero a rom passando em todos os testes primeiro, pra depois
+colocarmos essas funcionalidades.” Ideias futuras ficam documentadas.
+
+A ROM de referência atual tem SHA-256
+5d42387c5ec934239fcdeeb2e030ef3f3d4b763030b38f49538e3eb02fdf6cab.
+Sete ilhas recuperaram o gatilho de encontro em areia seca e 66 referências
+da Pokédex. As duas caps passaram na auditoria de espécies. Os testes de
+câmaras, navegação, treinadores, pedras e saves usaram a compilação atual.
+As cinco edições abriram no navegador, a TESTE preservou o save de
+inspeção de Mossdeep e o player do GitHub Pages foi preparado localmente.
+
+O contrato e as provas atuais estão em docs/design/atlas-functional-review-2026-11-23.
+Os registros abaixo são históricos. A ROM C e os seus resultados permanecem
+separados dos resultados atuais.
+
 PRIORIDADE ATUAL — CONCLUIR FUNCIONALIDADE E TESTES —23/11/2026
 Pedido literal: "Quero a rom passando em todos os testes primeiro, pra depois colocarmos essas funcionalidades."
 Histórias/ideias futuras ficam guardadas; não implementar novas funcionalidades.

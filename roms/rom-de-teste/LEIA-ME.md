@@ -1,14 +1,8 @@
-Atualização: a visão das divisas da Rota131 com Pacifidlog e a Rota130 foi
-corrigida e testada antes/depois da entrada, no retorno e após SAVE/Continue.
+# TESTE — camada 172
 
-# TESTE — candidata172
-
-Esta ROM inclui o reparo das103peças de rochas e seis fragmentos adicionais daRota131.
-Foi recompilada com as modificações atuais e mantém a supressão de
-encounters e abordagens automáticas. A bateria incluída foi salva pelo menu na
-ROM nova e passou novamente pelo Continue. A validação global da geografia
-continua pendente; consulte [o manifesto](../CANDIDATA-172.json) e a
-[continuidade técnica](../../docs/CONTINUIDADE-TECNICA-IA.md).
+A edição TESTE passou no mGBA e no navegador. O save de inspeção de
+Mossdeep foi carregado na ROM atual, salvo pelo menu e aberto novamente
+com Continue. [Provas do save](../../mods/hoenn/versions/evidence/atlas-surf-layout/editions/TESTE/inspection-save/).
 
 # ROM de teste da campanha e das rotas
 
@@ -18,7 +12,7 @@ Conserva a [campanha da camada 164](../../docs/badge-story.md): competição da 
 
 Abra `Pokemon-Journey-TESTE.gba` no emulador. Esta edição deriva de Gen1–9 Normal e contém as mesmas rotas, portos e cavernas das quatro ROMs normais.
 
-A tela azul relatada não foi reproduzida no mGBA com os arquivos desta entrega, abrindo sem save e usando Continue com o save abaixo. A causa específica no My Boy permanece sem confirmação; [relatórios e capturas atuais](../../mods/hoenn/generated-area-review-validation/editions/TESTE/cold-boot/).
+A tela azul relatada não foi reproduzida no mGBA com os arquivos desta entrega, abrindo sem save e usando Continue com o save abaixo. A causa específica no My Boy permanece sem confirmação; [relatórios e capturas atuais](../../mods/hoenn/versions/evidence/atlas-surf-layout/editions/TESTE/inspection-save/second/).
 
 No player do GitHub Pages, selecione **TESTE · Explore without encounters**. O navegador confere o arquivo atual e mantém um save separado das quatro edições normais.
 
