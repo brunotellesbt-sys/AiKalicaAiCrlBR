@@ -61,7 +61,19 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: current-rom-browser-validation
-          path: mods/hoenn/versions-validation/browser/
+          path: |
+            mods/hoenn/versions-validation/browser/
+            mods/hoenn/versions-validation/browser-route-pruning/
+      - name: Upload the five verified editions and current atlas
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: five-verified-editions
+          path: |
+            /tmp/player-site/games/Pokemon-Journey-Gen1-*.gba
+            /tmp/player-site/games/Pokemon-Journey-TESTE.gba
+            /tmp/player-site/games/versions.json
+            /tmp/player-site/games/review.json
+            /tmp/player-site/atlas-atual.png
       - name: Install mGBA
         run: |
           sudo apt-get update

@@ -1,7 +1,57 @@
 """Stage the verified, self-contained browser player for GitHub Pages."""
-import argparse,shutil
+import argparse,json,shutil
 from pathlib import Path
 from verify_playable import ROOT, verify, ROM_NAME
+
+VERSIONS = ROOT / 'mods/hoenn/versions'
+REVIEW = ROOT / 'roms/rom-de-teste'
+PRUNING = ROOT / 'mods/hoenn/atlas-route-pruning'
+CURRENT_BROWSER_EVIDENCE = ROOT / 'mods/hoenn/versions-validation/browser-route-pruning/browser-versions.json'
+
+
+def stage_current_editions(site, release):
+    """Build the exact editions served by Play and Download from sealed inputs."""
+    from package_review_rom import verify as verify_review
+    from verify_versions import TEST_EDITION_SCOPES
+    games = site / 'games'
+    games.mkdir(exist_ok=True)
+    review = None
+    if release.get('validation_scope') in TEST_EDITION_SCOPES:
+        review = verify_review(REVIEW, VERSIONS / 'Pokemon-Journey-Gen1-9-Normal.gba')
+    if release.get('validation_scope') == 'atlas-surf-layout' and (PRUNING / 'validation.json').is_file():
+        from verify_atlas_route_pruning import verify as verify_pruning
+        current = verify_pruning(output=games)
+        profiles = {row['edition']: row for row in current['editions']}
+        for row in release['variants']:
+            assert profiles[row['file']]['base_sha256'] == row['sha256']
+        assert profiles[review['file']]['base_sha256'] == review['sha256']
+        variants = [{key: row[key] for key in ('file', 'bytes', 'max_national', 'perfect_trainer_ivs')}
+                    for row in release['variants']]
+        for row in variants:
+            row['sha256'] = profiles[row['file']]['rom_sha256']
+        atlas = dict(file='atlas-atual.png', sha256=current['map_png_sha256'])
+        release = dict(validated=True, validation_scope='atlas-route-pruning',
+                       variants=variants, atlas=atlas)
+        normal = next(row for row in variants if row['file'] == review['base_normal_file'])
+        review = {key: review[key] for key in ('file', 'bytes', 'base_normal_file',
+                  'automatic_trainer_approaches', 'random_wild_encounters', 'separate_save_identity')}
+        review.update(sha256=profiles[review['file']]['rom_sha256'], base_normal_sha256=normal['sha256'])
+        shutil.copyfile(PRUNING / 'mapa-HJK.png', site / atlas['file'])
+        (site / 'world-map.html').write_text(
+            '<!doctype html><html lang="pt-BR"><meta charset="utf-8">'
+            '<title>Mapa atual de Pokémon Journey</title>'
+            '<meta http-equiv="refresh" content="0;url=atlas-atual.png">'
+            '<a href="atlas-atual.png">Abrir mapa atual</a></html>\n')
+    else:
+        for row in release['variants']:
+            shutil.copyfile(ROOT / 'roms' / row['file'], games / row['file'])
+        if review:
+            shutil.copyfile(REVIEW / review['file'], games / review['file'])
+    (games / 'versions.json').write_text(json.dumps(release, indent=2) + '\n')
+    if review:
+        (games / 'review.json').write_text(json.dumps(review, indent=2) + '\n')
+    return release, review
+
 
 def stage(output):
     output=Path(output)
@@ -12,20 +62,12 @@ def stage(output):
     for name in [ROM_NAME,'release.json']:
         shutil.copyfile(ROOT/'mods/hoenn/playable'/name,games/name)
     shutil.copyfile(ROOT/'mods/hoenn/playable/START-HERE.md',output/'START-HERE.md')
-    versions=ROOT/'mods/hoenn/versions'
+    versions=VERSIONS
     if (versions/'versions.json').exists():
         from verify_versions import verify as verify_versions,verify_browser
-        release=verify_versions(versions)
-        verify_browser(release)
-        for name in [row['file'] for row in release['variants']]+['versions.json']:
-            download=ROOT/'roms'/name if name.endswith('.gba') else versions/name
-            shutil.copyfile(download,games/name)
-        if release.get('validation_scope') in ('atlas-surf-layout','extra-gyms','dewford-coast-safety','generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers'):
-            from package_review_rom import verify as verify_review
-            review_dir=ROOT/'roms/rom-de-teste'
-            review=verify_review(review_dir,versions/'Pokemon-Journey-Gen1-9-Normal.gba')
-            for name in [review['file'],'review.json']:
-                shutil.copyfile(review_dir/name,games/name)
+        release, review = stage_current_editions(output, verify_versions(versions))
+        report = CURRENT_BROWSER_EVIDENCE if 'atlas' in release else None
+        verify_browser(release, review=review, report_path=report)
         shutil.copytree(ROOT/'docs',output/'docs',dirs_exist_ok=True)
         if (ROOT/'errors').is_dir():
             shutil.copytree(ROOT/'errors',output/'errors',dirs_exist_ok=True)

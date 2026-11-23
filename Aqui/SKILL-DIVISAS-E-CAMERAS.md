@@ -97,3 +97,16 @@ controle ainda é falha de planejamento, não prova de colisão no jogo.
 Cabeçalhos com shared_scripts_map/shared_events_map precisam ser comparados
 aos ponteiros e contagens do dono compartilhado declarado. Nunca aceitar um
 ponteiro divergente nem presumir que todo mapa possui seus próprios símbolos.
+
+## Retirada de uma rota navegável
+
+- Relacione os pixels do Atlas aos metatiles e aos mapas físicos que os
+  contêm. Remova também os pequenos segmentos de ligação na boca do corredor.
+  Preserve os entroncamentos que servem aos trajetos mantidos.
+- Confira a arte normal e o zoom 2× da ROM compilada. Mantenha conexões
+  de câmera que ainda exibem o terreno vizinho. A colisão do recife deve
+  fechar o caminho nas duas direções e o mar comum pode continuar visível
+  atrás dele.
+- Procure treinadores, eventos e referências AREA da Pokédex nas células
+  afetadas. Teste cada boca, os desvios e o Continue de um save feito tanto
+  dentro da rota retirada quanto em uma área que perdeu seu acesso.

@@ -6,19 +6,27 @@ ROOT=Path(__file__).resolve().parents[2]
 VARIANTS={f'Pokemon-Journey-Gen1-{generation}-{difficulty}.gba':(cap,hard)
           for generation,cap in [(4,493),(9,1025)]
           for difficulty,hard in [('Normal',False),('Hard',True)]}
+TEST_EDITION_SCOPES=('atlas-surf-layout','atlas-route-pruning','extra-gyms','dewford-coast-safety',
+                     'generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review',
+                     'arrival-coast-review','coastal-ecology','generated-world-audit','badge-story',
+                     'coastal-closures','sevii-integrated-piers')
 
 def digest(raw):return hashlib.sha256(raw).hexdigest()
 
-def verify_browser(release):
-    report=json.loads((ROOT/'mods/hoenn/versions-validation/browser/browser-versions.json').read_text())
+def verify_browser(release, *, review=None, report_path=None):
+    report_path=report_path or ROOT/'mods/hoenn/versions-validation/browser/browser-versions.json'
+    report=json.loads(report_path.read_text())
     assert report['passed'] is True and report['bundled_mgba'] is True
     assert report['invalid_manifest_rejected'] and report['incomplete_rom_rejected']
     expected={r['file']:r['sha256'] for r in release['variants']}
-    if release.get('validation_scope') in ('atlas-surf-layout','extra-gyms','dewford-coast-safety','generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers'):
+    if release.get('validation_scope') in TEST_EDITION_SCOPES:
         assert report['stale_test_edition_rejected']
-        from package_review_rom import verify as verify_review
-        review=verify_review(ROOT/'roms/rom-de-teste',ROOT/'mods/hoenn/versions/Pokemon-Journey-Gen1-9-Normal.gba')
+        if review is None:
+            from package_review_rom import verify as verify_review
+            review=verify_review(ROOT/'roms/rom-de-teste',ROOT/'mods/hoenn/versions/Pokemon-Journey-Gen1-9-Normal.gba')
         expected[review['file']]=review['sha256']
+    if 'atlas' in release:
+        assert report['served_atlas'] == release['atlas']
     checks=report['checks'];assert len(checks)==len(expected) and {c['file'] for c in checks}==set(expected)
     for row in checks:
         assert row['rom_sha256']==expected[row['file']] and row['actual_game_name']==row['file'], ('Stale browser evidence; rerun validate_versions_browser.cjs', row['file'])

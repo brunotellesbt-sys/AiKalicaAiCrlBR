@@ -31,8 +31,8 @@ from restore_generated_area_review import verify_prefix
 ROOT=Path(__file__).resolve().parents[2]
 
 
-def source_audit(layer,metadata):
-    view=OverlaySource(layer);parent=Source(layer.source);inventory,_,_,_=_read_evidence(parent)
+def source_audit(layer,metadata,*,inventory_source=None):
+    view=OverlaySource(layer);parent=Source(inventory_source or layer.source);inventory,_,_,_=_read_evidence(parent)
     path=ROOT/'docs/design/atlas-surf-layout/native-chart-connected-review/source/coasts.json.gz'
     raw=path.read_bytes()
     if hashlib.sha256(raw).hexdigest()!='f242a412b60c8a60b5fdbba827baad5c02bcfdfab73c678679f35a9187063c26':

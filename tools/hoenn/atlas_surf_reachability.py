@@ -763,7 +763,14 @@ def audit(source, *, plan, requirements=None, strict=False, max_states=1000000, 
                         generated_cells += 1
                     else:
                         graph.errors.append(dict(kind='generated-water-state-unmodelled', map=name, tile=[x, y]))
-        if not chunk_water:
+        if chunk.get('scenery_only') is True:
+            if (chunk_water or not scenery or any(
+                    graph.passable(graph.point([name, x, y])) and (x,y) not in scenery
+                    for y in range(layout['height']) for x in range(layout['width']))
+                    or any(source.maps[name].get(field) for field in
+                           ('object_events', 'warp_events', 'coord_events', 'bg_events'))):
+                graph.errors.append(dict(kind='unexpected-playable-content-in-scenery-map', map=name))
+        elif not chunk_water:
             graph.errors.append(dict(kind='generated-chunk-has-no-physical-water', map=name))
     if not generated:
         graph.errors.append(dict(kind='no-generated-physical-water'))
