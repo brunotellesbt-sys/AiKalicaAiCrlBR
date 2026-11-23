@@ -1,3 +1,13 @@
+ROTAS H, J E K — 23/11/2026
+
+H, J estendido até o cruzamento ao norte e K foram retirados da arte do
+Atlas e dos corredores reais de Surf. A linha superior de Kanto–Sevii
+e seu acesso sul continuam funcionais. A nadadora 39 foi movida dentro
+do mesmo mapa. A migração 9 reposiciona saves nas áreas encerradas e
+renova os blocos de câmera salvos. Pokédex de Finneon e Lumineon aponta
+para um gatilho alcançável. A revisão foi compilada nas cinco edições,
+com patches BPS e mapa em mods/hoenn/atlas-route-pruning.
+
 ATUALIZAÇÃO — FUNCIONALIDADE E TESTES DA CAMADA 172 — 23/11/2026
 
 Pedido atual: “Quero a rom passando em todos os testes primeiro, pra depois

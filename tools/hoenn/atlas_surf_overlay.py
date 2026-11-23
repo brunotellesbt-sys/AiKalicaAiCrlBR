@@ -47,6 +47,8 @@ class OverlaySource(Source):
         name=str(name);path=Path(name)
         if path.is_absolute() or '..' in path.parts or '\\' in name:
             raise ValueError(('Unsafe staged source path',name))
+        if name not in self.layer.expected and name not in self.layer.outputs:
+            raise FileNotFoundError(name)
         raw=read(self.layer,name)
         value=hashlib.sha256(raw).hexdigest()
         if name in self.inputs and self.inputs[name]!=value:

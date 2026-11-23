@@ -22,6 +22,15 @@ def run(source,library,output,offset=0,limit=None,manual=False):
     output.mkdir(parents=True,exist_ok=True)
     metadata=json.loads((source/'.journey-atlas-surf-layout').read_bytes())
     all_trainers=metadata['surf_trainer_redesign']['trainers']
+    geometry_version=metadata['migration']['final_version']
+    pruning=source/'.journey-atlas-route-pruning'
+    if pruning.exists():
+        from prepare_atlas_route_pruning import TRAINER_MAP, TRAINER_DESTINATION
+        geometry_version=json.loads(pruning.read_bytes())['migration']['final_version']
+        for row in all_trainers:
+            if row['map']==TRAINER_MAP:
+                assert row['script']=='JourneyAtlasSwimmer39'
+                row.update(tile=list(TRAINER_DESTINATION),facing='DOWN',delta=[0,1])
     selected=all_trainers[offset:offset+limit if limit else None]
     artifacts={n:sha(source/n) for n in ('pokeemerald.gba','pokeemerald.elf','.journey-atlas-surf-layout')}
     assert selected and len({r['map'] for r in all_trainers})==96
@@ -137,7 +146,7 @@ def run(source,library,output,offset=0,limit=None,manual=False):
     finally:
         lib.stop();ns['emulator_workspace'].cleanup()
     expected={row['flag']:row in selected for row in all_trainers}
-    cold=cold_boot(source,library,output/'cold-continue',battery,expected_geometry_version=8,expected_flags=expected)
+    cold=cold_boot(source,library,output/'cold-continue',battery,expected_geometry_version=geometry_version,expected_flags=expected)
     report=dict(kind='atlas-surf-trainers-native',passed=True,artifact_sha256=artifacts,cases=results,
         initial_party_progress_stats_and_per_case_placement_are_fixtures=True,
         after_departure_battles_and_save_controllers_only=True,no_battle_RAM_writes=True,

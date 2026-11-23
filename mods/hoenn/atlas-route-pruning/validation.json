@@ -1,0 +1,311 @@
+{
+  "layer": "atlas-route-pruning",
+  "previous_art": "Atlas 172",
+  "base_commit": "168e7ec8d319409765b13da194b3a9548baf5724",
+  "input_files_checked": 34396,
+  "candidate_base_rom_sha256": "59cdd79766cf12c0370e05336c875aa330c87a8385f1663ae3287479a75c926d",
+  "elf_sha256": "2902a3407149ba94ec7066c808f6ffa817cce4a4ed960fa95b1c668fed7e7116",
+  "marker_sha256": "aeeb2c126b82ce180d83d2de4a4f2cce20ad17d1e32c676f4db889d95f3d06b8",
+  "source_outputs": {
+    "data/layouts/JourneyAtlasScene023/map.bin": "fabfea7690b74e1be5786a75ed35f99c17b5df1295d74de65e7077665b2d42a6",
+    "data/layouts/JourneyAtlasScene024/map.bin": "d855ee1f72c526733da831431ff65e1d0b576b40e31c32cf43bb658cd36757ba",
+    "data/layouts/JourneyAtlasScene056/map.bin": "23cf069a7719ddc88b702546ed76c0b5aa2390bcabf32d0569fb5abfa0d358b1",
+    "data/layouts/JourneyAtlasSea119/map.bin": "7178dfcb17c11af1b69374c00de0e945fefe876c264b00d700040a840cfcaab2",
+    "data/layouts/JourneyAtlasSea130/map.bin": "26efbf923983b26b0c99dd598eff0d85c02d83d47a62ef9c66222d827c8f8559",
+    "data/layouts/JourneyAtlasSea132/map.bin": "471cb26df44097c43ba778da99956c117ea5ed710bb9c29a17e0357a0aea40c1",
+    "data/layouts/JourneyAtlasSea139/map.bin": "b63274cfbf8aae5021f215994ad0e21322141d924a658b82b6cff5f8b2e7b6e7",
+    "data/layouts/JourneyAtlasSea140/map.bin": "ddca650e81d4d1f04a9b652ad87a7be0a6ddc4dcf6321f5e45849dc204e73415",
+    "data/layouts/JourneyAtlasSea142/map.bin": "7433d674dfade3f797141e4e43af12073d560f7dce47edd50afaca5c886525ea",
+    "data/layouts/JourneyAtlasSea326/map.bin": "8fa901ae590d8acea76df7431bb74c82babccda9125cca303860fabd1ba20548",
+    "data/layouts/JourneyAtlasSea361/map.bin": "fbe401cb2ca77dfb678b2cc9cbf220f5c551997ba6a26be41ac5f24f1a573c88",
+    "data/layouts/JourneyAtlasSea372/map.bin": "020d9818021a45f78273928b798e44ca21a6bbc7da80fde7e18195977d44c0a4",
+    "data/layouts/JourneyAtlasSea378/map.bin": "8268c7f86b59de70c11feee5f3759cd5d58d5237751cfb30fe3af19f5744a3bc",
+    "data/maps/JourneyAtlasSea326/map.json": "d1db8045861aa06e83cb4199e571ddd6076c6e7828e0960a8fc72a8cbeb79dd8",
+    "src/data/journey_world_map.h": "4b418d4324d1a649b52270820b3dcb11fd433cbe0f489e68dd507781fc3a2be9",
+    "src/data/journey_atlas_background.h": "d9f6a3141e38e404807b3c75883c61cbc4256a0cf11afa15cd4370a1b41a95f3",
+    "src/load_save.c": "0da8e410c8bfa0f41692707f13cd9754ac341e6ddda30f47a55b00698eae5ec8",
+    "src/data/journey_world_dex_locations.h": "c2a08df8cb3dc223eb6231070d7d14ae31e674241c29f505eaba554908bff39f"
+  },
+  "compiled_ranges": {
+    "JourneyAtlasScene023": {
+      "offset": 21596340,
+      "size": 1196,
+      "sha256": "fabfea7690b74e1be5786a75ed35f99c17b5df1295d74de65e7077665b2d42a6"
+    },
+    "JourneyAtlasScene024": {
+      "offset": 21600336,
+      "size": 1350,
+      "sha256": "d855ee1f72c526733da831431ff65e1d0b576b40e31c32cf43bb658cd36757ba"
+    },
+    "JourneyAtlasScene056": {
+      "offset": 21737412,
+      "size": 800,
+      "sha256": "23cf069a7719ddc88b702546ed76c0b5aa2390bcabf32d0569fb5abfa0d358b1"
+    },
+    "JourneyAtlasSea119": {
+      "offset": 21588576,
+      "size": 512,
+      "sha256": "7178dfcb17c11af1b69374c00de0e945fefe876c264b00d700040a840cfcaab2"
+    },
+    "JourneyAtlasSea130": {
+      "offset": 21596256,
+      "size": 48,
+      "sha256": "26efbf923983b26b0c99dd598eff0d85c02d83d47a62ef9c66222d827c8f8559"
+    },
+    "JourneyAtlasSea132": {
+      "offset": 21597572,
+      "size": 104,
+      "sha256": "471cb26df44097c43ba778da99956c117ea5ed710bb9c29a17e0357a0aea40c1"
+    },
+    "JourneyAtlasSea139": {
+      "offset": 21599960,
+      "size": 112,
+      "sha256": "b63274cfbf8aae5021f215994ad0e21322141d924a658b82b6cff5f8b2e7b6e7"
+    },
+    "JourneyAtlasSea140": {
+      "offset": 21600108,
+      "size": 192,
+      "sha256": "ddca650e81d4d1f04a9b652ad87a7be0a6ddc4dcf6321f5e45849dc204e73415"
+    },
+    "JourneyAtlasSea142": {
+      "offset": 21601724,
+      "size": 240,
+      "sha256": "7433d674dfade3f797141e4e43af12073d560f7dce47edd50afaca5c886525ea"
+    },
+    "JourneyAtlasSea326": {
+      "offset": 21740144,
+      "size": 792,
+      "sha256": "8fa901ae590d8acea76df7431bb74c82babccda9125cca303860fabd1ba20548"
+    },
+    "JourneyAtlasSea361": {
+      "offset": 21769900,
+      "size": 672,
+      "sha256": "fbe401cb2ca77dfb678b2cc9cbf220f5c551997ba6a26be41ac5f24f1a573c88"
+    },
+    "JourneyAtlasSea372": {
+      "offset": 21778700,
+      "size": 192,
+      "sha256": "020d9818021a45f78273928b798e44ca21a6bbc7da80fde7e18195977d44c0a4"
+    },
+    "JourneyAtlasSea378": {
+      "offset": 21780956,
+      "size": 272,
+      "sha256": "8268c7f86b59de70c11feee5f3759cd5d58d5237751cfb30fe3af19f5744a3bc"
+    },
+    "sWorldTiles": {
+      "offset": 10391424,
+      "size": 8960,
+      "sha256": "dc6f87605c6bdfbbc5bc5d974d66a3d3b01c475cef39fa2a169ccb909650f43d"
+    },
+    "sWorldTilemap": {
+      "offset": 10389376,
+      "size": 2048,
+      "sha256": "af1044c3f448d6f675d2fbc63f0a8c89587eaebe86c9404a492331889702c1d9"
+    },
+    "sWorldPalette": {
+      "offset": 9528928,
+      "size": 32,
+      "sha256": "da38567f7f701d0d76c5c53ef00407fc6eeb75632efdf6121590b9b2f7aca73a"
+    },
+    "sWorldDetailPixels": {
+      "offset": 10324560,
+      "size": 50176,
+      "sha256": "a603707286d11e7ed7191141d33bdd3427f5b7818595228ffe19e2ebe83e816f"
+    }
+  },
+  "editions": [
+    {
+      "edition": "Pokemon-Journey-Gen1-4-Hard.gba",
+      "base": "roms/Pokemon-Journey-Gen1-4-Hard.gba",
+      "base_sha256": "4f8febd3c8b07e95232240b7224fc6642a86c66f0f3996d69cc38efc0ba182e5",
+      "patch": "Pokemon-Journey-Gen1-4-Hard-atlas172-HJK.bps",
+      "patch_sha256": "5a488dd801241cef57cdb7566f78bd281cb647d6b6dfaa7932b0873a3d096497",
+      "rom_sha256": "36d71f3673cdbfc5f1c13b58afa0ade383818a4e96b5f5768c80595ace92afa9"
+    },
+    {
+      "edition": "Pokemon-Journey-Gen1-4-Normal.gba",
+      "base": "roms/Pokemon-Journey-Gen1-4-Normal.gba",
+      "base_sha256": "43e5d96adc2ec0ae993d59b390dc33d940f0866b0bc7f7cd2a043e6792554b11",
+      "patch": "Pokemon-Journey-Gen1-4-Normal-atlas172-HJK.bps",
+      "patch_sha256": "58e97ba1a8bcbede98f16164630e71758bf1f62f4d25b358ae4b652ff27a8067",
+      "rom_sha256": "0fd7124c37cfdd4d800a753fe981467251ed21287195ec81a57b9045594e8f12"
+    },
+    {
+      "edition": "Pokemon-Journey-Gen1-9-Hard.gba",
+      "base": "roms/Pokemon-Journey-Gen1-9-Hard.gba",
+      "base_sha256": "d24210c122c8adbe2dc44d5a8292552dcd8e1056c244894542cc0817d4cef523",
+      "patch": "Pokemon-Journey-Gen1-9-Hard-atlas172-HJK.bps",
+      "patch_sha256": "af455079c89818e184fd0b1b9401d8f61d6fbe98b4a632cf7c6ef9b70f94b505",
+      "rom_sha256": "256210a394ed6b33f2b54c6739b766d379b2e59dd1389a7f4b4ae1f444f0040d"
+    },
+    {
+      "edition": "Pokemon-Journey-Gen1-9-Normal.gba",
+      "base": "roms/Pokemon-Journey-Gen1-9-Normal.gba",
+      "base_sha256": "19028b334d1d038712280144919079c48e3a5fa7cb7f0e1b3d8d9b1a42ec2420",
+      "patch": "Pokemon-Journey-Gen1-9-Normal-atlas172-HJK.bps",
+      "patch_sha256": "391cd247ea0aa6084e6519b2bcc019928ff4fe17eee0e621bece48ee413d1f21",
+      "rom_sha256": "2491597f54f14cbbe842f84e136b78a24a99bb430c3f994e2aeecf7d3d824cb7"
+    },
+    {
+      "edition": "Pokemon-Journey-TESTE.gba",
+      "base": "roms/rom-de-teste/Pokemon-Journey-TESTE.gba",
+      "base_sha256": "d394be6a535ce8882a4b2fbe05212b8ec981e6a35e2072280e1d5e6946ee3b53",
+      "patch": "Pokemon-Journey-TESTE-atlas172-HJK.bps",
+      "patch_sha256": "b414d4e9ac64c5c89602854a737df6f058080d118ee79368e5f3c6bca7affd98",
+      "rom_sha256": "96739b5a915482b8c458b99ee747e8e1b357af8e06a36607dabd3893c5b38c85"
+    }
+  ],
+  "removed_atlas_pixels": [
+    [
+      96,
+      60
+    ],
+    [
+      97,
+      60
+    ],
+    [
+      98,
+      60
+    ],
+    [
+      99,
+      60
+    ],
+    [
+      100,
+      60
+    ],
+    [
+      102,
+      60
+    ],
+    [
+      103,
+      60
+    ],
+    [
+      104,
+      60
+    ],
+    [
+      105,
+      60
+    ],
+    [
+      125,
+      85
+    ],
+    [
+      125,
+      86
+    ],
+    [
+      125,
+      87
+    ],
+    [
+      125,
+      88
+    ],
+    [
+      126,
+      86
+    ]
+  ],
+  "changed_blocks": {
+    "JourneyAtlasScene023": 42,
+    "JourneyAtlasScene024": 28,
+    "JourneyAtlasScene056": 3,
+    "JourneyAtlasSea119": 12,
+    "JourneyAtlasSea130": 9,
+    "JourneyAtlasSea132": 13,
+    "JourneyAtlasSea139": 7,
+    "JourneyAtlasSea140": 15,
+    "JourneyAtlasSea142": 23,
+    "JourneyAtlasSea326": 31,
+    "JourneyAtlasSea361": 36,
+    "JourneyAtlasSea372": 8,
+    "JourneyAtlasSea378": 14
+  },
+  "removed_active_cells": 816,
+  "save_coordinates_migrated": 877,
+  "dex_relocations": [
+    {
+      "species": "SPECIES_FINNEON",
+      "cap": "9",
+      "old": [
+        "JourneyAtlasSea142",
+        104,
+        60
+      ],
+      "new": [
+        "JourneyAtlasSea150",
+        116,
+        60
+      ]
+    },
+    {
+      "species": "SPECIES_FINNEON",
+      "cap": "4",
+      "old": [
+        "JourneyAtlasSea142",
+        104,
+        60
+      ],
+      "new": [
+        "JourneyAtlasSea150",
+        116,
+        60
+      ]
+    },
+    {
+      "species": "SPECIES_LUMINEON",
+      "cap": "9",
+      "old": [
+        "JourneyAtlasSea142",
+        104,
+        60
+      ],
+      "new": [
+        "JourneyAtlasSea150",
+        116,
+        60
+      ]
+    },
+    {
+      "species": "SPECIES_LUMINEON",
+      "cap": "4",
+      "old": [
+        "JourneyAtlasSea142",
+        104,
+        60
+      ],
+      "new": [
+        "JourneyAtlasSea150",
+        116,
+        60
+      ]
+    }
+  ],
+  "map_png_sha256": "6c4309af04b64197ad90e06c0169a846a9d686c47e5ab7c5498bc2d3e5b189dd",
+  "evidence_sha256": {
+    "Pokemon-Journey-Gen1-4-Hard-boot.json": "b3c55fb725ae0c75ab28f26cd54d1d857bdb5042f18f79bbc628d9b14da51d28",
+    "Pokemon-Journey-Gen1-4-Hard-rules.json.gz": "763bdfc15137ec49b4b55b313dbcb022a3e4b24e97c739ea319c256907b1b945",
+    "Pokemon-Journey-Gen1-4-Normal-boot.json": "59f89848b178e7426eea17954a79261b851dbb25bcd3587ddca691c429b4a42d",
+    "Pokemon-Journey-Gen1-4-Normal-rules.json.gz": "f647083ef23be68c4abd5973ea3c94c5cb204829967ab8143c8864283c810cfc",
+    "Pokemon-Journey-Gen1-9-Hard-boot.json": "429c1de7be36b5c9eb1b54376597d19a37e06baf31d806331fa57550b26c4540",
+    "Pokemon-Journey-Gen1-9-Hard-rules.json.gz": "3f05740da0e2229f123a237beae92aff62f0df0b3b97c2b24fd1ea7a7d8c8e56",
+    "Pokemon-Journey-Gen1-9-Normal-boot.json": "f9cee84c2387fd24cb1394421e8ccace178f8f5ff288421f4a41fe88bc5d64ef",
+    "Pokemon-Journey-Gen1-9-Normal-rules.json.gz": "14d70faf984c0be0ccf9f691e3fd94925957ef9225a51ea4d9149e673a952886",
+    "Pokemon-Journey-Gen1-9-Normal-trainer.json": "c10ec12e81fc45fd3b18263fe9a8fafe0404ef375ec17d60cafe34a18d33e287",
+    "Pokemon-Journey-TESTE-boot.json": "c5d3082a49ba7e09a92cd10f613d1182e373f1838bf848ad9a868bda1d0e1c2c",
+    "Pokemon-Journey-TESTE-rules.json.gz": "442ff2a852a77937b8bdf55d6e6be29ce71ac2bcfbef9b7f097dce009f6868c8",
+    "Pokemon-Journey-TESTE-trainer.json": "119aa45e53a4a68f353c6b2d530028d70180ab68aa2e269a87828bfb85a3492b",
+    "ecology-comparison.json.gz": "4d09c323263bd7d6b07cdb746b3deaa336dd3d518cbb836d5aecb8e1966659ce",
+    "navigation.json": "a949bd5df00f52d4b60fbbd205fc49070c7ddf1c02aa1ef859c4ae260bf89e76",
+    "recife-J.png": "b19835c88c3fc8e0b75a00ac7ec3ec83c241c8ef1ce6e555c63675bac32ca9a4",
+    "recife-K.png": "ecedff720b471b9437d06731feec382f0969e6861ad25d6d8159c4766ba91585",
+    "teste-continue.json": "6b2181ae20f93bf81a542fbf97e46068f7a4fe313300bd0d444380e036aa0522"
+  }
+}
