@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/workspace/AiKalicaAiCrlBR/tools/hoenn/validate_atlas_edition_rules_native.py", line 154, in <module>
+    run(args.source, args.library, args.census, args.output)
+  File "/workspace/AiKalicaAiCrlBR/tools/hoenn/validate_atlas_edition_rules_native.py", line 64, in run
+    assert not dex_gaps, ('Missing or forbidden native AREA entries', cap, dex_gaps)
+           ^^^^^^^^^^^^
+AssertionError: ('Missing or forbidden native AREA entries', 493, [{'national_dex': 113, 'species': 113, 'count': 0, 'allowed': True}, {'national_dex': 209, 'species': 209, 'count': 0, 'allowed': True}, {'national_dex': 210, 'species': 210, 'count': 0, 'allowed': True}, {'national_dex': 241, 'species': 241, 'count': 0, 'allowed': True}, {'national_dex': 242, 'species': 242, 'count': 0, 'allowed': True}, {'national_dex': 309, 'species': 309, 'count': 0, 'allowed': True}, {'national_dex': 310, 'species': 310, 'count': 0, 'allowed': True}, {'national_dex': 335, 'species': 335, 'count': 0, 'allowed': True}, {'national_dex': 440, 'species': 440, 'count': 0, 'allowed': True}])

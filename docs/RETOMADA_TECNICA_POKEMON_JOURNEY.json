@@ -827,5 +827,17 @@
     "rom_sha256": "d296428c98f989a815e24d9def5a51bfd284c50f1ca9831547cb42fb7ce8c0ce",
     "final_release_validated": false,
     "public_ROMs_remain_version7": true
+  },
+  "latest_functional_priority_2026_11_23": {
+    "request": "Quero a rom passando em todos os testes primeiro, pra depois colocarmos essas funcionalidades.",
+    "future_ideas_remain_documented_only": true,
+    "review": "docs/design/atlas-functional-review-2026-11-23/README.md",
+    "frozen_source": ".local/final-atlas-src",
+    "final_release_validated": false,
+    "native_Dex_gaps": {
+      "493": 9,
+      "1025": 36
+    },
+    "next": "Restore narrow native land encounter triggers and exact AREA rows; compile new private source and repeat final native/edition/browser checks."
   }
 }

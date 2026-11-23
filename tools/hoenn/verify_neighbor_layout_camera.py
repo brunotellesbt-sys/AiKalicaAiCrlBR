@@ -1,5 +1,6 @@
 """Verify current neighbor-camera evidence without changing source or ROMs."""
 import hashlib
+import gzip
 import json
 from pathlib import Path
 from PIL import Image
@@ -40,7 +41,9 @@ def verify_reference(root,frozen):
     return summary
 
 def verify(frozen,folder):
-    folder=Path(folder);r=json.loads((folder/'neighbor-camera-native.json').read_bytes())
+    folder=Path(folder);path=folder/'neighbor-camera-native.json'
+    if not path.exists():path=path.with_suffix('.json.gz')
+    raw=path.read_bytes();r=json.loads(gzip.decompress(raw) if path.suffix=='.gz' else raw)
     assert r['passed'] is r['fixed'] is True
     assert r['artifact_sha256']=={'pokeemerald.gba':frozen['rom_sha256'],'pokeemerald.elf':frozen['elf_sha256'],
         '.journey-atlas-surf-layout':frozen['marker_sha256']},'Neighbor proof belongs to another ROM'
@@ -68,7 +71,7 @@ def verify(frozen,folder):
                     assert row['cell']==cell['tile']
                     verify_pixels(dict(obs,cells=[row]),phase['capture'],captures,images,row['cell'],cell['metatile'])
         bump=case['native_boundary_rock_bump'];assert bump and bump['before']==bump['after']
-        assert case['battery']['geometry_version']==7
+        assert case['battery']['geometry_version']==frozen.get('migration_version',7)
         p=folder/case['battery']['file'];assert p.stat().st_size==131072 and hashlib.sha256(p.read_bytes()).hexdigest()==case['battery']['sha256']
     assert all(q['function'].startswith(('MapGridGet','MetatileBehavior_Is')) or q['function']=='PlayerGetElevation' for q in r['queries'])
     return dict(cases=2,captures=len(captures),three_animation_phases=True,collision_and_native_save=True)

@@ -1,0 +1,48 @@
+RESOLVIDO NA COMPILAÇÃO ATUAL — 23/11/2026
+
+O compilador nativo e a caminhada pelo emulador confirmaram encontros
+terrestres nas sete ilhas afetadas. A correção usa somente areia seca
+na altura 3 nesses mapas. Os locais da Pokédex usam os gatilhos verificados.
+A auditoria nativa encontrou zero lacunas de localização em Gen 1–4 e Gen 1–9.
+Veja docs/design/atlas-functional-review-2026-11-23/final-contract.json.
+
+Histórico do diagnóstico:
+
+EM ANDAMENTO — COBERTURA NATIVA DA POKEDEX E HABITATS TERRESTRES
+
+Pedido atual: "Quero a rom passando em todos os testes primeiro, pra depois
+colocarmos essas funcionalidades." As ideias futuras ficam guardadas.
+
+ROMC: d296428c98f989a815e24d9def5a51bfd284c50f1ca9831547cb42fb7ce8c0ce.
+Nova conferência JourneySpeciesAllowed + JourneyWorldDexLocationCount em todas
+as espécies canônicas das edições reais encontrou9lacunas cap493 e36cap1025.
+Reprodução: validate_atlas_edition_rules_native.py naGen1-4-Normal/Gen1-9-Normal.
+Provas/diagnósticos:docs/design/atlas-functional-review-2026-11-23.
+
+As antigas tabelas de habitats e encontros declaram famílias terrestres em
+JourneyWorldSea00..07, mas quase todas as ilhas equivalentes têm apenas areia
+sem gatilho terrestre; a05tem grama. Censos anteriores já não encontravam esses
+gatilhos. O removedor AREA classificou72linhas como ineficazes; parte delas
+corresponde a espécies que ficaram sem nenhum local. Não basta recolocar as
+linhas no DEX sem permitir o encontro real.
+
+Próximo reparo: predicado nativo estreito para areia seca dos cenários dessas
+famílias, sem mudar o terreno ou os pools, seguido de censo compilado e AREA
+com espécie/cap/proprietário/gatilho alcançável exatos. Conferir guarda de mapa,
+comportamento e altura e rejeitar água ou mapas não autorizados. Recompilar em
+nova fonte privada, preservarC e repetir provas na novaROM. Solução ainda pendente.
+
+Passaram neste lote naC:487/1025captura+SAVE+coldContinue;Pacifidlog;ThreeIsland;
+7portos+14baterias dry/Surf;5edições com batalha/flag/coldContinue;TESTE600frames
+sem abordagem e vitória por interação manual. Os8FAIL+1ERROR do selo não foram
+mascarados, e a auditoria nova mantém as lacunas DEX como falha legítima.
+
+Portos: atualizar leitura das coordenadas atuais. O teste antigo tentava
+OneIsland17,6; o atual20,6 foi alcançado por controles da cidade até o interior.
+Balsa mundial retorna ao interior; não confundir com tabela Seagallop exterior.
+
+Espaço: seis caches de navegação foram comprimidos sem perdas, com verificação
+de SHA dos bytes descomprimidos. O fetch trouxe um pack inteiramente redundante;
+seus2237objetos foram conferidos contra índices/objetos preexistentes antes de
+reclamar somente esse cache. Não executar GC/repack genérico em clone parcial.
+Para push usar GIT_NO_LAZY_FETCH=1 e desabilitar promisor/bitmaps na chamada.

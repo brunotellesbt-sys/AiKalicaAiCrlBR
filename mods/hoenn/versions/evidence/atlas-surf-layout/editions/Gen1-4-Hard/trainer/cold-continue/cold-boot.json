@@ -1,0 +1,564 @@
+{
+  "passed": true,
+  "rom_sha256": "4f8febd3c8b07e95232240b7224fc6642a86c66f0f3996d69cc38efc0ba182e5",
+  "fresh_rom_boot_to_title": true,
+  "fresh_rom_title_to_new_game": true,
+  "no_assert_screen": true,
+  "controllers_only": true,
+  "no_game_memory_writes": true,
+  "bundled_save_tested": true,
+  "runs": [
+    {
+      "battery": false,
+      "frames": 2464,
+      "samples": [
+        {
+          "frame": 1200,
+          "callback": "MainCB2_Intro"
+        },
+        {
+          "frame": 1201,
+          "callback": "MainCB2_EndIntro"
+        },
+        {
+          "frame": 1291,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1591,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1592,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1682,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1683,
+          "callback": "CB2_GoToMainMenu"
+        },
+        {
+          "frame": 1773,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2073,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2074,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2164,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2464,
+          "callback": "CB2_MainMenu"
+        }
+      ],
+      "fresh_rom_boot_to_title": true,
+      "fresh_rom_title_to_new_game": true,
+      "new_game_tasks": [
+        "Task_HandleMultichoiceInput",
+        "Task_JourneyIntroRegion"
+      ]
+    },
+    {
+      "battery": true,
+      "frames": 3664,
+      "samples": [
+        {
+          "frame": 1200,
+          "callback": "MainCB2_Intro"
+        },
+        {
+          "frame": 1201,
+          "callback": "MainCB2_EndIntro"
+        },
+        {
+          "frame": 1291,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1591,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1592,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1682,
+          "callback": "MainCB2"
+        },
+        {
+          "frame": 1683,
+          "callback": "CB2_GoToMainMenu"
+        },
+        {
+          "frame": 1773,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2073,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2074,
+          "callback": "CB2_MainMenu"
+        },
+        {
+          "frame": 2164,
+          "callback": "CB2_ContinueSavedGame"
+        },
+        {
+          "frame": 3064,
+          "callback": "CB2_Overworld"
+        },
+        {
+          "frame": 3664,
+          "callback": "CB2_Overworld"
+        }
+      ],
+      "bundled_save_continue_to_field": true,
+      "field_map": [
+        96,
+        1
+      ],
+      "player_tile": [
+        10,
+        19
+      ],
+      "player_surfing": true,
+      "player_elevation": 1,
+      "geometry_version": 8,
+      "persistent_flags_checked": [
+        {
+          "flag": 4192,
+          "value": true
+        },
+        {
+          "flag": 4193,
+          "value": false
+        },
+        {
+          "flag": 4194,
+          "value": false
+        },
+        {
+          "flag": 4195,
+          "value": false
+        },
+        {
+          "flag": 4196,
+          "value": false
+        },
+        {
+          "flag": 4197,
+          "value": false
+        },
+        {
+          "flag": 4198,
+          "value": false
+        },
+        {
+          "flag": 4199,
+          "value": false
+        },
+        {
+          "flag": 4200,
+          "value": false
+        },
+        {
+          "flag": 4201,
+          "value": false
+        },
+        {
+          "flag": 4202,
+          "value": false
+        },
+        {
+          "flag": 4203,
+          "value": false
+        },
+        {
+          "flag": 4204,
+          "value": false
+        },
+        {
+          "flag": 4205,
+          "value": false
+        },
+        {
+          "flag": 4206,
+          "value": false
+        },
+        {
+          "flag": 4207,
+          "value": false
+        },
+        {
+          "flag": 4208,
+          "value": false
+        },
+        {
+          "flag": 4209,
+          "value": false
+        },
+        {
+          "flag": 4210,
+          "value": false
+        },
+        {
+          "flag": 4211,
+          "value": false
+        },
+        {
+          "flag": 4212,
+          "value": false
+        },
+        {
+          "flag": 4213,
+          "value": false
+        },
+        {
+          "flag": 4214,
+          "value": false
+        },
+        {
+          "flag": 4215,
+          "value": false
+        },
+        {
+          "flag": 4216,
+          "value": false
+        },
+        {
+          "flag": 4217,
+          "value": false
+        },
+        {
+          "flag": 4218,
+          "value": false
+        },
+        {
+          "flag": 4219,
+          "value": false
+        },
+        {
+          "flag": 4220,
+          "value": false
+        },
+        {
+          "flag": 4221,
+          "value": false
+        },
+        {
+          "flag": 4222,
+          "value": false
+        },
+        {
+          "flag": 4223,
+          "value": false
+        },
+        {
+          "flag": 4224,
+          "value": false
+        },
+        {
+          "flag": 4225,
+          "value": false
+        },
+        {
+          "flag": 4226,
+          "value": false
+        },
+        {
+          "flag": 4227,
+          "value": false
+        },
+        {
+          "flag": 4228,
+          "value": false
+        },
+        {
+          "flag": 4229,
+          "value": false
+        },
+        {
+          "flag": 4230,
+          "value": false
+        },
+        {
+          "flag": 4231,
+          "value": false
+        },
+        {
+          "flag": 4232,
+          "value": false
+        },
+        {
+          "flag": 4233,
+          "value": false
+        },
+        {
+          "flag": 4234,
+          "value": false
+        },
+        {
+          "flag": 4235,
+          "value": false
+        },
+        {
+          "flag": 4236,
+          "value": false
+        },
+        {
+          "flag": 4237,
+          "value": false
+        },
+        {
+          "flag": 4238,
+          "value": false
+        },
+        {
+          "flag": 4239,
+          "value": false
+        },
+        {
+          "flag": 4240,
+          "value": false
+        },
+        {
+          "flag": 4241,
+          "value": false
+        },
+        {
+          "flag": 4242,
+          "value": false
+        },
+        {
+          "flag": 4243,
+          "value": false
+        },
+        {
+          "flag": 4244,
+          "value": false
+        },
+        {
+          "flag": 4245,
+          "value": false
+        },
+        {
+          "flag": 4246,
+          "value": false
+        },
+        {
+          "flag": 4247,
+          "value": false
+        },
+        {
+          "flag": 4248,
+          "value": false
+        },
+        {
+          "flag": 4249,
+          "value": false
+        },
+        {
+          "flag": 4250,
+          "value": false
+        },
+        {
+          "flag": 4251,
+          "value": false
+        },
+        {
+          "flag": 4252,
+          "value": false
+        },
+        {
+          "flag": 4253,
+          "value": false
+        },
+        {
+          "flag": 4254,
+          "value": false
+        },
+        {
+          "flag": 4255,
+          "value": false
+        },
+        {
+          "flag": 4256,
+          "value": false
+        },
+        {
+          "flag": 4257,
+          "value": false
+        },
+        {
+          "flag": 4258,
+          "value": false
+        },
+        {
+          "flag": 4259,
+          "value": false
+        },
+        {
+          "flag": 4260,
+          "value": false
+        },
+        {
+          "flag": 4261,
+          "value": false
+        },
+        {
+          "flag": 4262,
+          "value": false
+        },
+        {
+          "flag": 4263,
+          "value": false
+        },
+        {
+          "flag": 4264,
+          "value": false
+        },
+        {
+          "flag": 4265,
+          "value": false
+        },
+        {
+          "flag": 4266,
+          "value": false
+        },
+        {
+          "flag": 4267,
+          "value": false
+        },
+        {
+          "flag": 4268,
+          "value": false
+        },
+        {
+          "flag": 4269,
+          "value": false
+        },
+        {
+          "flag": 4270,
+          "value": false
+        },
+        {
+          "flag": 4271,
+          "value": false
+        },
+        {
+          "flag": 4272,
+          "value": false
+        },
+        {
+          "flag": 4273,
+          "value": false
+        },
+        {
+          "flag": 4274,
+          "value": false
+        },
+        {
+          "flag": 4275,
+          "value": false
+        },
+        {
+          "flag": 4276,
+          "value": false
+        },
+        {
+          "flag": 4277,
+          "value": false
+        },
+        {
+          "flag": 4278,
+          "value": false
+        },
+        {
+          "flag": 4279,
+          "value": false
+        },
+        {
+          "flag": 4280,
+          "value": false
+        },
+        {
+          "flag": 4281,
+          "value": false
+        },
+        {
+          "flag": 4282,
+          "value": false
+        },
+        {
+          "flag": 4283,
+          "value": false
+        },
+        {
+          "flag": 4284,
+          "value": false
+        },
+        {
+          "flag": 4285,
+          "value": false
+        },
+        {
+          "flag": 4286,
+          "value": false
+        },
+        {
+          "flag": 4287,
+          "value": false
+        }
+      ]
+    }
+  ],
+  "geometry_layout_proof": {
+    "vars_offset": 8600,
+    "variable": 16604,
+    "vars_start": 16384,
+    "current_version": 8,
+    "actual_ARM_APCS_struct_compiled": true,
+    "GetVarPointer_ELF_literal_matches": true,
+    "probe_assembly_sha256": "b7e39542c14784137e44134052761dff17ea7db21b764d5eca0b7e3c639ce887",
+    "global_header_sha256": "7efef4510fad4bea894698a4210d14da99b8141de834efdb4190bfe2bc02b283"
+  },
+  "field_state_layout_proof": {
+    "offsets": {
+      "flags": 7728,
+      "flags_size": 872,
+      "saved_templates": 6192,
+      "template_size": 24,
+      "template_local_id": 0,
+      "template_count": 64,
+      "object_size": 36,
+      "object_local_id": 8,
+      "object_map_num": 9,
+      "object_map_group": 10,
+      "object_x": 16,
+      "object_y": 18,
+      "object_count": 16,
+      "header_events": 4,
+      "event_object_count": 0,
+      "event_objects": 4,
+      "pokemon_size": 100
+    },
+    "actual_ARM_APCS_struct_compiled": true,
+    "assembly_sha256": "bd1844f4625d7d342209ae2f0eca89181ffc62dba1a112388c7aeefcf67b35c3",
+    "read_only_RAM_observation": true
+  },
+  "bundled_save_continue_to_field": true,
+  "bundled_save_sha256": "b95d6c2a012bc5ed533b51add43c616e87af35a1dec2bc24ee4679d0ce869048"
+}

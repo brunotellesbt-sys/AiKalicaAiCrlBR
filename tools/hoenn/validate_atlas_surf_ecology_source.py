@@ -207,6 +207,12 @@ static struct {enum MapType mapType;} gMapHeader;
             aliases = re.sub(r'^\s*#include[^\n]*\n', '', aliases, flags=re.M)
         except FileNotFoundError:
             aliases = 'u16 JourneyAtlasEcologyOwner(u16 map) {return map;}\n'
+        if 'JourneyAtlasLandEncounter' in aliases:
+            from atlas_sand_habitats import verify_hooks
+            verify_hooks(encounters)
+            extra_land = 'return JourneyAtlasLandEncounter(map, behavior, elevation);'
+        else:
+            extra_land = '(void)map;(void)behavior;(void)elevation;return 0;'
         functions = definition(coast, 'IsConnectedSeviiCoast')+'\n'
         functions += 'bool32 JourneySeviiIsOpenCoast(void) { return IsConnectedSeviiCoast(save.location.mapGroup, save.location.mapNum); }\n'
         functions += '\n'.join(definition(behavior, name) for name in predicates)
@@ -243,6 +249,7 @@ u32 ecology_trigger(u32 packed,u32 underwater,u32 behavior) {
  | (MetatileBehavior_IsWaterfall(behavior)?32:0);
 }
 '''
+        exports += '\nu32 ecology_atlas_land_trigger(u32 map,u32 behavior,u32 elevation) {'+extra_land+'}\n'
         code = prefix+'\n'+data+'\n'+aliases+'\n'+flags+'\n'+table[0]+'\n'+functions+'\n'+exports
         compiler = shutil.which('cc') or shutil.which('gcc')
         if not compiler:
@@ -353,7 +360,7 @@ def terrain_triggers(inputs, compiled, name, reachable_cells=None):
         if behavior not in masks:
             masks[behavior] = compiled.native.ecology_trigger(packed, underwater, behavior)
         flags = masks[behavior]
-        if flags & 1:
+        if flags & 1 or compiled.native.ecology_atlas_land_trigger(packed, behavior, word >> 12):
             triggers[0].append(point)
             grass.append(point)
         if flags & 2 or flags & 16 and word >> 12 in (0, 1, 15):

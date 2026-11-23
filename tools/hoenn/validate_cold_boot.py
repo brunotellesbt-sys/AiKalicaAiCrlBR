@@ -7,6 +7,7 @@ import argparse
 import ctypes
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import shutil
@@ -113,7 +114,7 @@ def validate(source, library, output, battery=None, save_output=None, expected_g
     runs = []
 
     def run(save_file):
-        with tempfile.TemporaryDirectory(prefix='journey-cold-boot-', dir='/tmp') as directory:
+        with tempfile.TemporaryDirectory(prefix='journey-cold-boot-', dir=os.environ.get('JOURNEY_EMULATOR_TMPDIR','/tmp')) as directory:
             rom = Path(directory)/'cold-boot.gba'
             shutil.copyfile(source/'pokeemerald.gba', rom)
             assert lib.start(str(rom).encode())

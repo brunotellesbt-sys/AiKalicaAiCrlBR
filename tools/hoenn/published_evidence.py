@@ -40,6 +40,13 @@ def release_baseline(info):
  The candidate keeps its empty proof list and unvalidated flags. Returning the
  separate manifest lets readers inspect old reports without certifying 172.
  """
+ if info.get('validation_scope')=='atlas-surf-layout':
+  assert info['candidate'] is False and info['validated'] is True
+  assert info['final_release_validated'] is True and info['proofs']
+  previous=resolve_previous_release(info)
+  assert previous['validation_scope']=='generated-area-review'
+  assert previous['integration_layers']==info['integration_layers'][:-1]
+  return previous
  if info.get('validation_scope')!='atlas-surf-layout-candidate':return info
  assert info['candidate'] is True and info['validated'] is False
  assert info['final_release_validated'] is False and info['proofs']==[]

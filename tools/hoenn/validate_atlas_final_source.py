@@ -63,8 +63,14 @@ def validate(source,parent,reference,frozen,census,output):
     stage_save_rescues(replay,exteriors);meta['migration']['final_version']=8
     baseline=load(ROOT/'docs/design/atlas-surf-layout/ecology-parent-source.json.gz')
     catalog=load(ROOT/'tools/hoenn/catalog_metadata.json')['species'];after=load(census)
+    restored=()
+    if metadata.get('sand_land_habitats'):
+        from atlas_sand_habitats import stage as stage_sand,OWNERS
+        assert stage_sand(replay)==metadata['sand_land_habitats']
+        restored=OWNERS
     path='src/data/journey_world_dex_locations.h'
-    header,dex=relocate(read(replay,path).decode(),baseline,after,meta['geometry_plan'],catalog);replay.stage(path,header)
+    header,dex=relocate(read(replay,path).decode(),baseline,after,meta['geometry_plan'],catalog,
+                        restore_inactive_from_owners=restored);replay.stage(path,header)
     assert {n:sha(raw) for n,raw in replay.outputs.items()}==frozen['prepared_sha256'],'Independent atlas replay differs'
     room_audit=audit_rooms(replay,reference,rooms)
     _,physical,_,banks=source_audit(replay,meta)
@@ -127,6 +133,9 @@ def validate(source,parent,reference,frozen,census,output):
     for name in ('JourneyWorldMapPosition','JourneySpecialUnlocked','HasTrainerBeenFought','CreateNPCTrainerPartyFromTrainer',
                  'TrySetDiveWarp','GetMapBorderIdAt','CopyPartyAndObjectsFromSave','TrySpawnObjectEvents'):
         at,size=table[name];assert size;runtime.append(bind(name,at,data(at,size)))
+    if restored:
+        for name in ('JourneyAtlasLandEncounter','StandardWildEncounter','SweetScentWildEncounter'):
+            at,size=table[name];assert size;runtime.append(bind(name,at,data(at,size)))
     for name,wanted in expected.items():assert sha((source/name).read_bytes())==wanted,name
     assert artifacts=={n:sha((source/n).read_bytes()) for n in artifacts}
     report=dict(kind='atlas-surf-final-source',passed=True,rom_sha256=frozen['rom_sha256'],elf_sha256=frozen['elf_sha256'],

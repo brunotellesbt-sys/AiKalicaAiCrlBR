@@ -1,0 +1,1235 @@
+{
+  "kind": "atlas-surf-trainers-native",
+  "passed": true,
+  "artifact_sha256": {
+    "pokeemerald.gba": "d394be6a535ce8882a4b2fbe05212b8ec981e6a35e2072280e1d5e6946ee3b53",
+    "pokeemerald.elf": "4865bd2967ed6e98bac6a7fcff6b6e414a727f7b2f2fa4ad079d6206b83f8230",
+    ".journey-atlas-surf-layout": "b7ec6da5cb9ff9214dde31505a51edb05206c2d6d12b2e45f1bcb3b94664ff87"
+  },
+  "cases": [
+    {
+      "trainer": 1807,
+      "map": "JourneyAtlasSea488",
+      "private_flag": 4192,
+      "facing": "DOWN",
+      "start": [
+        10,
+        20
+      ],
+      "native_actor": {
+        "local_id": 1,
+        "tile": [
+          10,
+          16
+        ],
+        "facing": 1
+      },
+      "native_sight_line_started_battle": false,
+      "native_manual_interaction_started_battle": true,
+      "no_automatic_approach_after600_frames": true,
+      "outcome": 1,
+      "attacks": 2,
+      "observed_battle_species": [
+        72,
+        278
+      ],
+      "private_defeat_flag_set": true,
+      "unrelated_system_flag_unchanged": true
+    }
+  ],
+  "initial_party_progress_stats_and_per_case_placement_are_fixtures": true,
+  "after_departure_battles_and_save_controllers_only": true,
+  "no_battle_RAM_writes": true,
+  "controls": [
+    {
+      "frames": 16,
+      "key": 64
+    },
+    {
+      "frames": 45,
+      "key": 0
+    },
+    {
+      "frames": 600,
+      "key": 0
+    },
+    {
+      "frames": 120,
+      "key": 64
+    },
+    {
+      "frames": 45,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 64
+    },
+    {
+      "frames": 8,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 32
+    },
+    {
+      "frames": 8,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 64
+    },
+    {
+      "frames": 8,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 32
+    },
+    {
+      "frames": 8,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 64
+    },
+    {
+      "frames": 8,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 32
+    },
+    {
+      "frames": 8,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 64
+    },
+    {
+      "frames": 8,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 32
+    },
+    {
+      "frames": 8,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 2
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 120,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 8
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 90,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 128
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    },
+    {
+      "frames": 1,
+      "key": 1
+    },
+    {
+      "frames": 35,
+      "key": 0
+    }
+  ],
+  "queries": [
+    {
+      "function": "HasTrainerBeenFought",
+      "args": [
+        1807
+      ]
+    }
+  ],
+  "captures": [
+    {
+      "file": "JourneyAtlasSwimmer0-before-sight-line.png",
+      "sha256": "6670468ffe2221ea5ccc60ee374fbc657ce4fc8114695c6c4d83c5d428dda157"
+    },
+    {
+      "file": "JourneyAtlasSwimmer0-review-no-automatic-approach.png",
+      "sha256": "e7a9c367c14282d5084ac19ab2d16c8d26e82da92b1fe1a8e0b9f6ec1fbf5b40"
+    },
+    {
+      "file": "JourneyAtlasSwimmer0-native-battle.png",
+      "sha256": "c640083cf6710543c22d979443552294f252f9a24bd8caf34786d9c2e030457c"
+    },
+    {
+      "file": "JourneyAtlasSwimmer0-native-victory.png",
+      "sha256": "9e6dea13dd9183c9f985e50326605416c09d8b1996a427eeea702a4c18266209"
+    }
+  ],
+  "save_callbacks": [
+    "SaveConfirmInputCallback",
+    "SaveDoSaveCallback",
+    "SaveReturnSuccessCallback",
+    "SaveSuccessCallback",
+    "SaveYesNoCallback"
+  ],
+  "battery": {
+    "file": "trainer-victories-controller-save.sav",
+    "sha256": "fafe381258f7d742ea046559f87e0f2d630d7f520abc311639c2270d6252c80b"
+  },
+  "current_cold_continue_preserves_private_flags": true,
+  "review_mode": true,
+  "balance_playthrough": false,
+  "full96coverage": false,
+  "final_release_validated": false
+}
