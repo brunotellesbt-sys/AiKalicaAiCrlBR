@@ -22,7 +22,7 @@ const editionsReady = fetch('games/versions.json', {cache: 'no-store'}).then(asy
     throw new Error('The edition list is invalid.');
   }
   editions = [...info.variants];
-  if (['atlas-surf-layout','extra-gyms','dewford-coast-safety','generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers'].includes(info.validation_scope)) {
+  if (['atlas-surf-layout','atlas-route-pruning','extra-gyms','dewford-coast-safety','generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers'].includes(info.validation_scope)) {
     const response = await fetch('games/review.json', {cache: 'no-store'});
     if (!response.ok) throw new Error('The test edition could not load. Please retry.');
     const review = validateRelease(await response.json());
@@ -39,6 +39,11 @@ const editionsReady = fetch('games/versions.json', {cache: 'no-store'}).then(asy
   }
   document.querySelector('#edition-label').hidden = false;
   document.querySelector('#edition-description').hidden = false;
+  if (info.atlas?.file === 'atlas-atual.png') {
+    const atlas = document.querySelector('#current-atlas');
+    atlas.href = info.atlas.file + '?sha256=' + info.atlas.sha256;
+    atlas.hidden = false;
+  }
   updateDownload();
 }).catch(error => { editionError = error; status.textContent = error.message; });
 
@@ -50,9 +55,12 @@ function validateRelease(info) {
   }
   return info;
 }
+function editionUrl(row) {
+  return 'games/' + row.file + '?sha256=' + row.sha256;
+}
 function updateDownload() {
-  const anchor = document.querySelector('#download-rom');
-  if (editions) anchor.href = 'games/' + edition.value;
+  const row = editions?.find(row => row.file === edition.value);
+  if (row) document.querySelector('#download-rom').href = editionUrl(row);
 }
 edition.addEventListener('change', updateDownload);
 
@@ -95,7 +103,7 @@ async function launch(localFile) {
       if (matching && editions) { edition.value = matching.file; updateDownload(); }
     } else {
       expected = await release();
-      const response = await fetch('games/' + expected.file + '?sha256=' + expected.sha256);
+      const response = await fetch(editionUrl(expected));
       if (!response.ok) throw new Error('The game download failed. Please try again.');
       bytes = await response.arrayBuffer();
       if (bytes.byteLength !== expected.bytes || await sha256(bytes) !== expected.sha256) {

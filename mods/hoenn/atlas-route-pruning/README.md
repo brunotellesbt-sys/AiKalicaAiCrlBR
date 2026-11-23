@@ -20,6 +20,9 @@ A Pokédex aponta Finneon e Lumineon para um habitat navegável.
 
 ## ROM jogável
 
+O player oferece as cinco ROMs com os cortes já aplicados no botão
+**Download .gba**. [Jogar e baixar](https://brunotellesbt-sys.github.io/AiKalicaAiCrlBR/).
+
 Cada patch BPS usa como base a edição de mesmo nome do **Atlas 172**.
 Aplique o patch à ROM correspondente. Mantenha uma cópia do seu save antigo
 e use o mesmo nome de arquivo da nova ROM para carregar esse save no emulador.
@@ -32,8 +35,15 @@ e use o mesmo nome de arquivo da nova ROM para carregar esse save no emulador.
 | Gen 1–9 Hard | [BPS](Pokemon-Journey-Gen1-9-Hard-atlas172-HJK.bps) |
 | TESTE | [BPS](Pokemon-Journey-TESTE-atlas172-HJK.bps) |
 
-Os patches são candidatos de revisão para as cinco edições. Os downloads
-principais do Atlas 172 continuam disponíveis para quem já está jogando.
+O check `sea-routes` do PR disponibiliza as ROMs completas no artefato
+`five-verified-editions`.
+
+## Mapa dentro da ROM
+
+O menu **Start → MAP** mostra os mesmos cortes em 1× e 2×. A comparação
+foi capturada durante o jogo, após abrir o mapa por controles.
+
+![Recortes antes e depois no menu MAP](mapa-menu-antes-depois.png)
 
 ## Reprodução e validação
 

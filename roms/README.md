@@ -1,4 +1,7 @@
-# ROMs atuais
+# ROMs-base do Atlas 172
+
+O player monta as edições com os cortes H, J e K e oferece o download direto
+da ROM corrigida ao lado do botão **Play**. [Jogar e baixar](https://brunotellesbt-sys.github.io/AiKalicaAiCrlBR/).
 
 A camada 172 restaura os encontros terrestres em sete ilhas e os locais
 correspondentes na Pokédex das edições Gen 1–4 e Gen 1–9. A validação também

@@ -4,10 +4,11 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const ROOT = path.resolve(__dirname, '../..');
-const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'mods/hoenn/versions/versions.json')));
+const gamesDir = process.env.PLAYABLE_GAMES_DIR;
+const manifest = JSON.parse(fs.readFileSync(gamesDir ? path.join(gamesDir, 'versions.json') : path.join(ROOT, 'mods/hoenn/versions/versions.json')));
 const releases = [...manifest.variants];
-const includesTestEdition = ['atlas-surf-layout','extra-gyms','dewford-coast-safety','generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers'].includes(manifest.validation_scope);
-if (includesTestEdition) releases.push(JSON.parse(fs.readFileSync(path.join(ROOT,'roms/rom-de-teste/review.json'))));
+const includesTestEdition = ['atlas-surf-layout','atlas-route-pruning','extra-gyms','dewford-coast-safety','generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers'].includes(manifest.validation_scope);
+if (includesTestEdition) releases.push(JSON.parse(fs.readFileSync(gamesDir ? path.join(gamesDir, 'review.json') : path.join(ROOT,'roms/rom-de-teste/review.json'))));
 const OUT = process.env.BROWSER_VALIDATION_OUTPUT || path.join(ROOT, 'mods/hoenn/versions-validation/browser');
 const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
 (async () => {
@@ -17,6 +18,7 @@ const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
   try {
     const assets = await browser.newContext();
     const playerSources = {};
+    let servedAtlas;
     try {
       for (const name of ['index.html','player.js','style.css']) {
         const response = await assets.request.get(new URL(name,url).href);
@@ -26,7 +28,20 @@ const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
         if (hash !== expected) throw new Error('Published player asset is stale: '+name);
         playerSources[name] = hash;
       }
+      if (manifest.atlas) {
+        const response = await assets.request.get(new URL(manifest.atlas.file, url).href);
+        if (!response.ok()) throw new Error('Current atlas unavailable');
+        const hash = crypto.createHash('sha256').update(await response.body()).digest('hex');
+        if (hash !== manifest.atlas.sha256) throw new Error('Current atlas is stale');
+        servedAtlas = {file: manifest.atlas.file, sha256: hash};
+      }
     } finally { await assets.close(); }
+    if (servedAtlas) {
+      const map = await browser.newPage();
+      await map.goto(new URL('world-map.html', url).href);
+      await map.waitForURL(new URL(servedAtlas.file, url).href);
+      await map.close();
+    }
     const invalid = await browser.newPage();
     await invalid.route('**/games/versions.json',route=>route.fulfill({contentType:'application/json',body:JSON.stringify({...manifest,validated:false})}));
     await invalid.goto(url);await invalid.locator('#play').click();
@@ -54,7 +69,14 @@ const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
       await page.goto(url);
       await page.locator('#edition-label').waitFor({state:'visible'});
       await page.locator('#edition').selectOption(row.file);
-      if(!((await page.locator('#download-rom').getAttribute('href')).endsWith(row.file)))throw new Error('Wrong edition download');
+      const download = await page.locator('#download-rom').getAttribute('href');
+      if(download !== 'games/' + row.file + '?sha256=' + row.sha256)throw new Error('Wrong edition download');
+      if (manifest.atlas) {
+        const link = page.locator('#current-atlas');
+        if (!await link.isVisible() || await link.getAttribute('href') !== manifest.atlas.file + '?sha256=' + manifest.atlas.sha256) {
+          throw new Error('Current atlas not linked from the player');
+        }
+      }
       // Hash the real server response and pass those same bytes to the player.
       // A 32 MiB ROM exceeds Chromium's response-inspection cache.
       let bytes;
@@ -84,6 +106,7 @@ const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
     fs.writeFileSync(path.join(OUT,'browser-versions.json'),JSON.stringify({passed:true,checks,
       invalid_manifest_rejected:true,incomplete_rom_rejected:true,bundled_mgba:true,
       stale_test_edition_rejected:includesTestEdition,
+      served_atlas:servedAtlas,
       player_sources_sha256:playerSources,
       desktop_and_mobile_viewports:true,full_campaign_playthrough:false},null,2)+'\n');
   }finally{await browser.close();}

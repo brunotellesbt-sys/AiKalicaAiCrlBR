@@ -19,7 +19,7 @@ def sha(raw):
     return hashlib.sha256(raw).hexdigest()
 
 
-def verify(directory=DIRECTORY, base_root=ROOT):
+def verify(directory=DIRECTORY, base_root=ROOT, *, output=None):
     directory, base_root = Path(directory), Path(base_root)
     report = json.loads((directory / 'validation.json').read_bytes())
     assert report['layer'] == LAYER
@@ -72,6 +72,8 @@ def verify(directory=DIRECTORY, base_root=ROOT):
             battle, = trainer['cases']
             assert battle['trainer'] == 1846 and battle['outcome'] == 1 and battle['private_defeat_flag_set']
             assert trainer['current_cold_continue_preserves_private_flags']
+        if output is not None:
+            (output / name).write_bytes(rom)
     return report
 
 

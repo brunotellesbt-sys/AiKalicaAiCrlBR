@@ -8,7 +8,9 @@ das cinco edições no navegador. [Validação da versão](docs/design/atlas-fun
 Pokémon Journey reúne Kanto, Hoenn e Sevii, com duas campanhas, 16 insígnias, rotas marítimas contínuas e uma missão Galactic final. O jogo está em inglês; a documentação está em português.
 
 - [Quatro edições GBA: Gen 1–4 / Gen 1–9, Normal / Hard](mods/hoenn/versions/START-HERE.md)
-- [ROMs atuais para download — pasta roms/](roms/README.md)
+- [Jogar e baixar as edições atualizadas](https://brunotellesbt-sys.github.io/AiKalicaAiCrlBR/)
+- [Mapa-múndi atual](https://brunotellesbt-sys.github.io/AiKalicaAiCrlBR/world-map.html)
+- [Arquivos-base da camada 172](roms/README.md)
 - [Documentação da história, encontros, itens e equipes dos ginásios](docs/README.md)
 - [Prisão Galactic com Dialga, Giratina e Palkia](docs/images/team-galactic-final-chamber.png)
 - [Estado da integração e limites da validação](mods/hoenn/INTEGRATION-STATUS.md)

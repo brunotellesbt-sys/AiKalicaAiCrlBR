@@ -8,6 +8,12 @@ renova os blocos de câmera salvos. Pokédex de Finneon e Lumineon aponta
 para um gatilho alcançável. A revisão foi compilada nas cinco edições,
 com patches BPS e mapa em mods/hoenn/atlas-route-pruning.
 
+A publicação do player reconstrói as cinco ROMs a partir desses patches
+e valida seus hashes antes de servir Play e Download. O endereço
+world-map.html abre a imagem do mesmo Atlas. As capturas do menu MAP
+confirmam os cortes em 1× e 2×. As ROMs-base 172 e seus relatórios
+continuam como referência de reprodução.
+
 ATUALIZAÇÃO — FUNCIONALIDADE E TESTES DA CAMADA 172 — 23/11/2026
 
 Pedido atual: “Quero a rom passando em todos os testes primeiro, pra depois

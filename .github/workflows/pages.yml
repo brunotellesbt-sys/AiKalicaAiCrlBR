@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['web/**', 'docs/**', 'roms/**', 'mods/hoenn/playable/**', 'mods/hoenn/versions/**', 'tools/hoenn/stage_pages.py', 'tools/hoenn/verify_versions.py', 'tools/hoenn/run_versions_browser.py', 'tools/hoenn/validate_versions_browser.cjs', 'tools/ci/**', '.github/workflows/pages.yml']
+    paths: ['web/**', 'docs/**', 'roms/**', 'mods/hoenn/playable/**', 'mods/hoenn/versions/**', 'mods/hoenn/atlas-route-pruning/**', 'tools/hoenn/stage_pages.py', 'tools/hoenn/verify_versions.py', 'tools/hoenn/verify_atlas_route_pruning.py', 'tools/hoenn/run_versions_browser.py', 'tools/hoenn/validate_versions_browser.cjs', 'tools/ci/**', '.github/workflows/pages.yml']
 permissions:
   contents: read
   pages: write
@@ -46,6 +46,7 @@ jobs:
         env:
           PLAYWRIGHT_MODULE: ${{ runner.temp }}/browser-validation/node_modules/playwright
           PLAYABLE_SITE_URL: ${{ steps.deployment.outputs.page_url }}
+          PLAYABLE_GAMES_DIR: /tmp/player-site/games
           BROWSER_VALIDATION_OUTPUT: ${{ runner.temp }}/pages-live-validation
         run: node tools/hoenn/validate_versions_browser.cjs
       - name: Upload published player evidence
