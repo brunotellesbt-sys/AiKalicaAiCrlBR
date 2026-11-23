@@ -12,6 +12,7 @@ p.add_argument('--output',type=Path,required=True)
 p.add_argument('--play-cup',action='store_true',help='Also win one real cup; player battle stats are explicitly boosted fixtures')
 p.add_argument('--cup-generation',type=int,default=3)
 p.add_argument('--exhaust-pp-once',action='store_true',help='Set the first active battler PP to zero as an explicit Struggle fixture')
+p.add_argument('--roster-review',type=Path,help='Compare actual six-member parties against the reviewed PWT data')
 a=p.parse_args()
 sys.argv=[sys.argv[0],'--source',str(a.source),'--library',str(a.library),'--output',str(a.output)]
 exec(compile((ROOT/'tools/hoenn/validate_abilities.py').read_text().split('\nability_field,')[0],str(ROOT/'tools/hoenn/validate_abilities.py'),'exec'))
@@ -26,6 +27,13 @@ assert len(offsets)==69,offsets
 state=s['sPWT'];cup=state+offsets[1];party=s['gParties'];enemy=party+6*abi[2]
 cap=native('JourneyPWTMaxGeneration');hard=native('JourneyPerfectTrainerIvs')
 assert cap in (4,9) and native('JourneyPWTCatalogCount')==len(rows)
+reviewed_parties={}
+if a.roster_review:
+    from prepare_pwt_official_parties import validate_review
+    roster_review=json.loads(a.roster_review.read_bytes())
+    reviewed_parties=validate_review(roster_review)
+    catalog=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_bytes())
+    species_ids={row['name'].removeprefix('SPECIES_'):row['id'] for row in catalog['species'].values()}
 for i in range(6*abi[2]):lib.write8(party+i,0)
 lib.write8(s['gPartiesCount'],0)
 for species,level in zip([260,149,376,121,445,6],[12,75,30,5,100,20]):
@@ -82,6 +90,10 @@ for index in ids[1:]:
         assert ability != 0
         if rows[index]['key']=='EREN' and slot==5:assert ability==offsets[62]
         mons.append(dict(species=species,level=50,evs=evs,ivs=ivs,moves=moves,ability=ability))
+    reviewed=reviewed_parties.get(rows[index]['key'])
+    if reviewed:
+        expected=reviewed['gen1_4'] if cap==4 else reviewed['reference']
+        assert [mon['species'] for mon in mons]==[species_ids[mon] for mon in expected], reviewed['key']
     records.append(dict(name=rows[index]['name'],trainer_id=trainer,portrait_id=picture_id,team=mons))
 assert high_portraits>0 and offsets[17]==2,'PWT portraits beyond byte range must use the widened enum'
 assert 0 in iv_values and 31 in iv_values
@@ -224,5 +236,9 @@ report=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').rea
     helper_and_travel_fixtures=True,complete_tournament_playthrough=bool(actual_battles),
     actual_battles=actual_battles,player_battle_stats_boosted_for_flow_test=bool(actual_battles),
     full_campaign_playthrough=False)
+if a.roster_review:
+    eligible_keys = {rows[index]['key'] for index in ids[1:]}
+    report['reviewed_official_teams'] = sum(row['key'] in eligible_keys for row in roster_review['reviewed'])
+    report['reviewed_league_teams'] = sum(row['key'] in eligible_keys for row in roster_review['league_reviewed'])
 (args.output/'pwt-world.json').write_text(json.dumps(report,indent=2)+'\n')
 print('Native PWT catalog/party/board checks passed:',len(records),'teams',flush=True)

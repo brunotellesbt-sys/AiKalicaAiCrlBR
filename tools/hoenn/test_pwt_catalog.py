@@ -1,6 +1,8 @@
 """Check identities, shared gyms and the two edition-specific entrant pools."""
+import json
 import unittest
 from pwt_catalog import eligible, load
+from prepare_pwt_official_parties import OUTPUT, validate_review
 
 class TournamentCatalogTests(unittest.TestCase):
     def test_shared_gym_leaders_have_independent_teams(self):
@@ -35,6 +37,21 @@ class TournamentCatalogTests(unittest.TestCase):
                 self.assertEqual(row['species'][:len(row['original'])],row['original'])
                 self.assertEqual(row['species'][len(row['original']):],row['additions'])
                 self.assertTrue(row['source_game'])
+
+    def test_league_reviews_keep_reference_teams_and_fit_the_generation_cap(self):
+        reviewed = validate_review(json.loads(OUTPUT.read_bytes()))
+        self.assertEqual(reviewed['AGATHA']['reference'].count('GENGAR'), 2)
+        self.assertIn('MAROWAK_ALOLA', reviewed['AGATHA']['reference'])
+        self.assertIn('HAUNTER', reviewed['AGATHA']['gen1_4'])
+        self.assertEqual(reviewed['GLACIA']['gen1_4'].count('GLALIE'), 1)
+        self.assertEqual(set(reviewed['GLACIA']['gen1_4_additions']), {'MAMOSWINE', 'SEALEO'})
+        self.assertEqual(reviewed['SHAUNTAL']['reference'].count('DRIFBLIM'), 1)
+        self.assertIn('GENGAR', reviewed['SHAUNTAL']['reference'])
+        self.assertIsNone(reviewed['SHAUNTAL']['gen1_4'])
+
+    def test_review_patches_roundtrip_to_the_emulator_tested_editions(self):
+        from verify_pwt_official_review import verify
+        self.assertEqual(len(verify()['editions']), 4)
 
 if __name__ == '__main__':
     unittest.main()
