@@ -31,6 +31,8 @@ HISTORICAL_COMMIT = '4f7e33cd49004cde4dfb668d76deb95803981cf9'
 ATTACHMENT_SCOPES = {SCOPE, 'coastal-ecology', 'coastal-closures', 'sevii-integrated-piers', 'generated-world-audit',
                      'arrival-coast-review', 'game-continuity-review', 'sevii-route-boundaries', 'coast-scenery-review', 'generated-area-review'}
 CONTINUITY_FILES = ('docs/CONTINUIDADE-TECNICA-IA.md',
+                    'docs/design/atlas-functional-review-2026-11-23/README.md',
+                    'docs/design/atlas-functional-review-2026-11-23/progress.json',
                     'docs/design/legendary-chambers-review/compiled-c-v8/README.md',
                     'docs/design/legendary-chambers-review/compiled-c-v8/progress.json',
                     'docs/RETOMADA-2026-11-17.md',

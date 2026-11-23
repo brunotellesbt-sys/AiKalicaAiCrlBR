@@ -1,3 +1,27 @@
+PRIORIDADE ATUAL — CONCLUIR FUNCIONALIDADE E TESTES —23/11/2026
+Pedido literal: "Quero a rom passando em todos os testes primeiro, pra depois colocarmos essas funcionalidades."
+Histórias/ideias futuras ficam guardadas; não implementar novas funcionalidades.
+Branch:fix/final-rom-validation-2026-11-23, baseada emmainatual. Preservar fontes
+congeladas e preparar PR normal apenas depois dos checks obrigatórios verdes.
+
+NaROMC preservada passaram487/1025captura+SAVE+coldContinue,Pacifidlog,
+ThreeIsland,7portos/14baterias dry/Surf e5edições com batalha+flag+coldContinue.
+TESTE passou600frames sem abordagem e batalha manual. As chegadas de porto
+precisam usar o marker atual; balsa mundial volta ao interior, Seagalloptem
+outra chegada exterior. O validador novo comprovou percursos sem alterar aROM.
+
+Bloqueio real novo: auditoria de todas as entradas AREA nativas encontrou9
+espécies sem local naGen1–4 e36naGen1–9. Famílias terrestres declaradas emilhas
+arenosas ficaram sem gatilho. Corrigir predicado nativo estreito e AREA com
+censo real, gerar fonte privada nova e repetir provas pelos hashes novos.
+Não afrouxar cobertura, selo ou testes; as ROMs públicas continuamV7.
+Provas/diagnósticos:docs/design/atlas-functional-review-2026-11-23/README.md.
+FonteC:.local/final-atlas-src;freeze:.local/final-atlas-frozen.json.
+Próximo:reparo de habitats/Dex,censo/compilação/provas finais,contrato172,
+publicação5edições,leitores históricos,browser/Pages e suíte completa.
+
+HISTÓRICO PRESERVADO (pedidos anteriores de abrir PR de progresso não mudam a prioridade atual):
+
 CHECKPOINT PARA PR DE PROGRESSO — 18/11/2026
 Pedido literal mais recente: "ABRA UM PR COM TODO PROGRESSO ATÉ O MOMENTO POIS O LIMITE VAI ACABAR."
 O autor agora solicita abrir o PR com todo o progresso existente, mesmo com

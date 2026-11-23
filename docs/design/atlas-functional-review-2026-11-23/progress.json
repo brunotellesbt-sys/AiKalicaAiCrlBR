@@ -1,0 +1,306 @@
+{
+  "schema": "atlas-functional-validation-progress/v1",
+  "date": "2026-11-23",
+  "priority": "Complete current ROM functionality and all required tests before future story/features.",
+  "parent_rom_sha256": "d296428c98f989a815e24d9def5a51bfd284c50f1ca9831547cb42fb7ce8c0ce",
+  "current_native_captures_added": [
+    487,
+    1025
+  ],
+  "articuno144_reference": "docs/design/legendary-chambers-review/compiled-c-v8/captures-smoke",
+  "pacifidlog_roundtrip_passed": true,
+  "three_port_surf_passed": true,
+  "seven_ports_passed": 7,
+  "real_dry_and_surf_cold_saves_passed": 14,
+  "five_edition_trainer_battles_and_cold_saves_passed": true,
+  "TESTE_automatic_approach_suppressed_and_manual_battle_won": true,
+  "native_Dex_missing": {
+    "Gen1-4-Normal": 9,
+    "Gen1-9-Normal": 36
+  },
+  "native_Dex_diagnostic": {
+    "Gen1-4-Normal": [
+      {
+        "national_dex": 113,
+        "species": 113,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 209,
+        "species": 209,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 210,
+        "species": 210,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 241,
+        "species": 241,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 242,
+        "species": 242,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 309,
+        "species": 309,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 310,
+        "species": 310,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 335,
+        "species": 335,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 440,
+        "species": 440,
+        "count": 0,
+        "allowed": true
+      }
+    ],
+    "Gen1-9-Normal": [
+      {
+        "national_dex": 113,
+        "species": 113,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 209,
+        "species": 209,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 210,
+        "species": 210,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 242,
+        "species": 242,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 309,
+        "species": 309,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 310,
+        "species": 310,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 325,
+        "species": 325,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 326,
+        "species": 326,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 357,
+        "species": 357,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 427,
+        "species": 427,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 428,
+        "species": 428,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 440,
+        "species": 440,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 556,
+        "species": 556,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 572,
+        "species": 572,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 573,
+        "species": 573,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 588,
+        "species": 588,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 589,
+        "species": 589,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 605,
+        "species": 605,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 606,
+        "species": 606,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 629,
+        "species": 629,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 630,
+        "species": 630,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 672,
+        "species": 672,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 673,
+        "species": 673,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 674,
+        "species": 674,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 675,
+        "species": 675,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 682,
+        "species": 682,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 683,
+        "species": 683,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 769,
+        "species": 769,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 770,
+        "species": 770,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 829,
+        "species": 829,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 830,
+        "species": 830,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 835,
+        "species": 835,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 836,
+        "species": 836,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 852,
+        "species": 852,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 853,
+        "species": 853,
+        "count": 0,
+        "allowed": true
+      },
+      {
+        "national_dex": 871,
+        "species": 871,
+        "count": 0,
+        "allowed": true
+      }
+    ]
+  },
+  "blocker": "Current native Dex has 9 missing species in cap493 and 36 in cap1025. Their declared land families have no terrain encounter trigger on several native sandy islands. Restore narrow native land triggers and exact AREA rows; do not relax the gate.",
+  "public_ROMs_unchanged": true,
+  "final_release_validated": false,
+  "remaining": [
+    "Restore declared land encounters and native Dex coverage, freeze a new private ROM and repeat matching native proofs.",
+    "Complete five-edition runtime APIs and actual encounters.",
+    "Finalize strict layer172 source/native/edition publishing and historical readers.",
+    "Run full unit/native/browser/Pages required checks before PR."
+  ]
+}

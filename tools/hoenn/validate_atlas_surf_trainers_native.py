@@ -17,7 +17,7 @@ from validate_cold_boot import validate as cold_boot
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-def run(source,library,output,offset=0,limit=None):
+def run(source,library,output,offset=0,limit=None,manual=False):
     source,library,output=(Path(p).resolve() for p in (source,library,output))
     output.mkdir(parents=True,exist_ok=True)
     metadata=json.loads((source/'.journey-atlas-surf-layout').read_bytes())
@@ -27,6 +27,8 @@ def run(source,library,output,offset=0,limit=None):
     assert selected and len({r['map'] for r in all_trainers})==96
     ns=bootstrap(source,library,output,{r['map'] for r in selected})
     lib,s,abi,pabi=(ns[k] for k in ('lib','s','abi','pabi'))
+    review_mode=bool(lib.read8(s['gJourneyReviewMode']))
+    assert manual==review_mode,'Review edition requires an actual manual interaction'
     old={k:ns[k] for k in ('native','script','warp','step')}
     fixture=True;depth=0;controls=[];queries=[];captures=[];results=[]
     def step(frames,key=0):
@@ -81,6 +83,15 @@ def run(source,library,output,offset=0,limit=None):
             picture(row['script']+'-before-sight-line');fixture=False
             key={(-1,0):16,(1,0):32,(0,-1):128,(0,1):64}[dx,dy]
             step(16,key);step(45)
+            if manual:
+                step(600)
+                assert ns['idle']() and not lib.read8(s['gNoOfApproachingTrainers'])
+                assert (lib.read32(s['gMain']+4)&~1) not in (s['CB2_InitBattle'],s['BattleMainCB2'])
+                assert not flag(row['flag'])
+                picture(row['script']+'-review-no-automatic-approach')
+                step(120,key);step(45)
+                assert sum(abs(a-b) for a,b in zip(ns['position'](),row['tile']))==1
+                ns['press'](1)
             started=False;attacks=0;seen_species=set();first_battle=False
             for tick in range(1800):
                 cb=lib.read32(s['gMain']+4)&~1
@@ -111,10 +122,13 @@ def run(source,library,output,offset=0,limit=None):
             assert len(seen_species)==2,('Both actual enemy species must take a battle turn',row,seen_species)
             picture(row['script']+'-native-victory')
             results.append(dict(trainer=row['id'],map=row['map'],private_flag=row['flag'],facing=row['facing'],
-                start=start,native_actor=actors[0],native_sight_line_started_battle=True,
+                start=start,native_actor=actors[0],native_sight_line_started_battle=not manual,
+                native_manual_interaction_started_battle=manual,
+                no_automatic_approach_after600_frames=manual,
                 outcome=1,attacks=attacks,observed_battle_species=sorted(seen_species),
                 private_defeat_flag_set=True,unrelated_system_flag_unchanged=True))
-            print(row['script'],row['facing'],'native sight/battle/victory/private flag PASS',flush=True)
+            print(row['script'],row['facing'],'native manual' if manual else 'native sight',
+                  'battle/victory/private flag PASS',flush=True)
             (output/'partial-trainers.json').write_text(json.dumps(results,indent=2)+'\n')
         battery=output/'trainer-victories-controller-save.sav';callbacks=save_menu(ns,battery)
         assert artifacts=={n:sha(source/n) for n in artifacts}
@@ -130,7 +144,7 @@ def run(source,library,output,offset=0,limit=None):
         controls=controls,queries=queries,captures=captures,save_callbacks=callbacks,
         battery=dict(file=battery.name,sha256=sha(battery)),
         current_cold_continue_preserves_private_flags=cold['bundled_save_continue_to_field'],
-        balance_playthrough=False,full96coverage=len(results)==96,final_release_validated=False)
+        review_mode=review_mode,balance_playthrough=False,full96coverage=len(results)==96,final_release_validated=False)
     (output/'surf-trainers-native.json').write_text(json.dumps(report,indent=2)+'\n')
     return report
 
@@ -139,4 +153,5 @@ if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     for name in ('source','library','output'):p.add_argument('--'+name,type=Path,required=True)
     p.add_argument('--offset',type=int,default=0);p.add_argument('--limit',type=int)
-    a=p.parse_args();run(a.source,a.library,a.output,a.offset,a.limit)
+    p.add_argument('--manual',action='store_true')
+    a=p.parse_args();run(a.source,a.library,a.output,a.offset,a.limit,a.manual)
