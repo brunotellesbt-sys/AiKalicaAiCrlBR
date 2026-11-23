@@ -4,6 +4,7 @@ import argparse
 import ctypes
 import hashlib
 import json
+import os
 from pathlib import Path
 import re
 import shutil
@@ -40,7 +41,7 @@ layouts = {l['id']: l for l in json.loads((source / 'data/layouts/layouts.json')
 lib = ctypes.CDLL(str(args.library.resolve())); lib.start.argtypes = [ctypes.c_char_p]
 lib.image.restype = ctypes.c_void_p; lib.read32.restype = ctypes.c_uint32
 # Each emulator owns its flash backing file, including parallel Continue tests.
-emulator_workspace=tempfile.TemporaryDirectory(prefix='journey-emulator-',dir='/tmp')
+emulator_workspace=tempfile.TemporaryDirectory(prefix='journey-emulator-',dir=os.environ.get('JOURNEY_EMULATOR_TMPDIR','/tmp'))
 emulator_rom=Path(emulator_workspace.name)/'pokeemerald.gba'
 shutil.copy2(source/'pokeemerald.gba',emulator_rom)
 # Native-call and script-entry fixtures must never overwrite compiled game

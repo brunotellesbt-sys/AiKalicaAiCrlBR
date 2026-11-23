@@ -71,7 +71,7 @@ def run(source, library, census_path, output):
             aliases.append(dict(map=name, owner=owner, native_owner=actual))
         pool_rows = {}
         for row in census['map_areas']:
-            if row['map'].startswith('JourneyAtlas') and row['area'] in (1, 3) and row['species'][str(cap)] and row['terrain_trigger_cells']:
+            if row['map'].startswith('JourneyAtlas') and row['area'] in (0, 1, 3) and row['species'][str(cap)] and row['terrain_trigger_cells']:
                 pool_rows.setdefault((row['owner'], row['area']), row)
         assert pool_rows
         for phase, badges in ((0, 0), (1, 4), (2, 8)):
@@ -89,7 +89,8 @@ def run(source, library, census_path, output):
                 for _ in range(3):
                     species = native('JourneyWildSpecies', min(expected), row['area'])
                     assert species in expected, ('Native sample outside exact source census', row['map'], phase, species)
-                    assert native('JourneySpeciesAllowed', species) and native('JourneyAquaticSpecies', species)
+                    assert native('JourneySpeciesAllowed', species)
+                    if row['area'] in (1,3):assert native('JourneyAquaticSpecies', species)
                     observed.append(species)
                 samples.append(dict(map=row['map'], owner=row['owner'], area=row['area'], phase=phase,
                                     native_species=observed, graph_trigger=row['trigger_sample'][0]))

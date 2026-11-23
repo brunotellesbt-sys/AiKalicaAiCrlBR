@@ -10,7 +10,12 @@ import re
 from atlas_surf_ecology import DEX_ROW
 
 
-def relocate(header,before,after,plan,catalog):
+def relocate(header,before,after,plan,catalog, *, restore_inactive_from_owners=()):
+    restored_owners=set(restore_inactive_from_owners)
+    if restored_owners:
+        from atlas_sand_habitats import OWNERS
+        if not restored_owners <= set(OWNERS):
+            raise ValueError('Unreviewed owner cannot restore an inactive AREA row')
     if any(r.get('schema')!='atlas-surf-ecology-source-v1' or not r.get('native_c_compiled') for r in (before,after)):
         raise ValueError('Both compiled ecology censuses are required')
     if not after.get('graph_reachable_cells_supplied') or before.get('retired_maps'):
@@ -60,15 +65,20 @@ def relocate(header,before,after,plan,catalog):
         x,y,fixed,cap=map(int,match.groups()[2:])
         if fixed:
             raise ValueError('Fixed event on retired map needs its own event migration')
-        if (old,name,cap) not in active:
-            dead.append(dict(map=old,species=name,cap=cap));return ''
         choices=witnesses.get((name,cap))
+        restored=(old,name,cap) not in active and old in restored_owners
+        if restored:
+            choices=[r for r in choices or [] if r['owner']==old and r['area']==0]
+            if not choices:
+                raise ValueError(('Restored island species lacks its own reachable land trigger',old,name,cap))
+        elif (old,name,cap) not in active:
+            dead.append(dict(map=old,species=name,cap=cap));return ''
         if not choices:
             raise ValueError(('Previously catchable species has no reachable current trigger',old,name,cap))
         target=min(choices,key=lambda r:(r['owner']!=old,abs(r['atlas'][0]-x)+abs(r['atlas'][1]-y),r['map'],r['area'],r['tile']))
         replacement='{'+','.join(map(str,(name,target['constant'],*target['atlas'],0,cap)))+'}'
         relocations.append(dict(old_map=old,species=name,cap=cap,old_atlas=[x,y],witness=target,
-            owner_changed=target['owner']!=old,replacement=replacement))
+            owner_changed=target['owner']!=old,replacement=replacement,restored_land_trigger=restored))
         if replacement in emitted:
             return ''
         emitted.add(replacement);return replacement
