@@ -12,7 +12,7 @@ O levantamento cobre a composição das equipes. Golpes, itens, habilidades e at
 
 ## Como jogar esta revisão
 
-Aplique o patch BPS sobre a ROM de mesmo nome que já contém os cortes **H, J e K**. Essa ROM-base pode ser obtida no [player atual](https://brunotellesbt-sys.github.io/AiKalicaAiCrlBR/) ou reconstruída com o [patch do Atlas](../atlas-route-pruning/README.md). Os hashes de entrada e da ROM resultante constam em `validation.json`.
+Aplique o patch BPS sobre a ROM de mesmo nome gerada pelo patch do Atlas com os cortes **H, J e K**. Os hashes de entrada e da ROM resultante constam em `validation.json`. [Base do Atlas](../atlas-route-pruning/README.md) · [Catálogo completo do PWT](../pwt-complete-rosters/README.md)
 
 | Edição | Patch |
 | --- | --- |

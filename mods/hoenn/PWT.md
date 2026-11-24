@@ -1,9 +1,13 @@
 # PWT — torneio Singles na Battle Frontier
 
+Veja os 162 treinadores, as regras atuais e os patches das cinco edições.
+[Catálogo completo do PWT](pwt-complete-rosters/README.md)
 A [revisão de equipes](pwt-official-review/README.md) reúne as referências, os
 testes e os patches de avaliação das quatro edições.
 O [lote de Galar e Mega Evoluções](pwt-galar-za-megas/README.md) reúne as
 revanches e as provas de uso das Megas de Legends Z-A no torneio.
+
+## Registro do módulo original
 
 O guia no lobby do Battle Dome oferece uma visita à recepção própria do PWT.
 A atendente do balcão esquerdo inscreve você. A porta de saída devolve você ao

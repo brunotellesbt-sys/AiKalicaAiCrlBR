@@ -1,3 +1,26 @@
+CATÁLOGO COMPLETO DO PWT — 24/11/2026
+
+A camada `pwt-complete-rosters` sobre `2c38d692` conclui as 73 equipes
+pendentes. Para cada treinador, o arquivo de referência identifica a batalha
+usada e distingue Pokémon documentados de escolhas para completar a equipe.
+As 162 identidades e o suporte às Megas de Legends Z-A continuam no elenco
+existente. Gladion equipa Water Memory para Silvally do tipo Água.
+
+O catálogo compilado foi conferido nas cinco edições. A Gen 1–4 tem 61 times
+e a Gen 1–9 tem 162, assim como a TESTE. Os BPS cumulativos partem das
+ROMs com as rotas H, J e K já removidas. A etapa de publicação reconstrói
+essas edições antes de disponibilizar Play e Download.
+[Reprodução, times e provas](../mods/hoenn/pwt-complete-rosters/README.md)
+
+As nove copas regionais e as duas Copas Mundiais chegaram ao título no
+mGBA. A matriz de 2.736 interações de batalha passou nas quatro edições de
+jogo. O teste adicional em Paldea Hard registrou quatro vitórias e duas
+derrotas sem reforço de atributos, com restauração da equipe ao sair. As
+cinco edições abriram no navegador e a TESTE carregou o save de Mossdeep.
+
+A revisão das histórias dos lendários, do mundo durante as missões e da
+campanha completa fica para a etapa final, na ordem solicitada pelo autor.
+
 GALAR E MEGAS DE LEGENDS Z-A NO PWT — 24/11/2026
 
 O pedido atual é usar as Mega Evoluções de Legends Z-A quando couberem
@@ -11,8 +34,7 @@ de Lt. Surge na mesma partida do PWT. A Gen 1–4 permite 17 formas e a Gen
 446 times nas quatro edições. Os relatórios e os patches cumulativos ficam
 em [mods/hoenn/pwt-galar-za-megas](../mods/hoenn/pwt-galar-za-megas/README.md).
 
-Restam 73 equipes para revisar. A revisão de histórias, missões e campanha
-continua programada para depois do PWT e das mecânicas.
+O catálogo completo acima registra as 73 equipes que restavam neste lote.
 
 PWT E MECÂNICAS DE BATALHA — 23/11/2026
 

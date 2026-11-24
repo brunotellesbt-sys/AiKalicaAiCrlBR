@@ -57,5 +57,9 @@ class TournamentCatalogTests(unittest.TestCase):
         from verify_pwt_galar_za_megas import verify
         self.assertEqual(len(verify()['editions']), 4)
 
+    def test_completed_catalog_replays_all_five_native_editions(self):
+        from verify_pwt_complete_rosters import verify
+        self.assertEqual(len(verify()['editions']), 5)
+
 if __name__ == '__main__':
     unittest.main()
