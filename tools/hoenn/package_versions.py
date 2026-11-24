@@ -31,8 +31,12 @@ def package(source,output):
         parent_header_hex=base[0xA0:0xBE].hex(),parent_rules_hex=base[at:at+4].hex(),
         variants=rows,all_other_bytes_identical=True,validated=False)
  pwt_marker=source/'.journey-pwt-complete-rosters'
- if pwt_marker.exists() or (source/'.journey-pwt-galar-za-megas').exists() or (source/'.journey-pwt-official-parties').exists():
-  if pwt_marker.exists():
+ rescue_marker=source/'.journey-sootopolis-rescue'
+ if rescue_marker.exists() or pwt_marker.exists() or (source/'.journey-pwt-galar-za-megas').exists() or (source/'.journey-pwt-official-parties').exists():
+  if rescue_marker.exists():
+   from prepare_sootopolis_rescue import PRIOR,LAYER
+   pwt_marker=rescue_marker
+  elif pwt_marker.exists():
    from prepare_pwt_complete_rosters import PRIOR,LAYER
   elif (source/'.journey-pwt-galar-za-megas').exists():
    from prepare_pwt_galar_za_megas import PRIOR,LAYER

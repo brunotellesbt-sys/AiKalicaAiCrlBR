@@ -1,6 +1,6 @@
-# Propostas de histórias paralelas com lendários
+# Propostas de histórias com lendários
 
-Registro de 19/11/2026 para trabalhos futuros. Este documento contém propostas narrativas; não representa missões implementadas.
+Registro de 19/11/2026. O resgate inicial do arco de Sootopolis está implementado na ROM. [Resgate de Sootopolis](../mods/hoenn/sootopolis-rescue/README.md)
 
 As histórias 1, 2 e 3 foram selecionadas pelo autor. A história 4 incorpora a ligação solicitada com as distorções de espaço-tempo do episódio Galactic. A história 5 é uma proposta exclusiva das edições Gen 1–9, com Palkia e Deoxys como protagonistas e participação de Ultra Beasts, Ultra Wormholes, Necrozma, Hoopa e Zygarde. As histórias 6 e 7 aprofundam as orientações posteriores: Regis ligados a Eren, às três muralhas e ao Titã Fundador; extensões Gen 1–9 de Reiner/Marley e Zeke; e Palkia/Celebi diante de distorções temporais e Pokémon Paradoxo. As correspondências solicitadas estão registradas; cenas, falas e soluções abaixo são propostas para detalhamento futuro.
 
@@ -12,7 +12,7 @@ Atualização posterior do autor: Lusamine e a equipe antagonista da Aether agra
 
 O capítulo Galactic no Abandoned Ship já reúne Dialga, Palkia e Giratina, Eren e Luffy, o arrependimento de Cyrus e o retorno dos viajantes aos seus mundos. Giovanni já participa da campanha como aliado arrependido. Estas propostas respeitam esses acontecimentos.
 
-As novas histórias são paralelas. O planejamento deve preservar a exploração e os requisitos existentes das Ligas. Cada lendário deve aparecer, tomar decisões e interferir nos acontecimentos ao longo de sua missão. Seu encontro opcional posterior deve respeitar a câmara própria e as regras de captura do projeto.
+O resgate inicial de Luffy em Sootopolis é obrigatório na campanha de Hoenn. As demais propostas entram como histórias paralelas. Cada lendário deve aparecer, tomar decisões e interferir nos acontecimentos ao longo de sua missão. Seu encontro opcional posterior deve respeitar a câmara própria e as regras de captura do projeto. [Progressão atual das Ligas e da Galactic](badge-story.md)
 
 A história deve reconhecer lendários já capturados, sem criar um segundo indivíduo de captura para substituir o original. Os limites de geração de cada edição também precisam ser respeitados.
 
@@ -24,7 +24,7 @@ Cada história comum às duas faixas tem conclusão completa na Gen 1–4. Uma a
 
 Quando uma história é marcada como ausente na Gen 1–4, ela não recebe uma troca improvisada de lendário nem uma etapa impossível de concluir. A ausência deste roteiro não remove encontros ou usos anteriores de espécies disponíveis que já pertencem à campanha.
 
-As versões não modificam por este documento os critérios existentes de formas, itens, capturas únicas ou requisitos da campanha. Os reencontros respeitam Pokémon já capturados e o indivíduo original.
+Os reencontros respeitam as formas, os itens, as câmaras e os indivíduos já capturados. Os requisitos narrativos propostos aparecem no arco correspondente.
 
 ## 1. Mewtwo — A dívida de Giovanni
 
@@ -66,14 +66,27 @@ No final, Darkrai entra no pesadelo coletivo enquanto Cresselia mantém uma saí
 
 | Faixa de gerações | Conteúdo desta versão |
 |---|---|
-| Gen 1–4 | Luffy, Kyogre, Groudon, Lugia, Manaphy e a operação do Governo Mundial compõem um arco completo. O epílogo de Shaymin da história 10 também está disponível. |
-| Gen 1–9 | A mesma história marítima completa, com os mesmos responsáveis e o epílogo de Shaymin. Outros arcos exclusivos não são requisitos para esse desfecho. |
+| Gen 1–4 | Resgate obrigatório em Sootopolis. Depois, investigação da operação do Governo Mundial e epílogo de Shaymin. |
+| Gen 1–9 | Mesmo resgate obrigatório, com a mesma investigação e o mesmo epílogo de Shaymin. |
 
 ### Disponibilidade e ligação com a campanha
 
 Arco comum às edições Gen 1–4 e Gen 1–9. Parte das consequências da luta entre Kyogre e Groudon, preservando a intervenção de Rayquaza e a resolução climática já ocorridas.
 
-O reencontro com Luffy acontece por uma passagem temporária posterior ao capítulo Galactic. Ele continua próximo do período após o primeiro Sabaody e reconhece os métodos do Governo Mundial; não conhece automaticamente todas as revelações futuras de seu próprio mundo.
+Em Sootopolis, Luffy ainda está no mundo do jogador se a despedida no navio estiver pendente. Se o jogador já concluiu a Galactic por outra ordem de ginásios, o resgate usa o reencontro por uma passagem temporária. Luffy vem do período após o primeiro Sabaody, e o que ele revela sobre o Governo Mundial se limita àquilo que consegue reconhecer ou comprovar na missão.
+
+### Resgate obrigatório no porto de Sootopolis
+
+A cena de Rayquaza encerra a tempestade. Ao voltar a circular por Sootopolis, o jogador descobre pelo capitão que um barco saiu para buscar moradores e perdeu contato quando a água voltou a subir com o céu limpo. O guia do ginásio aponta o porto se o jogador for direto ao último desafio de Hoenn. [Porto e capitão existentes](porto-sootopolis.md)
+
+1. Luffy embarca para buscar os desaparecidos. O capitão conduz a embarcação até a área de resgate.
+2. O jogador segue Manaphy por Surf até os moradores, abre o caminho de volta e os leva até o barco. Lugia desvia uma onda da embarcação durante a retirada.
+3. Na volta, Kyogre reage a um pulso que vem do fundo. O jogador avista uma peça submersa, e o capitão registra o local para investigar depois.
+4. A missão termina quando todos desembarcam e o capitão confirma o resgate. A confirmação libera o último ginásio de Hoenn assim que os demais requisitos atuais forem cumpridos.
+
+A investigação submarina abre quando o resgate e o capítulo Galactic estiverem concluídos, em qualquer ordem. É nela que Luffy reconhece os métodos do Governo Mundial. O confronto com os agentes e o epílogo de Shaymin seguem como continuação opcional.
+
+O capitão oferece a missão a quem já concluiu Rayquaza. Em saves que já têm as oito insígnias de Hoenn, ele também oferece o resgate na volta ao porto e as conquistas do jogador são preservadas. [Casos validados no emulador](design/sootopolis-rescue/README.md)
 
 ### O mar continua subindo
 
@@ -95,9 +108,7 @@ A operação não reutiliza nem consome itens de missões originais. Seus instru
 
 ### A decisão de Luffy
 
-Luffy reconhece bandeiras e práticas do Governo Mundial e inicialmente quer enfrentar os responsáveis de imediato. O desaparecimento de um barco de moradores o leva a priorizar o resgate.
-
-Uma cena mostra o mar crescendo diante de uma comunidade: os agentes oferecem transporte somente a quem aceitar suas condições, enquanto Luffy embarca para buscar quem ficou para trás. A lembrança de Sabaody dá peso pessoal à recusa de deixar outras pessoas serem tratadas como propriedade ou recurso.
+No primeiro resgate, Luffy decide embarcar antes de saber quem provocou a nova subida da água. Durante a investigação posterior, ele identifica bandeiras e práticas do Governo Mundial. Os agentes oferecem transporte somente a quem aceita suas condições, e Luffy mantém aberta a rota de retirada para todos. A lembrança de Sabaody dá peso pessoal à recusa de deixar outras pessoas serem tratadas como propriedade ou recurso.
 
 Luffy participa das travessias, ajuda a abrir uma rota de evacuação e luta ao lado do jogador na instalação. Seu protagonismo aparece nas escolhas e nos resgates, além dos combates.
 

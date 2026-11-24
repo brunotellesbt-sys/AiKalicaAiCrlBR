@@ -7,7 +7,7 @@ const ROOT = path.resolve(__dirname, '../..');
 const gamesDir = process.env.PLAYABLE_GAMES_DIR;
 const manifest = JSON.parse(fs.readFileSync(gamesDir ? path.join(gamesDir, 'versions.json') : path.join(ROOT, 'mods/hoenn/versions/versions.json')));
 const releases = [...manifest.variants];
-const includesTestEdition = ['atlas-surf-layout','atlas-route-pruning','pwt-complete-rosters','extra-gyms','dewford-coast-safety','generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers'].includes(manifest.validation_scope);
+const includesTestEdition = ['atlas-surf-layout','atlas-route-pruning','pwt-complete-rosters','sootopolis-rescue','extra-gyms','dewford-coast-safety','generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review','arrival-coast-review','coastal-ecology','generated-world-audit','badge-story','coastal-closures','sevii-integrated-piers'].includes(manifest.validation_scope);
 if (includesTestEdition) releases.push(JSON.parse(fs.readFileSync(gamesDir ? path.join(gamesDir, 'review.json') : path.join(ROOT,'roms/rom-de-teste/review.json'))));
 const OUT = process.env.BROWSER_VALIDATION_OUTPUT || path.join(ROOT, 'mods/hoenn/versions-validation/browser');
 const url = process.env.PLAYABLE_SITE_URL || 'http://127.0.0.1:8770/';
