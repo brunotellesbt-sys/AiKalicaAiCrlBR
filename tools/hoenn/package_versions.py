@@ -30,11 +30,15 @@ def package(source,output):
  r=dict(parent_rom_sha256=hashlib.sha256(base).hexdigest(),build_rules_offset=at,
         parent_header_hex=base[0xA0:0xBE].hex(),parent_rules_hex=base[at:at+4].hex(),
         variants=rows,all_other_bytes_identical=True,validated=False)
- pwt_marker=source/'.journey-pwt-official-parties'
- if pwt_marker.exists():
-  from prepare_pwt_official_parties import PRIOR,LAYER
+ pwt_marker=source/'.journey-pwt-galar-za-megas'
+ if pwt_marker.exists() or (source/'.journey-pwt-official-parties').exists():
+  if pwt_marker.exists():
+   from prepare_pwt_galar_za_megas import PRIOR,LAYER
+  else:
+   from prepare_pwt_official_parties import PRIOR,LAYER
+   pwt_marker=source/'.journey-pwt-official-parties'
   r['integration_layers']=PRIOR+[LAYER]
-  r['validation_scope']='pwt-official-parties-candidate'
+  r['validation_scope']=LAYER+'-candidate'
   r['candidate']=True
   r['final_release_validated']=False
   r['source_marker_sha256']=hashlib.sha256(pwt_marker.read_bytes()).hexdigest()

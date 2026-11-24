@@ -13,6 +13,7 @@ p.add_argument('--play-cup',action='store_true',help='Also win one real cup; pla
 p.add_argument('--cup-generation',type=int,default=3)
 p.add_argument('--exhaust-pp-once',action='store_true',help='Set the first active battler PP to zero as an explicit Struggle fixture')
 p.add_argument('--roster-review',type=Path,help='Compare actual six-member parties against the reviewed PWT data')
+p.add_argument('--galar-review',action='store_true',help='Compare the Galar postgame rematch teams')
 a=p.parse_args()
 sys.argv=[sys.argv[0],'--source',str(a.source),'--library',str(a.library),'--output',str(a.output)]
 exec(compile((ROOT/'tools/hoenn/validate_abilities.py').read_text().split('\nability_field,')[0],str(ROOT/'tools/hoenn/validate_abilities.py'),'exec'))
@@ -32,6 +33,11 @@ if a.roster_review:
     from prepare_pwt_official_parties import validate_review
     roster_review=json.loads(a.roster_review.read_bytes())
     reviewed_parties=validate_review(roster_review)
+if a.galar_review:
+    from prepare_pwt_galar_za_megas import load_review
+    galar_parties=load_review()
+    reviewed_parties.update(galar_parties)
+if reviewed_parties:
     catalog=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_bytes())
     species_ids={row['name'].removeprefix('SPECIES_'):row['id'] for row in catalog['species'].values()}
 for i in range(6*abi[2]):lib.write8(party+i,0)
@@ -240,5 +246,7 @@ if a.roster_review:
     eligible_keys = {rows[index]['key'] for index in ids[1:]}
     report['reviewed_official_teams'] = sum(row['key'] in eligible_keys for row in roster_review['reviewed'])
     report['reviewed_league_teams'] = sum(row['key'] in eligible_keys for row in roster_review['league_reviewed'])
+if a.galar_review:
+    report['reviewed_galar_teams'] = sum(rows[index]['key'] in galar_parties for index in ids[1:])
 (args.output/'pwt-world.json').write_text(json.dumps(report,indent=2)+'\n')
 print('Native PWT catalog/party/board checks passed:',len(records),'teams',flush=True)

@@ -1,0 +1,54 @@
+{
+  "layer": "pwt-galar-za-megas",
+  "final_release_validated": false,
+  "parent_commit": "526876cac10d5d3f2dd9ccd9fb21809f34ceee8b",
+  "reference_sha256": "fa49d479a80cbff56ec3479214b33d21147b18721edf28ff4238a02814eff5f8",
+  "source_marker": {
+    "layer": "pwt-galar-za-megas",
+    "galar_teams": 13,
+    "entrant_ids_preserved": true,
+    "original_sha256": {
+      "src/data/journey_pwt_catalog.h": "4e03d8e1a451a80ff9a1a4c736466d29a38ff7daf729153ff927961b7b55de86",
+      "src/data/journey_pwt_trainers.h": "86697a78ab4adb53637cc18a442ff40c7cd3244b8b2e51767d11a4b2afb66c81",
+      "src/journey_pwt.c": "97f02082500996efa27e146b200b28bb7f2e29af40835ff482d6e3fb211f78fa"
+    },
+    "prepared_sha256": {
+      "src/data/journey_pwt_catalog.h": "975f59bd3f56f81677776f6ec079d3f5262cfb6b22a559e4f554aeac94d97fad",
+      "src/data/journey_pwt_trainers.h": "4af190d63a3e6c3fe623412b902505b2143bbee357117a7dc69c266e7ad24a90",
+      "src/journey_pwt.c": "b18705484c71b1b0e2073259e3fe829a0794e0db891e51225eadb2598e444752"
+    }
+  },
+  "source_marker_sha256": "6c8a15fdd2c960ca8aa4bd6b48af5346252b0e904d50ad0fe2687484d9499776",
+  "compiled_elf_sha256": "a065cf1417c79912d21d6e2408b8513b6699263c5e99fd5330dad1637b58b0e0",
+  "compiled_rom_sha256": "75c40e192ab6c880dc884368ea6f9c76c27d396097e0f4465d72eab5594c5e86",
+  "editions": {
+    "Pokemon-Journey-Gen1-4-Normal.gba": {
+      "base_sha256": "0fd7124c37cfdd4d800a753fe981467251ed21287195ec81a57b9045594e8f12",
+      "rom_sha256": "7d7a7113c1a1554b4b3ed22ad67b54da178016b3433f5afc7f0c39e74dde56d3",
+      "patch_sha256": "99475d7a9ae7b63e051c75117fa9cde43a991b10cb04882735163095ce5365a6",
+      "evidence_sha256": "15ef71f041a92e07c6aed6a2fa2adea08884b783906c6d2a6b35eb37c1187774",
+      "screenshot_sha256": "de93b5158740e94d59efaf0e9045c3794191df9bfdaf7886e004e8a1c0355546"
+    },
+    "Pokemon-Journey-Gen1-4-Hard.gba": {
+      "base_sha256": "36d71f3673cdbfc5f1c13b58afa0ade383818a4e96b5f5768c80595ace92afa9",
+      "rom_sha256": "d4130a19c982dd47b68e2bd55443633b98d6a15a4ba1d302ea2b8b2dd0400a62",
+      "patch_sha256": "059c60e3ef3ac94d1a89effd8bdde403bd69ccf03b1cd7df230cb2b63d327971",
+      "evidence_sha256": "08a4a79a631d2d4939a845ef0a995817893f8397b51b165bcf7108444f2a715d",
+      "screenshot_sha256": "3b96fbdccfe198c69c88f189a0b697ab17fadd1df8c10a00c3f312bd31d21708"
+    },
+    "Pokemon-Journey-Gen1-9-Normal.gba": {
+      "base_sha256": "2491597f54f14cbbe842f84e136b78a24a99bb430c3f994e2aeecf7d3d824cb7",
+      "rom_sha256": "ea38a4bbacfa4e74b1ce4faa65d1ad5728784ec32002464901691e7569d193a2",
+      "patch_sha256": "ea9f338f4206180583af58afe97f7fb9c6389597a8997373945f3beeed4e9392",
+      "evidence_sha256": "26a32a9c17d91f066dbbb6c67170bfc6f84dfae43ef1e9219a723803d0cebace",
+      "screenshot_sha256": "3b96fbdccfe198c69c88f189a0b697ab17fadd1df8c10a00c3f312bd31d21708"
+    },
+    "Pokemon-Journey-Gen1-9-Hard.gba": {
+      "base_sha256": "256210a394ed6b33f2b54c6739b766d379b2e59dd1389a7f4b4ae1f444f0040d",
+      "rom_sha256": "2c81c672869b6f2d37debb90abfec46adc45c507947361e66bf725e31a995687",
+      "patch_sha256": "a50c6c8f7c845d3f28bf774d3363aaf264e7604265e84c03523e604be124b921",
+      "evidence_sha256": "3fbc199ab033468dacfb13857be2ea9c4d7ad9b067c4e64d34a7024b318eb2df",
+      "screenshot_sha256": "3b96fbdccfe198c69c88f189a0b697ab17fadd1df8c10a00c3f312bd31d21708"
+    }
+  }
+}
