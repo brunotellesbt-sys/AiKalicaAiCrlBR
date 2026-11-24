@@ -6,7 +6,17 @@ from verify_playable import ROOT, verify, ROM_NAME
 VERSIONS = ROOT / 'mods/hoenn/versions'
 REVIEW = ROOT / 'roms/rom-de-teste'
 PRUNING = ROOT / 'mods/hoenn/atlas-route-pruning'
+PWT_COMPLETE = ROOT / 'mods/hoenn/pwt-complete-rosters'
 CURRENT_BROWSER_EVIDENCE = ROOT / 'mods/hoenn/versions-validation/browser-route-pruning/browser-versions.json'
+PWT_BROWSER_EVIDENCE = ROOT / 'mods/hoenn/versions-validation/browser-pwt-complete/browser-versions.json'
+
+
+def browser_evidence(release):
+    if release.get('validation_scope') == 'pwt-complete-rosters':
+        return PWT_BROWSER_EVIDENCE
+    if 'atlas' in release:
+        return CURRENT_BROWSER_EVIDENCE
+    return ROOT / 'mods/hoenn/versions-validation/browser/browser-versions.json'
 
 
 def stage_current_editions(site, release):
@@ -25,12 +35,18 @@ def stage_current_editions(site, release):
         for row in release['variants']:
             assert profiles[row['file']]['base_sha256'] == row['sha256']
         assert profiles[review['file']]['base_sha256'] == review['sha256']
+        scope = 'atlas-route-pruning'
+        if (PWT_COMPLETE / 'validation.json').is_file():
+            from verify_pwt_complete_rosters import verify as verify_pwt
+            completed = verify_pwt(PWT_COMPLETE, output=games, base_directory=games)
+            profiles = completed['editions']
+            scope = completed['layer']
         variants = [{key: row[key] for key in ('file', 'bytes', 'max_national', 'perfect_trainer_ivs')}
                     for row in release['variants']]
         for row in variants:
             row['sha256'] = profiles[row['file']]['rom_sha256']
         atlas = dict(file='atlas-atual.png', sha256=current['map_png_sha256'])
-        release = dict(validated=True, validation_scope='atlas-route-pruning',
+        release = dict(validated=True, validation_scope=scope,
                        variants=variants, atlas=atlas)
         normal = next(row for row in variants if row['file'] == review['base_normal_file'])
         review = {key: review[key] for key in ('file', 'bytes', 'base_normal_file',
@@ -66,8 +82,7 @@ def stage(output):
     if (versions/'versions.json').exists():
         from verify_versions import verify as verify_versions,verify_browser
         release, review = stage_current_editions(output, verify_versions(versions))
-        report = CURRENT_BROWSER_EVIDENCE if 'atlas' in release else None
-        verify_browser(release, review=review, report_path=report)
+        verify_browser(release, review=review, report_path=browser_evidence(release))
         shutil.copytree(ROOT/'docs',output/'docs',dirs_exist_ok=True)
         if (ROOT/'errors').is_dir():
             shutil.copytree(ROOT/'errors',output/'errors',dirs_exist_ok=True)

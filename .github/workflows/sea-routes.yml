@@ -64,6 +64,7 @@ jobs:
           path: |
             mods/hoenn/versions-validation/browser/
             mods/hoenn/versions-validation/browser-route-pruning/
+            mods/hoenn/versions-validation/browser-pwt-complete/
       - name: Upload the five verified editions and current atlas
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:

@@ -28,4 +28,5 @@ const u32 gPWTWorldFixtureABI[] = {
     offsetof(struct BattlePokemon,attack), offsetof(struct BattlePokemon,speed),
     offsetof(struct BattlePokemon,maxHP), offsetof(struct Pokemon,attack),
     offsetof(struct Pokemon,speed), offsetof(struct Pokemon,maxHP),
+    MON_DATA_HELD_ITEM, ITEM_WATER_MEMORY,
 };

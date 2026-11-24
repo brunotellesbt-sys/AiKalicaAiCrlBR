@@ -30,10 +30,13 @@ def package(source,output):
  r=dict(parent_rom_sha256=hashlib.sha256(base).hexdigest(),build_rules_offset=at,
         parent_header_hex=base[0xA0:0xBE].hex(),parent_rules_hex=base[at:at+4].hex(),
         variants=rows,all_other_bytes_identical=True,validated=False)
- pwt_marker=source/'.journey-pwt-galar-za-megas'
- if pwt_marker.exists() or (source/'.journey-pwt-official-parties').exists():
+ pwt_marker=source/'.journey-pwt-complete-rosters'
+ if pwt_marker.exists() or (source/'.journey-pwt-galar-za-megas').exists() or (source/'.journey-pwt-official-parties').exists():
   if pwt_marker.exists():
+   from prepare_pwt_complete_rosters import PRIOR,LAYER
+  elif (source/'.journey-pwt-galar-za-megas').exists():
    from prepare_pwt_galar_za_megas import PRIOR,LAYER
+   pwt_marker=source/'.journey-pwt-galar-za-megas'
   else:
    from prepare_pwt_official_parties import PRIOR,LAYER
    pwt_marker=source/'.journey-pwt-official-parties'

@@ -14,6 +14,7 @@ p.add_argument('--cup-generation',type=int,default=3)
 p.add_argument('--exhaust-pp-once',action='store_true',help='Set the first active battler PP to zero as an explicit Struggle fixture')
 p.add_argument('--roster-review',type=Path,help='Compare actual six-member parties against the reviewed PWT data')
 p.add_argument('--galar-review',action='store_true',help='Compare the Galar postgame rematch teams')
+p.add_argument('--complete-review',action='store_true',help='Compare the final documented PWT additions')
 a=p.parse_args()
 sys.argv=[sys.argv[0],'--source',str(a.source),'--library',str(a.library),'--output',str(a.output)]
 exec(compile((ROOT/'tools/hoenn/validate_abilities.py').read_text().split('\nability_field,')[0],str(ROOT/'tools/hoenn/validate_abilities.py'),'exec'))
@@ -24,7 +25,7 @@ with tempfile.TemporaryDirectory(prefix='pwt-world-abi-',dir='/tmp') as d:
     subprocess.run([str(ROOT/'.local/arm-gcc/usr/bin/arm-none-eabi-gcc'),'-S','-iquote',str(source/'include'),'-include',str(source/'src/journey_pwt.c'),'-D_(x)=x','-DCOMPOUND_STRING(x)=((const u8 *)(x))','-DMODERN=1','-DPOKEEMERALD','-mthumb','-march=armv4t','-mabi=apcs-gnu',str(ROOT/'tools/hoenn/fixture_pwt_world_abi.c'),'-o',str(out)],check=True)
     text=out.read_text().split('gPWTWorldFixtureABI:',1)[1].split('.size',1)[0]
     offsets=[int(v) for v in re.findall(r'\.word\s+(\d+)',text)]
-assert len(offsets)==69,offsets
+assert len(offsets)==71,offsets
 state=s['sPWT'];cup=state+offsets[1];party=s['gParties'];enemy=party+6*abi[2]
 cap=native('JourneyPWTMaxGeneration');hard=native('JourneyPerfectTrainerIvs')
 assert cap in (4,9) and native('JourneyPWTCatalogCount')==len(rows)
@@ -37,6 +38,10 @@ if a.galar_review:
     from prepare_pwt_galar_za_megas import load_review
     galar_parties=load_review()
     reviewed_parties.update(galar_parties)
+if a.complete_review:
+    from prepare_pwt_complete_rosters import load_review
+    complete_parties=load_review()
+    reviewed_parties.update(complete_parties)
 if reviewed_parties:
     catalog=json.loads((ROOT/'tools/hoenn/catalog_metadata.json').read_bytes())
     species_ids={row['name'].removeprefix('SPECIES_'):row['id'] for row in catalog['species'].values()}
@@ -96,10 +101,15 @@ for index in ids[1:]:
         assert ability != 0
         if rows[index]['key']=='EREN' and slot==5:assert ability==offsets[62]
         mons.append(dict(species=species,level=50,evs=evs,ivs=ivs,moves=moves,ability=ability))
+        if a.complete_review:
+            mons[-1]['held_item'] = native('GetMonData2',mon,offsets[69])
     reviewed=reviewed_parties.get(rows[index]['key'])
     if reviewed:
         expected=reviewed['gen1_4'] if cap==4 else reviewed['reference']
         assert [mon['species'] for mon in mons]==[species_ids[mon] for mon in expected], reviewed['key']
+    if a.complete_review and rows[index]['key']=='GLADION':
+        silvally,=[mon for mon in mons if mon['species']==species_ids['SILVALLY_WATER']]
+        assert silvally['held_item']==offsets[70], silvally
     records.append(dict(name=rows[index]['name'],trainer_id=trainer,portrait_id=picture_id,team=mons))
 assert high_portraits>0 and offsets[17]==2,'PWT portraits beyond byte range must use the widened enum'
 assert 0 in iv_values and 31 in iv_values
@@ -227,7 +237,8 @@ if a.play_cup:
         press(1)
     assert location()==map_id('JourneyPWTLobby')
     assert bytes(lib.read8(party+i) for i in range(6*abi[2]))==tournament_original
-    assert lib.read16(bp_at)==bp_before+10
+    tournament_reward = lib.read16(bp_at) - bp_before
+    assert tournament_reward == (10 if a.cup_generation else 25)
     assert lib.read8(cup+offsets[12])==2
     if a.exhaust_pp_once:assert exhausted_pp and struggle_seen,'Native Struggle was not observed'
     picture('pwt-world-cup-champion-return')
@@ -248,5 +259,8 @@ if a.roster_review:
     report['reviewed_league_teams'] = sum(row['key'] in eligible_keys for row in roster_review['league_reviewed'])
 if a.galar_review:
     report['reviewed_galar_teams'] = sum(rows[index]['key'] in galar_parties for index in ids[1:])
+if a.complete_review:
+    report['reviewed_final_teams'] = sum(rows[index]['key'] in complete_parties for index in ids[1:])
+    report['water_silvally_memory_verified'] = cap == 9
 (args.output/'pwt-world.json').write_text(json.dumps(report,indent=2)+'\n')
 print('Native PWT catalog/party/board checks passed:',len(records),'teams',flush=True)

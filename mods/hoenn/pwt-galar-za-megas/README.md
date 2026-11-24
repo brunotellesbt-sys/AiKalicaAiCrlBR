@@ -10,7 +10,7 @@ O adversário mantém uma Mega Stone compatível escolhida pelo seu perfil compe
 
 ## ROM de avaliação
 
-Cada patch inclui as duas etapas da revisão do PWT. Aplique-o à edição correspondente que já tem os cortes **H, J e K**. [ROM-base no player público](https://brunotellesbt-sys.github.io/AiKalicaAiCrlBR/) · [Patches do Atlas](../atlas-route-pruning/README.md)
+Cada patch registra as duas primeiras etapas da revisão do PWT. Aplique-o à edição correspondente gerada pelos patches dos cortes **H, J e K**. [Patches do Atlas](../atlas-route-pruning/README.md)
 
 | Edição | Patch |
 | --- | --- |
@@ -31,4 +31,4 @@ No teste sem reforço de Galar Hard, a equipe venceu Nessa e perdeu para Luffy e
 
 `python3 tools/hoenn/verify_pwt_galar_za_megas.py` reconstrói as quatro ROMs e confere os hashes dos relatórios e das capturas. [Manifesto de validação](validation.json)
 
-Restam 73 equipes para revisar no PWT. As histórias dos lendários, as missões e a validação integral da campanha ficam para a etapa final.
+As 73 equipes seguintes estão no [catálogo completo do PWT](../pwt-complete-rosters/README.md).

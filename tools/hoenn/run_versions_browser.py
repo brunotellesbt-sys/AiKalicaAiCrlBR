@@ -9,7 +9,7 @@ import tempfile
 import threading
 
 from verify_versions import ROOT, verify, verify_browser
-from stage_pages import CURRENT_BROWSER_EVIDENCE, VERSIONS, stage_current_editions
+from stage_pages import VERSIONS, browser_evidence, stage_current_editions
 
 
 def run():
@@ -18,7 +18,7 @@ def run():
         site = Path(temporary)
         shutil.copytree(ROOT / 'web', site, dirs_exist_ok=True)
         release, review = stage_current_editions(site, base)
-        report = CURRENT_BROWSER_EVIDENCE if 'atlas' in release else ROOT / 'mods/hoenn/versions-validation/browser/browser-versions.json'
+        report = browser_evidence(release)
         handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(site))
         server = http.server.ThreadingHTTPServer(('127.0.0.1', 0), handler)
         worker = threading.Thread(target=server.serve_forever, daemon=True)
