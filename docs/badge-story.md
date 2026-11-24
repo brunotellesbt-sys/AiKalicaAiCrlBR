@@ -64,10 +64,12 @@ Viridian e os personagens próprios do PWT não entram nessa substituição.
 ## Galactic na 22ª insígnia
 
 O compartimento do navio abandonado da Rota 108 passa a exigir **22 insígnias
-no total**, incluindo as dos ginásios extras. A visibilidade dos grunts segue
-a mesma regra. O aviso da 22ª orienta a investigação da Room 6; os encontros
-anteriores de Luffy e Eren continuam sendo pré-requisitos narrativos desse
-capítulo. Eles já não são uma barreira para as Ligas depois da competição.
+no total**, incluindo as dos ginásios extras. A camada Titan Story acrescenta
+o resgate de Sootopolis, a Titan Cave e a vitória na competição antes do
+capítulo final. A entrada da Room 6 também confere os doze encontros de
+Luffy e Eren. As Ligas mantêm a admissão pela competição e pelas 18 insígnias.
+Saves que já registraram a primeira batalha da sala final podem concluir
+o navio na ordem em que começaram. [Capítulo da Titan Cave](../mods/hoenn/titan-story/README.md)
 
 ## Validação e downloads
 

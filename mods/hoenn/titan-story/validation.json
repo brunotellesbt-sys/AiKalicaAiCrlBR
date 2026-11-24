@@ -1,0 +1,67 @@
+{
+  "layer": "titan-story",
+  "rescue_manifest_sha256": "d9134c922fd3aa239f55b1ebee4d2c410e8c1ee86c17333b5e3a5c2b26a3d456",
+  "source_marker_sha256": "54e042d2627c85dfa6241a9f85ecc4f9aa30603a5ea7e1718e94f7571bcb242c",
+  "compiled_elf_sha256": "909da8ac137c2aa79f69c5223a3825a4ed2ba9eca185a8662f725fd4cca63651",
+  "compiled_rom_sha256": "bde7c804abfc64088dbfd4438cdf52713992c9815c2d0fa8e332c7dfac61b269",
+  "test_mode": {
+    "file": "Pokemon-Journey-TESTE.gba",
+    "bytes": 33554432,
+    "sha256": "4bed3ecddd47772545afa0f214e857e605b6736064d645be4c0cf61f9b948a1c",
+    "base_normal_file": "Pokemon-Journey-Gen1-9-Normal.gba",
+    "base_normal_sha256": "855c3181eddfe606b7db3af75157bfae8fad8cd0c05fdeeed37af3765dd06c18",
+    "review_mode_offset": 9217214,
+    "patched_byte_offsets": [
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      189,
+      9217214
+    ],
+    "base_header_hex": "4a4f55524e4559204739204e42504545303196000000000000000000009a",
+    "automatic_trainer_approaches": false,
+    "random_wild_encounters": false,
+    "fishing_encounters": false,
+    "manual_trainer_and_legendary_interactions_preserved": true,
+    "separate_save_identity": true
+  },
+  "build_rules_offset": 9218608,
+  "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
+  "editions": {
+    "Pokemon-Journey-Gen1-4-Normal.gba": {
+      "base_sha256": "8bd87e8778ad967374a9c035c9749777ead8ce07d861b07a7bba03bc71eba46a",
+      "rom_sha256": "bc0c768c12b723458d2c53c852bc76ca0e19ed7bb327626e36965365d1564b8e",
+      "patch_sha256": "33fff880fd7754a59d78609d28fd209816bee2f345586002e5dc36f3ff683dce",
+      "evidence_sha256": "fd260ad866ffec02df0c13b2f2635c7b09f66a945308d5e5f7559ce7c3e20d01"
+    },
+    "Pokemon-Journey-Gen1-4-Hard.gba": {
+      "base_sha256": "333f90056f57de4fae9eb0a8ac45000fa2b9d08bd877333f7c4b56fe0c5fff05",
+      "rom_sha256": "37d8c4b43a6eda931bca53b3e16928f5b1111edd90dbd2a0ac06136da9c707d1",
+      "patch_sha256": "d0221b35ca683a964d6c8fc5cea0fa637de1ec8ff83eb8cb03655cf7407c5967",
+      "evidence_sha256": "fdb061960af22be40cfc5c776c71da651a14abfdf26b09c13ab2e36fc275876b"
+    },
+    "Pokemon-Journey-Gen1-9-Normal.gba": {
+      "base_sha256": "174931a33ccceea955c1bf92cd65ab52202fda5914013f1f3de6e7a49b5f9cf0",
+      "rom_sha256": "855c3181eddfe606b7db3af75157bfae8fad8cd0c05fdeeed37af3765dd06c18",
+      "patch_sha256": "5c9244ec5a5830bbd24abf425a2531c2acf323355e17c406c6e623429257af25",
+      "evidence_sha256": "dfaf0413ea7e8bfb65555c10cd72321c9469958125a1a81326f894d8aeb5206a"
+    },
+    "Pokemon-Journey-Gen1-9-Hard.gba": {
+      "base_sha256": "72f90b9cd745dff202bfda63c9073d737936d02ac2ab2f892d5800854225f20d",
+      "rom_sha256": "61376dc8ad92d2183b14f6f3f839719eff0fc325736c0db8cb32f6c9761aab25",
+      "patch_sha256": "7431dbfd184375cce7fb11f8240ad82f7b5fc20118809102177689fb3f222426",
+      "evidence_sha256": "cc39d6deee199d94e52c82b1cf93fe3b0679d13a3562ba3564216ac7affa5ca0"
+    },
+    "Pokemon-Journey-TESTE.gba": {
+      "base_sha256": "739e2221565114ba8cebe4f3c31d292319718e812be9f208cd5e4f57f2fa84ac",
+      "rom_sha256": "4bed3ecddd47772545afa0f214e857e605b6736064d645be4c0cf61f9b948a1c",
+      "patch_sha256": "9a09e02c41f3df43aa65cac4120c9f5a7d554bb8d52b54f179e7b4ceeb99b137",
+      "evidence_sha256": "fcfa05c8df50b67aa13dc1cc0907c930f44cbf7aae2967fff7f85b29e1c8a3e8"
+    }
+  },
+  "published_save_proof_sha256": "580f2ff39b5b745698fe80f4b0397986c516c8c8e7e6934d9183a5d8ccaeb131"
+}

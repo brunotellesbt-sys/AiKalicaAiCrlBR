@@ -6,7 +6,7 @@ O túnel entre a Rota 11, perto de Vermilion, e a Rota 2 tem três exploradores 
 
 O Rock Tunnel é outro local e mantém a missão anterior com quatro membros do Team Magma. Ambas as cavernas dispensam Flash.
 
-**Este guia contém spoilers.** Os circuitos de ginásios são independentes. As insígnias de Kanto contam para a ordem dos ginásios de Kanto e as de Hoenn para Hoenn. A competição da Battle Frontier libera as duas Ligas com 18 insígnias. O capítulo Galactic começa com 22. [Requisitos atuais](badge-story.md)
+**Este guia contém spoilers.** Os circuitos de ginásios são independentes. As insígnias de Kanto contam para a ordem dos ginásios de Kanto e as de Hoenn para Hoenn. A competição da Battle Frontier libera as duas Ligas com 18 insígnias. O capítulo final da Galactic exige 22, os capítulos de Luffy e Eren e a vitória na competição. [Requisitos atuais](badge-story.md)
 
 ## Kanto
 
@@ -24,7 +24,7 @@ O Rock Tunnel é outro local e mantém a missão anterior com quatro membros do 
 - Após cinco insígnias, conclua Magma Hideout.
 - Após seis insígnias, derrote Matt e conclua a fuga do submarino no esconderijo Aqua de Lilycove.
 - Após sete insígnias, Steven ajuda contra Maxie e Tabitha no Space Center. Depois, a missão de Archie em Seafloor Cavern exige também a vitória sobre Giovanni na Silph Co. Giovanni participa como aliado, arrependido, explicando que o propósito inicial da Rocket se perdeu e que quer reparar seus erros.
-- Conclua a crise climática de Sootopolis e o episódio de Rayquaza. Em seguida, fale com o capitão do porto e complete o resgate com Luffy. A confirmação do desembarque libera o último ginásio de Hoenn. [Resgate de Sootopolis](../mods/hoenn/sootopolis-rescue/README.md)
+- Conclua a crise climática de Sootopolis e o episódio de Rayquaza. Em seguida, fale com o capitão do porto e complete o resgate com Luffy. Lugia protege a jangada, Articuno detém a água que atinge o barco, Zapdos ilumina o recife e Moltres aquece os resgatados. A confirmação do desembarque libera o último ginásio de Hoenn. [Resgate e capítulo da Titan Cave](../mods/hoenn/titan-story/README.md)
 
 Os guias dos ginásios fechados indicam o evento pendente e o local. As missões bloqueiam ginásios; as rotas permanecem abertas, com as condições aquáticas de Surf/Dive/Waterfall e as missões de bicicleta.
 
@@ -43,9 +43,11 @@ Cada um tem seis encontros, três em Kanto e três em Hoenn. A ordem de visita a
 
 Eren suspeita de Magma e fala de seus companheiros de antes do fim da segunda temporada. O contato com a Titã Sorridente é parte do mistério. Luffy está no período após o primeiro Sabaody e suspeita de Aqua e de Kizaru. As doze visitas são obrigatórias antes de entrar no setor final Galactic e continuam disponíveis após a 22ª insígnia. O guia informa o próximo local que falta visitar.
 
+Depois do resgate, a pista do capitão leva à Wishstar Chamber dentro da Fiery Path, acessível pela Rota 112. Fale com Eren para ver Jirachi revelar os selos. Reencontre Eren na Titan Cave, no mar perto de Three Island, e siga Regirock, Regice e Registeel, ligados a Maria, Rose e Sina. Na Gen 1–9, siga também Regieleki e Regidrago para descobrir as ações de Reiner e Zeke. Regigigas revela o juramento do rei das muralhas, e o jogador ajuda a dissipar os tremores de Groudon. É possível desafiar o último ginásio de Hoenn no intervalo entre o resgate e a Titan Cave. [Câmaras e acessos](cavernas-lendarias.md)
+
 ## Prisão Galactic no navio
 
-Com 22 insígnias no total, vá ao Abandoned Ship da Route 108. Use Dive e procure Room 6 no piso inferior oculto. Os habitantes do navio foram substituídos por grunts Galactic e os NPCs originais foram realocados em rotas.
+Com 22 insígnias no total, conclua o resgate, o capítulo da Titan Cave e a competição da Battle Frontier. Vá ao Abandoned Ship da Route 108, use Dive e procure Room 6 no piso inferior oculto. O guarda orienta sobre os encontros de Eren e Luffy que estiverem pendentes. Os NPCs originais do navio foram realocados em rotas.
 
 Derrote os 19 grunts, incluindo o guarda do compartimento. Na sala final, Dialga, Giratina e Palkia estão presos em três celas de energia:
 

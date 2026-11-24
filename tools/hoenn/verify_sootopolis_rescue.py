@@ -20,7 +20,7 @@ def sha(raw):
     return hashlib.sha256(raw).hexdigest()
 
 
-def verify(directory=DIRECTORY, *, base_directory=None, output=None):
+def verify(directory=DIRECTORY, *, base_directory=None, output=None, consume=None):
     directory = Path(directory)
     manifest = json.loads((directory / 'validation.json').read_bytes())
     assert manifest['layer'] == LAYER and manifest['parent_commit'] == PWT_PARENT
@@ -106,6 +106,8 @@ def verify(directory=DIRECTORY, *, base_directory=None, output=None):
 
         if output is not None:
             (Path(output) / name).write_bytes(rom)
+        if consume is not None:
+            consume(name, rom)
     return manifest
 
 

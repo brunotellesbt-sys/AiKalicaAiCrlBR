@@ -8,12 +8,16 @@ REVIEW = ROOT / 'roms/rom-de-teste'
 PRUNING = ROOT / 'mods/hoenn/atlas-route-pruning'
 PWT_COMPLETE = ROOT / 'mods/hoenn/pwt-complete-rosters'
 SOOTOPOLIS_RESCUE = ROOT / 'mods/hoenn/sootopolis-rescue'
+TITAN_STORY = ROOT / 'mods/hoenn/titan-story'
 CURRENT_BROWSER_EVIDENCE = ROOT / 'mods/hoenn/versions-validation/browser-route-pruning/browser-versions.json'
 PWT_BROWSER_EVIDENCE = ROOT / 'mods/hoenn/versions-validation/browser-pwt-complete/browser-versions.json'
 RESCUE_BROWSER_EVIDENCE = ROOT / 'mods/hoenn/versions-validation/browser-sootopolis-rescue/browser-versions.json'
+TITAN_BROWSER_EVIDENCE = ROOT / 'mods/hoenn/versions-validation/browser-titan-story/browser-versions.json'
 
 
 def browser_evidence(release):
+    if release.get('validation_scope') == 'titan-story':
+        return TITAN_BROWSER_EVIDENCE
     if release.get('validation_scope') == 'sootopolis-rescue':
         return RESCUE_BROWSER_EVIDENCE
     if release.get('validation_scope') == 'pwt-complete-rosters':
@@ -50,6 +54,11 @@ def stage_current_editions(site, release):
                 rescue = verify_rescue(SOOTOPOLIS_RESCUE, output=games, base_directory=games)
                 profiles = rescue['editions']
                 scope = rescue['layer']
+                if (TITAN_STORY / 'validation.json').is_file():
+                    from verify_titan_story import verify as verify_titans
+                    titans = verify_titans(TITAN_STORY, output=games, base_directory=games)
+                    profiles = titans['editions']
+                    scope = titans['layer']
         variants = [{key: row[key] for key in ('file', 'bytes', 'max_national', 'perfect_trainer_ivs')}
                     for row in release['variants']]
         for row in variants:

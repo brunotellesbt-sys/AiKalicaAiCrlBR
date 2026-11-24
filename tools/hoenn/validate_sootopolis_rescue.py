@@ -16,6 +16,7 @@ PORT = 'JourneySootopolisHarbor'
 AREA = 'JourneySootopolisRescue'
 GYM = 'SootopolisCity_Gym_1F'
 RESCUE = 0x40E5
+titan_marker = source / '.journey-titan-story'
 variables = (source / 'include/constants/vars.h').read_text()
 opponents = (source / 'include/constants/opponents.h').read_text()
 def constant(data, name):
@@ -61,7 +62,7 @@ rawflag(0x500 + constant(opponents, 'TRAINER_MATT'), True)
 var('VAR_MOSSDEEP_SPACE_CENTER_STATE', 3)
 var('VAR_SOOTOPOLIS_CITY_STATE', 6)
 var('VAR_SKY_PILLAR_STATE', 2)
-galactic_first = bool(lib.read8(s['gJourneyBuildRules'] + 2))
+galactic_first = not titan_marker.exists() and bool(lib.read8(s['gJourneyBuildRules'] + 2))
 var('VAR_JOURNEY_GALACTIC_STATE', 7 if galactic_first else 0)
 native('ScriptSetMonMoveSlot', 0, 57, 2)
 native('DisableWildEncounters', 1)
@@ -90,6 +91,9 @@ for index, flag_value in enumerate(hoenn_flags):
     rawflag(flag_value, index != 7)
 
 names = [CITY, PORT, AREA, GYM]
+if titan_marker.exists():
+    from validate_titan_story import MAPS, play_titan_story
+    names.extend(MAPS)
 allowed = set()
 walk_prefix = 'sootopolis-rescue'
 walk_max_ticks = 3500
@@ -143,6 +147,7 @@ assert active_actor(8)
 picture('raft-reaches-the-landing')
 talk_up()
 lugia = kyogre = False
+birds = {}
 for _ in range(220):
     if location() == area_id and active_actor(6) and not lugia:
         picture('lugia-shields-the-raft')
@@ -150,6 +155,13 @@ for _ in range(220):
     if location() == area_id and active_actor(7) and not kyogre:
         picture('kyogre-reacts-to-the-pulse')
         kyogre = True
+    if titan_marker.exists() and location() == area_id:
+        for actor_id, bird in enumerate(('articuno', 'zapdos', 'moltres'), start=9):
+            if bird not in birds and active_actor(actor_id):
+                step(42)
+                picture(bird + '-with-lugia')
+                assert active_actor(6), bird
+                birds[bird] = actor_id
     if location() == port_id and idle() and stage() == 4:
         break
     press(1)
@@ -163,7 +175,11 @@ picture('regular-ferry-preserved')
 press(2)
 finish()
 doors.append(door_probe(CITY, False))
+if titan_marker.exists():
+    assert list(birds) == ['articuno', 'zapdos', 'moltres'], birds
+    titan = play_titan_story(globals())
 lib.stop()
+emulator_workspace.cleanup()
 
 cold = cold_boot(source, args.library, args.output / 'cold-continue', checkpoint,
                  expected_geometry_version=9)
@@ -184,5 +200,13 @@ report = dict(
     capture_sha256={png.name: hashlib.sha256(png.read_bytes()).hexdigest()
                     for png in sorted(args.output.glob('*.png'))},
 )
+if titan_marker.exists():
+    titan_continue = cold_boot(source, args.library, args.output / 'titan-cold-continue',
+                               args.output / 'titan-cave.sav', expected_geometry_version=9)
+    resumed = titan_continue['runs'][-1]
+    assert tuple(resumed['field_map']) == map_id('JourneySanctuaryTitans')
+    assert resumed['player_tile'] == [6, 7] and not resumed['player_surfing']
+    report.update(titan, seabirds=birds, titan_continue=titan_continue,
+                  titan_marker_sha256=hashlib.sha256(titan_marker.read_bytes()).hexdigest())
 (args.output / 'sootopolis-rescue.json').write_text(json.dumps(report, indent=2) + '\n')
 print('Native mandatory Sootopolis rescue, gym gate, Surf and Continue passed', flush=True)
