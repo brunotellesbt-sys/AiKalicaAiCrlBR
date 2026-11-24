@@ -1,6 +1,6 @@
 # Propostas de histórias com lendários
 
-Registro de 19/11/2026. O resgate inicial do arco de Sootopolis está implementado na ROM. [Resgate de Sootopolis](../mods/hoenn/sootopolis-rescue/README.md)
+Registro de 19/11/2026. O resgate de Sootopolis com Lugia e as três aves, o capítulo de Eren e a nova ordem da Galactic estão implementados na camada Titan Story. [Patches e reprodução](../mods/hoenn/titan-story/README.md)
 
 As histórias 1, 2 e 3 foram selecionadas pelo autor. A história 4 incorpora a ligação solicitada com as distorções de espaço-tempo do episódio Galactic. A história 5 é uma proposta exclusiva das edições Gen 1–9, com Palkia e Deoxys como protagonistas e participação de Ultra Beasts, Ultra Wormholes, Necrozma, Hoopa e Zygarde. As histórias 6 e 7 aprofundam as orientações posteriores: Regis ligados a Eren, às três muralhas e ao Titã Fundador; extensões Gen 1–9 de Reiner/Marley e Zeke; e Palkia/Celebi diante de distorções temporais e Pokémon Paradoxo. As correspondências solicitadas estão registradas; cenas, falas e soluções abaixo são propostas para detalhamento futuro.
 
@@ -12,9 +12,26 @@ Atualização posterior do autor: Lusamine e a equipe antagonista da Aether agra
 
 O capítulo Galactic no Abandoned Ship já reúne Dialga, Palkia e Giratina, Eren e Luffy, o arrependimento de Cyrus e o retorno dos viajantes aos seus mundos. Giovanni já participa da campanha como aliado arrependido. Estas propostas respeitam esses acontecimentos.
 
-O resgate inicial de Luffy em Sootopolis é obrigatório na campanha de Hoenn. As demais propostas entram como histórias paralelas. Cada lendário deve aparecer, tomar decisões e interferir nos acontecimentos ao longo de sua missão. Seu encontro opcional posterior deve respeitar a câmara própria e as regras de captura do projeto. [Progressão atual das Ligas e da Galactic](badge-story.md)
+O autor definiu a ordem da reta final nas edições Gen 1–4 e Gen 1–9: Rayquaza encerra a crise climática, o jogador conclui o resgate obrigatório de Luffy em Sootopolis, Eren investiga os tremores com Jirachi e enfrenta a crise de Groudon e Regigigas, e a Galactic fecha a história principal no navio. Eren e Luffy retornam aos seus mundos nesse capítulo. As histórias paralelas que ocorrem depois podem explorar as consequências das distorções com seus próprios protagonistas. [Progressão atual das Ligas e da Galactic](badge-story.md)
+
+Na camada Titan Story, o navio também exige a vitória na competição da Frontier, que reúne Eren e Luffy antes da despedida. Saves que já registraram a primeira batalha da sala final podem concluir o navio. Quem já viu a despedida pode fazer o resgate com o reencontro pela passagem temporária. [Progressão e compatibilidade](../mods/hoenn/titan-story/README.md)
+
+Cada lendário deve aparecer, tomar decisões e interferir nos acontecimentos ao longo de sua missão. Seu encontro opcional posterior deve respeitar a câmara própria e as regras de captura do projeto.
 
 A história deve reconhecer lendários já capturados, sem criar um segundo indivíduo de captura para substituir o original. Os limites de geração de cada edição também precisam ser respeitados.
+
+### Ritmo da campanha atual
+
+A leitura dos mapas e scripts confirmou gatilhos de rival após o Weather Institute na Rota 119 e no 7º andar da Silph Co. A progressão por insígnias também permite concentrar missões por região ou adiar encontros de Eren e Luffy. [Missões e encontros atuais](historia-e-missoes.md)
+
+| Trecho | Sequência na ROM atual |
+|---|---|
+| Hoenn, após quatro insígnias | Mauville e o Weather Institute ficam pendentes na mesma etapa. Depois de Shelly, há um gatilho automático de May ou Brendan no caminho da Rota 119 para Fortree. |
+| Hoenn, após sete insígnias | Space Center, Seafloor Cavern com Archie e Giovanni, Rayquaza e o resgate em Sootopolis antecedem o último ginásio. A Silph Co. também pode virar uma viagem pendente se o jogador avançou primeiro em Hoenn. |
+| Kanto, após quatro e seis insígnias | Fuji e as incursões Magma/Aqua ficam concentrados na etapa das quatro insígnias, em vários mapas. Na visita obrigatória à Silph Co. após seis, o rival está no 7º andar, Giovanni no 11º, e há cura disponível no 9º. |
+| Rotas e reta final | Dois encontros de Eren ficam nas rotas vizinhas 112 e 113. Os doze encontros podem acumular até a porta do setor final. Luffy tem um na própria Rota 108, onde ficam os 19 recrutas do navio, as duas duplas, Cyrus e Giratina. |
+
+A sequência implantada usa uma pista curta no porto e abre a investigação de Eren quando o jogador volta à Fiery Path pela Rota 112. O último ginásio pode ser feito no intervalo. O trecho mais carregado de missões obrigatórias começa na sétima insígnia de Hoenn, normalmente em Mossdeep. O caso mais direto de uma batalha de rival logo após uma missão é a Rota 119, onde May ou Brendan aguardam no caminho para Fortree após o Weather Institute. [Competição e requisitos atuais](badge-story.md)
 
 ## Regras de leitura das versões
 
@@ -73,18 +90,18 @@ No final, Darkrai entra no pesadelo coletivo enquanto Cresselia mantém uma saí
 
 Arco comum às edições Gen 1–4 e Gen 1–9. Parte das consequências da luta entre Kyogre e Groudon, preservando a intervenção de Rayquaza e a resolução climática já ocorridas.
 
-Em Sootopolis, Luffy ainda está no mundo do jogador se a despedida no navio estiver pendente. Se o jogador já concluiu a Galactic por outra ordem de ginásios, o resgate usa o reencontro por uma passagem temporária. Luffy vem do período após o primeiro Sabaody, e o que ele revela sobre o Governo Mundial se limita àquilo que consegue reconhecer ou comprovar na missão.
+Na ordem planejada, Luffy segue no mundo do jogador até a despedida no navio. Ele vem do período após o primeiro Sabaody, e o que revela sobre o Governo Mundial se limita àquilo que consegue reconhecer ou comprovar na missão.
 
 ### Resgate obrigatório no porto de Sootopolis
 
 A cena de Rayquaza encerra a tempestade. Ao voltar a circular por Sootopolis, o jogador descobre pelo capitão que um barco saiu para buscar moradores e perdeu contato quando a água voltou a subir com o céu limpo. O guia do ginásio aponta o porto se o jogador for direto ao último desafio de Hoenn. [Porto e capitão existentes](porto-sootopolis.md)
 
 1. Luffy embarca para buscar os desaparecidos. O capitão conduz a embarcação até a área de resgate.
-2. O jogador segue Manaphy por Surf até os moradores, abre o caminho de volta e os leva até o barco. Lugia desvia uma onda da embarcação durante a retirada.
+2. O jogador segue Manaphy por Surf até os moradores, abre o caminho de volta e sinaliza para Lugia. Lugia segura a onda e chama as três aves. Articuno congela a água que ameaça a jangada e permite que Luffy a puxe de volta. Zapdos ilumina o canal e a jangada avança. Moltres aquece os moradores que Luffy traz para a praia e restaura a equipe do jogador.
 3. Na volta, Kyogre reage a um pulso que vem do fundo. O jogador avista uma peça submersa, e o capitão registra o local para investigar depois.
 4. A missão termina quando todos desembarcam e o capitão confirma o resgate. A confirmação libera o último ginásio de Hoenn assim que os demais requisitos atuais forem cumpridos.
 
-A investigação submarina abre quando o resgate e o capítulo Galactic estiverem concluídos, em qualquer ordem. É nela que Luffy reconhece os métodos do Governo Mundial. O confronto com os agentes e o epílogo de Shaymin seguem como continuação opcional.
+A investigação submarina, o confronto com os agentes e o epílogo de Shaymin são uma continuação opcional do resgate. Entre o resgate e o navio, Luffy participa e reconhece os métodos do Governo Mundial. Para quem visitar a área após o navio, a proposta é que o capitão e os moradores contem o que ficou pendente e Manaphy guie a investigação submarina.
 
 O capitão oferece a missão a quem já concluiu Rayquaza. Em saves que já têm as oito insígnias de Hoenn, ele também oferece o resgate na volta ao porto e as conquistas do jogador são preservadas. [Casos validados no emulador](design/sootopolis-rescue/README.md)
 
@@ -276,12 +293,12 @@ Os encontros opcionais e as capturas anteriores continuam preservados. O roteiro
 
 | Faixa de gerações | Conteúdo desta versão |
 |---|---|
-| Gen 1–4 | Conclusão própria com Eren, Groudon, Regirock/Maria, Regice/Rose, Registeel/Sina e Regigigas/Fundador e seu juramento. Não contém Regieleki, Regidrago ou os episódios de Reiner/Marley e Zeke vinculados a eles. |
-| Gen 1–9 | O mesmo núcleo e suas correspondências, acrescidos de Regieleki/Reiner/Marley e Regidrago/Zeke. O enredo de Eren já registrado é preservado; este bloco somente explicita sua divisão por edição. |
+| Gen 1–4 | Eren, Jirachi e Groudon percorrem o arco completo com Regirock/Maria, Regice/Rose, Registeel/Sina e o juramento de Regigigas/Fundador. |
+| Gen 1–9 | O mesmo núcleo com Jirachi, acrescido de Regieleki/Reiner/Marley e Regidrago/Zeke. |
 
 ### Edições e correspondências
 
-O núcleo com Groudon, Regirock, Regice, Registeel e Regigigas existe nas edições Gen 1–4 e Gen 1–9, Normal e Hard. Regieleki/Reiner/Marley e Regidrago/Zeke são extensões exclusivas das edições Gen 1–9.
+O núcleo jogável inclui Jirachi, Groudon, Regirock, Regice, Registeel e Regigigas nas duas faixas de gerações, Normal e Hard. Regieleki e Regidrago aparecem na Gen 1–9. Eles reproduzem as memórias de Reiner em Marley e a tentativa de Zeke de alcançar o Fundador. A versão jogável usa interações com os selos e com Groudon. As cenas expandidas abaixo registram detalhes da proposta de roteiro.
 
 | Pokémon | Representação solicitada | Conflito da proposta |
 |---|---|---|
@@ -290,16 +307,29 @@ O núcleo com Groudon, Regirock, Regice, Registeel e Regigigas existe nas ediç�
 | Registeel | Muralha Sina | Segurança e privilégios concentrados no centro. |
 | Regigigas | Titã Fundador e intenção do rei das muralhas | Proteger o refúgio e conservar o juramento de renúncia à guerra. |
 | Groudon | Titã de Ataque, rugido da terra e imagem do Rumbling | O impulso de avançar, a terra que desperta e intenções de Eren ainda desconhecidas neste período. |
+| Jirachi | O desejo de liberdade | Ouve o desejo de Eren e o de quem ainda se sente protegido atrás dos muros. |
 | Regieleki | Reiner, Marley e avanços tecnológicos; somente Gen 1–9 | Uma força viva transformada em infraestrutura e arma de um Estado. |
 | Regidrago | Zeke e seus métodos bestiais; somente Gen 1–9 | Manipulação de aliados e imposição do fim de uma linhagem sob promessa de salvação. |
 
 As associações são simbólicas neste crossover. Os Pokémon mantêm identidade e vontade. A imagem do Rumbling nasce da convergência entre a capacidade coordenadora do Fundador/Regigigas e o despertar terrestre de Groudon; não atribui ao Titã de Ataque, isoladamente, o poder canônico do Fundador.
 
+### Encaixe entre o resgate de Sootopolis e o navio
+
+O despertar de Groudon no Esconderijo Magma, na etapa das cinco insígnias de Hoenn, prenuncia o arco. Depois da intervenção de Rayquaza e do resgate obrigatório de Luffy, um tremor localizado volta a ser sentido na Rota 112. O capitão pode mencionar o relato em uma fala curta. Eren ouve o chão vibrar na direção da Fiery Path. Perto da Wishstar Chamber, ele encontra Jirachi e percebe que as inscrições reagiram ao pulso. A investigação começa na volta à Rota 112, e a Titan Cave reúne os três perímetros e o núcleo de Regigigas. [Missões de Hoenn](historia-e-missoes.md) · [Localização das câmaras](cavernas-lendarias.md)
+
+Para garantir a ordem em campanhas com ginásios livres, a conclusão do arco deve liberar a etapa Galactic junto das 22 insígnias e dos encontros já exigidos. Entre a pista no porto e a volta à Rota 112, o jogador pode explorar e desafiar o último ginásio de Hoenn quando ele estiver disponível. As cenas dos lendários pertencem à missão, e as capturas usam os requisitos das câmaras. [Regra atual do navio](badge-story.md#galactic-na-22%C2%AA-ins%C3%ADgnia)
+
+### Jirachi e o desejo de liberdade
+
+Eren deseja ver o céu sem um muro decidindo até onde ele pode ir. Jirachi ilumina uma inscrição esquecida do refúgio, deixada por moradores que pediam uma saída para procurar parentes do outro lado. As estrelas projetadas nas três faces do selo revelam a antiga passagem de evacuação. Eren quer abri-la de imediato. O jogador precisa percorrer os três perímetros e recuperar os mecanismos que permitem abrir a passagem com as famílias em segurança.
+
+Quando o tremor chega ao núcleo, Jirachi mantém aceso o caminho de saída e os Regis contêm a vibração. Regigigas abre uma passagem que os moradores podem atravessar por vontade própria. Eren segura a saída enquanto as últimas pessoas passam e observa o chão ainda vibrando do lado de fora. A cena realiza o resgate e deixa em aberto até onde ele levaria seu desejo.
+
 ### Eren e a diferença entre os tempos
 
-O roteiro atual situa Eren perto do fim da segunda temporada e conclui seu retorno no capítulo Galactic. A proposta preserva esse encerramento e cria um reencontro temporário posterior.
+O roteiro situa Eren perto do fim da segunda temporada. Ele ainda está no mundo do jogador durante a missão da Titan Cave. Sua despedida e seu retorno acontecem mais tarde, no navio.
 
-Os selos dos Regis reagem à ressonância do experimento e à marca deixada pelo contato de Eren com a Titã Sorridente. Palkia mantém uma passagem localizada. Eren chega de um ponto próximo de seu retorno; na Gen 1–9, Reiner e Zeke chegam de momentos posteriores de seu próprio mundo.
+Os selos dos Regis reagem ao despertar de Groudon e à marca deixada pelo contato de Eren com a Titã Sorridente. Na Gen 1–9, uma brecha precursora traz Reiner e Zeke de momentos posteriores de seu mundo. No navio, o jogador poderá reconhecer o padrão de energia visto na Titan Cave quando descobrir os experimentos Galactic.
 
 Eles conhecem acontecimentos que Eren ainda ignora. As falas revelam essas diferenças aos poucos. Fragmentos de futuro e imagens desconexas não são tratados como uma decisão já tomada por este Eren.
 
@@ -361,7 +391,7 @@ Fala proposta de um registro: "Que nenhum herdeiro transforme o abrigo destes gi
 
 ### Groudon / Ataque — A terra ainda quer avançar
 
-As cicatrizes do confronto entre Groudon e Kyogre continuam presentes. Pulsos do núcleo despertam áreas da terra que ainda conservam energia daquele combate. Pedras vibram em sequência e o chão parece responder a passos distantes.
+Na Titan Cave, o novo pulso de Groudon alcança o núcleo dos Regis. As pedras vibram em sequência e o chão parece responder a passos distantes. Eren reconhece o som que ouviu quando Groudon despertou no Esconderijo Magma.
 
 Groudon aparece como a força que rompe limites e avança. Para Eren, esse despertar se mistura ao impulso de atravessar os muros e alcançar a liberdade. As imagens mostram a escala assustadora da terra quando ela começa a se mover.
 
@@ -371,7 +401,7 @@ A ligação ao Rumbling permanece em presságios: linhas de tremores, silhuetas 
 
 Não há declaração antecipada de seu plano futuro nem decisão obrigatória de repetir um massacre. Groudon também não representa obediência a Eren: o Pokémon tem reações próprias ao desequilíbrio e precisa ser enfrentado ou contido conforme o desenho da cena.
 
-No clímax Gen 1–4, o jogador impede uma realimentação entre os pulsos terrestres e a rede dos guardiões. Regigigas conserva a proteção, os três Regis abrem os caminhos necessários e Groudon deixa de responder à escalada. Eren retorna ao seu mundo com perguntas e impressões, não com uma conclusão narrada sobre seu destino.
+No clímax Gen 1–4, o jogador impede uma realimentação entre os pulsos terrestres e a rede dos guardiões. Regigigas conserva a proteção, os três Regis abrem os caminhos necessários e Groudon deixa de responder à escalada. Eren sai da Titan Cave com perguntas sobre o poder e a liberdade. Ele leva essa lembrança para seu último encontro no navio.
 
 ### Extensão Gen 1–9 — Regieleki, Reiner e a promessa de Marley
 
@@ -415,7 +445,7 @@ A Gen 1–4 oferece um arco completo com os três perímetros, o juramento de Re
 
 A Gen 1–9 amplia essa base com a militarização de Marley e a tentativa de Zeke. A ativação forçada do núcleo agrava as cicatrizes temporais já existentes, preparando a investigação de Palkia e Celebi na história 7.
 
-Os reencontros têm despedida própria e reconhecem as diferenças de época entre os personagens. As capturas dos Regis e de Groudon continuam únicas, preservando as câmaras, os indivíduos já obtidos e os acontecimentos da campanha.
+O encerramento na Titan Cave reconhece as diferenças de época entre os personagens. A despedida de Eren acontece no navio. Os encontros de captura de Jirachi, dos Regis e de Groudon usam suas câmaras e reconhecem indivíduos já obtidos.
 
 ## 7. Palkia e Celebi, Sada e Turo — Os amanhãs que atravessaram a porta
 
@@ -597,7 +627,7 @@ Formas evolutivas, encontros únicos e eventuais participantes já capturados pr
 
 | Faixa de gerações | Conteúdo desta versão |
 |---|---|
-| Gen 1–4 | Epílogo completo de Shaymin após a recuperação marítima, com a comunidade, o solo e a água afetados e a despedida de Luffy. |
+| Gen 1–4 | Epílogo completo de Shaymin após a recuperação marítima, com a comunidade, o solo e a água afetados e uma cena de reconstrução com Luffy antes do navio. |
 | Gen 1–9 | O mesmo epílogo completo. A aparição posterior de Shaymin em 14 é outro episódio do mesmo indivíduo, sem duplicação de captura e sem tornar 14 obrigatório aqui. |
 
 Disponível nas edições Gen 1–4 e Gen 1–9. Epílogo da história marítima com Luffy, Kyogre, Lugia e Manaphy.
@@ -608,7 +638,7 @@ Shaymin aparece em pequenos pontos onde a vegetação ainda resiste. Os moradore
 
 A investigação revela que ali passa a água contaminada que continua prejudicando a região. A recuperação depende de interromper essa origem, limpar os caminhos de água e ajudar os moradores, junto da atuação de Shaymin.
 
-Luffy participa de uma última cena ajudando na reconstrução e se despede das pessoas que salvou. O momento mostra o trabalho que continua depois de vencer a crise.
+Antes do navio, Luffy ajuda na reconstrução e visita as pessoas que salvou. Depois do navio, o capitão pode acompanhar essa etapa com os moradores. A despedida de Luffy e seu retorno ao próprio mundo acontecem no capítulo Galactic.
 
 Uma flor nascendo no antigo ponto de evacuação funciona como recompensa visual. As mudanças de ambiente pertencem ao desenho futuro da missão, com revisão própria antes de alterar mapas.
 

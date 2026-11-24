@@ -16,6 +16,8 @@ PORT = 'JourneySootopolisHarbor'
 AREA = 'JourneySootopolisRescue'
 GYM = 'SootopolisCity_Gym_1F'
 RESCUE = 0x40E5
+titan_marker = source / '.journey-titan-story'
+playable_seabirds = titan_marker.exists() and json.loads(titan_marker.read_bytes()).get('playable_seabird_rescue')
 variables = (source / 'include/constants/vars.h').read_text()
 opponents = (source / 'include/constants/opponents.h').read_text()
 def constant(data, name):
@@ -40,12 +42,16 @@ def talk_up():
     step(20)
     press(1)
 
+def actor_position(local_id):
+    for slot in range(16):
+        address = s['gObjectEvents'] + 36 * slot
+        if lib.read8(address) & 1 and lib.read8(address + 8) == local_id:
+            return lib.read16(address + 16) - 7, lib.read16(address + 18) - 7
+    return None
+
+
 def active_actor(local_id):
-    return any(
-        lib.read8(s['gObjectEvents'] + 36 * slot) & 1
-        and lib.read8(s['gObjectEvents'] + 36 * slot + 8) == local_id
-        for slot in range(16)
-    )
+    return actor_position(local_id) is not None
 
 for index, flag_value in enumerate(hoenn_flags):
     rawflag(flag_value, index != 7)
@@ -61,7 +67,7 @@ rawflag(0x500 + constant(opponents, 'TRAINER_MATT'), True)
 var('VAR_MOSSDEEP_SPACE_CENTER_STATE', 3)
 var('VAR_SOOTOPOLIS_CITY_STATE', 6)
 var('VAR_SKY_PILLAR_STATE', 2)
-galactic_first = bool(lib.read8(s['gJourneyBuildRules'] + 2))
+galactic_first = not titan_marker.exists() and bool(lib.read8(s['gJourneyBuildRules'] + 2))
 var('VAR_JOURNEY_GALACTIC_STATE', 7 if galactic_first else 0)
 native('ScriptSetMonMoveSlot', 0, 57, 2)
 native('DisableWildEncounters', 1)
@@ -90,6 +96,9 @@ for index, flag_value in enumerate(hoenn_flags):
     rawflag(flag_value, index != 7)
 
 names = [CITY, PORT, AREA, GYM]
+if titan_marker.exists():
+    from validate_titan_story import MAPS, play_titan_story
+    names.extend(MAPS)
 allowed = set()
 walk_prefix = 'sootopolis-rescue'
 walk_max_ticks = 3500
@@ -141,15 +150,62 @@ assert not active_actor(4) and not active_actor(5)
 walk((AREA, 6, 19))
 assert active_actor(8)
 picture('raft-reaches-the-landing')
+aid = {}
+if playable_seabirds:
+    hp_field, max_hp_field = abi[47:49]
+    full_hp = native('GetMonData2', party, max_hp_field)
+    assert full_hp > 1
+    lib.write16(scratch, 1)
+    native('SetMonData', party, hp_field, scratch)
+    talk_up()
+    wait_for(lambda: task('Task_HandleYesNoInput'), 'signal-lugia')
+    step(12)
+    picture('choose-when-to-signal-lugia')
+    press(2)
+    finish()
+    assert stage() == 2 and actor_position(8) == (3, 20) and not active_actor(6)
+    assert native('GetMonData2', party, hp_field) == 1
 talk_up()
+if playable_seabirds:
+    wait_for(lambda: task('Task_HandleYesNoInput'), 'signal-lugia-again')
+    step(12)
+    press(1)
+raft_positions = {'articuno': (3, 20), 'zapdos': (3, 17)}
 lugia = kyogre = False
-for _ in range(220):
+birds = {}
+for _ in range(360):
     if location() == area_id and active_actor(6) and not lugia:
         picture('lugia-shields-the-raft')
         lugia = True
     if location() == area_id and active_actor(7) and not kyogre:
         picture('kyogre-reacts-to-the-pulse')
         kyogre = True
+    if titan_marker.exists() and location() == area_id:
+        if playable_seabirds and 'drifting_raft' not in aid and actor_position(8) == (3, 22):
+            step(42)
+            assert active_actor(6)
+            aid['drifting_raft'] = actor_position(8)
+            picture('current-pulls-the-raft')
+        for actor_id, bird in enumerate(('articuno', 'zapdos', 'moltres'), start=9):
+            if bird in birds or not active_actor(actor_id):
+                continue
+            if playable_seabirds:
+                if bird in raft_positions:
+                    if actor_position(8) != raft_positions[bird]:
+                        continue
+                    aid[bird + '_raft'] = actor_position(8)
+                else:
+                    if actor_position(4) != (7, 17) or actor_position(5) != (8, 17):
+                        continue
+                    healed = native('GetMonData2', party, hp_field)
+                    if healed != full_hp:
+                        continue
+                    aid['moltres_castaways'] = [actor_position(4), actor_position(5)]
+                    aid['moltres_hp'] = [1, healed]
+            step(42)
+            picture(bird + '-with-lugia')
+            assert active_actor(6), bird
+            birds[bird] = actor_id
     if location() == port_id and idle() and stage() == 4:
         break
     press(1)
@@ -163,7 +219,14 @@ picture('regular-ferry-preserved')
 press(2)
 finish()
 doors.append(door_probe(CITY, False))
+if titan_marker.exists():
+    assert list(birds) == ['articuno', 'zapdos', 'moltres'], birds
+    if playable_seabirds:
+        assert aid['drifting_raft'] == (3, 22) and aid['moltres_hp'] == [1, full_hp], aid
+        assert native('GetMonData2', party, hp_field) == full_hp
+    titan = play_titan_story(globals())
 lib.stop()
+emulator_workspace.cleanup()
 
 cold = cold_boot(source, args.library, args.output / 'cold-continue', checkpoint,
                  expected_geometry_version=9)
@@ -184,5 +247,15 @@ report = dict(
     capture_sha256={png.name: hashlib.sha256(png.read_bytes()).hexdigest()
                     for png in sorted(args.output.glob('*.png'))},
 )
+if titan_marker.exists():
+    titan_continue = cold_boot(source, args.library, args.output / 'titan-cold-continue',
+                               args.output / 'titan-cave.sav', expected_geometry_version=9)
+    resumed = titan_continue['runs'][-1]
+    assert tuple(resumed['field_map']) == map_id('JourneySanctuaryTitans')
+    assert resumed['player_tile'] == [6, 7] and not resumed['player_surfing']
+    report.update(titan, seabirds=birds, titan_continue=titan_continue,
+                  titan_marker_sha256=hashlib.sha256(titan_marker.read_bytes()).hexdigest())
+    if playable_seabirds:
+        report['seabird_field_observations'] = aid
 (args.output / 'sootopolis-rescue.json').write_text(json.dumps(report, indent=2) + '\n')
 print('Native mandatory Sootopolis rescue, gym gate, Surf and Continue passed', flush=True)

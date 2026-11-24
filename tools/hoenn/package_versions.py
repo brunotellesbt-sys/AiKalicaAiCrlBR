@@ -32,8 +32,12 @@ def package(source,output):
         variants=rows,all_other_bytes_identical=True,validated=False)
  pwt_marker=source/'.journey-pwt-complete-rosters'
  rescue_marker=source/'.journey-sootopolis-rescue'
- if rescue_marker.exists() or pwt_marker.exists() or (source/'.journey-pwt-galar-za-megas').exists() or (source/'.journey-pwt-official-parties').exists():
-  if rescue_marker.exists():
+ titan_marker=source/'.journey-titan-story'
+ if titan_marker.exists() or rescue_marker.exists() or pwt_marker.exists() or (source/'.journey-pwt-galar-za-megas').exists() or (source/'.journey-pwt-official-parties').exists():
+  if titan_marker.exists():
+   from prepare_titan_story import PRIOR,LAYER
+   pwt_marker=titan_marker
+  elif rescue_marker.exists():
    from prepare_sootopolis_rescue import PRIOR,LAYER
    pwt_marker=rescue_marker
   elif pwt_marker.exists():
