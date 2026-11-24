@@ -1,3 +1,19 @@
+GALAR E MEGAS DE LEGENDS Z-A NO PWT — 24/11/2026
+
+O pedido atual é usar as Mega Evoluções de Legends Z-A quando couberem
+nos times do elenco existente. A camada `pwt-galar-za-megas` parte do merge
+`526876ca` do PR119. Revê 13 equipes do Champion Cup e usa os vínculos de
+Mega e as pedras já compilados para equipar adversários compatíveis.
+
+As quatro edições mostraram Raichu Mega Y do jogador e Raichu Mega X da IA
+de Lt. Surge na mesma partida do PWT. A Gen 1–4 permite 17 formas e a Gen
+1–9 permite 49, com 45 pedras no estoque de Ever Grande. A matriz conferiu
+446 times nas quatro edições. Os relatórios e os patches cumulativos ficam
+em [mods/hoenn/pwt-galar-za-megas](../mods/hoenn/pwt-galar-za-megas/README.md).
+
+Restam 73 equipes para revisar. A revisão de histórias, missões e campanha
+continua programada para depois do PWT e das mecânicas.
+
 PWT E MECÂNICAS DE BATALHA — 23/11/2026
 
 Pedido atual: “vamos primeiro sobre fechar o pwt e testar mais mecânicas no
@@ -19,9 +35,9 @@ sem reforço. Dipplin e Girafarig passaram pelos menus e pelo recarregamento
 do save. A edição Gen 1–9 Normal testada tem SHA-256
 `d5c1fa8b9490cdb72da76d2ce7bcadf272f85233c8252f09e795eb362b54a643`.
 
-O próximo lote do PWT precisa conferir as 86 referências restantes e preparar
-os participantes de Legends Z-A. As histórias dos lendários, a revisão do
-mundo durante as missões e a validação integral da campanha ficaram para o fim.
+O próximo lote do PWT cobre 13 referências de Galar e o uso das Megas de
+Legends Z-A pelos treinadores existentes. As histórias dos lendários, a revisão
+do mundo durante as missões e a validação integral da campanha ficaram para o fim.
 
 ROTAS H, J E K — 23/11/2026
 

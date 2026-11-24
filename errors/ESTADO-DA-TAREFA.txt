@@ -1,3 +1,18 @@
+GALAR E MEGAS DE LEGENDS Z-A NO PWT — 24/11/2026
+
+Pedido literal: “Não quero participantes de legends z-a, mas quero a
+possibilidade das megas de legends z-a de serem usadas quando aplicável,
+continue o progresso”. O lote preserva as identidades dos 162 treinadores
+e revê 13 times de Galar. Restam 73 equipes para revisar.
+
+Em prepare_pwt_galar_za_megas.py, a preparação do time escolhe uma pedra
+compatível de Z-A com a espécie e o limite da edição. O teste Hard inicial
+usava Thunderbolt e o Raichu do jogador desmaiava antes da captura entre
+turnos. O teste passou com Protect como primeiro golpe, preservando os
+atributos, a IA e a resolução do combate. A matriz atual confirmou as duas
+Megas de Raichu nas quatro edições. Relatórios e hashes correspondem aos
+quatro patches em mods/hoenn/pwt-galar-za-megas/validation.json.
+
 PWT E MECÂNICAS DE BATALHA — 23/11/2026
 
 Pedido literal mais recente: “Continue”. Ordem definida antes: fechar o PWT
@@ -14,8 +29,8 @@ Os patches e as provas por edição são vinculados em
 mods/hoenn/pwt-official-review/validation.json. Os quatro BPS reproduzem os
 binários testados. A matriz de 446 equipes, as duas copas, as partidas sem
 reforço contra Glacia e Shauntal, os testes de evolução pelo menu e as
-verificações de batalha passaram. Priorizar agora as 86
-referências restantes no PWT e, depois, os participantes de Legends Z-A.
+verificações de batalha passaram. O lote seguinte prioriza 13 referências de
+Galar e as Megas de Legends Z-A com os participantes atuais do PWT.
 Histórias dos lendários, mundo durante as missões e campanha integral
 ficaram para o fim, conforme o pedido.
 

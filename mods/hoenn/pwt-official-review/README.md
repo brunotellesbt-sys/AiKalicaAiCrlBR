@@ -35,4 +35,4 @@ Parta de uma cópia privada da fonte compilável com a camada `atlas-route-pruni
 
 ## Trabalho restante
 
-Das 94 entradas fora deste lote, cinco têm dados de Platinum já conferidos no repositório. Ash, Eren e Luffy são convidados com equipes próprias. Restam 86 entradas para pesquisa e revisão. A triagem de Legends Z-A já confirmou candidatos em batalhas de promoção e revanche, incluindo Canari, Ivor, Corbeau, Jacinthe e Grisham. Os candidatos ainda precisam de equipes 6×6 adaptadas e de validação no torneio. [Missões e partidas de promoção](https://www.serebii.net/legendsz-a/mainmissions.shtml) · [Revanche no Infinite Z-A Royale](https://bulbapedia.bulbagarden.net/wiki/Infinite_Z-A_Royale)
+Das 94 entradas fora deste lote, cinco têm dados de Platinum já conferidos no repositório. Ash, Eren e Luffy são convidados com equipes próprias. A revisão seguinte cobre 13 revanches de Galar e o uso das Mega Evoluções de Legends Z-A pelo elenco existente. [Galar e Megas no PWT](../pwt-galar-za-megas/README.md)
