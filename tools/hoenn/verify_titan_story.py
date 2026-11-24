@@ -18,6 +18,7 @@ CAPTURES = {bird + '-with-lugia.png' for bird in BIRDS} | {
     'titan-cave-concluded.png',
     'galactic-waits-for-rescue.png', 'galactic-waits-for-titan-cave.png',
     'galactic-waits-for-frontier.png', 'galactic-finale-entry.png',
+    'choose-when-to-signal-lugia.png', 'current-pulls-the-raft.png',
 }
 
 
@@ -29,6 +30,7 @@ def verify(directory=DIRECTORY, *, output=None, base_directory=None):
     marker = json.loads(checked(directory / 'source-marker.json', manifest['source_marker_sha256']))
     assert marker['layer'] == LAYER and marker['complete_state'] == 8 and marker['rescue_state'] == 4
     assert marker['needs_qualifier_before_finale'] is True
+    assert marker['playable_seabird_rescue'] is True
     editions = manifest['editions']
     assert editions.keys() == prior['editions'].keys() == VARIANTS.keys() | {TEST_EDITION}
 
@@ -71,6 +73,11 @@ def verify(directory=DIRECTORY, *, output=None, base_directory=None):
                     'eren_started_after_rescue', 'native_titan_complete', 'galactic_fixtures_and_physical_gate'):
             assert report[key] is True, (name, key)
         assert report['seabirds'] == dict(zip(BIRDS, (9, 10, 11)))
+        aid = report['seabird_field_observations']
+        assert aid['drifting_raft'] == [3, 22] and aid['articuno_raft'] == [3, 20]
+        assert aid['zapdos_raft'] == [3, 17] and aid['moltres_castaways'] == [[7, 17], [8, 17]]
+        injured_hp, healed_hp = aid['moltres_hp']
+        assert injured_hp == 1 and healed_hp > injured_hp
         assert report['titan_stage'] == 8 and report['region2_regs'] is (national == 1025)
         boot = report['titan_continue']
         assert boot['passed'] and boot['rom_sha256'] == edition['rom_sha256']

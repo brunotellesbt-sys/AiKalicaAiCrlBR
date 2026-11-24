@@ -24,7 +24,7 @@ O Rock Tunnel é outro local e mantém a missão anterior com quatro membros do 
 - Após cinco insígnias, conclua Magma Hideout.
 - Após seis insígnias, derrote Matt e conclua a fuga do submarino no esconderijo Aqua de Lilycove.
 - Após sete insígnias, Steven ajuda contra Maxie e Tabitha no Space Center. Depois, a missão de Archie em Seafloor Cavern exige também a vitória sobre Giovanni na Silph Co. Giovanni participa como aliado, arrependido, explicando que o propósito inicial da Rocket se perdeu e que quer reparar seus erros.
-- Conclua a crise climática de Sootopolis e o episódio de Rayquaza. Em seguida, fale com o capitão do porto e complete o resgate com Luffy. Lugia protege a jangada, Articuno detém a água que atinge o barco, Zapdos ilumina o recife e Moltres aquece os resgatados. A confirmação do desembarque libera o último ginásio de Hoenn. [Resgate e capítulo da Titan Cave](../mods/hoenn/titan-story/README.md)
+- Conclua a crise climática de Sootopolis e o episódio de Rayquaza. Em seguida, fale com o capitão do porto e complete o resgate com Luffy. Quando a jangada chegar, sinalize para Lugia proteger o grupo e chamar as três aves. Articuno estabiliza a jangada, Zapdos ilumina a passagem para Luffy guiá-la e Moltres aquece os resgatados na praia e cura sua equipe. A confirmação do desembarque libera o último ginásio de Hoenn. [Resgate e capítulo da Titan Cave](../mods/hoenn/titan-story/README.md)
 
 Os guias dos ginásios fechados indicam o evento pendente e o local. As missões bloqueiam ginásios; as rotas permanecem abertas, com as condições aquáticas de Surf/Dive/Waterfall e as missões de bicicleta.
 

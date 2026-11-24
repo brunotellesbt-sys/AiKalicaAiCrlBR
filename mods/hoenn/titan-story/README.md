@@ -1,6 +1,6 @@
 # Resgate de Sootopolis, Titan Cave e final Galactic
 
-Depois de Rayquaza, fale com o capitão em Sootopolis. Ao recolher a jangada, Lugia protege o grupo, Articuno detém a água que atinge a embarcação, Zapdos ilumina a passagem entre os recifes e Moltres aquece os moradores resgatados por Luffy.
+Depois de Rayquaza, fale com o capitão em Sootopolis. Após alcançar os moradores, volte à praia e escolha quando sinalizar para Lugia. Lugia segura a onda e chama as três aves. Articuno estabiliza a jangada e permite que Luffy a puxe de volta. O clarão de Zapdos marca o canal e a jangada avança. Moltres aquece os moradores na praia e restaura a equipe do jogador.
 
 Com todos de volta ao porto, siga pela Rota 112 até a Wishstar Chamber na Fiery Path. Eren e Jirachi revelam os selos. A Titan Cave fica no mar perto de Three Island. Interaja com os guardiões das três muralhas e ajude Regigigas e Groudon a interromper os tremores. Na Gen 1–9 e na TESTE, Regieleki e Regidrago mostram as memórias de Reiner e Zeke como passos adicionais. As capturas seguem as regras das câmaras individuais.
 

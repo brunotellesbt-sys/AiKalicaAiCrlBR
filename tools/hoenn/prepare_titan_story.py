@@ -14,12 +14,17 @@ PRIOR = PREVIOUS_LAYERS + [PREVIOUS]
 DATA = Path(__file__).parent / 'data/titan-story'
 
 
-def add_actors(layer, name, rows, expected_tiles):
+def add_actors(layer, name, rows, expected_tiles, *, scene_tiles=()):
     path = f'data/maps/{name}/map.json'
     scene = read_json(layer, path)
     layouts = read_json(layer, 'data/layouts/layouts.json')['layouts']
     layout, = [row for row in layouts if row['id'] == scene['layout']]
     words = [word for word, in struct.iter_unpack('<H', read(layer, layout['blockdata_filepath']))]
+    for x, y, expected in scene_tiles:
+        if not 0 <= x < layout['width'] or not 0 <= y < layout['height']:
+            raise ValueError(('Story movement outside the map', name, x, y))
+        if words[y * layout['width'] + x] != expected:
+            raise ValueError(('Unexpected floor along the story movement', name, x, y))
     occupied = {(event['x'], event['y']) for key in ('object_events', 'warp_events', 'coord_events', 'bg_events')
                 for event in scene[key]}
     for graphics, x, y, direction, script, flag in rows:
@@ -40,11 +45,13 @@ def prepare(source):
     if previous := layer.existing():
         return previous
 
+    raft_path = [(3, y, OCEAN) for y in range(17, 23)]
+    dry_landing = [(x, 17, 0x310D) for x in (7, 8)]
     add_actors(layer, AREA, [
         ('ARTICUNO', 9, 16, 'DOWN', 'Idle', 'FLAG_TEMP_5'),
         ('ZAPDOS', 11, 16, 'DOWN', 'Idle', 'FLAG_TEMP_5'),
         ('MOLTRES', 10, 17, 'DOWN', 'Idle', 'FLAG_TEMP_5'),
-    ], {OCEAN})
+    ], {OCEAN}, scene_tiles=raft_path + dry_landing)
     add_actors(layer, 'JourneyLegendRoom0385', [
         ('JOURNEY_EREN', 17, 20, 'DOWN', 'WishstarEren', 'FLAG_TEMP_5'),
         ('SPECIES(JIRACHI)', 15, 19, 'DOWN', 'Idle', 'FLAG_TEMP_6'),
@@ -75,6 +82,10 @@ def prepare(source):
         replace(layer, path, start + 'JourneySanctuary_Sync\n', start + f'JourneyTitanStory_{transition}\n')
 
     rescue = f'data/maps/{AREA}/scripts.inc'
+    replace(layer, rescue, 'JourneyRescue_EscortHome::\n',
+            'JourneyRescue_EscortHome::\n\tlockall\n'
+            '\tmsgbox JourneyTitanStory_SignalText, MSGBOX_YESNO\n'
+            '\tgoto_if_eq VAR_RESULT, NO, JourneyRescue_Done\n')
     replace(layer, rescue, '\tsetflag FLAG_TEMP_4\n', '\tsetflag FLAG_TEMP_4\n\tsetflag FLAG_TEMP_5\n')
     replace(layer, rescue, '\tclosemessage\n\tremoveobject 6\n',
             '\tclosemessage\n\tcall JourneyTitanStory_Seabirds\n\tremoveobject 6\n')
@@ -102,7 +113,7 @@ def prepare(source):
             '                         && VarGet(VAR_JOURNEY_TITAN_STORY) == TITAN_STORY_COMPLETE\n'
             '                         && JourneyQualifierWon()));')
     return layer.finish(save_variable='0x409B', rescue_state=4, complete_state=8,
-                        needs_qualifier_before_finale=True)
+                        needs_qualifier_before_finale=True, playable_seabird_rescue=True)
 
 
 if __name__ == '__main__':

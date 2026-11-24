@@ -97,7 +97,7 @@ Na ordem planejada, Luffy segue no mundo do jogador até a despedida no navio. E
 A cena de Rayquaza encerra a tempestade. Ao voltar a circular por Sootopolis, o jogador descobre pelo capitão que um barco saiu para buscar moradores e perdeu contato quando a água voltou a subir com o céu limpo. O guia do ginásio aponta o porto se o jogador for direto ao último desafio de Hoenn. [Porto e capitão existentes](porto-sootopolis.md)
 
 1. Luffy embarca para buscar os desaparecidos. O capitão conduz a embarcação até a área de resgate.
-2. O jogador segue Manaphy por Surf até os moradores, abre o caminho de volta e os leva até o barco. Lugia desvia uma onda e chama as três aves. Articuno congela a água que ameaça atingir a jangada, Zapdos ilumina a passagem entre os recifes e Moltres aquece os moradores enquanto Luffy os recolhe.
+2. O jogador segue Manaphy por Surf até os moradores, abre o caminho de volta e sinaliza para Lugia. Lugia segura a onda e chama as três aves. Articuno congela a água que ameaça a jangada e permite que Luffy a puxe de volta. Zapdos ilumina o canal e a jangada avança. Moltres aquece os moradores que Luffy traz para a praia e restaura a equipe do jogador.
 3. Na volta, Kyogre reage a um pulso que vem do fundo. O jogador avista uma peça submersa, e o capitão registra o local para investigar depois.
 4. A missão termina quando todos desembarcam e o capitão confirma o resgate. A confirmação libera o último ginásio de Hoenn assim que os demais requisitos atuais forem cumpridos.
 

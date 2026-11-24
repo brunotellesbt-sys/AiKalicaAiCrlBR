@@ -1,22 +1,58 @@
 JourneyTitanStory_Seabirds::
+	applymovement 8, JourneyTitanStory_RaftDrift
+	waitmovement 8
+	msgbox JourneyTitanStory_DriftText, MSGBOX_DEFAULT
+	closemessage
 	clearflag FLAG_TEMP_5
 	addobject 9
 	playmoncry SPECIES_ARTICUNO, CRY_MODE_NORMAL
+	playse SE_M_ICY_WIND
+	applymovement 8, JourneyTitanStory_RaftAnchor
+	waitmovement 8
 	msgbox JourneyTitanStory_ArticunoText, MSGBOX_DEFAULT
 	closemessage
 	removeobject 9
 	addobject 10
 	playmoncry SPECIES_ZAPDOS, CRY_MODE_NORMAL
+	playse SE_M_THUNDERBOLT
+	fadescreen FADE_TO_WHITE
+	fadescreen FADE_FROM_WHITE
+	applymovement 8, JourneyTitanStory_RaftEnterChannel
+	waitmovement 8
 	msgbox JourneyTitanStory_ZapdosText, MSGBOX_DEFAULT
 	closemessage
 	removeobject 10
 	addobject 11
 	playmoncry SPECIES_MOLTRES, CRY_MODE_NORMAL
+	setobjectxyperm 4, 7, 17
+	setobjectxyperm 5, 8, 17
+	clearflag FLAG_TEMP_3
+	addobject 4
+	addobject 5
+	applymovement 2, Common_Movement_FaceUp
+	waitmovement 2
+	special HealPlayerParty
+	playfanfare MUS_HEAL
+	waitfanfare
 	msgbox JourneyTitanStory_MoltresText, MSGBOX_DEFAULT
 	closemessage
 	removeobject 11
 	setflag FLAG_TEMP_5
 	return
+
+JourneyTitanStory_RaftDrift:
+	walk_down
+	walk_down
+	step_end
+JourneyTitanStory_RaftAnchor:
+	walk_up
+	walk_up
+	step_end
+JourneyTitanStory_RaftEnterChannel:
+	walk_up
+	walk_up
+	walk_up
+	step_end
 
 JourneyTitanStory_HarborClue::
 	msgbox JourneyTitanStory_HarborText, MSGBOX_DEFAULT
@@ -234,16 +270,25 @@ JourneyTitanStory_Done::
 JourneyTitanStory_Idle::
 	end
 
+JourneyTitanStory_SignalText:
+	.string "Luffy has the raft in sight.\n"
+	.string "Signal Lugia to cover it?$"
+JourneyTitanStory_DriftText:
+	.string "The current pulls the raft\n"
+	.string "away. Lugia calls to the birds\l"
+	.string "over the sound of the waves.$"
 JourneyTitanStory_ArticunoText:
-	.string "Lugia calls across the sea.\n"
-	.string "Articuno freezes the spray\l"
-	.string "before it strikes the raft.$"
+	.string "Articuno freezes the spray.\n"
+	.string "The raft steadies, and Luffy\l"
+	.string "pulls it back into line.$"
 JourneyTitanStory_ZapdosText:
-	.string "Zapdos lights up the reef.\n"
-	.string "Luffy steers through the gap.$"
+	.string "Zapdos lights the narrow\n"
+	.string "channel along the sandbar.\p"
+	.string "Luffy guides the raft through.$"
 JourneyTitanStory_MoltresText:
-	.string "Moltres warms the people\n"
-	.string "as Luffy lifts them aboard.$"
+	.string "Luffy brings them ashore.\n"
+	.string "Moltres warms the survivors\l"
+	.string "and revives your team.$"
 JourneyTitanStory_HarborText:
 	.string "Reports say the ground moved\n"
 	.string "again near ROUTE 112.\p"

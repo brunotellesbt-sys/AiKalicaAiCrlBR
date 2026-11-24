@@ -1,10 +1,13 @@
 RESGATE COM LUGIA E CAPÍTULO DA TITAN CAVE — 24/11/2026
 
 O autor pediu incluir Articuno, Zapdos e Moltres no arco de Luffy,
-implementar Eren depois dele e identificar o trecho com mais eventos.
-A camada `titan-story` acrescenta as aves à retirada da jangada com Lugia,
-liga o desembarque ao capítulo de Eren na Wishstar Chamber e na Titan Cave
-e condiciona o final Galactic à conclusão de ambos os capítulos e à vitória
+implementar Eren depois dele e identificar o trecho com mais eventos. No
+seguimento, pediu o PR e uma função jogável para cada ave no resgate.
+A camada `titan-story` permite escolher quando sinalizar para Lugia. O
+chamado reúne as aves. Articuno estabiliza a jangada, Zapdos ilumina o
+canal por onde a jangada avança e Moltres recebe os moradores na praia e
+cura a equipe. O desembarque libera o capítulo de Eren na Wishstar Chamber
+e depois na Titan Cave. O final Galactic exige ambos os capítulos e a vitória
 na competição da Frontier. O navio preserva a despedida de Eren e Luffy.
 Na Gen 1–9 e na TESTE, Regieleki e Regidrago mostram as memórias de Reiner
 e Zeke. A história opcional do Governo Mundial e de Shaymin segue no roteiro.
@@ -17,7 +20,7 @@ caminho para Fortree logo após o Weather Institute.
 
 As cinco edições passaram no mGBA pelo resgate, Titan Cave, Continue e
 porta Galactic. O player abriu as cinco no Chromium. A TESTE também retomou
-o save distribuído de Mossdeep. Os 14 testes de regressão focados passaram.
+o save distribuído de Mossdeep. Os 13 testes de regressão focados passaram.
 A suíte geral local ficou pendente por arquivos de evidência de camadas
 históricas fora do checkout esparso. A camada nova entrega patches BPS e
 provas com hashes por edição. A publicação no GitHub Pages fica pendente.

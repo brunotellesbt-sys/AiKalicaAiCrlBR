@@ -1,7 +1,7 @@
 {
   "passed": true,
-  "rom_sha256": "bc0c768c12b723458d2c53c852bc76ca0e19ed7bb327626e36965365d1564b8e",
-  "elf_sha256": "909da8ac137c2aa79f69c5223a3825a4ed2ba9eca185a8662f725fd4cca63651",
+  "rom_sha256": "b816c6c4a2d7ffbba5205db1b7b6f2f1b2634e6290b340352ab795da23b64315",
+  "elf_sha256": "b2419d895ac6ccc515d5e3604ede95a2a24c80ed53413e91a77ffa75511867ec",
   "marker_sha256": "d1656edb4451fddc945b5063f8d237593aee8c505ac3e893fe8e182b2f5011b6",
   "required_for_eight_last_gym_choices": true,
   "physical_gym_door_before_and_after": [
@@ -27,7 +27,7 @@
   "rescue_completion_state": 4,
   "controller_save_and_cold_continue": {
     "passed": true,
-    "rom_sha256": "bc0c768c12b723458d2c53c852bc76ca0e19ed7bb327626e36965365d1564b8e",
+    "rom_sha256": "b816c6c4a2d7ffbba5205db1b7b6f2f1b2634e6290b340352ab795da23b64315",
     "fresh_rom_boot_to_title": true,
     "fresh_rom_title_to_new_game": true,
     "no_assert_screen": true,
@@ -177,40 +177,42 @@
       "global_header_sha256": "7efef4510fad4bea894698a4210d14da99b8141de834efdb4190bfe2bc02b283"
     },
     "bundled_save_continue_to_field": true,
-    "bundled_save_sha256": "56a29ab07bb07e5a43e1e3d07ef06b0a57a19abd49728a778930bc3e0551327d"
+    "bundled_save_sha256": "dee85e473405627420b80519bef868bdec64d53dfa24798e95831c51b21254ee"
   },
   "restored_from_save_during_escort": true,
   "regular_ferry_still_available": true,
   "initial_mission_badges_and_placement_are_fixtures": true,
   "capture_sha256": {
-    "CinnabarIsland_Frlg-mission-door-blocked.png": "7cc03f463469ce1c88a42ce689da1285fb942100b6ebd64e3e48244c544760d5",
+    "CinnabarIsland_Frlg-mission-door-blocked.png": "e223967e632f7d4632fc301f4dbc17d195daa4ee1742fd5a19634458a072bfe7",
     "FortreeCity-mission-door-blocked.png": "7edb28182c056a16451e4978e5c9efc3b285cefb3347aa41e567273deafada43",
     "SootopolisCity-mission-door-blocked.png": "a8d6bb42fb789d0a084ce4741e09e6a88b9ffe138b97f7884d78b2a403b07dbb",
     "SootopolisCity-mission-door-opened.png": "b8e34a75f98496153262d576149174ced1a61c869c800419fe7aa2357bd72d1b",
     "arrive-on-dry-sand.png": "b3cb42fdba4daab75d44e30ae47c117b321a0320ce1a8da4ad8827ec4c39dfe2",
-    "articuno-with-lugia.png": "d4b67d6d1289839cbbddcf1f266bf8fb017347488c5971cf7747746695020036",
+    "articuno-with-lugia.png": "6e75d32a024a48f877d27f75030169f2bb6e6d31195e2c9462bf6a36b7cb5f17",
     "captain-offers-rescue.png": "f81bd1083fe12e9349514818e39615dd21fbb88cb8f629359efc1f99ca9fb550",
+    "choose-when-to-signal-lugia.png": "6e5e5ef6b5c3570bf60bf3d7b6ff23c1ec02c1ebbb69d8dbb20bd82fdd9da1a9",
+    "current-pulls-the-raft.png": "ceccc300f86160983e84f952f0e0149a9ae50e86d6e586b57b2d8a790178f872",
     "eren-in-titan-cave.png": "c50bf46ba6ec3496eb6d928a2d522226f7a9bde83d98be6f4fe49fd83c16ea89",
     "galactic-finale-entry.png": "cae93f6b452cb401b04934869960acee837f21c9155d498fc3c01b0394255a5c",
     "galactic-waits-for-frontier.png": "a2260c75de3da4cda8159df84e11fbd41805c2c7279616c31e626125ab133374",
     "galactic-waits-for-rescue.png": "a2f7c3b59395a4a5af3b0045d24b0ce277ffbff1b797a63f0210d044e2b22197",
     "galactic-waits-for-titan-cave.png": "793110b9d9bf911749f5fd902d7471adf6f09c9fa637a55aeccb9873a04190da",
     "jirachi-and-eren.png": "e7c3d80f786667569b8b5505cc1d684fffeac50792a9b402a38d693088bdff2e",
-    "kyogre-reacts-to-the-pulse.png": "e7dc4a7722a8bfa6ee974ea2c7b907aaba3bab8810ee4cc2521c35f5ceb0e96a",
-    "lugia-shields-the-raft.png": "71d6f0d534a801972d18b92b8f7b3ef5aa07aae27b46faf793291f992c6b671b",
-    "moltres-with-lugia.png": "fe6b136dfeba024f5782c307e04b3c7e818dc23c211718fdc37f622bffb478f9",
+    "kyogre-reacts-to-the-pulse.png": "9d5d2374cbdddae12079e2c977ce377c57e0cb1dbc02407089d3496b1fb2d214",
+    "lugia-shields-the-raft.png": "dca5fe388da6b6d7ded9a2cfd30addf69b1810b41eef474350d9099664ad53ca",
+    "moltres-with-lugia.png": "bd927936e409bceaabd5c0f8dfb1fa73022c47940030b52c07cafdfe65313c0e",
     "raft-reaches-the-landing.png": "b4159add10ccc1cc4439877b42aab92d29aa3fee807bae7f7e56dbba98c721ce",
     "reach-castaways.png": "13a0dadf5ea21359a2382502e7c8849a94f60d9b1814d9d99cf3c3c0d3e014b6",
     "regice-rose.png": "b6696b17e0593365c03eade8fce1b3df0ef445b504ea672bd59cc028fed40264",
-    "regigigas-and-groudon.png": "5829fd7d9196169d03a115e43eb01bccc3df9209fc2b22ddf833ba06df1393c2",
+    "regigigas-and-groudon.png": "94e31f08d4ac39a67fddda602dc925b3616728eae0e7a5d3e3068674bb932a82",
     "regirock-maria.png": "07092474e2725e1b831a7aa185a982f4678816ed3f232a2efc60fdc5c44bf15a",
     "registeel-sina.png": "d0ccfabde488df5e8733229df44d6439c15c2efd55b7907276487bc83a49079f",
-    "regular-ferry-preserved.png": "7a6d36f4d4a212497254ca61d507ceffac232053a97d5c5b985ff01861ce5703",
-    "rescue-confirmed-at-the-harbor.png": "db74754f4d2487c2105491e130ca37c0891e06edf20aabaae82978f7ab1692db",
+    "regular-ferry-preserved.png": "79740daf3d1b89572bdb300fb0ac3c8fa4307523579ae5bea4307aa8ae4405ec",
+    "rescue-confirmed-at-the-harbor.png": "bc61830059d924526c08a772efeede21ac0b748fe28e8f6128dcb27de6e0f8b4",
     "surf-escort-save.png": "06ea67350573f644b771146bcf12d236235ed4eb7df2ea317daa087aaf97f2c0",
     "surf-to-manaphy.png": "f0f582757b8a7ed3a32b5fd2078ad6536a42fa609966bcbf9f1223a13138cc8d",
     "titan-cave-concluded.png": "f02f8cb4fb0946dda0e4d1ddf61d771ac5788de50a335d91fa333a3ca2e7b92b",
-    "zapdos-with-lugia.png": "d2246f34529a58dc45ca63edd76afb6a089d75e0c8dd5197415c30614c6d52f3"
+    "zapdos-with-lugia.png": "8734d46928c5b815279ced47162f6794065d51b77466dc02026564aa9fa3a7a3"
   },
   "eren_started_after_rescue": true,
   "region2_regs": false,
@@ -224,7 +226,7 @@
   },
   "titan_continue": {
     "passed": true,
-    "rom_sha256": "bc0c768c12b723458d2c53c852bc76ca0e19ed7bb327626e36965365d1564b8e",
+    "rom_sha256": "b816c6c4a2d7ffbba5205db1b7b6f2f1b2634e6290b340352ab795da23b64315",
     "fresh_rom_boot_to_title": true,
     "fresh_rom_title_to_new_game": true,
     "no_assert_screen": true,
@@ -374,7 +376,35 @@
       "global_header_sha256": "7efef4510fad4bea894698a4210d14da99b8141de834efdb4190bfe2bc02b283"
     },
     "bundled_save_continue_to_field": true,
-    "bundled_save_sha256": "d6436d256bbde1a76f432b931b35f6c420562b82d5ab8cfc54d9e24dd184af66"
+    "bundled_save_sha256": "e99b4038f80167a1edffbe10f27dc8709fe871c157e60ae81855f5842dd4f79d"
   },
-  "titan_marker_sha256": "54e042d2627c85dfa6241a9f85ecc4f9aa30603a5ea7e1718e94f7571bcb242c"
+  "titan_marker_sha256": "125cede47d3d4d97f4dcc45449e5d9f96091825a4ea0bdc10ab29aacc540fb87",
+  "seabird_field_observations": {
+    "drifting_raft": [
+      3,
+      22
+    ],
+    "articuno_raft": [
+      3,
+      20
+    ],
+    "zapdos_raft": [
+      3,
+      17
+    ],
+    "moltres_castaways": [
+      [
+        7,
+        17
+      ],
+      [
+        8,
+        17
+      ]
+    ],
+    "moltres_hp": [
+      1,
+      312
+    ]
+  }
 }
