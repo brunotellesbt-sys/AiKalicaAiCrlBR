@@ -1,3 +1,24 @@
+PWT E MECÂNICAS DE BATALHA — 23/11/2026
+
+Pedido literal mais recente: “Continue”. Ordem definida antes: fechar o PWT
+e testar mecânicas de jogo. Completar equipes de forma coerente com cada
+personagem, usando primeiro o PWT e as equipes mais fortes dos jogos.
+
+Lote preparado sobre 48dfb952: 54 equipes oficiais do PWT, 14 revanches de
+Liga e 48 equipes correspondentes da Gen 1–4. A matriz compilada anterior
+mostrou três Glalie na equipe de Glacia da Gen 1–4 e dois Drifblim na equipe
+de Shauntal da Gen 1–9. Corrigidos em prepare_pwt_official_parties.py e
+data/pwt-official-party-review.json. Gengar repetido de Agatha é oficial.
+
+Os patches e as provas por edição são vinculados em
+mods/hoenn/pwt-official-review/validation.json. Os quatro BPS reproduzem os
+binários testados. A matriz de 446 equipes, as duas copas, as partidas sem
+reforço contra Glacia e Shauntal, os testes de evolução pelo menu e as
+verificações de batalha passaram. Priorizar agora as 86
+referências restantes no PWT e, depois, os participantes de Legends Z-A.
+Histórias dos lendários, mundo durante as missões e campanha integral
+ficaram para o fim, conforme o pedido.
+
 ATUALIZAÇÃO — FUNCIONALIDADE E TESTES DA CAMADA 172 — 23/11/2026
 
 Pedido atual: “Quero a rom passando em todos os testes primeiro, pra depois

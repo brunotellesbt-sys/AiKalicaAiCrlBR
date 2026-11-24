@@ -1,5 +1,8 @@
 # PWT — torneio Singles na Battle Frontier
 
+A [revisão de equipes](pwt-official-review/README.md) reúne as referências, os
+testes e os patches de avaliação das quatro edições.
+
 O guia no lobby do Battle Dome oferece uma visita à recepção própria do PWT.
 A atendente do balcão esquerdo inscreve você. A porta de saída devolve você ao
 Dome; suas recepções e desafios originais continuam disponíveis.

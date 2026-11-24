@@ -17,7 +17,11 @@ parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--source', type=Path, required=True)
 parser.add_argument('--library', type=Path, required=True)
 parser.add_argument('--output', type=Path, required=True)
-parser.add_argument('--case', choices=['stone', 'alola-stone', 'kadabra', 'onix', 'pawmo', 'gimmighoul'], default='stone')
+move_evolutions = {
+    'dipplin': ('DIPPLIN', 'HYDRAPPLE', 'DRAGON_CHEER', 45),
+    'girafarig': ('GIRAFARIG', 'FARIGIRAF', 'TWIN_BEAM', 29),
+}
+parser.add_argument('--case', choices=['stone', 'alola-stone', 'kadabra', 'onix', 'pawmo', 'gimmighoul', *move_evolutions], default='stone')
 options = parser.parse_args()
 case = options.case
 sys.argv = [sys.argv[0], '--source', str(options.source), '--library', str(options.library), '--output', str(options.output)]
@@ -29,6 +33,9 @@ names = ['ITEM_THUNDER_STONE', 'ITEM_TM_THUNDERBOLT', 'MOVE_THUNDERBOLT',
          'ITEM_RARE_CANDY', 'ITEM_METAL_COAT', 'MON_DATA_HELD_ITEM', 'MON_DATA_LEVEL',
          'VAR_UNUSED_0x404E', 'SPECIES_RAICHU_ALOLA', 'SPECIES_PAWMO', 'SPECIES_PAWMOT',
          'SPECIES_GIMMIGHOUL', 'SPECIES_GHOLDENGO']
+if case in move_evolutions:
+    starter, evolution, required_move, fixture_level = move_evolutions[case]
+    names += ['SPECIES_' + starter, 'SPECIES_' + evolution, 'MOVE_' + required_move]
 with tempfile.TemporaryDirectory(dir='/tmp') as directory:
     probe = Path(directory) / 'constants.s'
     code = '#include "global.h"\n#include "pokemon.h"\n#include "constants/items.h"\n#include "constants/moves.h"\n#include "constants/species.h"\n#include "constants/vars.h"\n#include "item_menu.h"\n#include <stddef.h>\nconst u32 probe[]={' + ','.join(names) + '};'
@@ -98,14 +105,17 @@ def back_to_field(limit=500):
 for index in range(6 * constants['sizeof(struct Pokemon)']):
     lib.write8(s['gParties'] + index, 0)
 lib.write8(s['gPartiesCount'], 0)
-species, level, held, expected = {
+fixtures = {
     'stone': (25, 5, 0, 26),
     'alola-stone': (25, 5, 0, constants['SPECIES_RAICHU_ALOLA']),
     'kadabra': (64, 35, 0, 65),
     'onix': (95, 29, constants['ITEM_METAL_COAT'], 208),
     'pawmo': (constants['SPECIES_PAWMO'], 35, 0, constants['SPECIES_PAWMOT']),
     'gimmighoul': (constants['SPECIES_GIMMIGHOUL'], 35, 0, constants['SPECIES_GHOLDENGO']),
-}[case]
+}
+if case in move_evolutions:
+    fixtures[case] = (constants['SPECIES_' + starter], fixture_level, 0, constants['SPECIES_' + evolution])
+species, level, held, expected = fixtures[case]
 assert native('ScriptGiveMon', species, level, held) == 0
 if case == 'stone':
     assert native('ScriptGiveMon', 25, 5, 0) == 0
@@ -114,6 +124,30 @@ if case == 'alola-stone':
 stone = constants['ITEM_THUNDER_STONE'] if case.endswith('stone') else constants['ITEM_RARE_CANDY']
 assert native('AddBagItem', stone, 2 if case.endswith('stone') else 1)
 before = native('CountTotalItemQuantityInBag', stone)
+if case in move_evolutions:
+    # A level gain without the required move must leave this Pokémon alone.
+    move = constants['MOVE_' + required_move]
+    assert all(native('GetMonData2', s['gParties'], constants['MON_DATA_MOVE1'] + slot) != move
+               for slot in range(4))
+    bag()
+    activate_item()
+    for _ in range(200):
+        if active('Task_BagMenu_HandleInput'):
+            break
+        assert callback() != s['CB2_EvolutionSceneUpdate']
+        press(1)
+    assert active('Task_BagMenu_HandleInput')
+    back_to_field()
+    assert native('GetMonData2', s['gParties'], abi[7]) == species
+    after_control = native('CountTotalItemQuantityInBag', stone)
+    assert after_control == before - 1, (case, 'control candy count', before, after_control)
+    level += 1
+    assert native('GetMonData2', s['gParties'], constants['MON_DATA_LEVEL']) == level
+    native('ScriptSetMonMoveSlot', 0, move, 0)
+    for slot in range(1, 4):
+        native('ScriptSetMonMoveSlot', 0, 0, slot)
+    assert native('GetMonData2', s['gParties'], constants['MON_DATA_MOVE1']) == move
+    assert native('AddBagItem', stone, 1)
 bag()
 activate_item()
 for _ in range(200):
@@ -142,11 +176,22 @@ if held:
     assert after_held == 0, 'Evolution must consume its held item'
 
 if case != 'stone':
+    def moves():
+        return [native('GetMonData2', s['gParties'], constants['MON_DATA_MOVE1'] + slot)
+                for slot in range(4)]
+
+    evolved_moves = moves() if case in move_evolutions else None
+    if evolved_moves:
+        assert move in evolved_moves, (case, evolved_moves)
     assert native('TrySavingData', 0, max_frames=6000) == 1
     assert native('LoadGameSave', 0, max_frames=6000) == 1
     assert native('GetMonData2', s['gParties'], abi[7]) == expected
     assert native('CountTotalItemQuantityInBag', stone) == before - 1
     assert native('GetMonData2', s['gParties'], constants['MON_DATA_HELD_ITEM']) == after_held
+    control = dict(required_move=required_move, level_up_without_move_did_not_evolve=True,
+                   learned_move_persisted_after_evolution_and_reload=True) if case in move_evolutions else {}
+    if control:
+        assert moves() == evolved_moves
     assert hashlib.sha256((source / 'pokeemerald.gba').read_bytes()).hexdigest() == sha
     lib.stop()
     (args.output / ('item-menu-' + case + '.json')).write_text(json.dumps(dict(
@@ -154,7 +199,7 @@ if case != 'stone':
         item_activation_and_confirmation_are_controller_input=True,
         animation_completed=True, used_item_consumed_once=True,
         evolved_species=expected, level=expected_level, held_item_after=after_held,
-        flash_reload_preserves_evolved_species_and_item_quantities=True), indent=2) + '\n')
+        flash_reload_preserves_evolved_species_and_item_quantities=True, **control), indent=2) + '\n')
     print('Native evolution, item consumption and reload passed:', case, flush=True)
     sys.exit(0)
 

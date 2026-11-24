@@ -1,3 +1,28 @@
+PWT E MECÂNICAS DE BATALHA — 23/11/2026
+
+Pedido atual: “vamos primeiro sobre fechar o pwt e testar mais mecânicas no
+jogo”. A prioridade das equipes é PWT oficial, equipes fortes dos jogos,
+mangá e por último anime. As vagas precisam combinar com o treinador.
+
+Na branch `work/pwt-mecanicas`, sobre o merge `48dfb952`, a camada
+`pwt-official-parties` revisa 54 equipes de PWT e 14 de Liga. Quarenta e oito
+equipes elegíveis têm dados próprios para Gen 1–4. A primeira compilação
+revelou as repetições de Glalie e Drifblim. Os dados atuais corrigem os dois
+casos e preservam a duplicação de Gengar da revanche oficial de Agatha.
+Reprodução, fontes e patches de revisão ficam em
+[mods/hoenn/pwt-official-review](../mods/hoenn/pwt-official-review/README.md).
+
+As quatro edições passaram na matriz de 446 equipes, em 2.736 verificações
+de batalha e em 70 verificações novas. As copas Normal de Kanto e Unova
+chegaram ao título. Glacia e Shauntal foram derrotadas no Hard com equipes
+sem reforço. Dipplin e Girafarig passaram pelos menus e pelo recarregamento
+do save. A edição Gen 1–9 Normal testada tem SHA-256
+`d5c1fa8b9490cdb72da76d2ce7bcadf272f85233c8252f09e795eb362b54a643`.
+
+O próximo lote do PWT precisa conferir as 86 referências restantes e preparar
+os participantes de Legends Z-A. As histórias dos lendários, a revisão do
+mundo durante as missões e a validação integral da campanha ficaram para o fim.
+
 ROTAS H, J E K — 23/11/2026
 
 H, J estendido até o cruzamento ao norte e K foram retirados da arte do
