@@ -6,7 +6,9 @@ visit flags are written. This is not a New Game to credits playthrough.
 import hashlib,json,re,struct
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
-bootstrap=(ROOT/'tools/hoenn/validate_galactic_chapter.py').read_text().split('\nwins=[]')[0]
+galactic=(ROOT/'tools/hoenn/validate_galactic_chapter.py').read_text()
+# Reuse the field and battle fixtures without preparing Galactic prerequisites.
+bootstrap=galactic.split('\nchapter=json.loads')[0] + '\n' + galactic[galactic.index('\ntargets='):galactic.index('\nwins=[]')]
 exec(compile(bootstrap,str(ROOT/'tools/hoenn/validate_galactic_chapter.py'),'exec'))
 native('VarSet',0x40FF,0)
 native('VarSet',0x40FE,0)
@@ -23,10 +25,12 @@ def attributes(tileset,frlg):
 
 routes=['Route4_Frlg','Route10_Frlg','Route17_Frlg','Route112','Route113','PetalburgWoods',
         'Route6_Frlg','Route13_Frlg','Route20_Frlg','Route106','Route108','Route125']
-wins=[]
-# Visit each hero's locations in a different order to exercise independent
-# party progression rather than binding the team to a particular route.
-for index in [2,8,5,9,1,7,3,11,0,10,4,6]:
+marker=source/'.journey-crossover-badges'
+if marker.exists():
+    routes[10]='AbandonedShip_Deck'
+
+
+def route_start(index):
     name=routes[index];mapdata=json.loads((source/'data/maps'/name/'map.json').read_text())
     layout=layouts[mapdata['layout']];w,h=layout['width'],layout['height']
     raw=(source/layout['blockdata_filepath']).read_bytes();blocks=struct.unpack('<'+'H'*(len(raw)//2),raw)
@@ -41,6 +45,11 @@ for index in [2,8,5,9,1,7,3,11,0,10,4,6]:
     occupied={(o['x'],o['y']) for o in mapdata['object_events']}
     occupied.update((o['x'],o['y']) for o in mapdata.get('coord_events',[]))
     trainers=[o for o in mapdata['object_events'] if o.get('trainer_type') not in [None,'TRAINER_TYPE_NONE']]
+    if name == 'AbandonedShip_Deck':
+        assert suitable(13, 14) and (13, 14) not in occupied
+        assert any(warp['dest_map']=='MAP_ROUTE108' and (warp['x'],warp['y'])==(13,15)
+                   for warp in mapdata['warp_events'])
+        return 13, 14
     candidates=[]
     for y in range(1,h-1):
         for x in range(1,w-1):
@@ -50,16 +59,74 @@ for index in [2,8,5,9,1,7,3,11,0,10,4,6]:
                     candidates.append((x,y))
     assert candidates,('No walkable approach for mandatory rival',name)
     # Ending the warp fixture lets the normal on-frame hook spawn and approach.
-    x,y=candidates[len(candidates)//2]
+    return candidates[len(candidates)//2]
+
+
+def set_badges(flags, count):
+    for index, own_flag in enumerate(flags):
+        rawflag(own_flag, index < count)
+
+
+def assert_idle_on_route(name, before):
+    step(100)
+    assert idle() and location() == map_id(name), ('Unexpected approach', name, position())
+    assert native('VarGet', 0x40FF) == before
+    assert all(not lib.read8(s['gObjectEvents'] + 36 * i) & 1
+               or lib.read8(s['gObjectEvents'] + 36 * i + 8) != 240 for i in range(16))
+
+
+order=[]
+if marker.exists():
+    kanto_order=(0, 6, 1, 7, 2, 8)
+    hoenn_order=(5, 9, 3, 10, 4, 11)
+    for kanto, later in ((True, kanto_order[1]), (False, hoenn_order[1])):
+        set_badges(kanto_flags, 8)
+        set_badges(hoenn_flags, 8)
+        warp(routes[later], *route_start(later))
+        assert_idle_on_route(routes[later], 0)
+        assert native('JourneyGymBadgeCount', kanto) == 8
+    for badges, (kanto, hoenn) in enumerate(zip(kanto_order, hoenn_order), 1):
+        order.extend(((kanto, True, badges), (hoenn, False, badges)))
+else:
+    set_badges(kanto_flags, 8)
+    set_badges(hoenn_flags, 8)
+    order=[(index,None,None) for index in [2,8,5,9,1,7,3,11,0,10,4,6]]
+
+wins=[]
+opponents=(source/'include/constants/opponents.h').read_text()
+for index, kanto, badges in order:
+    name=routes[index]
+    x,y=route_start(index)
+    print('Checking crossover encounter:',name,flush=True)
     native('HealPlayerParty')
     for member,move in enumerate([57,337,309]):
         for slot in range(4):native('ScriptSetMonMoveSlot',member,move if slot==0 else 0,slot)
-    warp(name,x,y)
+    if marker.exists():
+        own_flags, other_flags=(kanto_flags,hoenn_flags) if kanto else (hoenn_flags,kanto_flags)
+        set_badges(other_flags,8)
+        set_badges(own_flags,badges-1)
+        assert native('JourneyGymBadgeCount',kanto)==badges-1
+        before=native('VarGet',0x40FF)
+        warp(name,x,y)
+        assert_idle_on_route(name,before)
+        set_badges(own_flags,badges)
+    else:
+        warp(name,x,y)
     step(50)
+    if marker.exists():
+        assert any(lib.read8(s['gObjectEvents']+36*i)&1
+                   and lib.read8(s['gObjectEvents']+36*i+8)==240 for i in range(16)), (name,x,y,'No rival approached')
     win=one_battle(name)
     expected=native('VarGet',0x40FF)
     assert expected&(1<<index),(name,expected)
+    if marker.exists():
+        hero='EREN' if index<6 else 'LUFFY'
+        hero_wins=sum((row['visit_bit']<6)==(index<6) for row in wins)
+        opponent=int(re.search(r'^#define\s+TRAINER_JOURNEY_'+hero+f'_{hero_wins+1}\\s+(\\d+)',opponents,re.M)[1])
+        assert win['opponent']==opponent and expected==before | (1<<index), (name,win,expected)
     win.update(map=name,visit_bit=index,visit_mask=expected,approach=[x,y])
+    if marker.exists():
+        win.update(region='Kanto' if kanto else 'Hoenn',battled_at=badges,blocked_at=badges-1,other_region_badges=8)
     wins.append(win);print('Crossover visit complete:',name,flush=True)
 assert native('JourneyCrossoverComplete')==1
 assert native('VarGet',0x40FF)==4095
@@ -68,4 +135,5 @@ lib.stop()
 (args.output/'crossover-visits.json').write_text(json.dumps(dict(passed=True,rom_sha256=sha,wins=wins,
     native_victories=True,normal_field_hook_and_approach=True,visit_flags_not_written=True,
     initial_badges_travel_and_team_are_fixtures=True,player_battle_stats_boosted=True,
+    ordered_by_badges=marker.exists(), skipped_earlier_battle_refused=marker.exists(),
     full_campaign_playthrough=False),indent=2)+'\n')

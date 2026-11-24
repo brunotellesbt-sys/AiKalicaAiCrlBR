@@ -30,18 +30,18 @@ Os guias dos ginásios fechados indicam o evento pendente e o local. As missões
 
 ## Eren e Luffy
 
-Cada um tem seis encontros, três em Kanto e três em Hoenn. A ordem de visita aos locais é livre; as equipes e falas avançam de acordo com as vitórias contra aquele personagem.
+Cada um tem seis encontros, três em Kanto e três em Hoenn. Os encontros exigem de uma a seis insígnias da própria região. Para acessar o encontro seguinte, vença o anterior na mesma região. Kanto e Hoenn avançam de forma independente. As equipes e falas evoluem de acordo com as vitórias contra cada personagem.
 
-| Eren | Luffy |
-|---|---|
-| Route 4, Kanto | Route 6, Kanto |
-| Route 10, Kanto | Route 13, Kanto |
-| Route 17, Kanto | Route 20, Kanto |
-| Route 112, Hoenn | Route 106, Hoenn |
-| Route 113, Hoenn | Route 108, Hoenn |
-| Petalburg Woods | Route 125, Hoenn |
+| Insígnias na região | Kanto | Hoenn |
+|---:|---|---|
+| 1 | Eren na Rota 4 | Eren em Petalburg Woods |
+| 2 | Luffy na Rota 6 | Luffy na Rota 106 |
+| 3 | Eren na Rota 10 | Eren na Rota 112 |
+| 4 | Luffy na Rota 13 | Luffy no convés do Navio Abandonado, Rota 108 |
+| 5 | Eren na Rota 17 | Eren na Rota 113 |
+| 6 | Luffy na Rota 20 | Luffy na Rota 125 |
 
-Eren suspeita de Magma e fala de seus companheiros de antes do fim da segunda temporada. O contato com a Titã Sorridente é parte do mistério. Luffy está no período após o primeiro Sabaody e suspeita de Aqua e de Kizaru. As doze visitas são obrigatórias antes de entrar no setor final Galactic e continuam disponíveis após a 22ª insígnia. O guia informa o próximo local que falta visitar.
+Eren suspeita de Magma e fala de seus companheiros de antes do fim da segunda temporada. O contato com a Titã Sorridente é parte do mistério. Luffy está no período após o primeiro Sabaody e suspeita de Aqua e de Kizaru. Se você deixar uma batalha para depois, ela continua disponível até o final Galactic. A entrada desse capítulo exige as doze vitórias, e o guarda indica o próximo encontro pendente. Vitórias já registradas contam na ordem nova. [Camada de progressão e patches](../mods/hoenn/crossover-badges/README.md)
 
 Depois do resgate, a pista do capitão leva à Wishstar Chamber dentro da Fiery Path, acessível pela Rota 112. Fale com Eren para ver Jirachi revelar os selos. Reencontre Eren na Titan Cave, no mar perto de Three Island, e siga Regirock, Regice e Registeel, ligados a Maria, Rose e Sina. Na Gen 1–9, siga também Regieleki e Regidrago para descobrir as ações de Reiner e Zeke. Regigigas revela o juramento do rei das muralhas, e o jogador ajuda a dissipar os tremores de Groudon. É possível desafiar o último ginásio de Hoenn no intervalo entre o resgate e a Titan Cave. [Câmaras e acessos](cavernas-lendarias.md)
 

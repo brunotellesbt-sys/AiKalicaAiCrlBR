@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[2]
 VARIANTS={f'Pokemon-Journey-Gen1-{generation}-{difficulty}.gba':(cap,hard)
           for generation,cap in [(4,493),(9,1025)]
           for difficulty,hard in [('Normal',False),('Hard',True)]}
-TEST_EDITION_SCOPES=('atlas-surf-layout','atlas-route-pruning','pwt-complete-rosters','sootopolis-rescue','titan-story','extra-gyms','dewford-coast-safety',
+TEST_EDITION_SCOPES=('atlas-surf-layout','atlas-route-pruning','pwt-complete-rosters','sootopolis-rescue','titan-story','crossover-badges','extra-gyms','dewford-coast-safety',
                      'generated-area-review','coast-scenery-review','sevii-route-boundaries','game-continuity-review',
                      'arrival-coast-review','coastal-ecology','generated-world-audit','badge-story',
                      'coastal-closures','sevii-integrated-piers')

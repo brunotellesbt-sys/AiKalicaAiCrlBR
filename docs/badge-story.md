@@ -67,7 +67,9 @@ O compartimento do navio abandonado da Rota 108 passa a exigir **22 insígnias
 no total**, incluindo as dos ginásios extras. A camada Titan Story acrescenta
 o resgate de Sootopolis, a Titan Cave e a vitória na competição antes do
 capítulo final. A entrada da Room 6 também confere os doze encontros de
-Luffy e Eren. As Ligas mantêm a admissão pela competição e pelas 18 insígnias.
+Luffy e Eren. Esses encontros são liberados da primeira à sexta insígnia
+em cada região. As Ligas mantêm a admissão pela competição e pelas 18 insígnias.
+[Ordem das batalhas](historia-e-missoes.md#eren-e-luffy)
 Saves que já registraram a primeira batalha da sala final podem concluir
 o navio na ordem em que começaram. [Capítulo da Titan Cave](../mods/hoenn/titan-story/README.md)
 
