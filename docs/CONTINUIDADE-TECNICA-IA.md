@@ -1,3 +1,17 @@
+REVISÃO DAS HISTÓRIAS — RESGATE DE SOOTOPOLIS — 24/11/2026
+
+O autor pediu a implementação do resgate obrigatório de Luffy. A camada
+`sootopolis-rescue` acrescenta a missão após Rayquaza e libera o último
+ginásio de Hoenn quando o capitão confirma o desembarque. A ROM aceita
+Galactic antes ou depois do resgate, e quem já tem as oito insígnias de
+Hoenn pode fazer o resgate na volta ao porto.
+
+As cinco edições passaram na travessia, no resgate, no bloqueio e na
+liberação do ginásio, na volta ao ferry e no Continue durante o resgate.
+A TESTE carregou também o save de Mossdeep. A investigação do Governo
+Mundial, o epílogo de Shaymin e os demais arcos ainda estão no roteiro.
+[Camada e provas](design/sootopolis-rescue/README.md)
+
 CATÁLOGO COMPLETO DO PWT — 24/11/2026
 
 A camada `pwt-complete-rosters` sobre `2c38d692` conclui as 73 equipes

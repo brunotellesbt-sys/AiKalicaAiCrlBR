@@ -6,7 +6,7 @@ O túnel entre a Rota 11, perto de Vermilion, e a Rota 2 tem três exploradores 
 
 O Rock Tunnel é outro local e mantém a missão anterior com quatro membros do Team Magma. Ambas as cavernas dispensam Flash.
 
-**Este guia contém spoilers.** Os circuitos de ginásios são independentes: insígnias de Kanto contam para a ordem dos ginásios de Kanto e as de Hoenn para Hoenn. As duas Ligas exigem as 16 insígnias e a conclusão das missões obrigatórias, incluindo o capítulo Galactic.
+**Este guia contém spoilers.** Os circuitos de ginásios são independentes. As insígnias de Kanto contam para a ordem dos ginásios de Kanto e as de Hoenn para Hoenn. A competição da Battle Frontier libera as duas Ligas com 18 insígnias. O capítulo Galactic começa com 22. [Requisitos atuais](badge-story.md)
 
 ## Kanto
 
@@ -24,7 +24,7 @@ O Rock Tunnel é outro local e mantém a missão anterior com quatro membros do 
 - Após cinco insígnias, conclua Magma Hideout.
 - Após seis insígnias, derrote Matt e conclua a fuga do submarino no esconderijo Aqua de Lilycove.
 - Após sete insígnias, Steven ajuda contra Maxie e Tabitha no Space Center. Depois, a missão de Archie em Seafloor Cavern exige também a vitória sobre Giovanni na Silph Co. Giovanni participa como aliado, arrependido, explicando que o propósito inicial da Rocket se perdeu e que quer reparar seus erros.
-- Conclua a crise climática de Sootopolis e o episódio de Rayquaza antes do último ginásio de Hoenn.
+- Conclua a crise climática de Sootopolis e o episódio de Rayquaza. Em seguida, fale com o capitão do porto e complete o resgate com Luffy. A confirmação do desembarque libera o último ginásio de Hoenn. [Resgate de Sootopolis](../mods/hoenn/sootopolis-rescue/README.md)
 
 Os guias dos ginásios fechados indicam o evento pendente e o local. As missões bloqueiam ginásios; as rotas permanecem abertas, com as condições aquáticas de Surf/Dive/Waterfall e as missões de bicicleta.
 
@@ -41,11 +41,11 @@ Cada um tem seis encontros, três em Kanto e três em Hoenn. A ordem de visita a
 | Route 113, Hoenn | Route 108, Hoenn |
 | Petalburg Woods | Route 125, Hoenn |
 
-Eren suspeita de Magma e fala de seus companheiros de antes do fim da segunda temporada; o contato com a Titã Sorridente é parte do mistério. Luffy está no período após o primeiro Sabaody e suspeita de Aqua e de Kizaru. As doze visitas são obrigatórias antes de entrar no setor final Galactic. Elas continuam disponíveis após obter as 16 insígnias; o guia informa o próximo local que falta visitar.
+Eren suspeita de Magma e fala de seus companheiros de antes do fim da segunda temporada. O contato com a Titã Sorridente é parte do mistério. Luffy está no período após o primeiro Sabaody e suspeita de Aqua e de Kizaru. As doze visitas são obrigatórias antes de entrar no setor final Galactic e continuam disponíveis após a 22ª insígnia. O guia informa o próximo local que falta visitar.
 
 ## Prisão Galactic no navio
 
-Com as 16 insígnias, vá ao Abandoned Ship da Route 108. Use Dive e procure Room 6 no piso inferior oculto. Os habitantes do navio foram substituídos por grunts Galactic; os NPCs originais foram realocados em rotas.
+Com 22 insígnias no total, vá ao Abandoned Ship da Route 108. Use Dive e procure Room 6 no piso inferior oculto. Os habitantes do navio foram substituídos por grunts Galactic e os NPCs originais foram realocados em rotas.
 
 Derrote os 19 grunts, incluindo o guarda do compartimento. Na sala final, Dialga, Giratina e Palkia estão presos em três celas de energia:
 
@@ -54,6 +54,6 @@ Derrote os 19 grunts, incluindo o guarda do compartimento. Na sala final, Dialga
 3. Você enfrenta Cyrus sozinho.
 4. Giratina enfrenta o jogador numa luta obrigatória, sem captura, com apoio dos aliados. As celas são desativadas após vencer.
 5. Cyrus explica as distorções e se arrepende. Eren entrega Adamant Crystal; Luffy entrega Lustrous Globe; Cyrus entrega Griseous Core. Com a bolsa cheia, libere espaço e retome a conversa; a recompensa pendente pode ser recebida depois.
-6. Eren e Luffy retornam aos seus mundos. Os três lendários retornam às cavernas, onde podem ser enfrentados e capturados opcionalmente. As Ligas ficam disponíveis quando não há outras missões pendentes.
+6. Eren e Luffy retornam aos seus mundos. Os três lendários retornam às cavernas, onde podem ser enfrentados e capturados opcionalmente.
 
 ![Três celas Galactic](images/team-galactic-final-chamber.png)

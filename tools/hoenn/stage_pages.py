@@ -7,11 +7,15 @@ VERSIONS = ROOT / 'mods/hoenn/versions'
 REVIEW = ROOT / 'roms/rom-de-teste'
 PRUNING = ROOT / 'mods/hoenn/atlas-route-pruning'
 PWT_COMPLETE = ROOT / 'mods/hoenn/pwt-complete-rosters'
+SOOTOPOLIS_RESCUE = ROOT / 'mods/hoenn/sootopolis-rescue'
 CURRENT_BROWSER_EVIDENCE = ROOT / 'mods/hoenn/versions-validation/browser-route-pruning/browser-versions.json'
 PWT_BROWSER_EVIDENCE = ROOT / 'mods/hoenn/versions-validation/browser-pwt-complete/browser-versions.json'
+RESCUE_BROWSER_EVIDENCE = ROOT / 'mods/hoenn/versions-validation/browser-sootopolis-rescue/browser-versions.json'
 
 
 def browser_evidence(release):
+    if release.get('validation_scope') == 'sootopolis-rescue':
+        return RESCUE_BROWSER_EVIDENCE
     if release.get('validation_scope') == 'pwt-complete-rosters':
         return PWT_BROWSER_EVIDENCE
     if 'atlas' in release:
@@ -41,6 +45,11 @@ def stage_current_editions(site, release):
             completed = verify_pwt(PWT_COMPLETE, output=games, base_directory=games)
             profiles = completed['editions']
             scope = completed['layer']
+            if (SOOTOPOLIS_RESCUE / 'validation.json').is_file():
+                from verify_sootopolis_rescue import verify as verify_rescue
+                rescue = verify_rescue(SOOTOPOLIS_RESCUE, output=games, base_directory=games)
+                profiles = rescue['editions']
+                scope = rescue['layer']
         variants = [{key: row[key] for key in ('file', 'bytes', 'max_national', 'perfect_trainer_ivs')}
                     for row in release['variants']]
         for row in variants:

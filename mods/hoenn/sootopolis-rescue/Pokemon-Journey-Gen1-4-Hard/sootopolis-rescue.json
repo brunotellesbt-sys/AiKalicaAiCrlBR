@@ -1,0 +1,201 @@
+{
+  "passed": true,
+  "rom_sha256": "333f90056f57de4fae9eb0a8ac45000fa2b9d08bd877333f7c4b56fe0c5fff05",
+  "elf_sha256": "e516546caa4b43cf2d399af568ec1ba3aa54f9b58fc748e02ce63088717fe662",
+  "marker_sha256": "d1656edb4451fddc945b5063f8d237593aee8c505ac3e893fe8e182b2f5011b6",
+  "required_for_eight_last_gym_choices": true,
+  "physical_gym_door_before_and_after": [
+    {
+      "city": "SootopolisCity",
+      "blocked": true,
+      "physical_door": true
+    },
+    {
+      "city": "SootopolisCity",
+      "blocked": false,
+      "physical_door": true
+    }
+  ],
+  "galactic_completed_before_rescue": true,
+  "old_save_eight_badges_keep_access": true,
+  "offers_rescue_only_after_rayquaza": true,
+  "blocks_leader_inside_unwon_gym": true,
+  "native_port_entry_and_ferry": true,
+  "native_surf_both_directions": true,
+  "manaphy_and_two_castaways_seen": true,
+  "lugia_and_kyogre_seen": true,
+  "rescue_completion_state": 4,
+  "controller_save_and_cold_continue": {
+    "passed": true,
+    "rom_sha256": "333f90056f57de4fae9eb0a8ac45000fa2b9d08bd877333f7c4b56fe0c5fff05",
+    "fresh_rom_boot_to_title": true,
+    "fresh_rom_title_to_new_game": true,
+    "no_assert_screen": true,
+    "controllers_only": true,
+    "no_game_memory_writes": true,
+    "bundled_save_tested": true,
+    "runs": [
+      {
+        "battery": false,
+        "frames": 2464,
+        "samples": [
+          {
+            "frame": 1200,
+            "callback": "MainCB2_Intro"
+          },
+          {
+            "frame": 1201,
+            "callback": "MainCB2_EndIntro"
+          },
+          {
+            "frame": 1291,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1591,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1592,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1682,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1683,
+            "callback": "CB2_GoToMainMenu"
+          },
+          {
+            "frame": 1773,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2073,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2074,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2164,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2464,
+            "callback": "CB2_MainMenu"
+          }
+        ],
+        "fresh_rom_boot_to_title": true,
+        "fresh_rom_title_to_new_game": true,
+        "new_game_tasks": [
+          "Task_HandleMultichoiceInput",
+          "Task_JourneyIntroRegion"
+        ]
+      },
+      {
+        "battery": true,
+        "frames": 3664,
+        "samples": [
+          {
+            "frame": 1200,
+            "callback": "MainCB2_Intro"
+          },
+          {
+            "frame": 1201,
+            "callback": "MainCB2_EndIntro"
+          },
+          {
+            "frame": 1291,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1591,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1592,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1682,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1683,
+            "callback": "CB2_GoToMainMenu"
+          },
+          {
+            "frame": 1773,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2073,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2074,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2164,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 3064,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 3664,
+            "callback": "CB2_Overworld"
+          }
+        ],
+        "bundled_save_continue_to_field": true,
+        "field_map": [
+          99,
+          0
+        ],
+        "player_tile": [
+          11,
+          14
+        ],
+        "player_surfing": true,
+        "player_elevation": 1,
+        "geometry_version": 9
+      }
+    ],
+    "geometry_layout_proof": {
+      "vars_offset": 8600,
+      "variable": 16604,
+      "vars_start": 16384,
+      "current_version": 8,
+      "actual_ARM_APCS_struct_compiled": true,
+      "GetVarPointer_ELF_literal_matches": true,
+      "probe_assembly_sha256": "b7e39542c14784137e44134052761dff17ea7db21b764d5eca0b7e3c639ce887",
+      "global_header_sha256": "7efef4510fad4bea894698a4210d14da99b8141de834efdb4190bfe2bc02b283"
+    },
+    "bundled_save_continue_to_field": true,
+    "bundled_save_sha256": "d577eaf748c1010758948a8237f5cc96f619314229a3a97dc7bf0d0bbea3f987"
+  },
+  "restored_from_save_during_escort": true,
+  "regular_ferry_still_available": true,
+  "initial_mission_badges_and_placement_are_fixtures": true,
+  "capture_sha256": {
+    "CinnabarIsland_Frlg-mission-door-blocked.png": "e223967e632f7d4632fc301f4dbc17d195daa4ee1742fd5a19634458a072bfe7",
+    "FortreeCity-mission-door-blocked.png": "7edb28182c056a16451e4978e5c9efc3b285cefb3347aa41e567273deafada43",
+    "SootopolisCity-mission-door-blocked.png": "a8d6bb42fb789d0a084ce4741e09e6a88b9ffe138b97f7884d78b2a403b07dbb",
+    "SootopolisCity-mission-door-opened.png": "b8e34a75f98496153262d576149174ced1a61c869c800419fe7aa2357bd72d1b",
+    "arrive-on-dry-sand.png": "d17610f68e7c838894239cf5f0264adc401cb37d8ca1e757387da1ab26213f03",
+    "captain-offers-rescue.png": "b373185d1161643659afe5dd799d4547acaa6cdbf6524955ec6464312be4aca4",
+    "kyogre-reacts-to-the-pulse.png": "89819c7686d0b3b77fd615a03245f2885fbfc129e4fbdacdbde706606387fd12",
+    "lugia-shields-the-raft.png": "6d79bd4e82a2daefd85c4808633f148bfbab4ae4d531153a0236f7d2c4be5e31",
+    "raft-reaches-the-landing.png": "0ddad0d6cb83f1d0cf869ab8629a911823bde7c9af1b88df074e910dd82ca998",
+    "reach-castaways.png": "75f7b4efae04f632b92d0949dbbe78c89d4b081d412469af4fd3c4175f76d993",
+    "regular-ferry-preserved.png": "79740daf3d1b89572bdb300fb0ac3c8fa4307523579ae5bea4307aa8ae4405ec",
+    "rescue-confirmed-at-the-harbor.png": "db74754f4d2487c2105491e130ca37c0891e06edf20aabaae82978f7ab1692db",
+    "surf-escort-save.png": "4dcfd1e53cdbe14e68eea0f8223e1450888291689935920ffbd57c0a4091dbc5",
+    "surf-to-manaphy.png": "d34d088b0f92b0a164eb0d680c1c2a92e27cca72ce008d6e02aa8fa911cae91b"
+  }
+}
