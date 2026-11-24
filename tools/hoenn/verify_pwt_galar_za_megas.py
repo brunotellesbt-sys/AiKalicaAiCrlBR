@@ -52,6 +52,16 @@ def verify(directory=DIRECTORY):
             assert cup['passed'] and cup['rom_sha256'] == entry['rom_sha256'], name
             assert cup['cup_generation'] == cup_generation and cup['complete_tournament_playthrough'], name
             assert cup['champion'] and cup['bp_reward'] == 10 and cup['party_restored_byte_exact'], name
+        if name.endswith('Normal.gba'):
+            ordinary = proof['ordinary']
+            assert ordinary['passed'] and ordinary['rom_sha256'] == entry['rom_sha256'], name
+            assert ordinary['case'] == ('garchomp-z' if cap == 4 else 'greninja'), name
+            assert ordinary['native_start_button'] and ordinary['transformed'] and ordinary['restored_base_species'], name
+        if cup_generation == 8:
+            unboosted = proof['unboosted']
+            assert unboosted['passed'] and unboosted['rom_sha256'] == entry['rom_sha256'], name
+            assert unboosted['pool'] == 8 and not unboosted['battle_stat_hp_pp_or_outcome_writes'], name
+            assert unboosted['returned_to_lobby'] and unboosted['original_party_restored_byte_exact'], name
 
         names = {record['name']: record['key'] for record in eligible(rows, cap)}
         assert roster['catalog_identities'] == len(rows) == 162

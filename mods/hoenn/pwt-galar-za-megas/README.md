@@ -27,6 +27,8 @@ Em uma cópia privada da fonte compilável com `pwt-official-parties`, aplique `
 
 Os percursos de Kanto na Gen 1–4 Normal e de Galar na Gen 1–9 Hard terminaram com 10 BP e restauração da equipe. A preparação desses dois testes reforça os atributos do jogador para conferir todas as fases do torneio.
 
+No teste sem reforço de Galar Hard, a equipe venceu Nessa e perdeu para Luffy e Kabu. O jogo voltou ao saguão e restaurou a equipe. Em batalhas fora do PWT, Garchomp Mega Z e Mega Greninja também voltaram à forma base ao fim.
+
 `python3 tools/hoenn/verify_pwt_galar_za_megas.py` reconstrói as quatro ROMs e confere os hashes dos relatórios e das capturas. [Manifesto de validação](validation.json)
 
 Restam 73 equipes para revisar no PWT. As histórias dos lendários, as missões e a validação integral da campanha ficam para a etapa final.
