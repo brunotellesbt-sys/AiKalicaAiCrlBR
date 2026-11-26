@@ -1,4 +1,6 @@
 """Compile the rival badge gates and check every historical visit mask."""
+import copy
+import json
 from pathlib import Path
 import re
 import shutil
@@ -7,6 +9,7 @@ import tempfile
 import unittest
 
 from prepare_crossover_badges import PROGRESSION
+from verify_crossover_badges import DIRECTORY, NORMAL, verify_native
 
 
 class CrossoverBadgesTests(unittest.TestCase):
@@ -59,3 +62,14 @@ int main(void)
 ''')
             subprocess.run(['cc', '-std=c11', '-Wall', '-Wextra', '-Werror', str(source), '-o', str(program)], check=True)
             subprocess.run([str(program)], check=True)
+
+    def test_late_team_and_badge_gate_are_observed_for_each_battle(self):
+        report = json.loads((DIRECTORY / (Path(NORMAL).stem + '-visits.json')).read_bytes())
+        verify_native(report, report['rom_sha256'])
+        for field, value in [('blocked_at', 20), ('enemy_species', []), ('enemy_levels', [1] * 6),
+                             ('opponent', 1556), ('visit_mask', 0xfff)]:
+            with self.subTest(field=field):
+                altered = copy.deepcopy(report)
+                altered['wins'][-1][field] = value
+                with self.assertRaises(AssertionError):
+                    verify_native(altered, report['rom_sha256'])

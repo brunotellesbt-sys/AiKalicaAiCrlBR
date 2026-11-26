@@ -1,19 +1,33 @@
 {
   "layer": "crossover-badges",
-  "regional_milestones": [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-  ],
+  "total_badges": {
+    "Eren": [
+      1,
+      5,
+      13,
+      20
+    ],
+    "Luffy": [
+      2,
+      7,
+      11,
+      15
+    ]
+  },
   "visit_bits_preserved": true,
   "route108_site": "AbandonedShip_Deck",
   "original_sha256": {
+    "src/data/journey_crossover_trainers.h": "275fd2954ade4875f0f0dba74b8734214e627a37ecb8ff185223f2993ae2a2d6",
+    "data/scripts/journey_crossover.inc": "974f804b5a7b44c1dc2c8453dccff7e565b9510af04a0d66790baa310bae231c",
+    "data/scripts/journey_galactic.inc": "4f9c11ca19e7145fb159b4e8e3719d8e0ab8157398c1bef65648e7f2f61a1c53",
+    "src/pokemon.c": "bc809db702f6fd7cde4d416bddd19be84b004ea5c37e51b7f2544cdec722b5dd",
     "src/journey_crossover.c": "779a2a229fc8b6feb02a84864f0ab0114277cddb6bb914e4096a2fb1a0a14ebb"
   },
   "prepared_sha256": {
-    "src/journey_crossover.c": "04a4a5e14ae80c049d4b7abaeb279cc97f5ff11f2d1c6b514d153e5646b71f69"
+    "src/data/journey_crossover_trainers.h": "d2e044fa450d614c3b846ed6482189451a35c3987f05ec12f87de85f311e1d94",
+    "data/scripts/journey_crossover.inc": "83cd5ee7f609a09ae407ff1b24e5826dbbeafef4d19228a563fd5b638a8c1131",
+    "data/scripts/journey_galactic.inc": "743ab16029e865a24e1f5acf19306aaf55c2dedfa66be4fce74caf9ef29b269c",
+    "src/pokemon.c": "ad3187aa00be39b09cf3648f4ce15a602cbed2415f8b3f667dac59f623c45d89",
+    "src/journey_crossover.c": "3d0bc7143b5dae03cc69571fad2a16eebfc1dde9d4805ba569c068b18f7e25e7"
   }
 }

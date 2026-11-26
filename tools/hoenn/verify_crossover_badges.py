@@ -128,6 +128,24 @@ def verify(directory=DIRECTORY, *, output=None, base_directory=None):
             assert row['capture'] == capture
             image = checked(directory / prefix / capture, row['capture_sha256'])
             assert image[:8] == b'\x89PNG\r\n\x1a\n' and struct.unpack_from('>II', image, 16) == (240, 160)
+        if name == NORMAL:
+            folder = directory / prefix
+            gate = json.loads(checked(folder / 'galactic-entry.json', entry['galactic_entry_sha256']))
+            assert gate['rom_sha256'] == entry['rom_sha256']
+            assert gate['mask'] == report['wins'][-1]['visit_mask']
+            assert (gate['source_map'], gate['entry_tile'], gate['destination']) == ([24,66], [37,4], [83,21])
+            boot = gate['cold_continue']
+            assert boot['passed'] and boot['controllers_only'] and boot['no_game_memory_writes']
+            assert boot['rom_sha256'] == gate['rom_sha256']
+            saved = boot['runs'][-1]
+            assert len(checked(folder / 'eight-wins.sav', boot['bundled_save_sha256'])) == 131072
+            assert saved['persistent_variables'] == {'0x40ff': gate['mask'], '0x409b': 8, '0x40e5': 4}
+            assert saved['field_map'] == gate['source_map'] and saved['player_tile'] == gate['entry_tile']
+            pages = {'trainer-card-' + page + '.png' for page in ('first','second','third','left','restored','select')}
+            pictures = pages | {'dialogue-' + row['map'] + '.png' for row in report['wins']}
+            assert set(gate['captures']) == pictures | {'eight-wins-galactic-entry.png'}
+            for path, digest in gate['captures'].items():
+                checked(folder / path, digest)
         if output is not None:
             (Path(output) / name).write_bytes(rom)
 

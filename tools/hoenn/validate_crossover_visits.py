@@ -261,6 +261,7 @@ if modern and normal9:
     until(lambda: location() == map_id('JourneyGalacticHall'))
     step(120)
     picture('eight-wins-galactic-entry')
+    arrived = location()
     assert native('VarGet', 0x40FF) == visited
     # Exercise the three real pages on the Trainer Card using 22 earned flags.
     exec(compile((ROOT/'tools/hoenn/validate_extra_gym_card.py').read_text(), 'extra-gym-card','exec'))
@@ -270,6 +271,14 @@ if modern and normal9:
                         expected_geometry_version=9, expected_variables=((0x40FF, visited),(0x409B,8),(0x40E5,4)))
     assert resumed['runs'][-1]['field_map'] == list(map_id(ship))
     assert resumed['runs'][-1]['player_tile'] == list(start)
+    media = ['eight-wins-galactic-entry.png', 'trainer-card-first.png', 'trainer-card-second.png',
+             'trainer-card-third.png', 'trainer-card-restored.png', 'trainer-card-left.png', 'trainer-card-select.png',
+             *('dialogue-' + row['map'] + '.png' for row in wins)]
+    journey_end = dict(rom_sha256=sha, mask=visited, source_map=list(map_id(ship)),
+                       entry_tile=list(start), destination=list(arrived), cold_continue=resumed,
+                       story_and_qualifier_seeded=True,
+                       captures={name: hashlib.sha256((args.output/name).read_bytes()).hexdigest() for name in media})
+    (args.output/'galactic-entry.json').write_text(json.dumps(journey_end, indent=2) + '\n')
 (args.output/'crossover-visits.json').write_text(json.dumps(dict(passed=True,rom_sha256=sha,wins=wins,
     native_victories=True,normal_field_hook_and_approach=True,visit_flags_not_written=True,
     initial_badges_travel_and_team_are_fixtures=True,player_battle_stats_boosted=True,
