@@ -1,3 +1,7 @@
+26/11/2026 — Oito batalhas antes do navio
+
+O autor confirmou quatro encontros de Eren e quatro de Luffy. Eren usa os marcos de 1, 5, 13 e 20 insígnias totais. Luffy usa 2, 7, 11 e 15. O histórico do PR #124 em ddce22dc descreve a versão anterior de doze encontros. A revisão dos mapas e das histórias completas continua por etapas. Consulte docs/design/revisao-integral-2026-11-26.md para os pré-requisitos, as verificações e a ordem da auditoria.
+
 ATUALIZAÇÃO — FUNCIONALIDADE E TESTES DA CAMADA 172 — 23/11/2026
 
 Pedido atual: “Quero a rom passando em todos os testes primeiro, pra depois
