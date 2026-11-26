@@ -96,13 +96,13 @@ def field_state_layout(source):
 
 def validate(source, library, output, battery=None, save_output=None, expected_geometry_version=None, expected_map_cells=(),
              *, expected_flags=(), verify_current_map_objects=False, require_cleared_template_tail=False,
-             expected_party_sha256=None):
+             expected_party_sha256=None, expected_variables=()):
     source, library, output = map(Path, (source, library, output))
     output.mkdir(parents=True, exist_ok=True)
     sha = hashlib.sha256((source/'pokeemerald.gba').read_bytes()).hexdigest()
     nm = subprocess.check_output([str(ROOT/'.local/arm-binutils/usr/bin/arm-none-eabi-nm'), '-n', str(source/'pokeemerald.elf')], text=True)
     symbols = {n: int(a, 16) for a, k, n in re.findall(r'^(\w+) (\w) (\S+)$', nm, re.M)}
-    layout=geometry_layout(source) if expected_geometry_version is not None else None
+    layout=geometry_layout(source) if expected_geometry_version is not None or expected_variables else None
     grid_layout,grid_probe_sha=backup_grid_layout(source) if expected_map_cells else (None,None)
     field_layout=field_state_layout(source) if expected_flags or verify_current_map_objects or expected_party_sha256 else None
     callbacks = {v: k for k, v in symbols.items()}
@@ -176,10 +176,20 @@ def validate(source, library, output, battery=None, save_output=None, expected_g
                             assert actual==word,('Continued native map grid differs',x,y,actual,word)
                             observed.append(dict(tile=[x,y],word=actual))
                         result['continued_native_map_grid_cells']=observed
-                    if layout is not None:
+                    if expected_geometry_version is not None:
                         actual=lib.read16(save+layout['vars_offset']+2*(layout['variable']-layout['vars_start']))
                         assert actual==expected_geometry_version,('Saved geometry migration did not finish',actual,expected_geometry_version)
                         result['geometry_version']=actual
+                    if expected_variables:
+                        constants = (source / 'include/constants/vars.h').read_text()
+                        last = int(re.search(r'^#define\s+VARS_END\s+(0x[0-9A-Fa-f]+)\b', constants, re.M)[1], 16)
+                        observed = {}
+                        for variable, expected in expected_variables:
+                            assert layout['vars_start'] <= variable <= last and variable not in observed
+                            address = save + layout['vars_offset'] + 2 * (variable - layout['vars_start'])
+                            observed[variable] = lib.read16(address)
+                            assert observed[variable] == expected, ('Continue variable', hex(variable), observed, expected)
+                        result['persistent_variables'] = {hex(key): value for key, value in observed.items()}
                     if field_layout is not None:
                         fields=field_layout['offsets']
                         flag_values=[]

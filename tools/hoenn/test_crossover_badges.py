@@ -27,47 +27,33 @@ typedef uint32_t u32;
 #define FALSE 0
 #define ARRAY_COUNT(a) (sizeof(a) / sizeof((a)[0]))
 #define COMPOUND_STRING(name) ((const u8 *)(name))
-static u8 badgeCount[2];
-static u8 JourneyGymBadgeCount(bool8 kanto) { return badgeCount[kanto]; }
+static u8 totalBadges;
+static u8 JourneyTotalBadgeCount(void) { return totalBadges; }
 ''' + 'enum {' + ', '.join(names) + '};\n' + progression + '''
 int main(void)
 {
-    const u16 mapBySavedVisitBit[] = {
-        MAP_ROUTE4, MAP_ROUTE10, MAP_ROUTE17, MAP_ROUTE112, MAP_ROUTE113, MAP_PETALBURG_WOODS,
-        MAP_ROUTE6, MAP_ROUTE13, MAP_ROUTE20, MAP_ROUTE106, MAP_ABANDONED_SHIP_DECK, MAP_ROUTE125,
-    };
-    const u8 chronological[][6] = {{5, 9, 3, 10, 4, 11}, {0, 6, 1, 7, 2, 8}};
-    assert(ARRAY_COUNT(sJourneyCrossoverLocations) == ARRAY_COUNT(mapBySavedVisitBit));
-    for (u32 index = 0; index < ARRAY_COUNT(mapBySavedVisitBit); index++)
-        assert(sJourneyCrossoverLocations[index].map == mapBySavedVisitBit[index]);
-    for (u16 visits = 0; visits < 4096; visits++)
-    {
-        for (u32 region = 0; region < 2; region++)
+    const u8 bits[2][4]={{0,3,2,12},{9,7,10,13}};
+    const u8 thresholds[2][4]={{1,5,13,20},{2,7,11,15}};
+    assert(ARRAY_COUNT(sJourneyCrossoverLocations)==8);
+    for (u32 mask=0; mask<16384; mask++)
+        for (u32 hero=0; hero<2; hero++)
         {
-            u32 next = 12, lowerLimit = 9;
-            for (u32 i = 0; i < 6; i++)
+            u32 wins=0, next=8;
+            for (u32 bit=0;bit<6;bit++) wins+=(mask>>(hero*6+bit))&1;
+            wins+=(mask>>(12+hero))&1;
+            assert(JourneyCrossoverWon(hero, mask)==wins);
+            for (u32 rank=0;rank<4;rank++)
             {
-                u32 slot = chronological[region][i];
-                if (!(visits & (1 << slot)))
-                {
-                    next = slot;
-                    lowerLimit = i + 1;
-                    break;
-                }
+                if (wins < 4 && (wins < 3 || rank==3 || (mask & (1u<<(12+hero))))
+                    && !(mask & (1u<<bits[hero][rank])))
+                { next=hero*4+rank; break; }
             }
-            assert(JourneyCrossoverNext(region, visits) == next);
-            for (u32 own = 0; own <= 8; own++)
-            {
-                badgeCount[region] = own;
-                badgeCount[!region] = 8;
-                for (u32 i = 0; i < 6; i++)
-                {
-                    u32 slot = chronological[region][i];
-                    assert(JourneyCrossoverReady(slot, visits) == (slot == next && own >= lowerLimit));
-                }
-            }
+            assert(JourneyCrossoverNext(hero,mask)==next);
+            for (totalBadges=0; totalBadges<=24; totalBadges++)
+                for (u32 rank=0;rank<4;rank++)
+                    assert(JourneyCrossoverReady(hero*4+rank,mask)
+                        == (next==hero*4+rank && totalBadges>=thresholds[hero][rank]));
         }
-    }
     return 0;
 }
 ''')
