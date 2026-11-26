@@ -28,7 +28,7 @@ targets={int(a,16) for a,_,n in re.findall(r'^(\w+) (\w) (\S+)$',raw,re.M) if n 
 def boost():
  # Deliberately strong player-side fixture, to validate state transitions.
  for battler in [0]:
-  lib.write16(s['gBattleMons']+battler*abi[74]+pabi[12],16000)
+  lib.write16(s['gBattleMons']+battler*abi[74]+pabi[15],16000)
   lib.write16(s['gBattleMons']+battler*abi[74]+pabi[16],10000)
   lib.write16(s['gBattleMons']+battler*abi[74]+pabi[20],30000)
   if lib.read16(s['gBattleMons']+battler*abi[74]+abi[102]):lib.write16(s['gBattleMons']+battler*abi[74]+abi[102],30000)
