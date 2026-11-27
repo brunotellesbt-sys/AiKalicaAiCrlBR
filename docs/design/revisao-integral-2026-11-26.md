@@ -25,6 +25,24 @@ O jogo preserva os bits das vitórias antigas, inclusive as das rotas aposentada
 
 A Rota 119 após o Weather Institute e o 7º andar da Silph têm batalhas de rival. Os novos locais ficam fora desses gatilhos. A ordem livre de ginásios impede associar uma quantidade total de insígnias a um líder específico. [Decisões narrativas](../IDEIAS-HISTORIAS-LENDARIOS.md)
 
+## Resultados da ROM dos oito encontros
+
+| Verificação | Resultado observado |
+| --- | --- |
+| Campo e batalha | 40 vitórias no mGBA, oito por edição. Cada encontro foi recusado com uma insígnia a menos. A escada da Rota 108 levou ao terceiro encontro de Luffy no convés. |
+| Progresso e save | Cada edição abriu uma bateria da versão Titan Story em (6, 7), preservou o segundo estágio da caverna, salvou pelo menu e voltou ao mesmo ponto após reiniciar. Na Gen 1–9 Normal a bateria salva diante do guarda recuperou as oito vitórias. O jogador entrou na sala da Galactic com os demais requisitos de história preparados. |
+| Texto e estojo | 18 falas confrontadas com o texto compilado. A maior linha tem 168 dos 208 pixels disponíveis. Na Gen 1–9 Normal os botões do cartão percorreram Hoenn, Kanto e o circuito extra, com 22 das 24 insígnias. |
+| Navegador | As cinco ROMs reconstituídas pelos patches abriram no Chromium. Cada edição executou 362 frames e exportou um estado nativo de 528.472 bytes. O pacote local do Pages passou. |
+| Registro do PWT | Em cada edição, 12 casos cobriram recusas por composição de equipe e os prêmios de 10 e 25 BP. O teste dos prêmios prepara o estágio final e verifica o pagamento único e a restauração da equipe. |
+| Megas de Legends Z-A | O estoque de Ever Grande inclui 45 pedras. Das 49 formas compiladas, 17 são elegíveis na Gen 1–4 e 49 na Gen 1–9 e na TESTE. Em todas as edições o jogador ativou Mega Raichu Y e a IA de Lt. Surge ativou Mega Raichu X no mesmo combate. |
+| Mecânicas de combate | 684 casos em cada edição, entre eles 324 combinações de tipos e 90 verificações de condições de status por tipo. Também foram medidos clima, terreno, ordem dos turnos, habilidades, itens e efeitos com dois Pokémon em campo. Os estados iniciais de combate foram preparados para isolar cada regra. |
+
+Os relatórios comprimidos preservam as observações e a identidade de cada ROM. As imagens dos dois Raichu correspondem aos hashes registrados. [Evidências de mecânicas e inventário](revisao-integral-2026-11-26/) · [Evidências dos encontros, do navio e do estojo](../../mods/hoenn/crossover-badges/)
+
+### Alcance da revisão do mundo
+
+O inventário confrontou 179 camadas e 6.243 arquivos espaciais da fonte original. Dos 2.051 mapas atuais, 1.383 têm alterações diretas e 232 usam bancos gráficos ou scripts compartilhados modificados. Entre os mapas diretamente afetados há 885 rotas marítimas, 211 cavernas, 72 rotas terrestres e 14 ginásios. Cada registro identifica layout, conexões, saídas, bancos e camadas responsáveis. Um mapa entra na fila de inspeção mesmo que a única mudança tenha sido um script. A aprovação visual de uma divisa exige vê-la no emulador em ambos os sentidos e nos estados condicionais aplicáveis. [Inventário completo em JSON comprimido](revisao-integral-2026-11-26/inventario-mapas.json.gz)
+
 ## Plano de execução e evidência necessária
 
 | Ordem | Trabalho nas camadas produzidas para Journey | Critério para fechar |
