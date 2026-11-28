@@ -1,5 +1,7 @@
 # Registro de erros
 
+O adversário do PWT andava na linha −1 e desaparecia durante o anúncio. As capturas reproduzem o erro nas cinco edições. O registro documenta a conversão de coordenadas, a remoção pela câmera e a sequência de entrada corrigida. [Arena do PWT](../mods/hoenn/pwt-arena-positions/README.md)
+
 Atual: [gates após merge112 e cavernas pendentes](2026-11-17-post-merge-release-gates.txt).
 
 Atual: [visão desatualizada de mapas vizinhos](2026-11-17-neighbor-camera.txt).

@@ -110,3 +110,7 @@ ponteiro divergente nem presumir que todo mapa possui seus próprios símbolos.
 - Procure treinadores, eventos e referências AREA da Pokédex nas células
   afetadas. Teste cada boca, os desvios e o Continue de um save feito tanto
   dentro da rota retirada quanto em uma área que perdeu seu acesso.
+
+## Personagens que entram pelo limite da câmera
+
+Na arena do PWT, `SpawnSpecialObjectEventParameterized` recebe coordenadas que incluem `MAP_OFFSET`. Conferir a posição local inicial e final do objeto no mapa, sua identidade gráfica e a imagem no instante em que o jogador deve vê-lo. A câmera pode descarregar um personagem criado cedo demais, mesmo quando a posição de destino está correta. Reproduzir o caminho do jogador e verificar o adversário no campo antes de abrir a caixa de escolha. [Capturas e reprodução](../mods/hoenn/pwt-arena-positions/README.md)

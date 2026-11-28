@@ -39,6 +39,12 @@ A Rota 119 após o Weather Institute e o 7º andar da Silph têm batalhas de riv
 
 Os relatórios comprimidos preservam as observações e a identidade de cada ROM. As imagens dos dois Raichu correspondem aos hashes registrados. [Evidências de mecânicas e inventário](revisao-integral-2026-11-26/) · [Evidências dos encontros, do navio e do estojo](../../mods/hoenn/crossover-badges/)
 
+### Arena do PWT
+
+O teste anterior conferia a posição do jogador e atribuía sucesso à entrada dos dois participantes. As capturas das cinco ROMs revelaram o adversário fora do mapa. A correção usa a margem nativa na criação do personagem e aguarda a aproximação do jogador antes da entrada pela direita. Cada rodada agora lê a posição inicial, a posição final e a identidade gráfica do adversário presente no campo. As cinco edições concluíram copas com equipe reforçada e também voltaram ao saguão após eliminação com atributos normais. [Comparação visual e resultados por edição](../../mods/hoenn/pwt-arena-positions/README.md)
+
+A reprodução das fontes históricas 165 e 170 permitiu executar os 26 testes anteriormente pulados na suíte local. Passaram sete casos de ecologia aquática, dezesseis da ligação marítima sul e três de câmera. [Execução dos 26 casos](revisao-integral-2026-11-26/testes-historicos.txt)
+
 ### Alcance da revisão do mundo
 
 O inventário confrontou 179 camadas e 6.243 arquivos espaciais da fonte original. Dos 2.051 mapas atuais, 1.383 têm alterações diretas e 232 usam bancos gráficos ou scripts compartilhados modificados. Entre os mapas diretamente afetados há 885 rotas marítimas, 211 cavernas, 72 rotas terrestres e 14 ginásios. Cada registro identifica layout, conexões, saídas, bancos e camadas responsáveis. Um mapa entra na fila de inspeção mesmo que a única mudança tenha sido um script. A aprovação visual de uma divisa exige vê-la no emulador em ambos os sentidos e nos estados condicionais aplicáveis. [Inventário completo em JSON comprimido](revisao-integral-2026-11-26/inventario-mapas.json.gz)

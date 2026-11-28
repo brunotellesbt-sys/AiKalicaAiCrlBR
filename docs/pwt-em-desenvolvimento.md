@@ -1,5 +1,8 @@
 # PWT — torneios e arena
 
+
+Os patches da arena corrigem a entrada do adversário nas cinco edições. O guia mostra os dois lados da pista durante o anúncio e lista as copas jogadas em cada edição. [Patches e resultados no mGBA](../mods/hoenn/pwt-arena-positions/README.md)
+
 As quatro ROMs em `roms/` incluem esta implementação do PWT: torneios por geração, Copa global, 162 retratos de batalha, 162 identidades de caminhada e uma arena própria. Use um save novo conforme o guia das edições.
 
 ## Participantes e torneios
