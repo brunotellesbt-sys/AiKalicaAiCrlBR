@@ -1,4 +1,5 @@
 // Host probe only: compile with -include candidate/src/journey_pwt.c.
+#include "fieldmap.h"
 const u32 gPWTWorldFixtureABI[] = {
     sizeof(struct PWTState), offsetof(struct PWTState,cup),
     offsetof(struct PWTState,size), offsetof(struct PWTState,pool),
@@ -29,4 +30,8 @@ const u32 gPWTWorldFixtureABI[] = {
     offsetof(struct BattlePokemon,maxHP), offsetof(struct Pokemon,attack),
     offsetof(struct Pokemon,speed), offsetof(struct Pokemon,maxHP),
     MON_DATA_HELD_ITEM, ITEM_WATER_MEMORY,
+    sizeof(struct ObjectEvent), offsetof(struct ObjectEvent,localId),
+    offsetof(struct ObjectEvent,mapNum), offsetof(struct ObjectEvent,mapGroup),
+    offsetof(struct ObjectEvent,initialCoords), offsetof(struct ObjectEvent,currentCoords),
+    OBJECT_EVENTS_COUNT, MAP_OFFSET,
 };

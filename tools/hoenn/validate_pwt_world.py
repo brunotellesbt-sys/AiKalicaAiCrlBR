@@ -25,7 +25,7 @@ with tempfile.TemporaryDirectory(prefix='pwt-world-abi-',dir='/tmp') as d:
     subprocess.run([str(ROOT/'.local/arm-gcc/usr/bin/arm-none-eabi-gcc'),'-S','-iquote',str(source/'include'),'-include',str(source/'src/journey_pwt.c'),'-D_(x)=x','-DCOMPOUND_STRING(x)=((const u8 *)(x))','-DMODERN=1','-DPOKEEMERALD','-mthumb','-march=armv4t','-mabi=apcs-gnu',str(ROOT/'tools/hoenn/fixture_pwt_world_abi.c'),'-o',str(out)],check=True)
     text=out.read_text().split('gPWTWorldFixtureABI:',1)[1].split('.size',1)[0]
     offsets=[int(v) for v in re.findall(r'\.word\s+(\d+)',text)]
-assert len(offsets)==71,offsets
+assert len(offsets)==79,offsets
 state=s['sPWT'];cup=state+offsets[1];party=s['gParties'];enemy=party+6*abi[2]
 cap=native('JourneyPWTMaxGeneration');hard=native('JourneyPerfectTrainerIvs')
 assert cap in (4,9) and native('JourneyPWTCatalogCount')==len(rows)
@@ -67,6 +67,34 @@ def finish():
     assert bytes(lib.read8(party+i) for i in range(6*abi[2]))==original
     assert lib.read16(bp_at)==bp_before
     assert lib.read32(s['gBattleTypeFlags'])==0
+def observe_ready_positions():
+    stride, local_id, map_num, map_group, initial, current, count, border = offsets[71:79]
+    group, number = location()
+    assert (group, number) == map_id('JourneyPWTArena')
+    # Read the live field objects while the ready prompt is still on screen.
+    actors = []
+    for i in range(count):
+        at = s['gObjectEvents'] + i * stride
+        if (lib.read8(at) & 1 and lib.read8(at + local_id) == 14
+                and lib.read8(at + map_num) == number and lib.read8(at + map_group) == group):
+            actors.append(at)
+    assert len(actors) == 1, ('PWT opponent missing or duplicated', actors)
+    actor, = actors
+    def tile(field):
+        return [lib.read16(actor + field) - border, lib.read16(actor + field + 2) - border]
+    entrant = lib.read16(cup + offsets[9])
+    trainer = lib.read16(cup + offsets[8] + 2 * entrant)
+    graphics = lib.read16(actor + offsets[46])
+    assert graphics == lib.read16(s['sPWTWalking'] + 2 * trainer), ('PWT walking identity', trainer)
+    return dict(player=list(position()), opponent_start=tile(initial), opponent=tile(current),
+                catalog_id=trainer, walking_graphics=graphics)
+
+
+def check_ready_positions(observed):
+    assert observed['player'] == [9, 6], observed
+    assert observed['opponent_start'] == [17, 6] and observed['opponent'] == [13, 6], observed
+
+
 for generation in range(cap+1):
     ids=begin(generation)
     assert all(bool(native('JourneyPWTTrainerEligible',r['id'],generation))==(r['id'] in ids[1:]) for r in rows)
@@ -177,7 +205,10 @@ if a.play_cup:
             press(1)
         picture('pwt-world-ready-failure');raise AssertionError('Round ready prompt missing')
     while lib.read8(state+offsets[4]):
-        ready();assert position()==(9,6),position();entrant=lib.read16(cup+offsets[9]);stage=lib.read8(cup+offsets[12])
+        ready()
+        entrance = observe_ready_positions()
+        check_ready_positions(entrance)
+        entrant=lib.read16(cup+offsets[9]);stage=lib.read8(cup+offsets[12])
         picture('pwt-world-ring-'+str(len(actual_battles)))
         press(1)
         for _ in range(300):
@@ -222,7 +253,8 @@ if a.play_cup:
                 else:press(1)
             elif callback==s['CB2_Overworld']:
                 assert lib.read8(s['gBattleOutcome'])==1
-                actual_battles.append(dict(stage=stage,opponent=entrant,attacks=attacks,outcome=1))
+                actual_battles.append(dict(stage=stage,opponent=entrant,attacks=attacks,outcome=1,entrance=entrance))
+                print('Native victory', len(actual_battles), 'generation', a.cup_generation, flush=True)
                 break
             else:press(1)
         else:
