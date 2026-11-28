@@ -62,3 +62,5 @@ O inventário confrontou 179 camadas e 6.243 arquivos espaciais da fonte origina
 O escopo de edição começa nos arquivos tocados por cada camada e nos seus consumidores. Os mapas e recursos originais servem de referência. A captura de uma batalha ou o teste de integridade de um arquivo histórico, isoladamente, não encerra uma revisão de mundo ou de campanha.
 
 A primeira execução completa da suíte local de Hoenn revelou um erro de infraestrutura na cópia de 147 MiB de evidências históricas. O teste da camada 162 fixava o destino em `/tmp` mesmo com outro volume temporário configurado. O mesmo teste passou ao honrar `TMPDIR` e continuar copiando e verificando o conjunto original. A ROM de referência e o histórico das falhas do CI estão nos registros de continuidade. [Guia técnico](../CONTINUIDADE-TECNICA-IA.md)
+
+Na ROM com a entrada do PWT corrigida, o mGBA repetiu os oito encontros de estrada e o resgate de Sootopolis nas cinco edições. Os relatórios, as capturas e as baterias estão organizados por edição. [Provas de campanha desta compilação](revisao-integral-2026-11-26/campanha-na-rom-do-pwt.zip)
