@@ -9,13 +9,21 @@ PRUNING = ROOT / 'mods/hoenn/atlas-route-pruning'
 PWT_COMPLETE = ROOT / 'mods/hoenn/pwt-complete-rosters'
 SOOTOPOLIS_RESCUE = ROOT / 'mods/hoenn/sootopolis-rescue'
 TITAN_STORY = ROOT / 'mods/hoenn/titan-story'
+CROSSOVER_BADGES = ROOT / 'mods/hoenn/crossover-badges'
+ARENA = ROOT / 'mods/hoenn/pwt-arena-positions'
 CURRENT_BROWSER_EVIDENCE = ROOT / 'mods/hoenn/versions-validation/browser-route-pruning/browser-versions.json'
 PWT_BROWSER_EVIDENCE = ROOT / 'mods/hoenn/versions-validation/browser-pwt-complete/browser-versions.json'
 RESCUE_BROWSER_EVIDENCE = ROOT / 'mods/hoenn/versions-validation/browser-sootopolis-rescue/browser-versions.json'
 TITAN_BROWSER_EVIDENCE = ROOT / 'mods/hoenn/versions-validation/browser-titan-story/browser-versions.json'
+CROSSOVER_BROWSER_EVIDENCE = ROOT / 'mods/hoenn/versions-validation/browser-crossover-badges/browser-versions.json'
+ARENA_BROWSER_EVIDENCE = ROOT / 'mods/hoenn/versions-validation/browser-pwt-arena/browser-versions.json'
 
 
 def browser_evidence(release):
+    if release.get('validation_scope') == 'pwt-arena-positions':
+        return ARENA_BROWSER_EVIDENCE
+    if release.get('validation_scope') == 'crossover-badges':
+        return CROSSOVER_BROWSER_EVIDENCE
     if release.get('validation_scope') == 'titan-story':
         return TITAN_BROWSER_EVIDENCE
     if release.get('validation_scope') == 'sootopolis-rescue':
@@ -59,6 +67,16 @@ def stage_current_editions(site, release):
                     titans = verify_titans(TITAN_STORY, output=games, base_directory=games)
                     profiles = titans['editions']
                     scope = titans['layer']
+        if scope == 'titan-story' and (CROSSOVER_BADGES / 'validation.json').is_file():
+            from verify_crossover_badges import verify as verify_crossover
+            crossover = verify_crossover(CROSSOVER_BADGES, output=games, base_directory=games)
+            profiles = crossover['editions']
+            scope = crossover['layer']
+        if scope == 'crossover-badges' and (ARENA / 'validation.json').is_file():
+            from verify_pwt_arena_positions import verify as verify_arena
+            arena = verify_arena(ARENA, output=games, base_directory=games)
+            profiles = arena['editions']
+            scope = arena['layer']
         variants = [{key: row[key] for key in ('file', 'bytes', 'max_national', 'perfect_trainer_ivs')}
                     for row in release['variants']]
         for row in variants:

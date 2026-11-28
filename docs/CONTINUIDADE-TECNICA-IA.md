@@ -1,3 +1,19 @@
+26/11/2026 — Oito batalhas antes do navio
+
+O autor confirmou quatro encontros de Eren e quatro de Luffy. Eren usa os marcos de 1, 5, 13 e 20 insígnias totais. Luffy usa 2, 7, 11 e 15. O histórico do PR #124 em ddce22dc descreve a versão anterior de doze encontros. A revisão dos mapas e das histórias completas continua por etapas. Consulte docs/design/revisao-integral-2026-11-26.md para os pré-requisitos, as verificações e a ordem da auditoria.
+
+ORDEM DE EREN E LUFFY POR INSÍGNIAS — 24/11/2026
+
+Após o merge do PR 123, o autor pediu uma ordem por quantidade de insígnias.
+`crossover-badges` usa os seis primeiros marcos da própria região e exige
+concluir o encontro anterior dali. Os doze bits de vitória em `0x40FF`
+mantêm suas identidades, inclusive o encontro de Luffy na Rota 108. Luffy
+agora surge no convés do Navio Abandonado, acessível pela escada da rota.
+O mGBA registrou os bloqueios e as 60 vitórias nas cinco edições. O Chromium
+abriu as cinco ROMs e o verificador reproduziu cada BPS. O guia Galactic
+aponta para o primeiro encontro pendente na ordem.
+[Camada, tabela e provas](../mods/hoenn/crossover-badges/README.md)
+
 RESGATE COM LUGIA E CAPÍTULO DA TITAN CAVE — 24/11/2026
 
 O autor pediu incluir Articuno, Zapdos e Moltres no arco de Luffy,

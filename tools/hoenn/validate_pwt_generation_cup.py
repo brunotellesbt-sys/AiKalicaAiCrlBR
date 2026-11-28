@@ -12,9 +12,6 @@ prefix=pwt_validator_text.split('for generation in range(cap+1):')[0]
 exec(compile(prefix,str(ROOT/'tools/hoenn/validate_pwt_world.py'),'exec'))
 assert a.play_cup and 0<=a.cup_generation<=cap
 flow=pwt_validator_text.split('actual_battles=[]\n',1)[1].split('\nlib.stop()',1)[0]
-# Progress logging only; the original loop still obtains every outcome natively.
-flow=flow.replace("actual_battles.append(dict(stage=stage,opponent=entrant,attacks=attacks,outcome=1))",
-    "actual_battles.append(dict(stage=stage,opponent=entrant,attacks=attacks,outcome=1))\n                print('Native victory',len(actual_battles),'generation',a.cup_generation,flush=True)")
 actual_battles=[]
 exec(compile(flow,str(ROOT/'tools/hoenn/validate_pwt_world.py'),'exec'))
 entrants=[lib.read16(cup+offsets[8]+i*2) for i in range(lib.read16(cup+offsets[7]))]
@@ -30,7 +27,9 @@ report=dict(passed=True,rom_sha256=hashlib.sha256((source/'pokeemerald.gba').rea
     version_generation_cap=cap,difficulty='Hard' if hard else 'Normal',cup_generation=a.cup_generation,
     complete_tournament_playthrough=True,actual_battles=actual_battles,entrants=len(entrants),
     champion=True,bp_reward=tournament_reward,returned_to_lobby=True,party_restored_byte_exact=True,
-    both_entrances_complete_at_ready_prompt=True,player_ready_position=[9,6],
+    both_entrances_complete_at_ready_prompt=all(b['entrance']['opponent']==[13,6] and
+        b['entrance']['player']==[9,6] for b in actual_battles),
+    player_ready_position=actual_battles[0]['entrance']['player'],
     helper_and_travel_fixtures=True,player_battle_stats_boosted_for_flow_test=True,
     competitive_balance_test=False,full_campaign_playthrough=False)
 report['unavailable_move_choices_avoided']=controller.avoided

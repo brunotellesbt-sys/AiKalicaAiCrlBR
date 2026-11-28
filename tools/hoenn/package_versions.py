@@ -33,8 +33,16 @@ def package(source,output):
  pwt_marker=source/'.journey-pwt-complete-rosters'
  rescue_marker=source/'.journey-sootopolis-rescue'
  titan_marker=source/'.journey-titan-story'
- if titan_marker.exists() or rescue_marker.exists() or pwt_marker.exists() or (source/'.journey-pwt-galar-za-megas').exists() or (source/'.journey-pwt-official-parties').exists():
-  if titan_marker.exists():
+ arena_marker=source/'.journey-pwt-arena-positions'
+ crossover_marker=source/'.journey-crossover-badges'
+ if arena_marker.exists() or crossover_marker.exists() or titan_marker.exists() or rescue_marker.exists() or pwt_marker.exists() or (source/'.journey-pwt-galar-za-megas').exists() or (source/'.journey-pwt-official-parties').exists():
+  if arena_marker.exists():
+   from prepare_pwt_arena_positions import PRIOR,LAYER
+   pwt_marker=arena_marker
+  elif crossover_marker.exists():
+   from prepare_crossover_badges import PRIOR,LAYER
+   pwt_marker=crossover_marker
+  elif titan_marker.exists():
    from prepare_titan_story import PRIOR,LAYER
    pwt_marker=titan_marker
   elif rescue_marker.exists():

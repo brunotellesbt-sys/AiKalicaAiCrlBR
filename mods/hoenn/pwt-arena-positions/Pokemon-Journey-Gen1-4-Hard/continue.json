@@ -1,0 +1,472 @@
+{
+  "rom_sha256": "cdbe7d577e0239722542bd0ccbe2cc164f0dcf5fac12e3834d965d0c95901bda",
+  "old_rom_sha256": "b02683ab0ea18579cc82f03ede9e6446820a2bec62844141318a891d9adf054a",
+  "elf_sha256": "dbd820f95d7abc9ba783cb8e32268fab9ae9d5e4e0ce67a59fb100310c72a5ed",
+  "continued": {
+    "passed": true,
+    "rom_sha256": "cdbe7d577e0239722542bd0ccbe2cc164f0dcf5fac12e3834d965d0c95901bda",
+    "fresh_rom_boot_to_title": true,
+    "fresh_rom_title_to_new_game": true,
+    "no_assert_screen": true,
+    "controllers_only": true,
+    "no_game_memory_writes": true,
+    "bundled_save_tested": true,
+    "runs": [
+      {
+        "battery": false,
+        "frames": 2464,
+        "samples": [
+          {
+            "frame": 1200,
+            "callback": "MainCB2_Intro"
+          },
+          {
+            "frame": 1201,
+            "callback": "MainCB2_EndIntro"
+          },
+          {
+            "frame": 1291,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1591,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1592,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1682,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1683,
+            "callback": "CB2_GoToMainMenu"
+          },
+          {
+            "frame": 1773,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2073,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2074,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2164,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2464,
+            "callback": "CB2_MainMenu"
+          }
+        ],
+        "fresh_rom_boot_to_title": true,
+        "fresh_rom_title_to_new_game": true,
+        "new_game_tasks": [
+          "Task_HandleMultichoiceInput",
+          "Task_JourneyIntroRegion"
+        ]
+      },
+      {
+        "battery": true,
+        "frames": 5301,
+        "samples": [
+          {
+            "frame": 1200,
+            "callback": "MainCB2_Intro"
+          },
+          {
+            "frame": 1201,
+            "callback": "MainCB2_EndIntro"
+          },
+          {
+            "frame": 1291,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1591,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1592,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1682,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1683,
+            "callback": "CB2_GoToMainMenu"
+          },
+          {
+            "frame": 1773,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2073,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2074,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2164,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 3064,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 3664,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 3665,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 3755,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 3845,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 3846,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 3936,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 3937,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4027,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4028,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4118,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4119,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4209,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4210,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4300,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4301,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4391,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4392,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4482,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4483,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4573,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4574,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4664,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4665,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4755,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4756,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4846,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4847,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4937,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 4938,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 5028,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 5029,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 5119,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 5120,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 5210,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 5211,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 5301,
+            "callback": "CB2_Overworld"
+          }
+        ],
+        "bundled_save_continue_to_field": true,
+        "field_map": [
+          83,
+          3
+        ],
+        "player_tile": [
+          6,
+          7
+        ],
+        "player_surfing": false,
+        "player_elevation": 0,
+        "geometry_version": 9,
+        "persistent_variables": {
+          "0x409b": 2,
+          "0x40ff": 0
+        },
+        "saved_after_continue_with_controllers": true,
+        "save_menu_callbacks": [
+          "SaveConfirmInputCallback",
+          "SaveConfirmOverwriteCallback",
+          "SaveDoSaveCallback",
+          "SaveOverwriteInputCallback",
+          "SaveReturnSuccessCallback",
+          "SaveSuccessCallback",
+          "SaveYesNoCallback"
+        ],
+        "saved_battery_sha256": "fac6b1f15dc285bec511201d26f5db01bbd5576793cd27b1f32f87939f9a2e8e"
+      }
+    ],
+    "geometry_layout_proof": {
+      "vars_offset": 8600,
+      "variable": 16604,
+      "vars_start": 16384,
+      "current_version": 8,
+      "actual_ARM_APCS_struct_compiled": true,
+      "GetVarPointer_ELF_literal_matches": true,
+      "probe_assembly_sha256": "b7e39542c14784137e44134052761dff17ea7db21b764d5eca0b7e3c639ce887",
+      "global_header_sha256": "7efef4510fad4bea894698a4210d14da99b8141de834efdb4190bfe2bc02b283"
+    },
+    "bundled_save_continue_to_field": true,
+    "bundled_save_sha256": "1be887864c820d8d07a45dea7c13f391212361e7b2b05a27f8a66e79a57c30d9"
+  },
+  "resaved": {
+    "passed": true,
+    "rom_sha256": "cdbe7d577e0239722542bd0ccbe2cc164f0dcf5fac12e3834d965d0c95901bda",
+    "fresh_rom_boot_to_title": true,
+    "fresh_rom_title_to_new_game": true,
+    "no_assert_screen": true,
+    "controllers_only": true,
+    "no_game_memory_writes": true,
+    "bundled_save_tested": true,
+    "runs": [
+      {
+        "battery": false,
+        "frames": 2464,
+        "samples": [
+          {
+            "frame": 1200,
+            "callback": "MainCB2_Intro"
+          },
+          {
+            "frame": 1201,
+            "callback": "MainCB2_EndIntro"
+          },
+          {
+            "frame": 1291,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1591,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1592,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1682,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1683,
+            "callback": "CB2_GoToMainMenu"
+          },
+          {
+            "frame": 1773,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2073,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2074,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2164,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2464,
+            "callback": "CB2_MainMenu"
+          }
+        ],
+        "fresh_rom_boot_to_title": true,
+        "fresh_rom_title_to_new_game": true,
+        "new_game_tasks": [
+          "Task_HandleMultichoiceInput",
+          "Task_JourneyIntroRegion"
+        ]
+      },
+      {
+        "battery": true,
+        "frames": 3664,
+        "samples": [
+          {
+            "frame": 1200,
+            "callback": "MainCB2_Intro"
+          },
+          {
+            "frame": 1201,
+            "callback": "MainCB2_EndIntro"
+          },
+          {
+            "frame": 1291,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1591,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1592,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1682,
+            "callback": "MainCB2"
+          },
+          {
+            "frame": 1683,
+            "callback": "CB2_GoToMainMenu"
+          },
+          {
+            "frame": 1773,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2073,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2074,
+            "callback": "CB2_MainMenu"
+          },
+          {
+            "frame": 2164,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 3064,
+            "callback": "CB2_Overworld"
+          },
+          {
+            "frame": 3664,
+            "callback": "CB2_Overworld"
+          }
+        ],
+        "bundled_save_continue_to_field": true,
+        "field_map": [
+          83,
+          3
+        ],
+        "player_tile": [
+          6,
+          7
+        ],
+        "player_surfing": false,
+        "player_elevation": 0,
+        "geometry_version": 9,
+        "persistent_variables": {
+          "0x409b": 2,
+          "0x40ff": 0
+        }
+      }
+    ],
+    "geometry_layout_proof": {
+      "vars_offset": 8600,
+      "variable": 16604,
+      "vars_start": 16384,
+      "current_version": 8,
+      "actual_ARM_APCS_struct_compiled": true,
+      "GetVarPointer_ELF_literal_matches": true,
+      "probe_assembly_sha256": "b7e39542c14784137e44134052761dff17ea7db21b764d5eca0b7e3c639ce887",
+      "global_header_sha256": "7efef4510fad4bea894698a4210d14da99b8141de834efdb4190bfe2bc02b283"
+    },
+    "bundled_save_continue_to_field": true,
+    "bundled_save_sha256": "fac6b1f15dc285bec511201d26f5db01bbd5576793cd27b1f32f87939f9a2e8e"
+  }
+}

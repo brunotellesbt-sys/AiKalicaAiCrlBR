@@ -1,0 +1,74 @@
+{
+  "layer": "crossover-badges",
+  "titan_manifest_sha256": "b354999150ae6505acdfd45c06393968eccfa058f1a50479e1b60a46036d980a",
+  "source_marker_sha256": "118daa1acef1aac1bd98b7712f45be0d9d6dae771e2f73d238300c89dd41cd7c",
+  "compiled_rom_sha256": "6563c5214f56e1464ae54457603258528e06844219346e25056a75a200e537c7",
+  "elf_sha256": "67afef012dfd0b42e69922023b11984466a070ac1d0cea855e63cc081f295ff8",
+  "build_rules_offset": 9217840,
+  "parent_header_hex": "504f4b454d4f4e20454d4552425045453031960000000000000000000072",
+  "test_mode": {
+    "file": "Pokemon-Journey-TESTE.gba",
+    "bytes": 33554432,
+    "sha256": "98caf78e15e97ccd5c144096230513e908c1fe8110a2082ecf7d205ee56274f4",
+    "base_normal_file": "Pokemon-Journey-Gen1-9-Normal.gba",
+    "base_normal_sha256": "e1bcd840eb40ec01b6993b418b0eb3042bede432f44a1409343b500df80e323e",
+    "review_mode_offset": 9216446,
+    "patched_byte_offsets": [
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      189,
+      9216446
+    ],
+    "base_header_hex": "4a4f55524e4559204739204e42504545303196000000000000000000009a",
+    "automatic_trainer_approaches": false,
+    "random_wild_encounters": false,
+    "fishing_encounters": false,
+    "manual_trainer_and_legendary_interactions_preserved": true,
+    "separate_save_identity": true
+  },
+  "dialogue_sha256": "c6bd1a97038fba02a0e102dd817af2790e14cd13bf08c73393771c51bdb5dca0",
+  "route108_proof_sha256": "e542ae4c9f1f86d171ba81bc7c2a5d123c94ee6711a99b07caae0caddf84882b",
+  "editions": {
+    "Pokemon-Journey-Gen1-4-Hard.gba": {
+      "base_sha256": "b02683ab0ea18579cc82f03ede9e6446820a2bec62844141318a891d9adf054a",
+      "rom_sha256": "f2f08ac3c871b98e47a3a0e8d40b73c7b585ce92d18aaf0824e708fb636ff1d3",
+      "patch_sha256": "e57cfc5674831a1a84f193137d75022f022dfad873b48dc8d497762a789b98ee",
+      "evidence_sha256": "c89a3b5767848be06f5d8298016844e8a93e861336ac9a73422953637f85b677",
+      "continue_sha256": "17499922bfbb91a0014c4d8e4137b04df016637e98a87b0739c665deb278c2e8"
+    },
+    "Pokemon-Journey-Gen1-4-Normal.gba": {
+      "base_sha256": "b816c6c4a2d7ffbba5205db1b7b6f2f1b2634e6290b340352ab795da23b64315",
+      "rom_sha256": "6b8d88e85f83a0d5477b9b2576ebf76762477f3499f53e1a0118863b6f1e8dcd",
+      "patch_sha256": "ce34a25dc5e014785040b61e0f1d97ac48bacd5f6cf192289de37d215b8a6ed7",
+      "evidence_sha256": "257367058e3aded2b4342feda643617953699a38be34b50d423bb57133a40a28",
+      "continue_sha256": "65ea0670ce91d49b16b789991406768f4e3401a6526daf76b9433e15933ea968"
+    },
+    "Pokemon-Journey-Gen1-9-Hard.gba": {
+      "base_sha256": "d729e25dea83be55cf018cbee0307108053437d889600cd4dab2923313921efb",
+      "rom_sha256": "8f92dc0dc2370815ca1c5384fa02f219e7830c5877a02b9ddb9909fbf8ef7331",
+      "patch_sha256": "53cbeda1840d70910aee4226de08f71f4ddc7257298451d81a0ce613d1d5637a",
+      "evidence_sha256": "3c1018bd54bc89a8450ef80081de824df9f55e845353af31be3a035284af5e2e",
+      "continue_sha256": "97fd98c65c02894ae81b59b3567942b575e9eb9e68352f016607c07760fbda37"
+    },
+    "Pokemon-Journey-Gen1-9-Normal.gba": {
+      "base_sha256": "df2e789660638db1ff702c240be8370bb8b77c05b3fc3544bbca8bc57ed4a3b7",
+      "rom_sha256": "e1bcd840eb40ec01b6993b418b0eb3042bede432f44a1409343b500df80e323e",
+      "patch_sha256": "fa70add4ee3c6d6c0eb8e19a8488c50fefb83b0a78e45f259250255d49125396",
+      "evidence_sha256": "2fc9077af34194d162a7e5b7795fbdec90ca49752355c628acfba1f105ce0c76",
+      "continue_sha256": "4eda00a0674c15d4cc3d25aae1fcc300ac9902e250caf3fe5c8f969843ff0eb8",
+      "galactic_entry_sha256": "c8a9bcb533fa5cfc964eec0d275587adcdd3106d60fd6cbe5f0992c27840967c"
+    },
+    "Pokemon-Journey-TESTE.gba": {
+      "base_sha256": "365b5a5c906a522194591cbd1e5bef164cb5fef2328994586245e7e96c64fea3",
+      "rom_sha256": "98caf78e15e97ccd5c144096230513e908c1fe8110a2082ecf7d205ee56274f4",
+      "patch_sha256": "d950cf6341d8e92189bc6f39a547bf9b39cfea72be8355336509a7d5a9ccfa19",
+      "evidence_sha256": "9ddb585b4977bee7686a23773b7cb61077418ed35a7f248c0c136cee2b1f6891",
+      "continue_sha256": "765b585df4ebbd280b3e2b4ee78098e5bfbe5017f260de1a36fda5eda0d6fbb7"
+    }
+  }
+}

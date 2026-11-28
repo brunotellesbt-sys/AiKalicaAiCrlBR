@@ -22,7 +22,7 @@ CAPTURES = {bird + '-with-lugia.png' for bird in BIRDS} | {
 }
 
 
-def verify(directory=DIRECTORY, *, output=None, base_directory=None):
+def verify(directory=DIRECTORY, *, output=None, base_directory=None, consume=None):
     directory = Path(directory)
     manifest = json.loads((directory / 'validation.json').read_bytes())
     assert manifest['layer'] == LAYER
@@ -94,6 +94,8 @@ def verify(directory=DIRECTORY, *, output=None, base_directory=None):
 
         if output is not None:
             (Path(output) / name).write_bytes(rom)
+        if consume is not None:
+            consume(name, rom)
 
     if base_directory is None:
         verify_rescue(consume=verify_edition)

@@ -1,0 +1,195 @@
+{
+  "passed": true,
+  "rom_sha256": "98caf78e15e97ccd5c144096230513e908c1fe8110a2082ecf7d205ee56274f4",
+  "wins": [
+    {
+      "label": "Route4_Frlg",
+      "opponent": 1551,
+      "outcome": 1,
+      "battle_controller_ticks": 379,
+      "map": "Route4_Frlg",
+      "visit_bit": 0,
+      "visit_mask": 1,
+      "approach": [
+        35,
+        11
+      ],
+      "capture": "approach-Route4_Frlg.png",
+      "capture_sha256": "4a4ea10426103627fc31cef159c8964c261d0c6253983adee206ffd6a1e90787",
+      "battled_at": 1,
+      "blocked_at": 0,
+      "badge_scope": "total"
+    },
+    {
+      "label": "Route106",
+      "opponent": 1557,
+      "outcome": 1,
+      "battle_controller_ticks": 500,
+      "map": "Route106",
+      "visit_bit": 9,
+      "visit_mask": 513,
+      "approach": [
+        60,
+        15
+      ],
+      "capture": "approach-Route106.png",
+      "capture_sha256": "404ef8d34339cb74aebf7f6e62ee9bdfde91471a882cef4c1c0daf10fe3e10f7",
+      "battled_at": 2,
+      "blocked_at": 1,
+      "badge_scope": "total"
+    },
+    {
+      "label": "Route112",
+      "opponent": 1552,
+      "outcome": 1,
+      "battle_controller_ticks": 332,
+      "map": "Route112",
+      "visit_bit": 3,
+      "visit_mask": 521,
+      "approach": [
+        34,
+        48
+      ],
+      "capture": "approach-Route112.png",
+      "capture_sha256": "d742c034a41e6faff80d4f9ad4de07cbe789a2dc91f2052edc8b193e21524020",
+      "battled_at": 5,
+      "blocked_at": 4,
+      "badge_scope": "total"
+    },
+    {
+      "label": "Route13_Frlg",
+      "opponent": 1558,
+      "outcome": 1,
+      "battle_controller_ticks": 358,
+      "map": "Route13_Frlg",
+      "visit_bit": 7,
+      "visit_mask": 649,
+      "approach": [
+        57,
+        7
+      ],
+      "capture": "approach-Route13_Frlg.png",
+      "capture_sha256": "af6ec3e0d23b55e371fc02495d134232e6944626c635fc1f0e162f7785383e01",
+      "battled_at": 7,
+      "blocked_at": 6,
+      "badge_scope": "total"
+    },
+    {
+      "label": "AbandonedShip_Deck",
+      "opponent": 1559,
+      "outcome": 1,
+      "battle_controller_ticks": 342,
+      "map": "AbandonedShip_Deck",
+      "visit_bit": 10,
+      "visit_mask": 1673,
+      "approach": [
+        13,
+        14
+      ],
+      "capture": "approach-AbandonedShip_Deck.png",
+      "capture_sha256": "0d507c67c9502d1bf2e2e60a901b26d630d995004d428b11c239990405cced11",
+      "battled_at": 11,
+      "blocked_at": 10,
+      "badge_scope": "total"
+    },
+    {
+      "label": "Route17_Frlg",
+      "opponent": 1553,
+      "outcome": 1,
+      "battle_controller_ticks": 1187,
+      "map": "Route17_Frlg",
+      "visit_bit": 2,
+      "visit_mask": 1677,
+      "approach": [
+        19,
+        75
+      ],
+      "capture": "approach-Route17_Frlg.png",
+      "capture_sha256": "74acdcbb69111937e6b9578d01254b3f3f86074d0c4fc5f98580b3ada1a909ee",
+      "battled_at": 13,
+      "blocked_at": 12,
+      "badge_scope": "total"
+    },
+    {
+      "label": "SixIsland_WaterPath_Frlg",
+      "opponent": 1560,
+      "outcome": 1,
+      "battle_controller_ticks": 306,
+      "map": "SixIsland_WaterPath_Frlg",
+      "visit_bit": 13,
+      "visit_mask": 9869,
+      "approach": [
+        10,
+        58
+      ],
+      "capture": "approach-SixIsland_WaterPath_Frlg.png",
+      "capture_sha256": "f8f23013ce3acca4642d514ee5415fadc74e8aa6df1483a5f32a2d2703c09967",
+      "battled_at": 15,
+      "blocked_at": 14,
+      "badge_scope": "total",
+      "party_mean": 68,
+      "enemy_species": [
+        62,
+        143,
+        272,
+        338,
+        395,
+        468
+      ],
+      "enemy_levels": [
+        67,
+        66,
+        67,
+        66,
+        63,
+        68
+      ]
+    },
+    {
+      "label": "Route123",
+      "opponent": 1554,
+      "outcome": 1,
+      "battle_controller_ticks": 406,
+      "map": "Route123",
+      "visit_bit": 12,
+      "visit_mask": 13965,
+      "approach": [
+        3,
+        12
+      ],
+      "capture": "approach-Route123.png",
+      "capture_sha256": "67d36ceccbd46ce7eb80e982db9bb779a478fd3dea887734a9c251d81a80a30f",
+      "battled_at": 20,
+      "blocked_at": 19,
+      "badge_scope": "total",
+      "party_mean": 78,
+      "enemy_species": [
+        208,
+        212,
+        248,
+        445,
+        477,
+        486
+      ],
+      "enemy_levels": [
+        75,
+        79,
+        76,
+        77,
+        76,
+        75
+      ]
+    }
+  ],
+  "native_victories": true,
+  "normal_field_hook_and_approach": true,
+  "visit_flags_not_written": true,
+  "initial_badges_travel_and_team_are_fixtures": true,
+  "player_battle_stats_boosted": true,
+  "ordered_by_badges": true,
+  "skipped_earlier_battle_refused": true,
+  "legacy_completed_visit_mask_accepted": true,
+  "full_campaign_playthrough": false,
+  "elf_sha256": "67afef012dfd0b42e69922023b11984466a070ac1d0cea855e63cc081f295ff8",
+  "marker_sha256": "118daa1acef1aac1bd98b7712f45be0d9d6dae771e2f73d238300c89dd41cd7c"
+}

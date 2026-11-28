@@ -131,7 +131,7 @@ class CoastalReleaseContracts(unittest.TestCase):
     def test_historical162_verification_uses_pinned_review_and_save_without_current_roms(self):
         info = json.loads((BASELINE / 'versions.json').read_bytes())
         review = json.loads((BASELINE / 'review.json').read_bytes())
-        with tempfile.TemporaryDirectory(prefix='coastal-history-', dir='/tmp') as directory:
+        with tempfile.TemporaryDirectory(prefix='coastal-history-') as directory:
             output = Path(directory)
             shutil.copytree(VERSIONS / 'evidence', output / 'evidence')
             self.assertFalse(any(output.glob('*.gba')))
